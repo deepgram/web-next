@@ -1,13 +1,23 @@
 {
+  "name": "@example/basics",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "build:all": "npm run build && cp main.ts dist",
+    "build:server": "cp main.ts dist"
   },
   "devDependencies": {
-    "@nuxt/content": "npm:@nuxt/content-edge@latest",
-    "nuxt": "^3.0.0-rc.3"
+    "@astrojs/tailwind": "^0.2.1",
+    "@astrojs/vue": "^0.1.4",
+    "astro": "^1.0.0-beta.29",
+    "vue": "^3.2.33"
+  },
+  "dependencies": {
+    "@astrojs/deno": "^0.1.5",
+    "@astrojs/netlify": "^0.4.0"
   }
 }
