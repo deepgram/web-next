@@ -7,6 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "precopy": "rm -rf ./blog-content/",
+    "copy": "npm run precopy && cp -r ../content/www/blog ./blog-content/",
     "build:all": "npm run build && cp main.ts dist",
     "build:server": "cp main.ts dist"
   },
