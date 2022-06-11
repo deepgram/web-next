@@ -6,7 +6,7 @@ export async function getStaticPaths() {
 	);
 
 	return sortedPosts.map((post) => {
-		const regex = /^\/\S+\/(?<year>\d{4})\/(?<month>\d{2})\/(?<slug>\S+)\/\S+$/
+		const regex = /^\/\S+\/(?<year>\d{4})\/(?<month>\d{2})\/(?<slug>\S+)\.\S+$/
 		const matches = post.file.match(regex)
 		const { groups: { year, month, slug } } = matches
 
