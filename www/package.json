@@ -5,7 +5,7 @@
   "scripts": {
     "predev": "yarn clean && yarn content && yarn media",
     "dev": "astro dev",
-    "prebuild": "yarn content",
+    "prebuild": "yarn content && yarn media",
     "build": "astro build",
     "preview": "astro preview",
     "clean": "rm -rf ./src/content/ && rm -rf ./public/uploads",
