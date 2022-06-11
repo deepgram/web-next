@@ -4,8 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "media"
+public_folder: "/uploads"
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
