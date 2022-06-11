@@ -13,6 +13,4 @@ seo:
   keywords: javascript, deno, node, api, rest
 ---
 
-# Demo post
-
-##
+demo post is from shared content

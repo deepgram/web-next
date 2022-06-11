@@ -1,25 +1,21 @@
 {
-  "name": "@example/basics",
+  "name": "@deepgram-web/www",
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "predev": "yarn clean && yarn content",
     "dev": "astro dev",
-    "start": "astro dev",
+    "prebuild": "yarn content",
     "build": "astro build",
     "preview": "astro preview",
-    "precopy": "rm -rf ./blog-content/",
-    "copy": "npm run precopy && cp -r ../content/www/blog ./blog-content/",
-    "build:all": "npm run build && cp main.ts dist",
-    "build:server": "cp main.ts dist"
+    "content": "cp -r ../content/www/ ./src/content/",
+    "clean": "rm -rf ./src/content/"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^0.2.1",
-    "@astrojs/vue": "^0.1.4",
     "astro": "^1.0.0-beta.29",
     "vue": "^3.2.33"
   },
   "dependencies": {
-    "@astrojs/deno": "^0.1.5",
-    "@astrojs/netlify": "^0.4.0"
+    "@types/node": "^17.0.42"
   }
 }
