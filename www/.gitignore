@@ -22,3 +22,4 @@ pnpm-debug.log*
 
 # deepgram content
 src/content
+public/uploads

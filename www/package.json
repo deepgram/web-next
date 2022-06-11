@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "content": "cp -r ../content/www/ ./src/content/",
-    "clean": "rm -rf ./src/content/"
+    "media": "cp -r ../media/ ./public/uploads/",
+    "clean": "rm -rf ./src/content/ && rm -rf ./public/uploads"
   },
   "devDependencies": {
     "astro": "^1.0.0-beta.29",

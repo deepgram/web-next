@@ -14,3 +14,5 @@ seo:
 ---
 
 demo post is from shared content
+
+![Go on!](./go-on.png)
