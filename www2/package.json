@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "prebuild": "yarn content && yarn media",
+    "build": "nuxt build",
+    "predev": "yarn clean && yarn content && yarn media",
+    "dev": "nuxt dev",
+    "pregenerate": "yarn content && yarn media",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "clean": "rm -rf ./content/ && rm -rf ./public/uploads",
+    "content": "cp -r ../content/www/ ./content/",
+    "media": "cp -r ../media/ ./public/uploads/"
+  },
+  "devDependencies": {
+    "@nuxt/content": "npm:@nuxt/content-edge@latest",
+    "nuxt": "^3.0.0-rc.3"
+  }
+}
