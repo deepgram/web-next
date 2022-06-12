@@ -7,7 +7,7 @@ const globalPanel = function () {
       "astro:config:setup": ({ injectScript }) => {
         injectScript(
           "page-ssr",
-          'import Panel from "./src/components/layout/Panel.astro"; global.Panel = Panel;'
+          'import Panel from "../src/components/layout/Panel.astro"; global.Panel = Panel;'
         );
       },
     },
