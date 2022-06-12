@@ -1,0 +1,31 @@
+---
+import path from "path";
+import Panel from "../components/layout/Panel.astro"
+
+export async function getStaticPaths() {
+  const allPages = await Astro.glob('../content/pages/*.md');
+
+  return allPages.map((page) => {
+		const fileInfo = path.parse(page.file);
+		let slug;
+
+		if (fileInfo.name !== 'index') {
+			slug = `${fileInfo.name}`
+		}
+
+    return {
+      params: {
+        slug
+      },
+      props: {
+        page
+      }
+    }
+  })
+
+}
+
+const { page } = Astro.props;
+const { slug } = Astro.params;
+---
+<page.Content />

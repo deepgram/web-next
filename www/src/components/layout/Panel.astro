@@ -1,0 +1,15 @@
+---
+// Example: Panel.astro
+// Usage: <Panel greeting="Howdy" name="Partner" />
+const { align, text, image } = Astro.props
+---
+
+<section>
+  {align === 'left' && (
+    <img src={image} />
+  )}
+  <p>{text}</p>
+  {align !== 'left' && (
+    <img src={image} />
+  )}
+</section>
