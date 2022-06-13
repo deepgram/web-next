@@ -10,7 +10,7 @@
     "preview": "nuxt preview",
     "clean": "rm -rf ./content/ && rm -rf ./public/uploads",
     "content": "cp -r ../content/www/ ./content/",
-    "media": "cp -r ../uploads/ ./public/uploads/"
+    "media": "cp -r ../media/ ./public/uploads/"
   },
   "devDependencies": {
     "@nuxt/content": "npm:@nuxt/content-edge@latest",
