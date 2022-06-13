@@ -4,8 +4,12 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "uploads"
-public_folder: "/uploads"
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: deepgram
+    api_key: 144739743837772
+    # https://www.netlifycms.org/docs/cloudinary/#security-considerations
 
 collections:
   - name: "blog"
