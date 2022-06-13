@@ -3,14 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "predev": "yarn clean && yarn content && yarn media",
+    "predev": "yarn clean && yarn content",
     "dev": "astro dev --experimental-integrations",
-    "prebuild": "yarn content && yarn media",
+    "prebuild": "yarn content",
     "build": "astro build --experimental-integrations",
     "preview": "astro preview",
-    "clean": "rm -rf ./src/content/ && rm -rf ./public/uploads",
-    "content": "cp -r ../content/www/ ./src/content/",
-    "media": "cp -r ../media/ ./public/uploads/"
+    "clean": "rm -rf ./src/content/",
+    "content": "cp -r ../content/www/ ./src/content/"
   },
   "devDependencies": {
     "astro": "^1.0.0-beta.29",
