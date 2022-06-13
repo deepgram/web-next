@@ -1,6 +1,6 @@
 <template>
   <main>
     <NuxtLink to="/">home</NuxtLink>
-    <ContentDoc />
+    <ContentDoc path="pages" />
   </main>
 </template>
