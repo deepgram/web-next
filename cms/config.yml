@@ -4,19 +4,28 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "media"
+media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/www/blog" # The path to the folder where the documents are stored
-    path: "{{year}}/{{month}}/{{slug}}/index"
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "blog"
+    label: "Blog"
+    folder: "content/www/blog"
+    path: "{{year}}/{{month}}/{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "pages"
+    label: "Pages"
+    folder: "content/www/pages"
+    path: "{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
