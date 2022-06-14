@@ -136,6 +136,12 @@ collections:
       - label: Title
         name: jobtitle
         widget: string
+      - label: Pronouns
+        name: pronouns
+        widget: string
+      - label: Bio
+        name: bio
+        widget: markdown
       - label: Picture
         name: picture
         widget: image
