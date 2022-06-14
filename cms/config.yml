@@ -24,7 +24,7 @@ collections:
         name: title
         widget: string
       - label: Description
-        name: title
+        name: description
         widget: string
       - label: "Publish Date"
         name: date
@@ -63,6 +63,12 @@ collections:
         widget: object
         collapsed: true
         fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: string
           - label: Keywords
             name: keywords
             widget: list
@@ -94,6 +100,9 @@ collections:
       - label: Title
         name: title
         widget: string
+      - label: Description
+        name: description
+        widget: string
       - label: Body
         name: body
         widget: markdown
@@ -102,6 +111,15 @@ collections:
         widget: object
         collapsed: true
         fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: string
+          - label: Keywords
+            name: keywords
+            widget: list
           - label: Keywords
             name: keywords
             widget: list
