@@ -13,7 +13,8 @@ media_library:
 
 collections:
   - name: blog
-    label: Blog
+    label: "Blog Posts"
+    label_singular: Blog
     folder: "content/www/blog"
     path: "{{year}}/{{month}}/{{slug}}"
     create: true
@@ -34,11 +35,15 @@ collections:
         display_fields: ["{{title}} - {{jobtitle}}"]
         value_field: "{{slug}}"
   - name: pages
-    label: Pages
+    label: "Marketing Pages"
+    label_singular: Page
     folder: "content/www/pages"
     path: "{{slug}}"
     create: true
     slug: "{{slug}}"
+    nested:
+      depth: 3
+      summary: "{{title}}"
     fields:
       - label: Title
         name: title
@@ -47,7 +52,8 @@ collections:
         name: body
         widget: markdown
   - name: authors
-    label: Authors
+    label: "Authors"
+    label_singular: Author
     folder: "content/www/blog/authors"
     path: "{{slug}}"
     create: true
