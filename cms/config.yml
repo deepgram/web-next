@@ -41,9 +41,6 @@ collections:
     path: "{{slug}}"
     create: true
     slug: "{{slug}}"
-    nested:
-      depth: 3
-      summary: "{{title}}"
     fields:
       - label: Title
         name: title
