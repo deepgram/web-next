@@ -55,10 +55,10 @@ collections:
     format: json
     fields:
       - label: Name
-        name: name
+        name: title
         widget: string
       - label: Title
-        name: title
+        name: jobtitle
         widget: string
       - label: Picture
         name: picture
