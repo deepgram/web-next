@@ -120,9 +120,6 @@ collections:
           - label: Keywords
             name: keywords
             widget: list
-          - label: Keywords
-            name: keywords
-            widget: list
   - name: authors
     label: "Authors"
     label_singular: Author
