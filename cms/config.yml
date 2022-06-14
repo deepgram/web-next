@@ -25,13 +25,13 @@ collections:
       - label: Body
         name: body
         widget: markdown
-      - label: "Post Author"
-        name: "author"
+      - label: "Post Authors"
+        name: "authors"
         multiple: true
         widget: relation
         collection: authors
-        search_fields: ["name"]
-        display_fields: ["name"]
+        search_fields: ["title"]
+        display_fields: ["{{title}} - {{jobtitle}}"]
         value_field: "{{slug}}"
   - name: pages
     label: Pages
