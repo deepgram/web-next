@@ -91,6 +91,7 @@ collections:
             widget: image
   - name: pages
     label: "Marketing Pages"
+    summary: "({{filename}}) {{title}}"
     label_singular: Page
     folder: "content/www/pages"
     path: "{{slug}}"
