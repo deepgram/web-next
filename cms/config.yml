@@ -97,6 +97,14 @@ collections:
       - label: Body
         name: body
         widget: markdown
+      - label: SEO
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Keywords
+            name: keywords
+            widget: list
   - name: authors
     label: "Authors"
     label_singular: Author
