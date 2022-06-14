@@ -23,17 +23,66 @@ collections:
       - label: Title
         name: title
         widget: string
-      - label: Body
-        name: body
-        widget: markdown
+      - label: Description
+        name: title
+        widget: string
+      - label: "Publish Date"
+        name: date
+        widget: datetime
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: true
+      - label: "Cover Image"
+        name: cover
+        widget: image
       - label: "Post Authors"
-        name: "authors"
+        name: authors
         multiple: true
         widget: relation
         collection: authors
         search_fields: ["title"]
         display_fields: ["{{title}} - {{jobtitle}}"]
         value_field: "{{slug}}"
+      - label: Category
+        name: category
+        widget: relation
+        collection: category
+        search_fields: ["title"]
+        display_fields: ["title"]
+        value_field: "{{slug}}"
+      - label: Tags
+        name: tags
+        widget: list
+        max: 3
+        min: 1
+      - label: Body
+        name: body
+        widget: markdown
+      - label: SEO
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Keywords
+            name: keywords
+            widget: list
+          - label: "Canonical URL"
+            name: canonical
+            widget: string
+      - label: OpenGraph
+        name: og
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: string
+          - label: Image
+            name: image
+            widget: image
   - name: pages
     label: "Marketing Pages"
     label_singular: Page
@@ -66,3 +115,15 @@ collections:
       - label: Picture
         name: picture
         widget: image
+  - name: category
+    label: "Categories"
+    label_singular: Category
+    folder: "content/www/blog/category"
+    path: "{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    format: json
+    fields:
+      - label: Name
+        name: title
+        widget: string
