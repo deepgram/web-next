@@ -10,15 +10,15 @@
 defineProps({
   align: {
     type: String,
-    default: "left",
+    required: true,
   },
   text: {
     type: String,
-    default: "",
+    required: true,
   },
   image: {
     type: String,
-    default: "",
+    required: true,
   },
 });
 </script>
