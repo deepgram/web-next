@@ -24,6 +24,5 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { slug } = Astro.params;
 ---
-<a href="/">home</a>
-<p>{post.frontmatter.date}</p>
+
 <post.Content />
