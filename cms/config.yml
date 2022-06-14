@@ -12,21 +12,54 @@ media_library:
     # https://www.netlifycms.org/docs/cloudinary/#security-considerations
 
 collections:
-  - name: "blog"
-    label: "Blog"
+  - name: blog
+    label: Blog
     folder: "content/www/blog"
     path: "{{year}}/{{month}}/{{slug}}"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-  - name: "pages"
-    label: "Pages"
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+      - label: "Post Author"
+        name: "author"
+        multiple: true
+        widget: relation
+        collection: authors
+        search_fields: ["name"]
+        display_fields: ["name"]
+        value_field: "{{slug}}"
+  - name: pages
+    label: Pages
     folder: "content/www/pages"
     path: "{{slug}}"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
+  - name: authors
+    label: Authors
+    folder: "content/www/blog/authors"
+    path: "{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    format: json
+    fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Picture
+        name: picture
+        widget: image
