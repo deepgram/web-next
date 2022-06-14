@@ -1,7 +1,9 @@
 <template>
   <section>
     <img v-if="align === 'left'" :src="image" />
-    <p>{{ text }}</p>
+    <p>
+      {{ text }}
+    </p>
     <img v-if="align === 'right'" :src="image" />
   </section>
 </template>
