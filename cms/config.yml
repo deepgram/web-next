@@ -51,6 +51,7 @@ collections:
       - label: Body
         name: body
         widget: markdown
+    meta: { path: { widget: string, label: "Path", index_file: "index" } }
   - name: authors
     label: "Authors"
     label_singular: Author
