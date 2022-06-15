@@ -1,16 +1,20 @@
 ---
 import path from "path";
 
-
 export async function getStaticPaths() {
-  const allPages = await Astro.glob('../content/pages/*.md');
+  const cwd = process.cwd();
+  const contentPath = `${cwd}/src/content/pages`
+
+  const allPages = await Astro.glob(`/src/content/pages/**/*.md`);
 
   return allPages.map((page) => {
 		const fileInfo = path.parse(page.file);
+    const uri = fileInfo.dir.replace(contentPath,'').replace(/^\//,'')
 		let slug;
 
-		if (fileInfo.name !== 'index') {
-			slug = `${fileInfo.name}`
+    // slug can be a string (url path) or undefined, but NOT a blank string
+		if (uri !== '') {
+			slug = uri
 		}
 
     return {
