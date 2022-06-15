@@ -1,0 +1,55 @@
+---
+// Example: TwoColumns.astro
+/**
+ * Usage: 
+ * <TwoColumns layout="two-thirds-left">
+ *   <div slot="left">Arbitrary stuff</div>
+ *   <div slot="right">Other arbitrary stuff</div>
+ * </TwoColumns>
+ */
+interface Props {
+  layout: "two-thirds-left" | "two-thirds-right" | "split";
+}
+
+const { layout } = Astro.props as Props;
+const layoutMap = {
+  "two-thirds-left": {
+    left: '66.666%',
+    right: '33.333%',
+  },
+  "two-thirds-right": {
+    left: '33.333%',
+    right: '66.666%',
+  },
+  split: {
+    left: '50%',
+    right: '50%',
+  }
+}
+
+const leftBasis = layoutMap[layout].left
+const rightBasis = layoutMap[layout].right
+---
+
+<style define:vars={{ rightBasis, leftBasis }}>
+  * { outline: 1px solid red; }
+  .columns {
+    display: flex;
+  }
+  .left-column {
+    flex-basis: var(--leftBasis);
+  }
+  .right-column {
+    flex-basis: var(--rightBasis);
+  }
+</style>
+
+
+<section class="columns">
+  <div class="left-column">
+    <slot name="left"/>
+  </div>
+  <div class="right-column">
+    <slot name="right"/>
+  </div>
+</section>
