@@ -1,6 +1,7 @@
 ---
 title: Demopost
 date: 2022-06-12T14:09:44.129Z
+layout: ./src/layouts/BlogLayout.astro
 ---
 
 demo post is from shared content

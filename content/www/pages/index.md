@@ -1,5 +1,6 @@
 ---
 title: Deepgram - Automated Speech Recognition (ASR)
+layout: ./src/layouts/PageLayout.astro
 ---
 
 test index
