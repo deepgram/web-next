@@ -9,51 +9,58 @@
   </head>
   <body>
     <!-- Include the script that builds the page and powers Netlify CMS -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script src="https://unpkg.com/@netlify/netlify-cms-widget-parent@^1.0.0/dist/netlify-cms-widget-parent.js"></script>
-
+    <script src="https://unpkg.com/netlify-cms-widget-nested-select@^1.0.0"></script>
     <script>
       const parentWidget = window.NetlifyCmsWidgetParent;
       CMS.registerWidget("parent", parentWidget.control, parentWidget.preview);
 
+      CMS.registerWidget(
+        "nested-select",
+        NestedSelectControl,
+        NestedSelectPreview
+      );
+
       // YouTube custom editor component.
-      CMS.registerEditorComponent({
-        // Internal id of the component
-        id: "panel",
-        // Visible label
-        label: "Asymmetric Panel",
-        // Fields the user need to fill out when adding an instance of the component
-        fields: [
-          {
-            name: "align",
-            label: "Alignment",
-            widget: "select",
-            options: ["left", "right"],
-          },
-          { name: "text", label: "Text", widget: "string" },
-          { name: "image", label: "Image", widget: "image" },
-        ],
-        // Pattern to identify a block as being an instance of this component
-        pattern:
-          /<Panel align=\"(\S+)\" text=\"(.+)\" image=\"(\S+)\"><\/Panel>/,
-        // Function to extract data elements from the regexp match
-        fromBlock: function (match) {
-          return {
-            align: match[1],
-            text: match[2],
-            image: match[3],
-          };
-        },
-        // Function to create a text block from an instance of this component
-        toBlock: function (obj) {
-          return `<Panel align="${obj.align}" text="${obj.text}" image="${obj.image}"></Panel>`;
-        },
-        // Preview output for this component. Can either be a string or a React component
-        // (component gives better render performance)
-        toPreview: function (obj) {
-          return `<div><img src="${obj.image}" />${obj.text}</div>`;
-        },
-      });
+      // CMS.registerEditorComponent({
+      //   // Internal id of the component
+      //   id: "panel",
+      //   // Visible label
+      //   label: "Asymmetric Panel",
+      //   // Fields the user need to fill out when adding an instance of the component
+      //   fields: [
+      //     {
+      //       name: "align",
+      //       label: "Alignment",
+      //       widget: "select",
+      //       options: ["left", "right"],
+      //     },
+      //     { name: "text", label: "Text", widget: "string" },
+      //     { name: "image", label: "Image", widget: "image" },
+      //   ],
+      //   // Pattern to identify a block as being an instance of this component
+      //   pattern:
+      //     /<Panel align=\"(\S+)\" text=\"(.+)\" image=\"(\S+)\"><\/Panel>/,
+      //   // Function to extract data elements from the regexp match
+      //   fromBlock: function (match) {
+      //     return {
+      //       align: match[1],
+      //       text: match[2],
+      //       image: match[3],
+      //     };
+      //   },
+      //   // Function to create a text block from an instance of this component
+      //   toBlock: function (obj) {
+      //     return `<Panel align="${obj.align}" text="${obj.text}" image="${obj.image}"></Panel>`;
+      //   },
+      //   // Preview output for this component. Can either be a string or a React component
+      //   // (component gives better render performance)
+      //   toPreview: function (obj) {
+      //     return `<div><img src="${obj.image}" />${obj.text}</div>`;
+      //   },
+      // });
 
       CMS.registerEditorComponent({
         id: "two-columns",
@@ -63,13 +70,14 @@
             name: "layout",
             label: "Layout",
             widget: "select",
-            options: ["two-thirds-left" | "two-thirds-right" | "split"],
+            options: ["two-thirds-left", "two-thirds-right", "split"],
+            default: "two-thirds-left",
           },
           { name: "left", label: "Left", widget: "markdown" },
           { name: "right", label: "Right", widget: "markdown" },
         ],
         pattern:
-          /<TwoColumns.*layout="(.*)">(?:\r\n|[\r\n])?(?:\s+)?<div slot="left">(.*)<\/div>(?:\r\n|[\r\n])?(?:\s+)?<div slot="right">(.*)<\/div>(?:\r\n|[\r\n])?(?:\s+)?<\/TwoColumns>/,
+          /<TwoColumns.*layout="(.*)">(?:\r\n|[\r\n])?(?:\s+)?<div slot="left">([\S\s]*?)<\/div>(?:\r\n|[\r\n])?(?:\s+)?<div slot="right">([\S\s]*?)<\/div>(?:\r\n|[\r\n])?(?:\s+)?<\/TwoColumns>/,
         fromBlock: function (match) {
           return {
             layout: match[1],
@@ -104,10 +112,10 @@
 
           return `<section style="display:flex">
   <div style="flex-basis: ${leftBasis}">
-    ${obj.left}
+    ${marked.parse(obj.left)}
   </div>
   <div style="flex-basis: ${rightBasis}">
-    ${obj.right}
+    ${marked.parse(obj.right)}
   </div>
 </section>`;
         },
