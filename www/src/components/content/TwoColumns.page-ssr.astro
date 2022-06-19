@@ -26,30 +26,13 @@ const layoutMap = {
     right: '50%',
   }
 }
-
-const leftBasis = layoutMap[layout].left
-const rightBasis = layoutMap[layout].right
 ---
 
-<style define:vars={{ rightBasis, leftBasis }}>
-  * { outline: 1px solid red; }
-  .columns {
-    display: flex;
-  }
-  .left-column {
-    flex-basis: var(--leftBasis);
-  }
-  .right-column {
-    flex-basis: var(--rightBasis);
-  }
-</style>
-
-
-<section class="columns">
-  <div class="left-column">
+<section style="display: flex;">
+  <div style={`flex-basis: ${layoutMap[layout].left}`}>
     <slot name="left"/>
   </div>
-  <div class="right-column">
+  <div style={`flex-basis: ${layoutMap[layout].right}`}>
     <slot name="right"/>
   </div>
 </section>
