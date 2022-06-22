@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: deepgram/web-next
+  name: git-gateway
   branch: main
 
 publish_mode: editorial_workflow
