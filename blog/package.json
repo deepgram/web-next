@@ -1,0 +1,22 @@
+{
+  "name": "@deepgram-web/blog",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "predev": "yarn clean && yarn link-content",
+    "dev": "astro dev --experimental-integrations",
+    "prebuild": "yarn build-content",
+    "build": "astro build --experimental-integrations",
+    "preview": "astro preview",
+    "clean": "rm -rf ./src/content",
+    "build-content": "cp -r ../content/blog/ ./src/content/",
+    "link-content": "ln -s ../../content/blog/ ./src/content"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^0.2.1",
+    "@types/node": "^17.0.42",
+    "astro": "^1.0.0-beta.29",
+    "glob": "^8.0.3",
+    "vue": "^3.2.33"
+  }
+}

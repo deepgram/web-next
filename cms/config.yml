@@ -17,7 +17,7 @@ collections:
   - name: blog
     label: "Blog Posts"
     label_singular: Blog
-    folder: "content/www/blog"
+    folder: "content/blog"
     path: "{{year}}/{{month}}/{{slug}}"
     create: true
     slug: "{{slug}}"
@@ -148,7 +148,7 @@ collections:
   - name: authors
     label: "Authors"
     label_singular: Author
-    folder: "content/www/blog/authors"
+    folder: "content/blog/authors"
     path: "{{slug}}"
     create: true
     slug: "{{slug}}"
@@ -172,7 +172,7 @@ collections:
   - name: category
     label: "Categories"
     label_singular: Category
-    folder: "content/www/blog/category"
+    folder: "content/blog/category"
     path: "{{slug}}"
     create: true
     slug: "{{slug}}"
