@@ -1,9 +1,10 @@
 ---
+import Promo from '../../../../../core-components/components/promo/Promo.astro';
 const { strap, title, body, primaryCta, secondaryCta, tertiaryCta } = Astro.props
 ---
 
 <section class="hero">
-  <span>{strap}</span>
+  <Promo>See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊</Promo>
   <h1>{title}</h1>
   <p>{body}</p>
   <p>{primaryCta}</p>

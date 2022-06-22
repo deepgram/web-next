@@ -1,13 +1,14 @@
 ---
+import HeroCentered from "./hero/HeroCentered.astro";
 const { strap, title, body, primaryCta, secondaryCta, tertiaryCta } = Astro.props
 ---
 
 <section class="hero">
-  HERO CENTERED
-  <span>{strap}</span>
+  <HeroCentered/>
+  <!-- <span>{strap}</span>
   <h1>{title}</h1>
   <p>{body}</p>
   <p>{primaryCta}</p>
   <p>{secondaryCta}</p>
-  <p>{tertiaryCta}</p>
+  <p>{tertiaryCta}</p> -->
 </section>
