@@ -1,0 +1,22 @@
+---
+export interface Props extends Record<any, any> {
+	variant?: string;
+}
+
+const { twClasses, ...props } = {
+	...Astro.props,
+} as Props;
+props.variant = twClasses || null;
+---
+
+<div class="dg-promo" {...props}><slot /></div>
+
+<style>
+	.dg-promo {
+    background-image:linear-gradient(to left, #38EDAC 20.31%,#9EA9FF 52.6%,#FE5C5C 81.77%);
+    @apply w-fit;
+    @apply px-2;
+    @apply font-bold;
+    @apply leading-5;
+  }
+</style>
