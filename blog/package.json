@@ -1,5 +1,5 @@
 {
-  "name": "@deepgram-web/www",
+  "name": "@deepgram-web/blog",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,8 +9,8 @@
     "build": "astro build --experimental-integrations",
     "preview": "astro preview",
     "clean": "rm -rf ./src/content",
-    "build-content": "cp -r ../content/www/ ./src/content/",
-    "link-content": "ln -s ../../content/www/ ./src/content"
+    "build-content": "cp -r ../content/blog/ ./src/content/",
+    "link-content": "ln -s ../../content/blog/ ./src/content"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.1",
