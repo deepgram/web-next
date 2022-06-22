@@ -1,0 +1,28 @@
+---
+export async function getStaticPaths() {
+	const allPosts = await Astro.glob('../../../../content/blog/**/*.md');
+	const sortedPosts = allPosts.sort((a, b) => 
+		(new Date(b.frontmatter.date)).getTime() - (new Date(a.frontmatter.date)).getTime()
+	);
+
+	return sortedPosts.map((post) => {
+		const regex = /^\/\S+\/(?<year>\d{4})\/(?<month>\d{2})\/(?<slug>\S+)\.\S+$/
+		const matches = post.file.match(regex)
+		const { groups: { year, month, slug } } = matches
+
+		return {
+			params: {
+				year, month, slug
+			},
+			props: {
+				post
+			}
+		}
+	})
+}
+
+const { post } = Astro.props;
+const { slug } = Astro.params;
+---
+
+<post.Content />
