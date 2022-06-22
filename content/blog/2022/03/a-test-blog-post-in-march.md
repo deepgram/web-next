@@ -24,9 +24,8 @@ og:
   description: opengraph specific description (if different)
   title: maybe a separate OG title as well
 ---
-
 blah blah blah
 
-![stuff](https://res.cloudinary.com/deepgram/image/upload/v1637245985/sample.jpg "blah")
+![stuff](https://res.cloudinary.com/deepgram/image/upload/v1637245985/sample.jpg "yada yada")
 
 blah blah blah blah blah
