@@ -1,6 +1,8 @@
 ---
 import Promo from '../../../../../core-components/components/promo/Promo.astro';
+import Button from '../../../../../core-components/components/button/Button.astro';
 const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, page } = Astro.props
+
 ---
 
 {page === 'home' ? 
@@ -12,6 +14,10 @@ const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, page } = Astr
   <p>{primaryCta}</p>
   <p>{secondaryCta}</p>
   <p>{tertiaryCta}</p>
+  <div class="flex">
+    <Button>Start Building</Button>
+    <Button>Contact Sales</Button>
+  </div>
 </section>
 
 : null
@@ -20,12 +26,13 @@ const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, page } = Astr
 
 <style>
   .hero {
+    @apply flex flex-col items-center;
     @apply bg-black;
-
-    h1 {
-      @apply bg-white;
-    }
   }
+
+  h1 {
+      @apply text-white;
+    }
 
 
 </style>
