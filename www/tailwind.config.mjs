@@ -69,5 +69,5 @@ export default {
       },
     },
   },
-  plugins: ["postcss-import"],
+  plugins: [],
 };
