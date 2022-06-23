@@ -20,6 +20,7 @@
     "vue": "^3.2.33"
   },
   "dependencies": {
-    "@astrojs/vue": "^0.1.5"
+    "@astrojs/vue": "^0.1.5",
+    "postcss-import": "^14.1.0"
   }
 }
