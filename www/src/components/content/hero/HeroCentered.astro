@@ -7,14 +7,14 @@ const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, page } = Astr
 
 {page === 'home' ? 
 
-<section class="hero">
+<section class="hero flex flex-col items-center">
   <Promo>{promo}</Promo>
   <h1>{title}</h1>
   <p>{body}</p>
   <p>{primaryCta}</p>
   <p>{secondaryCta}</p>
   <p>{tertiaryCta}</p>
-  <div class="flex">
+  <div class="flex justify-center space-x-7 w-screen">
     <Button>Start Building</Button>
     <Button>Contact Sales</Button>
   </div>
@@ -25,14 +25,12 @@ const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, page } = Astr
 }
 
 <style>
-  .hero {
-    @apply flex flex-col items-center;
-    @apply bg-black;
-  }
-
   h1 {
-      @apply text-white;
-    }
-
-
+    @apply text-6xl;
+    @apply w-7/12;
+    line-height: 70px;
+    @apply text-center;
+    @apply mt-10 mb-14;
+  }
 </style>
+
