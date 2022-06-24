@@ -12,7 +12,11 @@ props.type = type || 'button';
 props.variant = variant || null;
 ---
 
-<button class="dg-button" {...props}><slot /></button>
+<button class={`
+dg-button 
+${variant === 'small' ? "dg-button--small" : ""}
+${variant === 'big' ? "dg-button--big" : ""}
+`} {...props}><slot /></button>
 
 <style>
 	.dg-button {
@@ -25,7 +29,16 @@ props.variant = variant || null;
 		@apply whitespace-nowrap;
 		@apply bg-meadow;
 		@apply text-darkCharcoal;
-		height: 42px;
+		height: 3.25em;
     width: fit-content;
 	}
-</style>
+
+	.dg-button--small {
+		height: 2.375em;
+		@apply py-2 px-4;
+	}
+
+	.dg-button--big {
+		height: 4.125em;
+	}
+</style> 
