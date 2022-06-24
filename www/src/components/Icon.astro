@@ -6,8 +6,8 @@ export interface Props {
 }
 
 function getSVG(name: string) {
-  const filepath = `/src/assets/images/deepgram.svg`;
-  const files = import.meta.globEager<string>('/src/assets/images/deepgram.svg', {
+  const filepath = `/src/assets/svgs/${name}.svg`;
+  const files = import.meta.globEager<string>('/src/assets/svgs/*.svg', {
     as: 'raw',
   });
 
