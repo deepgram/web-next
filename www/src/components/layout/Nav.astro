@@ -2,16 +2,16 @@
 import Button from "../../../../core-components/components/button/Button.astro"
 ---
 
-<nav class="grow flex text-white">
-	<ul class="flex space-x-6 font-semibold">
-		<li><a href="/" class="px-4">Product</a></li>
-		<li><a href="/" class="px-4">Solutions</a></li>
-		<li><a href="/" class="px-4">Pricing</a></li>
-		<li><a href="/" class="px-4">Docs</a></li>
-		<li><a href="/" class="px-4">Blog</a></li>
-		<li><a href="/" class="px-4">About</a></li>
+<nav class="nav">
+	<ul>
+		<li><a href="/">Product</a></li>
+		<li><a href="/">Solutions</a></li>
+		<li><a href="/">Pricing</a></li>
+		<li><a href="/">Docs</a></li>
+		<li><a href="/">Blog</a></li>
+		<li><a href="/">About</a></li>
 	</ul>
-	<ul class="flex space-x-6 font-semibold ml-auto">
+	<ul class="ml-auto">
 		<li>
 			<a href="https://console.deepgram.com/" rel="noopener noreferrer">Log in</a>
 		</li>
@@ -20,3 +20,24 @@ import Button from "../../../../core-components/components/button/Button.astro"
 		</li>
 	</ul>
 </nav>
+
+<style>
+	.nav {
+		@apply grow flex text-white;
+	}
+
+	.nav ul {
+		@apply flex space-x-6 font-semibold;
+	}
+
+	.nav ul li a {
+		@apply flex justify-center items-center;
+		@apply font-bold;
+		@apply text-base;
+		@apply leading-4;
+		@apply py-2 px-4;
+		@apply whitespace-nowrap;
+		height: 2.375em;
+    width: fit-content;
+	}
+</style>
