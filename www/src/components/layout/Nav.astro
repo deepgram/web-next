@@ -2,18 +2,21 @@
 import Button from "../../../../core-components/components/button/Button.astro"
 ---
 
-<nav class="flex">
-  <ul class="flex">
-    <li>link</li>
-    <li>link</li>
-    <li>link</li>
-    <li>link</li>
-    <li>link</li>
-  </ul>
-  <ul class="flex ml-auto">
-    <li>search</li>
-    <li>contact us</li>
-    <li>sign up</li>
-    <Button>Sign Up</Button>
-  </ul>
+<nav class="grow flex text-white">
+	<ul class="flex space-x-6 font-semibold">
+		<li><a href="/" class="px-4">Product</a></li>
+		<li><a href="/" class="px-4">Solutions</a></li>
+		<li><a href="/" class="px-4">Pricing</a></li>
+		<li><a href="/" class="px-4">Docs</a></li>
+		<li><a href="/" class="px-4">Blog</a></li>
+		<li><a href="/" class="px-4">About</a></li>
+	</ul>
+	<ul class="flex space-x-6 font-semibold ml-auto">
+		<li>
+			<a href="https://console.deepgram.com/">Log in</a>
+		</li>
+		<li>
+			<Button variant="small">Sign Up</Button>
+		</li>
+	</ul>
 </nav>

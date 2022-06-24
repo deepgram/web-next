@@ -1,4 +1,37 @@
 ---
-import Deepgram from './deepgram.svg';
+import { parse } from 'node-html-parser';
+
+export interface Props {
+  icon: string;
+}
+
+function getSVG(name: string) {
+  const filepath = `/src/assets/images/deepgram.svg`;
+  const files = import.meta.globEager<string>('/src/assets/images/deepgram.svg', {
+    as: 'raw',
+  });
+
+  if (!(filepath in files)) {
+    throw new Error(`${filepath} not found`);
+  }
+
+  const root = parse(files[filepath]);
+
+  const svg = root.querySelector('svg');
+  const { attributes, innerHTML } = svg;
+
+  return {
+    attributes,
+    innerHTML,
+  };
+}
+
+const { icon, ...attributes } = Astro.props as Props;
+const { attributes: baseAttributes, innerHTML } = getSVG(icon);
+
+const svgAttributes = { ...baseAttributes, ...attributes };
 ---
-<a href="/"><img src={Deepgram} alt="Deepgram - Automated Speech Recognition (ASR)" /></a>
+<svg
+  {...svgAttributes}
+  set:html={innerHTML}
+></svg>
