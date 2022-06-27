@@ -52,6 +52,13 @@ const items = [
         </div>
         <div>Language select</div>
       </div>
+      <div class="transcription">
+        <div class="box-left">
+          Transcribe your voice in English or select another language.
+        </div>
+        <div class="box-right">Example Code</div>
+      </div>
+      BUTTON
     </div>
     <div v-else>
       <p>Transcribe real-world audio.</p>
@@ -63,8 +70,9 @@ const items = [
           v-model="pickedValue"
           @input="pickedValue = $event.target.value"
         />
-        <div class="code-sample">{{ pickedValue }}</div>
+        <div class="box-right">{{ pickedValue }}</div>
       </div>
+      BUTTON
     </div>
   </div>
 </template>
@@ -94,7 +102,8 @@ const items = [
   @apply w-3/6;
 }
 
-.code-sample {
+.box-left,
+.box-right {
   @apply border-white border-2 w-3/6;
 }
 </style>
