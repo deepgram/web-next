@@ -2,18 +2,62 @@
 import Button from "../../../../core-components/components/button/Button.astro"
 ---
 
-<nav class="flex">
-  <ul class="flex">
-    <li>link</li>
-    <li>link</li>
-    <li>link</li>
-    <li>link</li>
-    <li>link</li>
-  </ul>
-  <ul class="flex ml-auto">
-    <li>search</li>
-    <li>contact us</li>
-    <li>sign up</li>
-    <Button>Sign Up</Button>
-  </ul>
+<nav class="nav">
+	<ul class="main">
+		<li><a href="/">Product</a></li>
+		<li><a href="/">Solutions</a></li>
+		<li><a href="/">Pricing</a></li>
+		<li><a href="/">Docs</a></li>
+		<li><a href="/">Blog</a></li>
+		<li><a href="/">About</a></li>
+	</ul>
+	<ul class="side">
+		<li>
+			<a href="/" rel="noopener noreferrer">Se</a>
+		</li>
+		<li>
+			<a href="https://console.deepgram.com/" rel="noopener noreferrer">Log in</a>
+		</li>
+		<li>
+			<Button variant="small">Sign Up</Button>
+		</li>
+		<li>
+			<Button variant="small">Sign Up</Button>
+		</li>
+	</ul>
 </nav>
+
+<style>
+	.nav {
+		@apply grow flex text-white;
+	}
+
+	.nav ul {
+		@apply flex space-x-5;
+	}
+
+	.nav ul.main li a {
+		@apply flex justify-center items-center;
+		@apply font-bold;
+		@apply text-base;
+		@apply leading-4;
+		@apply py-2 px-4;
+		@apply whitespace-nowrap;
+		height: 2.375rem;
+    width: fit-content;
+	}
+
+	.nav ul.side {
+		@apply ml-auto;
+	}
+
+	.nav ul.side li a {
+		@apply flex justify-center items-center;
+		@apply font-bold;
+		@apply text-base;
+		@apply leading-4;
+		@apply whitespace-nowrap;
+		height: 2.375rem;
+    width: fit-content;
+	}
+</style>

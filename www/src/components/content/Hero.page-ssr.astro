@@ -1,10 +1,10 @@
 ---
 import HeroCentered from "./hero/HeroCentered.astro";
-const { strap, title, body, primaryCta, secondaryCta, tertiaryCta } = Astro.props
+const { promo, title, body, primaryCta, secondaryCta, tertiaryCta } = Astro.props
 ---
 
 <section class="hero">
-  <HeroCentered/>
+  <HeroCentered promo={promo} title={title} page="home"/>
   <!-- <span>{strap}</span>
   <h1>{title}</h1>
   <p>{body}</p>

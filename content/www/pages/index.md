@@ -3,7 +3,7 @@ title: Deepgram - Automated Speech Recognition (ASR)
 layout: ./src/layouts/PageLayout.astro
 ---
 
-<Hero/>
+<Hero promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world." page="home"/>
 <p>Really fast. Really accurate. 
 Give it a try.</p>
 <Demo/>

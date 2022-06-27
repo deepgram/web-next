@@ -1,13 +1,37 @@
 ---
 import Promo from '../../../../../core-components/components/promo/Promo.astro';
-const { strap, title, body, primaryCta, secondaryCta, tertiaryCta } = Astro.props
+import Button from '../../../../../core-components/components/button/Button.astro';
+const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, page } = Astro.props
+
 ---
 
-<section class="hero">
-  <Promo>See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊</Promo>
+{page === 'home' ? 
+
+<section class="hero flex flex-col items-center">
+  <Promo>{promo}</Promo>
   <h1>{title}</h1>
   <p>{body}</p>
   <p>{primaryCta}</p>
   <p>{secondaryCta}</p>
   <p>{tertiaryCta}</p>
+  <div class="flex justify-center space-x-7 w-screen">
+    <Button>Start Building</Button>
+    <Button>Contact Sales</Button>
+  </div>
 </section>
+
+: null
+
+}
+
+<style>
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply font-bold;
+    @apply w-7/12 xl:w-6/12;
+    @apply leading-9 sm:leading-15 md:leading-16 lg:leading-17;
+    @apply text-center;
+    @apply mt-10 mb-14;
+  }
+</style>
+
