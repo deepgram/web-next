@@ -29,56 +29,58 @@ const items = [
 </script>
 
 <template>
-  <div class="demo-transcription max-w-screen-2xl mx-auto">
-    <div class="flex">
-      <span class="left-label" :class="{ selected: !checkedValue }">{{
-        labelLeft
-      }}</span>
-      <Toggle
-        v-model="checkedValue"
-        @input="checkedValue = $event.target.checked"
-      />
-      <span class="right-label" :class="{ selected: checkedValue }">{{
-        labelRight
-      }}</span>
-    </div>
-    <div v-if="!checkedValue">
-      <p>Transcribe your voice in real-time.</p>
-      <p>Click the mic to give it a try.</p>
-      <div class="flex justify-between">
-        <div>
-          <button>microphone</button>
-          <button>dots</button>
-        </div>
-        <div>Language select</div>
-      </div>
-      <div class="transcription">
-        <div class="box-left">
-          Transcribe your voice in English or select another language.
-        </div>
-        <div class="box-right">Example Code</div>
-      </div>
-      BUTTON
-    </div>
-    <div v-else>
-      <p>Transcribe real-world audio.</p>
-      <p>See how Deepgram excels at tough, conversational audio files.</p>
-      <p>Select a file below.</p>
-      <div class="transcription">
-        <RadioDemo
-          :items="items"
-          v-model="pickedValue"
-          @input="pickedValue = $event.target.value"
+  <section class="demo-transcription w-full">
+    <div class="container max-w-screen-2xl mx-auto">
+      <div class="flex">
+        <span class="left-label" :class="{ selected: !checkedValue }">{{
+          labelLeft
+        }}</span>
+        <Toggle
+          v-model="checkedValue"
+          @input="checkedValue = $event.target.checked"
         />
-        <div class="box-right">{{ pickedValue }}</div>
+        <span class="right-label" :class="{ selected: checkedValue }">{{
+          labelRight
+        }}</span>
       </div>
-      BUTTON
+      <div v-if="!checkedValue">
+        <p>Transcribe your voice in real-time.</p>
+        <p>Click the mic to give it a try.</p>
+        <div class="flex justify-between">
+          <div>
+            <button>microphone</button>
+            <button>dots</button>
+          </div>
+          <div>Language select</div>
+        </div>
+        <div class="transcription">
+          <div class="box-left">
+            Transcribe your voice in English or select another language.
+          </div>
+          <div class="box-right">Example Code</div>
+        </div>
+        BUTTON
+      </div>
+      <div v-else>
+        <p>Transcribe real-world audio.</p>
+        <p>See how Deepgram excels at tough, conversational audio files.</p>
+        <p>Select a file below.</p>
+        <div class="transcription">
+          <RadioDemo
+            :items="items"
+            v-model="pickedValue"
+            @input="pickedValue = $event.target.value"
+          />
+          <div class="box-right">{{ pickedValue }}</div>
+        </div>
+        BUTTON
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style>
-.demo-transcription {
+.container {
   @apply flex flex-col;
   @apply w-8/12;
   /* TODO Change to a blur effect: */

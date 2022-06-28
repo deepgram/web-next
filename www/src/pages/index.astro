@@ -6,7 +6,7 @@ import DemoTranscription from "../components/content/demo/DemoTranscription.vue"
 
 ---
 <PageLayout>
-  <main class="w-screen max-w-screen-2xl mx-auto">
+  <main>
     <HeroCentered promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world."/>
     <PrimaryCallToAction/>
     <DemoTranscription client:load/>
@@ -15,6 +15,7 @@ import DemoTranscription from "../components/content/demo/DemoTranscription.vue"
 
 <style>
   main {
+    @apply w-screen max-w-screen-2xl mx-auto;
     @apply bg-black;
     @apply text-white;
     background: black no-repeat top right url('./fingerprint.svg');
