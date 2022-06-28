@@ -1,0 +1,27 @@
+---
+import { stat } from "fs";
+
+const stats = [{
+  stat:"120X faster",
+  detail:"Transcribe an hour of pre-recorded audio in 30 seconds."
+}, {
+  stat:"<300ms latency",
+  detail:"The fastest real-time transcription speeds for human-like conversational AI experiences, real-time analytics, and enablement."
+}, {
+  stat:"20+ languages",
+  detail:"Over 20 languages and dialects to choose from with more rapidly added regularly."
+}, {
+  stat:"100+ files supported",
+  detail:"Over 100 different audio formats and encodings supported including MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM."
+}]
+---
+<section class="stats w-full">
+  <div class=" flex flex-col items-center max-w-screen-2xl mx-auto">
+    <h2>Quality you can count on.</h2>
+    <div class="flex">
+    {stats.map((stat)=>{
+      return <div><h3>{stat.stat}</h3><div>{stat.detail}</div></div>
+    })}
+    </div>
+  </div>
+</section>

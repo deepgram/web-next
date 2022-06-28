@@ -3,7 +3,10 @@ import PageLayout from "../layouts/PageLayout.astro";
 import HeroCentered from "../components/content/hero/HeroCentered.astro";
 import PrimaryCallToAction from "../components/content/home/PrimaryCallToAction.astro";
 import DemoTranscription from "../components/content/demo/DemoTranscription.vue";
-import LogosDivider from "../components/content/home/LogosDivider.astro";
+import LogosDividerOne from "../components/content/home/LogosDividerOne.astro";
+import Stats from "../components/content/home/Stats.astro"
+import SecondaryCallToAction from "../components/content/home/SecondaryCallToAction.astro";
+import LogosDividerTwo from "../components/content/home/LogosDividerTwo.astro";
 
 const brands = ['brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand']
 ---
@@ -12,7 +15,10 @@ const brands = ['brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', '
     <HeroCentered promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world."/>
     <PrimaryCallToAction/>
     <DemoTranscription client:load/>
-    <LogosDivider brands={brands} cta="Trusted by the world’s most innovative brands."/>
+    <LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/>
+    <Stats/>
+    <SecondaryCallToAction/>
+    <LogosDividerTwo/>
   </main>
 </PageLayout>
 
