@@ -7,6 +7,7 @@ import LogosDividerOne from "../components/content/home/LogosDividerOne.astro";
 import Stats from "../components/content/home/Stats.astro"
 import SecondaryCallToAction from "../components/content/home/SecondaryCallToAction.astro";
 import LogosDividerTwo from "../components/content/home/LogosDividerTwo.astro";
+import Testimonial from "../components/content/home/Testimonial.astro";
 
 const brands = ['brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand']
 ---
@@ -19,14 +20,16 @@ const brands = ['brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', '
     <Stats/>
     <SecondaryCallToAction/>
     <LogosDividerTwo/>
+    <Testimonial quote="Deepgram is doing for speech what SpaceX did for space travel." name="Todd Fisher" role="Founder, Call Tracking Metrics"/>
   </main>
 </PageLayout>
 
 <style>
   main {
-    @apply w-screen max-w-screen-2xl mx-auto;
+    @apply w-full;
     @apply bg-black;
     @apply text-white;
-    background: black no-repeat top right url('./fingerprint.svg');
+    overflow-x: hidden;
+    background: black no-repeat top right -384px url('./fingerprint.svg');
   }
 </style>
