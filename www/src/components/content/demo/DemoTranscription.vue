@@ -29,7 +29,7 @@ const items = [
 </script>
 
 <template>
-  <div class="demo-transcription">
+  <div class="demo-transcription max-w-screen-2xl mx-auto">
     <div class="flex">
       <span class="left-label" :class="{ selected: !checkedValue }">{{
         labelLeft

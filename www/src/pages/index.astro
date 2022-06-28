@@ -6,23 +6,10 @@ import DemoTranscription from "../components/content/demo/DemoTranscription.vue"
 
 ---
 <PageLayout>
-  <main class="w-screen">
-    <div class="pl-40 pb-24 pt-12">
-      <svg width="43" height="43" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M27.1354 18.2544V1.84814H26.6146V18.2544C26.6146 22.8565 22.8833 26.5877 18.2812 26.5877H1.875V27.1086H18.2812C22.8833 27.1086 26.6146 30.8398 26.6146 35.4419V51.8482H27.1354V35.4419C27.1354 30.8398 30.8667 27.1086 35.4687 27.1086H51.875V26.5877H35.4687C30.8667 26.5877 27.1354 22.8565 27.1354 18.2544Z" fill="#38EDAC" stroke="#38EDAC" stroke-width="2"/>
-      </svg>
-    </div>
-    <HeroCentered promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world." page="home"/>
-    <div class="flex justify-end pr-44 pt-24 pb-12">
-      <svg width="21" height="21" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1143 0.559082V1.00929C21.1143 11.4783 29.6023 19.9663 40.0713 19.9663H40.5214V21.1512H40.0713C29.6023 21.1512 21.1143 29.6392 21.1143 40.1082V40.559H19.9295V40.1082C19.9295 29.6392 11.4414 21.1512 0.972406 21.1512H0.521484V19.9663H0.972406C11.4414 19.9663 19.9295 11.4783 19.9295 1.00929V0.559082H21.1143Z" fill="#FE5C5C"/>
-      </svg>
-    </div>
+  <main class="w-screen max-w-screen-2xl mx-auto">
+    <HeroCentered promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world."/>
     <PrimaryCallToAction/>
-    <div class="flex justify-center">
-      <DemoTranscription client:load/>
-    </div>
-    
+    <DemoTranscription client:load/>
   </main>
 </PageLayout>
 
