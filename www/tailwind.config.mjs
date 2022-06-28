@@ -3,13 +3,13 @@ export default {
   theme: {
     extend: {
       lineHeight: {
-        '11': '2.75rem',
-        '12': '3rem',
-        '13': '3.25rem',
-        '14': '3.5rem',
-        '15': '3.75rem',
-        '16': '4rem',
-        '17': '4.25rem',
+        11: "2.75rem",
+        12: "3rem",
+        13: "3.25rem",
+        14: "3.5rem",
+        15: "3.75rem",
+        16: "4rem",
+        17: "4.25rem",
       },
       colors: {
         transparent: "transparent",
@@ -36,6 +36,7 @@ export default {
         mist: "#F7F9FC",
         rock: "#354659",
         lightPurple: "#A8ACFF",
+        lightIris: "#96A2FF",
         storm: "#66788D",
         stone: "#758AA2",
         sunflower: "#FFD34B",
