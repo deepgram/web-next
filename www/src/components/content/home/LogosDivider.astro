@@ -1,0 +1,23 @@
+---
+import Brand from "../../Brand.astro"
+const { cta, brands } = Astro.props
+---
+
+<section class="logos-divider w-full">
+  <div class=" flex flex-col items-center max-w-screen-2xl mx-auto">
+    <p>{cta}</p>
+    <div class="flex logos">
+    {brands.map(brand=>{
+      return <div class="pr-10"><Brand class="w-36  text-storm" /></div>
+    })}
+    </div>
+  </div>
+</section>
+
+<style>
+
+  .logos {
+    width: 110%;
+    margin-left: -10%;
+  }
+</style>

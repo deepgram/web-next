@@ -3,13 +3,16 @@ import PageLayout from "../layouts/PageLayout.astro";
 import HeroCentered from "../components/content/hero/HeroCentered.astro";
 import PrimaryCallToAction from "../components/content/home/PrimaryCallToAction.astro";
 import DemoTranscription from "../components/content/demo/DemoTranscription.vue";
+import LogosDivider from "../components/content/home/LogosDivider.astro";
 
+const brands = ['brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand']
 ---
 <PageLayout>
   <main>
     <HeroCentered promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world."/>
     <PrimaryCallToAction/>
     <DemoTranscription client:load/>
+    <LogosDivider brands={brands} cta="Trusted by the world’s most innovative brands."/>
   </main>
 </PageLayout>
 

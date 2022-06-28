@@ -5,9 +5,15 @@ import Footer from '../components/layout/Footer.astro';
 <html>
   <head>
   </head>
-  <body class="bg-black text-white">
+  <body class="bg-black text-white ">
     <Header />
     <slot />
     <Footer />
   </body>
 </html>
+
+<style>
+  body {
+    overflow-x: hidden;
+  }
+</style>
