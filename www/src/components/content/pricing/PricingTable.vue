@@ -1,0 +1,287 @@
+<script setup>
+import { computed, ref } from "vue";
+import Toggle from "../../Toggle.vue";
+const pricingModels = {
+  baseModel: [
+    {
+      title: "Pay As You Go",
+      text: "No minimum, No expiration.",
+      preRecorded: 0.0125,
+      live: 0.0158,
+      cta: "Start for Free",
+      addons: 0.008,
+      extraAudio: 0.004,
+    },
+    {
+      title: "Starter",
+      text: "Pre-paid for the year, starting at:",
+      fee: 500,
+      preRecorded: 0.0108,
+      live: 0.0142,
+      cta: "Request Access",
+      addons: 0.008,
+      extraAudio: 0.004,
+    },
+    {
+      title: "Growth",
+      text: "Pre-paid for the year, starting at:",
+      fee: 2000,
+      preRecorded: 0.009,
+      live: 0.0125,
+      cta: "Request Access",
+      addons: 0.008,
+      extraAudio: 0.004,
+    },
+  ],
+  enhancedModel: [
+    {
+      title: "Pay As You Go",
+      text: "No minimum, No expiration.",
+      preRecorded: 0.0208,
+      live: 0.0265,
+      cta: "Start for Free",
+      addons: 0.008,
+      extraAudio: 0.004,
+    },
+    {
+      title: "Starter",
+      text: "Pre-paid for the year, starting at:",
+      fee: 500,
+      preRecorded: 0.0192,
+      live: 0.0248,
+      cta: "Request Access",
+      addons: 0.008,
+      extraAudio: 0.004,
+    },
+    {
+      title: "Growth",
+      text: "Pre-paid for the year, starting at:",
+      fee: 2000,
+      preRecorded: 0.0175,
+      live: 0.0232,
+      cta: "Request Access",
+      addons: 0.008,
+      extraAudio: 0.004,
+    },
+  ],
+};
+let checkedValue = ref(false);
+let checkedModel = computed(() => {
+  return checkedValue ? "enhancedModel" : "baseModel";
+});
+</script>
+
+<template class="bg-green">
+  <div id="pricing-section">
+    <h3>Pay ahead. Save money.</h3>
+    <Toggle
+      v-model="checkedValue"
+      @input="checkedValue = $event.target.checked"
+    />
+    <div class="plans">
+      <div class="plan all col-start-3">
+        <h4 class="plan-header">All plans include:</h4>
+        <ul>
+          <li>REST API & SDKs</li>
+          <li>Pre-recorded and live streaming transcription</li>
+          <li>
+            Access to all features (understanding features at addional cost as
+            noted)
+          </li>
+          <li>2 audio channels</li>
+          <li>20+ languages and dialects supported</li>
+          <li>7+ use-case models</li>
+          <li>Billing calculated per second transcribed</li>
+          <li>Basic support via email</li>
+        </ul>
+        <p>and more...</p>
+      </div>
+      <template v-for="(plan, key) in pricingModels">
+        <!-- {pricingModel[checkedValue].map((plan, index) => ( -->
+        <template v-if="key === checkedModel">
+          <div
+            v-for="(plan, index) in pricingModels[checkedModel]"
+            :key="`${key}-${index}`"
+            class="plan"
+            :class="`col-start-${index + 4}`"
+          >
+            <div class="plan-header">
+              <h4>{{ plan.title }}</h4>
+              <p class="plan-text">{{ plan.text }}</p>
+              <p v-if="plan.fee" class="plan-fee">{{ plan.fee }}</p>
+            </div>
+            <p><strong>Base Model</strong> transcription rates:</p>
+            <div class="flex items-center">
+              <img src="/images/pre-recorded-file.svg" />
+              <div>
+                <p>Pre-recorded transcription</p>
+                <p>
+                  <span class="text-3xl">${{ plan.preRecorded }}</span
+                  >/min
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <img src="/images/live-streaming.svg" />
+              <div>
+                <p>Live streaming transcription</p>
+                <p>
+                  <span class="text-3xl">${{ plan.live }}</span
+                  >/min
+                </p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="button"
+              :class="{
+                'bg-green-300': index === 0,
+                'bg-gray-300': index != 0,
+              }"
+              >{{ plan.cta }}</a
+            >
+            <div class="add-ons">
+              <h5>Plus access to add-ons:</h5>
+              <hr />
+              <div class="flex justify-between">
+                <p>
+                  Understanding
+                  <span class="text-xl">+ ${{ plan.addons }}</span
+                  >/min
+                </p>
+              </div>
+              <ul>
+                <li>Speaker Diarization</li>
+                <li>Redaction</li>
+                <li>Named Entity Recognition</li>
+              </ul>
+              <hr />
+              <div class="flex justify-between">
+                <p>
+                  Extra audio channels
+                  <span class="text-xl">+ ${{ plan.extraAudio }}</span
+                  >/min
+                </p>
+              </div>
+              <p class="text-sm">
+                Cost per additoinal channel over the 2 included channels
+              </p>
+            </div>
+          </div>
+        </template>
+      </template>
+
+      <!-- <template v-else>
+        <div
+          v-for="(plan, index) in pricingModels.enhancedModel"
+          :key="`enhancedModel-${index}`"
+          class="plan"
+          :class="`col-start-${index + 4}`"
+        >
+          <div class="plan-header">
+            <h4>{{ plan.title }}</h4>
+            <p class="plan-text">{{ plan.text }}</p>
+            <p v-if="plan.fee" class="plan-fee">{{ plan.fee }}</p>
+          </div>
+          <p><strong>Base Model</strong> transcription rates:</p>
+          <div class="flex items-center">
+            <img src="/images/pre-recorded-file.svg" />
+            <div>
+              <p>Pre-recorded transcription</p>
+              <p>
+                <span class="text-3xl">${{ plan.preRecorded }}</span
+                >/min
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <img src="/images/live-streaming.svg" />
+            <div>
+              <p>Live streaming transcription</p>
+              <p>
+                <span class="text-3xl">${{ plan.live }}</span
+                >/min
+              </p>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="button"
+            :class="{ 'bg-green-300': index === 0, 'bg-gray-300': index != 0 }"
+            >{{ plan.cta }}</a
+          >
+          <div class="add-ons">
+            <h5>Plus access to add-ons:</h5>
+            <hr />
+            <div class="flex justify-between">
+              <p>
+                Understanding
+                <span class="text-xl">+ ${{ plan.addons }}</span
+                >/min
+              </p>
+            </div>
+            <ul>
+              <li>Speaker Diarization</li>
+              <li>Redaction</li>
+              <li>Named Entity Recognition</li>
+            </ul>
+            <hr />
+            <div class="flex justify-between">
+              <p>
+                Extra audio channels
+                <span class="text-xl">+ ${{ plan.extraAudio }}</span
+                >/min
+              </p>
+            </div>
+            <p class="text-sm">
+              Cost per additoinal channel over the 2 included channels
+            </p>
+          </div>
+        </div>
+      </template> -->
+      <!-- ))} -->
+    </div>
+  </div>
+</template>
+
+<style scoped>
+#pricing-section {
+  @apply bg-white text-darkCharcoal text-center;
+  @apply m-auto pb-10;
+}
+h3 {
+  @apply text-4xl font-bold pt-5 pb-3;
+}
+
+.plans {
+  @apply m-auto grid grid-cols-6;
+}
+.plan {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  @apply bg-white col-span-1 col-start-auto mx-4 p-4;
+}
+.plan:nth-of-type(1) {
+  @apply col-start-2 p-3;
+  @apply bg-darkCharcoal text-white text-left;
+}
+
+.plan .plan-header {
+  @apply mb-7 mt-5;
+}
+.plan:nth-of-type(1) li {
+  list-style-image: url(/src/assets/icons/greencheck.svg);
+  @apply ml-7 mb-5;
+}
+
+.plan:nth-of-type(1) > p {
+  @apply ml-7;
+}
+
+.plan h4 {
+  @apply text-2xl font-bold text-center;
+}
+
+.plan.plan-text {
+  @apply text-sm;
+}
+</style>
