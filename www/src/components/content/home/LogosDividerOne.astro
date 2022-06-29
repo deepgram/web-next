@@ -4,17 +4,20 @@ const { cta, brands } = Astro.props
 ---
 
 <section class="logos-divider w-full">
-  <div class=" flex flex-col items-center max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto">
+  <div class="flex flex-col items-center">
     <p>{cta}</p>
-    <div class="flex logos">
+    <div class="flex logos space-x-10 items-center">
     {brands.map(brand=>{
-      return <div class="pr-10"><Brand class="w-36  text-storm" /></div>
+      return <Brand class="logo text-storm" />
     })}
     </div>
   </div>
 </section>
 
 <style>
+  .logo {
+    height: calc(100vw/50)
+  }
 
   .logos {
     width: 110%;
