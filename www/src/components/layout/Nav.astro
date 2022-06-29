@@ -1,5 +1,5 @@
 ---
-import Button from "../../../../core-components/components/button/Button.astro"
+import Icon from "../Icon.astro"
 ---
 
 <nav class="nav">
@@ -9,20 +9,23 @@ import Button from "../../../../core-components/components/button/Button.astro"
 		<li><a href="/pricing">Pricing</a></li>
 		<li><a href="/">Docs</a></li>
 		<li><a href="/">Blog</a></li>
-		<li><a href="/">About</a></li>
+		<!-- <li><a href="/">About</a></li> -->
 	</ul>
 	<ul class="side">
-		<li>
-			<a href="/" rel="noopener noreferrer">Se</a>
+		<li class="no-margin">
+			<a href="/search" rel="noopener noreferrer"><Icon icon="search" class="fill-current w-4" /></a>
 		</li>
-		<li>
+		<li class="no-margin">
 			<a href="https://console.deepgram.com/" rel="noopener noreferrer">Log in</a>
 		</li>
-		<li>
-			<Button variant="small">Sign Up</Button>
+		<li class="hidden lg:block">
+			<a href="https://console.deepgram.com/signup" rel="noopener noreferrer" class="button--secondary">Contact Us</a>
+		</li>
+		<li class="block lg:hidden">
+			<button class="button button--small button--secondary">Menu</button>
 		</li>
 		<li>
-			<Button variant="small">Sign Up</Button>
+			<a href="https://console.deepgram.com/signup" rel="noopener noreferrer" class="button--primary">Sign Up</a>
 		</li>
 	</ul>
 </nav>
@@ -33,31 +36,28 @@ import Button from "../../../../core-components/components/button/Button.astro"
 	}
 
 	.nav ul {
-		@apply flex space-x-5;
+		@apply flex;
 	}
 
-	.nav ul.main li a {
-		@apply flex justify-center items-center;
-		@apply font-bold;
-		@apply text-base;
-		@apply leading-4;
-		@apply py-2 px-4;
-		@apply whitespace-nowrap;
-		height: 2.375rem;
-    width: fit-content;
+	.nav ul.main {
+		@apply hidden lg:flex;
+	}
+
+	.nav ul li a {
+		@apply button button--small;
 	}
 
 	.nav ul.side {
 		@apply ml-auto;
 	}
 
-	.nav ul.side li a {
-		@apply flex justify-center items-center;
-		@apply font-bold;
-		@apply text-base;
-		@apply leading-4;
-		@apply whitespace-nowrap;
-		height: 2.375rem;
-    width: fit-content;
+	/* .nav ul li:not(:first-child) a {
+		@apply ml-5;
+	} */
+
+	.nav ul li:not(:last-child):not(.no-margin) button,
+	.nav ul li:not(:last-child):not(.no-margin) a {
+		@apply mr-4;
 	}
+
 </style>
