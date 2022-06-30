@@ -66,9 +66,6 @@ const pricingModels = {
   ],
 };
 let checkedValue = ref(false);
-let checkedModel = computed(() => {
-  return checkedValue ? "enhancedModel" : "baseModel";
-});
 </script>
 
 <template class="bg-green">
@@ -77,6 +74,7 @@ let checkedModel = computed(() => {
     <Toggle
       v-model="checkedValue"
       @input="checkedValue = $event.target.checked"
+      class="toggle"
     />
     <div class="plans">
       <div class="plan all col-start-3">
@@ -96,110 +94,36 @@ let checkedModel = computed(() => {
         </ul>
         <p>and more...</p>
       </div>
-      <template v-for="(plan, key) in pricingModels">
+      <template v-if="!checkedValue">
         <!-- {pricingModel[checkedValue].map((plan, index) => ( -->
-        <template v-if="key === checkedModel">
-          <div
-            v-for="(plan, index) in pricingModels[checkedModel]"
-            :key="`${key}-${index}`"
-            class="plan"
-            :class="`col-start-${index + 4}`"
-          >
-            <div class="plan-header">
-              <h4>{{ plan.title }}</h4>
-              <p class="plan-text">{{ plan.text }}</p>
-              <p v-if="plan.fee" class="plan-fee">{{ plan.fee }}</p>
-            </div>
-            <p><strong>Base Model</strong> transcription rates:</p>
-            <div class="flex items-center">
-              <img src="/images/pre-recorded-file.svg" />
-              <div>
-                <p>Pre-recorded transcription</p>
-                <p>
-                  <span class="text-3xl">${{ plan.preRecorded }}</span
-                  >/min
-                </p>
-              </div>
-            </div>
-            <div class="flex items-center">
-              <img src="/images/live-streaming.svg" />
-              <div>
-                <p>Live streaming transcription</p>
-                <p>
-                  <span class="text-3xl">${{ plan.live }}</span
-                  >/min
-                </p>
-              </div>
-            </div>
-            <a
-              href="#"
-              class="button"
-              :class="{
-                'bg-green-300': index === 0,
-                'bg-gray-300': index != 0,
-              }"
-              >{{ plan.cta }}</a
-            >
-            <div class="add-ons">
-              <h5>Plus access to add-ons:</h5>
-              <hr />
-              <div class="flex justify-between">
-                <p>
-                  Understanding
-                  <span class="text-xl">+ ${{ plan.addons }}</span
-                  >/min
-                </p>
-              </div>
-              <ul>
-                <li>Speaker Diarization</li>
-                <li>Redaction</li>
-                <li>Named Entity Recognition</li>
-              </ul>
-              <hr />
-              <div class="flex justify-between">
-                <p>
-                  Extra audio channels
-                  <span class="text-xl">+ ${{ plan.extraAudio }}</span
-                  >/min
-                </p>
-              </div>
-              <p class="text-sm">
-                Cost per additoinal channel over the 2 included channels
-              </p>
-            </div>
-          </div>
-        </template>
-      </template>
-
-      <!-- <template v-else>
         <div
-          v-for="(plan, index) in pricingModels.enhancedModel"
-          :key="`enhancedModel-${index}`"
+          v-for="(plan, index) in pricingModels.baseModel"
+          :key="`baseModel-${index}`"
           class="plan"
           :class="`col-start-${index + 4}`"
         >
           <div class="plan-header">
             <h4>{{ plan.title }}</h4>
             <p class="plan-text">{{ plan.text }}</p>
-            <p v-if="plan.fee" class="plan-fee">{{ plan.fee }}</p>
+            <p v-if="plan.fee" class="plan-fee"><sup>$</sup>{{ plan.fee }}</p>
           </div>
           <p><strong>Base Model</strong> transcription rates:</p>
-          <div class="flex items-center">
+          <div class="transcription">
             <img src="/images/pre-recorded-file.svg" />
             <div>
               <p>Pre-recorded transcription</p>
-              <p>
-                <span class="text-3xl">${{ plan.preRecorded }}</span
+              <p class="price-per-min">
+                <span class="number">${{ plan.preRecorded }}</span
                 >/min
               </p>
             </div>
           </div>
-          <div class="flex items-center">
+          <div class="transcription">
             <img src="/images/live-streaming.svg" />
             <div>
               <p>Live streaming transcription</p>
-              <p>
-                <span class="text-3xl">${{ plan.live }}</span
+              <p class="price-per-min">
+                <span class="number">${{ plan.live }}</span
                 >/min
               </p>
             </div>
@@ -238,7 +162,76 @@ let checkedModel = computed(() => {
             </p>
           </div>
         </div>
-      </template> -->
+      </template>
+
+      <template v-else>
+        <div
+          v-for="(plan, index) in pricingModels.enhancedModel"
+          :key="`enhancedModel-${index}`"
+          class="plan"
+          :class="`col-start-${index + 4}`"
+        >
+          <div class="plan-header">
+            <h4>{{ plan.title }}</h4>
+            <p class="plan-text">{{ plan.text }}</p>
+            <p v-if="plan.fee" class="plan-fee"><sup>$</sup>{{ plan.fee }}</p>
+          </div>
+          <p><strong>Base Model</strong> transcription rates:</p>
+          <div class="transcription">
+            <img src="/images/pre-recorded-file.svg" />
+            <div>
+              <p>Pre-recorded transcription</p>
+              <p class="price-per-min">
+                <span class="number">${{ plan.preRecorded }}</span
+                >/min
+              </p>
+            </div>
+          </div>
+          <div class="transcription">
+            <img src="/images/live-streaming.svg" />
+            <div>
+              <p>Live streaming transcription</p>
+              <p class="price-per-min">
+                <span class="number">${{ plan.live }}</span
+                >/min
+              </p>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="button"
+            :class="{ 'bg-green-300': index === 0, 'bg-gray-300': index != 0 }"
+            >{{ plan.cta }}</a
+          >
+          <div class="add-ons">
+            <h5>Plus access to add-ons:</h5>
+            <hr />
+            <div class="flex justify-between">
+              <p>
+                Understanding
+                <span class="text-xl">+ ${{ plan.addons }}</span
+                >/min
+              </p>
+            </div>
+            <ul>
+              <li>Speaker Diarization</li>
+              <li>Redaction</li>
+              <li>Named Entity Recognition</li>
+            </ul>
+            <hr />
+            <div class="flex justify-between">
+              <p>
+                Extra audio channels
+                <span class="text-xl">+ ${{ plan.extraAudio }}</span
+                >/min
+              </p>
+            </div>
+            <p class="text-sm">
+              Cost per additoinal channel over the 2 included channels
+            </p>
+          </div>
+        </div>
+      </template>
       <!-- ))} -->
     </div>
   </div>
@@ -246,15 +239,16 @@ let checkedModel = computed(() => {
 
 <style scoped>
 #pricing-section {
-  @apply bg-white text-darkCharcoal text-center;
+  @apply bg-white text-darkCharcoal;
   @apply m-auto pb-10;
 }
 h3 {
-  @apply text-4xl font-bold pt-5 pb-3;
+  @apply text-4xl font-bold pt-5 pb-3 text-center;
 }
 
 .plans {
-  @apply m-auto grid grid-cols-6;
+  @apply m-auto grid;
+  grid-template-columns: 1fr repeat(4, 275px) 1fr;
 }
 .plan {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
@@ -266,7 +260,15 @@ h3 {
 }
 
 .plan .plan-header {
-  @apply mb-7 mt-5;
+  @apply mb-7 mt-auto text-center;
+}
+
+.plan:nth-child(2) .plan-header {
+  @apply mt-5;
+}
+
+.plan .plan-header .plan-fee {
+  @apply text-3xl font-bold;
 }
 .plan:nth-of-type(1) li {
   list-style-image: url(/src/assets/icons/greencheck.svg);
@@ -277,11 +279,39 @@ h3 {
   @apply ml-7;
 }
 
+.plan p {
+  @apply text-sm my-2;
+}
+
 .plan h4 {
   @apply text-2xl font-bold text-center;
 }
 
-.plan.plan-text {
-  @apply text-sm;
+.plan .plan-text {
+  @apply text-sm my-1;
+}
+
+.plan hr {
+  @apply border-darkCharcoal;
+}
+
+.toggle {
+  @apply text-center mb-4;
+}
+
+.transcription {
+  @apply flex items-center;
+}
+
+.transcription p {
+  @apply text-xs ml-2;
+}
+
+.price-per-min {
+  @apply text-lg;
+}
+
+.price-per-min .number {
+  @apply text-2xl;
 }
 </style>

@@ -79,7 +79,7 @@ const items = [
   </section>
 </template>
 
-<style>
+<style scoped>
 .container {
   @apply flex flex-col;
   @apply w-8/12;
