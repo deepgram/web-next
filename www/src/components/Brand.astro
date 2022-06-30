@@ -2,12 +2,12 @@
 import { parse } from 'node-html-parser';
 
 export interface Props {
-  icon: string;
+  brand: string;
 }
 
 function getSVG(name: string) {
-  const filepath = `/src/assets/images/deepgram.svg`;
-  const files = import.meta.globEager<string>('/src/assets/images/deepgram.svg', {
+  const filepath = `/src/assets/images/${name}.svg`;
+  const files = import.meta.globEager<string>('/src/assets/images/*.svg', {
     as: 'raw',
   });
 
@@ -26,8 +26,8 @@ function getSVG(name: string) {
   };
 }
 
-const { icon, ...attributes } = Astro.props as Props;
-const { attributes: baseAttributes, innerHTML } = getSVG(icon);
+const { brand, ...attributes } = Astro.props as Props;
+const { attributes: baseAttributes, innerHTML } = getSVG(brand);
 
 const svgAttributes = { ...baseAttributes, ...attributes };
 ---

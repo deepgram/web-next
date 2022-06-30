@@ -30,7 +30,7 @@ const items = [
 
 <template>
   <section class="demo-transcription w-full">
-    <img src="../../../../public/saturn.svg" />
+    <img src="/saturn.svg" />
     <div class="container max-w-screen-2xl mx-auto">
       <div class="label">
         <span class="left-label" :class="{ selected: !checkedValue }">{{
@@ -124,7 +124,7 @@ img {
 
 .container {
   @apply flex flex-col;
-  @apply px-24 lg:px-28;
+  @apply px-24 xl:px-28;
   @apply relative z-10;
   background-color: rgba(79, 98, 120, 0.3);
 }
