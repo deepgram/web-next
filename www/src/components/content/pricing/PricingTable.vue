@@ -95,7 +95,6 @@ let checkedValue = ref(false);
         <p>and more...</p>
       </div>
       <template v-if="!checkedValue">
-        <!-- {pricingModel[checkedValue].map((plan, index) => ( -->
         <div
           v-for="(plan, index) in pricingModels.baseModel"
           :key="`baseModel-${index}`"
@@ -107,33 +106,38 @@ let checkedValue = ref(false);
             <p class="plan-text">{{ plan.text }}</p>
             <p v-if="plan.fee" class="plan-fee"><sup>$</sup>{{ plan.fee }}</p>
           </div>
-          <p><strong>Base Model</strong> transcription rates:</p>
-          <div class="transcription">
-            <img src="/images/pre-recorded-file.svg" />
-            <div>
-              <p>Pre-recorded transcription</p>
-              <p class="price-per-min">
-                <span class="number">${{ plan.preRecorded }}</span
-                >/min
-              </p>
+          <div class="rates">
+            <p><strong>Base Model</strong> transcription rates:</p>
+            <div class="transcription">
+              <img src="/images/pre-recorded-file.svg" />
+              <div>
+                <p>Pre-recorded transcription</p>
+                <p class="price-per-min">
+                  <span class="number">${{ plan.preRecorded }}</span
+                  >/min
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="transcription">
-            <img src="/images/live-streaming.svg" />
-            <div>
-              <p>Live streaming transcription</p>
-              <p class="price-per-min">
-                <span class="number">${{ plan.live }}</span
-                >/min
-              </p>
+            <div class="transcription">
+              <img src="/images/live-streaming.svg" />
+              <div>
+                <p>Live streaming transcription</p>
+                <p class="price-per-min">
+                  <span class="number">${{ plan.live }}</span
+                  >/min
+                </p>
+              </div>
             </div>
+            <a
+              href="#"
+              class="button"
+              :class="{
+                green: index === 0,
+                gray: index != 0,
+              }"
+              >{{ plan.cta }}</a
+            >
           </div>
-          <a
-            href="#"
-            class="button"
-            :class="{ 'bg-green-300': index === 0, 'bg-gray-300': index != 0 }"
-            >{{ plan.cta }}</a
-          >
           <div class="add-ons">
             <h5>Plus access to add-ons:</h5>
             <hr />
@@ -176,33 +180,39 @@ let checkedValue = ref(false);
             <p class="plan-text">{{ plan.text }}</p>
             <p v-if="plan.fee" class="plan-fee"><sup>$</sup>{{ plan.fee }}</p>
           </div>
-          <p><strong>Base Model</strong> transcription rates:</p>
-          <div class="transcription">
-            <img src="/images/pre-recorded-file.svg" />
-            <div>
-              <p>Pre-recorded transcription</p>
-              <p class="price-per-min">
-                <span class="number">${{ plan.preRecorded }}</span
-                >/min
-              </p>
+
+          <div class="rates">
+            <p><strong>Enhanced Model</strong> transcription rates:</p>
+            <div class="transcription">
+              <img src="/images/pre-recorded-file.svg" />
+              <div>
+                <p>Pre-recorded transcription</p>
+                <p class="price-per-min">
+                  <span class="number">${{ plan.preRecorded }}</span
+                  >/min
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="transcription">
-            <img src="/images/live-streaming.svg" />
-            <div>
-              <p>Live streaming transcription</p>
-              <p class="price-per-min">
-                <span class="number">${{ plan.live }}</span
-                >/min
-              </p>
+            <div class="transcription">
+              <img src="/images/live-streaming.svg" />
+              <div>
+                <p>Live streaming transcription</p>
+                <p class="price-per-min">
+                  <span class="number">${{ plan.live }}</span
+                  >/min
+                </p>
+              </div>
             </div>
+            <a
+              href="#"
+              class="button"
+              :class="{
+                'bg-green-300': index === 0,
+                'bg-gray-300': index != 0,
+              }"
+              >{{ plan.cta }}</a
+            >
           </div>
-          <a
-            href="#"
-            class="button"
-            :class="{ 'bg-green-300': index === 0, 'bg-gray-300': index != 0 }"
-            >{{ plan.cta }}</a
-          >
           <div class="add-ons">
             <h5>Plus access to add-ons:</h5>
             <hr />
@@ -232,7 +242,6 @@ let checkedValue = ref(false);
           </div>
         </div>
       </template>
-      <!-- ))} -->
     </div>
   </div>
 </template>
@@ -248,28 +257,32 @@ h3 {
 
 .plans {
   @apply m-auto grid;
-  grid-template-columns: 1fr repeat(4, 275px) 1fr;
+  grid-template-columns: 1fr repeat(4, 310px) 1fr;
 }
 .plan {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   @apply bg-white col-span-1 col-start-auto mx-4 p-4;
+  @apply grid;
+  grid-template-rows: 1fr 250px 250px;
 }
 .plan:nth-of-type(1) {
   @apply col-start-2 p-3;
   @apply bg-darkCharcoal text-white text-left;
+  @apply flex justify-center flex-col;
 }
 
 .plan .plan-header {
-  @apply mb-7 mt-auto text-center;
-}
-
-.plan:nth-child(2) .plan-header {
-  @apply mt-5;
+  @apply mb-auto mt-auto text-center;
 }
 
 .plan .plan-header .plan-fee {
   @apply text-3xl font-bold;
 }
+
+.plan .add-ons {
+  @apply mt-auto;
+}
+
 .plan:nth-of-type(1) li {
   list-style-image: url(/src/assets/icons/greencheck.svg);
   @apply ml-7 mb-5;
@@ -313,5 +326,21 @@ h3 {
 
 .price-per-min .number {
   @apply text-2xl;
+}
+
+.rates {
+  @apply flex flex-col justify-between;
+}
+
+.button {
+  @apply flex justify-center items-center;
+  border-radius: 1px;
+  @apply font-semibold p-2 m-auto w-full mt-auto;
+}
+.button.green {
+  @apply bg-meadow;
+}
+.button.gray {
+  @apply bg-powder;
 }
 </style>
