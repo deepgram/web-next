@@ -207,8 +207,8 @@ let checkedValue = ref(false);
               href="#"
               class="button"
               :class="{
-                'bg-green-300': index === 0,
-                'bg-gray-300': index != 0,
+                green: index === 0,
+                gray: index != 0,
               }"
               >{{ plan.cta }}</a
             >
@@ -255,7 +255,16 @@ h3 {
   @apply text-4xl font-bold pt-5 pb-3 text-center;
 }
 /* @media only screen and (min-width: 0px) { */
-/* @media screen(md) {
+.plans {
+  @apply m-auto grid grid-cols-1;
+}
+/* } */
+.plan:nth-of-type(1) {
+  @apply bg-darkCharcoal text-white text-left;
+  @apply flex justify-center flex-col;
+  @apply md:col-start-1 md:p-3;
+}
+@screen md {
   .plans {
     @apply grid;
     grid-template-columns: repeat(2, 1fr);
@@ -263,21 +272,11 @@ h3 {
   .plan {
     @apply m-3;
   }
-} */
-.plans {
-  @apply m-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
-  /* grid-template-rows: auto; */
-}
-/* } */
-.plan:nth-of-type(1) {
-  @apply bg-darkCharcoal text-white text-left;
-  @apply flex justify-center flex-col;
-  /* @apply md:col-start-1 md:p-3; */
 }
 
-/* @media screen(lg) {
+@screen xl {
   .plans {
-    grid-template-columns: 1fr repeat(4, 310px) 1fr;
+    grid-template-columns: 1fr repeat(4, minmax(310px, 1fr)) 1fr;
   }
   .plan {
     grid-template-rows: 1fr 250px 250px;
@@ -285,14 +284,14 @@ h3 {
   .plan:nth-of-type(1) {
     @apply col-start-2;
   }
-} */
+}
 
 .plan {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   @apply bg-white col-span-1 col-start-auto mx-4 p-4;
   @apply grid;
-  /* @apply md:m-3; */
-  /* grid-template-rows: 1fr 210px 230px; */
+  @apply md:m-3;
+  grid-template-rows: 1fr 210px 230px;
 }
 
 .plan .plan-header {
