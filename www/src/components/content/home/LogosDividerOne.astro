@@ -8,7 +8,7 @@ const { cta, brands } = Astro.props
     <p class="cta">{cta}</p>
     <div class="flex logos space-x-10 items-center">
     {brands.map(brand=>{
-      return <Brand brand="deepgram" class="logo text-storm" />
+      return <img src={`/${brand}.png`} class="logo text-storm" />
     })}
     </div>
   </div>
@@ -25,7 +25,7 @@ const { cta, brands } = Astro.props
     @apply mb-4;
   }
   .logo {
-    height: calc(100vw/30)
+    height: calc(100vw/20)
   }
 
 </style>

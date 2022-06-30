@@ -124,7 +124,7 @@ img {
 
 .container {
   @apply flex flex-col;
-  @apply px-24 xl:px-28;
+  @apply px-8 md:px-24 xl:px-28;
   @apply relative z-10;
   background-color: rgba(79, 98, 120, 0.3);
 }
