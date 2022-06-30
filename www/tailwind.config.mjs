@@ -15,6 +15,7 @@ export default {
         17: "4.25rem",
       },
       colors: {
+        powder: "#E8F1FF",
         transparent: "transparent",
         current: "currentColor",
         black: "#000000",
