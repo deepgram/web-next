@@ -254,21 +254,45 @@ let checkedValue = ref(false);
 h3 {
   @apply text-4xl font-bold pt-5 pb-3 text-center;
 }
-
+/* @media only screen and (min-width: 0px) { */
+/* @media screen(md) {
+  .plans {
+    @apply grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .plan {
+    @apply m-3;
+  }
+} */
 .plans {
-  @apply m-auto grid;
-  grid-template-columns: 1fr repeat(4, 310px) 1fr;
+  @apply m-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
+  /* grid-template-rows: auto; */
 }
+/* } */
+.plan:nth-of-type(1) {
+  @apply bg-darkCharcoal text-white text-left;
+  @apply flex justify-center flex-col;
+  /* @apply md:col-start-1 md:p-3; */
+}
+
+/* @media screen(lg) {
+  .plans {
+    grid-template-columns: 1fr repeat(4, 310px) 1fr;
+  }
+  .plan {
+    grid-template-rows: 1fr 250px 250px;
+  }
+  .plan:nth-of-type(1) {
+    @apply col-start-2;
+  }
+} */
+
 .plan {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   @apply bg-white col-span-1 col-start-auto mx-4 p-4;
   @apply grid;
-  grid-template-rows: 1fr 250px 250px;
-}
-.plan:nth-of-type(1) {
-  @apply col-start-2 p-3;
-  @apply bg-darkCharcoal text-white text-left;
-  @apply flex justify-center flex-col;
+  /* @apply md:m-3; */
+  /* grid-template-rows: 1fr 210px 230px; */
 }
 
 .plan .plan-header {
