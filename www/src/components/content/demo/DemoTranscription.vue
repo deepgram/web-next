@@ -2,10 +2,10 @@
 import { ref } from "vue";
 import Toggle from "../../Toggle.vue";
 import RadioDemo from "./RadioDemo.vue";
-const labelLeft = "Transcribe Live";
-const labelRight = "Transcribe Pre Recorded";
-let checkedValue = ref(false);
-let pickedValue = ref("");
+const labelLeft = "TRANSCRIBE LIVE";
+const labelRight = "TRANSCRIBE PRE-RECORDED";
+let checkedValue = ref(false); // toggle v-model
+let pickedValue = ref(""); // radio button v-model
 const items = [
   {
     id: 0,
@@ -31,7 +31,7 @@ const items = [
 <template>
   <section class="demo-transcription w-full">
     <div class="container max-w-screen-2xl mx-auto">
-      <div class="flex">
+      <div class="label">
         <span class="left-label" :class="{ selected: !checkedValue }">{{
           labelLeft
         }}</span>
@@ -44,68 +44,111 @@ const items = [
         }}</span>
       </div>
       <div v-if="!checkedValue">
-        <p>Transcribe your voice in real-time.</p>
+        <h3>Transcribe your voice in real-time.</h3>
         <p>Click the mic to give it a try.</p>
-        <div class="flex justify-between">
-          <div>
-            <button>microphone</button>
-            <button>dots</button>
-          </div>
-          <div>Language select</div>
+        <div class="mic-buttons">
+          <button>mic</button><button>volumebars</button>
         </div>
-        <div class="transcription">
-          <div class="box-left">
-            Transcribe your voice in English or select another language.
-          </div>
-          <div class="box-right">Example Code</div>
+        <div class="grid-container">
+          <div class="grid-div">test 1</div>
+          <div class="grid-div">test 2</div>
         </div>
-        BUTTON
+        <div class="flex justify-center mt-10">
+          <a
+            href="https://console.deepgram.com/signup"
+            rel="noopener noreferrer"
+            class="primary-button"
+            >Transcribe More Free</a
+          >
+        </div>
       </div>
       <div v-else>
-        <p>Transcribe real-world audio.</p>
+        <h3>Transcribe real-world audio.</h3>
         <p>See how Deepgram excels at tough, conversational audio files.</p>
         <p>Select a file below.</p>
-        <div class="transcription">
-          <RadioDemo
-            :items="items"
-            v-model="pickedValue"
-            @input="pickedValue = $event.target.value"
-          />
-          <div class="box-right">{{ pickedValue }}</div>
+        <div class="grid-container">
+          <div>
+            <RadioDemo
+              :items="items"
+              v-model="pickedValue"
+              @input="pickedValue = $event.target.value"
+            />
+          </div>
+          <div class="grid-div">{{ pickedValue }}</div>
         </div>
-        BUTTON
+        <div class="flex justify-center mt-10">
+          <a
+            href="https://console.deepgram.com/signup"
+            rel="noopener noreferrer"
+            class="primary-button"
+            >Try With Your Own Files</a
+          >
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
+h3 {
+  @apply font-bold text-3xl;
+  @apply mb-2;
+}
+
+h3 + p {
+  @apply font-semibold;
+  @apply mb-8;
+}
+
+h3 + p + p {
+  @apply mb-6;
+}
+
+.demo-transcription {
+  @apply mt-8 px-36;
+}
+
+.primary-button {
+  @apply button button--primary button--small;
+  @apply mb-10;
+}
+
 .container {
   @apply flex flex-col;
-  @apply w-8/12;
+  @apply px-28;
   /* TODO Change to a blur effect: */
   background-color: #181d24;
+  /* @apply min-h-screen; */
+}
+
+.label {
+  @apply flex justify-center mb-14 mt-10;
+  @apply font-bold text-lg;
+}
+
+.left-label {
+  @apply flex justify-end;
 }
 
 .left-label,
 .right-label {
   @apply text-stone;
+  @apply px-4;
+  @apply w-3/6;
 }
 
 .selected {
   @apply text-white;
 }
 
-.transcription {
-  @apply flex;
+.mic-buttons {
+  @apply flex justify-between w-3/6 pr-6 mb-6;
+}
+.grid-container {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
 }
 
-.transcription > div {
-  @apply w-3/6;
-}
-
-.box-left,
-.box-right {
-  @apply border-white border-2 w-3/6;
+.grid-div {
+  @apply border-white border-2 h-80;
 }
 </style>
