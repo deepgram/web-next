@@ -30,6 +30,7 @@ const items = [
 
 <template>
   <section class="demo-transcription w-full">
+    <img src="../../../../public/saturn.svg" />
     <div class="container max-w-screen-2xl mx-auto">
       <div class="label">
         <span class="left-label" :class="{ selected: !checkedValue }">{{
@@ -104,8 +105,16 @@ h3 + p + p {
   @apply mb-6;
 }
 
+img {
+  @apply relative;
+  @apply w-4/12;
+  @apply relative z-0 top-40 -left-56;
+}
+
 .demo-transcription {
-  @apply mt-8 px-36;
+  @apply px-8 lg:px-16 xl:px-36;
+  @apply mt-8 -mb-40 md:-mb-52 lg:-mb-56 2xl:-mb-80;
+  @apply relative -top-52 md:-top-64 lg:-top-72 xl:-top-80 2xl:-top-96;
 }
 
 .primary-button {
@@ -115,10 +124,9 @@ h3 + p + p {
 
 .container {
   @apply flex flex-col;
-  @apply px-28;
-  /* TODO Change to a blur effect: */
-  background-color: #181d24;
-  /* @apply min-h-screen; */
+  @apply px-24 lg:px-28;
+  @apply relative z-10;
+  background-color: rgba(79, 98, 120, 0.3);
 }
 
 .label {
