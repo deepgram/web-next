@@ -2,6 +2,9 @@ export default {
   content: ["./public/**/*.html", "./src/**/*.astro"],
   theme: {
     extend: {
+      fontFamily: {
+        favorit: ["favorit", "sans-serif"],
+      },
       lineHeight: {
         11: "2.75rem",
         12: "3rem",
