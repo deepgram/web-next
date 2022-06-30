@@ -4,10 +4,10 @@ import HeroCentered from "../components/content/hero/HeroCentered.astro";
 import PrimaryCallToAction from "../components/content/home/PrimaryCallToAction.astro";
 import DemoTranscription from "../components/content/demo/DemoTranscription.vue";
 import LogosDividerOne from "../components/content/home/LogosDividerOne.astro";
-import Stats from "../components/content/home/Stats.astro"
 import SecondaryCallToAction from "../components/content/home/SecondaryCallToAction.astro";
 import LogosDividerTwo from "../components/content/home/LogosDividerTwo.astro";
 import Testimonial from "../components/content/home/Testimonial.astro";
+import HighlightColumn from "../components/content/home/HighlightColumn.astro";
 
 const brands = ['brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand']
 ---
@@ -17,7 +17,7 @@ const brands = ['brand', 'brand', 'brand', 'brand', 'brand', 'brand', 'brand', '
     <PrimaryCallToAction/>
     <DemoTranscription client:load/>
     <LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/>
-    <Stats/>
+    <HighlightColumn/>
     <SecondaryCallToAction/>
     <LogosDividerTwo/>
     <Testimonial quote="Deepgram is doing for speech what SpaceX did for space travel." name="Todd Fisher" role="Founder, Call Tracking Metrics"/>
