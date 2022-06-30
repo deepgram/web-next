@@ -254,21 +254,42 @@ let checkedValue = ref(false);
 h3 {
   @apply text-4xl font-bold pt-5 pb-3 text-center;
 }
-
 .plans {
-  @apply m-auto grid;
-  grid-template-columns: 1fr repeat(4, 310px) 1fr;
+  @apply m-auto grid grid-cols-1;
 }
+.plan:nth-of-type(1) {
+  @apply bg-darkCharcoal text-white text-left;
+  @apply flex justify-center flex-col;
+}
+@screen md {
+  .plans {
+    @apply grid-cols-2;
+  }
+  .plan:nth-of-type(1) {
+    @apply col-start-1 p-3;
+  }
+  .plan {
+    @apply m-3;
+    grid-template-rows: 1fr 210px 230px;
+  }
+}
+
+@media screen(lg) {
+  .plans {
+    grid-template-columns: 1fr repeat(4, 310px) 1fr;
+  }
+  .plan {
+    grid-template-rows: 1fr 250px 250px;
+  }
+  .plan:nth-of-type(1) {
+    @apply col-start-2;
+  }
+}
+
 .plan {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
   @apply bg-white col-span-1 col-start-auto mx-4 p-4;
   @apply grid;
-  grid-template-rows: 1fr 250px 250px;
-}
-.plan:nth-of-type(1) {
-  @apply col-start-2 p-3;
-  @apply bg-darkCharcoal text-white text-left;
-  @apply flex justify-center flex-col;
 }
 
 .plan .plan-header {
