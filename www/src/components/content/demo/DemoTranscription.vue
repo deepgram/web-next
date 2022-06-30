@@ -30,7 +30,7 @@ const items = [
 
 <template>
   <section class="demo-transcription w-full">
-    <img src="../../../../public/saturn.svg" />
+    <img src="/saturn.svg" />
     <div class="container max-w-screen-2xl mx-auto">
       <div class="label">
         <span class="left-label" :class="{ selected: !checkedValue }">{{
