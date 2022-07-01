@@ -45,7 +45,7 @@ const items = [
         }}</span>
       </div>
       <div v-if="!checkedValue">
-        <h3>Transcribe your voice in real-time.</h3>
+        <h3>See real-time transcription with live radio.</h3>
         <p>Click the mic to give it a try.</p>
         <div class="mic-buttons">
           <button>mic</button><button>volumebars</button>
@@ -93,7 +93,7 @@ const items = [
 <style scoped>
 h3 {
   @apply font-bold text-3xl;
-  @apply mb-2;
+  @apply mb-6;
 }
 
 h3 + p {
@@ -136,12 +136,17 @@ img {
 
 .left-label {
   @apply flex justify-end;
+  @apply px-4;
+}
+
+.right-label {
+  @apply pl-4 pr-10 md:px-4;
 }
 
 .left-label,
 .right-label {
   @apply text-stone;
-  @apply px-4;
+  /* @apply px-4; */
   @apply w-3/6;
 }
 
