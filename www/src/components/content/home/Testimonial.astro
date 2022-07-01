@@ -12,7 +12,7 @@ const { quote, name, role, image } = Astro.props
       <div class="flex items-center mb-6">
         <img src="/todd-fisher.png" class="pr-6 w-5/12" />
         <div>
-          <p>{name}</p>
+          <p class="font-semibold">{name}</p>
           <p>{role}</p>
         </div>
       </div>
@@ -25,7 +25,6 @@ const { quote, name, role, image } = Astro.props
 
   section {
   @apply w-full flex flex-col items-center;
-  @apply mb-14;
   @apply px-16 md:px-40 xl:px-80;
 }
 
