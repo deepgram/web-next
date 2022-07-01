@@ -2,7 +2,7 @@
 const { quote, name, role, image } = Astro.props
 ---
 
-<section class="logos-divider w-full flex flex-col items-center">
+<section class="logos-divider">
   <div class="max-w-screen-2xl mx-auto">
       <svg width="83" height="62" viewBox="0 0 83 62" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.832031 36.2744C0.832031 16.2423 17.0397 0 37.0291 0L36.9072 17.785C30.5809 17.785 24.9983 20.9985 21.7045 25.8828H36.9246V62H0.832031V36.2744Z" fill="#FB3640"/>
@@ -24,8 +24,9 @@ const { quote, name, role, image } = Astro.props
 <style>
 
   section {
+  @apply w-full flex flex-col items-center;
   @apply mb-14;
-  @apply px-80;
+  @apply px-16 md:px-40 xl:px-80;
 }
 
   h2 {

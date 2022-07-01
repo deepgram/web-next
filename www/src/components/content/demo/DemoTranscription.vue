@@ -46,12 +46,14 @@ const items = [
       </div>
       <div v-if="!checkedValue">
         <h3>See real-time transcription with live radio.</h3>
-        <p>Click the mic to give it a try.</p>
+        <p>Click the button to transcribe live.</p>
         <div class="mic-buttons">
           <button>mic</button><button>volumebars</button>
         </div>
         <div class="grid-container">
-          <div class="grid-div">test 1</div>
+          <div class="grid-div">
+            Transcribe your voice in English or select another language.
+          </div>
           <div class="grid-div">test 2</div>
         </div>
         <div class="flex justify-center mt-10">
@@ -124,7 +126,7 @@ img {
 
 .container {
   @apply flex flex-col;
-  @apply px-8 md:px-24 xl:px-28;
+  @apply px-8 md:px-16 lg:px-24 xl:px-28;
   @apply relative z-10;
   background-color: rgba(79, 98, 120, 0.3);
 }
@@ -163,5 +165,7 @@ img {
 
 .grid-div {
   @apply border-white border-2 h-80;
+  @apply px-3 py-6;
+  @apply text-stone text-lg;
 }
 </style>
