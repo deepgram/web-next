@@ -22,10 +22,10 @@ import Icon from "../Icon.astro"
 		<li class="no-margin">
 			<a href="https://console.deepgram.com/" rel="noopener noreferrer">Log in</a>
 		</li>
-		<li class="hidden lg:block">
+		<li class="hidden xl:block">
 			<a href="https://console.deepgram.com/signup" rel="noopener noreferrer" class="button--secondary">Contact Us</a>
 		</li>
-		<li class="block lg:hidden">
+		<li class="block xl:hidden">
 			<button class="button button--small button--secondary">Menu</button>
 		</li>
 		<li>
@@ -44,7 +44,7 @@ import Icon from "../Icon.astro"
 	}
 
 	.nav ul.main {
-		@apply hidden lg:flex;
+		@apply hidden xl:flex;
 	}
 
 	.nav ul li a {
@@ -63,5 +63,4 @@ import Icon from "../Icon.astro"
 	.nav ul li:not(:last-child):not(.no-margin) a {
 		@apply mr-4;
 	}
-
 </style>
