@@ -128,15 +128,7 @@ let checkedValue = ref(false);
                 </p>
               </div>
             </div>
-            <a
-              href="#"
-              class="button"
-              :class="{
-                green: index === 0,
-                gray: index != 0,
-              }"
-              >{{ plan.cta }}</a
-            >
+            <a href="#" class="button">{{ plan.cta }}</a>
           </div>
           <div class="add-ons">
             <h5>Plus access to add-ons:</h5>
@@ -203,15 +195,7 @@ let checkedValue = ref(false);
                 </p>
               </div>
             </div>
-            <a
-              href="#"
-              class="button"
-              :class="{
-                green: index === 0,
-                gray: index != 0,
-              }"
-              >{{ plan.cta }}</a
-            >
+            <a href="#" class="button">{{ plan.cta }}</a>
           </div>
           <div class="add-ons">
             <h5>Plus access to add-ons:</h5>
@@ -263,6 +247,8 @@ h3 {
   @apply bg-darkCharcoal text-white text-left;
   @apply flex justify-center flex-col;
   @apply md:col-start-1 md:p-3;
+  @apply hidden sm:grid;
+  grid-template-rows: auto;
 }
 @screen md {
   .plans {
@@ -288,14 +274,25 @@ h3 {
 
 .plan {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
-  @apply bg-white col-span-1 col-start-auto mx-4 p-4;
+  @apply bg-white col-span-1 col-start-auto mx-4;
   @apply grid;
-  @apply md:m-3;
-  grid-template-rows: 1fr 210px 230px;
+  @apply mb-4 md:m-3;
+  grid-template-rows: 1fr 210px auto;
 }
 
 .plan .plan-header {
-  @apply mb-auto mt-auto text-center;
+  @apply mb-auto mt-auto text-center p-4;
+  @apply flex h-full justify-center items-center flex-col;
+}
+
+.plan:nth-child(2) .plan-header {
+  @apply bg-mintChip;
+}
+.plan:nth-child(3) .plan-header {
+  @apply bg-powder;
+}
+.plan:nth-child(4) .plan-header {
+  @apply bg-cottonCandy;
 }
 
 .plan .plan-header .plan-fee {
@@ -303,7 +300,7 @@ h3 {
 }
 
 .plan .add-ons {
-  @apply mt-auto;
+  @apply p-4 pt-8 mt-4;
 }
 
 .plan:nth-of-type(1) li {
@@ -352,7 +349,7 @@ h3 {
 }
 
 .rates {
-  @apply flex flex-col justify-between;
+  @apply flex flex-col justify-between p-4;
 }
 
 .button {
@@ -360,10 +357,14 @@ h3 {
   border-radius: 1px;
   @apply font-semibold p-2 m-auto w-full mt-auto;
 }
-.button.green {
+.plan:nth-of-type(2) .button {
   @apply bg-meadow;
 }
-.button.gray {
+.plan:nth-of-type(3) .button {
   @apply bg-powder;
+}
+
+.plan:nth-of-type(4) .button {
+  @apply bg-cottonCandy;
 }
 </style>

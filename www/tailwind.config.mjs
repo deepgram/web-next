@@ -16,6 +16,7 @@ export default {
       },
       colors: {
         powder: "#E8F1FF",
+        cottonCandy: "#FFEBEB",
         transparent: "transparent",
         current: "currentColor",
         black: "#000000",
