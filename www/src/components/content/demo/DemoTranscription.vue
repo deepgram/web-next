@@ -45,13 +45,15 @@ const items = [
         }}</span>
       </div>
       <div v-if="!checkedValue">
-        <h3>Transcribe your voice in real-time.</h3>
-        <p>Click the mic to give it a try.</p>
+        <h3>See real-time transcription with live radio.</h3>
+        <p>Click the button to transcribe live.</p>
         <div class="mic-buttons">
           <button>mic</button><button>volumebars</button>
         </div>
         <div class="grid-container">
-          <div class="grid-div">test 1</div>
+          <div class="grid-div">
+            Transcribe your voice in English or select another language.
+          </div>
           <div class="grid-div">test 2</div>
         </div>
         <div class="flex justify-center mt-10">
@@ -93,7 +95,7 @@ const items = [
 <style scoped>
 h3 {
   @apply font-bold text-3xl;
-  @apply mb-2;
+  @apply mb-6;
 }
 
 h3 + p {
@@ -124,7 +126,7 @@ img {
 
 .container {
   @apply flex flex-col;
-  @apply px-8 md:px-24 xl:px-28;
+  @apply px-8 md:px-16 lg:px-24 xl:px-28;
   @apply relative z-10;
   background-color: rgba(79, 98, 120, 0.3);
 }
@@ -136,12 +138,17 @@ img {
 
 .left-label {
   @apply flex justify-end;
+  @apply px-4;
+}
+
+.right-label {
+  @apply pl-4 pr-10 md:px-4;
 }
 
 .left-label,
 .right-label {
   @apply text-stone;
-  @apply px-4;
+  /* @apply px-4; */
   @apply w-3/6;
 }
 
@@ -158,5 +165,7 @@ img {
 
 .grid-div {
   @apply border-white border-2 h-80;
+  @apply px-3 py-6;
+  @apply text-stone text-lg;
 }
 </style>

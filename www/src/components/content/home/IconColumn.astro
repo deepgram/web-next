@@ -1,0 +1,83 @@
+---
+import Icon from "../../Icon.astro"
+
+const details = [{
+  icon:"audiofile",
+  title:"Easy to use, easy to integrate",
+  detail:"Built by developers for developers with the tools you want: APIs, SDKs....",
+  link:"See for Yourself"
+}, {
+  icon:"audiofile",
+  title:"Built for rapid innovation",
+  detail:"Our flexible architecture and transfer learning allows us to innovate quickly.",
+  link:"See for Yourself"
+}, {
+  icon:"audiofile",
+  title:"Focused on NLU capabilities",
+  detail:"Stop building features from scratch. Deepgram has 3+ NLU features and counting."
+}, {
+  icon:"audiofile",
+  title:"Human-level accuracy on real-life audio",
+  detail:"Background noise, multiple speakers, cross-talk—get top accuracy on tough audio.",
+  link:"See for Yourself"
+}, {
+  icon:"audiofile",
+  title:"Unparalleled speed",
+  detail:"Create human-like conversational AI experiences, real-time analytics, and enablement.",
+  link:"See for Yourself"
+}, {
+  icon:"audiofile",
+  title:"Transcribe thousands of files concurrently",
+  detail:"We use GPUs to process exponentially more audio without breaking the bank.",
+  link:"See for Yourself"
+}, {
+  icon:"audiofile",
+  title:"Cost-effective pricing",
+  detail:"Accuracy, speed, and scaleability don’t have to cost the proverbial arm and leg.",
+  link:"See for Yourself"
+}, {
+  icon:"audiofile",
+  title:"Bottom line: It just works.",
+  detail:"Get STT that can TCB and deliver actually usable transcripts.",
+  link:"See for Yourself"
+}]
+---
+<section class="stats w-full">
+  <div class=" flex flex-col max-w-screen-2xl mx-auto ">
+    <div class="grid-container">
+    {details.map((detail)=>{return <div class="grid-div"><div class="flex flex-col pl-7 border-lightIris border-l-2"><Icon icon={detail.icon} class="mb-4 text-casper"/><h5>{detail.title}</h5> <div>{detail.detail}</div><a>{detail.link}</a></div></div>
+       })}
+    </div>
+  </div>
+</section>
+
+<style>
+section {
+  @apply px-8 md:px-16 lg:px-10 xl:px-36;
+  @apply mb-24;
+  @apply bg-darkCharcoal
+}
+
+h2 {
+  @apply text-4xl font-bold;
+}
+
+h5 {
+  @apply text-xl font-bold;
+  @apply mb-2;
+}
+
+a {
+  @apply mt-4;
+}
+
+.grid-container {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-8 2xl:gap-10;
+  @apply mt-14;
+}
+
+.grid-div {
+  @apply w-4/6 md:w-5/6 md:w-full;
+}
+
+</style>

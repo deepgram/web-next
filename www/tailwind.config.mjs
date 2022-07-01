@@ -4,6 +4,7 @@ export default {
     extend: {
       fontFamily: {
         favorit: ["favorit", "sans-serif"],
+        inter: ["inter", "sans-serif"],
       },
       lineHeight: {
         11: "2.75rem",

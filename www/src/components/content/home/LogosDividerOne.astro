@@ -6,9 +6,9 @@ const { cta, brands } = Astro.props
 <section class="logos-divider w-full">
   <div class="flex flex-col items-center">
     <p class="cta">{cta}</p>
-    <div class="flex logos space-x-10 items-center">
+    <div class="flex logos items-center grid-container">
     {brands.map(brand=>{
-      return <img src={`/${brand}.png`} class="logo text-storm" />
+      return <div class="grid-div"><img src={`/${brand}.png`} class="logo text-storm" /></div>
     })}
     </div>
   </div>
@@ -25,7 +25,19 @@ const { cta, brands } = Astro.props
     @apply mb-4;
   }
   .logo {
-    height: calc(100vw/20)
+    /* @apply h-4 lg:h-full; */
+    /* height: calc(100vw/15) */
+    @apply h-[calc(100vw/4)] md:h-[calc(100vw/5)] lg:h-[calc(100vw/10)]
   }
+
+  .grid-container {
+  @apply grid lg:flex grid-cols-3 md:grid-cols-4;
+  @apply gap-6;
+  @apply mt-14;
+}
+
+.grid-div {
+  /* @apply py-0 pl-0 pr-10 sm:pr-0 md:p-8 lg:pr-4; */
+}
 
 </style>
