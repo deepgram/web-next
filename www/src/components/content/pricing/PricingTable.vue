@@ -263,6 +263,7 @@ h3 {
 @screen xl {
   .plans {
     grid-template-columns: 1fr repeat(4, minmax(310px, 1fr)) 1fr;
+    gap: 0.7rem;
   }
   .plan {
     grid-template-rows: 1fr 250px 250px;
