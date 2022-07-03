@@ -21,6 +21,7 @@ export default {
         transparent: "transparent",
         current: "currentColor",
         black: "#000000",
+        offBlack: "#050A0F",
         white: "#ffffff",
         blueberry: "#1c4374",
         darkCharcoal: "#141E29",

@@ -51,4 +51,117 @@
   .button--secondary {
     @apply bg-rock text-meadow;
   }
+
+  .contrast {
+    position: relative;
+    margin-top: 57px;
+    margin-bottom: 57px;
+  }
+
+  .contrast::after,
+  .contrast::before {
+    @apply w-full;
+    height: 57px;
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+  }
+
+  .contrast::before {
+    top: -57px;
+  }
+
+  .contrast::after {
+    bottom: -57px;
+  }
+
+  @media (min-width: 640px) {
+    .contrast {
+      margin-top: 114px;
+      margin-bottom: 114px;
+    }
+
+    .contrast::after,
+    .contrast::before {
+      height: 114px;
+    }
+
+    .contrast::before {
+      top: -114px;
+    }
+
+    .contrast::after {
+      bottom: -114px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .contrast {
+      margin-top: 228px;
+      margin-bottom: 228px;
+    }
+
+    .contrast::after,
+    .contrast::before {
+      height: 228px;
+    }
+
+    .contrast::before {
+      top: -228px;
+    }
+
+    .contrast::after {
+      bottom: -228px;
+    }
+  }
+
+  .contrast--black {
+    @apply bg-black;
+  }
+
+  .contrast--black::before {
+    background-image: url("../images/large-divider-black.svg");
+  }
+
+  .contrast--black::after {
+    @apply bg-black;
+  }
+
+  .contrast--offBlack {
+    @apply bg-offBlack;
+  }
+
+  .contrast--offBlack::before {
+    background-image: url("../images/large-divider-off-black.svg");
+  }
+
+  .contrast--offBlack::after {
+    @apply bg-offBlack;
+  }
+
+  .contrast--darkCharcoal {
+    @apply bg-darkCharcoal;
+  }
+
+  .contrast--darkCharcoal::before {
+    background-image: url("../images/large-divider-dark-charcoal.svg");
+  }
+
+  .contrast--darkCharcoal::after {
+    @apply bg-darkCharcoal;
+  }
+
+  .contrast--white {
+    @apply bg-white;
+  }
+
+  .contrast--white::before {
+    background-image: url("../images/large-divider-white.svg");
+  }
+
+  .contrast--white::after {
+    @apply bg-white;
+  }
 }
