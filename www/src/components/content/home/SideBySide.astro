@@ -2,7 +2,7 @@
 const { quote, name, role, image } = Astro.props
 ---
 
-<section class="side-by-side">
+<section>
   <div class="max-w-screen-2xl mx-auto ">
     
     <div class="flex flex-col items-center pt-16 lg:pt-0">
@@ -23,13 +23,8 @@ const { quote, name, role, image } = Astro.props
 
 <style>
 section {
-
   @apply px-8 md:px-16 lg:px-10 xl:px-36;
-  @apply bg-darkCharcoal;
-  clip-path: ellipse(90% 81% at 50% 100%);
   @apply pt-56;
-  /* background: no-repeat top url('./clipped-background-top.png'); */
-  /* background-size:contain; */
 }
 
 h2 {

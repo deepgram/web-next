@@ -54,14 +54,14 @@
 
   .contrast {
     position: relative;
-    margin-top: 57px;
-    margin-bottom: 57px;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
   }
 
   .contrast::after,
   .contrast::before {
     @apply w-full;
-    height: 57px;
+    height: 3.5rem;
     content: "";
     position: absolute;
     background-repeat: no-repeat;
@@ -70,50 +70,50 @@
   }
 
   .contrast::before {
-    top: -57px;
+    top: -3.5rem;
   }
 
   .contrast::after {
-    bottom: -57px;
+    bottom: -3.5rem;
   }
 
   @media (min-width: 640px) {
     .contrast {
-      margin-top: 114px;
-      margin-bottom: 114px;
+      margin-top: 7.125rem;
+      margin-bottom: 7.125rem;
     }
 
     .contrast::after,
     .contrast::before {
-      height: 114px;
+      height: 7.125rem;
     }
 
     .contrast::before {
-      top: -114px;
+      top: -7.125rem;
     }
 
     .contrast::after {
-      bottom: -114px;
+      bottom: -7.125rem;
     }
   }
 
   @media (min-width: 1024px) {
     .contrast {
-      margin-top: 228px;
-      margin-bottom: 228px;
+      margin-top: 14.25rem;
+      margin-bottom: 14.25rem;
     }
 
     .contrast::after,
     .contrast::before {
-      height: 228px;
+      height: 14.25rem;
     }
 
     .contrast::before {
-      top: -228px;
+      top: -14.25rem;
     }
 
     .contrast::after {
-      bottom: -228px;
+      bottom: -14.25rem;
     }
   }
 
@@ -126,7 +126,7 @@
   }
 
   .contrast--black::after {
-    @apply bg-black;
+    background-image: url("../images/large-bottom-divider-black.svg");
   }
 
   .contrast--offBlack {
@@ -138,7 +138,7 @@
   }
 
   .contrast--offBlack::after {
-    @apply bg-offBlack;
+    background-image: url("../images/large-bottom-divider-off-black.svg");
   }
 
   .contrast--darkCharcoal {
@@ -150,7 +150,7 @@
   }
 
   .contrast--darkCharcoal::after {
-    @apply bg-darkCharcoal;
+    background-image: url("../images/large-bottom-divider-dark-charcoal.svg");
   }
 
   .contrast--white {
@@ -162,6 +162,6 @@
   }
 
   .contrast--white::after {
-    @apply bg-white;
+    background-image: url("../images/large-bottom-divider-white.svg");
   }
 }

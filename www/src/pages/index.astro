@@ -19,16 +19,15 @@ const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock
     <PrimaryCallToAction/>
     <DemoTranscription client:load/>
     <LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/>
-
-    <div class="contrast contrast--offBlack">
-      <HighlightColumn/>
-    </div>
-
+    <HighlightColumn/>
     <SecondaryCallToAction/>
     <LogosDividerTwo/>
     <Testimonial quote="Deepgram is doing for speech what SpaceX did for space travel." name="Todd Fisher" role="Founder, Call Tracking Metrics"/>
-    <SideBySide/>
-    <IconColumn/>
+
+    <div class="contrast contrast--offBlack">
+      <SideBySide/>
+      <IconColumn/>
+    </div>
   </main>
 </PageLayout>
 
