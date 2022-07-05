@@ -65,17 +65,16 @@
     height: 3.5rem;
     content: "";
     position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
+    margin: 5rem 0;
   }
 
   .contrast::before {
-    background-position: bottom center;
+    clip-path: ellipse(75% 100% at 50% 100%);
     top: -3.5rem;
   }
 
   .contrast::after {
-    background-position: top center;
+    clip-path: ellipse(75% 100% at 50% 100%);
     bottom: -3.5rem;
   }
 
@@ -119,51 +118,49 @@
     }
   }
 
-  .contrast--black {
+  @media (min-width: 1600px) {
+    .contrast::before {
+      clip-path: ellipse(65% 100% at 50% 100%);
+    }
+
+    .contrast::after {
+      clip-path: ellipse(65% 100% at 50% 100%);
+    }
+  }
+
+  .contrast--black,
+  .contrast--black::before {
     @apply bg-black;
   }
 
-  .contrast--black::before {
-    background-image: url("../images/large-divider-black.svg");
+  .contrast--end--black::after {
+    @apply bg-black;
   }
 
-  .contrast--black::after {
-    background-image: url("../images/large-bottom-divider-black.svg");
-  }
-
-  .contrast--offBlack {
+  .contrast--offBlack,
+  .contrast--offBlack::before {
     @apply bg-offBlack;
   }
 
-  .contrast--offBlack::before {
-    background-image: url("../images/large-divider-off-black.svg");
+  .contrast--end--offBlack::after {
+    @apply bg-offBlack;
   }
 
-  .contrast--offBlack::after {
-    background-image: url("../images/large-bottom-divider-off-black.svg");
-  }
-
-  .contrast--darkCharcoal {
+  .contrast--darkCharcoal,
+  .contrast--darkCharcoal::before {
     @apply bg-darkCharcoal;
   }
 
-  .contrast--darkCharcoal::before {
-    background-image: url("../images/large-divider-dark-charcoal.svg");
+  .contrast--end--darkCharcoal::after {
+    @apply bg-darkCharcoal;
   }
 
-  .contrast--darkCharcoal::after {
-    background-image: url("../images/large-bottom-divider-dark-charcoal.svg");
-  }
-
-  .contrast--white {
+  .contrast--white,
+  .contrast--white::before {
     @apply bg-white;
   }
 
-  .contrast--white::before {
-    background-image: url("../images/large-divider-white.svg");
-  }
-
-  .contrast--white::after {
-    background-image: url("../images/large-bottom-divider-white.svg");
+  .contrast--end--white::after {
+    @apply bg-white;
   }
 }
