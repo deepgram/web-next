@@ -1,15 +1,16 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
-import liveStreamingSVG from './images/live-streaming.svg'
-import preRecordedSVG from './images/pre-recorded-file.svg'
 import PricingHero from '../components/content/pricing/Hero.astro'
 import PricingTable from '../components/content/pricing/PricingTable.vue'
 
 ---
 <PageLayout>
   <main>
-<PricingHero />
-<PricingTable client:load />
+    
+    <PricingHero />
+    <div class="contrast contrast--white contrast--end--white">
+      <PricingTable client:load />
+    </div>
 
 <div>
   <img src="./images/left-wave.svg" />

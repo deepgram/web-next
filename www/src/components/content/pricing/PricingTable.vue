@@ -361,11 +361,22 @@ h3 {
 .plan:nth-of-type(2) .button {
   @apply bg-meadow;
 }
+.plan:nth-of-type(2) .button:hover {
+  @apply bg-mintChip;
+}
 .plan:nth-of-type(3) .button {
   @apply bg-powder;
 }
 
+.plan:nth-of-type(3) .button:hover {
+  @apply bg-sky-200;
+}
+
 .plan:nth-of-type(4) .button {
   @apply bg-cottonCandy;
+}
+
+.plan:nth-of-type(4) .button:hover {
+  @apply bg-red-200;
 }
 </style>
