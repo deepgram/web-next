@@ -128,6 +128,7 @@ img {
   @apply flex flex-col;
   @apply px-8 md:px-16 lg:px-24 xl:px-28;
   @apply relative z-10;
+  backdrop-filter: blur(10px);
   background-color: rgba(79, 98, 120, 0.3);
 }
 

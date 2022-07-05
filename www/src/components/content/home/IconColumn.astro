@@ -42,12 +42,13 @@ const details = [{
   link:"See for Yourself"
 }]
 ---
-<section class="stats w-full">
-  <div class=" flex flex-col max-w-screen-2xl mx-auto ">
+<section class="w-full">
+  <div class=" flex flex-col items-center max-w-screen-2xl mx-auto">
     <div class="grid-container">
     {details.map((detail)=>{return <div class="grid-div"><div class="flex flex-col pl-7 border-lightIris border-l-2"><Icon icon={detail.icon} class="mb-4 text-casper"/><h5>{detail.title}</h5> <div>{detail.detail}</div><a>{detail.link}</a></div></div>
        })}
     </div>
+    <div class="mt-28"><a class="font-bold text-2xl">Sound good? Get started 🚀</a></div>
   </div>
 </section>
 
