@@ -1,0 +1,89 @@
+---
+import Icon from "../../Icon.astro"
+const { quote, name, role, image } = Astro.props
+
+const details = [{
+  name: "Todd F",
+  role: "CEO",
+  image:"",
+  quote:"Excellent service - best price and highest quality transcription service.  We used IBM Watson, Google, AWS, Azure and other transcription providers.  Deepgram out does all of them by far.  We're able to use Deepgram to provide high-quality call analysis in real time to customers.",
+  socialMedia: "twitter"
+},{
+  name: "Justin W",
+  role: "CTO",
+  image:"",
+  quote:"Extremely accurate and fast responses.  Deepgram allows us to transcribe live streams and create captioning in real time.  Deepgram determines context of a sentence as it's being transcribed and makes corrections as it receives more data.",
+  socialMedia: "twitter"
+}, {
+  name: "Leif B",
+  role: "Senior Software Engineer",
+  image:"",
+  quote:"API: Good Product, Good Documentation, Great Support.  We use Deepgram as our primary transcription engine, converting a Twilio phone call audio stream into a text stream in real time and analyzing the results. The Deepgram API covers the languages we need (and then some), integrates easily with our audio source, is accurate enough, and delivers results quickly. The documentation made it easy to design our code, and the very helpful support engineers were quick to respond to questions and to help us debug our initial efforts.",
+  socialMedia: "twitter"
+},
+{
+  name: "Gabriela Avila",
+  role: "Cheif Artificial Intelligence Officer",
+  image:"",
+  quote:"Overall, we've seen an average transcription accuracy of 90%. We've had some audios where the confidence is from 80 to 85%, but when the client's audios are high quality, the confidence can go up to 95%. It is incredible, because there are some potential clients who have not seen something of the kind in spanish, so this represents the highest impact metric we can talk about. It is not something you see everyday. ",
+  socialMedia: "twitter"
+}]
+---
+
+<section class="small-testimonial">
+  <div class="max-w-screen-2xl mx-auto">
+      <h3>See what developers are saying about Deepgram.</h3>
+      <!-- <div class="container flex flex-col items-center max-w-screen-2xl mx-auto"> -->
+    <div class="card-container">
+      {details.map((detail)=>{
+        return <div class="card-div">
+          <div class="flex flex-col py-8 px-5">
+            <div class="flex justify-between">
+              <div class="flex items-center">
+                <img class="mr-3" src="image"/>
+                <div>
+                  <p class="font-semibold">{detail.name}</p>
+                  <p class="text-xs">{detail.role}</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <Icon icon="twitter" class="fill-brand-twitter w-4"/>
+              </div></div>
+              <p class="text-cloud text-sm mt-4">{detail.quote}</p>
+            </div>
+          </div>
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+
+section {
+  @apply w-full flex;
+  @apply relative -top-72;
+  @apply -mb-72;
+  background: black url('./soundwavelarge.png');
+  background-size:contain;
+  @apply h-[calc(100vw/4)] md:h-[calc(100vw/5)] lg:h-[calc(100vw/2)]
+
+}
+
+h3 {
+  @apply text-2xl xl:text-3xl font-bold;
+  @apply mb-6 mt-40;
+  @apply text-center;
+}
+
+.card-container {
+  @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-8 2xl:gap-10;
+  @apply mt-14 -mb-24 xl:-mb-40 2xl:-mb-52;
+}
+
+.card-div {
+  @apply w-full md:w-5/6 md:w-full;
+  @apply h-max;
+  background-color: rgba(79, 98, 120, 0.3);
+}
+
+</style>

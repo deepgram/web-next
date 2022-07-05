@@ -53,12 +53,15 @@ const details = [{
        })}
     </div>
   </div>
+  <div class="flex justify-end">
+  <img class="image2" src="/star-meadow.svg" />
+  </div>
 </section>
 
 <style>
 section {
   @apply px-8 md:px-16 lg:px-10 xl:px-36;
-  @apply relative -top-52 md:-top-64 lg:-top-72 xl:-top-80 2xl:-top-96;
+  @apply relative -top-52;
 }
 
 h4 {
@@ -70,19 +73,17 @@ a {
 }
 .container {
   @apply relative z-10;
-
 }
 
 .image1 {
-  @apply relative;
   @apply w-6/12;
-  @apply relative z-0 top-40 -left-56;
+  @apply relative z-0 -left-56 top-32;
 }
 
 .grid-container {
   @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-8 2xl:gap-10;
-  @apply mt-14;
-  @apply -top-32 lg:-top-52 xl:-top-52 2xl:-top-64 relative;
+  @apply mt-14 -mb-24 xl:-mb-40 2xl:-mb-52;
+  @apply -top-32 lg:-top-52 xl:-top-52 2xl:-top-96 relative;
 }
 
 .grid-div {
@@ -90,6 +91,10 @@ a {
   backdrop-filter: blur(10px);
   background-color: rgba(79, 98, 120, 0.3);
   @apply h-full;
+}
+
+.image2 {
+  @apply relative right-4 md:right-40 -top-24;
 }
 
 
