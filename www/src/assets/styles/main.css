@@ -56,6 +56,7 @@
     position: relative;
     margin-top: 3.5rem;
     margin-bottom: 3.5rem;
+    padding: 5rem 0;
   }
 
   .contrast::after,
@@ -65,15 +66,16 @@
     content: "";
     position: absolute;
     background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: cover;
+    background-size: contain;
   }
 
   .contrast::before {
+    background-position: bottom center;
     top: -3.5rem;
   }
 
   .contrast::after {
+    background-position: top center;
     bottom: -3.5rem;
   }
 
