@@ -1,5 +1,5 @@
 ---
-const { cta, brands } = Astro.props
+const { cta, brands, theme } = Astro.props
 ---
 
 <section class="logos-divider w-full">
@@ -21,22 +21,13 @@ const { cta, brands } = Astro.props
 
   .cta {
     @apply font-bold text-xl;
-    @apply mb-4;
   }
   .logo {
-    /* @apply h-4 lg:h-full; */
-    /* height: calc(100vw/15) */
     @apply h-[calc(100vw/4)] md:h-[calc(100vw/5)] lg:h-[calc(100vw/10)]
   }
-
   .grid-container {
   @apply grid lg:flex grid-cols-3 md:grid-cols-4;
   @apply gap-6;
-  @apply mt-14;
-}
-
-.grid-div {
-  /* @apply py-0 pl-0 pr-10 sm:pr-0 md:p-8 lg:pr-4; */
 }
 
 </style>

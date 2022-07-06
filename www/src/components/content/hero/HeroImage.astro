@@ -1,12 +1,14 @@
 ---
 import Promo from '../../../../../core-components/components/promo/Promo.astro';
 import Hyperlink from '../../Hyperlink.astro';
+import LogosDividerOne from '../home/LogosDividerOne.astro';
 const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, image, alt } = Astro.props
-
+const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock', 'khoros' ]
 ---
 
-<section class="hero hero-split">
-  <div class="hero-left">
+<section class="hero hero-split w-full">
+  <div class="grid-container">
+  <div class="hero-left grid-div max-w-screen-2xl mx-auto">
     <Promo>{promo}</Promo>
     <h1>{title}</h1>
     <p>{body}</p>
@@ -29,7 +31,29 @@ const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, image, alt } 
       <Hyperlink icon="arrowright">Explore the Docs</Hyperlink>
     </div>
   </div>
-  <div class="hero-right">
-    <img class="hero-image" src={image} alt={alt} title={alt} />
+  <div class="hero-right grid-div">
+    <div>Animation</div>
+    <img class="hero-image" src="" alt={alt} title={alt} />
   </div>
+  </div>
+  <LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/>
 </section>
+
+<style>
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  .grid-container {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
+}
+
+.grid-div {
+  @apply px-3 py-6;
+  /* @apply text-stone text-lg; */
+}
+
+.hero-right {
+  @apply border-white border-2;
+}
+</style>
