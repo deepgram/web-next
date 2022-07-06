@@ -4,7 +4,7 @@ description: Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
   dui. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci
   porta dapibus. Curabitur aliquet quam id dui posuere blandit. Sed porttitor
   lectus nibh.
-layout: ../src/layouts/PageLayout.astro
+layout: ./src/layouts/PageLayout.astro
 ---
 
 Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Proin eget tortor risus. Sed porttitor lectus nibh.
