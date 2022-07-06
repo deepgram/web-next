@@ -52,6 +52,12 @@
     @apply bg-rock text-meadow;
   }
 
+  .hyperlink {
+    @apply text-lightIris;
+    @apply text-lg;
+    @apply font-black;
+  }
+
   .contrast {
     position: relative;
     margin-top: 3.5rem;
