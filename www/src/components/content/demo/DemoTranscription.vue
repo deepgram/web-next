@@ -60,7 +60,7 @@ const items = [
           <a
             href="https://console.deepgram.com/signup"
             rel="noopener noreferrer"
-            class="primary-button"
+            class="button button--primary button--small mb-10"
             >Transcribe More Free</a
           >
         </div>
@@ -83,7 +83,7 @@ const items = [
           <a
             href="https://console.deepgram.com/signup"
             rel="noopener noreferrer"
-            class="primary-button"
+            class="button button--primary button--small mb-10"
             >Try With Your Own Files</a
           >
         </div>
@@ -117,11 +117,6 @@ img {
   @apply px-8 lg:px-16 xl:px-36;
   @apply mt-8 -mb-40 md:-mb-52 lg:-mb-56 2xl:-mb-80;
   @apply relative -top-52 md:-top-64 lg:-top-72 xl:-top-80 2xl:-top-96;
-}
-
-.primary-button {
-  @apply button button--primary button--small;
-  @apply mb-10;
 }
 
 .container {
