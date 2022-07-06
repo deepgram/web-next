@@ -1,11 +1,15 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import HeroImage from "../components/content/hero/HeroImage.astro";
+import SideBySideNoImage from "../components/content/product/SideBySideNoImage.astro";
+import DemoTranscriptionTwo from "../components/content/demo/product/DemoTranscriptionTwo.vue";
 ---
 
 <PageLayout>
   <main>
     <HeroImage promo="Webinar: What’s New in Product, May 26 ✨" title="Transcribe and understand real-world audio with the API built for developers." primaryCta="See how easy it can be."/>
+    <SideBySideNoImage/>
+    <DemoTranscriptionTwo client:load/>
   </main>
 </PageLayout>
 

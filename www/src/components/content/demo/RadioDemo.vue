@@ -14,7 +14,7 @@ const emit = defineEmits(["update:modelValue"]);
   <div class="radio-group">
     <div class="item" v-for="item in items" :key="item.id">
       <label :for="item.id" :class="item.code === picked ? 'picked' : null">
-        <img src="../../../assets/icons/audiofile.svg" />
+        <img src="src/assets/icons/audiofile.svg" />
 
         <div class="label-text">
           <div class="title">{{ item.title }}</div>
@@ -61,6 +61,7 @@ svg {
 
 .radio-group {
   @apply mb-10;
+  @apply h-80;
 }
 
 label {
@@ -75,7 +76,7 @@ label {
 .item {
   @apply bg-ink;
   @apply h-24;
-  @apply mb-3;
+  @apply mb-4;
 }
 
 .picked {
