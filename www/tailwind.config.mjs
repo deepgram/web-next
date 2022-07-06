@@ -27,6 +27,7 @@ export default {
         darkCharcoal: "#141E29",
         midCharcoal: "#1D2630",
         ink: "#1E2C3C",
+        iris: "#5D6FD0",
         steel: "#4F6278",
         casper: "#AAB8CD",
         cloud: "#D7DFEB",

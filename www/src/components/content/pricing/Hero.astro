@@ -1,4 +1,3 @@
-<div class="bottom-curve">
   <div id="hero-pricing">
     <div class="top">
 
@@ -26,20 +25,43 @@
       </div>
     </div>
   </div>
-</div>
 
 <style scoped>
-  .bottom-curve {
-    background: linear-gradient(180deg, #000 50%, #fff 50%);   
-  }
-
+  
   #hero-pricing {
+    @apply bg-almostBlack relative;
     color: white;
     display: grid;
     grid-template-columns: 1fr repeat(4, minmax(155px, 1fr)) 1fr;
     grid-template-rows: repeat(4, 7rem);
     gap: .7rem;
+    @apply py-5;
   }
+
+  #hero-pricing::before {
+    width: 400px;
+    height: 75px;
+    content: "";
+    position: absolute;
+    right: -130px;
+    top: 0px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-image: url("/images/top-planet.svg")
+  }
+
+  @screen md {
+    #hero-pricing {
+        background-image: url("/images/ring-planet.svg");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+    }
+
+    #hero-pricing::before {
+    right: 0px;
+  }
+  }
+
   .top {
     @apply text-white flex justify-center items-center;
     @apply col-start-2 col-end-6 row-start-1 row-end-3;
@@ -86,6 +108,7 @@
     justify-content: baseline;
     align-items: center;
     font-size: 1rem;
+    padding: 1rem;
     padding-top: 1rem
     /* display: grid;
     grid-template-rows: 3rem 4rem 5rem; */

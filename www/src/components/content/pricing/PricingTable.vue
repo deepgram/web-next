@@ -76,6 +76,8 @@ let checkedValue = ref(false);
       @input="checkedValue = $event.target.checked"
       class="toggle"
     />
+    <!-- TODO: Need to set the actual link -->
+    <a href="#">How do I select a model?</a>
     <div class="plans">
       <div class="plan all col-start-3">
         <h4 class="plan-header">All plans include:</h4>
@@ -233,7 +235,12 @@ let checkedValue = ref(false);
 <style scoped>
 #pricing-section {
   @apply bg-white text-darkCharcoal;
-  @apply m-auto pb-10;
+  @apply m-auto pb-10 flex flex-col;
+}
+
+#pricing-section a {
+  @apply m-auto;
+  @apply underline text-iris;
 }
 h3 {
   @apply text-4xl font-bold pt-5 pb-3 text-center;
