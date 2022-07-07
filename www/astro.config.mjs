@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [globals(), vue(), tailwind()],
+  integrations: [tailwind(), globals(), vue()],
   vite: {
     resolve: {
       preserveSymlinks: true, // required for dev to read contents of symlinked directory

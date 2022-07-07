@@ -1,5 +1,5 @@
 export default {
-  content: ["./public/**/*.html", "./src/**/*.astro"],
+  content: ["./public/**/*.html", "./src/**/*.astro", "./src/**/*.vue"],
   theme: {
     extend: {
       fontFamily: {
