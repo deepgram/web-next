@@ -34,19 +34,3 @@ http-server
 ## /content
 
 Static content directory shared between multiple web projects.
-
-## /core-components
-
-Component library.
-
-### components
-
-Folders for each component. Be sure to add export to the `index.js` file after you create a component. This makes it easier to import all components at once if needed.
-
-### demo
-
-```
-npm i
-npm run dev
-```
-The demo should include examples of the core-components
