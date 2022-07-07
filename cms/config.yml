@@ -115,10 +115,6 @@ collections:
     meta: { path: { label: Parent, widget: parent, index_file: "index" } }
     slug: "{{slug}}"
     fields:
-      - label: Layout
-        name: layout
-        widget: hidden
-        value: "./src/layouts/PageLayout.astro"
       - label: Title
         name: title
         widget: string
