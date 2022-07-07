@@ -1,8 +1,6 @@
 ---
-import Promo from '../../../../../core-components/components/promo/Promo.astro';
-import Button from '../../../../../core-components/components/button/Button.astro';
+import Promo from "../Promo.astro";
 const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, page } = Astro.props
-
 ---
 <section class="hero w-full">
   <div class="flex flex-col max-w-screen-2xl mx-auto">
@@ -15,8 +13,8 @@ const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, page } = Astr
     <Promo>{promo}</Promo>
     <h1>{title}</h1>
     <div class="flex justify-center space-x-7">
-      <Button>Start Building</Button>
-      <Button>Contact Sales</Button>
+      <a href="/" class="button button--primary">Start Building</a>
+      <a href="/" class="button button--secondary">Contact Sales</a>
     </div>
     </div>
     <div class="flex justify-end pt-24 pb-12 pr-40 md:pr-56 lg:pr-72">
