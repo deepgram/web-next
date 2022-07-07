@@ -18,12 +18,29 @@ body {
 } */
 
 @layer base {
+  h1,
+  h2 {
+    @apply font-bold;
+  }
+
   h1 {
-    @apply text-6xl;
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  a {
+    @apply text-lightIris;
   }
 }
 
 @layer components {
+  .hero h1 {
+    @apply text-6xl;
+  }
+
   .button {
     @apply flex justify-center items-center font-bold text-base leading-4 py-2 px-6 whitespace-nowrap;
     height: 3.25rem;
