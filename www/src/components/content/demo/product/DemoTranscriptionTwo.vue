@@ -47,57 +47,56 @@ const items = [
 <template>
   <section class="demo-transcription w-full">
     <div class="grid grid-cols-1 lg:grid-cols-4">
-      <div class="col-span-2">
+      <div class="col-span-1">
         <ToggleTwo
           :demoItems="demoItems"
           v-model="checkedValue"
           @input="checkedValue = $event.target.value"
         />
       </div>
-
-      <div class="container">
-        <div v-if="checkedValue === '0'">
-          <!-- <h3>See real-time transcription with live radio.</h3>
-        <p>Click the button to transcribe live.</p> -->
-          <div class="mic-buttons">
-            <button>mic</button><button>volumebars</button>
-          </div>
-          <div class="grid-container">
-            <div class="grid-div">
-              Transcribe your voice in English or select another language.
+      <div class="col-span-3">
+        <div class="container mx-0 lg:mx-12">
+          <div v-if="checkedValue === '0'">
+            <div class="mic-buttons">
+              <button>mic</button><button>volumebars</button>
             </div>
-            <div class="grid-div">test 2</div>
-          </div>
-          <div class="flex justify-center mt-10">
-            <a
-              href="https://console.deepgram.com/signup"
-              rel="noopener noreferrer"
-              class="button button--primary button--small"
-              >Transcribe More Free</a
-            >
-          </div>
-        </div>
-        <div v-if="checkedValue === '1'">
-          <div class="mic-buttons">
-            <p>Select a file below.</p>
-          </div>
-          <div class="grid-container">
-            <RadioDemo
-              :items="items"
-              v-model="pickedValue"
-              @input="pickedValue = $event.target.value"
-            />
-            <div class="grid-div">
-              {{ pickedValue }}
+            <div class="grid-container">
+              <div class="grid-div">
+                Transcribe your voice in English or select another language.
+              </div>
+              <div class="grid-div">test 2</div>
+            </div>
+            <div class="flex justify-center mt-10">
+              <a
+                href="https://console.deepgram.com/signup"
+                rel="noopener noreferrer"
+                class="button button--primary button--small"
+                >Transcribe More Free</a
+              >
             </div>
           </div>
-          <div class="flex justify-center">
-            <a
-              href="https://console.deepgram.com/signup"
-              rel="noopener noreferrer"
-              class="button button--primary button--small"
-              >Transcribe More Free</a
-            >
+          <div v-if="checkedValue === '1'">
+            <div class="mic-buttons">
+              <p>Select a file below.</p>
+            </div>
+            <div class="grid-container">
+              <RadioDemo
+                :items="items"
+                v-model="pickedValue"
+                @input="pickedValue = $event.target.value"
+              />
+              <div class="grid-div">
+                {{ pickedValue }}
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <a
+                href="https://console.deepgram.com/signup"
+                rel="noopener noreferrer"
+                class="button button--primary button--small"
+                >Transcribe More Free</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -134,7 +133,7 @@ img {
 
 .container {
   @apply flex flex-col;
-  @apply p-8 md:px-16 lg:px-24 xl:px-28;
+  @apply p-8 md:px-16 lg:px-12;
   @apply col-span-3;
   backdrop-filter: blur(10px);
   background-color: rgba(79, 98, 120, 0.3);

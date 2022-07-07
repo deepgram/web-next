@@ -58,8 +58,12 @@ body {
 }
 
 @layer components {
-  .hero h1 {
+  .h1-large {
     @apply text-6xl;
+  }
+
+  .h1-small {
+    @apply text-5xl;
   }
 
   .button {

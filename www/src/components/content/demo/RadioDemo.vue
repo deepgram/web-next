@@ -18,7 +18,7 @@ const emit = defineEmits(["update:modelValue"]);
 
         <div class="label-text">
           <div class="title">{{ item.title }}</div>
-          <div>{{ item.text }}</div>
+          <div class="hidden xl:flex">{{ item.text }}</div>
         </div>
         <input
           type="radio"

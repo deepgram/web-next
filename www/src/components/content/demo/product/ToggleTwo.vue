@@ -75,18 +75,15 @@ svg {
 }
 
 label {
-  @apply px-4;
+  @apply px-5;
 }
 
 .label-text {
-  @apply pl-4;
-  @apply w-11/12;
+  /* @apply w-11/12; */
 }
 
 .item {
-  /* @apply bg-ink; */
-  /* @apply h-24; */
-  @apply pl-7 border-lightIris border-l-2;
+  @apply border-lightIris border-l-2;
   @apply mt-14 mb-3;
 }
 

@@ -12,7 +12,7 @@ const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock
       <Promo>{promo}</Promo>
       <h1 class="h1-small mt-11">{title}</h1>
       <p>{body}</p>
-      <p class="mt-2">{primaryCta}</p>
+      <!-- <p class="mt-2">{primaryCta}</p> -->
       <p>{secondaryCta}</p>
       <p>{tertiaryCta}</p>
       <div class="flex flex-col">
@@ -36,8 +36,7 @@ const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock
       </div>
     </div>
     <div class="hero-right grid-div">
-      <div>Animation</div>
-      <img class="hero-image" src={image} alt={alt} title={alt} />
+      <img class="hero-image" src="src/assets/images/product.png" alt={alt} title={alt} />
     </div>
   </div>
   <div class="mt-14">
@@ -56,11 +55,11 @@ const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock
 }
 
 .grid-div {
-  @apply px-3 pb-6;
+  /* @apply pb-6; */
   /* @apply text-stone text-lg; */
 }
 
 .hero-right {
-  @apply border-white border-2;
+  /* @apply border-white border-2; */
 }
 </style>
