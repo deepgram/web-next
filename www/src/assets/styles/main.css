@@ -11,6 +11,10 @@ body {
   @apply font-inter;
 }
 
+.bg-fingerprint {
+  background: black no-repeat top right -20rem url('./fingerprint.svg');
+}
+
 /* @media screen and (min-width: 1600px) {
   html {
     font-size: 25px;

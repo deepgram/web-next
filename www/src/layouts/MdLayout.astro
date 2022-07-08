@@ -1,0 +1,8 @@
+---
+import BaseLayout from './BaseLayout.astro'
+---
+<BaseLayout>
+	<main class={Astro.props.frontmatter.body}>
+		<slot />
+	</main>
+</BaseLayout>
