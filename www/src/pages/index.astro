@@ -1,53 +1,41 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import HeroCentered from "../components/content/hero/HeroCentered.astro";
-// import PrimaryCallToAction from "../components/content/home/PrimaryCallToAction.astro";
-// import DemoTranscription from "../components/content/demo/DemoTranscription.vue";
-// import LogosDividerOne from "../components/content/home/LogosDividerOne.astro";
-// import SecondaryCallToAction from "../components/content/home/SecondaryCallToAction.astro";
-// import LogosDividerTwo from "../components/content/home/LogosDividerTwo.astro";
-// import Testimonial from "../components/content/home/Testimonial.astro";
-// import HighlightColumn from "../components/content/home/HighlightColumn.astro";
-// import SideBySide from "../components/content/home/SideBySide.astro";
-// import IconColumn from "../components/content/home/IconColumn.astro";
-// import Community from "../components/content/home/Community.astro";
-// import Cards from "../components/content/home/Cards.astro";
+import PrimaryCallToAction from "../components/content/home/PrimaryCallToAction.astro";
+import DemoTranscription from "../components/content/demo/DemoTranscription.vue";
+import LogosDividerOne from "../components/content/home/LogosDividerOne.astro";
+import SecondaryCallToAction from "../components/content/home/SecondaryCallToAction.astro";
+import LogosDividerTwo from "../components/content/home/LogosDividerTwo.astro";
+import Testimonial from "../components/content/home/Testimonial.astro";
+import HighlightColumn from "../components/content/home/HighlightColumn.astro";
+import SideBySide from "../components/content/home/SideBySide.astro";
+import IconColumn from "../components/content/home/IconColumn.astro";
+import Community from "../components/content/home/Community.astro";
+import Cards from "../components/content/home/Cards.astro";
 import AmplifyQuote from "../components/content/AmplifyQuote.page-ssr.astro";
-// import SmallTestimonial from "../components/content/home/SmallTestimonial.astro";
+import SmallTestimonial from "../components/content/home/SmallTestimonial.astro";
 
 const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock', 'khoros' ]
 ---
 <PageLayout>
   <main>
     <HeroCentered promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world."/>
-    <!-- <PrimaryCallToAction/> -->
-    <!-- <DemoTranscription client:load/> -->
-    <!-- <LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/> -->
-    <!-- <HighlightColumn/> -->
-    <!-- <SecondaryCallToAction/> -->
-    <!-- <LogosDividerTwo/> -->
-    <!-- <Testimonial quote="Deepgram is doing for speech what SpaceX did for space travel." name="Todd Fisher" role="Founder, Call Tracking Metrics"/> -->
+    <PrimaryCallToAction/>
+    <DemoTranscription client:load/>
+    <LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/>
+    <HighlightColumn/>
+    <SecondaryCallToAction/>
+    <LogosDividerTwo/>
+    <Testimonial quote="Deepgram is doing for speech what SpaceX did for space travel." name="Todd Fisher" role="Founder, Call Tracking Metrics"/>
 
-    <!-- <div class="contrast contrast--darkCharcoal contrast--end--black">
+    <div class="contrast contrast--darkCharcoal contrast--end--black">
       <SideBySide/>
       <IconColumn/>
-    </div> -->
-    <!-- <Community/> -->
-    <!-- <Cards/> -->
-    <!-- <SmallTestimonial/> -->
-    
-    <AmplifyQuote>
-      <h2>tl;dr</h2>
-      <h1>Stop building work-arounds for STT that doesn’t work.</h1>
-      <p><a href="https://console.deepgram.com/signup">Start Free</a> 💰 <small>Got questions? <a href="/contact-us">Talk to an expert</a></small></p>
-    </AmplifyQuote>
-    
-    <AmplifyQuote>
-      <h2>tl;dr</h2>
-      <h1>Stop building work-arounds for STT that doesn’t work.</h1>
-      <p><a href="https://console.deepgram.com/signup">Start Free</a> 💰 <small>Got questions? <a href="/contact-us">Talk to an expert</a></small></p>
-    </AmplifyQuote>
-    
+    </div>
+    <Community/>
+    <Cards/>
+    <SmallTestimonial/>
+
     <AmplifyQuote>
       <h2>tl;dr</h2>
       <h1>Stop building work-arounds for STT that doesn’t work.</h1>
