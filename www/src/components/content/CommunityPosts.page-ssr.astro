@@ -1,4 +1,6 @@
 ---
+import Icon from "../Icon.astro"
+
 const details = [{
   image:"audiofile",
   title:"Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram",
@@ -45,60 +47,39 @@ const details = [{
 }]
 ---
 
-<section class="w-full">
-  <img class="image1" src="/starburst.svg" />
-  <div class="container flex flex-col items-center max-w-screen-2xl mx-auto">
-    <div class="grid-container">
-    {details.map((detail)=>{return <div class="grid-div"><img class="card-image" src="/hello-world-blog@2x.jpg"/><div class="details p-4"><p class="text-sm mb-4">{`#${detail.tags[0]}`}</p><h4>{detail.title}</h4> <p class="text-sm font-bold mt-20">{detail.author.toUpperCase()}</p></div></div>
-       })}
+<section class="community-posts mb-24">
+  <div class="max-w-screen-2xl mx-auto">
+    <div class="-mx-96 bg-starburst px-96">
+      <div class="px-4 md:px-6 lg:px-10 flex flex-col"> 
+        <h2 class="text-center">What’s new in the community.</h2>
+        <div class="pt-12 flex justify-center space-x-8">
+          <a><Icon icon="twitter" class="fill-current w-10"/></a>
+          <a><Icon icon="github" class="fill-current w-10"/></a>
+          <a><Icon icon="linkedin" class="fill-current w-10"/></a>
+        </div>
+        <div class="pt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-8 2xl:gap-10">
+          {details.map((detail) => {
+            return <div class="card">
+            <img src="/hello-world-blog@2x.jpg"/>
+            <div class="details p-4">
+              <p class="text-sm mb-4">{`#${detail.tags[0]}`}</p>
+              <h4>{detail.title}</h4>
+              <p class="text-sm font-bold mt-20">{detail.author.toUpperCase()}</p>
+              </div>
+            </div>
+          })}
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="flex justify-end">
-  <img class="image2" src="/star-meadow.svg" />
-  </div>
+</div>
 </section>
 
+
 <style>
-section {
-  @apply px-8 md:px-16 lg:px-10 xl:px-36;
-  @apply relative -top-52;
-}
-
-h4 {
-  @apply text-2xl;
-}
-
-a {
-  @apply mt-4;
-}
-.container {
-  @apply relative z-10;
-}
-
-.image1 {
-  @apply w-6/12;
-  @apply relative z-0 -left-56 top-32;
-}
-
-.grid-container {
-  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-8 2xl:gap-10;
-  @apply mt-14 -mb-24 xl:-mb-40 2xl:-mb-52;
-  @apply -top-32 lg:-top-52 xl:-top-52 2xl:-top-96 relative;
-}
-
-.grid-div {
+.card {
   @apply w-full md:w-5/6 md:w-full;
   backdrop-filter: blur(10px);
   background-color: rgba(79, 98, 120, 0.3);
   @apply h-full;
 }
-
-.image2 {
-  @apply relative right-4 md:right-40 -top-24;
-}
-
-
-
-
-
 </style>

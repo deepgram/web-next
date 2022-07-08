@@ -1,0 +1,67 @@
+---
+import Icon from "../Icon.astro"
+
+const details = [{
+  icon: "audiofile",
+  title: "Easy to use, easy to integrate",
+  detail: "Built by developers for developers with the tools you want: APIs, SDKs....",
+  cta: "View SDKs",
+  link: "/product"
+}, {
+  icon: "audiofile",
+  title: "Built for rapid innovation",
+  detail: "Our flexible architecture and transfer learning allows us to innovate quickly.",
+  cta: "See Changelog",
+  link: "/product"
+}, {
+  icon: "audiofile",
+  title: "Focused on NLU capabilities",
+  detail: "Stop building features from scratch. Deepgram has 3+ NLU features and counting.",
+  cta: "View Features",
+  link: "/product"
+}, {
+  icon: "audiofile",
+  title: "Human-level accuracy on real-life audio",
+  detail: "Background noise, multiple speakers, cross-talk—get top accuracy on tough audio.",
+  cta: "Give it a Try",
+  link: "/product"
+}, {
+  icon: "audiofile",
+  title: "Unparalleled speed",
+  detail: "Create human-like conversational AI experiences, real-time analytics, and enablement.",
+  cta: "See Use Cases",
+  link: "/product"
+}, {
+  icon: "audiofile",
+  title: "Transcribe thousands of files concurrently",
+  detail: "We use GPUs to process exponentially more audio without breaking the bank.",
+  cta: "View Product",
+  link: "/product"
+}, {
+  icon: "audiofile",
+  title: "Cost-effective pricing",
+  detail: "Accuracy, speed, and scaleability don’t have to cost the proverbial arm and leg.",
+  cta: "View Pricing",
+  link: "/product"
+}, {
+  icon:"audiofile",
+  title:"Bottom line: It just works.",
+  detail:"Get STT that can TCB and deliver actually usable transcripts.",
+  cta:"See for Yourself",
+  link: "/product"
+}]
+---
+<section class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10">
+  <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-10 lg:gap-8 2xl:gap-10">
+    {details.map((detail) => {
+      return <div class="border-lightIris border-l-2 flex flex-col space-y-2 p-6">
+        <Icon icon={detail.icon} class="mb-4 text-casper"/>
+        <h5>{detail.title}</h5>
+        <p>{detail.detail}</p>
+        <a href={detail.link} class="inline-block flex font-bold">
+          {detail.cta} <Icon icon="arrowright"/>
+        </a>
+      </div>
+    })}
+  </div>
+</section>

@@ -11,6 +11,12 @@ body {
   @apply font-inter;
 }
 
+.bg-starburst {
+  background-image: url('/starburst.svg');
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
 /* @media screen and (min-width: 1600px) {
   html {
     font-size: 25px;

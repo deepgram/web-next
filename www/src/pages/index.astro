@@ -9,13 +9,6 @@ import SecondaryCallToAction from "../components/content/home/SecondaryCallToAct
 import LogosDividerTwo from "../components/content/home/LogosDividerTwo.astro";
 import Testimonial from "../components/content/home/Testimonial.astro";
 import HighlightColumn from "../components/content/home/HighlightColumn.astro";
-import SideBySide from "../components/content/home/SideBySide.astro";
-import IconColumn from "../components/content/home/IconColumn.astro";
-import Community from "../components/content/home/Community.astro";
-import Cards from "../components/content/home/Cards.astro";
-
-import WhatDevelopersAreSaying from "../components/content/home/WhatDevelopersAreSaying.astro";
-import AmplifyQuote from "../components/content/AmplifyQuote.astro";
 
 const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock', 'khoros' ]
 ---
@@ -31,13 +24,14 @@ const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock
     <Testimonial quote="Deepgram is doing for speech what SpaceX did for space travel." name="Todd Fisher" role="Founder, Call Tracking Metrics"/>
 
     <div class="contrast contrast--darkCharcoal contrast--end--black">
-      <SideBySide/>
-      <IconColumn/>
+      <WhyDeepgram />
+      <IconColumn />
+      <GetStarted />
     </div>
-    <Community/>
-    <Cards/>
 
-    <WhatDevelopersAreSaying/>
+    <CommunityPosts />
+
+    <WhatDevelopersAreSaying />
     
     <AmplifyQuote>
       <h2>tl;dr</h2>
