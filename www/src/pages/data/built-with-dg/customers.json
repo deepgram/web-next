@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Rasa",
+    "logo": "/customer-logos/rasa-logo-color.png"
+  },
+  {
+    "name": "Twilio",
+    "logo": "/customer-logos/twilio-logo-color.png"
+  },
+  {
+    "name": "Nasa",
+    "logo": "/customer-logos/nasa-logo-color.png"
+  },
+  {
+    "name": "Citi",
+    "logo": "/customer-logos/citi-logo-color.png"
+  },
+  {
+    "name": "Revenue.io",
+    "logo": "/customer-logos/revenue-io-one-logo-color.png"
+  },
+  {
+    "name": "Veed.io",
+    "logo": "/customer-logos/veed-io-logo-color.png"
+  },
+  {
+    "name": "Auth0",
+    "logo": "/customer-logos/auth0-logo-color.png"
+  },
+  {
+    "name": "Daily",
+    "logo": "/customer-logos/daily-co-logo-color.png"
+  },
+  {
+    "name": "Spotify",
+    "logo": "/customer-logos/spotify-logo-color.png"
+  },
+  {
+    "name": "Volley",
+    "logo": "/customer-logos/volley-logo-color.png"
+  },
+  {
+    "name": "Nytro.ai",
+    "logo": "/customer-logos/nytro-logo-color.png"
+  },
+  {
+    "name": "Khoros",
+    "logo": "/customer-logos/khoros-logo-color.png"
+  },
+  {
+    "name": "Workable",
+    "logo": "/customer-logos/workable-logo-color.png"
+  },
+  {
+    "name": "Knock CRM",
+    "logo": "/customer-logos/knock-crm-logo-color.png"
+  },
+  {
+    "name": "Re:infer",
+    "logo": "/customer-logos/re-infer-logo-color.png"
+  },
+  {
+    "name": "Elerian AI",
+    "logo": "/customer-logos/elerian-ai-logo-color.png"
+  },
+  {
+    "name": "Fireside",
+    "logo": "/customer-logos/fireside-logo-color.png"
+  },
+  {
+    "name": "Tethrr",
+    "logo": "/customer-logos/tethr-logo-color.png"
+  },
+  {
+    "name": "Sharpen",
+    "logo": "/customer-logos/sharpen-logo-color.png"
+  },
+  {
+    "name": "Callbi",
+    "logo": "/customer-logos/callbi-logo-color.png"
+  },
+  {
+    "name": "Vocinity",
+    "logo": "/customer-logos/Vocinity-logo-color.png"
+  },
+  {
+    "name": "OneReach.ai",
+    "logo": "/customer-logos/onereach-logo-color.png"
+  },
+  {
+    "name": "Salesken",
+    "logo": "/customer-logos/salesken-logo-color.png"
+  },
+  {
+    "name": "Converge One",
+    "logo": "/customer-logos/converge-one-logo-color.png"
+  },
+  {
+    "name": "Goldcast",
+    "logo": "/customer-logos/goldcast-logo-color.png"
+  },
+  {
+    "name": "Randall Reilly",
+    "logo": "/customer-logos/randall-reilly-logo-color.png"
+  },
+  {
+    "name": "Red Box Voice",
+    "logo": "/customer-logos/redbox-logo-color.png"
+  },
+  {
+    "name": "Update AI",
+    "logo": "/customer-logos/update-ai-logo-color.png"
+  },
+  {
+    "name": "Valyant AI",
+    "logo": "/customer-logos/valyant-ai-logo-color.png"
+  },
+  {
+    "name": "CallTrackingMetrics",
+    "logo": "/customer-logos/calltrackingmetrics-logo-color.png"
+  }
+]
