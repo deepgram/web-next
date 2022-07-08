@@ -21,7 +21,10 @@ wegwep;ignhjweg
 wegwegw
 
 <AmplifyQuote>
-  <h2>tl;dr</h2>
-  <h1>Stop building work-arounds for STT that doesn’t work.</h1>
-  <p><a href="https://console.deepgram.com/signup">Start Free</a> 💰 <small>Got questions? <a href="/contact-us">Talk to an expert</a></small></p>
+  ## tl;dr
+
+  # Stop building work-arounds for STT that doesn’t work.
+
+  <!-- make "cta" a common slot in other custom components -->
+  <a slot="cta" href="https://console.deepgram.com/signup">Start Free 💰</a>
 </AmplifyQuote>
