@@ -77,7 +77,7 @@ let checkedValue = ref(false);
       class="toggle"
     />
     <!-- TODO: Need to set the actual link -->
-    <a href="#">How do I select a model?</a>
+    <a class="how" href="#">How do I select a model?</a>
     <div class="plans">
       <div class="plan all col-start-3">
         <h4 class="plan-header">All plans include:</h4>
@@ -238,7 +238,7 @@ let checkedValue = ref(false);
   @apply m-auto pb-10 flex flex-col;
 }
 
-#pricing-section a {
+#pricing-section a.how {
   @apply m-auto;
   @apply underline text-iris;
 }
