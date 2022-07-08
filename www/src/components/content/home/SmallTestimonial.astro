@@ -30,13 +30,12 @@ const details = [{
 }]
 ---
 
-<section class="small-testimonial">
-  <div class="max-w-screen-2xl mx-auto">
-      <h3>See what developers are saying about Deepgram.</h3>
-      <!-- <div class="container flex flex-col items-center max-w-screen-2xl mx-auto"> -->
-    <div class="card-container">
-      {details.map((detail)=>{
-        return <div class="card-div">
+<section class="testimonial-tweets">
+  <div class="pt-56 max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10">
+    <h3>See what developers are saying about Deepgram.</h3>
+    <div class="pt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
+      {details.map((detail) => {
+        return <div class="tweets-cards">
           <div class="flex flex-col py-8 px-5">
             <div class="flex justify-between">
               <div class="flex items-center">
@@ -58,32 +57,18 @@ const details = [{
 </section>
 
 <style>
-
-section {
-  @apply w-full flex;
-  @apply relative -top-72;
-  @apply -mb-72;
-  background: black url('./soundwavelarge.png');
-  background-size:contain;
-  @apply h-[calc(100vw/4)] md:h-[calc(100vw/5)] lg:h-[calc(100vw/2)]
-
+.testimonial-tweets {
+  background-image: url('/soundwavelarge.png');
+  background-size: contain;
+  background-repeat: repeat-x;
 }
 
 h3 {
-  @apply text-2xl xl:text-3xl font-bold;
-  @apply mb-6 mt-40;
   @apply text-center;
 }
 
-.card-container {
-  @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-8 2xl:gap-10;
-  @apply mt-14 -mb-24 xl:-mb-40 2xl:-mb-52;
-}
-
-.card-div {
-  @apply w-full md:w-5/6 md:w-full;
-  @apply h-max;
-  background-color: rgba(79, 98, 120, 0.3);
+.tweets-cards {
+  @apply bg-steel/50;
 }
 
 </style>
