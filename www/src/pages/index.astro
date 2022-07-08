@@ -1,5 +1,6 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+
 import HeroCentered from "../components/content/hero/HeroCentered.astro";
 import PrimaryCallToAction from "../components/content/home/PrimaryCallToAction.astro";
 import DemoTranscription from "../components/content/demo/DemoTranscription.vue";
@@ -12,8 +13,9 @@ import SideBySide from "../components/content/home/SideBySide.astro";
 import IconColumn from "../components/content/home/IconColumn.astro";
 import Community from "../components/content/home/Community.astro";
 import Cards from "../components/content/home/Cards.astro";
+
+import WhatDevelopersAreSaying from "../components/content/home/WhatDevelopersAreSaying.astro";
 import AmplifyQuote from "../components/content/AmplifyQuote.astro";
-import SmallTestimonial from "../components/content/home/SmallTestimonial.astro";
 
 const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock', 'khoros' ]
 ---
@@ -34,7 +36,8 @@ const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock
     </div>
     <Community/>
     <Cards/>
-    <SmallTestimonial/>
+
+    <WhatDevelopersAreSaying/>
     
     <AmplifyQuote>
       <h2>tl;dr</h2>
