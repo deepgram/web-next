@@ -21,7 +21,8 @@ import customerJson from "./data/built-with-dg/customers.json"
 
     <section class="customers contrast contrast--white ">
       <h2>Leading the voice ecosystem</h2>
-      <p>Join the growing list of customers who are innovating with Deepgram and creating new voice technology products and services without compromising speed accuracy, costs or scale.</p>
+      <p class="text-large">Join the growing list of customers who are innovating with Deepgram and creating new voice technology products and services without compromising speed accuracy, costs or scale.</p>
+      <p class="text-small">From individuals to enterprises, see what developers all over the world are building with Deepgram.</p>
       <div class="logos">
         {customerJson.map(customer => {
           return <div class="logo">
@@ -29,6 +30,8 @@ import customerJson from "./data/built-with-dg/customers.json"
           </div>
         })}
       </div>
+      <!-- TODO: update link -->
+      <p class="join-us">Join Us. <a href="#" class="dg-underline">Contact Sales</a></p> 
     </section>
   </main>
 </PageLayout>
@@ -37,8 +40,12 @@ import customerJson from "./data/built-with-dg/customers.json"
   main {
     @apply bg-black;
     @apply text-white;
-    background: black no-repeat top -20rem right -20rem url('./starburst.svg');
-    
+    background: black no-repeat top -20rem right -30rem url('./starburst.svg'); 
+  }
+  @screen md {
+    main {
+    background: black no-repeat top -20rem right -20rem url('./starburst.svg'); 
+  }
   }
   .promo-link {
     @apply text-black underline;
@@ -51,36 +58,56 @@ import customerJson from "./data/built-with-dg/customers.json"
     @apply text-center;
     @apply mt-10 mb-7;
   }
+  .subtext {
+    @apply text-center;
+  }
 
   .dg-underline {
     @apply inline-flex flex-col justify-center;
     /* @apply w-60; */
   }
-  .dg-underline::after {
+  .hero-header .dg-underline::after {
     content: url("data:image/svg+xml,%3Csvg viewBox='0 0 280 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.86133 2.94025C78.716 2.62721 155.535 2.09814 232.42 2.09814C235.136 2.09814 277.942 2.24492 277.942 5.27943C277.942 5.66548 242.303 4.67511 241.799 4.67124C194.146 4.30648 147.306 4.96347 100.281 8.64785C70.4472 10.9853 39.8094 13.8856 11.345 18.0981' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
     width: inherit;
     @apply -mt-6;
   }
+  
   .cta {
     @apply mt-7;
   }
 
   section.customers {
-    @apply bg-white text-black flex flex-col justify-center items-center;
+    @apply bg-white text-black flex flex-col justify-center items-center text-center;
   }
 
   .customers h2 {
-    @apply mb-3;
+    @apply mb-3 mx-2 p-1 sm:p-0;
   }
 
   .customers p {
-    @apply max-w-4xl text-center;
+    @apply max-w-4xl text-center px-3 sm:p-1;
+  }
+
+  .join-us * {
+    display: inline;
+  }
+
+  .join-us .dg-underline {
+    @apply underline;
+  }
+
+  .text-large {
+    @apply hidden md:block;
+  }
+
+  .text-small {
+    @apply block md:hidden;
   }
 
   .logos {
-    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8;
+    @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-8;
   }
   .logo {
-    @apply h-32 w-36 m-6;
+    @apply h-32 w-36 m-1 md:m-6;
   }
 </style>
