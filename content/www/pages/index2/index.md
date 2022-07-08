@@ -19,3 +19,9 @@ body: bg-black text-white bg-fingerprint
 wegwep;ignhjweg
 
 wegwegw
+
+<AmplifyQuote>
+  <h2>tl;dr</h2>
+  <h1>Stop building work-arounds for STT that doesn’t work.</h1>
+  <p><a href="https://console.deepgram.com/signup">Start Free</a> 💰 <small>Got questions? <a href="/contact-us">Talk to an expert</a></small></p>
+</AmplifyQuote>
