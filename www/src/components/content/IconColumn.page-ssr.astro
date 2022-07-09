@@ -55,7 +55,7 @@ const details = [{
   <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-10 lg:gap-8 2xl:gap-10">
     {details.map((detail) => {
       return <div class="border-lightIris border-l-2 flex flex-col space-y-2 p-6">
-        <Icon icon={detail.icon} class="mb-4 text-casper"/>
+        <Icon icon={detail.icon} class="mb-4" />
         <h5>{detail.title}</h5>
         <p>{detail.detail}</p>
         <a href={detail.link} class="inline-block flex font-bold">
