@@ -1,5 +1,6 @@
 ---
 import Icon from "../Icon.astro"
+import FullWidthSection from "../layout/FullWidthSection.astro";
 
 const details = [{
   name: "Todd F",
@@ -29,37 +30,31 @@ const details = [{
 }]
 ---
 
-<section class="testimonial-tweets">
-  <div class="pt-56 max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10">
-    <h3>See what developers are saying about Deepgram.</h3>
-    <div class="pt-20 grid xl:place-items-start grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
-      {details.map((detail) => {
-        return <div class="tweets-cards py-8 px-5 bg-steel/50">
-        <div class="flex justify-between">
-          <div class="flex items-center">
-            <img class="mr-3" src={detail.image}/>
-            <div>
-              <p class="font-semibold">{detail.name}</p>
-              <p class="text-xs">{detail.role}</p>
-            </div>
+<FullWidthSection class="testimonial-tweets">
+  <h3 class="block pt-28 lg:pt-56 text-center">See what developers are saying about Deepgram.</h3>
+  <div class="pt-20 grid xl:place-items-start grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 lg:gap-10">
+    {details.map((detail) => {
+      return <div class="tweets-cards py-8 px-5 bg-steel/50">
+      <div class="flex justify-between">
+        <div class="flex items-center">
+          <img class="mr-3" src={detail.image}/>
+          <div>
+            <p class="font-semibold">{detail.name}</p>
+            <p class="text-xs">{detail.role}</p>
           </div>
-          <Icon icon="twitter" class="fill-brand-twitter w-4"/>
         </div>
-        <p class="text-cloud text-sm mt-4">{detail.quote}</p>
+        <Icon icon="twitter" class="fill-brand-twitter w-4"/>
       </div>
-      })}
+      <p class="text-cloud text-sm mt-4">{detail.quote}</p>
     </div>
+    })}
   </div>
-</section>
+</FullWidthSection>
 
 <style>
 .testimonial-tweets {
   background-image: url('/soundwavelarge.png');
   background-size: contain;
   background-repeat: repeat-x;
-}
-
-h3 {
-  @apply text-center;
 }
 </style>

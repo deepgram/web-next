@@ -6,7 +6,6 @@ import PrimaryCallToAction from "../components/content/home/PrimaryCallToAction.
 import DemoTranscription from "../components/content/demo/DemoTranscription.vue";
 import LogosDividerOne from "../components/content/home/LogosDividerOne.astro";
 import SecondaryCallToAction from "../components/content/home/SecondaryCallToAction.astro";
-import LogosDividerTwo from "../components/content/home/LogosDividerTwo.astro";
 import HighlightColumn from "../components/content/home/HighlightColumn.astro";
 
 const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock', 'khoros' ]
@@ -19,7 +18,8 @@ const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock
     <LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/>
     <HighlightColumn/>
     <SecondaryCallToAction/>
-    <LogosDividerTwo/>
+
+    <SdkDivider/>
 
     <Testimonial>
       <h1 slot="quote">Deepgram is doing for speech what SpaceX did for space travel.</h1>
@@ -28,13 +28,13 @@ const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock
       <p slot="job">Founder, Call Tracking Metrics</p>
     </Testimonial>
 
-    <div class="contrast contrast--darkCharcoal contrast--end--black">
+    <Contrast color="darkCharcoal" background="black">
       <WhyDeepgram />
 
       <IconColumn />
 
       <GetStarted />
-    </div>
+    </Contrast>
 
     <CommunityPosts />
 

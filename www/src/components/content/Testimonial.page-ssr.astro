@@ -1,9 +1,10 @@
 ---
 import Svg from "../Svg.astro";
 import Icon from "../Icon.astro";
+import NarrowSection from "../layout/NarrowSection.astro";
 ---
 
-<section class="testimonial max-w-2xl mx-auto px-4 md:px-6 lg:px-10">
+<NarrowSection class="testimonial">
   <Svg name="quotation-mark" class="mb-6" />
   <slot name="quote" />
   <div class="flex items-center mb-6">
@@ -16,7 +17,7 @@ import Icon from "../Icon.astro";
   <a href="/customers" class="inline-block flex font-bold">
     See Customer Stories <Icon icon="arrowright" class="w-6"/>
   </a>
-</section>
+</NarrowSection>
 
 <style>
 .testimonial :global(h1) {
