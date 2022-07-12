@@ -6,52 +6,54 @@ import PrimaryCallToAction from "../components/content/home/PrimaryCallToAction.
 import DemoTranscription from "../components/content/demo/DemoTranscription.vue";
 import LogosDividerOne from "../components/content/home/LogosDividerOne.astro";
 import SecondaryCallToAction from "../components/content/home/SecondaryCallToAction.astro";
-import HighlightColumn from "../components/content/home/HighlightColumn.astro";
 
 const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock', 'khoros' ]
 ---
 <PageLayout>
-  <main>
-    <HeroCentered promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world."/>
-    <PrimaryCallToAction/>
-    <DemoTranscription client:load/>
-    <LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/>
-    <HighlightColumn/>
-    <SecondaryCallToAction/>
+	<main>
+		<HeroCentered promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world."/>
+		<PrimaryCallToAction/>
+		<DemoTranscription client:load/>
 
-    <SdkDivider/>
+		<LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/>
 
-    <Testimonial>
-      <h1 slot="quote">Deepgram is doing for speech what SpaceX did for space travel.</h1>
-      <img slot="photo" src="/todd-fisher.png" class="pr-6 w-5/12" />
-      <h2 slot="author">Todd Fisher</h2>
-      <p slot="job">Founder, Call Tracking Metrics</p>
-    </Testimonial>
+		<QualityYouCanCountOn/>
 
-    <Contrast color="darkCharcoal" background="black">
-      <WhyDeepgram />
+		<SecondaryCallToAction/>
 
-      <IconColumn />
+		<SdkDivider/>
 
-      <GetStarted />
-    </Contrast>
+		<Testimonial>
+			<h1 slot="quote">Deepgram is doing for speech what SpaceX did for space travel.</h1>
+			<img slot="photo" src="/todd-fisher.png" class="pr-6 w-5/12" />
+			<h2 slot="author">Todd Fisher</h2>
+			<p slot="job">Founder, Call Tracking Metrics</p>
+		</Testimonial>
 
-    <CommunityPosts />
+		<Contrast color="darkCharcoal" background="black">
+			<WhyDeepgram />
 
-    <WhatDevelopersAreSaying />
-    
-    <AmplifyQuote>
-      <h2>tl;dr</h2>
-      <h1>Stop building work-arounds for STT that doesn’t work.</h1>
-      <p><a href="https://console.deepgram.com/signup">Start Free</a> 💰 <small>Got questions? <a href="/contact-us">Talk to an expert</a></small></p>
-    </AmplifyQuote>
-  </main>
+			<IconColumn />
+
+			<GetStarted />
+		</Contrast>
+
+		<CommunityPosts />
+
+		<WhatDevelopersAreSaying />
+		
+		<AmplifyQuote>
+			<h2>tl;dr</h2>
+			<h1>Stop building work-arounds for STT that doesn’t work.</h1>
+			<p><a href="https://console.deepgram.com/signup">Start Free</a> 💰 <small>Got questions? <a href="/contact-us">Talk to an expert</a></small></p>
+		</AmplifyQuote>
+	</main>
 </PageLayout>
 
 <style>
-  main {
-    @apply bg-black;
-    @apply text-white;
-    background: black no-repeat top right -20rem url('./fingerprint.svg');
-  }
+	main {
+		@apply bg-black;
+		@apply text-white;
+		background: black no-repeat top right -20rem url('./fingerprint.svg');
+	}
 </style>
