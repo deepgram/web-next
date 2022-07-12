@@ -51,6 +51,7 @@ const details = [{
   link: "/product"
 }]
 ---
+
 <section class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10">
   <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-10 lg:gap-8 2xl:gap-10">
     {details.map((detail) => {
@@ -59,7 +60,7 @@ const details = [{
         <h5>{detail.title}</h5>
         <p>{detail.detail}</p>
         <a href={detail.link} class="inline-block flex font-bold">
-          {detail.cta} <Icon icon="arrowright"/>
+          {detail.cta} <Icon icon="arrowright" />
         </a>
       </div>
     })}

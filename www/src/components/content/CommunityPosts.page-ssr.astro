@@ -48,17 +48,17 @@ const details = [{
 }]
 ---
 
-<FlareSection class="community-posts mb-24" background="bg-starburst">
+<FlareSection class="community-posts" background="bg-starburst">
   <div class="flex flex-col">
     <h2 class="text-center">What’s new in the community.</h2>
-    <div class="pt-12 flex justify-center space-x-8">
+    <div class="flex justify-center space-x-8">
       <a><Icon icon="twitter" class="fill-current w-10"/></a>
       <a><Icon icon="github" class="fill-current w-10"/></a>
       <a><Icon icon="linkedin" class="fill-current w-10"/></a>
     </div>
-    <div class="pt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-8 2xl:gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-8 2xl:gap-10">
       {details.map((detail) => {
-        return <div class="card">
+        return <div class="bg-steel/50 bg-blur">
         <img src="/hello-world-blog@2x.jpg"/>
         <div class="details p-4">
           <p class="text-sm mb-4">{`#${detail.tags[0]}`}</p>
@@ -70,13 +70,3 @@ const details = [{
     </div>
   </div>
 </FlareSection>
-
-
-<style>
-.card {
-  @apply w-full md:w-5/6 md:w-full;
-  backdrop-filter: blur(10px);
-  background-color: rgba(79, 98, 120, 0.3);
-  @apply h-full;
-}
-</style>

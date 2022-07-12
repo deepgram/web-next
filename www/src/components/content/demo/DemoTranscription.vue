@@ -29,67 +29,64 @@ const items = [
 </script>
 
 <template>
-  <section class="demo-transcription w-full">
-    <img src="/saturn.svg" />
-    <div class="container max-w-screen-2xl mx-auto">
-      <div class="label">
-        <span class="left-label" :class="{ selected: !checkedValue }">{{
-          labelLeft
-        }}</span>
-        <Toggle
-          v-model="checkedValue"
-          @input="checkedValue = $event.target.checked"
-        />
-        <span class="right-label" :class="{ selected: checkedValue }">{{
-          labelRight
-        }}</span>
+  <div class="w-full container">
+    <div class="label">
+      <span class="left-label" :class="{ selected: !checkedValue }">{{
+        labelLeft
+      }}</span>
+      <Toggle
+        v-model="checkedValue"
+        @input="checkedValue = $event.target.checked"
+      />
+      <span class="right-label" :class="{ selected: checkedValue }">{{
+        labelRight
+      }}</span>
+    </div>
+    <div v-if="!checkedValue">
+      <h3>See real-time transcription with live radio.</h3>
+      <p>Click the button to transcribe live.</p>
+      <div class="mic-buttons">
+        <button>mic</button><button>volumebars</button>
       </div>
-      <div v-if="!checkedValue">
-        <h3>See real-time transcription with live radio.</h3>
-        <p>Click the button to transcribe live.</p>
-        <div class="mic-buttons">
-          <button>mic</button><button>volumebars</button>
+      <div class="grid-container">
+        <div class="grid-div">
+          Transcribe your voice in English or select another language.
         </div>
-        <div class="grid-container">
-          <div class="grid-div">
-            Transcribe your voice in English or select another language.
-          </div>
-          <div class="grid-div">test 2</div>
-        </div>
-        <div class="flex justify-center mt-10">
-          <a
-            href="https://console.deepgram.com/signup"
-            rel="noopener noreferrer"
-            class="button button--primary button--small mb-10"
-            >Transcribe More Free</a
-          >
-        </div>
+        <div class="grid-div">test 2</div>
       </div>
-      <div v-else>
-        <h3>Transcribe real-world audio.</h3>
-        <p>See how Deepgram excels at tough, conversational audio files.</p>
-        <p>Select a file below.</p>
-        <div class="grid-container">
-          <div>
-            <RadioDemo
-              :items="items"
-              v-model="pickedValue"
-              @input="pickedValue = $event.target.value"
-            />
-          </div>
-          <div class="grid-div">{{ pickedValue }}</div>
-        </div>
-        <div class="flex justify-center mt-10">
-          <a
-            href="https://console.deepgram.com/signup"
-            rel="noopener noreferrer"
-            class="button button--primary button--small mb-10"
-            >Try With Your Own Files</a
-          >
-        </div>
+      <div class="flex justify-center mt-10">
+        <a
+          href="https://console.deepgram.com/signup"
+          rel="noopener noreferrer"
+          class="button button--primary button--small mb-10"
+          >Transcribe More Free</a
+        >
       </div>
     </div>
-  </section>
+    <div v-else>
+      <h3>Transcribe real-world audio.</h3>
+      <p>See how Deepgram excels at tough, conversational audio files.</p>
+      <p>Select a file below.</p>
+      <div class="grid-container">
+        <div>
+          <RadioDemo
+            :items="items"
+            v-model="pickedValue"
+            @input="pickedValue = $event.target.value"
+          />
+        </div>
+        <div class="grid-div">{{ pickedValue }}</div>
+      </div>
+      <div class="flex justify-center mt-10">
+        <a
+          href="https://console.deepgram.com/signup"
+          rel="noopener noreferrer"
+          class="button button--primary button--small mb-10"
+          >Try With Your Own Files</a
+        >
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>

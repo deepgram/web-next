@@ -14,7 +14,15 @@ body {
 .bg-starburst {
   background-image: url('/starburst.svg');
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: 21rem top;
+  background-size: 42.75rem;
+}
+
+.bg-saturn {
+  background-image: url('/saturn.svg');
+  background-repeat: no-repeat;
+  background-position: 22rem top;
+  background-size: 30rem;
 }
 
 /* @media screen and (min-width: 1600px) {
@@ -103,5 +111,12 @@ body {
     @apply text-lightIris;
     @apply text-lg;
     @apply font-black;
+  }
+}
+
+@layer utilities  {
+  .bg-blur {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
 }
