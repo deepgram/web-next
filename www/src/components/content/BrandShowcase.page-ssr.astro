@@ -1,19 +1,21 @@
 ---
-import FullWidthSection from "../layout/FullWidthSection.astro"
-
+import PrimarySection from "../layout/PrimarySection.astro";
 
 const brands = ['callbi', 'calltrackingmetrics', 'converge-one', 'elerian-ai', 'fireside', 'goldcast', 'nytro', 'onereach',
-'revenue-io-one', 'veed-io', 'khoros', 'rasa', 'auth0', 'spotify', 'nasa', 'twilio', 'citi', 'daily-co', 'volley', 'workable', 'knock-crm', 're-infer', // priority
+
+// these logos are priority based on figma showing them on different breakpoints. auth0 spotify nasa twilio citi and daily seem to be the most visible
+'revenue-io-one', 'veed-io', 'khoros', 'rasa', 'auth0', 'spotify', 'nasa', 'twilio', 'citi', 'daily-co', 'volley', 'workable', 'knock-crm', 're-infer', 
+
 'randall-reilly', 'redbox', 'salesken', 'sharpen', 'tethr', 'update-ai', 'valyant-ai', 'vocinity',]
 ---
 
-<FullWidthSection class={`brand-showcase`}>
+<PrimarySection class="brand-showcase my-28">
   <div class="flex flex-col items-center">
-    <h2>Hell yes, we have SDKs.</h2>
+    <h4>Trusted by the world’s most innovative brands. </h4>
     <div class="flex justify-center w-screen space-x-10">
       {brands.map(brand=>{
         return <img class="h-32" src={`/brand-showcase/${brand}-logo-storm@2x.png`} />
       })}
     </div>
   </div>
-</FullWidthSection>
+</PrimarySection>
