@@ -1,14 +1,29 @@
 ---
-import HeroCentered from "./hero/HeroCentered.astro";
-const { promo, title, body, primaryCta, secondaryCta, tertiaryCta } = Astro.props
+import FlareSection from "../layout/FlareSection.astro";
+
+const { layout } = Astro.props
 ---
 
-<section class="hero">
-  <HeroCentered promo={promo} title={title} page="home"/>
-  <!-- <span>{strap}</span>
-  <h1>{title}</h1>
-  <p>{body}</p>
-  <p>{primaryCta}</p>
-  <p>{secondaryCta}</p>
-  <p>{tertiaryCta}</p> -->
-</section>
+<FlareSection class={`hero-centered ${Astro.props.class}`} background={Astro.props.background}>
+  <slot name="header" />
+
+{layout === "centered" && (
+  <>
+      <div class="flex flex-col items-center">
+        <slot />
+      
+        <div class="call-to-action flex justify-center space-x-7">
+          <slot name="cta" />
+        </div>
+      </div>
+  </>
+)}
+
+  <slot name="footer" />
+</FlareSection>
+
+<style>
+  .hero-centered :global(h1) {
+    @apply mt-10 mb-20 w-[54rem] text-center text-6xl
+  }
+</style>

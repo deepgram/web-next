@@ -1,12 +1,41 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 
-import HeroCentered from "../components/content/hero/HeroCentered.astro";
+import Hero from "../components/content/Hero.page-ssr.astro";
+import Promo from "../components/content/Promo.page-ssr.astro";
+import DemoTranscription from "../components/content/DemoTranscription.page-ssr.astro";
+import BrandShowcase from "../components/content/BrandShowcase.page-ssr.astro";
+import QualityYouCanCountOn from "../components/content/QualityYouCanCountOn.page-ssr.astro";
+import SdkShowcase from "../components/content/SdkShowcase.page-ssr.astro";
+import Testimonial from "../components/content/Testimonial.page-ssr.astro";
+import WhyDeepgram from "../components/content/WhyDeepgram.page-ssr.astro";
+import IconColumn from "../components/content/IconColumn.page-ssr.astro";
+import GetStarted from "../components/content/GetStarted.page-ssr.astro";
+import Contrast from "../components/content/Contrast.page-ssr.astro";
+import CommunityPosts from "../components/content/CommunityPosts.page-ssr.astro";
+import WhatDevelopersAreSaying from "../components/content/WhatDevelopersAreSaying.page-ssr.astro";
+import AmplifyQuote from "../components/content/AmplifyQuote.page-ssr.astro";
+import LeftStar from "../components/decoration/LeftStar.astro";
+import RightStar from "../components/decoration/RightStar.astro";
 ---
 
 <PageLayout>
 	<main>
-		<HeroCentered promo="See how Deepgram stacks up on the ASR Comparison Tool.🍎🍊" title="Meet the speech-to-text API built for the real world."/>
+		<Hero layout="centered" class="homepage-hero" background="bg-fingerprint">
+			<LeftStar slot="header" />
+
+			<Promo>
+				See how Deepgram stacks up on the <a href="/asr-comparison">ASR Comparison Tool</a>. 🍎🍊
+			</Promo>
+
+			<h1>Meet the speech-to-text API built for the <u>real world</u>.</h1>
+			
+			<!-- custom CTA component, make "cta" a common slot in other custom components -->
+			<a slot="cta" class="button button--primary" href="https://console.deepgram.com">Start Building</a>
+			<a slot="cta" class="button button--secondary" href="/contact-us">Contact Sales</a>
+
+			<RightStar slot="footer" />
+		</Hero>
 
 		<DemoTranscription />
 
@@ -47,6 +76,5 @@ import HeroCentered from "../components/content/hero/HeroCentered.astro";
 	main {
 		@apply bg-black;
 		@apply text-white;
-		background: black no-repeat top right -20rem url('./fingerprint.svg');
 	}
 </style>

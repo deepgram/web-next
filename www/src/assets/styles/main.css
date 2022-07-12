@@ -11,6 +11,12 @@ body {
   @apply font-inter;
 }
 
+.bg-fingerprint {
+  background-image: url('/fingerprint.svg');
+  background-repeat: no-repeat;
+  background-position: right 16rem top;
+}
+
 .bg-starburst {
   background-image: url('/starburst.svg');
   background-repeat: no-repeat;
