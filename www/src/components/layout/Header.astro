@@ -44,7 +44,7 @@ import NavItem from "../nav/NavItem.astro";
         </NavMenu>
 
         <!-- Pricing -->
-        <NavItem href="/pricing">Pricing</NavItem>
+        <NavItem href="/pricing" class="text-white">Pricing</NavItem>
 
         <!-- Docs -->
         <NavMenu name="Docs">
@@ -57,7 +57,7 @@ import NavItem from "../nav/NavItem.astro";
         </NavMenu>
 
         <!-- Blog -->
-        <NavItem href="/">Blog</NavItem>
+        <NavItem href="/" class="text-white">Blog</NavItem>
 
         <!-- About -->
         <NavMenu name="About">
@@ -71,7 +71,7 @@ import NavItem from "../nav/NavItem.astro";
         <button @click="mobile = true" class="button button--small">
           <Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current" />
         </button>
-        <NavItem href="/" class="button button--small">Log In</NavItem>
+        <NavItem href="/" class="button button--small text-white">Log In</NavItem>
         <NavItem href="/" class="button button--secondary button--small">Contact Us</NavItem>
         <NavItem href="/" class="ml-4 button button--primary button--small">Sign Up</NavItem>
       </div>

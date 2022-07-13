@@ -5,7 +5,7 @@ const { name, primary } = Astro.props
 <div x-data="{ open: false }" @click.outside="open = false" class="relative">
   <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
   <button @click="open = !open" type="button" class="group inline-flex items-center border-b-4 mt-1 py-4 border-transparent" :class="{'border-lightIris': open, 'border-transparent': !open}" aria-expanded="false">
-    <span>{name}</span>
+    <span class="text-bold">{name}</span>
     <!--
       Heroicon name: solid/chevron-down
 
