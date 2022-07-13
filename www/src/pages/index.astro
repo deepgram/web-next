@@ -20,7 +20,7 @@ import RightStar from "../components/decoration/RightStar.astro";
 ---
 
 <PageLayout>
-	<main>
+	<main class="bg-black text-white">
 		<Hero layout="centered" class="homepage-hero" background="bg-fingerprint">
 			<LeftStar class="text-meadow text-5xl" slot="header" />
 
@@ -73,10 +73,3 @@ import RightStar from "../components/decoration/RightStar.astro";
 		</AmplifyQuote>
 	</main>
 </PageLayout>
-
-<style>
-	main {
-		@apply bg-black;
-		@apply text-white;
-	}
-</style>
