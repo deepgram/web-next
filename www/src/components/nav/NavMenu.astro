@@ -1,21 +1,43 @@
 ---
-const { name } = Astro.props
+const { name, primary } = Astro.props
 ---
 
-<div x-data="{ open: false }" @click.outside="open = false">
-  <button @click="open = !open" type="button" class="group rounded-md inline-flex items-center text-base font-medium" aria-expanded="false">
+<div x-data="{ open: false }" @click.outside="open = false" class="relative">
+  <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
+  <button @click="open = !open" type="button" class="group inline-flex items-center border-b-4 mt-1 py-4 border-transparent" :class="{'border-lightIris': open, 'border-transparent': !open}" aria-expanded="false">
     <span>{name}</span>
+    <!--
+      Heroicon name: solid/chevron-down
 
-    <svg :class="{'-rotate-90': !open, '': open}" class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      Item active: "text-gray-600", Item inactive: "text-gray-400"
+    -->
+    <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
       <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
     </svg>
   </button>
 
-  <div class="absolute z-10 top-full inset-x-0 transform bg-almostBlack hidden" :class="{'flex': open, 'hidden': !open}">
-    <div class="max-w-7xl mx-auto grid gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-3 lg:px-8 lg:py-12 xl:py-16">
+  <!--
+    'Solutions' flyout menu, show/hide based on flyout menu state.
 
-      <slot />
+    Entering: "transition ease-out duration-200"
+      From: "opacity-0 translate-y-1"
+      To: "opacity-100 translate-y-0"
+    Leaving: "transition ease-in duration-150"
+      From: "opacity-100 translate-y-0"
+      To: "opacity-0 translate-y-1"
+  -->
+  <div class="absolute z-10 -ml-20 mt-2 transform w-screen hidden" :class="{'flex': open, 'hidden': !open}">
+    <div class="shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden flex">
+      {primary && (
+        <div class="p-5 bg-ink sm:p-8">
+          <slot name="primary" />
+        </div>
+      )}
+      <div class="relative bg-darkCharcoal grid p-12 gap-12 lg:grid-cols-2">
 
+        <slot />
+
+      </div>
     </div>
   </div>
 </div>
