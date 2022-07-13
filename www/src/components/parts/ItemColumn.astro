@@ -1,0 +1,16 @@
+---
+import Icon from "../Icon.astro";
+
+const { details } = Astro.props;
+---
+
+{details.map((detail) => {
+  return <div class={`flex flex-col ${Astro.props.class}`}>
+    <Icon icon={detail.icon} class="mb-4" />
+    <h5>{detail.title}</h5>
+    <p>{detail.detail}</p>
+    <a href={detail.link} class="inline-block flex font-bold">
+      {detail.cta} <Icon icon="arrowright" />
+    </a>
+  </div>
+})}

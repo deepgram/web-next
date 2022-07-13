@@ -120,7 +120,7 @@ body {
   }
 }
 
-@layer utilities  {
+@layer utilities {
   .bg-blur {
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);

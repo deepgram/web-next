@@ -1,7 +1,8 @@
 ---
-import Icon from "../Icon.astro"
+import PrimarySection from "../layout/PrimarySection.astro";
+import ItemColumn from "../parts/ItemColumn.astro";
 
-const details = [{
+const features = [{
   icon: "easy-button",
   title: "Easy to use, easy to integrate",
   detail: "Built by developers for developers with the tools you want: APIs, SDKs....",
@@ -52,17 +53,8 @@ const details = [{
 }]
 ---
 
-<section class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10">
+<PrimarySection class="feature-showcase">
   <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 md:gap-10 lg:gap-8 2xl:gap-10">
-    {details.map((detail) => {
-      return <div class="border-lightIris border-l-2 flex flex-col space-y-2 p-6">
-        <Icon icon={detail.icon} class="mb-4" />
-        <h5>{detail.title}</h5>
-        <p>{detail.detail}</p>
-        <a href={detail.link} class="inline-block flex font-bold">
-          {detail.cta} <Icon icon="arrowright" />
-        </a>
-      </div>
-    })}
+    <ItemColumn details={features} class="border-lightIris border-l-2 space-y-2 p-6" />
   </div>
-</section>
+</PrimarySection>

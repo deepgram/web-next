@@ -9,7 +9,7 @@ const { layout } = Astro.props
 
 {layout === "centered" && (
   <>
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center max-w-full">
         <slot />
       
         <div class="call-to-action flex justify-center space-x-7">
@@ -24,6 +24,6 @@ const { layout } = Astro.props
 
 <style>
   .hero-centered :global(h1) {
-    @apply mt-10 mb-20 w-[54rem] text-center text-6xl
+    @apply mt-10 mb-20 max-w-[54rem] text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl
   }
 </style>

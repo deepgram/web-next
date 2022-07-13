@@ -4,16 +4,20 @@ import Svg from "../Svg.astro";
 ---
 
 <PrimarySection class="amplify-quote flex">
-  <div>
+  <div class="flex items-center">
     <Svg name="amplify" class="h-[12rem] sm:h-[24rem] lg:h-[48rem] w-auto" />
   </div>
-  <div class="flex flex-col justify-center items-start pl-9">
+  <div class="flex flex-col justify-center pl-9">
     <slot />
   </div>
 </PrimarySection>
 
 <style>
   .amplify-quote :global(h2) {
-    @apply text-storm;
+    @apply text-storm text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl;
+  }
+
+  .amplify-quote :global(h1) {
+    @apply text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
   }
 </style>

@@ -9,7 +9,7 @@ import QualityYouCanCountOn from "../components/content/QualityYouCanCountOn.pag
 import SdkShowcase from "../components/content/SdkShowcase.page-ssr.astro";
 import Testimonial from "../components/content/Testimonial.page-ssr.astro";
 import WhyDeepgram from "../components/content/WhyDeepgram.page-ssr.astro";
-import IconColumn from "../components/content/IconColumn.page-ssr.astro";
+import FeatureShowcase from "../components/content/FeatureShowcase.page-ssr.astro";
 import GetStarted from "../components/content/GetStarted.page-ssr.astro";
 import Contrast from "../components/content/Contrast.page-ssr.astro";
 import CommunityPosts from "../components/content/CommunityPosts.page-ssr.astro";
@@ -22,7 +22,7 @@ import RightStar from "../components/decoration/RightStar.astro";
 <PageLayout>
 	<main>
 		<Hero layout="centered" class="homepage-hero" background="bg-fingerprint">
-			<LeftStar slot="header" />
+			<LeftStar class="text-meadow text-5xl" slot="header" />
 
 			<Promo>
 				See how Deepgram stacks up on the <a href="/asr-comparison">ASR Comparison Tool</a>. 🍎🍊
@@ -34,7 +34,7 @@ import RightStar from "../components/decoration/RightStar.astro";
 			<a slot="cta" class="button button--primary" href="https://console.deepgram.com">Start Building</a>
 			<a slot="cta" class="button button--secondary" href="/contact-us">Contact Sales</a>
 
-			<RightStar slot="footer" />
+			<RightStar class="text-coral text-4xl" slot="footer" />
 		</Hero>
 
 		<DemoTranscription />
@@ -55,7 +55,7 @@ import RightStar from "../components/decoration/RightStar.astro";
 		<Contrast color="darkCharcoal" background="black">
 			<WhyDeepgram />
 
-			<IconColumn />
+			<FeatureShowcase />
 
 			<GetStarted />
 		</Contrast>
@@ -65,9 +65,11 @@ import RightStar from "../components/decoration/RightStar.astro";
 		<WhatDevelopersAreSaying />
 		
 		<AmplifyQuote>
+			<LeftStar class="" />
 			<h2>tl;dr</h2>
 			<h1>Stop building work-arounds for STT that doesn’t work.</h1>
 			<p><a href="https://console.deepgram.com/signup">Start Free</a> 💰 <small>Got questions? <a href="/contact-us">Talk to an expert</a></small></p>
+			<RightStar class="text-fireEngine text-3xl" />
 		</AmplifyQuote>
 	</main>
 </PageLayout>
