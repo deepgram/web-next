@@ -7,7 +7,7 @@ import NavMenuItem from "../nav/NavMenuItem.astro";
 import NavItem from "../nav/NavItem.astro";
 ---
 
-<div x-data="{ mobile: false }" @click.outside="mobile = false" class="bg-almostBlack text-white">
+<div x-data="{ mobile: false, search: false }" @click.outside="mobile = false" class="bg-almostBlack text-white">
   <div class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10">
     <div>
       <a href="/" class="flex">
@@ -67,13 +67,13 @@ import NavItem from "../nav/NavItem.astro";
         </NavMenu>
 
       </nav>
-      <div class="flex items-center space-x-5 xl:ml-12 pb-1">
-        <NavItem href="/search">
-          <Icon icon="search" class="w-[1.2em] h-[1.2em] fill-current" />
-        </NavItem>
-        <NavItem href="/">Log In</NavItem>
+      <div class="flex items-center xl:ml-12 pb-1">
+        <button @click="mobile = true" class="button button--small">
+          <Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current" />
+        </button>
+        <NavItem href="/" class="button button--small">Log In</NavItem>
         <NavItem href="/" class="button button--secondary button--small">Contact Us</NavItem>
-        <NavItem href="/" class="button button--primary button--small">Sign Up</NavItem>
+        <NavItem href="/" class="ml-4 button button--primary button--small">Sign Up</NavItem>
       </div>
     </div>
   </div>
@@ -88,7 +88,7 @@ import NavItem from "../nav/NavItem.astro";
       From: "opacity-100 scale-100"
       To: "opacity-0 scale-95"
   -->
-  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right xl:hidden" :class="{'absolute': mobile, 'hidden': !mobile}">
+  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden" :class="{'absolute': mobile, 'hidden': !mobile}">
     <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
