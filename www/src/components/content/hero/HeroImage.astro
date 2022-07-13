@@ -1,9 +1,7 @@
 ---
-import Promo from "../Promo.astro";
+import Promo from "../Promo.page-ssr.astro";
 import Hyperlink from '../../Hyperlink.astro';
-import LogosDividerOne from '../home/LogosDividerOne.astro';
-const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, image, alt } = Astro.props
-const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock', 'khoros' ]
+const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, image, alt } = Astro.props;
 ---
 
 <section class="hero hero-split w-full">
@@ -38,9 +36,6 @@ const brands = ['auth0','spotify', 'nasa','twilio', 'citi',   'workable', 'knock
     <div class="hero-right grid-div">
       <img class="hero-image" src="src/assets/images/product.png" alt={alt} title={alt} />
     </div>
-  </div>
-  <div class="mt-14">
-    <LogosDividerOne brands={brands} cta="Trusted by the world’s most innovative brands."/>
   </div>
 </section>
 
