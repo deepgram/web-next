@@ -2,9 +2,9 @@
 const { name, primary } = Astro.props
 ---
 
-<div x-data="{ open: false }" @click.outside="open = false" class="relative">
+<div class="relative" x-data={`{ name: '${name}' }`}>
   <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-  <button @click="open = !open" type="button" class="group inline-flex items-center border-b-4 mt-1 py-4 border-transparent" :class="{'border-lightIris': open, 'border-transparent': !open}" aria-expanded="false">
+  <button x-on:click={`menu = name`} type="button" class="group inline-flex items-center border-b-4 mt-1 py-4 border-transparent" aria-expanded="false">
     <span class="text-bold">{name}</span>
     <!--
       Heroicon name: solid/chevron-down
@@ -26,8 +26,8 @@ const { name, primary } = Astro.props
       From: "opacity-100 translate-y-0"
       To: "opacity-0 translate-y-1"
   -->
-  <div class="absolute z-10 -ml-20 mt-2 transform w-screen hidden" :class="{'flex': open, 'hidden': !open}">
-    <div class="shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden flex">
+  <div class="absolute z-10 -ml-20 mt-2 w-screen" x-bind:class="menu == name ? 'block' : 'hidden'">
+    <div class="overflow-hidden flex">
       {primary && (
         <div class="p-5 bg-ink sm:p-8">
           <slot name="primary" />

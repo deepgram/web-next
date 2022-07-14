@@ -7,193 +7,197 @@ import NavMenuItem from "../nav/NavMenuItem.astro";
 import NavItem from "../nav/NavItem.astro";
 ---
 
-<div x-data="{ mobile: false, search: false }" @click.outside="mobile = false" class="bg-almostBlack text-white">
-  <div class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10">
-    <div>
-      <a href="/" class="flex">
-        <span class="sr-only">Deepgram</span>
-        <Svg name="deepgram" class="my-4 h-8 w-auto text-coral" />
-      </a>
-    </div>
-    <div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
-      <button @click="mobile = true" type="button" class="button button--secondary button--small" aria-expanded="false">
-        Menu
-      </button>
-      <NavItem href="/" class="button button--primary button--small">Sign Up</NavItem>
-    </div>
-    <div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
-      <nav class="flex space-x-10">
-
-        <!-- Product -->
-        <NavMenu name="Product" primary>
-          <NavMenuPrimaryItem slot="primary" href="/product" icon="search" description="Meet the Deepgram speech-to-text API">View Product</NavMenuPrimaryItem>
-
-          <NavMenuItem href="/product/model-overview" icon="search">Model Overview</NavMenuItem>
-          <NavMenuItem href="/product/sdks-tools" icon="search">SDKs + Tools</NavMenuItem>
-          <NavMenuItem href="/product/languages" icon="search">Languages</NavMenuItem>
-          <NavMenuItem href="/product/free-api-key" icon="search">Free API Key</NavMenuItem>
-          <NavMenuItem href="/product/why-deepgram" icon="search">Why Deepgram</NavMenuItem>
-        </NavMenu>
-
-        <!-- Solutions -->
-        <NavMenu name="Solutions">
-          <NavMenuItem href="/built-with-dg" icon="search" description="Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.">Built with Deepgram</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Proin eget tortor risus.">Contact Centers</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Speech Analytics</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Proin eget tortor risus.">Convo AI</NavMenuItem>
-        </NavMenu>
-
-        <!-- Pricing -->
-        <NavItem href="/pricing" class="text-white">Pricing</NavItem>
-
-        <!-- Docs -->
-        <NavMenu name="Docs">
-          <NavMenuItem href="/" icon="search" description="Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.">Documentation</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Nulla quis lorem ut libero malesuada feugiat.">Guides</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Sed porttitor lectus nibh.">Status</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.">Changelog</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Nulla porttitor accumsan tincidunt.">API Reference</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Quisque velit nisi, pretium ut lacinia in, elementum id enim.">Tutorials</NavMenuItem>
-        </NavMenu>
-
-        <!-- Blog -->
-        <NavItem href="/" class="text-white">Blog</NavItem>
-
-        <!-- About -->
-        <NavMenu name="About">
-          <NavMenuItem href="/" icon="search" description="Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.">About Us</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Nulla quis lorem ut libero malesuada feugiat.">Newsroom</NavMenuItem>
-          <NavMenuItem href="/" icon="search" description="Sed porttitor lectus nibh.">Careers</NavMenuItem>
-        </NavMenu>
-
-      </nav>
-      <div class="flex items-center xl:ml-12 pb-1">
-        <button @click="mobile = true" class="button button--small">
-          <Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current" />
+<header x-data="{ mobile: false, search: false, menu: null }">
+  <div class="z-20 fixed inset-0 bg-black/75" x-bind:class="(mobile || search || menu !== null) ? 'block' : 'hidden'"></div>
+  <div class="z-30 absolute inset-x-0 bg-almostBlack text-white">
+    <div class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10">
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">Deepgram</span>
+          <Svg name="deepgram" class="my-4 h-8 w-auto text-coral" />
+        </a>
+      </div>
+      <div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
+        <button x-on:click="mobile = true" type="button" class="button button--secondary button--small" aria-expanded="false">
+          Menu
         </button>
-        <NavItem href="/" class="button button--small text-white">Log In</NavItem>
-        <NavItem href="/" class="button button--secondary button--small">Contact Us</NavItem>
-        <NavItem href="/" class="ml-4 button button--primary button--small">Sign Up</NavItem>
+        <NavItem href="/" class="button button--primary button--small">Sign Up</NavItem>
       </div>
-    </div>
-  </div>
-
-  <!--
-    Mobile menu, show/hide based on mobile menu state.
-
-    Entering: "duration-200 ease-out"
-      From: "opacity-0 scale-95"
-      To: "opacity-100 scale-100"
-    Leaving: "duration-100 ease-in"
-      From: "opacity-100 scale-100"
-      To: "opacity-0 scale-95"
-  -->
-  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden" :class="{'absolute': mobile, 'hidden': !mobile}">
-    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-      <div class="pt-5 pb-6 px-5">
-        <div class="flex items-center justify-between">
-          <div>
-            <span class="sr-only">Deepgram</span>
-            <Svg name="deepgram" class="h-8 w-auto text-coral" />
-          </div>
-          <div class="-mr-2">
-            <button @click="mobile = false" type="button" class="rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-              <span class="sr-only">Close menu</span>
-              <!-- Heroicon name: outline/x -->
-              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-        <div class="mt-6">
-          <nav class="grid gap-6">
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/chart-bar -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Analytics</div>
-            </a>
-
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/cursor-click -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Engagement</div>
-            </a>
-
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/shield-check -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Security</div>
-            </a>
-
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/view-grid -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Integrations</div>
-            </a>
-
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/refresh -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Automations</div>
-            </a>
-
-            <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
-              <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/document-report -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <div class="ml-4 text-base font-medium text-gray-900">Reports</div>
-            </a>
-          </nav>
-        </div>
-      </div>
-      <div class="py-6 px-5">
-        <div class="grid grid-cols-2 gap-4">
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Pricing </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Docs </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Enterprise </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Help Center </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Guides </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Events </a>
-
-          <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Security </a>
-        </div>
-        <div class="mt-6">
-          <a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Sign up </a>
-          <p class="mt-6 text-center text-base font-medium text-gray-500">
-            Existing customer?
-            <a href="#" class="text-indigo-600 hover:text-indigo-500"> Sign in </a>
-          </p>
+      <div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
+        <nav class="flex space-x-10" x-on:click.outside="menu = null">
+  
+          <!-- Product -->
+          <NavMenu name="Product" primary>
+            <NavMenuPrimaryItem slot="primary" href="/product" icon="search" description="Meet the Deepgram speech-to-text API">View Product</NavMenuPrimaryItem>
+  
+            <NavMenuItem href="/product/model-overview" icon="search">Model Overview</NavMenuItem>
+            <NavMenuItem href="/product/sdks-tools" icon="search">SDKs + Tools</NavMenuItem>
+            <NavMenuItem href="/product/languages" icon="search">Languages</NavMenuItem>
+            <NavMenuItem href="/product/free-api-key" icon="search">Free API Key</NavMenuItem>
+            <NavMenuItem href="/product/why-deepgram" icon="search">Why Deepgram</NavMenuItem>
+          </NavMenu>
+  
+          <!-- Solutions -->
+          <NavMenu name="Solutions">
+            <NavMenuItem href="/built-with-dg" icon="search" description="Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.">Built with Deepgram</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Proin eget tortor risus.">Contact Centers</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Speech Analytics</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Proin eget tortor risus.">Convo AI</NavMenuItem>
+          </NavMenu>
+  
+          <!-- Pricing -->
+          <NavItem href="/pricing" class="text-white">Pricing</NavItem>
+  
+          <!-- Docs -->
+          <NavMenu name="Docs">
+            <NavMenuItem href="/" icon="search" description="Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.">Documentation</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Nulla quis lorem ut libero malesuada feugiat.">Guides</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Sed porttitor lectus nibh.">Status</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.">Changelog</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Nulla porttitor accumsan tincidunt.">API Reference</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Quisque velit nisi, pretium ut lacinia in, elementum id enim.">Tutorials</NavMenuItem>
+          </NavMenu>
+  
+          <!-- Blog -->
+          <NavItem href="/" class="text-white">Blog</NavItem>
+  
+          <!-- About -->
+          <NavMenu name="About">
+            <NavMenuItem href="/" icon="search" description="Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.">About Us</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Nulla quis lorem ut libero malesuada feugiat.">Newsroom</NavMenuItem>
+            <NavMenuItem href="/" icon="search" description="Sed porttitor lectus nibh.">Careers</NavMenuItem>
+          </NavMenu>
+  
+        </nav>
+        <div class="flex items-center xl:ml-12 pb-1">
+          <button class="button button--small">
+            <Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current" />
+          </button>
+          <NavItem href="/" class="button button--small text-white">Log In</NavItem>
+          <NavItem href="/" class="button button--secondary button--small">Contact Us</NavItem>
+          <NavItem href="/" class="ml-4 button button--primary button--small">Sign Up</NavItem>
         </div>
       </div>
     </div>
+  
+    <!--
+      Mobile menu, show/hide based on mobile menu state.
+  
+      Entering: "duration-200 ease-out"
+        From: "opacity-0 scale-95"
+        To: "opacity-100 scale-100"
+      Leaving: "duration-100 ease-in"
+        From: "opacity-100 scale-100"
+        To: "opacity-0 scale-95"
+    -->
+    <div class="absolute top-0 inset-x-0 xl:hidden" x-bind:class="mobile ? 'block' : 'hidden'">
+      <div class="bg-almostBlack text-white">
+        <div class="px-4 md:px-6 lg:px-10">
+          <div class="flex items-center justify-between">
+            <div>
+              <a href="/" class="flex">
+                <span class="sr-only">Deepgram</span>
+                <Svg name="deepgram" class="my-4 h-8 w-auto text-coral" />
+              </a>
+            </div>
+            <div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
+              <button class="button button--small">
+                <Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current mr-3" /> Search
+              </button>
+              <button x-on:click="mobile = false" type="button" class="button button--secondary button--small" aria-expanded="false">
+                <Icon icon="xmark" class="w-[1em] h-[1em] fill-current" />
+              </button>
+            </div>      
+          </div>
+          <div class="mt-6">
+            <nav class="grid gap-6">
+              <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                  <!-- Heroicon name: outline/chart-bar -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div class="ml-4 text-base font-medium text-gray-900">Analytics</div>
+              </a>
+  
+              <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                  <!-- Heroicon name: outline/cursor-click -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                  </svg>
+                </div>
+                <div class="ml-4 text-base font-medium text-gray-900">Engagement</div>
+              </a>
+  
+              <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                  <!-- Heroicon name: outline/shield-check -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div class="ml-4 text-base font-medium text-gray-900">Security</div>
+              </a>
+  
+              <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                  <!-- Heroicon name: outline/view-grid -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                  </svg>
+                </div>
+                <div class="ml-4 text-base font-medium text-gray-900">Integrations</div>
+              </a>
+  
+              <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                  <!-- Heroicon name: outline/refresh -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                </div>
+                <div class="ml-4 text-base font-medium text-gray-900">Automations</div>
+              </a>
+  
+              <a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-500 text-white">
+                  <!-- Heroicon name: outline/document-report -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <div class="ml-4 text-base font-medium text-gray-900">Reports</div>
+              </a>
+            </nav>
+          </div>
+        </div>
+        <div class="py-6 px-5">
+          <div class="grid grid-cols-2 gap-4">
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Pricing </a>
+  
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Docs </a>
+  
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Enterprise </a>
+  
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Help Center </a>
+  
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Guides </a>
+  
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Events </a>
+  
+            <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700"> Security </a>
+          </div>
+          <div class="mt-6">
+            <a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Sign up </a>
+            <p class="mt-6 text-center text-base font-medium text-gray-500">
+              Existing customer?
+              <a href="#" class="text-indigo-600 hover:text-indigo-500"> Sign in </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</header>
