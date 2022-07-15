@@ -2,9 +2,15 @@
 const { name } = Astro.props;
 ---
 
-<div class="space-y-1">
+<div class="space-y-1" x-data="{ submenu: null }">
 	<!-- Current: "bg-gray-100 text-gray-900", Default: "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
-	<button type="button" class="group w-full flex items-center pl-2 pr-1 py-4 text-left border-b-2 border-steel" aria-controls="sub-menu-1" aria-expanded="false">
+	<button
+		x-on:click={`submenu === name ? submenu = null : submenu = name`}
+		type="button"
+		class="group w-full flex items-center pl-2 pr-1 py-4 text-left border-b-2 border-steel"
+		aria-controls={`mobile-submenu-${name}`}
+		aria-expanded="submenu === name ? 'true' : 'false'"
+	>
 		<!-- Heroicon name: outline/users -->
 		<svg
 			class="mr-3 flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
@@ -28,7 +34,7 @@ const { name } = Astro.props;
 		</svg>
 	</button>
 	<!-- Expandable link section, show/hide based on state. -->
-	<div class="space-y-1 hidden" id="sub-menu-1">
+	<div class="space-y-1 hidden" id={`mobile-submenu-${name}`}>
 		<slot></slot>
 	</div>
 </div>

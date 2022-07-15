@@ -1,5 +1,5 @@
 ---
-const { href } = Astro.props;
+const { class: classes, ...rest } = Astro.props;
 ---
 
-<a href={href} class={`mt-1 py-4 text-bold ${Astro.props.class}`}><slot></slot></a>
+<a class={`mt-1 py-4 text-bold ${classes}`} {...rest}><slot></slot></a>

@@ -7,8 +7,10 @@ const { name, primary } = Astro.props;
 	<button
 		x-on:click={`menu === name ? menu = null : menu = name`}
 		type="button"
-		class="group inline-flex items-center border-b-4 mt-1 py-4 border-transparent"
-		aria-expanded="false"
+		class="group inline-flex items-center border-b-4 mt-1 py-4"
+		x-bind:class="menu === name ? 'border-lightIris' : 'border-transparent'"
+		aria-controls={`menu-${name}`}
+		aria-expanded="menu === name ? 'true' : 'false'"
 	>
 		<span class="text-bold">{name}</span>
 		<!--
@@ -31,7 +33,7 @@ const { name, primary } = Astro.props;
       From: "opacity-100 translate-y-0"
       To: "opacity-0 translate-y-1"
   -->
-	<div class="absolute z-10 -ml-20 mt-2 w-screen" x-bind:class="menu == name ? 'block' : 'hidden'">
+	<div class="absolute z-10 -ml-20 mt-2 w-screen" x-bind:class="menu === name ? 'block' : 'hidden'">
 		<div class="overflow-hidden flex">
 			{primary && (
 				<div class="bg-ink p-5 sm:p-8">
