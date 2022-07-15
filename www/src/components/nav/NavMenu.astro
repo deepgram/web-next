@@ -4,7 +4,12 @@ const { name, primary } = Astro.props;
 
 <div class="relative" x-data={`{ name: '${name}' }`}>
 	<!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-	<button x-on:click={`menu = name`} type="button" class="group inline-flex items-center border-b-4 mt-1 py-4 border-transparent" aria-expanded="false">
+	<button
+		x-on:click={`menu === name ? menu = null : menu = name`}
+		type="button"
+		class="group inline-flex items-center border-b-4 mt-1 py-4 border-transparent"
+		aria-expanded="false"
+	>
 		<span class="text-bold">{name}</span>
 		<!--
       Heroicon name: solid/chevron-down
