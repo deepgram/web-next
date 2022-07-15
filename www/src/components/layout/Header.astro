@@ -13,7 +13,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 <header x-data="{ menu: null }">
 	<div class="z-20 fixed inset-0 bg-black/75" x-bind:class="menu !== null ? 'block' : 'hidden'" x-on:click="menu = null"></div>
 	<div class="z-30 absolute inset-x-0 bg-almostBlack text-white">
-		<div class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10">
+		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10">
 			<div>
 				<a href="/" class="flex">
 					<span class="sr-only">Deepgram</span>
@@ -81,8 +81,8 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 
 		<div class="fixed top-0 inset-x-0 xl:hidden" x-bind:class="menu === 'Mobile' ? 'block' : 'hidden'">
 			<div class="h-screen bg-almostBlack text-white flex flex-col justify-between">
-				<div class="px-4 md:px-6 lg:px-10 overflow-y-scroll">
-					<div class="flex items-center justify-between">
+				<div class="overflow-y-scroll">
+					<div class="px-6 lg:px-10 flex items-center justify-between">
 						<div>
 							<a href="/" class="flex">
 								<span class="sr-only">Deepgram</span>
@@ -99,7 +99,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 						</div>
 					</div>
 					<div class="mt-6">
-						<nav class="grid text-lg">
+						<nav class="grid text-xl font-bold bg-darkCharcoal">
 							<!-- Product -->
 							<MobileNavMenu name="Product" primary>
 								<MobileNavMenuItem href="/product" icon="search">View Product</MobileNavMenuItem>
@@ -143,11 +143,11 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 						</nav>
 					</div>
 				</div>
-				<div class="py-6 px-5">
+				<div class="p-6 lg:p-10">
 					<div class="grid grid-cols-2 grid-rows-2 gap-4">
-						<a href="#" class="button button--secondary button--block">Log In</a>
-						<a href="#" class="button button--tertiary button--block">Sign Up</a>
-						<a href="#" class="col-span-2 button button--primary button--block">Contact Us</a>
+						<a href="#" class="button button--secondary button--block text-xl">Log In</a>
+						<a href="#" class="button button--tertiary button--block text-xl">Sign Up</a>
+						<a href="#" class="col-span-2 button button--primary button--block text-xl">Contact Us</a>
 					</div>
 				</div>
 			</div>
