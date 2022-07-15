@@ -1,43 +1,43 @@
 <script setup>
-import { ref } from 'vue';
-import ToggleTwo from './ToggleTwo.vue';
-import RadioDemo from '../RadioDemo.vue';
+import { ref } from "vue";
+import ToggleTwo from "./ToggleTwo.vue";
+import RadioDemo from "../RadioDemo.vue";
 // const labelLeft = "TRANSCRIBE LIVE";
 // const labelRight = "TRANSCRIBE PRE-RECORDED";
-let checkedValue = ref('0'); // toggle v-model
-let pickedValue = ref(''); // radio button v-model
+let checkedValue = ref("0"); // toggle v-model
+let pickedValue = ref(""); // radio button v-model
 const demoItems = [
 	{
 		id: 0,
-		title: 'Real-time transcription',
-		details: 'Got live audio? Get real-time transcription that’s actually in “real time” with <300 millisecond latency. Click the mic and  give it a try.',
-		buttonText: 'Transcribe More Free',
+		title: "Real-time transcription",
+		details: "Got live audio? Get real-time transcription that’s actually in “real time” with <300 millisecond latency. Click the mic and  give it a try.",
+		buttonText: "Transcribe More Free",
 	},
 	{
 		id: 1,
-		title: 'Pre-recorded transcription',
-		details: 'Accurately transcribe the toughest audio blazingly fast: just 30 seconds to transcribe an hour. Select a file to try it.',
-		buttonText: 'Try Free With Your Own Audio',
+		title: "Pre-recorded transcription",
+		details: "Accurately transcribe the toughest audio blazingly fast: just 30 seconds to transcribe an hour. Select a file to try it.",
+		buttonText: "Try Free With Your Own Audio",
 	},
 ];
 const items = [
 	{
 		id: 0,
-		title: 'NASA: First All Female Space Walk',
-		text: 'Poor audio quality, background noise, lengthy audio, multiple speakers, female speakers',
-		code: 'code NASA',
+		title: "NASA: First All Female Space Walk",
+		text: "Poor audio quality, background noise, lengthy audio, multiple speakers, female speakers",
+		code: "code NASA",
 	},
 	{
 		id: 1,
-		title: 'Podcast: Deep Learning’s Effect on Science',
-		text: 'Multiple speakers, lengthy audio',
-		code: 'code Podcast',
+		title: "Podcast: Deep Learning’s Effect on Science",
+		text: "Multiple speakers, lengthy audio",
+		code: "code Podcast",
 	},
 	{
 		id: 2,
-		title: 'Call Center: Upgrade Service',
-		text: 'Multiple speakers, Multiple Genders, lengthy audio',
-		code: 'code Call Center',
+		title: "Call Center: Upgrade Service",
+		text: "Multiple speakers, Multiple Genders, lengthy audio",
+		code: "code Call Center",
 	},
 ];
 </script>

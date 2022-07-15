@@ -1,35 +1,35 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
-import HeroCenteredSlots from '../components/content/hero/HeroCenteredSlots.astro';
-import Promo from '../components/content/Promo.page-ssr.astro';
-import customerJson from './data/built-with-dg/customers.json';
+import PageLayout from "../layouts/PageLayout.astro";
+import HeroCenteredSlots from "../components/content/hero/HeroCenteredSlots.astro";
+import Promo from "../components/content/Promo.page-ssr.astro";
+import customerJson from "./data/built-with-dg/customers.json";
 ---
 
 <PageLayout>
 	<main>
-		<HeroCenteredSlots promo='Check out our Startup Program' title='Built with Deepgram.'>
-			<Promo slot='promo'>
-				&#128640; Check out our <a class='promo-link' href='/startups'>Startup Program</a>
+		<HeroCenteredSlots promo="Check out our Startup Program" title="Built with Deepgram.">
+			<Promo slot="promo">
+				&#128640; Check out our <a class="promo-link" href="/startups">Startup Program</a>
 			</Promo>
-			<h1 class='hero-header' slot='title'>
-				Built With <p class='dg-underline'>Deepgram</p>
+			<h1 class="hero-header" slot="title">
+				Built With <p class="dg-underline">Deepgram</p>
 			</h1>
-			<p slot='subtext'>From individuals to enterprises, see what developers all over the world are building with Deepgram.</p>
-			<div slot='cta' class='cta flex justify-center space-x-7'>
-				<a href='/' class='button button--primary'>What will you build?</a>
+			<p slot="subtext">From individuals to enterprises, see what developers all over the world are building with Deepgram.</p>
+			<div slot="cta" class="cta flex justify-center space-x-7">
+				<a href="/" class="button button--primary">What will you build?</a>
 			</div>
 		</HeroCenteredSlots>
 		<!-- Filtered Use cases -->
 		<!-- This will be similar to blog post section. will duplicate it here. -->
 
-		<section class='customers contrast contrast--white '>
+		<section class="customers contrast contrast--white ">
 			<h2>Leading the voice ecosystem</h2>
-			<p class='text-large'>
+			<p class="text-large">
 				Join the growing list of customers who are innovating with Deepgram and creating new voice technology products and services without compromising speed accuracy, costs or
 				scale.
 			</p>
-			<p class='text-small'>From individuals to enterprises, see what developers all over the world are building with Deepgram.</p>
-			<div class='logos'>
+			<p class="text-small">From individuals to enterprises, see what developers all over the world are building with Deepgram.</p>
+			<div class="logos">
 				{customerJson.map((customer) => {
 					return (
 						<div class="logo">
@@ -39,8 +39,8 @@ import customerJson from './data/built-with-dg/customers.json';
 				})}
 			</div>
 			<!-- TODO: update link -->
-			<p class='join-us'>
-				Join Us. <a href='#' class='dg-underline'>Contact Sales</a>
+			<p class="join-us">
+				Join Us. <a href="#" class="dg-underline">Contact Sales</a>
 			</p>
 		</section>
 	</main>
@@ -50,11 +50,11 @@ import customerJson from './data/built-with-dg/customers.json';
 	main {
 		@apply bg-black;
 		@apply text-white;
-		background: black no-repeat top -20rem right -30rem url('./starburst.svg');
+		background: black no-repeat top -20rem right -30rem url("./starburst.svg");
 	}
 	@screen md {
 		main {
-			background: black no-repeat top -20rem right -20rem url('./starburst.svg');
+			background: black no-repeat top -20rem right -20rem url("./starburst.svg");
 		}
 	}
 	.promo-link {

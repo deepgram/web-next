@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: 'favorit';
-	src: url('../fonts/ABCFavorit-Bold.woff2');
+	font-family: "favorit";
+	src: url("../fonts/ABCFavorit-Bold.woff2");
 }
 
 /* for the notch */
@@ -17,20 +17,20 @@ body {
 }
 
 .bg-fingerprint {
-	background-image: url('/fingerprint.svg');
+	background-image: url("/fingerprint.svg");
 	background-repeat: no-repeat;
 	background-position: right 16rem top;
 }
 
 .bg-starburst {
-	background-image: url('/starburst.svg');
+	background-image: url("/starburst.svg");
 	background-repeat: no-repeat;
 	background-position: 21rem top;
 	background-size: 42.75rem;
 }
 
 .bg-saturn {
-	background-image: url('/saturn.svg');
+	background-image: url("/saturn.svg");
 	background-repeat: no-repeat;
 	background-position: 22rem top;
 	background-size: 30rem;

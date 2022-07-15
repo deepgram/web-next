@@ -1,16 +1,16 @@
 ---
-import Icon from '../Icon.astro';
+import Icon from "../Icon.astro";
 
 const { href, description, icon } = Astro.props;
 ---
 
-<a href={href} class='-m-3 p-3 max-w-xs flow-root'>
-	<div class='flex items-center mb-10'>
-		<h4 class='text-white'>{description}</h4>
+<a href={href} class="-m-3 p-3 max-w-xs flow-root">
+	<div class="flex items-center mb-10">
+		<h4 class="text-white">{description}</h4>
 	</div>
-	<p class='flex text-white items-center gap-2'>
-		<Icon icon={icon} class='h-[1.2em] w-[1.2em] fill-cloud' />
+	<p class="flex text-white items-center gap-2">
+		<Icon icon={icon} class="h-[1.2em] w-[1.2em] fill-cloud" />
 		<slot></slot>
-		<Icon icon='arrowright' class='h-[1em] w-[1em] stroke-lightIris' />
+		<Icon icon="arrowright" class="h-[1em] w-[1em] stroke-lightIris" />
 	</p>
 </a>

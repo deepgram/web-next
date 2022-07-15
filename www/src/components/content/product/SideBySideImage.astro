@@ -1,14 +1,14 @@
 ---
-import Hyperlink from '../../Hyperlink.astro';
+import Hyperlink from "../../Hyperlink.astro";
 
 const { body, cta, image, linkText } = Astro.props;
 ---
 
 <section>
-	<div class='max-w-screen-2xl mx-auto mt-48'>
-		<div class='flex flex-col items-center pt-16 lg:pt-0'>
-			<div class='flex flex-col-reverse	items-center lg:flex-row'>
-				<div class='flex flex-col w-full lg:w-6/12 pr-24'>
+	<div class="max-w-screen-2xl mx-auto mt-48">
+		<div class="flex flex-col items-center pt-16 lg:pt-0">
+			<div class="flex flex-col-reverse	items-center lg:flex-row">
+				<div class="flex flex-col w-full lg:w-6/12 pr-24">
 					<h3>{cta}</h3>
 					<p>{body}</p>
 					{linkText && linkText.length > 0 ? (
@@ -19,7 +19,7 @@ const { body, cta, image, linkText } = Astro.props;
 						</div>
 					) : null}
 				</div>
-				<div class='w-10/12 lg:w-6/12 mb-12 lg:mb-0'>
+				<div class="w-10/12 lg:w-6/12 mb-12 lg:mb-0">
 					<img src={`src/assets/images/${image}`} />
 				</div>
 			</div>

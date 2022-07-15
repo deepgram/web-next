@@ -1,16 +1,16 @@
 ---
-import LeftStar from '../../decoration/LeftStar.astro';
-import RightStar from '../../decoration/RightStar.astro';
-import FlareSection from '../../layout/FlareSection.astro';
+import LeftStar from "../../decoration/LeftStar.astro";
+import RightStar from "../../decoration/RightStar.astro";
+import FlareSection from "../../layout/FlareSection.astro";
 ---
 
 <LeftStar />
-<FlareSection class='homepage-hero' background='bg-starburst'>
-	<div class='flex flex-col items-center'>
+<FlareSection class="homepage-hero" background="bg-starburst">
+	<div class="flex flex-col items-center">
 		<slot></slot>
 
-		<div class='call-to-action flex justify-center space-x-7'>
-			<slot name='cta'></slot>
+		<div class="call-to-action flex justify-center space-x-7">
+			<slot name="cta"></slot>
 		</div>
 	</div>
 </FlareSection>

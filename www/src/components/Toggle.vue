@@ -1,10 +1,10 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 const props = defineProps({
 	modelValue: Boolean,
 });
 const checked = ref(false);
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(["update:modelValue"]);
 </script>
 
 <template>
@@ -43,7 +43,7 @@ const emit = defineEmits(['update:modelValue']);
 
 .slider:before {
 	position: absolute;
-	content: '';
+	content: "";
 	height: 22px;
 	width: 22px;
 	left: 4px;

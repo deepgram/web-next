@@ -1,13 +1,13 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const props = defineProps({
 	items: Array,
 	modelValue: String,
 });
 
-const picked = ref('One');
-const emit = defineEmits(['update:modelValue']);
+const picked = ref("One");
+const emit = defineEmits(["update:modelValue"]);
 </script>
 
 <template>
@@ -31,7 +31,7 @@ const emit = defineEmits(['update:modelValue']);
 	@apply font-semibold;
 }
 
-input[type='radio'] {
+input[type="radio"] {
 	position: absolute;
 	opacity: 0;
 	height: 100%;

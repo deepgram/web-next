@@ -1,6 +1,6 @@
 ---
-import PageLayout from '../layouts/PageLayout.astro';
-import path from 'path';
+import PageLayout from "../layouts/PageLayout.astro";
+import path from "path";
 
 export async function getStaticPaths() {
 	const cwd = process.cwd();
@@ -10,11 +10,11 @@ export async function getStaticPaths() {
 
 	return allPages.map((page) => {
 		const fileInfo = path.parse(page.file);
-		const uri = fileInfo.dir.replace(contentPath, '').replace(/^\//, '');
+		const uri = fileInfo.dir.replace(contentPath, "").replace(/^\//, "");
 		let slug;
 
 		// slug can be a string (url path) or undefined, but NOT a blank string
-		if (uri !== '') {
+		if (uri !== "") {
 			slug = uri;
 		}
 

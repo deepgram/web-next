@@ -1,29 +1,29 @@
 <script setup>
-import { ref } from 'vue';
-import Toggle from '../../Toggle.vue';
-import RadioDemo from './RadioDemo.vue';
-const labelLeft = 'TRANSCRIBE LIVE';
-const labelRight = 'TRANSCRIBE PRE-RECORDED';
+import { ref } from "vue";
+import Toggle from "../../Toggle.vue";
+import RadioDemo from "./RadioDemo.vue";
+const labelLeft = "TRANSCRIBE LIVE";
+const labelRight = "TRANSCRIBE PRE-RECORDED";
 let checkedValue = ref(false); // toggle v-model
-let pickedValue = ref(''); // radio button v-model
+let pickedValue = ref(""); // radio button v-model
 const items = [
 	{
 		id: 0,
-		title: 'NASA: First All Female Space Walk',
-		text: 'Poor audio quality, background noise, lengthy audio, multiple speakers, female speakers',
-		code: 'code NASA',
+		title: "NASA: First All Female Space Walk",
+		text: "Poor audio quality, background noise, lengthy audio, multiple speakers, female speakers",
+		code: "code NASA",
 	},
 	{
 		id: 1,
-		title: 'Podcast: Deep Learning’s Effect on Science',
-		text: 'Multiple speakers, lengthy audio',
-		code: 'code Podcast',
+		title: "Podcast: Deep Learning’s Effect on Science",
+		text: "Multiple speakers, lengthy audio",
+		code: "code Podcast",
 	},
 	{
 		id: 2,
-		title: 'Call Center: Upgrade Service',
-		text: 'Multiple speakers, Multiple Genders, lengthy audio',
-		code: 'code Call Center',
+		title: "Call Center: Upgrade Service",
+		text: "Multiple speakers, Multiple Genders, lengthy audio",
+		code: "code Call Center",
 	},
 ];
 </script>

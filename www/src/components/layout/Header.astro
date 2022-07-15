@@ -1,153 +1,153 @@
 ---
-import Icon from '../Icon.astro';
-import Svg from '../Svg.astro';
-import NavMenu from '../nav/NavMenu.astro';
-import NavMenuPrimaryItem from '../nav/NavMenuPrimaryItem.astro';
-import NavMenuItem from '../nav/NavMenuItem.astro';
-import NavItem from '../nav/NavItem.astro';
-import MobileNavMenu from '../nav/MobileNavMenu.astro';
-import MobileNavMenuItem from '../nav/MobileNavMenuItem.astro';
-import MobileNavItem from '../nav/MobileNavItem.astro';
+import Icon from "../Icon.astro";
+import Svg from "../Svg.astro";
+import NavMenu from "../nav/NavMenu.astro";
+import NavMenuPrimaryItem from "../nav/NavMenuPrimaryItem.astro";
+import NavMenuItem from "../nav/NavMenuItem.astro";
+import NavItem from "../nav/NavItem.astro";
+import MobileNavMenu from "../nav/MobileNavMenu.astro";
+import MobileNavMenuItem from "../nav/MobileNavMenuItem.astro";
+import MobileNavItem from "../nav/MobileNavItem.astro";
 ---
 
-<header x-data='{ menu: null }'>
-	<div class='z-20 fixed inset-0 bg-black/75' x-bind:class='menu !== null ? 'block' : 'hidden'' x-on:click='menu = null'></div>
-	<div class='z-30 absolute inset-x-0 bg-almostBlack text-white'>
-		<div class='max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10'>
+<header x-data="{ menu: null }">
+	<div class="z-20 fixed inset-0 bg-black/75" x-bind:class="menu !== null ? 'block' : 'hidden'" x-on:click="menu = null"></div>
+	<div class="z-30 absolute inset-x-0 bg-almostBlack text-white">
+		<div class="max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10">
 			<div>
-				<a href='/' class='flex'>
-					<span class='sr-only'>Deepgram</span>
-					<Svg name='deepgram' class='my-4 h-8 w-auto text-coral' />
+				<a href="/" class="flex">
+					<span class="sr-only">Deepgram</span>
+					<Svg name="deepgram" class="my-4 h-8 w-auto text-coral" />
 				</a>
 			</div>
-			<div class='flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden'>
-				<button x-on:click='menu = 'Mobile'' type='button' class='button button--secondary button--small' aria-expanded='false'> Menu</button>
-				<NavItem href='/' class='button button--primary button--small'>Sign Up</NavItem>
+			<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
+				<button x-on:click="menu = 'Mobile'" type="button" class="button button--secondary button--small" aria-expanded="false"> Menu</button>
+				<NavItem href="/" class="button button--primary button--small">Sign Up</NavItem>
 			</div>
-			<div class='hidden xl:flex-1 xl:flex xl:items-center xl:justify-between'>
-				<nav class='flex space-x-10' x-on:click.outside='menu = null'>
+			<div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
+				<nav class="flex space-x-10" x-on:click.outside="menu = null">
 					<!-- Product -->
-					<NavMenu name='Product' primary>
-						<NavMenuPrimaryItem slot='primary' href='/product' icon='search' description='Meet the Deepgram speech-to-text API'>View Product</NavMenuPrimaryItem>
+					<NavMenu name="Product" primary>
+						<NavMenuPrimaryItem slot="primary" href="/product" icon="search" description="Meet the Deepgram speech-to-text API">View Product</NavMenuPrimaryItem>
 
-						<NavMenuItem href='/product/model-overview' icon='search'>Model Overview</NavMenuItem>
-						<NavMenuItem href='/product/sdks-tools' icon='search'>SDKs + Tools</NavMenuItem>
-						<NavMenuItem href='/product/languages' icon='search'>Languages</NavMenuItem>
-						<NavMenuItem href='/product/free-api-key' icon='search'>Free API Key</NavMenuItem>
-						<NavMenuItem href='/product/why-deepgram' icon='search'>Why Deepgram</NavMenuItem>
+						<NavMenuItem href="/product/model-overview" icon="search">Model Overview</NavMenuItem>
+						<NavMenuItem href="/product/sdks-tools" icon="search">SDKs + Tools</NavMenuItem>
+						<NavMenuItem href="/product/languages" icon="search">Languages</NavMenuItem>
+						<NavMenuItem href="/product/free-api-key" icon="search">Free API Key</NavMenuItem>
+						<NavMenuItem href="/product/why-deepgram" icon="search">Why Deepgram</NavMenuItem>
 					</NavMenu>
 
 					<!-- Solutions -->
-					<NavMenu name='Solutions'>
-						<NavMenuItem href='/built-with-dg' icon='search'>Built with Deepgram</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>Contact Centers</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>Speech Analytics</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>Convo AI</NavMenuItem>
+					<NavMenu name="Solutions">
+						<NavMenuItem href="/built-with-dg" icon="search">Built with Deepgram</NavMenuItem>
+						<NavMenuItem href="/" icon="search">Contact Centers</NavMenuItem>
+						<NavMenuItem href="/" icon="search">Speech Analytics</NavMenuItem>
+						<NavMenuItem href="/" icon="search">Convo AI</NavMenuItem>
 					</NavMenu>
 
 					<!-- Pricing -->
-					<NavItem href='/pricing' class='text-white'>Pricing</NavItem>
+					<NavItem href="/pricing" class="text-white">Pricing</NavItem>
 
 					<!-- Docs -->
-					<NavMenu name='Docs'>
-						<NavMenuItem href='/' icon='search'>Documentation</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>Guides</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>Status</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>Changelog</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>API Reference</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>Tutorials</NavMenuItem>
+					<NavMenu name="Docs">
+						<NavMenuItem href="/" icon="search">Documentation</NavMenuItem>
+						<NavMenuItem href="/" icon="search">Guides</NavMenuItem>
+						<NavMenuItem href="/" icon="search">Status</NavMenuItem>
+						<NavMenuItem href="/" icon="search">Changelog</NavMenuItem>
+						<NavMenuItem href="/" icon="search">API Reference</NavMenuItem>
+						<NavMenuItem href="/" icon="search">Tutorials</NavMenuItem>
 					</NavMenu>
 
 					<!-- Blog -->
-					<NavItem href='/' class='text-white'>Blog</NavItem>
+					<NavItem href="/" class="text-white">Blog</NavItem>
 
 					<!-- About -->
-					<NavMenu name='About'>
-						<NavMenuItem href='/' icon='search'>About Us</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>Newsroom</NavMenuItem>
-						<NavMenuItem href='/' icon='search'>Careers</NavMenuItem>
+					<NavMenu name="About">
+						<NavMenuItem href="/" icon="search">About Us</NavMenuItem>
+						<NavMenuItem href="/" icon="search">Newsroom</NavMenuItem>
+						<NavMenuItem href="/" icon="search">Careers</NavMenuItem>
 					</NavMenu>
 				</nav>
-				<div class='flex items-center xl:ml-12 pb-1'>
-					<button class='button button--small'>
-						<Icon icon='search' class='w-[1.5em] h-[1.5em] fill-current' />
+				<div class="flex items-center xl:ml-12 pb-1">
+					<button class="button button--small">
+						<Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current" />
 					</button>
-					<NavItem href='/' class='button button--small text-white'>Log In</NavItem>
-					<NavItem href='/' class='button button--secondary button--small'>Contact Us</NavItem>
-					<NavItem href='/' class='ml-4 button button--primary button--small'>Sign Up</NavItem>
+					<NavItem href="/" class="button button--small text-white">Log In</NavItem>
+					<NavItem href="/" class="button button--secondary button--small">Contact Us</NavItem>
+					<NavItem href="/" class="ml-4 button button--primary button--small">Sign Up</NavItem>
 				</div>
 			</div>
 		</div>
 
-		<div class='fixed top-0 inset-x-0 xl:hidden' x-bind:class='menu === 'Mobile' ? 'block' : 'hidden''>
-			<div class='h-screen bg-almostBlack text-white flex flex-col justify-between'>
-				<div class='px-4 md:px-6 lg:px-10 overflow-y-scroll'>
-					<div class='flex items-center justify-between'>
+		<div class="fixed top-0 inset-x-0 xl:hidden" x-bind:class="menu === 'Mobile' ? 'block' : 'hidden'">
+			<div class="h-screen bg-almostBlack text-white flex flex-col justify-between">
+				<div class="px-4 md:px-6 lg:px-10 overflow-y-scroll">
+					<div class="flex items-center justify-between">
 						<div>
-							<a href='/' class='flex'>
-								<span class='sr-only'>Deepgram</span>
-								<Svg name='deepgram' class='my-4 h-8 w-auto text-coral' />
+							<a href="/" class="flex">
+								<span class="sr-only">Deepgram</span>
+								<Svg name="deepgram" class="my-4 h-8 w-auto text-coral" />
 							</a>
 						</div>
-						<div class='flex items-center xl:ml-12 pb-1 xl:hidden'>
-							<button class='button button--small'>
-								<Icon icon='search' class='w-[1.5em] h-[1.5em] fill-current mr-3' />
+						<div class="flex items-center xl:ml-12 pb-1 xl:hidden">
+							<button class="button button--small">
+								<Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current mr-3" />
 							</button>
-							<button x-on:click='menu = null' type='button' class='button button--secondary button--small' aria-expanded='false'>
-								<Icon icon='xmark-large' class='w-[1em] h-[1em] fill-current' />
+							<button x-on:click="menu = null" type="button" class="button button--secondary button--small" aria-expanded="false">
+								<Icon icon="xmark-large" class="w-[1em] h-[1em] fill-current" />
 							</button>
 						</div>
 					</div>
-					<div class='mt-6'>
-						<nav class='grid text-lg'>
+					<div class="mt-6">
+						<nav class="grid text-lg">
 							<!-- Product -->
-							<MobileNavMenu name='Product' primary>
-								<MobileNavMenuItem href='/product' icon='search'>View Product</MobileNavMenuItem>
-								<MobileNavMenuItem href='/product/model-overview' icon='search'>Model Overview</MobileNavMenuItem>
-								<MobileNavMenuItem href='/product/sdks-tools' icon='search'>SDKs + Tools</MobileNavMenuItem>
-								<MobileNavMenuItem href='/product/languages' icon='search'>Languages</MobileNavMenuItem>
-								<MobileNavMenuItem href='/product/free-api-key' icon='search'>Free API Key</MobileNavMenuItem>
-								<MobileNavMenuItem href='/product/why-deepgram' icon='search'>Why Deepgram</MobileNavMenuItem>
+							<MobileNavMenu name="Product" primary>
+								<MobileNavMenuItem href="/product" icon="search">View Product</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/model-overview" icon="search">Model Overview</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/sdks-tools" icon="search">SDKs + Tools</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/languages" icon="search">Languages</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/free-api-key" icon="search">Free API Key</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/why-deepgram" icon="search">Why Deepgram</MobileNavMenuItem>
 							</MobileNavMenu>
 
 							<!-- Solutions -->
-							<MobileNavMenu name='Solutions'>
-								<MobileNavMenuItem href='/built-with-dg' icon='search'>Built with Deepgram</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>Contact Centers</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>Speech Analytics</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>Convo AI</MobileNavMenuItem>
+							<MobileNavMenu name="Solutions">
+								<MobileNavMenuItem href="/built-with-dg" icon="search">Built with Deepgram</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">Contact Centers</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">Speech Analytics</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">Convo AI</MobileNavMenuItem>
 							</MobileNavMenu>
 
 							<!-- Pricing -->
-							<MobileNavItem href='/pricing' class='text-white'>Pricing</MobileNavItem>
+							<MobileNavItem href="/pricing" class="text-white">Pricing</MobileNavItem>
 
 							<!-- Docs -->
-							<MobileNavMenu name='Docs'>
-								<MobileNavMenuItem href='/' icon='search'>Documentation</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>Guides</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>Status</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>Changelog</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>API Reference</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>Tutorials</MobileNavMenuItem>
+							<MobileNavMenu name="Docs">
+								<MobileNavMenuItem href="/" icon="search">Documentation</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">Guides</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">Status</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">Changelog</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">API Reference</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">Tutorials</MobileNavMenuItem>
 							</MobileNavMenu>
 
 							<!-- Blog -->
-							<MobileNavItem href='/' class='text-white'>Blog</MobileNavItem>
+							<MobileNavItem href="/" class="text-white">Blog</MobileNavItem>
 
 							<!-- About -->
-							<MobileNavMenu name='About'>
-								<MobileNavMenuItem href='/' icon='search'>About Us</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>Newsroom</MobileNavMenuItem>
-								<MobileNavMenuItem href='/' icon='search'>Careers</MobileNavMenuItem>
+							<MobileNavMenu name="About">
+								<MobileNavMenuItem href="/" icon="search">About Us</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">Newsroom</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="search">Careers</MobileNavMenuItem>
 							</MobileNavMenu>
 						</nav>
 					</div>
 				</div>
-				<div class='py-6 px-5'>
-					<div class='grid grid-cols-2 grid-rows-2 gap-4'>
-						<a href='#' class='button button--secondary button--block'>Log In</a>
-						<a href='#' class='button button--tertiary button--block'>Sign Up</a>
-						<a href='#' class='col-span-2 button button--primary button--block'>Contact Us</a>
+				<div class="py-6 px-5">
+					<div class="grid grid-cols-2 grid-rows-2 gap-4">
+						<a href="#" class="button button--secondary button--block">Log In</a>
+						<a href="#" class="button button--tertiary button--block">Sign Up</a>
+						<a href="#" class="col-span-2 button button--primary button--block">Contact Us</a>
 					</div>
 				</div>
 			</div>

@@ -1,13 +1,13 @@
 ---
-import FlareSection from '../layout/FlareSection.astro';
+import FlareSection from "../layout/FlareSection.astro";
 
 const { layout } = Astro.props;
 ---
 
 <FlareSection class={`hero-centered ${Astro.props.class}`} background={Astro.props.background}>
-	<slot name='header'></slot>
+	<slot name="header"></slot>
 
-	{layout === 'centered' && (
+	{layout === "centered" && (
 		<>
 			<div class="flex max-w-full flex-col items-center">
 				<slot />
@@ -19,7 +19,7 @@ const { layout } = Astro.props;
 		</>
 	)}
 
-	<slot name='footer'></slot>
+	<slot name="footer"></slot>
 </FlareSection>
 
 <style>

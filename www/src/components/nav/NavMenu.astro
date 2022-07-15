@@ -2,17 +2,17 @@
 const { name, primary } = Astro.props;
 ---
 
-<div class='relative' x-data={`{ name: '${name}' }`}>
+<div class="relative" x-data={`{ name: '${name}' }`}>
 	<!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-	<button x-on:click={`menu = name`} type='button' class='group inline-flex items-center border-b-4 mt-1 py-4 border-transparent' aria-expanded='false'>
-		<span class='text-bold'>{name}</span>
+	<button x-on:click={`menu = name`} type="button" class="group inline-flex items-center border-b-4 mt-1 py-4 border-transparent" aria-expanded="false">
+		<span class="text-bold">{name}</span>
 		<!--
       Heroicon name: solid/chevron-down
 
       Item active: "text-gray-600", Item inactive: "text-gray-400"
     -->
-		<svg class='h-5 w-5' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' aria-hidden='true'>
-			<path fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd'></path>
+		<svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+			<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
 		</svg>
 	</button>
 
@@ -26,14 +26,14 @@ const { name, primary } = Astro.props;
       From: "opacity-100 translate-y-0"
       To: "opacity-0 translate-y-1"
   -->
-	<div class='absolute z-10 -ml-20 mt-2 w-screen' x-bind:class='menu == name ? 'block' : 'hidden''>
-		<div class='overflow-hidden flex'>
+	<div class="absolute z-10 -ml-20 mt-2 w-screen" x-bind:class="menu == name ? 'block' : 'hidden'">
+		<div class="overflow-hidden flex">
 			{primary && (
 				<div class="bg-ink p-5 sm:p-8">
 					<slot name="primary" />
 				</div>
 			)}
-			<div class='relative bg-darkCharcoal grid p-12 gap-12 lg:grid-cols-2'>
+			<div class="relative bg-darkCharcoal grid p-12 gap-12 lg:grid-cols-2">
 				<slot></slot>
 			</div>
 		</div>

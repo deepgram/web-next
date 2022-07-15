@@ -1,21 +1,21 @@
 ---
-import Svg from '../Svg.astro';
-import Icon from '../Icon.astro';
-import NarrowSection from '../layout/NarrowSection.astro';
+import Svg from "../Svg.astro";
+import Icon from "../Icon.astro";
+import NarrowSection from "../layout/NarrowSection.astro";
 ---
 
-<NarrowSection class='testimonial mt-48'>
-	<Svg name='quotation-mark' class='mb-6' />
-	<slot name='quote'></slot>
-	<div class='flex items-center mb-6'>
-		<slot name='photo'></slot>
+<NarrowSection class="testimonial mt-48">
+	<Svg name="quotation-mark" class="mb-6" />
+	<slot name="quote"></slot>
+	<div class="flex items-center mb-6">
+		<slot name="photo"></slot>
 		<div>
-			<slot name='author'></slot>
-			<slot name='job'></slot>
+			<slot name="author"></slot>
+			<slot name="job"></slot>
 		</div>
 	</div>
-	<a href='/customers' class='inline-block flex font-bold'>
-		See Customer Stories <Icon icon='arrowright' class='w-6' />
+	<a href="/customers" class="inline-block flex font-bold">
+		See Customer Stories <Icon icon="arrowright" class="w-6" />
 	</a>
 </NarrowSection>
 

@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const props = defineProps({
 	demoItems: Array,
@@ -7,7 +7,7 @@ const props = defineProps({
 });
 
 const picked = ref(0);
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(["update:modelValue"]);
 </script>
 
 <template>
@@ -35,7 +35,7 @@ const emit = defineEmits(['update:modelValue']);
 	@apply mb-4;
 }
 
-input[type='radio'] {
+input[type="radio"] {
 	position: absolute;
 	opacity: 0;
 	height: 100%;

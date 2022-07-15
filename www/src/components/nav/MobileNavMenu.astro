@@ -2,33 +2,33 @@
 const { name } = Astro.props;
 ---
 
-<div class='space-y-1'>
+<div class="space-y-1">
 	<!-- Current: "bg-gray-100 text-gray-900", Default: "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
-	<button type='button' class='group w-full flex items-center pl-2 pr-1 py-4 text-left border-b-2 border-steel' aria-controls='sub-menu-1' aria-expanded='false'>
+	<button type="button" class="group w-full flex items-center pl-2 pr-1 py-4 text-left border-b-2 border-steel" aria-controls="sub-menu-1" aria-expanded="false">
 		<!-- Heroicon name: outline/users -->
 		<svg
-			class='mr-3 flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500'
-			xmlns='http://www.w3.org/2000/svg'
-			fill='none'
-			viewBox='0 0 24 24'
-			stroke-width='2'
-			stroke='currentColor'
-			aria-hidden='true'
+			class="mr-3 flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+			xmlns="http://www.w3.org/2000/svg"
+			fill="none"
+			viewBox="0 0 24 24"
+			stroke-width="2"
+			stroke="currentColor"
+			aria-hidden="true"
 		>
-			<path stroke-linecap='round' stroke-linejoin='round' d='M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z'></path>
+			<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
 		</svg>
-		<span class='flex-1'>{name}</span>
+		<span class="flex-1">{name}</span>
 		<!-- Expanded: "text-gray-400 rotate-90", Collapsed: "text-gray-300" -->
 		<svg
-			class='text-gray-300 ml-3 flex-shrink-0 w-[1em] h-[1em] transform group-hover:text-gray-400 transition-colors ease-in-out duration-150'
-			viewBox='0 0 20 20'
-			aria-hidden='true'
+			class="text-gray-300 ml-3 flex-shrink-0 w-[1em] h-[1em] transform group-hover:text-gray-400 transition-colors ease-in-out duration-150"
+			viewBox="0 0 20 20"
+			aria-hidden="true"
 		>
-			<path d='M6 6L14 10L6 14V6Z' fill='currentColor'></path>
+			<path d="M6 6L14 10L6 14V6Z" fill="currentColor"></path>
 		</svg>
 	</button>
 	<!-- Expandable link section, show/hide based on state. -->
-	<div class='space-y-1 hidden' id='sub-menu-1'>
+	<div class="space-y-1 hidden" id="sub-menu-1">
 		<slot></slot>
 	</div>
 </div>

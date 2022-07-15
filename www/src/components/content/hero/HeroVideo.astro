@@ -2,8 +2,8 @@
 const { strap, title, body, primaryCta, secondaryCta, tertiaryCta, video } = Astro.props;
 ---
 
-<section class='hero hero-split'>
-	<div class='hero-left'>
+<section class="hero hero-split">
+	<div class="hero-left">
 		<span>{strap}</span>
 		<h1>{title}</h1>
 		<p>{body}</p>
@@ -11,8 +11,8 @@ const { strap, title, body, primaryCta, secondaryCta, tertiaryCta, video } = Ast
 		<p>{secondaryCta}</p>
 		<p>{tertiaryCta}</p>
 	</div>
-	<div class='hero-right'>
-		<iframe width='560' height='315' src={video} title={title} frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+	<div class="hero-right">
+		<iframe width="560" height="315" src={video} title={title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 		></iframe>
 	</div>
 </section>
