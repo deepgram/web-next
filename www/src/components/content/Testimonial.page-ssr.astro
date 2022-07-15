@@ -1,36 +1,36 @@
 ---
-import Svg from "../Svg.astro";
-import Icon from "../Icon.astro";
-import NarrowSection from "../layout/NarrowSection.astro";
+import Svg from '../Svg.astro';
+import Icon from '../Icon.astro';
+import NarrowSection from '../layout/NarrowSection.astro';
 ---
 
-<NarrowSection class="testimonial mt-48">
-  <Svg name="quotation-mark" class="mb-6" />
-  <slot name="quote" />
-  <div class="flex items-center mb-6">
-    <slot name="photo" />
-    <div>
-      <slot name="author" />
-      <slot name="job" />
-    </div>
-  </div>
-  <a href="/customers" class="inline-block flex font-bold">
-    See Customer Stories <Icon icon="arrowright" class="w-6"/>
-  </a>
+<NarrowSection class='testimonial mt-48'>
+	<Svg name='quotation-mark' class='mb-6' />
+	<slot name='quote'></slot>
+	<div class='flex items-center mb-6'>
+		<slot name='photo'></slot>
+		<div>
+			<slot name='author'></slot>
+			<slot name='job'></slot>
+		</div>
+	</div>
+	<a href='/customers' class='inline-block flex font-bold'>
+		See Customer Stories <Icon icon='arrowright' class='w-6' />
+	</a>
 </NarrowSection>
 
 <style>
-.testimonial :global(h1) {
-  @apply text-4xl font-bold;
-  @apply mb-6;
-}
+	.testimonial :global(h1) {
+		@apply text-4xl font-bold;
+		@apply mb-6;
+	}
 
-.testimonial :global(h2) {
-  @apply text-2xl font-bold;
-  @apply font-semibold;
-}
+	.testimonial :global(h2) {
+		@apply text-2xl font-bold;
+		@apply font-semibold;
+	}
 
-.testimonial :global(img) {
-  @apply pr-6 w-5/12;
-}
+	.testimonial :global(img) {
+		@apply w-5/12 pr-6;
+	}
 </style>

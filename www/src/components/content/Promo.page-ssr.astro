@@ -1,20 +1,20 @@
 ---
 ---
 
-<div class={`promo ${Astro.props.class}`}><slot /></div>
+<div class={`promo ${Astro.props.class}`}><slot></slot></div>
 
 <style>
 	.promo {
-    background-image:linear-gradient(to left, #38EDAC 20.31%,#9EA9FF 52.6%,#FE5C5C 81.77%);
-    @apply px-2;
-    @apply font-bold;
-    @apply text-black;
-    @apply leading-5;
-    @apply text-center;
-  }
+		background-image: linear-gradient(to left, #38edac 20.31%, #9ea9ff 52.6%, #fe5c5c 81.77%);
+		@apply px-2;
+		@apply font-bold;
+		@apply text-black;
+		@apply leading-5;
+		@apply text-center;
+	}
 
-  .promo :global(a) {
-    @apply text-black;
-    @apply underline;
-  }
+	.promo :global(a) {
+		@apply text-black;
+		@apply underline;
+	}
 </style>

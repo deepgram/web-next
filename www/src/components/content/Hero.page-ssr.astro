@@ -1,29 +1,29 @@
 ---
-import FlareSection from "../layout/FlareSection.astro";
+import FlareSection from '../layout/FlareSection.astro';
 
-const { layout } = Astro.props
+const { layout } = Astro.props;
 ---
 
 <FlareSection class={`hero-centered ${Astro.props.class}`} background={Astro.props.background}>
-  <slot name="header" />
+	<slot name='header'></slot>
 
-{layout === "centered" && (
-  <>
-      <div class="flex flex-col items-center max-w-full">
-        <slot />
-      
-        <div class="call-to-action flex justify-center space-x-7">
-          <slot name="cta" />
-        </div>
-      </div>
-  </>
-)}
+	{layout === 'centered' && (
+		<>
+			<div class="flex max-w-full flex-col items-center">
+				<slot />
 
-  <slot name="footer" />
+				<div class="call-to-action flex justify-center space-x-7">
+					<slot name="cta" />
+				</div>
+			</div>
+		</>
+	)}
+
+	<slot name='footer'></slot>
 </FlareSection>
 
 <style>
-  .hero-centered :global(h1) {
-    @apply mt-10 mb-20 max-w-[54rem] text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl
-  }
+	.hero-centered :global(h1) {
+		@apply mt-10 mb-20 max-w-[54rem] text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+	}
 </style>

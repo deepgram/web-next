@@ -1,61 +1,79 @@
 ---
-import Svg from "../Svg.astro";
-import Icon from "../Icon.astro"
+import Svg from '../Svg.astro';
+import Icon from '../Icon.astro';
 ---
 
-<footer class="w-full bg-black text-white text-base">
-	<section class="pt-28 max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10 flex flex-col">
-    <Svg name="deepgram-long" class="text-coral w-56 stroke-0"></Svg>
-    <p class="mt-4">Every Voice. Heard and understood.</p>
-    <div class="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <div class="grid grid-cols-1 lg:grid-cols-2">
-        <ul class="space-y-3 leading-tight">
-          <li class="uppercase">Product</li>
-          <li>Speech-to-Text API</li>
-          <li>Documentation</li>
-          <li>Features</li>
-          <li>Languages</li>
-          <li>APIs + SKDs</li>
-          <li>Get Started</li>
-          <li>Changelog</li>
-        </ul>
-        <ul class="space-y-3 leading-tight">
-          <li class="uppercase">Company</li>
-          <li>Built With Deepgram</li>
-          <li>Pricing</li>
-          <li>Blog</li>
-          <li>Careers<br /><span class="text-lightIris font-bold">We're Hiring! ✨</span></li>
-          <li>Contact Us</li>
-        </ul>
-      </div>
-      <div class="lg:col-start-3">
-        <ul class="space-y-3 leading-tight">
-          <li class="uppercase">Emails + Updates</li>
-          <li>
-            <form>
-            <label for="work-email">Work email</label>
-            <div class="flex">
-              <input id="work-email" type="email" class="w-60" />
-              <button type="submit">Submit</button>
-            </div>
-            <input type="checkbox" /> I’m good with the <a href="/" class="text-lightIris">Privacy Policy</a>
-            </form>
-          </li>
-          <li>
-            <ul class="flex 2xl:space-x-6 space-x-4 text-storm uppercase leading-none">
-              <li><a href="/Twitch"><Icon icon="twitch" class="fill-current w-6 2xl:w-10" /></a></li>
-              <li><a href="/GitHub"><Icon icon="github" class="fill-current w-6 2xl:w-10" /></a></li>
-              <li><a href="/TwitterDevs" class="flex flex-col items-center"><Icon icon="twitter" class="fill-current w-6 2xl:w-10" /><span class="text-xs">DEVS</span></a></li>
-              <li><a href="/Twitter"><Icon icon="twitter" class="fill-current w-6 2xl:w-10" /></a></li>
-              <li><a href="/LinkedIn"><Icon icon="linkedin" class="fill-current w-6 2xl:w-10" /></a></li>
-              <li><a href="/YouTube"><Icon icon="youtube" class="fill-current w-6 2xl:w-10" /></a></li>
-              <li><a href="/Facebook"><Icon icon="facebook" class="fill-current w-6 2xl:w-10" /></a></li>
-              <li><a href="/Dribbble"><Icon icon="dribbble" class="fill-current w-6 2xl:w-10" /></a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <p class="mt-28 mb-64 text-stone">Terms | Privacy | Copyright &copy;2022</p>
+<footer class='w-full bg-black text-white text-base'>
+	<section class='pt-28 max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10 flex flex-col'>
+		<Svg name='deepgram-long' class='text-coral w-56 stroke-0' />
+		<p class='mt-4'>Every Voice. Heard and understood.</p>
+		<div class='mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+			<div class='grid grid-cols-1 lg:grid-cols-2'>
+				<ul class='space-y-3 leading-tight'>
+					<li class='uppercase'>Product</li>
+					<li>Speech-to-Text API</li>
+					<li>Documentation</li>
+					<li>Features</li>
+					<li>Languages</li>
+					<li>APIs + SKDs</li>
+					<li>Get Started</li>
+					<li>Changelog</li>
+				</ul>
+				<ul class='space-y-3 leading-tight'>
+					<li class='uppercase'>Company</li>
+					<li>Built With Deepgram</li>
+					<li>Pricing</li>
+					<li>Blog</li>
+					<li>
+						Careers<br /><span class='text-lightIris font-bold'>We're Hiring! ✨</span>
+					</li>
+					<li>Contact Us</li>
+				</ul>
+			</div>
+			<div class='lg:col-start-3'>
+				<ul class='space-y-3 leading-tight'>
+					<li class='uppercase'>Emails + Updates</li>
+					<li>
+						<form>
+							<label for='work-email'>Work email</label>
+							<div class='flex'>
+								<input id='work-email' type='email' class='w-60' />
+								<button type='submit'>Submit</button>
+							</div>
+							<input type='checkbox' /> I’m good with the <a href='/' class='text-lightIris'>Privacy Policy</a>
+						</form>
+					</li>
+					<li>
+						<ul class='flex 2xl:space-x-6 space-x-4 text-storm uppercase leading-none'>
+							<li>
+								<a href='/Twitch'><Icon icon='twitch' class='fill-current w-6 2xl:w-10' /></a>
+							</li>
+							<li>
+								<a href='/GitHub'><Icon icon='github' class='fill-current w-6 2xl:w-10' /></a>
+							</li>
+							<li>
+								<a href='/TwitterDevs' class='flex flex-col items-center'><Icon icon='twitter' class='fill-current w-6 2xl:w-10' /><span class='text-xs'>DEVS</span></a>
+							</li>
+							<li>
+								<a href='/Twitter'><Icon icon='twitter' class='fill-current w-6 2xl:w-10' /></a>
+							</li>
+							<li>
+								<a href='/LinkedIn'><Icon icon='linkedin' class='fill-current w-6 2xl:w-10' /></a>
+							</li>
+							<li>
+								<a href='/YouTube'><Icon icon='youtube' class='fill-current w-6 2xl:w-10' /></a>
+							</li>
+							<li>
+								<a href='/Facebook'><Icon icon='facebook' class='fill-current w-6 2xl:w-10' /></a>
+							</li>
+							<li>
+								<a href='/Dribbble'><Icon icon='dribbble' class='fill-current w-6 2xl:w-10' /></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p class='mt-28 mb-64 text-stone'>Terms | Privacy | Copyright &copy;2022</p>
 	</section>
 </footer>

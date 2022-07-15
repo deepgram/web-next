@@ -1,30 +1,28 @@
 ---
-import LeftStar from "../../decoration/LeftStar.astro";
-import RightStar from "../../decoration/RightStar.astro";
-import FlareSection from "../../layout/FlareSection.astro";
+import LeftStar from '../../decoration/LeftStar.astro';
+import RightStar from '../../decoration/RightStar.astro';
+import FlareSection from '../../layout/FlareSection.astro';
 ---
 
 <LeftStar />
-<FlareSection class="homepage-hero" background="bg-starburst">
-  <div class="flex flex-col items-center">
-    <slot></slot>
-  
-    <div class="call-to-action flex justify-center space-x-7">
-      <slot name="cta"></slot>
-    </div>
-  </div>
+<FlareSection class='homepage-hero' background='bg-starburst'>
+	<div class='flex flex-col items-center'>
+		<slot></slot>
+
+		<div class='call-to-action flex justify-center space-x-7'>
+			<slot name='cta'></slot>
+		</div>
+	</div>
 </FlareSection>
 <RightStar />
 
-
-
 <style>
-.hero-centered :global(h1) {
-@apply w-8/12 xl:w-7/12;
-@apply text-4xl sm:text-5xl md:text-6xl;
-@apply font-bold;
-@apply leading-9 sm:leading-15 md:leading-16 lg:leading-17;
-@apply text-center;
-@apply mt-10 mb-14;
-}
+	.hero-centered :global(h1) {
+		@apply w-8/12 xl:w-7/12;
+		@apply text-4xl sm:text-5xl md:text-6xl;
+		@apply font-bold;
+		@apply sm:leading-15 md:leading-16 lg:leading-17 leading-9;
+		@apply text-center;
+		@apply mt-10 mb-14;
+	}
 </style>
