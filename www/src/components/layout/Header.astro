@@ -11,7 +11,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 ---
 
 <header x-data="{ menu: null }">
-	<div class="z-20 fixed inset-0 bg-black/75" x-bind:class="menu !== null ? 'block' : 'hidden'" x-on:click="menu = null"></div>
+	<div class="z-20 fixed inset-0 bg-black/75" style="display: none;" x-show="menu !== null" x-on:click="menu = null"></div>
 	<div class="z-30 absolute inset-x-0 bg-almostBlack text-white">
 		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10">
 			<div>
@@ -28,21 +28,21 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 				<nav class="flex space-x-10" x-on:click.outside="menu = null">
 					<!-- Product -->
 					<NavMenu name="Product" primary>
-						<NavMenuPrimaryItem slot="primary" href="/product" icon="search" description="Meet the Deepgram speech-to-text API">View Product</NavMenuPrimaryItem>
+						<NavMenuPrimaryItem slot="primary" href="/product" icon="star" description="Meet the Deepgram speech-to-text API">View Product</NavMenuPrimaryItem>
 
-						<NavMenuItem href="/product/model-overview" icon="search">Model Overview</NavMenuItem>
-						<NavMenuItem href="/product/sdks-tools" icon="search">SDKs + Tools</NavMenuItem>
-						<NavMenuItem href="/product/languages" icon="search">Languages</NavMenuItem>
-						<NavMenuItem href="/product/free-api-key" icon="search">Free API Key</NavMenuItem>
-						<NavMenuItem href="/product/why-deepgram" icon="search">Why Deepgram</NavMenuItem>
+						<NavMenuItem href="/product/model-overview" icon="model">Model Overview</NavMenuItem>
+						<NavMenuItem href="/product/sdks-tools" icon="box">SDKs + Tools</NavMenuItem>
+						<NavMenuItem href="/product/languages" icon="globe">Languages</NavMenuItem>
+						<NavMenuItem href="/product/free-api-key" icon="code">Free API Key</NavMenuItem>
+						<NavMenuItem href="/product/why-deepgram" icon="question">Why Deepgram</NavMenuItem>
 					</NavMenu>
 
 					<!-- Solutions -->
 					<NavMenu name="Solutions">
-						<NavMenuItem href="/built-with-dg" icon="search">Built with Deepgram</NavMenuItem>
-						<NavMenuItem href="/" icon="search">Contact Centers</NavMenuItem>
-						<NavMenuItem href="/" icon="search">Speech Analytics</NavMenuItem>
-						<NavMenuItem href="/" icon="search">Convo AI</NavMenuItem>
+						<NavMenuItem href="/built-with-dg" icon="sparkles">Built with Deepgram</NavMenuItem>
+						<NavMenuItem href="/" icon="head-headphones">Contact Centers</NavMenuItem>
+						<NavMenuItem href="/" icon="mag-glass-soundwave">Speech Analytics</NavMenuItem>
+						<NavMenuItem href="/" icon="robot-head">Conversational AI</NavMenuItem>
 					</NavMenu>
 
 					<!-- Pricing -->
@@ -50,12 +50,12 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 
 					<!-- Docs -->
 					<NavMenu name="Docs">
-						<NavMenuItem href="/" icon="search">Documentation</NavMenuItem>
-						<NavMenuItem href="/" icon="search">Guides</NavMenuItem>
-						<NavMenuItem href="/" icon="search">Status</NavMenuItem>
-						<NavMenuItem href="/" icon="search">Changelog</NavMenuItem>
-						<NavMenuItem href="/" icon="search">API Reference</NavMenuItem>
-						<NavMenuItem href="/" icon="search">Tutorials</NavMenuItem>
+						<NavMenuItem href="/" icon="file">Documentation</NavMenuItem>
+						<NavMenuItem href="/" icon="code-laptop">API Reference</NavMenuItem>
+						<NavMenuItem href="/" icon="book">Guides</NavMenuItem>
+						<NavMenuItem href="/" icon="heartbeat">Status</NavMenuItem>
+						<NavMenuItem href="/" icon="grad">Tutorials</NavMenuItem>
+						<NavMenuItem href="/" icon="rotating-gear">Changelog</NavMenuItem>
 					</NavMenu>
 
 					<!-- Blog -->
@@ -63,9 +63,9 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 
 					<!-- About -->
 					<NavMenu name="About">
-						<NavMenuItem href="/" icon="search">About Us</NavMenuItem>
-						<NavMenuItem href="/" icon="search">Newsroom</NavMenuItem>
-						<NavMenuItem href="/" icon="search">Careers</NavMenuItem>
+						<NavMenuItem href="/" icon="deepgram-d">About Us</NavMenuItem>
+						<NavMenuItem href="/" icon="newspaper">Newsroom</NavMenuItem>
+						<NavMenuItem href="/" icon="open-door">Careers</NavMenuItem>
 					</NavMenu>
 				</nav>
 				<div class="flex items-center xl:ml-12 pb-1">
@@ -79,7 +79,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 			</div>
 		</div>
 
-		<div class="fixed top-0 inset-x-0 xl:hidden" x-bind:class="menu === 'Mobile' ? 'block' : 'hidden'">
+		<div class="fixed top-0 inset-x-0 xl:hidden" style="display: none;" x-show="menu === 'Mobile'">
 			<div class="h-screen bg-almostBlack text-white flex flex-col justify-between">
 				<div class="overflow-y-scroll">
 					<div class="px-6 lg:px-10 flex items-center justify-between">
@@ -102,20 +102,20 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 						<nav class="grid text-xl font-bold bg-darkCharcoal">
 							<!-- Product -->
 							<MobileNavMenu name="Product" primary>
-								<MobileNavMenuItem href="/product" icon="search">View Product</MobileNavMenuItem>
-								<MobileNavMenuItem href="/product/model-overview" icon="search">Model Overview</MobileNavMenuItem>
-								<MobileNavMenuItem href="/product/sdks-tools" icon="search">SDKs + Tools</MobileNavMenuItem>
-								<MobileNavMenuItem href="/product/languages" icon="search">Languages</MobileNavMenuItem>
-								<MobileNavMenuItem href="/product/free-api-key" icon="search">Free API Key</MobileNavMenuItem>
-								<MobileNavMenuItem href="/product/why-deepgram" icon="search">Why Deepgram</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product" icon="star">View Product</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/model-overview" icon="model">Model Overview</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/sdks-tools" icon="box">SDKs + Tools</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/languages" icon="globe">Languages</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/free-api-key" icon="code">Free API Key</MobileNavMenuItem>
+								<MobileNavMenuItem href="/product/why-deepgram" icon="question">Why Deepgram</MobileNavMenuItem>
 							</MobileNavMenu>
 
 							<!-- Solutions -->
 							<MobileNavMenu name="Solutions">
-								<MobileNavMenuItem href="/built-with-dg" icon="search">Built with Deepgram</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">Contact Centers</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">Speech Analytics</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">Convo AI</MobileNavMenuItem>
+								<MobileNavMenuItem href="/built-with-dg" icon="sparkles">Built with Deepgram</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="head-headphones">Contact Centers</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="mag-glass-soundwave">Speech Analytics</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="robot-head">Convo AI</MobileNavMenuItem>
 							</MobileNavMenu>
 
 							<!-- Pricing -->
@@ -123,12 +123,12 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 
 							<!-- Docs -->
 							<MobileNavMenu name="Docs">
-								<MobileNavMenuItem href="/" icon="search">Documentation</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">Guides</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">Status</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">Changelog</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">API Reference</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">Tutorials</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="file">Documentation</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="code-laptop">Guides</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="book">Status</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="heartbeat">Changelog</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="grad">API Reference</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="rotating-gear">Tutorials</MobileNavMenuItem>
 							</MobileNavMenu>
 
 							<!-- Blog -->
@@ -136,9 +136,9 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 
 							<!-- About -->
 							<MobileNavMenu name="About">
-								<MobileNavMenuItem href="/" icon="search">About Us</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">Newsroom</MobileNavMenuItem>
-								<MobileNavMenuItem href="/" icon="search">Careers</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="deepgram-d">About Us</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="newspaper">Newsroom</MobileNavMenuItem>
+								<MobileNavMenuItem href="/" icon="open-door">Careers</MobileNavMenuItem>
 							</MobileNavMenu>
 						</nav>
 					</div>
