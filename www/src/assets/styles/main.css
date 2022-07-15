@@ -126,6 +126,10 @@ body {
 		@apply text-darkCharcoal bg-white;
 	}
 
+	.button--quaternary {
+		@apply text-lightIris bg-black;
+	}
+
 	.hyperlink {
 		@apply text-lightIris;
 		@apply text-lg;
