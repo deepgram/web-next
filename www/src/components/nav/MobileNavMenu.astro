@@ -18,7 +18,7 @@ const { name } = Astro.props;
 		<Icon icon="angle-down" class="fill-gray-300 w-[1em] h-[1em]" x-bind:class="{ 'rotate-180' : submenu === name }" />
 	</button>
 	<!-- Expandable link section, show/hide based on state. -->
-	<div class="bg-black" id={`mobile-submenu-${name}`} x-bind:class="submenu === name ? 'block' : 'hidden'">
+	<div class="bg-rock" id={`mobile-submenu-${name}`} x-bind:class="submenu === name ? 'block' : 'hidden'">
 		<slot></slot>
 	</div>
 	<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>

@@ -82,9 +82,9 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 		</div>
 
 		<div class="fixed top-0 inset-x-0 xl:hidden" style="display: none;" x-show="menu === 'Mobile'">
-			<div class="h-screen bg-almostBlack text-white flex flex-col justify-between">
+			<div class="h-screen bg-black text-white flex flex-col justify-between">
 				<div class="overflow-y-scroll">
-					<div class="px-6 lg:px-10 flex items-center justify-between">
+					<div class="px-6 bg-almostBlack lg:px-10 flex items-center justify-between">
 						<div>
 							<a href="/" class="flex">
 								<span class="sr-only">Deepgram</span>
@@ -93,15 +93,15 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 						</div>
 						<div class="flex items-center xl:ml-12 pb-1 xl:hidden">
 							<button class="button button--small">
-								<Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current mr-3" />
+								<Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current" />
 							</button>
-							<button x-on:click="menu = null" type="button" class="button button--secondary button--small" aria-expanded="false">
-								<Icon icon="xmark-large" class="w-[1em] h-[1em] fill-current" />
+							<button x-on:click="menu = null" type="button" class="button button--small" aria-expanded="false">
+								<Icon icon="xmark-large" class="w-[1.5em] h-[1.5em] fill-current" />
 							</button>
 						</div>
 					</div>
-					<div class="mt-6">
-						<nav class="grid font-bold bg-darkCharcoal">
+					<div class="mt-6 bg-darkCharcoal">
+						<nav class="grid font-bold">
 							<!-- Product -->
 							<MobileNavMenu name="Product" primary>
 								<MobileNavMenuItem href="/product" icon="star">View Product</MobileNavMenuItem>
