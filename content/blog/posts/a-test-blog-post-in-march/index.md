@@ -22,7 +22,6 @@ og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1648829347/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/Building-Livestreaming-w-AmazonIVS.jpg
   description: opengraph specific description (if different)
   title: maybe a separate OG title as well
-layout: ./src/layouts/BlogLayout.astro
 ---
 
 blah blah blah
