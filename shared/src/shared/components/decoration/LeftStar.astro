@@ -1,0 +1,9 @@
+---
+// TODO: rename to LeftDecoration, accept SVG name as property (to switch type of decoration used)
+
+import Svg from "../general/Svg.astro";
+---
+
+<div class="flex py-20 px-10 lg:px-36">
+	<Svg name="star-left" class={`h-[1em] w-[1em] ${Astro.props.class}`} />
+</div>

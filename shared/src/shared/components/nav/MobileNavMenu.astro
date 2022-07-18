@@ -1,0 +1,25 @@
+---
+import Icon from "../Icon.astro";
+
+const { name } = Astro.props;
+---
+
+<div x-data="{ submenu: null }" x-on:click.outside="submenu = null">
+	<!-- Current: "bg-gray-100 text-gray-900", Default: "bg-white text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
+	<button
+		x-on:click={`submenu === name ? submenu = null : submenu = name`}
+		type="button"
+		class="group w-full flex items-center py-4 px-6 lg:px-10 text-left"
+		aria-controls={`mobile-submenu-${name}`}
+		aria-expanded="submenu === name ? 'true' : 'false'"
+	>
+		<span class="flex-1">{name}</span>
+		<!-- Expanded: "text-gray-400 rotate-90", Collapsed: "text-gray-300" -->
+		<Icon icon="angle-down" class="fill-gray-300 w-[1em] h-[1em]" x-bind:class="{ 'rotate-180' : submenu === name }" />
+	</button>
+	<!-- Expandable link section, show/hide based on state. -->
+	<div class="bg-rock" id={`mobile-submenu-${name}`} x-bind:class="submenu === name ? 'block' : 'hidden'">
+		<slot></slot>
+	</div>
+	<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+</div>

@@ -1,0 +1,11 @@
+---
+import Icon from "../Icon.astro";
+
+const { icon, href } = Astro.props;
+---
+
+<a href={href} class="group w-full flex items-center py-4 px-6 lg:px-10 text-white">
+	<Icon icon={icon} class="mr-3 w-[1.5em] h-[1.5em] fill-current" />
+	<slot></slot>
+	<Icon icon="arrowright" class="ml-3 w-[1.2em] h-[1.2em] stroke-lightIris" />
+</a>

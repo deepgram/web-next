@@ -1,0 +1,8 @@
+---
+import Icon from "./Icon.astro";
+const { icon, href, ...props } = {
+	...Astro.props,
+} as Props;
+---
+
+<a href={href} class="hyperlink flex items-center"><span class="pr-1"><slot></slot></span><span><Icon icon={icon} /></span></a>
