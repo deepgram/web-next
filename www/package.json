@@ -2,28 +2,36 @@
   "name": "@deepgram-web/www",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "^v18.6.0",
+    "yarn": "^1.22.0"
+  },
   "scripts": {
-    "predev": "yarn clean && yarn link-content",
     "dev": "astro dev --experimental-integrations",
-    "prebuild": "yarn clean && yarn build-content",
     "build": "astro build --experimental-integrations",
     "preview": "astro preview",
-    "clean": "rm -rf ./src/content",
-    "build-content": "cp -r ../content/www/ ./src/content/",
-    "link-content": "ln -s ../../content/www/ ./src/content"
+    "predev": "yarn clean && yarn symlink",
+    "prebuild": "yarn clean && yarn copy",
+    "symlink": "yarn content:symlink & yarn shared:symlink",
+    "copy": "yarn content:copy & yarn shared:copy",
+    "clean": "yarn content:clean & yarn shared:clean",
+    "content:symlink": "ln -s ../../content/www/ ./src/content",
+    "content:copy": "cp -r ../content/www/ ./src/content/",
+    "content:clean": "rm -rf ./src/content",
+    "shared:symlink": "ln -s ../../shared/src/shared/ ./src/shared",
+    "shared:copy": "cp -r ../shared/src/shared/ ./src/shared/",
+    "shared:clean": "rm -rf ./src/shared"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.1",
     "@types/node": "^17.0.42",
-    "astro": "^1.0.0-beta.29",
+    "astro": "^1.0.0-beta.72",
     "glob": "^8.0.3",
     "node-html-parser": "^5.3.3",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.1.1",
     "prettier-plugin-tailwindcss": "^0.1.12",
-    "vue": "^3.2.33"
-  },
-  "dependencies": {
+    "vue": "^3.2.33",
     "@astrojs/vue": "^0.1.5"
   }
 }
