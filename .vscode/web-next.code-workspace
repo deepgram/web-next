@@ -1,0 +1,36 @@
+{
+  "folders": [
+    {
+      "name": "www",
+      "path": "../www"
+    },
+    {
+      "name": "cms",
+      "path": "../cms"
+    },
+    {
+      "name": "blog",
+      "path": "../blog"
+    },
+    {
+      "name": "shared",
+      "path": "../shared"
+    },
+    {
+      "name": "next-web root",
+      "path": "../"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules/": true
+    }
+  },
+  "extensions": {
+    "recommendations": [
+      "astro-build.astro-vscode",
+      "bradlc.vscode-tailwindcss",
+      "adrianwilczynski.alpine-js-intellisense"
+    ]
+  }
+}
