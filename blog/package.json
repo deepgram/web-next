@@ -3,14 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "predev": "yarn clean && yarn link-content",
     "dev": "astro dev --experimental-integrations",
-    "prebuild": "yarn clean && yarn build-content",
     "build": "astro build --experimental-integrations",
     "preview": "astro preview",
-    "clean": "rm -rf ./src/content",
-    "build-content": "cp -r ../content/blog/ ./src/content/",
-    "link-content": "ln -s ../../content/blog/ ./src/content"
+    "predev": "yarn clean && yarn symlink",
+    "prebuild": "yarn clean && yarn copy",
+    "symlink": "yarn content:symlink & yarn shared:symlink",
+    "copy": "yarn content:copy & yarn shared:copy",
+    "clean": "yarn content:clean & yarn shared:clean",
+    "content:symlink": "ln -s ../../content/blog/ ./src/content",
+    "content:copy": "cp -r ../content/blog/ ./src/content/",
+    "content:clean": "rm -rf ./src/content",
+    "shared:symlink": "ln -s ../../shared/src/shared/ ./src/shared",
+    "shared:copy": "cp -r ../shared/src/shared/ ./src/shared/",
+    "shared:clean": "rm -rf ./src/shared"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.1",
