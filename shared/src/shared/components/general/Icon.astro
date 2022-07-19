@@ -7,8 +7,8 @@ export interface Props {
 }
 
 function getSVG(name: string) {
-	const filepath = `/src/assets/icons/${name}.svg`;
-	const files = import.meta.globEager<string>("/src/assets/icons/*.svg", {
+	const filepath = `/src/shared/assets/icons/${name}.svg`;
+	const files = import.meta.globEager<string>("/src/shared/assets/icons/*.svg", {
 		as: "raw",
 	});
 
