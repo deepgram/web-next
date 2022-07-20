@@ -2,7 +2,129 @@
 import PageLayout from "../layouts/PageLayout.astro";
 import HeroCenteredSlots from "../components/content/hero/HeroCenteredSlots.astro";
 import Promo from "../components/content/Promo.page-ssr.astro";
-import customerJson from "./data/built-with-dg/customers.json";
+
+const customers = [
+	{
+		name: "Rasa",
+		logo: "/rasa-logo-color.png",
+	},
+	{
+		name: "Twilio",
+		logo: "/twilio-logo-color.png",
+	},
+	{
+		name: "Nasa",
+		logo: "/nasa-logo-color.png",
+	},
+	{
+		name: "Citi",
+		logo: "/citi-logo-color.png",
+	},
+	{
+		name: "Revenue.io",
+		logo: "/revenue-io-one-logo-color.png",
+	},
+	{
+		name: "Veed.io",
+		logo: "/veed-io-logo-color.png",
+	},
+	{
+		name: "Auth0",
+		logo: "/auth0-logo-color.png",
+	},
+	{
+		name: "Daily",
+		logo: "/daily-co-logo-color.png",
+	},
+	{
+		name: "Spotify",
+		logo: "/spotify-logo-color.png",
+	},
+	{
+		name: "Volley",
+		logo: "/volley-logo-color.png",
+	},
+	{
+		name: "Nytro.ai",
+		logo: "/nytro-logo-color.png",
+	},
+	{
+		name: "Khoros",
+		logo: "/khoros-logo-color.png",
+	},
+	{
+		name: "Workable",
+		logo: "/workable-logo-color.png",
+	},
+	{
+		name: "Knock CRM",
+		logo: "/knock-crm-logo-color.png",
+	},
+	{
+		name: "Re:infer",
+		logo: "/re-infer-logo-color.png",
+	},
+	{
+		name: "Elerian AI",
+		logo: "/elerian-ai-logo-color.png",
+	},
+	{
+		name: "Fireside",
+		logo: "/fireside-logo-color.png",
+	},
+	{
+		name: "Tethrr",
+		logo: "/tethr-logo-color.png",
+	},
+	{
+		name: "Sharpen",
+		logo: "/sharpen-logo-color.png",
+	},
+	{
+		name: "Callbi",
+		logo: "/callbi-logo-color.png",
+	},
+	{
+		name: "Vocinity",
+		logo: "/Vocinity-logo-color.png",
+	},
+	{
+		name: "OneReach.ai",
+		logo: "/onereach-logo-color.png",
+	},
+	{
+		name: "Salesken",
+		logo: "/salesken-logo-color.png",
+	},
+	{
+		name: "Converge One",
+		logo: "/converge-one-logo-color.png",
+	},
+	{
+		name: "Goldcast",
+		logo: "/goldcast-logo-color.png",
+	},
+	{
+		name: "Randall Reilly",
+		logo: "/randall-reilly-logo-color.png",
+	},
+	{
+		name: "Red Box Voice",
+		logo: "/redbox-logo-color.png",
+	},
+	{
+		name: "Update AI",
+		logo: "/update-ai-logo-color.png",
+	},
+	{
+		name: "Valyant AI",
+		logo: "/valyant-ai-logo-color.png",
+	},
+	{
+		name: "CallTrackingMetrics",
+		logo: "/calltrackingmetrics-logo-color.png",
+	},
+];
 ---
 
 <PageLayout>
@@ -30,10 +152,10 @@ import customerJson from "./data/built-with-dg/customers.json";
 			</p>
 			<p class="text-small">From individuals to enterprises, see what developers all over the world are building with Deepgram.</p>
 			<div class="logos">
-				{customerJson.map((customer) => {
+				{customers.map((customer) => {
 					return (
 						<div class="logo">
-							<img src={customer.logo} alt={customer.name} />
+							<img src={`/brand-showcase${customer.logo}`} alt={customer.name} />
 						</div>
 					)
 				})}
