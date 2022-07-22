@@ -5,11 +5,14 @@ import ComponentSection from "../components/partials/ComponentSection.astro";
 import Layout from "../layouts/Default.astro";
 import BlogCard from "../shared/components/cards/BlogCard.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import LibraryIntro from "../components/partials/LibraryIntro.astro";
 ---
 
 <Layout>
-	<PrimarySection>
+	<PrimarySection class="pt-10">
 		<h1>Component Library</h1>
+
+		<LibraryIntro />
 
 		<ComponentSection title="Blog sections">
 			<ComponentStaticPreview id="blog-card" title="Single blog card" snippet={`<BlogCard 
