@@ -13,56 +13,12 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 		<ComponentSection title="Blog sections">
 			<ComponentPreview id="blog-card" title="Single blog card" snippet={`<BlogCard 
 	title="Test post" 
-	image="http://placeimg.com/640/480/any" 
+	image="//placeimg.com/640/480/any" 
 	tag="Vue" 
 	author="lukeocodes" 
 />`}>
-				<BlogCard title="Test post" image="http://placeimg.com/640/480/any" tag="Vue" author="lukeocodes" />
+				<BlogCard title="Test post" image="//placeimg.com/640/480/any" tag="Vue" author="lukeocodes" />
 			</ComponentPreview>
 		</ComponentSection>
 	</PrimarySection>
 </Layout>
-
-<script is:inline>
-	var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-	var eventer = window[eventMethod];
-
-	eventer("DOMContentLoaded", function(e) {
-		const inputs=document.querySelectorAll('input[data-onload]');
-		[...inputs].forEach(input => eval(input.getAttribute('data-onload')))
-	}, false);
-
-	const messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-	eventer(messageEvent, function(e) {
-			const key = e.message ? "message" : "data";
-			const data = e[key];
-
-			if (data.type === "BODY_HEIGHT") {
-				const iframe = document.getElementById(data.name);
-				iframe.style.height = `${data.height+50}px`;
-			}
-	}, false);
-
-	function writeIframe(id) {
-		// input contains the raw render of the component
-		const input = document.getElementById(`input-${id}`);
-
-		// get the styles ONLY from the parent page head
-		const styles = document.getElementsByTagName("head")[0].querySelectorAll('style');
-		const styleMap = Array.from(styles).map(style => style.outerHTML);
-
-		// create the source for the iframe
-		const source = `<!DOCTYPE html><html><head><script src="/iframe.js" defer><\/script>${styleMap.join('')}</head><body class="p-5">${input.value}</body></html>`;
-
-		// create an iframe DOM element and apply the source to srcdoc
-		var iframe = document.createElement("iframe");
-		iframe.setAttribute('name', id);
-		iframe.setAttribute('id', id);
-		iframe.classList.add("w-full", "border", "rounded-lg");
-		iframe.srcdoc = source;
-
-		// append the iframe to the iframe container
-		const container = document.getElementById(`container-${id}`);
-		container.appendChild(iframe);
-	}
-</script>
