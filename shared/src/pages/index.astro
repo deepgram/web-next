@@ -1,5 +1,6 @@
 ---
 import ComponentPreview from "../components/partials/ComponentPreview.astro";
+import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
 import ComponentSection from "../components/partials/ComponentSection.astro";
 import Layout from "../layouts/Default.astro";
 import BlogCard from "../shared/components/cards/BlogCard.astro";
@@ -9,6 +10,17 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 <Layout>
 	<PrimarySection>
 		<h1>Component Library</h1>
+
+		<ComponentSection title="Blog sections">
+			<ComponentStaticPreview id="blog-card" title="Single blog card" snippet={`<BlogCard 
+	title="Test post" 
+	image="//placeimg.com/640/480/any" 
+	tag="Vue" 
+	author="lukeocodes" 
+/>`}>
+				<BlogCard title="Test post" image="//placeimg.com/640/480/any" tag="Vue" author="lukeocodes" />
+			</ComponentStaticPreview>
+		</ComponentSection>
 
 		<ComponentSection title="Blog sections">
 			<ComponentPreview id="blog-card" title="Single blog card" snippet={`<BlogCard 
