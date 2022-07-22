@@ -95,7 +95,7 @@ import "../shared/assets/styles/main.css";
 				const linkMap = Array.from(links).map(link => link.outerHTML);
 
 				// create the source for the iframe
-				const source = `<!DOCTYPE html><html><head><script src="/iframe.js" defer><\/script>${styleMap.join('')}${linkMap.join('')}</head><body class="p-5">${input.value}</body></html>`;
+				const source = `<!DOCTYPE html><html><head><script src="/iframe.js" defer><\/script>${styleMap.join('')}${linkMap.join('')}</head><body class="p-5 flex">${input.value}</body></html>`;
 
 				// create an iframe DOM element and apply the source to srcdoc
 				var iframe = document.createElement("iframe");
