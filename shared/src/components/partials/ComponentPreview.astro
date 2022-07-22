@@ -10,51 +10,13 @@ if (Astro.slots.has("default")) {
 const { id } = Astro.props;
 ---
 
-<!-- <div x-data="{ code: false }" class="grid grid-cols-[1fr,auto] items-center mb-10 component-preview">
-	<div class="flex min-w-0">
-		<h2 class="truncate text-base font-medium leading-7 text-slate-900">
-			{Astro.props.title}
-		</h2>
-	</div>
-	<div class="ml-6 flex items-center pr-6">
-		<div class="flex space-x-1 rounded-lg bg-slate-100 p-0.5" role="tablist" aria-orientation="horizontal">
-			<button x-on:click="code = false" class="flex items-center rounded-md py-[0.4375rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 bg-white shadow" x-bind:class="{'bg-white shadow': !code, '': code}" role="tab" type="button" aria-selected="true" x-bind:aria-selected="{'true': !code, 'false': code}" tabindex="0">
-				<svg class="h-5 w-5 flex-none stroke-sky-500" x-bind:class="{'stroke-sky-500': !code, 'stroke-slate-600': code}" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-					<path d="M17.25 10c0 1-1.75 6.25-7.25 6.25S2.75 11 2.75 10 4.5 3.75 10 3.75 17.25 9 17.25 10Z"></path>
-					<circle cx="10" cy="10" r="2.25"></circle>
-				</svg>
-				<span class="sr-only lg:not-sr-only lg:ml-2 text-slate-900">Preview</span>
-			</button>
-			<button x-on:click="code = true" class="flex items-center rounded-md py-[0.4375rem] pl-2 pr-2 text-sm font-semibold lg:pr-3" x-bind:class="{'': !code, 'bg-white shadow': code}" role="tab" type="button" aria-selected="false" x-bind:aria-selected="{'false': !code, 'true': code}" tabindex="-1">
-				<svg class="h-5 w-5 flex-none stroke-slate-600" x-bind:class="{'stroke-slate-600': !code, 'stroke-sky-500': code}" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-					<path d="m13.75 6.75 3.5 3.25-3.5 3.25M6.25 13.25 2.75 10l3.5-3.25"></path>
-				</svg><span class="sr-only lg:not-sr-only lg:ml-2 text-slate-600">Code</span>
-			</button>
-		</div>
-	</div>
-	<div class="col-span-2 row-start-2 min-w-0">
-		<div class="mt-4 focus:outline-none" id="headlessui-tabs-panel-4" role="tabpanel" tabindex="0" aria-labelledby="headlessui-tabs-tab-2" style="">
-			<div class="flex block" x-bind:class="{'block': !code, 'hidden': code}">
-				<div id="demo-viewport" class="w-full resize-x pr-6"></div>
-				<div class="h-auto flex items-center cursor-ew-resize">
-					<div class="h-8 w-1.5 rounded-full -ml-5 bg-slate-400 pointer-events-none"></div>
-				</div>
-			</div>
-			<div class="hidden" x-bind:class="{'hidden': !code, 'block': code}">
-				<Code lang="astro" code={Astro.props.snippet} />
-				<input type="hidden" value={Astro.props.snippet}>
-			</div>
-		</div>
-	</div>
-</div> -->
-
 <div x-data="{ code: false }" class="grid grid-cols-[1fr,auto] items-center mb-10 component-preview">
 	<div class="flex min-w-0">
 		<h2 class="truncate text-base font-medium leading-7 text-slate-900">
 			{Astro.props.title}
 		</h2>
 	</div>
-	<div class="ml-6 flex items-center pr-6">
+	<div class="ml-6 flex items-center">
 		<div class="flex space-x-1 rounded-lg bg-slate-100 p-0.5" role="tablist" aria-orientation="horizontal">
 			<button x-on:click="code = false" class="flex items-center rounded-md py-[0.4375rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 bg-white shadow" x-bind:class="{'bg-white shadow': !code, '': code}" role="tab" type="button" aria-selected="true" x-bind:aria-selected="{'true': !code, 'false': code}" tabindex="0">
 				<svg class="h-5 w-5 flex-none stroke-sky-500" x-bind:class="{'stroke-sky-500': !code, 'stroke-slate-600': code}" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
@@ -72,10 +34,10 @@ const { id } = Astro.props;
 	</div>
 	<div class="col-span-2 row-start-2 min-w-0">
 		<div class="mt-4 focus:outline-none" id="headlessui-tabs-panel-4" role="tabpanel" tabindex="0" aria-labelledby="headlessui-tabs-tab-2" style="">
-			<div class="flex block" x-bind:class="{'block': !code, 'hidden': code}">
+			<div class="flex block -mr-6" x-bind:class="{'block': !code, 'hidden': code}">
 				<div id={`container-${id}`} class="w-full resize-x pr-6"></div>
 				<div class="h-auto flex items-center cursor-ew-resize">
-					<div class="h-8 w-1.5 rounded-full -ml-5 bg-slate-400 pointer-events-none"></div>
+					<div class="h-8 w-1.5 rounded-full -ml-4 bg-slate-400 pointer-events-none"></div>
 				</div>
 			</div>
 			<div class="hidden" x-bind:class="{'hidden': !code, 'block': code}">
