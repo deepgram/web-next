@@ -1,8 +1,10 @@
 ---
 import GenericCard from "./GenericCard.astro";
+
+const { class: classes, ...rest } = Astro.props
 ---
 
-<GenericCard {...Astro.props}>
+<GenericCard class={`w-[21rem] h-[21rem] ${classes}`} {...rest}>
 	<div class="flex-shrink-0">
 		<img class="h-48 w-full object-cover" src={Astro.props.image} alt={`Blog title image for the blog post: ${Astro.props.title}`} />
 	</div>
