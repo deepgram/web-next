@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default {
 	content: ["./public/**/*.html", "./src/**/*.astro", "./src/**/*.vue"],
 	theme: {
@@ -92,3 +93,6 @@ export default {
 	},
 	plugins: [],
 };
+=======
+
+>>>>>>> 412b0dc (adding blog card medium)
