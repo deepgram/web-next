@@ -14,4 +14,10 @@ export default defineConfig({
 			preserveSymlinks: true, // required for dev to read contents of symlinked directory
 		},
 	},
+  markdown: {
+    shikiConfig: {
+      theme: 'github-light',
+      wrap: true,
+    },
+  },
 });

@@ -1,0 +1,25 @@
+---
+import GenericCard from "./GenericCard.astro";
+---
+
+<GenericCard {...Astro.props}>
+	<div class="flex-shrink-0">
+		<img class="h-48 w-full object-cover" src={Astro.props.image} alt={`Blog title image for the blog post: ${Astro.props.title}`} />
+	</div>
+	<div class="flex-1 bg-white p-6 flex flex-col justify-between">
+		<div class="flex-1">
+			<p class="text-sm font-medium text-indigo-600">
+				<!-- foreach tag in tags -->
+				<a href="#" class="hover:underline">{Astro.props.tag}</a>
+			</p>
+			<a href="#" class="block mt-2">
+				<p class="text-xl font-semibold text-gray-900">{Astro.props.title}</p>
+			</a>
+		</div>
+		<div class="mt-6">
+			<p class="text-sm font-medium text-gray-900">
+				<a href="#" class="hover:underline">{Astro.props.author}</a>
+			</p>
+		</div>
+	</div>
+</GenericCard>

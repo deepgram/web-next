@@ -1,19 +1,79 @@
 ---
 import Footer from "../shared/components/layout/Footer.astro";
-import Header from "../shared/components/layout/Header.astro"
+import Header from "../shared/components/layout/Header.astro";
 import "../shared/assets/styles/main.css";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en" dir="ltr">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta charset="utf-8" />
+		<meta name="HandheldFriendly" content="True" />
+		<meta name="MobileOptimized" content="480" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+		<!-- scripts -->
+		<script src="//unpkg.com/alpinejs" defer is:inline>
+
+		</script>
+		<script src="//unpkg.com/interactjs" defer is:inline>
+
+		</script>
+		<script type="module">
+			interact(".resize-x")
+				.resizable({
+					// resize from all edges and corners
+					edges: { right: true },
+
+					listeners: {
+						move(event) {
+							var target = event.target;
+							var x = parseFloat(target.getAttribute("data-x")) || 0;
+
+							// update the element's style
+							target.style.width = event.rect.width + "px";
+
+							// translate when resizing from top or left edges
+							x += event.deltaRect.left;
+
+							target.setAttribute("data-x", x);
+						},
+					},
+					modifiers: [
+						// keep the edges inside the parent
+						interact.modifiers.restrictEdges({
+							outer: "parent",
+						}),
+
+						// minimum size
+						interact.modifiers.restrictSize({
+							min: { width: 100, height: 50 },
+						}),
+					],
+
+					inertia: true,
+				})
+				.draggable({
+					listeners: { move: window.dragMoveListener },
+					inertia: true,
+					modifiers: [
+						interact.modifiers.restrictRect({
+							restriction: "parent",
+							endOnly: true,
+						}),
+					],
+				});
+		</script>
 	</head>
 	<body>
-		<Header></Header>
-		<slot></slot>
-		<Footer></Footer>
+		<Header />
+		<main>
+			<slot></slot>
+		</main>
+		<Footer />
+		<style>
+			main {
+				@apply pt-16; /* height of the menu at 16px text-size: 64px, 4rem, or tailwind h-16 */
+			}
+		</style>
 	</body>
 </html>
