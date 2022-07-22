@@ -1,6 +1,6 @@
 [build]
   # directory to change to build in
-  base = "component-library/"
+  base = "shared/"
 
   # relativate path for the build output (www/dist/)
   publish = "dist/"
