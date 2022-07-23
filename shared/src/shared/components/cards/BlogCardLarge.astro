@@ -19,9 +19,11 @@ const { class: classes, title, description, tags, author, image, ...rest } = Ast
 					<h2 class="sm:pt-4 text-lg leading-5 sm:text-xl sm:leading-6 md:text-4xl leading-7">{title}</h2>
 					<p class="pt-4 hidden sm:block">{description}</p>
 				</div>
-				<div class="pb-3 sm:py-6 text-xs">
-					<p><span class="uppercase font-semibold">{author}</span></p>
-				</div>
+				{author && (
+					<div class="pb-3 sm:py-6 text-xs">
+						<p><span class="uppercase font-semibold">{author}</span></p>
+					</div>
+				)}
 			</div>
 		</div>
 	</ACube>

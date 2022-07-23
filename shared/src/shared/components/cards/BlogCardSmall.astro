@@ -8,9 +8,11 @@ const { class: classes, title, tags, author, image, ...rest } = Astro.props;
 	<div class="flex">
 		<div class="flex grow flex-col justify-between text-black p-2">
 			<h5 class="text-lg leading-5">{title}</h5>
-			<div class="text-xs">
-				<p><span class="uppercase font-semibold">{author}</span></p>
-			</div>
+			{author && (
+				<div class="text-xs">
+					<p><span class="uppercase font-semibold">{author}</span></p>
+				</div>
+			)}
 		</div>
 		<div class="shrink-0 w-[6rem] p-[0.5rem] flex justify-end place-items-end">
 			<img class="h-[5rem] object-cover" src={image} alt={`Blog title image for the blog post: ${title}`} />
