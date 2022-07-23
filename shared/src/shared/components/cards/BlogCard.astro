@@ -18,9 +18,11 @@ const { class: classes, title, tags, author, image, ...rest } = Astro.props;
 					</ul>
 					<h4 class="text-lg leading-5 sm:text-xl sm:leading-6 md:text-2xl md:leading-7">{title}</h4>
 				</div>
-				<div class="pb-3 text-xs">
-					<p><span class="uppercase font-semibold">{author}</span> on July 4, 2022</p>
-				</div>
+				{author && (
+					<div class="pb-3 text-xs">
+						<p><span class="uppercase font-semibold">{author}</span></p>
+					</div>
+				)}
 			</div>
 		</div>
 	</ACube>
