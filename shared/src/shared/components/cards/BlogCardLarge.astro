@@ -1,27 +1,25 @@
 ---
 import GenericCard from "./GenericCard.astro";
 
-const { class: classes, ...rest } = Astro.props
+const { class: classes, title, description, tags, author, image, ...rest } = Astro.props;
 ---
 
-<GenericCard class={`w-[21rem] h-[21rem] ${classes}`} {...rest}>
-	<div class="flex-shrink-0">
-		<img class="h-48 w-full object-cover" src={Astro.props.image} alt={`Blog title image for the blog post: ${Astro.props.title}`} />
-	</div>
-	<div class="flex-1 bg-white p-6 flex flex-col justify-between">
-		<div class="flex-1">
-			<p class="text-sm font-medium text-indigo-600">
-				<!-- foreach tag in tags -->
-				<a href="#" class="hover:underline">{Astro.props.tag}</a>
-			</p>
-			<a href="#" class="block mt-2">
-				<p class="text-xl font-semibold text-gray-900">{Astro.props.title}</p>
-			</a>
+<GenericCard class={`w-full max-w-[48rem] ${classes ? classes : ''}`} {...rest}>
+	<div class="grid grid-rows-2 h-full">
+		<div class="overflow-hidden flex place-content-center">
+			<img class="max-w-full grow" src={image} alt={`Blog title image for the blog post: ${title}`} />
 		</div>
-		<div class="mt-6">
-			<p class="text-sm font-medium text-gray-900">
-				<a href="#" class="hover:underline">{Astro.props.author}</a>
-			</p>
+		<div class="px-6 flex flex-col justify-between text-black">
+			<div class="flex-1 flex flex-col justify-start space-y-1">
+				<ul class="pt-6 flex text-sm font-medium space-x-2">
+					{tags.map((tag) => (<li class="bg-steel text-white">#{tag}</li>))}
+				</ul>
+				<h2 class="pt-4">{title}</h2>
+				<p class="pt-4">{description}</p>
+			</div>
+			<div class="py-6 text-xs">
+				<p><span class="uppercase font-semibold">{author}</span> on July 4, 2022</p>
+			</div>
 		</div>
 	</div>
 </GenericCard>
