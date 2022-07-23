@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 export default {
 	content: ["./public/**/*.html", "./src/**/*.astro", "./src/**/*.vue"],
 	theme: {
 		extend: {
+			boxShadow: {
+				dg: "3px 3px 10px rgba(0, 0, 0, 0.25)",
+			},
 			fontFamily: {
 				favorit: ["favorit", "sans-serif"],
 				inter: ["inter", "sans-serif"],
@@ -89,3 +93,6 @@ export default {
 	},
 	plugins: [],
 };
+=======
+
+>>>>>>> 412b0dc (adding blog card medium)
