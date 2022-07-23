@@ -11,12 +11,12 @@ const { class: classes, title, tags, author, image, ...rest } = Astro.props;
 			<div class="overflow-hidden flex place-content-center">
 				<img class="max-w-full grow" src={image} alt={`Blog title image for the blog post: ${title}`} />
 			</div>
-			<div class="flex-1 px-4 flex flex-col justify-between text-black">
+			<div class="px-4 flex flex-col justify-between text-black">
 				<div class="flex-1 flex flex-col justify-start space-y-1">
 					<ul class="pt-3 flex text-sm font-medium space-x-2">
 						{tags.map((tag) => (<li class="bg-steel text-white">#{tag}</li>))}
 					</ul>
-					<h2 class="font-semibold text-xl sm:text-2xl leading-5 sm:leading-7">{title}</h2>
+					<h5 class="font-semibold text-xl sm:text-2xl leading-5 sm:leading-7">{title}</h5>
 				</div>
 				<div class="pb-3 text-xs">
 					<p><span class="uppercase font-semibold">{author}</span> on July 4, 2022</p>
