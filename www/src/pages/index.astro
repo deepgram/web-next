@@ -21,58 +21,71 @@ import RightStar from "../shared/components/decoration/RightStar.astro";
 ---
 
 <PageLayout>
-	<main class="bg-black text-white">
-		<Hero layout="centered" class="homepage-hero" background="bg-fingerprint">
-			<LeftStar class="text-meadow text-5xl" slot="header" />
+  <main class="bg-black text-white">
+    <Hero layout="centered" class="homepage-hero" background="bg-fingerprint">
+      <LeftStar class="text-meadow text-5xl" slot="header" />
 
-			<Promo>
-				See how Deepgram stacks up on the <a href="/asr-comparison">ASR Comparison Tool</a>. 🍎🍊
-			</Promo>
+      <Promo>
+        See how Deepgram stacks up on the <a href="/asr-comparison"
+          >ASR Comparison Tool
+        </a>. 🍎🍊
+      </Promo>
 
-			<h1>Meet the speech-to-text API built for the <u>real world</u>.</h1>
+      <h1>Meet the speech-to-text API built for the <u>real world</u>.</h1>
 
-			<!-- custom CTA component, make "cta" a common slot in other custom components -->
-			<a slot="cta" class="button button--primary" href="https://console.deepgram.com">Start Building</a>
-			<a slot="cta" class="button button--secondary" href="/contact-us">Contact Sales</a>
+      <!-- custom CTA component, make "cta" a common slot in other custom components -->
+      <a
+        slot="cta"
+        class="button button--primary"
+        href="https://console.deepgram.com"
+        >Start Building
+      </a>
+      <a slot="cta" class="button button--secondary" href="/contact-us"
+        >Contact Sales
+      </a>
 
-			<RightStar class="text-coral text-4xl" slot="footer" />
-		</Hero>
+      <RightStar class="text-coral text-4xl" slot="footer" />
+    </Hero>
 
-		<DemoTranscription />
+    <DemoTranscription />
 
-		<BrandShowcase />
+    <BrandShowcase />
 
-		<QualityYouCanCountOn />
+    <QualityYouCanCountOn />
 
-		<SdkShowcase />
+    <SdkShowcase />
 
-		<Testimonial>
-			<h1 slot="quote">Deepgram is doing for speech what SpaceX did for space travel.</h1>
-			<img slot="photo" src="/todd-fisher.png" class="pr-6 w-5/12" />
-			<h2 slot="author">Todd Fisher</h2>
-			<p slot="job">Founder, Call Tracking Metrics</p>
-		</Testimonial>
+    <Testimonial>
+      <h1 slot="quote">
+        Deepgram is doing for speech what SpaceX did for space travel.
+      </h1>
+      <img slot="photo" src="/todd-fisher.png" class="pr-6 w-5/12" />
+      <h2 slot="author">Todd Fisher</h2>
+      <p slot="job">Founder, Call Tracking Metrics</p>
+    </Testimonial>
 
-		<Contrast color="darkCharcoal" background="black">
-			<WhyDeepgram />
+    <Contrast color="darkCharcoal" background="black">
+      <WhyDeepgram />
 
-			<FeatureShowcase />
+      <FeatureShowcase />
 
-			<GetStarted />
-		</Contrast>
+      <GetStarted />
+    </Contrast>
 
-		<CommunityPosts />
+    <CommunityPosts />
 
-		<WhatDevelopersAreSaying />
+    <WhatDevelopersAreSaying />
 
-		<AmplifyQuote>
-			<LeftStar class="" />
-			<h2>tl;dr</h2>
-			<h1>Stop building work-arounds for STT that doesn’t work.</h1>
-			<p>
-				<a href="https://console.deepgram.com/signup">Start Free</a> 💰 <small>Got questions? <a href="/contact-us">Talk to an expert</a></small>
-			</p>
-			<RightStar class="text-fireEngine text-3xl" />
-		</AmplifyQuote>
-	</main>
+    <AmplifyQuote>
+      <LeftStar class="" />
+      <h2>tl;dr</h2>
+      <h1>Stop building work-arounds for STT that doesn’t work.</h1>
+      <p>
+        <a href="https://console.deepgram.com/signup">Start Free</a> 💰 <small
+          >Got questions? <a href="/contact-us">Talk to an expert</a>
+        </small>
+      </p>
+      <RightStar class="text-fireEngine text-3xl" />
+    </AmplifyQuote>
+  </main>
 </PageLayout>

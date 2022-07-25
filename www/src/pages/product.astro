@@ -7,42 +7,42 @@ import SideBySideImage from "../components/content/product/SideBySideImage.astro
 ---
 
 <PageLayout>
-	<main>
-		<HeroImage
-			promo="Webinar: What’s New in Product, May 26 ✨"
-			title="Transcribe and understand real-world audio with the API built for developers."
-			primaryCta="See how easy it can be."
-		/>
-		<SideBySideNoImage />
-		<DemoTranscriptionTwo client:load />
-		<SideBySideImage
-			image="SDK_Example.png"
-			cta="Build with what you want."
-			body="Use our Python, Node.js, .NET SDKs, or our REST API to get transcripts that read like a human wrote them."
-			linkText="Read the Docs"
-		/>
-		<SideBySideImage
-			image="Curl.png"
-			cta="Call the most accurate use-case model for your domain."
-			body="Specialized models for phone calls, meetings, conversational AI, and more. Don’t see a model that works for you? Try our general model, or train a tailored model for your needs."
-		/>
-		<SideBySideImage
-			image="DG_Deploy.png"
-			cta="Deploy on-prem, cloud, or VPC."
-			body="Our standard deployment is within our cloud, but for more sensitive voice and transcription data, we also offer an on-premises installation or a private cloud installation, where you can control the entire environment. Deepgram is Kubernetes-ready with Docker images, and has pre-built VM images to enable rapid deployment to most cloud providers. Train models and deploy anywhere – on premises or in the cloud."
-			linkText="View Security"
-		/>
-		<SideBySideImage
-			image="DG_Transcribe.png"
-			cta="Transcribe in 20+ languages and dialects."
-			body="We speak your customers’ language with coverage for over 20 language varieties and use-case models—with more added regularly."
-			linkText="View All Language and Use-Case Models"
-		/>
-	</main>
+  <main>
+    <HeroImage
+      promo="Webinar: What’s New in Product, May 26 ✨"
+      title="Transcribe and understand real-world audio with the API built for developers."
+      primaryCta="See how easy it can be."
+    />
+    <SideBySideNoImage />
+    <DemoTranscriptionTwo client:load />
+    <SideBySideImage
+      image="SDK_Example.png"
+      cta="Build with what you want."
+      body="Use our Python, Node.js, .NET SDKs, or our REST API to get transcripts that read like a human wrote them."
+      linkText="Read the Docs"
+    />
+    <SideBySideImage
+      image="Curl.png"
+      cta="Call the most accurate use-case model for your domain."
+      body="Specialized models for phone calls, meetings, conversational AI, and more. Don’t see a model that works for you? Try our general model, or train a tailored model for your needs."
+    />
+    <SideBySideImage
+      image="DG_Deploy.png"
+      cta="Deploy on-prem, cloud, or VPC."
+      body="Our standard deployment is within our cloud, but for more sensitive voice and transcription data, we also offer an on-premises installation or a private cloud installation, where you can control the entire environment. Deepgram is Kubernetes-ready with Docker images, and has pre-built VM images to enable rapid deployment to most cloud providers. Train models and deploy anywhere – on premises or in the cloud."
+      linkText="View Security"
+    />
+    <SideBySideImage
+      image="DG_Transcribe.png"
+      cta="Transcribe in 20+ languages and dialects."
+      body="We speak your customers’ language with coverage for over 20 language varieties and use-case models—with more added regularly."
+      linkText="View All Language and Use-Case Models"
+    />
+  </main>
 </PageLayout>
 
 <style>
-	main {
-		@apply bg-black text-white;
-	}
+  main {
+    @apply bg-black text-white;
+  }
 </style>

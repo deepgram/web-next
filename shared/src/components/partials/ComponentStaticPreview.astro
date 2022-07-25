@@ -1,9 +1,9 @@
 ---
-import PreviewToggle from "./PreviewToggle.astro"
+import PreviewToggle from "./PreviewToggle.astro";
 
 const { ...rest } = Astro.props;
 ---
 
 <PreviewToggle class="border p-5 rounded-lg" {...rest}>
-	<slot></slot>
+  <slot />
 </PreviewToggle>

@@ -1,49 +1,73 @@
 ---
 import Promo from "../Promo.page-ssr.astro";
 import Hyperlink from "../../Hyperlink.astro";
-const { promo, title, body, primaryCta, secondaryCta, tertiaryCta, image, alt } = Astro.props;
+const {
+  promo,
+  title,
+  body,
+  primaryCta,
+  secondaryCta,
+  tertiaryCta,
+  image,
+  alt,
+} = Astro.props;
 ---
 
 <section class="hero hero-split w-full">
-	<div class="grid-container">
-		<div class="hero-left grid-div max-w-screen-2xl mx-auto">
-			<Promo>{promo}</Promo>
-			<h1 class="h1-small mt-11">{title}</h1>
-			<p>{body}</p>
-			<!-- <p class="mt-2">{primaryCta}</p> -->
-			<p>{secondaryCta}</p>
-			<p>{tertiaryCta}</p>
-			<div class="flex flex-col">
-				<div class="flex space-x-7 mt-7">
-					<a href="https://console.deepgram.com/signup" rel="noopener noreferrer" class="button button--primary">Transcribe More Free</a>
-					<a href="https://console.deepgram.com/signup" rel="noopener noreferrer" class="button button--secondary">Transcribe More Free</a>
-				</div>
-				<div class="mt-7">
-					<Hyperlink icon="arrowright">Explore the Docs</Hyperlink>
-				</div>
-			</div>
-		</div>
-		<div class="hero-right grid-div">
-			<img class="hero-image" src="src/assets/images/product.png" alt={alt} title={alt} />
-		</div>
-	</div>
+  <div class="grid-container">
+    <div class="hero-left grid-div max-w-screen-2xl mx-auto">
+      <Promo>{promo}</Promo>
+      <h1 class="h1-small mt-11">{title}</h1>
+      <p>{body}</p>
+      <!-- <p class="mt-2">{primaryCta}</p> -->
+      <p>{secondaryCta}</p>
+      <p>{tertiaryCta}</p>
+      <div class="flex flex-col">
+        <div class="flex space-x-7 mt-7">
+          <a
+            href="https://console.deepgram.com/signup"
+            rel="noopener noreferrer"
+            class="button button--primary"
+            >Transcribe More Free
+          </a>
+          <a
+            href="https://console.deepgram.com/signup"
+            rel="noopener noreferrer"
+            class="button button--secondary"
+            >Transcribe More Free
+          </a>
+        </div>
+        <div class="mt-7">
+          <Hyperlink icon="arrowright">Explore the Docs</Hyperlink>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right grid-div">
+      <img
+        class="hero-image"
+        src="src/assets/images/product.png"
+        alt={alt}
+        title={alt}
+      />
+    </div>
+  </div>
 </section>
 
 <style>
-	.hero {
-		@apply pt-36;
-		@apply px-8 lg:px-16 xl:px-36;
-	}
-	.grid-container {
-		@apply grid grid-cols-1 gap-6 lg:grid-cols-2;
-	}
+  .hero {
+    @apply pt-36;
+    @apply px-8 lg:px-16 xl:px-36;
+  }
+  .grid-container {
+    @apply grid grid-cols-1 gap-6 lg:grid-cols-2;
+  }
 
-	.grid-div {
-		/* @apply pb-6; */
-		/* @apply text-stone text-lg; */
-	}
+  .grid-div {
+    /* @apply pb-6; */
+    /* @apply text-stone text-lg; */
+  }
 
-	.hero-right {
-		/* @apply border-white border-2; */
-	}
+  .hero-right {
+    /* @apply border-white border-2; */
+  }
 </style>

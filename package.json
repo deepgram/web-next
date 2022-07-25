@@ -1,0 +1,24 @@
+{
+  "name": "@deepgram-web/root",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "^v18.6.0",
+    "yarn": "^1.22.0"
+  },
+  "workspaces": [
+    "@deepgram-web/www",
+    "@deepgram-web/blog",
+    "@deepgram-web/shared"
+  ],
+  "scripts": {
+    "lint": "prettier --check .",
+    "lint:fix": "prettier --write ."
+  },
+  "devDependencies": {
+    "astro": "^1.0.0-beta.73",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.1.2",
+    "prettier-plugin-tailwindcss": "^0.1.12"
+  }
+}

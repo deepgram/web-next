@@ -4,242 +4,257 @@ import HeroCenteredSlots from "../components/content/hero/HeroCenteredSlots.astr
 import Promo from "../components/content/Promo.page-ssr.astro";
 
 const customers = [
-	{
-		name: "Rasa",
-		logo: "/rasa-logo-color.png",
-	},
-	{
-		name: "Twilio",
-		logo: "/twilio-logo-color.png",
-	},
-	{
-		name: "Nasa",
-		logo: "/nasa-logo-color.png",
-	},
-	{
-		name: "Citi",
-		logo: "/citi-logo-color.png",
-	},
-	{
-		name: "Revenue.io",
-		logo: "/revenue-io-one-logo-color.png",
-	},
-	{
-		name: "Veed.io",
-		logo: "/veed-io-logo-color.png",
-	},
-	{
-		name: "Auth0",
-		logo: "/auth0-logo-color.png",
-	},
-	{
-		name: "Daily",
-		logo: "/daily-co-logo-color.png",
-	},
-	{
-		name: "Spotify",
-		logo: "/spotify-logo-color.png",
-	},
-	{
-		name: "Volley",
-		logo: "/volley-logo-color.png",
-	},
-	{
-		name: "Nytro.ai",
-		logo: "/nytro-logo-color.png",
-	},
-	{
-		name: "Khoros",
-		logo: "/khoros-logo-color.png",
-	},
-	{
-		name: "Workable",
-		logo: "/workable-logo-color.png",
-	},
-	{
-		name: "Knock CRM",
-		logo: "/knock-crm-logo-color.png",
-	},
-	{
-		name: "Re:infer",
-		logo: "/re-infer-logo-color.png",
-	},
-	{
-		name: "Elerian AI",
-		logo: "/elerian-ai-logo-color.png",
-	},
-	{
-		name: "Fireside",
-		logo: "/fireside-logo-color.png",
-	},
-	{
-		name: "Tethrr",
-		logo: "/tethr-logo-color.png",
-	},
-	{
-		name: "Sharpen",
-		logo: "/sharpen-logo-color.png",
-	},
-	{
-		name: "Callbi",
-		logo: "/callbi-logo-color.png",
-	},
-	{
-		name: "Vocinity",
-		logo: "/Vocinity-logo-color.png",
-	},
-	{
-		name: "OneReach.ai",
-		logo: "/onereach-logo-color.png",
-	},
-	{
-		name: "Salesken",
-		logo: "/salesken-logo-color.png",
-	},
-	{
-		name: "Converge One",
-		logo: "/converge-one-logo-color.png",
-	},
-	{
-		name: "Goldcast",
-		logo: "/goldcast-logo-color.png",
-	},
-	{
-		name: "Randall Reilly",
-		logo: "/randall-reilly-logo-color.png",
-	},
-	{
-		name: "Red Box Voice",
-		logo: "/redbox-logo-color.png",
-	},
-	{
-		name: "Update AI",
-		logo: "/update-ai-logo-color.png",
-	},
-	{
-		name: "Valyant AI",
-		logo: "/valyant-ai-logo-color.png",
-	},
-	{
-		name: "CallTrackingMetrics",
-		logo: "/calltrackingmetrics-logo-color.png",
-	},
+  {
+    name: "Rasa",
+    logo: "/rasa-logo-color.png",
+  },
+  {
+    name: "Twilio",
+    logo: "/twilio-logo-color.png",
+  },
+  {
+    name: "Nasa",
+    logo: "/nasa-logo-color.png",
+  },
+  {
+    name: "Citi",
+    logo: "/citi-logo-color.png",
+  },
+  {
+    name: "Revenue.io",
+    logo: "/revenue-io-one-logo-color.png",
+  },
+  {
+    name: "Veed.io",
+    logo: "/veed-io-logo-color.png",
+  },
+  {
+    name: "Auth0",
+    logo: "/auth0-logo-color.png",
+  },
+  {
+    name: "Daily",
+    logo: "/daily-co-logo-color.png",
+  },
+  {
+    name: "Spotify",
+    logo: "/spotify-logo-color.png",
+  },
+  {
+    name: "Volley",
+    logo: "/volley-logo-color.png",
+  },
+  {
+    name: "Nytro.ai",
+    logo: "/nytro-logo-color.png",
+  },
+  {
+    name: "Khoros",
+    logo: "/khoros-logo-color.png",
+  },
+  {
+    name: "Workable",
+    logo: "/workable-logo-color.png",
+  },
+  {
+    name: "Knock CRM",
+    logo: "/knock-crm-logo-color.png",
+  },
+  {
+    name: "Re:infer",
+    logo: "/re-infer-logo-color.png",
+  },
+  {
+    name: "Elerian AI",
+    logo: "/elerian-ai-logo-color.png",
+  },
+  {
+    name: "Fireside",
+    logo: "/fireside-logo-color.png",
+  },
+  {
+    name: "Tethrr",
+    logo: "/tethr-logo-color.png",
+  },
+  {
+    name: "Sharpen",
+    logo: "/sharpen-logo-color.png",
+  },
+  {
+    name: "Callbi",
+    logo: "/callbi-logo-color.png",
+  },
+  {
+    name: "Vocinity",
+    logo: "/Vocinity-logo-color.png",
+  },
+  {
+    name: "OneReach.ai",
+    logo: "/onereach-logo-color.png",
+  },
+  {
+    name: "Salesken",
+    logo: "/salesken-logo-color.png",
+  },
+  {
+    name: "Converge One",
+    logo: "/converge-one-logo-color.png",
+  },
+  {
+    name: "Goldcast",
+    logo: "/goldcast-logo-color.png",
+  },
+  {
+    name: "Randall Reilly",
+    logo: "/randall-reilly-logo-color.png",
+  },
+  {
+    name: "Red Box Voice",
+    logo: "/redbox-logo-color.png",
+  },
+  {
+    name: "Update AI",
+    logo: "/update-ai-logo-color.png",
+  },
+  {
+    name: "Valyant AI",
+    logo: "/valyant-ai-logo-color.png",
+  },
+  {
+    name: "CallTrackingMetrics",
+    logo: "/calltrackingmetrics-logo-color.png",
+  },
 ];
 ---
 
 <PageLayout>
-	<main>
-		<HeroCenteredSlots promo="Check out our Startup Program" title="Built with Deepgram.">
-			<Promo slot="promo">
-				&#128640; Check out our <a class="promo-link" href="/startups">Startup Program</a>
-			</Promo>
-			<h1 class="hero-header" slot="title">
-				Built With <p class="dg-underline">Deepgram</p>
-			</h1>
-			<p slot="subtext">From individuals to enterprises, see what developers all over the world are building with Deepgram.</p>
-			<div slot="cta" class="cta flex justify-center space-x-7">
-				<a href="/" class="button button--primary">What will you build?</a>
-			</div>
-		</HeroCenteredSlots>
-		<!-- Filtered Use cases -->
-		<!-- This will be similar to blog post section. will duplicate it here. -->
+  <main>
+    <HeroCenteredSlots
+      promo="Check out our Startup Program"
+      title="Built with Deepgram."
+    >
+      <Promo slot="promo">
+        &#128640; Check out our <a class="promo-link" href="/startups"
+          >Startup Program
+        </a>
+      </Promo>
+      <h1 class="hero-header" slot="title">
+        Built With <p class="dg-underline">Deepgram</p>
+      </h1>
+      <p slot="subtext">
+        From individuals to enterprises, see what developers all over the world
+        are building with Deepgram.
+      </p>
+      <div slot="cta" class="cta flex justify-center space-x-7">
+        <a href="/" class="button button--primary">What will you build?</a>
+      </div>
+    </HeroCenteredSlots>
+    <!-- Filtered Use cases -->
+    <!-- This will be similar to blog post section. will duplicate it here. -->
 
-		<section class="customers contrast contrast--white ">
-			<h2>Leading the voice ecosystem</h2>
-			<p class="text-large">
-				Join the growing list of customers who are innovating with Deepgram and creating new voice technology products and services without compromising speed accuracy, costs or
-				scale.
-			</p>
-			<p class="text-small">From individuals to enterprises, see what developers all over the world are building with Deepgram.</p>
-			<div class="logos">
-				{customers.map((customer) => {
-					return (
-						<div class="logo">
-							<img src={`/brand-showcase${customer.logo}`} alt={customer.name} />
-						</div>
-					)
-				})}
-			</div>
-			<!-- TODO: update link -->
-			<p class="join-us">
-				Join Us. <a href="#" class="dg-underline">Contact Sales</a>
-			</p>
-		</section>
-	</main>
+    <section class="customers contrast contrast--white ">
+      <h2>Leading the voice ecosystem</h2>
+      <p class="text-large">
+        Join the growing list of customers who are innovating with Deepgram and
+        creating new voice technology products and services without compromising
+        speed accuracy, costs or scale.
+      </p>
+      <p class="text-small">
+        From individuals to enterprises, see what developers all over the world
+        are building with Deepgram.
+      </p>
+      <div class="logos">
+        {customers.map((customer) => {
+          return (
+            <div class="logo">
+              <img
+                src={`/brand-showcase${customer.logo}`}
+                alt={customer.name}
+              />
+            </div>
+          );
+        })}
+      </div>
+      <!-- TODO: update link -->
+      <p class="join-us">
+        Join Us. <a href="#" class="dg-underline">Contact Sales</a>
+      </p>
+    </section>
+  </main>
 </PageLayout>
 
 <style scoped>
-	main {
-		@apply bg-black;
-		@apply text-white;
-		background: black no-repeat top -20rem right -30rem url("./starburst.svg");
-	}
-	@screen md {
-		main {
-			background: black no-repeat top -20rem right -20rem url("./starburst.svg");
-		}
-	}
-	.promo-link {
-		@apply text-black underline;
-	}
-	h1.hero-header {
-		@apply text-4xl sm:text-5xl md:text-6xl;
-		@apply font-bold;
-		@apply w-8/12 xl:w-7/12;
-		@apply sm:leading-15 md:leading-16 lg:leading-17 leading-9;
-		@apply text-center;
-		@apply mt-10 mb-7;
-	}
-	.subtext {
-		@apply text-center;
-	}
+  main {
+    @apply bg-black;
+    @apply text-white;
+    background: black no-repeat top -20rem right -30rem url("./starburst.svg");
+  }
+  @screen md {
+    main {
+      background: black no-repeat top -20rem right -20rem url("./starburst.svg");
+    }
+  }
+  .promo-link {
+    @apply text-black underline;
+  }
+  h1.hero-header {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply font-bold;
+    @apply w-8/12 xl:w-7/12;
+    @apply sm:leading-15 md:leading-16 lg:leading-17 leading-9;
+    @apply text-center;
+    @apply mt-10 mb-7;
+  }
+  .subtext {
+    @apply text-center;
+  }
 
-	.dg-underline {
-		@apply inline-flex flex-col justify-center;
-		/* @apply w-60; */
-	}
-	.hero-header .dg-underline::after {
-		content: url("data:image/svg+xml,%3Csvg viewBox='0 0 280 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.86133 2.94025C78.716 2.62721 155.535 2.09814 232.42 2.09814C235.136 2.09814 277.942 2.24492 277.942 5.27943C277.942 5.66548 242.303 4.67511 241.799 4.67124C194.146 4.30648 147.306 4.96347 100.281 8.64785C70.4472 10.9853 39.8094 13.8856 11.345 18.0981' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
-		width: inherit;
-		@apply -mt-6;
-	}
+  .dg-underline {
+    @apply inline-flex flex-col justify-center;
+    /* @apply w-60; */
+  }
+  .hero-header .dg-underline::after {
+    content: url("data:image/svg+xml,%3Csvg viewBox='0 0 280 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.86133 2.94025C78.716 2.62721 155.535 2.09814 232.42 2.09814C235.136 2.09814 277.942 2.24492 277.942 5.27943C277.942 5.66548 242.303 4.67511 241.799 4.67124C194.146 4.30648 147.306 4.96347 100.281 8.64785C70.4472 10.9853 39.8094 13.8856 11.345 18.0981' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+    width: inherit;
+    @apply -mt-6;
+  }
 
-	.cta {
-		@apply mt-7;
-	}
+  .cta {
+    @apply mt-7;
+  }
 
-	section.customers {
-		@apply flex flex-col items-center justify-center bg-white text-center text-black;
-	}
+  section.customers {
+    @apply flex flex-col items-center justify-center bg-white text-center text-black;
+  }
 
-	.customers h2 {
-		@apply mx-2 mb-3 p-1 sm:p-0;
-	}
+  .customers h2 {
+    @apply mx-2 mb-3 p-1 sm:p-0;
+  }
 
-	.customers p {
-		@apply max-w-4xl px-3 text-center sm:p-1;
-	}
+  .customers p {
+    @apply max-w-4xl px-3 text-center sm:p-1;
+  }
 
-	.join-us * {
-		display: inline;
-	}
+  .join-us * {
+    display: inline;
+  }
 
-	.join-us .dg-underline {
-		@apply underline;
-	}
+  .join-us .dg-underline {
+    @apply underline;
+  }
 
-	.text-large {
-		@apply hidden md:block;
-	}
+  .text-large {
+    @apply hidden md:block;
+  }
 
-	.text-small {
-		@apply block md:hidden;
-	}
+  .text-small {
+    @apply block md:hidden;
+  }
 
-	.logos {
-		@apply grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-8 lg:grid-cols-5;
-	}
-	.logo {
-		@apply m-1 h-32 w-36 md:m-6;
-	}
+  .logos {
+    @apply grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-8 lg:grid-cols-5;
+  }
+  .logo {
+    @apply m-1 h-32 w-36 md:m-6;
+  }
 </style>

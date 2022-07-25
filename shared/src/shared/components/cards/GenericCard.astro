@@ -1,7 +1,10 @@
 ---
-const { class: classes, ...rest } = Astro.props
+const { class: classes, ...rest } = Astro.props;
 ---
 
-<a class={`min-w-[18rem] bg-mist/50 shadow-dg ${classes ? classes : ''}`} {...rest}>
-	<slot></slot>
+<a
+  class={`min-w-[18rem] bg-mist/50 shadow-dg ${classes ? classes : ""}`}
+  {...rest}
+>
+  <slot />
 </a>

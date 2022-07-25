@@ -1,25 +1,26 @@
 ---
-import PrimarySection from '../../shared/components/layout/PrimarySection.astro';
-import Layout from '../../layouts/Default.astro';
-import { Debug } from 'astro/components';
+import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
+import Layout from "../../layouts/Default.astro";
 
 export async function getStaticPaths() {
-	const allPosts = await Astro.glob('/src/content/posts/**/*.md');
-	const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+  const allPosts = await Astro.glob("/src/content/posts/**/*.md");
+  const sortedPosts = allPosts.sort(
+    (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+  );
 
-	return sortedPosts.map((post) => {
-		const pathParts = post.file.replace('/index.md', '').split('/');
-		const slug = pathParts[pathParts.length - 1]
+  return sortedPosts.map((post) => {
+    const pathParts = post.file.replace("/index.md", "").split("/");
+    const slug = pathParts[pathParts.length - 1];
 
-		return {
-			params: {
-				slug
-			},
-			props: {
-				post
-			}
-		}
-	})
+    return {
+      params: {
+        slug,
+      },
+      props: {
+        post,
+      },
+    };
+  });
 }
 
 const { post } = Astro.props;
@@ -28,19 +29,19 @@ const { slug } = Astro.params;
 
 <Layout>
   <PrimarySection>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
-    test<br/>
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
+    test<br />
   </PrimarySection>
 </Layout>
