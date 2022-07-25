@@ -18,7 +18,10 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 		<a href="/">Back</a>
 
 		<ComponentSection title="Blog card lists">
-			<ComponentPreview id="blog-card-list" title="Blog card list w/ title" snippet={`<BlogCardList>
+			<ComponentPreview
+				id="blog-card-list"
+				title="Blog card list w/ title"
+				snippet={`<BlogCardList>
 	<NoLinkCardListTitle title="Announcements" slot="title" />
 	<BlogCard 
 		title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
@@ -27,31 +30,20 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 		author="lukeocodes" 
 	/>
 	... etc ...
-</BlogCardList>`}>
-				<BlogCardList>
+</BlogCardList>`}
+			>
+				<BlogCardList class="max-w-5xl">
 					<NoLinkCardListTitle title="Latest Posts" slot="title" />
-					<BlogCard 
-						title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
-						image="//placeimg.com/1200/627/tech/1" 
-						tags={["Vue"]} 
-						author="lukeocodes" 
-					/>
-					<BlogCard 
-						title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
-						image="//placeimg.com/1200/627/tech/2" 
-						tags={["Vue"]} 
-						author="lukeocodes" 
-					/>
-					<BlogCard 
-						title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
-						image="//placeimg.com/1200/627/tech/3" 
-						tags={["Vue"]} 
-						author="lukeocodes" 
-					/>
+					<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/1" tags={["Vue"]} author="lukeocodes" />
+					<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/2" tags={["Vue"]} author="lukeocodes" />
+					<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/3" tags={["Vue"]} author="lukeocodes" />
 				</BlogCardList>
 			</ComponentPreview>
 
-			<ComponentPreview id="blog-card-list-w-link" title="Blog card list w/ title link" snippet={`<BlogCardList>
+			<ComponentPreview
+				id="blog-card-list-w-link"
+				title="Blog card list w/ title link"
+				snippet={`<BlogCardList>
 	<LinkCardListTitle title="Announcements" href="/blog/categories/announcements" slot="title" />
 	<BlogCard 
 		title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
@@ -60,76 +52,63 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 		author="lukeocodes" 
 	/>
 	... etc ...
-</BlogCardList>`}>
-				<BlogCardList>
+</BlogCardList>`}
+			>
+				<BlogCardList class="max-w-5xl">
 					<LinkCardListTitle title="Announcements" href="/blog/categories/announcements" slot="title" />
-					<BlogCard 
-						title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
-						image="//placeimg.com/1200/627/tech/1" 
-						tags={["Vue"]} 
-						author="lukeocodes" 
-					/>
-					<BlogCard 
-						title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
-						image="//placeimg.com/1200/627/tech/2" 
-						tags={["Vue"]} 
-						author="lukeocodes" 
-					/>
-					<BlogCard 
-						title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
-						image="//placeimg.com/1200/627/tech/3" 
-						tags={["Vue"]} 
-						author="lukeocodes" 
-					/>
+					<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/1" tags={["Vue"]} author="lukeocodes" />
+					<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/2" tags={["Vue"]} author="lukeocodes" />
+					<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/3" tags={["Vue"]} author="lukeocodes" />
 				</BlogCardList>
 			</ComponentPreview>
 		</ComponentSection>
 
 		<ComponentSection title="Blog cards">
-			<ComponentPreview id="blog-card-large" title="Large blog card" snippet={`<BlogCardLarge 
+			<ComponentPreview
+				id="blog-card-large"
+				title="Large blog card"
+				snippet={`<BlogCardLarge 
 	title="Top 3 Use Cases for Speech-to-Text in Gaming" 
 	description="In the gaming industry, speech-to-text and voice recognition technology are becoming more and more commonplace. This is due to the fact that they offer a number of advantages for both developers and players alike." 
 	image="//placeimg.com/1200/627/tech" 
 	tags={["Vue"]} 
 	author="lukeocodes" 
-/>`}>
-				<BlogCardLarge 
-					title="Top 3 Use Cases for Speech-to-Text in Gaming" 
-					description="In the gaming industry, speech-to-text and voice recognition technology are becoming more and more commonplace. This is due to the fact that they offer a number of advantages for both developers and players alike." 
-					image="//placeimg.com/1200/627/tech" 
-					tags={["Vue"]} 
-					author="lukeocodes" 
+/>`}
+			>
+				<BlogCardLarge
+					title="Top 3 Use Cases for Speech-to-Text in Gaming"
+					description="In the gaming industry, speech-to-text and voice recognition technology are becoming more and more commonplace. This is due to the fact that they offer a number of advantages for both developers and players alike."
+					image="//placeimg.com/1200/627/tech"
+					tags={["Vue"]}
+					author="lukeocodes"
 				/>
 			</ComponentPreview>
 
-			<ComponentPreview id="blog-card-medium" title="Medium blog card" snippet={`<BlogCard 
+			<ComponentPreview
+				id="blog-card-medium"
+				title="Medium blog card"
+				snippet={`<BlogCard 
 	title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
 	image="//placeimg.com/1200/627/tech" 
 	tags={["Vue"]} 
 	author="lukeocodes" 
-/>`}>
-				<BlogCard 
-					title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" 
-					image="//placeimg.com/1200/627/tech/2" 
-					tags={["Vue"]} 
-					author="lukeocodes" 
-				/>
+/>`}
+			>
+				<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/2" tags={["Vue"]} author="lukeocodes" />
 			</ComponentPreview>
 
-			<ComponentPreview id="blog-card-small" title="Small blog card" snippet={`<BlogCardSmall 
+			<ComponentPreview
+				id="blog-card-small"
+				title="Small blog card"
+				snippet={`<BlogCardSmall 
 	title="5 Ways to Understand the Voice of the Customer Voice" 
 	image="//placeimg.com/1200/627/tech" 
 	tags={["Vue"]} 
 	author="lukeocodes" 
-/>`}>
-				<BlogCardSmall 
-					title="5 Ways to Understand the Voice of the Customer Voice" 
-					image="//placeimg.com/1200/627/tech/3" 
-					tags={["Vue"]} 
-					author="lukeocodes" 
-				/>
+/>`}
+			>
+				<BlogCardSmall title="5 Ways to Understand the Voice of the Customer Voice" image="//placeimg.com/1200/627/tech/3" tags={["Vue"]} author="lukeocodes" />
 			</ComponentPreview>
 		</ComponentSection>
-
 	</PrimarySection>
 </Layout>

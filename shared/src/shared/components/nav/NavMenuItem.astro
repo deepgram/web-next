@@ -5,9 +5,9 @@ const { href, icon } = Astro.props;
 ---
 
 <a href={href} class="flex text-white items-center gap-2">
-  <p class="flex text-white items-center gap-2">
-    <Icon icon={icon} class="h-[1.2em] w-[1.2em] fill-cloud" />
-    <slot />
-    <Icon icon="arrowright" class="h-[1em] w-[1em] stroke-lightIris" />
-  </p>
+	<p class="flex text-white items-center gap-2">
+		<Icon icon={icon} class="h-[1.2em] w-[1.2em] fill-cloud" />
+		<slot />
+		<Icon icon="arrowright" class="h-[1em] w-[1em] stroke-lightIris" />
+	</p>
 </a>

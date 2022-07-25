@@ -6,34 +6,28 @@ const { class: classes, title, tags, author, image, ...rest } = Astro.props;
 ---
 
 <GenericCard class={`w-full max-w-[30rem] ${classes ? classes : ""}`} {...rest}>
-  <ACube class="w-full">
-    <div class="grid grid-rows-2 h-full">
-      <div class="overflow-hidden flex place-content-center">
-        <img
-          class="max-w-full grow"
-          src={image}
-          alt={`Blog title image for the blog post: ${title}`}
-        />
-      </div>
-      <div class="px-4 flex flex-col justify-between text-black">
-        <div class="flex-1 flex flex-col justify-start space-y-1">
-          <ul class="pt-3 flex text-sm font-medium space-x-2">
-            {tags.map((tag) => <li class="bg-steel text-white">#{tag}</li>)}
-          </ul>
-          <h4
-            class="text-lg leading-5 sm:text-xl sm:leading-6 md:text-2xl md:leading-7"
-          >
-            {title}
-          </h4>
-        </div>
-        {author && (
-          <div class="pb-3 text-xs">
-            <p>
-              <span class="font-semibold uppercase">{author}</span>
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
-  </ACube>
+	<ACube class="w-full">
+		<div class="grid grid-rows-2 h-full">
+			<div class="overflow-hidden flex place-content-center">
+				<img class="max-w-full grow" src={image} alt={`Blog title image for the blog post: ${title}`} />
+			</div>
+			<div class="px-4 flex flex-col justify-between text-black">
+				<div class="flex-1 flex flex-col justify-start space-y-1">
+					<ul class="pt-3 flex text-sm font-medium space-x-2">
+						{tags.map((tag) => <li class="bg-steel text-white">#{tag}</li>)}
+					</ul>
+					<h4 class="text-lg leading-5 sm:text-xl sm:leading-6 md:text-2xl md:leading-7">
+						{title}
+					</h4>
+				</div>
+				{author && (
+					<div class="pb-3 text-xs">
+						<p>
+							<span class="font-semibold uppercase">{author}</span>
+						</p>
+					</div>
+				)}
+			</div>
+		</div>
+	</ACube>
 </GenericCard>

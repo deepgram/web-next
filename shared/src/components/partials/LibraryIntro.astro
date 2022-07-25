@@ -3,68 +3,51 @@ import Code from "astro/components/Code.astro";
 ---
 
 <div class="library-intro">
-  <h2 class="mt-10">Using this Library</h2>
-  <p>
-    There are several helper components available for usage in this library. <code
-      class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
-      >ComponentSection
-    </code>, for creating a new H2 heading section for a group of components. <code
-      class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
-      >ComponentPreview
-    </code> and <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
-      >ComponentStaticPreview
-    </code>, both for displaying a component and toggling it's code snippet. <code
-      class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
-      >ComponentPreview
-    </code> differs in that the rendered preview is inside an <code
-      class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
-      >&lt;iframe&gt;
-    </code> which can be resized responsively.
-  </p>
+	<h2 class="mt-10">Using this Library</h2>
+	<p>
+		There are several helper components available for usage in this library. <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">ComponentSection</code>, for creating a
+		new H2 heading section for a group of components. <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">ComponentPreview</code> and <code
+			class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
+			>ComponentStaticPreview
+		</code>, both for displaying a component and toggling it's code snippet. <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">ComponentPreview</code> differs in that
+		the rendered preview is inside an <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">&lt;iframe&gt;</code> which can be resized responsively.
+	</p>
 
-  <h4 class="mt-10 mb-2">ComponentSection</h4>
+	<h4 class="mt-10 mb-2">ComponentSection</h4>
 
-  <p class="mb-4">
-    Requires a <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
-      >title
-    </code> for the name of the section.
-  </p>
+	<p class="mb-4">
+		Requires a <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">title</code> for the name of the section.
+	</p>
 
-  <Code
-    lang="astro"
-    code={`<ComponentSection title="Blog sections">
+	<Code
+		lang="astro"
+		code={`<ComponentSection title="Blog sections">
 	... (one or many ComponentPreview or ComponentStaticPreview)
 </ComponentSection>`}
-  />
+	/>
 
-  <h4 class="mt-10 mb-2">ComponentPreview and ComponentStaticPreview</h4>
+	<h4 class="mt-10 mb-2">ComponentPreview and ComponentStaticPreview</h4>
 
-  <p class="mb-4">
-    Requires a unique descriptive <code
-      class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
-      >id
-    </code>, a <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
-      >title
-    </code> for the name of the component, and a <code
-      class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
-      >snippet
-    </code> which is the unrendered Astro component to copy.
-  </p>
+	<p class="mb-4">
+		Requires a unique descriptive <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">id</code>, a <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
+			>title
+		</code> for the name of the component, and a <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">snippet</code> which is the unrendered Astro component to copy.
+	</p>
 
-  <Code
-    lang="astro"
-    code={`<ComponentStaticPreview id="blog-card" title="Single blog card" snippet={\`... same Component you place in the slot\`}>
+	<Code
+		lang="astro"
+		code={`<ComponentStaticPreview id="blog-card" title="Single blog card" snippet={\`... same Component you place in the slot\`}>
 	...Component to preview
 </ComponentStaticPreview>
 
 <ComponentPreview id="blog-card" title="Single blog card" snippet={\`... same Component you place in the slot\`}>
 	...Component to preview
 </ComponentPreview>`}
-  />
+	/>
 </div>
 
 <style>
-  .library-intro :global(.astro-code) {
-    @apply overflow-hidden rounded-lg border p-5;
-  }
+	.library-intro :global(.astro-code) {
+		@apply overflow-hidden rounded-lg border p-5;
+	}
 </style>

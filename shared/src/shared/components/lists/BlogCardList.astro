@@ -1,12 +1,12 @@
 ---
-const { class: classes, ...rest } = Astro.props
+const { class: classes, ...rest } = Astro.props;
 ---
 
-<div class={`w-full ${classes ? classes : ''}`} {...rest}>
-  <div class="relative mx-auto">
-    <slot name="title"></slot>
-    <div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6 md:gap-8 lg:gap-10">
-      <slot></slot>
-    </div>
-  </div>
+<div class={`w-full ${classes ? classes : ""}`} {...rest}>
+	<div class="relative mx-auto">
+		<slot name="title" />
+		<div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6 md:gap-8 lg:gap-10">
+			<slot />
+		</div>
+	</div>
 </div>
