@@ -6,6 +6,11 @@
     "node": "^v18.6.0",
     "yarn": "^1.22.0"
   },
+  "workspaces": [
+    "@deepgram-web/www",
+    "@deepgram-web/blog",
+    "@deepgram-web/shared"
+  ],
   "scripts": {
     "lint": "prettier --check .",
     "lint:fix": "prettier --write ."
