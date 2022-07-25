@@ -1,19 +1,25 @@
 ---
-import PreviewToggle from "./PreviewToggle.astro"
+import PreviewToggle from "./PreviewToggle.astro";
 
 let html: string = "";
 
 if (Astro.slots.has("default")) {
-	html = await Astro.slots.render("default");
+  html = await Astro.slots.render("default");
 }
 
 const { id, ...rest } = Astro.props;
 ---
 
 <PreviewToggle class="-mr-6" id={id} {...rest}>
-	<div id={`container-${id}`} class="w-full resize-x pr-6"></div>
-	<input id={`input-${id}`} type="hidden" value={html} data-onload={`writeIframe("${id}")`} />
-	<div class="h-auto flex items-center cursor-ew-resize">
-		<div class="h-8 w-1.5 rounded-full -ml-4 bg-slate-400 pointer-events-none"></div>
-	</div>
+  <div id={`container-${id}`} class="w-full resize-x pr-6"></div>
+  <input
+    id={`input-${id}`}
+    type="hidden"
+    value={html}
+    data-onload={`writeIframe("${id}")`}
+  />
+  <div class="h-auto flex items-center cursor-ew-resize">
+    <div class="h-8 w-1.5 rounded-full -ml-4 bg-slate-400 pointer-events-none">
+    </div>
+  </div>
 </PreviewToggle>

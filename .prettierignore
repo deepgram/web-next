@@ -3,3 +3,4 @@ node_modules
 .github
 .changeset
 *.md
+shared/src/components/partials/PreviewToggle.astro

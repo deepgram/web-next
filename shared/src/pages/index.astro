@@ -9,31 +9,49 @@ import LibraryIntro from "../components/partials/LibraryIntro.astro";
 ---
 
 <Layout>
-	<PrimarySection class="pt-10">
-		<h1>Component Library</h1>
+  <PrimarySection class="pt-10">
+    <h1>Component Library</h1>
 
-		<LibraryIntro />
+    <LibraryIntro />
 
-		<ComponentSection title="Blog sections">
-			<ComponentStaticPreview id="blog-card" title="Single blog card" snippet={`<BlogCard 
+    <ComponentSection title="Blog sections">
+      <ComponentStaticPreview
+        id="blog-card"
+        title="Single blog card"
+        snippet={`<BlogCard 
 	title="Test post" 
 	image="//placeimg.com/640/480/any" 
 	tag="Vue" 
 	author="lukeocodes" 
-/>`}>
-				<BlogCard title="Test post" image="//placeimg.com/640/480/any" tag="Vue" author="lukeocodes" />
-			</ComponentStaticPreview>
-		</ComponentSection>
+/>`}
+      >
+        <BlogCard
+          title="Test post"
+          image="//placeimg.com/640/480/any"
+          tag="Vue"
+          author="lukeocodes"
+        />
+      </ComponentStaticPreview>
+    </ComponentSection>
 
-		<ComponentSection title="Blog sections">
-			<ComponentPreview id="blog-card" title="Single blog card" snippet={`<BlogCard 
+    <ComponentSection title="Blog sections">
+      <ComponentPreview
+        id="blog-card"
+        title="Single blog card"
+        snippet={`<BlogCard 
 	title="Test post" 
 	image="//placeimg.com/640/480/any" 
 	tag="Vue" 
 	author="lukeocodes" 
-/>`}>
-				<BlogCard title="Test post" image="//placeimg.com/640/480/any" tag="Vue" author="lukeocodes" />
-			</ComponentPreview>
-		</ComponentSection>
-	</PrimarySection>
+/>`}
+      >
+        <BlogCard
+          title="Test post"
+          image="//placeimg.com/640/480/any"
+          tag="Vue"
+          author="lukeocodes"
+        />
+      </ComponentPreview>
+    </ComponentSection>
+  </PrimarySection>
 </Layout>

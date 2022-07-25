@@ -3,37 +3,38 @@
 @tailwind utilities;
 
 @font-face {
-	font-family: "favorit";
-	src: url("../fonts/ABCFavorit-Bold.woff2");
+  font-family: "favorit";
+  src: url("../fonts/ABCFavorit-Bold.woff2");
 }
 
 /* for the notch */
 html {
-	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right)
+    env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 body {
-	@apply font-inter;
+  @apply font-inter;
 }
 
 .bg-fingerprint {
-	background-image: url("/fingerprint.svg");
-	background-repeat: no-repeat;
-	background-position: right 16rem top;
+  background-image: url("/fingerprint.svg");
+  background-repeat: no-repeat;
+  background-position: right 16rem top;
 }
 
 .bg-starburst {
-	background-image: url("/starburst.svg");
-	background-repeat: no-repeat;
-	background-position: 21rem top;
-	background-size: 42.75rem;
+  background-image: url("/starburst.svg");
+  background-repeat: no-repeat;
+  background-position: 21rem top;
+  background-size: 42.75rem;
 }
 
 .bg-saturn {
-	background-image: url("/saturn.svg");
-	background-repeat: no-repeat;
-	background-position: 22rem top;
-	background-size: 30rem;
+  background-image: url("/saturn.svg");
+  background-repeat: no-repeat;
+  background-position: 22rem top;
+  background-size: 30rem;
 }
 
 /* @media screen and (min-width: 1600px) {
@@ -43,103 +44,103 @@ body {
 } */
 
 @layer base {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply font-favorit;
-		@apply font-bold;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-favorit;
+    @apply font-bold;
+  }
 
-	h1 {
-		@apply text-5xl;
-	}
+  h1 {
+    @apply text-5xl;
+  }
 
-	h2 {
-		@apply text-4xl;
-	}
+  h2 {
+    @apply text-4xl;
+  }
 
-	h3 {
-		@apply text-3xl;
-	}
+  h3 {
+    @apply text-3xl;
+  }
 
-	h4 {
-		@apply text-2xl;
-	}
+  h4 {
+    @apply text-2xl;
+  }
 
-	h5 {
-		@apply text-xl;
-	}
+  h5 {
+    @apply text-xl;
+  }
 
-	h6 {
-		@apply text-lg;
-	}
+  h6 {
+    @apply text-lg;
+  }
 
-	a {
-		@apply text-lightIris;
-	}
+  a {
+    @apply text-lightIris;
+  }
 }
 
 @layer components {
-	.h1-large {
-		@apply text-6xl;
-	}
+  .h1-large {
+    @apply text-6xl;
+  }
 
-	.h1-small {
-		@apply text-5xl;
-	}
+  .h1-small {
+    @apply text-5xl;
+  }
 
-	button.button {
-		@apply -mb-1;
-	}
+  button.button {
+    @apply -mb-1;
+  }
 
-	.button {
-		@apply flex items-center justify-center py-2 px-6 text-base font-bold;
-		height: 3.25rem;
-		width: fit-content;
-	}
+  .button {
+    @apply flex items-center justify-center py-2 px-6 text-base font-bold;
+    height: 3.25rem;
+    width: fit-content;
+  }
 
-	.button--small {
-		@apply py-2 px-4;
-		height: 2.375rem;
-	}
+  .button--small {
+    @apply py-2 px-4;
+    height: 2.375rem;
+  }
 
-	.button--big {
-		height: 4.125rem;
-	}
+  .button--big {
+    height: 4.125rem;
+  }
 
-	.button--block {
-		@apply w-full;
-	}
+  .button--block {
+    @apply w-full;
+  }
 
-	.button--primary {
-		@apply bg-meadow text-darkCharcoal;
-	}
+  .button--primary {
+    @apply bg-meadow text-darkCharcoal;
+  }
 
-	.button--secondary {
-		@apply bg-rock text-meadow;
-	}
+  .button--secondary {
+    @apply bg-rock text-meadow;
+  }
 
-	.button--tertiary {
-		@apply text-darkCharcoal bg-white;
-	}
+  .button--tertiary {
+    @apply text-darkCharcoal bg-white;
+  }
 
-	.button--quaternary {
-		@apply text-lightIris bg-black;
-	}
+  .button--quaternary {
+    @apply text-lightIris bg-black;
+  }
 
-	.hyperlink {
-		@apply text-lightIris;
-		@apply text-lg;
-		@apply font-black;
-	}
+  .hyperlink {
+    @apply text-lightIris;
+    @apply text-lg;
+    @apply font-black;
+  }
 }
 
 @layer utilities {
-	.bg-blur {
-		-webkit-backdrop-filter: blur(10px);
-		backdrop-filter: blur(10px);
-	}
+  .bg-blur {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 }
