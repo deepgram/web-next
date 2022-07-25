@@ -1,0 +1,48 @@
+---
+import BlogCard from "../shared/components/cards/BlogCard.astro";
+import BlogCardLarge from "../shared/components/cards/BlogCardLarge.astro";
+import BlogCardList from "../shared/components/lists/BlogCardList.astro";
+import BlogCardSmall from "../shared/components/cards/BlogCardSmall.astro";
+import ComponentPreview from "../components/partials/ComponentPreview.astro";
+import ComponentSection from "../components/partials/ComponentSection.astro";
+import Layout from "../layouts/Default.astro";
+import LinkCardListTitle from "../shared/components/titles/LinkCardListTitle.astro";
+import NoLinkCardListTitle from "../shared/components/titles/NoLinkCardListTitle.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
+---
+
+<Layout>
+	<PrimarySection class="pt-10">
+		<h1>Marketing Components</h1>
+
+		<a href="/">Back</a>
+
+		<ComponentSection title="Quotes and Testimonials">
+			<ComponentPreview id="quote-amplify" title="Amplify Quote" snippet={`<AmplifyQuote>
+	<h1>Ready to see Deepgram in Action?</h1>
+	<p>Get your API key and unlock $150 in free credit.</p>
+	<a href="https://console.deepgram.com/signup">Start Free</a>
+</AmplifyQuote>`}>
+				<AmplifyQuote>
+					<h1>Ready to see Deepgram in Action?</h1>
+					<p>Get your API key and unlock $150 in free credit.</p>
+					<a href="https://console.deepgram.com/signup">Start Free</a>
+				</AmplifyQuote>
+
+			</ComponentPreview>
+			<ComponentPreview id="quote-amplify-dark" title="Amplify Quote (dark)" snippet={`<AmplifyQuote>
+	<h1>Ready to see Deepgram in Action?</h1>
+	<p>Get your API key and unlock $150 in free credit.</p>
+	<a href="https://console.deepgram.com/signup">Start Free</a>
+</AmplifyQuote>`}>
+				<AmplifyQuote class="bg-black text-white">
+					<h1>Ready to see Deepgram in Action?</h1>
+					<p>Get your API key and unlock $150 in free credit.</p>
+					<a href="https://console.deepgram.com/signup">Start Free</a>
+				</AmplifyQuote>
+			</ComponentPreview>
+		</ComponentSection>
+
+	</PrimarySection>
+</Layout>
