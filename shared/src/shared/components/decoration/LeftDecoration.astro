@@ -1,0 +1,9 @@
+---
+// TODO: rename to LeftDecoration, accept SVG name as property (to switch type of decoration used)
+
+import Svg from "../general/Svg.astro";
+
+const { class: classes, icon } = Astro.props;
+---
+
+<Svg name={icon} class={`ml-[20%] mr-auto ${classes ? classes : ''}`} />

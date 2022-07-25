@@ -2,6 +2,8 @@
 import Footer from "../shared/components/layout/Footer.astro";
 import Header from "../shared/components/layout/Header.astro";
 import "../shared/assets/styles/main.css";
+
+const { class: classes } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -112,7 +114,7 @@ import "../shared/assets/styles/main.css";
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main class={classes}>
 			<slot></slot>
 		</main>
 		<Footer />
