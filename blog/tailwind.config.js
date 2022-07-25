@@ -1,5 +1,8 @@
-export default {
-  content: ["./public/**/*.html", "./src/**/*.astro", "./src/**/*.vue"],
+module.exports = {
+  content: [
+    "./src/{components,layouts,pages}/**/*.{vue,astro,html,js}",
+    "./src/shared/{components,layouts,pages}/**/*.{vue,astro,html,js}",
+  ],
   theme: {
     extend: {
       fontFamily: {
