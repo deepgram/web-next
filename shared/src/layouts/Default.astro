@@ -8,120 +8,144 @@ const { class: classes } = Astro.props;
 
 <!DOCTYPE html>
 <html class="no-js" lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="HandheldFriendly" content="True" />
-		<meta name="MobileOptimized" content="480" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-		<!-- scripts -->
-		<script src="//unpkg.com/alpinejs" defer is:inline>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="480" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <!-- scripts -->
+    <script src="//unpkg.com/alpinejs" defer is:inline>
 
-		</script>
-		<script src="//unpkg.com/interactjs" defer is:inline>
+    </script>
+    <script src="//unpkg.com/interactjs" defer is:inline>
 
-		</script>
-		<script type="module">
-			interact(".resize-x")
-				.resizable({
-					// resize from all edges and corners
-					edges: { right: true },
+    </script>
+    <script type="module">
+      interact(".resize-x")
+        .resizable({
+          // resize from all edges and corners
+          edges: { right: true },
 
-					listeners: {
-						move(event) {
-							var target = event.target;
-							var x = parseFloat(target.getAttribute("data-x")) || 0;
+          listeners: {
+            move(event) {
+              var target = event.target;
+              var x = parseFloat(target.getAttribute("data-x")) || 0;
 
-							// update the element's style
-							target.style.width = event.rect.width + "px";
+              // update the element's style
+              target.style.width = event.rect.width + "px";
 
-							// translate when resizing from top or left edges
-							x += event.deltaRect.left;
+              // translate when resizing from top or left edges
+              x += event.deltaRect.left;
 
-							target.setAttribute("data-x", x);
-						},
-					},
-					modifiers: [
-						// keep the edges inside the parent
-						interact.modifiers.restrictEdges({
-							outer: "parent",
-						}),
+              target.setAttribute("data-x", x);
+            },
+          },
+          modifiers: [
+            // keep the edges inside the parent
+            interact.modifiers.restrictEdges({
+              outer: "parent",
+            }),
 
-						// minimum size
-						interact.modifiers.restrictSize({
-							min: { width: 320, height: 300 },
-						}),
-					],
+            // minimum size
+            interact.modifiers.restrictSize({
+              min: { width: 320, height: 300 },
+            }),
+          ],
 
-					inertia: true,
-				})
-				.draggable({
-					listeners: { move: window.dragMoveListener },
-					inertia: true,
-					modifiers: [
-						interact.modifiers.restrictRect({
-							restriction: "parent",
-							endOnly: true,
-						}),
-					],
-				});
-		</script>
-		<script type="module">
-			var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-			var eventer = window[eventMethod];
+          inertia: true,
+        })
+        .draggable({
+          listeners: { move: window.dragMoveListener },
+          inertia: true,
+          modifiers: [
+            interact.modifiers.restrictRect({
+              restriction: "parent",
+              endOnly: true,
+            }),
+          ],
+        });
+    </script>
+    <script type="module">
+      var eventMethod = window.addEventListener
+        ? "addEventListener"
+        : "attachEvent";
+      var eventer = window[eventMethod];
 
-			eventer("DOMContentLoaded", function(e) {
-				const inputs=document.querySelectorAll('input[data-onload]');
-				[...inputs].forEach(input => eval(input.getAttribute('data-onload')))
-			}, false);
+      eventer(
+        "DOMContentLoaded",
+        function (e) {
+          const inputs = document.querySelectorAll("input[data-onload]");
+          [...inputs].forEach((input) =>
+            eval(input.getAttribute("data-onload"))
+          );
+        },
+        false
+      );
 
-			const messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-			eventer(messageEvent, function(e) {
-					const key = e.message ? "message" : "data";
-					const data = e[key];
+      const messageEvent =
+        eventMethod == "attachEvent" ? "onmessage" : "message";
+      eventer(
+        messageEvent,
+        function (e) {
+          const key = e.message ? "message" : "data";
+          const data = e[key];
 
-					if (data.type === "BODY_HEIGHT") {
-						const iframe = document.getElementById(data.name);
-						iframe.style.height = `${data.height+50}px`;
-					}
-			}, false);
+          if (data.type === "BODY_HEIGHT") {
+            const iframe = document.getElementById(data.name);
+            iframe.style.height = `${data.height + 50}px`;
+          }
+        },
+        false
+      );
 
-			function writeIframe(id) {
-				// input contains the raw render of the component
-				const input = document.getElementById(`input-${id}`);
+      function writeIframe(id) {
+        // input contains the raw render of the component
+        const input = document.getElementById(`input-${id}`);
 
-				// get the styles ONLY from the parent page head
-				const styles = document.getElementsByTagName("head")[0].querySelectorAll('style');
-				const styleMap = Array.from(styles).map(style => style.outerHTML);
+        // get the styles ONLY from the parent page head
+        const styles = document
+          .getElementsByTagName("head")[0]
+          .querySelectorAll("style");
+        const styleMap = Array.from(styles).map((style) => style.outerHTML);
 
-				const links = document.getElementsByTagName("head")[0].querySelectorAll('link[rel=stylesheet]');
-				const linkMap = Array.from(links).map(link => link.outerHTML);
+        const links = document
+          .getElementsByTagName("head")[0]
+          .querySelectorAll("link[rel=stylesheet]");
+        const linkMap = Array.from(links).map((link) => link.outerHTML);
 
-				// create the source for the iframe
-				const source = `<!DOCTYPE html><html><head><script src="/iframe.js" defer><\/script>${styleMap.join('')}${linkMap.join('')}</head><body class="p-5 flex">${input.value}</body></html>`;
+        // create the source for the iframe
+        const source = `<!DOCTYPE html><html><head><script src="/iframe.js" defer><\/script>${styleMap.join(
+          ""
+        )}${linkMap.join("")}</head><body class="p-5 flex">${
+          input.value
+        }</body></html>`;
 
-				// create an iframe DOM element and apply the source to srcdoc
-				var iframe = document.createElement("iframe");
-				iframe.setAttribute('name', id);
-				iframe.setAttribute('id', id);
-				iframe.classList.add("w-full", "border", "rounded-lg");
-				iframe.srcdoc = source;
+        // create an iframe DOM element and apply the source to srcdoc
+        var iframe = document.createElement("iframe");
+        iframe.setAttribute("name", id);
+        iframe.setAttribute("id", id);
+        iframe.classList.add("w-full", "border", "rounded-lg");
+        iframe.srcdoc = source;
 
-				// append the iframe to the iframe container
-				const container = document.getElementById(`container-${id}`);
-				container.appendChild(iframe);
-			}
-		</script>
-	</head>
-	<body>
-		<Header />
-		<main class={classes}>
-			<slot></slot>
-		</main>
-		<Footer />
-		<style>
-			main {
-				@apply pt-16; /* height of the menu at 16px text-size: 64px, 4rem, or tailwind h-16 */
-			}
-		</style>
-	</body>
+        // append the iframe to the iframe container
+        const container = document.getElementById(`container-${id}`);
+        container.appendChild(iframe);
+      }
+    </script>
+  </head>
+  <body>
+    <Header />
+    <main class={classes}>
+      <slot />
+    </main>
+    <Footer />
+    <style>
+      main {
+        @apply pt-16; /* height of the menu at 16px text-size: 64px, 4rem, or tailwind h-16 */
+      }
+    </style>
+  </body>
 </html>

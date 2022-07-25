@@ -5,46 +5,46 @@ const { body, cta, image, linkText } = Astro.props;
 ---
 
 <section>
-	<div class="max-w-screen-2xl mx-auto mt-48">
-		<div class="flex flex-col items-center pt-16 lg:pt-0">
-			<div class="flex flex-col-reverse	items-center lg:flex-row">
-				<div class="flex flex-col w-full lg:w-6/12 pr-24">
-					<h3>{cta}</h3>
-					<p>{body}</p>
-					{linkText && linkText.length > 0 ? (
-						<div class="mt-6 mb-10">
-							<Hyperlink icon="arrowright" href="">
-								{linkText}
-							</Hyperlink>
-						</div>
-					) : null}
-				</div>
-				<div class="w-10/12 lg:w-6/12 mb-12 lg:mb-0">
-					<img src={`src/assets/images/${image}`} />
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="max-w-screen-2xl mx-auto mt-48">
+    <div class="flex flex-col items-center pt-16 lg:pt-0">
+      <div class="flex flex-col-reverse	items-center lg:flex-row">
+        <div class="flex flex-col w-full lg:w-6/12 pr-24">
+          <h3>{cta}</h3>
+          <p>{body}</p>
+          {linkText && linkText.length > 0 ? (
+            <div class="mt-6 mb-10">
+              <Hyperlink icon="arrowright" href="">
+                {linkText}
+              </Hyperlink>
+            </div>
+          ) : null}
+        </div>
+        <div class="w-10/12 lg:w-6/12 mb-12 lg:mb-0">
+          <img src={`src/assets/images/${image}`} />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
-	section {
-		@apply px-8 md:px-16 lg:px-10 xl:px-36;
-		/* @apply pb-24; */
-	}
+  section {
+    @apply px-8 md:px-16 lg:px-10 xl:px-36;
+    /* @apply pb-24; */
+  }
 
-	h2 {
-		@apply text-4xl font-bold;
-		@apply mb-24;
-		/* @apply pt-20 lg:pt-0; */
-	}
+  h2 {
+    @apply text-4xl font-bold;
+    @apply mb-24;
+    /* @apply pt-20 lg:pt-0; */
+  }
 
-	h3 {
-		@apply text-2xl font-bold xl:text-3xl;
-		@apply mb-6;
-	}
+  h3 {
+    @apply text-2xl font-bold xl:text-3xl;
+    @apply mb-6;
+  }
 
-	a {
-		@apply mt-6;
-	}
+  a {
+    @apply mt-6;
+  }
 </style>
