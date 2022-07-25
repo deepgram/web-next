@@ -1,5 +1,5 @@
 {
-  "name": "feedback",
+  "name": "hn-jwt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
