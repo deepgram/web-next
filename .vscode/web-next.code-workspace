@@ -24,7 +24,9 @@
   "settings": {
     "files.exclude": {
       "node_modules/": true
-    }
+    },
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "extensions": {
     "recommendations": [
