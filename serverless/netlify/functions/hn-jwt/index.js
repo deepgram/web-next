@@ -1,4 +1,3 @@
-const axios = require('axios')
 const jwt = require('jsonwebtoken')
 
 exports.handler = async function (event, context) {
