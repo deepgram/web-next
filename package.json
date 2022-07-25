@@ -1,0 +1,16 @@
+{
+  "name": "@deepgram-web/root",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "^v18.6.0",
+    "yarn": "^1.22.0"
+  },
+  "scripts": {
+    "lint": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.1.2"
+  }
+}
