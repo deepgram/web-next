@@ -1,5 +1,5 @@
 {
-  "name": "contact-consent",
+  "name": "serverless",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.0",
-    "jsonwebtoken": "^8.5.1"
+    "axios": "^0.27.2",
+    "jsonwebtoken": "^8.5.1",
+    "@deepgram/sdk": "^1.2.2",
+    "dotenv": "^16.0.0",
+    "@jlengstorf/get-twitch-oauth": "^1.0.1"
   }
 }
