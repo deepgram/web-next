@@ -1,19 +1,18 @@
 ---
-const { langs, ...rest } = Astro.props
+const { tabs, default: defaultLang, ...rest } = Astro.props
 
 ---
-
-<div class="code-group" {...rest}>
+<div class="code-group" x-data={`{ lang: '${defaultLang}' }`} {...rest}>
   <header>
     <span class="text-sm tracking-wide">Title</span>
-    <select x-show={langs && langs.length > 0}  x-on:change="lang = $el.value">
 
-      {langs && langs.map((l:string) => {
-        return  <option id={`install-${l}`}>{l}
-                </option>
-      })}
-
-    </select>
+    {(tabs && tabs.length > 1) && (
+      <select x-on:change="lang = $el.value">
+        {tabs.map((l:string) => {
+          return <option id={`install-${l}`}>{l}</option>
+        })}
+      </select>
+    )}
   </header>
   
   <slot/>

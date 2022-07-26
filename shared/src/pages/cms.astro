@@ -1,0 +1,65 @@
+---
+import ComponentPreview from "../components/partials/ComponentPreview.astro";
+import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
+import ComponentSection from "../components/partials/ComponentSection.astro";
+import Layout from "../layouts/Default.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import CodeGroup from "../shared/components/code/CodeGroup.astro"
+import CodeBlock from "../shared/components/code/CodeBlock.astro"
+import { Code } from 'astro/components';
+---
+
+<Layout>
+	<PrimarySection class="pt-10">
+		<h1>CMS Components</h1>
+		<a href="/">Back</a>
+		
+    <ComponentSection title="Code Components">
+      <ComponentStaticPreview
+        id="code-group"
+        title="Code Group"
+        snippet={`<CodeGroup tabs={['npm', 'yarn', 'pnpm']} default="npm">
+	<CodeBlock tab="yarn">
+      <Code lang="bash" code="yarn"/>
+    </CodeBlock>
+    <CodeBlock tab="npm">
+      <Code lang="bash" code="npm install"/>
+    </CodeBlock>
+    <CodeBlock tab="pnpm">
+      <Code lang="bash" code="pnpm install"/>
+    </CodeBlock>
+  </CodeGroup>`}
+      >
+        <CodeGroup tabs={['npm', 'yarn', 'pnpm']} default="npm">
+			    <CodeBlock tab="yarn">
+				    <Code lang="bash" code="yarn"/>
+			    </CodeBlock>
+			    <CodeBlock tab="npm">
+				    <Code lang="bash" code="npm install"/>
+			    </CodeBlock>
+			    <CodeBlock tab="pnpm">
+				    <Code lang="bash" code="pnpm install"/>
+			    </CodeBlock>
+		    </CodeGroup>
+      </ComponentStaticPreview>
+    </ComponentSection>
+
+    <ComponentSection>
+      <ComponentStaticPreview
+        id="code-group" 
+        title="Code Group without menu"
+        snippet={`<CodeGroup tabs={['npm']} default="npm">
+	<CodeBlock tab="npm">
+		<Code code="npm"/>
+	</CodeBlock>
+</CodeGroup>`}
+      >
+        <CodeGroup tabs={['npm']} default="npm">
+			    <CodeBlock tab="npm">
+				    <Code code="npm"/>
+			    </CodeBlock>
+		    </CodeGroup>
+      </ComponentStaticPreview>
+    </ComponentSection>
+	</PrimarySection>
+</Layout>

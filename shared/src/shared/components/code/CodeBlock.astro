@@ -1,8 +1,8 @@
 ---
-const { lang } = Astro.props
+const { tab } = Astro.props
 ---
 
-<div x-show={`{'hidden':lang !== '${lang}'}`} class={`code-block hidden`} x-bind:class={`{'hidden':lang !== '${lang}', 'block':lang === '${lang}'}`}> 
+<div x-show={`{'hidden':lang !== '${tab}'}`} class={`code-block hidden`} x-bind:class={`{'hidden':lang !== '${tab}', 'block':lang === '${tab}'}`}> 
   <slot/>
 </div>
 
