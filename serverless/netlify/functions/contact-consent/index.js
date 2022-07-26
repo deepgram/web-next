@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {
   } = await axios.put(
     `https://app.hellonext.co/api/v3/feature_requests/${body.postId}`,
     {
-      description: body.description + `<br/><br/><p>Email: ${body.email}</p>`,
+      description: body.description,
     },
     {
       headers: {
