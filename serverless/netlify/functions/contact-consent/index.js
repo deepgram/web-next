@@ -3,11 +3,9 @@ const jwt = require('jsonwebtoken')
 
 exports.handler = async function (event, context) {
   const body = JSON.parse(event.body)
-  console.log("body", body)
   const email = body.email
   const secret = process.env.HELLONEXT_SSO
   const token = jwt.sign({email}, secret, { algorithm: "HS256" })
-  console.log('token', token)
   const {
     data,
   } = await axios.put(
@@ -25,7 +23,6 @@ exports.handler = async function (event, context) {
       }
     }
     )
-    console.log("data", data)
     return {
       statusCode: 200,
     }  
