@@ -3,18 +3,16 @@ const jwt = require('jsonwebtoken')
 
 exports.handler = async function (event, context) {
   const body = JSON.parse(event.body)
-  const email = "devrel@deepgram.com"
+  const email = body.email || "devrel@deepgram.com"
   const secret = process.env.HELLONEXT_SSO
-  const token = jwt.sign({email}, secret, { algorithm: "HS256" })
+  const token = jwt.sign({email, name: body.name}, secret, { algorithm: "HS256" })
   const payload = {
-    title: `Feedback on ${body.page}`,
-    description: body.feedback,
+    title: body.feedback,
+    description: `Submitted from ${body.page}`,
     bucket_id: 10405,
   }
   
-  const {
-    data,
-  } = await axios.post(
+  await axios.post(
     "https://app.hellonext.co/api/v3/feature_requests",
     payload,
     {
@@ -30,6 +28,5 @@ exports.handler = async function (event, context) {
     )
     return {
       statusCode: 200,
-      body: JSON.stringify({postId: data.id})
     }  
 }
