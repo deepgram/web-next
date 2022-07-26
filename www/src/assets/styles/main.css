@@ -7,6 +7,11 @@
   src: url("../fonts/ABCFavorit-Bold.woff2");
 }
 
+@font-face {
+  font-family: "Fira Code";
+  src: url("..fonts/FiraCode-Light.ttf");
+}
+
 /* for the notch */
 html {
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
@@ -15,6 +20,10 @@ html {
 
 body {
   @apply font-inter;
+}
+
+code {
+  @apply font-firaCode;
 }
 
 .bg-fingerprint {
@@ -135,6 +144,10 @@ body {
     @apply text-lightIris;
     @apply text-lg;
     @apply font-black;
+  }
+
+  .astro-code {
+    @apply overflow-hidden py-7 px-10;
   }
 }
 
