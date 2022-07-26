@@ -1,0 +1,9 @@
+---
+const { class: classes } = Astro.props;
+---
+
+<div class={`relative pt-[100%] ${classes ? classes : ""}`}>
+	<div class="absolute inset-0">
+		<slot />
+	</div>
+</div>

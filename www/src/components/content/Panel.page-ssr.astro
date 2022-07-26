@@ -5,7 +5,7 @@ const { align, text, image } = Astro.props;
 ---
 
 <section>
-  {align === "left" && <img src={image} />}
-  <p>{text}</p>
-  {align !== "left" && <img src={image} />}
+	{align === "left" && <img src={image} />}
+	<p>{text}</p>
+	{align !== "left" && <img src={image} />}
 </section>

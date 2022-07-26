@@ -1,0 +1,25 @@
+---
+import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
+import ComponentSection from "../components/partials/ComponentSection.astro";
+import Layout from "../layouts/Default.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
+---
+
+<Layout class="bg-black text-white">
+	<PrimarySection class="pt-10">
+		<h1>Luke's Sandbox</h1>
+
+		<a href="/">Back</a>
+
+		<ComponentSection title="Stuff I am working on">
+			<ComponentStaticPreview id="luke-stuff" title="Luke's current sandbox" snippet={``}>test</ComponentStaticPreview>
+		</ComponentSection>
+	</PrimarySection>
+
+	<AmplifyQuote>
+		<h1>Ready to see Deepgram in Action?</h1>
+		<p>Get your API key and unlock $150 in free credit.</p>
+		<a href="https://console.deepgram.com/signup">Start Free</a>
+	</AmplifyQuote>
+</Layout>

@@ -1,42 +1,23 @@
 ---
-import ComponentPreview from "../components/partials/ComponentPreview.astro";
-import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
-import ComponentSection from "../components/partials/ComponentSection.astro";
+import BlogCardSmall from "../shared/components/cards/BlogCardSmall.astro";
+import BlogCardList from "../shared/components/lists/BlogCardList.astro";
 import Layout from "../layouts/Default.astro";
-import BlogCard from "../shared/components/cards/BlogCard.astro";
-import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import LibraryIntro from "../components/partials/LibraryIntro.astro";
 import CodeGroup from "../shared/components/code/CodeGroup.astro"
 import CodeBlock from "../shared/components/code/CodeBlock.astro"
-
 import { Code } from 'astro/components';
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import ComponentSection from "../components/partials/ComponentSection.astro";
+import ComponentPreview from "../components/partials/ComponentPreview.astro";
+import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
+import NoLinkCardListTitle from "../shared/components/titles/NoLinkCardListTitle.astro";
 ---
 
 <Layout>
-  <PrimarySection class="pt-10">
-    <h1>Component Library</h1>
+	<PrimarySection class="pt-10">
+		<h1>Component Library</h1>
 
-    <LibraryIntro />
-
-    <ComponentSection title="Blog sections">
-      <ComponentStaticPreview
-        id="blog-card"
-        title="Single blog card"
-        snippet={`<BlogCard 
-	title="Test post" 
-	image="//placeimg.com/640/480/any" 
-	tag="Vue" 
-	author="lukeocodes" 
-/>`}
-      >
-        <BlogCard
-          title="Test post"
-          image="//placeimg.com/640/480/any"
-          tag="Vue"
-          author="lukeocodes"
-        />
-      </ComponentStaticPreview>
-    </ComponentSection>
+		<LibraryIntro />
 
     <ComponentSection title="Blog sections">
       <ComponentPreview
@@ -135,5 +116,14 @@ import { Code } from 'astro/components';
 		    </CodeGroup>
       </ComponentStaticPreview>
     </ComponentSection>
-  </PrimarySection>
+		<div class={`w-full py-10`}>
+			<div class="relative mx-auto">
+				<NoLinkCardListTitle slot="title" title="Component Sections" />
+				<div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-6 md:gap-8 lg:gap-10">
+					<BlogCardSmall href="/blog" title="Blog Components" image="//placeimg.com/1200/627/blog" />
+					<BlogCardSmall href="/marketing" title="Marketing Components" image="//placeimg.com/1200/627/marketing" />
+				</div>
+			</div>
+		</div>
+	</PrimarySection>
 </Layout>

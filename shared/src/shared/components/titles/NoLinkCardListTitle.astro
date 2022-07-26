@@ -1,0 +1,7 @@
+---
+const { title, class: classes, ...rest } = Astro.props;
+---
+
+<div {...rest} class={`flex flex-col md:flex-row items-start md:items-end justify-between pb-6 md:pb-8 lg:pb-10 ${classes ? classes : ""}`}>
+	<h3>{title}</h3>
+</div>
