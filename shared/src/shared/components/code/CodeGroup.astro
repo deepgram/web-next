@@ -1,10 +1,10 @@
 ---
-const { tabs, default: defaultLang, ...rest } = Astro.props
+const { tabs, title, default: defaultLang, ...rest } = Astro.props
 
 ---
 <div class="code-group" x-data={`{ lang: '${defaultLang}' }`} {...rest}>
   <header>
-    <span class="text-sm tracking-wide">Title</span>
+    <span class="text-sm tracking-wide">{title}</span>
 
     {(tabs && tabs.length > 1) && (
       <select x-on:change="lang = $el.value">

@@ -18,7 +18,7 @@ import { Code } from 'astro/components';
       <ComponentStaticPreview
         id="code-group"
         title="Code Group"
-        snippet={`<CodeGroup tabs={['npm', 'yarn', 'pnpm']} default="npm">
+        snippet={`<CodeGroup title="title" tabs={['npm', 'yarn', 'pnpm']} default="npm">
 	<CodeBlock tab="yarn">
       <Code lang="bash" code="yarn"/>
     </CodeBlock>
@@ -30,7 +30,7 @@ import { Code } from 'astro/components';
     </CodeBlock>
   </CodeGroup>`}
       >
-        <CodeGroup tabs={['npm', 'yarn', 'pnpm']} default="npm">
+        <CodeGroup title="title" tabs={['npm', 'yarn', 'pnpm']} default="npm">
 			    <CodeBlock tab="yarn">
 				    <Code lang="bash" code="yarn"/>
 			    </CodeBlock>
@@ -48,13 +48,13 @@ import { Code } from 'astro/components';
       <ComponentStaticPreview
         id="code-group" 
         title="Code Group without menu"
-        snippet={`<CodeGroup tabs={['npm']} default="npm">
+        snippet={`<CodeGroup title="title" tabs={['npm']} default="npm">
 	<CodeBlock tab="npm">
 		<Code code="npm"/>
 	</CodeBlock>
 </CodeGroup>`}
       >
-        <CodeGroup tabs={['npm']} default="npm">
+        <CodeGroup title="title goes here" tabs={['npm']} default="npm">
 			    <CodeBlock tab="npm">
 				    <Code code="npm"/>
 			    </CodeBlock>
