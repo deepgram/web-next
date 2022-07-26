@@ -1,0 +1,41 @@
+---
+const { langs, ...rest } = Astro.props
+
+---
+
+<div class="code-group" {...rest}>
+  <header>
+    <span class="text-sm tracking-wide">Title</span>
+    <select x-show={langs && langs.length > 0}  x-on:change="lang = $el.value">
+
+      {langs && langs.map((l:string) => {
+        return  <option id={`install-${l}`}>{l}
+                </option>
+      })}
+
+    </select>
+  </header>
+  
+  <slot/>
+    
+</div>
+
+<style scoped>
+
+  .code-group {
+    @apply w-full;
+  }
+
+  header {
+      @apply flex justify-between;
+      @apply px-3 py-2;
+      @apply rounded-t-sm;
+      @apply bg-steel;
+      @apply text-white text-sm font-inter uppercase font-bold;
+  }
+
+  select {
+    @apply bg-steel border-none outline-none rounded-none;
+    @apply mr-4;
+  }
+</style>

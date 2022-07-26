@@ -1,0 +1,13 @@
+---
+const { lang } = Astro.props
+---
+
+<div x-show={`{'hidden':lang !== '${lang}'}`} class={`code-block hidden`} x-bind:class={`{'hidden':lang !== '${lang}', 'block':lang === '${lang}'}`}> 
+  <slot/>
+</div>
+
+<style>
+  .code-block :global(.astro-code) {
+    @apply border-ink rounded-t-none rounded-b-sm;
+  }
+</style>

@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         favorit: ["favorit", "sans-serif"],
         inter: ["inter", "sans-serif"],
+        firaCode: ["firaCode", "monospace"]
       },
       lineHeight: {
         11: "2.75rem",

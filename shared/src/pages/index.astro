@@ -6,6 +6,10 @@ import Layout from "../layouts/Default.astro";
 import BlogCard from "../shared/components/cards/BlogCard.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import LibraryIntro from "../components/partials/LibraryIntro.astro";
+import CodeGroup from "../shared/components/code/CodeGroup.astro"
+import CodeBlock from "../shared/components/code/CodeBlock.astro"
+
+import { Code } from 'astro/components';
 ---
 
 <Layout>
@@ -39,11 +43,11 @@ import LibraryIntro from "../components/partials/LibraryIntro.astro";
         id="blog-card"
         title="Single blog card"
         snippet={`<BlogCard 
-	title="Test post" 
-	image="//placeimg.com/640/480/any" 
-	tag="Vue" 
-	author="lukeocodes" 
-/>`}
+	      title="Test post" 
+	      image="//placeimg.com/640/480/any" 
+	      tag="Vue" 
+	      author="lukeocodes" 
+        />`}
       >
         <BlogCard
           title="Test post"
@@ -52,6 +56,84 @@ import LibraryIntro from "../components/partials/LibraryIntro.astro";
           author="lukeocodes"
         />
       </ComponentPreview>
+    </ComponentSection>
+    
+    <ComponentSection title="Code sections">
+      <ComponentStaticPreview
+        id="code-group"
+        title="Code Group"
+        snippet={`<CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
+  <CodeBlock lang="yarn"  >
+    <Code lang="bash" code="yarn "/>
+  </CodeBlock>
+  <CodeBlock lang="npm">
+    <Code lang="bash" code="npm install"/>
+  </CodeBlock>
+  <CodeBlock lang="pnpm">
+    <Code lang="bash" code="pnpm install"/>
+  </CodeBlock>
+  </CodeGroup>`}
+      >
+        <CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
+			    <CodeBlock lang="yarn"  >
+				    <Code lang="bash" code="yarn "/>
+			    </CodeBlock>
+			    <CodeBlock lang="npm">
+				    <Code lang="bash" code="npm install"/>
+			    </CodeBlock>
+			    <CodeBlock lang="pnpm">
+				    <Code lang="bash" code="pnpm install"/>
+			    </CodeBlock>
+		    </CodeGroup>
+      </ComponentStaticPreview>
+    </ComponentSection>
+    
+    <ComponentSection>
+      <ComponentPreview
+        id="code-group"
+        title="Code Group"
+        snippet={`<CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
+  <CodeBlock lang="yarn"  >
+    <Code lang="bash" code="yarn "/>
+  </CodeBlock>
+  <CodeBlock lang="npm">
+    <Code lang="bash" code="npm install"/>
+  </CodeBlock>
+  <CodeBlock lang="pnpm">
+    <Code lang="bash" code="pnpm install"/>
+  </CodeBlock>
+  </CodeGroup>`}
+      >
+        <CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
+			    <CodeBlock lang="yarn"  >
+				    <Code lang="bash" code="yarn "/>
+			    </CodeBlock>
+			    <CodeBlock lang="npm">
+				    <Code lang="bash" code="npm install"/>
+			    </CodeBlock>
+			    <CodeBlock lang="pnpm">
+				    <Code lang="bash" code="pnpm install"/>
+			    </CodeBlock>
+		    </CodeGroup>
+      </ComponentPreview>
+    </ComponentSection>
+
+    <ComponentSection>
+      <ComponentStaticPreview
+        id="code-group"
+        title="Code Block without menu"
+        snippet={`<CodeGroup>
+			    <CodeBlock  >
+				    <Code code="yarn"/>
+			    </CodeBlock>
+		    </CodeGroup>`}
+      >
+        <CodeGroup>
+			    <CodeBlock lang="yarn">
+				    <Code code="yarn"/>
+			    </CodeBlock>
+		    </CodeGroup>
+      </ComponentStaticPreview>
     </ComponentSection>
   </PrimarySection>
 </Layout>
