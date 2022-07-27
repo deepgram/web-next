@@ -1,0 +1,27 @@
+name: "www Actions"
+
+on:
+  push:
+    paths:
+    - 'www'
+  pull_request:
+    paths: 
+    - 'www'
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: install
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: install
+        working-directory: ./www
+      - uses: borales/actions-yarn@v3.0.0
+        with:
+          cmd: lint
+        working-directory: ./www

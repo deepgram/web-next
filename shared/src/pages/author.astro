@@ -1,0 +1,48 @@
+---
+import AuthorCard from "../shared/components/cards/AuthorCard.astro";
+import AuthorCardList from "../shared/components/lists/AuthorCardList.astro";
+import ComponentPreview from "../components/partials/ComponentPreview.astro";
+import ComponentSection from "../components/partials/ComponentSection.astro";
+import Layout from "../layouts/Default.astro";
+import NoLinkCardListTitle from "../shared/components/titles/NoLinkCardListTitle.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+---
+
+<Layout>
+	<PrimarySection class="pt-10">
+		<h1>Author Components</h1>
+
+		<a href="/">Back</a>
+
+		<ComponentSection title="Author lists">
+			<ComponentPreview
+				id="author-card-list"
+				title="Author card list w/ title"
+				snippet={`<AuthorCardList>
+	<NoLinkCardListTitle title="Deepgram team" slot="title" /> <!-- slot="title" is important -->
+	... author cards 
+</AuthorCardList>`}
+			>
+				<AuthorCardList>
+					<NoLinkCardListTitle title="Deepgram team" slot="title" />
+					<AuthorCard title="Bekah Hawrot Weigel" jobtitle="Senior Developer Experience Engineer" image="https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512" />
+					<AuthorCard title="Luke Oliff" jobtitle="Developer Advocate" image="https://ca.slack-edge.com/T0LL805A9-U02GEHFJ8MR-3029c93a71ed-512" />
+					<AuthorCard title="Michael Jolley" jobtitle="Technical Community Builder" image="https://ca.slack-edge.com/T0LL805A9-U01U92M6U3B-7febdc3d4942-512" />
+					<AuthorCard title="Bekah Hawrot Weigel" jobtitle="Senior Developer Experience Engineer" image="https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512" />
+					<AuthorCard title="Luke Oliff" jobtitle="Developer Advocate" image="https://ca.slack-edge.com/T0LL805A9-U02GEHFJ8MR-3029c93a71ed-512" />
+					<AuthorCard title="Michael Jolley" jobtitle="Technical Community Builder" image="https://ca.slack-edge.com/T0LL805A9-U01U92M6U3B-7febdc3d4942-512" />
+				</AuthorCardList>
+			</ComponentPreview>
+		</ComponentSection>
+
+		<ComponentSection title="Authors cards">
+			<ComponentPreview
+				id="author-card"
+				title="Author card"
+				snippet={`<AuthorCard title="Bekah Hawrot Weigel" jobtitle="Senior Developer Experience Engineer" image="https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512" />`}
+			>
+				<AuthorCard title="Bekah Hawrot Weigel" jobtitle="Senior Developer Experience Engineer" image="https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512" />
+			</ComponentPreview>
+		</ComponentSection>
+	</PrimarySection>
+</Layout>
