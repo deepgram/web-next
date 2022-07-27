@@ -1,10 +1,10 @@
 ---
-import GenericCard from "./GenericCard.astro";
+import GenericBlogCard from "./GenericBlogCard.astro";
 
 const { class: classes, title, tags, author, image, ...rest } = Astro.props;
 ---
 
-<GenericCard class={`w-full max-w-[21rem] ${classes ? classes : ""}`} {...rest}>
+<GenericBlogCard class={`w-full max-w-[21rem] ${classes ? classes : ""}`} {...rest}>
 	<div class="flex">
 		<div class="flex grow flex-col justify-between text-black p-2">
 			<h5 class="text-lg leading-5">{title}</h5>
@@ -20,4 +20,4 @@ const { class: classes, title, tags, author, image, ...rest } = Astro.props;
 			<img class="h-[5rem] object-cover" src={image} alt={`Blog title image for the blog post: ${title}`} />
 		</div>
 	</div>
-</GenericCard>
+</GenericBlogCard>

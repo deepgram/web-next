@@ -1,11 +1,11 @@
 ---
-import GenericCard from "./GenericCard.astro";
+import GenericBlogCard from "./GenericBlogCard.astro";
 import ACube from "../partials/ACube.astro";
 
 const { class: classes, title, description, tags, author, image, ...rest } = Astro.props;
 ---
 
-<GenericCard class={`w-full max-w-[48rem] ${classes ? classes : ""}`} {...rest}>
+<GenericBlogCard class={`w-full max-w-[48rem] ${classes ? classes : ""}`} {...rest}>
 	<ACube class="w-full">
 		<div class="grid grid-rows-2 h-full">
 			<div class="overflow-hidden flex place-content-center">
@@ -31,4 +31,4 @@ const { class: classes, title, description, tags, author, image, ...rest } = Ast
 			</div>
 		</div>
 	</ACube>
-</GenericCard>
+</GenericBlogCard>
