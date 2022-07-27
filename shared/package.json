@@ -10,7 +10,8 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "lint": "cd .. && ./node_modules/.bin/prettier --check ./shared"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.1",

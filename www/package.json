@@ -20,7 +20,8 @@
     "content:clean": "rm -rf ./src/content",
     "shared:symlink": "ln -s ../../shared/src/shared/ ./src/shared",
     "shared:copy": "cp -r ../shared/src/shared/ ./src/shared/",
-    "shared:clean": "rm -rf ./src/shared"
+    "shared:clean": "rm -rf ./src/shared",
+    "lint": "cd .. && ./node_modules/.bin/prettier --check ./www"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.1",
