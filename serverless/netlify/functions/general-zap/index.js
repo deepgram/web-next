@@ -1,11 +1,13 @@
 const axios = require('axios')
 
 exports.handler = async function (event, context) {
-  const hookUrl = process.env.THUMBS_HOOK_URL
+  const body = JSON.parse(event.body)
+  const hookId = body.hookId
+  const url = `${process.env.ZAP_HOOK_URL}${hookId}`
   const {
     data: { data: streams },
   } = await axios.post(
-    hookUrl,
+    url,
     event.body
     
   )
