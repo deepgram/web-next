@@ -3,10 +3,10 @@ name: "www Actions"
 on:
   push:
     paths:
-    - './www'
+    - 'www'
   pull_request:
     paths: 
-    - './www'
+    - 'www'
 
 jobs:
   lint:
