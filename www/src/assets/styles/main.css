@@ -8,8 +8,8 @@
 }
 
 @font-face {
-  font-family: "Fira Code";
-  src: url("..fonts/FiraCode-Light.ttf");
+	font-family: "Fira Code";
+	src: url("..fonts/FiraCode-Light.ttf");
 }
 
 /* for the notch */
@@ -22,7 +22,7 @@ body {
 }
 
 code {
-  @apply font-firaCode;
+	@apply font-firaCode;
 }
 
 .bg-fingerprint {
@@ -92,62 +92,62 @@ code {
 }
 
 @layer components {
-  .h1-large {
-    @apply text-6xl;
-  }
+	.h1-large {
+		@apply text-6xl;
+	}
 
-  .h1-small {
-    @apply text-5xl;
-  }
+	.h1-small {
+		@apply text-5xl;
+	}
 
-  button.button {
-    @apply -mb-1;
-  }
+	button.button {
+		@apply -mb-1;
+	}
 
-  .button {
-    @apply flex items-center justify-center py-2 px-6 text-base font-bold;
-    height: 3.25rem;
-    width: fit-content;
-  }
+	.button {
+		@apply flex items-center justify-center py-2 px-6 text-base font-bold;
+		height: 3.25rem;
+		width: fit-content;
+	}
 
-  .button--small {
-    @apply py-2 px-4;
-    height: 2.375rem;
-  }
+	.button--small {
+		@apply py-2 px-4;
+		height: 2.375rem;
+	}
 
-  .button--big {
-    height: 4.125rem;
-  }
+	.button--big {
+		height: 4.125rem;
+	}
 
-  .button--block {
-    @apply w-full;
-  }
+	.button--block {
+		@apply w-full;
+	}
 
-  .button--primary {
-    @apply bg-meadow text-darkCharcoal;
-  }
+	.button--primary {
+		@apply bg-meadow text-darkCharcoal;
+	}
 
-  .button--secondary {
-    @apply bg-rock text-meadow;
-  }
+	.button--secondary {
+		@apply bg-rock text-meadow;
+	}
 
-  .button--tertiary {
-    @apply text-darkCharcoal bg-white;
-  }
+	.button--tertiary {
+		@apply text-darkCharcoal bg-white;
+	}
 
-  .button--quaternary {
-    @apply text-lightIris bg-black;
-  }
+	.button--quaternary {
+		@apply text-lightIris bg-black;
+	}
 
-  .hyperlink {
-    @apply text-lightIris;
-    @apply text-lg;
-    @apply font-black;
-  }
+	.hyperlink {
+		@apply text-lightIris;
+		@apply text-lg;
+		@apply font-black;
+	}
 
-  .astro-code {
-    @apply overflow-hidden py-7 px-10;
-  }
+	.astro-code {
+		@apply overflow-hidden py-7 px-10;
+	}
 }
 
 @layer utilities {
