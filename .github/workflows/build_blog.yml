@@ -1,4 +1,4 @@
-name: "Blog: Continuous Integration"
+name: "Blog: CI/CD"
 
 on:
   workflow_dispatch:
