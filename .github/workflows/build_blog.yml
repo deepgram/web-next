@@ -1,21 +1,23 @@
-name: "WWW: Continuous Deployment"
+name: "Blog: Continuous Integration"
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths: 
-    - 'www/**'
+    - 'blog/**'
     - 'content/**'
+    - 'shared/**'
   pull_request:
     branches: [main]
     paths: 
-    - 'www/**'
+    - 'blog/**'
     - 'content/**'
+    - 'shared/**'
     
 jobs:
-  www:
-    name: Deploy WWW
+  blog:
+    name: Build Blog
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,16 +26,16 @@ jobs:
           node-version: "18.x"
       - name: Install Dependencies
         run: |
-          cd ./www
+          cd ./blog
           yarn install
       - name: Build
         run: |
-          cd ./www
+          cd ./blog
           yarn build
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './www/dist'
+          publish-dir: './blog/dist'
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
@@ -43,5 +45,5 @@ jobs:
           production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_WWW }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
         timeout-minutes: 1
