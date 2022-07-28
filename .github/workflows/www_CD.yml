@@ -14,8 +14,8 @@ on:
     - 'content/**'
     
 jobs:
-  blog:
-    name: Deploy Blog
+  www:
+    name: Deploy WWW
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
