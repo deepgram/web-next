@@ -6,7 +6,7 @@ export async function getStaticPaths() {
 	const cwd = process.cwd();
 	const contentPath = `${cwd}/src/content/pages`;
 
-	const allPages = await Astro.glob(`/src/content/pages/**/*.md`);
+	const allPages = await Astro.glob("/src/content/pages/**/*.md");
 
 	return allPages.map((page) => {
 		const fileInfo = path.parse(page.file);
