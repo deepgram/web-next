@@ -5,13 +5,13 @@ on:
   push:
     branches: [main]
     paths: 
-    - 'www'
-    - 'content'
+    - 'www/**'
+    - 'content/**'
   pull_request:
     branches: [main]
     paths: 
-    - 'www'
-    - 'content'
+    - 'www/**'
+    - 'content/**'
     
 jobs:
   www:
