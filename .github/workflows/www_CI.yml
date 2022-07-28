@@ -1,4 +1,4 @@
-name: 'WWW: Continuous Integration'
+name: WWW - Continuous Integration
 
 on:
   workflow_dispatch:
