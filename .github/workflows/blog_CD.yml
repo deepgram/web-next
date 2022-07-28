@@ -1,0 +1,47 @@
+name: "Blog: Continuous Deployment"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: 
+    - 'blog/**'
+    - 'content/**'
+  pull_request:
+    branches: [main]
+    paths: 
+    - 'blog/**'
+    - 'content/**'
+    
+jobs:
+  blog:
+    name: Deploy Blog
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+      - name: Install Dependencies
+        run: |
+          cd ./blog
+          yarn install
+      - name: Build
+        run: |
+          cd ./blog
+          yarn build
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: './blog/dist'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+          production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
+        timeout-minutes: 1
