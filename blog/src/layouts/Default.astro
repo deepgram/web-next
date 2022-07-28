@@ -5,15 +5,19 @@ import "../shared/assets/styles/main.css";
 ---
 
 <html class="no-js" lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-	</head>
-	<body>
-		<Header />
-		<main class="bg-black text-white">
-			<slot />
-		</main>
-		<Footer />
-	</body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <script src="//unpkg.com/alpinejs" defer is:inline></script>
+</head>
+
+<body>
+  <Header />
+  <main class="bg-black text-white">
+    <slot />
+  </main>
+  <Footer />
+</body>
+
 </html>

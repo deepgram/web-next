@@ -1,0 +1,80 @@
+---
+import PrimarySection from "../layout/PrimarySection.astro";
+import Svg from "../general/Svg.astro";
+import Icon from "../general/Icon.astro";
+
+const ratePage = function () {
+  // const form = e.target
+  console.log('form submitted')
+
+  fetch('https://mellow-mermaid-841d72.netlify.app/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formDataString.join('&'),
+  })
+    .then(() => {
+      this.thumb = form.elements.thumb.value
+      this.$nextTick(() => {
+        this.$refs.feedback.focus()
+      })
+    })
+    .catch(() => {
+      this.error = 'A problem occured submitting your rating.'
+    })
+}
+
+const { page } = Astro.props;
+---
+
+<div class="py-12">
+  <h1 class="px-1 border-b-2 border-grass">Share your Feedback</h1>
+  <!-- <div v-show="error" class="px-1">
+      {{ error }}
+    </div> -->
+  <div x-data="{ count: 0 }">
+    <button x-on:click="count++">Increment</button>
+
+    <span x-text="count"></span>
+  </div>
+  <div x-data="{
+    thumbup: 'up',
+    ratePage(e) {
+      const form = new FormData(e.target)
+      const body = {
+        thumb: form.get('thumb'),
+        page: window.location.pathname,
+        hookId: form.get('hook')
+      }
+      fetch('https://deploy-preview-30--mellow-mermaid-841d72.netlify.app/.netlify/functions/forms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded', },
+        body: JSON.stringify(body),
+      })
+        .then(() => {
+          console.log('form submitted')
+        })
+        .catch(() => {
+          this.error = 'A problem occured submitting your rating.'
+        })
+    }
+  }" class="px-1">
+    <p class="feedback-question font-bold">
+      Was this article helpful to you?
+    </p>
+
+    <form id="thumbsup-form" class="inline" name="rating" @submit.prevent="ratePage" action="/foo">
+      <input id="thumbup" type="submit" aria-hidden="true" class="hidden" />
+      <label for="thumbup" class="text-3xl">
+        <!-- <Svg name="thumbsup" class="m-auto" /> -->
+        THUMBSUP
+      </label>
+
+      <input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
+      <input type="hidden" name="thumb" value="up" />
+      <input type="hidden" name="hook" value="bgv9wf1" />
+      <!-- <input type="hidden" name="page" value={page.url.current} /> -->
+    </form>
+
+
+  </div>
+</div>
