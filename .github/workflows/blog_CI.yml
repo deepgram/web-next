@@ -1,9 +1,20 @@
-name: 'Blog - CI'
+name: 'Blog: Continuous Integration'
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: 
+    - 'blog'
+    - 'content'
+  pull_request:
+    branches: [main]
+    paths: 
+    - 'blog'
+    - 'content'
+    
 jobs:
-  lint:
+  blog:
     name: Build Blog
     runs-on: ubuntu-latest
     steps:

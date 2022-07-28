@@ -1,9 +1,20 @@
-name: 'WWW - CI'
+name: 'WWW: Continuous Integration'
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: 
+    - 'www'
+    - 'content'
+  pull_request:
+    branches: [main]
+    paths: 
+    - 'www'
+    - 'content'
+    
 jobs:
-  lint:
+  www:
     name: Build WWW
     runs-on: ubuntu-latest
     steps:
