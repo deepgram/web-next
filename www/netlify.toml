@@ -5,6 +5,8 @@
   # relativate path for the build output (www/dist/)
   publish = "dist/"
 
-  # build command 
+  # build command
   command = "yarn build"
   
+  # ignore command, used to determine whether effectual changes have been made for this site
+  # ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ../content/www/ ./"
