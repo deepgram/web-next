@@ -1,21 +1,21 @@
-name: Blog - Continuous Integration
+name: Continuous Integration
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths: 
-    - 'blog'
+    - 'www'
     - 'content'
   pull_request:
     branches: [main]
     paths: 
-    - 'blog'
+    - 'www'
     - 'content'
     
 jobs:
-  blog:
-    name: Build Blog
+  www:
+    name: Build WWW
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
           node-version: "18.x"
       - name: Install Dependencies
         run: |
-          cd ./blog
+          cd ./www
           yarn install
       - name: Build
         run: |
