@@ -28,4 +28,5 @@ jobs:
           yarn install
       - name: Build
         run: |
+          cd ./www
           yarn build
