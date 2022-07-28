@@ -1,0 +1,20 @@
+name: 'WWW - CI'
+
+on:
+  workflow_dispatch:
+jobs:
+  lint:
+    name: Build WWW
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+      - name: Install Dependencies
+        run: |
+          cd ./www
+          yarn install
+      - name: Build
+        run: |
+          yarn build
