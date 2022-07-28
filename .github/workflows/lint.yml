@@ -1,4 +1,4 @@
-name: "_Global: Lint"
+name: "Lint"
 
 on:
   workflow_dispatch:
