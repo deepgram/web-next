@@ -5,6 +5,6 @@
   # relativate path for the build output (www/dist/)
   publish = "dist/"
 
-  # build command
+  # build command 
   command = "yarn build"
   
