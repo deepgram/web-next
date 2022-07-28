@@ -1,0 +1,13 @@
+---
+const { tab } = Astro.props
+---
+
+<div x-show={`{'hidden':lang !== '${tab}'}`} class={`code-block hidden`} x-bind:class={`{'hidden':lang !== '${tab}', 'block':lang === '${tab}'}`}> 
+  <slot/>
+</div>
+
+<style>
+  .code-block :global(.astro-code) {
+    @apply border-ink rounded-t-none rounded-b-sm;
+  }
+</style>
