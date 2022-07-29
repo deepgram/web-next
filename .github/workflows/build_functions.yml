@@ -35,7 +35,7 @@ jobs:
           enable-commit-comment: true
           overwrites-pull-request-comment: true
           production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
-          netlify-config-path: ./serverless/netlify.toml
+          functions-dir: ./serverless/netlify/functions
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_FUNCTIONS }}
