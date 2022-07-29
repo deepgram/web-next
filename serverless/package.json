@@ -1,0 +1,15 @@
+{
+  "name": "@deepgram-web/serverless",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "yarn": "^1.22.0"
+  },
+  "scripts": {
+    "postinstall": "yarn install:deepgram_token && yarn install:live-on-twitch && yarn install:madgab",
+    "install:deepgram_token": "cd netlify/functions/deepgram_token && yarn install",
+    "install:live-on-twitch": "cd netlify/functions/live-on-twitch && yarn install",
+    "install:madgab": "cd netlify/functions/madgab && yarn install",
+    "lint": "cd .. && ./node_modules/.bin/prettier --check ./serverless"
+  }
+}
