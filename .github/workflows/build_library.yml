@@ -1,19 +1,19 @@
-name: "Functions: CI/CD"
+name: "Library: CI/CD"
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths: 
-    - 'serverless/**'
+    - 'shared/**'
   pull_request:
     branches: [main]
-    paths: 
-    - 'serverless/**'
+    paths:
+    - 'shared/**'
     
 jobs:
-  www:
-    name: Build Serverless Functions
+  blog:
+    name: Build Library
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,12 +22,16 @@ jobs:
           node-version: "18.x"
       - name: Install Dependencies
         run: |
-          cd ./serverless
+          cd ./shared
           yarn install
+      - name: Build
+        run: |
+          cd ./shared
+          yarn build
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './serverless'
+          publish-dir: './shared/dist'
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
@@ -35,8 +39,7 @@ jobs:
           enable-commit-comment: true
           overwrites-pull-request-comment: true
           production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
-          netlify-config-path: ./netlify.toml
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_FUNCTIONS }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_LIBRARY }}
         timeout-minutes: 1
