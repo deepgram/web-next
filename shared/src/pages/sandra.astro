@@ -1,13 +1,12 @@
 ---
-import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
-// import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
 import ComponentSection from "../components/partials/ComponentSection.astro";
+import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
 import Layout from "../layouts/Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
-import CodeGroup from "../shared/components/code/CodeGroup.astro"
-import CodeBlock from "../shared/components/code/CodeBlock.astro"
-import { Code } from 'astro/components';
+import CodeGroup from "../shared/components/code/CodeGroup.astro";
+import CodeBlock from "../shared/components/code/CodeBlock.astro";
+import Code from "astro/components/Code.astro";
 ---
 
 <Layout>
@@ -27,84 +26,51 @@ import { Code } from 'astro/components';
 		<a href="https://console.deepgram.com/signup">Start Free</a>
 	</AmplifyQuote>
 
+	<ComponentSection>
+		<ComponentStaticPreview
+			id="code-group"
+			title="Code Group"
+			snippet={`<CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
+    <CodeBlock lang="yarn"  >
+      <Code lang="bash" code="yarn "/>
+    </CodeBlock>
+    <CodeBlock lang="npm">
+      <Code lang="bash" code="npm install"/>
+    </CodeBlock>
+    <CodeBlock lang="pnpm">
+      <Code lang="bash" code="pnpm install"/>
+    </CodeBlock>
+    </CodeGroup>`}
+		>
+			<CodeGroup tabs={["npm", "yarn", "pnpm"]} default="npm">
+				<CodeBlock tab="yarn">
+					<Code lang="bash" code="yarn " />
+				</CodeBlock>
+				<CodeBlock tab="npm">
+					<Code lang="bash" code="npm install" />
+				</CodeBlock>
+				<CodeBlock tab="pnpm">
+					<Code lang="bash" code="pnpm install" />
+				</CodeBlock>
+			</CodeGroup>
+		</ComponentStaticPreview>
+	</ComponentSection>
 
-
-<!-- <ComponentSection title="Code sections">
-      <ComponentStaticPreview
-        id="code-group"
-        title="Code Group"
-        snippet={`<CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
-  <CodeBlock lang="yarn"  >
-    <Code lang="bash" code="yarn "/>
-  </CodeBlock>
-  <CodeBlock lang="npm">
-    <Code lang="bash" code="npm install"/>
-  </CodeBlock>
-  <CodeBlock lang="pnpm">
-    <Code lang="bash" code="pnpm install"/>
-  </CodeBlock>
-  </CodeGroup>`}
-      >
-        <CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
-			    <CodeBlock lang="yarn"  >
-				    <Code lang="bash" code="yarn "/>
-			    </CodeBlock>
-			    <CodeBlock lang="npm">
-				    <Code lang="bash" code="npm install"/>
-			    </CodeBlock>
-			    <CodeBlock lang="pnpm">
-				    <Code lang="bash" code="pnpm install"/>
-			    </CodeBlock>
-		    </CodeGroup>
-      </ComponentStaticPreview>
-    </ComponentSection>
-     -->
-    <ComponentSection>
-      <ComponentStaticPreview
-        id="code-group"
-        title="Code Group"
-        snippet={`<CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
-  <CodeBlock lang="yarn"  >
-    <Code lang="bash" code="yarn "/>
-  </CodeBlock>
-  <CodeBlock lang="npm">
-    <Code lang="bash" code="npm install"/>
-  </CodeBlock>
-  <CodeBlock lang="pnpm">
-    <Code lang="bash" code="pnpm install"/>
-  </CodeBlock>
-  </CodeGroup>`}
-      >
-        <CodeGroup tabs={['npm', 'yarn', 'pnpm']} default="npm">
-			    <CodeBlock tab="yarn">
-				    <Code lang="bash" code="yarn "/>
-			    </CodeBlock>
-			    <CodeBlock tab="npm">
-				    <Code lang="bash" code="npm install"/>
-			    </CodeBlock>
-			    <CodeBlock tab="pnpm">
-				    <Code lang="bash" code="pnpm install"/>
-			    </CodeBlock>
-		    </CodeGroup>
-      </ComponentStaticPreview>
-    </ComponentSection>
-
-    <ComponentSection>
-      <ComponentStaticPreview
-        id="code-group"
-        title="Code Group without menu"
-        snippet={`<CodeGroup>
-			    <CodeBlock  >
-				    <Code code="yarn"/>
-			    </CodeBlock>
-		    </CodeGroup>`}
-      >
-        <CodeGroup tabs={['npm']} default="npm">
-			    <CodeBlock tab="npm">
-				    <Code code="npm"/>
-			    </CodeBlock>
-		    </CodeGroup>
-      </ComponentStaticPreview>
-    </ComponentSection>
-
+	<ComponentSection>
+		<ComponentStaticPreview
+			id="code-group"
+			title="Code Group without menu"
+			snippet={`<CodeGroup>
+                  <CodeBlock  >
+                      <Code code="yarn"/>
+                  </CodeBlock>
+              </CodeGroup>`}
+		>
+			<CodeGroup tabs={["npm"]} default="npm">
+				<CodeBlock tab="npm">
+					<Code code="npm" />
+				</CodeBlock>
+			</CodeGroup>
+		</ComponentStaticPreview>
+	</ComponentSection>
 </Layout>
