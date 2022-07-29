@@ -26,20 +26,14 @@ const ratePage = function () {
 const { page } = Astro.props;
 ---
 
-<div class="py-12">
-  <h1 class="px-1 border-b-2 border-grass">Share your Feedback</h1>
-  <!-- <div v-show="error" class="px-1">
-      {{ error }}
-    </div> -->
-  <div x-data="{ count: 0 }">
-    <button x-on:click="count++">Increment</button>
-
-    <span x-text="count"></span>
-  </div>
-  <div x-data="{
-    thumbup: 'up',
+<div x-data="{
+    error: null,
+    feedback: null,
+    email: null,
+    thumb: null,
     ratePage(e) {
       const form = new FormData(e.target)
+      this.thumb = form.get('thumb')
       const body = {
         thumb: form.get('thumb'),
         page: window.location.pathname,
@@ -47,34 +41,116 @@ const { page } = Astro.props;
       }
       fetch('https://deploy-preview-30--mellow-mermaid-841d72.netlify.app/.netlify/functions/forms', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded', },
         body: JSON.stringify(body),
       })
-        .then(() => {
-          console.log('form submitted')
-        })
-        .catch(() => {
-          this.error = 'A problem occured submitting your rating.'
-        })
+      .then(() => {
+        console.log('form submitted')
+      })
+      .catch(() => {
+        this.error = 'A problem occured submitting your rating.'
+      })
+    },
+    sendFeedback(e) {
+      const form = new FormData(e.target)
+      const body = 
+
+      fetch('https://deploy-preview-30--mellow-mermaid-841d72.netlify.app/.netlify/functions/forms', {
+        method: 'POST',
+        body: formDataString.join('&'),
+      })
+      .then(() => {
+        this.feedback = form.elements.feedback.value
+      })
+      .catch(() => {
+        this.error = 'A problem occured submitting your feedback.'
+      })
     }
-  }" class="px-1">
+  }" class="py-12 max-w-lg">
+  <h1 class="px-1 border-b-2 border-grass">Share your Feedback</h1>
+  <div x-show="error" x-text="error" class="px-1"></div>
+  <div  class="px-1">
     <p class="feedback-question font-bold">
       Was this article helpful to you?
     </p>
+    <div class="thumbs flex items-center justify-start">    
+      <form id="thumbsup-form" :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating" @submit.prevent="ratePage">
+        <input id="thumbup" type="submit" aria-hidden="true" class="hidden" />
+        <label for="thumbup" class="text-3xl">
+          <Svg name="thumbsup" class="my-4 h-8 w-auto" />
+        </label>
 
-    <form id="thumbsup-form" class="inline" name="rating" @submit.prevent="ratePage" action="/foo">
-      <input id="thumbup" type="submit" aria-hidden="true" class="hidden" />
-      <label for="thumbup" class="text-3xl">
-        <!-- <Svg name="thumbsup" class="m-auto" /> -->
-        THUMBSUP
-      </label>
+        <input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
+        <input type="hidden" name="thumb" value="up" />
+        <input type="hidden" name="hook" value="bgv9wf1" />
+        <!-- <input type="hidden" name="page" value={page.url.current} /> -->
+      </form>
+      <form id="thumbsdown-form" :class="thumb === 'down' ? 'active' : ''" class="thumb inline down" name="rating" @submit.prevent="ratePage">
+        <input id="thumbdown" type="submit" aria-hidden="true" class="hidden" />
+        <label for="thumbdown" class="text-3xl">
+          <Svg name="thumbsdown" class="my-4 h-8 w-auto" />
+        </label>
 
-      <input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
-      <input type="hidden" name="thumb" value="up" />
-      <input type="hidden" name="hook" value="bgv9wf1" />
-      <!-- <input type="hidden" name="page" value={page.url.current} /> -->
-    </form>
+        <input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
+        <input type="hidden" name="thumb" value="down" />
+        <input type="hidden" name="hook" value="bgv9wf1" />
+        <!-- <input type="hidden" name="page" value={page.url.current} /> -->
+      </form>
+    </div>
+    <form
+        x-show="thumb !== null"
+        name="feedback"
+        method="POST"
+        @submit.prevent="sendFeedback"
+      >
+        <div class="flex flex-col mb-2">
+          <label for="feedback" x-text="`Thank you! ${thumb === 'up' ? 'Is there anything else we can do better?' : 'Please let us know how we can do better.'} (Optional)`"
+            >
+            
+            </label
+          >
+          <textarea
+            id="feedback"
+            ref="feedback"
+            class="border-2 border-ink mt-2 p-2"
+            name="feedback"
+            required="required"
+          ></textarea>
+        </div>
 
+        <div class="flex flex-row-reverse">
+          <button
+            type="submit"
+            aria-label="Send Feedback"
+            title="Send Feedback"
+            class="button"
+          >
+            Send Feedback
+          </button>
+        </div>
 
+        <input
+          class="hidden"
+          aria-label="Don't fill this in if you're a human."
+          name="bot-field"
+        />
+        <input type="hidden" name="thumb" :value="thumb" />
+        <input type="hidden" name="hook" :value="bgvnn9g" />
+      </form>
   </div>
 </div>
+<!-- TODO: Add email input to feedback form, hook up feedback form -->
+<style scoped>
+  form.thumb {
+    @apply mx-2;
+  }
+  form svg {
+    fill: white;
+    cursor: pointer;
+  }
+  form.thumb.up svg:hover, form.thumb.up.active svg{
+    @apply fill-grass ;
+  }
+  form.thumb.down svg:hover, form.thumb.down.active svg{
+    @apply fill-fireEngine;
+  }
+</style>
