@@ -1,0 +1,41 @@
+name: "Functions: CI/CD"
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: 
+    - 'serverless/**'
+  pull_request:
+    branches: [main]
+    paths: 
+    - 'serverless/**'
+    
+jobs:
+  www:
+    name: Build Serverless Functions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+      - name: Install Dependencies
+        run: |
+          cd ./serverless
+          yarn install
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: './serverless'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+          production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_FUNCTIONS }}
+        timeout-minutes: 1
