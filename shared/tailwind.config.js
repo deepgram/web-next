@@ -2,6 +2,9 @@ module.exports = {
 	content: ["./src/{components,layouts,pages}/**/*.{vue,astro,html,js}", "./src/shared/{components,layouts,pages}/**/*.{vue,astro,html,js}"],
 	theme: {
 		extend: {
+			boxShadow: {
+				dg: "3px 3px 10px rgba(0, 0, 0, 0.25)",
+			},
 			fontFamily: {
 				favorit: ["favorit", "sans-serif"],
 				inter: ["inter", "sans-serif"],
