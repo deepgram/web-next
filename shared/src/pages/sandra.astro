@@ -7,6 +7,7 @@ import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
 import CodeGroup from "../shared/components/code/CodeGroup.astro";
 import CodeBlock from "../shared/components/code/CodeBlock.astro";
 import Code from "astro/components/Code.astro";
+import Feedback from "../shared/components/layout/Feedback.astro";
 ---
 
 <Layout>
@@ -16,17 +17,20 @@ import Code from "astro/components/Code.astro";
 		<a href="/">Back</a>
 
 		<ComponentSection title="Stuff I am working on">
-			<ComponentStaticPreview id="luke-stuff" title="Luke's current sandbox" snippet={``}>test</ComponentStaticPreview>
+
+			<ComponentSection title="Feedback Component">
+				<Feedback></Feedback>
 		</ComponentSection>
+
+		</ComponentSection>
+	
+	
+	
 	</PrimarySection>
 
-	<AmplifyQuote>
-		<h1>Ready to see Deepgram in Action?</h1>
-		<p>Get your API key and unlock $150 in free credit.</p>
-		<a href="https://console.deepgram.com/signup">Start Free</a>
-	</AmplifyQuote>
+	
 
-	<ComponentSection>
+	<!-- <ComponentSection>
 		<ComponentStaticPreview
 			id="code-group"
 			title="Code Group"
@@ -72,5 +76,5 @@ import Code from "astro/components/Code.astro";
 				</CodeBlock>
 			</CodeGroup>
 		</ComponentStaticPreview>
-	</ComponentSection>
+	</ComponentSection> -->
 </Layout>

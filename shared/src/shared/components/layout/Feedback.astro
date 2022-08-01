@@ -66,11 +66,11 @@ const { page } = Astro.props;
       })
     }
   }" class="py-12 max-w-lg">
-  <h1 class="px-1 border-b-2 border-grass">Share your Feedback</h1>
-  <div x-show="error" x-text="error" class="px-1"></div>
-  <div  class="px-1">
-    <p class="feedback-question font-bold">
-      Was this article helpful to you?
+  <h4>Share your Feedback</h4>
+  <div x-show="error" x-text="error"></div>
+  <div>
+    <p class="feedback-question">
+      Was this article useful or interesting to you?
     </p>
     <div class="thumbs flex items-center justify-start">    
       <form id="thumbsup-form" :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating" @submit.prevent="ratePage">
@@ -87,7 +87,7 @@ const { page } = Astro.props;
       <form id="thumbsdown-form" :class="thumb === 'down' ? 'active' : ''" class="thumb inline down" name="rating" @submit.prevent="ratePage">
         <input id="thumbdown" type="submit" aria-hidden="true" class="hidden" />
         <label for="thumbdown" class="text-3xl">
-          <Svg name="thumbsdown" class="my-4 h-8 w-auto" />
+          <Svg name="thumbsdown" class="mt-4 h-8 w-auto" />
         </label>
 
         <input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
@@ -102,18 +102,20 @@ const { page } = Astro.props;
         method="POST"
         @submit.prevent="sendFeedback"
       >
-        <div class="flex flex-col mb-2">
-          <label for="feedback" x-text="`Thank you! ${thumb === 'up' ? 'Is there anything else we can do better?' : 'Please let us know how we can do better.'} (Optional)`"
-            >
-            
-            </label
+        <div class="flex flex-col mb-4">
+          <div class="mb-4">
+          <p x-show="thumb ==='up'">Thank you! Can you tell us what you liked about it? (Optional)</p>  
+          <p x-show="thumb !=='up'">Please let us know how we can do better. (Optional)</p>
+          </div>
+          <label for="feedback" class="text-sm">Your message</label
           >
           <textarea
             id="feedback"
             ref="feedback"
-            class="border-2 border-ink mt-2 p-2"
+            class="bg-cloud py-3 px-4 mt-2 h-32 placeholder:text-sm"
             name="feedback"
             required="required"
+            placeholder="Share your thoughts"
           ></textarea>
         </div>
 
@@ -122,7 +124,7 @@ const { page } = Astro.props;
             type="submit"
             aria-label="Send Feedback"
             title="Send Feedback"
-            class="button"
+            class="button button--primary button--small"
           >
             Send Feedback
           </button>
@@ -140,11 +142,15 @@ const { page } = Astro.props;
 </div>
 <!-- TODO: Add email input to feedback form, hook up feedback form -->
 <style scoped>
+
+  p {
+    @apply text-lg;
+  }
   form.thumb {
     @apply mx-2;
   }
   form svg {
-    fill: white;
+    @apply fill-darkCharcoal;
     cursor: pointer;
   }
   form.thumb.up svg:hover, form.thumb.up.active svg{
