@@ -7,6 +7,7 @@ import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
 import CodeGroup from "../shared/components/code/CodeGroup.astro";
 import CodeBlock from "../shared/components/code/CodeBlock.astro";
 import Code from "astro/components/Code.astro";
+import CodePlayground from "../shared/components/code/CodePlayground.astro";
 ---
 
 <Layout>
@@ -16,15 +17,18 @@ import Code from "astro/components/Code.astro";
 		<a href="/">Back</a>
 
 		<ComponentSection title="Stuff I am working on">
-			<ComponentStaticPreview id="luke-stuff" title="Luke's current sandbox" snippet={``}>test</ComponentStaticPreview>
+
+			<ComponentSection title="Code Playground Component">
+				<CodePlayground width="50%" src="https://codepen.io/sandrarodgers/embed/jOBrmrw"></CodePlayground>
+			
+							<CodePlayground width="50%" src="https://codesandbox.io/embed/v-tooltip-hn2gf?fontsize=14&hidenavigation=1&theme=dark" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></CodePlayground>
+			</ComponentSection>
+
 		</ComponentSection>
+	
 	</PrimarySection>
 
-	<AmplifyQuote>
-		<h1>Ready to see Deepgram in Action?</h1>
-		<p>Get your API key and unlock $150 in free credit.</p>
-		<a href="https://console.deepgram.com/signup">Start Free</a>
-	</AmplifyQuote>
+	
 
 	<ComponentSection>
 		<ComponentStaticPreview
