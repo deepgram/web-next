@@ -3,20 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": "^v18.6.0",
     "yarn": "^1.22.0"
   },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "lint": "cd .. && ./node_modules/.bin/prettier --check ./shared"
   },
   "devDependencies": {
     "@astrojs/tailwind": "^0.2.1",
     "@astrojs/vue": "^0.1.5",
     "@types/node": "^17.0.42",
-    "astro": "^1.0.0-beta.73",
+    "astro": "^1.0.0-rc.2",
     "glob": "^8.0.3",
     "node-html-parser": "^5.3.3"
   },

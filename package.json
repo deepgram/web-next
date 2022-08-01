@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": "^v18.6.0",
     "yarn": "^1.22.0"
   },
   "workspaces": [
@@ -16,7 +15,7 @@
     "lint:fix": "prettier --write ."
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.73",
+    "astro": "^1.0.0-rc.2",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.1.2",
     "prettier-plugin-tailwindcss": "^0.1.12"

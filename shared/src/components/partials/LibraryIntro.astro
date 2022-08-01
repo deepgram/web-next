@@ -9,8 +9,8 @@ import Code from "astro/components/Code.astro";
 		new H2 heading section for a group of components. <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">ComponentPreview</code> and <code
 			class="border px-2 py-[0.05rem] border-red-200 bg-red-50"
 			>ComponentStaticPreview
-		</code>, both for displaying a component and toggling it's code snippet. <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">ComponentPreview</code> differs in that
-		the rendered preview is inside an <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">&lt;iframe&gt;</code> which can be resized responsively.
+		</code>, both for displaying a component and toggling its code snippet. <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">ComponentPreview</code> differs in that the
+		rendered preview is inside an <code class="border px-2 py-[0.05rem] border-red-200 bg-red-50">&lt;iframe&gt;</code> which can be resized responsively.
 	</p>
 
 	<h4 class="mt-10 mb-2">ComponentSection</h4>
@@ -48,6 +48,6 @@ import Code from "astro/components/Code.astro";
 
 <style>
 	.library-intro :global(.astro-code) {
-		@apply overflow-hidden rounded-lg border p-5;
+		@apply rounded-sm border;
 	}
 </style>

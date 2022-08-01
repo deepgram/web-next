@@ -1,13 +1,13 @@
 {
-  "name": "serverless",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@deepgram-web/serverless",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "yarn": "^1.22.0"
   },
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "lint": "cd .. && ./node_modules/.bin/prettier --check ./serverless"
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "jsonwebtoken": "^8.5.1",
