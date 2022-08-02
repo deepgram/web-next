@@ -2795,10 +2795,10 @@ preferred-pm@^3.0.3:
     path-exists "^4.0.0"
     which-pm "2.0.0"
 
-prettier-plugin-astro@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.npmjs.org/prettier-plugin-astro/-/prettier-plugin-astro-0.1.2.tgz"
-  integrity sha512-1g3bvYQ+Qx9XutxCXUa/z1tn9S5/3DofF8TxTUXH0z2VFlqsCkNwcOHqOKsgZ27Szx5wSsWTqXkfeDG15SN9UA==
+prettier-plugin-astro@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-astro/-/prettier-plugin-astro-0.2.0.tgz#e05b79add9de8f741421ca48f73985212aca2b18"
+  integrity sha512-T+pWXK6AWcIE+KMSI6RFCshDLvAofiMuSk4w7tO3UtG4Fgpm1eyqmddTStIGmURjx+KgqIrRogV1QEzwet+teg==
   dependencies:
     "@astrojs/compiler" "^0.19.0"
     prettier "^2.7.1"
