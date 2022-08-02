@@ -7,7 +7,7 @@ import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
 import CodeGroup from "../shared/components/code/CodeGroup.astro";
 import CodeBlock from "../shared/components/code/CodeBlock.astro";
 import Code from "astro/components/Code.astro";
-import CodePlayground from "../shared/components/code/CodePlayground.astro";
+import CodeEmbed from "../shared/components/code/CodeEmbed.astro";
 ---
 
 <Layout>
@@ -17,24 +17,18 @@ import CodePlayground from "../shared/components/code/CodePlayground.astro";
 		<a href="/">Back</a>
 
 		<ComponentSection title="Stuff I am working on">
-
 			<ComponentSection title="Code Playground Component">
-				<CodePlayground width="50%" src="https://codepen.io/sandrarodgers/embed/jOBrmrw"></CodePlayground>
-			
-							<CodePlayground width="50%" src="https://codesandbox.io/embed/v-tooltip-hn2gf?fontsize=14&hidenavigation=1&theme=dark" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></CodePlayground>
+				<div class="max-w-lg">
+					<CodeEmbed src="https://codepen.io/sandrarodgers/embed/jOBrmrw" />
+				</div>
 			</ComponentSection>
-
 		</ComponentSection>
-	
-	</PrimarySection>
 
-	
-
-	<ComponentSection>
-		<ComponentStaticPreview
-			id="code-group"
-			title="Code Group"
-			snippet={`<CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
+		<ComponentSection>
+			<ComponentStaticPreview
+				id="code-group"
+				title="Code Group"
+				snippet={`<CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
     <CodeBlock lang="yarn"  >
       <Code lang="bash" code="yarn "/>
     </CodeBlock>
@@ -45,36 +39,37 @@ import CodePlayground from "../shared/components/code/CodePlayground.astro";
       <Code lang="bash" code="pnpm install"/>
     </CodeBlock>
     </CodeGroup>`}
-		>
-			<CodeGroup tabs={["npm", "yarn", "pnpm"]} default="npm">
-				<CodeBlock tab="yarn">
-					<Code lang="bash" code="yarn " />
-				</CodeBlock>
-				<CodeBlock tab="npm">
-					<Code lang="bash" code="npm install" />
-				</CodeBlock>
-				<CodeBlock tab="pnpm">
-					<Code lang="bash" code="pnpm install" />
-				</CodeBlock>
-			</CodeGroup>
-		</ComponentStaticPreview>
-	</ComponentSection>
+			>
+				<CodeGroup tabs={["npm", "yarn", "pnpm"]} default="npm">
+					<CodeBlock tab="yarn">
+						<Code lang="bash" code="yarn " />
+					</CodeBlock>
+					<CodeBlock tab="npm">
+						<Code lang="bash" code="npm install" />
+					</CodeBlock>
+					<CodeBlock tab="pnpm">
+						<Code lang="bash" code="pnpm install" />
+					</CodeBlock>
+				</CodeGroup>
+			</ComponentStaticPreview>
+		</ComponentSection>
 
-	<ComponentSection>
-		<ComponentStaticPreview
-			id="code-group"
-			title="Code Group without menu"
-			snippet={`<CodeGroup>
+		<ComponentSection>
+			<ComponentStaticPreview
+				id="code-group"
+				title="Code Group without menu"
+				snippet={`<CodeGroup>
                   <CodeBlock  >
                       <Code code="yarn"/>
                   </CodeBlock>
               </CodeGroup>`}
-		>
-			<CodeGroup tabs={["npm"]} default="npm">
-				<CodeBlock tab="npm">
-					<Code code="npm" />
-				</CodeBlock>
-			</CodeGroup>
-		</ComponentStaticPreview>
-	</ComponentSection>
+			>
+				<CodeGroup tabs={["npm"]} default="npm">
+					<CodeBlock tab="npm">
+						<Code code="npm" />
+					</CodeBlock>
+				</CodeGroup>
+			</ComponentStaticPreview>
+		</ComponentSection>
+	</PrimarySection>
 </Layout>
