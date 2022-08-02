@@ -14,18 +14,30 @@ media_library:
     # https://www.netlifycms.org/docs/cloudinary/#security-considerations
 
 collections:
+  - label: "Site Settings"
+    editor:
+      preview: false
+    name: settings
+    files:
+      - label: "Blog Settings"
+        name: blog
+        file: "content/blog/settings.json"
+        fields:
+          - name: featured_post
+            label: "Featured Post"
+            widget: relation
+            collection: blog
+            searchFields: [title, description]
+            valueField: title
+
   - name: blog
     label: "Blog Posts"
     label_singular: Blog
-    folder: "content/blog"
-    path: "{{year}}/{{month}}/{{slug}}"
+    folder: "content/blog/posts"
+    path: "{{slug}}/index"
     create: true
     slug: "{{slug}}"
     fields:
-      - label: Layout
-        name: layout
-        widget: hidden
-        value: "./src/layouts/BlogLayout.astro"
       - label: Title
         name: title
         widget: string
@@ -101,45 +113,6 @@ collections:
           - label: Image
             name: image
             widget: image
-            required: false
-  - name: pages
-    label: "Marketing Pages"
-    summary: "(/{{dirname}}) {{title}}"
-    label_singular: Page
-    folder: "content/www/pages"
-    path: "{{slug}}"
-    create: true
-    nested:
-      depth: 3 # max depth to show in the collection tree
-      summary: "{{title}}" # optional summary for a tree node, defaults to the inferred title field
-    meta: { path: { label: Parent, widget: parent, index_file: "index" } }
-    slug: "{{slug}}"
-    fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Description
-        name: description
-        widget: string
-      - label: Body
-        name: body
-        widget: markdown
-      - label: SEO
-        name: seo
-        widget: object
-        collapsed: true
-        fields:
-          - label: Title
-            name: title
-            widget: string
-            required: false
-          - label: Description
-            name: description
-            widget: string
-            required: false
-          - label: Keywords
-            name: keywords
-            widget: list
             required: false
   - name: authors
     label: "Authors"
