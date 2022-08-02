@@ -1,0 +1,18 @@
+{
+  "name": "@deepgram-web/serverless",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "yarn": "^1.22.0"
+  },
+  "scripts": {
+    "lint": "cd .. && ./node_modules/.bin/prettier --check ./serverless"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jsonwebtoken": "^8.5.1",
+    "@deepgram/sdk": "^1.2.2",
+    "dotenv": "^16.0.0",
+    "@jlengstorf/get-twitch-oauth": "^1.0.1"
+  }
+}

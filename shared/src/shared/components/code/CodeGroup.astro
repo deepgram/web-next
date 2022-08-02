@@ -1,0 +1,38 @@
+---
+const { tabs, title, default: defaultLang, ...rest } = Astro.props;
+---
+
+<div class="code-group" x-data={`{ lang: '${defaultLang}' }`} {...rest}>
+	<header>
+		<span class="text-sm tracking-wide">{title}</span>
+
+		{tabs && tabs.length > 1 && (
+			<select x-on:change="lang = $el.value">
+				{tabs.map((l: string) => {
+					return <option id={`install-${l}`}>{l}</option>;
+				})}
+			</select>
+		)}
+	</header>
+
+	<slot />
+</div>
+
+<style scoped>
+	.code-group {
+		@apply w-full;
+	}
+
+	header {
+		@apply flex justify-between;
+		@apply px-3 py-2;
+		@apply rounded-t-sm;
+		@apply bg-steel;
+		@apply font-inter text-sm font-bold uppercase text-white;
+	}
+
+	select {
+		@apply bg-steel rounded-none border-none outline-none;
+		@apply mr-4;
+	}
+</style>
