@@ -61,9 +61,7 @@ const { page } = Astro.props;
   <h4>Share your Feedback</h4>
   <div x-show="error" x-text="error"></div>
   <div>
-    <p class="feedback-question">
-      Was this article useful or interesting to you?
-    </p>
+    <p class="feedback-question">Was this article useful or interesting to you?</p>
     <div class="thumbs flex items-center justify-start">
       <form id="thumbsup-form" :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating"
         @submit.prevent="ratePage">
@@ -98,18 +96,15 @@ const { page } = Astro.props;
         <label for="feedback" class="text-sm">Your message</label>
         <textarea id="feedback" ref="feedback" class="bg-cloud py-3 px-4 mt-2 h-32 placeholder:text-sm" name="feedback"
           required placeholder="Share your thoughts (optional)" x-model="feedback"></textarea>
-        <label for="email">Email </label>
+        <label for="email">Email</label>
         <input id="email" class="flex-grow border-2 border-ink mr-2 px-2" type="email" name="email"
           placeholder="Your email (optional)" x-model="email" />
       </div>
 
       <div class="flex flex-row-reverse">
         <button type="submit" aria-label="Send Feedback" title="Send Feedback"
-          class="button button--primary button--small">
-          Send Feedback
-        </button>
+          class="button button--primary button--small"> Send Feedback</button>
       </div>
-
 
       <input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
       <input type="hidden" name="thumb" value="thumb" />
