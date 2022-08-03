@@ -8,6 +8,7 @@ import CodeGroup from "../shared/components/code/CodeGroup.astro";
 import CodeBlock from "../shared/components/code/CodeBlock.astro";
 import Code from "astro/components/Code.astro";
 import CodeEmbed from "../shared/components/code/CodeEmbed.astro";
+import YouTube from "../shared/components/general/YouTube.astro";
 ---
 
 <Layout>
@@ -22,6 +23,11 @@ import CodeEmbed from "../shared/components/code/CodeEmbed.astro";
 					<CodeEmbed src="https://codepen.io/sandrarodgers/embed/jOBrmrw" />
 				</div>
 			</ComponentSection>
+			<ComponentStaticPreview id="youtube" title="YouTube Component" snippet={`<YouTube id="" />`}>
+				<div class="max-w-2xl">
+					<YouTube id="kgCUn4fQTsc" />
+				</div>
+			</ComponentStaticPreview>
 		</ComponentSection>
 
 		<ComponentSection>
