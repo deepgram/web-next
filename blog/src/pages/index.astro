@@ -19,5 +19,26 @@ import Layout from "../layouts/Default.astro";
 		test<br />
 		test<br />
 		test<br />
+		<!-- Runs the netlify transcribe_prerecorded function -->
+		<div x-data="transcribe">
+			<button class="bg-meadow" x-on:click="$store.transcribe.getTranscription">Transcribe</button>
+		</div>
 	</PrimarySection>
 </Layout>
+
+<script>
+	Alpine.store("transcribe", {
+		transcription: "",
+		getTranscription: async function getTranscription() {
+			const response = await fetch("http://localhost:9999/.netlify/functions/transcribe_prerecorded", {
+				method: "POST",
+				body: JSON.stringify("https://static.deepgram.com/examples/interview_speech-analytics.wav"),
+			});
+			if (response.ok) {
+				const result = await response.json();
+				this.transcription = result.transcription;
+				console.log(result);
+			}
+		},
+	});
+</script>
