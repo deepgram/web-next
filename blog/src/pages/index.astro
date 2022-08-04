@@ -19,5 +19,25 @@ import Layout from "../layouts/Default.astro";
 		test<br />
 		test<br />
 		test<br />
+
+		<!-- Runs the netlify deepgram_token function -->
+		<div x-data="token">
+			<button class="bg-meadow" x-on:click="$store.token.getToken">Button</button>
+		</div>
 	</PrimarySection>
 </Layout>
+
+<script>
+	Alpine.store("token", {
+		tempToken: "",
+
+		getToken: async function getToken() {
+			const response = await fetch("http://localhost:9999/.netlify/functions/deepgram_token");
+			if (response.ok) {
+				const result = await response.json();
+				this.tempToken = result.key;
+				console.log(this.tempToken);
+			}
+		},
+	});
+</script>
