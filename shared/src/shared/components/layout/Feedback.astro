@@ -26,7 +26,7 @@ const { page } = Astro.props;
         body: JSON.stringify(body),
       })
       .then(() => {
-        console.log('form submitted')
+        this.feedback = null
       })
       .catch(() => {
         this.error = 'A problem occured submitting your rating.'
@@ -42,13 +42,11 @@ const { page } = Astro.props;
         page: window.location.pathname,
         hookId: form.get('hook')
       }
-      console.log('body', body)
       fetch('https://mellow-mermaid-841d72-functions.netlify.app/.netlify/functions/forms', {
         method: 'POST',
         body: JSON.stringify(body),
       })
       .then(() => {
-        console.log('feedback submitted')
         this.email = null
         this.feedback = null
         this.thumb = null
@@ -65,7 +63,7 @@ const { page } = Astro.props;
 	<div x-show="error" x-text="error"></div>
 	<div>
 		<p class="feedback-question">Was this article useful or interesting to you?</p>
-		<div class="thumbs flex items-center justify-start">
+		<div x-show="!thanks" class="thumbs flex items-center justify-start">
 			<form id="thumbsup-form" :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating" @submit.prevent="ratePage">
 				<input id="thumbup" type="submit" aria-hidden="true" class="hidden" />
 				<label for="thumbup" class="text-3xl">
