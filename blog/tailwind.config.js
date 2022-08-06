@@ -1,5 +1,5 @@
 module.exports = {
-	content: ["./src/{components,layouts,pages}/**/*.{vue,astro,html,js}", "./src/shared/{components,layouts,pages}/**/*.{vue,astro,html,js}"],
+	content: ["./src/{components,layouts,pages}/**/*.{vue,astro,html,js}", "./src/shared/components/**/*.{vue,astro,html,js}"],
 	safelist: ["bg-darkCharcoal", "bg-white", "bg-black", "bg-almostBlack", "bg-cloud", "fill-darkCharcoal", "fill-white", "fill-black", "fill-almostBlack", "fill-cloud"],
 	theme: {
 		extend: {
