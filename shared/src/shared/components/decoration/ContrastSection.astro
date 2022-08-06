@@ -1,22 +1,21 @@
 ---
 import Svg from "../general/Svg.astro";
 
-const { background, contrast, topHidden, bottomHidden, topOverlay, bottomOverlay } = Astro.props;
-
-const topBg = `bg-${background}`;
-const bottomBg = `bg-${contrast}`;
-const topContrast = `fill-${contrast}`;
-const bottomContrast = `fill-${background}`;
+const { class: classes, background, contrast, topOverlay, bottomOverlay, topDivider, bottomDivider } = Astro.props;
 ---
 
-<div class:list={[bottomBg]}>
-	<div class:list={[{ hidden: topHidden }, { "-mb-4 sm:-mb-8 md:-mb-12 lg:-mb-16 xl:-mb-20": topOverlay }]}>
-		<Svg name="eclipse-divider" class:list={["block w-full", "h-4 sm:h-8 md:h-12 lg:h-16 xl:h-20", topBg, topContrast]} />
-	</div>
-	<div class="contrast-content">
+<div class={`bg-${contrast} ${classes ? classes : ""}`}>
+	{topDivider && (
+		<div class:list={[{ "-mb-4 sm:-mb-8 md:-mb-12 lg:-mb-16 xl:-mb-20": topOverlay }]}>
+			<Svg name={topDivider} class:list={["block w-full", "h-4 sm:h-8 md:h-12 lg:h-16 xl:h-20", `bg-${background}`, `fill-${contrast}`]} />
+		</div>
+	)}
+	<div class:list={["relative contrast-content", { "z-20": bottomOverlay }]}>
 		<slot />
 	</div>
-	<div class:list={[{ hidden: bottomHidden }, { "-mb-4 sm:-mb-8 md:-mb-12 lg:-mb-16 xl:-mb-20": bottomOverlay }]}>
-		<Svg name="eclipse-divider" class:list={["block w-full", "h-4 sm:h-8 md:h-12 lg:h-16 xl:h-20", bottomBg, bottomContrast]} />
-	</div>
+	{bottomDivider && (
+		<div class:list={[{ "z-10 -mt-4 sm:-mt-8 md:-mt-12 lg:-mt-16 xl:-mt-20": bottomOverlay }]}>
+			<Svg name={bottomDivider} class:list={["block w-full", "h-4 sm:h-8 md:h-12 lg:h-16 xl:h-20", `fill-${background}`]} />
+		</div>
+	)}
 </div>
