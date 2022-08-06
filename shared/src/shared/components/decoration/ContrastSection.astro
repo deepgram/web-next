@@ -4,17 +4,17 @@ import Svg from "../general/Svg.astro";
 const { class: classes, background, contrast, topOverlay, bottomOverlay, topDivider, bottomDivider } = Astro.props;
 ---
 
-<div class={`bg-${contrast} ${classes ? classes : ""}`}>
+<div class:list={[`bg-${contrast}`, classes ? classes : "", { "mb-8 sm:mb-12 md:mb-16 lg:mb-20 xl:mb-24": bottomDivider && bottomOverlay }]}>
 	{topDivider && (
 		<div class:list={[{ "-mb-4 sm:-mb-8 md:-mb-12 lg:-mb-16 xl:-mb-20": topOverlay }]}>
 			<Svg name={topDivider} class:list={["block w-full", "h-4 sm:h-8 md:h-12 lg:h-16 xl:h-20", `bg-${background}`, `fill-${contrast}`]} />
 		</div>
 	)}
-	<div class:list={["relative contrast-content", { "z-20": bottomOverlay }]}>
+	<div class:list={["relative contrast-content", { "z-20": bottomDivider && bottomOverlay }]}>
 		<slot />
 	</div>
 	{bottomDivider && (
-		<div class:list={[{ "z-10 -mt-4 sm:-mt-8 md:-mt-12 lg:-mt-16 xl:-mt-20": bottomOverlay }]}>
+		<div class:list={[{ "z-10 -mt-12 sm:-mt-20 md:-mt-28 lg:-mt-36 xl:-mt-44": bottomOverlay }]}>
 			<Svg name={bottomDivider} class:list={["block w-full", "h-4 sm:h-8 md:h-12 lg:h-16 xl:h-20", `fill-${background}`]} />
 		</div>
 	)}
