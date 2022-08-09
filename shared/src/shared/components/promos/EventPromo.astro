@@ -1,19 +1,11 @@
 ---
 import AbstractPromo from "./AbstractPromo.astro";
+import PromoForm from "./PromoForm.astro";
 import PromoLink from "./PromoLink.astro";
 
-const { date, title, strapline, straplineColor, backgroundImage, backgroundColor, textColor, labelColor, placeholderColor, ...rest } = Astro.props;
+const { date, title, formText, strapline, backgroundImage, theme, ...rest } = Astro.props;
 ---
 
-<AbstractPromo
-	title={title}
-	strapline={strapline}
-	straplineColor={straplineColor}
-	backgroundColor={backgroundColor}
-	textColor={textColor}
-	backgroundImage={backgroundImage}
-	{...rest}
->
-	form here
-	<PromoLink linkText="Register" />
+<AbstractPromo theme={theme} title={title} strapline={strapline} backgroundImage={backgroundImage} {...rest}>
+	<PromoForm theme={theme} formText={formText} />
 </AbstractPromo>

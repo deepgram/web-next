@@ -27,18 +27,45 @@ import eventImg from "../shared/assets/temp_images/apples.png";
 
 		<ComponentSection title="Stuff I am working on">
 			<ComponentSection title="Promo">
-				<div class="mt-10">
-					<NewsletterPromo backgroundColor="white" textColor="" backgroundImage={newsletterImg} />
-					<WebinarPromo date="09-10-22" backgroundColor="#FB3640" textColor="" backgroundImage={webinarImg} />
-					<WhitepaperPromo backgroundColor="#1E2C3C" textColor="white" straplineColor="#FE5C5C" backgroundImage={whitepaperImg} />
-					<EventPromo
-						backgroundColor="#1E2C3C"
-						textColor="white"
-						straplineColor="#FE5C5C"
-						title="Try the ASR Comparison Tool"
-						strapline="Using google or amazon STT?"
-						backgroundImage={eventImg}
-					/>
+				<div class="my-10">
+					<div class="my-4">
+						<NewsletterPromo
+							theme="white"
+							backgroundImage={newsletterImg}
+							title="Get Deepgram news and product updates."
+							formText={[{ label: "Work email", placeholder: "you@company.com" }]}
+						/>
+					</div>
+					<div class="my-4">
+						<WebinarPromo
+							title="How to Make Your Application Voice-Ready"
+							date="09-10-22"
+							humanReadableDate="Wed Apr 27 11a PT | 12p ET"
+							theme="red"
+							backgroundImage={webinarImg}
+							formText={[
+								{ label: "Name (first and last)", placeholder: "Your name" },
+								{ label: "Work email", placeholder: "you@company.com" },
+								{ label: "Role", placeholder: "Role/Title" },
+							]}
+						/>
+					</div>
+					<div class="my-4">
+						<WhitepaperPromo theme="black" backgroundImage={whitepaperImg} />
+					</div>
+					<div class="my-4">
+						<EventPromo
+							title="Try the ASR Comparison Tool"
+							strapline="Using google or amazon STT?"
+							formText={[
+								{ label: "Name (first and last)", placeholder: "Your name" },
+								{ label: "Work email", placeholder: "you@company.com" },
+								{ label: "Role", placeholder: "Role/Title" },
+							]}
+							theme="black"
+							backgroundImage={eventImg}
+						/>
+					</div>
 				</div>
 			</ComponentSection>
 		</ComponentSection>

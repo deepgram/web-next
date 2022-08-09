@@ -1,36 +1,25 @@
 ---
 import AbstractPromo from "./AbstractPromo.astro";
 import NewsletterPromo from "./NewsletterPromo.astro";
-import PromoLink from "./PromoLink.astro";
+import PromoForm from "./PromoForm.astro";
 
-const { date, straplineColor, backgroundImage, backgroundColor, textColor, labelColor, placeholderColor, ...rest } = Astro.props;
+const { date, humanReadableDate, backgroundImage, theme, formText, ...rest } = Astro.props;
+
 const dateFormatted = new Date(date);
-
 function isBeforeToday(dateFormatted) {
 	const today = new Date();
 	today.setHours(0, 0, 0, 0);
-
 	return dateFormatted < today;
 }
-
 const dateIsBeforeToday = isBeforeToday(dateFormatted);
-
 const dateNotPast = dateIsBeforeToday === false;
 const datePast = dateIsBeforeToday === true;
 ---
 
 {dateNotPast && (
-	<AbstractPromo
-		strapline="Webinar"
-		straplineColor={straplineColor}
-		title="this is the title"
-		backgroundColor={backgroundColor}
-		textColor={textColor}
-		backgroundImage={backgroundImage}
-		{...rest}
-	>
-		// form here
-		<PromoLink linkText="Register" />
+	<AbstractPromo strapline="Webinar" title="this is the title" backgroundImage={backgroundImage} theme={theme} {...rest}>
+		{humanReadableDate ? (<div>humanReadableDate</div>) : null}
+		<PromoForm theme={theme} formText={formText} />
 	</AbstractPromo>
 )}
 

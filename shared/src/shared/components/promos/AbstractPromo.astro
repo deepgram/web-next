@@ -1,25 +1,71 @@
 ---
-const { strapline, straplineColor, title, backgroundImage, backgroundColor, textColor } = Astro.props;
-console.log(backgroundImage);
+const { strapline, title, backgroundImage, theme } = Astro.props;
+let themeStyles;
+if (theme) {
+	switch (theme) {
+		case "black":
+			themeStyles = "theme--black";
+			break;
+		case "white":
+			themeStyles = "theme--white";
+			break;
+		case "red":
+			themeStyles = "theme--red";
+			break;
+	}
+}
 ---
 
-<div class="promo" style={`background: url('${backgroundImage}') top right no-repeat; background-size:contain; background-color: ${backgroundColor}; color: ${textColor}`}>
-	{strapline && (
-		<h5 class="uppercase" style={`color: ${straplineColor}`}>
-			{strapline}
-		</h5>
-	)}
+<div class:list={["promo", themeStyles]} style={`background-image: url('${backgroundImage}');`}>
+	{strapline && <h5 class="uppercase">{strapline}</h5>}
 	<h2>{title}</h2>
-	<div class="flex items-center">
+	<div>
 		<slot />
 	</div>
 </div>
 
-<style>
+<style scoped>
 	.promo {
-		@apply max-w-[1220px];
+		@apply max-w-[1094px];
 		@apply flex flex-col space-y-1;
 		@apply py-3 px-8;
 		@apply drop-shadow-md;
+		@apply md:bg-60% bg-contain bg-right-bottom bg-no-repeat md:bg-right lg:bg-contain lg:bg-right-top;
+	}
+
+	/* White Theme Styles */
+
+	.theme--white {
+		@apply bg-white;
+	}
+
+	.theme--white h5,
+	h2 {
+		@apply text-black;
+	}
+
+	/* Black Theme Styles */
+
+	.theme--black {
+		@apply bg-ink;
+	}
+
+	.theme--black h5 {
+		@apply text-coral;
+	}
+
+	.theme--black h2 {
+		@apply text-white;
+	}
+
+	/* Red Theme Styles */
+
+	.theme--red {
+		@apply bg-fireEngine;
+	}
+
+	.theme--red h5,
+	h2 {
+		@apply text-black;
 	}
 </style>

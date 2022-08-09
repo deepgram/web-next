@@ -1,0 +1,103 @@
+---
+import PromoLink from "./PromoLink.astro";
+
+const { theme, formText } = Astro.props;
+
+let themeStyles;
+if (theme) {
+	switch (theme) {
+		case "black":
+			themeStyles = "theme--black";
+			break;
+		case "white":
+			themeStyles = "theme--white";
+			break;
+		case "red":
+			themeStyles = "theme--red";
+			break;
+	}
+}
+---
+
+<form class:list={[themeStyles]}>
+	{formText &&
+		formText.map((form) => {
+			return (
+				<div class="input-container">
+					<label>{form.label}</label>
+					<input placeholder={form.placeholder} />
+				</div>
+			);
+		})}
+	<div class="button-container"><PromoLink linkText="Submit" /></div>
+</form>
+
+<style scoped>
+	form {
+		@apply flex flex-col lg:flex-row;
+		@apply w-full;
+	}
+	label {
+		@apply mt-1 pb-1 text-sm lg:mt-4;
+		@apply relative top-1;
+		@apply w-full md:w-3/6 lg:w-44;
+	}
+
+	input {
+		height: 3.25rem;
+		margin-top: 0.25rem;
+		@apply w-full md:w-3/6 lg:w-44;
+	}
+
+	input::placeholder {
+		@apply px-4;
+	}
+
+	.input-container {
+		@apply flex flex-col;
+		@apply mr-0 lg:mr-4;
+	}
+
+	.button-container {
+		@apply block items-end lg:flex;
+	}
+
+	/* White Theme Styles */
+	.theme--white input {
+		@apply bg-cloud;
+	}
+
+	.theme--white label {
+		@apply text-rock;
+	}
+
+	.theme--white input::placeholder {
+		@apply text-steel;
+	}
+	/* Black Theme Styles */
+
+	.theme--black input {
+		@apply bg-black;
+	}
+
+	.theme--black label {
+		@apply text-cloud;
+	}
+
+	.theme--black input::placeholder {
+		@apply text-stone;
+	}
+	/* Red Theme Styles */
+
+	.theme--red input {
+		@apply bg-crimson;
+	}
+
+	.theme--red label {
+		@apply text-black;
+	}
+
+	.theme--red input::placeholder {
+		@apply text-cottonCandy;
+	}
+</style>
