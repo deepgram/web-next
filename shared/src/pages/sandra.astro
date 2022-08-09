@@ -44,7 +44,16 @@ import eventImg from "../shared/assets/temp_images/apples.png";
 						/>
 					</div>
 					<div class="my-4">
-						<WhitepaperPromo title="How to Make Your Application Voice-Ready" theme="black" backgroundImage={whitepaperImg} />
+						<WhitepaperPromo
+							title="How to Make Your Application Voice-Ready"
+							theme="black"
+							backgroundImage={whitepaperImg}
+							formText={[
+								{ label: "Name (first and last)", placeholder: "Your name" },
+								{ label: "Work email", placeholder: "you@company.com" },
+								{ label: "Role", placeholder: "Role/Title" },
+							]}
+						/>
 					</div>
 					<div class="my-4">
 						<EventPromo

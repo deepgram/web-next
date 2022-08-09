@@ -5,6 +5,6 @@ import PromoForm from "./PromoForm.astro";
 const { date, backgroundImage, theme, formText, ...rest } = Astro.props;
 ---
 
-<AbstractPromo strapline="White Paper" title="this is the title" backgroundImage={backgroundImage} {...rest}>
+<AbstractPromo strapline="White Paper" title="this is the title" backgroundImage={backgroundImage} theme={theme} {...rest}>
 	<PromoForm theme={theme} formText={formText} />
 </AbstractPromo>
