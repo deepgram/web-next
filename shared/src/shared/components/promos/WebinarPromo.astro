@@ -18,7 +18,6 @@ const datePast = dateIsBeforeToday === true;
 
 {dateNotPast && (
 	<AbstractPromo strapline="Webinar" title="this is the title" backgroundImage={backgroundImage} theme={theme} {...rest}>
-		{humanReadableDate ? (<div>humanReadableDate</div>) : null}
 		<PromoForm theme={theme} formText={formText} />
 	</AbstractPromo>
 )}
