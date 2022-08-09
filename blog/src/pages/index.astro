@@ -32,7 +32,7 @@ import Layout from "../layouts/Default.astro";
 		tempToken: "",
 
 		getToken: async function getToken() {
-			const response = await fetch("http://localhost:9999/.netlify/functions/deepgram_token");
+			const response = await fetch("https://mellow-mermaid-841d72-functions.netlify.app/.netlify/functions/deepgram_token");
 			if (response.ok) {
 				const result = await response.json();
 				this.tempToken = result.key;
