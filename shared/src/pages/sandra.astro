@@ -9,6 +9,14 @@ import CodeBlock from "../shared/components/code/CodeBlock.astro";
 import Code from "astro/components/Code.astro";
 import CodeEmbed from "../shared/components/code/CodeEmbed.astro";
 import YouTube from "../shared/components/general/YouTube.astro";
+import WebinarPromo from "../shared/components/promos/WebinarPromo.astro";
+import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.astro";
+import NewsletterPromo from "../shared/components/promos/NewsletterPromo.astro";
+import EventPromo from "../shared/components/promos/EventPromo.astro";
+import newsletterImg from "../shared/assets/temp_images/newsletter.svg";
+import webinarImg from "../shared/assets/temp_images/webinar.png";
+import whitepaperImg from "../shared/assets/temp_images/quotes.svg";
+import eventImg from "../shared/assets/temp_images/apples.png";
 ---
 
 <Layout>
@@ -18,64 +26,21 @@ import YouTube from "../shared/components/general/YouTube.astro";
 		<a href="/">Back</a>
 
 		<ComponentSection title="Stuff I am working on">
-			<ComponentSection title="Code Playground Component">
-				<div class="max-w-lg">
-					<CodeEmbed src="https://codepen.io/sandrarodgers/embed/jOBrmrw" />
+			<ComponentSection title="Promo">
+				<div class="mt-10">
+					<NewsletterPromo backgroundColor="white" textColor="" backgroundImage={newsletterImg} />
+					<WebinarPromo date="09-10-22" backgroundColor="#FB3640" textColor="" backgroundImage={webinarImg} />
+					<WhitepaperPromo backgroundColor="#1E2C3C" textColor="white" straplineColor="#FE5C5C" backgroundImage={whitepaperImg} />
+					<EventPromo
+						backgroundColor="#1E2C3C"
+						textColor="white"
+						straplineColor="#FE5C5C"
+						title="Try the ASR Comparison Tool"
+						strapline="Using google or amazon STT?"
+						backgroundImage={eventImg}
+					/>
 				</div>
 			</ComponentSection>
-			<ComponentStaticPreview id="youtube" title="YouTube Component" snippet={`<YouTube id="" />`}>
-				<div class="max-w-2xl">
-					<YouTube id="kgCUn4fQTsc" />
-				</div>
-			</ComponentStaticPreview>
-		</ComponentSection>
-
-		<ComponentSection>
-			<ComponentStaticPreview
-				id="code-group"
-				title="Code Group"
-				snippet={`<CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
-    <CodeBlock lang="yarn"  >
-      <Code lang="bash" code="yarn "/>
-    </CodeBlock>
-    <CodeBlock lang="npm">
-      <Code lang="bash" code="npm install"/>
-    </CodeBlock>
-    <CodeBlock lang="pnpm">
-      <Code lang="bash" code="pnpm install"/>
-    </CodeBlock>
-    </CodeGroup>`}
-			>
-				<CodeGroup tabs={["npm", "yarn", "pnpm"]} default="npm">
-					<CodeBlock tab="yarn">
-						<Code lang="bash" code="yarn " />
-					</CodeBlock>
-					<CodeBlock tab="npm">
-						<Code lang="bash" code="npm install" />
-					</CodeBlock>
-					<CodeBlock tab="pnpm">
-						<Code lang="bash" code="pnpm install" />
-					</CodeBlock>
-				</CodeGroup>
-			</ComponentStaticPreview>
-		</ComponentSection>
-
-		<ComponentSection>
-			<ComponentStaticPreview
-				id="code-group"
-				title="Code Group without menu"
-				snippet={`<CodeGroup>
-                  <CodeBlock  >
-                      <Code code="yarn"/>
-                  </CodeBlock>
-              </CodeGroup>`}
-			>
-				<CodeGroup tabs={["npm"]} default="npm">
-					<CodeBlock tab="npm">
-						<Code code="npm" />
-					</CodeBlock>
-				</CodeGroup>
-			</ComponentStaticPreview>
 		</ComponentSection>
 	</PrimarySection>
 </Layout>

@@ -1,0 +1,25 @@
+---
+const { strapline, straplineColor, title, backgroundImage, backgroundColor, textColor } = Astro.props;
+console.log(backgroundImage);
+---
+
+<div class="promo" style={`background: url('${backgroundImage}') top right no-repeat; background-size:contain; background-color: ${backgroundColor}; color: ${textColor}`}>
+	{strapline && (
+		<h5 class="uppercase" style={`color: ${straplineColor}`}>
+			{strapline}
+		</h5>
+	)}
+	<h2>{title}</h2>
+	<div class="flex items-center">
+		<slot />
+	</div>
+</div>
+
+<style>
+	.promo {
+		@apply max-w-[1220px];
+		@apply flex flex-col space-y-1;
+		@apply py-3 px-8;
+		@apply drop-shadow-md;
+	}
+</style>

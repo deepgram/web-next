@@ -1,0 +1,19 @@
+---
+import AbstractPromo from "./AbstractPromo.astro";
+import PromoLink from "./PromoLink.astro";
+
+const { date, straplineColor, backgroundImage, backgroundColor, textColor, labelColor, placeholderColor, ...rest } = Astro.props;
+---
+
+<AbstractPromo
+	strapline="White Paper"
+	straplineColor={straplineColor}
+	title="this is the title"
+	backgroundColor={backgroundColor}
+	textColor={textColor}
+	backgroundImage={backgroundImage}
+	{...rest}
+>
+	form here
+	<PromoLink linkText="Register" />
+</AbstractPromo>

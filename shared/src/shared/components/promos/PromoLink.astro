@@ -1,0 +1,8 @@
+---
+import AbstractPromo from "./AbstractPromo.astro";
+const { linkText, ...rest } = Astro.props;
+---
+
+<AbstractPromo {...rest}>
+	<div class="flex"><a class="button button--primary button--small">{linkText}</a></div>
+</AbstractPromo>
