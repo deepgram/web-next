@@ -110,5 +110,45 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 				<BlogCardSmall title="5 Ways to Understand the Voice of the Customer Voice" image="//placeimg.com/1200/627/tech/3" tags={["Vue"]} author="lukeocodes" />
 			</ComponentPreview>
 		</ComponentSection>
+
+		<ComponentSection title="Blog hero (for reference)">
+			<ComponentPreview id="blog-hero" title="Hero" snippet={`// see component`}>
+				<PrimarySection class="pt-14">
+					<div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+						<div class="lg:col-span-2 xl:col-span-3 grid gap-5 xl:grid-cols-3 ">
+							<div class="xl:order-last xl:col-span-2 flex">
+								<BlogCardLarge
+									class="text-red-500"
+									href="/"
+									title="Top 3 Use Cases for Speech-to-Text in Gaming"
+									description="In the gaming industry, speech-to-text and voice recognition technology are becoming more and more commonplace. This is due to the fact that they offer a number of advantages for both developers and players alike."
+									tags={["Vue"]}
+									author="Chris Doty"
+									image="https://placeimg.com/1200/627/animals/1"
+								/>
+							</div>
+							<div class="grid gap-5 lg:hidden xl:grid xl:grid-rows-2 ">
+								<BlogCard href="/" title="Top 3 Use Cases for Speech-to-Text in Gaming" tags={["Vue"]} author="Chris Doty" image="https://placeimg.com/1200/627/animals/3" />
+								<BlogCard
+									class="sm:hidden lg:block"
+									href="/"
+									title="Top 3 Use Cases for Speech-to-Text in Gaming"
+									tags={["Vue"]}
+									author="Chris Doty"
+									image="https://placeimg.com/1200/627/animals/2"
+								/>
+							</div>
+						</div>
+						<div class="grid gap-5 grid-rows-5">
+							<BlogCardSmall href="/" title="Top 3 Use Cases for Speech-to-Text in Gaming" tags={["Vue"]} author="Chris Doty" image="https://placeimg.com/1200/627/animals" />
+							<BlogCardSmall href="/" title="Top 3 Use Cases for Speech-to-Text in Gaming" tags={["Vue"]} author="Chris Doty" image="https://placeimg.com/1200/627/animals" />
+							<BlogCardSmall href="/" title="Top 3 Use Cases for Speech-to-Text in Gaming" tags={["Vue"]} author="Chris Doty" image="https://placeimg.com/1200/627/animals" />
+							<BlogCardSmall href="/" title="Top 3 Use Cases for Speech-to-Text in Gaming" tags={["Vue"]} author="Chris Doty" image="https://placeimg.com/1200/627/animals" />
+							<BlogCardSmall href="/" title="Top 3 Use Cases for Speech-to-Text in Gaming" tags={["Vue"]} author="Chris Doty" image="https://placeimg.com/1200/627/animals" />
+						</div>
+					</div>
+				</PrimarySection>
+			</ComponentPreview>
+		</ComponentSection>
 	</PrimarySection>
 </Layout>

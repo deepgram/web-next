@@ -4,6 +4,6 @@ import GenericCard from "./GenericCard.astro";
 const { class: classes, ...rest } = Astro.props;
 ---
 
-<GenericCard class={`min-w-[18rem] bg-mist/50 shadow-dg ${classes ? classes : ""}`} {...rest}>
+<GenericCard class={`min-w-[18rem] bg-mist/50 shadow-dg bg-blur ${classes ? classes : ""}`} {...rest}>
 	<slot />
 </GenericCard>
