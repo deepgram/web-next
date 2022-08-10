@@ -2,6 +2,6 @@
 const { class: classes, ...rest } = Astro.props;
 ---
 
-<a class={`text-black ${classes ? classes : ""}`} {...rest}>
+<a class={`block text-black ${classes ? classes : ""}`} {...rest}>
 	<slot />
 </a>
