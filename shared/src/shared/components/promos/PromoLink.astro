@@ -1,5 +1,5 @@
 ---
-const { linkText, ...rest } = Astro.props;
+const { linkText } = Astro.props;
 ---
 
 <div class="flex"><a class="button button--primary">{linkText}</a></div>
@@ -7,6 +7,6 @@ const { linkText, ...rest } = Astro.props;
 <style scoped>
 	.button {
 		@apply w-full md:w-3/6 lg:w-44;
-		@apply mt-4 lg:mt-0;
+		@apply mt-4 mb-40 md:mb-6 lg:mb-0 lg:mt-0;
 	}
 </style>
