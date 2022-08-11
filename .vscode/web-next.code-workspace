@@ -35,7 +35,10 @@
 		},
 		"editor.formatOnSave": true,
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"tailwindCSS.experimental.configFile": "./shared/tailwind.config.js"
+		"tailwindCSS.experimental.configFile": "./shared/tailwind.config.js",
+		"[svg]": {
+			"editor.defaultFormatter": "jock.svg"
+		}
 	},
 	"extensions": {
 		"recommendations": ["astro-build.astro-vscode", "bradlc.vscode-tailwindcss", "adrianwilczynski.alpine-js-intellisense"]
