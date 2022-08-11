@@ -1,0 +1,72 @@
+---
+import ComponentPreview from "../components/partials/ComponentPreview.astro";
+import ComponentSection from "../components/partials/ComponentSection.astro";
+import Layout from "../layouts/Default.astro";
+import BlogCard from "../shared/components/cards/BlogCard.astro";
+import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
+import LeftDecoration from "../shared/components/decoration/LeftDecoration.astro";
+import RightDecoration from "../shared/components/decoration/RightDecoration.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import BlogCardList from "../shared/components/lists/BlogCardList.astro";
+---
+
+<Layout>
+	<PrimarySection class="pt-10">
+		<h1>Decoration Components</h1>
+
+		<a href="/">Back</a>
+
+		<ComponentSection title="General Decorations">
+			<ComponentPreview id="left-decoration" title="(showing star) Left Alignment" snippet={`<LeftDecoration icon="star-left" class="text-coral" />`}>
+				<LeftDecoration icon="star-left" class="text-coral" />
+			</ComponentPreview>
+			<ComponentPreview id="right-decoration" title="(showing star) Right Alignment" snippet={`<RightDecoration icon="star-right" class="text-cloud" />`}>
+				<RightDecoration icon="star-right" class="text-cloud" />
+			</ComponentPreview>
+		</ComponentSection>
+
+		<ComponentSection title="Contrast Sections">
+			<ComponentPreview
+				id="contrast-default-cloud"
+				title="Standard (cloud over white) Contrast"
+				snippet={`<ContrastSection contrast="cloud" background="white" topDivider="eclipse-divider" bottomDivider="eclipse-divider">
+	...
+</ContrastSection>`}
+			>
+				<ContrastSection contrast="cloud" background="white" topDivider="eclipse-divider" bottomDivider="eclipse-divider" class="w-full">Test</ContrastSection>
+			</ComponentPreview>
+
+			<ComponentPreview
+				id="contrast-default-darkCharcoal"
+				title="Standard (darkCharcoal over black) Contrast"
+				snippet={`<ContrastSection contrast="darkCharcoal" background="black" topDivider="eclipse-divider" bottomDivider="eclipse-divider">
+	...
+</ContrastSection>`}
+			>
+				<ContrastSection contrast="darkCharcoal" background="black" topDivider="eclipse-divider" bottomDivider="eclipse-divider" class="w-full text-white">Test</ContrastSection>
+			</ComponentPreview>
+
+			<ComponentPreview
+				id="contrast-hero-cloud"
+				title="Hero style with bottom overlay and bg image"
+				snippet={`<ContrastSection contrast="cloud" background="white" bottomDivider="eclipse-divider" bottomOverlay class="bg-sound-wave-cloud-dark">
+	...
+</ContrastSection>`}
+			>
+				<ContrastSection contrast="cloud" background="white" bottomDivider="eclipse-divider" bottomOverlay class="bg-sound-wave-cloud-dark w-full">
+					<PrimarySection>
+						<h1 class="mt-20 mb-10">Deepgram Blog ⚡</h1>
+						<BlogCardList>
+							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/1" tags={["Vue"]} author="lukeocodes" />
+							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/2" tags={["Vue"]} author="lukeocodes" />
+							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/3" tags={["Vue"]} author="lukeocodes" />
+							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/1" tags={["Vue"]} author="lukeocodes" />
+							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/2" tags={["Vue"]} author="lukeocodes" />
+							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/3" tags={["Vue"]} author="lukeocodes" />
+						</BlogCardList>
+					</PrimarySection>
+				</ContrastSection>
+			</ComponentPreview>
+		</ComponentSection>
+	</PrimarySection>
+</Layout>
