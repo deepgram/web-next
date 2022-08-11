@@ -1,10 +1,10 @@
 {
   "homepage_posts": [
-    "A test blog post in March",
-    "A test blog post in March",
-    "A test blog post in March",
-    "A test blog post in March",
-    "A test blog post in March"
+    "a-test-blog-post-in-march/index",
+    "a-test-blog-post-in-march/index",
+    "a-test-blog-post-in-march/index",
+    "a-test-blog-post-in-march/index",
+    "a-test-blog-post-in-march/index"
   ],
-  "featured_post": "A test blog post in March"
+  "featured_post": "a-test-blog-post-in-march/index"
 }
