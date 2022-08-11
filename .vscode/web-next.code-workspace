@@ -17,6 +17,14 @@
 			"path": "../shared"
 		},
 		{
+			"name": "serverless",
+			"path": "../serverless"
+		},
+		{
+			"name": "content",
+			"path": "../content"
+		},
+		{
 			"name": "next-web root",
 			"path": "../"
 		}
