@@ -8,5 +8,9 @@
   # build command
   command = "yarn build"
   
-  # ignore command, used to determine whether effectual changes have been made for this site
-  # ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ../content/www/ ./"
+[functions]
+  # Directory with serverless functions, including background
+  # functions, to deploy. This is relative to the base directory
+  # if one has been set, or the root directory if
+  # a base hasn’t been set.
+  directory = "src/shared/functions/"

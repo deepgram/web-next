@@ -1,0 +1,7 @@
+{
+  "name": "@deepgram-web-functions/deepgram_token",
+  "version": "0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {}
+}

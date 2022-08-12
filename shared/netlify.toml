@@ -1,6 +1,6 @@
 [build]
   # directory to change to build in
-  base = "blog/"
+  base = "shared/"
 
   # relativate path for the build output (www/dist/)
   publish = "dist/"
