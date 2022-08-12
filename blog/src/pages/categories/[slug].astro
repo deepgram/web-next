@@ -2,26 +2,35 @@
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../layouts/Default.astro";
 
-export async function getStaticPaths() {
-	const allPosts = await Astro.glob("/src/content/posts/**/*.md");
-	const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+/// get all the posts for one category
 
-	return sortedPosts.map((post) => {
-		const pathParts = post.file.replace("/index.md", "").split("/");
-		const slug = pathParts[pathParts.length - 1];
+export async function getStaticPaths() {
+	const categories = await Astro.glob("../../content/category/*.json");
+	const allPosts = await Astro.glob("../../content/posts/**/index.md");
+
+	return categories.map((cat) => {
+		const slug = "blah"; // cat.file.split("/")[cat.file.split("/").length - 2];
+
+		const posts = allPosts
+			.filter((post) => post.frontmatter.category === slug)
+			.sort((a, b) => {
+				const aDate = new Date(b.frontmatter.date);
+				const bDate = new Date(a.frontmatter.date);
+				return aDate.getTime() - bDate.getTime();
+			});
 
 		return {
 			params: {
 				slug,
 			},
 			props: {
-				post,
+				posts,
 			},
 		};
 	});
 }
 
-const { post } = Astro.props;
+const { cat } = Astro.props;
 const { slug } = Astro.params;
 ---
 
