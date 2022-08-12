@@ -9,73 +9,12 @@ import CodeBlock from "../shared/components/code/CodeBlock.astro";
 import Code from "astro/components/Code.astro";
 import CodeEmbed from "../shared/components/code/CodeEmbed.astro";
 import YouTube from "../shared/components/general/YouTube.astro";
+import CategoryList from "../shared/components/nav/CategoryList.astro";
+import HasAside from "../shared/components/layout/HasAside.astro";
 ---
 
 <Layout>
 	<PrimarySection class="pt-10">
-		<h1>Sandra's Sandbox</h1>
-
-		<a href="/">Back</a>
-
-		<ComponentSection title="Stuff I am working on">
-			<ComponentSection title="Code Playground Component">
-				<div class="max-w-lg">
-					<CodeEmbed src="https://codepen.io/sandrarodgers/embed/jOBrmrw" />
-				</div>
-			</ComponentSection>
-			<ComponentStaticPreview id="youtube" title="YouTube Component" snippet={`<YouTube id="" />`}>
-				<div class="max-w-2xl">
-					<YouTube id="kgCUn4fQTsc" />
-				</div>
-			</ComponentStaticPreview>
-		</ComponentSection>
-
-		<ComponentSection>
-			<ComponentStaticPreview
-				id="code-group"
-				title="Code Group"
-				snippet={`<CodeGroup langs={['npm', 'yarn', 'pnpm']} x-data="{lang:'npm'}">
-    <CodeBlock lang="yarn"  >
-      <Code lang="bash" code="yarn "/>
-    </CodeBlock>
-    <CodeBlock lang="npm">
-      <Code lang="bash" code="npm install"/>
-    </CodeBlock>
-    <CodeBlock lang="pnpm">
-      <Code lang="bash" code="pnpm install"/>
-    </CodeBlock>
-    </CodeGroup>`}
-			>
-				<CodeGroup tabs={["npm", "yarn", "pnpm"]} default="npm">
-					<CodeBlock tab="yarn">
-						<Code lang="bash" code="yarn " />
-					</CodeBlock>
-					<CodeBlock tab="npm">
-						<Code lang="bash" code="npm install" />
-					</CodeBlock>
-					<CodeBlock tab="pnpm">
-						<Code lang="bash" code="pnpm install" />
-					</CodeBlock>
-				</CodeGroup>
-			</ComponentStaticPreview>
-		</ComponentSection>
-
-		<ComponentSection>
-			<ComponentStaticPreview
-				id="code-group"
-				title="Code Group without menu"
-				snippet={`<CodeGroup>
-                  <CodeBlock  >
-                      <Code code="yarn"/>
-                  </CodeBlock>
-              </CodeGroup>`}
-			>
-				<CodeGroup tabs={["npm"]} default="npm">
-					<CodeBlock tab="npm">
-						<Code code="npm" />
-					</CodeBlock>
-				</CodeGroup>
-			</ComponentStaticPreview>
-		</ComponentSection>
+		<HasAside><CategoryList slot="aside" />test <br />test <br />test <br />test <br />test <br /></HasAside>
 	</PrimarySection>
 </Layout>

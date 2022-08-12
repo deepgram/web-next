@@ -1,0 +1,34 @@
+---
+const modules = import.meta.glob("../../../../../blog/src/content/category/*.json");
+
+async function getCategories() {
+	let paths = [];
+	for (const path in modules) {
+		const result = await modules[path]();
+		paths.push({ slug: "blog/categories/" + path.split("/").pop().replace(".json", " ").trim(), title: result.title });
+	}
+	return paths;
+}
+
+const categories = await getCategories();
+---
+
+<div>
+	<h3>Categories</h3>
+	<div class="categories-list">
+		{categories &&
+			categories.map((cat) => {
+				return (
+					<p>
+						<a href={cat.slug}>{cat.title}</a>
+					</p>
+				);
+			})}
+		<button>View All</button>
+	</div>
+</div>
+<style scoped>
+	.categories-list {
+		@apply mt-4;
+	}
+</style>
