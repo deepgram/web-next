@@ -1,7 +1,9 @@
 ---
-const { class: classes, ...rest } = Astro.props;
+const { class: classes, post, ...rest } = Astro.props;
+
+const slug = post.frontmatter.slug || post.file.split("/")[post.file.split("/").length - 2];
 ---
 
-<a class={`block text-black ${classes ? classes : ""}`} {...rest}>
+<a href={`/posts/${slug}`} class={`block text-black ${classes ? classes : ""}`} {...rest}>
 	<slot />
 </a>

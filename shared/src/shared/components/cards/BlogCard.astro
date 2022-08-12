@@ -1,14 +1,16 @@
 ---
+import Authors from "../strings/Authors.astro";
 import GenericBlogCard from "./GenericBlogCard.astro";
 
-const { class: classes, title, tags, author, image, ...rest } = Astro.props;
+const { class: classes, post } = Astro.props;
+const { title, tags, authors, cover } = post.frontmatter;
 ---
 
-<GenericBlogCard class={`w-full flex flex-col ${classes ? classes : ""}`} {...rest}>
-	<div class="overflow-hidden flex place-content-center">
-		<img class="max-w-full grow" src={image} alt={`Blog title image for the blog post: ${title}`} />
+<GenericBlogCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={post}>
+	<div class="overflow-hidden flex h-1/2 place-content-center">
+		<img class="object-cover w-full" src={cover} alt={`Blog title image for the blog post: ${title}`} />
 	</div>
-	<div class="px-4 flex flex-col justify-between text-black">
+	<div class="px-4 pb-3 flex flex-col h-1/2 justify-between text-black">
 		<div class="flex flex-col justify-start space-y-1">
 			<ul class="pt-3 flex text-sm font-medium space-x-2">
 				{tags.map((tag) => <li class="bg-steel text-white">#{tag}</li>)}
@@ -17,6 +19,7 @@ const { class: classes, title, tags, author, image, ...rest } = Astro.props;
 				{title}
 			</h4>
 		</div>
-		{author && <div class="py-3 text-xs font-semibold uppercase">{author}</div>}
+
+		<Authors authors={authors} />
 	</div>
 </GenericBlogCard>

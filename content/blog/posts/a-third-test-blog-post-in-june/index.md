@@ -5,6 +5,8 @@ date: 2022-06-28T14:09:44.129Z
 cover: https://placeimg.com/1200/627/animals
 authors:
   - luke-oliff
+  - kevin-lewis
+  - michael-jolley
 category: tutorial
 tags:
   - vue

@@ -1,9 +1,9 @@
 ---
 import GenericCard from "./GenericCard.astro";
 
-const { class: classes, ...rest } = Astro.props;
+const { class: classes, post } = Astro.props;
 ---
 
-<GenericCard class={`min-w-[10rem] bg-mist/50 shadow-dg bg-blur ${classes ? classes : ""}`} {...rest}>
+<GenericCard class={`min-w-[10rem] bg-mist/50 shadow-dg bg-blur ${classes ? classes : ""}`} post={post}>
 	<slot />
 </GenericCard>

@@ -1,0 +1,37 @@
+---
+import AuthorName from "./AuthorName.astro";
+
+const { authors } = Astro.props;
+
+const isFirst = (author, array) => {
+	return array[0] === author;
+};
+
+const isLast = (author, array) => {
+	return array[array.length - 1] === author;
+};
+
+const isAlone = (array) => {
+	return array.length === 1;
+};
+
+const prefix = (author, index, array) => {
+	return !isAlone(array) && !isFirst(author, array) && !isLast(author, array) ? ", " : !isAlone(array) && !isFirst(author, array) && isLast(author, array) ? "& " : "";
+};
+---
+
+{authors && (
+	<ul class="flex text-xs font-semibold uppercase">
+		{authors.map((author, index, array) => (
+			<li>
+				<AuthorName prefix={prefix(author, index, array)} author={author} />
+			</li>
+		))}
+	</ul>
+)}
+
+<style>
+	li:last-child {
+		@apply pl-1;
+	}
+</style>
