@@ -24,11 +24,23 @@ const categories = await getCategories();
 					</p>
 				);
 			})}
-		<button>View All</button>
+		<button class="button button--quinary button--small">View All</button>
 	</div>
 </div>
 <style scoped>
 	.categories-list {
-		@apply mt-4;
+		@apply my-10;
+	}
+
+	a {
+		@apply text-darkCharcoal hover:text-fireEngine font-semibold leading-5;
+	}
+
+	p {
+		@apply pb-4;
+	}
+
+	button {
+		@apply mt-6;
 	}
 </style>
