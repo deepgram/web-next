@@ -8,6 +8,9 @@
   # build command
   command = "yarn build"
 
+[dev]
+  command = "yarn netlify-dev"
+
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
   

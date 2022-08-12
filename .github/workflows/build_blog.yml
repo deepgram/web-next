@@ -28,6 +28,10 @@ jobs:
         run: |
           cd ./blog
           yarn install
+      - name: Copy netlify functions from shared
+        run: |
+          cd ./www
+          yarn copy-functions
       - name: Build
         run: |
           cd ./blog
