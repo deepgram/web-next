@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: |
           cd ./shared
-          yarn build
+          ./node_modules/.bin/ntl build
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
