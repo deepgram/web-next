@@ -21,17 +21,15 @@ const prefix = (author, index, array) => {
 ---
 
 {authors && (
-	<ul class="flex text-xs font-semibold uppercase">
+	<div class="flex flex-wrap text-xs font-semibold uppercase">
 		{authors.map((author, index, array) => (
-			<li>
-				<AuthorName prefix={prefix(author, index, array)} author={author} />
-			</li>
+			<AuthorName prefix={prefix(author, index, array)} author={author} />
 		))}
-	</ul>
+	</div>
 )}
 
 <style>
-	li:last-child {
+	div :global(span:last-child) {
 		@apply pl-1;
 	}
 </style>

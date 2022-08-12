@@ -3,4 +3,4 @@ const { author: authorSlug, prefix } = Astro.props;
 const author = await import(`../../../content/authors/${authorSlug}.json`);
 ---
 
-<span>{prefix}{author.title}</span>
+<span class="shrink-0">{prefix}{author.title}</span>
