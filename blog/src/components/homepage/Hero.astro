@@ -16,7 +16,7 @@ const { title, featured, homepage, latest } = Astro.props;
 			</div>
 			<div class="grid gap-5 lg:hidden xl:grid xl:grid-rows-2 ">
 				<BlogCard post={latest[0]} />
-				<BlogCard post={latest[1]} />
+				<BlogCard class="sm:hidden lg:block" post={latest[1]} />
 			</div>
 		</div>
 		<div class="grid gap-5 grid-rows-5">
