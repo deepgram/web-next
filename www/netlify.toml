@@ -7,6 +7,9 @@
 
   # build command
   command = "yarn build"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
   
 [functions]
   # Directory with serverless functions
