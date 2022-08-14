@@ -7,6 +7,10 @@
 
   # build command
   command = "yarn build"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
   
-  # ignore command, used to determine whether effectual changes have been made for this site
-  # ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ../content/www/ ./"
+[functions]
+  # Directory with serverless functions
+  directory = "functions/"

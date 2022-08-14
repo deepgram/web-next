@@ -18,3 +18,8 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# deepgram files
+src/content
+src/shared
+public/uploads

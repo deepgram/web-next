@@ -2,7 +2,7 @@
 title: A test blog post in March
 description: This is a test blog post made in March test test test
 date: 2022-03-13T14:09:44.129Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1648829347/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/Building-Livestreaming-w-AmazonIVS.jpg
+cover: https://placeimg.com/1200/627/animals/1
 authors:
   - luke-oliff
 category: tutorial
@@ -19,13 +19,13 @@ seo:
     - here
   canonical: this-should-be-optional
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1648829347/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/Building-Livestreaming-w-AmazonIVS.jpg
+  image: https://placeimg.com/1200/627/animals/1
   description: opengraph specific description (if different)
   title: maybe a separate OG title as well
 ---
 
 blah blah blah
 
-![stuff](https://res.cloudinary.com/deepgram/image/upload/v1637245985/sample.jpg "blah")
+![stuff](https://placeimg.com/1200/627/animals/1 "blah")
 
 blah blah blah blah blah

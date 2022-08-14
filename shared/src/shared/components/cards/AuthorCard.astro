@@ -4,7 +4,7 @@ import GenericCard from "./GenericCard.astro";
 const { class: classes, title, jobtitle, image, ...rest } = Astro.props;
 ---
 
-<GenericCard class={classes ? classes : ""} {...rest}>
+<GenericCard class={classes ? classes : ""} href="/authors/" {...rest}>
 	<div class="flex">
 		<div class="shrink-0 w-[6rem] md:w-[8rem]">
 			<img class="h-[6rem] md:h-[8rem] object-cover rounded-full" src={image} alt={`Blog title image for the blog post: ${title}`} />

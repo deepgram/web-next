@@ -27,6 +27,7 @@ pnpm-debug.log*
 .DS_Store
 
 # deepgram files
+functions
 src/content
 src/shared
 public/uploads
