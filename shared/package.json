@@ -9,6 +9,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "predev": "yarn clean && yarn symlink",
+    "prebuild": "yarn clean && yarn copy",
+    "symlink": "yarn content:symlink",
+    "copy": "yarn content:copy",
+    "clean": "yarn content:clean",
+    "content:symlink": "ln -s ../../content/blog/ ./src/content",
+    "content:copy": "cp -r ../content/blog/ ./src/content/",
+    "content:clean": "rm -rf ./src/content",
     "lint": "cd .. && ./node_modules/.bin/prettier --check ./shared"
   },
   "devDependencies": {
