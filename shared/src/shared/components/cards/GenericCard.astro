@@ -1,7 +1,7 @@
 ---
-const { class: classes, ...rest } = Astro.props;
+const { class: classes, href, ...rest } = Astro.props;
 ---
 
-<a class={`text-black ${classes ? classes : ""}`} {...rest}>
+<a href={href} class={`block text-black ${classes ? classes : ""}`} {...rest}>
 	<slot />
 </a>

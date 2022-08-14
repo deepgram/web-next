@@ -1,23 +1,67 @@
 ---
-import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import settings from "../content/blog/settings.json";
+
+import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
 import Layout from "../layouts/Default.astro";
+import Hero from "../components/homepage/Hero.astro";
+
+const allPosts = await Astro.glob("../content/blog/posts/**/index.md");
+const sortedPosts = allPosts
+	.sort((a, b) => {
+		const aDate = new Date(b.frontmatter.date);
+		const bDate = new Date(a.frontmatter.date);
+		return aDate.getTime() - bDate.getTime();
+	})
+	.slice(0, 9);
+
+const featuredPost = allPosts.find((post) => {
+	return post.file.includes(`/${settings.featured_post}.md`);
+});
+
+const homepagePosts = allPosts.filter((post) => {
+	return settings.homepage_posts.find((slug) => {
+		return post.file.includes(`/${slug}.md`);
+	});
+});
+
+const otherPosts = sortedPosts.filter((post) => {
+	return ![featuredPost, ...homepagePosts].some((f) => {
+		return f.file === post.file;
+	});
+});
+
+const latestPosts = otherPosts.splice(0, 2);
+
+// every other post (incase we need them)
+const posts = otherPosts.filter((post) => {
+	return !latestPosts.some((f) => {
+		return f.file === post.file;
+	});
+});
 ---
 
 <Layout>
-	<PrimarySection>
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-	</PrimarySection>
+	<ContrastSection contrast="cloud" background="white" class="bg-sound-wave-cloud-dark" bottomDivider="eclipse-divider" bottomOverlay>
+		<Hero title="Deepgram Blog ⚡️" featured={featuredPost} homepage={homepagePosts} latest={latestPosts} />
+	</ContrastSection>
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
+	test <br />
 </Layout>
