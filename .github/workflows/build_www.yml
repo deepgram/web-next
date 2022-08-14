@@ -21,9 +21,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Read .nvmrc file
+        uses: browniebroke/read-nvmrc-action@v1
       - uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: '${{ steps.nvmrc.outputs.node_version }}'
       - name: Install Dependencies
         run: |
           cd ./www
