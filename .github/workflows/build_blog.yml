@@ -31,7 +31,7 @@ jobs:
       - name: Copy netlify functions from shared
         run: |
           cd ./blog
-          yarn copy-functions
+          yarn functions:clean && yarn functions:copy
       - name: Build
         run: |
           cd ./blog

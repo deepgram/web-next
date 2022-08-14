@@ -6,6 +6,7 @@
     "yarn": "^1.22.0"
   },
   "scripts": {
+    "postinstall": "yarn functions:clean && yarn functions:symlink",
     "dev": "astro dev --experimental-integrations",
     "build": "astro build --experimental-integrations",
     "preview": "astro preview",
@@ -20,8 +21,9 @@
     "shared:symlink": "ln -s ../../shared/src/shared/ ./src/shared",
     "shared:copy": "cp -r ../shared/src/shared/ ./src/shared/",
     "shared:clean": "rm -rf ./src/shared",
-    "copy-functions": "cp -r ../shared/functions/ ./functions/",
-    "netlify-dev": "yarn copy-functions && yarn dev",
+    "functions:symlink": "ln -s ../shared/functions/ ./functions",
+    "functions:copy": "cp -r ../shared/functions/ ./functions/",
+    "functions:clean": "rm -rf ./functions",
     "lint": "cd .. && ./node_modules/.bin/prettier --check ./blog"
   },
   "devDependencies": {
