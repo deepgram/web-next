@@ -9,6 +9,7 @@ import Layout from "../layouts/Default.astro";
 import LinkCardListTitle from "../shared/components/titles/LinkCardListTitle.astro";
 import NoLinkCardListTitle from "../shared/components/titles/NoLinkCardListTitle.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import CategoryList from "../shared/components/nav/CategoryList.astro";
 
 // hardcoded for demo
 const demoPost = {
@@ -114,6 +115,12 @@ const demoPost = {
 						</div>
 					</div>
 				</PrimarySection>
+			</ComponentPreview>
+		</ComponentSection>
+
+		<ComponentSection title="Blog Categories">
+			<ComponentPreview id="category-list" title="Category List" snippet={`<CategoryList />`}>
+				<CategoryList />
 			</ComponentPreview>
 		</ComponentSection>
 	</PrimarySection>

@@ -21,5 +21,7 @@ pnpm-debug.log*
 
 # deepgram files
 src/content
-src/shared
 public/uploads
+
+# netlify files
+.netlify/functions

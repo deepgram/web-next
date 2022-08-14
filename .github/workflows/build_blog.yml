@@ -21,9 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Read .nvmrc file
+        run: echo ::set-output name=NODE_VERSION::$(cat ./blog/.nvmrc)
+        id: nvm
       - uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
       - name: Install Dependencies
         run: |
           cd ./blog

@@ -1,11 +1,11 @@
 ---
-import settings from "../content/settings.json";
+import settings from "../content/blog/settings.json";
 
 import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
 import Layout from "../layouts/Default.astro";
 import Hero from "../components/homepage/Hero.astro";
 
-const allPosts = await Astro.glob("../content/posts/**/index.md");
+const allPosts = await Astro.glob("../content/blog/posts/**/index.md");
 const sortedPosts = allPosts
 	.sort((a, b) => {
 		const aDate = new Date(b.frontmatter.date);

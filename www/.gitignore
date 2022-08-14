@@ -31,3 +31,6 @@ functions
 src/content
 src/shared
 public/uploads
+
+# netlify files
+.netlify/functions
