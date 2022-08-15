@@ -21,17 +21,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Read .nvmrc file
+        run: echo ::set-output name=NODE_VERSION::$(cat ./blog/.nvmrc)
+        id: nvm
       - uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
       - name: Install Dependencies
         run: |
           cd ./blog
           yarn install
+      - name: Copy netlify functions from shared
+        run: |
+          cd ./blog
+          yarn functions:clean && yarn functions:copy
       - name: Build
         run: |
           cd ./blog
-          yarn build
+          ./node_modules/.bin/ntl build
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
@@ -43,6 +52,7 @@ jobs:
           enable-commit-comment: true
           overwrites-pull-request-comment: true
           production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+          functions-dir: ./blog/functions
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}

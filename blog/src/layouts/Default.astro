@@ -2,6 +2,7 @@
 import Header from "../shared/components/layout/Header.astro";
 import Footer from "../shared/components/layout/Footer.astro";
 import "../shared/assets/styles/main.css";
+import "../assets/styles/blog.css";
 ---
 
 <html class="no-js" lang="en" dir="ltr">
@@ -12,9 +13,10 @@ import "../shared/assets/styles/main.css";
 
 		</script>
 	</head>
+
 	<body>
 		<Header />
-		<main class="bg-black text-white">
+		<main class="pt-16">
 			<slot />
 		</main>
 		<Footer />

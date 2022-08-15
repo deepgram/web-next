@@ -18,3 +18,11 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# deepgram files
+src/content
+public/uploads
+
+# netlify files
+.netlify/functions
+.netlify/edge-functions-import-map.json

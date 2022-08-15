@@ -139,6 +139,10 @@ code {
 		@apply text-lightIris bg-black;
 	}
 
+	.button--quinary {
+		@apply text-meadow bg-rock;
+	}
+
 	.hyperlink {
 		@apply text-lg;
 		@apply font-black;

@@ -18,5 +18,6 @@ pnpm-debug.log*
 ./package.json
 ./package-lock.json
 ./yarn.lock
-# Local Netlify folder
-.netlify
+
+# Netlify built functions folder
+.netlify/functions
