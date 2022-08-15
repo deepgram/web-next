@@ -5,8 +5,6 @@ const deepgram = new Deepgram(process.env.DEEPGRAM_API_KEY);
 const deepgramProjectId = process.env.DEEPGRAM_PROJECT_ID;
 
 const headers = {
-	"Access-Control-Allow-Origin": "*",
-	"Access-Control-Allow-Headers": "Content-Type",
 	"Access-Control-Allow-Methods": "GET",
 };
 
@@ -21,6 +19,7 @@ exports.handler = async function (event) {
 			},
 		};
 	}
+
 	try {
 		const key = await deepgram.keys.create(deepgramProjectId, "Temporary key", ["member"], {
 			timeToLive: 5,
