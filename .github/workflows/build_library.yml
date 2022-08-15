@@ -26,7 +26,7 @@ jobs:
       - name: Install Dependencies
         run: |
           cd ./shared
-          yarn install
+          yarn --skip-integrity-check
       - name: Build
         run: |
           cd ./shared
