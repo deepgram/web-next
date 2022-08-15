@@ -41,7 +41,6 @@ jobs:
           ./node_modules/.bin/ntl build
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          YARN_FLAGS: "--skip-integrity-check"
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
