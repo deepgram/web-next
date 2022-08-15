@@ -1,6 +1,11 @@
-require("dotenv").config();
 const { Deepgram } = require("@deepgram/sdk");
+require("dotenv").config();
+
 const deepgram = new Deepgram(process.env.DEEPGRAM_API_KEY);
+
+const headers = {
+	"Access-Control-Allow-Methods": "POST",
+};
 
 exports.handler = async function transcribePrerecorded(event) {
 	// Only allow POST
@@ -8,31 +13,27 @@ exports.handler = async function transcribePrerecorded(event) {
 		return {
 			statusCode: 405,
 			body: "Method Not Allowed",
-			headers: {
-				Allow: "Get",
-			},
 		};
 	}
 
-	file = JSON.parse(event.body);
-	source = { url: file };
+	// format of body is now { url: "https:// etc" }
+	// but don't pass the parsed body to the function, to avoid abuse
+	const { url } = JSON.parse(event.body);
 
 	try {
-		const transcription = await deepgram.transcription.preRecorded(source, {
-			punctuate: true,
-		});
+		const transcription = await deepgram.transcription.preRecorded({ url }, { punctuate: true });
 
 		return {
 			statusCode: 200,
 			body: JSON.stringify(transcription.results.channels[0].alternatives[0]),
-			headers: { "access-control-allow-origin": "*" },
+			headers,
 		};
 	} catch (err) {
 		console.log(err);
 
 		return {
 			statusCode: 500,
-			headers: { "access-control-allow-origin": "*" },
+			headers,
 		};
 	}
 };
