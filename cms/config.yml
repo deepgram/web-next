@@ -23,13 +23,14 @@ collections:
         name: blog
         file: "content/blog/settings.json"
         fields:
-          - name: featured_post
-            label: "Featured Post"
-            widget: relation
-            collection: blog
-            searchFields: [title, description]
-            valueField: title
-
+          - { label: "Featured Post", name: featured_post, widget: relation, collection: blog, searchFields: [title, "{{slug}}"], displayFields: [title], valueField: "{{slug}}" }
+          - name: homepage_posts
+            label: "Homepage Posts"
+            label_singular: "Homepage Post"
+            widget: list
+            min: 5
+            max: 5
+            field: { label: Post, name: post, widget: relation, collection: blog, searchFields: [title, "{{slug}}"], displayFields: [title], valueField: "{{slug}}" }
   - name: blog
     label: "Blog Posts"
     label_singular: Blog

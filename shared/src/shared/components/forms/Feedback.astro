@@ -1,0 +1,148 @@
+---
+import Svg from "../general/Svg.astro";
+
+const url = Astro.url;
+---
+
+<div
+	x-data="{
+    error: null,
+    feedback: null,
+    email: null,
+    thumb: null,
+    thanks: false,
+    ratePage(e) {
+      const form = new FormData(e.target)
+      this.thumb = form.get('thumb')
+      const body = {
+        thumb: form.get('thumb'),
+        page: window.location.pathname,
+        hookId: form.get('hook')
+      }
+      fetch('/.netlify/functions/forms', {
+        method: 'POST',
+        body: JSON.stringify(body),
+      })
+      .then(() => {
+        this.feedback = null
+      })
+      .catch(() => {
+        this.error = 'A problem occured submitting your rating.'
+      })
+    },
+    sendFeedback(e) {
+      const form = new FormData(e.target)
+      this.email = form.get('email')
+      this.feedback = form.get('feedback')
+      const body = {
+        email: form.get('email'),
+        feedback: form.get('feedback'),
+        page: window.location.pathname,
+        hookId: form.get('hook')
+      }
+      fetch('/.netlify/functions/forms', {
+        method: 'POST',
+        body: JSON.stringify(body),
+      })
+      .then(() => {
+        this.email = null
+        this.feedback = null
+        this.thumb = null
+        this.thanks = true
+      })
+      .catch(() => {
+        this.error = 'A problem occured submitting your feedback.'
+      })
+    }
+  }"
+>
+	<h4>Share your feedback</h4>
+	<div x-show="error" x-text="error"></div>
+	<div>
+		<p class="feedback-question">Was this article useful or interesting to you?</p>
+		<div x-show="!thanks" class="thumbs flex items-center justify-start">
+			<form id="thumbsup-form" :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating" @submit.prevent="ratePage">
+				<input id="thumbup" type="submit" aria-hidden="true" class="hidden" />
+				<label for="thumbup" class="text-3xl">
+					<Svg name="thumbsup" class="my-4 h-8 w-auto" />
+				</label>
+
+				<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
+				<input type="hidden" name="thumb" value="up" />
+				<input type="hidden" name="hook" value="bgv9wf1" />
+				<input type="hidden" name="page" value={url} />
+			</form>
+			<form id="thumbsdown-form" :class="thumb === 'down' ? 'active' : ''" class="thumb inline down" name="rating" @submit.prevent="ratePage">
+				<input id="thumbdown" type="submit" aria-hidden="true" class="hidden" />
+				<label for="thumbdown" class="text-3xl">
+					<Svg name="thumbsdown" class="mt-4 h-8 w-auto" />
+				</label>
+
+				<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
+				<input type="hidden" name="thumb" value="down" />
+				<input type="hidden" name="hook" value="bgv9wf1" />
+			</form>
+		</div>
+		<form x-show="thumb !== null" name="feedback" method="POST" @submit.prevent="sendFeedback">
+			<div class="flex flex-col mb-4">
+				<div class="mb-4">
+					<p x-show="thumb ==='up'">Thank you! Can you tell us what you liked about it? (Optional)</p>
+					<p x-show="thumb !=='up'">Thank you. What could we have done better? (Optional)</p>
+				</div>
+				<label for="feedback" class="text-sm">Your message</label>
+				<textarea
+					id="feedback"
+					ref="feedback"
+					class="bg-cloud py-3 px-4 mt-2 h-32 placeholder:text-sm"
+					name="feedback"
+					required
+					placeholder="Share your thoughts"
+					x-model="feedback"></textarea>
+				<label for="email">Email</label>
+				<input id="email" class="flex-grow border-2 border-ink mr-2 px-2" type="email" name="email" placeholder="you@email.com" x-model="email" />
+			</div>
+
+			<div class="flex flex-row-reverse">
+				<button type="submit" aria-label="Send Feedback" title="Send Feedback" class="button button--primary button--small"> Send Feedback</button>
+			</div>
+
+			<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
+			<input type="hidden" name="thumb" value="thumb" />
+			<input type="hidden" name="hook" value="bgvnn9g" />
+		</form>
+		<div x-show="thanks" class="px-1">
+			<p class="text-watercourse text-2xl font-bold">Thank you!</p>
+			<p>We appreciate your response.</p>
+		</div>
+	</div>
+</div>
+<!-- TODO: Add email input to feedback form, hook up feedback form -->
+<style scoped>
+	p {
+		@apply text-lg;
+	}
+
+	form.thumb {
+		@apply mx-2;
+	}
+
+	form svg {
+		@apply fill-darkCharcoal;
+		cursor: pointer;
+	}
+
+	form.thumb.up svg:hover,
+	form.thumb.up.active svg {
+		@apply fill-grass;
+	}
+
+	form.thumb.down svg:hover,
+	form.thumb.down.active svg {
+		@apply fill-fireEngine;
+	}
+
+	form input,
+	form textarea {
+		@apply text-almostBlack;
+	}
+</style>

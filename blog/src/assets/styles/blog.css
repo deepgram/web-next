@@ -1,0 +1,6 @@
+.bg-sound-wave-cloud-dark {
+	background-image: url("/sound-wave-cloud-dark.svg");
+	background-size: 50rem;
+	background-repeat: repeat-x;
+	background-position: 0 12rem;
+}

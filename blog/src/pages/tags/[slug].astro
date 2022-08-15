@@ -3,7 +3,7 @@ import PrimarySection from "../../shared/components/layout/PrimarySection.astro"
 import Layout from "../../layouts/Default.astro";
 
 export async function getStaticPaths() {
-	const allPosts = await Astro.glob("/src/content/posts/**/*.md");
+	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
 	const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 
 	return sortedPosts.map((post) => {
