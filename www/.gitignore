@@ -34,3 +34,4 @@ public/uploads
 
 # netlify files
 .netlify/functions
+.netlify/edge-functions-import-map.json
