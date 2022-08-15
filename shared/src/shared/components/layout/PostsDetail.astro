@@ -1,0 +1,23 @@
+---
+import PrimarySection from "./PrimarySection.astro";
+import HasAside from "./HasAside.astro";
+import CategoryList from "../nav/CategoryList.astro";
+import BlogCardList from "../lists/BlogCardList.astro";
+import BlogCard from "../cards/BlogCard.astro";
+
+const { posts, backLink } = Astro.props;
+---
+
+<a href="/" class="mb-12">{backLink}</a>
+<div class="mb-16 mt-12">
+	<h1 class="mb-8">Deepgram Blog ⚡️</h1>
+	<h2>All Posts</h2>
+</div>
+<HasAside>
+	<CategoryList slot="aside" />
+	<BlogCardList>
+		{posts.map((post) => {
+			return <BlogCard post={post} />;
+		})}
+	</BlogCardList>
+</HasAside>
