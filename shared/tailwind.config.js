@@ -19,6 +19,7 @@ module.exports = {
 				"70%": "70%",
 				"80%": "80%",
 				"90%": "90%",
+				"promo-xs": "300%",
 			},
 			fontFamily: {
 				favorit: ["favorit", "sans-serif"],

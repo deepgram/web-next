@@ -1,7 +1,7 @@
 ---
 import PromoLink from "./PromoLink.astro";
 
-const { theme, formText } = Astro.props;
+const { theme, formText, buttonText } = Astro.props;
 
 let themeStyles;
 if (theme) {
@@ -29,7 +29,7 @@ if (theme) {
 				</div>
 			);
 		})}
-	<div class="button-container"><PromoLink linkText="Submit" /></div>
+	<div class="button-container"><PromoLink buttonText={buttonText} /></div>
 </form>
 
 <style scoped>
@@ -44,8 +44,7 @@ if (theme) {
 	}
 
 	input {
-		@apply md:h-13 h-9;
-		/* height: 3.25rem; */
+		@apply lg:h-13 h-9;
 		margin-top: 0.25rem;
 		@apply w-full md:w-3/6 lg:w-44;
 	}

@@ -1,10 +1,11 @@
 ---
 import AbstractPromo from "./AbstractPromo.astro";
 import PromoForm from "./PromoForm.astro";
+import newsletterImage from "../../assets/temp_images/white-arrows.svg";
 
-const { date, backgroundImage, theme, formText, ...rest } = Astro.props;
+const { ...rest } = Astro.props;
 ---
 
-<AbstractPromo title="this is the title" backgroundImage={backgroundImage} theme={theme} {...rest}>
-	<PromoForm theme={theme} formText={formText} />
+<AbstractPromo title="Get Deepgram news and product updates." backgroundImage={newsletterImage} theme="white" {...rest}>
+	<PromoForm theme="white" formText={[{ label: "Work email", placeholder: "you@company.com" }]} buttonText="Submit" />
 </AbstractPromo>

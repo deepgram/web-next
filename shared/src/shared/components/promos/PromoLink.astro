@@ -1,11 +1,12 @@
 ---
-const { linkText } = Astro.props;
+const { buttonText } = Astro.props;
 ---
 
-<div class="flex"><a class="button button--primary">{linkText}</a></div>
+<div class="flex"><a class="button button--primary">{buttonText}</a></div>
 
 <style scoped>
 	.button {
+		@apply lg:h-13 h-9;
 		@apply w-full md:w-3/6 lg:w-44;
 		@apply mt-4 mb-40 md:mb-6 lg:mb-0 lg:mt-0;
 	}
