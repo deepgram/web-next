@@ -21,7 +21,7 @@ const { page } = Astro.props;
         page: window.location.pathname,
         hookId: form.get('hook')
       }
-      fetch('https://mellow-mermaid-841d72-functions.netlify.app/.netlify/functions/forms', {
+      fetch('/serverless/forms', {
         method: 'POST',
         body: JSON.stringify(body),
       })
@@ -42,7 +42,7 @@ const { page } = Astro.props;
         page: window.location.pathname,
         hookId: form.get('hook')
       }
-      fetch('https://mellow-mermaid-841d72-functions.netlify.app/.netlify/functions/forms', {
+      fetch('/serverless/forms', {
         method: 'POST',
         body: JSON.stringify(body),
       })
