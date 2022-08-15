@@ -1,7 +1,7 @@
 ---
 import Svg from "../general/Svg.astro";
 
-// const { page } = Astro.props;
+const url = Astro.url;
 ---
 
 <div
@@ -55,9 +55,8 @@ import Svg from "../general/Svg.astro";
       })
     }
   }"
-	class="py-12 max-w-lg"
 >
-	<h4>Share your Feedback</h4>
+	<h4>Share your feedback</h4>
 	<div x-show="error" x-text="error"></div>
 	<div>
 		<p class="feedback-question">Was this article useful or interesting to you?</p>
@@ -71,7 +70,7 @@ import Svg from "../general/Svg.astro";
 				<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
 				<input type="hidden" name="thumb" value="up" />
 				<input type="hidden" name="hook" value="bgv9wf1" />
-				<!-- <input type="hidden" name="page" value={page.url.current} /> -->
+				<input type="hidden" name="page" value={url} />
 			</form>
 			<form id="thumbsdown-form" :class="thumb === 'down' ? 'active' : ''" class="thumb inline down" name="rating" @submit.prevent="ratePage">
 				<input id="thumbdown" type="submit" aria-hidden="true" class="hidden" />
@@ -88,7 +87,7 @@ import Svg from "../general/Svg.astro";
 			<div class="flex flex-col mb-4">
 				<div class="mb-4">
 					<p x-show="thumb ==='up'">Thank you! Can you tell us what you liked about it? (Optional)</p>
-					<p x-show="thumb !=='up'">Please let us know how we can do better. (Optional)</p>
+					<p x-show="thumb !=='up'">Thank you. What could we have done better? (Optional)</p>
 				</div>
 				<label for="feedback" class="text-sm">Your message</label>
 				<textarea
@@ -97,10 +96,10 @@ import Svg from "../general/Svg.astro";
 					class="bg-cloud py-3 px-4 mt-2 h-32 placeholder:text-sm"
 					name="feedback"
 					required
-					placeholder="Share your thoughts (optional)"
+					placeholder="Share your thoughts"
 					x-model="feedback"></textarea>
 				<label for="email">Email</label>
-				<input id="email" class="flex-grow border-2 border-ink mr-2 px-2" type="email" name="email" placeholder="Your email (optional)" x-model="email" />
+				<input id="email" class="flex-grow border-2 border-ink mr-2 px-2" type="email" name="email" placeholder="you@email.com" x-model="email" />
 			</div>
 
 			<div class="flex flex-row-reverse">
@@ -112,7 +111,8 @@ import Svg from "../general/Svg.astro";
 			<input type="hidden" name="hook" value="bgvnn9g" />
 		</form>
 		<div x-show="thanks" class="px-1">
-			<p class="text-watercourse text-2xl font-bold">THANK YOU!</p>
+			<p class="text-watercourse text-2xl font-bold">Thank you!</p>
+			<p>We appreciate your response.</p>
 		</div>
 	</div>
 </div>
