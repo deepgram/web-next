@@ -30,9 +30,9 @@ import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 							humanReadableDate="Wed Apr 27 11a PT | 12p ET"
 							theme="red"
 							backgroundImage={webinarImg}
-							formText={[
+							formProps={[
 								{ label: "Name (first and last)", placeholder: "Your name" },
-								{ label: "Work email", placeholder: "you@company.com" },
+								{ label: "Work email", placeholder: "you@company.com", type: "email" },
 								{ label: "Role", placeholder: "Role/Title" },
 							]}
 							buttonText="Register"
@@ -43,9 +43,9 @@ import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 							title="How to Make Your Application Voice-Ready"
 							theme="black"
 							backgroundImage={whitepaperImg}
-							formText={[
+							formProps={[
 								{ label: "Name (first and last)", placeholder: "Your name" },
-								{ label: "Work email", placeholder: "you@company.com" },
+								{ label: "Work email", placeholder: "you@company.com", type: "email" },
 								{ label: "Role", placeholder: "Role/Title" },
 							]}
 							buttonText="Download"
@@ -55,9 +55,9 @@ import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 						<EventPromo
 							title="Try the ASR Comparison Tool"
 							strapline="Using google or amazon STT?"
-							formText={[
+							formProps={[
 								{ label: "Name (first and last)", placeholder: "Your name" },
-								{ label: "Work email", placeholder: "you@company.com" },
+								{ label: "Work email", placeholder: "you@company.com", type: "email" },
 								{ label: "Role", placeholder: "Role/Title" },
 							]}
 							theme="black"

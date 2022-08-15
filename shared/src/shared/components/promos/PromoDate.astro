@@ -2,4 +2,4 @@
 const { humanReadableDate } = Astro.props;
 ---
 
-{humanReadableDate ? <h3>{humanReadableDate}</h3> : null}
+{(<h3>{humanReadableDate ? Astro.props.humanReadableDate : null}</h3>)}

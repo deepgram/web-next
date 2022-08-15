@@ -2,9 +2,9 @@
 import AbstractPromo from "./AbstractPromo.astro";
 import PromoForm from "./PromoForm.astro";
 
-const { date, title, formText, buttonText, strapline, backgroundImage, theme, ...rest } = Astro.props;
+const { date, title, formProps, buttonText, strapline, backgroundImage, theme, ...rest } = Astro.props;
 ---
 
 <AbstractPromo theme={theme} title={title} strapline={strapline} backgroundImage={backgroundImage} {...rest}>
-	<PromoForm theme={theme} formText={formText} buttonText={buttonText} />
+	<PromoForm theme={theme} formProps={formProps} buttonText={buttonText} />
 </AbstractPromo>

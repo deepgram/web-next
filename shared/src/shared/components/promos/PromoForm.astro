@@ -1,7 +1,7 @@
 ---
 import PromoLink from "./PromoLink.astro";
 
-const { theme, formText, buttonText } = Astro.props;
+const { theme, formProps, buttonText } = Astro.props;
 
 let themeStyles;
 if (theme) {
@@ -20,12 +20,12 @@ if (theme) {
 ---
 
 <form class:list={[themeStyles]}>
-	{formText &&
-		formText.map((form) => {
+	{formProps &&
+		formProps.map((form) => {
 			return (
 				<div class="input-container">
 					<label>{form.label}</label>
-					<input placeholder={form.placeholder} />
+					<input type={form.type} placeholder={form.placeholder} />
 				</div>
 			);
 		})}

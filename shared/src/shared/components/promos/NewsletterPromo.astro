@@ -7,5 +7,5 @@ const { ...rest } = Astro.props;
 ---
 
 <AbstractPromo title="Get Deepgram news and product updates." backgroundImage={newsletterImage} theme="white" {...rest}>
-	<PromoForm theme="white" formText={[{ label: "Work email", placeholder: "you@company.com" }]} buttonText="Submit" />
+	<PromoForm theme="white" formProps={[{ label: "Work email", placeholder: "you@company.com" }]} buttonText="Submit" />
 </AbstractPromo>
