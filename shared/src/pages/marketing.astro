@@ -9,10 +9,9 @@ import NewsletterPromo from "../shared/components/promos/NewsletterPromo.astro";
 import WebinarPromo from "../shared/components/promos/WebinarPromo.astro";
 import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.astro";
 import EventPromo from "../shared/components/promos/EventPromo.astro";
-import newsletterImg from "../shared/assets/temp_images/newsletter.svg";
-import webinarImg from "../shared/assets/temp_images/webinar.png";
-import whitepaperImg from "../shared/assets/temp_images/quotes.svg";
-import eventImg from "../shared/assets/temp_images/apples.png";
+import webinarImg from "../shared/assets/temp_images/red-ticks.svg";
+import whitepaperImg from "../shared/assets/temp_images/black-quote.svg";
+import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 ---
 
 <Layout>
@@ -33,12 +32,7 @@ import eventImg from "../shared/assets/temp_images/apples.png";
 	formText={[{ label: "Work email", placeholder: "you@company.com" }]}
 		/>`}
 			>
-				<NewsletterPromo
-					theme="white"
-					backgroundImage={newsletterImg}
-					title="Get Deepgram news and product updates."
-					formText={[{ label: "Work email", placeholder: "you@company.com" }]}
-				/>
+				<NewsletterPromo theme="white" title="Get Deepgram news and product updates." formText={[{ label: "Work email", placeholder: "you@company.com" }]} />
 			</ComponentPreview>
 			<ComponentPreview
 				id="promo-webinar"
