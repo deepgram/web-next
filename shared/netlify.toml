@@ -1,0 +1,16 @@
+[build]
+  # directory to change to build in
+  base = "shared/"
+
+  # relativate path for the build output (www/dist/)
+  publish = "dist/"
+
+  # build command
+  command = "yarn build"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+[functions]
+  # Directory with serverless functions
+  directory = "functions/"

@@ -8,6 +8,31 @@ import LeftDecoration from "../shared/components/decoration/LeftDecoration.astro
 import RightDecoration from "../shared/components/decoration/RightDecoration.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import BlogCardList from "../shared/components/lists/BlogCardList.astro";
+
+// hardcoded for demo
+const demoPost = {
+	file: "/Projects/Deepgram/web-next/blog/src/content/posts/a-third-test-blog-post-in-june/index.md",
+	frontmatter: {
+		title: "A third test blog post in June",
+		description: "This is a test blog post made in June test test test",
+		date: "2022-06-28T14:09:44.129Z",
+		cover: "https://placeimg.com/1200/627/animals",
+		authors: ["luke-oliff", "kevin-lewis", "michael-jolley"],
+		category: "tutorial",
+		tags: ["vue", "stream", "live"],
+		seo: {
+			title: "A different title of SEO maybe?",
+			description: "oooo a different description for SEO",
+			keywords: ["keywords", "go", "here"],
+			canonical: "this-should-be-optional",
+		},
+		og: {
+			image: "https://placeimg.com/1200/627/animals",
+			description: "opengraph specific description (if different)",
+			title: "maybe a separate OG title as well",
+		},
+	},
+};
 ---
 
 <Layout>
@@ -57,12 +82,12 @@ import BlogCardList from "../shared/components/lists/BlogCardList.astro";
 					<PrimarySection>
 						<h1 class="mt-20 mb-10">Deepgram Blog ⚡</h1>
 						<BlogCardList>
-							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/1" tags={["Vue"]} author="lukeocodes" />
-							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/2" tags={["Vue"]} author="lukeocodes" />
-							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/3" tags={["Vue"]} author="lukeocodes" />
-							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/1" tags={["Vue"]} author="lukeocodes" />
-							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/2" tags={["Vue"]} author="lukeocodes" />
-							<BlogCard title="Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram" image="//placeimg.com/1200/627/tech/3" tags={["Vue"]} author="lukeocodes" />
+							<BlogCard post={demoPost} />
+							<BlogCard post={demoPost} />
+							<BlogCard post={demoPost} />
+							<BlogCard post={demoPost} />
+							<BlogCard post={demoPost} />
+							<BlogCard post={demoPost} />
 						</BlogCardList>
 					</PrimarySection>
 				</ContrastSection>

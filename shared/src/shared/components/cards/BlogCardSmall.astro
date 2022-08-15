@@ -1,23 +1,19 @@
 ---
+import Authors from "../strings/Authors.astro";
 import GenericBlogCard from "./GenericBlogCard.astro";
 
-const { class: classes, title, tags, author, image, ...rest } = Astro.props;
+const { class: classes, post } = Astro.props;
+const { title, authors, cover } = post.frontmatter;
 ---
 
-<GenericBlogCard class={`w-full max-w-[21rem] ${classes ? classes : ""}`} {...rest}>
-	<div class="flex">
-		<div class="flex grow flex-col justify-between text-black p-2">
-			<h5 class="text-lg leading-5">{title}</h5>
-			{author && (
-				<div class="text-xs">
-					<p>
-						<span class="font-semibold uppercase">{author}</span>
-					</p>
-				</div>
-			)}
+<GenericBlogCard class={`w-full flex justify-between ${classes ? classes : ""}`} post={post}>
+	<div class="flex grow flex-col h-full justify-between text-black p-2 pb-3">
+		<div>
+			<h5 class="inline-block text-lg leading-5">{title}</h5>
 		</div>
-		<div class="shrink-0 w-[6rem] p-[0.5rem] flex justify-end place-items-end">
-			<img class="h-[5rem] object-cover" src={image} alt={`Blog title image for the blog post: ${title}`} />
-		</div>
+		<Authors authors={authors} />
+	</div>
+	<div class="shrink-0 w-[7rem] p-[0.5rem] flex justify-end place-items-start">
+		<img class="h-[6rem] object-cover" src={cover} alt={`Blog title image for the blog post: ${title}`} />
 	</div>
 </GenericBlogCard>

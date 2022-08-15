@@ -17,6 +17,10 @@
 			"path": "../shared"
 		},
 		{
+			"name": "content",
+			"path": "../content"
+		},
+		{
 			"name": "next-web root",
 			"path": "../"
 		}
