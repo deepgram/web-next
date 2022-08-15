@@ -1,23 +1,20 @@
 ---
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../layouts/Default.astro";
+import PostsDetail from "../../shared/components/layout/PostsDetail.astro";
+
+const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
+const sortedPosts = allPosts
+	.sort((a, b) => {
+		const aDate = new Date(b.frontmatter.date);
+		const bDate = new Date(a.frontmatter.date);
+		return aDate.getTime() - bDate.getTime();
+	})
+	.slice(0, 9);
 ---
 
 <Layout>
-	<PrimarySection>
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
+	<PrimarySection class="pt-14">
+		<PostsDetail posts={sortedPosts} backLink="Back to blog home" />
 	</PrimarySection>
 </Layout>
