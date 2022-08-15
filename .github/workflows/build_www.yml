@@ -30,7 +30,7 @@ jobs:
       - name: Install Dependencies
         run: |
           cd ./www
-          yarn --skip-integrity-check
+          yarn install
       - name: Copy netlify functions from shared
         run: |
           cd ./www
