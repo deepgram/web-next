@@ -10,6 +10,8 @@ import LinkCardListTitle from "../shared/components/titles/LinkCardListTitle.ast
 import NoLinkCardListTitle from "../shared/components/titles/NoLinkCardListTitle.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
+import Feedback from "../shared/components/forms/Feedback.astro";
+import NarrowSection from "../shared/components/layout/NarrowSection.astro";
 ---
 
 <Layout>
@@ -48,6 +50,12 @@ import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
 					<p>Get your API key and unlock $150 in free credit.</p>
 					<a href="https://console.deepgram.com/signup">Start Free</a>
 				</AmplifyQuote>
+			</ComponentPreview>
+		</ComponentSection>
+
+		<ComponentSection title="Forms">
+			<ComponentPreview id="form-feedback" title="Feedback Form" snippet={`<Feedback>`}>
+				<NarrowSection><Feedback /></NarrowSection>
 			</ComponentPreview>
 		</ComponentSection>
 	</PrimarySection>
