@@ -1,0 +1,18 @@
+---
+import HasAside from "../../shared/components/layout/HasAside.astro";
+import CategoryList from "../../shared/components/nav/CategoryList.astro";
+import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
+import BlogCard from "../../shared/components/cards/BlogCard.astro";
+
+const { posts, link, linkText, subtitle } = Astro.props;
+---
+
+<a href={link} class="inline-block py-4 md:py-6 lg:py-8 xl:py-10">&lt;- {linkText}</a>
+<h1 class="mb-8">Deepgram Blog ⚡️</h1>
+<h2 class="mb-8">{subtitle}</h2>
+<HasAside>
+	<CategoryList slot="aside" />
+	<BlogCardList>
+		{posts.map((post, index) => <BlogCard post={post} />)}
+	</BlogCardList>
+</HasAside>

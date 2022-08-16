@@ -9,17 +9,17 @@ const { title, featured, homepage, latest } = Astro.props;
 
 <PrimarySection class="pt-14">
 	<h1 class="mb-8">{title}</h1>
-	<div class="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-		<div class="lg:col-span-2 xl:col-span-3 grid gap-5 xl:grid-cols-3 ">
+	<div class="grid gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+		<div class="lg:col-span-2 xl:col-span-3 grid gap-4 lg:gap-6 xl:grid-cols-3 ">
 			<div class="xl:order-last xl:col-span-2 flex">
 				<BlogCardLarge post={featured} />
 			</div>
-			<div class="grid gap-5 lg:hidden xl:grid xl:grid-rows-2 ">
+			<div class="grid gap-4 lg:gap-6 lg:hidden xl:grid xl:grid-rows-2">
 				<BlogCard post={latest[0]} />
 				<BlogCard class="sm:hidden lg:block" post={latest[1]} />
 			</div>
 		</div>
-		<div class="grid gap-5 grid-rows-5">
+		<div class="grid gap-4 lg:gap-6 grid-rows-5">
 			<BlogCardSmall post={homepage[0]} />
 			<BlogCardSmall post={homepage[1]} />
 			<BlogCardSmall post={homepage[2]} />

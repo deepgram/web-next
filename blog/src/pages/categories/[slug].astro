@@ -1,36 +1,46 @@
 ---
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../layouts/Default.astro";
-import PostsDetail from "../../shared/components/layout/PostsDetail.astro";
+import GeneralPostsPage from "../../components/posts/GeneralPostsPage.astro";
 
 export async function getStaticPaths() {
-	const categories = await Astro.glob("../../content/blog/category/*.json");
+	const categoryFiles = import.meta.glob("../../content/blog/category/*.json");
+
+	async function getCategories() {
+		let paths = [];
+		for (const path in categoryFiles) {
+			const category = await categoryFiles[path]();
+			paths.push({ title: category.title, slug: path.split("/").pop().replace(".json", " ").trim() });
+		}
+		return paths;
+	}
+
+	const categories = await getCategories();
 	const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
-	return categories.map((cat) => {
-		const slug = cat.title.toLowerCase().replace(/ /g, "-").replace("&", "and");
-		const postsByCategory = [];
-		allPosts.filter((post) => {
-			if (post.frontmatter.category === slug) {
-				postsByCategory.push(post);
-			}
+
+	return categories.map((category) => {
+		const postsByCategory = allPosts.filter((post) => {
+			return post.frontmatter.category === category.slug
 		});
 
 		return {
 			params: {
-				slug,
+				slug: category.slug
 			},
 			props: {
+				title: category.title,
 				posts: postsByCategory,
 			},
 		};
 	});
 }
-const { posts } = Astro.props;
+
+const { posts, title } = Astro.props;
 const { slug } = Astro.params;
 ---
 
 <Layout>
-	<PrimarySection class="pt-14">
-		<PostsDetail posts={posts} backLink="All Posts" />
+	<PrimarySection>
+		<GeneralPostsPage posts={posts} link="/posts" linkText="All posts" subtitle={`All ${title} posts`} />
 	</PrimarySection>
 </Layout>
