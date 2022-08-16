@@ -6,7 +6,7 @@ cover: https://placeimg.com/1200/627/animals/2
 authors:
   - luke-oliff
   - kevin-lewis
-category: careers
+category: tutorial
 tags:
   - vue
   - stream
