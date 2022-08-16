@@ -7,7 +7,7 @@ authors:
   - luke-oliff
   - kevin-lewis
   - michael-jolley
-category: tutorial
+category: ai-and-engineering
 tags:
   - vue
   - stream

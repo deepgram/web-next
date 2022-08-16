@@ -5,7 +5,7 @@ date: 2022-05-13T14:09:44.129Z
 cover: https://placeimg.com/1200/627/animals/2
 authors:
   - luke-oliff
-category: tutorial
+category: ai-and-engineering
 tags:
   - vue
   - stream
