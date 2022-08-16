@@ -2,7 +2,7 @@
 title: "Nulla quis lorem ut libero malesuada feugiat"
 description: "Nulla quis lorem ut libero malesuada feugiat. Curabitur aliquet quam id dui posuere blandit."
 date: 2022-04-21T14:09:44.129Z
-cover: https://placeimg.com/1200/627/animals/4
+cover: https://placeimg.com/1200/627/animals/2
 authors:
   - luke-oliff
 category: product-news
