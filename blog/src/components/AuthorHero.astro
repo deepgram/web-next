@@ -6,36 +6,44 @@ const { author } = Astro.props;
 ---
 
 <PrimarySection class="bg-darkCharcoal">
-	<div class="flex author-hero">
+	<div class="author-hero">
 		<div class="flex-1 author-info">
 			<!-- Is there a reason we did title instead of name? -->
 			<h1 class="name">{author.title}</h1>
 			<h2 class="title">{author.jobtitle}</h2>
 			<ul class="socials">
-				<li v-if="author.twitter">
+        {author.twitter && 
+        <li>
 					<a href={`https://twitter.com/${author.twitter}`} target="_blank">
-						<img src="/social/twitter.svg" />
+						<Svg class="twitter" name="twitter" />
 					</a>
 				</li>
-				<li v-if="author.linkedin">
-					<a href={author.linkedin_url} target="_blank">
-						<img src="/social/linkedin.svg" />
+        }
+
+        {author.linkedin &&				
+				<li>
+					<a href={author.linkedin} target="_blank">
+						<Svg class="linkedin" name="linkedin" />
+						<!-- <img src="/social/linkedin.svg" /> -->
 					</a>
 				</li>
-				<li v-if="author.github">
-					<a href={author.github_url} target="_blank">
-						<img src="/social/github.svg" />
+      }
+        {author.github && 
+        <li>
+					<a href={author.github} target="_blank">
+						<Svg class="github" name="github" />
 					</a>
 				</li>
-				<!-- TODO: if we want twitch, we'll need a twitch logo SVG -->
-				<!-- <li v-if="author.twitch">
-					<a href={author.twitch_url} target="_blank">
-            
-						<img src="/social/twitch.svg" />
+      }
+        {author.twitch && 
+        <li>
+					<a href={author.twitch} target="_blank">
+						<Svg class="twitch" name="twitch" />
 					</a>
-				</li> -->
+				</li>
+      }
 			</ul>
-			<p>{author.bio}</p>
+			<p class="bio">{author.bio}</p>
 		</div>
 		<div class="picture-section ">
 			<img class="picture" src={author.picture} alt={author.title} />
@@ -46,37 +54,55 @@ const { author } = Astro.props;
 
 <style scoped>
 	.author-hero {
-		@apply flex text-white;
+		grid-template-rows: 0.5fr 1fr;
+		@apply grid grid-cols-1 pb-10 text-white md:grid-cols-2 md:grid-rows-1 md:pt-4;
 	}
+
 	.author-hero h1 {
 		@apply mt-3 text-3xl font-bold md:mt-10 md:text-6xl;
 	}
+	.author-hero h2 {
+		@apply text-2xl font-bold md:mt-3 md:mt-10 md:text-4xl;
+	}
 	.author-info {
 		@apply grow;
+		@apply order-2 md:order-1;
 	}
 	ul.socials {
 		@apply flex items-start;
 	}
 	ul.socials li {
-		@apply mx-4;
+		@apply mx-2 my-3;
+	}
+	ul.socials li svg {
+		fill: white;
+		@apply h-5 w-5;
 	}
 	ul.socials li:nth-child(1) {
 		@apply ml-0;
 	}
 
+	p.bio {
+		@apply text-lg;
+	}
+
 	.picture-section {
 		@apply grid shrink grow-0 grid-cols-7;
+		@apply order-1 md:order-2;
+		/* grid-template-rows: 0.5fr; */
+		/* @screen md { */
 		grid-template-rows: 1fr;
+		/* } */
 	}
 	.picture-section .picture {
-		@apply h-full max-h-80 rounded-full;
-		grid-column: 3 / span 3;
+		@apply my-auto max-h-80 rounded-full;
+		@apply col-span-3 col-start-1 lg:col-start-2;
 		grid-row: 1;
 		z-index: 1;
 	}
 	.picture-section .fingerprint {
-		@apply h-full max-h-80;
-		grid-column: 5 / span 3;
+		@apply my-auto max-h-80 w-full;
+		@apply col-span-3 col-start-3 lg:col-start-4;
 		grid-row: 1;
 		z-index: 0;
 	}
