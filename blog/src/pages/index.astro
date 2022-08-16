@@ -58,6 +58,9 @@ const categories = await getCategories();
 		<HasAside>
 			<CategoryList slot="aside" />
 			{categories && categories.map((category, index) => <CategorySection index={index} category={category} />)}
+			<center class="-mt-10 mb-20">
+				<a href="/posts" class="button button--quinary button--small">View All</a>
+			</center>
 		</HasAside>
 	</PrimarySection>
 	<ContrastSection contrast="black" background="white" topDivider="eclipse-divider">
