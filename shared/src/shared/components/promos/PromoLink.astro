@@ -2,12 +2,10 @@
 const { buttonText } = Astro.props;
 ---
 
-<div class="flex"><a class="button button--primary">{buttonText}</a></div>
+<div class="flex w-full"><a class="button button--primary button--block button--small lg:button--base">{buttonText}</a></div>
 
 <style scoped>
 	.button {
-		@apply lg:h-13 h-9;
-		@apply w-full md:w-3/6 lg:w-44;
 		@apply mt-4 mb-40 md:mb-6 lg:mb-0 lg:mt-0;
 	}
 </style>

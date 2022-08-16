@@ -6,9 +6,6 @@ module.exports = {
 			boxShadow: {
 				dg: "3px 3px 10px rgba(0, 0, 0, 0.25)",
 			},
-			height: {
-				13: "3.25rem",
-			},
 			backgroundSize: {
 				"10%": "10%",
 				"20%": "20%",

@@ -110,6 +110,10 @@ code {
 		width: fit-content;
 	}
 
+	.button--base {
+		height: 3.25rem;
+	}
+
 	.button--small {
 		@apply py-2 px-4;
 		height: 2.375rem;
@@ -121,6 +125,10 @@ code {
 
 	.button--block {
 		@apply w-full;
+	}
+
+	.button--fit-content {
+		width: fit-content;
 	}
 
 	.button--primary {
@@ -145,6 +153,19 @@ code {
 
 	.button--senary {
 		@apply bg-rock text-white;
+	}
+
+	.input--base {
+		height: 3.25rem;
+	}
+
+	.input--small {
+		@apply py-2 px-4;
+		height: 2.375rem;
+	}
+
+	.input--big {
+		height: 4.125rem;
 	}
 
 	.hyperlink {
