@@ -28,7 +28,7 @@ const categories = await getCategories();
 					);
 				})}
 		</ul>
-		<button class="button button--quinary button--small">View All</button>
+		<a href="/posts" class="button button--quinary button--small">View All</a>
 	</div>
 	<div x-data="{ open: false }" class="block lg:hidden mb-10">
 		<a @click="open = !open" class="button button--senary button--small button--block flex justify-between">
