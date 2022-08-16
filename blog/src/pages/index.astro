@@ -54,7 +54,7 @@ const categories = await getCategories();
 	<ContrastSection contrast="cloud" background="white" class="bg-sound-wave-cloud-dark" bottomDivider="eclipse-divider" bottomOverlay>
 		<Hero title="Deepgram Blog ⚡️" featured={featuredPost} homepage={homepagePosts} latest={latestPosts} />
 	</ContrastSection>
-	<PrimarySection class="mt-52">
+	<PrimarySection class="mt-32 xl:mt-52">
 		<HasAside>
 			<CategoryList slot="aside" />
 			{categories && categories.map((category, index) => <CategorySection index={index} category={category} />)}
