@@ -1,32 +1,36 @@
 ---
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
+import AuthorHero from "../../components/AuthorHero.astro";
 import Layout from "../../layouts/Default.astro";
 
 export async function getStaticPaths() {
-	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
-	const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+	const allAuthors = await Astro.glob("/src/content/blog/authors/*.json");
+	const sortedAuthors = allAuthors.sort((a, b) => a.title.localeCompare(b.title));
 
-	return sortedPosts.map((post) => {
-		const pathParts = post.file.replace("/index.md", "").split("/");
-		const slug = pathParts[pathParts.length - 1];
+	return sortedAuthors.map((author) => {
+		// const pathParts = author.file.replace("/index.md", "").split("/");
+		// const slug = pathParts[pathParts.length - 1];
 
 		return {
 			params: {
-				slug,
+				slug: author.slug,
 			},
 			props: {
-				post,
+				author,
 			},
 		};
 	});
 }
 
-const { post } = Astro.props;
+const { author } = Astro.props;
 const { slug } = Astro.params;
 ---
 
 <Layout>
+	<AuthorHero author={author} />
 	<PrimarySection>
+		<!-- <h1>{author.title}</h1>
+		<p>{slug}</p> -->
 		test<br />
 		test<br />
 		test<br />

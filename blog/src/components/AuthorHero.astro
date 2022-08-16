@@ -1,0 +1,83 @@
+---
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import Svg from "../shared/components/general/Svg.astro";
+
+const { author } = Astro.props;
+---
+
+<PrimarySection class="bg-darkCharcoal">
+	<div class="flex author-hero">
+		<div class="flex-1 author-info">
+			<!-- Is there a reason we did title instead of name? -->
+			<h1 class="name">{author.title}</h1>
+			<h2 class="title">{author.jobtitle}</h2>
+			<ul class="socials">
+				<li v-if="author.twitter">
+					<a href={`https://twitter.com/${author.twitter}`} target="_blank">
+						<img src="/social/twitter.svg" />
+					</a>
+				</li>
+				<li v-if="author.linkedin">
+					<a href={author.linkedin_url} target="_blank">
+						<img src="/social/linkedin.svg" />
+					</a>
+				</li>
+				<li v-if="author.github">
+					<a href={author.github_url} target="_blank">
+						<img src="/social/github.svg" />
+					</a>
+				</li>
+				<!-- TODO: if we want twitch, we'll need a twitch logo SVG -->
+				<!-- <li v-if="author.twitch">
+					<a href={author.twitch_url} target="_blank">
+            
+						<img src="/social/twitch.svg" />
+					</a>
+				</li> -->
+			</ul>
+			<p>{author.bio}</p>
+		</div>
+		<div class="picture-section ">
+			<img class="picture" src={author.picture} alt={author.title} />
+			<Svg class="fingerprint" name="fingerprint" />
+		</div>
+	</div>
+</PrimarySection>
+
+<style scoped>
+	.author-hero {
+		@apply flex text-white;
+	}
+	.author-hero h1 {
+		@apply mt-3 text-3xl font-bold md:mt-10 md:text-6xl;
+	}
+	.author-info {
+		@apply grow;
+	}
+	ul.socials {
+		@apply flex items-start;
+	}
+	ul.socials li {
+		@apply mx-4;
+	}
+	ul.socials li:nth-child(1) {
+		@apply ml-0;
+	}
+
+	.picture-section {
+		@apply grid shrink grow-0 grid-cols-7;
+		grid-template-rows: 1fr;
+	}
+	.picture-section .picture {
+		@apply h-full max-h-80 rounded-full;
+		grid-column: 3 / span 3;
+		grid-row: 1;
+		z-index: 1;
+	}
+	.picture-section .fingerprint {
+		@apply h-full max-h-80;
+		grid-column: 5 / span 3;
+		grid-row: 1;
+		z-index: 0;
+	}
+</style>
