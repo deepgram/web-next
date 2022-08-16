@@ -5,6 +5,8 @@ import ComponentSection from "../components/partials/ComponentSection.astro";
 import Layout from "../layouts/Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
+import Feedback from "../shared/components/forms/Feedback.astro";
+import NarrowSection from "../shared/components/layout/NarrowSection.astro";
 import NewsletterPromo from "../shared/components/promos/NewsletterPromo.astro";
 import WebinarPromo from "../shared/components/promos/WebinarPromo.astro";
 import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.astro";
@@ -19,6 +21,46 @@ import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 		<h1>Marketing Components</h1>
 
 		<a href="/">Back</a>
+
+		<ComponentSection title="Quotes and Testimonials">
+			<ComponentPreview
+				id="quote-amplify"
+				title="Amplify Quote"
+				snippet={`<AmplifyQuote>
+	<h1>Ready to see Deepgram in Action?</h1>
+	<p>Get your API key and unlock $150 in free credit.</p>
+	<a href="https://console.deepgram.com/signup">Start Free</a>
+</AmplifyQuote>`}
+			>
+				<AmplifyQuote>
+					<h1>Ready to see Deepgram in Action?</h1>
+					<p>Get your API key and unlock $150 in free credit.</p>
+					<a href="https://console.deepgram.com/signup">Start Free</a>
+				</AmplifyQuote>
+			</ComponentPreview>
+			<ComponentPreview
+				id="quote-amplify-dark"
+				title="Amplify Quote (dark)"
+				snippet={`<AmplifyQuote>
+	<h1>Ready to see Deepgram in Action?</h1>
+	<p>Get your API key and unlock $150 in free credit.</p>
+	<a href="https://console.deepgram.com/signup">Start Free</a>
+</AmplifyQuote>`}
+			>
+				<AmplifyQuote class="bg-black text-white">
+					<h1>Ready to see Deepgram in Action?</h1>
+					<p>Get your API key and unlock $150 in free credit.</p>
+					<a href="https://console.deepgram.com/signup">Start Free</a>
+				</AmplifyQuote>
+			</ComponentPreview>
+		</ComponentSection>
+
+		<ComponentSection title="Forms">
+			<ComponentPreview id="form-feedback" title="Feedback Form" snippet={`<Feedback>`}>
+				<NarrowSection><Feedback /></NarrowSection>
+			</ComponentPreview>
+		</ComponentSection>
+
 		<ComponentSection title="Promos">
 			<p>Promos can be <code>theme=white</code> or <code>theme=black</code> or <code>theme=red</code></p>
 			<ComponentPreview
