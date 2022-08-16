@@ -14,10 +14,12 @@ if (theme) {
 			break;
 	}
 }
+
+const rawHTMLString = "&nbsp";
 ---
 
 <div class:list={["promo", themeStyles]} style={`background-image: url('${backgroundImage}');`}>
-	{strapline && <h5 class="uppercase">{strapline}</h5>}
+	{strapline ? <h5 class="uppercase">{strapline}</h5> : <h5 class="uppercase" set:html={rawHTMLString} />}
 	<h2>{title}</h2>
 	<div>
 		<slot />

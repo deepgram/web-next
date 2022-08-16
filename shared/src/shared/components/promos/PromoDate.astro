@@ -1,5 +1,6 @@
 ---
 const { humanReadableDate } = Astro.props;
+const rawHTMLString = "&nbsp";
 ---
 
-{(<h3>{humanReadableDate ? Astro.props.humanReadableDate : null}</h3>)}
+{humanReadableDate ? <h3>{humanReadableDate}</h3> : <h3 set:html={rawHTMLString} />}
