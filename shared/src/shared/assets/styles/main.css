@@ -143,6 +143,10 @@ code {
 		@apply text-meadow bg-rock;
 	}
 
+	.button--senary {
+		@apply bg-rock text-white;
+	}
+
 	.hyperlink {
 		@apply text-lg;
 		@apply font-black;
