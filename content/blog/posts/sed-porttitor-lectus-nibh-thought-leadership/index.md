@@ -2,7 +2,7 @@
 title: "Sed porttitor lectus nibh. Curabitur arcu erat"
 description: "Sed porttitor lectus nibh. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem."
 date: 2022-04-21T14:09:44.129Z
-cover: https://placeimg.com/1200/627/animals/4
+cover: https://placeimg.com/1200/627/animals/5
 authors:
   - luke-oliff
 category: thought-leadership

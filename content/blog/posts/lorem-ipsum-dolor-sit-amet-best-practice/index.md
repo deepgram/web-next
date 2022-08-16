@@ -2,8 +2,7 @@
 title: "Lorem ipsum dolor sit amet, consectetur adipiscing"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
 date: 2022-04-21T14:09:44.129Z
-cover: https://placeimg.com/1200/627/animals/4
-authors:
+cover: https://placeimg.com/1200/627/animals/1
   - luke-oliff
 category: best-practice
 tags:

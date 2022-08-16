@@ -2,7 +2,7 @@
 title: "Vestibulum ac diam sit amet quam vehicula elementum"
 description: "Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula."
 date: 2022-04-21T14:09:44.129Z
-cover: https://placeimg.com/1200/627/animals/4
+cover: https://placeimg.com/1200/627/animals/6
 authors:
   - luke-oliff
 category: careers
