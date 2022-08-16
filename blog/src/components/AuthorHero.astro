@@ -27,21 +27,21 @@ const { author } = Astro.props;
 						<!-- <img src="/social/linkedin.svg" /> -->
 					</a>
 				</li>
-      }
+        }
         {author.github && 
         <li>
 					<a href={author.github} target="_blank">
 						<Svg class="github" name="github" />
 					</a>
 				</li>
-      }
+        }
         {author.twitch && 
         <li>
 					<a href={author.twitch} target="_blank">
 						<Svg class="twitch" name="twitch" />
 					</a>
 				</li>
-      }
+        }
 			</ul>
 			<p class="bio">{author.bio}</p>
 		</div>
@@ -62,7 +62,7 @@ const { author } = Astro.props;
 		@apply mt-3 text-3xl font-bold md:mt-10 md:text-6xl;
 	}
 	.author-hero h2 {
-		@apply text-2xl font-bold md:mt-3 md:mt-10 md:text-4xl;
+		@apply text-2xl font-bold md:mt-10 md:text-4xl;
 	}
 	.author-info {
 		@apply grow;
