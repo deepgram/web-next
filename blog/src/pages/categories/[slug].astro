@@ -20,12 +20,12 @@ export async function getStaticPaths() {
 
 	return categories.map((category) => {
 		const postsByCategory = allPosts.filter((post) => {
-			return post.frontmatter.category === category.slug
+			return post.frontmatter.category === category.slug;
 		});
 
 		return {
 			params: {
-				slug: category.slug
+				slug: category.slug,
 			},
 			props: {
 				title: category.title,
