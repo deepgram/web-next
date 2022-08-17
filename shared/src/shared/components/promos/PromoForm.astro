@@ -29,7 +29,7 @@ if (theme) {
 				</div>
 			);
 		})}
-	<div class="button-container"><PromoButton buttonText={buttonText} /></div>
+	<div class="button-container"><PromoButton theme={theme} buttonText={buttonText} /></div>
 </form>
 
 <style scoped>
@@ -72,10 +72,6 @@ if (theme) {
 		@apply text-steel;
 	}
 
-	.theme--white :global(button) {
-		@apply button--primary;
-	}
-
 	/* Black Theme Styles */
 	.theme--black input {
 		@apply bg-black;
@@ -90,10 +86,6 @@ if (theme) {
 		@apply text-stone;
 	}
 
-	.theme--black :global(button) {
-		@apply button--primary;
-	}
-
 	/* Red Theme Styles */
 	.theme--red input {
 		@apply bg-crimson;
@@ -106,9 +98,5 @@ if (theme) {
 
 	.theme--red input::placeholder {
 		@apply text-cottonCandy;
-	}
-
-	.theme--red :global(button) {
-		@apply button--tertiary;
 	}
 </style>

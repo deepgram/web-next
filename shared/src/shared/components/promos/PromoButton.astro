@@ -1,5 +1,7 @@
 ---
-const { buttonText } = Astro.props;
+const { buttonText, theme } = Astro.props;
 ---
 
-<button type="submit" class="button button--block button--small lg:button--base">{buttonText}</button>
+<button type="submit" class:list={[{ "button--primary": theme !== "red" }, { "button--tertiary": theme === "red" }, "button button--block button--small lg:button--base"]} class=""
+	>{buttonText}
+</button>
