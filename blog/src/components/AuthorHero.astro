@@ -8,40 +8,38 @@ const { author } = Astro.props;
 <PrimarySection class="bg-darkCharcoal">
 	<div class="author-hero">
 		<div class="flex-1 author-info">
-			<!-- Is there a reason we did title instead of name? -->
 			<h1 class="name">{author.title}</h1>
 			<h2 class="title">{author.jobtitle}</h2>
 			<ul class="socials">
-        {author.twitter && 
-        <li>
-					<a href={`https://twitter.com/${author.twitter}`} target="_blank">
-						<Svg class="twitter" name="twitter" />
-					</a>
-				</li>
-        }
+				{author.twitter && (
+					<li>
+						<a href={`https://twitter.com/${author.twitter}`} target="_blank">
+							<Svg class="twitter" name="twitter" />
+						</a>
+					</li>
+				)}
 
-        {author.linkedin &&				
-				<li>
-					<a href={author.linkedin} target="_blank">
-						<Svg class="linkedin" name="linkedin" />
-						<!-- <img src="/social/linkedin.svg" /> -->
-					</a>
-				</li>
-        }
-        {author.github && 
-        <li>
-					<a href={author.github} target="_blank">
-						<Svg class="github" name="github" />
-					</a>
-				</li>
-        }
-        {author.twitch && 
-        <li>
-					<a href={author.twitch} target="_blank">
-						<Svg class="twitch" name="twitch" />
-					</a>
-				</li>
-        }
+				{author.linkedin && (
+					<li>
+						<a href={author.linkedin} target="_blank">
+							<Svg class="linkedin" name="linkedin" />
+						</a>
+					</li>
+				)}
+				{author.github && (
+					<li>
+						<a href={author.github} target="_blank">
+							<Svg class="github" name="github" />
+						</a>
+					</li>
+				)}
+				{author.twitch && (
+					<li>
+						<a href={author.twitch} target="_blank">
+							<Svg class="twitch" name="twitch" />
+						</a>
+					</li>
+				)}
 			</ul>
 			<p class="bio">{author.bio}</p>
 		</div>
