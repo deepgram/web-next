@@ -1,6 +1,7 @@
 ---
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Svg from "../shared/components/general/Svg.astro";
+import Icon from "../shared/components/general/Icon.astro";
 
 const { author } = Astro.props;
 ---
@@ -14,7 +15,7 @@ const { author } = Astro.props;
 				{author.twitter && (
 					<li>
 						<a href={`https://twitter.com/${author.twitter}`} target="_blank">
-							<Svg class="twitter" name="twitter" />
+							<Icon icon="twitter" />
 						</a>
 					</li>
 				)}
@@ -22,21 +23,21 @@ const { author } = Astro.props;
 				{author.linkedin && (
 					<li>
 						<a href={author.linkedin} target="_blank">
-							<Svg class="linkedin" name="linkedin" />
+							<Icon icon="linkedin" />
 						</a>
 					</li>
 				)}
 				{author.github && (
 					<li>
 						<a href={author.github} target="_blank">
-							<Svg class="github" name="github" />
+							<Icon icon="github" />
 						</a>
 					</li>
 				)}
 				{author.twitch && (
 					<li>
 						<a href={author.twitch} target="_blank">
-							<Svg class="twitch" name="twitch" />
+							<Icon icon="twitch" />
 						</a>
 					</li>
 				)}
