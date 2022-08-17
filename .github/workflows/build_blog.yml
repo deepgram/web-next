@@ -1,6 +1,7 @@
 name: "Blog site: New Deployment"
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths: 
