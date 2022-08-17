@@ -131,30 +131,6 @@ code {
 		width: fit-content;
 	}
 
-	.button--primary {
-		@apply bg-meadow text-darkCharcoal;
-	}
-
-	.button--secondary {
-		@apply bg-rock text-meadow;
-	}
-
-	.button--tertiary {
-		@apply text-darkCharcoal bg-white;
-	}
-
-	.button--quaternary {
-		@apply text-lightIris bg-black;
-	}
-
-	.button--quinary {
-		@apply text-meadow bg-rock;
-	}
-
-	.button--senary {
-		@apply bg-rock text-white;
-	}
-
 	.input--base {
 		height: 3.25rem;
 	}
@@ -179,6 +155,30 @@ code {
 }
 
 @layer utilities {
+	.button--primary {
+		@apply bg-meadow text-darkCharcoal;
+	}
+
+	.button--secondary {
+		@apply bg-rock text-meadow;
+	}
+
+	.button--tertiary {
+		@apply text-darkCharcoal bg-white;
+	}
+
+	.button--quaternary {
+		@apply text-lightIris bg-black;
+	}
+
+	.button--quinary {
+		@apply text-meadow bg-rock;
+	}
+
+	.button--senary {
+		@apply bg-rock text-white;
+	}
+
 	.bg-blur {
 		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);

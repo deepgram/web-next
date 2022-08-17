@@ -22,24 +22,16 @@ if (theme) {
 
 <AbstractPromo theme={theme} {...rest}>
 	<div class="flex flex-col w-full sm:w-1/2 lg:w-full">
-		<p class="pb-8">{description}</p>
-		<a href={href} class:list={["button button--block button--small lg:button--fit-content lg:button--base lg:px-12", themeStyles]}>{buttonText}</a>
+		<p class="pb-10">{description}</p>
+		<a
+			href={href}
+			class:list={[
+				{ "button--primary": theme !== "red" },
+				{ "button--tertiary": theme === "red" },
+				"button button--block button--small lg:button--fit-content lg:button--base lg:px-12",
+				themeStyles,
+			]}
+			>{buttonText}
+		</a>
 	</div>
 </AbstractPromo>
-
-<style>
-	/* White Theme Styles */
-	a.button.theme--white {
-		@apply button--primary;
-	}
-
-	/* Black Theme Styles */
-	a.button.theme--black {
-		@apply button--primary;
-	}
-
-	/* Red Theme Styles */
-	a.button.theme--red {
-		@apply button--tertiary;
-	}
-</style>
