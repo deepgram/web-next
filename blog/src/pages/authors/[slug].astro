@@ -5,13 +5,22 @@ import Layout from "../../layouts/Default.astro";
 import ContrastSection from "../../shared/components/decoration/ContrastSection.astro";
 
 export async function getStaticPaths() {
-	const allAuthors = await Astro.glob("/src/content/blog/authors/*.json");
+	const authorFiles = import.meta.glob("../../content/blog/authors/*.json");
+
+	async function getAuthors() {
+		let authors = [];
+		for (const path in authorFiles) {
+			const author = await authorFiles[path]();
+			const slug = path.split("/").pop().replace(".json", " ").trim();
+			authors.push({ ...(author as object), slug });
+		}
+		return authors;
+	}
+
+	const allAuthors = await getAuthors();
 	const sortedAuthors = allAuthors.sort((a, b) => a.title.localeCompare(b.title));
 
 	return sortedAuthors.map((author) => {
-		// const pathParts = author.file.replace("/index.md", "").split("/");
-		// const slug = pathParts[pathParts.length - 1];
-
 		return {
 			params: {
 				slug: author.slug,
