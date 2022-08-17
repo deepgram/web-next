@@ -2,10 +2,10 @@
 title: A third test blog post in April
 description: This is a test blog post made in April test test test
 date: 2022-04-23T14:09:44.129Z
-cover: https://placeimg.com/1200/627/animals
+cover: https://placeimg.com/1200/627/animals/8
 authors:
   - luke-oliff
-category: tutorial
+category: ai-and-engineering
 tags:
   - vue
   - stream

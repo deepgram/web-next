@@ -1,0 +1,6 @@
+---
+const { humanReadableDate } = Astro.props;
+const rawHTMLString = "&nbsp";
+---
+
+{humanReadableDate ? <h4 class="date">{humanReadableDate}</h4> : <h4 set:html={rawHTMLString} />}
