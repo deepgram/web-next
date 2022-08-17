@@ -1,12 +1,27 @@
 ---
 import AbstractPromo from "./AbstractPromo.astro";
+import NewsletterPromo from "./NewsletterPromo.astro";
 import PromoForm from "./PromoForm.astro";
 import PromoDate from "./PromoDate.astro";
 
-const { date, title, formProps, buttonText, strapline, humanReadableDate, backgroundImage, theme, ...rest } = Astro.props;
+const { date, strapline, humanReadableDate, backgroundImage, theme, formProps, buttonText, ...rest } = Astro.props;
+
+const dateFormatted = new Date(date);
+function isBeforeToday(dateFormatted) {
+	const today = new Date();
+	today.setHours(0, 0, 0, 0);
+	return dateFormatted < today;
+}
+const dateIsBeforeToday = isBeforeToday(dateFormatted);
+const dateNotPast = dateIsBeforeToday === false;
+const datePast = dateIsBeforeToday === true;
 ---
 
-<AbstractPromo theme={theme} title={title} strapline={strapline} backgroundImage={backgroundImage} {...rest}>
-	<PromoDate humanReadableDate={humanReadableDate} />
-	<PromoForm theme={theme} formProps={formProps} buttonText={buttonText} />
-</AbstractPromo>
+{dateNotPast && (
+	<AbstractPromo strapline="Event" backgroundImage={backgroundImage} theme={theme} {...rest}>
+		<PromoDate humanReadableDate={humanReadableDate} />
+		<PromoForm theme={theme} formProps={formProps} buttonText={buttonText} humanReadableDate={humanReadableDate} />
+	</AbstractPromo>
+)}
+
+{datePast && <NewsletterPromo />}

@@ -1,5 +1,5 @@
 ---
-import PromoLink from "./PromoLink.astro";
+import PromoButton from "./PromoButton.astro";
 
 const { theme, formProps, buttonText } = Astro.props;
 
@@ -29,7 +29,7 @@ if (theme) {
 				</div>
 			);
 		})}
-	<div class="button-container"><PromoLink buttonText={buttonText} /></div>
+	<div class="button-container"><PromoButton buttonText={buttonText} /></div>
 </form>
 
 <style scoped>
@@ -37,8 +37,9 @@ if (theme) {
 		@apply flex flex-col lg:flex-row;
 		@apply w-full;
 	}
+
 	label {
-		@apply mt-1 pb-1 text-sm lg:mt-4;
+		@apply mt-1 pb-1 text-sm;
 		@apply relative top-1;
 		@apply w-full md:w-3/6 lg:w-48;
 	}
@@ -54,8 +55,8 @@ if (theme) {
 	}
 
 	.button-container {
-		@apply block items-end lg:flex;
-		@apply w-full md:w-3/6 lg:w-48;
+		@apply mb-1 block items-end lg:flex;
+		@apply mt-8 w-full md:w-3/6 lg:w-48;
 	}
 
 	/* White Theme Styles */
@@ -70,8 +71,12 @@ if (theme) {
 	.theme--white input::placeholder {
 		@apply text-steel;
 	}
-	/* Black Theme Styles */
 
+	.theme--white :global(button) {
+		@apply button--primary;
+	}
+
+	/* Black Theme Styles */
 	.theme--black input {
 		@apply bg-black;
 		@apply text-white;
@@ -84,8 +89,12 @@ if (theme) {
 	.theme--black input::placeholder {
 		@apply text-stone;
 	}
-	/* Red Theme Styles */
 
+	.theme--black :global(button) {
+		@apply button--primary;
+	}
+
+	/* Red Theme Styles */
 	.theme--red input {
 		@apply bg-crimson;
 		@apply text-white;
@@ -97,5 +106,9 @@ if (theme) {
 
 	.theme--red input::placeholder {
 		@apply text-cottonCandy;
+	}
+
+	.theme--red :global(button) {
+		@apply button--tertiary;
 	}
 </style>

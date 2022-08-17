@@ -11,9 +11,12 @@ import NewsletterPromo from "../shared/components/promos/NewsletterPromo.astro";
 import WebinarPromo from "../shared/components/promos/WebinarPromo.astro";
 import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.astro";
 import EventPromo from "../shared/components/promos/EventPromo.astro";
+import LinkPromo from "../shared/components/promos/LinkPromo.astro";
+
+import eventImg from "../shared/assets/temp_images/white-arrows.svg";
 import webinarImg from "../shared/assets/temp_images/red-ticks.svg";
 import whitepaperImg from "../shared/assets/temp_images/black-quote.svg";
-import eventImg from "../shared/assets/temp_images/black-arrows.svg";
+import linkImg from "../shared/assets/temp_images/black-arrows.svg";
 ---
 
 <Layout>
@@ -56,26 +59,20 @@ import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 		</ComponentSection>
 
 		<ComponentSection title="Forms">
-			<ComponentPreview id="form-feedback" title="Feedback Form" snippet={`<Feedback>`}>
+			<ComponentStaticPreview id="form-feedback" title="Feedback Form" snippet={`<Feedback>`}>
 				<NarrowSection><Feedback /></NarrowSection>
-			</ComponentPreview>
+			</ComponentStaticPreview>
 		</ComponentSection>
 
 		<ComponentSection title="Promos">
 			<p>Promos can be <code>theme=white</code> or <code>theme=black</code> or <code>theme=red</code></p>
-			<ComponentPreview
-				id="promo-newsletter"
-				title="Newsletter Promo"
-				snippet={`
-<NewsletterPromo/>`}
-			>
+			<ComponentPreview id="promo-newsletter" title="Newsletter Promo" snippet={`<NewsletterPromo/>`}>
 				<NewsletterPromo />
 			</ComponentPreview>
 			<ComponentPreview
 				id="promo-webinar"
 				title="Webinar Promo"
-				snippet={`
-<WebinarPromo
+				snippet={`<WebinarPromo
 	title="How to Make Your Application Voice-Ready"
 	date="09-10-22"
 	humanReadableDate="Wed Apr 27 11a PT | 12p ET"
@@ -87,7 +84,7 @@ import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 		{ label: "Role", placeholder: "Role/Title" },
 	]}
 	buttonText="Register"
-		/>`}
+/>`}
 			>
 				<WebinarPromo
 					title="How to Make Your Application Voice-Ready"
@@ -104,10 +101,40 @@ import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 				/>
 			</ComponentPreview>
 			<ComponentPreview
+				id="promo-event"
+				title="Event Promo"
+				snippet={`<EventPromo
+	title="An Event I Just Made Up"
+	date="09-10-22"
+	humanReadableDate="Wed Apr 27 11a PT | 12p ET"
+	theme="white"
+	backgroundImage={eventImg}
+	formProps={[
+		{ label: "Name (first and last)", placeholder: "Your name" },
+		{ label: "Work email", placeholder: "you@company.com", type: "email" },
+		{ label: "Role", placeholder: "Role/Title" },
+	]}
+	buttonText="Register"
+/>`}
+			>
+				<EventPromo
+					title="An Event I Just Made Up"
+					date="09-10-22"
+					humanReadableDate="Wed Apr 27 11a PT | 12p ET"
+					theme="white"
+					backgroundImage={eventImg}
+					formProps={[
+						{ label: "Name (first and last)", placeholder: "Your name" },
+						{ label: "Work email", placeholder: "you@company.com", type: "email" },
+						{ label: "Role", placeholder: "Role/Title" },
+					]}
+					buttonText="Register"
+				/>
+			</ComponentPreview>
+			<ComponentPreview
 				id="promo-whitepaper"
 				title="Whitepaper Promo"
-				snippet={`
-<WhitepaperPromo
+				snippet={`<WhitepaperPromo
 	title="How to Make Your Application Voice-Ready"
 	theme="black"
 	backgroundImage={whitepaperImg}
@@ -117,7 +144,7 @@ import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 		{ label: "Role", placeholder: "Role/Title" },
 	]}
 	buttonText="Download"
-		/>`}
+/>`}
 			>
 				<WhitepaperPromo
 					title="How to Make Your Application Voice-Ready"
@@ -132,32 +159,25 @@ import eventImg from "../shared/assets/temp_images/black-arrows.svg";
 				/>
 			</ComponentPreview>
 			<ComponentPreview
-				id="promo-event"
-				title="Event Promo"
-				snippet={`
-<EventPromo
+				id="promo-link"
+				title="Link Promo"
+				snippet={`<LinkPromo
+	strapline="Using Google or Amazon STT?"
 	title="Try the ASR Comparison Tool"
-	strapline="Using google or amazon STT?"
-	formProps={[
-		{ label: "Name (first and last)", placeholder: "Your name" },
-		{ label: "Work email", placeholder: "you@company.com", type: "email" },
-		{ label: "Role", placeholder: "Role/Title" },
-	]}
+	description="See how Deepgram fares against the big guys on tough audio."
+	href="/marketing"
 	theme="black"
-	backgroundImage={eventImg}
+	backgroundImage={linkImg}
 	buttonText="Try it Free"
-		/>`}
+/>`}
 			>
-				<EventPromo
+				<LinkPromo
+					strapline="Using Google or Amazon STT?"
 					title="Try the ASR Comparison Tool"
-					strapline="Using google or amazon STT?"
-					formProps={[
-						{ label: "Name (first and last)", placeholder: "Your name" },
-						{ label: "Work email", placeholder: "you@company.com", type: "email" },
-						{ label: "Role", placeholder: "Role/Title" },
-					]}
+					description="See how Deepgram fares against the big guys on tough audio."
+					href="/marketing"
 					theme="black"
-					backgroundImage={eventImg}
+					backgroundImage={linkImg}
 					buttonText="Try it Free"
 				/>
 			</ComponentPreview>

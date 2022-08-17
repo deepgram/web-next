@@ -15,12 +15,14 @@ if (theme) {
 	}
 }
 
-const rawHTMLString = "&nbsp";
+const rawHTMLString = "&nbsp;";
 ---
 
 <div class:list={["promo", themeStyles]} style={`background-image: url('${backgroundImage}');`}>
-	{strapline ? <h5 class="uppercase">{strapline}</h5> : <h5 class="uppercase" set:html={rawHTMLString} />}
-	<h2>{title}</h2>
+	<header>
+		{strapline ? <h6 class="uppercase">{strapline}</h6> : <h6 class="uppercase" set:html={rawHTMLString} />}
+		<h2>{title}</h2>
+	</header>
 	<div>
 		<slot />
 	</div>
@@ -28,48 +30,55 @@ const rawHTMLString = "&nbsp";
 
 <style scoped>
 	.promo {
-		@apply max-w-[1094px];
-		@apply w-full;
+		@apply max-w-[76.25rem];
+		@apply min-h-[13rem] w-full;
 		@apply flex flex-col space-y-1;
-		@apply py-3 px-8;
+		@apply py-4 px-8;
+		@apply justify-between;
 		@apply drop-shadow-md;
 		@apply bg-right-bottom bg-no-repeat lg:bg-right;
 		@apply bg-promo-xs sm:bg-auto;
 	}
 
 	/* White Theme Styles */
-
 	.theme--white {
 		@apply bg-white;
 	}
 
-	.theme--white h5,
-	h2 {
+	.theme--white h6 {
+		@apply text-fireEngine;
+	}
+
+	.theme--white h2,
+	.theme--white :global(h4.date),
+	.theme--white :global(p) {
 		@apply text-black;
 	}
 
 	/* Black Theme Styles */
-
 	.theme--black {
 		@apply bg-ink;
 	}
 
-	.theme--black h5 {
+	.theme--black h6 {
 		@apply text-coral;
 	}
 
-	.theme--black h2 {
+	.theme--black h2,
+	.theme--black :global(h4.date),
+	.theme--black :global(p) {
 		@apply text-white;
 	}
 
 	/* Red Theme Styles */
-
 	.theme--red {
 		@apply bg-fireEngine;
 	}
 
-	.theme--red h5,
-	h2 {
+	.theme--red h6,
+	.theme--red h2,
+	.theme--red :global(h4.date),
+	.theme--red :global(p) {
 		@apply text-black;
 	}
 </style>
