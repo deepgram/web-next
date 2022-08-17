@@ -1,7 +1,9 @@
 ---
+import WhitepaperPromo from "../../shared/components/promos/WhitepaperPromo.astro";
 import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
 import LinkCardListTitle from "../../shared/components/titles/LinkCardListTitle.astro";
 import CategoryPosts from "./CategoryPosts.astro";
+import whitepaperImg from "../../shared/assets/temp_images/black-quote.svg";
 
 const { index, category } = Astro.props;
 
@@ -25,6 +27,20 @@ const categoryPosts = posts.filter((p) => category.slug === p.frontmatter.catego
 			<CategoryPosts posts={categoryPosts} />
 		</BlogCardList>
 
-		{index === 0 && <div class="bg-darkCharcoal mb-32 h-40 max-w-[] text-white">promo goes here</div>}
+		{index === 0 && (
+			<div class="mb-32">
+				<WhitepaperPromo
+					title="How to Make Your Application Voice-Ready"
+					theme="black"
+					backgroundImage={whitepaperImg}
+					formProps={[
+						{ label: "Name (first and last)", placeholder: "Your name" },
+						{ label: "Work email", placeholder: "you@company.com", type: "email" },
+						{ label: "Role", placeholder: "Role/Title" },
+					]}
+					buttonText="Download"
+				/>
+			</div>
+		)}
 	</>
 )}
