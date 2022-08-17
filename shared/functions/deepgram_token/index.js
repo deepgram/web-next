@@ -4,11 +4,29 @@ require("dotenv").config();
 const deepgram = new Deepgram(process.env.DEEPGRAM_API_KEY);
 const deepgramProjectId = process.env.DEEPGRAM_PROJECT_ID;
 
-const headers = {
-	"Access-Control-Allow-Methods": "GET",
-};
-
 exports.handler = async function (event) {
+	const cors = process.env.DEEPGRAM_SERVERLESS_CORS;
+	let corsOrigin = "*";
+
+	if (cors) {
+		const corsDomains = [process.env.URL, process.env.DEPLOY_URL, ...cors.split(", ")];
+		const thisCors = corsDomains.indexOf(event.headers["origin"]);
+
+		if (thisCors < 0) {
+			return {
+				statusCode: 403,
+				body: "Forbidden",
+			};
+		}
+
+		corsOrigin = corsDomains[thisCors];
+	}
+
+	const headers = {
+		"Access-Control-Allow-Origin": corsOrigin,
+		"Access-Control-Allow-Methods": "GET",
+	};
+
 	// Only allow GET
 	if (event.httpMethod !== "GET") {
 		return {
