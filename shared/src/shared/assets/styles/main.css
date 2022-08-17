@@ -110,6 +110,10 @@ code {
 		width: fit-content;
 	}
 
+	.button--base {
+		height: 3.25rem;
+	}
+
 	.button--small {
 		@apply py-2 px-4;
 		height: 2.375rem;
@@ -123,6 +127,34 @@ code {
 		@apply w-full;
 	}
 
+	.button--fit-content {
+		width: fit-content;
+	}
+
+	.input--base {
+		height: 3.25rem;
+	}
+
+	.input--small {
+		@apply py-2 px-4;
+		height: 2.375rem;
+	}
+
+	.input--big {
+		height: 4.125rem;
+	}
+
+	.hyperlink {
+		@apply text-lg;
+		@apply font-black;
+	}
+
+	.astro-code {
+		@apply overflow-hidden py-7 px-10;
+	}
+}
+
+@layer utilities {
 	.button--primary {
 		@apply bg-meadow text-darkCharcoal;
 	}
@@ -152,12 +184,6 @@ code {
 		@apply font-black;
 	}
 
-	.astro-code {
-		@apply overflow-hidden py-7 px-10;
-	}
-}
-
-@layer utilities {
 	.bg-blur {
 		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);

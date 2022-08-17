@@ -6,6 +6,18 @@ module.exports = {
 			boxShadow: {
 				dg: "3px 3px 10px rgba(0, 0, 0, 0.25)",
 			},
+			backgroundSize: {
+				"10%": "10%",
+				"20%": "20%",
+				"30%": "30%",
+				"40%": "40%",
+				"50%": "50%",
+				"60%": "60%",
+				"70%": "70%",
+				"80%": "80%",
+				"90%": "90%",
+				"promo-xs": "300%",
+			},
 			fontFamily: {
 				favorit: ["favorit", "sans-serif"],
 				inter: ["inter", "sans-serif"],
@@ -23,6 +35,7 @@ module.exports = {
 			colors: {
 				powder: "#E8F1FF",
 				cottonCandy: "#FFEBEB",
+				crimson: "#AB1A22",
 				transparent: "transparent",
 				current: "currentColor",
 				black: "#000000",
