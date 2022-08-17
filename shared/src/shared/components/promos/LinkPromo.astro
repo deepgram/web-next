@@ -1,0 +1,37 @@
+---
+import AbstractPromo from "./AbstractPromo.astro";
+
+const { href, theme, description, buttonText, ...rest } = Astro.props;
+
+let themeStyles;
+
+if (theme) {
+	switch (theme) {
+		case "black":
+			themeStyles = "theme--black";
+			break;
+		case "white":
+			themeStyles = "theme--white";
+			break;
+		case "red":
+			themeStyles = "theme--red";
+			break;
+	}
+}
+---
+
+<AbstractPromo theme={theme} {...rest}>
+	<div class="flex flex-col w-full sm:w-1/2 lg:w-full">
+		<p class="pb-10">{description}</p>
+		<a
+			href={href}
+			class:list={[
+				{ "button--primary": theme !== "red" },
+				{ "button--tertiary": theme === "red" },
+				"button button--block button--small lg:button--fit-content lg:button--base lg:px-12",
+				themeStyles,
+			]}
+			>{buttonText}
+		</a>
+	</div>
+</AbstractPromo>

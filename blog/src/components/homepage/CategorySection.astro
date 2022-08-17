@@ -1,0 +1,30 @@
+---
+import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
+import LinkCardListTitle from "../../shared/components/titles/LinkCardListTitle.astro";
+import CategoryPosts from "./CategoryPosts.astro";
+
+const { index, category } = Astro.props;
+
+const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
+
+const posts = allPosts.sort((a, b) => {
+	const aDate = new Date(b.frontmatter.date);
+	const bDate = new Date(a.frontmatter.date);
+	return aDate.getTime() - bDate.getTime();
+});
+
+const categoryPosts = posts.filter((p) => category.slug === p.frontmatter.category);
+---
+
+{categoryPosts.length > 0 && (
+	<>
+		<BlogCardList class="mb-32">
+			<LinkCardListTitle slot="title" href={`/categories/${category.slug}`} title={category.title}>
+				<h3>{category.title}</h3>
+			</LinkCardListTitle>
+			<CategoryPosts posts={categoryPosts} />
+		</BlogCardList>
+
+		{index === 0 && <div class="bg-darkCharcoal mb-32 h-40 max-w-[] text-white">promo goes here</div>}
+	</>
+)}

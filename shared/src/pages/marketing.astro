@@ -7,6 +7,16 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
 import Feedback from "../shared/components/forms/Feedback.astro";
 import NarrowSection from "../shared/components/layout/NarrowSection.astro";
+import NewsletterPromo from "../shared/components/promos/NewsletterPromo.astro";
+import WebinarPromo from "../shared/components/promos/WebinarPromo.astro";
+import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.astro";
+import EventPromo from "../shared/components/promos/EventPromo.astro";
+import LinkPromo from "../shared/components/promos/LinkPromo.astro";
+
+import eventImg from "../shared/assets/temp_images/white-arrows.svg";
+import webinarImg from "../shared/assets/temp_images/red-ticks.svg";
+import whitepaperImg from "../shared/assets/temp_images/black-quote.svg";
+import linkImg from "../shared/assets/temp_images/black-arrows.svg";
 ---
 
 <Layout>
@@ -52,6 +62,125 @@ import NarrowSection from "../shared/components/layout/NarrowSection.astro";
 			<ComponentStaticPreview id="form-feedback" title="Feedback Form" snippet={`<Feedback>`}>
 				<NarrowSection><Feedback /></NarrowSection>
 			</ComponentStaticPreview>
+		</ComponentSection>
+
+		<ComponentSection title="Promos">
+			<p>Promos can be <code>theme=white</code> or <code>theme=black</code> or <code>theme=red</code></p>
+			<ComponentPreview id="promo-newsletter" title="Newsletter Promo" snippet={`<NewsletterPromo/>`}>
+				<NewsletterPromo />
+			</ComponentPreview>
+			<ComponentPreview
+				id="promo-webinar"
+				title="Webinar Promo"
+				snippet={`<WebinarPromo
+	title="How to Make Your Application Voice-Ready"
+	date="09-10-22"
+	humanReadableDate="Wed Apr 27 11a PT | 12p ET"
+	theme="red"
+	backgroundImage={webinarImg}
+	formProps={[
+		{ label: "Name (first and last)", placeholder: "Your name" },
+		{ label: "Work email", placeholder: "you@company.com", type: "email" },
+		{ label: "Role", placeholder: "Role/Title" },
+	]}
+	buttonText="Register"
+/>`}
+			>
+				<WebinarPromo
+					title="How to Make Your Application Voice-Ready"
+					date="09-10-22"
+					humanReadableDate="Wed Apr 27 11a PT | 12p ET"
+					theme="red"
+					backgroundImage={webinarImg}
+					formProps={[
+						{ label: "Name (first and last)", placeholder: "Your name" },
+						{ label: "Work email", placeholder: "you@company.com", type: "email" },
+						{ label: "Role", placeholder: "Role/Title" },
+					]}
+					buttonText="Register"
+				/>
+			</ComponentPreview>
+			<ComponentPreview
+				id="promo-event"
+				title="Event Promo"
+				snippet={`<EventPromo
+	title="An Event I Just Made Up"
+	date="09-10-22"
+	humanReadableDate="Wed Apr 27 11a PT | 12p ET"
+	theme="white"
+	backgroundImage={eventImg}
+	formProps={[
+		{ label: "Name (first and last)", placeholder: "Your name" },
+		{ label: "Work email", placeholder: "you@company.com", type: "email" },
+		{ label: "Role", placeholder: "Role/Title" },
+	]}
+	buttonText="Register"
+/>`}
+			>
+				<EventPromo
+					title="An Event I Just Made Up"
+					date="09-10-22"
+					humanReadableDate="Wed Apr 27 11a PT | 12p ET"
+					theme="white"
+					backgroundImage={eventImg}
+					formProps={[
+						{ label: "Name (first and last)", placeholder: "Your name" },
+						{ label: "Work email", placeholder: "you@company.com", type: "email" },
+						{ label: "Role", placeholder: "Role/Title" },
+					]}
+					buttonText="Register"
+				/>
+			</ComponentPreview>
+			<ComponentPreview
+				id="promo-whitepaper"
+				title="Whitepaper Promo"
+				snippet={`<WhitepaperPromo
+	title="How to Make Your Application Voice-Ready"
+	theme="black"
+	backgroundImage={whitepaperImg}
+	formProps={[
+		{ label: "Name (first and last)", placeholder: "Your name" },
+		{ label: "Work email", placeholder: "you@company.com", type: "email" },
+		{ label: "Role", placeholder: "Role/Title" },
+	]}
+	buttonText="Download"
+/>`}
+			>
+				<WhitepaperPromo
+					title="How to Make Your Application Voice-Ready"
+					theme="black"
+					backgroundImage={whitepaperImg}
+					formProps={[
+						{ label: "Name (first and last)", placeholder: "Your name" },
+						{ label: "Work email", placeholder: "you@company.com", type: "email" },
+						{ label: "Role", placeholder: "Role/Title" },
+					]}
+					buttonText="Download"
+				/>
+			</ComponentPreview>
+			<ComponentPreview
+				id="promo-link"
+				title="Link Promo"
+				snippet={`<LinkPromo
+	strapline="Using Google or Amazon STT?"
+	title="Try the ASR Comparison Tool"
+	description="See how Deepgram fares against the big guys on tough audio."
+	href="/marketing"
+	theme="black"
+	backgroundImage={linkImg}
+	buttonText="Try it Free"
+/>`}
+			>
+				<LinkPromo
+					strapline="Using Google or Amazon STT?"
+					title="Try the ASR Comparison Tool"
+					description="See how Deepgram fares against the big guys on tough audio."
+					href="/marketing"
+					theme="black"
+					backgroundImage={linkImg}
+					buttonText="Try it Free"
+				/>
+			</ComponentPreview>
 		</ComponentSection>
 	</PrimarySection>
 </Layout>
