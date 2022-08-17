@@ -2,10 +2,10 @@
 title: A test blog post in March
 description: This is a test blog post made in March test test test
 date: 2022-03-13T14:09:44.129Z
-cover: https://placeimg.com/1200/627/animals/1
+cover: https://placeimg.com/1200/627/animals/6
 authors:
   - luke-oliff
-category: tutorial
+category: ai-and-engineering
 tags:
   - vue
   - stream

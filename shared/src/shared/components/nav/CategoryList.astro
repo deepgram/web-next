@@ -1,4 +1,6 @@
 ---
+import Icon from "../general/Icon.astro";
+
 const modules = import.meta.glob("../../../../src/content/blog/category/*.json");
 
 async function getCategories() {
@@ -14,30 +16,48 @@ const categories = await getCategories();
 ---
 
 <div>
-	<h3>Categories</h3>
-	<div class="categories-list">
-		{categories &&
-			categories.map((cat) => {
-				return (
-					<p>
-						<a href={cat.slug}>{cat.title}</a>
-					</p>
-				);
-			})}
-		<button class="button button--quinary button--small">View All</button>
+	<div class="hidden lg:block mb-10">
+		<h3>Categories</h3>
+		<ul>
+			{categories &&
+				categories.map((cat) => {
+					return (
+						<li>
+							<a href={cat.slug}>{cat.title}</a>
+						</li>
+					);
+				})}
+		</ul>
+		<a href="/posts" class="button button--quinary button--small">View All</a>
+	</div>
+	<div x-data="{ open: false }" class="block lg:hidden mb-10">
+		<a @click="open = !open" class="button button--senary button--small button--block flex justify-between">
+			<span>Categories</span>
+			<Icon icon="angle-down" class="fill-gray-300 w-[1em] h-[1em]" x-bind:class="{ 'rotate-180' : open }" />
+		</a>
+		<ul class="hidden" x-bind:class="{hidden: !open, block: open}">
+			{categories &&
+				categories.map((cat) => {
+					return (
+						<li>
+							<a href={cat.slug}>{cat.title}</a>
+						</li>
+					);
+				})}
+		</ul>
 	</div>
 </div>
 
 <style>
-	.categories-list {
-		@apply my-10;
+	h3 {
+		@apply pb-8;
 	}
 
-	a {
+	li a {
 		@apply text-darkCharcoal hover:text-fireEngine font-semibold leading-5;
 	}
 
-	p {
+	li {
 		@apply pb-4;
 	}
 

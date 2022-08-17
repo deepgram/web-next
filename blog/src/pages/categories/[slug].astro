@@ -1,45 +1,46 @@
 ---
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../layouts/Default.astro";
+import GeneralPostsPage from "../../components/posts/GeneralPostsPage.astro";
 
 export async function getStaticPaths() {
-	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
-	const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+	const categoryFiles = import.meta.glob("../../content/blog/category/*.json");
 
-	return sortedPosts.map((post) => {
-		const pathParts = post.file.replace("/index.md", "").split("/");
-		const slug = pathParts[pathParts.length - 1];
+	async function getCategories() {
+		let paths = [];
+		for (const path in categoryFiles) {
+			const category = await categoryFiles[path]();
+			paths.push({ title: category.title, slug: path.split("/").pop().replace(".json", " ").trim() });
+		}
+		return paths;
+	}
+
+	const categories = await getCategories();
+	const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
+
+	return categories.map((category) => {
+		const postsByCategory = allPosts.filter((post) => {
+			return post.frontmatter.category === category.slug;
+		});
 
 		return {
 			params: {
-				slug,
+				slug: category.slug,
 			},
 			props: {
-				post,
+				title: category.title,
+				posts: postsByCategory,
 			},
 		};
 	});
 }
 
-const { post } = Astro.props;
+const { posts, title } = Astro.props;
 const { slug } = Astro.params;
 ---
 
 <Layout>
 	<PrimarySection>
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
+		<GeneralPostsPage posts={posts} link="/posts" linkText="All posts" subtitle={`All ${title} posts`} />
 	</PrimarySection>
 </Layout>
