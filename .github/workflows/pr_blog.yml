@@ -1,8 +1,8 @@
-name: "Blog site: New Deployment"
+name: "Blog site: New PR"
 
 on:
   workflow_dispatch:
-  push:
+  pull_request:
     branches: [main]
     paths: 
     - 'blog/**'
