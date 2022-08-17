@@ -34,13 +34,14 @@ jobs:
           publish-dir: ./blog/dist
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: 'Deploy: ${{ github.event.push.head_commit.message }}'
+          deploy-message: PR ${{ github.event.pull_request.title }} (#${{ github.event.number }})
           enable-pull-request-comment: false
           overwrites-pull-request-comment: false
-          production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+          production-deploy: false
           functions-dir: ./blog/functions
-          github-deployment-environment: blog-production
-          github-deployment-description: Production for Blog Site
+          github-deployment-environment: deploy-preview-${{ github.event.number }}
+          github-deployment-description: Deploy Preview for Blog Site
+          alias: deploy-preview-${{ github.event.number }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
