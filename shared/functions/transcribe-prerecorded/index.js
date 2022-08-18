@@ -7,9 +7,10 @@ exports.handler = async function transcribePrerecorded(event) {
 	const cors = process.env.DEEPGRAM_SERVERLESS_CORS;
 	let corsOrigin = "*";
 
-	const eventOrigin = new URL(event.headers["origin"] || event.headers["referer"]);
+	const origin = event.headers["origin"] || event.headers["referer"];
 
-	if (cors) {
+	if (cors && origin) {
+		const eventOrigin = new URL(origin);
 		const corsDomains = [process.env.URL, process.env.DEPLOY_URL, ...cors.split(", ")];
 		const thisCors = corsDomains.indexOf(eventOrigin.origin);
 
@@ -19,7 +20,10 @@ exports.handler = async function transcribePrerecorded(event) {
 				body: "Forbidden by allow-list",
 				headers: {
 					"Access-Control-Allow-Origin": "*",
-					"Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+					"Access-Control-Allow-Headers": "Content-Type",
+					"Access-Control-Allow-Methods": "POST, OPTIONS",
+					Allow: "POST, OPTIONS",
+					Vary: "Origin",
 				},
 			};
 		}
@@ -29,7 +33,10 @@ exports.handler = async function transcribePrerecorded(event) {
 
 	const headers = {
 		"Access-Control-Allow-Origin": corsOrigin,
-		"Access-Control-Allow-Methods": "GET",
+		"Access-Control-Allow-Headers": "Content-Type",
+		"Access-Control-Allow-Methods": "POST, OPTIONS",
+		Allow: "POST, OPTIONS",
+		Vary: "Origin",
 	};
 
 	// Only allow POST
@@ -37,6 +44,7 @@ exports.handler = async function transcribePrerecorded(event) {
 		return {
 			statusCode: 405,
 			body: "Method Not Allowed",
+			headers,
 		};
 	}
 
