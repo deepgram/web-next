@@ -1,0 +1,21 @@
+---
+const { page } = Astro.props;
+
+---
+
+<nav>
+  <div>{page.currentPage} / {page.lastPage}</div>
+  <div class="flex">
+    {page.currentPage === 1 ?<div>Prev</div> : null}
+    {page.currentPage !== 1 ? <a href={page.url.prev}>Prev</a> : null}
+    {page.currentPage !== page.lastPage ? <a class="ml-2" href={page.url.next}>Next</a> : null}
+    {page.currentPage === page.lastPage ? <div class="ml-2">Next</div> : null}
+  </div>
+</nav>
+
+<style scoped>
+  nav {
+    @apply w-full flex flex-col items-center;
+    @apply mt-28;
+  }
+</style>
