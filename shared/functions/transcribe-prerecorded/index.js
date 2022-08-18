@@ -7,14 +7,20 @@ exports.handler = async function transcribePrerecorded(event) {
 	const cors = process.env.DEEPGRAM_SERVERLESS_CORS;
 	let corsOrigin = "*";
 
+	const eventOrigin = new URL(event.headers["origin"] || event.headers["referer"]);
+
 	if (cors) {
-		const corsDomains = [process.env.URL, process.env.DEPLOY_URL, ...cors.split(",")];
-		const thisCors = corsDomains.indexOf(event.headers["origin"]);
+		const corsDomains = [process.env.URL, process.env.DEPLOY_URL, ...cors.split(", ")];
+		const thisCors = corsDomains.indexOf(eventOrigin.origin);
 
 		if (thisCors < 0) {
 			return {
 				statusCode: 403,
-				body: "Forbidden",
+				body: "Forbidden by allow-list",
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+					"Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+				},
 			};
 		}
 
