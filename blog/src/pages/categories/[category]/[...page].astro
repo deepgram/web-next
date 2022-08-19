@@ -27,7 +27,7 @@ export async function getStaticPaths({ paginate }) {
 			params: {
 				category: category.slug,
 			},
-			pageSize: 3,
+			pageSize: 1,
 			props: {
 				title: category.title,
 				slug: category.slug,
@@ -42,6 +42,6 @@ const params = Astro.params;
 
 <Layout>
 	<PrimarySection>
-		<GeneralPostsPage slug={slug} page={page} posts={page.data} link="/posts" linkText="All posts" subtitle={`All ${title} posts`} />
+		<GeneralPostsPage slug={`categories/${slug}`} page={page} posts={page.data} link="/posts" linkText="All posts" subtitle={`All ${title} posts`} />
 	</PrimarySection>
 </Layout>

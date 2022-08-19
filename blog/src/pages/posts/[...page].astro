@@ -1,0 +1,18 @@
+---
+import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
+import Layout from "../../layouts/Default.astro";
+import GeneralPostsPage from "../../components/posts/GeneralPostsPage.astro";
+
+export async function getStaticPaths({ paginate }) {
+	const posts = await Astro.glob("../../content/blog/posts/**/index.md");
+	return paginate(posts, { pageSize: 6 });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout>
+	<PrimarySection>
+		<GeneralPostsPage slug="posts" posts={page.data} page={page} link="/" linkText="Back to blog home" subtitle="All posts" />
+	</PrimarySection>
+</Layout>
