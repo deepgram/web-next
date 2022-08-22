@@ -2,7 +2,7 @@
 import Icon from "../../../../shared/src/shared/components/general/Icon.astro";
 const { page, slug } = Astro.props;
 
-let pageStatuses = Array.from({ length: page.total }, (v, i) => i + 1).map((i) => {
+let pageStatuses = Array.from({ length: page.lastPage }, (v, i) => i + 1).map((i) => {
 	var item = {
 		pageNumber: i,
 		isActive: page.currentPage == i,
@@ -47,7 +47,7 @@ pageStatuses[pageStatuses.length - 1].isDisabled = false;
 <style scoped>
 	nav {
 		@apply flex w-full flex-col items-center;
-		@apply mt-28;
+		@apply my-28;
 	}
 
 	.page {

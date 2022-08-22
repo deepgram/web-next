@@ -6,12 +6,9 @@ import GeneralPostsPage from "../../components/posts/GeneralPostsPage.astro";
 export async function getStaticPaths({ paginate }) {
 	const posts = await Astro.glob("../../content/blog/posts/**/index.md");
 
-	// return posts.map((post, i) => {
 	return paginate(posts, {
-		// params:i,
 		pageSize: 6,
 	});
-	// });
 }
 
 const { page } = Astro.props;
