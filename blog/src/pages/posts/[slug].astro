@@ -47,8 +47,6 @@ const headings = await post.getHeadings();
 <Layout>
 	<Title slot="head:title" title={`${post.frontmatter.title} - Deepgram Blog ⚡️`} />
 	<Description slot="head:description" name="description" content={post.frontmatter.description} />
-	<StyleSrc slot="head" href="//unpkg.com/social-share-kit/dist/css/social-share-kit.css" />
-	<ScriptSrc slot="head" src="//unpkg.com/social-share-kit/dist/js/social-share-kit.js" />
 
 	<Meta slot="og:title" property="og:title" content={post.frontmatter.title} />
 	<Meta property="og:description" content={post.frontmatter.description} />
@@ -63,20 +61,16 @@ const headings = await post.getHeadings();
 	<Meta slot="head" property="article:section" content={post.frontmatter.category} />
 	{post.frontmatter.tags && post.frontmatter.tags.map((tag) => <Meta slot="head" property="article:tag" content={tag} />)}
 
-	<script defer type="text/javascript">
-		SocialShareKit.init();
-	</script>
-
 	<article>
 		<ContrastSection contrast="mist" background="white" bottomDivider="eclipse-divider" bottomOverlay>
 			<PrimarySection>
 				<a href="/posts" class="inline-block py-4 md:py-6 lg:py-8 xl:py-10">&lt;- All posts</a>
 				<HasGutters>
-					<div class="flex flex-col">
+					<header class="flex flex-col">
 						<PostHeading post={post} />
 						<PostMeta post={post} />
 						<PostImage post={post} />
-					</div>
+					</header>
 				</HasGutters>
 			</PrimarySection>
 		</ContrastSection>
@@ -93,13 +87,29 @@ const headings = await post.getHeadings();
 				</div>
 
 				<div slot="right">
-					<h5>X Share</h5>
-					<div class="ssk-lg ssk-group">
-						<a href="" class="ssk ssk-icon ssk-email text-iris"></a>
-						<a href="" class="ssk ssk-icon ssk-twitter"></a>
-						<a href="" class="ssk ssk-icon ssk-linkedin"></a>
-						<a href="" class="ssk ssk-icon ssk-facebook"></a>
-					</div>
+					Share
+					<a
+						href={`mailto:?body=Check%20out%20this%20awesome%20post%20on%20Deepgram!%0A%0A${encodeURIComponent(post.frontmatter.title)}%0A%0A${encodeURIComponent(Astro.url)}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						>Email
+					</a>
+					<a
+						href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20post%20on%20Deepgram%20%40deepgramai%20%20${encodeURIComponent(Astro.url)}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						>Twitter
+					</a>
+					<a
+						href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(Astro.url)}&title=${encodeURIComponent(
+							post.frontmatter.title
+						)}&summary=${encodeURIComponent(post.frontmatter.description)}&source=${encodeURIComponent(Astro.url.host)}`}
+						target="_blank"
+						rel="noopener noreferrer"
+						>LinkedIn
+					</a>
+					<a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url)}`} target="_blank" rel="noopener noreferrer">Facebook</a>
+
 					<Debug {headings} />
 				</div>
 			</HasGutters>
