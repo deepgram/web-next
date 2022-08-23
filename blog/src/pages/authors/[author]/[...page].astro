@@ -1,11 +1,11 @@
 ---
-import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
-import AuthorHero from "../../components/AuthorHero.astro";
-import Layout from "../../layouts/Default.astro";
-import ContrastSection from "../../shared/components/decoration/ContrastSection.astro";
+import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
+import AuthorHero from "../../../components/AuthorHero.astro";
+import Layout from "../../../layouts/Default.astro";
+import ContrastSection from "../../../shared/components/decoration/ContrastSection.astro";
 
 export async function getStaticPaths() {
-	const authorFiles = import.meta.glob("../../content/blog/authors/*.json");
+	const authorFiles = import.meta.glob("../../../content/blog/authors/*.json");
 
 	async function getAuthors() {
 		let authors = [];
