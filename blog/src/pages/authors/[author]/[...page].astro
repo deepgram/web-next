@@ -1,10 +1,9 @@
 ---
 import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
-import AuthorHero from "../../../components/AuthorHero.astro";
 import Layout from "../../../layouts/Default.astro";
-import ContrastSection from "../../../shared/components/decoration/ContrastSection.astro";
+import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ paginate }) {
 	const authorFiles = import.meta.glob("../../../content/blog/authors/*.json");
 
 	async function getAuthors() {
@@ -17,45 +16,32 @@ export async function getStaticPaths() {
 		return authors;
 	}
 
-	const allAuthors = await getAuthors();
-	const sortedAuthors = allAuthors.sort((a, b) => a.title.localeCompare(b.title));
+	const authors = await getAuthors();
+	const allPosts = await Astro.glob("../../../content/blog/posts/**/index.md");
 
-	return sortedAuthors.map((author) => {
-		return {
+	return authors.map((author) => {
+		const posts = allPosts.filter((post) => {
+			return post.frontmatter.category === author.slug;
+		});
+
+		return paginate(posts, {
 			params: {
+				author: author.slug,
+			},
+			pageSize: 6,
+			props: {
+				title: author.title,
 				slug: author.slug,
 			},
-			props: {
-				author,
-			},
-		};
+		});
 	});
 }
 
-const { author } = Astro.props;
-const { slug } = Astro.params;
+const { title, page, slug } = Astro.props;
 ---
 
 <Layout>
-	<ContrastSection contrast="darkCharcoal" background="white" bottomDivider="eclipse-divider">
-		<AuthorHero author={author} />
-	</ContrastSection>
 	<PrimarySection>
-		<!-- <h1>{author.title}</h1>
-		<p>{slug}</p> -->
-		1st test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
+		<GeneralPostsPage slug={`authors/${slug}`} page={page} posts={page.data} link="/authors" linkText="All authors" subtitle={`All ${title} posts`} />
 	</PrimarySection>
 </Layout>
