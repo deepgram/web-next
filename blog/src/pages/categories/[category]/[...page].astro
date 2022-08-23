@@ -1,0 +1,46 @@
+---
+import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
+import Layout from "../../../layouts/Default.astro";
+import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+
+export async function getStaticPaths({ paginate }) {
+	const categoryFiles = import.meta.glob("../../../content/blog/category/*.json");
+
+	async function getCategories() {
+		let paths = [];
+		for (const path in categoryFiles) {
+			const category = await categoryFiles[path]();
+			paths.push({ title: category.title, slug: path.split("/").pop().replace(".json", " ").trim() });
+		}
+		return paths;
+	}
+
+	const categories = await getCategories();
+	const allPosts = await Astro.glob("../../../content/blog/posts/**/index.md");
+
+	return categories.map((category) => {
+		const posts = allPosts.filter((post) => {
+			return post.frontmatter.category === category.slug;
+		});
+
+		return paginate(posts, {
+			params: {
+				category: category.slug,
+			},
+			pageSize: 6,
+			props: {
+				title: category.title,
+				slug: category.slug,
+			},
+		});
+	});
+}
+
+const { title, page, slug } = Astro.props;
+---
+
+<Layout>
+	<PrimarySection>
+		<GeneralPostsPage slug={`categories/${slug}`} page={page} posts={page.data} link="/posts" linkText="All categories" subtitle={`All ${title} posts`} />
+	</PrimarySection>
+</Layout>
