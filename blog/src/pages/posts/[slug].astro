@@ -42,6 +42,14 @@ const headings = await post.getHeadings();
 <Layout>
 	<title slot="head:title">{post.frontmatter.title}</title>
 	<meta slot="head:description" name="description" content={post.frontmatter.description} />
+	<link slot="head" rel="stylesheet" href="https://unpkg.com/social-share-kit/dist/css/social-share-kit.css" type="text/css" />
+	<script slot="head" type="text/javascript" src="https://unpkg.com/social-share-kit/dist/js/social-share-kit.js">
+
+	</script>
+
+	<script slot="head" defer type="text/javascript">
+		SocialShareKit.init();
+	</script>
 
 	<article>
 		<ContrastSection contrast="mist" background="white" bottomDivider="eclipse-divider" bottomOverlay>
@@ -56,7 +64,7 @@ const headings = await post.getHeadings();
 				</HasGutters>
 			</PrimarySection>
 		</ContrastSection>
-		<PrimarySection>
+		<PrimarySection class="pt-12">
 			<HasGutters>
 				<div class="post">
 					<div class="post-prose">
@@ -69,7 +77,13 @@ const headings = await post.getHeadings();
 				</div>
 
 				<div slot="right">
-					social share
+					<h5>X Share</h5>
+					<div class="ssk-lg ssk-group">
+						<a href="" class="ssk ssk-icon ssk-email text-iris"></a>
+						<a href="" class="ssk ssk-icon ssk-twitter"></a>
+						<a href="" class="ssk ssk-icon ssk-linkedin"></a>
+						<a href="" class="ssk ssk-icon ssk-facebook"></a>
+					</div>
 					<Debug {headings} />
 				</div>
 			</HasGutters>
@@ -79,7 +93,7 @@ const headings = await post.getHeadings();
 
 <style>
 	.post {
-		@apply pt-10 md:mx-20 lg:mx-32;
+		@apply md:mx-20 lg:mx-32;
 	}
 
 	.post-prose :global(img) {
