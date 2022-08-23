@@ -1,0 +1,47 @@
+---
+import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
+import Layout from "../../../layouts/Default.astro";
+import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+
+export async function getStaticPaths({ paginate }) {
+	const authorFiles = import.meta.glob("../../../content/blog/authors/*.json");
+
+	async function getAuthors() {
+		let authors = [];
+		for (const path in authorFiles) {
+			const author = await authorFiles[path]();
+			const slug = path.split("/").pop().replace(".json", " ").trim();
+			authors.push({ ...(author as object), slug });
+		}
+		return authors;
+	}
+
+	const authors = await getAuthors();
+	const allPosts = await Astro.glob("../../../content/blog/posts/**/index.md");
+
+	return authors.map((author) => {
+		const posts = allPosts.filter((post) => {
+			return post.frontmatter.category === author.slug;
+		});
+
+		return paginate(posts, {
+			params: {
+				author: author.slug,
+			},
+			pageSize: 6,
+			props: {
+				title: author.title,
+				slug: author.slug,
+			},
+		});
+	});
+}
+
+const { title, page, slug } = Astro.props;
+---
+
+<Layout>
+	<PrimarySection>
+		<GeneralPostsPage slug={`authors/${slug}`} page={page} posts={page.data} link="/authors" linkText="All authors" subtitle={`All ${title} posts`} />
+	</PrimarySection>
+</Layout>

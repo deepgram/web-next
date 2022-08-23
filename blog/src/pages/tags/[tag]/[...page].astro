@@ -1,0 +1,36 @@
+---
+import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
+import Layout from "../../../layouts/Default.astro";
+import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+
+export async function getStaticPaths({ paginate }) {
+	const allPosts = await Astro.glob("../../../content/blog/posts/**/*.md");
+
+	function getTags() {
+		const tagsArray = [];
+		allPosts.map((post) => {
+			tagsArray.push(...post.frontmatter.tags);
+		});
+		const noDuplicateTags = [...new Set(tagsArray)];
+		return noDuplicateTags;
+	}
+
+	const tags = getTags();
+
+	return tags.map((tag) => {
+		const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+		return paginate(filteredPosts, {
+			params: { tag },
+			pageSize: 6,
+			props: { tag },
+		});
+	});
+}
+const { page, tag } = Astro.props;
+---
+
+<Layout>
+	<PrimarySection>
+		<GeneralPostsPage slug={`tags/${tag}`} page={page} posts={page.data} link="/tags" linkText="All tags" subtitle={`All ${tag} posts`} />
+	</PrimarySection>
+</Layout>
