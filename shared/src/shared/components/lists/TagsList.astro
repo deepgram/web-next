@@ -1,7 +1,16 @@
 ---
-const { tags } = Astro.props;
+const { tags, link } = Astro.props;
 ---
 
 <ul class="pt-3 flex text-sm font-medium space-x-2">
-	{tags.map((tag) => <li class="bg-steel px-1 text-white">#{tag}</li>)}
+	{tags.map((tag) => (
+		<li class="bg-steel px-1 text-white">
+			{link && (
+				<a href={`/tags/${tag}`} class="text-white">
+					#{tag}
+				</a>
+			)}
+			{!link && <>#{tag}</>}
+		</li>
+	))}
 </ul>
