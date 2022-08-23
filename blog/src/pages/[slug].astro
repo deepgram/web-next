@@ -16,6 +16,7 @@ import StyleSrc from "../shared/components/meta/StyleSrc.astro";
 import ScriptSrc from "../shared/components/meta/ScriptSrc.astro";
 import Meta from "../shared/components/meta/Meta.astro";
 import Icon from "../shared/components/general/Icon.astro";
+import RelatedResources from "../components/posts/RelatedResources.astro";
 
 export async function getStaticPaths() {
 	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
@@ -131,8 +132,8 @@ const headings = await post.getHeadings();
 			</HasGutters>
 			<div class="mt-20">
 				<center>
-					<h3>Related Resources</h3>
-					<!-- <RelatedResources /> -->
+					<h3 class="mb-10">Related Resources</h3>
+					<RelatedResources post={post} />
 				</center>
 			</div>
 		</PrimarySection>
@@ -233,14 +234,13 @@ const headings = await post.getHeadings();
 	}
 
 	.post-prose :global(table) {
-		@apply mb-4 border-collapse;
+		@apply mb-4 block border-collapse overflow-auto whitespace-nowrap;
 	}
 
 	.post-prose :global(table) + :global(p small) {
 		@apply -mt-2 block text-center text-sm font-bold;
 	}
 
-	.post-prose :global(table),
 	.post-prose :global(td),
 	.post-prose :global(th) {
 		@apply border-casper table-auto  border;

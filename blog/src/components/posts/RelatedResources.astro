@@ -1,0 +1,18 @@
+---
+import BlogCard from "../../shared/components/cards/BlogCard.astro";
+
+const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
+const sortedPosts = allPosts.sort((a, b) => {
+	const aDate = new Date(b.frontmatter.date);
+	const bDate = new Date(a.frontmatter.date);
+	return aDate.getTime() - bDate.getTime();
+});
+
+const { post } = Astro.props;
+
+const relatedPosts = sortedPosts.filter((p) => p.frontmatter.category === post.frontmatter.category && p.file !== post.file).slice(0, 4);
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid-flow-row-dense justify-items-center gap-4 lg:gap-6 text-left">
+	{relatedPosts.map((p) => <BlogCard post={p} />)}
+</div>
