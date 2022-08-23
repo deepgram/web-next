@@ -5,6 +5,6 @@ const { class: classes, post } = Astro.props;
 const slug = post.frontmatter.slug || post.file.split("/")[post.file.split("/").length - 2];
 ---
 
-<GenericCard class={`min-w-[10rem] bg-mist/50 shadow-dg bg-blur ${classes ? classes : ""}`} href={`/posts/${slug}`}>
+<GenericCard class={`min-w-[10rem] bg-mist/50 shadow-dg bg-blur ${classes ? classes : ""}`} href={`/${slug}`}>
 	<slot />
 </GenericCard>

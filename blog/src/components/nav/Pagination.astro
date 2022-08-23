@@ -1,0 +1,58 @@
+---
+import Icon from "../../shared/components/general/Icon.astro";
+const { page, slug } = Astro.props;
+
+let pageStatuses = Array.from({ length: page.lastPage }, (v, i) => i + 1).map((i) => {
+	var item = {
+		pageNumber: i,
+		isActive: page.currentPage == i,
+		isDisabled: isDisabled(i),
+	};
+	return item;
+});
+
+function isDisabled(i) {
+	if (page.totalPage <= 6) return false;
+	if (i <= 2 || i >= page.totalPage - 1) return false;
+	if (page.currentPage == i - 1 || page.currentPage == i || page.currentPage == i + 1) return false;
+	return true;
+}
+
+pageStatuses[0].pageNumber = 0;
+pageStatuses[pageStatuses.length - 1].isDisabled = false;
+---
+
+<nav>
+	<div class="flex items-center justify-center">
+		<a href={page.url.prev === undefined ? null : `${page.url.prev}`}><Icon class="h-9 px-4 py-2 text-storm" icon="chevron-left" /></a>
+		<div>
+			{pageStatuses.map((pageStatus, index) =>
+				pageStatus.isActive ? (
+					<a class="page text-darkCharcoal border-darkCharcoal border-b-2 font-bold">{page.currentPage}</a>
+				) : pageStatus.isDisabled && !pageStatuses[index - 1].isDisabled ? (
+					<a class="page disabled:opacity-75">...</a>
+				) : (
+					!pageStatus.isDisabled && (
+						<a class="page" href={`/${slug}/${pageStatus.pageNumber === 0 ? "" : pageStatus.pageNumber}`}>
+							{pageStatus.pageNumber === 0 ? 1 : pageStatus.pageNumber}
+						</a>
+					)
+				)
+			)}
+		</div>
+		<a href={page.url.next === undefined ? null : `${page.url.next}`}><Icon class="h-9 text-storm px-4 py-2" icon="chevron-right" /></a>
+	</div>
+</nav>
+
+<style scoped>
+	nav {
+		@apply flex w-full flex-col items-center;
+		@apply my-28;
+	}
+
+	.page {
+		@apply relative inline-flex flex-nowrap items-center;
+		@apply px-4 py-2;
+		@apply text-storm text-sm;
+	}
+</style>
