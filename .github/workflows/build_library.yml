@@ -32,6 +32,7 @@ jobs:
           cd ./shared
           ./node_modules/.bin/ntl build
         env:
+          URL: "https://ubiquitous-otter-a04e78-library.netlify.app"
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
