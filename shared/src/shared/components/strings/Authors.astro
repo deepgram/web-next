@@ -15,11 +15,13 @@ const { authors, class: classes } = Astro.props;
 )}
 
 <style>
-	ul li:not(:first-child):not(:last-child)::before {
+	ul li:not(:first-child)::before {
 		content: ", ";
 	}
-	ul li:last-child::before {
+	ul li:not(:first-child):last-child {
 		@apply pl-1;
+	}
+	ul li:not(:first-child):last-child::before {
 		content: "& ";
 	}
 </style>

@@ -18,10 +18,10 @@ const { authors } = Astro.props;
 	.author-names a:not(:first-child)::before {
 		content: ", ";
 	}
-	.author-names a:last-child {
+	.author-names a:not(:first-child):last-child {
 		@apply pl-1;
 	}
-	.author-names a:last-child::before {
+	.author-names a:not(:first-child):last-child::before {
 		content: "& ";
 	}
 </style>

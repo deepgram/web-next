@@ -1,0 +1,5 @@
+---
+const { title, slot: unused1, class: unused2, ...rest } = Astro.props;
+---
+
+<title {...rest}>{title}</title>

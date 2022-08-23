@@ -10,6 +10,11 @@ import PostMeta from "../../components/posts/PostMeta.astro";
 import PostHeading from "../../components/posts/PostHeading.astro";
 import Feedback from "../../shared/components/forms/Feedback.astro";
 import TagsList from "../../shared/components/lists/TagsList.astro";
+import Title from "../../shared/components/meta/Title.astro";
+import Description from "../../shared/components/meta/Description.astro";
+import StyleSrc from "../../shared/components/meta/StyleSrc.astro";
+import ScriptSrc from "../../shared/components/meta/ScriptSrc.astro";
+import Meta from "../../shared/components/meta/Meta.astro";
 
 export async function getStaticPaths() {
 	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
@@ -40,14 +45,25 @@ const headings = await post.getHeadings();
 ---
 
 <Layout>
-	<title slot="head:title">{post.frontmatter.title}</title>
-	<meta slot="head:description" name="description" content={post.frontmatter.description} />
-	<link slot="head" rel="stylesheet" href="https://unpkg.com/social-share-kit/dist/css/social-share-kit.css" type="text/css" />
-	<script slot="head" type="text/javascript" src="https://unpkg.com/social-share-kit/dist/js/social-share-kit.js">
+	<Title slot="head:title" title={`${post.frontmatter.title} - Deepgram Blog ⚡️`} />
+	<Description slot="head:description" name="description" content={post.frontmatter.description} />
+	<StyleSrc slot="head" href="//unpkg.com/social-share-kit/dist/css/social-share-kit.css" />
+	<ScriptSrc slot="head" src="//unpkg.com/social-share-kit/dist/js/social-share-kit.js" />
 
-	</script>
+	<Meta slot="og:title" property="og:title" content={post.frontmatter.title} />
+	<Meta property="og:description" content={post.frontmatter.description} />
+	<Meta slot="og:type" property="og:type" content="article" />
+	<Meta slot="og:image" property="og:image" content={post.frontmatter.cover} />
+	<Meta slot="og:image:width" property="og:image:width" content="1200" />
+	<Meta slot="og:image:height" property="og:image:height" content="762" />
+	<Meta slot="og:image:alt" property="og:image:alt" content={`Deepgram Blog - A post titled: ${post.frontmatter.title}`} />
 
-	<script slot="head" defer type="text/javascript">
+	<Meta slot="head" property="article:published_time" content={post.frontmatter.date} />
+	{post.frontmatter.authors && post.frontmatter.authors.map((author) => <Meta slot="head" property="article:author" content={author} />)}
+	<Meta slot="head" property="article:section" content={post.frontmatter.category} />
+	{post.frontmatter.tags && post.frontmatter.tags.map((tag) => <Meta slot="head" property="article:tag" content={tag} />)}
+
+	<script defer type="text/javascript">
 		SocialShareKit.init();
 	</script>
 

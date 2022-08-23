@@ -1,26 +1,82 @@
 ---
 import Header from "../shared/components/layout/Header.astro";
 import Footer from "../shared/components/layout/Footer.astro";
+
+import Title from "../shared/components/meta/Title.astro";
+import Description from "../shared/components/meta/Description.astro";
+import Meta from "../shared/components/meta/Meta.astro";
+import ScriptSrc from "../shared/components/meta/ScriptSrc.astro";
+import Link from "../shared/components/meta/Link.astro";
+
 import "../shared/assets/styles/main.css";
 import "../assets/styles/blog.css";
 ---
 
 <html class="no-js" lang="en" dir="ltr">
 	<head>
+		<meta charset="utf-8" />
+
 		<slot name="head:title">
-			<title>Default Title</title>
+			<Title title="Deepgram Blog ⚡️" />
 		</slot>
 		<slot name="head:description">
-			<meta name="description" content="Default description" />
+			<Description
+				name="description"
+				content="Deepgram Automatic Speech Recognition helps you build voice applications with better, faster, more economical transcription at scale."
+			/>
+		</slot>
+		<slot name="head:canonical">
+			<Link rel="canonical" href={Astro.url} />
+		</slot>
+
+		<Link rel="icon" type="image/ico" href="/favicon.ico" />
+
+		<slot name="og:locale">
+			<Meta property="og:locale" content="en_US" />
+		</slot>
+		<slot name="og:type">
+			<Meta property="og:type" content="website" />
+		</slot>
+		<slot name="og:title">
+			<Meta property="og:title" content="Deepgram Blog ⚡️" />
+		</slot>
+		<slot name="og:description">
+			<Meta
+				property="og:description"
+				content="Deepgram Automatic Speech Recognition helps you build voice applications with better, faster, more economical transcription at scale."
+			/>
+		</slot>
+		<slot name="og:url">
+			<Meta property="og:url" content={Astro.url} />
+		</slot>
+		<slot name="og:site_name">
+			<Meta property="og:site_name" content="Deepgram" />
+		</slot>
+		<slot name="og:image">
+			<Meta property="og:image" content={`${Astro.url.origin}/build-something-great-with-voice.png`} />
+		</slot>
+		<slot name="og:image:width">
+			<Meta property="og:image:width" content="2400" />
+		</slot>
+		<slot name="og:image:height">
+			<Meta property="og:image:height" content="1200" />
+		</slot>
+		<slot name="og:image:type">
+			<Meta property="og:image:type" content="image/png" />
+		</slot>
+		<slot name="og:image:alt">
+			<Meta property="og:image:alt" content="Deepgram - Build something great with voice. Faster, More Accurate Transcription Through AI Speech Recognition" />
+		</slot>
+		<slot name="twitter:card">
+			<Meta property="twitter:card" content="summary" />
+		</slot>
+		<slot name="twitter:site">
+			<Meta property="twitter:site" content="@deepgramai" />
 		</slot>
 		<slot name="head" />
 
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-
-		<script src="//unpkg.com/alpinejs" defer is:inline>
-
-		</script>
+		<Meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+		<ScriptSrc src="//unpkg.com/alpinejs" />
 	</head>
 
 	<body>
