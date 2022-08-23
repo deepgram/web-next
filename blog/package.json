@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "netlify-cli": "^10.17.3",
+    "rehype-autolink-headings": "^6.1.1",
     "vue": "^3.2.33"
   }
 }
