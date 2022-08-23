@@ -1,5 +1,5 @@
 <div class="grid grid-cols-1 gap-4 lg:gap-6 xl:grid-cols-6">
 	<aside><slot name="left" /></aside>
+	<aside class="xl:order-last"><slot name="right" /></aside>
 	<div class="xl:col-span-4"><slot /></div>
-	<aside><slot name="right" /></aside>
 </div>
