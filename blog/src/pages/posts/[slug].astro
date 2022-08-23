@@ -1,14 +1,26 @@
 ---
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../layouts/Default.astro";
+import HasGutters from "../../shared/components/layout/HasGutters.astro";
+import ContrastSection from "../../shared/components/decoration/ContrastSection.astro";
+
+import { Debug } from "astro/components";
+import PostImage from "../../components/posts/PostImage.astro";
+import PostMeta from "../../components/posts/PostMeta.astro";
+import PostHeading from "../../components/posts/PostHeading.astro";
+import Feedback from "../../shared/components/forms/Feedback.astro";
+import TagsList from "../../shared/components/lists/TagsList.astro";
 
 export async function getStaticPaths() {
 	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
-	const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+	const sortedPosts = allPosts.sort((a, b) => {
+		const aDate = new Date(b.frontmatter.date);
+		const bDate = new Date(a.frontmatter.date);
+		return aDate.getTime() - bDate.getTime();
+	});
 
 	return sortedPosts.map((post) => {
-		const pathParts = post.file.replace("/index.md", "").split("/");
-		const slug = pathParts[pathParts.length - 1];
+		const slug = post.frontmatter.slug || post.file.split("/")[post.file.split("/").length - 2];
 
 		return {
 			params: {
@@ -23,23 +35,161 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { slug } = Astro.params;
+
+const headings = await post.getHeadings();
 ---
 
 <Layout>
-	<PrimarySection>
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-	</PrimarySection>
+	<title slot="head:title">{post.frontmatter.title}</title>
+	<meta slot="head:description" name="description" content={post.frontmatter.description} />
+
+	<article>
+		<ContrastSection contrast="mist" background="white" bottomDivider="eclipse-divider" bottomOverlay>
+			<PrimarySection>
+				<a href="/posts" class="inline-block py-4 md:py-6 lg:py-8 xl:py-10">&lt;- All posts</a>
+				<HasGutters>
+					<div class="flex flex-col">
+						<PostHeading post={post} />
+						<PostMeta post={post} />
+						<PostImage post={post} />
+					</div>
+				</HasGutters>
+			</PrimarySection>
+		</ContrastSection>
+		<PrimarySection>
+			<HasGutters>
+				<div class="post">
+					<div class="post-prose">
+						<post.Content />
+					</div>
+					<h4>More with these tags:</h4>
+					<TagsList tags={post.frontmatter.tags} />
+
+					<Feedback />
+				</div>
+
+				<div slot="right">
+					social share
+					<Debug {headings} />
+				</div>
+			</HasGutters>
+		</PrimarySection>
+	</article>
 </Layout>
+
+<style>
+	.post {
+		@apply pt-10 md:mx-20 lg:mx-32;
+	}
+
+	.post-prose :global(img) {
+		@apply mx-auto object-cover;
+	}
+
+	.post-prose :global(small) {
+		@apply text-sm;
+	}
+
+	.post-prose :global(h1),
+	.post-prose :global(h2),
+	.post-prose :global(h3),
+	.post-prose :global(h4),
+	.post :global(h4),
+	.post-prose :global(h5),
+	.post-prose :global(h6) {
+		@apply pt-6 pb-2;
+	}
+
+	.post-prose :global(p) {
+		@apply pb-4;
+	}
+
+	.post-prose :global(* a) {
+		@apply text-iris;
+	}
+
+	.post-prose :global(pre.astro-code) {
+		@apply m-0 mb-14;
+	}
+
+	.post-prose :global(:not(pre.astro-code) code) {
+		@apply bg-casper/50 p-1;
+	}
+
+	.post-prose :global(ol) {
+		@apply m-0 mb-5 pl-8;
+	}
+
+	.post-prose :global(ul:not(.contains-task-list)) {
+		@apply m-0 mb-5 pl-6;
+	}
+
+	.post-prose :global(ol) {
+		counter-reset: li;
+	}
+
+	.post-prose :global(ol li) {
+		@apply relative;
+	}
+
+	.post-prose :global(ol li),
+	.post-prose :global(ul:not(.contains-task-list) li),
+	.post-prose :global(ul li.task-list-item) {
+		@apply py-1;
+	}
+
+	.post-prose :global(ol li::before) {
+		content: counter(li);
+		counter-increment: li;
+		@apply absolute -left-8 h-6 w-6 rounded-full border border-black text-center text-black;
+	}
+
+	.post-prose :global(ul:not(.contains-task-list)) {
+		@apply list-disc;
+	}
+
+	.post-prose :global(ul:not(.contains-task-list) li::marker) {
+		@apply text-casper;
+	}
+
+	.post-prose :global(ul:not(.contains-task-list) li) {
+		@apply pl-1 text-black;
+	}
+
+	.post-prose :global(li.task-list-item input) {
+		@apply appearance-none accent-pink-500;
+	}
+
+	.post-prose :global(li.task-list-item input:checked::before) {
+		content: "✔";
+		@apply text-meadow text-lg;
+	}
+
+	.post-prose :global(li.task-list-item input:not(:checked)::before) {
+		content: "✖";
+		@apply text-lg text-red-500;
+	}
+
+	.post-prose :global(table) {
+		@apply mb-4 border-collapse;
+	}
+
+	.post-prose :global(table) + :global(p small) {
+		@apply -mt-2 block text-center text-sm font-bold;
+	}
+
+	.post-prose :global(table),
+	.post-prose :global(td),
+	.post-prose :global(th) {
+		@apply border-casper table-auto  border;
+	}
+
+	.post-prose :global(th) {
+		@apply bg-mist;
+	}
+
+	.post-prose :global(td),
+	.post-prose :global(th) {
+		@apply px-6 py-2;
+	}
+</style>

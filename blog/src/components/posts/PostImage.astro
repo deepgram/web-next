@@ -1,0 +1,5 @@
+---
+const { post } = Astro.props;
+---
+
+<img class="shadow-dg" src={post.frontmatter.cover} alt={post.frontmatter.title} />

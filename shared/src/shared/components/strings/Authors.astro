@@ -1,35 +1,25 @@
 ---
-import AuthorName from "./AuthorName.astro";
+import AuthorName from "../strings/AuthorName.astro";
 
-const { authors } = Astro.props;
-
-const isFirst = (author, array) => {
-	return array[0] === author;
-};
-
-const isLast = (author, array) => {
-	return array[array.length - 1] === author;
-};
-
-const isAlone = (array) => {
-	return array.length === 1;
-};
-
-const prefix = (author, index, array) => {
-	return !isAlone(array) && !isFirst(author, array) && !isLast(author, array) ? ", " : !isAlone(array) && !isFirst(author, array) && isLast(author, array) ? "& " : "";
-};
+const { authors, class: classes } = Astro.props;
 ---
 
 {authors && (
-	<div class="flex flex-wrap text-xs font-semibold uppercase">
+	<ul class:list={["inline list-none p-0 text-xs font-bold uppercase", classes]}>
 		{authors.map((author, index, array) => (
-			<AuthorName prefix={prefix(author, index, array)} author={author} />
+			<li class="inline-block p-0">
+				<AuthorName author={author} />
+			</li>
 		))}
-	</div>
+	</ul>
 )}
 
 <style>
-	div :global(span:nth-last-child(2)) {
-		@apply pr-1;
+	ul li:not(:first-child):not(:last-child)::before {
+		content: ", ";
+	}
+	ul li:last-child::before {
+		@apply pl-1;
+		content: "& ";
 	}
 </style>

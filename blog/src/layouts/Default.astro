@@ -7,8 +7,17 @@ import "../assets/styles/blog.css";
 
 <html class="no-js" lang="en" dir="ltr">
 	<head>
+		<slot name="head:title">
+			<title>Default Title</title>
+		</slot>
+		<slot name="head:description">
+			<meta name="description" content="Default description" />
+		</slot>
+
+		<slot name="head" />
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
 		<script src="//unpkg.com/alpinejs" defer is:inline>
 
 		</script>
