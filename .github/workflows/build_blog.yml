@@ -19,11 +19,14 @@ jobs:
   blog:
     name: Build Blog
     runs-on: ubuntu-latest
+    env:
+      URL: "https://sweet-pie-c52a63-blog.netlify.app"
     steps:
       - uses: actions/checkout@v2
       - name: Read .nvmrc file
         run: echo ::set-output name=NODE_VERSION::$(cat ./blog/.nvmrc)
         id: nvm
+      - run:  env
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
@@ -40,7 +43,6 @@ jobs:
           cd ./blog
           ./node_modules/.bin/ntl build
         env:
-          URL: "https://sweet-pie-c52a63-blog.netlify.app"
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
