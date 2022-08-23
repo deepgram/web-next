@@ -110,10 +110,10 @@ const headings = await post.getHeadings();
 					</a>
 					<a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url)}`} target="_blank" rel="noopener noreferrer">Facebook</a>
 
-					{headings.length > 0 && (
-					<h5 class="py-5">In this blog post</h5>
+					{headings.length > 0 && <h5 class="py-5">In this blog post</h5>}
 					<ul>
-							{headings
+						{headings.length > 0 &&
+							headings
 								.filter((heading) => heading.depth <= 2)
 								.map((heading) => (
 									<li class="pb-4">
@@ -123,7 +123,6 @@ const headings = await post.getHeadings();
 									</li>
 								))}
 					</ul>
-					)}
 				</div>
 			</HasGutters>
 			<div class="mt-20">
