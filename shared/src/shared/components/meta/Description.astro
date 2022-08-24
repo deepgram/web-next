@@ -1,0 +1,7 @@
+---
+import Meta from "./Meta.astro";
+
+const { content, slot: unused1, class: unused2, ...rest } = Astro.props;
+---
+
+<Meta name="description" content={content} {...rest} />

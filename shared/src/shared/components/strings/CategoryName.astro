@@ -1,0 +1,6 @@
+---
+const { category: categorySlug } = Astro.props;
+const category = await import(`../../../content/blog/category/${categorySlug}.json`);
+---
+
+{category.title}

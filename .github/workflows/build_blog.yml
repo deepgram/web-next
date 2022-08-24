@@ -19,6 +19,10 @@ jobs:
   blog:
     name: Build Blog
     runs-on: ubuntu-latest
+    env:
+      URL: "https://sweet-pie-c52a63-blog.netlify.app"
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
     steps:
       - uses: actions/checkout@v2
       - name: Read .nvmrc file
@@ -39,8 +43,6 @@ jobs:
         run: |
           cd ./blog
           ./node_modules/.bin/ntl build
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
@@ -53,7 +55,4 @@ jobs:
           overwrites-pull-request-comment: true
           production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
           functions-dir: ./blog/functions
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
-        timeout-minutes: 1
+        timeout-minutes: 2

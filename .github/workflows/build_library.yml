@@ -15,6 +15,10 @@ jobs:
   blog:
     name: Build Library
     runs-on: ubuntu-latest
+    env:
+      URL: "https://ubiquitous-otter-a04e78-library.netlify.app"
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
     steps:
       - uses: actions/checkout@v2
       - name: Read .nvmrc file
@@ -31,8 +35,6 @@ jobs:
         run: |
           cd ./shared
           ./node_modules/.bin/ntl build
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
@@ -45,7 +47,4 @@ jobs:
           overwrites-pull-request-comment: true
           production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
           functions-dir: ./shared/functions
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_LIBRARY }}
-        timeout-minutes: 1
+        timeout-minutes: 2
