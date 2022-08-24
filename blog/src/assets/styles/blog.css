@@ -4,3 +4,35 @@
 	background-repeat: repeat-x;
 	background-position: 0 12rem;
 }
+
+.bg-starburst-gradient {
+	background-image: url("/starburst-gradient.svg");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: 60%;
+}
+
+@media screen(sm) {
+	.bg-starburst-gradient {
+		background-position: center bottom 1rem;
+		background-size: auto;
+	}
+}
+
+@media screen(md) {
+	.bg-starburst-gradient {
+		background-position: center bottom 2rem;
+	}
+}
+
+@media screen(lg) {
+	.bg-starburst-gradient {
+		background-position: center bottom 3rem;
+	}
+}
+
+@media screen(xl) {
+	.bg-starburst-gradient {
+		background-position: center bottom 4rem;
+	}
+}

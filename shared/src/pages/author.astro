@@ -19,29 +19,83 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 				id="author-card-list"
 				title="Author card list w/ title"
 				snippet={`<AuthorCardList>
-	<NoLinkCardListTitle title="Deepgram team" slot="title" /> <!-- slot="title" is important -->
+	<NoLinkCardListTitle slot="title"><h2>Deepgram team</h2></NoLinkCardListTitle> <!-- slot="title" is important -->
 	... author cards 
 </AuthorCardList>`}
 			>
 				<AuthorCardList>
-					<NoLinkCardListTitle title="Deepgram team" slot="title" />
-					<AuthorCard title="Bekah Hawrot Weigel" jobtitle="Senior Developer Experience Engineer" image="https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512" />
-					<AuthorCard title="Luke Oliff" jobtitle="Developer Advocate" image="https://ca.slack-edge.com/T0LL805A9-U02GEHFJ8MR-3029c93a71ed-512" />
-					<AuthorCard title="Michael Jolley" jobtitle="Technical Community Builder" image="https://ca.slack-edge.com/T0LL805A9-U01U92M6U3B-7febdc3d4942-512" />
-					<AuthorCard title="Bekah Hawrot Weigel" jobtitle="Senior Developer Experience Engineer" image="https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512" />
-					<AuthorCard title="Luke Oliff" jobtitle="Developer Advocate" image="https://ca.slack-edge.com/T0LL805A9-U02GEHFJ8MR-3029c93a71ed-512" />
-					<AuthorCard title="Michael Jolley" jobtitle="Technical Community Builder" image="https://ca.slack-edge.com/T0LL805A9-U01U92M6U3B-7febdc3d4942-512" />
+					<NoLinkCardListTitle slot="title"><h2>Deepgram team</h2></NoLinkCardListTitle>
+					<AuthorCard
+						author={{
+							slug: "bekah-hawrot-weigel",
+							title: "Bekah Hawrot Weigel",
+							jobtitle: "Senior Developer Experience Engineer",
+							picture: "https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512",
+						}}
+					/>
+					<AuthorCard
+						author={{ slug: "luke-oliff", title: "Luke Oliff", jobtitle: "Developer Advocate", picture: "https://ca.slack-edge.com/T0LL805A9-U02GEHFJ8MR-3029c93a71ed-512" }}
+					/>
+					<AuthorCard
+						author={{
+							slug: "michael-jolley",
+							title: "Michael Jolley",
+							jobtitle: "Technical Community Builder",
+							picture: "https://ca.slack-edge.com/T0LL805A9-U01U92M6U3B-7febdc3d4942-512",
+						}}
+					/>
+					<AuthorCard
+						author={{
+							slug: "bekah-hawrot-weigel",
+							title: "Bekah Hawrot Weigel",
+							jobtitle: "Senior Developer Experience Engineer",
+							picture: "https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512",
+						}}
+					/>
+					<AuthorCard
+						author={{ slug: "luke-oliff", title: "Luke Oliff", jobtitle: "Developer Advocate", picture: "https://ca.slack-edge.com/T0LL805A9-U02GEHFJ8MR-3029c93a71ed-512" }}
+					/>
+					<AuthorCard
+						author={{
+							slug: "michael-jolley",
+							title: "Michael Jolley",
+							jobtitle: "Technical Community Builder",
+							picture: "https://ca.slack-edge.com/T0LL805A9-U01U92M6U3B-7febdc3d4942-512",
+						}}
+					/>
+					<AuthorCard
+						author={{
+							slug: "bekah-hawrot-weigel",
+							title: "Bekah Hawrot Weigel",
+							jobtitle: "Senior Developer Experience Engineer",
+							picture: "https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512",
+						}}
+					/>
+					<AuthorCard
+						author={{ slug: "luke-oliff", title: "Luke Oliff", jobtitle: "Developer Advocate", picture: "https://ca.slack-edge.com/T0LL805A9-U02GEHFJ8MR-3029c93a71ed-512" }}
+					/>
+					<AuthorCard
+						author={{
+							slug: "michael-jolley",
+							title: "Michael Jolley",
+							jobtitle: "Technical Community Builder",
+							picture: "https://ca.slack-edge.com/T0LL805A9-U01U92M6U3B-7febdc3d4942-512",
+						}}
+					/>
 				</AuthorCardList>
 			</ComponentPreview>
 		</ComponentSection>
 
 		<ComponentSection title="Authors cards">
-			<ComponentPreview
-				id="author-card"
-				title="Author card"
-				snippet={`<AuthorCard title="Bekah Hawrot Weigel" jobtitle="Senior Developer Experience Engineer" image="https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512" />`}
-			>
-				<AuthorCard title="Bekah Hawrot Weigel" jobtitle="Senior Developer Experience Engineer" image="https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512" />
+			<ComponentPreview id="author-card" title="Author card" snippet={`<AuthorCard author={author} />`}>
+				<AuthorCard
+					author={{
+						slug: "bekah-hawrot-weigel",
+						title: "Bekah Hawrot Weigel",
+						jobtitle: "Senior Developer Experience Engineer",
+						picture: "https://ca.slack-edge.com/T0LL805A9-U02V5CLJAUV-35e12e03fd53-512",
+					}}
+				/>
 			</ComponentPreview>
 		</ComponentSection>
 	</PrimarySection>
