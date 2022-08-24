@@ -1,0 +1,20 @@
+---
+import LeftDecoration from "../../shared/components/decoration/LeftDecoration.astro";
+import RightDecoration from "../../shared/components/decoration/RightDecoration.astro";
+import Svg from "../../shared/components/general/Svg.astro";
+import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
+
+const { title } = Astro.props;
+---
+
+<PrimarySection class="">
+	<div class="grid grid-cols-2 xl:grid-cols-3">
+		<a href="/posts" class="col-span-2 xl:col-span-3 inline-block py-4 md:py-6 lg:py-8 xl:py-10">&lt;- All posts</a>
+		<h1 class="mb-20 text-white">Authors</h1>
+		<div class="xl:order-last">
+			<RightDecoration icon="star-left" class="text-white w-6 lg:w-8 xl:-mt-10" />
+			<LeftDecoration icon="star-right" class="text-white w-5 lg:w-6 mt-4 xl:mt-20" />
+		</div>
+		<div><Svg class="opacity-0 -mb-10" name="starburst-gradient" /></div>
+	</div>
+</PrimarySection>
