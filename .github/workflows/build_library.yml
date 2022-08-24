@@ -18,7 +18,7 @@ jobs:
     env:
       URL: "https://ubiquitous-otter-a04e78-library.netlify.app"
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_LIBRARY }}
     steps:
       - uses: actions/checkout@v2
       - name: Read .nvmrc file
