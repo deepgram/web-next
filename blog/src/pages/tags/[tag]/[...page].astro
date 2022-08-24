@@ -2,13 +2,20 @@
 import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../../layouts/Default.astro";
 import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+import BlogCardList from "../../../shared/components/lists/BlogCardList.astro";
+import BlogCard from "../../../shared/components/cards/BlogCard.astro";
+import HasAside from "../../../shared/components/layout/HasAside.astro";
+import CategoryList from "../../../shared/components/nav/CategoryList.astro";
+import WhitepaperPromo from "../../../shared/components/promos/WhitepaperPromo.astro";
+import whitepaperImg from "../../shared/assets/temp_images/black-quote.svg";
+import Pagination from "../../../components/nav/Pagination.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const allPosts = await Astro.glob("../../../content/blog/posts/**/*.md");
-
+	const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 	function getTags() {
 		const tagsArray = [];
-		allPosts.map((post) => {
+		sortedPosts.map((post) => {
 			tagsArray.push(...post.frontmatter.tags);
 		});
 		const noDuplicateTags = [...new Set(tagsArray)];
@@ -18,19 +25,48 @@ export async function getStaticPaths({ paginate }) {
 	const tags = getTags();
 
 	return tags.map((tag) => {
-		const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+		const filteredPosts = sortedPosts.filter((post) => post.frontmatter.tags.includes(tag));
 		return paginate(filteredPosts, {
 			params: { tag },
-			pageSize: 6,
-			props: { tag },
+			pageSize: 18,
+			props: { tag, size: 18 },
 		});
 	});
 }
-const { page, tag } = Astro.props;
+const { page, tag, size } = Astro.props;
 ---
 
 <Layout>
 	<PrimarySection>
-		<GeneralPostsPage slug={`tags/${tag}`} page={page} posts={page.data} link="/tags" linkText="All tags" subtitle={`All ${tag} posts`} />
+		<a href="/tags" class="inline-block py-4 md:py-6 lg:py-8 xl:py-10">&lt;- All tags</a>
+		<h1 class="mb-8">Deepgram Blog ⚡️</h1>
+		<h2 class="mb-8">{`All posts tagged with #${tag}`}</h2>
+		<HasAside>
+			<CategoryList slot="aside" />
+			{page.data.length > 0 && (
+				<>
+					<BlogCardList>{page.data && page.data.slice(0, 9).map((post) => <BlogCard post={post} />)}</BlogCardList>
+					{page.data.length > size / 2 && (
+						<div class="my-24">
+							<WhitepaperPromo
+								title="How to Make Your Application Voice-Ready"
+								theme="black"
+								backgroundImage={whitepaperImg}
+								formProps={[
+									{ label: "Name (first and last)", placeholder: "Your name" },
+									{ label: "Work email", placeholder: "you@company.com", type: "email" },
+									{ label: "Role", placeholder: "Role/Title" },
+								]}
+								buttonText="Download"
+							/>
+						</div>
+					)}
+					<div class="mb-24">
+						<BlogCardList>{page.data && page.data.slice(9, 18).map((post) => <BlogCard post={post} />)}</BlogCardList>
+					</div>
+				</>
+			)}
+			<Pagination page={page} slug={`tags/${tag}`} />
+		</HasAside>
 	</PrimarySection>
 </Layout>
