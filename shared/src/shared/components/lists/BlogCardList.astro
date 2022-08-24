@@ -5,7 +5,7 @@ const { class: classes, ...rest } = Astro.props;
 <div class={`w-full ${classes ? classes : ""}`} {...rest}>
 	<div class="relative mx-auto">
 		<slot name="title" />
-		<div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-4 lg:gap-6">
+		<div class="grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center gap-4 lg:gap-6">
 			<slot />
 		</div>
 	</div>
