@@ -136,9 +136,30 @@ collections:
       - label: Bio
         name: bio
         widget: markdown
+      - label: Deepgram Team
+        name: team
+        widget: boolean
       - label: Picture
         name: picture
         widget: image
+      - label: Twitter handle
+        name: twitter
+        widget: string
+      - label: LinkedIn URL
+        name: linkedin
+        widget: string
+      - label: GitHub Profile URL 
+        name: github
+        widget: string
+      - label: Twitch URL 
+        name: twitch
+        widget: string
+      - label: Website URL 
+        name: website
+        widget: string
+      - label: YouTube URL 
+        name: youtube
+        widget: string
   - name: category
     label: "Categories"
     label_singular: Category
