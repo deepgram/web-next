@@ -63,27 +63,31 @@ code {
 	}
 
 	h1 {
-		@apply text-3xl md:text-4xl xl:text-5xl;
+		@apply xl:text-h1-large-d text-h1-large-m;
+	}
+
+	h1 small {
+		@apply xl:text-h1-small-d text-h1-small-m;
 	}
 
 	h2 {
-		@apply text-2xl md:text-3xl xl:text-4xl;
+		@apply xl:text-h2-d text-h2-m;
 	}
 
 	h3 {
-		@apply text-xl md:text-2xl xl:text-3xl;
+		@apply xl:text-h3-d text-h3-m;
 	}
 
 	h4 {
-		@apply text-lg md:text-xl xl:text-2xl;
+		@apply xl:text-h4-d text-h4-m;
 	}
 
 	h5 {
-		@apply text-lg xl:text-xl;
+		@apply xl:text-h5-d text-h5-m;
 	}
 
 	h6 {
-		@apply text-sm md:text-base xl:text-lg;
+		@apply xl:text-h6-d text-h6-m;
 	}
 
 	a {
@@ -92,14 +96,6 @@ code {
 }
 
 @layer components {
-	.h1-large {
-		@apply text-6xl;
-	}
-
-	.h1-small {
-		@apply text-5xl;
-	}
-
 	button.button {
 		@apply -mb-1;
 	}

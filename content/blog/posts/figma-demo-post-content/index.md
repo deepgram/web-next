@@ -1,6 +1,6 @@
 ---
 title: "Top 3 Use Cases for Speech-to-Text in Gaming"
-description: "In the gaming industry, speech-to-text and voice recognition technology are becoming more and more commonplace."
+description: "In the gaming industry, speech-to-text and voice recognition technology are becoming more and more commonplace. This is due to the fact that they offer a number of advantages for both developers and players alike."
 date: 2022-08-19T16:15:44.129Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1660922192/blog/test-blog-post-image_akruql.png
 authors:
