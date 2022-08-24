@@ -5,10 +5,11 @@ import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const allPosts = await Astro.glob("../../../content/blog/posts/**/*.md");
+	const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
 
 	function getTags() {
 		const tagsArray = [];
-		allPosts.map((post) => {
+		sortedPosts.map((post) => {
 			tagsArray.push(...post.frontmatter.tags);
 		});
 		const noDuplicateTags = [...new Set(tagsArray)];
@@ -18,10 +19,10 @@ export async function getStaticPaths({ paginate }) {
 	const tags = getTags();
 
 	return tags.map((tag) => {
-		const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+		const filteredPosts = sortedPosts.filter((post) => post.frontmatter.tags.includes(tag));
 		return paginate(filteredPosts, {
 			params: { tag },
-			pageSize: 6,
+			pageSize: 12,
 			props: { tag },
 		});
 	});
