@@ -10,8 +10,8 @@ const { class: classes, author } = Astro.props;
 			<img class="h-[6rem] md:h-[8rem] object-cover rounded-full" src={author.picture} alt={`Blog title image for the blog post: ${author.title}`} />
 		</div>
 		<div class="flex flex-col ml-4 pt-2 md:pt-8">
-			<h4 class="text-xl md:text-2xl">{author.title}</h4>
-			<h5 class="text-base md:text-xl text-storm">{author.jobtitle}</h5>
+			<h4>{author.title}</h4>
+			<h5 class="text-storm">{author.jobtitle}</h5>
 		</div>
 	</div>
 </GenericCard>

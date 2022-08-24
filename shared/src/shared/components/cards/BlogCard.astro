@@ -14,9 +14,7 @@ const { title, tags, authors, cover } = post.frontmatter;
 	<div class="px-4 pb-3 flex flex-col h-1/2 justify-between text-black">
 		<div class="flex flex-col justify-start space-y-1">
 			<TagsList tags={tags} />
-			<h4 class="text-lg leading-5 sm:text-xl sm:leading-6 md:text-2xl md:leading-7">
-				{title}
-			</h4>
+			<h4>{title}</h4>
 		</div>
 
 		<Authors authors={authors} />
