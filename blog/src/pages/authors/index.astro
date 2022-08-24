@@ -7,6 +7,9 @@ import ContrastSection from "../../shared/components/decoration/ContrastSection.
 import Hero from "../../components/authors/Hero.astro";
 import AuthorCard from "../../shared/components/cards/AuthorCard.astro";
 import NoLinkCardListTitle from "../../shared/components/titles/NoLinkCardListTitle.astro";
+import Title from "../../shared/components/meta/Title.astro";
+import Description from "../../shared/components/meta/Description.astro";
+import Meta from "../../shared/components/meta/Meta.astro";
 
 const authorFiles = import.meta.glob("../../content/blog/authors/*.json");
 
@@ -27,6 +30,11 @@ const guests = authors.filter((a) => !a.guest);
 ---
 
 <Layout>
+	<Title slot="head:title" title="All authors - Deepgram Blog ⚡️" />
+	<Description slot="head:description" name="description" content="All the authors writing content on the Deepgram blog." />
+	<Meta slot="og:title" property="og:title" content="All authors - Deepgram Blog ⚡️" />
+	<Meta slot="og:description" property="og:description" content="All the authors writing content on the Deepgram blog." />
+
 	<ContrastSection contrast="darkCharcoal" class="bg-starburst-gradient" background="white" bottomDivider="eclipse-divider">
 		<Hero title="Authors" />
 	</ContrastSection>
