@@ -1,5 +1,8 @@
 {
   "title": "Luke Oliff",
   "jobtitle": "Senior Developer Experience Engineer",
-  "picture": "https://res.cloudinary.com/deepgram/image/upload/v1638198321/authors/lukeocodes/lukeocodes.jpg"
+  "picture": "https://res.cloudinary.com/deepgram/image/upload/v1638198321/authors/lukeocodes/lukeocodes.jpg",
+  "bio": "Dad of two, tech streamer on Twitch, and open source contributor/maintainer.",
+  "twitter": "lukeocodes",
+  "github": "https://github.com/lukeocodes"
 }
