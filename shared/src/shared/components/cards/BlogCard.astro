@@ -4,19 +4,20 @@ import Authors from "../strings/Authors.astro";
 import GenericBlogCard from "./GenericBlogCard.astro";
 
 const { class: classes, post } = Astro.props;
-const { title, tags, authors, cover } = post.frontmatter;
+let { title } = post.frontmatter;
+const { title: originalTitle, tags, authors, cover } = post.frontmatter;
+
+title = title.length > 60 ? `${title.substring(0, 57)}...` : title;
 ---
 
 <GenericBlogCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={post}>
 	<div class="overflow-hidden flex h-1/2 place-content-center">
-		<img class="object-cover w-full" src={cover} alt={`Blog title image for the blog post: ${title}`} />
+		<img class="object-cover w-full" src={cover} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
 	<div class="px-4 pb-3 flex flex-col h-1/2 justify-between text-black">
 		<div class="flex flex-col justify-start space-y-1">
 			<TagsList tags={tags} />
-			<h4 class="text-lg leading-5 sm:text-xl sm:leading-6 md:text-2xl md:leading-7">
-				{title}
-			</h4>
+			<h4>{title}</h4>
 		</div>
 
 		<Authors authors={authors} />

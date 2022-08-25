@@ -1,5 +1,5 @@
 module.exports = {
-	content: ["./src/{components,layouts,pages}/**/*.{vue,astro,html,js}", "./src/shared/components/**/*.{vue,astro,html,js}"],
+	content: ["./src/{components,layouts,pages,assets}/**/*.{vue,astro,html,js,css}", "./src/shared/{components,assets}/**/*.{vue,astro,html,js,css}"],
 	safelist: [
 		"bg-darkCharcoal",
 		"bg-mist",
@@ -18,6 +18,28 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontSize: {
+				body: ["1.125rem", "1.75rem"],
+
+				// desktop sizes
+				"hero-body-d": ["1.25rem", "1.75rem"],
+				"h6-d": ["1.125rem", "1.5rem"],
+				"h5-d": ["1.25rem", "1.625rem"],
+				"h4-d": ["1.5rem", "1.75rem"],
+				"h3-d": ["1.875rem", "2.375rem"],
+				"h2-d": ["2.375rem", "2.75rem"],
+				"h1-small-d": ["2.75rem", "3.375rem"],
+				"h1-large-d": ["3.75rem", "4.375rem"],
+
+				// mobile sizes
+				"h6-m": ["0.875rem", "1rem"],
+				"h5-m": ["1.125rem", "1.625rem"],
+				"h4-m": ["1.25rem", "1.375rem"],
+				"h3-m": ["1.375rem", "1.625rem"],
+				"h2-m": ["1.625rem", "2rem"],
+				"h1-small-m": ["1.75rem", "2.125rem"],
+				"h1-large-m": ["2rem", "2.25rem"],
+			},
 			boxShadow: {
 				dg: "3px 3px 10px rgba(0, 0, 0, 0.25)",
 			},

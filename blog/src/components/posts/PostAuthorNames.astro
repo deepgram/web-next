@@ -1,4 +1,5 @@
 ---
+import Link from "../../shared/components/general/Link.astro";
 import AuthorName from "../../shared/components/strings/AuthorName.astro";
 
 const { authors } = Astro.props;
@@ -7,9 +8,9 @@ const { authors } = Astro.props;
 {authors && (
 	<span class="author-names">
 		{authors.map((author, index, array) => (
-			<a href={`/authors/${author}`} class="text-iris inline-block">
+			<Link href={`/authors/${author}`} class="text-iris inline-block">
 				<AuthorName author={author} />
-			</a>
+			</Link>
 		))}
 	</span>
 )}

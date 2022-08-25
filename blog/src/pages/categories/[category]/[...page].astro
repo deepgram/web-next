@@ -2,6 +2,9 @@
 import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../../layouts/Default.astro";
 import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+import Title from "../../../shared/components/meta/Title.astro";
+import Description from "../../../shared/components/meta/Description.astro";
+import Meta from "../../../shared/components/meta/Meta.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const categoryFiles = import.meta.glob("../../../content/blog/category/*.json");
@@ -29,18 +32,22 @@ export async function getStaticPaths({ paginate }) {
 			},
 			pageSize: 6,
 			props: {
-				title: category.title,
-				slug: category.slug,
+				category,
 			},
 		});
 	});
 }
 
-const { title, page, slug } = Astro.props;
+const { category, page } = Astro.props;
 ---
 
 <Layout>
+	<Title slot="head:title" title={`All posts in the ${category.title} category - Deepgram Blog ⚡️`} />
+	<Description slot="head:description" name="description" content={`All posts in the ${category.title} category on the Deepgram Blog.`} />
+	<Meta slot="og:title" property="og:title" content={`All posts in the ${category.title} category - Deepgram Blog ⚡️`} />
+	<Meta slot="og:description" property="og:description" content={`All posts in the ${category.title} category on the Deepgram Blog.`} />
+
 	<PrimarySection>
-		<GeneralPostsPage slug={`categories/${slug}`} page={page} posts={page.data} link="/posts" linkText="All categories" subtitle={`All ${title} posts`} />
+		<GeneralPostsPage slug={`categories/${category.slug}`} page={page} posts={page.data} link="/categories" linkText="All categories" subtitle={`All ${category.title} posts`} />
 	</PrimarySection>
 </Layout>

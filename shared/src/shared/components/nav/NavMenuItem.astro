@@ -1,13 +1,11 @@
 ---
 import Icon from "../general/Icon.astro";
+import Link from "../general/Link.astro";
 
 const { href, icon } = Astro.props;
 ---
 
-<a href={href} class="flex text-white items-center gap-2">
-	<p class="flex text-white items-center gap-2">
-		<Icon icon={icon} class="h-[1.2em] w-[1.2em] fill-cloud" />
-		<slot />
-		<Icon icon="arrowright" class="h-[1em] w-[1em] stroke-lightIris" />
-	</p>
-</a>
+<Link href={href} icon={icon} class="flex text-cloud items-center gap-2">
+	<slot />
+	<Icon icon="arrow-right" class="w-[1em] h-[1em] fill-lightIris" />
+</Link>

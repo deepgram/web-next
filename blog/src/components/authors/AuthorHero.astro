@@ -1,50 +1,53 @@
 ---
-import PrimarySection from "../shared/components/layout/PrimarySection.astro";
-import Svg from "../shared/components/general/Svg.astro";
-import Icon from "../shared/components/general/Icon.astro";
+import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
+import Svg from "../../shared/components/general/Svg.astro";
+import Icon from "../../shared/components/general/Icon.astro";
+import Backlink from "../nav/Backlink.astro";
+import Link from "../../shared/components/general/Link.astro";
 
 const { author } = Astro.props;
 ---
 
 <PrimarySection class="bg-darkCharcoal">
-	<div class="author-hero">
+	<Backlink href="/authors" class="mb-12 lg:mb-11">All authors</Backlink>
+	<div class="author-hero mb-20">
 		<div class="flex-1 author-info">
 			<h1 class="name">{author.title}</h1>
 			<h2 class="title">{author.jobtitle}</h2>
 			<ul class="socials">
 				{author.twitter && (
 					<li>
-						<a href={`https://twitter.com/${author.twitter}`} target="_blank">
+						<Link href={`https://twitter.com/${author.twitter}`} target="_blank" rel="nofollow">
 							<Icon icon="twitter" />
-						</a>
+						</Link>
 					</li>
 				)}
 
 				{author.linkedin && (
 					<li>
-						<a href={author.linkedin} target="_blank">
+						<Link href={author.linkedin} target="_blank" rel="nofollow">
 							<Icon icon="linkedin" />
-						</a>
+						</Link>
 					</li>
 				)}
 				{author.github && (
 					<li>
-						<a href={author.github} target="_blank">
+						<Link href={author.github} target="_blank" rel="nofollow">
 							<Icon icon="github" />
-						</a>
+						</Link>
 					</li>
 				)}
 				{author.twitch && (
 					<li>
-						<a href={author.twitch} target="_blank">
+						<Link href={author.twitch} target="_blank" rel="nofollow">
 							<Icon icon="twitch" />
-						</a>
+						</Link>
 					</li>
 				)}
 			</ul>
 			<p class="bio">{author.bio}</p>
 		</div>
-		<div class="picture-section ">
+		<div class="picture-section">
 			<img class="picture" src={author.picture} alt={author.title} />
 			<Svg class="fingerprint" name="fingerprint" />
 		</div>
@@ -54,14 +57,11 @@ const { author } = Astro.props;
 <style scoped>
 	.author-hero {
 		grid-template-rows: 0.5fr 1fr;
-		@apply grid grid-cols-1 pb-10 text-white md:grid-cols-2 md:grid-rows-1 md:pt-4;
+		@apply grid grid-cols-1 pb-10 text-white md:grid-cols-2 md:grid-rows-1;
 	}
 
-	.author-hero h1 {
-		@apply mt-3 text-3xl font-bold md:mt-10 md:text-6xl;
-	}
 	.author-hero h2 {
-		@apply text-2xl font-bold md:mt-10 md:text-4xl;
+		@apply md:mt-10;
 	}
 	.author-info {
 		@apply grow;

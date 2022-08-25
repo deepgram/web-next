@@ -1,4 +1,6 @@
 ---
+import Link from "../general/Link.astro";
+
 const { tags, link } = Astro.props;
 ---
 
@@ -6,9 +8,9 @@ const { tags, link } = Astro.props;
 	{tags.map((tag) => (
 		<li class="bg-steel px-1 text-white">
 			{link && (
-				<a href={`/tags/${tag}`} class="text-white">
+				<Link href={`/tags/${tag}`} class="text-white">
 					#{tag}
-				</a>
+				</Link>
 			)}
 			{!link && <>#{tag}</>}
 		</li>
