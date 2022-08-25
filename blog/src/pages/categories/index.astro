@@ -7,6 +7,7 @@ import CategorySection from "../../components/homepage/CategorySection.astro";
 import Title from "../../shared/components/meta/Title.astro";
 import Description from "../../shared/components/meta/Description.astro";
 import Meta from "../../shared/components/meta/Meta.astro";
+import Backlink from "../../components/nav/Backlink.astro";
 
 const categoryFiles = import.meta.glob("../../content/blog/category/*.json");
 
@@ -30,7 +31,7 @@ const categories = allCategories.splice(0, 2);
 	<Meta slot="og:description" property="og:description" content="All the categories on the Deepgram blog." />
 
 	<PrimarySection>
-		<a href="/" class="inline-block py-4 md:py-6 lg:py-8 xl:py-10">&lt;- Back to blog home</a>
+		<Backlink href="/">Back to blog home</Backlink>
 		<h1 class="mb-8">Deepgram Blog ⚡️</h1>
 		<HasAside>
 			<CategoryList slot="aside" />
