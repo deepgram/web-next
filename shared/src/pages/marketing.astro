@@ -18,6 +18,8 @@ import webinarImg from "../shared/assets/temp_images/red-ticks.svg";
 import whitepaperImg from "../shared/assets/temp_images/black-quote.svg";
 import linkImg from "../shared/assets/temp_images/black-arrows.svg";
 import Link from "../shared/components/general/Link.astro";
+import InlineIcon from "../shared/components/general/InlineIcon.astro";
+import Button from "../shared/components/general/Button.astro";
 ---
 
 <Layout>
@@ -28,51 +30,142 @@ import Link from "../shared/components/general/Link.astro";
 
 		<ComponentSection title="Icons, Buttons and Links">
 			<ComponentPreview
+				id="text"
+				title="Text"
+				snippet={`<span><InlineIcon icon="share">Just text with Icon</InlineIcon><span>
+<h1><InlineIcon icon="email" iconSuffix>Just text with Icon</InlineIcon></h1>
+<h3><InlineIcon icon="xmark-large" iconSuffix>Close</InlineIcon></h3>`}
+			>
+				<div class="flex flex-col space-y-2">
+					<span><InlineIcon icon="share">Just text with Icon</InlineIcon></span>
+					<h1><InlineIcon icon="email" iconSuffix>Just text with Icon</InlineIcon></h1>
+					<h3><InlineIcon icon="xmark-large" iconSuffix>Close</InlineIcon></h3>
+				</div>
+			</ComponentPreview>
+
+			<ComponentPreview
 				id="links"
 				title="Links"
-				snippet={`<Link href="/test" class="text-red-900">Link with no Icon</Link>
-<Link href="/test" icon="email">Link with Icon</Link>
-<Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link>
-
-
-<h1><Link href="/test">Link with no Icon</Link></h1>
-<h2><Link href="/test">Link with no Icon</Link></h2>
-<h3><Link href="/test">Link with no Icon</Link></h3>
-<h4><Link href="/test">Link with no Icon</Link></h4>
-<h5><Link href="/test">Link with no Icon</Link></h5>
-<h6><Link href="/test" class="text-black">Link with no Icon</Link></h6>
-
-etc...`}
+				snippet={`<Link href="#" class="text-red-900">Link with no Icon</Link>
+<h1><Link href="#">Link with no Icon</Link></h1>
+<h2><Link href="#">Link with no Icon</Link></h2>
+<h3><Link href="#">Link with no Icon</Link></h3>
+<h4><Link href="#">Link with no Icon</Link></h4>
+<h5><Link href="#">Link with no Icon</Link></h5>
+<h6><Link href="#" class="text-black">Link with no Icon</Link></h6>
+<Link href="#" icon="email" class="text-red-900">Link with Icon</Link>
+<h1><Link href="#" icon="email">Link with Icon</Link></h1>
+<h2><Link href="#" icon="email">Link with Icon</Link></h2>
+<h3><Link href="#" icon="email">Link with Icon</Link></h3>
+<h4><Link href="#" icon="email">Link with Icon</Link></h4>
+<h5><Link href="#" icon="email">Link with Icon</Link></h5>
+<h6><Link href="#" icon="email" class="text-black">Link with Icon</Link></h6>
+<Link href="#" icon="email" iconSuffix class="text-red-900">Link with suffix Icon</Link>
+<h1><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h1>
+<h2><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h2>
+<h3><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h3>
+<h4><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h4>
+<h5><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h5>
+<h6><Link href="#" icon="email" iconSuffix class="text-black">Link with suffix Icon</Link></h6>
+<Link href="#" class="text-white button button--primary">Link like Primary Button</Link>
+<Link href="#" class="text-white button button--primary button--small">Small Link like Primary Button</Link>
+<Link href="#" class="text-white button button--primary button--large">Large Link like Primary Button</Link>
+<Link href="#" class="text-white button button--primary button--block">Block Link like Primary Button</Link>
+<Link href="#" class="text-white button button--secondary">Link like Secondary Button</Link>
+<Link href="#" class="text-white button button--tertiary">Link like Tertiary Button</Link>
+<Link href="#" class="text-white button button--quaternary">Link like Quaternary Button</Link>
+<Link href="#" class="text-white button button--quinary">Link like Quinary Button</Link>
+<Link href="#" class="text-white button button--senary">Link like Senary Button</Link>
+<Link href="#" icon="angle-down" class="text-white button button--primary">Link like Primary Button with Icon</Link>
+<Link href="#" icon="angle-down" iconSuffix class="text-white button button--secondary">Link like Secondary Button with suffix Icon</Link>`}
 			>
-				<ul>
-					<li>
-						<Link href="/test" class="text-red-900">Link with no Icon</Link>
-						<h1><Link href="/test">Link with no Icon</Link></h1>
-						<h2><Link href="/test">Link with no Icon</Link></h2>
-						<h3><Link href="/test">Link with no Icon</Link></h3>
-						<h4><Link href="/test">Link with no Icon</Link></h4>
-						<h5><Link href="/test">Link with no Icon</Link></h5>
-						<h6><Link href="/test" class="text-black">Link with no Icon</Link></h6>
-					</li>
-					<li>
-						<Link href="/test" icon="email" class="text-red-900">Link with Icon</Link>
-						<h1><Link href="/test" icon="email">Link with Icon</Link></h1>
-						<h2><Link href="/test" icon="email">Link with Icon</Link></h2>
-						<h3><Link href="/test" icon="email">Link with Icon</Link></h3>
-						<h4><Link href="/test" icon="email">Link with Icon</Link></h4>
-						<h5><Link href="/test" icon="email">Link with Icon</Link></h5>
-						<h6><Link href="/test" icon="email" class="text-black">Link with Icon</Link></h6>
-					</li>
-					<li>
-						<Link href="/test" icon="email" iconSuffix class="text-red-900">Link with suffix Icon</Link>
-						<h1><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h1>
-						<h2><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h2>
-						<h3><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h3>
-						<h4><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h4>
-						<h5><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h5>
-						<h6><Link href="/test" icon="email" iconSuffix class="text-black">Link with suffix Icon</Link></h6>
-					</li>
-				</ul>
+				<div class="flex flex-col space-y-2">
+					<Link href="#" class="text-red-900">Link with no Icon</Link>
+					<h1><Link href="#">Link with no Icon</Link></h1>
+					<h2><Link href="#">Link with no Icon</Link></h2>
+					<h3><Link href="#">Link with no Icon</Link></h3>
+					<h4><Link href="#">Link with no Icon</Link></h4>
+					<h5><Link href="#">Link with no Icon</Link></h5>
+					<h6><Link href="#" class="text-black">Link with no Icon</Link></h6>
+					<Link href="#" icon="email" class="text-red-900">Link with Icon</Link>
+					<h1><Link href="#" icon="email">Link with Icon</Link></h1>
+					<h2><Link href="#" icon="email">Link with Icon</Link></h2>
+					<h3><Link href="#" icon="email">Link with Icon</Link></h3>
+					<h4><Link href="#" icon="email">Link with Icon</Link></h4>
+					<h5><Link href="#" icon="email">Link with Icon</Link></h5>
+					<h6><Link href="#" icon="email" class="text-black">Link with Icon</Link></h6>
+					<Link href="#" icon="email" iconSuffix class="text-red-900">Link with suffix Icon</Link>
+					<h1><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h1>
+					<h2><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h2>
+					<h3><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h3>
+					<h4><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h4>
+					<h5><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h5>
+					<h6><Link href="#" icon="email" iconSuffix class="text-black">Link with suffix Icon</Link></h6>
+					<Link href="#" class="text-white button button--primary">Link like Primary Button</Link>
+					<Link href="#" class="text-white button button--primary button--small">Small Link like Primary Button</Link>
+					<Link href="#" class="text-white button button--primary button--large">Large Link like Primary Button</Link>
+					<Link href="#" class="text-white button button--primary button--block">Block Link like Primary Button</Link>
+					<Link href="#" class="text-white button button--secondary">Link like Secondary Button</Link>
+					<Link href="#" class="text-white button button--tertiary">Link like Tertiary Button</Link>
+					<Link href="#" class="text-white button button--quaternary">Link like Quaternary Button</Link>
+					<Link href="#" class="text-white button button--quinary">Link like Quinary Button</Link>
+					<Link href="#" class="text-white button button--senary">Link like Senary Button</Link>
+					<Link href="#" icon="angle-down" class="text-white button button--primary">Link like Primary Button with Icon</Link>
+					<Link href="#" icon="angle-down" iconSuffix class="text-white button button--secondary">Link like Secondary Button with suffix Icon</Link>
+				</div>
+			</ComponentPreview>
+
+			<ComponentPreview id="buttons" title="Buttons" snippet={``}>
+				<div class="flex flex-col space-y-2">
+					<h5>Button</h5>
+					<div class="flex flex-wrap space-x-2">
+						<Button type="button" value="test" class="button">Button (unstyled)</Button>
+						<Button type="button" value="test" class="button button--primary">Button (primary)</Button>
+						<Button type="button" value="test" class="button button--secondary">Button (secondary)</Button>
+						<Button type="button" value="test" class="button button--tertiary">Button (tertiary)</Button>
+						<Button type="button" value="test" class="button button--quaternary">Button (quaternary)</Button>
+						<Button type="button" value="test" class="button button--quinary">Button (quinary)</Button>
+						<Button type="button" value="test" class="button button--senary">Button (senary)</Button>
+					</div>
+					<h5>Button with Icons</h5>
+					<div class="flex flex-wrap space-x-2">
+						<Button type="button" value="test" icon="email" class="button">Button (unstyled)</Button>
+						<Button type="button" value="test" icon="email" class="button button--primary">Button (primary)</Button>
+						<Button type="button" value="test" icon="email" class="button button--secondary">Button (secondary)</Button>
+					</div>
+					<h5>Button with suffix Icons</h5>
+					<div class="flex flex-wrap space-x-2">
+						<Button type="button" value="test" icon="email" iconSuffix class="button">Button (unstyled)</Button>
+						<Button type="button" value="test" icon="email" iconSuffix class="button button--primary">Button (primary)</Button>
+						<Button type="button" value="test" icon="email" iconSuffix class="button button--secondary">Button (secondary)</Button>
+					</div>
+					<h5>Small Button</h5>
+					<div class="flex flex-wrap space-x-2">
+						<Button type="button" value="test" class="button button--small">Button (unstyled)</Button>
+						<Button type="button" value="test" class="button button--small button--primary">Button (primary)</Button>
+						<Button type="button" value="test" class="button button--small button--secondary">Button (secondary)</Button>
+						<Button type="button" value="test" class="button button--small button--tertiary">Button (tertiary)</Button>
+						<Button type="button" value="test" class="button button--small button--quaternary">Button (quaternary)</Button>
+						<Button type="button" value="test" class="button button--small button--quinary">Button (quinary)</Button>
+						<Button type="button" value="test" class="button button--small button--senary">Button (senary)</Button>
+					</div>
+					<h5>Big Button</h5>
+					<div class="flex flex-wrap space-x-2">
+						<Button type="button" value="test" class="button button--big">Button (unstyled)</Button>
+						<Button type="button" value="test" class="button button--big button--primary">Button (primary)</Button>
+						<Button type="button" value="test" class="button button--big button--secondary">Button (secondary)</Button>
+						<Button type="button" value="test" class="button button--big button--tertiary">Button (tertiary)</Button>
+						<Button type="button" value="test" class="button button--big button--quaternary">Button (quaternary)</Button>
+						<Button type="button" value="test" class="button button--big button--quinary">Button (quinary)</Button>
+						<Button type="button" value="test" class="button button--big button--senary">Button (senary)</Button>
+					</div>
+					<h5>Block Button</h5>
+					<div class="flex flex-col space-y-2">
+						<Button type="button" value="test" class="button button--block button--primary">Button Block</Button>
+						<Button type="button" value="test" class="button button--block button--small button--secondary">Button Block (small)</Button>
+						<Button type="button" value="test" class="button button--block button--big button--quaternary">Button Block (big)</Button>
+					</div>
+				</div>
 			</ComponentPreview>
 		</ComponentSection>
 
