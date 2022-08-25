@@ -5,7 +5,11 @@ import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const allPosts = await Astro.glob("../../../content/blog/posts/**/*.md");
-	const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date));
+	const sortedPosts = allPosts.sort((a, b) => {
+		const aDate = new Date(b.frontmatter.date);
+		const bDate = new Date(a.frontmatter.date);
+		return aDate.getTime() - bDate.getTime();
+	});
 
 	function getTags() {
 		const tagsArray = [];
@@ -32,6 +36,6 @@ const { page, tag } = Astro.props;
 
 <Layout>
 	<PrimarySection>
-		<GeneralPostsPage slug={`tags/${tag}`} page={page} posts={page.data} link="/tags" linkText="All tags" subtitle={`All ${tag} posts`} />
+		<GeneralPostsPage slug={`tags/${tag}`} page={page} posts={page.data} link="/tags" linkText="All tags" subtitle={`All posts tagged with #${tag}`} />
 	</PrimarySection>
 </Layout>
