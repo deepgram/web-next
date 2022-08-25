@@ -1,0 +1,69 @@
+/* SITE INFORMATION */
+
+  Site name:  Deepgram
+  Site URL:   https://deepgram.com
+  Twitter:    @deepgramai
+  Contact:    https://deepgram.com/contact
+  Location:   USA
+  Built with: Astro, Tailwind, Alpine, Vue
+  Launched:   2015
+  Language:   English
+	Doctype:    HTML5
+	IDE:        VSCode, Netlify, Figma, Asana
+
+/* THANKS */
+
+  Senior Developer Experience Engineer: Luke Oliff
+  Twitter: @lukeocodes
+
+  Developer Experience Engineer: Sandra Rodgers
+  Twitter: @sandra_rodgers_
+
+  Developer Experience Engineer: Brian Barrow
+  Twitter: @the_BrianB
+
+  Head of Developer Relations: Michael Jolley
+  Twitter: @baldbeardbuild
+
+  Senior Developer Advocate: Kevin Lewis
+  Twitter: @_phzn
+
+  Python Developer Advocate: Tonya Sims
+  Twitter: @TonyaSims
+
+  Technical Community Builder: Bekah Hawrot-Weigel
+  Twitter: @BekahHW
+
+  Creative Director: Mara
+
+  Senior Product Designer: Ingrid
+
+  Product Designer: Kusum
+
+  Senior Content Marketing Manager: Chris
+
+  SEO Manager: Aimie
+
+  Senior Growth Marketing Manager: Alexa
+
+  Head of Growth: Claudia
+
+  Product Manager: Faye
+
+  Product Manager: Shir
+
+  VP Marketing: Katie
+
+  Head of Product Marketing: Keith
+
+  Head of Product: Natalie
+
+  Senior Graphics Designer: Patricia
+
+  VP Operations: Sam
+
+  CEO: Scott
+
+  COO: Shadi
+
+/* https://twitter.com/humanstxt */
