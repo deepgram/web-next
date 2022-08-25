@@ -1,6 +1,7 @@
 ---
 import Icon from "../general/Icon.astro";
 import Svg from "../general/Svg.astro";
+import Link from "../general/Link.astro";
 
 import NavMenu from "../nav/NavMenu.astro";
 import NavMenuPrimaryItem from "../nav/NavMenuPrimaryItem.astro";
@@ -17,10 +18,10 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 	<div class="z-40 absolute inset-x-0 bg-almostBlack text-white">
 		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10">
 			<div>
-				<a href="/" class="flex">
+				<Link href="/" class="flex">
 					<span class="sr-only">Deepgram</span>
 					<Svg name="deepgram" class="my-4 h-8 w-auto text-coral" />
-				</a>
+				</Link>
 			</div>
 			<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
 				<button x-on:click="menu = 'Mobile'" type="button" class="button button--secondary button--small" aria-expanded="false"> Menu</button>
@@ -75,7 +76,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 						<Icon icon="search" class="w-[1.5em] h-[1.5em] fill-current" />
 					</button>
 					<NavItem href="https://console.deepgram.com/" rel="noopener noreferrer nofollow" class="button button--small text-white">Log In</NavItem>
-					<NavItem href="/" class="button button--secondary button--small">Contact Us</NavItem>
+					<NavItem href="/contact" class="button button--secondary button--small">Contact Us</NavItem>
 					<NavItem href="https://console.deepgram.com/signup" rel="noopener noreferrer nofollow" class="ml-4 button button--primary button--small">Sign Up</NavItem>
 				</div>
 			</div>
@@ -86,10 +87,10 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 				<div class="overflow-y-scroll">
 					<div class="px-6 bg-almostBlack lg:px-10 flex items-center justify-between">
 						<div>
-							<a href="/" class="flex">
+							<Link href="/" class="flex">
 								<span class="sr-only">Deepgram</span>
 								<Svg name="deepgram" class="my-4 h-8 w-auto text-coral" />
-							</a>
+							</Link>
 						</div>
 						<div class="flex items-center xl:ml-12 pb-1 xl:hidden">
 							<button class="button button--small">
@@ -147,9 +148,9 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 				</div>
 				<div class="p-6 lg:p-10">
 					<div class="grid grid-cols-2 grid-rows-2 gap-4">
-						<a href="#" class="button button--small button--secondary button--block">Log In</a>
-						<a href="#" class="button button--small button--tertiary button--block">Sign Up</a>
-						<a href="#" class="col-span-2 button button--small button--primary button--block">Contact Us</a>
+						<Link href="https://console.deepgram.com" class="button button--small button--secondary button--block">Log In</Link>
+						<Link href="https://console.deepgram.com" class="button button--small button--tertiary button--block">Sign Up</Link>
+						<Link href="/contact" class="col-span-2 button button--small button--primary button--block">Contact Us</Link>
 					</div>
 				</div>
 			</div>

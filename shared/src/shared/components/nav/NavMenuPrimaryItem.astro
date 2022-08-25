@@ -1,10 +1,11 @@
 ---
 import InlineIcon from "../general/InlineIcon.astro";
+import Link from "../general/Link.astro";
 
 const { href, description, icon } = Astro.props;
 ---
 
-<a href={href} class="-m-3 p-3 max-w-xs flow-root">
+<Link href={href} class="-m-3 p-3 max-w-xs flow-root">
 	<div class="flex items-center mb-10">
 		<h4 class="text-white">{description}</h4>
 	</div>
@@ -17,4 +18,4 @@ const { href, description, icon } = Astro.props;
 			</span>
 		</InlineIcon>
 	</p>
-</a>
+</Link>
