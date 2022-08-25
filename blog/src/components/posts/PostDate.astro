@@ -1,0 +1,12 @@
+---
+const { post } = Astro.props;
+
+const date = new Date(post.frontmatter.date);
+const formattedDate = date.toLocaleDateString("en-US", {
+	year: "numeric",
+	month: "long",
+	day: "numeric",
+});
+---
+
+{formattedDate}

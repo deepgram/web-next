@@ -1,0 +1,23 @@
+---
+import PostAuthorImages from "./PostAuthorImages.astro";
+import PostAuthorNames from "./PostAuthorNames.astro";
+import PostDate from "./PostDate.astro";
+import PostMetaDivider from "./PostMetaDivider.astro";
+import PostCategory from "./PostCategory.astro";
+
+const { post } = Astro.props;
+
+const date = new Date(post.frontmatter.date);
+const formattedDate = date.toLocaleDateString("en-US", {
+	year: "numeric",
+	month: "long",
+	day: "numeric",
+});
+---
+
+<div class="flex flex-row items-center my-4">
+	<PostAuthorImages authors={post.frontmatter.authors} />
+	<p class="flex flex-col md:flex-none md:inline">
+		<PostAuthorNames authors={post.frontmatter.authors} /><PostMetaDivider /><PostDate post={post} /><PostCategory post={post} />
+	</p>
+</div>

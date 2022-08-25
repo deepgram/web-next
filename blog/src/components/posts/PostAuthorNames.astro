@@ -1,0 +1,27 @@
+---
+import AuthorName from "../../shared/components/strings/AuthorName.astro";
+
+const { authors } = Astro.props;
+---
+
+{authors && (
+	<span class="author-names">
+		{authors.map((author, index, array) => (
+			<a href={`/authors/${author}`} class="text-iris inline-block">
+				<AuthorName author={author} />
+			</a>
+		))}
+	</span>
+)}
+
+<style>
+	.author-names a:not(:first-child)::before {
+		content: ", ";
+	}
+	.author-names a:not(:first-child):last-child {
+		@apply pl-1;
+	}
+	.author-names a:not(:first-child):last-child::before {
+		content: "& ";
+	}
+</style>

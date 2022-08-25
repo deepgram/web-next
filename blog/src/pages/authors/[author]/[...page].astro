@@ -1,7 +1,9 @@
 ---
 import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../../layouts/Default.astro";
-import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+import AuthorPostsPage from "../../../components/authors/AuthorPostsPage.astro";
+import ContrastSection from "../../../shared/components/decoration/ContrastSection.astro";
+import AuthorHero from "../../../components/authors/AuthorHero.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const authorFiles = import.meta.glob("../../../content/blog/authors/*.json");
@@ -18,30 +20,41 @@ export async function getStaticPaths({ paginate }) {
 
 	const authors = await getAuthors();
 	const allPosts = await Astro.glob("../../../content/blog/posts/**/index.md");
+	const sortedPosts = allPosts.sort((a, b) => {
+		const aDate = new Date(b.frontmatter.date);
+		const bDate = new Date(a.frontmatter.date);
+		return aDate.getTime() - bDate.getTime();
+	});
 
 	return authors.map((author) => {
-		const posts = allPosts.filter((post) => {
-			return post.frontmatter.category === author.slug;
+		const posts = sortedPosts.filter((post) => {
+			if (post.frontmatter.authors) {
+				return post.frontmatter.authors.includes(author.slug);
+			}
+
+			return false;
 		});
 
 		return paginate(posts, {
 			params: {
 				author: author.slug,
 			},
-			pageSize: 6,
+			pageSize: 20,
 			props: {
-				title: author.title,
-				slug: author.slug,
+				author,
 			},
 		});
 	});
 }
 
-const { title, page, slug } = Astro.props;
+const { page, author } = Astro.props;
 ---
 
 <Layout>
+	<ContrastSection contrast="darkCharcoal" background="white" bottomDivider="eclipse-divider" class="-mb-32">
+		<AuthorHero author={author} />
+	</ContrastSection>
 	<PrimarySection>
-		<GeneralPostsPage slug={`authors/${slug}`} page={page} posts={page.data} link="/authors" linkText="All authors" subtitle={`All ${title} posts`} />
+		<AuthorPostsPage slug={`authors/${author.slug}`} page={page} posts={page.data} link="/authors" linkText="All authors" subtitle={`All ${author.title} posts`} />
 	</PrimarySection>
 </Layout>

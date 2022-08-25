@@ -1,6 +1,21 @@
 module.exports = {
 	content: ["./src/{components,layouts,pages}/**/*.{vue,astro,html,js}", "./src/shared/components/**/*.{vue,astro,html,js}"],
-	safelist: ["bg-darkCharcoal", "bg-white", "bg-black", "bg-almostBlack", "bg-cloud", "fill-darkCharcoal", "fill-white", "fill-black", "fill-almostBlack", "fill-cloud"],
+	safelist: [
+		"bg-darkCharcoal",
+		"bg-mist",
+		"bg-casper",
+		"bg-white",
+		"bg-black",
+		"bg-almostBlack",
+		"bg-cloud",
+		"fill-darkCharcoal",
+		"fill-mist",
+		"fill-casper",
+		"fill-white",
+		"fill-black",
+		"fill-almostBlack",
+		"fill-cloud",
+	],
 	theme: {
 		extend: {
 			boxShadow: {
