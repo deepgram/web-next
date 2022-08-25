@@ -1,13 +1,17 @@
 ---
-import Icon from "../general/Icon.astro";
+import InlineIcon from "../general/InlineIcon.astro";
 
 const { href, icon } = Astro.props;
 ---
 
 <a href={href} class="flex text-white items-center gap-2">
-	<p class="flex text-white items-center gap-2">
-		<Icon icon={icon} class="h-[1.2em] w-[1.2em] fill-cloud" />
-		<slot />
-		<Icon icon="arrow-right" class="h-[1em] w-[1em] stroke-lightIris" />
+	<p class="flex text-lightIris items-center space-x-3">
+		<InlineIcon icon="arrow-right" iconSuffix>
+			<span class="text-cloud">
+				<InlineIcon icon={icon}>
+					<slot />
+				</InlineIcon>
+			</span>
+		</InlineIcon>
 	</p>
 </a>

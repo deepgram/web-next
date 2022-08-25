@@ -13,8 +13,8 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 ---
 
 <header x-data="{ menu: null }">
-	<div class="z-20 fixed inset-0 bg-black/75 text-white" style="display: none;" x-show="menu !== null" x-on:click="menu = null"></div>
-	<div class="z-30 absolute inset-x-0 bg-almostBlack text-white">
+	<div class="z-30 fixed inset-0 bg-black/75 text-white" style="display: none;" x-show="menu !== null" x-on:click="menu = null"></div>
+	<div class="z-40 absolute inset-x-0 bg-almostBlack text-white">
 		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start xl:space-x-10">
 			<div>
 				<a href="/" class="flex">

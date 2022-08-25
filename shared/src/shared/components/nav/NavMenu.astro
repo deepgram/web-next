@@ -15,7 +15,7 @@ const { name, primary } = Astro.props;
 		x-bind:aria-expanded="menu === name ? 'true' : 'false'"
 	>
 		<span class="text-bold">{name}</span>
-		<Icon icon="angle-down" class="fill-gray-300 w-[1em] h-[1em]" x-bind:class="{ 'rotate-180' : menu === name }" />
+		<Icon icon="angle-down" class="fill-gray-300 w-[1em] h-[1em] ml-2" x-bind:class="{ 'rotate-180' : menu === name }" />
 	</button>
 
 	<!--
