@@ -1,7 +1,8 @@
 ---
+import Link from "../../shared/components/general/Link.astro";
 import CategoryName from "../../shared/components/strings/CategoryName.astro";
 
 const { post } = Astro.props;
 ---
 
-<span>in <a class="text-iris" href={`/categories/${post.frontmatter.category}`}><CategoryName category={post.frontmatter.category} /></a></span>
+<span>in <Link class="text-iris" href={`/categories/${post.frontmatter.category}`}><CategoryName category={post.frontmatter.category} /></Link></span>

@@ -2,12 +2,14 @@
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Svg from "../../shared/components/general/Svg.astro";
 import Icon from "../../shared/components/general/Icon.astro";
+import Backlink from "../nav/Backlink.astro";
+import Link from "../../shared/components/general/Link.astro";
 
 const { author } = Astro.props;
 ---
 
 <PrimarySection class="bg-darkCharcoal">
-	<a href="/authors" class="col-span-2 xl:col-span-3 inline-block py-4 md:py-6 lg:py-8 xl:py-10 mb-12 lg:mb-11">&lt;- All authors</a>
+	<Backlink href="/authors" class="mb-12 lg:mb-11">All authors</Backlink>
 	<div class="author-hero mb-20">
 		<div class="flex-1 author-info">
 			<h1 class="name">{author.title}</h1>
@@ -15,31 +17,31 @@ const { author } = Astro.props;
 			<ul class="socials">
 				{author.twitter && (
 					<li>
-						<a href={`https://twitter.com/${author.twitter}`} target="_blank">
+						<Link href={`https://twitter.com/${author.twitter}`} target="_blank" rel="nofollow">
 							<Icon icon="twitter" />
-						</a>
+						</Link>
 					</li>
 				)}
 
 				{author.linkedin && (
 					<li>
-						<a href={author.linkedin} target="_blank">
+						<Link href={author.linkedin} target="_blank" rel="nofollow">
 							<Icon icon="linkedin" />
-						</a>
+						</Link>
 					</li>
 				)}
 				{author.github && (
 					<li>
-						<a href={author.github} target="_blank">
+						<Link href={author.github} target="_blank" rel="nofollow">
 							<Icon icon="github" />
-						</a>
+						</Link>
 					</li>
 				)}
 				{author.twitch && (
 					<li>
-						<a href={author.twitch} target="_blank">
+						<Link href={author.twitch} target="_blank" rel="nofollow">
 							<Icon icon="twitch" />
-						</a>
+						</Link>
 					</li>
 				)}
 			</ul>
