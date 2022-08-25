@@ -4,7 +4,6 @@ import Layout from "../layouts/Default.astro";
 import HasGutters from "../shared/components/layout/HasGutters.astro";
 import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
 
-import { Debug } from "astro/components";
 import PostImage from "../components/posts/PostImage.astro";
 import PostMeta from "../components/posts/PostMeta.astro";
 import PostHeading from "../components/posts/PostHeading.astro";
@@ -12,8 +11,6 @@ import Feedback from "../shared/components/forms/Feedback.astro";
 import TagsList from "../shared/components/lists/TagsList.astro";
 import Title from "../shared/components/meta/Title.astro";
 import Description from "../shared/components/meta/Description.astro";
-import StyleSrc from "../shared/components/meta/StyleSrc.astro";
-import ScriptSrc from "../shared/components/meta/ScriptSrc.astro";
 import Meta from "../shared/components/meta/Meta.astro";
 import Icon from "../shared/components/general/Icon.astro";
 import RelatedResources from "../components/posts/RelatedResources.astro";
@@ -51,7 +48,7 @@ const headings = await post.getHeadings();
 	<Description slot="head:description" name="description" content={post.frontmatter.description} />
 
 	<Meta slot="og:title" property="og:title" content={post.frontmatter.title} />
-	<Meta property="og:description" content={post.frontmatter.description} />
+	<Meta slot="og:description" property="og:description" content={post.frontmatter.description} />
 	<Meta slot="og:type" property="og:type" content="article" />
 	<Meta slot="og:image" property="og:image" content={post.frontmatter.cover} />
 	<Meta slot="og:image:width" property="og:image:width" content="1200" />

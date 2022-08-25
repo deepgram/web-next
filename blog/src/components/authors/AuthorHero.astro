@@ -1,13 +1,14 @@
 ---
-import PrimarySection from "../shared/components/layout/PrimarySection.astro";
-import Svg from "../shared/components/general/Svg.astro";
-import Icon from "../shared/components/general/Icon.astro";
+import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
+import Svg from "../../shared/components/general/Svg.astro";
+import Icon from "../../shared/components/general/Icon.astro";
 
 const { author } = Astro.props;
 ---
 
 <PrimarySection class="bg-darkCharcoal">
-	<div class="author-hero">
+	<a href="/authors" class="col-span-2 xl:col-span-3 inline-block py-4 md:py-6 lg:py-8 xl:py-10 mb-12 lg:mb-11">&lt;- All authors</a>
+	<div class="author-hero mb-20">
 		<div class="flex-1 author-info">
 			<h1 class="name">{author.title}</h1>
 			<h2 class="title">{author.jobtitle}</h2>
@@ -44,7 +45,7 @@ const { author } = Astro.props;
 			</ul>
 			<p class="bio">{author.bio}</p>
 		</div>
-		<div class="picture-section ">
+		<div class="picture-section">
 			<img class="picture" src={author.picture} alt={author.title} />
 			<Svg class="fingerprint" name="fingerprint" />
 		</div>
@@ -54,14 +55,11 @@ const { author } = Astro.props;
 <style scoped>
 	.author-hero {
 		grid-template-rows: 0.5fr 1fr;
-		@apply grid grid-cols-1 pb-10 text-white md:grid-cols-2 md:grid-rows-1 md:pt-4;
+		@apply grid grid-cols-1 pb-10 text-white md:grid-cols-2 md:grid-rows-1;
 	}
 
-	.author-hero h1 {
-		@apply mt-3 text-3xl font-bold md:mt-10 md:text-6xl;
-	}
 	.author-hero h2 {
-		@apply text-2xl font-bold md:mt-10 md:text-4xl;
+		@apply md:mt-10;
 	}
 	.author-info {
 		@apply grow;

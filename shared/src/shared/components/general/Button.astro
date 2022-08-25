@@ -1,0 +1,9 @@
+---
+import InlineIcon from "./InlineIcon.astro";
+
+const { icon, iconSuffix, iconStroke, ...rest } = Astro.props;
+---
+
+<button {...rest}>
+	<InlineIcon {icon} {iconSuffix} {iconStroke}><slot /></InlineIcon>
+</button>

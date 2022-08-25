@@ -2,6 +2,9 @@
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../layouts/Default.astro";
 import GeneralPostsPage from "../../components/posts/GeneralPostsPage.astro";
+import Title from "../../shared/components/meta/Title.astro";
+import Description from "../../shared/components/meta/Description.astro";
+import Meta from "../../shared/components/meta/Meta.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
@@ -15,6 +18,11 @@ const { page } = Astro.props;
 ---
 
 <Layout>
+	<Title slot="head:title" title="All blog posts - Deepgram Blog ⚡️" />
+	<Description slot="head:description" name="description" content="All the blog posts on the Deepgram blog." />
+	<Meta slot="og:title" property="og:title" content="All blog posts - Deepgram Blog ⚡️" />
+	<Meta slot="og:description" property="og:description" content="All the blog posts on the Deepgram blog." />
+
 	<PrimarySection>
 		<GeneralPostsPage slug="posts" posts={page.data} page={page} link="/" linkText="Back to blog home" subtitle="All posts" />
 	</PrimarySection>

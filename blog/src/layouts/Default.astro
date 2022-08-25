@@ -79,6 +79,8 @@ import "../assets/styles/blog.css";
 		</slot>
 		<slot name="head" />
 
+		<Meta property="DC.date.issued" content={new Date().toISOString()} />
+		<Meta name="robots" content="noodp, noydir" />
 		<Meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 		<ScriptSrc src="//unpkg.com/alpinejs" />
 	</head>
