@@ -4,6 +4,9 @@ import Layout from "../../../layouts/Default.astro";
 import AuthorPostsPage from "../../../components/authors/AuthorPostsPage.astro";
 import ContrastSection from "../../../shared/components/decoration/ContrastSection.astro";
 import AuthorHero from "../../../components/authors/AuthorHero.astro";
+import Title from "../../../shared/components/meta/Title.astro";
+import Description from "../../../shared/components/meta/Description.astro";
+import Meta from "../../../shared/components/meta/Meta.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const authorFiles = import.meta.glob("../../../content/blog/authors/*.json");
@@ -48,9 +51,30 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page, author } = Astro.props;
+const name = author.title.split(" ");
+const firstName = name.pop();
+const lastName = name.join(" ");
 ---
 
 <Layout>
+	<Title slot="head:title" title={`${author.title} - ${author.jobtitle} - Deepgram Blog ⚡️`} />
+	<Description slot="head:description" name="description" content={author.bio ? author.bio : `${author.title} is a ${author.jobtitle} writing content for the Deepgram blog.`} />
+	<Meta slot="og:title" property="og:title" content={`${author.title} - ${author.jobtitle} - Deepgram Blog ⚡️`} />
+	<Meta slot="og:description" property="og:description" content={author.bio ? author.bio : `${author.title} is a ${author.jobtitle} writing content for the Deepgram blog.`} />
+	<Meta slot="og:type" property="og:type" content="profile" />
+	{author.picture && <Meta slot="og:image" property="og:image" content={author.picture} />}
+	{author.picture && (
+		<Meta
+			slot="og:image:alt"
+			property="og:image:alt"
+			content={author.bio ? `Profile pic for ${author.title}. ${author.bio}` : `Profile pic for ${author.title}, a ${author.jobtitle} writing content for the Deepgram blog.`}
+		/>
+	)}
+	<Meta slot="head" property="profile:username" content={author.slug} />
+	<Meta slot="head" property="profile:first_name" content={firstName} />
+	<Meta slot="head" property="profile:last_name" content={lastName} />
+	{author.twitter && <Meta slot="head" property="twitter:creator" content={`@${author.twitter}`} />}
+
 	<ContrastSection contrast="darkCharcoal" background="white" bottomDivider="eclipse-divider" class="-mb-32">
 		<AuthorHero author={author} />
 	</ContrastSection>
