@@ -20,9 +20,14 @@ export async function getStaticPaths({ paginate }) {
 
 	const authors = await getAuthors();
 	const allPosts = await Astro.glob("../../../content/blog/posts/**/index.md");
+	const sortedPosts = allPosts.sort((a, b) => {
+		const aDate = new Date(b.frontmatter.date);
+		const bDate = new Date(a.frontmatter.date);
+		return aDate.getTime() - bDate.getTime();
+	});
 
 	return authors.map((author) => {
-		const posts = allPosts.filter((post) => {
+		const posts = sortedPosts.filter((post) => {
 			if (post.frontmatter.authors) {
 				return post.frontmatter.authors.includes(author.slug);
 			}
