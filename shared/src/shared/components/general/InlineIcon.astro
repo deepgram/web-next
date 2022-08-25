@@ -1,0 +1,9 @@
+---
+import Icon from "./Icon.astro";
+
+const { icon, iconSuffix } = Astro.props;
+---
+
+{icon && !iconSuffix && <Icon icon={icon} class="-mt-[0.2em] inline w-[1em] fill-current" />}
+<slot />
+{icon && !!iconSuffix && <Icon icon={icon} class="-mt-[0.2em] inline w-[1em] fill-current" />}

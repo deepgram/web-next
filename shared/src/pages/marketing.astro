@@ -17,6 +17,7 @@ import eventImg from "../shared/assets/temp_images/white-arrows.svg";
 import webinarImg from "../shared/assets/temp_images/red-ticks.svg";
 import whitepaperImg from "../shared/assets/temp_images/black-quote.svg";
 import linkImg from "../shared/assets/temp_images/black-arrows.svg";
+import Link from "../shared/components/general/Link.astro";
 ---
 
 <Layout>
@@ -24,6 +25,56 @@ import linkImg from "../shared/assets/temp_images/black-arrows.svg";
 		<h1>Marketing Components</h1>
 
 		<a href="/">Back</a>
+
+		<ComponentSection title="Icons, Buttons and Links">
+			<ComponentPreview
+				id="links"
+				title="Links"
+				snippet={`<Link href="/test" class="text-red-900">Link with no Icon</Link>
+<Link href="/test" icon="email">Link with Icon</Link>
+<Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link>
+
+
+<h1><Link href="/test">Link with no Icon</Link></h1>
+<h2><Link href="/test">Link with no Icon</Link></h2>
+<h3><Link href="/test">Link with no Icon</Link></h3>
+<h4><Link href="/test">Link with no Icon</Link></h4>
+<h5><Link href="/test">Link with no Icon</Link></h5>
+<h6><Link href="/test" class="text-black">Link with no Icon</Link></h6>
+
+etc...`}
+			>
+				<ul>
+					<li>
+						<Link href="/test" class="text-red-900">Link with no Icon</Link>
+						<h1><Link href="/test">Link with no Icon</Link></h1>
+						<h2><Link href="/test">Link with no Icon</Link></h2>
+						<h3><Link href="/test">Link with no Icon</Link></h3>
+						<h4><Link href="/test">Link with no Icon</Link></h4>
+						<h5><Link href="/test">Link with no Icon</Link></h5>
+						<h6><Link href="/test" class="text-black">Link with no Icon</Link></h6>
+					</li>
+					<li>
+						<Link href="/test" icon="email" class="text-red-900">Link with Icon</Link>
+						<h1><Link href="/test" icon="email">Link with Icon</Link></h1>
+						<h2><Link href="/test" icon="email">Link with Icon</Link></h2>
+						<h3><Link href="/test" icon="email">Link with Icon</Link></h3>
+						<h4><Link href="/test" icon="email">Link with Icon</Link></h4>
+						<h5><Link href="/test" icon="email">Link with Icon</Link></h5>
+						<h6><Link href="/test" icon="email" class="text-black">Link with Icon</Link></h6>
+					</li>
+					<li>
+						<Link href="/test" icon="email" iconSuffix class="text-red-900">Link with suffix Icon</Link>
+						<h1><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h1>
+						<h2><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h2>
+						<h3><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h3>
+						<h4><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h4>
+						<h5><Link href="/test" icon="email" iconSuffix>Link with suffix Icon</Link></h5>
+						<h6><Link href="/test" icon="email" iconSuffix class="text-black">Link with suffix Icon</Link></h6>
+					</li>
+				</ul>
+			</ComponentPreview>
+		</ComponentSection>
 
 		<ComponentSection title="Quotes and Testimonials">
 			<ComponentPreview
