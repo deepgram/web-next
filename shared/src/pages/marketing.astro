@@ -115,7 +115,40 @@ import Button from "../shared/components/general/Button.astro";
 				</div>
 			</ComponentPreview>
 
-			<ComponentPreview id="buttons" title="Buttons" snippet={``}>
+			<ComponentPreview
+				id="buttons"
+				title="Buttons"
+				snippet={`<Button type="button" value="test" class="button">Button (unstyled)</Button>
+<Button type="button" value="test" class="button button--primary">Button (primary)</Button>
+<Button type="button" value="test" class="button button--secondary">Button (secondary)</Button>
+<Button type="button" value="test" class="button button--tertiary">Button (tertiary)</Button>
+<Button type="button" value="test" class="button button--quaternary">Button (quaternary)</Button>
+<Button type="button" value="test" class="button button--quinary">Button (quinary)</Button>
+<Button type="button" value="test" class="button button--senary">Button (senary)</Button>
+<Button type="button" value="test" icon="email" class="button">Button (unstyled)</Button>
+<Button type="button" value="test" icon="email" class="button button--primary">Button (primary)</Button>
+<Button type="button" value="test" icon="email" class="button button--secondary">Button (secondary)</Button>
+<Button type="button" value="test" icon="email" iconSuffix class="button">Button (unstyled)</Button>
+<Button type="button" value="test" icon="email" iconSuffix class="button button--primary">Button (primary)</Button>
+<Button type="button" value="test" icon="email" iconSuffix class="button button--secondary">Button (secondary)</Button>
+<Button type="button" value="test" class="button button--small">Button (unstyled)</Button>
+<Button type="button" value="test" class="button button--small button--primary">Button (primary)</Button>
+<Button type="button" value="test" class="button button--small button--secondary">Button (secondary)</Button>
+<Button type="button" value="test" class="button button--small button--tertiary">Button (tertiary)</Button>
+<Button type="button" value="test" class="button button--small button--quaternary">Button (quaternary)</Button>
+<Button type="button" value="test" class="button button--small button--quinary">Button (quinary)</Button>
+<Button type="button" value="test" class="button button--small button--senary">Button (senary)</Button>
+<Button type="button" value="test" class="button button--big">Button (unstyled)</Button>
+<Button type="button" value="test" class="button button--big button--primary">Button (primary)</Button>
+<Button type="button" value="test" class="button button--big button--secondary">Button (secondary)</Button>
+<Button type="button" value="test" class="button button--big button--tertiary">Button (tertiary)</Button>
+<Button type="button" value="test" class="button button--big button--quaternary">Button (quaternary)</Button>
+<Button type="button" value="test" class="button button--big button--quinary">Button (quinary)</Button>
+<Button type="button" value="test" class="button button--big button--senary">Button (senary)</Button>
+<Button type="button" value="test" class="button button--block button--primary">Button Block</Button>
+<Button type="button" value="test" class="button button--block button--small button--secondary">Button Block (small)</Button>
+<Button type="button" value="test" class="button button--block button--big button--quaternary">Button Block (big)</Button>`}
+			>
 				<div class="flex flex-col space-y-2">
 					<h5>Button</h5>
 					<div class="flex flex-wrap space-x-2">
