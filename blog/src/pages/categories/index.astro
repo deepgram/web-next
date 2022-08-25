@@ -8,6 +8,7 @@ import Title from "../../shared/components/meta/Title.astro";
 import Description from "../../shared/components/meta/Description.astro";
 import Meta from "../../shared/components/meta/Meta.astro";
 import Backlink from "../../components/nav/Backlink.astro";
+import Link from "../../shared/components/general/Link.astro";
 
 const categoryFiles = import.meta.glob("../../content/blog/category/*.json");
 
@@ -20,8 +21,7 @@ async function getCategories() {
 	return paths;
 }
 
-const allCategories = await getCategories();
-const categories = allCategories.splice(0, 2);
+const categories = await getCategories();
 ---
 
 <Layout>
@@ -37,7 +37,7 @@ const categories = allCategories.splice(0, 2);
 			<CategoryList slot="aside" />
 			{categories && categories.map((category, index) => <CategorySection index={index} category={category} />)}
 			<center class="-mt-10 mb-20">
-				<a href="/posts" class="button button--quinary button--small">View All</a>
+				<Link href="/posts" icon="arrow-right" iconSuffix class="button button--quinary button--small">View All</Link>
 			</center>
 		</HasAside>
 	</PrimarySection>
