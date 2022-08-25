@@ -1,0 +1,11 @@
+---
+import Icon from "./Icon.astro";
+
+const { icon, iconSuffix, iconStroke } = Astro.props;
+---
+
+{icon && !iconSuffix && (
+	<Icon icon={icon} class:list={["-mt-[0.2em] inline w-[1em] mr-[0.3em]", { "stroke-current fill-transparent": iconStroke }, { "fill-current": !iconStroke }]} />
+)}<slot />{icon && !!iconSuffix && (
+	<Icon icon={icon} class:list={["-mt-[0.2em] inline w-[1em] ml-[0.3em]", { "stroke-current fill-transparent": iconStroke }, { "fill-current": !iconStroke }]} />
+)}

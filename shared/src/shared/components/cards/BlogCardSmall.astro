@@ -3,17 +3,20 @@ import Authors from "../strings/Authors.astro";
 import GenericBlogCard from "./GenericBlogCard.astro";
 
 const { class: classes, post } = Astro.props;
-const { title, authors, cover } = post.frontmatter;
+let { title } = post.frontmatter;
+const { title: originalTitle, authors, cover } = post.frontmatter;
+
+title = title.length > 60 ? `${title.substring(0, 57)}...` : title;
 ---
 
 <GenericBlogCard class={`w-full flex justify-between ${classes ? classes : ""}`} post={post}>
 	<div class="flex grow flex-col h-full justify-between text-black p-2 pb-3">
 		<div>
-			<h5 class="inline-block text-lg leading-5">{title}</h5>
+			<h5>{title}</h5>
 		</div>
 		<Authors authors={authors} />
 	</div>
 	<div class="shrink-0 w-[7rem] p-[0.5rem] flex justify-end place-items-start">
-		<img class="h-[6rem] object-cover" src={cover} alt={`Blog title image for the blog post: ${title}`} />
+		<img class="h-[6rem] object-cover" src={cover} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
 </GenericBlogCard>

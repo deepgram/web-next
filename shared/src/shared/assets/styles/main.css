@@ -63,27 +63,31 @@ code {
 	}
 
 	h1 {
-		@apply text-5xl;
+		@apply lg:text-h1-large-d text-h1-large-m;
+	}
+
+	h1 small {
+		@apply lg:text-h1-small-d text-h1-small-m;
 	}
 
 	h2 {
-		@apply text-4xl;
+		@apply lg:text-h2-d text-h2-m;
 	}
 
 	h3 {
-		@apply text-3xl;
+		@apply lg:text-h3-d text-h3-m;
 	}
 
 	h4 {
-		@apply text-2xl;
+		@apply lg:text-h4-d text-h4-m;
 	}
 
 	h5 {
-		@apply text-xl;
+		@apply lg:text-h5-d text-h5-m;
 	}
 
 	h6 {
-		@apply text-lg;
+		@apply lg:text-h6-d text-h6-m;
 	}
 
 	a {
@@ -92,14 +96,6 @@ code {
 }
 
 @layer components {
-	.h1-large {
-		@apply text-6xl;
-	}
-
-	.h1-small {
-		@apply text-5xl;
-	}
-
 	button.button {
 		@apply -mb-1;
 	}
