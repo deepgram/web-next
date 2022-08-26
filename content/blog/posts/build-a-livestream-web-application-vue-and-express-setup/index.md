@@ -1,5 +1,5 @@
 ---
-title: Build a Live Streaming Web Application: Vue and Express Setup
+title: "Build a Live Streaming Web Application: Vue and Express Setup"
 description: In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service.
 date: 2022-03-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1647979609/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/Building-Livestreaming-w-AmazonIVS.jpg
@@ -7,14 +7,14 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - aws,
-    - javascript,
-    - tutorial,
-    - serverless,
-    - vue,
+    - aws
+    - javascript
+    - tutorial
+    - serverless
+    - vue
     - express
 seo:
-    title: Build a Live Streaming Web Application: Vue and Express Setup
+    title: "Build a Live Streaming Web Application: Vue and Express Setup"
     description: In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service.
 shorturls:
     share: https://dpgr.am/819c66
