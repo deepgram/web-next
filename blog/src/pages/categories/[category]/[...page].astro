@@ -20,9 +20,13 @@ export async function getStaticPaths({ paginate }) {
 
 	const categories = await getCategories();
 	const allPosts = await Astro.glob("../../../content/blog/posts/**/index.md");
-
+	const sortedPosts = allPosts.sort((a, b) => {
+		const aDate = new Date(b.frontmatter.date);
+		const bDate = new Date(a.frontmatter.date);
+		return aDate.getTime() - bDate.getTime();
+	});
 	return categories.map((category) => {
-		const posts = allPosts.filter((post) => {
+		const posts = sortedPosts.filter((post) => {
 			return post.frontmatter.category === category.slug;
 		});
 

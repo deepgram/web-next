@@ -5,10 +5,15 @@ import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const allPosts = await Astro.glob("../../../content/blog/posts/**/*.md");
+	const sortedPosts = allPosts.sort((a, b) => {
+		const aDate = new Date(b.frontmatter.date);
+		const bDate = new Date(a.frontmatter.date);
+		return aDate.getTime() - bDate.getTime();
+	});
 
 	function getTags() {
 		const tagsArray = [];
-		allPosts.map((post) => {
+		sortedPosts.map((post) => {
 			tagsArray.push(...post.frontmatter.tags);
 		});
 		const noDuplicateTags = [...new Set(tagsArray)];
@@ -18,10 +23,10 @@ export async function getStaticPaths({ paginate }) {
 	const tags = getTags();
 
 	return tags.map((tag) => {
-		const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+		const filteredPosts = sortedPosts.filter((post) => post.frontmatter.tags.includes(tag));
 		return paginate(filteredPosts, {
 			params: { tag },
-			pageSize: 6,
+			pageSize: 12,
 			props: { tag },
 		});
 	});
@@ -31,6 +36,6 @@ const { page, tag } = Astro.props;
 
 <Layout>
 	<PrimarySection>
-		<GeneralPostsPage slug={`tags/${tag}`} page={page} posts={page.data} link="/tags" linkText="All tags" subtitle={`All ${tag} posts`} />
+		<GeneralPostsPage slug={`tags/${tag}`} page={page} posts={page.data} link="/tags" linkText="All tags" subtitle={`All posts tagged with #${tag}`} />
 	</PrimarySection>
 </Layout>

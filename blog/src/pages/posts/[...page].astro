@@ -7,10 +7,14 @@ import Description from "../../shared/components/meta/Description.astro";
 import Meta from "../../shared/components/meta/Meta.astro";
 
 export async function getStaticPaths({ paginate }) {
-	const posts = await Astro.glob("../../content/blog/posts/**/index.md");
-
-	return paginate(posts, {
-		pageSize: 6,
+	const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
+	const sortedPosts = allPosts.sort((a, b) => {
+		const aDate = new Date(b.frontmatter.date);
+		const bDate = new Date(a.frontmatter.date);
+		return aDate.getTime() - bDate.getTime();
+	});
+	return paginate(sortedPosts, {
+		pageSize: 12,
 	});
 }
 
