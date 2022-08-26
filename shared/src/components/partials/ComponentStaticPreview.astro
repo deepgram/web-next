@@ -1,9 +1,9 @@
 ---
 import PreviewToggle from "./PreviewToggle.astro";
 
-const { ...rest } = Astro.props;
+const { class: classes, ...rest } = Astro.props;
 ---
 
-<PreviewToggle class="border p-5 rounded-lg" {...rest}>
+<PreviewToggle class={`border p-5 rounded-lg ${classes ? classes : null}`} {...rest}>
 	<slot />
 </PreviewToggle>

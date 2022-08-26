@@ -151,6 +151,49 @@ import Button from "../shared/components/general/Button.astro";
 					</div>
 				</div>
 			</ComponentStaticPreview>
+
+			<ComponentStaticPreview id="forms-inputs" title="Forms and Inputs" snippet={``} class="flex-col">
+				<div class="w-full mb-5">
+					<p class="text-purple-500">Simple Form</p>
+					<div class=" bg-darkCharcoal text-white p-10 w-full">
+						<div class="input-group">
+							<label for="input-1">Name (first and last)</label>
+							<input id="input-1" class="input" placeholder="Your name" />
+						</div>
+						<div class="input-group">
+							<label for="input-1">Name (first and last)</label>
+							<input id="input-1" class="input" placeholder="Your name" />
+						</div>
+						<Button type="button" value="test" class="button button--primary">Button</Button>
+					</div>
+				</div>
+				<div class="w-full">
+					<p class="text-purple-500">Simple Form (Light bg)</p>
+					<div class="p-10 w-full">
+						<div class="input-group input-group--light-bg">
+							<label for="input-2">Name (first and last)</label>
+							<input id="input-2" class="input" placeholder="Your name" />
+						</div>
+						<div class="input-group input-group--light-bg">
+							<label for="input-2">Name (first and last)</label>
+							<input id="input-2" class="input" placeholder="Your name" />
+						</div>
+						<Button type="button" value="test" class="button button--primary">Button</Button>
+					</div>
+				</div>
+				<div class="w-full">
+					<p class="text-purple-500">Inline Form (Light bg)</p>
+					<div class="p-10 w-full">
+						<div class="form--inline">
+							<div class="input-group input-group--inline input-group--light-bg">
+								<label for="input-2">Name (first and last)</label>
+								<input id="input-2" class="input" placeholder="Your name" />
+							</div>
+							<Button type="button" value="test" class="button button--primary">Button</Button>
+						</div>
+					</div>
+				</div>
+			</ComponentStaticPreview>
 		</ComponentSection>
 
 		<ComponentSection title="Quotes and Testimonials">
