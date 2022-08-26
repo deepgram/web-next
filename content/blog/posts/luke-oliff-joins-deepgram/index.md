@@ -4,7 +4,7 @@ description: "Luke Oliff joins the Developer Relations team at Deepgram!"
 date: 2021-11-30
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638199198/blog/2021/11/luke-oliff-joins-deepgram/luke-oliff-joins-developer-relations-at-deepgram.jpg
 authors:
-    - lukeocodes
+    - luke-oliff
 category: devlife
 tags:
     - bio,
