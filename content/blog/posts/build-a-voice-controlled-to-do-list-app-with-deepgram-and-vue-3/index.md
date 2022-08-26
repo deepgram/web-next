@@ -1,5 +1,5 @@
 ---
-title: Project Upgrade: Voice Controlled To-Do List App with Deepgram and Vue 3
+title: "Project Upgrade: Voice Controlled To-Do List App with Deepgram and Vue 3"
 description: Using Vue 3 & Deepgram's Speech-to-Text API, update the classic to-do list project by adding voice controls!
 date: 2022-05-02
 cover: https://res.cloudinary.com/deepgram/image/upload/v1651517750/blog/2022/05/build-a-voice-controlled-to-do-list-app-with-deepgram-and-vue-3/Build-Todo-list-w-Vue3-Pinia%402x.jpg
@@ -14,7 +14,7 @@ tags:
     - pinia,
     - regular-expressions
 seo:
-    title: Project Upgrade: Voice Controlled To-Do List App with Deepgram and Vue 3
+    title: "Project Upgrade: Voice Controlled To-Do List App with Deepgram and Vue 3"
     description: Using Vue 3 & Deepgram's Speech-to-Text API, update the classic to-do list project by adding voice controls!
 shorturls:
     share: https://dpgr.am/d215fe
