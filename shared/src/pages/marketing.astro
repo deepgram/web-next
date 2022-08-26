@@ -1,6 +1,6 @@
 ---
 import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
-import ComponentPreview from "../components/partials/ComponentPreview.astro";
+import ComponentStaticPreview from "../components/partials/ComponentStaticPreview.astro";
 import ComponentSection from "../components/partials/ComponentSection.astro";
 import Layout from "../layouts/Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
@@ -29,7 +29,7 @@ import Button from "../shared/components/general/Button.astro";
 		<a href="/">Back</a>
 
 		<ComponentSection title="Icons, Buttons and Links">
-			<ComponentPreview
+			<ComponentStaticPreview
 				id="text"
 				title="Text"
 				snippet={`<span><InlineIcon icon="share">Just text with Icon</InlineIcon><span>
@@ -41,9 +41,9 @@ import Button from "../shared/components/general/Button.astro";
 					<h1><InlineIcon icon="email" iconSuffix>Just text with Icon</InlineIcon></h1>
 					<h3><InlineIcon icon="xmark-large" iconSuffix>Close</InlineIcon></h3>
 				</div>
-			</ComponentPreview>
+			</ComponentStaticPreview>
 
-			<ComponentPreview
+			<ComponentStaticPreview
 				id="links"
 				title="Links"
 				snippet={`<Link href="#" class="text-red-900">Link with no Icon</Link>
@@ -101,109 +101,56 @@ import Button from "../shared/components/general/Button.astro";
 					<h4><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h4>
 					<h5><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h5>
 					<h6><Link href="#" icon="email" iconSuffix class="text-black">Link with suffix Icon</Link></h6>
-					<Link href="#" class="text-white button button--primary">Link like Primary Button</Link>
-					<Link href="#" class="text-white button button--primary button--small">Small Link like Primary Button</Link>
-					<Link href="#" class="text-white button button--primary button--large">Large Link like Primary Button</Link>
-					<Link href="#" class="text-white button button--primary button--block">Block Link like Primary Button</Link>
-					<Link href="#" class="text-white button button--secondary">Link like Secondary Button</Link>
-					<Link href="#" class="text-white button button--tertiary">Link like Tertiary Button</Link>
-					<Link href="#" class="text-white button button--quaternary">Link like Quaternary Button</Link>
-					<Link href="#" class="text-white button button--quinary">Link like Quinary Button</Link>
-					<Link href="#" class="text-white button button--senary">Link like Senary Button</Link>
-					<Link href="#" icon="angle-down" class="text-white button button--primary">Link like Primary Button with Icon</Link>
-					<Link href="#" icon="angle-down" iconSuffix class="text-white button button--secondary">Link like Secondary Button with suffix Icon</Link>
 				</div>
-			</ComponentPreview>
+			</ComponentStaticPreview>
 
-			<ComponentPreview
-				id="buttons"
-				title="Buttons"
-				snippet={`<Button type="button" value="test" class="button">Button (unstyled)</Button>
-<Button type="button" value="test" class="button button--primary">Button (primary)</Button>
-<Button type="button" value="test" class="button button--secondary">Button (secondary)</Button>
-<Button type="button" value="test" class="button button--tertiary">Button (tertiary)</Button>
-<Button type="button" value="test" class="button button--quaternary">Button (quaternary)</Button>
-<Button type="button" value="test" class="button button--quinary">Button (quinary)</Button>
-<Button type="button" value="test" class="button button--senary">Button (senary)</Button>
-<Button type="button" value="test" icon="email" class="button">Button (unstyled)</Button>
-<Button type="button" value="test" icon="email" class="button button--primary">Button (primary)</Button>
-<Button type="button" value="test" icon="email" class="button button--secondary">Button (secondary)</Button>
-<Button type="button" value="test" icon="email" iconSuffix class="button">Button (unstyled)</Button>
-<Button type="button" value="test" icon="email" iconSuffix class="button button--primary">Button (primary)</Button>
-<Button type="button" value="test" icon="email" iconSuffix class="button button--secondary">Button (secondary)</Button>
-<Button type="button" value="test" class="button button--small">Button (unstyled)</Button>
-<Button type="button" value="test" class="button button--small button--primary">Button (primary)</Button>
-<Button type="button" value="test" class="button button--small button--secondary">Button (secondary)</Button>
-<Button type="button" value="test" class="button button--small button--tertiary">Button (tertiary)</Button>
-<Button type="button" value="test" class="button button--small button--quaternary">Button (quaternary)</Button>
-<Button type="button" value="test" class="button button--small button--quinary">Button (quinary)</Button>
-<Button type="button" value="test" class="button button--small button--senary">Button (senary)</Button>
-<Button type="button" value="test" class="button button--big">Button (unstyled)</Button>
-<Button type="button" value="test" class="button button--big button--primary">Button (primary)</Button>
-<Button type="button" value="test" class="button button--big button--secondary">Button (secondary)</Button>
-<Button type="button" value="test" class="button button--big button--tertiary">Button (tertiary)</Button>
-<Button type="button" value="test" class="button button--big button--quaternary">Button (quaternary)</Button>
-<Button type="button" value="test" class="button button--big button--quinary">Button (quinary)</Button>
-<Button type="button" value="test" class="button button--big button--senary">Button (senary)</Button>
-<Button type="button" value="test" class="button button--block button--primary">Button Block</Button>
-<Button type="button" value="test" class="button button--block button--small button--secondary">Button Block (small)</Button>
-<Button type="button" value="test" class="button button--block button--big button--quaternary">Button Block (big)</Button>`}
-			>
+			<ComponentStaticPreview id="buttons" title="Buttons" snippet={``}>
 				<div class="flex flex-col space-y-2">
-					<h5>Button</h5>
+					<p class="text-purple-500">Button Primary</p>
 					<div class="flex flex-wrap space-x-2">
-						<Button type="button" value="test" class="button">Button (unstyled)</Button>
-						<Button type="button" value="test" class="button button--primary">Button (primary)</Button>
-						<Button type="button" value="test" class="button button--secondary">Button (secondary)</Button>
-						<Button type="button" value="test" class="button button--tertiary">Button (tertiary)</Button>
-						<Button type="button" value="test" class="button button--quaternary">Button (quaternary)</Button>
-						<Button type="button" value="test" class="button button--quinary">Button (quinary)</Button>
-						<Button type="button" value="test" class="button button--senary">Button (senary)</Button>
+						<Button type="button" value="test" class="button button--primary">Button</Button>
+						<Button type="button" value="test" class="button button--primary button--alternative">Button*</Button>
+						<Button type="button" value="test" class="button button--primary" disabled>Button</Button>
+						<Button type="button" value="test" class="button button--primary button--light-bg" disabled>Button</Button>
 					</div>
-					<h5>Button with Icons</h5>
+					<p class="text-purple-500">Button Secondary</p>
 					<div class="flex flex-wrap space-x-2">
-						<Button type="button" value="test" icon="email" class="button">Button (unstyled)</Button>
-						<Button type="button" value="test" icon="email" class="button button--primary">Button (primary)</Button>
-						<Button type="button" value="test" icon="email" class="button button--secondary">Button (secondary)</Button>
+						<Button type="button" value="test" class="button button--secondary">Button</Button>
+						<Button type="button" value="test" class="button button--secondary" disabled>Button</Button>
+						<Button type="button" value="test" class="button button--secondary button--light-bg" disabled>Button</Button>
 					</div>
-					<h5>Button with suffix Icons</h5>
+					<p class="text-purple-500">Button Small Primary</p>
 					<div class="flex flex-wrap space-x-2">
-						<Button type="button" value="test" icon="email" iconSuffix class="button">Button (unstyled)</Button>
-						<Button type="button" value="test" icon="email" iconSuffix class="button button--primary">Button (primary)</Button>
-						<Button type="button" value="test" icon="email" iconSuffix class="button button--secondary">Button (secondary)</Button>
+						<Button type="button" value="test" class="button button--small button--primary">Button</Button>
+						<Button type="button" value="test" class="button button--small button--primary button--alternative">Button*</Button>
+						<Button type="button" value="test" class="button button--small button--primary" disabled>Button</Button>
+						<Button type="button" value="test" class="button button--small button--primary button--light-bg" disabled>Button</Button>
 					</div>
-					<h5>Small Button</h5>
+					<p class="text-purple-500">Button Small Secondary</p>
 					<div class="flex flex-wrap space-x-2">
-						<Button type="button" value="test" class="button button--small">Button (unstyled)</Button>
-						<Button type="button" value="test" class="button button--small button--primary">Button (primary)</Button>
-						<Button type="button" value="test" class="button button--small button--secondary">Button (secondary)</Button>
-						<Button type="button" value="test" class="button button--small button--tertiary">Button (tertiary)</Button>
-						<Button type="button" value="test" class="button button--small button--quaternary">Button (quaternary)</Button>
-						<Button type="button" value="test" class="button button--small button--quinary">Button (quinary)</Button>
-						<Button type="button" value="test" class="button button--small button--senary">Button (senary)</Button>
+						<Button type="button" value="test" class="button button--small button--secondary">Button</Button>
+						<Button type="button" value="test" class="button button--small button--secondary" disabled>Button</Button>
+						<Button type="button" value="test" class="button button--small button--secondary button--light-bg" disabled>Button</Button>
 					</div>
-					<h5>Big Button</h5>
+					<p class="text-purple-500">Button Mini</p>
 					<div class="flex flex-wrap space-x-2">
-						<Button type="button" value="test" class="button button--big">Button (unstyled)</Button>
-						<Button type="button" value="test" class="button button--big button--primary">Button (primary)</Button>
-						<Button type="button" value="test" class="button button--big button--secondary">Button (secondary)</Button>
-						<Button type="button" value="test" class="button button--big button--tertiary">Button (tertiary)</Button>
-						<Button type="button" value="test" class="button button--big button--quaternary">Button (quaternary)</Button>
-						<Button type="button" value="test" class="button button--big button--quinary">Button (quinary)</Button>
-						<Button type="button" value="test" class="button button--big button--senary">Button (senary)</Button>
+						<Button type="button" value="test" class="button button--mini button--secondary">Menu</Button>
+						<Button type="button" value="test" class="button button--mini button--primary">Sign Up</Button>
 					</div>
-					<h5>Block Button</h5>
-					<div class="flex flex-col space-y-2">
-						<Button type="button" value="test" class="button button--block button--primary">Button Block</Button>
-						<Button type="button" value="test" class="button button--block button--small button--secondary">Button Block (small)</Button>
-						<Button type="button" value="test" class="button button--block button--big button--quaternary">Button Block (big)</Button>
+					<p class="text-purple-500">Button Block</p>
+					<div class="flex flex-wrap space-x-2">
+						<Button type="button" value="test" class="button button--block button--primary">Button</Button>
+						<Button type="button" value="test" class="button button--block button--primary button--alternative">Button*</Button>
+						<Button type="button" value="test" class="button button--block button--secondary">Button</Button>
+						<Button type="button" value="test" class="button button--block button--small button--secondary">Button</Button>
+						<Button type="button" value="test" class="button button--block button--mini button--secondary">Button</Button>
 					</div>
 				</div>
-			</ComponentPreview>
+			</ComponentStaticPreview>
 		</ComponentSection>
 
 		<ComponentSection title="Quotes and Testimonials">
-			<ComponentPreview
+			<ComponentStaticPreview
 				id="quote-amplify"
 				title="Amplify Quote"
 				snippet={`<AmplifyQuote>
@@ -217,8 +164,8 @@ import Button from "../shared/components/general/Button.astro";
 					<p>Get your API key and unlock $150 in free credit.</p>
 					<a href="https://console.deepgram.com/signup">Start Free</a>
 				</AmplifyQuote>
-			</ComponentPreview>
-			<ComponentPreview
+			</ComponentStaticPreview>
+			<ComponentStaticPreview
 				id="quote-amplify-dark"
 				title="Amplify Quote (dark)"
 				snippet={`<AmplifyQuote>
@@ -232,7 +179,7 @@ import Button from "../shared/components/general/Button.astro";
 					<p>Get your API key and unlock $150 in free credit.</p>
 					<a href="https://console.deepgram.com/signup">Start Free</a>
 				</AmplifyQuote>
-			</ComponentPreview>
+			</ComponentStaticPreview>
 		</ComponentSection>
 
 		<ComponentSection title="Forms">
@@ -243,10 +190,10 @@ import Button from "../shared/components/general/Button.astro";
 
 		<ComponentSection title="Promos">
 			<p>Promos can be <code>theme=white</code> or <code>theme=black</code> or <code>theme=red</code></p>
-			<ComponentPreview id="promo-newsletter" title="Newsletter Promo" snippet={`<NewsletterPromo/>`}>
+			<ComponentStaticPreview id="promo-newsletter" title="Newsletter Promo" snippet={`<NewsletterPromo/>`}>
 				<NewsletterPromo />
-			</ComponentPreview>
-			<ComponentPreview
+			</ComponentStaticPreview>
+			<ComponentStaticPreview
 				id="promo-webinar"
 				title="Webinar Promo"
 				snippet={`<WebinarPromo
@@ -276,8 +223,8 @@ import Button from "../shared/components/general/Button.astro";
 					]}
 					buttonText="Register"
 				/>
-			</ComponentPreview>
-			<ComponentPreview
+			</ComponentStaticPreview>
+			<ComponentStaticPreview
 				id="promo-event"
 				title="Event Promo"
 				snippet={`<EventPromo
@@ -307,8 +254,8 @@ import Button from "../shared/components/general/Button.astro";
 					]}
 					buttonText="Register"
 				/>
-			</ComponentPreview>
-			<ComponentPreview
+			</ComponentStaticPreview>
+			<ComponentStaticPreview
 				id="promo-whitepaper"
 				title="Whitepaper Promo"
 				snippet={`<WhitepaperPromo
@@ -334,8 +281,8 @@ import Button from "../shared/components/general/Button.astro";
 					]}
 					buttonText="Download"
 				/>
-			</ComponentPreview>
-			<ComponentPreview
+			</ComponentStaticPreview>
+			<ComponentStaticPreview
 				id="promo-link"
 				title="Link Promo"
 				snippet={`<LinkPromo
@@ -357,7 +304,7 @@ import Button from "../shared/components/general/Button.astro";
 					backgroundImage={linkImg}
 					buttonText="Try it Free"
 				/>
-			</ComponentPreview>
+			</ComponentStaticPreview>
 		</ComponentSection>
 	</PrimarySection>
 </Layout>

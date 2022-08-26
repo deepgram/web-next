@@ -25,26 +25,6 @@ code {
 	@apply font-firaCode;
 }
 
-.bg-fingerprint {
-	background-image: url("/fingerprint.svg");
-	background-repeat: no-repeat;
-	background-position: right 16rem top;
-}
-
-.bg-starburst {
-	background-image: url("/starburst.svg");
-	background-repeat: no-repeat;
-	background-position: 21rem top;
-	background-size: 42.75rem;
-}
-
-.bg-saturn {
-	background-image: url("/saturn.svg");
-	background-repeat: no-repeat;
-	background-position: 22rem top;
-	background-size: 30rem;
-}
-
 /* @media screen and (min-width: 1600px) {
   html {
     font-size: 25px;
@@ -96,88 +76,70 @@ code {
 }
 
 @layer components {
-	button.button {
-		@apply -mb-1;
-	}
-
 	.button {
-		@apply flex items-center justify-center py-2 px-6 text-base font-bold;
-		height: 3.25rem;
-		width: fit-content;
+		@apply grow-0 px-[2.75rem] pb-[1.1rem] pt-[1.15rem] text-center text-[1rem] font-[700] leading-[1rem];
 	}
 
-	.button--base {
-		height: 3.25rem;
+	.button:disabled {
+		@apply bg-storm text-rock;
 	}
 
-	.button--small {
-		@apply py-2 px-4;
-		height: 2.375rem;
-	}
-
-	.button--big {
-		height: 4.125rem;
-	}
-
-	.button--block {
-		@apply w-full;
-	}
-
-	.button--fit-content {
-		width: fit-content;
-	}
-
-	.input--base {
-		height: 3.25rem;
-	}
-
-	.input--small {
-		@apply py-2 px-4;
-		height: 2.375rem;
-	}
-
-	.input--big {
-		height: 4.125rem;
-	}
-
-	.hyperlink {
-		@apply text-lg;
-		@apply font-black;
-	}
-
-	.astro-code {
-		@apply overflow-hidden py-7 px-10;
+	.button.button--light-bg:disabled {
+		@apply bg-casper text-storm;
 	}
 }
 
 @layer utilities {
+	.button--small {
+		@apply px-[0.6875rem] pb-[0.65rem] pt-[0.725rem];
+	}
+
+	.button--mini {
+		@apply min-w-[4.75rem] px-[0.475rem] pb-[0.375rem] pt-[0.5rem] leading-[0.75rem];
+	}
+
 	.button--primary {
 		@apply bg-meadow text-darkCharcoal;
+	}
+
+	.button--primary.button--alternative {
+		@apply bg-white;
+	}
+
+	.button--primary.button--alternative:hover {
+		@apply bg-mintChip;
 	}
 
 	.button--secondary {
 		@apply bg-rock text-meadow;
 	}
 
-	.button--tertiary {
-		@apply text-darkCharcoal bg-white;
+	.button--block {
+		@apply w-full;
 	}
 
-	.button--quaternary {
-		@apply text-lightIris bg-black;
+	.astro-code {
+		@apply overflow-hidden py-7 px-10;
 	}
 
-	.button--quinary {
-		@apply text-meadow bg-rock;
+	.bg-fingerprint {
+		background-image: url("/shared/fingerprint.svg");
+		background-repeat: no-repeat;
+		background-position: right 16rem top;
 	}
 
-	.button--senary {
-		@apply bg-rock text-white;
+	.bg-starburst {
+		background-image: url("/shared/starburst.svg");
+		background-repeat: no-repeat;
+		background-position: 21rem top;
+		background-size: 42.75rem;
 	}
 
-	.hyperlink {
-		@apply text-lg;
-		@apply font-black;
+	.bg-saturn {
+		background-image: url("/shared/saturn.svg");
+		background-repeat: no-repeat;
+		background-position: 22rem top;
+		background-size: 30rem;
 	}
 
 	.bg-blur {
