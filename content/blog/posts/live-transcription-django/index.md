@@ -7,19 +7,17 @@ authors:
     - tonya-sims
 category: tutorial
 tags:
-    - python,
-    - django,
-    - speech recognition,
-    - streaming
+    - python
+    - django
 seo:
     title: "Live Transcription With Python and Django"
     description: "Learn how to do a live, real-time transcription with Django in Python and Deepgram"
 shorturls:
-    share: https://dpgr.am/2fe2397
-    twitter: https://dpgr.am/ce378b1
-    linkedin: https://dpgr.am/9fb7f6f
-    reddit: https://dpgr.am/e52ed16
-    facebook: https://dpgr.am/01a508f
+    share: https://dpgr.am/abcb022
+    twitter: https://dpgr.am/ba1aaba
+    linkedin: https://dpgr.am/b5ab554
+    reddit: https://dpgr.am/654438d
+    facebook: https://dpgr.am/3d4f4bd
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454032/blog/live-transcription-django/ograph.png
 ---
@@ -363,3 +361,4 @@ Let’s start our application and start getting real-time transcriptions. From o
 
 Congratulations on building a real-time transcription project with Django and Deepgram. You can find the [code here](https://github.com/deepgram-devs/live-transcription-django) with instructions on how to run the project. If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

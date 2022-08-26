@@ -7,21 +7,17 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - vue,
-    - voice-to-text,
-    - speech-recognition,
-    - tutorial,
-    - pinia,
-    - regular-expressions
+    - vuejs
+    - pinia
 seo:
     title: "Project Upgrade: Voice Controlled To-Do List App with Deepgram and Vue 3"
     description: "Using Vue 3 & Deepgram's Speech-to-Text API, update the classic to-do list project by adding voice controls!"
 shorturls:
-    share: https://dpgr.am/e9c4604
-    twitter: https://dpgr.am/76da547
-    linkedin: https://dpgr.am/e906bce
-    reddit: https://dpgr.am/a18aa67
-    facebook: https://dpgr.am/b67013f
+    share: https://dpgr.am/0b45872
+    twitter: https://dpgr.am/0456c9d
+    linkedin: https://dpgr.am/e8b79dc
+    reddit: https://dpgr.am/8689f6d
+    facebook: https://dpgr.am/a85e2b8
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454078/blog/build-a-voice-controlled-to-do-list-app-with-deepgram-and-vue-3/ograph.png
 ---
@@ -616,3 +612,4 @@ That concludes this post on how to add voice-control to a Vue 3 to-do list app. 
 
 Feel free to reach out with questions on [Twitter](https://twitter.com/sandra_rodgers_). Happy coding!
 
+        

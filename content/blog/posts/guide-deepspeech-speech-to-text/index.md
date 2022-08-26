@@ -12,11 +12,11 @@ seo:
     title: "A Guide to DeepSpeech Speech to Text"
     description: "DeepSpeech is a Python library for doing ASR. In this post, we’ll look at how to use DeepSpeech to do Speech to Text in Python"
 shorturls:
-    share: https://dpgr.am/5941269
-    twitter: https://dpgr.am/887f1db
-    linkedin: https://dpgr.am/4a0e953
-    reddit: https://dpgr.am/d721cc2
-    facebook: https://dpgr.am/c3ada2b
+    share: https://dpgr.am/2b36a93
+    twitter: https://dpgr.am/3d69f41
+    linkedin: https://dpgr.am/d6f2658
+    reddit: https://dpgr.am/2dc3fb8
+    facebook: https://dpgr.am/7056571
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454117/blog/guide-deepspeech-speech-to-text/ograph.png
 ---
@@ -420,3 +420,4 @@ After a basic introduction, we stepped into a guide on how to use DeepSpeech to 
 
 We created three modules. One to handle WAV files, which are the audio data files that we can use DeepSpeech to transcribe. One to transcribe from WAV files, and one more file to create a command line interface to use DeepSpeech. Our CLI allows us to pass in options to pick if we want to do real time speech recognition or run speech recognition on an existing WAV audio file.
 
+        

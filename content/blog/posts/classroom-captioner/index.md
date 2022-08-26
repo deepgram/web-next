@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - nodejs,
-    - tutorial,
+    - nodejs
     - education
 seo:
     title: "Adding Live Captions To Your Classroom With Deepgram"
     description: "Make your lectures more accessible with live automatic captioning."
 shorturls:
-    share: https://dpgr.am/0db53ff
-    twitter: https://dpgr.am/8eaef83
-    linkedin: https://dpgr.am/c32a3e8
-    reddit: https://dpgr.am/d0cc653
-    facebook: https://dpgr.am/0dd93c3
+    share: https://dpgr.am/e0788f9
+    twitter: https://dpgr.am/9c1aee5
+    linkedin: https://dpgr.am/105bb6d
+    reddit: https://dpgr.am/b5d0747
+    facebook: https://dpgr.am/565f0de
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453858/blog/classroom-captioner/ograph.png
 ---
@@ -440,3 +439,4 @@ If you want to see the finished code and deploy your own version of this project
 
 Sharing knowledge as an educator feels wonderful, and now you can ensure all of your students have an equal experience in the classroom. If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

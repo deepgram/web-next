@@ -7,18 +7,16 @@ authors:
     - brian-barrow
 category: tutorial
 tags:
-    - authentication,
-    - supabase,
-    - tutorial
+    - supabase
 seo:
     title: "How to Add Supabase Authentication to a Vue App"
     description: "In this post we will walk through getting authentication set up using Supabase and Vue 3."
 shorturls:
-    share: https://dpgr.am/363155c
-    twitter: https://dpgr.am/7858afc
-    linkedin: https://dpgr.am/6587765
-    reddit: https://dpgr.am/c4937bb
-    facebook: https://dpgr.am/ac14621
+    share: https://dpgr.am/3afd559
+    twitter: https://dpgr.am/f87b3f4
+    linkedin: https://dpgr.am/99a7dcb
+    reddit: https://dpgr.am/d5d0e76
+    facebook: https://dpgr.am/60f3165
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453998/blog/supabase-authentication-vue/ograph.png
 ---
@@ -29,3 +27,4 @@ We cover how to include and set up Supabase, create components to manage registr
 
 You can read the post now over on the [freeCodeCamp Blog](https://www.freecodecamp.org/news/add-supabase-authentication-to-vue/). If you ever have any questions about this post, please feel free to reach out to us on Twitter [@DeepgramDevs](https://twitter.com/DeepgramDevs). We’re happy to help!
 
+        

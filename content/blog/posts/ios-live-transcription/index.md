@@ -7,18 +7,17 @@ authors:
     - abdul-ajetunmobi
 category: tutorial
 tags:
-    - ios,
-    - swift,
-    - tutorial
+    - ios
+    - swift
 seo:
     title: "Live Transcriptions with iOS and Deepgram"
     description: "Build an iOS app which takes the user’s microphone and prints transcripts to the screen in real-time."
 shorturls:
-    share: https://dpgr.am/b6eb328
-    twitter: https://dpgr.am/e4363b4
-    linkedin: https://dpgr.am/b145bbc
-    reddit: https://dpgr.am/f7074b4
-    facebook: https://dpgr.am/d280672
+    share: https://dpgr.am/fe8fa3f
+    twitter: https://dpgr.am/520da60
+    linkedin: https://dpgr.am/d25200f
+    reddit: https://dpgr.am/c4783e8
+    facebook: https://dpgr.am/f66d6dc
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453843/blog/ios-live-transcription/ograph.png
 ---
@@ -272,3 +271,4 @@ Once you have a `DeepgramResponse` instance, you will check if it is final, mean
 
 The final project code is available at <https://github.com/deepgram-devs/deepgram-live-transcripts-ios>, and if you have any questions, please feel free to reach out to the Deepgram team on Twitter - [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

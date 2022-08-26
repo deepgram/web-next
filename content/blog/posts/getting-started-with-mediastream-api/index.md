@@ -7,19 +7,16 @@ authors:
     - brian-barrow
 category: tutorial
 tags:
-    - mediastream,
-    - api,
-    - web,
-    - tutorial
+    - mediastream
 seo:
     title: "Getting Started with the MediaStream API"
     description: "Get to know the basics of the MediaStream API"
 shorturls:
-    share: https://dpgr.am/15f3e92
-    twitter: https://dpgr.am/a36205f
-    linkedin: https://dpgr.am/53a8fdc
-    reddit: https://dpgr.am/17c2b1c
-    facebook: https://dpgr.am/280b4ed
+    share: https://dpgr.am/93e84dc
+    twitter: https://dpgr.am/e6dcf20
+    linkedin: https://dpgr.am/8e652ff
+    reddit: https://dpgr.am/34e806b
+    facebook: https://dpgr.am/b3cff01
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453829/blog/getting-started-with-mediastream-api/ograph.png
 ---
@@ -195,3 +192,4 @@ You should be aware of a few events on the `MediaStream` object.
 
 The `MediaStream` API is beneficial and can be utilized in the applications that you build. I hope this has been informative and helped you as a web developer.
 
+        

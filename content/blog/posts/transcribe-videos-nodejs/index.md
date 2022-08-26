@@ -7,18 +7,18 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - nodejs,
-    - sdk,
+    - nodejs
+    - sdk
     - javascript
 seo:
     title: "Transcribe Videos With Node.js"
     description: "Convert and Transcribe Videos with Node.js and Deepgram"
 shorturls:
-    share: https://dpgr.am/c85045a
-    twitter: https://dpgr.am/b07e241
-    linkedin: https://dpgr.am/205980b
-    reddit: https://dpgr.am/b863fc5
-    facebook: https://dpgr.am/b0d3b65
+    share: https://dpgr.am/c5961f4
+    twitter: https://dpgr.am/dc34079
+    linkedin: https://dpgr.am/3621965
+    reddit: https://dpgr.am/977352f
+    facebook: https://dpgr.am/9df6807
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453821/blog/transcribe-videos-nodejs/ograph.png
 ---
@@ -138,3 +138,4 @@ async function transcribeRemoteVideo(url) {
 
 The complete project is available at <https://github.com/deepgram-devs/transcribe-videos> and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

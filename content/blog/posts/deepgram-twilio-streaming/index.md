@@ -7,19 +7,17 @@ authors:
     - nikola-whallon
 category: tutorial
 tags:
-    - tutorial,
-    - twilio,
-    - python,
-    - streaming
+    - twilio
+    - python
 seo:
     title: "Transcribing Twilio Voice Calls in Real-Time with Deepgram"
     description: "In this tutorial, learn how to transcribe Twilio Voice calls with Deepgram with real-time speech-to-text."
 shorturls:
-    share: https://dpgr.am/bf20808
-    twitter: https://dpgr.am/06844a0
-    linkedin: https://dpgr.am/22d53d3
-    reddit: https://dpgr.am/dc08b7f
-    facebook: https://dpgr.am/7c4efd0
+    share: https://dpgr.am/650fd92
+    twitter: https://dpgr.am/6458d1e
+    linkedin: https://dpgr.am/273ef64
+    reddit: https://dpgr.am/2fc8f2d
+    facebook: https://dpgr.am/80b16d1
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454061/blog/deepgram-twilio-streaming/ograph.png
 ---
@@ -365,3 +363,4 @@ to subscribe to, parses and formats the Deepgram transcription response, and pos
 
 If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

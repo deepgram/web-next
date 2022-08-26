@@ -12,11 +12,11 @@ seo:
     title: "Is There an ASR Gender Gap?"
     description: "Is there a gender gap with speech recognition technology? Is there differences with automatic speech recognition between genders? Here is what we see."
 shorturls:
-    share: https://dpgr.am/3676a65
-    twitter: https://dpgr.am/480a5c3
-    linkedin: https://dpgr.am/818f31f
-    reddit: https://dpgr.am/c8b49a0
-    facebook: https://dpgr.am/c6a0af1
+    share: https://dpgr.am/7b64767
+    twitter: https://dpgr.am/9a09218
+    linkedin: https://dpgr.am/1e8895f
+    reddit: https://dpgr.am/c326068
+    facebook: https://dpgr.am/89e75aa
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453790/blog/is-there-an-asr-gender-gap/ograph.png
 ---
@@ -53,3 +53,4 @@ We took a look at Automatic Speech Recognition (ASR) data from ourselves and our
 
 We’re in the business of making human speech intelligible to machines because we know there’s power in voice. Equality in speech technology will be a precondition for getting your voice out into the world. At Deepgram, our Research team tracks our ability to process speech of different demographic groups, including women, and aims for continuous improvement.
 
+        

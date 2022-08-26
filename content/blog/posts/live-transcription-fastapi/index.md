@@ -7,19 +7,17 @@ authors:
     - tonya-sims
 category: tutorial
 tags:
-    - python,
-    - fastapi,
-    - speech recognition,
-    - streaming
+    - python
+    - fastapi
 seo:
     title: "Live Transcription With Python and FastAPI"
     description: "Learn how to do a live, real-time transcription with FastAPI in Python and Deepgram"
 shorturls:
-    share: https://dpgr.am/efff2a1
-    twitter: https://dpgr.am/91bf9ef
-    linkedin: https://dpgr.am/a4d749b
-    reddit: https://dpgr.am/1bd0985
-    facebook: https://dpgr.am/489111e
+    share: https://dpgr.am/1f44788
+    twitter: https://dpgr.am/a3d3510
+    linkedin: https://dpgr.am/f8de728
+    reddit: https://dpgr.am/016efab
+    facebook: https://dpgr.am/5e90634
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454034/blog/live-transcription-fastapi/ograph.png
 ---
@@ -268,3 +266,4 @@ Let’s start our application and start getting real-time transcriptions. From o
 
 Congratulations on building a real-time transcription project with FastAPI and Deepgram. You can find the [code here](https://github.com/deepgram-devs/live-transcription-fastapi) with instructions on how to run the project. If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

@@ -7,16 +7,15 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - terminal
 seo:
     title: "Saving Transcripts From Your Terminal"
     description: "Learn how to use cURL to generate and save Deepgram transcripts directly from your terminal. Start now!"
 shorturls:
-    share: https://dpgr.am/23f0b86
-    twitter: https://dpgr.am/6cd9a91
-    linkedin: https://dpgr.am/18aee2a
-    reddit: https://dpgr.am/3410188
-    facebook: https://dpgr.am/82074d5
+    share: https://dpgr.am/8c8743f
+    twitter: https://dpgr.am/4db85ee
+    linkedin: https://dpgr.am/76ca356
+    reddit: https://dpgr.am/c6681df
+    facebook: https://dpgr.am/282a2d3
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454119/blog/saving-transcripts-from-terminal/ograph.png
 ---
@@ -153,3 +152,4 @@ The output looks like this:
 
 I hope you found this valuable and interesting. If you have any questions, please feel free to get in touch - we love to help!
 
+        

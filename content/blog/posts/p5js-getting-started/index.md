@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - javascript,
-    - creative-coding,
-    - p5js,
+    - javascript
+    - p5js
     - beginner
 seo:
     title: "Playing With P5.js: Getting Started"
     description: "P5.js is a JavaScript library for creative coding. In this series, we'll get you up and running with everything you need to build a basic game. Get started now."
 shorturls:
-    share: https://dpgr.am/25a02eb
-    twitter: https://dpgr.am/877e41f
-    linkedin: https://dpgr.am/dd6fb4f
-    reddit: https://dpgr.am/e227297
-    facebook: https://dpgr.am/00d1d87
+    share: https://dpgr.am/1cf2b50
+    twitter: https://dpgr.am/861d800
+    linkedin: https://dpgr.am/38c6234
+    reddit: https://dpgr.am/6877e1a
+    facebook: https://dpgr.am/2e2f7af
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454044/blog/p5js-getting-started/ograph.png
 ---
@@ -333,3 +332,4 @@ In next week's post, we'll cover how to build several games-related features in 
 
 If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

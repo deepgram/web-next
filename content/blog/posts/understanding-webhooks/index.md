@@ -7,18 +7,17 @@ authors:
     - nicole-ohanian
 category: tutorial
 tags:
-    - webhooks,
-    - concept,
-    - beginners
+    - webhooks
+    - beginner
 seo:
     title: "Understanding Webhooks"
     description: "Let's talk about why, when, and how webhooks are used in development."
 shorturls:
-    share: https://dpgr.am/e6c8b63
-    twitter: https://dpgr.am/0fe213a
-    linkedin: https://dpgr.am/6b2fed0
-    reddit: https://dpgr.am/1bb3b6f
-    facebook: https://dpgr.am/9492ffc
+    share: https://dpgr.am/037383e
+    twitter: https://dpgr.am/43d85fb
+    linkedin: https://dpgr.am/f3c8896
+    reddit: https://dpgr.am/f8ec009
+    facebook: https://dpgr.am/c2d2619
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454005/blog/understanding-webhooks/ograph.png
 ---
@@ -137,3 +136,4 @@ Webhooks are a wonderfully convenient and intuitive tool once you get the hang o
 
 If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

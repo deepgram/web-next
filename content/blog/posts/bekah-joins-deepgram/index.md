@@ -7,17 +7,16 @@ authors:
     - bekah-hawrot-weigel
 category: devlife
 tags:
-    - bio,
     - careers
 seo:
     title: "Bekah Hawrot Weigel joins the Developer Relations team at Deepgram as the Technical Community Builder"
     description: "Bekah Hawrot Weigel joins the Developer Relations team at Deepgram!"
 shorturls:
-    share: https://dpgr.am/0521148
-    twitter: https://dpgr.am/597740c
-    linkedin: https://dpgr.am/c2d4eb3
-    reddit: https://dpgr.am/6bdbf5e
-    facebook: https://dpgr.am/9b26e66
+    share: https://dpgr.am/1038070
+    twitter: https://dpgr.am/37b7b7f
+    linkedin: https://dpgr.am/cdd73bd
+    reddit: https://dpgr.am/7b02210
+    facebook: https://dpgr.am/5304e5c
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453856/blog/bekah-joins-deepgram/ograph.png
 ---
@@ -34,3 +33,4 @@ For me, that's the most important part of tech--creating space for people to fee
 
 Outside of tech and momming my four kids, you can find me swinging heavy kettlebells, eating spicy foods, writing, or playing outside. If you have any questions or just want to say “Hey!” you can pretty much always [find me on Twitter](https://twitter.com/BekahHW).
 
+        

@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - javascript,
-    - low-code,
-    - automations
+    - javascript
+    - low-code
 seo:
     title: "Automatically Transcribe Google Drive Files with Pipedream"
     description: "Learn how to automate the creation of transcriptions by simply dropping files into a Google Drive folder."
 shorturls:
-    share: https://dpgr.am/b77ff63
-    twitter: https://dpgr.am/7501f06
-    linkedin: https://dpgr.am/63c9f74
-    reddit: https://dpgr.am/8e40873
-    facebook: https://dpgr.am/d662687
+    share: https://dpgr.am/76f6af6
+    twitter: https://dpgr.am/23ffeae
+    linkedin: https://dpgr.am/0ead30b
+    reddit: https://dpgr.am/d45be9f
+    facebook: https://dpgr.am/7c87314
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454123/blog/transcribe-google-drive-files-pipedream/ograph.png
 ---
@@ -124,3 +123,4 @@ module.exports = defineComponent({
 
 You can now deploy your workflow and automatically receive Deepgram transcripts via email. You can, of course, edit any of the steps to be more useful to your specific use case. If you have any questions, please feel free to reach out to us - we love to help!
 
+        

@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - javascript,
-    - creative-coding,
-    - p5js,
+    - javascript
+    - p5js
     - beginner
 seo:
     title: "Playing With P5.js: Creating a Voice-Controlled Game"
     description: "In this post, we'll build a voice-controlled game with P5.js and Deepgram's Speech Recognition API. Learn how now."
 shorturls:
-    share: https://dpgr.am/65f82b3
-    twitter: https://dpgr.am/a53d644
-    linkedin: https://dpgr.am/8b652e9
-    reddit: https://dpgr.am/502294f
-    facebook: https://dpgr.am/b1f7fad
+    share: https://dpgr.am/c11f55a
+    twitter: https://dpgr.am/a0f09ef
+    linkedin: https://dpgr.am/ebf80d1
+    reddit: https://dpgr.am/7e24086
+    facebook: https://dpgr.am/7c4f65d
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454040/blog/p5js-deepgram-game/ograph.png
 ---
@@ -353,3 +352,4 @@ If you want to deploy your own, I encourage you to also read how to [protect you
 
 If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

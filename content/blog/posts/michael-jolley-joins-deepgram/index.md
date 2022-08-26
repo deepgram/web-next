@@ -12,11 +12,11 @@ seo:
     title: "Michael Jolley Joins the Developer Relations Team"
     description: "Welcome Michael Jolley, the bald, bearded, builder to the Deepgram Developer Relations team."
 shorturls:
-    share: https://dpgr.am/80aef2d
-    twitter: https://dpgr.am/a917b9d
-    linkedin: https://dpgr.am/2843080
-    reddit: https://dpgr.am/6e16dbd
-    facebook: https://dpgr.am/a669adc
+    share: https://dpgr.am/059f5a0
+    twitter: https://dpgr.am/92c5421
+    linkedin: https://dpgr.am/d85cc49
+    reddit: https://dpgr.am/8cf3e98
+    facebook: https://dpgr.am/08bb3eb
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453818/blog/michael-jolley-joins-deepgram/ograph.png
 ---
@@ -65,3 +65,4 @@ we can to help you level up your technical and soft skills. I get seriously
 excited every time I think about some of the things we've got planned. Hope to
 see you all along the journey!
 
+        

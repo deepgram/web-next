@@ -7,18 +7,17 @@ authors:
     - nikola-whallon
 category: tutorial
 tags:
-    - tutorial,
-    - game-dev,
+    - game-dev
     - godot
 seo:
     title: "How to Build a Speech-Enhanced Game with Godot and Deepgram"
     description: "Learn how to build a speech-enhanced game with Deepgram's ASR engine and the open-source Godot game engine."
 shorturls:
-    share: https://dpgr.am/1e280f7
-    twitter: https://dpgr.am/00b1cf5
-    linkedin: https://dpgr.am/0109623
-    reddit: https://dpgr.am/0258dc0
-    facebook: https://dpgr.am/6e7d1cd
+    share: https://dpgr.am/daeaf14
+    twitter: https://dpgr.am/8870f2b
+    linkedin: https://dpgr.am/220032e
+    reddit: https://dpgr.am/79c753a
+    facebook: https://dpgr.am/1794969
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454020/blog/deepgram-godot-tutorial/ograph.png
 ---
@@ -481,3 +480,4 @@ share some game ideas to get the creative juices flowing in the community:
 
 If you have any questions, please feel free to reach out on Twitter - we're @DeepgramDevs.
 
+        

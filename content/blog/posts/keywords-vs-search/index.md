@@ -7,20 +7,17 @@ authors:
     - sandra-rodgers
 category: best-practice
 tags:
-    - search,
-    - keywords,
-    - deepgram,
-    - api,
-    - features
+    - search
+    - keywords
 seo:
     title: "Keywords vs Search"
     description: "Compare Deepgram's search and keywords to learn which scenarios each feature works best for you"
 shorturls:
-    share: https://dpgr.am/1f63664
-    twitter: https://dpgr.am/a61f332
-    linkedin: https://dpgr.am/aeaf542
-    reddit: https://dpgr.am/c6ea0b9
-    facebook: https://dpgr.am/9edbf7e
+    share: https://dpgr.am/3c18657
+    twitter: https://dpgr.am/a03e2a5
+    linkedin: https://dpgr.am/babbe84
+    reddit: https://dpgr.am/35057c5
+    facebook: https://dpgr.am/971ad63
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453831/blog/keywords-vs-search/ograph.png
 ---
@@ -142,3 +139,4 @@ ASR is not perfect and humans are not perfect, but we can use a tool like the De
 
 The AI of Deepgram isn't about to take over the world all by itself, but humans with the AI of Deepgram can build great things.
 
+        

@@ -7,17 +7,16 @@ authors:
     - tonya-sims
 category: tutorial
 tags:
-    - python,
-    - virtual environments
+    - python
 seo:
     title: "Virtual Environments in Python"
     description: "Learn about why it's important to use virtual environments in Python, how to create one and use them in your next project."
 shorturls:
-    share: https://dpgr.am/5ff1a69
-    twitter: https://dpgr.am/552fe38
-    linkedin: https://dpgr.am/5ab36ca
-    reddit: https://dpgr.am/7cd83ce
-    facebook: https://dpgr.am/ad5d871
+    share: https://dpgr.am/0c37b14
+    twitter: https://dpgr.am/6627d16
+    linkedin: https://dpgr.am/2777e69
+    reddit: https://dpgr.am/91fcf1a
+    facebook: https://dpgr.am/63f791a
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453996/blog/python-virtual-environments/ograph.png
 ---
@@ -167,3 +166,4 @@ If you ever have any questions about this post, please feel free to reach out to
     python3 -m venv venv
     source venv/bin/activate
 
+        

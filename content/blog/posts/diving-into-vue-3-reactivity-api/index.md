@@ -7,17 +7,17 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - vue,
+    - vuejs
     - javascript
 seo:
     title: "Diving Into Vue 3 - The Reactivity API"
     description: "Learn about reactivity in Vue 3 and how to use ref and reactive helpers"
 shorturls:
-    share: https://dpgr.am/675aa42
-    twitter: https://dpgr.am/e7fc895
-    linkedin: https://dpgr.am/c3fc168
-    reddit: https://dpgr.am/2538060
-    facebook: https://dpgr.am/ba08e8b
+    share: https://dpgr.am/98e7070
+    twitter: https://dpgr.am/fa58f26
+    linkedin: https://dpgr.am/1ce34ef
+    reddit: https://dpgr.am/571a1b6
+    facebook: https://dpgr.am/3bf430e
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453991/blog/diving-into-vue-3-reactivity-api/ograph.png
 ---
@@ -372,3 +372,4 @@ Please join me for my next post about reusability in Vue 3, including a discussi
 
 Please reach out on [Twitter](https://twitter.com/sandra_rodgers_) and let me know if you are enjoying this series on Vue 3.
 
+        

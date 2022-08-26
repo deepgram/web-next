@@ -7,18 +7,16 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - project,
-    - video,
-    - integration
+    - video
 seo:
     title: "Video: Add Live Transcriptions to a Daily Video Call With Deepgram"
     description: "How to set up a Daily video call with live transcriptions."
 shorturls:
-    share: https://dpgr.am/a61a6b2
-    twitter: https://dpgr.am/b76067f
-    linkedin: https://dpgr.am/c9de6f3
-    reddit: https://dpgr.am/32bcb8d
-    facebook: https://dpgr.am/0e9835e
+    share: https://dpgr.am/a5af3d0
+    twitter: https://dpgr.am/7635d5c
+    linkedin: https://dpgr.am/5601be2
+    reddit: https://dpgr.am/27dad47
+    facebook: https://dpgr.am/70e4580
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453862/blog/daily-video-live-transcription/ograph.png
 ---
@@ -48,3 +46,4 @@ Further reading:
 
 If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

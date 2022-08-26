@@ -7,19 +7,18 @@ authors:
     - bekah-hawrot-weigel
 category: tutorial
 tags:
-    - javascript,
-    - beginners,
-    - freecodecamp,
-    - tutorial
+    - javascript
+    - beginner
+    - freecodecamp
 seo:
     title: "Upgrade your freeCodeCamp Project"
     description: "As early-career developers looking for your first or second job, upgrading your projects can help you to stand out from other candidates and grow as a new developer. To find out how to upgrade a common project, read more here."
 shorturls:
-    share: https://dpgr.am/e93e62c
-    twitter: https://dpgr.am/7f46f6e
-    linkedin: https://dpgr.am/ac581e7
-    reddit: https://dpgr.am/c6a0be2
-    facebook: https://dpgr.am/6b53380
+    share: https://dpgr.am/521c26c
+    twitter: https://dpgr.am/ab44d6f
+    linkedin: https://dpgr.am/fc5dec0
+    reddit: https://dpgr.am/3f6054d
+    facebook: https://dpgr.am/c47de40
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454028/blog/freecodecamp-quote-generator-upgrade/ograph.png
 ---
@@ -271,3 +270,4 @@ This is a project I hope to build on. We’ve been doing Twitter Spaces at Deepg
 
 If you have any questions or want a walkthrough of the how to build a freeCodeCamp project with the Deepgram update, hit us up on [@DeepgramDevs](https://twitter.com/DeepgramDevs) on Twitter.
 
+        

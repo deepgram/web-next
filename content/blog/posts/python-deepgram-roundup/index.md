@@ -7,20 +7,17 @@ authors:
     - tonya-sims
 category: thought-leadership
 tags:
-    - python,
-    - voice-to-text,
-    - speech recognition,
-    - speech-to-text,
+    - python
     - fastapi
 seo:
     title: "Starting Out with Python and Deepgram Live Streaming Audio"
     description: "Learn how to perform real-time Automatic Speech Recognition using various Python web frameworks and Deepgram's Speech-to-Text API with this roundup post."
 shorturls:
-    share: https://dpgr.am/a37fd4b
-    twitter: https://dpgr.am/0f72c7f
-    linkedin: https://dpgr.am/2ca0830
-    reddit: https://dpgr.am/dbbc23f
-    facebook: https://dpgr.am/1bf13dd
+    share: https://dpgr.am/bf4bebf
+    twitter: https://dpgr.am/d4a669d
+    linkedin: https://dpgr.am/f0f7a33
+    reddit: https://dpgr.am/039d224
+    facebook: https://dpgr.am/02c041e
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454100/blog/python-deepgram-roundup/ograph.png
 ---
@@ -63,3 +60,4 @@ Hopefully, you can see that regardless of your application's Python web framewor
 
 Please feel free to Tweet us at [@deepgramdevs](https://twitter.com/DeepgramDevs). We would love to hear from you!
 
+        

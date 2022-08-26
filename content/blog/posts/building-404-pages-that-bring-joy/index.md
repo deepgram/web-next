@@ -7,17 +7,16 @@ authors:
     - michael-jolley
 category: tutorial
 tags:
-    - tutorial,
     - game-dev
 seo:
     title: "Building 404 Pages That Bring Joy"
     description: "How we transformed the bad experience of landing on a 404 page into an enjoyable experience with a game."
 shorturls:
-    share: https://dpgr.am/601707f
-    twitter: https://dpgr.am/245fdb8
-    linkedin: https://dpgr.am/5812383
-    reddit: https://dpgr.am/f4e94f1
-    facebook: https://dpgr.am/b831062
+    share: https://dpgr.am/6d0c342
+    twitter: https://dpgr.am/462bfa3
+    linkedin: https://dpgr.am/fb46e5a
+    reddit: https://dpgr.am/4bfe39e
+    facebook: https://dpgr.am/24df052
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454014/blog/building-404-pages-that-bring-joy/ograph.png
 ---
@@ -269,3 +268,4 @@ also providing an enjoyable experience.
 Would you be interested in a MadGab component to use on your projects? Follow us
 on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs) and let us know.
 
+        

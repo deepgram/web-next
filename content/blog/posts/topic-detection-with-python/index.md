@@ -12,11 +12,11 @@ seo:
     title: "Topic Detection in Podcast Episodes with Python"
     description: "This tutorial will use Python and the Deepgram API speech-to-text to perform Topic Detection using the TF-IDF Machine Learning Algorithm and KMeans Clustering."
 shorturls:
-    share: https://dpgr.am/da3752d
-    twitter: https://dpgr.am/53854e1
-    linkedin: https://dpgr.am/fc4e10e
-    reddit: https://dpgr.am/5830f7e
-    facebook: https://dpgr.am/f76356a
+    share: https://dpgr.am/c1098c5
+    twitter: https://dpgr.am/335341b
+    linkedin: https://dpgr.am/11c3f1c
+    reddit: https://dpgr.am/e460418
+    facebook: https://dpgr.am/26c7cfa
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454121/blog/topic-detection-with-python/ograph.png
 ---
@@ -449,3 +449,4 @@ async def cleaned_docs_to_vectorize():
 asyncio.run(cleaned_docs_to_vectorize())
 ```
 
+        

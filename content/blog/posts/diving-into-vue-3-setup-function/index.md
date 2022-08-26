@@ -7,17 +7,17 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - vue,
+    - vuejs
     - javascript
 seo:
     title: "Diving Into Vue 3 - The Setup Function"
     description: "Learn about the new Vue 3 setup function and the Composition API"
 shorturls:
-    share: https://dpgr.am/1c5688b
-    twitter: https://dpgr.am/d032795
-    linkedin: https://dpgr.am/7b3f956
-    reddit: https://dpgr.am/dfb028e
-    facebook: https://dpgr.am/c9e984d
+    share: https://dpgr.am/ac518b9
+    twitter: https://dpgr.am/3a56d0b
+    linkedin: https://dpgr.am/931f9a0
+    reddit: https://dpgr.am/736169b
+    facebook: https://dpgr.am/dc79347
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453994/blog/diving-into-vue-3-setup-function/ograph.png
 ---
@@ -255,3 +255,4 @@ There is also another property, `expose`, which is useful in special cases. The 
 
 And that wraps up this post about the `setup` function. In the next post, we will be looking at `methods` and `computed` to see how we use those in Vue 3. And as always, feel free to reach out on [Twitter](https://twitter.com/sandra_rodgers_)!
 
+        

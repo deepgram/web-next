@@ -7,17 +7,17 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - vue,
+    - vuejs
     - javascript
 seo:
     title: "Diving Into Vue 3 - Methods, Watch, and Computed"
     description: "Learn about the basic features of methods, watch, and computed in Vue 3."
 shorturls:
-    share: https://dpgr.am/4deb90e
-    twitter: https://dpgr.am/7caf827
-    linkedin: https://dpgr.am/a9b9373
-    reddit: https://dpgr.am/5f1db91
-    facebook: https://dpgr.am/2833c1b
+    share: https://dpgr.am/c58f2b2
+    twitter: https://dpgr.am/99bca25
+    linkedin: https://dpgr.am/262624f
+    reddit: https://dpgr.am/4ec20fe
+    facebook: https://dpgr.am/57aa167
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661477089/blog/diving-into-vue-3-methods-watch-and-computed/ograph.png
 ---
@@ -295,3 +295,4 @@ At this point, I have logic that does the following:
 
 And that wraps up this post in the series. Stay tuned for upcoming posts that cover topics like `ref` and `reactive`, `composables`, and the new `v-model`. And as always, feel free to reach out on [Twitter](https://twitter.com/sandra_rodgers_)!
 
+        

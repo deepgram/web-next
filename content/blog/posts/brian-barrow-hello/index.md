@@ -7,17 +7,16 @@ authors:
     - brian-barrow
 category: devlife
 tags:
-    - bio,
     - careers
 seo:
     title: "Brian Barrow Joins the Developer Relations Team"
     description: "Brian Barrow Joins the Developer Relations Team"
 shorturls:
-    share: https://dpgr.am/1b89839
-    twitter: https://dpgr.am/cfd3a29
-    linkedin: https://dpgr.am/b3eb50c
-    reddit: https://dpgr.am/3616009
-    facebook: https://dpgr.am/4a8bef9
+    share: https://dpgr.am/bd6aedb
+    twitter: https://dpgr.am/aca9c1a
+    linkedin: https://dpgr.am/a2122f6
+    reddit: https://dpgr.am/9b57b72
+    facebook: https://dpgr.am/b4ca151
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453795/blog/brian-barrow-hello/ograph.png
 ---
@@ -32,3 +31,4 @@ People often talk about being "passionate" about what you do for a living. I can
 
 Outside of programming I have a lot of things keeping me busy. I love spending time with my wife and two kids. When I'm not spending time with them at any number of activities, I'm probably playing disc golf or watching it on YouTube. I was fortunate to be able to witness [the greatest shot in the sport's history this summer](https://www.youtube.com/watch?v=0lpcB5PJBVo).
 
+        

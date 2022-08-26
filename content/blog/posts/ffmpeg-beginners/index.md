@@ -7,18 +7,16 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - ffmpeg,
-    - cli,
-    - tutorial
+    - ffmpeg
 seo:
     title: "Getting Started with ffmpeg for Audio"
     description: "Learn about the FFmpeg CLI for working with audio files."
 shorturls:
-    share: https://dpgr.am/70289f2
-    twitter: https://dpgr.am/40cc9d4
-    linkedin: https://dpgr.am/f8dff39
-    reddit: https://dpgr.am/f230549
-    facebook: https://dpgr.am/794eb4e
+    share: https://dpgr.am/d591b55
+    twitter: https://dpgr.am/57448ea
+    linkedin: https://dpgr.am/cab14a9
+    reddit: https://dpgr.am/ae0bee6
+    facebook: https://dpgr.am/bb519fb
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453799/blog/ffmpeg-beginners/ograph.png
 ---
@@ -164,3 +162,4 @@ There are three parts to this filter:
 
 FFmpeg is hugely powerful, and with that comes a learning curve. We've only scratched the surface of what it can do but hopefully, its syntax makes more sense. If you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

@@ -7,17 +7,16 @@ authors:
     - luke-oliff
 category: devlife
 tags:
-    - bio,
     - careers
 seo:
     title: "Luke Oliff joins the Developer Relations team at Deepgram as a Senior Developer Experience Engineer"
     description: "Luke Oliff joins the Developer Relations team at Deepgram!"
 shorturls:
-    share: https://dpgr.am/91e346b
-    twitter: https://dpgr.am/ca5f0f5
-    linkedin: https://dpgr.am/8668e9b
-    reddit: https://dpgr.am/d05f033
-    facebook: https://dpgr.am/d376498
+    share: https://dpgr.am/fe381ce
+    twitter: https://dpgr.am/189a808
+    linkedin: https://dpgr.am/eaeadc1
+    reddit: https://dpgr.am/ea294e3
+    facebook: https://dpgr.am/a83bb6f
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453812/blog/luke-oliff-joins-deepgram/ograph.png
 ---
@@ -32,3 +31,4 @@ The town (then Roman capital) was home to the Roman Temple of Claudius, which th
 
 When not at work you can find me being a dad, tweeting (too much), or playing PC games. I've also recently been [streaming about technology](https://www.twitch.tv/lukeocodes), covering things like Nuxt, Vue, and Tailwind projects. My stream income gets donated to charities like [BlackGirlsCODE](https://www.blackgirlscode.com/) and [GirlsWhoCode](https://girlswhocode.com/), which help under-represented folks gain access to tech careers.
 
+        

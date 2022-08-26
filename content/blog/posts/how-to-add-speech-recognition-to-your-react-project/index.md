@@ -7,18 +7,16 @@ authors:
     - bekah-hawrot-weigel
 category: tutorial
 tags:
-    - React,
-    - voice-to-text,
-    - tutorial
+    - reactjs
 seo:
     title: "How to Add Speech Recognition to Your React and Node.js project"
     description: "Do you have a React project that could use speech-to-text? This tutorial will go through the steps to upgrade your React project with Deepgram transcriptions."
 shorturls:
-    share: https://dpgr.am/9a1b4dd
-    twitter: https://dpgr.am/2743c8b
-    linkedin: https://dpgr.am/9887ac4
-    reddit: https://dpgr.am/acb50e2
-    facebook: https://dpgr.am/53c1ccc
+    share: https://dpgr.am/d4e9f5a
+    twitter: https://dpgr.am/6a86a1c
+    linkedin: https://dpgr.am/3508bf1
+    reddit: https://dpgr.am/c31ff53
+    facebook: https://dpgr.am/859f3ae
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454098/blog/how-to-add-speech-recognition-to-your-react-project/ograph.png
 ---
@@ -212,3 +210,4 @@ You should see that text in your text box. Hit submit. There it is!
 
 As you’ve seen, there are a couple of steps involved to get Deepgram live transcription in your React project, but luckily, the process is very repeatable once you’ve done it. And now you’ve done it! You can also find all the code in the [repo for this project](https://github.com/deepgram-devs/react-app). To learn more about the features you have access to with our Node SDK, check out our [Node SDK documentation](https://developers.deepgram.com/sdks-tools/sdks/node-sdk/streaming-transcription/). If you have questions or want to learn more about using Automatic Speech Recognition in your React project, please hit us up on Twitter, [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

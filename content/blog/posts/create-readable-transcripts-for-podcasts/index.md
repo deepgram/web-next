@@ -12,11 +12,11 @@ seo:
     title: "How To Transcribe Your Podcast with Python"
     description: "Learn how to create lovely readable transcripts with Python for your podcasts, both before and after publishing."
 shorturls:
-    share: https://dpgr.am/394747a
-    twitter: https://dpgr.am/7aa722d
-    linkedin: https://dpgr.am/d63e5b2
-    reddit: https://dpgr.am/1ca63f6
-    facebook: https://dpgr.am/0833498
+    share: https://dpgr.am/f66d485
+    twitter: https://dpgr.am/d6c2f7c
+    linkedin: https://dpgr.am/9dfba57
+    reddit: https://dpgr.am/ef300d4
+    facebook: https://dpgr.am/e735fb2
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454116/blog/create-readable-transcripts-for-podcasts/ograph.png
 ---
@@ -27,7 +27,7 @@ If you have a podcast, or want to analyze podcasts, this is the post for you! We
 
 You must have Python installed on your machine - I'm using Python 3.10 at the time of writing. You will also need a Deepgram API Key - [get one here](https://console.deepgram.com/signup?jump=keys).
 
-Create a new directory and navigate to it in your terminal. [Create a virtual environment](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) with `python3 -m venv virtual_env` and activate it with `source virtual_env/bin/activate`. Install dependencies with `pip install deepgram asyncio python-dotenv feedparser`.
+Create a new directory and navigate to it in your terminal. [Create a virtual environment](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) with `python3 -m venv virtual_env` and activate it with `source virtual_env/bin/activate`. Install dependencies with `pip install deepgram_sdk asyncio python-dotenv feedparser`.
 
 Open the directory in a code editor, and create an empty `.env` file. Take your Deepgram API Key, and add the following line to `.env`:
 
@@ -180,3 +180,4 @@ if __name__ == '__main__':
     asyncio.run(main())
 ```
 
+        

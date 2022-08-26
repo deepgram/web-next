@@ -7,21 +7,16 @@ authors:
     - tonya-sims
 category: announcement
 tags:
-    - python,
-    - voice-to-text,
-    - speech recognition use cases,
-    - audio,
-    - speech-to-text,
-    - speech to text use cases
+    - python
 seo:
     title: "Deepgram Speech-to-Text Use Cases That Will Transform Your Life - (Special PyCon Edition)"
     description: "Let's look at compelling use cases for Python and Deepgram's speech recognition technology in preparation for PyCon US 2022."
 shorturls:
-    share: https://dpgr.am/34add7b
-    twitter: https://dpgr.am/e9b4221
-    linkedin: https://dpgr.am/6cae4b6
-    reddit: https://dpgr.am/9afec23
-    facebook: https://dpgr.am/65afc72
+    share: https://dpgr.am/24f2c59
+    twitter: https://dpgr.am/c8eb3bc
+    linkedin: https://dpgr.am/60878d1
+    reddit: https://dpgr.am/69f0ab8
+    facebook: https://dpgr.am/d51135b
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454071/blog/pycon-deepgram-usecases/ograph.png
 ---
@@ -75,3 +70,4 @@ Using Deepgram Python speech recognition can also increase educational opportuni
 
 You’ve now learned a handful of use cases for Deepgram voice-to-text transcription and Python. There are many more, and the opportunities are endless. Can you think of other uses cases for Deepgram and our Python SDK? To let us know, you can Tweet us at [@deepgramdevs](https://twitter.com/DeepgramDevs). We would love to see you at PyCon US 2022, so stop by and say hello!
 
+        

@@ -7,22 +7,18 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - streaming,
-    - fetch,
-    - tutorial,
-    - websockets,
-    - audio,
-    - browser,
+    - websockets
+    - browser
     - javascript
 seo:
     title: "Fetch Hosted Audio Streams In The Browser"
     description: "Learn how to fetch an audio stream from a URL, break down a readable stream into chunks using the JavaScript Streams API, and send the audio stream through a WebSocket to Deepgram."
 shorturls:
-    share: https://dpgr.am/ecba061
-    twitter: https://dpgr.am/17ddd19
-    linkedin: https://dpgr.am/784b950
-    reddit: https://dpgr.am/91fb71f
-    facebook: https://dpgr.am/e7e7021
+    share: https://dpgr.am/1aab758
+    twitter: https://dpgr.am/754f7d0
+    linkedin: https://dpgr.am/d758df7
+    reddit: https://dpgr.am/5ef955f
+    facebook: https://dpgr.am/590f31a
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454096/blog/fetch-hosted-audio-streams-in-the-browser/ograph.png
 ---
@@ -192,3 +188,4 @@ socket.onerror = (error) => {
 
 Have questions? We're happy to help [@DeepgramDevs.](https://twitter.com/DeepgramDevs)
 
+        

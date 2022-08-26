@@ -7,18 +7,17 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - vue,
-    - javascript,
-    - tutorial
+    - vuejs
+    - javascript
 seo:
     title: "Diving Into Vue 3 - Reusability with Composables"
     description: "Put everything together that we've learned in the series, and then refactor it all to use composables."
 shorturls:
-    share: https://dpgr.am/6cd9bfe
-    twitter: https://dpgr.am/5c52151
-    linkedin: https://dpgr.am/dbe6afd
-    reddit: https://dpgr.am/214c134
-    facebook: https://dpgr.am/644d453
+    share: https://dpgr.am/d629f17
+    twitter: https://dpgr.am/89aab6c
+    linkedin: https://dpgr.am/4f3ec42
+    reddit: https://dpgr.am/aa1b88d
+    facebook: https://dpgr.am/cc7baa5
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453993/blog/diving-into-vue-3-reusability-with-composables/ograph.png
 ---
@@ -421,3 +420,4 @@ I hope you have enjoyed this series. There is always more to learn, so stay tune
 
 Questions? Comments? Just want to say hi? You can find me on [Twitter](https://twitter.com/sandra_rodgers_)!
 
+        

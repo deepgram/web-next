@@ -7,21 +7,18 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - aws,
-    - javascript,
-    - tutorial,
-    - serverless,
-    - vue,
-    - express
+    - aws
+    - javascript
+    - serverless
 seo:
     title: "Build a Live Streaming Web Application: Vue and Express Setup"
     description: "In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service."
 shorturls:
-    share: https://dpgr.am/d7f36e2
-    twitter: https://dpgr.am/67c0e75
-    linkedin: https://dpgr.am/f302e08
-    reddit: https://dpgr.am/47d879a
-    facebook: https://dpgr.am/f0f75e8
+    share: https://dpgr.am/c1a13f1
+    twitter: https://dpgr.am/e7a043f
+    linkedin: https://dpgr.am/ec098b9
+    reddit: https://dpgr.am/952b793
+    facebook: https://dpgr.am/3d3cf68
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454011/blog/build-a-livestream-web-application-vue-and-express-setup/ograph.png
 ---
@@ -567,3 +564,4 @@ I will also introduce how to use Vue 3 composables to create the **Deepgram capt
 
 I hope you'll join me for my next post. As always, feel free to reach out on [Twitter](https://twitter.com/sandra_rodgers_).
 
+        

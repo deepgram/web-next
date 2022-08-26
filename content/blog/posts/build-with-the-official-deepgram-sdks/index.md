@@ -7,19 +7,18 @@ authors:
     - michael-jolley
 category: tutorial
 tags:
-    - nodejs,
-    - python,
-    - sdk,
-    - javascript
+    - nodejs
+    - python
+    - sdk
 seo:
     title: "Build With the Official Deepgram SDKs"
     description: "Add speech-to-text to your application even faster with the new Node.js and Python SDKs for the Deepgram API."
 shorturls:
-    share: https://dpgr.am/e29db9c
-    twitter: https://dpgr.am/d92db2e
-    linkedin: https://dpgr.am/c21f01f
-    reddit: https://dpgr.am/4ff820a
-    facebook: https://dpgr.am/9d3c042
+    share: https://dpgr.am/9247078
+    twitter: https://dpgr.am/f25c7c4
+    linkedin: https://dpgr.am/6b73861
+    reddit: https://dpgr.am/a157087
+    facebook: https://dpgr.am/c0956e1
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453793/blog/build-with-the-official-deepgram-sdks/ograph.png
 ---
@@ -116,3 +115,4 @@ asyncio.run(main())
 
 Our SDKs are still in their infancy, but we're building them in public. We welcome all issues and pull requests to our Node.js and Python repositories. Of course, we'd also love to hear what you're building, so tweet at [@DeepgramDevs](https://twitter.com/deepgramdevs) and let us know!
 
+        

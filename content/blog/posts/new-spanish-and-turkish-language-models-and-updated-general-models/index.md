@@ -12,11 +12,11 @@ seo:
     title: "New Spanish and Turkish Language Models and Updated General Models"
     description: "We have general released a new Spanish and Turkish speech model, improve all our general models and are limited releasing a Hindi and Conversational AI model"
 shorturls:
-    share: https://dpgr.am/8457dd1
-    twitter: https://dpgr.am/a51c33c
-    linkedin: https://dpgr.am/1d39627
-    reddit: https://dpgr.am/495375e
-    facebook: https://dpgr.am/4b11983
+    share: https://dpgr.am/347b5cf
+    twitter: https://dpgr.am/b074541
+    linkedin: https://dpgr.am/8a0c5a1
+    reddit: https://dpgr.am/128d825
+    facebook: https://dpgr.am/450727b
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453791/blog/new-spanish-and-turkish-language-models-and-updated-general-models/ograph.png
 ---
@@ -41,3 +41,4 @@ Our Production Team and Deepgram Labs are releasing new languages and speech mod
 
 Our Deepgram Labs Models are limited release models that ready to be trained and tailored for your specific use case.  As we obtain additional customer audio data, these models will be moved to General Release. [Contact us](http://www.deepgram.com/contact-us) if you are interested in using these Deepgram Labs models.
 
+        

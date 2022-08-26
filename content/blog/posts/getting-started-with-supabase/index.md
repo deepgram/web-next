@@ -7,18 +7,16 @@ authors:
     - brian-barrow
 category: tutorial
 tags:
-    - database,
-    - supabase,
-    - tutorial
+    - supabase
 seo:
     title: "Getting Started with Supabase"
     description: "Learn how to get started with Supabase, an open-source alternative to Firebase"
 shorturls:
-    share: https://dpgr.am/7b0980e
-    twitter: https://dpgr.am/577af05
-    linkedin: https://dpgr.am/085a904
-    reddit: https://dpgr.am/69e6ba6
-    facebook: https://dpgr.am/1e7df6f
+    share: https://dpgr.am/89c7e8e
+    twitter: https://dpgr.am/019c5c1
+    linkedin: https://dpgr.am/96ed603
+    reddit: https://dpgr.am/dfd7669
+    facebook: https://dpgr.am/1b79cea
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453807/blog/getting-started-with-supabase/ograph.png
 ---
@@ -120,3 +118,4 @@ Now you know the basics of how to set up and use a Supabase Database. This tutor
 
 Before you start using the database in an app, you'll also want to add the "Row Level Security" to your tables. This is beyond the scope of this introduction to Supabase blog, but basically it makes it so only authenticated users can affect the data in the tables. You can find out more in the [Supabase documentation page](https://supabase.io/docs/guides/auth/row-level-security).
 
+        

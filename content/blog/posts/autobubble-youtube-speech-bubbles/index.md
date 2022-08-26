@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase,
-    - facial-recognition,
-    - nodejs,
-    - hackathon
+    - showcase
+    - facial-recognition
+    - nodejs
 seo:
     title: "Add Live Speech Bubbles To YouTube Videos with Autobubble"
     description: "Using facial recognition and speech recognition to create live speech bubbles."
 shorturls:
-    share: https://dpgr.am/1961272
-    twitter: https://dpgr.am/ea3f569
-    linkedin: https://dpgr.am/06c48be
-    reddit: https://dpgr.am/d930526
-    facebook: https://dpgr.am/1b3f558
+    share: https://dpgr.am/54a290e
+    twitter: https://dpgr.am/ae46666
+    linkedin: https://dpgr.am/75df551
+    reddit: https://dpgr.am/91c9f29
+    facebook: https://dpgr.am/dbcb307
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454009/blog/autobubble-youtube-speech-bubbles/ograph.png
 ---
@@ -60,3 +59,4 @@ There were nearly 30 projects that incorporated Deepgram at Hack Cambridge, but 
 
 If you're interested in seeing how AutoBubble was built, you can find the code across two repositories - one for the [server](https://github.com/dantechguy/autobubbleserver) and one for the [client](https://github.com/dantechguy/autobubbleclient).
 
+        

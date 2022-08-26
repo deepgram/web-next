@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - nodejs,
-    - tutorial,
+    - nodejs
     - accessibility
 seo:
     title: "Generate WebVTT and SRT Captions Automatically with Node.js"
     description: "Create ready-to-upload caption files for the web and broadcast."
 shorturls:
-    share: https://dpgr.am/033cf71
-    twitter: https://dpgr.am/9fec97c
-    linkedin: https://dpgr.am/c32f62b
-    reddit: https://dpgr.am/ce3edb2
-    facebook: https://dpgr.am/10a9e03
+    share: https://dpgr.am/edad73f
+    twitter: https://dpgr.am/40622a2
+    linkedin: https://dpgr.am/3530253
+    reddit: https://dpgr.am/76f3d80
+    facebook: https://dpgr.am/2991d2d
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453801/blog/generate-webvtt-srt-captions-nodejs/ograph.png
 ---
@@ -182,3 +181,4 @@ stream.write(response.toSRT())
 
 We actually implemented `.toWebVTT()` and `.toSRT()` straight into the Node.js SDK while writing this post. Now, it's easier than ever to create valid caption files automatically with Deepgram. If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

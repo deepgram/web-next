@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase,
-    - analysis,
-    - research,
-    - hackathon
+    - showcase
+    - analysis
+    - research
 seo:
     title: "Creating Contextual Video Overlays with TomScottPlus"
     description: "How the team behind TomScottPlus used Deepgram to analyze YouTube videos in real-time and provide an overlay with Wikipedia links to read. Read more here."
 shorturls:
-    share: https://dpgr.am/aafd8a0
-    twitter: https://dpgr.am/6281d7c
-    linkedin: https://dpgr.am/ad6766c
-    reddit: https://dpgr.am/128ec7b
-    facebook: https://dpgr.am/b725081
+    share: https://dpgr.am/bfad829
+    twitter: https://dpgr.am/afe279a
+    linkedin: https://dpgr.am/ced2dbb
+    reddit: https://dpgr.am/76bdc62
+    facebook: https://dpgr.am/0a64ab6
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454018/blog/contextual-video-overlay-tomscottplus/ograph.png
 ---
@@ -40,3 +39,4 @@ The Python application then performed basic Natural Language Processing to look 
 
 You can check out the code for this [project on GitHub](https://github.com/StolenCheese/hackathon2022).
 
+        

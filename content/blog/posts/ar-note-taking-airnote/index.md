@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase,
-    - hackathon,
-    - augmented-reality,
-    - ios
+    - showcase
+    - hackathon
+    - augmented-reality
 seo:
     title: "Collaborative Augmented Reality Note-Taking with AiRNote"
     description: "The team behind AirNote utilized Deepgram's Speech Recognition API to create an app for generating, editing, and customizing AR sticky notes in a collaborative environment. Read more here."
 shorturls:
-    share: https://dpgr.am/0f7ff90
-    twitter: https://dpgr.am/5457c72
-    linkedin: https://dpgr.am/120faa9
-    reddit: https://dpgr.am/4c1b401
-    facebook: https://dpgr.am/bf427dc
+    share: https://dpgr.am/9c55e61
+    twitter: https://dpgr.am/324762a
+    linkedin: https://dpgr.am/79a2e5a
+    reddit: https://dpgr.am/0e48208
+    facebook: https://dpgr.am/72043a0
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454058/blog/ar-note-taking-airnote/ograph.png
 ---
@@ -48,3 +47,4 @@ The team managed to overcome their challenges and build a compelling demo that I
 
 You can see the code behind [AiRNote on GitHub](https://github.com/lambda-shuttle/Airnote).
 
+        

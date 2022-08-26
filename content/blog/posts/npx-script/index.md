@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - nodejs,
-    - tutorial,
-    - npm
+    - nodejs
+    - nodejs
 seo:
     title: "Creating an npx Command"
     description: "Build, locally test, and publish npx command scripts"
 shorturls:
-    share: https://dpgr.am/ffaf469
-    twitter: https://dpgr.am/b4f4c58
-    linkedin: https://dpgr.am/002de29
-    reddit: https://dpgr.am/1745bb4
-    facebook: https://dpgr.am/8860bf3
+    share: https://dpgr.am/5d3010e
+    twitter: https://dpgr.am/cf21007
+    linkedin: https://dpgr.am/78c8c7d
+    reddit: https://dpgr.am/31193f0
+    facebook: https://dpgr.am/a2ddc9d
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453846/blog/npx-script/ograph.png
 ---
@@ -222,3 +221,4 @@ Like creating npm packages, making them executable with npx was something I stru
 
 The final project code is available on the [npx branch of our npm-package repository](https://github.com/deepgram-devs/npm-package/tree/npx), and if you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

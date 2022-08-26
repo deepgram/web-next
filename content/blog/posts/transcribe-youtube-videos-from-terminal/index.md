@@ -7,17 +7,16 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - terminal,
     - youtube
 seo:
     title: "How To Transcribe YouTube Videos From Your Terminal"
     description: "A five-year old snippet shared by our CEO still stacks up. Learn how to transcribe a YouTube video entirely from the terminal with youtube-dl and jq."
 shorturls:
-    share: https://dpgr.am/ea99736
-    twitter: https://dpgr.am/623ea0b
-    linkedin: https://dpgr.am/ca09b28
-    reddit: https://dpgr.am/c92034c
-    facebook: https://dpgr.am/6243eec
+    share: https://dpgr.am/0efb794
+    twitter: https://dpgr.am/bf6fe19
+    linkedin: https://dpgr.am/59d015d
+    reddit: https://dpgr.am/fb31c03
+    facebook: https://dpgr.am/2d52871
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454124/blog/transcribe-youtube-videos-from-terminal/ograph.png
 ---
@@ -74,3 +73,4 @@ VIDEO_ID=EmIhbFeJgiE; youtube-dl ${VIDEO_ID} --extract-audio --audio-format wav 
 
 If you have any questions, please let us know - we love to help!
 
+        

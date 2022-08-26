@@ -7,18 +7,17 @@ authors:
     - nikola-whallon
 category: tutorial
 tags:
-    - tutorial,
-    - game-dev,
+    - game-dev
     - unity
 seo:
     title: "How to Add Deepgram Speech Recognition to Your Unity Game"
     description: "In this tutorial, learn how to integrate Deepgram's automatic speech recognition engine into your Unity game."
 shorturls:
-    share: https://dpgr.am/2af1328
-    twitter: https://dpgr.am/81708b8
-    linkedin: https://dpgr.am/5bea07e
-    reddit: https://dpgr.am/6312817
-    facebook: https://dpgr.am/1f7bfc4
+    share: https://dpgr.am/0692b8d
+    twitter: https://dpgr.am/fb3493d
+    linkedin: https://dpgr.am/da35424
+    reddit: https://dpgr.am/6adc409
+    facebook: https://dpgr.am/3ce4691
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454022/blog/deepgram-unity-tutorial/ograph.png
 ---
@@ -458,3 +457,4 @@ on the journey towards making games more immersive, interesting, and inclusive!
 
 If you have any questions, please feel free to reach out on Twitter - we're @DeepgramDevs.
 
+        

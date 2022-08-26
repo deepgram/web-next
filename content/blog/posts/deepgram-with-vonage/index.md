@@ -7,20 +7,16 @@ authors:
     - tonya-sims
 category: tutorial
 tags:
-    - python,
-    - voice-to-text,
-    - speech recognition,
-    - audio,
-    - phone calls
+    - python
 seo:
     title: "Speech Recognition with Vonage and Python"
     description: "Use Deepgram's speech-to-text features with Python and Vonage's API to transcribe real-time audio such as incoming phone calls."
 shorturls:
-    share: https://dpgr.am/ac0dee8
-    twitter: https://dpgr.am/af797b7
-    linkedin: https://dpgr.am/8f41c11
-    reddit: https://dpgr.am/2f6a721
-    facebook: https://dpgr.am/8927265
+    share: https://dpgr.am/ef1d65f
+    twitter: https://dpgr.am/f818563
+    linkedin: https://dpgr.am/d1c4cf8
+    reddit: https://dpgr.am/a051411
+    facebook: https://dpgr.am/15a2bac
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454085/blog/deepgram-with-vonage/ograph.png
 ---
@@ -273,3 +269,4 @@ Finally, we'll try making a phone call and using the non-Vonage phone to initiat
 
 Congratulations on building a speech-to-text Python project with Vonage and Deepgram! If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

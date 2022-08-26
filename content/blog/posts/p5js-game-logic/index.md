@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - javascript,
-    - creative-coding,
-    - p5js,
+    - javascript
+    - p5js
     - beginner
 seo:
     title: "Playing With P5.js: Implementing Game Logic"
     description: "In this post, we'll use P5.js to implement collision detection, manage entities with classes, and handle game state. Learn more now."
 shorturls:
-    share: https://dpgr.am/c75a3e4
-    twitter: https://dpgr.am/529d0a4
-    linkedin: https://dpgr.am/8e27763
-    reddit: https://dpgr.am/223ac1f
-    facebook: https://dpgr.am/5ead91e
+    share: https://dpgr.am/5e8b30b
+    twitter: https://dpgr.am/f15c93a
+    linkedin: https://dpgr.am/13a6df7
+    reddit: https://dpgr.am/060133c
+    facebook: https://dpgr.am/9b5bbd1
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454042/blog/p5js-game-logic/ograph.png
 ---
@@ -341,3 +340,4 @@ Together with the first post in this series, I hope you have the tools you need 
 
 Next week in the third and final part of this series, we'll cover how to integrate voice into your P5 sketches. Until then, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs) if you have any questions or thoughts.
 
+        

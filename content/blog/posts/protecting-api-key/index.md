@@ -7,18 +7,16 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - browser,
-    - tutorial,
-    - best-practice
+    - browser
 seo:
     title: "Browser Live Transcription - Protecting Your API Key"
     description: "Protect your API Key from unauthorized use with these tips."
 shorturls:
-    share: https://dpgr.am/53ff834
-    twitter: https://dpgr.am/8142687
-    linkedin: https://dpgr.am/8fec2eb
-    reddit: https://dpgr.am/4aeaf28
-    facebook: https://dpgr.am/22c757c
+    share: https://dpgr.am/c14514d
+    twitter: https://dpgr.am/ceb2d19
+    linkedin: https://dpgr.am/86668f1
+    reddit: https://dpgr.am/801f139
+    facebook: https://dpgr.am/5a7bbeb
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453850/blog/protecting-api-key/ograph.png
 ---
@@ -210,3 +208,4 @@ API Keys created in the console with roles have more permissions than you would 
 
 If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

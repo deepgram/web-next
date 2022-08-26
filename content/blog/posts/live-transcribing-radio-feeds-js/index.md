@@ -7,17 +7,16 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - javascript,
-    - streaming
+    - javascript
 seo:
     title: "Transcribing Radio Broadcasts With Node.js"
     description: "Learn how to use Deepgram to generate and store transcripts for your favorite radio stations. An excellent starting point to learn more about live transcription."
 shorturls:
-    share: https://dpgr.am/a67168b
-    twitter: https://dpgr.am/1506cdb
-    linkedin: https://dpgr.am/607b65a
-    reddit: https://dpgr.am/7c2fda1
-    facebook: https://dpgr.am/9c62bb0
+    share: https://dpgr.am/dd89e87
+    twitter: https://dpgr.am/dc14509
+    linkedin: https://dpgr.am/ac23935
+    reddit: https://dpgr.am/0f3c3af
+    facebook: https://dpgr.am/151cdf6
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454108/blog/live-transcribing-radio-feeds-js/ograph.png
 ---
@@ -174,3 +173,4 @@ deepgramLive.addListener('transcriptReceived', (message) => {
 
 If you have any questions, please feel free to reach out to us over email (<devrel@deepgram.com>) or via Twitter ([@DeepgramDevs](DeepgramDevs)).
 
+        

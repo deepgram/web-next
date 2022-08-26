@@ -7,17 +7,16 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase,
-    - tutorial
+    - showcase
 seo:
     title: "Video: Coding a Website With Your Voice"
     description: "Deepgram community member Filip builds a project which creates websites through voice commands. Find out how."
 shorturls:
-    share: https://dpgr.am/a5ca58f
-    twitter: https://dpgr.am/6b54c18
-    linkedin: https://dpgr.am/9e54f0a
-    reddit: https://dpgr.am/de79ca5
-    facebook: https://dpgr.am/ea53595
+    share: https://dpgr.am/7718cf2
+    twitter: https://dpgr.am/9b4fcd7
+    linkedin: https://dpgr.am/2c77018
+    reddit: https://dpgr.am/143cc54
+    facebook: https://dpgr.am/30931e1
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453860/blog/coding-website-with-voice/ograph.png
 ---
@@ -34,3 +33,4 @@ In Part 1, Filip expands on our [Get Live Speech Transcriptions In Your Browser]
 
 In Part 2, more functionality was introduced to add layout and styling to a webpage.
 
+        

@@ -7,18 +7,17 @@ authors:
     - bekah-hawrot-weigel
 category: careers
 tags:
-    - developer relations,
-    - writing,
-    - technical writing
+    - technical-writing
+    - technical-writing
 seo:
     title: "What is DevRel anyway: A Deepgram Approach to Developer Relations"
     description: "Developer Relations can mean many things. Keep reading for a high-level understanding of what a DevRel team does and a close-up of how our Deepgram team works."
 shorturls:
-    share: https://dpgr.am/b301ea2
-    twitter: https://dpgr.am/a32e90c
-    linkedin: https://dpgr.am/8b77213
-    reddit: https://dpgr.am/686df28
-    facebook: https://dpgr.am/a6fed08
+    share: https://dpgr.am/1e7b253
+    twitter: https://dpgr.am/133fbb5
+    linkedin: https://dpgr.am/8c7f3f0
+    reddit: https://dpgr.am/7e80e1c
+    facebook: https://dpgr.am/e5819e2
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454076/blog/what-is-devrel-a-deepgram-approach/ograph.png
 ---
@@ -68,3 +67,4 @@ As a DevRel team, we want our interactions to build up the developers we’re en
 
 If you have questions or want to hear more about starting in DevRel, you can check our upcoming Twitter Space or let us know what questions you have about DevRel in general or how our team works together: [@DeepgramDevs](https://twitter.com/DeepgramDevs)
 
+        

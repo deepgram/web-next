@@ -7,17 +7,16 @@ authors:
     - tonya-sims
 category: devlife
 tags:
-    - bio,
     - careers
 seo:
     title: "Tonya Sims Joins the Developer Relations Team"
     description: "Meet Deepgram's new Developer Advocate and learn her story of getting into tech."
 shorturls:
-    share: https://dpgr.am/c2633df
-    twitter: https://dpgr.am/be51bcc
-    linkedin: https://dpgr.am/1149acd
-    reddit: https://dpgr.am/c2a33cd
-    facebook: https://dpgr.am/39c8c7d
+    share: https://dpgr.am/1823103
+    twitter: https://dpgr.am/19b24a3
+    linkedin: https://dpgr.am/74ab82e
+    reddit: https://dpgr.am/6a40500
+    facebook: https://dpgr.am/9c02c30
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454001/blog/tonya-sims-joins-deepgram/ograph.png
 ---
@@ -52,3 +51,4 @@ Outside of work, I enjoy listening to music (anything from Tiesto!) and playing 
 
 It would be great to connect with you! I'm looking forward to learning more about you and what you're working on! Please feel free to reach out to me on [Twitter](https://twitter.com/tonyasims). I hope we have a chance to connect throughout your journey!
 
+        

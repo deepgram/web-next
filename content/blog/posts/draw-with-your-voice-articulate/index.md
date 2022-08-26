@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase,
-    - hackathon,
-    - accessibility,
-    - creative-coding
+    - showcase
+    - hackathon
+    - accessibility
 seo:
     title: "Use Your Voice to Draw with ARTiculate"
     description: "The team behind ARTiculate created a React and P5.js application for voice-based drawing to increase access to creative expression. Learn more here."
 shorturls:
-    share: https://dpgr.am/affd39a
-    twitter: https://dpgr.am/f149c68
-    linkedin: https://dpgr.am/93e9199
-    reddit: https://dpgr.am/154e84e
-    facebook: https://dpgr.am/0fe8a51
+    share: https://dpgr.am/10d75a8
+    twitter: https://dpgr.am/934ac77
+    linkedin: https://dpgr.am/a928f85
+    reddit: https://dpgr.am/e27577b
+    facebook: https://dpgr.am/8e02298
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454024/blog/draw-with-your-voice-articulate/ograph.png
 ---
@@ -46,3 +45,4 @@ The team has plenty of extensions planned, including the ability to fluidly pull
 
 You can try ARTiculate by visiting [art-iculate.netlify.app](https://art-iculate.netlify.app).
 
+        

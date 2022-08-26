@@ -7,19 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - streaming,
-    - websockets,
-    - vuejs,
-    - voice-to-text
+    - websockets
+    - vuejs
 seo:
     title: "Getting Started with Live Transcription and Vue.js"
     description: "Learn how to use Deepgram's Speech-to-Text API for fast and accurate live transcripts in your Vue.js applications."
 shorturls:
-    share: https://dpgr.am/a029bcf
-    twitter: https://dpgr.am/bd638ae
-    linkedin: https://dpgr.am/b09c9b5
-    reddit: https://dpgr.am/90473b3
-    facebook: https://dpgr.am/6f69d29
+    share: https://dpgr.am/e81eaba
+    twitter: https://dpgr.am/eb6c990
+    linkedin: https://dpgr.am/edcdb3d
+    reddit: https://dpgr.am/adf60f5
+    facebook: https://dpgr.am/4db5941
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454106/blog/getting-started-live-transcription-vue/ograph.png
 ---
@@ -310,3 +308,4 @@ This is the most simple implementation with Vue and is written for clarity over 
 
 If you have questions, please feel free to message us on Twitter, [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

@@ -7,19 +7,17 @@ authors:
     - tonya-sims
 category: tutorial
 tags:
-    - python,
-    - flask,
-    - speech recognition,
-    - streaming
+    - python
+    - flask
 seo:
     title: "Live Transcription With Python and Flask"
     description: "Learn how to do a live, real-time transcription with Flask in Python and Deepgram"
 shorturls:
-    share: https://dpgr.am/5c9ec81
-    twitter: https://dpgr.am/a0c4456
-    linkedin: https://dpgr.am/3437599
-    reddit: https://dpgr.am/c36ee2a
-    facebook: https://dpgr.am/9788eac
+    share: https://dpgr.am/bbacddc
+    twitter: https://dpgr.am/d7ec666
+    linkedin: https://dpgr.am/05c42ed
+    reddit: https://dpgr.am/0bf905b
+    facebook: https://dpgr.am/4ee5d48
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454036/blog/live-transcription-flask/ograph.png
 ---
@@ -271,3 +269,4 @@ Let's start our application and start getting real-time transcriptions. From our
 
 Congratulations on building a real-time transcription project with Flask and Deepgram. You can find the [code here](https://github.com/deepgram-devs/live-transcription-flask) with instructions on how to run the project. If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

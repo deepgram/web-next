@@ -7,19 +7,16 @@ authors:
     - tonya-sims
 category: tutorial
 tags:
-    - python,
-    - voice-to-text,
-    - speech recognition,
-    - audio
+    - python
 seo:
     title: "Speech Recognition to Monitor Script Compliance in Python"
     description: "Use Deepgram with Python for script compliance, monitoring real-time audio such as phone calls for specific words and phrases that are legally required."
 shorturls:
-    share: https://dpgr.am/48264d5
-    twitter: https://dpgr.am/f2f03f7
-    linkedin: https://dpgr.am/bd51f60
-    reddit: https://dpgr.am/5e51262
-    facebook: https://dpgr.am/d6d97a6
+    share: https://dpgr.am/cbb4071
+    twitter: https://dpgr.am/b461e6a
+    linkedin: https://dpgr.am/ba726b8
+    reddit: https://dpgr.am/6a4598c
+    facebook: https://dpgr.am/33fe5fc
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454046/blog/python-script-compliance/ograph.png
 ---
@@ -268,3 +265,4 @@ Here’s an example of what our output would look like:
 
 Congratulations on building a Python application with Deepgram to monitor script compliance! You can find the [code here](https://github.com/deepgram-devs/python-script-compliance) with instructions on how to run the project. If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

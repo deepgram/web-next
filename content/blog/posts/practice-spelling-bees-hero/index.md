@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase,
-    - hackathon,
-    - javascript,
-    - creative-coding
+    - showcase
+    - hackathon
+    - javascript
 seo:
     title: "Practice Spelling Bees with Spelling Hero"
     description: "We speak to the developers behind Spelling Hero - a spelling bee simulator complete with contextual usage and multi-difficulty. Learn more here."
 shorturls:
-    share: https://dpgr.am/455e820
-    twitter: https://dpgr.am/3a18a36
-    linkedin: https://dpgr.am/9ca137c
-    reddit: https://dpgr.am/3980f53
-    facebook: https://dpgr.am/d7a84ce
+    share: https://dpgr.am/57b1035
+    twitter: https://dpgr.am/19800df
+    linkedin: https://dpgr.am/c19e631
+    reddit: https://dpgr.am/e61da07
+    facebook: https://dpgr.am/0fb0ea5
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454069/blog/practice-spelling-bees-hero/ograph.png
 ---
@@ -34,3 +33,4 @@ Spelling Hero's data was manually curated in this first version, and each word a
 
 The team used the Deepgram Speech Recognition API to understand a user's voice input, basing their code on our [Browser Live Transcription](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/) tutorial. The user interface was built with P5.js ([see our P5.js tutorial here](https://developers.deepgram.com/blog/2022/03/p5js-getting-started/)), and you can check out the [code on GitHub](https://github.com/saksham-shah/deepgram-game).
 
+        

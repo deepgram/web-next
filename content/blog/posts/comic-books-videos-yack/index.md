@@ -7,18 +7,18 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase,
-    - computer-vision,
+    - showcase
+    - computer-vision
     - hackathon
 seo:
     title: "Create Comic Books From Videos with yack!"
     description: "Developers built a video and restyle it as a classic comic book using Deepgram's Speech Recognition API and computer vision. See how here!"
 shorturls:
-    share: https://dpgr.am/22e764d
-    twitter: https://dpgr.am/a797ca7
-    linkedin: https://dpgr.am/f186f6e
-    reddit: https://dpgr.am/82dddfa
-    facebook: https://dpgr.am/2e7e4ab
+    share: https://dpgr.am/f0ae853
+    twitter: https://dpgr.am/4bb8f13
+    linkedin: https://dpgr.am/ed4384a
+    reddit: https://dpgr.am/3530152
+    facebook: https://dpgr.am/c7e98e3
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454016/blog/comic-books-videos-yack/ograph.png
 ---
@@ -49,3 +49,4 @@ The yack! team built a website for users to interact with and a Docker image to 
 
 You can try out yack! at [yack.ml](https://yack.ml)
 
+        

@@ -7,19 +7,16 @@ authors:
     - tonya-sims
 category: tutorial
 tags:
-    - python,
-    - voice-to-text,
-    - speech recognition,
-    - audio
+    - python
 seo:
     title: "Speech Recognition Analytics for Audio with Python"
     description: "Learn how to combine speech recognition on real-time audio with analytics by utilizing Python and Deepgram's Speech-to-Text API."
 shorturls:
-    share: https://dpgr.am/b4262a7
-    twitter: https://dpgr.am/a7885d8
-    linkedin: https://dpgr.am/2550f86
-    reddit: https://dpgr.am/56a9a1a
-    facebook: https://dpgr.am/5ae85c5
+    share: https://dpgr.am/ad5301e
+    twitter: https://dpgr.am/035d8b3
+    linkedin: https://dpgr.am/6994e98
+    reddit: https://dpgr.am/4d26964
+    facebook: https://dpgr.am/3828283
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454048/blog/python-talk-time-analytics/ograph.png
 ---
@@ -253,3 +250,4 @@ Here’s an example of what our output would look like:
 
 Congratulations on transcribing audio to text with Python using Deepgram with speech-to-text analytics! You can find the [code here](https://github.com/deepgram-devs/python-talk-time-analytics) with instructions on how to run the project. If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs)
 
+        

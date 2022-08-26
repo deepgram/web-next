@@ -7,18 +7,16 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - project,
-    - hardware,
     - raspberrypi
 seo:
     title: "Video: Building a Live Transcription Badge With Deepgram"
     description: "We show you how we built our popular live transcription badge project."
 shorturls:
-    share: https://dpgr.am/a6a3010
-    twitter: https://dpgr.am/03aeb2e
-    linkedin: https://dpgr.am/672afd8
-    reddit: https://dpgr.am/39435cb
-    facebook: https://dpgr.am/8d9bd9a
+    share: https://dpgr.am/52f278c
+    twitter: https://dpgr.am/d9fab4f
+    linkedin: https://dpgr.am/a8943c4
+    reddit: https://dpgr.am/83e1f9e
+    facebook: https://dpgr.am/aa075d0
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453845/blog/live-transcription-badge-video/ograph.png
 ---
@@ -43,3 +41,4 @@ Code:
 
 If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

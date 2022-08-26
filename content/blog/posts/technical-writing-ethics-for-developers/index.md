@@ -7,19 +7,18 @@ authors:
     - bekah-hawrot-weigel
 category: best-practice
 tags:
-    - career,
-    - writing,
-    - technical-writing,
-    - beginners
+    - careers
+    - technical-writing
+    - technical-writing
 seo:
     title: "Technical Writing: Ethics and Honesty for Developers"
     description: "Ethics protects your credibility as a writer and developer and helps to create trust with your readers. Read more about technical writing ethics here."
 shorturls:
-    share: https://dpgr.am/db38f7f
-    twitter: https://dpgr.am/163aa77
-    linkedin: https://dpgr.am/b3f260f
-    reddit: https://dpgr.am/c42f5cc
-    facebook: https://dpgr.am/c588cb6
+    share: https://dpgr.am/18bea59
+    twitter: https://dpgr.am/9a4fcc8
+    linkedin: https://dpgr.am/aca0665
+    reddit: https://dpgr.am/2c2a423
+    facebook: https://dpgr.am/8784580
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454055/blog/technical-writing-ethics-for-developers/ograph.png
 ---
@@ -94,3 +93,4 @@ This post, along with the previous two on writing, should give you an overview o
 
 If you have any questions, or you’d like to hear more about finding your voice, you can hit us up on Twitter and listen to our Tuesday Twitter Spaces, at [@DeepgramDevs](https://twitter.com/DeepgramDevs)
 
+        

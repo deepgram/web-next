@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - javascript,
-    - microphone,
-    - streaming
+    - javascript
+    - microphone
 seo:
     title: "Get Live Speech Transcriptions In Your Browser"
     description: "Learn how to use Deepgram's streaming audio feature with one HTML file."
 shorturls:
-    share: https://dpgr.am/0c15c9e
-    twitter: https://dpgr.am/fd7b4aa
-    linkedin: https://dpgr.am/37db098
-    reddit: https://dpgr.am/3f4c75e
-    facebook: https://dpgr.am/f224dff
+    share: https://dpgr.am/23585b8
+    twitter: https://dpgr.am/fc4da4c
+    linkedin: https://dpgr.am/45fca13
+    reddit: https://dpgr.am/2e16852
+    facebook: https://dpgr.am/a1fa559
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453810/blog/live-transcription-mic-browser/ograph.png
 ---
@@ -208,3 +207,4 @@ The full code is here:
 
 If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

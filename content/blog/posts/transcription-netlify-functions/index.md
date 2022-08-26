@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - nodejs,
-    - tutorial,
-    - netlify,
+    - nodejs
+    - netlify
     - serverless
 seo:
     title: "Transcriptions Without a Server Using Netlify and Deepgram"
     description: "Use Netlify Functions to transcribe pre-recorded audio without a server"
 shorturls:
-    share: https://dpgr.am/b9baf7a
-    twitter: https://dpgr.am/52f6839
-    linkedin: https://dpgr.am/092eb9c
-    reddit: https://dpgr.am/3d97b8c
-    facebook: https://dpgr.am/fa422d9
+    share: https://dpgr.am/a0ed7cf
+    twitter: https://dpgr.am/838386f
+    linkedin: https://dpgr.am/038d7a4
+    reddit: https://dpgr.am/f2a916e
+    facebook: https://dpgr.am/1f580fd
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453852/blog/transcription-netlify-functions/ograph.png
 ---
@@ -189,3 +188,4 @@ Netlify also supports push-to-deploy with GitHub if you configure your project t
 
 Netlify makes deploying serverless functions reasonably straightforward, but if you have any questions after reading this guide, we are here to help! Just pop us a line at [@DeepgramDevs](https://twitter.com/deepgramdevs).
 
+        

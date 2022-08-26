@@ -7,19 +7,17 @@ authors:
     - nikola-whallon
 category: tutorial
 tags:
-    - tutorial,
-    - twilio,
-    - rust,
-    - streaming
+    - twilio
+    - rust
 seo:
     title: "Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram"
     description: "Learn how to transcribe Twilio Voice calls with Deepgram using real-time speech-to-text in Rust."
 shorturls:
-    share: https://dpgr.am/4359fe3
-    twitter: https://dpgr.am/acac658
-    linkedin: https://dpgr.am/35deb9b
-    reddit: https://dpgr.am/d5b1049
-    facebook: https://dpgr.am/32b627a
+    share: https://dpgr.am/eefb3c8
+    twitter: https://dpgr.am/e4fdda8
+    linkedin: https://dpgr.am/817df91
+    reddit: https://dpgr.am/37913ea
+    facebook: https://dpgr.am/ee177cb
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454095/blog/deepgram-twilio-streaming-rust/ograph.png
 ---
@@ -852,3 +850,4 @@ websocat is great for testing, but is not a reasonable final solution for subscr
 
 If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

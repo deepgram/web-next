@@ -7,18 +7,18 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase,
-    - nodejs,
+    - showcase
+    - nodejs
     - hackathon
 seo:
     title: "Voice Control Your Browser with Stëmm"
     description: "Leveraging both the Deepgram API & Chrome APIs into a Chrome extension that lets users control the browser hands-free with voice commands. Learn how we did it here."
 shorturls:
-    share: https://dpgr.am/2e515a5
-    twitter: https://dpgr.am/6ba6390
-    linkedin: https://dpgr.am/a2c4f9c
-    reddit: https://dpgr.am/47330b1
-    facebook: https://dpgr.am/ccb5b85
+    share: https://dpgr.am/af2c780
+    twitter: https://dpgr.am/7bd62ea
+    linkedin: https://dpgr.am/57dae70
+    reddit: https://dpgr.am/6b556e8
+    facebook: https://dpgr.am/f8fce58
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454056/blog/voice-control-browser-stemm/ograph.png
 ---
@@ -51,3 +51,4 @@ Once the extension could access a user's microphone and get transcripts from Dee
 
 The extension is still somewhat limited in terms of commands, but the team directly welcomes contributions to their project repository to add new features. You can find setup and contribution guidelines [directly on GitHub](https://github.com/siddharthsrivastava0501/hackcambridge-2022).
 
+        

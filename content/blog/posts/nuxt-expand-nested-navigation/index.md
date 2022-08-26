@@ -7,18 +7,17 @@ authors:
     - brian-barrow
 category: tutorial
 tags:
-    - tutorial,
-    - nuxt,
-    - vue
+    - nuxtjs
+    - vuejs
 seo:
     title: "Generating Collapsable Navigation from Nuxt Content"
     description: "Generating Collapsable Navigation from Nuxt Content"
 shorturls:
-    share: https://dpgr.am/0dd3452
-    twitter: https://dpgr.am/44cb838
-    linkedin: https://dpgr.am/f004a97
-    reddit: https://dpgr.am/1d86ff5
-    facebook: https://dpgr.am/e84c420
+    share: https://dpgr.am/f02f34c
+    twitter: https://dpgr.am/bf11f9d
+    linkedin: https://dpgr.am/3c0918e
+    reddit: https://dpgr.am/6fa4f3d
+    facebook: https://dpgr.am/c273412
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453848/blog/nuxt-expand-nested-navigation/ograph.png
 ---
@@ -179,3 +178,4 @@ That made the expand/collapse transition much smoother and created a better user
 
 <code-playground src="https://codesandbox.io/s/serene-stitch-30zmi" height="1000" width="1000" />
 
+        

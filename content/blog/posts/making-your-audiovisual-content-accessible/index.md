@@ -7,20 +7,17 @@ authors:
     - bekah-hawrot-weigel
 category: tutorial
 tags:
-    - accessibility,
-    - a11y,
-    - audiovisual,
-    - audio,
-    - visual
+    - accessibility
+    - accessibility
 seo:
     title: "Making Your Audio and Visual Content Accessible"
     description: "Creating audio visual content can be a fresh way to repackage your written developer content, but it’s important to make sure your content is accessible."
 shorturls:
-    share: https://dpgr.am/a7c5954
-    twitter: https://dpgr.am/92014a7
-    linkedin: https://dpgr.am/424afee
-    reddit: https://dpgr.am/e69a766
-    facebook: https://dpgr.am/2da3711
+    share: https://dpgr.am/b6b100c
+    twitter: https://dpgr.am/330366a
+    linkedin: https://dpgr.am/ec9c2cd
+    reddit: https://dpgr.am/247181f
+    facebook: https://dpgr.am/3e0fc3e
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454065/blog/making-your-audiovisual-content-accessible/ograph.png
 ---
@@ -81,3 +78,4 @@ Creating more accessible audiovisual content makes the web more equitable for ev
 
 If you have questions or want to learn more, please hit us up on Twitter, [@DeepgramDevs](https://twitter.com/deepgramdevs).
 
+        

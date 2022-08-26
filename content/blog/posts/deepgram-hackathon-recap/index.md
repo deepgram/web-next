@@ -7,19 +7,16 @@ authors:
     - bekah-hawrot-weigel
 category: best-practice
 tags:
-    - hackathon,
-    - developers,
-    - voice-to-text,
-    - speech-recognition
+    - hackathon
 seo:
     title: "A Deepgram Hackathon Recap: What makes a good submission?"
     description: "The Deepgram + Dev.to hackathon was an opportunity to build with Deepgram or share your coolest ideas, and we got some great ones. Check out what made them stand out."
 shorturls:
-    share: https://dpgr.am/282b047
-    twitter: https://dpgr.am/a27e067
-    linkedin: https://dpgr.am/ac43e24
-    reddit: https://dpgr.am/50ca64b
-    facebook: https://dpgr.am/bc887e8
+    share: https://dpgr.am/3078aa3
+    twitter: https://dpgr.am/f6eee4d
+    linkedin: https://dpgr.am/27e71dc
+    reddit: https://dpgr.am/1f9a0f9
+    facebook: https://dpgr.am/0b92786
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454083/blog/deepgram-hackathon-recap/ograph.png
 ---
@@ -50,3 +47,4 @@ There are a lot of benfits to entering hackathons beyond winning prizes. Enterin
 
 Congratulations to all of our participants. Thank you for sharing your stories and your projects with us. We took a lot of inspiration away from this event, and we’re looking forward to continuing to learn from you and sharing what we’ve learned. If you’re interested in hearing more from us, you can check out our [Community Conversations: Getting Started in DevRel](https://t.co/B55MR34gHn) meetup in a couple of weeks or follow us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs) to catch our next Twitter Space.
 
+        

@@ -7,20 +7,17 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - dolby,
-    - voice-to-text,
-    - speech-recognition,
-    - tutorial,
+    - dolby
     - accessibility
 seo:
     title: "Enhance Your Audio With Dolby.io For Higher Quality Transcripts"
     description: "Sometimes your audio will be low quality, and this may affect your transcripts. Learn how to use the Dolby.io Enhance API to clean up your files for better transcripts and happier ears."
 shorturls:
-    share: https://dpgr.am/efba6c9
-    twitter: https://dpgr.am/a9e0379
-    linkedin: https://dpgr.am/8876199
-    reddit: https://dpgr.am/d10b70b
-    facebook: https://dpgr.am/6e5e1c1
+    share: https://dpgr.am/17f87f4
+    twitter: https://dpgr.am/5325f0a
+    linkedin: https://dpgr.am/2ca55ed
+    reddit: https://dpgr.am/0e2f8f5
+    facebook: https://dpgr.am/e4a028b
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454087/blog/enhance-audio-with-dolby-and-deepgram/ograph.png
 ---
@@ -231,3 +228,4 @@ Today I used [Dolby.io](https://docs.dolby.io/) and [Deepgram](https://developer
 
 If you enjoyed my post, follow me at [Twitter](https://twitter.com/sandra_rodgers_) to continue the conversation.
 
+        

@@ -7,17 +7,16 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - html,
-    - beginners
+    - beginner
 seo:
     title: "How to Add Captions and Subtitles to HTML5 Videos"
     description: "Generating accurate transcripts is often just the start of a journey. Learn how to use Deepgram's best-in-class transcriptions in HTML Video elements."
 shorturls:
-    share: https://dpgr.am/7f7fa03
-    twitter: https://dpgr.am/6b7aeab
-    linkedin: https://dpgr.am/e58d57e
-    reddit: https://dpgr.am/b0ec347
-    facebook: https://dpgr.am/6b9e567
+    share: https://dpgr.am/0126109
+    twitter: https://dpgr.am/3778ec9
+    linkedin: https://dpgr.am/4f6726f
+    reddit: https://dpgr.am/bbb4eb8
+    facebook: https://dpgr.am/86e87ae
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454104/blog/adding-subtitles-to-html-video-element/ograph.png
 ---
@@ -97,3 +96,4 @@ You can add as many subtitle tracks as you want, but only one can have the `defa
 
 As a final note, if you've not seen [Scott's Chili Pepper video](https://deepgram.com/blog/chili-pepper/) which is in the header image for this post - you should. It's hilarious. If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

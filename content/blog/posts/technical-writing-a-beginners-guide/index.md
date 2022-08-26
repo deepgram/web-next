@@ -7,19 +7,18 @@ authors:
     - bekah-hawrot-weigel
 category: best-practice
 tags:
-    - career,
-    - writing,
-    - technical writing,
-    - beginners
+    - careers
+    - technical-writing
+    - technical-writing
 seo:
     title: "Technical Writing: A Beginner's Guide"
     description: "A developer's guide for creating written and technical documentation."
 shorturls:
-    share: https://dpgr.am/15b83a3
-    twitter: https://dpgr.am/596b082
-    linkedin: https://dpgr.am/fb4c656
-    reddit: https://dpgr.am/74bcd3a
-    facebook: https://dpgr.am/ab737c4
+    share: https://dpgr.am/6611fa2
+    twitter: https://dpgr.am/8a6c3fa
+    linkedin: https://dpgr.am/b0c86cb
+    reddit: https://dpgr.am/f0c9059
+    facebook: https://dpgr.am/dd7af93
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454049/blog/technical-writing-a-beginners-guide/ograph.png
 ---
@@ -82,3 +81,4 @@ Some other strategies I like include:
 
 Technical writing should be clear, have a purpose, and share examples that allow for understanding and application if necessary. I’ve heard many people say that technical writing is boring, but that doesn’t have to be the case. It’s interesting if you make it interesting. Stay tuned for the next post in this series where we'll go into some strategies for creating engaging content.
 
+        

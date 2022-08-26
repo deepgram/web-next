@@ -7,16 +7,15 @@ authors:
     - michael-jolley
 category: devlife
 tags:
-    - introduction
 seo:
     title: "Hello World! We're Deepgram."
     description: "Introducing the new Deepgram Developer Platform; the new home of Deepgram's documentation, developer blog, use cases, SDKs, and more."
 shorturls:
-    share: https://dpgr.am/4b94467
-    twitter: https://dpgr.am/ab0f17f
-    linkedin: https://dpgr.am/6028470
-    reddit: https://dpgr.am/580c4b2
-    facebook: https://dpgr.am/a5ff093
+    share: https://dpgr.am/5729572
+    twitter: https://dpgr.am/d21d0b3
+    linkedin: https://dpgr.am/2f063b5
+    reddit: https://dpgr.am/5dd5a34
+    facebook: https://dpgr.am/bfd3c79
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453808/blog/hello-world/ograph.png
 ---
@@ -63,3 +62,4 @@ There's a ton of features, content, and more that I can't wait to share, but
 for now: Hello world! We're Deepgram and we believe every voice deserves to be
 heard and understood.
 
+        

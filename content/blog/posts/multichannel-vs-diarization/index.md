@@ -7,20 +7,17 @@ authors:
     - sandra-rodgers
 category: best-practice
 tags:
-    - multichannel,
-    - diarize,
-    - deepgram,
-    - api,
-    - features
+    - multichannel
+    - diarization
 seo:
     title: "Multichannel vs Diarization"
     description: "Compare Deepgram's multichannel and diarization to learn which scenarios each feature works best for you"
 shorturls:
-    share: https://dpgr.am/8cccc9a
-    twitter: https://dpgr.am/664830e
-    linkedin: https://dpgr.am/8abe92c
-    reddit: https://dpgr.am/7699433
-    facebook: https://dpgr.am/a6cab0b
+    share: https://dpgr.am/8500064
+    twitter: https://dpgr.am/c9b475b
+    linkedin: https://dpgr.am/0cd82e8
+    reddit: https://dpgr.am/43274b0
+    facebook: https://dpgr.am/65997a5
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453833/blog/multichannel-vs-diarization/ograph.png
 ---
@@ -464,3 +461,4 @@ For this scenario (which I'm not going to include an example of due to the diffi
 
 I hope this helped to clarify how Deepgram's multichannel feature and diarize feature can be used to your advantage. Feel free to reach out to me on [Twitter](https://twitter.com/sandra_rodgers_) with any questions!
 
+        

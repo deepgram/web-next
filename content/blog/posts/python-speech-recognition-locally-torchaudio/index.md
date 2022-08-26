@@ -12,11 +12,11 @@ seo:
     title: "Python Speech Recognition Locally with TorchAudio"
     description: "Learn how to use the Python TorchAudio library and its Emformer Model for local speech recognition"
 shorturls:
-    share: https://dpgr.am/a719808
-    twitter: https://dpgr.am/e2eb4bb
-    linkedin: https://dpgr.am/923903a
-    reddit: https://dpgr.am/bfb7039
-    facebook: https://dpgr.am/81c1595
+    share: https://dpgr.am/6f6eb4e
+    twitter: https://dpgr.am/7fdfd20
+    linkedin: https://dpgr.am/d2e2258
+    reddit: https://dpgr.am/1385e37
+    facebook: https://dpgr.am/b02940e
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454110/blog/python-speech-recognition-locally-torchaudio/ograph.png
 ---
@@ -27,13 +27,13 @@ We’ve all heard this when calling customer service. What are they doing with t
 
 In this post, we’ll focus on how to do speech recognition locally on your device using TorchAudio’s pre-built Emformer RNN-T model. We will cover:
 
-- [Understanding PyTorch TorchAudio](#understanding-pytorch-torchaudio)
-- [Setting Up TorchAudio for Speech Recognition](#setting-up-torchaudio-for-speech-recognition)
-- [Building a Python Audio Data Streaming Function for Speech Recognition](#building-a-python-audio-data-streaming-function-for-speech-recognition)
-- [Setting up Python Speech Recognition Inference Pipeline](#setting-up-python-speech-recognition-inference-pipeline)
-- [Creating a Context Cache to Store Audio Data for Speech Recognition](#creating-a-context-cache-to-store-audio-data-for-speech-recognition)
-- [Using TorchAudio's Emformer Model for Local Speech Recognition in Python](#using-torchaudios-emformer-model-for-local-speech-recognition-in-python)
-- [In Summary](#in-summary)
+*   [Understanding PyTorch TorchAudio](#understanding-pytorch-torchaudio)
+*   [Setting Up TorchAudio for Speech Recognition](#setting-up-torchaudio-for-speech-recognition)
+*   [Building a Python Audio Data Streaming Function for Speech Recognition](#building-a-python-audio-data-streaming-function-for-speech-recognition)
+*   [Setting up Python Speech Recognition Inference Pipeline](#setting-up-python-speech-recognition-inference-pipeline)
+*   [Creating a Context Cache to Store Audio Data for Speech Recognition](#creating-a-context-cache-to-store-audio-data-for-speech-recognition)
+*   [Using TorchAudio’s Emformer Model for Local Speech Recognition in Python](#using-torchaudios-emformer-model-for-local-speech-recognition-in-python)
+*   [In Summary](#in-summary)
 
 ## Understanding PyTorch TorchAudio
 
@@ -199,3 +199,4 @@ In this post, we covered how to run speech recognition locally with their Emform
 
 Want to do speech recognition without all that code? [Sign up for Deepgram](https://console.deepgram.com) today and be up and running in just a few minutes.
 
+        

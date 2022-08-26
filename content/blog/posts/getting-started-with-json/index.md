@@ -7,18 +7,17 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - nodejs,
-    - python,
-    - tutorial
+    - nodejs
+    - python
 seo:
     title: "Getting Started with JSON"
     description: "Learn the basics of JSON and how to work with data in a JSON object."
 shorturls:
-    share: https://dpgr.am/041af10
-    twitter: https://dpgr.am/807f443
-    linkedin: https://dpgr.am/50ca9fa
-    reddit: https://dpgr.am/0c5805b
-    facebook: https://dpgr.am/022e7cb
+    share: https://dpgr.am/93e1090
+    twitter: https://dpgr.am/7dd0ca8
+    linkedin: https://dpgr.am/1d55e1e
+    reddit: https://dpgr.am/7daa083
+    facebook: https://dpgr.am/840ab1c
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453805/blog/getting-started-with-json/ograph.png
 ---
@@ -272,3 +271,4 @@ When comparing both languages, you can see that the way to get the data that you
 
 I hope you learned a few interesting facts about JSON. Feel free to [reach out](https://twitter.com/sandra_rodgers_) with comments, questions, or any other tidbits worth knowing about JSON.
 
+        

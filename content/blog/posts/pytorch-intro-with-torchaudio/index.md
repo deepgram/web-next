@@ -7,17 +7,16 @@ authors:
     - yujian-tang
 category: tutorial
 tags:
-    - python,
-    - audio
+    - python
 seo:
     title: "Introduction to PyTorch Audio Data via TorchAudio"
     description: "Learn how to use TorchAudio to transform, augment, and extract features from audio data."
 shorturls:
-    share: https://dpgr.am/0f9ecb9
-    twitter: https://dpgr.am/5b1c2a9
-    linkedin: https://dpgr.am/3761b8c
-    reddit: https://dpgr.am/2ea56c8
-    facebook: https://dpgr.am/4d56e4a
+    share: https://dpgr.am/08d1281
+    twitter: https://dpgr.am/b0e6457
+    linkedin: https://dpgr.am/22478f3
+    reddit: https://dpgr.am/33e3a34
+    facebook: https://dpgr.am/7f0d64d
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454102/blog/pytorch-intro-with-torchaudio/ograph.png
 ---
@@ -26,14 +25,14 @@ PyTorch is one of the leading machine learning frameworks in Python. Recently, P
 
 In this post, we'll cover:
 
-- [Setting up PyTorch TorchAudio for Audio Data Augmentation](#setting-up-pytorch-torchaudio-for-audio-data-augmentation)
-- [Adding Effects for Audio Data Augmentation with PyTorch TorchAudio](#adding-effects-for-audio-data-augmentation-with-pytorch-torchaudio)
-- [Using Sound Effects in Torchaudio](#using-sound-effects-in-torchaudio)
-- [Adding Background Noise](#adding-background-noise)
-- [Adding Room Reverberation](#adding-room-reverberation)
-- [Advanced Resampling of Audio Data with TorchAudio](#advanced-resampling-of-audio-data-with-torchaudio)
-- [Audio Feature Extraction with PyTorch TorchAudio](#audio-feature-extraction-with-pytorch-torchaudio)
-- [In Summary](#in-summary)
+*   [Setting up PyTorch TorchAudio for Audio Data Augmentation](#setting-up-pytorch-torchaudio-for-audio-data-augmentation)
+*   [Adding Effects for Audio Data Augmentation with PyTorch TorchAudio](#adding-effects-for-audio-data-augmentation-with-pytorch-torchaudio)
+*   [Using Sound Effects in TorchAudio](#using-sound-effects-in-torchaudio)
+*   [Adding Background Noise](#adding-background-noise)
+*   [Adding Room Reverberation](#adding-room-reverberation)
+*   [Advanced Resampling of Audio Data with TorchAudio](#advanced-resampling-of-audio-data-with-torchaudio)
+*   [Audio Feature Extraction with PyTorch TorchAudio](#audio-feature-extraction-with-pytorch-torchaudio)
+*   [In Summary](#in-summary)
 
 ## Setting up PyTorch TorchAudio for Audio Data Augmentation
 
@@ -653,3 +652,4 @@ TorchAudio also provides other audio manipulation methods as well, such as advan
 
 Finally, we covered how to use TorchAudio for feature extraction. We showed how to create a spectrogram to get spectral features, reverse that spectrogram with the Griffin-Lim formula, and how to create and use mel-scale bins to get mel-frequency cepstral coefficients (MFCC) features.
 
+        

@@ -7,17 +7,17 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - vue,
+    - vuejs
     - javascript
 seo:
     title: "Diving Into Vue 3 - Getting Started"
     description: "Compare how setting up a project in Vue 3 differs from setting one up in Vue 2, and take a look at what Vue 3 gives out of the box."
 shorturls:
-    share: https://dpgr.am/581df9d
-    twitter: https://dpgr.am/1254cd2
-    linkedin: https://dpgr.am/e0f6e55
-    reddit: https://dpgr.am/00d9dbe
-    facebook: https://dpgr.am/f463e22
+    share: https://dpgr.am/7f7a2e9
+    twitter: https://dpgr.am/d1d8f9b
+    linkedin: https://dpgr.am/2b4d230
+    reddit: https://dpgr.am/af0682a
+    facebook: https://dpgr.am/af881e5
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453841/blog/diving-into-vue-3-getting-started/ograph.png
 ---
@@ -246,3 +246,4 @@ In my next post in this series, I'll examine the `setup() ` function, which is p
 
 Please follow me on [Twitter](https://twitter.com/sandra_rodgers_) if you want to dive into more Vue 3 with me!
 
+        

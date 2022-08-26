@@ -7,19 +7,17 @@ authors:
     - tonya-sims
 category: tutorial
 tags:
-    - python,
-    - quart,
-    - speech recognition,
-    - streaming
+    - python
+    - quart
 seo:
     title: "Live Transcription With Python and Quart"
     description: "Learn how to do a live, real-time voice-to-text transcription with Quart's Python web microframework and Deepgram's Python SDK."
 shorturls:
-    share: https://dpgr.am/67bde88
-    twitter: https://dpgr.am/6d8cf70
-    linkedin: https://dpgr.am/9ea9c12
-    reddit: https://dpgr.am/1ee7bbd
-    facebook: https://dpgr.am/e67dd6c
+    share: https://dpgr.am/c6f6137
+    twitter: https://dpgr.am/040665d
+    linkedin: https://dpgr.am/4bafb11
+    reddit: https://dpgr.am/0bc0bc8
+    facebook: https://dpgr.am/1c9138b
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454038/blog/live-transcription-quart/ograph.png
 ---
@@ -272,3 +270,4 @@ Let’s start our application and start getting real-time audio transcriptions. 
 
 Congratulations on building a live voice-to-text transcription project with Quart and Deepgram. You can find the [code here](https://github.com/deepgram-devs/live-transcription-quart) with instructions on how to run the project. If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

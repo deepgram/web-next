@@ -7,18 +7,18 @@ authors:
     - michael-jolley
 category: tutorial
 tags:
-    - dotnet,
-    - nuget,
+    - dotnet
+    - dotnet
     - sdk
 seo:
     title: "Building a Cross Platform NuGet Package"
     description: "Learning to build a NuGet package by building a .NET SDK for the Deepgram API, while ensuring it's compatible with as many versions of the .NET Framework and as many platforms as possible."
 shorturls:
-    share: https://dpgr.am/e92ce65
-    twitter: https://dpgr.am/902605c
-    linkedin: https://dpgr.am/6ff01c2
-    reddit: https://dpgr.am/cb34cc6
-    facebook: https://dpgr.am/4f6177d
+    share: https://dpgr.am/80c1eaf
+    twitter: https://dpgr.am/63333a7
+    linkedin: https://dpgr.am/22512d8
+    reddit: https://dpgr.am/0688948
+    facebook: https://dpgr.am/7764cea
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453827/blog/cross-platform-nuget-dotnet/ograph.png
 ---
@@ -220,3 +220,4 @@ Also, the entire project has been
 and we'd love your input, feedback, and contributions to make it even better!
 Happy building!
 
+        

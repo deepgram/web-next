@@ -7,19 +7,18 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - aws,
-    - javascript,
-    - tutorial,
-    - vue
+    - aws
+    - javascript
+    - vuejs
 seo:
     title: "How to Write Vue 3 Composables for a Third-Party API Integration"
     description: "In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service."
 shorturls:
-    share: https://dpgr.am/2aafd70
-    twitter: https://dpgr.am/83fea18
-    linkedin: https://dpgr.am/36731f3
-    reddit: https://dpgr.am/fbed489
-    facebook: https://dpgr.am/6986dd4
+    share: https://dpgr.am/57da115
+    twitter: https://dpgr.am/54e93b8
+    linkedin: https://dpgr.am/f27181e
+    reddit: https://dpgr.am/7b9f73b
+    facebook: https://dpgr.am/c3ea449
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454030/blog/how-to-write-vue-3-composables-for-a-third-party-api-integration/ograph.png
 ---
@@ -391,3 +390,4 @@ In the next post, I'll show how to write composables for using Deepgram's API to
 
 I hope you'll join me for the next post. Follow me on [Twitter](https://twitter.com/sandra_rodgers_) so you don't miss it!
 
+        

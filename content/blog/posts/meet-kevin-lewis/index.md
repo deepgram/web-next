@@ -7,17 +7,16 @@ authors:
     - kevin-lewis
 category: devlife
 tags:
-    - bio,
     - careers
 seo:
     title: "Kevin Lewis Joins the Developer Relations Team"
     description: "Meet Deepgram's new Developer Advocate and learn his story of getting into tech."
 shorturls:
-    share: https://dpgr.am/4f3b385
-    twitter: https://dpgr.am/e64588f
-    linkedin: https://dpgr.am/25018f1
-    reddit: https://dpgr.am/f530da6
-    facebook: https://dpgr.am/6d2aa57
+    share: https://dpgr.am/f4d8f65
+    twitter: https://dpgr.am/5660461
+    linkedin: https://dpgr.am/3661792
+    reddit: https://dpgr.am/32d7dca
+    facebook: https://dpgr.am/867a210
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453814/blog/meet-kevin-lewis/ograph.png
 ---
@@ -32,3 +31,4 @@ What else? [I like boardgames](https://boardgamegeek.com/collection/user/phazono
 
 Whether it's to do with Deepgram, events, being an early-career dev, or anything else - please feel free to reach out wherever I am online - Twitter is generally best (I'm [@\_phzn](https://twitter.com/_phzn)).
 
+        

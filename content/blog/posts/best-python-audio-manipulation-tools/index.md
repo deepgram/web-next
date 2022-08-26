@@ -7,17 +7,16 @@ authors:
     - yujian-tang
 category: tutorial
 tags:
-    - python,
-    - concept
+    - python
 seo:
     title: "Best Python Tools for Manipulating Audio Data"
     description: "A comprehensive guide on using Python to work with audio files."
 shorturls:
-    share: https://dpgr.am/825f485
-    twitter: https://dpgr.am/503dc70
-    linkedin: https://dpgr.am/f2c87e4
-    reddit: https://dpgr.am/0af3fb5
-    facebook: https://dpgr.am/ba9a8e8
+    share: https://dpgr.am/737f53a
+    twitter: https://dpgr.am/b27d19f
+    linkedin: https://dpgr.am/de1fc03
+    reddit: https://dpgr.am/42f1085
+    facebook: https://dpgr.am/29312b6
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454091/blog/best-python-audio-manipulation-tools/ograph.png
 ---
@@ -26,29 +25,18 @@ Python provides us with many packages to manipulate audio data, but they don’t
 
 Note that this post is written using Python 3.9 as many audio packages have not yet been upgraded to work with 3.10 or 3.11. In this post we’ll cover:
 
-- [An Introduction to Audio Data](#an-introduction-to-audio-data)
-  - [What Is a Sampling Rate?](#what-is-a-sampling-rate)
-  - [Types of Audio Data](#types-of-audio-data)
-- [Ways To Use Audio Data](#ways-to-use-audio-data)
-- [Recording Audio Data With Python](#recording-audio-data-with-python)
-  - [Use PyAudio To Record Sound](#use-pyaudio-to-record-sound)
-  - [Record With Python-Sounddevice](#record-with-python-sounddevice)
-- [Playing Audio Data With Python](#playing-audio-data-with-python)
-  - [Use Pyaudio To Play Audio](#use-pyaudio-to-play-audio)
-  - [Play Audio With Python-sounddevice](#play-audio-with-python-sounddevice)
-- [Clipping Audio Data With Python](#clipping-audio-data-with-python)
-  - [Clip Audio With Pydub](#clip-audio-with-pydub)
-  - [Trim Audio Clips With FFMPEG](#trim-audio-clips-with-ffmpeg)
-- [Manipulating Audio Data Sampling Rates With Python](#manipulating-audio-data-sampling-rates-with-python)
-  - [Pydub](#pydub)
-  - [Scipy](#scipy)
-- [Changing Volume of Audio Data with Python](#changing-volume-of-audio-data-with-python)
-- [Combining Two Audio Files With Python](#combining-two-audio-files-with-python)
-- [Overlay Two Audio Files With Python](#overlay-two-audio-files-with-python)
-- [Changing Audio Data File Formats With Python](#changing-audio-data-file-formats-with-python)
-- [Transcribe Audio Data With a Web API](#transcribe-audio-data-with-a-web-api)
-- [Summary of the Best Python Tools for Manipulating Audio Data](#summary-of-the-best-python-tools-for-manipulating-audio-data)
-- [Further Reading](#further-reading)
+*   [An Introduction to Audio Data](#an-introduction-to-audio-data)
+*   [Ways To Use Audio Data](#ways-to-use-audio-data)
+*   [Recording Audio Data With Python](#recording-audio-data-with-python)
+*   [Playing Audio Data With Python](#playing-audio-data-with-python)
+*   [Clipping Audio Data With Python](#clipping-audio-data-with-python)
+*   [Manipulating Audio Data Sampling Rates With Python](#manipulating-audio-data-sampling-rates-with-python)
+*   [Changing Volume of Audio Data With Python](#changing-volume-of-audio-data-with-python)
+*   [Combining Two Audio Files With Python](#combining-two-audio-files-with-python)
+*   [Overlay Two Audio Files With Python](#overlay-two-audio-files-with-python)
+*   [Changing Audio Data File Formats With Python](#changing-audio-data-file-formats-with-python)
+*   [Transcribe Audio Data With a Web API](#transcribe-audio-data-with-a-web-api)
+*   [Summary of the Best Python Tools for Manipulating Audio Data](#summary-of-the-best-python-tools-for-manipulating-audio-data)
 
 ## An Introduction to Audio Data
 
@@ -402,3 +390,4 @@ We learned how to play and record audio data using `pyaudio` and `python-soundde
 *   [Lecture Notes on Audio Data from Penn](https://www.ling.upenn.edu/courses/Spring_2003/ling538/Lecnotes/AudioData.html)
 *   [Audio File Formats](https://en.wikipedia.org/wiki/Audio_file_format)
 
+        

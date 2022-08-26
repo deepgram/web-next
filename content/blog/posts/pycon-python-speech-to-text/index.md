@@ -7,21 +7,16 @@ authors:
     - tonya-sims
 category: announcement
 tags:
-    - python,
-    - voice-to-text,
-    - speech recognition,
-    - audio,
-    - speech-to-text,
-    - speech to text
+    - python
 seo:
     title: "Using Python With Speech-to-Text (Special PyCon Edition)"
     description: "Let's look at how we can use Python and Deepgram's speech recognition technology together in preparation for PyCon US 2022."
 shorturls:
-    share: https://dpgr.am/b0cf349
-    twitter: https://dpgr.am/38d90dd
-    linkedin: https://dpgr.am/b961966
-    reddit: https://dpgr.am/d95644b
-    facebook: https://dpgr.am/ea4fa11
+    share: https://dpgr.am/6a4d67a
+    twitter: https://dpgr.am/1d02f94
+    linkedin: https://dpgr.am/f232fb0
+    reddit: https://dpgr.am/a7dc3a9
+    facebook: https://dpgr.am/76602c4
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454073/blog/pycon-python-speech-to-text/ograph.png
 ---
@@ -80,3 +75,4 @@ We are very excited to help sponsor PyCon this year. When you’re free, you can
 
 We’re looking forward to connecting with you!
 
+        

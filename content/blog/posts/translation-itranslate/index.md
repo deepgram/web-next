@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - tutorial,
-    - translation,
+    - translation
     - nodejs
 seo:
     title: "Adding Translation to Your Transcription Project"
     description: "Use iTranslate's API to translate both pre-recorded and live transcription."
 shorturls:
-    share: https://dpgr.am/2570cbc
-    twitter: https://dpgr.am/50aa291
-    linkedin: https://dpgr.am/59ed885
-    reddit: https://dpgr.am/7d1658e
-    facebook: https://dpgr.am/3ef2d03
+    share: https://dpgr.am/ea626e0
+    twitter: https://dpgr.am/291f11b
+    linkedin: https://dpgr.am/2f4977d
+    reddit: https://dpgr.am/4810389
+    facebook: https://dpgr.am/dbbcb17
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453854/blog/translation-itranslate/ograph.png
 ---
@@ -157,3 +156,4 @@ Because iTranslate is such a fast translation service, it is a good pairing with
 
 If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

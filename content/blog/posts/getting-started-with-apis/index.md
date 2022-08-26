@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - nodejs,
-    - python,
-    - tutorial
+    - nodejs
+    - python
 seo:
     title: "Getting Started with APIs"
     description: "Learn about what APIs are, how to use them, and make your first requests."
 shorturls:
-    share: https://dpgr.am/59e5630
-    twitter: https://dpgr.am/2e51c2c
-    linkedin: https://dpgr.am/791a741
-    reddit: https://dpgr.am/1ce1429
-    facebook: https://dpgr.am/9b6641f
+    share: https://dpgr.am/048ee6b
+    twitter: https://dpgr.am/69ee488
+    linkedin: https://dpgr.am/f3db1d3
+    reddit: https://dpgr.am/bbd4f04
+    facebook: https://dpgr.am/af636fc
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453803/blog/getting-started-with-apis/ograph.png
 ---
@@ -198,3 +197,4 @@ Hopefully you feel more confident in using APIs. Before we end I want to share a
 
 I hope you found this valuable - it's the kind of summary I would have really appreciated as I started out. If you have further questions because things don't make sense, or you want to expand on topics mentioned here or elsewhere - please reach out to us on Twitter (we are [@DeepgramDevs](https://twitter.com/DeepgramDevs)).
 
+        

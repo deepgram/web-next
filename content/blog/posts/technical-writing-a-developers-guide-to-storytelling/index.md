@@ -7,19 +7,18 @@ authors:
     - bekah-hawrot-weigel
 category: best-practice
 tags:
-    - career,
-    - writing,
-    - technical-writing,
-    - beginners
+    - careers
+    - technical-writing
+    - technical-writing
 seo:
     title: "Technical Writing: A Developer's Guide to Storytelling"
     description: "A complete developer's guide with tips and tricks for implementing storytelling into technical writing and documentation. Read more here."
 shorturls:
-    share: https://dpgr.am/78edc74
-    twitter: https://dpgr.am/0adb15b
-    linkedin: https://dpgr.am/7be7b01
-    reddit: https://dpgr.am/9a1b7fd
-    facebook: https://dpgr.am/b439eea
+    share: https://dpgr.am/66fd1e9
+    twitter: https://dpgr.am/d61100d
+    linkedin: https://dpgr.am/45312be
+    reddit: https://dpgr.am/ec7d7cf
+    facebook: https://dpgr.am/7419fdb
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454051/blog/technical-writing-a-developers-guide-to-storytelling/ograph.png
 ---
@@ -73,3 +72,4 @@ Writing, of course is a skill learned on its own aside from technical knowledge.
 
 If you're enjoying this series, be sure to check out the Twitter Spaces we're doing by following us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

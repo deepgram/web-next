@@ -9,19 +9,16 @@ category: tutorial
 tags:
     - aws
     - javascript
-    - tutorial
     - serverless
-    - vue
-    - express
 seo:
     title: "Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component"
     description: "In this segment, learn how to use Vue 3 composables to power a text-captions component that integrates with Deepgram's speech-to-text API. Read more here!"
 shorturls:
-    share: https://dpgr.am/74d357f
-    twitter: https://dpgr.am/5d4cf77
-    linkedin: https://dpgr.am/dc3449e
-    reddit: https://dpgr.am/3628a36
-    facebook: https://dpgr.am/bce50aa
+    share: https://dpgr.am/5f3d18c
+    twitter: https://dpgr.am/6dfa73e
+    linkedin: https://dpgr.am/27c8482
+    reddit: https://dpgr.am/ec771f4
+    facebook: https://dpgr.am/cb3aca0
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454007/blog/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/ograph.png
 ---
@@ -517,3 +514,4 @@ It's been a great experience learning about Amazon IVS and Deepgram, and I've go
 
 If you enjoyed this series, please follow me on [Twitter](https://twitter.com/sandra_rodgers_) to receive updates on future series I have in the works!
 
+        

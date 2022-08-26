@@ -7,20 +7,18 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - vue,
-    - javascript,
-    - tutorial,
-    - typescript,
-    - pinia
+    - vuejs
+    - javascript
+    - typescript
 seo:
     title: "Build a To-do List App with Pinia and Vue 3"
     description: "Learn about Vue 3's new official state management system Pinia while building a to-do list app. Bonus - add typescript!"
 shorturls:
-    share: https://dpgr.am/c0cf686
-    twitter: https://dpgr.am/832d87f
-    linkedin: https://dpgr.am/2fb76cd
-    reddit: https://dpgr.am/a714061
-    facebook: https://dpgr.am/ba13527
+    share: https://dpgr.am/9d6a0bc
+    twitter: https://dpgr.am/9218baf
+    linkedin: https://dpgr.am/b0575b7
+    reddit: https://dpgr.am/8761a94
+    facebook: https://dpgr.am/f7cf134
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453154/blog/build-a-todo-list-with-pinia-and-vue-3/ograph.png
 ---
@@ -540,3 +538,4 @@ I hope this blog post has been helpful. I'm very excited about Pinia because of 
 
 If you have any questions, feel free to reach out on [Twitter](https://twitter.com/sandra_rodgers_)!
 
+        

@@ -7,17 +7,16 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - nodejs,
-    - tutorial
+    - nodejs
 seo:
     title: "Automatically Censor Profanity with Node.js"
     description: "Learn how to create censored audio files automatically."
 shorturls:
-    share: https://dpgr.am/1690c8d
-    twitter: https://dpgr.am/70c5245
-    linkedin: https://dpgr.am/dda8617
-    reddit: https://dpgr.am/72a9a7b
-    facebook: https://dpgr.am/92bcba7
+    share: https://dpgr.am/562fccf
+    twitter: https://dpgr.am/f751da2
+    linkedin: https://dpgr.am/b3df202
+    reddit: https://dpgr.am/afc2f1d
+    facebook: https://dpgr.am/d4e7bb9
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453797/blog/censor-profanity-nodejs/ograph.png
 ---
@@ -189,3 +188,4 @@ A transcript is not always the final step in a project - you can use the structu
 
 The complete project is available at <https://github.com/deepgram-devs/censor-audio> and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

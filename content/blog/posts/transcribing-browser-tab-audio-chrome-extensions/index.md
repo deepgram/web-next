@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - extension,
-    - javascript,
-    - streaming
+    - extension
+    - javascript
 seo:
     title: "Transcribing Browser Tab Audio with Chrome Extensions"
     description: "Build your first Google Chrome browser extension and learn how to use Deepgram's speech-to-text API to record tab audio, with and without your microphone."
 shorturls:
-    share: https://dpgr.am/c2d3a5f
-    twitter: https://dpgr.am/43d2800
-    linkedin: https://dpgr.am/9c228cf
-    reddit: https://dpgr.am/d149963
-    facebook: https://dpgr.am/c3644d1
+    share: https://dpgr.am/56c127e
+    twitter: https://dpgr.am/02a6d9c
+    linkedin: https://dpgr.am/8fa7312
+    reddit: https://dpgr.am/f2281f2
+    facebook: https://dpgr.am/4561947
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454112/blog/transcribing-browser-tab-audio-chrome-extensions/ograph.png
 ---
@@ -368,3 +367,4 @@ There's so much you can do to improve your Chrome extension - make it look nicer
 
 You can find the full finished code for this project on GitHub at [deepgram-devs/transcription-chrome-extension](https://github.com/deepgram-devs/transcription-chrome-extension). As ever, if you have any questions, please feel free to reach out on Twitter (we are [@DeepgramDevs](https://twitter.com/DeepgramDevs)).
 
+        

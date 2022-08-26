@@ -7,19 +7,18 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase,
-    - machine-learning,
-    - gpt-3,
-    - hackathon
+    - showcase
+    - machine-learning
+    - gpt-3
 seo:
     title: "Sharpen Your Foreign Language Skills with Triolingo's Chatbot"
     description: "With Deepgram and GPT-3, the team behind Triolingo created a realistic multilingual chatbot to help language learners gain confidence in conversation. Read about it here."
 shorturls:
-    share: https://dpgr.am/710b82d
-    twitter: https://dpgr.am/a328d7b
-    linkedin: https://dpgr.am/84f952a
-    reddit: https://dpgr.am/6df6aa9
-    facebook: https://dpgr.am/e31a621
+    share: https://dpgr.am/8d8733c
+    twitter: https://dpgr.am/f1eccfe
+    linkedin: https://dpgr.am/96c7dfd
+    reddit: https://dpgr.am/b41771a
+    facebook: https://dpgr.am/82c0534
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454026/blog/foreign-language-practice-triolingo/ograph.png
 ---
@@ -54,3 +53,4 @@ There are different grammatical constructs in some languages depending on who yo
 
 You can try out a [hosted version of Triolingo](https://triolingo.blockfour.co.uk/), and check out the [code on GitHub](https://github.com/meganelisabethfinch/HackCambridgeAtlas).
 
+        

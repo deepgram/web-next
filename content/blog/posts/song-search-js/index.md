@@ -7,19 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - javascript,
-    - microphone,
-    - streaming,
-    - lyrics
+    - javascript
+    - microphone
 seo:
     title: "Building a Voice-Powered Song Search"
     description: "🎅  Let Deepgram detect the Christmas song"
 shorturls:
-    share: https://dpgr.am/3194a5c
-    twitter: https://dpgr.am/84d3de2
-    linkedin: https://dpgr.am/7a71bd9
-    reddit: https://dpgr.am/859fcaf
-    facebook: https://dpgr.am/bd75d48
+    share: https://dpgr.am/15b5006
+    twitter: https://dpgr.am/73a2300
+    linkedin: https://dpgr.am/3e7d48b
+    reddit: https://dpgr.am/e2319b5
+    facebook: https://dpgr.am/cd65bc2
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453835/blog/song-search-js/ograph.png
 ---
@@ -313,3 +311,4 @@ This post has also introduced you to the code required to stream your microphone
 
 We'll have some more posts coming out before Christmas, but from me, this is it until January, so please have a wonderful festive period and a wonderful new year. The complete project is available at <https://github.com/deepgram-devs/song-search>, and if you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

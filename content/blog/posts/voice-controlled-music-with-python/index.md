@@ -12,11 +12,11 @@ seo:
     title: "How to Use Voice to Control Music with Python and Deepgram"
     description: "This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano."
 shorturls:
-    share: https://dpgr.am/5e41c3e
-    twitter: https://dpgr.am/eefc21a
-    linkedin: https://dpgr.am/88dd2a7
-    reddit: https://dpgr.am/20dea68
-    facebook: https://dpgr.am/3e2e7f2
+    share: https://dpgr.am/3eb1ffd
+    twitter: https://dpgr.am/568a128
+    linkedin: https://dpgr.am/b4afffb
+    reddit: https://dpgr.am/345ca5a
+    facebook: https://dpgr.am/67e6c9c
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454126/blog/voice-controlled-music-with-python/ograph.png
 ---
@@ -497,3 +497,4 @@ while i < len(data):
    tick += 0.005 # or 0.001 or 0.0001
 ```
 
+        

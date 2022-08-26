@@ -7,17 +7,16 @@ authors:
     - sandra-rodgers
 category: devlife
 tags:
-    - bio,
     - careers
 seo:
     title: "Sandra Rodgers Joins the Developer Relations Team"
     description: "Sandra Rodgers Joins the Developer Relations Team"
 shorturls:
-    share: https://dpgr.am/5e10038
-    twitter: https://dpgr.am/792fc89
-    linkedin: https://dpgr.am/63b2408
-    reddit: https://dpgr.am/2856b06
-    facebook: https://dpgr.am/c68eeb1
+    share: https://dpgr.am/0542836
+    twitter: https://dpgr.am/11162f2
+    linkedin: https://dpgr.am/d5b8118
+    reddit: https://dpgr.am/9c5854b
+    facebook: https://dpgr.am/9d362da
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453816/blog/meet-sandra-rodgers/ograph.png
 ---
@@ -32,3 +31,4 @@ Here's a fun story. Even though development is my second career, I dabbled in bu
 
 If you want to know more about me, feel free to reach out on [Twitter](https://twitter.com/sandra_rodgers_). I'm super excited to be part of the Deepgram team and I can't wait to help make the dev experience a better one for all those who are part of our community!
 
+        

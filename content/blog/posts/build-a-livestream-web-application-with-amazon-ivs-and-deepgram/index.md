@@ -7,20 +7,18 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - aws,
-    - javascript,
-    - tutorial,
-    - serverless,
-    - vue
+    - aws
+    - javascript
+    - serverless
 seo:
     title: "How to Build a Live Streaming Web Application with Amazon IVS and Deepgram"
     description: "In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service."
 shorturls:
-    share: https://dpgr.am/5f5d9fd
-    twitter: https://dpgr.am/bd3ada6
-    linkedin: https://dpgr.am/49c114a
-    reddit: https://dpgr.am/186bcfd
-    facebook: https://dpgr.am/85a51fa
+    share: https://dpgr.am/3f16a52
+    twitter: https://dpgr.am/bca64b1
+    linkedin: https://dpgr.am/d95369c
+    reddit: https://dpgr.am/4ad64e5
+    facebook: https://dpgr.am/347b3d4
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454013/blog/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/ograph.png
 ---
@@ -398,3 +396,4 @@ Vue.js is my favorite Javascript framework, and I have written a series on [Divi
 
 Please follow me on [Twitter](https://twitter.com/sandra_rodgers_) if you find my tutorials useful!
 
+        

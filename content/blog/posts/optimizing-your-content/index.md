@@ -7,18 +7,17 @@ authors:
     - bekah-hawrot-weigel
 category: best-practice
 tags:
-    - content creation,
-    - writing,
-    - technical writing
+    - technical-writing
+    - technical-writing
 seo:
     title: "Technical Writing: Optimize Your Content Creation"
     description: "We spend a lot of time working on developer content. Optimizing your writing by creating a content creation life cycle can help to ensure a larger audience and greater value for the time you put into your writing."
 shorturls:
-    share: https://dpgr.am/3ade77e
-    twitter: https://dpgr.am/8fa5ed3
-    linkedin: https://dpgr.am/73705b8
-    reddit: https://dpgr.am/8a6f4ae
-    facebook: https://dpgr.am/cb4a6e6
+    share: https://dpgr.am/8336533
+    twitter: https://dpgr.am/87b6ca7
+    linkedin: https://dpgr.am/f22293e
+    reddit: https://dpgr.am/4ed5a67
+    facebook: https://dpgr.am/b318ee1
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454067/blog/optimizing-your-content/ograph.png
 ---
@@ -92,3 +91,4 @@ With so many social media options out there, there are many ways to optimize you
 
 What does your content creation lifecycle looks like? Let's us know on our [@DeepgramDevs](https://twitter.com/DeepgramDevs) Twitter.
 
+        

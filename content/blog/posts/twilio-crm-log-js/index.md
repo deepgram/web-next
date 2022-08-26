@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - nodejs,
-    - tutorial,
+    - nodejs
     - twilio
 seo:
     title: "Build a Searchable Phone Call Dashboard with Twilio"
     description: "Automatically log and search your inbound Twilio calls"
 shorturls:
-    share: https://dpgr.am/5bd178c
-    twitter: https://dpgr.am/786ed73
-    linkedin: https://dpgr.am/6328588
-    reddit: https://dpgr.am/1b26bd6
-    facebook: https://dpgr.am/d626bf2
+    share: https://dpgr.am/6b12fa8
+    twitter: https://dpgr.am/66efe38
+    linkedin: https://dpgr.am/20d5645
+    reddit: https://dpgr.am/91a22f2
+    facebook: https://dpgr.am/87e4c65
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453836/blog/twilio-crm-log-js/ograph.png
 ---
@@ -378,3 +377,4 @@ We've done quite a lot here - how to forward and record calls with Twilio, how t
 
 The complete project is available at <https://github.com/deepgram-devs/twilio-voice-searchable-log> and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
+        

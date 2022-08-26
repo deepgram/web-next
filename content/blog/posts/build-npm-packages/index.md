@@ -7,18 +7,17 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - nodejs,
-    - tutorial,
-    - npm
+    - nodejs
+    - nodejs
 seo:
     title: "Building an npm Package"
     description: "Create, publish, and use your first npm package returning values, functions, and classes."
 shorturls:
-    share: https://dpgr.am/d12a0ee
-    twitter: https://dpgr.am/c2ec27b
-    linkedin: https://dpgr.am/c93bddb
-    reddit: https://dpgr.am/5d2d12a
-    facebook: https://dpgr.am/98cd361
+    share: https://dpgr.am/87d0a0c
+    twitter: https://dpgr.am/7b35feb
+    linkedin: https://dpgr.am/72dcd11
+    reddit: https://dpgr.am/2731585
+    facebook: https://dpgr.am/db18251
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453825/blog/build-npm-packages/ograph.png
 ---
@@ -228,3 +227,4 @@ Our final class-based package code can be found at <https://github.com/deepgram-
 
 When putting together my first npm packages, I found most tutorials stopped at the most basic examples or assumed lots of additional knowledge. I hope this has provided more helpful context and helped you get your first package published. If it did - please let us know what you've published so we can celebrate together - we are [@DeepgramDevs](https://twitter.com/DeepgramDevs) on Twitter or <devrel@deepgram.com> via email.
 
+        

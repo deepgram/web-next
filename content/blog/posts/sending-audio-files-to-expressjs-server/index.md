@@ -7,17 +7,17 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - nodejs,
+    - nodejs
     - express
 seo:
     title: "Sending Audio Files to your Express.js server"
     description: "Learn how to easily send files through an HTML form to an Express.js server using the middleware package Multer."
 shorturls:
-    share: https://dpgr.am/ca7e520
-    twitter: https://dpgr.am/82b121d
-    linkedin: https://dpgr.am/4575fc1
-    reddit: https://dpgr.am/690a4f5
-    facebook: https://dpgr.am/71c5aeb
+    share: https://dpgr.am/64d6c5c
+    twitter: https://dpgr.am/c511a95
+    linkedin: https://dpgr.am/5c6e6df
+    reddit: https://dpgr.am/b7f7b05
+    facebook: https://dpgr.am/d38a267
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453820/blog/sending-audio-files-to-expressjs-server/ograph.png
 ---
@@ -200,3 +200,4 @@ When you click the submit button, you can go to the `/uploads` folder you set up
 
 Now you are able to use Multer to send files to your Express.js server. Try sending some audio files or even image files. This is a good starting point for taking those files and moving them to another storage place, such as your Cloudinary account or a database.
 
+        

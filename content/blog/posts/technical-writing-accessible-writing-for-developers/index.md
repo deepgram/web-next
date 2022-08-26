@@ -7,19 +7,18 @@ authors:
     - bekah-hawrot-weigel
 category: tutorial
 tags:
-    - careers,
-    - writing,
-    - technical-writing,
-    - accessibility
+    - careers
+    - technical-writing
+    - technical-writing
 seo:
     title: "Technical Writing: Accessible Writing for Developers"
     description: "Accessible writing creates a more inclusive space, reduces gatekeeping, and provides clarity for your readers."
 shorturls:
-    share: https://dpgr.am/75ee18b
-    twitter: https://dpgr.am/cbc5e01
-    linkedin: https://dpgr.am/ea8052a
-    reddit: https://dpgr.am/50b662e
-    facebook: https://dpgr.am/7621059
+    share: https://dpgr.am/a6a5087
+    twitter: https://dpgr.am/86cd2aa
+    linkedin: https://dpgr.am/74b594a
+    reddit: https://dpgr.am/129c6dc
+    facebook: https://dpgr.am/c47d954
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454053/blog/technical-writing-accessible-writing-for-developers/ograph.png
 ---
@@ -77,3 +76,4 @@ Creating accessible content can be hard when you’re not used to it. Here are s
 
 Making technical writing accessible helps remove barriers to entry for learning new concepts and creates a more inclusive space for everyone. This post is an introduction to accessible writing for the web. If you want to know more about accessible writing, please check out the resources above, and hit us up with any questions or suggestions on our [@deepgramDevs Twitter account](https://twitter.com/DeepgramDevs).
 
+        
