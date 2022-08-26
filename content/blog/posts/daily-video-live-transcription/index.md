@@ -1,5 +1,5 @@
 ---
-title: Video: Add Live Transcriptions to a Daily Video Call With Deepgram
+title: "Video: Add Live Transcriptions to a Daily Video Call With Deepgram"
 description: How to set up a Daily video call with live transcriptions.
 date: 2022-02-24
 cover: https://res.cloudinary.com/deepgram/image/upload/v1645718184/blog/2022/02/daily-video-live-transcription/finished.png
@@ -11,7 +11,7 @@ tags:
     - video,
     - integration
 seo:
-    title: Video: Add Live Transcriptions to a Daily Video Call With Deepgram
+    title: "Video: Add Live Transcriptions to a Daily Video Call With Deepgram"
     description: How to set up a Daily video call with live transcriptions.
 shorturls:
     share: https://dpgr.am/56072d
