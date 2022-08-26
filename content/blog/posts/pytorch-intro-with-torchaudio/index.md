@@ -4,7 +4,7 @@ description: "Learn how to use TorchAudio to transform, augment, and extract fea
 date: 2022-06-27
 cover: https://res.cloudinary.com/deepgram/image/upload/v1656347792/blog/2022/06/pytorch-intro-with-torchaudio/Introduction-to-PyTorch-Audio-Data-via-TorchAudio%402x.jpg
 authors:
-    - yujiantang
+    - yujian-tang
 category: tutorial
 tags:
     - python,
@@ -26,14 +26,14 @@ PyTorch is one of the leading machine learning frameworks in Python. Recently, P
 
 In this post, we'll cover:
 
-*   [Setting up PyTorch TorchAudio for Audio Data Augmentation](#setting-up-pytorch-torchaudio-for-audio-data-augmentation)
-*   [Adding Effects for Audio Data Augmentation with PyTorch TorchAudio](#adding-effects-for-audio-data-augmentation-with-pytorch-torchaudio)
-*   [Using Sound Effects in TorchAudio](#using-sound-effects-in-torchaudio)
-*   [Adding Background Noise](#adding-background-noise)
-*   [Adding Room Reverberation](#adding-room-reverberation)
-*   [Advanced Resampling of Audio Data with TorchAudio](#advanced-resampling-of-audio-data-with-torchaudio)
-*   [Audio Feature Extraction with PyTorch TorchAudio](#audio-feature-extraction-with-pytorch-torchaudio)
-*   [In Summary](#in-summary)
+- [Setting up PyTorch TorchAudio for Audio Data Augmentation](#setting-up-pytorch-torchaudio-for-audio-data-augmentation)
+- [Adding Effects for Audio Data Augmentation with PyTorch TorchAudio](#adding-effects-for-audio-data-augmentation-with-pytorch-torchaudio)
+- [Using Sound Effects in Torchaudio](#using-sound-effects-in-torchaudio)
+- [Adding Background Noise](#adding-background-noise)
+- [Adding Room Reverberation](#adding-room-reverberation)
+- [Advanced Resampling of Audio Data with TorchAudio](#advanced-resampling-of-audio-data-with-torchaudio)
+- [Audio Feature Extraction with PyTorch TorchAudio](#audio-feature-extraction-with-pytorch-torchaudio)
+- [In Summary](#in-summary)
 
 ## Setting up PyTorch TorchAudio for Audio Data Augmentation
 

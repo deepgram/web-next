@@ -4,7 +4,7 @@ description: "DeepSpeech is a Python library for doing ASR. In this post, we’l
 date: 2022-08-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1659364680/blog/2022/08/guide-deepspeech-speech-to-text/cover.jpg
 authors:
-    - yujiantang
+    - yujian-tang
 category: tutorial
 tags:
     - python
