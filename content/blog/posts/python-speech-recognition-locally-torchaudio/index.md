@@ -4,7 +4,7 @@ description: "Learn how to use the Python TorchAudio library and its Emformer Mo
 date: 2022-07-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1657708926/blog/2022/07/python-speech-recognition-locally-torchaudio/cov.jpg
 authors:
-    - yujiantang
+    - yujian-tang
 category: tutorial
 tags:
     - python
@@ -27,13 +27,13 @@ We’ve all heard this when calling customer service. What are they doing with t
 
 In this post, we’ll focus on how to do speech recognition locally on your device using TorchAudio’s pre-built Emformer RNN-T model. We will cover:
 
-*   [Understanding PyTorch TorchAudio](#understanding-pytorch-torchaudio)
-*   [Setting Up TorchAudio for Speech Recognition](#setting-up-torchaudio-for-speech-recognition)
-*   [Building a Python Audio Data Streaming Function for Speech Recognition](#building-a-python-audio-data-streaming-function-for-speech-recognition)
-*   [Setting up Python Speech Recognition Inference Pipeline](#setting-up-python-speech-recognition-inference-pipeline)
-*   [Creating a Context Cache to Store Audio Data for Speech Recognition](#creating-a-context-cache-to-store-audio-data-for-speech-recognition)
-*   [Using TorchAudio’s Emformer Model for Local Speech Recognition in Python](#using-torchaudios-emformer-model-for-local-speech-recognition-in-python)
-*   [In Summary](#in-summary)
+- [Understanding PyTorch TorchAudio](#understanding-pytorch-torchaudio)
+- [Setting Up TorchAudio for Speech Recognition](#setting-up-torchaudio-for-speech-recognition)
+- [Building a Python Audio Data Streaming Function for Speech Recognition](#building-a-python-audio-data-streaming-function-for-speech-recognition)
+- [Setting up Python Speech Recognition Inference Pipeline](#setting-up-python-speech-recognition-inference-pipeline)
+- [Creating a Context Cache to Store Audio Data for Speech Recognition](#creating-a-context-cache-to-store-audio-data-for-speech-recognition)
+- [Using TorchAudio's Emformer Model for Local Speech Recognition in Python](#using-torchaudios-emformer-model-for-local-speech-recognition-in-python)
+- [In Summary](#in-summary)
 
 ## Understanding PyTorch TorchAudio
 
