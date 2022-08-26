@@ -5,7 +5,7 @@ date: 2022-03-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1648142030/blog/2022/03/technical-writing-accessible-writing-for-developers/accessible-writing%402x.jpg
 authors:
     - bekah-hawrot-weigel
-category: undefined
+category: tutorial
 tags:
     - careers,
     - writing,
