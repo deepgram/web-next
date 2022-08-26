@@ -1,10 +1,10 @@
 {
-  "featured_post": "figma-demo-post-content/index",
+  "featured_post": "transcribe-youtube-videos-from-terminal/index",
   "homepage_posts": [
-    "a-test-blog-post-in-march/index",
-    "a-test-blog-post-in-april/index",
-    "a-second-test-blog-post-in-april/index",
-    "a-third-test-blog-post-in-april/index",
-    "a-test-blog-post-in-may/index"
+    "topic-detection-with-python",
+    "saving-transcripts-from-terminal/index",
+    "voice-controlled-music-with-python/index",
+    "cloud-to-butt/index",
+    "create-readable-transcripts-for-podcasts/index"
   ]
 }
