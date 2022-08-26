@@ -1,6 +1,6 @@
 ---
-title: Hello World! We're Deepgram.
-description: Introducing the new Deepgram Developer Platform; the new home of Deepgram's documentation, developer blog, use cases, SDKs, and more.
+title: "Hello World! We're Deepgram."
+description: "Introducing the new Deepgram Developer Platform; the new home of Deepgram's documentation, developer blog, use cases, SDKs, and more."
 date: 2021-11-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1635464706/blog/2021/11/hello-world/hello-world-blog%402x.jpg
 authors:
@@ -9,14 +9,14 @@ category: devlife
 tags:
     - introduction
 seo:
-    title: Hello World! We're Deepgram.
-    description: Introducing the new Deepgram Developer Platform; the new home of Deepgram's documentation, developer blog, use cases, SDKs, and more.
+    title: "Hello World! We're Deepgram."
+    description: "Introducing the new Deepgram Developer Platform; the new home of Deepgram's documentation, developer blog, use cases, SDKs, and more."
 shorturls:
-    share: https://dpgr.am/7d42f6
-    twitter: https://dpgr.am/b0c9c7
-    linkedin: https://dpgr.am/6449cf
-    reddit: https://dpgr.am/22272d
-    facebook: https://dpgr.am/f28cd3
+    share: https://dpgr.am/4b94467
+    twitter: https://dpgr.am/ab0f17f
+    linkedin: https://dpgr.am/6028470
+    reddit: https://dpgr.am/580c4b2
+    facebook: https://dpgr.am/a5ff093
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453808/blog/hello-world/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Sandra Rodgers Joins the Developer Relations Team
-description: Sandra Rodgers Joins the Developer Relations Team
+title: "Sandra Rodgers Joins the Developer Relations Team"
+description: "Sandra Rodgers Joins the Developer Relations Team"
 date: 2021-11-12
 cover: https://res.cloudinary.com/deepgram/image/upload/v1636482805/blog/2021/11/meet-sandra-rodgers/dog-computer-cover.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - bio,
     - careers
 seo:
-    title: Sandra Rodgers Joins the Developer Relations Team
-    description: Sandra Rodgers Joins the Developer Relations Team
+    title: "Sandra Rodgers Joins the Developer Relations Team"
+    description: "Sandra Rodgers Joins the Developer Relations Team"
 shorturls:
-    share: https://dpgr.am/097719
-    twitter: https://dpgr.am/41aa8c
-    linkedin: https://dpgr.am/24ec7c
-    reddit: https://dpgr.am/1ede6c
-    facebook: https://dpgr.am/dab22f
+    share: https://dpgr.am/5e10038
+    twitter: https://dpgr.am/792fc89
+    linkedin: https://dpgr.am/63b2408
+    reddit: https://dpgr.am/2856b06
+    facebook: https://dpgr.am/c68eeb1
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453816/blog/meet-sandra-rodgers/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Diving Into Vue 3 - Methods, Watch, and Computed
-description: Learn about the basic features of methods, watch, and computed in Vue 3.
+title: "Diving Into Vue 3 - Methods, Watch, and Computed"
+description: "Learn about the basic features of methods, watch, and computed in Vue 3."
 date: 2022-02-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643663009/blog/2022/02/diving-into-vue-3-methods-watch-and-computed/dive-into-vue-3%402x.jpg
 authors:
@@ -10,16 +10,16 @@ tags:
     - vue,
     - javascript
 seo:
-    title: Diving Into Vue 3 - Methods, Watch, and Computed
-    description: Learn about the basic features of methods, watch, and computed in Vue 3.
+    title: "Diving Into Vue 3 - Methods, Watch, and Computed"
+    description: "Learn about the basic features of methods, watch, and computed in Vue 3."
 shorturls:
-    share: https://dpgr.am/655183
-    twitter: https://dpgr.am/947da5
-    linkedin: https://dpgr.am/d5103e
-    reddit: https://dpgr.am/c6d42d
-    facebook: https://dpgr.am/032e4c
+    share: https://dpgr.am/4deb90e
+    twitter: https://dpgr.am/7caf827
+    linkedin: https://dpgr.am/a9b9373
+    reddit: https://dpgr.am/5f1db91
+    facebook: https://dpgr.am/2833c1b
 og:
-    image: 
+    image: https://res.cloudinary.com/deepgram/image/upload/v1661477089/blog/diving-into-vue-3-methods-watch-and-computed/ograph.png
 ---
 
 In this series, I'm focusing on the basics needed to start working in **Vue 3** for people who might have some experience in **Vue 2**, but who haven't yet built anything in **Vue 3**.

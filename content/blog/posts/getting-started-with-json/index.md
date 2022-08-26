@@ -1,6 +1,6 @@
 ---
-title: Getting Started with JSON
-description: Learn the basics of JSON and how to work with data in a JSON object.
+title: "Getting Started with JSON"
+description: "Learn the basics of JSON and how to work with data in a JSON object."
 date: 2021-11-25
 cover: https://res.cloudinary.com/deepgram/image/upload/v1637609299/blog/2021/11/getting-started-with-json/Getting-Started-with-json-blog%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - python,
     - tutorial
 seo:
-    title: Getting Started with JSON
-    description: Learn the basics of JSON and how to work with data in a JSON object.
+    title: "Getting Started with JSON"
+    description: "Learn the basics of JSON and how to work with data in a JSON object."
 shorturls:
-    share: https://dpgr.am/f60649
-    twitter: https://dpgr.am/1da6f7
-    linkedin: https://dpgr.am/afbde4
-    reddit: https://dpgr.am/df6d8c
-    facebook: https://dpgr.am/93cb4b
+    share: https://dpgr.am/041af10
+    twitter: https://dpgr.am/807f443
+    linkedin: https://dpgr.am/50ca9fa
+    reddit: https://dpgr.am/0c5805b
+    facebook: https://dpgr.am/022e7cb
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453805/blog/getting-started-with-json/ograph.png
 ---

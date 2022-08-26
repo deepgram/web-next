@@ -1,6 +1,6 @@
 ---
-title: Automatically Transcribe Google Drive Files with Pipedream
-description: Learn how to automate the creation of transcriptions by simply dropping files into a Google Drive folder.
+title: "Automatically Transcribe Google Drive Files with Pipedream"
+description: "Learn how to automate the creation of transcriptions by simply dropping files into a Google Drive folder."
 date: 2022-08-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1659956235/blog/2022/08/transcribe-google-drive-files-pipedream/cover.png
 authors:
@@ -11,14 +11,14 @@ tags:
     - low-code,
     - automations
 seo:
-    title: Automatically Transcribe Google Drive Files with Pipedream
-    description: Learn how to automate the creation of transcriptions by simply dropping files into a Google Drive folder.
+    title: "Automatically Transcribe Google Drive Files with Pipedream"
+    description: "Learn how to automate the creation of transcriptions by simply dropping files into a Google Drive folder."
 shorturls:
-    share: https://dpgr.am/5fc941
-    twitter: https://dpgr.am/ce0b37
-    linkedin: https://dpgr.am/c5d388
-    reddit: https://dpgr.am/61b176
-    facebook: https://dpgr.am/24502d
+    share: https://dpgr.am/b77ff63
+    twitter: https://dpgr.am/7501f06
+    linkedin: https://dpgr.am/63c9f74
+    reddit: https://dpgr.am/8e40873
+    facebook: https://dpgr.am/d662687
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454123/blog/transcribe-google-drive-files-pipedream/ograph.png
 ---

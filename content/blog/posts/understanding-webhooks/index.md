@@ -1,6 +1,6 @@
 ---
-title: Understanding Webhooks
-description: Let's talk about why, when, and how webhooks are used in development.
+title: "Understanding Webhooks"
+description: "Let's talk about why, when, and how webhooks are used in development."
 date: 2022-02-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1645796672/blog/2022/02/understanding-webhooks/Understanding-Webhooks%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - concept,
     - beginners
 seo:
-    title: Understanding Webhooks
-    description: Let's talk about why, when, and how webhooks are used in development.
+    title: "Understanding Webhooks"
+    description: "Let's talk about why, when, and how webhooks are used in development."
 shorturls:
-    share: https://dpgr.am/821759
-    twitter: https://dpgr.am/d2c612
-    linkedin: https://dpgr.am/225a2e
-    reddit: https://dpgr.am/86a59e
-    facebook: https://dpgr.am/4e47d3
+    share: https://dpgr.am/e6c8b63
+    twitter: https://dpgr.am/0fe213a
+    linkedin: https://dpgr.am/6b2fed0
+    reddit: https://dpgr.am/1bb3b6f
+    facebook: https://dpgr.am/9492ffc
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454005/blog/understanding-webhooks/ograph.png
 ---

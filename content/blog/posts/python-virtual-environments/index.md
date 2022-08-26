@@ -1,6 +1,6 @@
 ---
-title: Virtual Environments in Python
-description: Learn about why it's important to use virtual environments in Python, how to create one and use them in your next project.
+title: "Virtual Environments in Python"
+description: "Learn about why it's important to use virtual environments in Python, how to create one and use them in your next project."
 date: 2022-02-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1644600894/blog/2022/02/python-virtual-environments/Setting-Up-Your-Python-Developer-Environment%402x.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - python,
     - virtual environments
 seo:
-    title: Virtual Environments in Python
-    description: Learn about why it's important to use virtual environments in Python, how to create one and use them in your next project.
+    title: "Virtual Environments in Python"
+    description: "Learn about why it's important to use virtual environments in Python, how to create one and use them in your next project."
 shorturls:
-    share: https://dpgr.am/5ea203
-    twitter: https://dpgr.am/c3ab82
-    linkedin: https://dpgr.am/aac64e
-    reddit: https://dpgr.am/36eac8
-    facebook: https://dpgr.am/d25692
+    share: https://dpgr.am/5ff1a69
+    twitter: https://dpgr.am/552fe38
+    linkedin: https://dpgr.am/5ab36ca
+    reddit: https://dpgr.am/7cd83ce
+    facebook: https://dpgr.am/ad5d871
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453996/blog/python-virtual-environments/ograph.png
 ---

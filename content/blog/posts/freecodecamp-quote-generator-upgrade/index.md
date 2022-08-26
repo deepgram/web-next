@@ -1,6 +1,6 @@
 ---
-title: Upgrade your freeCodeCamp Project
-description: As early-career developers looking for your first or second job, upgrading your projects can help you to stand out from other candidates and grow as a new developer. To find out how to upgrade a common project, read more here.
+title: "Upgrade your freeCodeCamp Project"
+description: "As early-career developers looking for your first or second job, upgrading your projects can help you to stand out from other candidates and grow as a new developer. To find out how to upgrade a common project, read more here."
 date: 2022-03-31
 cover: https://res.cloudinary.com/deepgram/image/upload/v1648719341/blog/2022/03/freecodecamp-quote-generator-upgrade/fcc-cover.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - freecodecamp,
     - tutorial
 seo:
-    title: Upgrade your freeCodeCamp Project
-    description: As early-career developers looking for your first or second job, upgrading your projects can help you to stand out from other candidates and grow as a new developer. To find out how to upgrade a common project, read more here.
+    title: "Upgrade your freeCodeCamp Project"
+    description: "As early-career developers looking for your first or second job, upgrading your projects can help you to stand out from other candidates and grow as a new developer. To find out how to upgrade a common project, read more here."
 shorturls:
-    share: https://dpgr.am/f22f5f
-    twitter: https://dpgr.am/f1d840
-    linkedin: https://dpgr.am/d80dcf
-    reddit: https://dpgr.am/597d30
-    facebook: https://dpgr.am/41989d
+    share: https://dpgr.am/e93e62c
+    twitter: https://dpgr.am/7f46f6e
+    linkedin: https://dpgr.am/ac581e7
+    reddit: https://dpgr.am/c6a0be2
+    facebook: https://dpgr.am/6b53380
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454028/blog/freecodecamp-quote-generator-upgrade/ograph.png
 ---

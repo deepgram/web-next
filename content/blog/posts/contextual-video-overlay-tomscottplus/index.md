@@ -1,6 +1,6 @@
 ---
-title: Creating Contextual Video Overlays with TomScottPlus
-description: How the team behind TomScottPlus used Deepgram to analyze YouTube videos in real-time and provide an overlay with Wikipedia links to read. Read more here.
+title: "Creating Contextual Video Overlays with TomScottPlus"
+description: "How the team behind TomScottPlus used Deepgram to analyze YouTube videos in real-time and provide an overlay with Wikipedia links to read. Read more here."
 date: 2022-03-17
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646146501/blog/2022/03/contextual-video-overlay-tomscottplus/cover.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - research,
     - hackathon
 seo:
-    title: Creating Contextual Video Overlays with TomScottPlus
-    description: How the team behind TomScottPlus used Deepgram to analyze YouTube videos in real-time and provide an overlay with Wikipedia links to read. Read more here.
+    title: "Creating Contextual Video Overlays with TomScottPlus"
+    description: "How the team behind TomScottPlus used Deepgram to analyze YouTube videos in real-time and provide an overlay with Wikipedia links to read. Read more here."
 shorturls:
-    share: https://dpgr.am/28b21f
-    twitter: https://dpgr.am/e8fb5d
-    linkedin: https://dpgr.am/4264c9
-    reddit: https://dpgr.am/d9a2ec
-    facebook: https://dpgr.am/beb03e
+    share: https://dpgr.am/aafd8a0
+    twitter: https://dpgr.am/6281d7c
+    linkedin: https://dpgr.am/ad6766c
+    reddit: https://dpgr.am/128ec7b
+    facebook: https://dpgr.am/b725081
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454018/blog/contextual-video-overlay-tomscottplus/ograph.png
 ---

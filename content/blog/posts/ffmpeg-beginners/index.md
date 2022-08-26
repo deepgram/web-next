@@ -1,6 +1,6 @@
 ---
-title: Getting Started with ffmpeg for Audio
-description: Learn about the FFmpeg CLI for working with audio files.
+title: "Getting Started with ffmpeg for Audio"
+description: "Learn about the FFmpeg CLI for working with audio files."
 date: 2021-11-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1635801056/blog/2021/11/ffmpeg-beginners/Getting-Started-with-ffmpeg-blog%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - cli,
     - tutorial
 seo:
-    title: Getting Started with ffmpeg for Audio
-    description: Learn about the FFmpeg CLI for working with audio files.
+    title: "Getting Started with ffmpeg for Audio"
+    description: "Learn about the FFmpeg CLI for working with audio files."
 shorturls:
-    share: https://dpgr.am/768e1b
-    twitter: https://dpgr.am/383c1a
-    linkedin: https://dpgr.am/bf52c1
-    reddit: https://dpgr.am/700e93
-    facebook: https://dpgr.am/be87a4
+    share: https://dpgr.am/70289f2
+    twitter: https://dpgr.am/40cc9d4
+    linkedin: https://dpgr.am/f8dff39
+    reddit: https://dpgr.am/f230549
+    facebook: https://dpgr.am/794eb4e
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453799/blog/ffmpeg-beginners/ograph.png
 ---

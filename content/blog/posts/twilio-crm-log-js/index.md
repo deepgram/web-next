@@ -1,6 +1,6 @@
 ---
-title: Build a Searchable Phone Call Dashboard with Twilio
-description: Automatically log and search your inbound Twilio calls
+title: "Build a Searchable Phone Call Dashboard with Twilio"
+description: "Automatically log and search your inbound Twilio calls"
 date: 2021-12-02
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638306971/blog/2021/12/twilio-crm-log-js/Build-CRM-w-Searchable-Call-Transcripts-twilio-blog%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - tutorial,
     - twilio
 seo:
-    title: Build a Searchable Phone Call Dashboard with Twilio
-    description: Automatically log and search your inbound Twilio calls
+    title: "Build a Searchable Phone Call Dashboard with Twilio"
+    description: "Automatically log and search your inbound Twilio calls"
 shorturls:
-    share: https://dpgr.am/919aa4
-    twitter: https://dpgr.am/5ed430
-    linkedin: https://dpgr.am/5d66e9
-    reddit: https://dpgr.am/8983ae
-    facebook: https://dpgr.am/8cda9d
+    share: https://dpgr.am/5bd178c
+    twitter: https://dpgr.am/786ed73
+    linkedin: https://dpgr.am/6328588
+    reddit: https://dpgr.am/1b26bd6
+    facebook: https://dpgr.am/d626bf2
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453836/blog/twilio-crm-log-js/ograph.png
 ---

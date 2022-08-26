@@ -1,6 +1,6 @@
 ---
-title: Python Speech Recognition Locally with TorchAudio
-description: Learn how to use the Python TorchAudio library and its Emformer Model for local speech recognition
+title: "Python Speech Recognition Locally with TorchAudio"
+description: "Learn how to use the Python TorchAudio library and its Emformer Model for local speech recognition"
 date: 2022-07-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1657708926/blog/2022/07/python-speech-recognition-locally-torchaudio/cov.jpg
 authors:
@@ -9,14 +9,14 @@ category: tutorial
 tags:
     - python
 seo:
-    title: Python Speech Recognition Locally with TorchAudio
-    description: Learn how to use the Python TorchAudio library and its Emformer Model for local speech recognition
+    title: "Python Speech Recognition Locally with TorchAudio"
+    description: "Learn how to use the Python TorchAudio library and its Emformer Model for local speech recognition"
 shorturls:
-    share: https://dpgr.am/2336db
-    twitter: https://dpgr.am/992990
-    linkedin: https://dpgr.am/36c3f7
-    reddit: https://dpgr.am/13ea3d
-    facebook: https://dpgr.am/bc400f
+    share: https://dpgr.am/a719808
+    twitter: https://dpgr.am/e2eb4bb
+    linkedin: https://dpgr.am/923903a
+    reddit: https://dpgr.am/bfb7039
+    facebook: https://dpgr.am/81c1595
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454110/blog/python-speech-recognition-locally-torchaudio/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Technical Writing: Accessible Writing for Developers
-description: Accessible writing creates a more inclusive space, reduces gatekeeping, and provides clarity for your readers.
+title: "Technical Writing: Accessible Writing for Developers"
+description: "Accessible writing creates a more inclusive space, reduces gatekeeping, and provides clarity for your readers."
 date: 2022-03-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1648142030/blog/2022/03/technical-writing-accessible-writing-for-developers/accessible-writing%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - technical-writing,
     - accessibility
 seo:
-    title: Technical Writing: Accessible Writing for Developers
-    description: Accessible writing creates a more inclusive space, reduces gatekeeping, and provides clarity for your readers.
+    title: "Technical Writing: Accessible Writing for Developers"
+    description: "Accessible writing creates a more inclusive space, reduces gatekeeping, and provides clarity for your readers."
 shorturls:
-    share: https://dpgr.am/11ad52
-    twitter: https://dpgr.am/f0abe2
-    linkedin: https://dpgr.am/bbea6c
-    reddit: https://dpgr.am/779d40
-    facebook: https://dpgr.am/1e589f
+    share: https://dpgr.am/75ee18b
+    twitter: https://dpgr.am/cbc5e01
+    linkedin: https://dpgr.am/ea8052a
+    reddit: https://dpgr.am/50b662e
+    facebook: https://dpgr.am/7621059
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454053/blog/technical-writing-accessible-writing-for-developers/ograph.png
 ---

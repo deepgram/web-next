@@ -1,6 +1,6 @@
 ---
-title: Start Chromium in Kiosk Mode on Raspberry Pi OS
-description: Launch directly into a fullscreen browser on your Raspberry Pi
+title: "Start Chromium in Kiosk Mode on Raspberry Pi OS"
+description: "Launch directly into a fullscreen browser on your Raspberry Pi"
 date: 2022-01-19
 cover: https://res.cloudinary.com/deepgram/image/upload/v1642519931/blog/2022/01/chromium-kiosk-pi/Pi.png
 authors:
@@ -11,14 +11,14 @@ tags:
     - hardware,
     - raspberrypi
 seo:
-    title: Start Chromium in Kiosk Mode on Raspberry Pi OS
-    description: Launch directly into a fullscreen browser on your Raspberry Pi
+    title: "Start Chromium in Kiosk Mode on Raspberry Pi OS"
+    description: "Launch directly into a fullscreen browser on your Raspberry Pi"
 shorturls:
-    share: https://dpgr.am/960943
-    twitter: https://dpgr.am/16c538
-    linkedin: https://dpgr.am/b5f1d2
-    reddit: https://dpgr.am/c00af2
-    facebook: https://dpgr.am/4269bc
+    share: https://dpgr.am/6ac2194
+    twitter: https://dpgr.am/5f4cf9c
+    linkedin: https://dpgr.am/b3044f0
+    reddit: https://dpgr.am/698e8d0
+    facebook: https://dpgr.am/dd58d00
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453839/blog/chromium-kiosk-pi/ograph.png
 ---

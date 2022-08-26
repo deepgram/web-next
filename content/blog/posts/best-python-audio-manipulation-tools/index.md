@@ -1,6 +1,6 @@
 ---
-title: Best Python Tools for Manipulating Audio Data
-description: A comprehensive guide on using Python to work with audio files.
+title: "Best Python Tools for Manipulating Audio Data"
+description: "A comprehensive guide on using Python to work with audio files."
 date: 2022-06-13
 cover: https://res.cloudinary.com/deepgram/image/upload/v1654884969/blog/2022/06/best-python-audio-manipulation-tools/cover.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - python,
     - concept
 seo:
-    title: Best Python Tools for Manipulating Audio Data
-    description: A comprehensive guide on using Python to work with audio files.
+    title: "Best Python Tools for Manipulating Audio Data"
+    description: "A comprehensive guide on using Python to work with audio files."
 shorturls:
-    share: https://dpgr.am/bd2908
-    twitter: https://dpgr.am/45a4ac
-    linkedin: https://dpgr.am/84dc3a
-    reddit: https://dpgr.am/86917e
-    facebook: https://dpgr.am/4b1b5c
+    share: https://dpgr.am/825f485
+    twitter: https://dpgr.am/503dc70
+    linkedin: https://dpgr.am/f2c87e4
+    reddit: https://dpgr.am/0af3fb5
+    facebook: https://dpgr.am/ba9a8e8
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454091/blog/best-python-audio-manipulation-tools/ograph.png
 ---

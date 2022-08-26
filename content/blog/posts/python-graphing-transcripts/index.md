@@ -1,6 +1,6 @@
 ---
-title: How to Turn Transcripts into Data Visualizations with Python
-description: Use Deepgram's speech-to-text features with Python to transcribe audio and graphing library Matplotlib to create a data visualization dashboard.
+title: "How to Turn Transcripts into Data Visualizations with Python"
+description: "Use Deepgram's speech-to-text features with Python to transcribe audio and graphing library Matplotlib to create a data visualization dashboard."
 date: 2022-05-12
 cover: https://res.cloudinary.com/deepgram/image/upload/v1652286544/blog/2022/05/python-graphing-transcripts/Build-Dashboard-Visualize-Real-Time-Speech-Python%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - speech-to-text,
     - data-visualization
 seo:
-    title: How to Turn Transcripts into Data Visualizations with Python
-    description: Use Deepgram's speech-to-text features with Python to transcribe audio and graphing library Matplotlib to create a data visualization dashboard.
+    title: "How to Turn Transcripts into Data Visualizations with Python"
+    description: "Use Deepgram's speech-to-text features with Python to transcribe audio and graphing library Matplotlib to create a data visualization dashboard."
 shorturls:
-    share: https://dpgr.am/f5a003
-    twitter: https://dpgr.am/cfc8d8
-    linkedin: https://dpgr.am/96525b
-    reddit: https://dpgr.am/20a3b2
-    facebook: https://dpgr.am/a851b2
+    share: https://dpgr.am/ed614ea
+    twitter: https://dpgr.am/9791262
+    linkedin: https://dpgr.am/a8e4cda
+    reddit: https://dpgr.am/fa57c78
+    facebook: https://dpgr.am/5213220
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454089/blog/python-graphing-transcripts/ograph.png
 ---

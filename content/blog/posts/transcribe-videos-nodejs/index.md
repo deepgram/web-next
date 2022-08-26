@@ -1,6 +1,6 @@
 ---
-title: Transcribe Videos With Node.js
-description: Convert and Transcribe Videos with Node.js and Deepgram
+title: "Transcribe Videos With Node.js"
+description: "Convert and Transcribe Videos with Node.js and Deepgram"
 date: 2021-11-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1635374324/blog/2021/11/transcribe-videos-nodejs/transcribe-videos-with-nodejs-blog%402x.png
 authors:
@@ -11,14 +11,14 @@ tags:
     - sdk,
     - javascript
 seo:
-    title: Transcribe Videos With Node.js
-    description: Convert and Transcribe Videos with Node.js and Deepgram
+    title: "Transcribe Videos With Node.js"
+    description: "Convert and Transcribe Videos with Node.js and Deepgram"
 shorturls:
-    share: https://dpgr.am/de5916
-    twitter: https://dpgr.am/998e0f
-    linkedin: https://dpgr.am/a06105
-    reddit: https://dpgr.am/8b9a11
-    facebook: https://dpgr.am/594526
+    share: https://dpgr.am/c85045a
+    twitter: https://dpgr.am/b07e241
+    linkedin: https://dpgr.am/205980b
+    reddit: https://dpgr.am/b863fc5
+    facebook: https://dpgr.am/b0d3b65
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453821/blog/transcribe-videos-nodejs/ograph.png
 ---

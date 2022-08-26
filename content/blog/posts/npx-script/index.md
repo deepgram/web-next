@@ -1,6 +1,6 @@
 ---
-title: Creating an npx Command
-description: Build, locally test, and publish npx command scripts
+title: "Creating an npx Command"
+description: "Build, locally test, and publish npx command scripts"
 date: 2022-01-06
 cover: https://res.cloudinary.com/deepgram/image/upload/v1640023176/blog/2022/01/npx-script/building-an-npm-package%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - tutorial,
     - npm
 seo:
-    title: Creating an npx Command
-    description: Build, locally test, and publish npx command scripts
+    title: "Creating an npx Command"
+    description: "Build, locally test, and publish npx command scripts"
 shorturls:
-    share: https://dpgr.am/8b9e67
-    twitter: https://dpgr.am/0e4a6a
-    linkedin: https://dpgr.am/d1bc24
-    reddit: https://dpgr.am/695c8f
-    facebook: https://dpgr.am/b64648
+    share: https://dpgr.am/ffaf469
+    twitter: https://dpgr.am/b4f4c58
+    linkedin: https://dpgr.am/002de29
+    reddit: https://dpgr.am/1745bb4
+    facebook: https://dpgr.am/8860bf3
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453846/blog/npx-script/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: How to Build a Live Streaming Web Application with Amazon IVS and Deepgram
-description: In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service.
+title: "How to Build a Live Streaming Web Application with Amazon IVS and Deepgram"
+description: "In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service."
 date: 2022-03-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646946075/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/Building-Livestreaming-w-AmazonIVS.jpg
 authors:
@@ -13,14 +13,14 @@ tags:
     - serverless,
     - vue
 seo:
-    title: How to Build a Live Streaming Web Application with Amazon IVS and Deepgram
-    description: In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service.
+    title: "How to Build a Live Streaming Web Application with Amazon IVS and Deepgram"
+    description: "In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service."
 shorturls:
-    share: https://dpgr.am/ae571e
-    twitter: https://dpgr.am/ef14b9
-    linkedin: https://dpgr.am/eaae89
-    reddit: https://dpgr.am/448006
-    facebook: https://dpgr.am/b967a6
+    share: https://dpgr.am/5f5d9fd
+    twitter: https://dpgr.am/bd3ada6
+    linkedin: https://dpgr.am/49c114a
+    reddit: https://dpgr.am/186bcfd
+    facebook: https://dpgr.am/85a51fa
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454013/blog/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/ograph.png
 ---
@@ -51,7 +51,7 @@ I will build two versions of this project. I'll use the following to build each 
 
 Here is a gif to demonstrate the final project:
 
-<img src="./VideoExample.gif" alt="demo of final project" style="width: 75%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646946089/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/VideoExample.gif" alt="demo of final project" style="width: 75%; margin:auto;">
 
 ## Project One: Vanilla Video Stream Player
 
@@ -61,13 +61,13 @@ I want to keep it as simple as possible, focusing on how to build a **video stre
 
 Here is a diagram to demonstrate the core technology for the **video streaming part** of the project:
 
-<img src="./VideoStream.png" alt="Video stream diagram" style="width: 75%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646946508/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/VideoStream.png" alt="Video stream diagram" style="width: 75%; margin:auto;">
 
 The diagram presents this flow: the webcam takes in the video stream --> OBS captures that video stream so it can be sent along to Amazon IVS --> Amazon IVS provides a service to take in the stream, optimize it, and send it in a format to the browser so that it can be used in an HTML video player --> the HTML video element plays the optimized video stream.
 
 Here is a diagram to demonstrate the core technology for the **text captions part** of the project:
 
-<img src="./AudioTranscription.png" alt="Audio transcription diagram" style="width: 75%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646946508/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/AudioTranscription.png" alt="Audio transcription diagram" style="width: 75%; margin:auto;">
 
 The general flow for the text captions technology will be something like this:
 
@@ -95,7 +95,7 @@ To set up OBS for my project, I will:
 
 2.  Run the OBS software. In the **Sources** panel, I'll click the **plus** sign to add a new source. I'll select **Video Capture Device**, and in the window that pops up, I'll select the camera I want to use to capture my stream (my computer camera or webcam).
 
-<img src="./VideoCaptureDevice.png" alt="Select Video Capture Device to add source from computer camera" style="width: 80%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646946718/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/VideoCaptureDevice.png" alt="Select Video Capture Device to add source from computer camera" style="width: 80%; margin:auto;">
 
 3.  Make sure the source is selected in the sources panel (I may have other sources that I have set up), then I'll click on **Settings** in the far-right **Controls** panel.
 
@@ -184,7 +184,7 @@ In the <head> tag of my HTML document, I will include the script for the Amazon 
 
 This will load the IVS Player, and I will have access to the `IVSPlayer` variable in the global context. I can type that variable into the console to take a look at the module that has been loaded. There are quite a few properties that could be of use to me, depending on my project's needs.
 
-<img src="./ConsoleIVSPlayer.png" alt="IVSPlayer in console" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646946972/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/ConsoleIVSPlayer.png" alt="IVSPlayer in console" style="width: 50%; margin:auto;">
 
 In the `<body>` tag, I will include a `<video>` player that has an `id` of `video-player` (this id can be renamed, as long as the javascript I write to find this element looks for that specific id).
 
@@ -221,7 +221,7 @@ Where it says `PLAYBACK_URL` in the code example, I need to put the string for m
 
 Then I can turn on my stream in OBS, and I should see my stream in the browser!
 
-<img src="./StartStream.png" alt="OBS Start stream" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646947012/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/StartStream.png" alt="OBS Start stream" style="width: 50%; margin:auto;">
 
 ### Use Deepgram to Create Text Captions
 
@@ -252,7 +252,7 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then((res) => {
 
 This will cause the browser to ask for permission to use the microphone.
 
-<img src="./GetMicrophone.png" alt="Request permission to use microphone" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646947043/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/GetMicrophone.png" alt="Request permission to use microphone" style="width: 50%; margin:auto;">
 
 If the user gives permission, then I'll have access to the live stream audio to send to Deepgram.
 

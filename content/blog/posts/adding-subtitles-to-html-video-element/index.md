@@ -1,6 +1,6 @@
 ---
-title: How to Add Captions and Subtitles to HTML5 Videos
-description: Generating accurate transcripts is often just the start of a journey. Learn how to use Deepgram's best-in-class transcriptions in HTML Video elements.
+title: "How to Add Captions and Subtitles to HTML5 Videos"
+description: "Generating accurate transcripts is often just the start of a journey. Learn how to use Deepgram's best-in-class transcriptions in HTML Video elements."
 date: 2022-07-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1658998154/blog/2022/07/adding-subtitles-to-html-video-element/post-cover.png
 authors:
@@ -10,14 +10,14 @@ tags:
     - html,
     - beginners
 seo:
-    title: How to Add Captions and Subtitles to HTML5 Videos
-    description: Generating accurate transcripts is often just the start of a journey. Learn how to use Deepgram's best-in-class transcriptions in HTML Video elements.
+    title: "How to Add Captions and Subtitles to HTML5 Videos"
+    description: "Generating accurate transcripts is often just the start of a journey. Learn how to use Deepgram's best-in-class transcriptions in HTML Video elements."
 shorturls:
-    share: https://dpgr.am/66c2d7
-    twitter: https://dpgr.am/419247
-    linkedin: https://dpgr.am/17030a
-    reddit: https://dpgr.am/01a3c2
-    facebook: https://dpgr.am/d2db31
+    share: https://dpgr.am/7f7fa03
+    twitter: https://dpgr.am/6b7aeab
+    linkedin: https://dpgr.am/e58d57e
+    reddit: https://dpgr.am/b0ec347
+    facebook: https://dpgr.am/6b9e567
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454104/blog/adding-subtitles-to-html-video-element/ograph.png
 ---

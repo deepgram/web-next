@@ -1,6 +1,6 @@
 ---
-title: Browser Live Transcription - Protecting Your API Key
-description: Protect your API Key from unauthorized use with these tips.
+title: "Browser Live Transcription - Protecting Your API Key"
+description: "Protect your API Key from unauthorized use with these tips."
 date: 2022-01-17
 cover: https://res.cloudinary.com/deepgram/image/upload/v1642183098/blog/2022/01/protecting-api-key/Browser-Live-Transcription-Protecting-Your-API-Key%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - tutorial,
     - best-practice
 seo:
-    title: Browser Live Transcription - Protecting Your API Key
-    description: Protect your API Key from unauthorized use with these tips.
+    title: "Browser Live Transcription - Protecting Your API Key"
+    description: "Protect your API Key from unauthorized use with these tips."
 shorturls:
-    share: https://dpgr.am/343095
-    twitter: https://dpgr.am/f45ad2
-    linkedin: https://dpgr.am/9526ac
-    reddit: https://dpgr.am/393816
-    facebook: https://dpgr.am/3ff1fb
+    share: https://dpgr.am/53ff834
+    twitter: https://dpgr.am/8142687
+    linkedin: https://dpgr.am/8fec2eb
+    reddit: https://dpgr.am/4aeaf28
+    facebook: https://dpgr.am/22c757c
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453850/blog/protecting-api-key/ograph.png
 ---

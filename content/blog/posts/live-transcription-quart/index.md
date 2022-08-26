@@ -1,6 +1,6 @@
 ---
-title: Live Transcription With Python and Quart
-description: Learn how to do a live, real-time voice-to-text transcription with Quart's Python web microframework and Deepgram's Python SDK.
+title: "Live Transcription With Python and Quart"
+description: "Learn how to do a live, real-time voice-to-text transcription with Quart's Python web microframework and Deepgram's Python SDK."
 date: 2022-03-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646675713/blog/2022/03/live-transcription-quart/Live-Transcription-With-Python-Quart-Deepgram%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - speech recognition,
     - streaming
 seo:
-    title: Live Transcription With Python and Quart
-    description: Learn how to do a live, real-time voice-to-text transcription with Quart's Python web microframework and Deepgram's Python SDK.
+    title: "Live Transcription With Python and Quart"
+    description: "Learn how to do a live, real-time voice-to-text transcription with Quart's Python web microframework and Deepgram's Python SDK."
 shorturls:
-    share: https://dpgr.am/bdcec1
-    twitter: https://dpgr.am/c6f7b4
-    linkedin: https://dpgr.am/536fb4
-    reddit: https://dpgr.am/58247b
-    facebook: https://dpgr.am/680816
+    share: https://dpgr.am/67bde88
+    twitter: https://dpgr.am/6d8cf70
+    linkedin: https://dpgr.am/9ea9c12
+    reddit: https://dpgr.am/1ee7bbd
+    facebook: https://dpgr.am/e67dd6c
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454038/blog/live-transcription-quart/ograph.png
 ---

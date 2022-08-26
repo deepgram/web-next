@@ -1,6 +1,6 @@
 ---
-title: Building a Cross Platform NuGet Package
-description: Learning to build a NuGet package by building a .NET SDK for the Deepgram API, while ensuring it's compatible with as many versions of the .NET Framework and as many platforms as possible.
+title: "Building a Cross Platform NuGet Package"
+description: "Learning to build a NuGet package by building a .NET SDK for the Deepgram API, while ensuring it's compatible with as many versions of the .NET Framework and as many platforms as possible."
 date: 2021-12-23
 cover: https://res.cloudinary.com/deepgram/image/upload/v1639685643/blog/2021/12/cross-platform-nuget-dotnet/Building-Cross-Platform-NuGet-Package%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - nuget,
     - sdk
 seo:
-    title: Building a Cross Platform NuGet Package
-    description: Learning to build a NuGet package by building a .NET SDK for the Deepgram API, while ensuring it's compatible with as many versions of the .NET Framework and as many platforms as possible.
+    title: "Building a Cross Platform NuGet Package"
+    description: "Learning to build a NuGet package by building a .NET SDK for the Deepgram API, while ensuring it's compatible with as many versions of the .NET Framework and as many platforms as possible."
 shorturls:
-    share: https://dpgr.am/eff08f
-    twitter: https://dpgr.am/52afe5
-    linkedin: https://dpgr.am/450235
-    reddit: https://dpgr.am/263910
-    facebook: https://dpgr.am/b42bfd
+    share: https://dpgr.am/e92ce65
+    twitter: https://dpgr.am/902605c
+    linkedin: https://dpgr.am/6ff01c2
+    reddit: https://dpgr.am/cb34cc6
+    facebook: https://dpgr.am/4f6177d
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453827/blog/cross-platform-nuget-dotnet/ograph.png
 ---

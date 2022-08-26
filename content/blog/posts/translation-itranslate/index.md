@@ -1,6 +1,6 @@
 ---
-title: Adding Translation to Your Transcription Project
-description: Use iTranslate's API to translate both pre-recorded and live transcription.
+title: "Adding Translation to Your Transcription Project"
+description: "Use iTranslate's API to translate both pre-recorded and live transcription."
 date: 2022-01-26
 cover: https://res.cloudinary.com/deepgram/image/upload/v1642934713/blog/2022/01/translation-itranslate/Adding-Live-Translation-to-Your-Transcription-Project%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - translation,
     - nodejs
 seo:
-    title: Adding Translation to Your Transcription Project
-    description: Use iTranslate's API to translate both pre-recorded and live transcription.
+    title: "Adding Translation to Your Transcription Project"
+    description: "Use iTranslate's API to translate both pre-recorded and live transcription."
 shorturls:
-    share: https://dpgr.am/160ecd
-    twitter: https://dpgr.am/ca2864
-    linkedin: https://dpgr.am/d8af98
-    reddit: https://dpgr.am/48b9dc
-    facebook: https://dpgr.am/c0d3a8
+    share: https://dpgr.am/2570cbc
+    twitter: https://dpgr.am/50aa291
+    linkedin: https://dpgr.am/59ed885
+    reddit: https://dpgr.am/7d1658e
+    facebook: https://dpgr.am/3ef2d03
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453854/blog/translation-itranslate/ograph.png
 ---

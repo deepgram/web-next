@@ -1,6 +1,6 @@
 ---
-title: Kevin Lewis Joins the Developer Relations Team
-description: Meet Deepgram's new Developer Advocate and learn his story of getting into tech.
+title: "Kevin Lewis Joins the Developer Relations Team"
+description: "Meet Deepgram's new Developer Advocate and learn his story of getting into tech."
 date: 2021-11-16
 cover: https://res.cloudinary.com/deepgram/image/upload/v1636992625/blog/2021/11/meet-kevin-lewis/belvoir-castle.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - bio,
     - careers
 seo:
-    title: Kevin Lewis Joins the Developer Relations Team
-    description: Meet Deepgram's new Developer Advocate and learn his story of getting into tech.
+    title: "Kevin Lewis Joins the Developer Relations Team"
+    description: "Meet Deepgram's new Developer Advocate and learn his story of getting into tech."
 shorturls:
-    share: https://dpgr.am/8ece43
-    twitter: https://dpgr.am/58e3c7
-    linkedin: https://dpgr.am/385db3
-    reddit: https://dpgr.am/805beb
-    facebook: https://dpgr.am/13ba45
+    share: https://dpgr.am/4f3b385
+    twitter: https://dpgr.am/e64588f
+    linkedin: https://dpgr.am/25018f1
+    reddit: https://dpgr.am/f530da6
+    facebook: https://dpgr.am/6d2aa57
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453814/blog/meet-kevin-lewis/ograph.png
 ---

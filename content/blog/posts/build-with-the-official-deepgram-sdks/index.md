@@ -1,6 +1,6 @@
 ---
-title: Build With the Official Deepgram SDKs
-description: Add speech-to-text to your application even faster with the new Node.js and Python SDKs for the Deepgram API.
+title: "Build With the Official Deepgram SDKs"
+description: "Add speech-to-text to your application even faster with the new Node.js and Python SDKs for the Deepgram API."
 date: 2021-07-22
 cover: https://res.cloudinary.com/deepgram/image/upload/v1635448116/blog/2021/07/build-with-the-official-deepgram-sdks/build-w-official-dg-sdks-blog%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - sdk,
     - javascript
 seo:
-    title: Build With the Official Deepgram SDKs
-    description: Add speech-to-text to your application even faster with the new Node.js and Python SDKs for the Deepgram API.
+    title: "Build With the Official Deepgram SDKs"
+    description: "Add speech-to-text to your application even faster with the new Node.js and Python SDKs for the Deepgram API."
 shorturls:
-    share: https://dpgr.am/38a239
-    twitter: https://dpgr.am/686dc0
-    linkedin: https://dpgr.am/00e738
-    reddit: https://dpgr.am/39ec3c
-    facebook: https://dpgr.am/2757e4
+    share: https://dpgr.am/e29db9c
+    twitter: https://dpgr.am/d92db2e
+    linkedin: https://dpgr.am/c21f01f
+    reddit: https://dpgr.am/4ff820a
+    facebook: https://dpgr.am/9d3c042
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453793/blog/build-with-the-official-deepgram-sdks/ograph.png
 ---

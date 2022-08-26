@@ -1,6 +1,6 @@
 ---
-title: Diving Into Vue 3 - The Reactivity API
-description: Learn about reactivity in Vue 3 and how to use ref and reactive helpers
+title: "Diving Into Vue 3 - The Reactivity API"
+description: "Learn about reactivity in Vue 3 and how to use ref and reactive helpers"
 date: 2022-02-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1644435060/blog/2022/02/diving-into-vue-3-reactivity-api/dive-into-vue-3%402x.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - vue,
     - javascript
 seo:
-    title: Diving Into Vue 3 - The Reactivity API
-    description: Learn about reactivity in Vue 3 and how to use ref and reactive helpers
+    title: "Diving Into Vue 3 - The Reactivity API"
+    description: "Learn about reactivity in Vue 3 and how to use ref and reactive helpers"
 shorturls:
-    share: https://dpgr.am/a8c4be
-    twitter: https://dpgr.am/937e52
-    linkedin: https://dpgr.am/c5dd27
-    reddit: https://dpgr.am/05d0e2
-    facebook: https://dpgr.am/879e04
+    share: https://dpgr.am/675aa42
+    twitter: https://dpgr.am/e7fc895
+    linkedin: https://dpgr.am/c3fc168
+    reddit: https://dpgr.am/2538060
+    facebook: https://dpgr.am/ba08e8b
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453991/blog/diving-into-vue-3-reactivity-api/ograph.png
 ---

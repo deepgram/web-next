@@ -1,6 +1,6 @@
 ---
-title: Speech Recognition with Twilio and Python
-description: Use Deepgram's speech-to-text features with Python and Twilio to transcribe audio such as incoming phone calls.
+title: "Speech Recognition with Twilio and Python"
+description: "Use Deepgram's speech-to-text features with Python and Twilio to transcribe audio such as incoming phone calls."
 date: 2022-04-13
 cover: https://res.cloudinary.com/deepgram/image/upload/v1649274528/blog/2022/04/python-deepgram-twilio/Speech-Analytics-Real-Time-Audio-w-Twilio-Python%402x.jpg
 authors:
@@ -13,14 +13,14 @@ tags:
     - audio,
     - phone calls
 seo:
-    title: Speech Recognition with Twilio and Python
-    description: Use Deepgram's speech-to-text features with Python and Twilio to transcribe audio such as incoming phone calls.
+    title: "Speech Recognition with Twilio and Python"
+    description: "Use Deepgram's speech-to-text features with Python and Twilio to transcribe audio such as incoming phone calls."
 shorturls:
-    share: https://dpgr.am/baa1d2
-    twitter: https://dpgr.am/f15f89
-    linkedin: https://dpgr.am/97037d
-    reddit: https://dpgr.am/f3920b
-    facebook: https://dpgr.am/80fab3
+    share: https://dpgr.am/4bf490f
+    twitter: https://dpgr.am/f316d6a
+    linkedin: https://dpgr.am/41e1ddf
+    reddit: https://dpgr.am/d019d6c
+    facebook: https://dpgr.am/74f585c
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454075/blog/python-deepgram-twilio/ograph.png
 ---

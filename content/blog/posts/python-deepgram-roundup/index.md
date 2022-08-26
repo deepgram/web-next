@@ -1,6 +1,6 @@
 ---
-title: Starting Out with Python and Deepgram Live Streaming Audio
-description: Learn how to perform real-time Automatic Speech Recognition using various Python web frameworks and Deepgram's Speech-to-Text API with this roundup post.
+title: "Starting Out with Python and Deepgram Live Streaming Audio"
+description: "Learn how to perform real-time Automatic Speech Recognition using various Python web frameworks and Deepgram's Speech-to-Text API with this roundup post."
 date: 2022-06-23
 cover: https://res.cloudinary.com/deepgram/image/upload/v1655914351/blog/2022/06/python-deepgram-roundup/Transcribing-Real-Time-Audio-Using-Python-in-5-Minutes%402x.jpg
 authors:
@@ -13,14 +13,14 @@ tags:
     - speech-to-text,
     - fastapi
 seo:
-    title: Starting Out with Python and Deepgram Live Streaming Audio
-    description: Learn how to perform real-time Automatic Speech Recognition using various Python web frameworks and Deepgram's Speech-to-Text API with this roundup post.
+    title: "Starting Out with Python and Deepgram Live Streaming Audio"
+    description: "Learn how to perform real-time Automatic Speech Recognition using various Python web frameworks and Deepgram's Speech-to-Text API with this roundup post."
 shorturls:
-    share: https://dpgr.am/b96d49
-    twitter: https://dpgr.am/080872
-    linkedin: https://dpgr.am/7ea93b
-    reddit: https://dpgr.am/6ff51c
-    facebook: https://dpgr.am/085d7c
+    share: https://dpgr.am/a37fd4b
+    twitter: https://dpgr.am/0f72c7f
+    linkedin: https://dpgr.am/2ca0830
+    reddit: https://dpgr.am/dbbc23f
+    facebook: https://dpgr.am/1bf13dd
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454100/blog/python-deepgram-roundup/ograph.png
 ---

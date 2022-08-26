@@ -1,6 +1,6 @@
 ---
-title: Generating Collapsable Navigation from Nuxt Content
-description: Generating Collapsable Navigation from Nuxt Content
+title: "Generating Collapsable Navigation from Nuxt Content"
+description: "Generating Collapsable Navigation from Nuxt Content"
 date: 2022-02-07
 cover: https://res.cloudinary.com/deepgram/image/upload/v1644257722/blog/2022/01/nuxt-expand-nested-navigation/Generating-Collapsable-Nav-from-Nuxt%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - nuxt,
     - vue
 seo:
-    title: Generating Collapsable Navigation from Nuxt Content
-    description: Generating Collapsable Navigation from Nuxt Content
+    title: "Generating Collapsable Navigation from Nuxt Content"
+    description: "Generating Collapsable Navigation from Nuxt Content"
 shorturls:
-    share: https://dpgr.am/b670c4
-    twitter: https://dpgr.am/c1b1f9
-    linkedin: https://dpgr.am/35e8c0
-    reddit: https://dpgr.am/001261
-    facebook: https://dpgr.am/b595b7
+    share: https://dpgr.am/0dd3452
+    twitter: https://dpgr.am/44cb838
+    linkedin: https://dpgr.am/f004a97
+    reddit: https://dpgr.am/1d86ff5
+    facebook: https://dpgr.am/e84c420
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453848/blog/nuxt-expand-nested-navigation/ograph.png
 ---

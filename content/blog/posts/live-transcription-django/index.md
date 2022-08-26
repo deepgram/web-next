@@ -1,6 +1,6 @@
 ---
-title: Live Transcription With Python and Django
-description: Learn how to do a live, real-time transcription with Django in Python and Deepgram
+title: "Live Transcription With Python and Django"
+description: "Learn how to do a live, real-time transcription with Django in Python and Deepgram"
 date: 2022-03-03
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646295674/blog/2022/03/live-transcription-django/Live-Transcription-With-Python-Django-Deepgram%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - speech recognition,
     - streaming
 seo:
-    title: Live Transcription With Python and Django
-    description: Learn how to do a live, real-time transcription with Django in Python and Deepgram
+    title: "Live Transcription With Python and Django"
+    description: "Learn how to do a live, real-time transcription with Django in Python and Deepgram"
 shorturls:
-    share: https://dpgr.am/1e3b5b
-    twitter: https://dpgr.am/b74913
-    linkedin: https://dpgr.am/d1ae2a
-    reddit: https://dpgr.am/c6d751
-    facebook: https://dpgr.am/592938
+    share: https://dpgr.am/2fe2397
+    twitter: https://dpgr.am/ce378b1
+    linkedin: https://dpgr.am/9fb7f6f
+    reddit: https://dpgr.am/e52ed16
+    facebook: https://dpgr.am/01a508f
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454032/blog/live-transcription-django/ograph.png
 ---

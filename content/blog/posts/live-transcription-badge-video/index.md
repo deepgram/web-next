@@ -1,6 +1,6 @@
 ---
-title: Video: Building a Live Transcription Badge With Deepgram
-description: We show you how we built our popular live transcription badge project.
+title: "Video: Building a Live Transcription Badge With Deepgram"
+description: "We show you how we built our popular live transcription badge project."
 date: 2022-01-21
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643835533/blog/2022/01/live-transcription-badge-video/build-badge.png
 authors:
@@ -11,14 +11,14 @@ tags:
     - hardware,
     - raspberrypi
 seo:
-    title: Video: Building a Live Transcription Badge With Deepgram
-    description: We show you how we built our popular live transcription badge project.
+    title: "Video: Building a Live Transcription Badge With Deepgram"
+    description: "We show you how we built our popular live transcription badge project."
 shorturls:
-    share: https://dpgr.am/4f57bd
-    twitter: https://dpgr.am/a10f8e
-    linkedin: https://dpgr.am/2af3d9
-    reddit: https://dpgr.am/b66974
-    facebook: https://dpgr.am/c2b052
+    share: https://dpgr.am/a6a3010
+    twitter: https://dpgr.am/03aeb2e
+    linkedin: https://dpgr.am/672afd8
+    reddit: https://dpgr.am/39435cb
+    facebook: https://dpgr.am/8d9bd9a
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453845/blog/live-transcription-badge-video/ograph.png
 ---

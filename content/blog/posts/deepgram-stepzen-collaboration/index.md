@@ -1,6 +1,6 @@
 ---
-title: How to Use Deepgram with Next.js Using StepZen
-description: Do you want to learn how to convert Deepgram's API into your own GraphQL API? This post is for you!
+title: "How to Use Deepgram with Next.js Using StepZen"
+description: "Do you want to learn how to convert Deepgram's API into your own GraphQL API? This post is for you!"
 date: 2022-06-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1654877200/blog/2022/06/deepgram-stepzen-collaboration/stepzen-cover.png
 authors:
@@ -11,14 +11,14 @@ tags:
     - graphQL,
     - Next.js
 seo:
-    title: How to Use Deepgram with Next.js Using StepZen
-    description: Do you want to learn how to convert Deepgram's API into your own GraphQL API? This post is for you!
+    title: "How to Use Deepgram with Next.js Using StepZen"
+    description: "Do you want to learn how to convert Deepgram's API into your own GraphQL API? This post is for you!"
 shorturls:
-    share: https://dpgr.am/e6300c
-    twitter: https://dpgr.am/d9df8c
-    linkedin: https://dpgr.am/a4b033
-    reddit: https://dpgr.am/bd5731
-    facebook: https://dpgr.am/335eee
+    share: https://dpgr.am/3e006b1
+    twitter: https://dpgr.am/1cff2d3
+    linkedin: https://dpgr.am/d6186be
+    reddit: https://dpgr.am/72c03f7
+    facebook: https://dpgr.am/282d9b1
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454093/blog/deepgram-stepzen-collaboration/ograph.png
 ---

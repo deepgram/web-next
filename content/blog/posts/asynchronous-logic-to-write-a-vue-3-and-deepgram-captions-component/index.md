@@ -1,6 +1,6 @@
 ---
-title: Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component
-description: In this segment, learn how to use Vue 3 composables to power a text-captions component that integrates with Deepgram's speech-to-text API. Read more here!
+title: "Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component"
+description: "In this segment, learn how to use Vue 3 composables to power a text-captions component that integrates with Deepgram's speech-to-text API. Read more here!"
 date: 2022-04-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1648829347/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/Building-Livestreaming-w-AmazonIVS.jpg
 authors:
@@ -14,14 +14,14 @@ tags:
     - vue,
     - express
 seo:
-    title: Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component
-    description: In this segment, learn how to use Vue 3 composables to power a text-captions component that integrates with Deepgram's speech-to-text API. Read more here!
+    title: "Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component"
+    description: "In this segment, learn how to use Vue 3 composables to power a text-captions component that integrates with Deepgram's speech-to-text API. Read more here!"
 shorturls:
-    share: https://dpgr.am/cff32e
-    twitter: https://dpgr.am/cddda2
-    linkedin: https://dpgr.am/d5300d
-    reddit: https://dpgr.am/0d88a0
-    facebook: https://dpgr.am/e8f4e0
+    share: https://dpgr.am/74d357f
+    twitter: https://dpgr.am/5d4cf77
+    linkedin: https://dpgr.am/dc3449e
+    reddit: https://dpgr.am/3628a36
+    facebook: https://dpgr.am/bce50aa
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454007/blog/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/ograph.png
 ---
@@ -58,7 +58,7 @@ Where it says "Deepgram Not Connected," there will be text captions that display
 
 Here is a diagram of what I will build today:
 
-<img src="./AudioTranscription_Final.png" alt="Audio Transcription Feature Diagram" style="width: 75%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1648829348/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/AudioTranscription_Final.png" alt="Audio Transcription Feature Diagram" style="width: 75%; margin:auto;">
 
 This feature will rely on Vue 3's Composition API, especially Vue Composables, to put Deepgram captions on the screen.
 
@@ -106,7 +106,7 @@ On the backend, I have set up an endpoint to receive the fetch request from the 
 
 Now I'll create the `useDeepgramKey.js` composable.
 
-<img src="./useDeepgramKey.png" alt="Create useDeepgramKey.js file in Composables folder" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1648829348/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/useDeepgramKey.png" alt="Create useDeepgramKey.js file in Composables folder" style="width: 50%; margin:auto;">
 
 ### Tip #1 - Use async and await to write a composable that returns a promise.
 

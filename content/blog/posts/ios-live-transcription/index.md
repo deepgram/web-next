@@ -1,6 +1,6 @@
 ---
-title: Live Transcriptions with iOS and Deepgram
-description: Build an iOS app which takes the user’s microphone and prints transcripts to the screen in real-time.
+title: "Live Transcriptions with iOS and Deepgram"
+description: "Build an iOS app which takes the user’s microphone and prints transcripts to the screen in real-time."
 date: 2022-01-03
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638827580/blog/2022/01/ios-live-transcription/Live-Transcriptions-w-iOS-Deepgram-A%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - swift,
     - tutorial
 seo:
-    title: Live Transcriptions with iOS and Deepgram
-    description: Build an iOS app which takes the user’s microphone and prints transcripts to the screen in real-time.
+    title: "Live Transcriptions with iOS and Deepgram"
+    description: "Build an iOS app which takes the user’s microphone and prints transcripts to the screen in real-time."
 shorturls:
-    share: https://dpgr.am/7cae61
-    twitter: https://dpgr.am/aa0788
-    linkedin: https://dpgr.am/c511f2
-    reddit: https://dpgr.am/007814
-    facebook: https://dpgr.am/88cffc
+    share: https://dpgr.am/b6eb328
+    twitter: https://dpgr.am/e4363b4
+    linkedin: https://dpgr.am/b145bbc
+    reddit: https://dpgr.am/f7074b4
+    facebook: https://dpgr.am/d280672
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453843/blog/ios-live-transcription/ograph.png
 ---

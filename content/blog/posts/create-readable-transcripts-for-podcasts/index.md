@@ -1,6 +1,6 @@
 ---
-title: How To Transcribe Your Podcast with Python
-description: Learn how to create lovely readable transcripts with Python for your podcasts, both before and after publishing.
+title: "How To Transcribe Your Podcast with Python"
+description: "Learn how to create lovely readable transcripts with Python for your podcasts, both before and after publishing."
 date: 2022-08-24
 cover: https://res.cloudinary.com/deepgram/image/upload/v1660841102/blog/2022/08/create-readable-transcripts-for-podcasts/cover.jpg
 authors:
@@ -9,14 +9,14 @@ category: tutorial
 tags:
     - python
 seo:
-    title: How To Transcribe Your Podcast with Python
-    description: Learn how to create lovely readable transcripts with Python for your podcasts, both before and after publishing.
+    title: "How To Transcribe Your Podcast with Python"
+    description: "Learn how to create lovely readable transcripts with Python for your podcasts, both before and after publishing."
 shorturls:
-    share: https://dpgr.am/4f2b49
-    twitter: https://dpgr.am/56fd3b
-    linkedin: https://dpgr.am/42ab82
-    reddit: https://dpgr.am/e032ab
-    facebook: https://dpgr.am/3e27c3
+    share: https://dpgr.am/394747a
+    twitter: https://dpgr.am/7aa722d
+    linkedin: https://dpgr.am/d63e5b2
+    reddit: https://dpgr.am/1ca63f6
+    facebook: https://dpgr.am/0833498
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454116/blog/create-readable-transcripts-for-podcasts/ograph.png
 ---

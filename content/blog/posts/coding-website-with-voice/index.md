@@ -1,6 +1,6 @@
 ---
 title: "Video: Coding a Website With Your Voice"
-description: Deepgram community member Filip builds a project which creates websites through voice commands. Find out how.
+description: "Deepgram community member Filip builds a project which creates websites through voice commands. Find out how."
 date: 2022-02-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646692163/blog/2022/02/coding-website-with-voice/cover.png
 authors:
@@ -11,13 +11,13 @@ tags:
     - tutorial
 seo:
     title: "Video: Coding a Website With Your Voice"
-    description: Deepgram community member Filip builds a project which creates websites through voice commands. Find out how.
+    description: "Deepgram community member Filip builds a project which creates websites through voice commands. Find out how."
 shorturls:
-    share: https://dpgr.am/52d037
-    twitter: https://dpgr.am/e4ecc5
-    linkedin: https://dpgr.am/1d12d9
-    reddit: https://dpgr.am/a95048
-    facebook: https://dpgr.am/20a2e5
+    share: https://dpgr.am/a5ca58f
+    twitter: https://dpgr.am/6b54c18
+    linkedin: https://dpgr.am/9e54f0a
+    reddit: https://dpgr.am/de79ca5
+    facebook: https://dpgr.am/ea53595
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453860/blog/coding-website-with-voice/ograph.png
 ---

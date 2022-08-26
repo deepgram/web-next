@@ -1,6 +1,6 @@
 ---
-title: How to Add Speech Recognition to Your React and Node.js project
-description: Do you have a React project that could use speech-to-text? This tutorial will go through the steps to upgrade your React project with Deepgram transcriptions.
+title: "How to Add Speech Recognition to Your React and Node.js project"
+description: "Do you have a React project that could use speech-to-text? This tutorial will go through the steps to upgrade your React project with Deepgram transcriptions."
 date: 2022-06-20
 cover: https://res.cloudinary.com/deepgram/image/upload/v1655815938/blog/2022/06/how-to-add-speech-recognition-to-your-react-project/How-to-Add-Speech-Recognition-to-Your-React-Project-blog.png
 authors:
@@ -11,14 +11,14 @@ tags:
     - voice-to-text,
     - tutorial
 seo:
-    title: How to Add Speech Recognition to Your React and Node.js project
-    description: Do you have a React project that could use speech-to-text? This tutorial will go through the steps to upgrade your React project with Deepgram transcriptions.
+    title: "How to Add Speech Recognition to Your React and Node.js project"
+    description: "Do you have a React project that could use speech-to-text? This tutorial will go through the steps to upgrade your React project with Deepgram transcriptions."
 shorturls:
-    share: https://dpgr.am/0cc8e8
-    twitter: https://dpgr.am/b86abc
-    linkedin: https://dpgr.am/6885a3
-    reddit: https://dpgr.am/82da90
-    facebook: https://dpgr.am/90219a
+    share: https://dpgr.am/9a1b4dd
+    twitter: https://dpgr.am/2743c8b
+    linkedin: https://dpgr.am/9887ac4
+    reddit: https://dpgr.am/acb50e2
+    facebook: https://dpgr.am/53c1ccc
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454098/blog/how-to-add-speech-recognition-to-your-react-project/ograph.png
 ---

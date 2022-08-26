@@ -1,6 +1,6 @@
 ---
-title: Diving Into Vue 3 - The Setup Function
-description: Learn about the new Vue 3 setup function and the Composition API
+title: "Diving Into Vue 3 - The Setup Function"
+description: "Learn about the new Vue 3 setup function and the Composition API"
 date: 2022-02-04
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643314554/blog/2022/02/diving-into-vue-3-setup-function/dive-into-vue-3%402x.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - vue,
     - javascript
 seo:
-    title: Diving Into Vue 3 - The Setup Function
-    description: Learn about the new Vue 3 setup function and the Composition API
+    title: "Diving Into Vue 3 - The Setup Function"
+    description: "Learn about the new Vue 3 setup function and the Composition API"
 shorturls:
-    share: https://dpgr.am/cc6eec
-    twitter: https://dpgr.am/bf397d
-    linkedin: https://dpgr.am/e81589
-    reddit: https://dpgr.am/432b10
-    facebook: https://dpgr.am/9ff5e4
+    share: https://dpgr.am/1c5688b
+    twitter: https://dpgr.am/d032795
+    linkedin: https://dpgr.am/7b3f956
+    reddit: https://dpgr.am/dfb028e
+    facebook: https://dpgr.am/c9e984d
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453994/blog/diving-into-vue-3-setup-function/ograph.png
 ---

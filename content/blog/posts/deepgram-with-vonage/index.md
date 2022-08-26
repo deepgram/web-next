@@ -1,6 +1,6 @@
 ---
-title: Speech Recognition with Vonage and Python
-description: Use Deepgram's speech-to-text features with Python and Vonage's API to transcribe real-time audio such as incoming phone calls.
+title: "Speech Recognition with Vonage and Python"
+description: "Use Deepgram's speech-to-text features with Python and Vonage's API to transcribe real-time audio such as incoming phone calls."
 date: 2022-05-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1651757346/blog/2022/05/deepgram-with-vonage/Speech-Analytics-Real-Time-Audio-w-Vonage-Python%402x.jpg
 authors:
@@ -13,14 +13,14 @@ tags:
     - audio,
     - phone calls
 seo:
-    title: Speech Recognition with Vonage and Python
-    description: Use Deepgram's speech-to-text features with Python and Vonage's API to transcribe real-time audio such as incoming phone calls.
+    title: "Speech Recognition with Vonage and Python"
+    description: "Use Deepgram's speech-to-text features with Python and Vonage's API to transcribe real-time audio such as incoming phone calls."
 shorturls:
-    share: https://dpgr.am/d86d3b
-    twitter: https://dpgr.am/340b2a
-    linkedin: https://dpgr.am/772c9f
-    reddit: https://dpgr.am/b0eaff
-    facebook: https://dpgr.am/b4bec8
+    share: https://dpgr.am/ac0dee8
+    twitter: https://dpgr.am/af797b7
+    linkedin: https://dpgr.am/8f41c11
+    reddit: https://dpgr.am/2f6a721
+    facebook: https://dpgr.am/8927265
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454085/blog/deepgram-with-vonage/ograph.png
 ---

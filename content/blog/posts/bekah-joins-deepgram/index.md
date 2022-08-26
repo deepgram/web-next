@@ -1,6 +1,6 @@
 ---
-title: Bekah Hawrot Weigel Joins the Developer Relations Team
-description: Bekah Hawrot Weigel joins the Developer Relations team at Deepgram!
+title: "Bekah Hawrot Weigel Joins the Developer Relations Team"
+description: "Bekah Hawrot Weigel joins the Developer Relations team at Deepgram!"
 date: 2022-02-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643986477/blog/2022/02/bekah-joins-deepgram/kettlebells%402x.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - bio,
     - careers
 seo:
-    title: Bekah Hawrot Weigel joins the Developer Relations team at Deepgram as the Technical Community Builder
-    description: Bekah Hawrot Weigel joins the Developer Relations team at Deepgram!
+    title: "Bekah Hawrot Weigel joins the Developer Relations team at Deepgram as the Technical Community Builder"
+    description: "Bekah Hawrot Weigel joins the Developer Relations team at Deepgram!"
 shorturls:
-    share: https://dpgr.am/f5c58c
-    twitter: https://dpgr.am/6c9eec
-    linkedin: https://dpgr.am/a8e120
-    reddit: https://dpgr.am/70cf25
-    facebook: https://dpgr.am/b4c9ca
+    share: https://dpgr.am/0521148
+    twitter: https://dpgr.am/597740c
+    linkedin: https://dpgr.am/c2d4eb3
+    reddit: https://dpgr.am/6bdbf5e
+    facebook: https://dpgr.am/9b26e66
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453856/blog/bekah-joins-deepgram/ograph.png
 ---

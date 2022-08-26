@@ -1,6 +1,6 @@
 ---
-title: Introduction to PyTorch Audio Data via TorchAudio
-description: Learn how to use TorchAudio to transform, augment, and extract features from audio data.
+title: "Introduction to PyTorch Audio Data via TorchAudio"
+description: "Learn how to use TorchAudio to transform, augment, and extract features from audio data."
 date: 2022-06-27
 cover: https://res.cloudinary.com/deepgram/image/upload/v1656347792/blog/2022/06/pytorch-intro-with-torchaudio/Introduction-to-PyTorch-Audio-Data-via-TorchAudio%402x.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - python,
     - audio
 seo:
-    title: Introduction to PyTorch Audio Data via TorchAudio
-    description: Learn how to use TorchAudio to transform, augment, and extract features from audio data.
+    title: "Introduction to PyTorch Audio Data via TorchAudio"
+    description: "Learn how to use TorchAudio to transform, augment, and extract features from audio data."
 shorturls:
-    share: https://dpgr.am/5862f4
-    twitter: https://dpgr.am/ffeb5b
-    linkedin: https://dpgr.am/4194bd
-    reddit: https://dpgr.am/3f83fb
-    facebook: https://dpgr.am/8c4c37
+    share: https://dpgr.am/0f9ecb9
+    twitter: https://dpgr.am/5b1c2a9
+    linkedin: https://dpgr.am/3761b8c
+    reddit: https://dpgr.am/2ea56c8
+    facebook: https://dpgr.am/4d56e4a
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454102/blog/pytorch-intro-with-torchaudio/ograph.png
 ---

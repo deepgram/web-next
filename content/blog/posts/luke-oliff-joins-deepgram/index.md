@@ -1,6 +1,6 @@
 ---
-title: Luke Oliff Joins the Developer Relations Team
-description: Luke Oliff joins the Developer Relations team at Deepgram!
+title: "Luke Oliff Joins the Developer Relations Team"
+description: "Luke Oliff joins the Developer Relations team at Deepgram!"
 date: 2021-11-30
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638199198/blog/2021/11/luke-oliff-joins-deepgram/luke-oliff-joins-developer-relations-at-deepgram.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - bio,
     - careers
 seo:
-    title: Luke Oliff joins the Developer Relations team at Deepgram as a Senior Developer Experience Engineer
-    description: Luke Oliff joins the Developer Relations team at Deepgram!
+    title: "Luke Oliff joins the Developer Relations team at Deepgram as a Senior Developer Experience Engineer"
+    description: "Luke Oliff joins the Developer Relations team at Deepgram!"
 shorturls:
-    share: https://dpgr.am/5c8790
-    twitter: https://dpgr.am/af2e68
-    linkedin: https://dpgr.am/12aba7
-    reddit: https://dpgr.am/bf1e90
-    facebook: https://dpgr.am/6fe8ce
+    share: https://dpgr.am/91e346b
+    twitter: https://dpgr.am/ca5f0f5
+    linkedin: https://dpgr.am/8668e9b
+    reddit: https://dpgr.am/d05f033
+    facebook: https://dpgr.am/d376498
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453812/blog/luke-oliff-joins-deepgram/ograph.png
 ---

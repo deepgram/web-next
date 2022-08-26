@@ -1,6 +1,6 @@
 ---
-title: Is There an ASR Gender Gap?
-description: Is there a gender gap with speech recognition technology? Is there differences with automatic speech recognition between genders? Here is what we see.
+title: "Is There an ASR Gender Gap?"
+description: "Is there a gender gap with speech recognition technology? Is there differences with automatic speech recognition between genders? Here is what we see."
 date: 2021-03-31
 cover: https://res.cloudinary.com/deepgram/image/upload/v1635446349/blog/2021/03/is-there-an-asr-gender-gap/asr-gender-gap-blog%402x.jpg
 authors:
@@ -9,14 +9,14 @@ category: thought-leadership
 tags:
     - inclusion
 seo:
-    title: Is There an ASR Gender Gap?
-    description: Is there a gender gap with speech recognition technology? Is there differences with automatic speech recognition between genders? Here is what we see.
+    title: "Is There an ASR Gender Gap?"
+    description: "Is there a gender gap with speech recognition technology? Is there differences with automatic speech recognition between genders? Here is what we see."
 shorturls:
-    share: https://dpgr.am/960df5
-    twitter: https://dpgr.am/331fd7
-    linkedin: https://dpgr.am/90445e
-    reddit: https://dpgr.am/16b0d7
-    facebook: https://dpgr.am/bf2c6e
+    share: https://dpgr.am/3676a65
+    twitter: https://dpgr.am/480a5c3
+    linkedin: https://dpgr.am/818f31f
+    reddit: https://dpgr.am/c8b49a0
+    facebook: https://dpgr.am/c6a0af1
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453790/blog/is-there-an-asr-gender-gap/ograph.png
 ---

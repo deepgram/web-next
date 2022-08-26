@@ -1,6 +1,6 @@
 ---
-title: How to Add Deepgram Speech Recognition to Your Unity Game
-description: In this tutorial, learn how to integrate Deepgram's automatic speech recognition engine into your Unity game.
+title: "How to Add Deepgram Speech Recognition to Your Unity Game"
+description: "In this tutorial, learn how to integrate Deepgram's automatic speech recognition engine into your Unity game."
 date: 2022-03-16
 cover: https://res.cloudinary.com/deepgram/image/upload/v1647451573/blog/2022/03/deepgram-unity-tutorial/assets/Building-a-Game-w-Unity-Deepgram%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - game-dev,
     - unity
 seo:
-    title: How to Add Deepgram Speech Recognition to Your Unity Game
-    description: In this tutorial, learn how to integrate Deepgram's automatic speech recognition engine into your Unity game.
+    title: "How to Add Deepgram Speech Recognition to Your Unity Game"
+    description: "In this tutorial, learn how to integrate Deepgram's automatic speech recognition engine into your Unity game."
 shorturls:
-    share: https://dpgr.am/f52d57
-    twitter: https://dpgr.am/54e3ee
-    linkedin: https://dpgr.am/138b0d
-    reddit: https://dpgr.am/5fb310
-    facebook: https://dpgr.am/7c703a
+    share: https://dpgr.am/2af1328
+    twitter: https://dpgr.am/81708b8
+    linkedin: https://dpgr.am/5bea07e
+    reddit: https://dpgr.am/6312817
+    facebook: https://dpgr.am/1f7bfc4
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454022/blog/deepgram-unity-tutorial/ograph.png
 ---
@@ -62,7 +62,7 @@ a ball around a simulated physics environment just by commanding it via your com
 
 Open Unity and click "New project".
 
-<img src="./assets/new_project.png" alt="Create a new project." style="max-width: 2272px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647377747/blog/2022/03/deepgram-unity-tutorial/assets/new_project.png" alt="Create a new project." style="max-width: 2272px;display: block;margin-left: auto;margin-right: auto;">
 
 You will be presented with a list of templates - choose "2D", and under the "Project Settings" panel name the project "UnityDeepgramDemo" (or whatever you'd like!)
 and choose a location for the project on your filesystem.
@@ -73,11 +73,11 @@ Then click "Create project."
 We are now in the Unity Editor. Our demo will rely on one external package to help us handle the websocket connection to Deepgram - [Native WebSockets](https://github.com/endel/NativeWebSocket).
 To install Native WebSockets, first, open the Package Manager from `Window -> Package Manager`.
 
-<img src="./assets/open_package_manager.png" alt="Open the Package Manager." style="max-width: 466px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647377747/blog/2022/03/deepgram-unity-tutorial/assets/open_package_manager.png" alt="Open the Package Manager." style="max-width: 466px;display: block;margin-left: auto;margin-right: auto;">
 
 Then click the "+" drop-down and click "Add package from git URL...".
 
-<img src="./assets/add_package_from_git_url.png" alt="Add a package from a git URL." style="max-width: 400px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647377746/blog/2022/03/deepgram-unity-tutorial/assets/add_package_from_git_url.png" alt="Add a package from a git URL." style="max-width: 400px;display: block;margin-left: auto;margin-right: auto;">
 
 Enter the URL: `https://github.com/endel/NativeWebSocket.git#upm` and click "Add."
 
@@ -92,7 +92,7 @@ Let's add some physics objects to our scene - we are going to create a box out o
 
 In the "Hierarchy" tab, right-click and select `2D Object -> Physics -> Static Sprite`.
 
-<img src="./assets/add_static_sprite.png" alt="Add a Static Sprite." style="max-width: 1166px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647377747/blog/2022/03/deepgram-unity-tutorial/assets/add_static_sprite.png" alt="Add a Static Sprite." style="max-width: 1166px;display: block;margin-left: auto;margin-right: auto;">
 
 We now have a static square sprite in the center of our scene. Let's move this square to the left and make it a vertical rectangle to start building our box.
 To do this, go to the "Inspector" tab on the right. Under "Transform," change the "X" "Position" to -5 and the "Y" "Scale" to 5. This will stretch the square
@@ -293,7 +293,7 @@ create a new script and name it "DeepgramInstance." Edit the script and add the 
 Insert your Deepgram API key where the script says "INSERT\_YOUR\_API\_KEY," then
 attach this script to the "DeepgramObject", and in the "Inspector" tab click the "Ball" field and select the "Ball" object we created earlier.
 
-<img src="./assets/add_ball_to_deepgram_object.png" alt="Adding a Ball object reference to the DeepgramObject." style="max-width: 556px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647404524/blog/2022/03/deepgram-unity-tutorial/assets/add_ball_to_deepgram_object.png" alt="Adding a Ball object reference to the DeepgramObject." style="max-width: 556px;display: block;margin-left: auto;margin-right: auto;">
 
 Ok, so what's going on here? Well, first the script defines the classes `DeepgramResponse`, `Channel`, and `Alternative` which we will use to deserialize
 the Deepgram ASR response, which is in JSON format. Then the script defines the class `DeepgramInstace` which has two member variables: a `WebSocket` object,
@@ -400,17 +400,17 @@ Currently, in order to get the microphone's audio data, the microphone's audio s
 can be problematic and lead to feedback issues (plus, hearing your voice in the game isn't the point). To fix this issue, go to the "Assets" panel, right-click,
 and select `Create -> Audio Mixer`. Name the mixer "Mixer."
 
-<img src="./assets/add_audio_mixer.png" alt="Add a Mixer." style="max-width: 1176px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647377747/blog/2022/03/deepgram-unity-tutorial/assets/add_audio_mixer.png" alt="Add a Mixer." style="max-width: 1176px;display: block;margin-left: auto;margin-right: auto;">
 
 Double click "Mixer" in the "Assets" panel, then next to "Groups" click the "+" button and name the group "Microphone."
 Now go to the fader for this group and turn it all the way down.
 
-<img src="./assets/turn_fader_down.png" alt="Silence the Microphone group." style="max-width: 1090px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647377746/blog/2022/03/deepgram-unity-tutorial/assets/turn_fader_down.png" alt="Silence the Microphone group." style="max-width: 1090px;display: block;margin-left: auto;margin-right: auto;">
 
 Now, click the "MicrophoneObject" in the "Hierarchy" tab and then click on the field for "Output" in the "Audio Source" node in the "Inspector" tab and select "Microphone (Mixer)."
 This will ensure the microphone audio can stream its data without being directed to your speakers!
 
-<img src="./assets/send_audio_source_to_mixer_group.png" alt="Silence the Microphone group." style="max-width: 568px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647377746/blog/2022/03/deepgram-unity-tutorial/assets/send_audio_source_to_mixer_group.png" alt="Silence the Microphone group." style="max-width: 568px;display: block;margin-left: auto;margin-right: auto;">
 
 You should now be able to press "Play" (►) and make the ball jump around by saying "left," "right," "up," or "down" in the microphone!
 

@@ -1,6 +1,6 @@
 ---
-title: Making Your Audio and Visual Content Accessible
-description: Creating audio visual content can be a fresh way to repackage your written developer content, but it’s important to make sure your content is accessible.
+title: "Making Your Audio and Visual Content Accessible"
+description: "Creating audio visual content can be a fresh way to repackage your written developer content, but it’s important to make sure your content is accessible."
 date: 2022-04-25
 cover: https://res.cloudinary.com/deepgram/image/upload/v1650883327/blog/2022/04/making-your-audiovisual-content-accessible/Making-Your-AV-Content-Accessible%402x.png
 authors:
@@ -13,14 +13,14 @@ tags:
     - audio,
     - visual
 seo:
-    title: Making Your Audio and Visual Content Accessible
-    description: Creating audio visual content can be a fresh way to repackage your written developer content, but it’s important to make sure your content is accessible.
+    title: "Making Your Audio and Visual Content Accessible"
+    description: "Creating audio visual content can be a fresh way to repackage your written developer content, but it’s important to make sure your content is accessible."
 shorturls:
-    share: https://dpgr.am/12c2b4
-    twitter: https://dpgr.am/9a44c4
-    linkedin: https://dpgr.am/30d273
-    reddit: https://dpgr.am/42117d
-    facebook: https://dpgr.am/357834
+    share: https://dpgr.am/a7c5954
+    twitter: https://dpgr.am/92014a7
+    linkedin: https://dpgr.am/424afee
+    reddit: https://dpgr.am/e69a766
+    facebook: https://dpgr.am/2da3711
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454065/blog/making-your-audiovisual-content-accessible/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Transcribing Twilio Voice Calls in Real-Time with Deepgram
-description: In this tutorial, learn how to transcribe Twilio Voice calls with Deepgram with real-time speech-to-text.
+title: "Transcribing Twilio Voice Calls in Real-Time with Deepgram"
+description: "In this tutorial, learn how to transcribe Twilio Voice calls with Deepgram with real-time speech-to-text."
 date: 2022-04-07
 cover: https://res.cloudinary.com/deepgram/image/upload/v1649267223/blog/2022/04/deepgram-twilio-streaming/Transcribing-Twilio-Calls-Real-Time-w-Deepgram%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - python,
     - streaming
 seo:
-    title: Transcribing Twilio Voice Calls in Real-Time with Deepgram
-    description: In this tutorial, learn how to transcribe Twilio Voice calls with Deepgram with real-time speech-to-text.
+    title: "Transcribing Twilio Voice Calls in Real-Time with Deepgram"
+    description: "In this tutorial, learn how to transcribe Twilio Voice calls with Deepgram with real-time speech-to-text."
 shorturls:
-    share: https://dpgr.am/50ca57
-    twitter: https://dpgr.am/61d120
-    linkedin: https://dpgr.am/e4ba99
-    reddit: https://dpgr.am/ed43de
-    facebook: https://dpgr.am/50ac04
+    share: https://dpgr.am/bf20808
+    twitter: https://dpgr.am/06844a0
+    linkedin: https://dpgr.am/22d53d3
+    reddit: https://dpgr.am/dc08b7f
+    facebook: https://dpgr.am/7c4efd0
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454061/blog/deepgram-twilio-streaming/ograph.png
 ---
@@ -42,7 +42,7 @@ You will need:
 We need to tell Twilio to fork audio data from calls going to your Twilio number to the server we are going to write.
 This is done via "TwiML Bin"s. In the Twilio Console, search for TwiML Bin, and click "Create TwiML Bin."
 
-<img src="./assets/find_twiml_bin.png" alt="Navigate to your TwiML Bins." style="max-width: 606px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1648782300/blog/2022/04/deepgram-twilio-streaming/assets/find_twiml_bin.png" alt="Navigate to your TwiML Bins." style="max-width: 606px;display: block;margin-left: auto;margin-right: auto;">
 
 Give the TwiML Bin a "Friendly Name" - something like "Streaming" or "Deepgram Streaming," and then make the contents of the TwiML Bin the following:
 
@@ -80,7 +80,7 @@ are ready to move on to the Deepgram integration server!
 
 Let's take a look at the system we are building here:
 
-<img src="./assets/deepgram_twilio_diagram.png" alt="The big picture." style="max-width: 2096px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1648783494/blog/2022/04/deepgram-twilio-streaming/assets/deepgram_twilio_diagram.png" alt="The big picture." style="max-width: 2096px;display: block;margin-left: auto;margin-right: auto;">
 
 We have pairs of callers, inbound and outbound, and, for each call passing through Twilio's servers, Twilio is able to fork the audio from the call
 to our proxy server via websockets. Our server then has to do some light processing of that audio, forward it on to Deepgram, receive transcripts
@@ -349,7 +349,7 @@ to `ws://localhost:5000/client`. Upon connecting, the server should output a lis
 the Deepgram transcription responses roll in! You can start multiple clients and have them all subscribe to the
 same `callSid` to see how a concurrent system could work.
 
-<img src="./assets/websocat_screenshot.png" alt="Using websocat to view the transcripts." style="max-width: 1623px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1649269367/blog/2022/04/deepgram-twilio-streaming/assets/websocat_screenshot.png" alt="Using websocat to view the transcripts." style="max-width: 1623px;display: block;margin-left: auto;margin-right: auto;">
 
 ## Further Development
 

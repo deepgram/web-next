@@ -1,6 +1,6 @@
 ---
-title: Get Live Speech Transcriptions In Your Browser
-description: Learn how to use Deepgram's streaming audio feature with one HTML file.
+title: "Get Live Speech Transcriptions In Your Browser"
+description: "Learn how to use Deepgram's streaming audio feature with one HTML file."
 date: 2021-11-22
 cover: https://res.cloudinary.com/deepgram/image/upload/v1637012204/blog/2021/11/live-transcription-mic-browser/Get-Live-Speech-Transcriptions-In-Browser%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - microphone,
     - streaming
 seo:
-    title: Get Live Speech Transcriptions In Your Browser
-    description: Learn how to use Deepgram's streaming audio feature with one HTML file.
+    title: "Get Live Speech Transcriptions In Your Browser"
+    description: "Learn how to use Deepgram's streaming audio feature with one HTML file."
 shorturls:
-    share: https://dpgr.am/c34f2a
-    twitter: https://dpgr.am/a885cd
-    linkedin: https://dpgr.am/a7878d
-    reddit: https://dpgr.am/faebc5
-    facebook: https://dpgr.am/d3ffbd
+    share: https://dpgr.am/0c15c9e
+    twitter: https://dpgr.am/fd7b4aa
+    linkedin: https://dpgr.am/37db098
+    reddit: https://dpgr.am/3f4c75e
+    facebook: https://dpgr.am/f224dff
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453810/blog/live-transcription-mic-browser/ograph.png
 ---

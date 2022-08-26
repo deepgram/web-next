@@ -1,6 +1,6 @@
 ---
-title: Build a To-do List App with Pinia and Vue 3
-description: Learn about Vue 3's new official state management system Pinia while building a to-do list app. Bonus - add typescript!
+title: "Build a To-do List App with Pinia and Vue 3"
+description: "Learn about Vue 3's new official state management system Pinia while building a to-do list app. Bonus - add typescript!"
 date: 2022-04-15
 cover: https://res.cloudinary.com/deepgram/image/upload/v1649693948/blog/2022/04/build-a-todo-list-with-pinia-and-vue-3/Build-Todo-list-w-Vue3-Pinia%402x.jpg
 authors:
@@ -13,14 +13,14 @@ tags:
     - typescript,
     - pinia
 seo:
-    title: Build a To-do List App with Pinia and Vue 3
-    description: Learn about Vue 3's new official state management system Pinia while building a to-do list app. Bonus - add typescript!
+    title: "Build a To-do List App with Pinia and Vue 3"
+    description: "Learn about Vue 3's new official state management system Pinia while building a to-do list app. Bonus - add typescript!"
 shorturls:
-    share: https://dpgr.am/47142a
-    twitter: https://dpgr.am/0f2d94
-    linkedin: https://dpgr.am/b44197
-    reddit: https://dpgr.am/90466e
-    facebook: https://dpgr.am/57548e
+    share: https://dpgr.am/c0cf686
+    twitter: https://dpgr.am/832d87f
+    linkedin: https://dpgr.am/2fb76cd
+    reddit: https://dpgr.am/a714061
+    facebook: https://dpgr.am/ba13527
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453154/blog/build-a-todo-list-with-pinia-and-vue-3/ograph.png
 ---
@@ -71,7 +71,7 @@ createApp(App).use(createPinia()).mount('#app')
 
 In the `src` folder, in `components`, I'll create the three components that will make up my todo list app - `TodoApp.vue` (the parent component), `TodoForm.vue` (a child component), and `TodoList.vue` (another child component).
 
-<img src="./components-folder-with-files.png" alt="Components folder with files" style="width:50%" />
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1649694505/blog/2022/04/build-a-todo-list-with-pinia-and-vue-3/components-folder-with-files.png" alt="Components folder with files" style="width:50%" />
 
 Here is the plan for how these components will be organized in the browser:
 
@@ -85,7 +85,7 @@ Now I'll import each component to where it needs to be -`TodoForm.vue` and `Todo
 
 Here's my screen now. The layout is there, but no logic or styles yet:
 
-<img src="./component-layout-browser.png" alt="Component layout in browser" style="width:50%" />
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1649694505/blog/2022/04/build-a-todo-list-with-pinia-and-vue-3/component-layout-browser.png" alt="Component layout in browser" style="width:50%" />
 
 ## Pinia - What is it?
 

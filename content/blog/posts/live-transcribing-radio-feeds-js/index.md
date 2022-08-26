@@ -1,6 +1,6 @@
 ---
-title: Transcribing Radio Broadcasts With Node.js
-description: Learn how to use Deepgram to generate and store transcripts for your favorite radio stations. An excellent starting point to learn more about live transcription.
+title: "Transcribing Radio Broadcasts With Node.js"
+description: "Learn how to use Deepgram to generate and store transcripts for your favorite radio stations. An excellent starting point to learn more about live transcription."
 date: 2022-07-25
 cover: https://res.cloudinary.com/deepgram/image/upload/v1658753935/blog/2022/07/live-transcribing-radio-feeds-js/cover.png
 authors:
@@ -10,14 +10,14 @@ tags:
     - javascript,
     - streaming
 seo:
-    title: Transcribing Radio Broadcasts With Node.js
-    description: Learn how to use Deepgram to generate and store transcripts for your favorite radio stations. An excellent starting point to learn more about live transcription.
+    title: "Transcribing Radio Broadcasts With Node.js"
+    description: "Learn how to use Deepgram to generate and store transcripts for your favorite radio stations. An excellent starting point to learn more about live transcription."
 shorturls:
-    share: https://dpgr.am/902142
-    twitter: https://dpgr.am/109b44
-    linkedin: https://dpgr.am/5cb2fd
-    reddit: https://dpgr.am/2fa594
-    facebook: https://dpgr.am/dbfc6d
+    share: https://dpgr.am/a67168b
+    twitter: https://dpgr.am/1506cdb
+    linkedin: https://dpgr.am/607b65a
+    reddit: https://dpgr.am/7c2fda1
+    facebook: https://dpgr.am/9c62bb0
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454108/blog/live-transcribing-radio-feeds-js/ograph.png
 ---

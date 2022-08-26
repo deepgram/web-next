@@ -1,6 +1,6 @@
 ---
-title: New Spanish and Turkish Language Models and Updated General Models
-description: We have general released a new Spanish and Turkish speech model, improve all our general models and are limited releasing a Hindi and Conversational AI model
+title: "New Spanish and Turkish Language Models and Updated General Models"
+description: "We have general released a new Spanish and Turkish speech model, improve all our general models and are limited releasing a Hindi and Conversational AI model"
 date: 2021-05-10
 cover: https://res.cloudinary.com/deepgram/image/upload/v1635446349/blog/2021/05/new-spanish-and-turkish-language-models-and-updated-general-models/spanish-turkish-general-model-update-blog%402x.jpg
 authors:
@@ -9,14 +9,14 @@ category: announcement
 tags:
     - language
 seo:
-    title: New Spanish and Turkish Language Models and Updated General Models
-    description: We have general released a new Spanish and Turkish speech model, improve all our general models and are limited releasing a Hindi and Conversational AI model
+    title: "New Spanish and Turkish Language Models and Updated General Models"
+    description: "We have general released a new Spanish and Turkish speech model, improve all our general models and are limited releasing a Hindi and Conversational AI model"
 shorturls:
-    share: https://dpgr.am/33aab5
-    twitter: https://dpgr.am/349cb5
-    linkedin: https://dpgr.am/ac3311
-    reddit: https://dpgr.am/866366
-    facebook: https://dpgr.am/4e5b4a
+    share: https://dpgr.am/8457dd1
+    twitter: https://dpgr.am/a51c33c
+    linkedin: https://dpgr.am/1d39627
+    reddit: https://dpgr.am/495375e
+    facebook: https://dpgr.am/4b11983
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453791/blog/new-spanish-and-turkish-language-models-and-updated-general-models/ograph.png
 ---

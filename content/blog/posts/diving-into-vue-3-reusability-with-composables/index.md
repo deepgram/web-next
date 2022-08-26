@@ -1,6 +1,6 @@
 ---
-title: Diving Into Vue 3 - Reusability with Composables
-description: Put everything together that we've learned in the series, and then refactor it all to use composables.
+title: "Diving Into Vue 3 - Reusability with Composables"
+description: "Put everything together that we've learned in the series, and then refactor it all to use composables."
 date: 2022-02-25
 cover: https://res.cloudinary.com/deepgram/image/upload/v1645127714/blog/2022/02/diving-into-vue-3-reusability-with-composables/dive-into-vue-3%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - javascript,
     - tutorial
 seo:
-    title: Diving Into Vue 3 - Reusability with Composables
-    description: Put everything together that we've learned in the series, and then refactor it all to use composables.
+    title: "Diving Into Vue 3 - Reusability with Composables"
+    description: "Put everything together that we've learned in the series, and then refactor it all to use composables."
 shorturls:
-    share: https://dpgr.am/7f3b71
-    twitter: https://dpgr.am/e8065e
-    linkedin: https://dpgr.am/4f5cf1
-    reddit: https://dpgr.am/255bab
-    facebook: https://dpgr.am/b338f7
+    share: https://dpgr.am/6cd9bfe
+    twitter: https://dpgr.am/5c52151
+    linkedin: https://dpgr.am/dbe6afd
+    reddit: https://dpgr.am/214c134
+    facebook: https://dpgr.am/644d453
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453993/blog/diving-into-vue-3-reusability-with-composables/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Fetch Hosted Audio Streams In The Browser
-description: Learn how to fetch an audio stream from a URL, break down a readable stream into chunks using the JavaScript Streams API, and send the audio stream through a WebSocket to Deepgram.
+title: "Fetch Hosted Audio Streams In The Browser"
+description: "Learn how to fetch an audio stream from a URL, break down a readable stream into chunks using the JavaScript Streams API, and send the audio stream through a WebSocket to Deepgram."
 date: 2022-06-16
 cover: https://res.cloudinary.com/deepgram/image/upload/v1655135180/blog/2022/06/fetch-hosted-audio-streams-in-the-browser/How-to-fetch-hosted-audio-streams-in-the-browser-blog.png
 authors:
@@ -15,14 +15,14 @@ tags:
     - browser,
     - javascript
 seo:
-    title: Fetch Hosted Audio Streams In The Browser
-    description: Learn how to fetch an audio stream from a URL, break down a readable stream into chunks using the JavaScript Streams API, and send the audio stream through a WebSocket to Deepgram.
+    title: "Fetch Hosted Audio Streams In The Browser"
+    description: "Learn how to fetch an audio stream from a URL, break down a readable stream into chunks using the JavaScript Streams API, and send the audio stream through a WebSocket to Deepgram."
 shorturls:
-    share: https://dpgr.am/786454
-    twitter: https://dpgr.am/cea791
-    linkedin: https://dpgr.am/e1d67c
-    reddit: https://dpgr.am/9406c3
-    facebook: https://dpgr.am/dc3f83
+    share: https://dpgr.am/ecba061
+    twitter: https://dpgr.am/17ddd19
+    linkedin: https://dpgr.am/784b950
+    reddit: https://dpgr.am/91fb71f
+    facebook: https://dpgr.am/e7e7021
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454096/blog/fetch-hosted-audio-streams-in-the-browser/ograph.png
 ---

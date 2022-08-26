@@ -1,6 +1,6 @@
 ---
-title: Tonya Sims Joins the Developer Relations Team
-description: Meet Deepgram's new Developer Advocate and learn her story of getting into tech.
+title: "Tonya Sims Joins the Developer Relations Team"
+description: "Meet Deepgram's new Developer Advocate and learn her story of getting into tech."
 date: 2022-02-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643739380/blog/2022/02/tonya-sims-joins-deepgram/tonya-city.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - bio,
     - careers
 seo:
-    title: Tonya Sims Joins the Developer Relations Team
-    description: Meet Deepgram's new Developer Advocate and learn her story of getting into tech.
+    title: "Tonya Sims Joins the Developer Relations Team"
+    description: "Meet Deepgram's new Developer Advocate and learn her story of getting into tech."
 shorturls:
-    share: https://dpgr.am/1f444d
-    twitter: https://dpgr.am/71c1a2
-    linkedin: https://dpgr.am/701f42
-    reddit: https://dpgr.am/6072e2
-    facebook: https://dpgr.am/514bd8
+    share: https://dpgr.am/c2633df
+    twitter: https://dpgr.am/be51bcc
+    linkedin: https://dpgr.am/1149acd
+    reddit: https://dpgr.am/c2a33cd
+    facebook: https://dpgr.am/39c8c7d
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454001/blog/tonya-sims-joins-deepgram/ograph.png
 ---

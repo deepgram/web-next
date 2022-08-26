@@ -1,6 +1,6 @@
 ---
-title: Enhance Your Audio With Dolby.io For Higher Quality Transcripts
-description: Sometimes your audio will be low quality, and this may affect your transcripts. Learn how to use the Dolby.io Enhance API to clean up your files for better transcripts and happier ears.
+title: "Enhance Your Audio With Dolby.io For Higher Quality Transcripts"
+description: "Sometimes your audio will be low quality, and this may affect your transcripts. Learn how to use the Dolby.io Enhance API to clean up your files for better transcripts and happier ears."
 date: 2022-06-02
 cover: https://res.cloudinary.com/deepgram/image/upload/v1653416318/blog/2022/05/enhance-audio-with-dolby-and-deepgram/Enhance-Audio-wDolby-for-higher-quality%402x.jpg
 authors:
@@ -13,14 +13,14 @@ tags:
     - tutorial,
     - accessibility
 seo:
-    title: Enhance Your Audio With Dolby.io For Higher Quality Transcripts
-    description: Sometimes your audio will be low quality, and this may affect your transcripts. Learn how to use the Dolby.io Enhance API to clean up your files for better transcripts and happier ears.
+    title: "Enhance Your Audio With Dolby.io For Higher Quality Transcripts"
+    description: "Sometimes your audio will be low quality, and this may affect your transcripts. Learn how to use the Dolby.io Enhance API to clean up your files for better transcripts and happier ears."
 shorturls:
-    share: https://dpgr.am/f4f3cd
-    twitter: https://dpgr.am/1db8a8
-    linkedin: https://dpgr.am/36e64f
-    reddit: https://dpgr.am/4943c2
-    facebook: https://dpgr.am/305f9b
+    share: https://dpgr.am/efba6c9
+    twitter: https://dpgr.am/a9e0379
+    linkedin: https://dpgr.am/8876199
+    reddit: https://dpgr.am/d10b70b
+    facebook: https://dpgr.am/6e5e1c1
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454087/blog/enhance-audio-with-dolby-and-deepgram/ograph.png
 ---

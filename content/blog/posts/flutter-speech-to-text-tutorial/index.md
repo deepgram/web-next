@@ -1,6 +1,6 @@
 ---
-title: Converting Speech to Text in Flutter Applications
-description: In this tutorial, learn how to use Deepgram's speech recognition API with Flutter and Dart to convert speech to text on iOS and Android devices.
+title: "Converting Speech to Text in Flutter Applications"
+description: "In this tutorial, learn how to use Deepgram's speech recognition API with Flutter and Dart to convert speech to text on iOS and Android devices."
 date: 2022-04-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1649265669/blog/2022/04/flutter-speech-to-text-tutorial/speech-to-text-in-flutter.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - dart,
     - tutorial
 seo:
-    title: Converting Speech to Text in Flutter Applications
-    description: In this tutorial, learn how to use Deepgram's speech recognition API with Flutter and Dart to convert speech to text on iOS and Android devices.
+    title: "Converting Speech to Text in Flutter Applications"
+    description: "In this tutorial, learn how to use Deepgram's speech recognition API with Flutter and Dart to convert speech to text on iOS and Android devices."
 shorturls:
-    share: https://dpgr.am/8eb7c6
-    twitter: https://dpgr.am/fd956e
-    linkedin: https://dpgr.am/0def1e
-    reddit: https://dpgr.am/a54f06
-    facebook: https://dpgr.am/ab9a66
+    share: https://dpgr.am/18672d7
+    twitter: https://dpgr.am/e0d8e10
+    linkedin: https://dpgr.am/451e9f7
+    reddit: https://dpgr.am/098c735
+    facebook: https://dpgr.am/09de6e8
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454063/blog/flutter-speech-to-text-tutorial/ograph.png
 ---

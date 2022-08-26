@@ -1,6 +1,6 @@
 ---
-title: Speech Recognition Analytics for Audio with Python
-description: Learn how to combine speech recognition on real-time audio with analytics by utilizing Python and Deepgram's Speech-to-Text API.
+title: "Speech Recognition Analytics for Audio with Python"
+description: "Learn how to combine speech recognition on real-time audio with analytics by utilizing Python and Deepgram's Speech-to-Text API."
 date: 2022-03-23
 cover: https://res.cloudinary.com/deepgram/image/upload/v1647974816/blog/2022/03/python-talk-time-analytics/Speech-Analytics-Real-Time-Audio-w-Python%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - speech recognition,
     - audio
 seo:
-    title: Speech Recognition Analytics for Audio with Python
-    description: Learn how to combine speech recognition on real-time audio with analytics by utilizing Python and Deepgram's Speech-to-Text API.
+    title: "Speech Recognition Analytics for Audio with Python"
+    description: "Learn how to combine speech recognition on real-time audio with analytics by utilizing Python and Deepgram's Speech-to-Text API."
 shorturls:
-    share: https://dpgr.am/7427f1
-    twitter: https://dpgr.am/9e5576
-    linkedin: https://dpgr.am/daa8a8
-    reddit: https://dpgr.am/fbf9c9
-    facebook: https://dpgr.am/fbe2c5
+    share: https://dpgr.am/b4262a7
+    twitter: https://dpgr.am/a7885d8
+    linkedin: https://dpgr.am/2550f86
+    reddit: https://dpgr.am/56a9a1a
+    facebook: https://dpgr.am/5ae85c5
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454048/blog/python-talk-time-analytics/ograph.png
 ---

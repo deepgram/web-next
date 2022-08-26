@@ -1,6 +1,6 @@
 ---
-title: Technical Writing: A Developer's Guide to Storytelling
-description: A complete developer's guide with tips and tricks for implementing storytelling into technical writing and documentation. Read more here.
+title: "Technical Writing: A Developer's Guide to Storytelling"
+description: "A complete developer's guide with tips and tricks for implementing storytelling into technical writing and documentation. Read more here."
 date: 2022-03-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1647092465/blog/2022/03/technical-writing-a-developers-guide-to-storytelling/storytelling-in-technical-blog-posts%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - technical-writing,
     - beginners
 seo:
-    title: Technical Writing: A Developer's Guide to Storytelling
-    description: A complete developer's guide with tips and tricks for implementing storytelling into technical writing and documentation. Read more here.
+    title: "Technical Writing: A Developer's Guide to Storytelling"
+    description: "A complete developer's guide with tips and tricks for implementing storytelling into technical writing and documentation. Read more here."
 shorturls:
-    share: https://dpgr.am/5877a6
-    twitter: https://dpgr.am/0b01ee
-    linkedin: https://dpgr.am/69573a
-    reddit: https://dpgr.am/b164ed
-    facebook: https://dpgr.am/e057cc
+    share: https://dpgr.am/78edc74
+    twitter: https://dpgr.am/0adb15b
+    linkedin: https://dpgr.am/7be7b01
+    reddit: https://dpgr.am/9a1b7fd
+    facebook: https://dpgr.am/b439eea
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454051/blog/technical-writing-a-developers-guide-to-storytelling/ograph.png
 ---

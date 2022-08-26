@@ -1,6 +1,6 @@
 ---
-title: Getting Started with the MediaStream API
-description: Get to know the basics of the MediaStream API
+title: "Getting Started with the MediaStream API"
+description: "Get to know the basics of the MediaStream API"
 date: 2021-12-13
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638832562/blog/2021/12/getting-started-with-mediastream-api/getting-started-w-mediastream-API%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - web,
     - tutorial
 seo:
-    title: Getting Started with the MediaStream API
-    description: Get to know the basics of the MediaStream API
+    title: "Getting Started with the MediaStream API"
+    description: "Get to know the basics of the MediaStream API"
 shorturls:
-    share: https://dpgr.am/6e8583
-    twitter: https://dpgr.am/40e52b
-    linkedin: https://dpgr.am/4fb13e
-    reddit: https://dpgr.am/9ea31f
-    facebook: https://dpgr.am/7dc2f5
+    share: https://dpgr.am/15f3e92
+    twitter: https://dpgr.am/a36205f
+    linkedin: https://dpgr.am/53a8fdc
+    reddit: https://dpgr.am/17c2b1c
+    facebook: https://dpgr.am/280b4ed
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453829/blog/getting-started-with-mediastream-api/ograph.png
 ---

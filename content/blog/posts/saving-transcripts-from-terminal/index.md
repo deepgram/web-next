@@ -1,6 +1,6 @@
 ---
-title: Saving Transcripts From Your Terminal
-description: Learn how to use cURL to generate and save Deepgram transcripts directly from your terminal. Start now!
+title: "Saving Transcripts From Your Terminal"
+description: "Learn how to use cURL to generate and save Deepgram transcripts directly from your terminal. Start now!"
 date: 2022-08-15
 cover: https://res.cloudinary.com/deepgram/image/upload/v1660569910/blog/2022/08/saving-transcripts-from-terminal/cover.jpg
 authors:
@@ -9,14 +9,14 @@ category: tutorial
 tags:
     - terminal
 seo:
-    title: Saving Transcripts From Your Terminal
-    description: Learn how to use cURL to generate and save Deepgram transcripts directly from your terminal. Start now!
+    title: "Saving Transcripts From Your Terminal"
+    description: "Learn how to use cURL to generate and save Deepgram transcripts directly from your terminal. Start now!"
 shorturls:
-    share: https://dpgr.am/c5bf81
-    twitter: https://dpgr.am/dd50a4
-    linkedin: https://dpgr.am/d8f067
-    reddit: https://dpgr.am/0a600e
-    facebook: https://dpgr.am/11aff5
+    share: https://dpgr.am/23f0b86
+    twitter: https://dpgr.am/6cd9a91
+    linkedin: https://dpgr.am/18aee2a
+    reddit: https://dpgr.am/3410188
+    facebook: https://dpgr.am/82074d5
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454119/blog/saving-transcripts-from-terminal/ograph.png
 ---

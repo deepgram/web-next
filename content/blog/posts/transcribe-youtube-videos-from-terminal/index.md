@@ -1,6 +1,6 @@
 ---
-title: How To Transcribe YouTube Videos From Your Terminal
-description: A five-year old snippet shared by our CEO still stacks up. Learn how to transcribe a YouTube video entirely from the terminal with youtube-dl and jq.
+title: "How To Transcribe YouTube Videos From Your Terminal"
+description: "A five-year old snippet shared by our CEO still stacks up. Learn how to transcribe a YouTube video entirely from the terminal with youtube-dl and jq."
 date: 2022-08-22
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661178745/blog/2022/08/transcribe-youtube-videos-from-terminal/2208-Transcribing-YouTube-Videos-From-Your-Terminal-blog%402x.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - terminal,
     - youtube
 seo:
-    title: How To Transcribe YouTube Videos From Your Terminal
-    description: A five-year old snippet shared by our CEO still stacks up. Learn how to transcribe a YouTube video entirely from the terminal with youtube-dl and jq.
+    title: "How To Transcribe YouTube Videos From Your Terminal"
+    description: "A five-year old snippet shared by our CEO still stacks up. Learn how to transcribe a YouTube video entirely from the terminal with youtube-dl and jq."
 shorturls:
-    share: https://dpgr.am/4bc3ba
-    twitter: https://dpgr.am/7face4
-    linkedin: https://dpgr.am/19049a
-    reddit: https://dpgr.am/1a5f0e
-    facebook: https://dpgr.am/abba2b
+    share: https://dpgr.am/ea99736
+    twitter: https://dpgr.am/623ea0b
+    linkedin: https://dpgr.am/ca09b28
+    reddit: https://dpgr.am/c92034c
+    facebook: https://dpgr.am/6243eec
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454124/blog/transcribe-youtube-videos-from-terminal/ograph.png
 ---

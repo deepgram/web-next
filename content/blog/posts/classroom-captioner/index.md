@@ -1,6 +1,6 @@
 ---
-title: Adding Live Captions To Your Classroom With Deepgram
-description: Make your lectures more accessible with live automatic captioning.
+title: "Adding Live Captions To Your Classroom With Deepgram"
+description: "Make your lectures more accessible with live automatic captioning."
 date: 2022-02-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1644272672/blog/2022/02/classroom-captioner/Adding-Live-Captions-To-Your-Classroom%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - tutorial,
     - education
 seo:
-    title: Adding Live Captions To Your Classroom With Deepgram
-    description: Make your lectures more accessible with live automatic captioning.
+    title: "Adding Live Captions To Your Classroom With Deepgram"
+    description: "Make your lectures more accessible with live automatic captioning."
 shorturls:
-    share: https://dpgr.am/47b1fb
-    twitter: https://dpgr.am/b7337e
-    linkedin: https://dpgr.am/b1deea
-    reddit: https://dpgr.am/d9c3bf
-    facebook: https://dpgr.am/52f6a8
+    share: https://dpgr.am/0db53ff
+    twitter: https://dpgr.am/8eaef83
+    linkedin: https://dpgr.am/c32a3e8
+    reddit: https://dpgr.am/d0cc653
+    facebook: https://dpgr.am/0dd93c3
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453858/blog/classroom-captioner/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Sending Audio Files to Your Express.js Server
-description: Learn how to easily send files through an HTML form to an Express.js server using the middleware package Multer.
+title: "Sending Audio Files to Your Express.js Server"
+description: "Learn how to easily send files through an HTML form to an Express.js server using the middleware package Multer."
 date: 2021-11-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1641852664/blog/2021/11/sending-audio-files-to-expressjs-server/Posting-Audio-File-to-Express-js-App%402x.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - nodejs,
     - express
 seo:
-    title: Sending Audio Files to your Express.js server
-    description: Learn how to easily send files through an HTML form to an Express.js server using the middleware package Multer.
+    title: "Sending Audio Files to your Express.js server"
+    description: "Learn how to easily send files through an HTML form to an Express.js server using the middleware package Multer."
 shorturls:
-    share: https://dpgr.am/01d520
-    twitter: https://dpgr.am/866b84
-    linkedin: https://dpgr.am/627927
-    reddit: https://dpgr.am/25bda1
-    facebook: https://dpgr.am/822e49
+    share: https://dpgr.am/ca7e520
+    twitter: https://dpgr.am/82b121d
+    linkedin: https://dpgr.am/4575fc1
+    reddit: https://dpgr.am/690a4f5
+    facebook: https://dpgr.am/71c5aeb
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453820/blog/sending-audio-files-to-expressjs-server/ograph.png
 ---

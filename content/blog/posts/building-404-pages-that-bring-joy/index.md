@@ -1,6 +1,6 @@
 ---
-title: Building 404 Pages That Bring Joy
-description: How we transformed the bad experience of landing on a 404 page into an enjoyable experience with a game.
+title: "Building 404 Pages That Bring Joy"
+description: "How we transformed the bad experience of landing on a 404 page into an enjoyable experience with a game."
 date: 2022-03-10
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646855876/blog/2022/03/building-404-pages-that-bring-joy/Turning-Our-404-Page-Into-a-Game%402x.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - tutorial,
     - game-dev
 seo:
-    title: Building 404 Pages That Bring Joy
-    description: How we transformed the bad experience of landing on a 404 page into an enjoyable experience with a game.
+    title: "Building 404 Pages That Bring Joy"
+    description: "How we transformed the bad experience of landing on a 404 page into an enjoyable experience with a game."
 shorturls:
-    share: https://dpgr.am/a10b3c
-    twitter: https://dpgr.am/9bebcf
-    linkedin: https://dpgr.am/168196
-    reddit: https://dpgr.am/6c47f7
-    facebook: https://dpgr.am/6db50a
+    share: https://dpgr.am/601707f
+    twitter: https://dpgr.am/245fdb8
+    linkedin: https://dpgr.am/5812383
+    reddit: https://dpgr.am/f4e94f1
+    facebook: https://dpgr.am/b831062
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454014/blog/building-404-pages-that-bring-joy/ograph.png
 ---
@@ -41,7 +41,7 @@ is hosting internal hack-a-thons (known internally as GRAMJAMs.) Last year, 8
 teams competed to be the GRAMJAM champion and one of the entries was a super
 fun game called MadGab.
 
-<img src="./gj2021.png" alt="GRAMJAM 2021 logo" style="width: 50%;margin:auto;"/>
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1645937086/blog/2022/03/building-404-pages-that-bring-joy/gj2021.png" alt="GRAMJAM 2021 logo" style="width: 50%;margin:auto;"/>
 
 The premise was simple: present the user with a nonsensical phrase that is
 phonetically similar to a real-life phrase. Players would read the nonsensical
@@ -72,7 +72,7 @@ three most relevant results to the user. With a little luck, the results shown
 will provide the information the visitor was looking for and they're only a
 click away from continuing their journey.
 
-<img src="./results.png" alt="Search results on the 404 page"
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646884394/blog/2022/03/building-404-pages-that-bring-joy/results.png" alt="Search results on the 404 page"
 style="width:75%;margin:auto;"/>
 
 ### Quick Access to Search
@@ -85,7 +85,7 @@ want users to expend unnecessary brain power trying to find it. Putting the
 search input front-and-center allows them to be on their way as efficiently as
 possible.
 
-<img src="./search-bar.png" alt="Search bar on the 404 page"
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646883861/blog/2022/03/building-404-pages-that-bring-joy/search-bar.png" alt="Search bar on the 404 page"
 style="width:75%;margin:auto;"/>
 
 Now that we've done all we can to provide relevant information and paths
@@ -103,7 +103,7 @@ our platform:
 We hope to open-source MadGab in the future, but, for now, I'll share how we
 achieved the goals above.
 
-<img src="./madgram.png" alt="Screenshot of the MadGram game on our 404 page"
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646945899/blog/2022/03/building-404-pages-that-bring-joy/madgram.png" alt="Screenshot of the MadGram game on our 404 page"
 style="width:75%;margin:auto;"/>
 
 ### Protecting API Keys

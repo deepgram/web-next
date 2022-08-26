@@ -1,6 +1,6 @@
 ---
-title: Michael Jolley Joins the Developer Relations Team
-description: Welcome Michael Jolley, the bald, bearded, builder to the Deepgram Developer Relations team.
+title: "Michael Jolley Joins the Developer Relations Team"
+description: "Welcome Michael Jolley, the bald, bearded, builder to the Deepgram Developer Relations team."
 date: 2021-11-19
 cover: https://res.cloudinary.com/deepgram/image/upload/v1636422499/blog/2021/11/michael-jolley-joins-deepgram/birmingham-city-scape.jpg
 authors:
@@ -9,14 +9,14 @@ category: devlife
 tags:
     - team
 seo:
-    title: Michael Jolley Joins the Developer Relations Team
-    description: Welcome Michael Jolley, the bald, bearded, builder to the Deepgram Developer Relations team.
+    title: "Michael Jolley Joins the Developer Relations Team"
+    description: "Welcome Michael Jolley, the bald, bearded, builder to the Deepgram Developer Relations team."
 shorturls:
-    share: https://dpgr.am/1309e5
-    twitter: https://dpgr.am/27b719
-    linkedin: https://dpgr.am/cb9fbf
-    reddit: https://dpgr.am/d34448
-    facebook: https://dpgr.am/950385
+    share: https://dpgr.am/80aef2d
+    twitter: https://dpgr.am/a917b9d
+    linkedin: https://dpgr.am/2843080
+    reddit: https://dpgr.am/6e16dbd
+    facebook: https://dpgr.am/a669adc
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453818/blog/michael-jolley-joins-deepgram/ograph.png
 ---

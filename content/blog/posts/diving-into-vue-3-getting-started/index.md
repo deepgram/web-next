@@ -1,6 +1,6 @@
 ---
-title: Diving Into Vue 3 - Getting Started
-description: Compare how setting up a project in Vue 3 differs from setting one up in Vue 2, and take a look at what Vue 3 gives out of the box.
+title: "Diving Into Vue 3 - Getting Started"
+description: "Compare how setting up a project in Vue 3 differs from setting one up in Vue 2, and take a look at what Vue 3 gives out of the box."
 date: 2022-01-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643297450/blog/2022/01/diving-into-vue-3-getting-started/dive-into-vue-3%402x.jpg
 authors:
@@ -10,14 +10,14 @@ tags:
     - vue,
     - javascript
 seo:
-    title: Diving Into Vue 3 - Getting Started
-    description: Compare how setting up a project in Vue 3 differs from setting one up in Vue 2, and take a look at what Vue 3 gives out of the box.
+    title: "Diving Into Vue 3 - Getting Started"
+    description: "Compare how setting up a project in Vue 3 differs from setting one up in Vue 2, and take a look at what Vue 3 gives out of the box."
 shorturls:
-    share: https://dpgr.am/0eeeb5
-    twitter: https://dpgr.am/0ba728
-    linkedin: https://dpgr.am/ae308b
-    reddit: https://dpgr.am/7ba63d
-    facebook: https://dpgr.am/828acc
+    share: https://dpgr.am/581df9d
+    twitter: https://dpgr.am/1254cd2
+    linkedin: https://dpgr.am/e0f6e55
+    reddit: https://dpgr.am/00d9dbe
+    facebook: https://dpgr.am/f463e22
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453841/blog/diving-into-vue-3-getting-started/ograph.png
 ---

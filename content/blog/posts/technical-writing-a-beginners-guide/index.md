@@ -1,6 +1,6 @@
 ---
-title: Technical Writing: A Beginner's Guide
-description: A developer's guide for creating written and technical documentation.
+title: "Technical Writing: A Beginner's Guide"
+description: "A developer's guide for creating written and technical documentation."
 date: 2022-03-07
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646661847/blog/2022/03/technical-writing-a-beginners-guide/writing-a-technical-blog-post.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - technical writing,
     - beginners
 seo:
-    title: Technical Writing: A Beginner's Guide
-    description: A developer's guide for creating written and technical documentation.
+    title: "Technical Writing: A Beginner's Guide"
+    description: "A developer's guide for creating written and technical documentation."
 shorturls:
-    share: https://dpgr.am/91616b
-    twitter: https://dpgr.am/925359
-    linkedin: https://dpgr.am/1ce026
-    reddit: https://dpgr.am/18498f
-    facebook: https://dpgr.am/32f928
+    share: https://dpgr.am/15b83a3
+    twitter: https://dpgr.am/596b082
+    linkedin: https://dpgr.am/fb4c656
+    reddit: https://dpgr.am/74bcd3a
+    facebook: https://dpgr.am/ab737c4
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454049/blog/technical-writing-a-beginners-guide/ograph.png
 ---

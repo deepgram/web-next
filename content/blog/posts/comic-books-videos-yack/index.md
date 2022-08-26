@@ -1,6 +1,6 @@
 ---
-title: Create Comic Books From Videos with yack!
-description: Developers built a video and restyle it as a classic comic book using Deepgram's Speech Recognition API and computer vision. See how here!
+title: "Create Comic Books From Videos with yack!"
+description: "Developers built a video and restyle it as a classic comic book using Deepgram's Speech Recognition API and computer vision. See how here!"
 date: 2022-03-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646083965/blog/2022/03/comic-books-videos-yack/yack.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - computer-vision,
     - hackathon
 seo:
-    title: Create Comic Books From Videos with yack!
-    description: Developers built a video and restyle it as a classic comic book using Deepgram's Speech Recognition API and computer vision. See how here!
+    title: "Create Comic Books From Videos with yack!"
+    description: "Developers built a video and restyle it as a classic comic book using Deepgram's Speech Recognition API and computer vision. See how here!"
 shorturls:
-    share: https://dpgr.am/8120e1
-    twitter: https://dpgr.am/87495a
-    linkedin: https://dpgr.am/665078
-    reddit: https://dpgr.am/ba013a
-    facebook: https://dpgr.am/5e6fbf
+    share: https://dpgr.am/22e764d
+    twitter: https://dpgr.am/a797ca7
+    linkedin: https://dpgr.am/f186f6e
+    reddit: https://dpgr.am/82dddfa
+    facebook: https://dpgr.am/2e7e4ab
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454016/blog/comic-books-videos-yack/ograph.png
 ---

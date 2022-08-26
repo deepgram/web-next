@@ -1,6 +1,6 @@
 ---
-title: Getting Started with Live Transcription and Vue.js
-description: Learn how to use Deepgram's Speech-to-Text API for fast and accurate live transcripts in your Vue.js applications.
+title: "Getting Started with Live Transcription and Vue.js"
+description: "Learn how to use Deepgram's Speech-to-Text API for fast and accurate live transcripts in your Vue.js applications."
 date: 2022-07-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1658067804/blog/2022/07/getting-started-live-transcription-vue/cover.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - vuejs,
     - voice-to-text
 seo:
-    title: Getting Started with Live Transcription and Vue.js
-    description: Learn how to use Deepgram's Speech-to-Text API for fast and accurate live transcripts in your Vue.js applications.
+    title: "Getting Started with Live Transcription and Vue.js"
+    description: "Learn how to use Deepgram's Speech-to-Text API for fast and accurate live transcripts in your Vue.js applications."
 shorturls:
-    share: https://dpgr.am/303fc1
-    twitter: https://dpgr.am/df3d9c
-    linkedin: https://dpgr.am/40265d
-    reddit: https://dpgr.am/1f73c1
-    facebook: https://dpgr.am/b39c4f
+    share: https://dpgr.am/a029bcf
+    twitter: https://dpgr.am/bd638ae
+    linkedin: https://dpgr.am/b09c9b5
+    reddit: https://dpgr.am/90473b3
+    facebook: https://dpgr.am/6f69d29
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454106/blog/getting-started-live-transcription-vue/ograph.png
 ---

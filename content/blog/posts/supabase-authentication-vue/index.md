@@ -1,6 +1,6 @@
 ---
-title: How to Add Supabase Authentication to a Vue App
-description: In this post we will walk through getting authentication set up using Supabase and Vue 3.
+title: "How to Add Supabase Authentication to a Vue App"
+description: "In this post we will walk through getting authentication set up using Supabase and Vue 3."
 date: 2022-02-10
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646690723/blog/2022/02/supabase-authentication-vue/Getting-Started-with-supabase-blog%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - supabase,
     - tutorial
 seo:
-    title: How to Add Supabase Authentication to a Vue App
-    description: In this post we will walk through getting authentication set up using Supabase and Vue 3.
+    title: "How to Add Supabase Authentication to a Vue App"
+    description: "In this post we will walk through getting authentication set up using Supabase and Vue 3."
 shorturls:
-    share: https://dpgr.am/c9eb82
-    twitter: https://dpgr.am/dc8517
-    linkedin: https://dpgr.am/0a6148
-    reddit: https://dpgr.am/cffaf0
-    facebook: https://dpgr.am/35a3ab
+    share: https://dpgr.am/363155c
+    twitter: https://dpgr.am/7858afc
+    linkedin: https://dpgr.am/6587765
+    reddit: https://dpgr.am/c4937bb
+    facebook: https://dpgr.am/ac14621
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453998/blog/supabase-authentication-vue/ograph.png
 ---

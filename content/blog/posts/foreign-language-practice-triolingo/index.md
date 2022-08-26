@@ -1,6 +1,6 @@
 ---
-title: Sharpen Your Foreign Language Skills with Triolingo's Chatbot
-description: With Deepgram and GPT-3, the team behind Triolingo created a realistic multilingual chatbot to help language learners gain confidence in conversation. Read about it here.
+title: "Sharpen Your Foreign Language Skills with Triolingo's Chatbot"
+description: "With Deepgram and GPT-3, the team behind Triolingo created a realistic multilingual chatbot to help language learners gain confidence in conversation. Read about it here."
 date: 2022-03-17
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646156543/blog/2022/03/foreign-language-practice-triolingo/cover.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - gpt-3,
     - hackathon
 seo:
-    title: Sharpen Your Foreign Language Skills with Triolingo's Chatbot
-    description: With Deepgram and GPT-3, the team behind Triolingo created a realistic multilingual chatbot to help language learners gain confidence in conversation. Read about it here.
+    title: "Sharpen Your Foreign Language Skills with Triolingo's Chatbot"
+    description: "With Deepgram and GPT-3, the team behind Triolingo created a realistic multilingual chatbot to help language learners gain confidence in conversation. Read about it here."
 shorturls:
-    share: https://dpgr.am/d8ddb7
-    twitter: https://dpgr.am/f54916
-    linkedin: https://dpgr.am/24312e
-    reddit: https://dpgr.am/2eb3a9
-    facebook: https://dpgr.am/07883e
+    share: https://dpgr.am/710b82d
+    twitter: https://dpgr.am/a328d7b
+    linkedin: https://dpgr.am/84f952a
+    reddit: https://dpgr.am/6df6aa9
+    facebook: https://dpgr.am/e31a621
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454026/blog/foreign-language-practice-triolingo/ograph.png
 ---

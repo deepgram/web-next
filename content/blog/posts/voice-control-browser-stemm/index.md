@@ -1,6 +1,6 @@
 ---
-title: Voice Control Your Browser with Stëmm
-description: Leveraging both the Deepgram API & Chrome APIs into a Chrome extension that lets users control the browser hands-free with voice commands. Learn how we did it here.
+title: "Voice Control Your Browser with Stëmm"
+description: "Leveraging both the Deepgram API & Chrome APIs into a Chrome extension that lets users control the browser hands-free with voice commands. Learn how we did it here."
 date: 2022-03-07
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646056012/blog/2022/03/voice-control-browser-stemm/stemm.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - nodejs,
     - hackathon
 seo:
-    title: Voice Control Your Browser with Stëmm
-    description: Leveraging both the Deepgram API & Chrome APIs into a Chrome extension that lets users control the browser hands-free with voice commands. Learn how we did it here.
+    title: "Voice Control Your Browser with Stëmm"
+    description: "Leveraging both the Deepgram API & Chrome APIs into a Chrome extension that lets users control the browser hands-free with voice commands. Learn how we did it here."
 shorturls:
-    share: https://dpgr.am/95320d
-    twitter: https://dpgr.am/a83559
-    linkedin: https://dpgr.am/2cf92e
-    reddit: https://dpgr.am/c11738
-    facebook: https://dpgr.am/686935
+    share: https://dpgr.am/2e515a5
+    twitter: https://dpgr.am/6ba6390
+    linkedin: https://dpgr.am/a2c4f9c
+    reddit: https://dpgr.am/47330b1
+    facebook: https://dpgr.am/ccb5b85
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454056/blog/voice-control-browser-stemm/ograph.png
 ---

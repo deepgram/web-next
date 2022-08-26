@@ -1,6 +1,6 @@
 ---
-title: Transcribe YouTube Videos with Node.js
-description: Generate and save transcripts from YouTube videos with the Deepgram SDK for Node.js.
+title: "Transcribe YouTube Videos with Node.js"
+description: "Generate and save transcripts from YouTube videos with the Deepgram SDK for Node.js."
 date: 2021-11-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1635374324/blog/2021/11/transcribe-youtube-videos-nodejs/getting-transcripts-from-youtube-videos-blog%402x.png
 authors:
@@ -12,14 +12,14 @@ tags:
     - javascript,
     - tutorial
 seo:
-    title: Transcribe YouTube Videos with Node.js
-    description: Generate and save transcripts from YouTube videos with the Deepgram SDK for Node.js.
+    title: "Transcribe YouTube Videos with Node.js"
+    description: "Generate and save transcripts from YouTube videos with the Deepgram SDK for Node.js."
 shorturls:
-    share: https://dpgr.am/fa8fe4
-    twitter: https://dpgr.am/0b9f29
-    linkedin: https://dpgr.am/bc8af2
-    reddit: https://dpgr.am/f1b9b8
-    facebook: https://dpgr.am/13f6c8
+    share: https://dpgr.am/cb64338
+    twitter: https://dpgr.am/0b84cae
+    linkedin: https://dpgr.am/dedfca3
+    reddit: https://dpgr.am/6dc1237
+    facebook: https://dpgr.am/cbe778f
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453823/blog/transcribe-youtube-videos-nodejs/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Live Transcription With Python and FastAPI
-description: Learn how to do a live, real-time transcription with FastAPI in Python and Deepgram
+title: "Live Transcription With Python and FastAPI"
+description: "Learn how to do a live, real-time transcription with FastAPI in Python and Deepgram"
 date: 2022-03-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646061615/blog/2022/03/live-transcription-fastapi/Live-Transcription-With-Python-FastAPI-Deepgram%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - speech recognition,
     - streaming
 seo:
-    title: Live Transcription With Python and FastAPI
-    description: Learn how to do a live, real-time transcription with FastAPI in Python and Deepgram
+    title: "Live Transcription With Python and FastAPI"
+    description: "Learn how to do a live, real-time transcription with FastAPI in Python and Deepgram"
 shorturls:
-    share: https://dpgr.am/07d51f
-    twitter: https://dpgr.am/765e6e
-    linkedin: https://dpgr.am/aff6f5
-    reddit: https://dpgr.am/0f8777
-    facebook: https://dpgr.am/e72a4a
+    share: https://dpgr.am/efff2a1
+    twitter: https://dpgr.am/91bf9ef
+    linkedin: https://dpgr.am/a4d749b
+    reddit: https://dpgr.am/1bd0985
+    facebook: https://dpgr.am/489111e
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454034/blog/live-transcription-fastapi/ograph.png
 ---

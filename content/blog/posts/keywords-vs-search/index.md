@@ -1,6 +1,6 @@
 ---
-title: Keywords vs Search
-description: Compare Deepgram's search and keywords to learn which scenarios each feature works best for you
+title: "Keywords vs Search"
+description: "Compare Deepgram's search and keywords to learn which scenarios each feature works best for you"
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638909280/blog/2021/12/keywords-vs-search/keywords-v-search-blog%402x.jpg
 authors:
@@ -13,14 +13,14 @@ tags:
     - api,
     - features
 seo:
-    title: Keywords vs Search
-    description: Compare Deepgram's search and keywords to learn which scenarios each feature works best for you
+    title: "Keywords vs Search"
+    description: "Compare Deepgram's search and keywords to learn which scenarios each feature works best for you"
 shorturls:
-    share: https://dpgr.am/5f6b01
-    twitter: https://dpgr.am/8aa2bb
-    linkedin: https://dpgr.am/9035f8
-    reddit: https://dpgr.am/6b0b6a
-    facebook: https://dpgr.am/1472b5
+    share: https://dpgr.am/1f63664
+    twitter: https://dpgr.am/a61f332
+    linkedin: https://dpgr.am/aeaf542
+    reddit: https://dpgr.am/c6ea0b9
+    facebook: https://dpgr.am/9edbf7e
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453831/blog/keywords-vs-search/ograph.png
 ---

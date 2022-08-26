@@ -1,6 +1,6 @@
 ---
-title: How to Build a Speech-Enhanced Game with Godot and Deepgram
-description: Learn how to build a speech-enhanced game with Deepgram's ASR engine and the open-source Godot game engine.
+title: "How to Build a Speech-Enhanced Game with Godot and Deepgram"
+description: "Learn how to build a speech-enhanced game with Deepgram's ASR engine and the open-source Godot game engine."
 date: 2022-03-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646783141/blog/2022/03/deepgram-godot-tutorial/assets/Building-a-Game-w-Godot-Deepgram%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - game-dev,
     - godot
 seo:
-    title: How to Build a Speech-Enhanced Game with Godot and Deepgram
-    description: Learn how to build a speech-enhanced game with Deepgram's ASR engine and the open-source Godot game engine.
+    title: "How to Build a Speech-Enhanced Game with Godot and Deepgram"
+    description: "Learn how to build a speech-enhanced game with Deepgram's ASR engine and the open-source Godot game engine."
 shorturls:
-    share: https://dpgr.am/b1949f
-    twitter: https://dpgr.am/8ebf8b
-    linkedin: https://dpgr.am/ffda6f
-    reddit: https://dpgr.am/96951b
-    facebook: https://dpgr.am/9f9173
+    share: https://dpgr.am/1e280f7
+    twitter: https://dpgr.am/00b1cf5
+    linkedin: https://dpgr.am/0109623
+    reddit: https://dpgr.am/0258dc0
+    facebook: https://dpgr.am/6e7d1cd
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454020/blog/deepgram-godot-tutorial/ograph.png
 ---
@@ -59,13 +59,13 @@ microphone.
 
 Open Godot and create a "New Project" in the project manager.
 
-<img src="./assets/new_project.png" alt="Create a new project." style="max-width: 1037px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646455688/blog/2022/03/deepgram-godot-tutorial/assets/new_project.png" alt="Create a new project." style="max-width: 1037px;display: block;margin-left: auto;margin-right: auto;">
 
 Now click "Browse" and choose a directory on your filesystem to store the project, and in the "Project Name"
 field, write "SpeechSpells" and hit "Create Folder." Finally, hit "Create and Edit," and we'll get to the Godot
 Editor, where we can build our game.
 
-<img src="./assets/set_project_name.png" alt="Set the name of the new project." style="max-width: 1038px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646455688/blog/2022/03/deepgram-godot-tutorial/assets/set_project_name.png" alt="Set the name of the new project." style="max-width: 1038px;display: block;margin-left: auto;margin-right: auto;">
 
 The Godot Editor consists of several panels and tabs, and we will be going over the ones we need to interact
 with to build "Speech Spells".
@@ -86,12 +86,12 @@ You may, of course, organize your projects however you like, but this is at leas
 
 Click on `Scene -> Save Scene` in the upper left corner of the editor to save this scene as `Game.tscn` in the "Scenes" directory that you just created.
 
-<img src="./assets/create_folders.png" alt="Set up the game directory structure." style="max-width: 249px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646455688/blog/2022/03/deepgram-godot-tutorial/assets/create_folders.png" alt="Set up the game directory structure." style="max-width: 249px;display: block;margin-left: auto;margin-right: auto;">
 
 Now, go to `Project -> Project Settings` from the upper left bar, and we will set a couple of properties of our game.
 Start by navigating to `Rendering -> Environment` and change the "Default Clear Color" to black.
 
-<img src="./assets/default_clear_color.png" alt="Change the default clear color." style="max-width: 913px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646455688/blog/2022/03/deepgram-godot-tutorial/assets/default_clear_color.png" alt="Change the default clear color." style="max-width: 913px;display: block;margin-left: auto;margin-right: auto;">
 
 Next, navigate to `Display -> Window`, uncheck "Resizable", set the "Width" to 320, the "Height" to 240,
 the "Test Width" to 960, the "Test Height" to 720, the "Stretch" "Mode" to "2d" and the
@@ -102,19 +102,19 @@ under `Display -> Window`, and understanding these can enable you to effortlessl
 fantastic at multiple resolutions and multiple aspect ratios targeting different devices without ever
 having to think about anything other than your base resolution (320x240 in our case)!
 
-<img src="./assets/change_window_settings.png" alt="Set the window settings." style="max-width: 986px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646549594/blog/2022/03/deepgram-godot-tutorial/assets/change_window_settings.png" alt="Set the window settings." style="max-width: 986px;display: block;margin-left: auto;margin-right: auto;">
 
 We have one more setting to change - navigate to `Application -> Audio` and check "Enable Audio Input".
 A warning will appear saying you will need to restart the editor for this to take effect, click the button
 that appears in the lower right ("Save & Restart") to do so.
 
-<img src="./assets/enable_audio.png" alt="Enable audio." style="max-width: 911px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646455688/blog/2022/03/deepgram-godot-tutorial/assets/enable_audio.png" alt="Enable audio." style="max-width: 911px;display: block;margin-left: auto;margin-right: auto;">
 
 Finally, click the "Play" button in the upper right (or press "F5") to start up the game - since this is the
 first time we are playing the game, you will be asked to tell Godot which scene you want to start when the
 game is first opened - we only have `Game.tscn` so select that one. We now have a blank canvas ready to be filled!
 
-<img src="./assets/press_play.png" alt="Start the game." style="max-width: 310px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646455688/blog/2022/03/deepgram-godot-tutorial/assets/press_play.png" alt="Start the game." style="max-width: 310px;display: block;margin-left: auto;margin-right: auto;">
 
 ## Creating a Player
 
@@ -123,7 +123,7 @@ the Godot editor, click `Scene -> New Scene`. Like when you first opened this pr
 will give you some options for the root node. Click "Other Node" and navigate to, or use the search
 field to find "KinematicBody2D" and click "Create."
 
-<img src="./assets/create_kinematic_body_2d.png" alt="Create a KinematicBody2D." style="max-width: 913px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646548729/blog/2022/03/deepgram-godot-tutorial/assets/create_kinematic_body_2d.png" alt="Create a KinematicBody2D." style="max-width: 913px;display: block;margin-left: auto;margin-right: auto;">
 
 "KinematicBody2D" is one of the most reasonable types of objects to use for controllable characters.
 This class/node offers convenient methods to make moving and handling collisions with various objects
@@ -132,14 +132,14 @@ easy - we will discuss one of these methods shortly.
 Now, right-click the root node and click "Add Child Node" and create a "Sprite" node. Do this again
 and add a "CollisionShape2D" node. Your node structure should now look like the following:
 
-<img src="./assets/player_node_structure.png" alt="The node structure of the Player - the `KinematicBody2D` root node here contains a `Sprite` node and `CollisionShape2D` node as children." style="max-width: 250px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646548729/blog/2022/03/deepgram-godot-tutorial/assets/player_node_structure.png" alt="The node structure of the Player - the `KinematicBody2D` root node here contains a `Sprite` node and `CollisionShape2D` node as children." style="max-width: 250px;display: block;margin-left: auto;margin-right: auto;">
 
 The "Sprite" node will contain the image to use for our player. We will use a pixel art
 image of a skull for our player; you can download it [here](https://res.cloudinary.com/deepgram/image/upload/v1646849910/blog/2022/03/deepgram-godot-tutorial/assets/skull.png). Drag the
 file into the "Assets" directory in the "Filesystem" tab in the lower left, then click on the "Import"
 tab next to the "Scene" tab, uncheck "Filter" and click "Reimport":
 
-<img src="./assets/import_skull.png" alt="Import the skull image." style="max-width: 245px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646548728/blog/2022/03/deepgram-godot-tutorial/assets/import_skull.png" alt="Import the skull image." style="max-width: 245px;display: block;margin-left: auto;margin-right: auto;">
 
 This is importing the image into our project and telling our project not to apply interpolation
 when scaling the image should the window size change from the base window size (which is a tiny
@@ -150,7 +150,7 @@ the sharp and blocky sprite to remain sharp and blocky at any resolution.
 Now, navigate back to the "Scene" tab, click on the "Sprite" node, and drag and drop `skull.png`
 from the "Asset" directory to the "Texture" field:
 
-<img src="./assets/set_skull_texture.png" alt="Set the Player's sprite texture." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646548729/blog/2022/03/deepgram-godot-tutorial/assets/set_skull_texture.png" alt="Set the Player's sprite texture." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
 
 After doing this, you should see an image in the scene's 2D view. Finally, some graphics!
 You may want to play around with zooming in or out to get a better view.
@@ -158,7 +158,7 @@ You may want to play around with zooming in or out to get a better view.
 Now, click on the "CollisionShape2D" node, then click on the "Shape" field on the upper right
 and select "RectangleShape2D", and change the "Extents" "x" and "y" fields to both be 8:
 
-<img src="./assets/add_rectangle_shape_2d.png" alt="Setup the Player's CollisionShape2D." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646548729/blog/2022/03/deepgram-godot-tutorial/assets/add_rectangle_shape_2d.png" alt="Setup the Player's CollisionShape2D." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
 
 This is essentially defining the hit-box of the player. We won't utilize hit-boxes
 or collision detection in this tutorial, but it is good practice to learn how to
@@ -168,7 +168,7 @@ Rename the root node "Player" and then save the scene as `Player.tscn` in the "S
 Now, with the root node ("Player") selected, hit the button which looks like a script with a green
 plus sign on it to create a script for this node:
 
-<img src="./assets/attach_script.png" alt="Attach a script to a node." style="max-width: 610px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646548728/blog/2022/03/deepgram-godot-tutorial/assets/attach_script.png" alt="Attach a script to a node." style="max-width: 610px;display: block;margin-left: auto;margin-right: auto;">
 
 This will create a `Player.gd` script, that will help define how this node functions in the game.
 `.gd` is the file extension for GDScript source code. GDScript is one of two languages which Godot uses
@@ -235,14 +235,14 @@ have them wrap to the right side of the window.
 
 Save, and finally go back to the "Game" scene, and click the button at the top of the "Scene" tab to "Instance Child Scene":
 
-<img src="./assets/instance_child_scene.png" alt="Instance a child scene." style="max-width: 626px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646548728/blog/2022/03/deepgram-godot-tutorial/assets/instance_child_scene.png" alt="Instance a child scene." style="max-width: 626px;display: block;margin-left: auto;margin-right: auto;">
 
 Select the `Player.tscn` we just created. Now our main "Game" scene has a "Player" scene as a child node! Click the "Play" button
 and now the game boots up with a skull in the corner - you can move the skull around with `WASD`! Feel free to reposition the skull
 in the "Game" scene - you can either click and drag the player in the 2D view, or you can directly enter the x and y position
 in `Node2D -> Transform -> Position` in the "Inspector" tab when the "Player" node is selected in the "Game" scene:
 
-<img src="./assets/player_position_in_editor.png" alt="Setting the Player's position." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646785008/blog/2022/03/deepgram-godot-tutorial/assets/player_position_in_editor.png" alt="Setting the Player's position." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
 
 ## Creating a Fireball
 
@@ -260,12 +260,12 @@ Now, click the "AnimatedSprite" node, and on the right in the "Frames" field, cl
 "New SpriteFrames". Then click the field again and you should be brought to an editor view where we can add our animation.
 Click and drag the `fireball_1.png` and `fireball_2.png` files from the "Assets" directory into the "Animation Frames" box:
 
-<img src="./assets/fireball_animation.png" alt="Create the fireball animation." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646613234/blog/2022/03/deepgram-godot-tutorial/assets/fireball_animation.png" alt="Create the fireball animation." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
 
 Next, click the "AnimatedSprite" node again to bring up the "Inspector" tab for this node again, check the box titled "Playing".
 In the lower-left of the "Animations" tab, change the "Speed" field to "12 FPS". The fireball should now be animated in the editor:
 
-<img src="./assets/fireball_editor_cropped_animated.gif" alt="The fireball animation in the editor." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646784180/blog/2022/03/deepgram-godot-tutorial/assets/fireball_editor_cropped_animated.gif" alt="The fireball animation in the editor." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
 
 There are certainly several tabs and fields to navigate through in this process, but I hope you find some of these operations intuitive!
 To create animations, you drag the individual frames into the "Animation Frames"
@@ -276,7 +276,7 @@ is turned on or off with the "Playing" check box.
 Now, click the "CollisionShape2D" node, and in the "Inspector" tab for the "Shape" field select "New CircleShape2D". Then
 click the "CicleShape2D" to edit it's properties and change its radius to 4:
 
-<img src="./assets/fireball_hitbox.png" alt="Setting the fireball's hit-box." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646613234/blog/2022/03/deepgram-godot-tutorial/assets/fireball_hitbox.png" alt="Setting the fireball's hit-box." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
 
 Now, save the scene as `Fireball.tscn` in the "Scenes" directory, and then attach a script to the root node. Make the contents
 of the script as follows:
@@ -381,7 +381,7 @@ our "Game" scene's root node.
 something different then the OS's audio sample rate. If you experience issues with microphone capture on Mac, you
 can check your OS's audio sample rate under `Utilities -> Audio Midi Setup`.
 
-<img src="./assets/mac_sample_rate_settings.png" alt="Mac audio sample rate settings." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1646351903/blog/2022/03/deepgram-godot-tutorial/assets/mac_sample_rate_settings.png" alt="Mac audio sample rate settings." style="max-width: 1850px;display: block;margin-left: auto;margin-right: auto;">
 
 ***
 

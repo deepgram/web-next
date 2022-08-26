@@ -1,6 +1,6 @@
 ---
-title: Collaborative Augmented Reality Note-Taking with AiRNote
-description: The team behind AirNote utilized Deepgram's Speech Recognition API to create an app for generating, editing, and customizing AR sticky notes in a collaborative environment. Read more here.
+title: "Collaborative Augmented Reality Note-Taking with AiRNote"
+description: "The team behind AirNote utilized Deepgram's Speech Recognition API to create an app for generating, editing, and customizing AR sticky notes in a collaborative environment. Read more here."
 date: 2022-04-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1651110485/blog/2022/04/ar-note-taking-airnote/cover.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - augmented-reality,
     - ios
 seo:
-    title: Collaborative Augmented Reality Note-Taking with AiRNote
-    description: The team behind AirNote utilized Deepgram's Speech Recognition API to create an app for generating, editing, and customizing AR sticky notes in a collaborative environment. Read more here.
+    title: "Collaborative Augmented Reality Note-Taking with AiRNote"
+    description: "The team behind AirNote utilized Deepgram's Speech Recognition API to create an app for generating, editing, and customizing AR sticky notes in a collaborative environment. Read more here."
 shorturls:
-    share: https://dpgr.am/c065ae
-    twitter: https://dpgr.am/13b363
-    linkedin: https://dpgr.am/28d381
-    reddit: https://dpgr.am/4c30c8
-    facebook: https://dpgr.am/20c0ee
+    share: https://dpgr.am/0f7ff90
+    twitter: https://dpgr.am/5457c72
+    linkedin: https://dpgr.am/120faa9
+    reddit: https://dpgr.am/4c1b401
+    facebook: https://dpgr.am/bf427dc
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454058/blog/ar-note-taking-airnote/ograph.png
 ---

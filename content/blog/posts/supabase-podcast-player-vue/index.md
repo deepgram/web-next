@@ -1,6 +1,6 @@
 ---
-title: How to Build a Podcast Player with Transcriptions using Vue and Supabase
-description: In this post we will walk through setting up a Podcast Player app using Supabase and Vue 3, including getting transcriptions for the podcasts.
+title: "How to Build a Podcast Player with Transcriptions using Vue and Supabase"
+description: "In this post we will walk through setting up a Podcast Player app using Supabase and Vue 3, including getting transcriptions for the podcasts."
 date: 2022-02-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646691089/blog/2022/02/supabase-podcast-player-vue/Build-Podcast-Player-app-w-transcriptions-using-Vue-Supabase%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - supabase,
     - tutorial
 seo:
-    title: How to Build a Podcast Player with Transcriptions using Vue and Supabase
-    description: In this post we will walk through setting up a Podcast Player app using Supabase and Vue 3, including getting transcriptions for the podcasts.
+    title: "How to Build a Podcast Player with Transcriptions using Vue and Supabase"
+    description: "In this post we will walk through setting up a Podcast Player app using Supabase and Vue 3, including getting transcriptions for the podcasts."
 shorturls:
-    share: https://dpgr.am/bb12da
-    twitter: https://dpgr.am/0a60e5
-    linkedin: https://dpgr.am/dc4558
-    reddit: https://dpgr.am/9d932c
-    facebook: https://dpgr.am/2473d4
+    share: https://dpgr.am/608d821
+    twitter: https://dpgr.am/5667713
+    linkedin: https://dpgr.am/fa15cf9
+    reddit: https://dpgr.am/25bd6b1
+    facebook: https://dpgr.am/1a18978
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454000/blog/supabase-podcast-player-vue/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Brian Barrow Joins the Developer Relations Team
-description: Brian Barrow Joins the Developer Relations Team
+title: "Brian Barrow Joins the Developer Relations Team"
+description: "Brian Barrow Joins the Developer Relations Team"
 date: 2021-11-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1641852668/blog/2021/11/brian-barrow-hello/disc-golf-cover.png
 authors:
@@ -10,14 +10,14 @@ tags:
     - bio,
     - careers
 seo:
-    title: Brian Barrow Joins the Developer Relations Team
-    description: Brian Barrow Joins the Developer Relations Team
+    title: "Brian Barrow Joins the Developer Relations Team"
+    description: "Brian Barrow Joins the Developer Relations Team"
 shorturls:
-    share: https://dpgr.am/9689d5
-    twitter: https://dpgr.am/ed6c94
-    linkedin: https://dpgr.am/de1c49
-    reddit: https://dpgr.am/0d3d1a
-    facebook: https://dpgr.am/24b2db
+    share: https://dpgr.am/1b89839
+    twitter: https://dpgr.am/cfd3a29
+    linkedin: https://dpgr.am/b3eb50c
+    reddit: https://dpgr.am/3616009
+    facebook: https://dpgr.am/4a8bef9
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453795/blog/brian-barrow-hello/ograph.png
 ---

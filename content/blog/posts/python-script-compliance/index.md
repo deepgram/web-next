@@ -1,6 +1,6 @@
 ---
-title: Speech Recognition to Monitor Script Compliance in Python
-description: Use Deepgram with Python for script compliance, monitoring real-time audio such as phone calls for specific words and phrases that are legally required.
+title: "Speech Recognition to Monitor Script Compliance in Python"
+description: "Use Deepgram with Python for script compliance, monitoring real-time audio such as phone calls for specific words and phrases that are legally required."
 date: 2022-03-30
 cover: https://res.cloudinary.com/deepgram/image/upload/v1648578346/blog/2022/03/python-script-compliance/Speech-Recognition-Monitor-Script-Compliance%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - speech recognition,
     - audio
 seo:
-    title: Speech Recognition to Monitor Script Compliance in Python
-    description: Use Deepgram with Python for script compliance, monitoring real-time audio such as phone calls for specific words and phrases that are legally required.
+    title: "Speech Recognition to Monitor Script Compliance in Python"
+    description: "Use Deepgram with Python for script compliance, monitoring real-time audio such as phone calls for specific words and phrases that are legally required."
 shorturls:
-    share: https://dpgr.am/ae703b
-    twitter: https://dpgr.am/f00bfb
-    linkedin: https://dpgr.am/e2b049
-    reddit: https://dpgr.am/3d49b0
-    facebook: https://dpgr.am/ebd538
+    share: https://dpgr.am/48264d5
+    twitter: https://dpgr.am/f2f03f7
+    linkedin: https://dpgr.am/bd51f60
+    reddit: https://dpgr.am/5e51262
+    facebook: https://dpgr.am/d6d97a6
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454046/blog/python-script-compliance/ograph.png
 ---

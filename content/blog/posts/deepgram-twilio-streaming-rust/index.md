@@ -1,6 +1,6 @@
 ---
-title: Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram
-description: Learn how to transcribe Twilio Voice calls with Deepgram using real-time speech-to-text in Rust.
+title: "Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram"
+description: "Learn how to transcribe Twilio Voice calls with Deepgram using real-time speech-to-text in Rust."
 date: 2022-06-07
 cover: https://res.cloudinary.com/deepgram/image/upload/v1654025615/blog/2022/06/deepgram-twilio-streaming-rust/Transcribing-Twilio-Rust-Calls-Real-Time-w-Deepgram%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - rust,
     - streaming
 seo:
-    title: Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram
-    description: Learn how to transcribe Twilio Voice calls with Deepgram using real-time speech-to-text in Rust.
+    title: "Transcribe Twilio Voice Calls in Real-Time with Rust and Deepgram"
+    description: "Learn how to transcribe Twilio Voice calls with Deepgram using real-time speech-to-text in Rust."
 shorturls:
-    share: https://dpgr.am/d9aee2
-    twitter: https://dpgr.am/b1e712
-    linkedin: https://dpgr.am/cca2b3
-    reddit: https://dpgr.am/1007ce
-    facebook: https://dpgr.am/1ef0bd
+    share: https://dpgr.am/4359fe3
+    twitter: https://dpgr.am/acac658
+    linkedin: https://dpgr.am/35deb9b
+    reddit: https://dpgr.am/d5b1049
+    facebook: https://dpgr.am/32b627a
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454095/blog/deepgram-twilio-streaming-rust/ograph.png
 ---
@@ -47,7 +47,7 @@ You will need:
 We will use TwiML Bins to make Twilio fork audio data from phone calls to a server that we will write.
 In the Twilio Console, search for TwiML Bin, and click "Create TwiML Bin."
 
-<img src="./assets/find_twiml_bin.png" alt="Navigate to your TwiML Bins." style="max-width: 606px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1654025616/blog/2022/06/deepgram-twilio-streaming-rust/assets/find_twiml_bin.png" alt="Navigate to your TwiML Bins." style="max-width: 606px;display: block;margin-left: auto;margin-right: auto;">
 
 Give the TwiML Bin a "Friendly Name" and enter the following as the the contents of the TwiML Bin:
 
@@ -81,7 +81,7 @@ Click "Save" at the bottom of the Twilio Console.
 
 The system that we will be building is illustrated here:
 
-<img src="./assets/deepgram_twilio_diagram.png" alt="The big picture." style="max-width: 2096px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1654025618/blog/2022/06/deepgram-twilio-streaming-rust/assets/deepgram_twilio_diagram.png" alt="The big picture." style="max-width: 2096px;display: block;margin-left: auto;margin-right: auto;">
 
 We want audio from phone calls going through Twilio's server to be forked to the proxy server we will be writing. The proxy server then buffers
 and processes the audio, sends it to Deepgram, and receives transcripts back from Deepgram. The proxy server also accepts client connections which
@@ -733,11 +733,11 @@ Then, latch onto the proxy server via the client endpoint with websocat:
 Websocat should immediately send you a message containing a list of the `callsid`s of all active calls (which in this case should be one).
 Reply to the message with the `callsid` by copy/pasting and hitting enter:
 
-<img src="./assets/connect_to_callsid.png" alt="Subscribe to the call via the `callsid`." style="max-width: 1326px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1654132200/blog/2022/06/deepgram-twilio-streaming-rust/assets/connect_to_callsid.png" alt="Subscribe to the call via the `callsid`." style="max-width: 1326px;display: block;margin-left: auto;margin-right: auto;">
 
 You should start to see transcription results appear in your websocat session in real time:
 
-<img src="./assets/websocat_streaming_asr_results.png" alt="Websocat streaming ASR results." style="max-width: 1326px;display: block;margin-left: auto;margin-right: auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1654132200/blog/2022/06/deepgram-twilio-streaming-rust/assets/websocat_streaming_asr_results.png" alt="Websocat streaming ASR results." style="max-width: 1326px;display: block;margin-left: auto;margin-right: auto;">
 
 Feel free to try setting up multiple Twilio numbers, and multiple client sessions!
 

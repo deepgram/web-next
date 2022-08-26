@@ -1,6 +1,6 @@
 ---
-title: Technical Writing: Optimize Your Content Creation
-description: We spend a lot of time working on developer content. Optimizing your writing by creating a content creation life cycle can help to ensure a larger audience and greater value for the time you put into your writing.
+title: "Technical Writing: Optimize Your Content Creation"
+description: "We spend a lot of time working on developer content. Optimizing your writing by creating a content creation life cycle can help to ensure a larger audience and greater value for the time you put into your writing."
 date: 2022-04-04
 cover: https://res.cloudinary.com/deepgram/image/upload/v1654610025/blog/2022/04/optimizing-your-content/sharing-your-technical-blog-posts%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - writing,
     - technical writing
 seo:
-    title: Technical Writing: Optimize Your Content Creation
-    description: We spend a lot of time working on developer content. Optimizing your writing by creating a content creation life cycle can help to ensure a larger audience and greater value for the time you put into your writing.
+    title: "Technical Writing: Optimize Your Content Creation"
+    description: "We spend a lot of time working on developer content. Optimizing your writing by creating a content creation life cycle can help to ensure a larger audience and greater value for the time you put into your writing."
 shorturls:
-    share: https://dpgr.am/c01391
-    twitter: https://dpgr.am/b7f0d4
-    linkedin: https://dpgr.am/e07501
-    reddit: https://dpgr.am/0ee23e
-    facebook: https://dpgr.am/2dfa85
+    share: https://dpgr.am/3ade77e
+    twitter: https://dpgr.am/8fa5ed3
+    linkedin: https://dpgr.am/73705b8
+    reddit: https://dpgr.am/8a6f4ae
+    facebook: https://dpgr.am/cb4a6e6
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454067/blog/optimizing-your-content/ograph.png
 ---

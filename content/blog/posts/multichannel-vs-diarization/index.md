@@ -1,6 +1,6 @@
 ---
-title: Multichannel vs Diarization
-description: Compare Deepgram's multichannel and diarization to learn which scenarios each feature works best for you
+title: "Multichannel vs Diarization"
+description: "Compare Deepgram's multichannel and diarization to learn which scenarios each feature works best for you"
 date: 2021-12-20
 cover: https://res.cloudinary.com/deepgram/image/upload/v1639597247/blog/2021/12/multichannel-vs-diarization/Multichannel-vs-Diarization%402x.jpg
 authors:
@@ -13,14 +13,14 @@ tags:
     - api,
     - features
 seo:
-    title: Multichannel vs Diarization
-    description: Compare Deepgram's multichannel and diarization to learn which scenarios each feature works best for you
+    title: "Multichannel vs Diarization"
+    description: "Compare Deepgram's multichannel and diarization to learn which scenarios each feature works best for you"
 shorturls:
-    share: https://dpgr.am/db7ca9
-    twitter: https://dpgr.am/d9f0f4
-    linkedin: https://dpgr.am/9d5381
-    reddit: https://dpgr.am/62f36c
-    facebook: https://dpgr.am/1ad537
+    share: https://dpgr.am/8cccc9a
+    twitter: https://dpgr.am/664830e
+    linkedin: https://dpgr.am/8abe92c
+    reddit: https://dpgr.am/7699433
+    facebook: https://dpgr.am/a6cab0b
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453833/blog/multichannel-vs-diarization/ograph.png
 ---

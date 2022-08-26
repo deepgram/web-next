@@ -1,27 +1,27 @@
 ---
 title: "Build a Live Streaming Web Application: Vue and Express Setup"
-description: In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service.
+description: "In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service."
 date: 2022-03-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1647979609/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/Building-Livestreaming-w-AmazonIVS.jpg
 authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - aws
-    - javascript
-    - tutorial
-    - serverless
-    - vue
+    - aws,
+    - javascript,
+    - tutorial,
+    - serverless,
+    - vue,
     - express
 seo:
     title: "Build a Live Streaming Web Application: Vue and Express Setup"
-    description: In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service.
+    description: "In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service."
 shorturls:
-    share: https://dpgr.am/819c66
-    twitter: https://dpgr.am/c60570
-    linkedin: https://dpgr.am/514716
-    reddit: https://dpgr.am/d00044
-    facebook: https://dpgr.am/74355d
+    share: https://dpgr.am/d7f36e2
+    twitter: https://dpgr.am/67c0e75
+    linkedin: https://dpgr.am/f302e08
+    reddit: https://dpgr.am/47d879a
+    facebook: https://dpgr.am/f0f75e8
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454011/blog/build-a-livestream-web-application-vue-and-express-setup/ograph.png
 ---
@@ -57,7 +57,7 @@ In this post, I'll set up the router (Vue Router) and Vuex so that I can put a n
 
 Here is the diagram to show the data flow and structure for what I will build today. The focus will be on building the protected entry with a navigation guard. If it seems complicated in the diagram, it won't by the end of the post because I plan to walk-through building this feature step-by-step.
 
-<img src="./ProtectedEntrytoSite.png" alt="Protected entry diagram" style="width: 75%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/ProtectedEntrytoSite.png" alt="Protected entry diagram" style="width: 75%; margin:auto;">
 
 ## Setting up the Vue Project
 
@@ -69,7 +69,7 @@ vue create NAME-OF-PROJECT
 
 I'll be sure to choose 'Manually select features' so I can add some dependencies during the creation of the project:
 
-<img src="./Presets.png" alt="Presents including router and vuex" style="width: 75%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/Presets.png" alt="Presents including router and vuex" style="width: 75%; margin:auto;">
 
 These are the presets I selected. I definitely recommend selecting Router and Vuex since those are required for this project, but the others are just my personal preference :
 
@@ -97,7 +97,7 @@ npm install vue-router@4 vuex@next express dotenv cors body-parser @deepgram/sdk
 
 A Vue application that is created using the Vue CLI starts out with this structure:
 
-<img src="./Vue-Folder-Structure.png" alt="Vue folder structure after creating new project" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/Vue-Folder-Structure.png" alt="Vue folder structure after creating new project" style="width: 50%; margin:auto;">
 
 The `src` contains the folders that will make up the frontend, and I will add two files to the root of the project which will be required for the backend. Those two files will be a `server.js` file and a `.env` file. The final structure can be seen [here](https://github.com/deepgram-devs/livestream-amazonIVS-and-deepgram) at the root level of the project in its GitHub repo.
 
@@ -107,7 +107,7 @@ I'll go over the SRC folder in more detail because the way I organize this folde
 
 Here is the file structure of the SRC for the final project (these folders can be set up now or as I progress through building the project):
 
-<img src="./SRC-Folder-Structure.png" alt="Folder structure of SRC folder" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/SRC-Folder-Structure.png" alt="Folder structure of SRC folder" style="width: 50%; margin:auto;">
 
 I'll go over the pieces starting from the bottom.
 
@@ -149,7 +149,7 @@ The first thing I will do is create the two main pages I intend to make as part 
 
 I will create a views folder and put those two main page files in the folder:
 
-<img src="./Views.png" alt="Views folder with files" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/Views.png" alt="Views folder with files" style="width: 50%; margin:auto;">
 
 For each file, I'll be sure to put in some HTML that will display on the page, so I can see that my router is working:
 
@@ -165,7 +165,7 @@ When I created my project with the Vue CLI, I opted to add the Vue Router depend
 
 If I start up the development server, I see that the links at the top of the page will take me between the two routes.
 
-<img src="./Home-About-Links.png" alt="Home and About links" style="width: 30%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/Home-About-Links.png" alt="Home and About links" style="width: 30%; margin:auto;">
 
 Since my project is only going to have two pages, I am just going to change the **home** and **about** views of the bootstrapped project to be the **EnterCode** view and the **StreamChannel** View.
 
@@ -217,13 +217,13 @@ I need to go back to App.vue and change the router-links to match my new routes.
 
 Now I see that my two main pages can be accessed (without reloading the page!) when I click the link to switch to each route:
 
-<img src="./Home-Channel-Links.png" alt="Home (enter-code) and Channel Links" style="width: 30%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/Home-Channel-Links.png" alt="Home (enter-code) and Channel Links" style="width: 30%; margin:auto;">
 
 ### Vue Router Navigation Guards
 
 I want the landing page to have a form input where the user has to enter a code, and if the code is correct, they can move on to the channel page. See the code for this input [here](https://github.com/deepgram-devs/livestream-amazonIVS-and-deepgram/blob/vuex-no-server-yet/src/views/EnterCode.vue#L4).
 
-<img src="./Input.png" alt="Input on enter code page" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/Input.png" alt="Input on enter code page" style="width: 50%; margin:auto;">
 
 But if the code they enter is incorrect, I want to keep them from being able to navigate to that page. Right now, the channel page is completely open, and I can access it just by clicking the **Channel** link.
 
@@ -276,7 +276,7 @@ I need to have some way of keeping track of the state of whether the correct cod
 
 I'll probably see this error in the browser now since I've referenced `store.state.allowAccess`, but the router file doesn't know what the `store` instance is.
 
-<img src="./error-store.png" alt="Error: 'store' is not defined" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/error-store.png" alt="Error: 'store' is not defined" style="width: 50%; margin:auto;">
 
 To make it go away, I need to import the store into the router by adding the following import statement to the router folder's `index.js` file.
 
@@ -311,7 +311,7 @@ I need to connect the input on the landing (EntryCode) page with this property i
 
 The way Vuex causes state to change is through this pattern:
 
-<img src="./vuex.png" alt="Vuex pattern" style="width: 80%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979626/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/vuex.png" alt="Vuex pattern" style="width: 80%; margin:auto;">
 
 Vue Component dispatch action -> Store action commit mutation -> Store mutation change state
 
@@ -492,7 +492,7 @@ if (req.body.code._value === process.env.SECRET_CODE)
 
 However, the value that is sent back is put into another object, which I see when I examine the shape of the req.body.code by using `console.log`. I see this:
 
-<img src="./reqbodycode.png" alt="req.body.code object shape" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/reqbodycode.png" alt="req.body.code object shape" style="width: 50%; margin:auto;">
 
 The `_value` property actually contains the value that I want to match to my code value I have put in the `.env` file. So I need to access it with `req.body.code._value`. This is how I can check that there is a match:
 

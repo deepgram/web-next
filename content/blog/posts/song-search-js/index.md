@@ -1,6 +1,6 @@
 ---
-title: Building a Voice-Powered Song Search
-description: 🎅  Let Deepgram detect the Christmas song
+title: "Building a Voice-Powered Song Search"
+description: "🎅  Let Deepgram detect the Christmas song"
 date: 2021-12-16
 cover: https://res.cloudinary.com/deepgram/image/upload/v1639662018/blog/2021/12/song-search-js/Building-Voice-Powered-Song-Search%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - streaming,
     - lyrics
 seo:
-    title: Building a Voice-Powered Song Search
-    description: 🎅  Let Deepgram detect the Christmas song
+    title: "Building a Voice-Powered Song Search"
+    description: "🎅  Let Deepgram detect the Christmas song"
 shorturls:
-    share: https://dpgr.am/98577b
-    twitter: https://dpgr.am/ba5500
-    linkedin: https://dpgr.am/1026fc
-    reddit: https://dpgr.am/0c6127
-    facebook: https://dpgr.am/b0486b
+    share: https://dpgr.am/3194a5c
+    twitter: https://dpgr.am/84d3de2
+    linkedin: https://dpgr.am/7a71bd9
+    reddit: https://dpgr.am/859fcaf
+    facebook: https://dpgr.am/bd75d48
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453835/blog/song-search-js/ograph.png
 ---

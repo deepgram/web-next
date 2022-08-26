@@ -1,6 +1,6 @@
 ---
-title: How to Use Voice to Control Music with Python and Deepgram
-description: This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano.
+title: "How to Use Voice to Control Music with Python and Deepgram"
+description: "This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano."
 date: 2022-08-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1660765739/blog/2022/08/voice-controlled-music-with-python/2208-How-to-Use-Voice-to-Control-Music-with-Python-and-Deepgram-blog%402x.jpg
 authors:
@@ -9,14 +9,14 @@ category: tutorial
 tags:
     - python
 seo:
-    title: How to Use Voice to Control Music with Python and Deepgram
-    description: This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano.
+    title: "How to Use Voice to Control Music with Python and Deepgram"
+    description: "This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano."
 shorturls:
-    share: https://dpgr.am/773d19
-    twitter: https://dpgr.am/153645
-    linkedin: https://dpgr.am/874bdf
-    reddit: https://dpgr.am/f45592
-    facebook: https://dpgr.am/356f18
+    share: https://dpgr.am/5e41c3e
+    twitter: https://dpgr.am/eefc21a
+    linkedin: https://dpgr.am/88dd2a7
+    reddit: https://dpgr.am/20dea68
+    facebook: https://dpgr.am/3e2e7f2
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454126/blog/voice-controlled-music-with-python/ograph.png
 ---

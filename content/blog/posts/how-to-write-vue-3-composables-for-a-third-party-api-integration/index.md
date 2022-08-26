@@ -1,6 +1,6 @@
 ---
-title: How to Write Vue 3 Composables for a Third-Party API Integration
-description: In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service.
+title: "How to Write Vue 3 Composables for a Third-Party API Integration"
+description: "In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service."
 date: 2022-03-25
 cover: https://res.cloudinary.com/deepgram/image/upload/v1647979609/blog/2022/03/how-to-write-vue-3-composables-for-a-third-party-API-integration/Building-Livestreaming-w-AmazonIVS.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - tutorial,
     - vue
 seo:
-    title: How to Write Vue 3 Composables for a Third-Party API Integration
-    description: In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service.
+    title: "How to Write Vue 3 Composables for a Third-Party API Integration"
+    description: "In this series, learn how to build a live streaming web application using Deepgram's speech-to-text API and Amazon Interactive Video Service."
 shorturls:
-    share: https://dpgr.am/fae5bb
-    twitter: https://dpgr.am/00e945
-    linkedin: https://dpgr.am/e7ca22
-    reddit: https://dpgr.am/b35cb6
-    facebook: https://dpgr.am/3a5056
+    share: https://dpgr.am/2aafd70
+    twitter: https://dpgr.am/83fea18
+    linkedin: https://dpgr.am/36731f3
+    reddit: https://dpgr.am/fbed489
+    facebook: https://dpgr.am/6986dd4
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454030/blog/how-to-write-vue-3-composables-for-a-third-party-api-integration/ograph.png
 ---
@@ -190,7 +190,7 @@ One way to bring in an external script is to add the script to the `<head>` in m
 
 Then I can type "IVSPlayer" in the console, and I should see the module there.
 
-<img src="./ConsoleIVSPlayer.png" alt="IVSPlayer in console" style="width: 50%; margin:auto;">
+<img src="https://res.cloudinary.com/deepgram/image/upload/v1647979619/blog/2022/03/how-to-write-vue-3-composables-for-a-third-party-API-integration/ConsoleIVSPlayer.png" alt="IVSPlayer in console" style="width: 50%; margin:auto;">
 
 If I choose this way to bring in the script, the module will be available on every page of my application. However, sometimes it is preferable to make a third-party technology only available on the page where it is needed. In that case, I need to remove that script from the `<head>` and bring it in a different way.
 

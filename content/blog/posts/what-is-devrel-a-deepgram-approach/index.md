@@ -1,6 +1,6 @@
 ---
-title: What is DevRel anyway: A Deepgram Approach to Developer Relations
-description: Developer Relations can mean many things. Keep reading for a high-level understanding of what a DevRel team does and a close-up of how our Deepgram team works.
+title: "What is DevRel anyway: A Deepgram Approach to Developer Relations"
+description: "Developer Relations can mean many things. Keep reading for a high-level understanding of what a DevRel team does and a close-up of how our Deepgram team works."
 date: 2022-04-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1649423317/blog/2022/04/what-is-devrel-a-deepgram-approach/DevRel-at-DG%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - writing,
     - technical writing
 seo:
-    title: What is DevRel anyway: A Deepgram Approach to Developer Relations
-    description: Developer Relations can mean many things. Keep reading for a high-level understanding of what a DevRel team does and a close-up of how our Deepgram team works.
+    title: "What is DevRel anyway: A Deepgram Approach to Developer Relations"
+    description: "Developer Relations can mean many things. Keep reading for a high-level understanding of what a DevRel team does and a close-up of how our Deepgram team works."
 shorturls:
-    share: https://dpgr.am/feccb1
-    twitter: https://dpgr.am/d315d1
-    linkedin: https://dpgr.am/3a7136
-    reddit: https://dpgr.am/5a84ab
-    facebook: https://dpgr.am/d402c9
+    share: https://dpgr.am/b301ea2
+    twitter: https://dpgr.am/a32e90c
+    linkedin: https://dpgr.am/8b77213
+    reddit: https://dpgr.am/686df28
+    facebook: https://dpgr.am/a6fed08
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454076/blog/what-is-devrel-a-deepgram-approach/ograph.png
 ---

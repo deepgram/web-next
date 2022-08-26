@@ -1,6 +1,6 @@
 ---
-title: Playing With P5.js: Implementing Game Logic
-description: In this post, we'll use P5.js to implement collision detection, manage entities with classes, and handle game state. Learn more now.
+title: "Playing With P5.js: Implementing Game Logic"
+description: "In this post, we'll use P5.js to implement collision detection, manage entities with classes, and handle game state. Learn more now."
 date: 2022-03-15
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646780523/blog/2022/03/p5js-game-logic/Playing-with-p5js%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - p5js,
     - beginner
 seo:
-    title: Playing With P5.js: Implementing Game Logic
-    description: In this post, we'll use P5.js to implement collision detection, manage entities with classes, and handle game state. Learn more now.
+    title: "Playing With P5.js: Implementing Game Logic"
+    description: "In this post, we'll use P5.js to implement collision detection, manage entities with classes, and handle game state. Learn more now."
 shorturls:
-    share: https://dpgr.am/ae99db
-    twitter: https://dpgr.am/3c3921
-    linkedin: https://dpgr.am/f8d9ea
-    reddit: https://dpgr.am/02979b
-    facebook: https://dpgr.am/1a8f8b
+    share: https://dpgr.am/c75a3e4
+    twitter: https://dpgr.am/529d0a4
+    linkedin: https://dpgr.am/8e27763
+    reddit: https://dpgr.am/223ac1f
+    facebook: https://dpgr.am/5ead91e
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454042/blog/p5js-game-logic/ograph.png
 ---

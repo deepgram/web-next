@@ -1,6 +1,6 @@
 ---
-title: Deepgram Speech-to-Text Use Cases That Will Transform Your Life - (Special PyCon Edition)
-description: Let's look at compelling use cases for Python and Deepgram's speech recognition technology in preparation for PyCon US 2022.
+title: "Deepgram Speech-to-Text Use Cases That Will Transform Your Life - (Special PyCon Edition)"
+description: "Let's look at compelling use cases for Python and Deepgram's speech recognition technology in preparation for PyCon US 2022."
 date: 2022-04-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1649792989/blog/2022/04/pycon-deepgram-usecases/pycon-posts%402x.jpg
 authors:
@@ -14,14 +14,14 @@ tags:
     - speech-to-text,
     - speech to text use cases
 seo:
-    title: Deepgram Speech-to-Text Use Cases That Will Transform Your Life - (Special PyCon Edition)
-    description: Let's look at compelling use cases for Python and Deepgram's speech recognition technology in preparation for PyCon US 2022.
+    title: "Deepgram Speech-to-Text Use Cases That Will Transform Your Life - (Special PyCon Edition)"
+    description: "Let's look at compelling use cases for Python and Deepgram's speech recognition technology in preparation for PyCon US 2022."
 shorturls:
-    share: https://dpgr.am/779439
-    twitter: https://dpgr.am/3fc9c6
-    linkedin: https://dpgr.am/a8bb57
-    reddit: https://dpgr.am/0e1171
-    facebook: https://dpgr.am/1fd6d5
+    share: https://dpgr.am/34add7b
+    twitter: https://dpgr.am/e9b4221
+    linkedin: https://dpgr.am/6cae4b6
+    reddit: https://dpgr.am/9afec23
+    facebook: https://dpgr.am/65afc72
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454071/blog/pycon-deepgram-usecases/ograph.png
 ---

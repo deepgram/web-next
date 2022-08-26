@@ -1,6 +1,6 @@
 ---
-title: Add Live Speech Bubbles To YouTube Videos with Autobubble
-description: Using facial recognition and speech recognition to create live speech bubbles.
+title: "Add Live Speech Bubbles To YouTube Videos with Autobubble"
+description: "Using facial recognition and speech recognition to create live speech bubbles."
 date: 2022-03-04
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646039788/blog/2022/03/autobubble-youtube-speech-bubbles/AutoBubble.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - nodejs,
     - hackathon
 seo:
-    title: Add Live Speech Bubbles To YouTube Videos with Autobubble
-    description: Using facial recognition and speech recognition to create live speech bubbles.
+    title: "Add Live Speech Bubbles To YouTube Videos with Autobubble"
+    description: "Using facial recognition and speech recognition to create live speech bubbles."
 shorturls:
-    share: https://dpgr.am/38e77f
-    twitter: https://dpgr.am/2f1d43
-    linkedin: https://dpgr.am/24978a
-    reddit: https://dpgr.am/ecb021
-    facebook: https://dpgr.am/3fb13b
+    share: https://dpgr.am/1961272
+    twitter: https://dpgr.am/ea3f569
+    linkedin: https://dpgr.am/06c48be
+    reddit: https://dpgr.am/d930526
+    facebook: https://dpgr.am/1b3f558
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454009/blog/autobubble-youtube-speech-bubbles/ograph.png
 ---

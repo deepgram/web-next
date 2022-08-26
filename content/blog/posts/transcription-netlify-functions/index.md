@@ -1,6 +1,6 @@
 ---
-title: Transcriptions Without a Server Using Netlify and Deepgram
-description: Use Netlify Functions to transcribe pre-recorded audio without a server
+title: "Transcriptions Without a Server Using Netlify and Deepgram"
+description: "Use Netlify Functions to transcribe pre-recorded audio without a server"
 date: 2022-01-31
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643628688/blog/2022/01/transcription-netlify-functions/Transcribe-without-server-Netlify-Deepgram%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - netlify,
     - serverless
 seo:
-    title: Transcriptions Without a Server Using Netlify and Deepgram
-    description: Use Netlify Functions to transcribe pre-recorded audio without a server
+    title: "Transcriptions Without a Server Using Netlify and Deepgram"
+    description: "Use Netlify Functions to transcribe pre-recorded audio without a server"
 shorturls:
-    share: https://dpgr.am/ea12e1
-    twitter: https://dpgr.am/74ce39
-    linkedin: https://dpgr.am/c55f6c
-    reddit: https://dpgr.am/796ed1
-    facebook: https://dpgr.am/de3a16
+    share: https://dpgr.am/b9baf7a
+    twitter: https://dpgr.am/52f6839
+    linkedin: https://dpgr.am/092eb9c
+    reddit: https://dpgr.am/3d97b8c
+    facebook: https://dpgr.am/fa422d9
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453852/blog/transcription-netlify-functions/ograph.png
 ---

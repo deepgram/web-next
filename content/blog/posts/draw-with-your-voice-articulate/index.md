@@ -1,6 +1,6 @@
 ---
-title: Use Your Voice to Draw with ARTiculate
-description: The team behind ARTiculate created a React and P5.js application for voice-based drawing to increase access to creative expression. Learn more here.
+title: "Use Your Voice to Draw with ARTiculate"
+description: "The team behind ARTiculate created a React and P5.js application for voice-based drawing to increase access to creative expression. Learn more here."
 date: 2022-03-24
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646222951/blog/2022/03/draw-with-your-voice-articulate/cover.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - accessibility,
     - creative-coding
 seo:
-    title: Use Your Voice to Draw with ARTiculate
-    description: The team behind ARTiculate created a React and P5.js application for voice-based drawing to increase access to creative expression. Learn more here.
+    title: "Use Your Voice to Draw with ARTiculate"
+    description: "The team behind ARTiculate created a React and P5.js application for voice-based drawing to increase access to creative expression. Learn more here."
 shorturls:
-    share: https://dpgr.am/757846
-    twitter: https://dpgr.am/c743d9
-    linkedin: https://dpgr.am/fa3226
-    reddit: https://dpgr.am/6cfc46
-    facebook: https://dpgr.am/6d38b7
+    share: https://dpgr.am/affd39a
+    twitter: https://dpgr.am/f149c68
+    linkedin: https://dpgr.am/93e9199
+    reddit: https://dpgr.am/154e84e
+    facebook: https://dpgr.am/0fe8a51
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454024/blog/draw-with-your-voice-articulate/ograph.png
 ---

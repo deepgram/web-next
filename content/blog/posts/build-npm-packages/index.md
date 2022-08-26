@@ -1,6 +1,6 @@
 ---
-title: Building an npm Package
-description: Create, publish, and use your first npm package returning values, functions, and classes.
+title: "Building an npm Package"
+description: "Create, publish, and use your first npm package returning values, functions, and classes."
 date: 2021-12-06
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638810126/blog/2021/12/build-npm-packages/building-an-npm-package%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - tutorial,
     - npm
 seo:
-    title: Building an npm Package
-    description: Create, publish, and use your first npm package returning values, functions, and classes.
+    title: "Building an npm Package"
+    description: "Create, publish, and use your first npm package returning values, functions, and classes."
 shorturls:
-    share: https://dpgr.am/e30d80
-    twitter: https://dpgr.am/48d95b
-    linkedin: https://dpgr.am/420d2d
-    reddit: https://dpgr.am/7b6628
-    facebook: https://dpgr.am/3b5fc2
+    share: https://dpgr.am/d12a0ee
+    twitter: https://dpgr.am/c2ec27b
+    linkedin: https://dpgr.am/c93bddb
+    reddit: https://dpgr.am/5d2d12a
+    facebook: https://dpgr.am/98cd361
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453825/blog/build-npm-packages/ograph.png
 ---

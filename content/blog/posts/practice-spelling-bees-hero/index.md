@@ -1,6 +1,6 @@
 ---
-title: Practice Spelling Bees with Spelling Hero
-description: We speak to the developers behind Spelling Hero - a spelling bee simulator complete with contextual usage and multi-difficulty. Learn more here.
+title: "Practice Spelling Bees with Spelling Hero"
+description: "We speak to the developers behind Spelling Hero - a spelling bee simulator complete with contextual usage and multi-difficulty. Learn more here."
 date: 2022-04-05
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646255609/blog/2022/04/practice-spelling-bees-hero/cover.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - javascript,
     - creative-coding
 seo:
-    title: Practice Spelling Bees with Spelling Hero
-    description: We speak to the developers behind Spelling Hero - a spelling bee simulator complete with contextual usage and multi-difficulty. Learn more here.
+    title: "Practice Spelling Bees with Spelling Hero"
+    description: "We speak to the developers behind Spelling Hero - a spelling bee simulator complete with contextual usage and multi-difficulty. Learn more here."
 shorturls:
-    share: https://dpgr.am/9d9f1b
-    twitter: https://dpgr.am/f41e62
-    linkedin: https://dpgr.am/1a4f96
-    reddit: https://dpgr.am/c3129e
-    facebook: https://dpgr.am/3ad9f9
+    share: https://dpgr.am/455e820
+    twitter: https://dpgr.am/3a18a36
+    linkedin: https://dpgr.am/9ca137c
+    reddit: https://dpgr.am/3980f53
+    facebook: https://dpgr.am/d7a84ce
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454069/blog/practice-spelling-bees-hero/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Remembering Cloud To Butt
-description: Who remembers the Cloud to Butt extension? Say no to buzzwords and use Deepgram's Find and Replace feature to make transcripts way more fun to read.
+title: "Remembering Cloud To Butt"
+description: "Who remembers the Cloud to Butt extension? Say no to buzzwords and use Deepgram's Find and Replace feature to make transcripts way more fun to read."
 date: 2022-08-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1660159294/blog/2022/08/cloud-to-butt/ctb.jpg
 authors:
@@ -9,14 +9,14 @@ category: tutorial
 tags:
     - terminal
 seo:
-    title: Remembering Cloud To Butt
-    description: Who remembers the Cloud to Butt extension? Say no to buzzwords and use Deepgram's Find and Replace feature to make transcripts way more fun to read.
+    title: "Remembering Cloud To Butt"
+    description: "Who remembers the Cloud to Butt extension? Say no to buzzwords and use Deepgram's Find and Replace feature to make transcripts way more fun to read."
 shorturls:
-    share: https://dpgr.am/8dd464
-    twitter: https://dpgr.am/69624e
-    linkedin: https://dpgr.am/c5b9cc
-    reddit: https://dpgr.am/7667d3
-    facebook: https://dpgr.am/c88c2e
+    share: https://dpgr.am/08d9863
+    twitter: https://dpgr.am/c62b061
+    linkedin: https://dpgr.am/b393a2f
+    reddit: https://dpgr.am/c353c36
+    facebook: https://dpgr.am/285908b
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454113/blog/cloud-to-butt/ograph.png
 ---

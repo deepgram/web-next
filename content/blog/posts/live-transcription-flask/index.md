@@ -1,6 +1,6 @@
 ---
-title: Live Transcription With Python and Flask
-description: Learn how to do a live, real-time transcription with Flask in Python and Deepgram
+title: "Live Transcription With Python and Flask"
+description: "Learn how to do a live, real-time transcription with Flask in Python and Deepgram"
 date: 2022-03-02
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646232657/blog/2022/03/live-transcription-flask/Live-Transcription-With-Python-Flask-Deepgram%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - speech recognition,
     - streaming
 seo:
-    title: Live Transcription With Python and Flask
-    description: Learn how to do a live, real-time transcription with Flask in Python and Deepgram
+    title: "Live Transcription With Python and Flask"
+    description: "Learn how to do a live, real-time transcription with Flask in Python and Deepgram"
 shorturls:
-    share: https://dpgr.am/5bfb0b
-    twitter: https://dpgr.am/4bc181
-    linkedin: https://dpgr.am/83650f
-    reddit: https://dpgr.am/cd7536
-    facebook: https://dpgr.am/6458ec
+    share: https://dpgr.am/5c9ec81
+    twitter: https://dpgr.am/a0c4456
+    linkedin: https://dpgr.am/3437599
+    reddit: https://dpgr.am/c36ee2a
+    facebook: https://dpgr.am/9788eac
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454036/blog/live-transcription-flask/ograph.png
 ---

@@ -1,6 +1,6 @@
 ---
-title: Generate WebVTT and SRT Captions Automatically with Node.js
-description: Create ready-to-upload caption files for the web and broadcast.
+title: "Generate WebVTT and SRT Captions Automatically with Node.js"
+description: "Create ready-to-upload caption files for the web and broadcast."
 date: 2021-11-15
 cover: https://res.cloudinary.com/deepgram/image/upload/v1636406494/blog/2021/11/generate-webvtt-srt-captions-nodejs/Generate-WebVTT-SRT-Captions-w-Nodejs%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - tutorial,
     - accessibility
 seo:
-    title: Generate WebVTT and SRT Captions Automatically with Node.js
-    description: Create ready-to-upload caption files for the web and broadcast.
+    title: "Generate WebVTT and SRT Captions Automatically with Node.js"
+    description: "Create ready-to-upload caption files for the web and broadcast."
 shorturls:
-    share: https://dpgr.am/1643a7
-    twitter: https://dpgr.am/bf8448
-    linkedin: https://dpgr.am/81ef0e
-    reddit: https://dpgr.am/0219c8
-    facebook: https://dpgr.am/8bb7ee
+    share: https://dpgr.am/033cf71
+    twitter: https://dpgr.am/9fec97c
+    linkedin: https://dpgr.am/c32f62b
+    reddit: https://dpgr.am/ce3edb2
+    facebook: https://dpgr.am/10a9e03
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453801/blog/generate-webvtt-srt-captions-nodejs/ograph.png
 ---

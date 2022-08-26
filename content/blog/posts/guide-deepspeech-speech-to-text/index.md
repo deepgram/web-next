@@ -1,6 +1,6 @@
 ---
-title: A Guide to DeepSpeech Speech to Text
-description: DeepSpeech is a Python library for doing ASR. In this post, we’ll look at how to use DeepSpeech to do Speech to Text in Python
+title: "A Guide to DeepSpeech Speech to Text"
+description: "DeepSpeech is a Python library for doing ASR. In this post, we’ll look at how to use DeepSpeech to do Speech to Text in Python"
 date: 2022-08-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1659364680/blog/2022/08/guide-deepspeech-speech-to-text/cover.jpg
 authors:
@@ -9,14 +9,14 @@ category: tutorial
 tags:
     - python
 seo:
-    title: A Guide to DeepSpeech Speech to Text
-    description: DeepSpeech is a Python library for doing ASR. In this post, we’ll look at how to use DeepSpeech to do Speech to Text in Python
+    title: "A Guide to DeepSpeech Speech to Text"
+    description: "DeepSpeech is a Python library for doing ASR. In this post, we’ll look at how to use DeepSpeech to do Speech to Text in Python"
 shorturls:
-    share: https://dpgr.am/7a73a9
-    twitter: https://dpgr.am/9486b9
-    linkedin: https://dpgr.am/cca482
-    reddit: https://dpgr.am/701d22
-    facebook: https://dpgr.am/05955f
+    share: https://dpgr.am/5941269
+    twitter: https://dpgr.am/887f1db
+    linkedin: https://dpgr.am/4a0e953
+    reddit: https://dpgr.am/d721cc2
+    facebook: https://dpgr.am/c3ada2b
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454117/blog/guide-deepspeech-speech-to-text/ograph.png
 ---

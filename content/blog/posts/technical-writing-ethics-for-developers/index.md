@@ -1,6 +1,6 @@
 ---
-title: Technical Writing: Ethics and Honesty for Developers
-description: Ethics protects your credibility as a writer and developer and helps to create trust with your readers. Read more about technical writing ethics here.
+title: "Technical Writing: Ethics and Honesty for Developers"
+description: "Ethics protects your credibility as a writer and developer and helps to create trust with your readers. Read more about technical writing ethics here."
 date: 2022-03-21
 cover: https://res.cloudinary.com/deepgram/image/upload/v1647623514/blog/2022/03/technical-writing-ethics-for-developers/ethics-in-technical-blog-posts%402x.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - technical-writing,
     - beginners
 seo:
-    title: Technical Writing: Ethics and Honesty for Developers
-    description: Ethics protects your credibility as a writer and developer and helps to create trust with your readers. Read more about technical writing ethics here.
+    title: "Technical Writing: Ethics and Honesty for Developers"
+    description: "Ethics protects your credibility as a writer and developer and helps to create trust with your readers. Read more about technical writing ethics here."
 shorturls:
-    share: https://dpgr.am/183248
-    twitter: https://dpgr.am/627c76
-    linkedin: https://dpgr.am/a4b8c9
-    reddit: https://dpgr.am/98e0e2
-    facebook: https://dpgr.am/f7095f
+    share: https://dpgr.am/db38f7f
+    twitter: https://dpgr.am/163aa77
+    linkedin: https://dpgr.am/b3f260f
+    reddit: https://dpgr.am/c42f5cc
+    facebook: https://dpgr.am/c588cb6
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454055/blog/technical-writing-ethics-for-developers/ograph.png
 ---

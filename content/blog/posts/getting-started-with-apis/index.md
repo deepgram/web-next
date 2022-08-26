@@ -1,6 +1,6 @@
 ---
-title: Getting Started with APIs
-description: Learn about what APIs are, how to use them, and make your first requests.
+title: "Getting Started with APIs"
+description: "Learn about what APIs are, how to use them, and make your first requests."
 date: 2021-11-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1635446349/blog/2021/11/getting-started-with-apis/getting-started-with-apis-blog%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - python,
     - tutorial
 seo:
-    title: Getting Started with APIs
-    description: Learn about what APIs are, how to use them, and make your first requests.
+    title: "Getting Started with APIs"
+    description: "Learn about what APIs are, how to use them, and make your first requests."
 shorturls:
-    share: https://dpgr.am/f91b40
-    twitter: https://dpgr.am/536892
-    linkedin: https://dpgr.am/659d11
-    reddit: https://dpgr.am/6a1546
-    facebook: https://dpgr.am/05778e
+    share: https://dpgr.am/59e5630
+    twitter: https://dpgr.am/2e51c2c
+    linkedin: https://dpgr.am/791a741
+    reddit: https://dpgr.am/1ce1429
+    facebook: https://dpgr.am/9b6641f
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453803/blog/getting-started-with-apis/ograph.png
 ---

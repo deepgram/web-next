@@ -1,6 +1,6 @@
 ---
-title: Getting Started with Supabase
-description: Learn how to get started with Supabase, an open-source alternative to Firebase
+title: "Getting Started with Supabase"
+description: "Learn how to get started with Supabase, an open-source alternative to Firebase"
 date: 2021-11-29
 cover: https://res.cloudinary.com/deepgram/image/upload/v1637609423/blog/2021/11/getting-started-with-supabase/Getting-Started-with-supabase-blog%402x.jpg
 authors:
@@ -11,14 +11,14 @@ tags:
     - supabase,
     - tutorial
 seo:
-    title: Getting Started with Supabase
-    description: Learn how to get started with Supabase, an open-source alternative to Firebase
+    title: "Getting Started with Supabase"
+    description: "Learn how to get started with Supabase, an open-source alternative to Firebase"
 shorturls:
-    share: https://dpgr.am/9f420f
-    twitter: https://dpgr.am/25beb6
-    linkedin: https://dpgr.am/87c408
-    reddit: https://dpgr.am/78917b
-    facebook: https://dpgr.am/25da85
+    share: https://dpgr.am/7b0980e
+    twitter: https://dpgr.am/577af05
+    linkedin: https://dpgr.am/085a904
+    reddit: https://dpgr.am/69e6ba6
+    facebook: https://dpgr.am/1e7df6f
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453807/blog/getting-started-with-supabase/ograph.png
 ---

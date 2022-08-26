@@ -1,6 +1,6 @@
 ---
-title: Automatically Censor Profanity with Node.js
-description: Learn how to create censored audio files automatically.
+title: "Automatically Censor Profanity with Node.js"
+description: "Learn how to create censored audio files automatically."
 date: 2021-11-04
 cover: https://res.cloudinary.com/deepgram/image/upload/v1635438532/blog/2021/11/censor-profanity-nodejs/automatically-censor-profanity-with-nodejs-blog%402x.png
 authors:
@@ -10,14 +10,14 @@ tags:
     - nodejs,
     - tutorial
 seo:
-    title: Automatically Censor Profanity with Node.js
-    description: Learn how to create censored audio files automatically.
+    title: "Automatically Censor Profanity with Node.js"
+    description: "Learn how to create censored audio files automatically."
 shorturls:
-    share: https://dpgr.am/33b6e6
-    twitter: https://dpgr.am/fbbe6d
-    linkedin: https://dpgr.am/7f6b3f
-    reddit: https://dpgr.am/d5b9cc
-    facebook: https://dpgr.am/403a77
+    share: https://dpgr.am/1690c8d
+    twitter: https://dpgr.am/70c5245
+    linkedin: https://dpgr.am/dda8617
+    reddit: https://dpgr.am/72a9a7b
+    facebook: https://dpgr.am/92bcba7
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453797/blog/censor-profanity-nodejs/ograph.png
 ---

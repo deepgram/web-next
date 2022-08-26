@@ -1,6 +1,6 @@
 ---
-title: Topic Detection in Podcast Episodes with Python
-description: This tutorial will use Python and the Deepgram API speech-to-text to perform Topic Detection using the TF-IDF Machine Learning Algorithm and KMeans Clustering.
+title: "Topic Detection in Podcast Episodes with Python"
+description: "This tutorial will use Python and the Deepgram API speech-to-text to perform Topic Detection using the TF-IDF Machine Learning Algorithm and KMeans Clustering."
 date: 2022-08-23
 cover: https://res.cloudinary.com/deepgram/image/upload/v1660892766/blog/2022/08/topic-detection-with-python/2208-Detect-Topics-in-Podcast-Episodes-with-Python-blog%402x.jpg
 authors:
@@ -9,14 +9,14 @@ category: tutorial
 tags:
     - python
 seo:
-    title: Topic Detection in Podcast Episodes with Python
-    description: This tutorial will use Python and the Deepgram API speech-to-text to perform Topic Detection using the TF-IDF Machine Learning Algorithm and KMeans Clustering.
+    title: "Topic Detection in Podcast Episodes with Python"
+    description: "This tutorial will use Python and the Deepgram API speech-to-text to perform Topic Detection using the TF-IDF Machine Learning Algorithm and KMeans Clustering."
 shorturls:
-    share: https://dpgr.am/3b6e6c
-    twitter: https://dpgr.am/2a5d84
-    linkedin: https://dpgr.am/12b1b6
-    reddit: https://dpgr.am/cc221b
-    facebook: https://dpgr.am/009247
+    share: https://dpgr.am/da3752d
+    twitter: https://dpgr.am/53854e1
+    linkedin: https://dpgr.am/fc4e10e
+    reddit: https://dpgr.am/5830f7e
+    facebook: https://dpgr.am/f76356a
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454121/blog/topic-detection-with-python/ograph.png
 ---

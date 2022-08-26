@@ -1,6 +1,6 @@
 ---
-title: Playing With P5.js: Creating a Voice-Controlled Game
-description: In this post, we'll build a voice-controlled game with P5.js and Deepgram's Speech Recognition API. Learn how now.
+title: "Playing With P5.js: Creating a Voice-Controlled Game"
+description: "In this post, we'll build a voice-controlled game with P5.js and Deepgram's Speech Recognition API. Learn how now."
 date: 2022-03-22
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646925972/blog/2022/03/p5js-deepgram-game/series-cover.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - p5js,
     - beginner
 seo:
-    title: Playing With P5.js: Creating a Voice-Controlled Game
-    description: In this post, we'll build a voice-controlled game with P5.js and Deepgram's Speech Recognition API. Learn how now.
+    title: "Playing With P5.js: Creating a Voice-Controlled Game"
+    description: "In this post, we'll build a voice-controlled game with P5.js and Deepgram's Speech Recognition API. Learn how now."
 shorturls:
-    share: https://dpgr.am/575c8e
-    twitter: https://dpgr.am/66d95c
-    linkedin: https://dpgr.am/312fa8
-    reddit: https://dpgr.am/09bb02
-    facebook: https://dpgr.am/79fe54
+    share: https://dpgr.am/65f82b3
+    twitter: https://dpgr.am/a53d644
+    linkedin: https://dpgr.am/8b652e9
+    reddit: https://dpgr.am/502294f
+    facebook: https://dpgr.am/b1f7fad
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454040/blog/p5js-deepgram-game/ograph.png
 ---

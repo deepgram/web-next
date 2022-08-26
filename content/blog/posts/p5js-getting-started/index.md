@@ -1,6 +1,6 @@
 ---
-title: Playing With P5.js: Getting Started
-description: P5.js is a JavaScript library for creative coding. In this series, we'll get you up and running with everything you need to build a basic game. Get started now.
+title: "Playing With P5.js: Getting Started"
+description: "P5.js is a JavaScript library for creative coding. In this series, we'll get you up and running with everything you need to build a basic game. Get started now."
 date: 2022-03-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646414380/blog/2022/03/p5js-getting-started/series-cover.jpg
 authors:
@@ -12,14 +12,14 @@ tags:
     - p5js,
     - beginner
 seo:
-    title: Playing With P5.js: Getting Started
-    description: P5.js is a JavaScript library for creative coding. In this series, we'll get you up and running with everything you need to build a basic game. Get started now.
+    title: "Playing With P5.js: Getting Started"
+    description: "P5.js is a JavaScript library for creative coding. In this series, we'll get you up and running with everything you need to build a basic game. Get started now."
 shorturls:
-    share: https://dpgr.am/c08ac9
-    twitter: https://dpgr.am/8604f4
-    linkedin: https://dpgr.am/c9a255
-    reddit: https://dpgr.am/9619cd
-    facebook: https://dpgr.am/c3b5db
+    share: https://dpgr.am/25a02eb
+    twitter: https://dpgr.am/877e41f
+    linkedin: https://dpgr.am/dd6fb4f
+    reddit: https://dpgr.am/e227297
+    facebook: https://dpgr.am/00d1d87
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454044/blog/p5js-getting-started/ograph.png
 ---

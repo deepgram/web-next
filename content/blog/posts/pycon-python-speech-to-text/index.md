@@ -1,6 +1,6 @@
 ---
-title: Using Python With Speech-to-Text (Special PyCon Edition)
-description: Let's look at how we can use Python and Deepgram's speech recognition technology together in preparation for PyCon US 2022.
+title: "Using Python With Speech-to-Text (Special PyCon Edition)"
+description: "Let's look at how we can use Python and Deepgram's speech recognition technology together in preparation for PyCon US 2022."
 date: 2022-04-21
 cover: https://res.cloudinary.com/deepgram/image/upload/v1650386018/blog/2022/04/pycon-python-speech-to-text/pycon-posts%402x.jpg
 authors:
@@ -14,14 +14,14 @@ tags:
     - speech-to-text,
     - speech to text
 seo:
-    title: Using Python With Speech-to-Text (Special PyCon Edition)
-    description: Let's look at how we can use Python and Deepgram's speech recognition technology together in preparation for PyCon US 2022.
+    title: "Using Python With Speech-to-Text (Special PyCon Edition)"
+    description: "Let's look at how we can use Python and Deepgram's speech recognition technology together in preparation for PyCon US 2022."
 shorturls:
-    share: https://dpgr.am/3e5ed4
-    twitter: https://dpgr.am/4bfeea
-    linkedin: https://dpgr.am/3ce788
-    reddit: https://dpgr.am/56bdee
-    facebook: https://dpgr.am/fc582f
+    share: https://dpgr.am/b0cf349
+    twitter: https://dpgr.am/38d90dd
+    linkedin: https://dpgr.am/b961966
+    reddit: https://dpgr.am/d95644b
+    facebook: https://dpgr.am/ea4fa11
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454073/blog/pycon-python-speech-to-text/ograph.png
 ---
