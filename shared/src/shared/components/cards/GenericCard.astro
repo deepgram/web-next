@@ -1,7 +1,9 @@
 ---
+import Link from "../general/Link.astro";
+
 const { class: classes, href, ...rest } = Astro.props;
 ---
 
-<a href={href} class={`block text-black ${classes ? classes : ""}`} {...rest}>
+<Link href={href} class={`block text-black ${classes ? classes : ""}`} {...rest}>
 	<slot />
-</a>
+</Link>

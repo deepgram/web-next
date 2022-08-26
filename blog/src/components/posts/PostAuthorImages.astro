@@ -1,35 +1,18 @@
 ---
+import Link from "../../shared/components/general/Link.astro";
 import AuthorPicture from "../../shared/components/images/AuthorPicture.astro";
 
 const { authors } = Astro.props;
 ---
 
 {authors && (
-	<ul class="author-images shrink-0">
+	<ul class="mr-4">
 		{authors.map((author, index, array) => (
-			<li>
-				<a href={`/authors/${author}`} class="relative inline-block h-14 w-14">
+			<li class="-mt-5 first:mt-0 first:ml-0 sm:mt-0 sm:-ml-4 sm:inline">
+				<Link href={`/authors/${author}`} class="relative inline-block h-14 w-14">
 					<AuthorPicture author={author} class="shadow-dg rounded-full" />
-				</a>
+				</Link>
 			</li>
 		))}
 	</ul>
 )}
-
-<style>
-	ul.author-images {
-		@apply mr-2;
-	}
-
-	ul.author-images {
-		@apply inline list-none p-0;
-	}
-
-	ul.author-images li {
-		@apply inline p-0;
-	}
-
-	ul.author-images li:not(:first-child) {
-		@apply -ml-4;
-	}
-</style>

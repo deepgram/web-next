@@ -14,6 +14,9 @@ import Description from "../shared/components/meta/Description.astro";
 import Meta from "../shared/components/meta/Meta.astro";
 import Icon from "../shared/components/general/Icon.astro";
 import RelatedResources from "../components/posts/RelatedResources.astro";
+import Link from "../shared/components/general/Link.astro";
+import Backlink from "../components/nav/Backlink.astro";
+import InlineIcon from "../shared/components/general/InlineIcon.astro";
 
 export async function getStaticPaths() {
 	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
@@ -63,7 +66,8 @@ const headings = await post.getHeadings();
 	<article>
 		<ContrastSection contrast="mist" background="white" bottomDivider="eclipse-divider" bottomOverlay>
 			<PrimarySection>
-				<a href="/posts" class="inline-block py-4 md:py-6 lg:py-8 xl:py-10">&lt;- All posts</a>
+				<Backlink href="/posts">All posts</Backlink>
+
 				<HasGutters>
 					<header class="flex flex-col">
 						<PostHeading post={post} />
@@ -86,30 +90,29 @@ const headings = await post.getHeadings();
 				</div>
 
 				<div slot="right" class="mx-0 md:mx-20 lg:mx-32 xl:mx-0">
-					<h5 class="pb-5 "><Icon icon="share" class="inline w-[0.8em] -mt-[0.2em] fill-black" /> Share</h5>
+					<h5 class="pb-5"><InlineIcon icon="share">Share</InlineIcon></h5>
 					<div class="flex gap-2 text-2xl">
-						<a
+						<Link
 							href={`mailto:?body=Check%20out%20this%20awesome%20post%20on%20Deepgram!%0A%0A${encodeURIComponent(post.frontmatter.title)}%0A%0A${encodeURIComponent(Astro.url)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="email" class="w-[1em] fill-iris" />
-						</a>
-						<a
+						</Link>
+						<Link
 							href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20post%20on%20Deepgram%20%40deepgramai%20%20${encodeURIComponent(Astro.url)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="twitter" class="w-[1em] fill-iris" />
-						</a>
-						<a
+						</Link>
+						<Link
 							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url)}&title=${encodeURIComponent(post.frontmatter.title)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="linkedin" class="w-[1em] fill-iris" />
-						</a>
-
-						<a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url)}`} target="_blank" rel="noopener noreferrer"
+						</Link>
+						<Link href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url)}`} target="_blank" rel="noopener noreferrer"
 							><Icon icon="facebook" class="w-[1em] fill-iris" />
-						</a>
+						</Link>
 					</div>
 
 					{headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">In this blog post</h5>}
@@ -119,9 +122,9 @@ const headings = await post.getHeadings();
 								.filter((heading) => heading.depth <= 2)
 								.map((heading) => (
 									<li class="pb-4">
-										<a class="text-black" href={`#${heading.slug}`}>
+										<Link class="text-black" href={`#${heading.slug}`}>
 											{heading.text}
-										</a>
+										</Link>
 									</li>
 								))}
 					</ul>
