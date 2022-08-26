@@ -24,9 +24,9 @@ async function getAuthors() {
 }
 
 const authors = await getAuthors();
-const team = authors.filter((a) => !a.guest);
-const guests = authors.filter((a) => !a.guest);
-// const guests = authors.filter((a) => !!a.guest);
+const team = authors.filter((a) => a.team);
+const alumni = authors.filter((a) => !a.team && a.alumni);
+const guests = authors.filter((a) => !a.team && !a.alumni);
 ---
 
 <Layout>
@@ -41,12 +41,16 @@ const guests = authors.filter((a) => !a.guest);
 
 	<PrimarySection>
 		<AuthorCardList class="mt-10 lg:mt-16 xl:mt-20">
-			<NoLinkCardListTitle slot="title"><h2>Deepgram team</h2></NoLinkCardListTitle>
+			<NoLinkCardListTitle slot="title"><h2>Deepgram Team</h2></NoLinkCardListTitle>
 			{team.map((author) => <AuthorCard author={author} />)}
 		</AuthorCardList>
 		<AuthorCardList class="mt-10 lg:mt-16 xl:mt-20">
-			<NoLinkCardListTitle slot="title"><h2>Guest authors</h2></NoLinkCardListTitle>
+			<NoLinkCardListTitle slot="title"><h2>Guest Authors</h2></NoLinkCardListTitle>
 			{guests.map((author) => <AuthorCard author={author} />)}
+		</AuthorCardList>
+		<AuthorCardList class="mt-10 lg:mt-16 xl:mt-20">
+			<NoLinkCardListTitle slot="title"><h2>Deepgram Alumni</h2></NoLinkCardListTitle>
+			{alumni.map((author) => <AuthorCard author={author} />)}
 		</AuthorCardList>
 	</PrimarySection>
 </Layout>
