@@ -7,6 +7,7 @@ authors:
     - michael-jolley
 category: devlife
 tags:
+    - team
 seo:
     title: "Hello World! We're Deepgram."
     description: "Introducing the new Deepgram Developer Platform; the new home of Deepgram's documentation, developer blog, use cases, SDKs, and more."

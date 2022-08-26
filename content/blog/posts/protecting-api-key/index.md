@@ -5,7 +5,7 @@ date: 2022-01-17
 cover: https://res.cloudinary.com/deepgram/image/upload/v1642183098/blog/2022/01/protecting-api-key/Browser-Live-Transcription-Protecting-Your-API-Key%402x.jpg
 authors:
     - kevin-lewis
-category: tutorial
+category: best-practice
 tags:
     - browser
 seo:

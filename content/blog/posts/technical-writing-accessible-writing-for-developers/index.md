@@ -9,7 +9,6 @@ category: tutorial
 tags:
     - careers
     - technical-writing
-    - technical-writing
 seo:
     title: "Technical Writing: Accessible Writing for Developers"
     description: "Accessible writing creates a more inclusive space, reduces gatekeeping, and provides clarity for your readers."

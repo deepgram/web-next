@@ -8,6 +8,7 @@ authors:
 category: tutorial
 tags:
     - python
+    - deepspeech
 seo:
     title: "A Guide to DeepSpeech Speech to Text"
     description: "DeepSpeech is a Python library for doing ASR. In this post, we’ll look at how to use DeepSpeech to do Speech to Text in Python"

@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - nodejs
-    - nodejs
 seo:
     title: "Creating an npx Command"
     description: "Build, locally test, and publish npx command scripts"

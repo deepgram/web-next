@@ -8,6 +8,7 @@ authors:
 category: devlife
 tags:
     - team
+    - careers
 seo:
     title: "Michael Jolley Joins the Developer Relations Team"
     description: "Welcome Michael Jolley, the bald, bearded, builder to the Deepgram Developer Relations team."

@@ -8,6 +8,7 @@ authors:
 category: devlife
 tags:
     - careers
+    - team
 seo:
     title: "Brian Barrow Joins the Developer Relations Team"
     description: "Brian Barrow Joins the Developer Relations Team"

@@ -8,6 +8,7 @@ authors:
 category: tutorial
 tags:
     - javascript
+    - nodejs
 seo:
     title: "Transcribing Radio Broadcasts With Node.js"
     description: "Learn how to use Deepgram to generate and store transcripts for your favorite radio stations. An excellent starting point to learn more about live transcription."

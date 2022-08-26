@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - nodejs
-    - nodejs
 seo:
     title: "Building an npm Package"
     description: "Create, publish, and use your first npm package returning values, functions, and classes."

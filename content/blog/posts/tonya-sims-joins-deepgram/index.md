@@ -8,6 +8,7 @@ authors:
 category: devlife
 tags:
     - careers
+    - team
 seo:
     title: "Tonya Sims Joins the Developer Relations Team"
     description: "Meet Deepgram's new Developer Advocate and learn her story of getting into tech."

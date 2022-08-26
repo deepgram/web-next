@@ -8,6 +8,7 @@ authors:
 category: tutorial
 tags:
     - raspberrypi
+    - iot
 seo:
     title: "Start Chromium in Kiosk Mode on Raspberry Pi OS"
     description: "Launch directly into a fullscreen browser on your Raspberry Pi"

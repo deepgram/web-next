@@ -8,6 +8,7 @@ authors:
 category: tutorial
 tags:
     - supabase
+    - javascript
 seo:
     title: "Getting Started with Supabase"
     description: "Learn how to get started with Supabase, an open-source alternative to Firebase"

@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - dotnet
-    - dotnet
     - sdk
 seo:
     title: "Building a Cross Platform NuGet Package"
