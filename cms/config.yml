@@ -159,6 +159,9 @@ collections:
       - label: Deepgram Team
         name: team
         widget: boolean
+      - label: Deepgram Alumni
+        name: alumni
+        widget: boolean
       - label: Picture
         name: picture
         widget: image
