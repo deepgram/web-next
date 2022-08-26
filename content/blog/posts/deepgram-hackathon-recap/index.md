@@ -1,5 +1,5 @@
 ---
-title: A Deepgram Hackathon Recap: What makes a good submission?
+title: "A Deepgram Hackathon Recap: What makes a good submission?"
 description: The Deepgram + Dev.to hackathon was an opportunity to build with Deepgram or share your coolest ideas, and we got some great ones. Check out what made them stand out.
 date: 2022-05-10
 cover: https://res.cloudinary.com/deepgram/image/upload/v1652193528/blog/2022/05/deepgram-hackathon-recap/Devto-Hackathon-Winners%402x.jpg
@@ -12,7 +12,7 @@ tags:
     - voice-to-text,
     - speech-recognition
 seo:
-    title: A Deepgram Hackathon Recap: What makes a good submission?
+    title: "A Deepgram Hackathon Recap: What makes a good submission?"
     description: The Deepgram + Dev.to hackathon was an opportunity to build with Deepgram or share your coolest ideas, and we got some great ones. Check out what made them stand out.
 shorturls:
     share: https://dpgr.am/6f58ba
