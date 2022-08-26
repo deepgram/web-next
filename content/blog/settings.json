@@ -1,7 +1,7 @@
 {
   "featured_post": "transcribe-youtube-videos-from-terminal/index",
   "homepage_posts": [
-    "topic-detection-with-python",
+    "topic-detection-with-python/index",
     "saving-transcripts-from-terminal/index",
     "voice-controlled-music-with-python/index",
     "cloud-to-butt/index",
