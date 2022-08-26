@@ -5,7 +5,7 @@ date: 2022-04-25
 cover: https://res.cloudinary.com/deepgram/image/upload/v1650883327/blog/2022/04/making-your-audiovisual-content-accessible/Making-Your-AV-Content-Accessible%402x.png
 authors:
     - bekah-hawrot-weigel
-category: undefined
+category: tutorial
 tags:
     - accessibility,
     - a11y,

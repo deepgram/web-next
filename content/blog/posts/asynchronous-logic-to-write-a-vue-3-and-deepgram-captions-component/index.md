@@ -7,11 +7,11 @@ authors:
     - sandra-rodgers
 category: tutorial
 tags:
-    - aws,
-    - javascript,
-    - tutorial,
-    - serverless,
-    - vue,
+    - aws
+    - javascript
+    - tutorial
+    - serverless
+    - vue
     - express
 seo:
     title: "Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component"
