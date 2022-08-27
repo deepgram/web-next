@@ -44,8 +44,8 @@ const { author } = Astro.props;
 		<p class="bio">{author.bio}</p>
 	</div>
 	<div class="picture-section">
-		<img class="picture" src={author.picture} alt={author.title} />
 		<Svg class="fingerprint" name="fingerprint" />
+		<img class="picture" src={author.picture} alt={author.title} />
 	</div>
 </div>
 
@@ -81,24 +81,19 @@ const { author } = Astro.props;
 	}
 
 	.picture-section {
-		@apply grid shrink grow-0 grid-cols-7;
+		@apply mb-5 grid shrink grow-0 grid-cols-7;
 		@apply order-1 md:order-2;
-		/* grid-template-rows: 0.5fr; */
-		/* @screen md { */
 		grid-template-rows: 1fr;
-		/* } */
 	}
 	.picture-section .picture {
-		@apply my-auto h-[20rem] w-[20rem] rounded-full object-cover;
+		@apply my-auto h-[20rem] min-h-[20rem] w-[20rem] min-w-[20rem] rounded-full object-cover;
 		@apply col-span-3 col-start-1 lg:col-start-2;
 		grid-row: 1;
-		z-index: 1;
 	}
 
 	.picture-section .fingerprint {
-		@apply my-auto h-[20rem] w-[20rem];
-		@apply col-span-3 col-start-3 lg:col-start-4;
+		@apply my-auto h-[20rem] min-h-[20rem] w-[20rem] min-w-[20rem];
+		@apply -order-last col-span-3 col-start-3 lg:col-start-4;
 		grid-row: 1;
-		z-index: 0;
 	}
 </style>
