@@ -1,5 +1,13 @@
 {
+  "team": true,
+  "alumni": false,
   "title": "Kevin Lewis",
   "jobtitle": "Senior Developer Advocate",
-  "picture": "https://res.cloudinary.com/deepgram/image/upload/v1638198321/authors/lukeocodes/lukeocodes.jpg"
+  "picture": "https://res.cloudinary.com/deepgram/image/upload/v1634851343/authors/kevinlewis/kevinlewis.png",
+  "bio": "Kevin is a Senior Developer Advocate at Deepgram and an experienced developer event organizer. He is an avid boardgamer, tired dad, and mechanical keyboard enthusiast.",
+  "twitter": "_phzn",
+  "github": "https://github.com/phazonoverload",
+  "twitch": "https://twitch.tv/phazonoverload",
+  "website": "https://lws.io",
+  "linkedin": "https://www.linkedin.com/in/phazonoverload/"
 }

@@ -1,7 +1,9 @@
 {
+  "team": true,
+  "alumni": false,
   "title": "Tonya Sims",
   "jobtitle": "Python Developer Advocate",
-  "picture": "https://res.cloudinary.com/deepgram/image/upload/f_auto,q_auto,w_auto,c_fit/v1643739380/authors/tonyasims/Tonya-Sims.png",
+  "picture": "https://res.cloudinary.com/deepgram/image/upload/v1643739380/authors/tonyasims/Tonya-Sims.png",
   "bio": "Tonya is a former Professional Athlete turned Pythonista. She was inducted into the Wisconsin Basketball Hall of Fame, most recently. As a Python Developer Advocate at Deepgram, she looks forward to blending her experience in sales, tech, and athletics to nurture the Python developer community.",
   "twitter": "tonyasims",
   "github": "https://github.com/geekchick",

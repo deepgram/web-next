@@ -115,6 +115,26 @@ collections:
             name: image
             widget: image
             required: false
+      - label: Short URLs
+        name: shorturls
+        widget: object
+        collapsed: true
+        fields:
+          - label: Share Link Short URL
+            name: share
+            widget: string
+          - label: Twitter Short URL
+            name: twitter
+            widget: string
+          - label: LinkedIn Short URL
+            name: linkedin
+            widget: string
+          - label: Reddit Short URL
+            name: reddit
+            widget: string
+          - label: Facebook Short URL
+            name: facebook
+            widget: string
   - name: authors
     label: "Authors"
     label_singular: Author
@@ -136,9 +156,33 @@ collections:
       - label: Bio
         name: bio
         widget: markdown
+      - label: Deepgram Team
+        name: team
+        widget: boolean
+      - label: Deepgram Alumni
+        name: alumni
+        widget: boolean
       - label: Picture
         name: picture
         widget: image
+      - label: Twitter handle
+        name: twitter
+        widget: string
+      - label: LinkedIn URL
+        name: linkedin
+        widget: string
+      - label: GitHub Profile URL 
+        name: github
+        widget: string
+      - label: Twitch URL 
+        name: twitch
+        widget: string
+      - label: Website URL 
+        name: website
+        widget: string
+      - label: YouTube URL 
+        name: youtube
+        widget: string
   - name: category
     label: "Categories"
     label_singular: Category
