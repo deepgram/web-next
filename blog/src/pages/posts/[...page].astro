@@ -27,7 +27,7 @@ const { page } = Astro.props;
 	<Meta slot="og:title" property="og:title" content="All blog posts - Deepgram Blog ⚡️" />
 	<Meta slot="og:description" property="og:description" content="All the blog posts on the Deepgram blog." />
 
-	<PrimarySection>
+	<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
 		<GeneralPostsPage slug="posts" posts={page.data} page={page} link="/" linkText="Back to blog home" subtitle="All posts" />
 	</PrimarySection>
 </Layout>

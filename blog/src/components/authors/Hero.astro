@@ -8,14 +8,11 @@ import Backlink from "../nav/Backlink.astro";
 const { title } = Astro.props;
 ---
 
-<PrimarySection class="">
-	<div class="grid grid-cols-2 xl:grid-cols-3">
-		<Backlink href="/posts" class="col-span-2 xl:col-span-3">All posts</Backlink>
-		<h1 class="mb-20 text-white">{title}</h1>
-		<div class="xl:order-last">
-			<RightDecoration icon="star-left" class="text-white w-6 lg:w-8 xl:-mt-10" />
-			<LeftDecoration icon="star-right" class="text-white w-5 lg:w-6 mt-4 xl:mt-20" />
-		</div>
-		<div><Svg class="opacity-0 -mb-10" name="starburst-gradient" /></div>
+<div class="grid grid-cols-1 xl:grid-cols-3">
+	<h1 class="mb-20 text-white">{title}</h1>
+	<div class="xl:order-last">
+		<RightDecoration icon="star-left" class="text-white w-6 lg:w-8 xl:-mt-10" />
+		<LeftDecoration icon="star-right" class="text-white w-5 lg:w-6 mt-4 xl:mt-20" />
 	</div>
-</PrimarySection>
+	<div><Svg class="opacity-0 -mb-10" name="starburst-gradient" /></div>
+</div>

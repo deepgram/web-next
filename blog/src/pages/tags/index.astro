@@ -1,23 +1,29 @@
 ---
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../layouts/Default.astro";
+import Title from "../../shared/components/meta/Title.astro";
+import Description from "../../shared/components/meta/Description.astro";
+import Meta from "../../shared/components/meta/Meta.astro";
+import Backlink from "../../components/nav/Backlink.astro";
 ---
 
 <Layout>
-	<PrimarySection>
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
-		test<br />
+	<Title slot="head:title" title="All tags - Deepgram Blog ⚡️" />
+	<Description slot="head:description" name="description" content="All the tags on the Deepgram blog." />
+	<Meta slot="og:title" property="og:title" content="All tags - Deepgram Blog ⚡️" />
+	<Meta slot="og:description" property="og:description" content="All the tags on the Deepgram blog." />
+
+	<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
+		<Backlink href="/" class="mb-12 lg:mb-11">Back to blog home</Backlink>
+
+		<h1 class="mb-8">Deepgram Blog ⚡️</h1>
+
+		<div>Tag goes here</div>
+		<div>Tag goes here</div>
+		<div>Tag goes here</div>
+		<div>Tag goes here</div>
+		<div>Tag goes here</div>
+		<div>Tag goes here</div>
+		<div>Tag goes here</div>
 	</PrimarySection>
 </Layout>

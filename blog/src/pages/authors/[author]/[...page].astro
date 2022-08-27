@@ -7,6 +7,7 @@ import AuthorHero from "../../../components/authors/AuthorHero.astro";
 import Title from "../../../shared/components/meta/Title.astro";
 import Description from "../../../shared/components/meta/Description.astro";
 import Meta from "../../../shared/components/meta/Meta.astro";
+import Backlink from "../../../components/nav/Backlink.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const authorFiles = import.meta.glob("../../../content/blog/authors/*.json");
@@ -76,7 +77,11 @@ const lastName = name.join(" ");
 	{author.twitter && <Meta slot="head" property="twitter:creator" content={`@${author.twitter}`} />}
 
 	<ContrastSection contrast="darkCharcoal" background="white" bottomDivider="eclipse-divider" class="-mb-32">
-		<AuthorHero author={author} />
+		<PrimarySection class="bg-darkCharcoal pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
+			<Backlink href="/authors" class="mb-12 lg:mb-11">All authors</Backlink>
+
+			<AuthorHero author={author} />
+		</PrimarySection>
 	</ContrastSection>
 	<PrimarySection>
 		<AuthorPostsPage slug={`authors/${author.slug}`} page={page} posts={page.data} link="/authors" linkText="All authors" subtitle={`All ${author.title} posts`} />

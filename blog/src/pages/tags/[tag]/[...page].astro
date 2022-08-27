@@ -35,7 +35,7 @@ const { page, tag } = Astro.props;
 ---
 
 <Layout>
-	<PrimarySection>
+	<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
 		<GeneralPostsPage slug={`tags/${tag}`} page={page} posts={page.data} link="/tags" linkText="All tags" subtitle={`All posts tagged with #${tag}`} />
 	</PrimarySection>
 </Layout>

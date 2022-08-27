@@ -17,14 +17,6 @@ html {
 	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-body {
-	@apply font-inter;
-}
-
-code {
-	@apply font-firaCode;
-}
-
 /* @media screen and (min-width: 1600px) {
   html {
     font-size: 25px;
@@ -32,6 +24,14 @@ code {
 } */
 
 @layer base {
+	body {
+		@apply font-inter;
+	}
+
+	code {
+		@apply font-firaCode;
+	}
+
 	h1,
 	h2,
 	h3,
@@ -160,6 +160,23 @@ code {
 
 	.button--block {
 		@apply w-full;
+	}
+
+	.button--main-nav {
+		@apply border-t-4 border-transparent px-0 text-[1rem] font-[600] leading-[1.125rem];
+		@apply after:relative after:top-[1.45rem] after:block after:border-b-4 after:border-transparent;
+	}
+
+	.button--main-nav.button--active {
+		@apply after:border-lightIris;
+	}
+
+	.button--small-icon svg {
+		@apply w-[0.8rem];
+	}
+
+	.button--big-icon svg {
+		@apply w-[1.4rem];
 	}
 
 	.astro-code {

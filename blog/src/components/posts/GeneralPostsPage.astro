@@ -9,7 +9,7 @@ import Backlink from "../nav/Backlink.astro";
 const { posts, page, slug, link, path, linkText, subtitle } = Astro.props;
 ---
 
-<Backlink href={link}>{linkText}</Backlink>
+<Backlink href={link} class="mb-12 lg:mb-11">{linkText}</Backlink>
 <h1 class="mb-8">Deepgram Blog ⚡️</h1>
 <h2 class="mb-8">{subtitle}</h2>
 <HasAside>

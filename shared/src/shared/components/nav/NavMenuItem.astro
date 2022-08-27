@@ -5,7 +5,7 @@ import Link from "../general/Link.astro";
 const { href, icon } = Astro.props;
 ---
 
-<Link href={href} icon={icon} class="flex text-cloud items-center gap-2">
+<Link href={href} icon={icon} class="flex text-cloud items-center gap-2 button--big-icon">
 	<slot />
 	<Icon icon="arrow-right" class="w-[1em] h-[1em] fill-lightIris" />
 </Link>
