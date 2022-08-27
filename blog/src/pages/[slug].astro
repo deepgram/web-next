@@ -44,19 +44,36 @@ const { post } = Astro.props;
 const { slug } = Astro.params;
 
 const headings = await post.getHeadings();
+
+const seo = {
+	title: post.frontmatter.seo.title ? post.frontmatter.seo.title : post.frontmatter.title,
+	description: post.frontmatter.seo.description ? post.frontmatter.seo.description : post.frontmatter.description,
+	url: post.frontmatter.seo.canonical ? post.frontmatter.seo.canonical : Astro.url,
+};
+
+const og = {
+	title: post.frontmatter.og.title ? post.frontmatter.og.title : seo.title,
+	description: post.frontmatter.og.description ? post.frontmatter.og.description : seo.description,
+	image: post.frontmatter.og.image ? post.frontmatter.og.image : post.frontmatter.cover,
+};
+
+// resize-og-image-to-fit
+const version = og.image.match(/(.*)\/image\/upload\/(?<version>v[0-9]+)\/(.*)\.(.*)/).groups.version;
+og.image = og.image.replace(version, "c_fit,h_627,w_1200");
 ---
 
 <Layout>
-	<Title slot="head:title" title={`${post.frontmatter.title} - Deepgram Blog ⚡️`} />
-	<Description slot="head:description" name="description" content={post.frontmatter.description} />
+	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />
+	<Description slot="head:description" name="description" content={seo.description} />
+	<Link slot="head:canonical" rel="canonical" href={seo.url} />
 
-	<Meta slot="og:title" property="og:title" content={post.frontmatter.title} />
-	<Meta slot="og:description" property="og:description" content={post.frontmatter.description} />
+	<Meta slot="og:title" property="og:title" content={og.title} />
+	<Meta slot="og:description" property="og:description" content={og.description} />
 	<Meta slot="og:type" property="og:type" content="article" />
-	<Meta slot="og:image" property="og:image" content={post.frontmatter.cover} />
+	<Meta slot="og:image" property="og:image" itemprop="image" content={og.image} />
 	<Meta slot="og:image:width" property="og:image:width" content="1200" />
 	<Meta slot="og:image:height" property="og:image:height" content="762" />
-	<Meta slot="og:image:alt" property="og:image:alt" content={`Deepgram Blog - A post titled: ${post.frontmatter.title}`} />
+	<Meta slot="og:image:alt" property="og:image:alt" content={`Deepgram Blog - A post titled: ${og.title}`} />
 
 	<Meta slot="head" property="article:published_time" content={post.frontmatter.date} />
 	{post.frontmatter.authors && post.frontmatter.authors.map((author) => <Meta slot="head" property="article:author" content={author} />)}

@@ -57,7 +57,7 @@ import "../assets/styles/blog.css";
 			<Meta property="og:site_name" content="Deepgram" />
 		</slot>
 		<slot name="og:image">
-			<Meta property="og:image" content={`${Astro.url.origin}/build-something-great-with-voice.png`} />
+			<Meta property="og:image" itemprop="image" content={`${Astro.url.origin}/build-something-great-with-voice.png`} />
 		</slot>
 		<slot name="og:image:width">
 			<Meta property="og:image:width" content="2400" />
