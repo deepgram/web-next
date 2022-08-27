@@ -109,6 +109,14 @@ html {
 	.input-group .input {
 		@apply placeholder:text-stone min-h-[3.375rem] w-1/2 min-w-fit max-w-md bg-black px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
 	}
+
+	.small-icon svg {
+		@apply w-[0.8rem];
+	}
+
+	.big-icon svg {
+		@apply w-[1.4rem];
+	}
 }
 
 @layer utilities {
@@ -169,14 +177,6 @@ html {
 
 	.button--main-nav.button--active {
 		@apply after:border-lightIris;
-	}
-
-	.button--small-icon svg {
-		@apply w-[0.8rem];
-	}
-
-	.button--big-icon svg {
-		@apply w-[1.4rem];
 	}
 
 	.astro-code {
