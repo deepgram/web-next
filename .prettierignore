@@ -5,3 +5,4 @@ node_modules
 *.md
 */.netlify/**/*.json
 content/
+cms/config.yml

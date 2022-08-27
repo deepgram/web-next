@@ -1,20 +1,31 @@
 ---
 title: "How to Use Voice to Control Music with Python and Deepgram"
 description: "This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano."
-date: 2022-08-18T14:09:44.129Z
-cover: https://res.cloudinary.com/deepgram/image/upload/f_auto,q_auto,w_auto,c_fit/v1660765739/blog/2022/08/voice-controlled-music-with-python/2208-How-to-Use-Voice-to-Control-Music-with-Python-and-Deepgram-blog%402x.jpg
+date: 2022-08-18
+cover: https://res.cloudinary.com/deepgram/image/upload/v1660765739/blog/2022/08/voice-controlled-music-with-python/2208-How-to-Use-Voice-to-Control-Music-with-Python-and-Deepgram-blog%402x.jpg
 authors:
-  - tonya-sims
+    - tonya-sims
 category: tutorial
 tags:
-  - python
+    - python
+seo:
+    title: "How to Use Voice to Control Music with Python and Deepgram"
+    description: "This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano."
+shorturls:
+    share: https://dpgr.am/3eb1ffd
+    twitter: https://dpgr.am/568a128
+    linkedin: https://dpgr.am/b4afffb
+    reddit: https://dpgr.am/345ca5a
+    facebook: https://dpgr.am/67e6c9c
+og:
+    image: https://res.cloudinary.com/deepgram/image/upload/v1661454126/blog/voice-controlled-music-with-python/ograph.png
 ---
 
 Move over Beethoven. This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play a piano with your voice. The song we’ll play is the first few phrases of [Lady Gaga’s Bad Romance](https://youtu.be/-bsMuWw-v6c). It’s a simple piece in C Major, meaning no flats and sharps! We’ll only use pitches C, D, E, F, G, A, and B, and no black keys. What a beautiful chance for someone learning how to play the piano without a keyboard, tapping into the power of voice to play music!
 
 After running the project, we'll see the GIF below when running the project as a PyGame application. A window will appear, and the piano will play the song. We'll hear the notes, which also light up on the keyboard.
 
-![Python and Deepgram API playing voice-controlled music with the piano](https://res.cloudinary.com/deepgram/image/upload/v1/blog/2022/08/voice-controlled-music-with-python/python-voice-controlled-music.gif)
+![Python and Deepgram API playing voice-controlled music with the piano](https://res.cloudinary.com/deepgram/image/upload/v1659451110/blog/2022/08/voice-controlled-music-with-python/python-voice-controlled-music.gif)
 
 Let’s get started!
 
@@ -28,9 +39,7 @@ We need to install [FluidSynth](https://www.fluidsynth.org/), a free, open-sourc
 
 There are various options to install FluidSynth on a Mac. In this tutorial, we’ll use [Homebrew](https://brew.sh/) for the installation. After installing Homebrew, run this command anywhere in the terminal:
 
-```
-brew install fluidsynth
-```
+    brew install fluidsynth
 
 Now that FluidSynth is installed, let’s get our Deepgram API Key.
 
@@ -50,23 +59,21 @@ We need to create a virtual environment and activate it so we can `pip` install 
 
 Activate the virtual environment after it’s created and install the following Python packages from the terminal.
 
-```
-pip install deepgram-sdk
-pip install python-dotenv
-pip install mingus
-pip install pygame
-pip install sounddevice
-pip install scipy
-```
+    pip install deepgram-sdk
+    pip install python-dotenv
+    pip install mingus
+    pip install pygame
+    pip install sounddevice
+    pip install scipy
 
 Let’s go through each of the Python packages.
 
-- `deepgram-sdk` is the Deepgram Python SDK installation that allows us to transcribe speech audio, or voice, to a text transcript.
-- `python-dotenv` helps us work with environment variables and our Deepgram API KEY, which we’ll pull from the `.env` file.
-- `mingus` is a package for Python used by programmers and musicians to make and play music.
-- `pygame` is an open-sourced Python engine to help us make games or other multimedia applications.
-- `sounddevice` helps get audio from our device’s microphone and records it as a NumPy array.
-- `scipy` helps writes the NumPy array into a WAV file.
+*   `deepgram-sdk` is the Deepgram Python SDK installation that allows us to transcribe speech audio, or voice, to a text transcript.
+*   `python-dotenv` helps us work with environment variables and our Deepgram API KEY, which we’ll pull from the `.env` file.
+*   `mingus` is a package for Python used by programmers and musicians to make and play music.
+*   `pygame` is an open-sourced Python engine to help us make games or other multimedia applications.
+*   `sounddevice` helps get audio from our device’s microphone and records it as a NumPy array.
+*   `scipy` helps writes the NumPy array into a WAV file.
 
 We need to download a few files, including [**keys.png**](https://github.com/bspaans/python-mingus/blob/master/mingus_examples/pygame-piano/keys.png), which is the image of the piano GUI. The other file we need is the **Yamaha-Grand-ios-v1.2** from [this site](https://sites.google.com/site/soundfonts4u/). A SoundFont contains a sample of musical instruments; in our case, we’ll need a piano sound.
 
@@ -92,12 +99,12 @@ def record_song_with_voice():
 
 async def get_deepgram_transcript():
    deepgram = Deepgram(os.getenv("DEEPGRAM_API_KEY"))
-
-   record_song_with_voice()
+  
+   record_song_with_voice() 
    with open(AUDIO_FILE, "rb") as audio:
        source = {"buffer": audio, "mimetype": "audio/wav"}
        response = await deepgram.transcription.prerecorded(source, {"punctuate": True, "numerals": True})
-
+  
    return response
 
 async def get_note_data():
@@ -110,12 +117,12 @@ async def get_note_data():
           '6': 'A',
           '7': 'B'
   }
-
+ 
    get_numbers = await get_deepgram_transcript()
    data = []
    if 'results' in get_numbers:
        data = get_numbers['results']['channels'][0]['alternatives'][0]['words']
-
+  
    return [note_dictonary [x['word']] for x in data]
 
 data = asyncio.run(get_note_data())
@@ -161,13 +168,13 @@ The function `get_deepgram_transcript` is where most of the magic happens. Let�
 ```python
 async def get_deepgram_transcript():
    deepgram = Deepgram(os.getenv("DEEPGRAM_API_KEY"))
-
-   record_song_with_voice()
+  
+   record_song_with_voice() 
 
    with open(AUDIO_FILE, "rb") as audio:
        source = {"buffer": audio, "mimetype": "audio/wav"}
        response = await deepgram.transcription.prerecorded(source, {"punctuate": True, "numerals": True})
-
+  
    return response
 ```
 
@@ -193,7 +200,7 @@ Finally, we open the newly created audio file in binary format for reading. We p
  with open(AUDIO_FILE, "rb") as audio:
        source = {"buffer": audio, "mimetype": "audio/wav"}
        response = await deepgram.transcription.prerecorded(source, {"punctuate": True, "numerals": True})
-
+  
    return response
 ```
 
@@ -210,12 +217,12 @@ async def get_note_data():
           '6': 'A',
           '7': 'B'
   }
-
+ 
    get_numbers = await get_deepgram_transcript()
    data = []
    if 'results' in get_numbers:
        data = get_numbers['results']['channels'][0]['alternatives'][0]['words']
-
+  
    return [note_dictonary [x['word']] for x in data]
 
 data = asyncio.run(get_note_data())
@@ -237,7 +244,7 @@ We have a Python dictionary with keys from ‘1’ to ‘7’ corresponding to e
 
 Here’s how that would look on a piano. Each note in C Major is labeled, and located above is a corresponding number. The numbers 1 - 7 are critical, representing a single note in our melody.
 
-![Piano Keys with Deepgram API to play voice-controlled music with Python](https://res.cloudinary.com/deepgram/image/upload/f_auto,q_auto/v1/blog/2022/08/voice-controlled-music-with-python/Musical-Keyboard-Python-Deepgram.png)
+![Piano Keys with Deepgram API to play voice-controlled music with Python](https://res.cloudinary.com/deepgram/image/upload/v1659450623/blog/2022/08/voice-controlled-music-with-python/Musical-Keyboard-Python-Deepgram.png)
 
 Next, we get the numerals from the Deepgram pre-recorded transcript `get_numbers = await get_deepgram_transcript()`.
 
@@ -251,13 +258,11 @@ We then create an empty list called `data` and check if there are any `results` 
 
 Example output may look like the below, depending on which song we create.
 
-```
-[
-{'word': '1', 'start': 2.0552316, 'end': 2.4942129, 'confidence': 0.99902344, 'punctuated_word': '1'},
-{'word': '4', 'start': 2.8533795, 'end': 3.172639, 'confidence': 0.9980469, 'punctuated_word': '4'},
-{'word': '3', 'start': 3.6116204, 'end': 4.1116204, 'confidence': 0.9975586, 'punctuated_word': '3'}
-]
-```
+    [
+    {'word': '1', 'start': 2.0552316, 'end': 2.4942129, 'confidence': 0.99902344, 'punctuated_word': '1'}, 
+    {'word': '4', 'start': 2.8533795, 'end': 3.172639, 'confidence': 0.9980469, 'punctuated_word': '4'}, 
+    {'word': '3', 'start': 3.6116204, 'end': 4.1116204, 'confidence': 0.9975586, 'punctuated_word': '3'}
+    ]
 
 We notice that the `word` key in the above response correlates to a numeral we speak into the microphone when recording the song.
 
@@ -267,9 +272,7 @@ To run the project, we’ll need all the code. See the end of this post.
 
 Then in our terminal, we can run the project by typing:
 
-```
-python3 piano-with-deepgram.py
-```
+    python3 piano-with-deepgram.py
 
 Now, use our voice to say the following numerals, which correspond to piano notes, to play the first few phrases from Lady Gaga’s song Bad Romance:
 
@@ -279,9 +282,9 @@ Now, use our voice to say the following numerals, which correspond to piano note
 
 Congratulations on getting to the end of the tutorial! We encourage you to try and extend the project to do the following:
 
-- Play around with the code to play songs in different octaves
-- Play voice-controlled music that has flats and sharps
-- Tweak the code to play voice-controlled music using whole notes and half notes
+*   Play around with the code to play songs in different octaves
+*   Play voice-controlled music that has flats and sharps
+*   Tweak the code to play voice-controlled music using whole notes and half notes
 
 When you have your new masterpiece, please send us a Tweet at [@DeepgramAI](https://twitter.com/DeepgramAI) and showcase your work!
 
@@ -342,7 +345,7 @@ def record_song_with_voice():
 async def get_deepgram_transcript():
    # Initializes the Deepgram SDK
    deepgram = Deepgram(os.getenv("DEEPGRAM_API_KEY"))
-
+  
    # call the external function
    record_song_with_voice()
    # Open the audio file
@@ -350,7 +353,7 @@ async def get_deepgram_transcript():
        # ...or replace mimetype as appropriate
        source = {"buffer": audio, "mimetype": "audio/wav"}
        response = await deepgram.transcription.prerecorded(source, {"punctuate": True, "numerals": True})
-
+  
    return response
 
 def load_img(name):
@@ -369,7 +372,7 @@ def load_img(name):
 if not fluidsynth.init(SF2):
   print("Couldn't load soundfont", SF2)
   sys.exit(1)
-
+  
 pygame.init()
 pygame.font.init()
 font = pygame.font.SysFont("monospace", 12)
@@ -455,13 +458,13 @@ async def get_note_data():
           '6': 'A',
           '7': 'B'
   }
-
+ 
    get_numbers = await get_deepgram_transcript()
    data = []
    if 'results' in get_numbers:
        data = get_numbers['results']['channels'][0]['alternatives'][0]['words']
 
-
+  
    return [note_dictonary [x['word']] for x in data]
 data = asyncio.run(get_note_data())
 i = 0
@@ -488,8 +491,10 @@ while i < len(data):
        i += 1
       # if i == len(data):
       # i = 0
-
-
+  
+ 
    pygame.display.update()
    tick += 0.005 # or 0.001 or 0.0001
 ```
+
+        

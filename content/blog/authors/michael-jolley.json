@@ -1,5 +1,14 @@
 {
+  "team": true,
+  "alumni": false,
   "title": "Michael Jolley",
-  "jobtitle": "Insert Title Here",
-  "picture": "https://res.cloudinary.com/deepgram/image/upload/v1638198321/authors/lukeocodes/lukeocodes.jpg"
+  "jobtitle": "Head of Developer Relations",
+  "picture": "https://res.cloudinary.com/deepgram/image/upload/v1634851343/authors/michaeljolley/michaeljolley.png",
+  "bio": "Michael is the bald, bearded builder. Using his 20 years experience in software development, this follicly challenged developer spends his days helping others level up their skills.",
+  "twitter": "baldbeardbuild",
+  "github": "https://github.com/MichaelJolley",
+  "twitch": "https://twitch.tv/baldbeardedbuilder",
+  "website": "https://baldbeardedbuilder.com",
+  "linkedin": "https://www.linkedin.com/in/michaelwjolley/",
+  "youtube": "https://youtube.com/baldbeardedbuilder"
 }
