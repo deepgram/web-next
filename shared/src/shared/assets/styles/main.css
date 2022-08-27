@@ -102,12 +102,22 @@ html {
 		@apply mt-4;
 	}
 
-	.input-group label + input.input {
+	.input-group label + input,
+	.input-group label + textarea {
 		@apply mt-1;
 	}
 
-	.input-group .input {
-		@apply placeholder:text-stone min-h-[3.375rem] w-1/2 min-w-fit max-w-md bg-black px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
+	.input-group input {
+		@apply min-h-[3.375rem];
+	}
+
+	.input-group textarea {
+		@apply min-h-[8rem];
+	}
+
+	.input-group input,
+	.input-group textarea {
+		@apply placeholder:text-stone w-full bg-black px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
 	}
 
 	.small-icon svg {
@@ -128,6 +138,10 @@ html {
 		@apply w-auto;
 	}
 
+	.form--inline .input-group input {
+		@apply w-[29rem];
+	}
+
 	.form--inline .input-group + .button,
 	.form--inline .input-group + .input-group,
 	.form--inline .button + .input-group {
@@ -138,7 +152,8 @@ html {
 		@apply text-rock;
 	}
 
-	.input-group--light-bg .input {
+	.input-group--light-bg input,
+	.input-group--light-bg textarea {
 		@apply bg-cloud;
 	}
 
