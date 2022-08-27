@@ -89,13 +89,14 @@ const { author } = Astro.props;
 		/* } */
 	}
 	.picture-section .picture {
-		@apply my-auto max-h-80 rounded-full;
+		@apply my-auto h-[20rem] w-[20rem] rounded-full object-cover;
 		@apply col-span-3 col-start-1 lg:col-start-2;
 		grid-row: 1;
 		z-index: 1;
 	}
+
 	.picture-section .fingerprint {
-		@apply my-auto max-h-80 w-full;
+		@apply my-auto h-[20rem] w-[20rem];
 		@apply col-span-3 col-start-3 lg:col-start-4;
 		grid-row: 1;
 		z-index: 0;
