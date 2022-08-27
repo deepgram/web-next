@@ -45,6 +45,34 @@ const { slug } = Astro.params;
 
 const headings = await post.getHeadings();
 
+async function getAuthors() {
+	const authorFiles = import.meta.glob("../../../content/blog/authors/*.json");
+	let authors = [];
+	for (const path in authorFiles) {
+		const author = await authorFiles[path]();
+		const slug = path.split("/").pop().replace(".json", " ").trim();
+		authors.push({ ...(author as object), slug });
+	}
+	return authors;
+}
+
+const allAuthors = await getAuthors();
+const postAuthors = allAuthors.filter((a) => post.frontmatter.authors.includes(a.slug));
+
+async function getCategories() {
+	const categoryFiles = import.meta.glob("../../../content/blog/category/*.json");
+	let categories = [];
+	for (const path in categoryFiles) {
+		const category = await categoryFiles[path]();
+		const slug = path.split("/").pop().replace(".json", " ").trim();
+		categories.push({ ...(category as object), slug });
+	}
+	return categories;
+}
+
+const allCategories = await getCategories();
+const postCategory = allCategories.find((c) => (post.frontmatter.category = c.slug));
+
 const seo = {
 	title: post.frontmatter.seo.title ? post.frontmatter.seo.title : post.frontmatter.title,
 	description: post.frontmatter.seo.description ? post.frontmatter.seo.description : post.frontmatter.description,
@@ -60,9 +88,55 @@ const og = {
 // resize-og-image-to-fit
 const version = og.image.match(/(.*)\/image\/upload\/(?<version>v[0-9]+)\/(.*)\.(.*)/).groups.version;
 og.image = og.image.replace(version, "c_fit,h_627,w_1200");
+
+// build json schema as a string
+const schema = JSON.stringify({
+	"@context": "http://schema.org",
+	"@type": "BlogPosting",
+	image: og.image,
+	url: seo.url,
+	headline: seo.title,
+	alternativeHeadline: og.title,
+	dateCreated: post.frontmatter.date,
+	datePublished: post.frontmatter.date,
+	dateModified: post.frontmatter.date,
+	inLanguage: "en-US",
+	isFamilyFriendly: "true",
+	copyrightYear: new Date().getFullYear(),
+	copyrightHolder: "Deepgram",
+	contentLocation: {
+		"@type": "Place",
+		name: "San Francisco, California, 94110, USA",
+	},
+	author: postAuthors.map((a) => ({
+		"@type": "Person",
+		name: a.title,
+		jobTitle: a.team ? (a.jobtitle ? a.jobtitle : "Deepgram Team") : a.alumni ? "Deepgram Alumni" : "Guest Author",
+		url: `${Astro.url.origin}/authors/${a.slug}`,
+	})),
+	publisher: {
+		"@type": "Organization",
+		name: "Deepgram",
+		url: "https://deepgram.com",
+		logo: {
+			"@type": "ImageObject",
+			url: "https://github.com/deepgram/.github/raw/main/profile/dg-logo.png",
+			width: "223",
+			height: "28",
+		},
+	},
+	mainEntityOfPage: "True",
+	keywords: post.frontmatter.tags,
+	genre: ["Speech Recognition", "Automatic Speech Recognition", "Speech-to-Text", "API"],
+	articleSection: postCategory.title,
+});
 ---
 
 <Layout>
+	<script slot="head" type="application/ld+json" set:html={schema}>
+
+	</script>
+
 	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />
 	<Description slot="head:description" name="description" content={seo.description} />
 	<Link slot="head:canonical" rel="canonical" href={seo.url} />
