@@ -228,6 +228,10 @@ html {
 		@apply after:border-lightIris;
 	}
 
+	.button--main-nav:hover {
+		@apply after:border-lightIris;
+	}
+
 	.astro-code {
 		@apply overflow-hidden py-7 px-10;
 	}
