@@ -355,7 +355,7 @@ h3 {
 }
 
 .plan:nth-of-type(3) .button:hover {
-	@apply bg-sky-200;
+	@apply bg-sky;
 }
 
 .plan:nth-of-type(4) .button {
@@ -363,6 +363,6 @@ h3 {
 }
 
 .plan:nth-of-type(4) .button:hover {
-	@apply bg-red-200;
+	@apply bg-coral;
 }
 </style>
