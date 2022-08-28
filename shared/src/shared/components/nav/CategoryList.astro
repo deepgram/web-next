@@ -19,7 +19,7 @@ const categories = await getCategories();
 <div>
 	<div class="hidden lg:block mb-10">
 		<h3>Categories</h3>
-		<ul>
+		<ul class="mb-4">
 			{categories &&
 				categories.map((cat) => {
 					return (
@@ -29,7 +29,7 @@ const categories = await getCategories();
 					);
 				})}
 		</ul>
-		<Link href="/posts" class="button button--quinary button--small" iconSuffix icon="arrow-right">View All</Link>
+		<Link href="/posts" class="button button--secondary button--small" iconSuffix icon="arrow-right">View All</Link>
 	</div>
 	<div x-data="{ open: false }" class="block lg:hidden mb-10">
 		<Link @click="open = !open" class="button button--senary button--small button--block flex justify-between">

@@ -149,6 +149,64 @@ html {
 	.big-icon svg {
 		@apply w-[1.4rem];
 	}
+
+	.astro-code {
+		@apply overflow-hidden py-7 px-10;
+	}
+
+	.draw-underline span {
+		@apply relative inline-block;
+	}
+
+	.draw-underline span:after {
+		@apply absolute bottom-0 left-0 h-[0.125rem] w-full bg-current;
+		content: "";
+		transform: scaleX(0);
+		transform-origin: bottom left;
+		transition: transform 0.25s ease-out;
+	}
+
+	.draw-underline:hover span:after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
+
+	.inline-icon {
+		@apply -mt-[0.2em] inline w-[1em];
+	}
+
+	.nudge-icon .inline-icon {
+		@apply transition-[margin] duration-300;
+	}
+
+	.nudge-icon:hover:not(.nudge-icon--right):not(.nudge-icon--left):not(.nudge-icon--down) .inline-icon {
+		@apply -mt-[0.3em] mb-[0.3em];
+	}
+
+	.bg-fingerprint {
+		background-image: url("/shared/fingerprint.svg");
+		background-repeat: no-repeat;
+		background-position: right 16rem top;
+	}
+
+	.bg-starburst {
+		background-image: url("/shared/starburst.svg");
+		background-repeat: no-repeat;
+		background-position: 21rem top;
+		background-size: 42.75rem;
+	}
+
+	.bg-saturn {
+		background-image: url("/shared/saturn.svg");
+		background-repeat: no-repeat;
+		background-position: 22rem top;
+		background-size: 30rem;
+	}
+
+	.bg-blur {
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
+	}
 }
 
 @layer utilities {
@@ -232,32 +290,23 @@ html {
 		@apply after:border-lightIris;
 	}
 
-	.astro-code {
-		@apply overflow-hidden py-7 px-10;
+	.inline-icon--left {
+		@apply mr-[0.3em];
 	}
 
-	.bg-fingerprint {
-		background-image: url("/shared/fingerprint.svg");
-		background-repeat: no-repeat;
-		background-position: right 16rem top;
+	.inline-icon--right {
+		@apply ml-[0.3em];
 	}
 
-	.bg-starburst {
-		background-image: url("/shared/starburst.svg");
-		background-repeat: no-repeat;
-		background-position: 21rem top;
-		background-size: 42.75rem;
+	.nudge-icon--right:hover .inline-icon {
+		@apply -mr-[0.3em] ml-[0.6em];
 	}
 
-	.bg-saturn {
-		background-image: url("/shared/saturn.svg");
-		background-repeat: no-repeat;
-		background-position: 22rem top;
-		background-size: 30rem;
+	.nudge-icon--left:hover .inline-icon {
+		@apply -ml-[0.3em] mr-[0.6em];
 	}
 
-	.bg-blur {
-		-webkit-backdrop-filter: blur(10px);
-		backdrop-filter: blur(10px);
+	.nudge-icon--bottom:hover .inline-icon {
+		@apply -mb-[0.3em] mt-[0.3em];
 	}
 }

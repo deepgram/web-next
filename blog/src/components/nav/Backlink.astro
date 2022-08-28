@@ -4,4 +4,4 @@ import Link from "../../shared/components/general/Link.astro";
 const { href, class: classes } = Astro.props;
 ---
 
-<Link {href} class:list={["inline-block ", classes]} icon="arrow-left"><slot /></Link>
+<Link {href} class:list={["inline-block nudge-icon nudge-icon--left", classes]} icon="arrow-left"><slot /></Link>
