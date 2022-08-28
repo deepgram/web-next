@@ -18,25 +18,25 @@ html {
 }
 
 /* ONLY PIXEL SIZES ALLOWED IN FILE */
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2500px) {
 	html {
 		font-size: 17px;
 	}
 }
 
-@media screen and (min-width: 2400px) {
+@media screen and (min-width: 2750px) {
 	html {
 		font-size: 18px;
 	}
 }
 
-@media screen and (min-width: 2800px) {
+@media screen and (min-width: 3000px) {
 	html {
 		font-size: 19px;
 	}
 }
 
-@media screen and (min-width: 3200px) {
+@media screen and (min-width: 3250px) {
 	html {
 		font-size: 20px;
 	}
