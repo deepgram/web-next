@@ -17,6 +17,7 @@ import RelatedResources from "../components/posts/RelatedResources.astro";
 import Link from "../shared/components/general/Link.astro";
 import Backlink from "../components/nav/Backlink.astro";
 import InlineIcon from "../shared/components/general/InlineIcon.astro";
+import JsonLD from "../shared/components/meta/JsonLD.astro";
 
 export async function getStaticPaths() {
 	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
@@ -89,53 +90,71 @@ const og = {
 const version = og.image.match(/(.*)\/image\/upload\/(?<version>v[0-9]+)\/(.*)\.(.*)/).groups.version;
 og.image = og.image.replace(version, "c_fit,h_627,w_1200");
 
+// build short URLs
+const shorturls = {
+	share: post.frontmatter.shorturls.share ? post.frontmatter.shorturls.share : Astro.url,
+	twitter: post.frontmatter.shorturls.twitter ? post.frontmatter.shorturls.twitter : Astro.url,
+	linkedin: post.frontmatter.shorturls.linkedin ? post.frontmatter.shorturls.linkedin : Astro.url,
+	reddit: post.frontmatter.shorturls.reddit ? post.frontmatter.shorturls.reddit : Astro.url,
+	facebook: post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
+};
+
 // build json schema as a string
-const schema = JSON.stringify({
-	"@context": "http://schema.org",
-	"@type": "BlogPosting",
-	image: og.image,
-	url: seo.url,
-	headline: seo.title,
-	alternativeHeadline: og.title,
-	dateCreated: post.frontmatter.date,
-	datePublished: post.frontmatter.date,
-	dateModified: post.frontmatter.date,
-	inLanguage: "en-US",
-	isFamilyFriendly: "true",
-	copyrightYear: new Date().getFullYear(),
-	copyrightHolder: "Deepgram",
-	contentLocation: {
-		"@type": "Place",
-		name: "San Francisco, California, 94110, USA",
+const schema = [
+	{
+		"@context": "http://schema.org",
+		"@type": "BlogPosting",
+		image: og.image,
+		url: seo.url,
+		headline: seo.title,
+		alternativeHeadline: og.title,
+		dateCreated: post.frontmatter.date,
+		datePublished: post.frontmatter.date,
+		dateModified: post.frontmatter.date,
+		inLanguage: "en-US",
+		isFamilyFriendly: "true",
+		copyrightYear: new Date().getFullYear(),
+		copyrightHolder: "Deepgram",
+		contentLocation: {
+			"@type": "Place",
+			name: "San Francisco, California, 94110, USA",
+		},
+		author: postAuthors.map((a) => ({
+			"@type": "Person",
+			image: a.picture ? a.picture : null,
+			name: a.title,
+			jobTitle: a.team ? (a.jobtitle ? a.jobtitle : "Deepgram Team") : a.alumni ? "Deepgram Alumni" : "Guest Author",
+			url: `${Astro.url.origin}/authors/${a.slug}`,
+		})),
+		publisher: {
+			"@type": "Organization",
+			name: "Deepgram",
+			url: "https://deepgram.com",
+			logo: {
+				"@type": "ImageObject",
+				url: "https://github.com/deepgram/.github/raw/main/profile/dg-logo.png",
+				width: "223",
+				height: "28",
+			},
+		},
+		mainEntityOfPage: "True",
+		keywords: post.frontmatter.tags,
+		genre: ["Speech Recognition", "Automatic Speech Recognition", "Speech-to-Text", "API"],
+		articleSection: postCategory.title,
 	},
-	author: postAuthors.map((a) => ({
+	...postAuthors.map((a) => ({
+		"@context": "https://schema.org",
 		"@type": "Person",
+		image: a.picture ? a.picture : null,
 		name: a.title,
 		jobTitle: a.team ? (a.jobtitle ? a.jobtitle : "Deepgram Team") : a.alumni ? "Deepgram Alumni" : "Guest Author",
 		url: `${Astro.url.origin}/authors/${a.slug}`,
 	})),
-	publisher: {
-		"@type": "Organization",
-		name: "Deepgram",
-		url: "https://deepgram.com",
-		logo: {
-			"@type": "ImageObject",
-			url: "https://github.com/deepgram/.github/raw/main/profile/dg-logo.png",
-			width: "223",
-			height: "28",
-		},
-	},
-	mainEntityOfPage: "True",
-	keywords: post.frontmatter.tags,
-	genre: ["Speech Recognition", "Automatic Speech Recognition", "Speech-to-Text", "API"],
-	articleSection: postCategory.title,
-});
+];
 ---
 
 <Layout>
-	<script slot="head" type="application/ld+json" set:html={schema}>
-
-	</script>
+	<JsonLD slot="json:ld" {schema} />
 
 	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />
 	<Description slot="head:description" name="description" content={seo.description} />
@@ -150,8 +169,8 @@ const schema = JSON.stringify({
 	<Meta slot="og:image:alt" property="og:image:alt" content={`Deepgram Blog - A post titled: ${og.title}`} />
 
 	<Meta slot="head" property="article:published_time" content={post.frontmatter.date} />
-	{post.frontmatter.authors && post.frontmatter.authors.map((author) => <Meta slot="head" property="article:author" content={author} />)}
-	<Meta slot="head" property="article:section" content={post.frontmatter.category} />
+	{postAuthors && postAuthors.map((author) => <Meta slot="head" property="article:author" content={author.title} />)}
+	<Meta slot="head" property="article:section" content={postCategory.title} />
 	{post.frontmatter.tags && post.frontmatter.tags.map((tag) => <Meta slot="head" property="article:tag" content={tag} />)}
 
 	<article>
@@ -184,24 +203,26 @@ const schema = JSON.stringify({
 					<h5 class="pb-5"><InlineIcon icon="share">Share</InlineIcon></h5>
 					<div class="flex gap-2 text-2xl">
 						<Link
-							href={`mailto:?body=Check%20out%20this%20awesome%20post%20on%20Deepgram!%0A%0A${encodeURIComponent(post.frontmatter.title)}%0A%0A${encodeURIComponent(Astro.url)}`}
+							href={`mailto:?body=Check%20out%20this%20awesome%20post%20on%20Deepgram!%0A%0A${encodeURIComponent(post.frontmatter.title)}%0A%0A${encodeURIComponent(
+								shorturls.share
+							)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="email" class="w-[1em] fill-iris" />
 						</Link>
 						<Link
-							href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20post%20on%20Deepgram%20%40deepgramai%20%20${encodeURIComponent(Astro.url)}`}
+							href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20post%20on%20Deepgram%20%40deepgramai%20%20${encodeURIComponent(shorturls.twitter)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="twitter" class="w-[1em] fill-iris" />
 						</Link>
 						<Link
-							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(Astro.url)}&title=${encodeURIComponent(post.frontmatter.title)}`}
+							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shorturls.linkedin)}&title=${encodeURIComponent(post.frontmatter.title)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="linkedin" class="w-[1em] fill-iris" />
 						</Link>
-						<Link href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(Astro.url)}`} target="_blank" rel="noopener noreferrer"
+						<Link href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shorturls.facebook)}`} target="_blank" rel="noopener noreferrer"
 							><Icon icon="facebook" class="w-[1em] fill-iris" />
 						</Link>
 					</div>

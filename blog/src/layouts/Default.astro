@@ -14,6 +14,7 @@ import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
 
 import "../shared/assets/styles/main.css";
 import "../assets/styles/blog.css";
+import JsonLD from "../shared/components/meta/JsonLD.astro";
 ---
 
 <html class="no-js" lang="en" dir="ltr">
@@ -83,6 +84,10 @@ import "../assets/styles/blog.css";
 		<Meta name="robots" content="noodp, noydir" />
 		<Meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 		<ScriptSrc src="//unpkg.com/alpinejs" />
+
+		<slot name="json:ld">
+			<JsonLD />
+		</slot>
 	</head>
 
 	<body>
