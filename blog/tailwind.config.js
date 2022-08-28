@@ -1,21 +1,8 @@
+const { safelist } = require("./deepgram.config.js");
+
 module.exports = {
 	content: ["./src/{components,layouts,pages,assets}/**/*.{vue,astro,html,js,css}", "./src/shared/{components,assets}/**/*.{vue,astro,html,js,css}"],
-	safelist: [
-		"bg-darkCharcoal",
-		"bg-mist",
-		"bg-casper",
-		"bg-white",
-		"bg-black",
-		"bg-almostBlack",
-		"bg-cloud",
-		"fill-darkCharcoal",
-		"fill-mist",
-		"fill-casper",
-		"fill-white",
-		"fill-black",
-		"fill-almostBlack",
-		"fill-cloud",
-	],
+	safelist,
 	theme: {
 		extend: {
 			fontSize: {
