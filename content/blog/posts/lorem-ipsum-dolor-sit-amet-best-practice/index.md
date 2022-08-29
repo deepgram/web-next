@@ -4,7 +4,7 @@ description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bl
 date: 2022-04-21T14:09:44.129Z
 cover: https://placeimg.com/1200/627/animals/1
   - luke-oliff
-category: best-practice
+category: best-practices
 tags:
   - vue
   - stream

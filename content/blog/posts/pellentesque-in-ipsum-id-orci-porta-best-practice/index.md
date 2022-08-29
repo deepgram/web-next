@@ -5,7 +5,7 @@ date: 2022-04-21T14:09:44.129Z
 cover: https://placeimg.com/1200/627/animals/3
 authors:
   - luke-oliff
-category: best-practice
+category: best-practices
 tags:
   - vue
   - stream

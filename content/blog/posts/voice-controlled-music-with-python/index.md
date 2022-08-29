@@ -1,16 +1,16 @@
 ---
 title: "How to Use Voice to Control Music with Python and Deepgram"
-description: "This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano."
+description: "This tutorials will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano."
 date: 2022-08-18T14:09:44.129Z
 cover: https://res.cloudinary.com/deepgram/image/upload/f_auto,q_auto,w_auto,c_fit/v1660765739/blog/2022/08/voice-controlled-music-with-python/2208-How-to-Use-Voice-to-Control-Music-with-Python-and-Deepgram-blog%402x.jpg
 authors:
   - tonya-sims
-category: tutorial
+category: tutorials
 tags:
   - python
 ---
 
-Move over Beethoven. This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play a piano with your voice. The song we’ll play is the first few phrases of [Lady Gaga’s Bad Romance](https://youtu.be/-bsMuWw-v6c). It’s a simple piece in C Major, meaning no flats and sharps! We’ll only use pitches C, D, E, F, G, A, and B, and no black keys. What a beautiful chance for someone learning how to play the piano without a keyboard, tapping into the power of voice to play music!
+Move over Beethoven. This tutorials will use Python and the Deepgram API speech-to-text audio transcription to play a piano with your voice. The song we’ll play is the first few phrases of [Lady Gaga’s Bad Romance](https://youtu.be/-bsMuWw-v6c). It’s a simple piece in C Major, meaning no flats and sharps! We’ll only use pitches C, D, E, F, G, A, and B, and no black keys. What a beautiful chance for someone learning how to play the piano without a keyboard, tapping into the power of voice to play music!
 
 After running the project, we'll see the GIF below when running the project as a PyGame application. A window will appear, and the piano will play the song. We'll hear the notes, which also light up on the keyboard.
 
@@ -26,7 +26,7 @@ This project requires macOS but is also possible with a Windows or Linux machine
 
 We need to install [FluidSynth](https://www.fluidsynth.org/), a free, open-source MIDI software synthesizer that creates sound in digital format, usually for music. **MIDI** or **Musical Instrument Digital Interface** is a protocol that allows musical gear like computers, software, and instruments to communicate with one another. **FluidSynth** uses **SoundFont** files to generate audio. These files have samples of musical instruments like a piano that play MIDI files.
 
-There are various options to install FluidSynth on a Mac. In this tutorial, we’ll use [Homebrew](https://brew.sh/) for the installation. After installing Homebrew, run this command anywhere in the terminal:
+There are various options to install FluidSynth on a Mac. In this tutorials, we’ll use [Homebrew](https://brew.sh/) for the installation. After installing Homebrew, run this command anywhere in the terminal:
 
 ```
 brew install fluidsynth
@@ -277,7 +277,7 @@ Now, use our voice to say the following numerals, which correspond to piano note
 
 ## Next Steps to Extend the Voice-Controlled Python AI Music Example
 
-Congratulations on getting to the end of the tutorial! We encourage you to try and extend the project to do the following:
+Congratulations on getting to the end of the tutorials! We encourage you to try and extend the project to do the following:
 
 - Play around with the code to play songs in different octaves
 - Play voice-controlled music that has flats and sharps
