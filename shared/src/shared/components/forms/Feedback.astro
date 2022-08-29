@@ -17,7 +17,8 @@ const url = Astro.url;
       const body = {
         thumb: form.get('thumb'),
         page: window.location.pathname,
-        hookId: form.get('hook')
+        hookId: form.get('hook'),
+        honeypot: form.get('bot-field')
       }
       fetch('/.netlify/functions/forms', {
         method: 'POST',
@@ -38,7 +39,8 @@ const url = Astro.url;
         email: form.get('email'),
         feedback: form.get('feedback'),
         page: window.location.pathname,
-        hookId: form.get('hook')
+        hookId: form.get('hook'),
+        honeypot: form.get('bot-field')
       }
       fetch('/.netlify/functions/forms', {
         method: 'POST',
