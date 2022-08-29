@@ -1,0 +1,9 @@
+---
+import "@docsearch/css/dist/style.css";
+import Button from "../general/Button.astro";
+import DocSearch from "./DocSearch";
+import "./DocSearch.css";
+---
+
+<Button id="docsearch-search-button" icon="search" class="button big-icon button--main-nav" />
+<DocSearch client:only="preact" />
