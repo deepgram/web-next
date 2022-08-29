@@ -34,6 +34,9 @@ import "../assets/styles/blog.css";
 		</slot>
 
 		<Link rel="icon" type="image/ico" href="/favicon.ico" />
+		<Link rel="sitemap" href="/sitemap-index.xml" />
+		<Link rel="alternative" type="application/rss+xml" href="/rss.xml" title="RSS Feed" />
+		<slot name="rss" />
 
 		<slot name="og:locale">
 			<Meta property="og:locale" content="en_US" />
