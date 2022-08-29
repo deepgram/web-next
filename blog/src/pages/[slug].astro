@@ -99,7 +99,7 @@ const shorturls = {
 	facebook: post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
 };
 
-// build json schema as a string
+// build json schema object
 const schema = [
 	{
 		"@context": "http://schema.org",
@@ -150,6 +150,29 @@ const schema = [
 		jobTitle: a.team ? (a.jobtitle ? a.jobtitle : "Deepgram Team") : a.alumni ? "Deepgram Alumni" : "Guest Author",
 		url: `${Astro.url.origin}/authors/${a.slug}`,
 	})),
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		itemListElement: [
+			{
+				"@type": "ListItem",
+				position: 1,
+				name: "Deepgram Home",
+				item: "https://deepgram.com",
+			},
+			{
+				"@type": "ListItem",
+				position: 2,
+				name: "Blog",
+				item: Astro.url.origin,
+			},
+			{
+				"@type": "ListItem",
+				position: 3,
+				name: seo.title,
+			},
+		],
+	},
 ];
 ---
 

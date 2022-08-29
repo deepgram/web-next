@@ -83,15 +83,46 @@ if (author.youtube) {
 }
 
 // build json schema as a string
-const schema = {
-	"@context": "https://schema.org",
-	"@type": "Person",
-	image: author.picture ? author.picture : null,
-	name: author.title,
-	jobTitle: author.team ? (author.jobtitle ? author.jobtitle : "Deepgram Team") : author.alumni ? "Deepgram Alumni" : "Guest Author",
-	url: Astro.url,
-	sameAs: socials,
-};
+const schema = [
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		image: author.picture ? author.picture : null,
+		name: author.title,
+		jobTitle: author.team ? (author.jobtitle ? author.jobtitle : "Deepgram Team") : author.alumni ? "Deepgram Alumni" : "Guest Author",
+		url: Astro.url,
+		sameAs: socials,
+	},
+	{
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		itemListElement: [
+			{
+				"@type": "ListItem",
+				position: 1,
+				name: "Deepgram Home",
+				item: "https://deepgram.com",
+			},
+			{
+				"@type": "ListItem",
+				position: 2,
+				name: "Blog",
+				item: Astro.url.origin,
+			},
+			{
+				"@type": "ListItem",
+				position: 3,
+				name: "Authors",
+				item: `${Astro.url.origin}/authors`,
+			},
+			{
+				"@type": "ListItem",
+				position: 4,
+				name: author.title,
+			},
+		],
+	},
+];
 ---
 
 <Layout>
