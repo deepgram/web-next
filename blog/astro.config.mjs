@@ -6,7 +6,7 @@ import vue from "@astrojs/vue";
 
 // https://astro.build/config
 export default defineConfig({
-	site: import.meta.env.URL,
+	site: process.env.URL,
 	integrations: [
 		sitemap(),
 		globals(),
