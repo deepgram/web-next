@@ -19,3 +19,9 @@
   from = "/serverless/*"
   to = "/.netlify/functions/:splat"
   status = 200
+
+[[redirects]]
+  from = "https://dpgr.am/*"
+  to = "/.netlify/functions/short-url?path=:splat"
+  status = 301
+  force = true

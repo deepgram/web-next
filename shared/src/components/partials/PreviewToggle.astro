@@ -63,7 +63,7 @@ const { class: classes, id, title, snippet } = Astro.props;
 	</div>
 	<div class="col-span-2 row-start-2 min-w-0">
 		<div class="mt-4 focus:outline-none">
-			<div class={`flex block ${classes}`} x-bind:class="{'block': !code, 'hidden': code}">
+			<div class={`flex ${classes}`} x-bind:class="{'block': !code, 'hidden': code}">
 				<slot />
 			</div>
 			<div class="hidden" x-bind:class="{'hidden': !code, 'block': code}">

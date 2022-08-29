@@ -19,6 +19,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontSize: {
+				"body-smallest": ["0.875rem", "1.125rem"],
 				body: ["1.125rem", "1.75rem"],
 
 				// desktop sizes
