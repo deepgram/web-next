@@ -38,7 +38,9 @@ fileName = fileName.replace("and", "&");
 					);
 				})}
 		</ul>
-		<Link href="/posts" class="button button--secondary button--small" iconSuffix icon="arrow-right">View All</Link>
+		<div class="mt-6">
+			<Link href="/posts" class="button button--secondary button--small" iconSuffix icon="arrow-right">View All</Link>
+		</div>
 	</div>
 	<!-- mobile -->
 	<div x-data="{ open: false }" class="block bg-rock lg:hidden mb-10">
@@ -62,9 +64,3 @@ fileName = fileName.replace("and", "&");
 		</ul>
 	</div>
 </div>
-
-<style>
-	.button {
-		@apply mt-6;
-	}
-</style>
