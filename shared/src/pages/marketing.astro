@@ -32,75 +32,36 @@ import Button from "../shared/components/general/Button.astro";
 			<ComponentStaticPreview
 				id="text"
 				title="Text"
-				snippet={`<span><InlineIcon icon="share">Just text with Icon</InlineIcon><span>
-<h1><InlineIcon icon="email" iconSuffix>Just text with Icon</InlineIcon></h1>
-<h3><InlineIcon icon="xmark-large" iconSuffix>Close</InlineIcon></h3>`}
+				snippet={`<InlineIcon icon="share">Just text with Icon</InlineIcon>
+<h2><InlineIcon icon="email" iconSuffix>Just text with Icon</InlineIcon></h2>
+<h5><InlineIcon icon="xmark-large" iconSuffix>Close</InlineIcon></h5>`}
 			>
 				<div class="flex flex-col space-y-2">
 					<span><InlineIcon icon="share">Just text with Icon</InlineIcon></span>
-					<h1><InlineIcon icon="email" iconSuffix>Just text with Icon</InlineIcon></h1>
-					<h3><InlineIcon icon="xmark-large" iconSuffix>Close</InlineIcon></h3>
+					<h2><InlineIcon icon="email" iconSuffix>Just text with Icon</InlineIcon></h2>
+					<h5><InlineIcon icon="xmark-large" iconSuffix>Close</InlineIcon></h5>
 				</div>
 			</ComponentStaticPreview>
 
 			<ComponentStaticPreview
 				id="links"
 				title="Links"
-				snippet={`<Link href="#" class="text-red-900">Link with no Icon</Link>
-<h1><Link href="#">Link with no Icon</Link></h1>
-<h2><Link href="#">Link with no Icon</Link></h2>
-<h3><Link href="#">Link with no Icon</Link></h3>
-<h4><Link href="#">Link with no Icon</Link></h4>
-<h5><Link href="#">Link with no Icon</Link></h5>
-<h6><Link href="#" class="text-black">Link with no Icon</Link></h6>
-<Link href="#" icon="email" class="text-red-900">Link with Icon</Link>
-<h1><Link href="#" icon="email">Link with Icon</Link></h1>
-<h2><Link href="#" icon="email">Link with Icon</Link></h2>
-<h3><Link href="#" icon="email">Link with Icon</Link></h3>
-<h4><Link href="#" icon="email">Link with Icon</Link></h4>
-<h5><Link href="#" icon="email">Link with Icon</Link></h5>
-<h6><Link href="#" icon="email" class="text-black">Link with Icon</Link></h6>
-<Link href="#" icon="email" iconSuffix class="text-red-900">Link with suffix Icon</Link>
-<h1><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h1>
-<h2><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h2>
-<h3><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h3>
-<h4><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h4>
-<h5><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h5>
-<h6><Link href="#" icon="email" iconSuffix class="text-black">Link with suffix Icon</Link></h6>
-<Link href="#" class="text-white button button--primary">Link like Primary Button</Link>
-<Link href="#" class="text-white button button--primary button--small">Small Link like Primary Button</Link>
-<Link href="#" class="text-white button button--primary button--large">Large Link like Primary Button</Link>
-<Link href="#" class="text-white button button--primary button--block">Block Link like Primary Button</Link>
-<Link href="#" class="text-white button button--secondary">Link like Secondary Button</Link>
-<Link href="#" class="text-white button button--tertiary">Link like Tertiary Button</Link>
-<Link href="#" class="text-white button button--quaternary">Link like Quaternary Button</Link>
-<Link href="#" class="text-white button button--quinary">Link like Quinary Button</Link>
-<Link href="#" class="text-white button button--senary">Link like Senary Button</Link>
-<Link href="#" icon="angle-down" class="text-white button button--primary">Link like Primary Button with Icon</Link>
-<Link href="#" icon="angle-down" iconSuffix class="text-white button button--secondary">Link like Secondary Button with suffix Icon</Link>`}
+				snippet={`<Link href="#" class="text-iris">Link with no Icon</Link>
+<h2><Link href="#" icon="email" class="text-meadow">Link with Icon</Link></h2>
+<h5><Link href="#" icon="email" iconSuffix class="text-iris">Link with suffix Icon</Link></h5>
+<Link href="#" class="text-rock inline-block nudge-icon nudge-icon--left" icon="arrow-left">Animated icon</Link>
+<Link href="#" class="text-ink nudge-icon nudge-icon--right" icon="arrow-right" iconSuffix>Animate icon suffix</Link>
+<h4><Link href="#" class="text-iris draw-underline"><span>Draw underline link</span></Link></h4>
+<h6><Link href="#" class="text-fireEngine draw-underline nudge-icon nudge-icon--right" icon="arrow-right" iconSuffix><span>Draw underline with icon</span></Link></h6>`}
 			>
 				<div class="flex flex-col space-y-2">
-					<Link href="#" class="text-red-900">Link with no Icon</Link>
-					<h1><Link href="#">Link with no Icon</Link></h1>
-					<h2><Link href="#">Link with no Icon</Link></h2>
-					<h3><Link href="#">Link with no Icon</Link></h3>
-					<h4><Link href="#">Link with no Icon</Link></h4>
-					<h5><Link href="#">Link with no Icon</Link></h5>
-					<h6><Link href="#" class="text-black">Link with no Icon</Link></h6>
-					<Link href="#" icon="email" class="text-red-900">Link with Icon</Link>
-					<h1><Link href="#" icon="email">Link with Icon</Link></h1>
-					<h2><Link href="#" icon="email">Link with Icon</Link></h2>
-					<h3><Link href="#" icon="email">Link with Icon</Link></h3>
-					<h4><Link href="#" icon="email">Link with Icon</Link></h4>
-					<h5><Link href="#" icon="email">Link with Icon</Link></h5>
-					<h6><Link href="#" icon="email" class="text-black">Link with Icon</Link></h6>
-					<Link href="#" icon="email" iconSuffix class="text-red-900">Link with suffix Icon</Link>
-					<h1><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h1>
-					<h2><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h2>
-					<h3><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h3>
-					<h4><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h4>
-					<h5><Link href="#" icon="email" iconSuffix>Link with suffix Icon</Link></h5>
-					<h6><Link href="#" icon="email" iconSuffix class="text-black">Link with suffix Icon</Link></h6>
+					<Link href="#" class="text-iris">Link with no Icon</Link>
+					<h2><Link href="#" icon="email" class="text-meadow">Link with Icon</Link></h2>
+					<h5><Link href="#" icon="email" iconSuffix class="text-iris">Link with suffix Icon</Link></h5>
+					<Link href="#" class="text-rock inline-block nudge-icon nudge-icon--left" icon="arrow-left">Animated icon</Link>
+					<Link href="#" class="text-ink nudge-icon nudge-icon--right" icon="arrow-right" iconSuffix>Animate icon suffix</Link>
+					<h4><Link href="#" class="text-iris draw-underline"><span>Draw underline link</span></Link></h4>
+					<h6><Link href="#" class="text-fireEngine draw-underline nudge-icon nudge-icon--right" icon="arrow-right" iconSuffix><span>Draw underline with icon</span></Link></h6>
 				</div>
 			</ComponentStaticPreview>
 
