@@ -38,12 +38,13 @@ const otherPosts = sortedPosts.filter((post) => {
 const latestPosts = otherPosts.splice(0, 2);
 
 async function getCategories() {
-	const categoryFiles = import.meta.glob("../../../content/blog/category/*.json");
+	const categoryFiles = import.meta.glob("../content/blog/category/*.json");
 	let categories = [];
 
 	for (const path in categoryFiles) {
 		const category = await categoryFiles[path]();
 		const slug = path.split("/").pop().replace(".json", " ").trim();
+
 		categories.push({ ...(category as object), slug });
 	}
 

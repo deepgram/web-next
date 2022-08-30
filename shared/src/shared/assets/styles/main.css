@@ -17,11 +17,30 @@ html {
 	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-/* @media screen and (min-width: 1600px) {
-  html {
-    font-size: 25px;
-  }
-} */
+/* ONLY PIXEL SIZES ALLOWED IN FILE */
+@media screen and (min-width: 2500px) {
+	html {
+		font-size: 17px;
+	}
+}
+
+@media screen and (min-width: 2750px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 3000px) {
+	html {
+		font-size: 19px;
+	}
+}
+
+@media screen and (min-width: 3250px) {
+	html {
+		font-size: 20px;
+	}
+}
 
 @layer base {
 	body {
@@ -150,6 +169,10 @@ html {
 		@apply w-[1.4rem];
 	}
 
+	.huge-icon svg {
+		@apply w-[1.6rem];
+	}
+
 	.astro-code {
 		@apply overflow-hidden py-7 px-10;
 	}
@@ -204,8 +227,13 @@ html {
 	}
 
 	.bg-blur {
-		-webkit-backdrop-filter: blur(10px);
-		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(0.625rem);
+		backdrop-filter: blur(0.625rem);
+	}
+
+	.shadow-menu {
+		-webkit-box-shadow: 0px -0.625rem 0.625rem 0.3125rem rgb(0, 0, 0);
+		box-shadow: 0px -0.625rem 0.625rem 0.3125rem rgb(0, 0, 0);
 	}
 }
 
@@ -282,11 +310,8 @@ html {
 		@apply after:relative after:top-[1.45rem] after:block after:border-b-4 after:border-transparent;
 	}
 
-	.button--main-nav.button--active {
-		@apply after:border-lightIris;
-	}
-
-	.button--main-nav:hover {
+	.button--nav-underline:hover,
+	.button--nav-underline.button--active {
 		@apply after:border-lightIris;
 	}
 

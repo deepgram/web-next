@@ -4,4 +4,4 @@ import Link from "../general/Link.astro";
 const { class: classes, ...rest } = Astro.props;
 ---
 
-<Link class={`button button--small button--main-nav ${classes}`} {...rest}><slot /></Link>
+<Link class={`button button--small button--main-nav button--nav-underline ${classes}`} {...rest}><slot /></Link>
