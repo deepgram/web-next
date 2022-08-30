@@ -294,7 +294,7 @@ html {
 	}
 
 	.button--primary.button--alternative:hover {
-		@apply bg-mintChip;
+		@apply bg-mint;
 	}
 
 	.button--secondary {
@@ -310,11 +310,8 @@ html {
 		@apply after:relative after:top-[1.45rem] after:block after:border-b-4 after:border-transparent;
 	}
 
+	.button--nav-underline:hover,
 	.button--nav-underline.button--active {
-		@apply after:border-lightIris;
-	}
-
-	.button--nav-underline:hover {
 		@apply after:border-lightIris;
 	}
 

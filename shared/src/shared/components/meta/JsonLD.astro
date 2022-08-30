@@ -1,0 +1,43 @@
+---
+import settings from "../../../content/settings.json";
+const { company, logo, founders, address, contacts, urls } = settings;
+
+const siteSchema = [
+	{
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		...company,
+		logo: {
+			"@type": "ImageObject",
+			...logo,
+		},
+		founders: founders.map((founder) => ({
+			"@type": "Person",
+			name: founder,
+		})),
+		address: {
+			"@type": "PostalAddress",
+			...address,
+		},
+		contactPoint: contacts.map((contact) => ({
+			"@type": "ContactPoint",
+			...contact,
+		})),
+		sameAs: urls,
+	},
+];
+
+const { schema } = Astro.props;
+
+if (schema) {
+	if (Array.isArray(schema)) {
+		siteSchema.push(...schema);
+	} else {
+		siteSchema.push(schema);
+	}
+}
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(siteSchema)}>
+
+</script>
