@@ -84,26 +84,24 @@ const url = Astro.url;
 			</form>
 		</div>
 		<form x-show="thumb !== null" name="feedback" method="POST" @submit.prevent="sendFeedback">
-			<div class="flex flex-col mb-4">
-				<div class="mb-4">
-					<p x-show="thumb ==='up'">Thank you! Can you tell us what you liked about it? (Optional)</p>
-					<p x-show="thumb !=='up'">Thank you. What could we have done better? (Optional)</p>
-				</div>
-				<label for="feedback" class="text-sm">Your message</label>
-				<textarea
-					id="feedback"
-					ref="feedback"
-					class="bg-cloud py-3 px-4 mt-2 h-32 placeholder:text-sm"
-					name="feedback"
-					required
-					placeholder="Share your thoughts"
-					x-model="feedback"></textarea>
-				<label for="email">Email</label>
-				<input id="email" class="flex-grow border-2 border-ink mr-2 px-2" type="email" name="email" placeholder="you@email.com" x-model="email" />
+			<div class="mb-4">
+				<p x-show="thumb ==='up'">Thank you! Can you tell us what you liked about it? (Optional)</p>
+				<p x-show="thumb !=='up'">Thank you. What could we have done better? (Optional)</p>
+				<p class="text-sm">
+					We may also want to contact you with updates or questions related to your feedback and our product. If don't mind, you can optionally leave your email address along with
+					your comments.
+				</p>
 			</div>
-
-			<div class="flex flex-row-reverse">
-				<button type="submit" aria-label="Send Feedback" title="Send Feedback" class="button button--primary button--small"> Send Feedback</button>
+			<div class="input-group input-group--light-bg">
+				<label for="feedback">Your message<span class="text-fireEngine">*</span></label>
+				<textarea id="feedback" ref="feedback" name="feedback" class="invalid:outline-fireEngine" required placeholder="Share your thoughts" x-model="feedback"></textarea>
+			</div>
+			<div class="input-group input-group--light-bg">
+				<label for="email">Your email</label>
+				<input id="email" type="email" name="email" placeholder="you@email.com" x-model="email" />
+			</div>
+			<div class="flex mt-4 justify-end">
+				<button type="submit" aria-label="Send Feedback" title="Send Feedback" class="button button--primary">Send Feedback</button>
 			</div>
 
 			<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
@@ -116,8 +114,8 @@ const url = Astro.url;
 		</div>
 	</div>
 </div>
-<!-- TODO: Add email input to feedback form, hook up feedback form -->
-<style scoped>
+
+<style>
 	p {
 		@apply text-lg;
 	}

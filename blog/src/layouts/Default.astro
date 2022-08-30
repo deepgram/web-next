@@ -14,6 +14,7 @@ import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
 
 import "../shared/assets/styles/main.css";
 import "../assets/styles/blog.css";
+import JsonLD from "../shared/components/meta/JsonLD.astro";
 ---
 
 <html class="no-js" lang="en" dir="ltr">
@@ -57,7 +58,7 @@ import "../assets/styles/blog.css";
 			<Meta property="og:site_name" content="Deepgram" />
 		</slot>
 		<slot name="og:image">
-			<Meta property="og:image" content={`${Astro.url.origin}/build-something-great-with-voice.png`} />
+			<Meta property="og:image" itemprop="image" content={`${Astro.url.origin}/build-something-great-with-voice.png`} />
 		</slot>
 		<slot name="og:image:width">
 			<Meta property="og:image:width" content="2400" />
@@ -83,23 +84,19 @@ import "../assets/styles/blog.css";
 		<Meta name="robots" content="noodp, noydir" />
 		<Meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 		<ScriptSrc src="//unpkg.com/alpinejs" />
+
+		<slot name="json:ld">
+			<JsonLD />
+		</slot>
 	</head>
 
 	<body>
 		<Header />
-		<main class="pt-16">
+
+		<main>
 			<slot />
 		</main>
 
-		<ContrastSection contrast="black" background="white" topDivider="eclipse-divider" class="mt-20">
-			<PrimarySection class="text-white">
-				<AmplifyQuote>
-					<h1>Ready to see Deepgram in Action?</h1>
-					<p>Get your API key and unlock $150 in free credit.</p>
-					<Link href="https://console.deepgram.com/signup">Start Free</Link>
-				</AmplifyQuote>
-			</PrimarySection>
-		</ContrastSection>
 		<Footer />
 	</body>
 </html>

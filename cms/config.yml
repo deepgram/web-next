@@ -90,10 +90,6 @@ collections:
             name: description
             widget: string
             required: false
-          - label: Keywords
-            name: keywords
-            widget: list
-            required: false
           - label: "Canonical URL"
             name: canonical
             widget: string

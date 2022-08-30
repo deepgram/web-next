@@ -1,58 +1,53 @@
 ---
-import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Svg from "../../shared/components/general/Svg.astro";
 import Icon from "../../shared/components/general/Icon.astro";
-import Backlink from "../nav/Backlink.astro";
 import Link from "../../shared/components/general/Link.astro";
 
 const { author } = Astro.props;
 ---
 
-<PrimarySection class="bg-darkCharcoal">
-	<Backlink href="/authors" class="mb-12 lg:mb-11">All authors</Backlink>
-	<div class="author-hero mb-20">
-		<div class="flex-1 author-info">
-			<h1 class="name">{author.title}</h1>
-			<h2 class="title">{author.jobtitle}</h2>
-			<ul class="socials">
-				{author.twitter && (
-					<li>
-						<Link href={`https://twitter.com/${author.twitter}`} target="_blank" rel="nofollow">
-							<Icon icon="twitter" />
-						</Link>
-					</li>
-				)}
+<div class="author-hero mb-20">
+	<div class="flex-1 author-info">
+		<h1 class="name">{author.title}</h1>
+		<h2 class="title">{author.jobtitle}</h2>
+		<ul class="socials">
+			{author.twitter && (
+				<li>
+					<Link href={`https://twitter.com/${author.twitter}`} target="_blank" rel="nofollow">
+						<Icon icon="twitter" />
+					</Link>
+				</li>
+			)}
 
-				{author.linkedin && (
-					<li>
-						<Link href={author.linkedin} target="_blank" rel="nofollow">
-							<Icon icon="linkedin" />
-						</Link>
-					</li>
-				)}
-				{author.github && (
-					<li>
-						<Link href={author.github} target="_blank" rel="nofollow">
-							<Icon icon="github" />
-						</Link>
-					</li>
-				)}
-				{author.twitch && (
-					<li>
-						<Link href={author.twitch} target="_blank" rel="nofollow">
-							<Icon icon="twitch" />
-						</Link>
-					</li>
-				)}
-			</ul>
-			<p class="bio">{author.bio}</p>
-		</div>
-		<div class="picture-section">
-			<img class="picture" src={author.picture} alt={author.title} />
-			<Svg class="fingerprint" name="fingerprint" />
-		</div>
+			{author.linkedin && (
+				<li>
+					<Link href={author.linkedin} target="_blank" rel="nofollow">
+						<Icon icon="linkedin" />
+					</Link>
+				</li>
+			)}
+			{author.github && (
+				<li>
+					<Link href={author.github} target="_blank" rel="nofollow">
+						<Icon icon="github" />
+					</Link>
+				</li>
+			)}
+			{author.twitch && (
+				<li>
+					<Link href={author.twitch} target="_blank" rel="nofollow">
+						<Icon icon="twitch" />
+					</Link>
+				</li>
+			)}
+		</ul>
+		<p class="bio">{author.bio}</p>
 	</div>
-</PrimarySection>
+	<div class="picture-section">
+		<Svg class="fingerprint" name="fingerprint" />
+		<img class="picture" src={author.picture} alt={author.title} />
+	</div>
+</div>
 
 <style scoped>
 	.author-hero {
@@ -86,23 +81,19 @@ const { author } = Astro.props;
 	}
 
 	.picture-section {
-		@apply grid shrink grow-0 grid-cols-7;
+		@apply mb-5 grid shrink grow-0 grid-cols-7;
 		@apply order-1 md:order-2;
-		/* grid-template-rows: 0.5fr; */
-		/* @screen md { */
 		grid-template-rows: 1fr;
-		/* } */
 	}
 	.picture-section .picture {
-		@apply my-auto max-h-80 rounded-full;
+		@apply my-auto h-[20rem] min-h-[20rem] w-[20rem] min-w-[20rem] rounded-full object-cover;
 		@apply col-span-3 col-start-1 lg:col-start-2;
 		grid-row: 1;
-		z-index: 1;
 	}
+
 	.picture-section .fingerprint {
-		@apply my-auto max-h-80 w-full;
-		@apply col-span-3 col-start-3 lg:col-start-4;
+		@apply my-auto h-[20rem] min-h-[20rem] w-[20rem] min-w-[20rem];
+		@apply -order-last col-span-3 col-start-3 lg:col-start-4;
 		grid-row: 1;
-		z-index: 0;
 	}
 </style>
