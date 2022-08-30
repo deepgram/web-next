@@ -266,7 +266,7 @@ html {
 	}
 
 	.button--primary.button--alternative:hover {
-		@apply bg-mintChip;
+		@apply bg-mint;
 	}
 
 	.button--secondary {

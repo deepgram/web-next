@@ -1,21 +1,8 @@
+const { safelist } = require("./deepgram.config.js");
+
 module.exports = {
 	content: ["./src/{components,layouts,pages,assets}/**/*.{vue,astro,html,js,css}", "./src/shared/{components,assets}/**/*.{vue,astro,html,js,css}"],
-	safelist: [
-		"bg-darkCharcoal",
-		"bg-mist",
-		"bg-casper",
-		"bg-white",
-		"bg-black",
-		"bg-almostBlack",
-		"bg-cloud",
-		"fill-darkCharcoal",
-		"fill-mist",
-		"fill-casper",
-		"fill-white",
-		"fill-black",
-		"fill-almostBlack",
-		"fill-cloud",
-	],
+	safelist,
 	theme: {
 		extend: {
 			fontSize: {
@@ -71,40 +58,46 @@ module.exports = {
 				17: "4.25rem",
 			},
 			colors: {
-				powder: "#E8F1FF",
-				cottonCandy: "#FFEBEB",
-				crimson: "#AB1A22",
-				transparent: "transparent",
-				current: "currentColor",
-				black: "#000000",
-				offBlack: "#050A0F",
-				white: "#ffffff",
-				blueberry: "#1c4374",
-				darkCharcoal: "#141E29",
-				midCharcoal: "#1D2630",
-				ink: "#1E2C3C",
-				iris: "#5D6FD0",
-				steel: "#4F6278",
-				casper: "#AAB8CD",
-				cloud: "#D7DFEB",
-				cloud30: "rgba(215,223,235,.3)",
-				shuttleGray: "#6B6E76",
-				almostBlack: "#0A121B",
-				fireEngine: "#FB3640",
-				coral: "#FE5C5C",
-				meadow: "#38EDAC",
-				grass: "#00A971",
-				watercourse: "#008752",
-				evergreen: "#025445",
-				mintChip: "#DAFFF2",
-				mist: "#F7F9FC",
-				rock: "#354659",
-				lightPurple: "#A8ACFF",
-				lightIris: "#96A2FF",
-				storm: "#66788D",
-				stone: "#758AA2",
-				sunflower: "#FFD34B",
-				gold: "#FBAC18",
+				// deepgram COSMOS styleguide colors
+				fireEngine: "rgba(251, 54, 64, 1)",
+				cottonCandy: "rgba(255,235,235,1)",
+				coral: "rgba(254, 92, 92, 1)",
+				crimson: "rgba(171, 26, 34, 1)",
+				blood: "rgba(102, 0, 0, 1)",
+
+				meadow: "rgba(56, 237, 172, 1)",
+				mint: "rgba(218, 255, 242, 1)",
+				grass: "rgba(0, 169, 113, 1)",
+				watercourse: "rgba(0, 135, 82, 1)",
+				evergreen: "rgba(2, 84, 69, 1)",
+
+				powder: "rgba(232,241,255,1)",
+				sky: "rgba(105, 165, 255, 1)",
+				cornflower: "rgba(85, 148, 255, 1)",
+				ocean: "rgba(0, 114, 255, 1)",
+				blueberry: "rgba(28, 67, 116, 1)",
+
+				lightIris: "rgba(150,162,255,1)",
+				iris: "rgba(93,111,208,1)",
+				darkIris: "rgba(17,42,175,1)",
+
+				sunflower: "rgba(255, 211, 75, 1)",
+				gold: "rgba(251, 172, 24, 1)",
+
+				//white
+				mist: "rgba(247, 249, 252, 1)",
+				cloud: "rgba(215, 223, 235, 1)",
+				casper: "rgba(170, 184, 205, 1)",
+				stone: "rgba(117, 138, 162, 1)",
+				storm: "rgba(102, 120, 141, 1)",
+				steel: "rgba(79, 98, 120, 1)",
+				rock: "rgba(53, 70, 89, 1)",
+				ink: "rgba(30, 44, 60, 1)",
+				darkCharcoal: "rgba(20, 30, 41, 1)",
+				almostBlack: "rgba(10, 18, 27, 1)",
+				offBlack: "rgba(5, 10, 15, 1)",
+				//black
+
 				http: {
 					get: "#2B2BFA",
 					options: "#2B2BFA",
@@ -141,6 +134,65 @@ module.exports = {
 					youtube: "#ff0000",
 				},
 			},
+
+			/**
+			 * Gadients
+			 * ========
+			 */
+			backgroundImage: (theme) => ({
+				/**
+				 * coral/irisLight/meadow
+				 * ----------------------
+				 * left to right - class="bg-gradient-to-r from-coral via-lightIris to-meadow"
+				 * top to bottom - class="bg-gradient-to-b from-coral via-lightIris to-meadow"
+				 */
+				"gradient--light-vertical": `linear-gradient(to right, ${theme("colors.coral")}, ${theme("colors.lightIris")}, ${theme("colors.meadow")})`,
+				"gradient--light-horizontal": `linear-gradient(to bottom, ${theme("colors.coral")}, ${theme("colors.lightIris")}, ${theme("colors.meadow")})`,
+
+				/**
+				 * fireEngine/iris/meadow
+				 * ----------------------
+				 * left to right - class="bg-gradient-to-r from-fireEngine via-iris to-meadow"
+				 * top to bottom - class="bg-gradient-to-b from-fireEngine via-iris to-meadow"
+				 */
+				"gradient--vibrant-horizontal": `linear-gradient(to bottom, ${theme("colors.fireEngine")}, ${theme("colors.iris")}, ${theme("colors.meadow")})`,
+				"gradient--vibrant-vertical": `linear-gradient(to right, ${theme("colors.fireEngine")}, ${theme("colors.iris")}, ${theme("colors.meadow")})`,
+
+				/**
+				 * iris/coral
+				 * ----------
+				 * top to bottom - class="bg-gradient-to-b from-iris to-coral"
+				 */
+				"gradient--iris-to-coral": `linear-gradient(to bottom, ${theme("colors.iris")}, ${theme("colors.coral")})`,
+
+				/**
+				 * mint/powder/cottonCandy
+				 * -----------------------
+				 * left to right - class="bg-gradient-to-r from-mint via-powder to-cottonCandy"
+				 */
+				"gradient--pale-left-to-right": `linear-gradient(to bottom, ${theme("colors.mint")}, ${theme("colors.powder")}, ${theme("colors.cottonCandy")})`,
+
+				/**
+				 * meadow/lightIris
+				 * ----------------
+				 * top-left to bottom-right - class="bg-gradient-to-br from-meadow to-lightIris"
+				 */
+				"gradient--meadow-to-lightIris": `linear-gradient(to bottom right, ${theme("colors.meadow")}, ${theme("colors.lightIris")})`,
+
+				/**
+				 * meadow/iris
+				 * ----------------
+				 * top to bottom - class="bg-gradient-to-b from-meadow to-iris"
+				 */
+				"gradient--meadow-to-iris": `linear-gradient(to bottom, ${theme("colors.meadow")}, ${theme("colors.iris")})`,
+
+				/**
+				 * storm/iris
+				 * ----------------
+				 * top to bottom - class="bg-gradient-to-b from-storm to-lightIris"
+				 */
+				"gradient--storm-to-lightIris": `linear-gradient(to bottom, ${theme("colors.storm")}, ${theme("colors.lightIris")})`,
+			}),
 		},
 	},
 	plugins: [],
