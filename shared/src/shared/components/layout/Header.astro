@@ -1,17 +1,18 @@
 ---
-import Icon from "../general/Icon.astro";
-import Svg from "../general/Svg.astro";
-import Link from "../general/Link.astro";
+import "@docsearch/css/dist/style.css";
+import "../search/DocSearch.css";
+
 import Button from "../general/Button.astro";
-
-import NavMenu from "../nav/NavMenu.astro";
-import NavMenuPrimaryItem from "../nav/NavMenuPrimaryItem.astro";
-import NavMenuItem from "../nav/NavMenuItem.astro";
-import NavItem from "../nav/NavItem.astro";
-
+import DocSearch from "../search/DocSearch";
+import Link from "../general/Link.astro";
+import MobileNavItem from "../nav/MobileNavItem.astro";
 import MobileNavMenu from "../nav/MobileNavMenu.astro";
 import MobileNavMenuItem from "../nav/MobileNavMenuItem.astro";
-import MobileNavItem from "../nav/MobileNavItem.astro";
+import NavItem from "../nav/NavItem.astro";
+import NavMenu from "../nav/NavMenu.astro";
+import NavMenuItem from "../nav/NavMenuItem.astro";
+import NavMenuPrimaryItem from "../nav/NavMenuPrimaryItem.astro";
+import Svg from "../general/Svg.astro";
 ---
 
 <header x-data="{ menu: null }" class="sticky top-0 z-10">
@@ -76,7 +77,8 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 					</NavMenu>
 				</nav>
 				<div class="flex space-x-[1rem] items-center xl:ml-12">
-					<Button icon="search" class="button big-icon button--main-nav" />
+					<!-- <Button icon="search" class="button big-icon button--main-nav" /> -->
+					<Button id="docsearch-button-d" icon="search" class="button big-icon button--main-nav" />
 					<Link href="https://console.deepgram.com/" class="button button--small button--main-nav text-white">Log In</Link>
 					<Link href="/contact" class="button button--secondary button--small w-[7rem]">Contact Us</Link>
 					<Link href="https://console.deepgram.com/signup" class="button button--primary button--small w-[7rem]">Sign Up</Link>
@@ -94,7 +96,8 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 						</Link>
 					</div>
 					<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
-						<Button icon="search" class="button big-icon button--main-nav" />
+						<!-- <Button icon="search" class="button big-icon button--main-nav" /> -->
+						<Button id="docsearch-button-m" icon="search" class="button big-icon button--main-nav" />
 						<Button icon="xmark-large" class="button big-icon button--main-nav" x-on:click="menu = null" />
 					</div>
 				</div>
@@ -152,4 +155,5 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 			</div>
 		</div>
 	</div>
+	<DocSearch client:only="preact" />
 </header>
