@@ -8,7 +8,7 @@ async function getCategories() {
 	let paths = [];
 	for (const path in modules) {
 		const result = await modules[path]();
-		paths.push({ slug: "/categories/" + path.split("/").pop().replace(".json", " ").trim(), title: result.title });
+		paths.push({ slug: "/categories/" + path.split("/").pop().replace(".json", " ").trim(), title: result.title, plural: result.plural || null });
 	}
 	return paths;
 }
@@ -32,7 +32,7 @@ fileName = fileName.replace("and", "&");
 								class={` hover:text-iris font-semibold leading-5 ${fileName === cat.title.toLowerCase().split(" ").join("-") ? "text-storm" : "text-darkCharcoal"}`}
 								href={cat.slug}
 							>
-								{cat.title}
+								{cat.plural || cat.title}
 							</Link>
 						</li>
 					);
