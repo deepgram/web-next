@@ -5,20 +5,19 @@ import GenericBlogCard from "./GenericBlogCard.astro";
 
 const { class: classes, post } = Astro.props;
 let { title } = post.frontmatter;
-const { title: originalTitle, description, tags, authors, cover } = post.frontmatter;
+const { title: originalTitle, tags, authors, cover } = post.frontmatter;
 
-title = title.length > 80 ? `${title.substring(0, 77)}...` : title;
+title = title.length > 60 ? `${title.substring(0, 57)}...` : title;
 ---
 
 <GenericBlogCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={post}>
-	<div class="overflow-hidden flex h-3/5 md:h-2/3 lg:h-3/5 place-content-center">
+	<div class="overflow-hidden flex h-[55%] md:h-2/3 lg:h-[55%] place-content-center">
 		<img class="object-cover w-full" src={cover} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
-	<div class="px-4 pb-3 flex flex-col h-2/5 md:h-1/3 lg:h-2/5 justify-between text-black">
+	<div class="px-4 pb-3 flex flex-col h-[45%] md:h-1/3 lg:h-[45%] justify-between text-black">
 		<div class="h-full flex flex-col justify-evenly">
 			<TagsList tags={tags} />
-			<h2 title={originalTitle} class="lg:text-h2-d md:text-h2-m text-h4-m">{title}</h2>
-			<p class="hidden lg:block">{description}</p>
+			<h4 class="lg:text-h4-d md:text-h2-m text-h4-m">{title}</h4>
 		</div>
 
 		<Authors authors={authors} />

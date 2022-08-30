@@ -1,30 +1,29 @@
 ---
-import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import BlogCardLarge from "../../shared/components/cards/BlogCardLarge.astro";
-import BlogCard from "../../shared/components/cards/BlogCard.astro";
 import BlogCardSmall from "../../shared/components/cards/BlogCardSmall.astro";
+import BlogCardHero from "../../shared/components/cards/BlogCardHero.astro";
 
 const { title, featured, homepage, latest } = Astro.props;
 ---
 
-<PrimarySection class="pt-14">
-	<h1 class="mb-8">{title}</h1>
-	<div class="grid gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-		<div class="lg:col-span-2 xl:col-span-3 grid gap-4 lg:gap-6 xl:grid-cols-3 ">
-			<div class="xl:order-last xl:col-span-2 flex">
-				<BlogCardLarge post={featured} />
-			</div>
-			<div class="grid gap-4 lg:gap-6 lg:hidden xl:grid xl:grid-rows-2">
-				<BlogCard post={latest[0]} />
-				<BlogCard class="sm:hidden lg:block" post={latest[1]} />
-			</div>
+<h1 class="mb-8">{title}</h1>
+<div class="grid gap-4 lg:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+	<div class="md:col-span-2 lg:col-span-2 xl:col-span-3 grid gap-4 lg:gap-6 xl:grid-cols-3 ">
+		<div class="xl:order-last xl:col-span-2 flex">
+			<BlogCardLarge post={featured} />
 		</div>
-		<div class="grid gap-4 lg:gap-6 grid-rows-5">
-			<BlogCardSmall post={homepage[0]} />
-			<BlogCardSmall post={homepage[1]} />
-			<BlogCardSmall post={homepage[2]} />
-			<BlogCardSmall post={homepage[3]} />
-			<BlogCardSmall post={homepage[4]} />
+		<div class="grid gap-4 lg:gap-6 lg:hidden xl:grid xl:grid-rows-2">
+			<BlogCardHero post={latest[0]} />
+			<BlogCardHero class="sm:hidden lg:block" post={latest[1]} />
 		</div>
 	</div>
-</PrimarySection>
+	<div class="grid gap-4 lg:gap-6 grid-rows-5">
+		<BlogCardSmall class="hidden lg:flex xl:hidden" post={latest[0]} />
+		<BlogCardSmall class="hidden md:flex xl:hidden" post={latest[1]} />
+		<BlogCardSmall post={homepage[0]} />
+		<BlogCardSmall post={homepage[1]} />
+		<BlogCardSmall post={homepage[2]} />
+		<BlogCardSmall post={homepage[3]} class="lg:hidden xl:flex" />
+		<BlogCardSmall post={homepage[4]} class="md:hidden xl:flex" />
+	</div>
+</div>
