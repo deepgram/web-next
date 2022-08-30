@@ -70,7 +70,7 @@ html {
 	}
 
 	h2 {
-		@apply lg:text-h2-d text-h2-m;
+		@apply xl:text-h2-d text-h2-m;
 	}
 
 	h3 {
@@ -82,7 +82,7 @@ html {
 	}
 
 	h5 {
-		@apply lg:text-h5-d text-h5-m;
+		@apply 2xl:text-h5-d text-h5-m;
 	}
 
 	h6 {
