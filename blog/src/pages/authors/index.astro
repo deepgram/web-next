@@ -11,6 +11,7 @@ import Title from "../../shared/components/meta/Title.astro";
 import Description from "../../shared/components/meta/Description.astro";
 import Meta from "../../shared/components/meta/Meta.astro";
 import Backlink from "../../components/nav/Backlink.astro";
+import JsonLD from "../../shared/components/meta/JsonLD.astro";
 
 const authorFiles = import.meta.glob("../../content/blog/authors/*.json");
 
@@ -28,9 +29,36 @@ const authors = await getAuthors();
 const team = authors.filter((a) => a.team);
 const alumni = authors.filter((a) => !a.team && a.alumni);
 const guests = authors.filter((a) => !a.team && !a.alumni);
+
+// build json schema object
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	itemListElement: [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Deepgram Home",
+			item: "https://deepgram.com",
+		},
+		{
+			"@type": "ListItem",
+			position: 2,
+			name: "Blog",
+			item: Astro.url.origin,
+		},
+		{
+			"@type": "ListItem",
+			position: 3,
+			name: "Authors",
+		},
+	],
+};
 ---
 
 <Layout>
+	<JsonLD slot="json:ld" {schema} />
+
 	<Title slot="head:title" title="All authors - Deepgram Blog ⚡️" />
 	<Description slot="head:description" name="description" content="All the authors writing content on the Deepgram blog." />
 	<Meta slot="og:title" property="og:title" content="All authors - Deepgram Blog ⚡️" />

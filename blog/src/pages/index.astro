@@ -9,6 +9,7 @@ import HasAside from "../shared/components/layout/HasAside.astro";
 import CategoryList from "../shared/components/nav/CategoryList.astro";
 import CategorySection from "../components/homepage/CategorySection.astro";
 import Link from "../shared/components/general/Link.astro";
+import JsonLD from "../shared/components/meta/JsonLD.astro";
 
 const allPosts = await Astro.glob("../content/blog/posts/**/index.md");
 
@@ -37,22 +38,43 @@ const otherPosts = sortedPosts.filter((post) => {
 const latestPosts = otherPosts.splice(0, 2);
 
 async function getCategories() {
-	const categoryFiles = import.meta.glob("../content/blog/category/*.json");
-	let paths = [];
+	const categoryFiles = import.meta.glob("../../../content/blog/category/*.json");
+	let categories = [];
 
 	for (const path in categoryFiles) {
 		const category = await categoryFiles[path]();
 		const slug = path.split("/").pop().replace(".json", " ").trim();
-		paths.push({ ...(category as object), slug });
+		categories.push({ ...(category as object), slug });
 	}
 
-	return paths;
+	return categories;
 }
 
 const categories = await getCategories();
+
+// build json schema object
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	itemListElement: [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Deepgram Home",
+			item: "https://deepgram.com",
+		},
+		{
+			"@type": "ListItem",
+			position: 2,
+			name: "Blog",
+		},
+	],
+};
 ---
 
 <Layout>
+	<JsonLD slot="json:ld" {schema} />
+
 	<ContrastSection contrast="cloud" background="white" class="bg-sound-wave-cloud-dark" bottomDivider="eclipse-divider" bottomOverlay>
 		<PrimarySection class="pt-[7rem] md:pt-[7.33203125rem] lg:pt-[7.6640625rem] xl:pt-[8.328125rem]">
 			<Hero title="Deepgram Blog ⚡️" featured={featuredPost} homepage={homepagePosts} latest={latestPosts} />

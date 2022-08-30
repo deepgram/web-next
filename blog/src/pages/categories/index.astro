@@ -9,6 +9,7 @@ import Description from "../../shared/components/meta/Description.astro";
 import Meta from "../../shared/components/meta/Meta.astro";
 import Backlink from "../../components/nav/Backlink.astro";
 import Link from "../../shared/components/general/Link.astro";
+import JsonLD from "../../shared/components/meta/JsonLD.astro";
 
 const categoryFiles = import.meta.glob("../../content/blog/category/*.json");
 
@@ -22,9 +23,36 @@ async function getCategories() {
 }
 
 const categories = await getCategories();
+
+// build json schema object
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	itemListElement: [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Deepgram Home",
+			item: "https://deepgram.com",
+		},
+		{
+			"@type": "ListItem",
+			position: 2,
+			name: "Blog",
+			item: Astro.url.origin,
+		},
+		{
+			"@type": "ListItem",
+			position: 3,
+			name: "Categories",
+		},
+	],
+};
 ---
 
 <Layout>
+	<JsonLD slot="json:ld" {schema} />
+
 	<Title slot="head:title" title="All categories - Deepgram Blog ⚡️" />
 	<Description slot="head:description" name="description" content="All the categories on the Deepgram blog." />
 	<Meta slot="og:title" property="og:title" content="All categories - Deepgram Blog ⚡️" />
