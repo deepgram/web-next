@@ -12,7 +12,7 @@ title = title.length > 60 ? `${title.substring(0, 57)}...` : title;
 <GenericBlogCard class={`w-full flex justify-between ${classes ? classes : ""}`} post={post}>
 	<div class="flex grow flex-col h-full justify-between text-black p-2 pb-3">
 		<div>
-			<h5>{title}</h5>
+			<h5 title={originalTitle}>{title}</h5>
 		</div>
 		<Authors authors={authors} />
 	</div>

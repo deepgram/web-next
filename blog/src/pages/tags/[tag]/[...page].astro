@@ -2,6 +2,7 @@
 import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../../layouts/Default.astro";
 import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+import JsonLD from "../../../shared/components/meta/JsonLD.astro";
 
 export async function getStaticPaths({ paginate }) {
 	const allPosts = await Astro.glob("../../../content/blog/posts/**/*.md");
@@ -31,11 +32,45 @@ export async function getStaticPaths({ paginate }) {
 		});
 	});
 }
+
 const { page, tag } = Astro.props;
+
+// build json schema object
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	itemListElement: [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Deepgram Home",
+			item: "https://deepgram.com",
+		},
+		{
+			"@type": "ListItem",
+			position: 2,
+			name: "Blog",
+			item: Astro.url.origin,
+		},
+		{
+			"@type": "ListItem",
+			position: 3,
+			name: "Tags",
+			item: `${Astro.url.origin}/tags`,
+		},
+		{
+			"@type": "ListItem",
+			position: 4,
+			name: tag,
+		},
+	],
+};
 ---
 
 <Layout>
-	<PrimarySection>
+	<JsonLD slot="json:ld" {schema} />
+
+	<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
 		<GeneralPostsPage slug={`tags/${tag}`} page={page} posts={page.data} link="/tags" linkText="All tags" subtitle={`All posts tagged with #${tag}`} />
 	</PrimarySection>
 </Layout>
