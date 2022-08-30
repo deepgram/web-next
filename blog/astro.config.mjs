@@ -4,7 +4,6 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import vue from "@astrojs/vue";
 import vitePreact from "@preact/preset-vite";
-
 import preact from "@astrojs/preact";
 
 // https://astro.build/config
