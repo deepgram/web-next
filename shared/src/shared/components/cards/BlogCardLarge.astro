@@ -17,7 +17,7 @@ title = title.length > 80 ? `${title.substring(0, 77)}...` : title;
 	<div class="px-4 pb-3 flex flex-col h-1/2 justify-between text-black">
 		<div class="flex flex-col justify-start space-y-1">
 			<TagsList tags={tags} />
-			<h2 class="pt-8 xl:text-h2-d text-h4-m">{title}</h2>
+			<h2 title={originalTitle} class="pt-8 xl:text-h2-d text-h4-m">{title}</h2>
 			<p class="hidden lg:block pt-8">{description}</p>
 		</div>
 

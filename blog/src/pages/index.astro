@@ -36,14 +36,16 @@ const otherPosts = sortedPosts.filter((post) => {
 
 const latestPosts = otherPosts.splice(0, 2);
 
-const categoryFiles = import.meta.glob("../content/blog/category/*.json");
-
 async function getCategories() {
+	const categoryFiles = import.meta.glob("../content/blog/category/*.json");
 	let paths = [];
+
 	for (const path in categoryFiles) {
 		const category = await categoryFiles[path]();
-		paths.push({ title: category.title, slug: path.split("/").pop().replace(".json", " ").trim() });
+		const slug = path.split("/").pop().replace(".json", " ").trim();
+		paths.push({ ...(category as object), slug });
 	}
+
 	return paths;
 }
 
@@ -52,14 +54,16 @@ const categories = await getCategories();
 
 <Layout>
 	<ContrastSection contrast="cloud" background="white" class="bg-sound-wave-cloud-dark" bottomDivider="eclipse-divider" bottomOverlay>
-		<Hero title="Deepgram Blog ⚡️" featured={featuredPost} homepage={homepagePosts} latest={latestPosts} />
+		<PrimarySection class="pt-[7rem] md:pt-[7.33203125rem] lg:pt-[7.6640625rem] xl:pt-[8.328125rem]">
+			<Hero title="Deepgram Blog ⚡️" featured={featuredPost} homepage={homepagePosts} latest={latestPosts} />
+		</PrimarySection>
 	</ContrastSection>
 	<PrimarySection class="mt-32 xl:mt-52">
 		<HasAside>
 			<CategoryList slot="aside" />
 			{categories && categories.map((category, index) => <CategorySection index={index} category={category} />)}
 			<center class="-mt-10 mb-20">
-				<Link href="/posts" icon="arrow-right" iconSuffix class="button button--quinary button--small">View All</Link>
+				<Link href="/posts" icon="arrow-right" iconSuffix class="button button--secondary button--small">View All</Link>
 			</center>
 		</HasAside>
 	</PrimarySection>
