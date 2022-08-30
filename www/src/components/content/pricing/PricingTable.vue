@@ -273,7 +273,7 @@ h3 {
 }
 
 .plan:nth-child(2) .plan-header {
-	@apply bg-mintChip;
+	@apply bg-mint;
 }
 .plan:nth-child(3) .plan-header {
 	@apply bg-powder;
@@ -348,14 +348,14 @@ h3 {
 	@apply bg-meadow;
 }
 .plan:nth-of-type(2) .button:hover {
-	@apply bg-mintChip;
+	@apply bg-mint;
 }
 .plan:nth-of-type(3) .button {
 	@apply bg-powder;
 }
 
 .plan:nth-of-type(3) .button:hover {
-	@apply bg-sky-200;
+	@apply bg-sky;
 }
 
 .plan:nth-of-type(4) .button {
@@ -363,6 +363,6 @@ h3 {
 }
 
 .plan:nth-of-type(4) .button:hover {
-	@apply bg-red-200;
+	@apply bg-coral;
 }
 </style>

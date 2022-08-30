@@ -39,6 +39,8 @@
     "@preact/preset-vite": "^2.3.0"
   },
   "dependencies": {
+    "@astrojs/rss": "^1.0.0",
+    "@astrojs/sitemap": "^1.0.0",
     "netlify-cli": "^10.17.3",
     "vue": "^3.2.33"
   }
