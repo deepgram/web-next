@@ -1,10 +1,10 @@
 ---
 import Link from "../general/Link.astro";
 
-const { title, class: classes, ...rest } = Astro.props;
+const { title, class: classes, linkClass, ...rest } = Astro.props;
 ---
 
-<div class="flex flex-col md:flex-row items-start md:items-end justify-between pb-6 md:pb-8 lg:pb-10">
+<div class={`flex flex-col md:flex-row items-start md:items-end justify-between pb-6 md:pb-8 lg:pb-10 ${classes ? classes : ""}`}>
 	<slot />
-	<Link {...rest} class="text-lg font-semibold stroke-[3]" icon="arrow-right" iconSuffix>View All {title}</Link>
+	<Link {...rest} class={`text-lg font-semibold stroke-[3] ${linkClass ? linkClass : ""}`} icon="arrow-right" iconSuffix><span>View All {title}</span></Link>
 </div>
