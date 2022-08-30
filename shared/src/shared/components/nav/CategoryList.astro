@@ -31,17 +31,22 @@ const categories = await getCategories();
 		</ul>
 		<Link href="/posts" class="button button--secondary button--small" iconSuffix icon="arrow-right">View All</Link>
 	</div>
-	<div x-data="{ open: false }" class="block lg:hidden mb-10">
-		<Link @click="open = !open" class="button button--senary button--small button--block flex justify-between">
-			<span>Categories</span>
+	<!-- mobile -->
+	<div x-data="{ open: false }" class="block bg-rock lg:hidden mb-10">
+		<Link @click="open = !open" class="button button--senary button--small button--block flex justify-between items-center text-white">
+			<h3 class="pb-0">Categories</h3>
 			<Icon icon="angle-down" class="fill-gray-300 w-[1em] h-[1em]" x-bind:class="{ 'rotate-180' : open }" />
 		</Link>
-		<ul class="hidden" x-bind:class="{hidden: !open, block: open}">
+
+		<ul class="hidden absolute w-full z-10 bg-rock overflow-y-auto max-h-[36rem]" x-bind:class="{hidden: !open, block: open}">
+			<hr class="sticky top-0 left-[3%] md:left-[2%] w-[97%] mb-4 bg-steel opacity-30" />
 			{categories &&
 				categories.map((cat) => {
 					return (
 						<li>
-							<Link href={cat.slug}>{cat.title}</Link>
+							<Link class="font-inter pl-4 font-normal text-white" href={cat.slug}>
+								{cat.title}
+							</Link>
 						</li>
 					);
 				})}
