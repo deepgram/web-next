@@ -92,19 +92,11 @@ import JsonLD from "../shared/components/meta/JsonLD.astro";
 
 	<body>
 		<Header />
-		<main class="pt-16">
+
+		<main>
 			<slot />
 		</main>
 
-		<ContrastSection contrast="black" background="white" topDivider="eclipse-divider" class="mt-20">
-			<PrimarySection class="text-white">
-				<AmplifyQuote>
-					<h1>Ready to see Deepgram in Action?</h1>
-					<p>Get your API key and unlock $150 in free credit.</p>
-					<Link href="https://console.deepgram.com/signup">Start Free</Link>
-				</AmplifyQuote>
-			</PrimarySection>
-		</ContrastSection>
 		<Footer />
 	</body>
 </html>
