@@ -2,7 +2,7 @@
 import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 
-const modules = import.meta.glob("../../../../src/content/blog/category/*.json");
+const modules = import.meta.glob("../../../content/blog/category/*.json");
 
 async function getCategories() {
 	let paths = [];

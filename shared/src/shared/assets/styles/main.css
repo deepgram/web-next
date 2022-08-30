@@ -17,21 +17,40 @@ html {
 	padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-body {
-	@apply font-inter;
+/* ONLY PIXEL SIZES ALLOWED IN FILE */
+@media screen and (min-width: 2500px) {
+	html {
+		font-size: 17px;
+	}
 }
 
-code {
-	@apply font-firaCode;
+@media screen and (min-width: 2750px) {
+	html {
+		font-size: 18px;
+	}
 }
 
-/* @media screen and (min-width: 1600px) {
-  html {
-    font-size: 25px;
-  }
-} */
+@media screen and (min-width: 3000px) {
+	html {
+		font-size: 19px;
+	}
+}
+
+@media screen and (min-width: 3250px) {
+	html {
+		font-size: 20px;
+	}
+}
 
 @layer base {
+	body {
+		@apply font-inter;
+	}
+
+	code {
+		@apply font-firaCode;
+	}
+
 	h1,
 	h2,
 	h3,
@@ -51,7 +70,7 @@ code {
 	}
 
 	h2 {
-		@apply lg:text-h2-d text-h2-m;
+		@apply xl:text-h2-d text-h2-m;
 	}
 
 	h3 {
@@ -63,7 +82,7 @@ code {
 	}
 
 	h5 {
-		@apply lg:text-h5-d text-h5-m;
+		@apply 2xl:text-h5-d text-h5-m;
 	}
 
 	h6 {
@@ -102,68 +121,89 @@ code {
 		@apply mt-4;
 	}
 
-	.input-group label + input.input {
+	.input-group label + input[type="email"],
+	.input-group label + input[type="password"],
+	.input-group label + input[type="search"],
+	.input-group label + input[type="tel"],
+	.input-group label + input[type="text"],
+	.input-group label + input[type="url"],
+	.input-group label + input[type="text"],
+	.input-group label + textarea {
 		@apply mt-1;
 	}
 
-	.input-group .input {
-		@apply placeholder:text-stone min-h-[3.375rem] w-1/2 min-w-fit max-w-md bg-black px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
-	}
-}
-
-@layer utilities {
-	.form--inline {
-		@apply flex  items-end;
-	}
-
-	.form--inline .input-group {
-		@apply w-auto;
+	.input-group input[type="email"],
+	.input-group input[type="password"],
+	.input-group input[type="search"],
+	.input-group input[type="tel"],
+	.input-group input[type="text"],
+	.input-group input[type="url"],
+	.input-group input[type="text"] {
+		@apply min-h-[3.375rem];
 	}
 
-	.form--inline .input-group + .button,
-	.form--inline .input-group + .input-group,
-	.form--inline .button + .input-group {
-		@apply mt-0 ml-4;
+	.input-group textarea {
+		@apply min-h-[8rem];
 	}
 
-	.input-group--light-bg {
-		@apply text-rock;
+	.input-group input[type="checkbox"] {
+		@apply border-stone checked:bg-meadow h-4 w-4 appearance-none border-2;
 	}
 
-	.input-group--light-bg .input {
-		@apply bg-cloud;
+	.input-group input[type="email"],
+	.input-group input[type="password"],
+	.input-group input[type="search"],
+	.input-group input[type="tel"],
+	.input-group input[type="text"],
+	.input-group input[type="url"],
+	.input-group input[type="text"],
+	.input-group textarea {
+		@apply placeholder:text-stone bg-almostBlack w-full px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
 	}
 
-	.button--small {
-		@apply min-h-[2.375rem] px-[0.6875rem] pb-[0.65rem] pt-[0.725rem];
+	.small-icon svg {
+		@apply w-[0.8rem];
 	}
 
-	.button--mini {
-		@apply min-h-[1.625rem] min-w-[4.75rem] px-[0.475rem] pb-[0.375rem] pt-[0.5rem] leading-[0.75rem];
+	.big-icon svg {
+		@apply w-[1.4rem];
 	}
 
-	.button--primary {
-		@apply bg-meadow text-darkCharcoal;
-	}
-
-	.button--primary.button--alternative {
-		@apply bg-white;
-	}
-
-	.button--primary.button--alternative:hover {
-		@apply bg-mintChip;
-	}
-
-	.button--secondary {
-		@apply bg-rock text-meadow;
-	}
-
-	.button--block {
-		@apply w-full;
+	.huge-icon svg {
+		@apply w-[1.6rem];
 	}
 
 	.astro-code {
 		@apply overflow-hidden py-7 px-10;
+	}
+
+	.draw-underline span {
+		@apply relative inline-block;
+	}
+
+	.draw-underline span:after {
+		@apply absolute bottom-0 left-0 h-[0.125rem] w-full bg-current;
+		content: "";
+		transform: scaleX(0);
+		transform-origin: bottom left;
+		transition: transform 0.25s ease-out;
+	}
+
+	.draw-underline:hover span:after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
+
+	.inline-icon {
+		@apply -mt-[0.2em] inline w-[1em];
+	}
+
+	.nudge-icon .inline-icon {
+		@apply transition-[margin] duration-300;
+	}
+
+	.nudge-icon:hover:not(.nudge-icon--right):not(.nudge-icon--left):not(.nudge-icon--down) .inline-icon {
+		@apply -mt-[0.3em] mb-[0.3em];
 	}
 
 	.bg-fingerprint {
@@ -187,7 +227,111 @@ code {
 	}
 
 	.bg-blur {
-		-webkit-backdrop-filter: blur(10px);
-		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(0.625rem);
+		backdrop-filter: blur(0.625rem);
+	}
+
+	.shadow-menu {
+		-webkit-box-shadow: 0px -0.625rem 0.625rem 0.3125rem rgb(0, 0, 0);
+		box-shadow: 0px -0.625rem 0.625rem 0.3125rem rgb(0, 0, 0);
+	}
+}
+
+@layer utilities {
+	.form--inline {
+		@apply flex items-end;
+	}
+
+	.form--inline .input-group {
+		@apply grow;
+	}
+
+	.form--inline .input-group input[type="email"],
+	.form--inline .input-group input[type="password"],
+	.form--inline .input-group input[type="search"],
+	.form--inline .input-group input[type="tel"],
+	.form--inline .input-group input[type="text"],
+	.form--inline .input-group input[type="url"],
+	.form--inline .input-group input[type="text"] {
+		@apply w-full;
+	}
+
+	.form--inline .input-group + .button,
+	.form--inline .input-group + .input-group,
+	.form--inline .button + .input-group {
+		@apply mt-0 ml-4;
+	}
+
+	.input-group--light-bg {
+		@apply text-rock;
+	}
+
+	.input-group--light-bg input[type="email"],
+	.input-group--light-bg input[type="password"],
+	.input-group--light-bg input[type="search"],
+	.input-group--light-bg input[type="tel"],
+	.input-group--light-bg input[type="text"],
+	.input-group--light-bg input[type="url"],
+	.input-group--light-bg input[type="text"],
+	.input-group--light-bg textarea {
+		@apply bg-cloud;
+	}
+
+	.button--small {
+		@apply min-h-[2.375rem] px-[0.6875rem] pb-[0.65rem] pt-[0.725rem];
+	}
+
+	.button--mini {
+		@apply min-h-[1.625rem] min-w-[4.75rem] px-[0.475rem] pb-[0.375rem] pt-[0.5rem] leading-[0.75rem];
+	}
+
+	.button--primary {
+		@apply bg-meadow text-darkCharcoal;
+	}
+
+	.button--primary.button--alternative {
+		@apply bg-white;
+	}
+
+	.button--primary.button--alternative:hover {
+		@apply bg-mint;
+	}
+
+	.button--secondary {
+		@apply bg-rock text-meadow;
+	}
+
+	.button--block {
+		@apply w-full;
+	}
+
+	.button--main-nav {
+		@apply border-t-4 border-transparent px-0 text-[1rem] font-[600] leading-[1.125rem];
+		@apply after:relative after:top-[1.45rem] after:block after:border-b-4 after:border-transparent;
+	}
+
+	.button--nav-underline:hover,
+	.button--nav-underline.button--active {
+		@apply after:border-lightIris;
+	}
+
+	.inline-icon--left {
+		@apply mr-[0.3em];
+	}
+
+	.inline-icon--right {
+		@apply ml-[0.3em];
+	}
+
+	.nudge-icon--right:hover .inline-icon {
+		@apply -mr-[0.3em] ml-[0.6em];
+	}
+
+	.nudge-icon--left:hover .inline-icon {
+		@apply -ml-[0.3em] mr-[0.6em];
+	}
+
+	.nudge-icon--bottom:hover .inline-icon {
+		@apply -mb-[0.3em] mt-[0.3em];
 	}
 }

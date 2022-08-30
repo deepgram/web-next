@@ -3,15 +3,27 @@ import PrimarySection from "../layout/PrimarySection.astro";
 import Svg from "../general/Svg.astro";
 import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
+import ContrastSection from "../decoration/ContrastSection.astro";
+import AmplifyQuote from "../quotes/AmplifyQuote.astro";
+import Button from "../general/Button.astro";
 ---
 
-<footer class="text-white text-base bg-black lg:pt-20">
+<footer class="text-white text-base bg-black">
+	<ContrastSection contrast="black" background="white" topDivider="eclipse-divider" class="mt-20 pb-20">
+		<PrimarySection>
+			<AmplifyQuote>
+				<h1>Ready to see Deepgram in Action?</h1>
+				<p>Get your API key and unlock $150 in free credit.</p>
+				<Link href="https://console.deepgram.com/signup">Start Free</Link>
+			</AmplifyQuote>
+		</PrimarySection>
+	</ContrastSection>
 	<PrimarySection>
-		<div class="grid grid-cols-1 xl:grid-cols-6 gap-10">
-			<div class="xl:col-span-4 flex flex-col space-y-10 py-10">
+		<div class="grid grid-cols-1 w-full sm:w-2/3 lg:w-full lg:grid-cols-5 xl:grid-cols-6 gap-10 items-end pb-14">
+			<div class="lg:col-start-1 lg:col-end-3 flex flex-col space-y-6">
 				<Svg name="deepgram-long" class="text-coral w-56 stroke-0" />
 				<p>Every Voice. Heard and understood.</p>
-				<ul class="grid grid-cols-4 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12 place-items-center md:place-items-start gap-4">
+				<ul class="grid grid-cols-4 sm:grid-cols-8 lg:place-items-center md:place-items-start gap-6 md:gap-12">
 					<li>
 						<Link href="http://" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"><Icon icon="twitch" class="fill-current w-10" /></Link>
 					</li>
@@ -19,7 +31,7 @@ import Link from "../general/Link.astro";
 						<Link href="http://" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"><Icon icon="github" class="fill-current w-10" /></Link>
 					</li>
 					<li>
-						<Link href="http://" rel="noopener noreferrer nofollow" target="_blank" class="text-storm flex flex-col items-center"
+						<Link href="http://" rel="noopener noreferrer nofollow" target="_blank" class="text-storm flex flex-col lg:items-center"
 							><Icon icon="twitter" class="fill-current w-10" /><span class="text-xs">DEVS</span>
 						</Link>
 					</li>
@@ -40,19 +52,20 @@ import Link from "../general/Link.astro";
 					</li>
 				</ul>
 			</div>
-			<div class="xl:col-span-2 py-10">
-				<p class="uppercase">Emails + Updates</p>
+			<div class="lg:col-start-4 lg:col-end-6 xl:col-start-5 xl:col-end-7 space-y-2">
+				<h5>Get news and product updates.</h5>
 				<form>
 					<div class="flex flex-col space-y-4">
-						<div class="flex flex-col space-y-2">
-							<div class="flex">
-								<input id="work-email" class="bg-black text-white border-b-2 border-white" placeholder="name@company.com" type="email" class="w-60" />
-								<button class="button button--quaternary" type="submit">Submit</button>
-							</div>
-							<label for="work-email" class="text-storm">Work email</label>
+						<div class="input-group flex-row items-baseline space-x-1">
+							<label><input type="checkbox" /> I’m good with the</label>
+							<Link href="/" target="_blank" class="text-lightIris">Privacy Policy</Link>
 						</div>
-						<div>
-							<input type="checkbox" /> I’m good with the <Link href="/" class="text-lightIris">Privacy Policy</Link>
+
+						<div class="form--inline">
+							<div class="input-group">
+								<input type="text" id="email" placeholder="you@work-email.com" />
+							</div>
+							<Button type="submit" value="test" class="button button--secondary">Submit</Button>
 						</div>
 					</div>
 				</form>
@@ -61,7 +74,7 @@ import Link from "../general/Link.astro";
 	</PrimarySection>
 	<div class="bg-darkCharcoal">
 		<PrimarySection class="py-10 flex flex-col space-y-10">
-			<div class="grid grid-cols-2 xl:grid-cols-6 gap-10">
+			<div class="grid grid-cols-2 lg:grid-cols-5 xl:grid-cols-6 gap-10">
 				<ul class="space-y-3 leading-tight">
 					<li class="uppercase font-bold">Product</li>
 					<li>Product</li>
