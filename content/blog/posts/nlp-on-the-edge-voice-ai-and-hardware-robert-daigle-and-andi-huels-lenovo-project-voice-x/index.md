@@ -1,6 +1,6 @@
 ---
 title: "NLP on the Edge: Voice, AI and Hardware - Robert Daigle and Andi Huels, Lenovo - Project Voice X"
-description: "'NLP on the Edge: Voice, AI and Hardware," presented by Robert Daigle and Andi Huels of Lenovo, presented on day one of Project Voice X. "
+description: "NLP on the Edge: Voice, AI and Hardware, presented by Robert Daigle and Andi Huels of Lenovo, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981399/blog/nlp-on-the-edge-voice-ai-and-hardware-robert-daigle-and-andi-huels-lenovo-project-voice-x/proj-voice-x-session-robert-daigle-andi-huels-blog.png
 authors:
@@ -12,7 +12,7 @@ tags:
   - project-voice-x
 seo:
   title: "NLP on the Edge: Voice, AI and Hardware - Robert Daigle and Andi Huels, Lenovo - Project Voice X"
-  description: "'NLP on the Edge: Voice, AI and Hardware," presented by Robert Daigle and Andi Huels of Lenovo, presented on day one of Project Voice X. "
+  description: "NLP on the Edge: Voice, AI and Hardware, presented by Robert Daigle and Andi Huels of Lenovo, presented on day one of Project Voice X. "
 shorturls:
   share: 
   twitter: 
