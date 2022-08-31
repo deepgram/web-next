@@ -52,21 +52,12 @@ export default function Search() {
 			indexName="astro"
 			appId="7AFBU8EPJU"
 			apiKey="4440670147c44d744fd8da35ff652518"
-			getMissingResultsUrl={({ query }) => `https://github.com/withastro/docs/issues/new?title=Missing+results+for+query+%22${encodeURIComponent(query)}%22`}
-			transformItems={(items) => {
-				return items.map((item) => {
-					// We transform the absolute URL into a relative URL to
-					// work better on localhost, preview URLS.
-					const a = document.createElement("a");
-					a.href = item.url;
-					const hash = a.hash === "#overview" ? "" : a.hash;
-					return {
-						...item,
-						url: `${a.pathname}${hash}`,
-					};
-				});
-			}}
-			placeholder="search..."
+			// indexName="netlify_6dedb30f-38ed-4005-9871-e9bdc5fbd7c6_main_all"
+			// appId="SKG3CU3YQM"
+			// apiKey="846a11bfd01d698dbd7b4d2b24a65471"
+			searchParameters={{ facetFilters: [[`lang:en`]] }}
+			getMissingResultsUrl={({ query }) => `https://github.com/orgs/deepgram/discussions/new?category=q-a&title=Search+term+missing+results+%22${encodeURIComponent(query)}%22`}
+			placeholder="Search..."
 		/>,
 		document.body
 	);
