@@ -1,6 +1,6 @@
 ---
 title: "Retail, Restaurants and Travel - Shilp Agarwal, CEO, Blutag - Project Voice X"
-description: ""Retail, Restaurants and Travel," presented by Shilp Agarwal of Blutag, presented on day one of Project Voice X. "
+description: "'Retail, Restaurants and Travel," presented by Shilp Agarwal of Blutag, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981400/blog/retail-restaurants-and-travel-shilp-agarwal-ceo-blutag-project-voice-x/proj-voice-x-session-shilp-agarwal-blog-thumb-554x.png
 authors:
@@ -13,7 +13,7 @@ tags:
   - retail
 seo:
   title: "Retail, Restaurants and Travel - Shilp Agarwal, CEO, Blutag - Project Voice X"
-  description: ""Retail, Restaurants and Travel," presented by Shilp Agarwal of Blutag, presented on day one of Project Voice X. "
+  description: "'Retail, Restaurants and Travel," presented by Shilp Agarwal of Blutag, presented on day one of Project Voice X. "
 shorturls:
   share: 
   twitter: 

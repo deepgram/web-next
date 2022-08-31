@@ -1,6 +1,6 @@
 ---
 title: "The Evolution of Conversational AI in the Car and Beyond - Shyamala Prayaga, Sr Software Product Manager, Ford - Project Voice X"
-description: ""The Evolution of Conversational AI in the Car and Beyond," presented by Shayamala Prayaga of Ford, presented on day one of Project Voice X. "
+description: "'The Evolution of Conversational AI in the Car and Beyond," presented by Shayamala Prayaga of Ford, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981401/blog/the-evolution-of-conversational-ai-in-the-car-and-beyond-shyamala-prayaga-sr-software-product-manager-ford-project-voice-x/proj-voice-x-session-shyamala-prayaga-blog-thumb-5.png
 authors:
@@ -13,7 +13,7 @@ tags:
   - retail
 seo:
   title: "The Evolution of Conversational AI in the Car and Beyond - Shyamala Prayaga, Sr Software Product Manager, Ford - Project Voice X"
-  description: ""The Evolution of Conversational AI in the Car and Beyond," presented by Shayamala Prayaga of Ford, presented on day one of Project Voice X. "
+  description: "'The Evolution of Conversational AI in the Car and Beyond," presented by Shayamala Prayaga of Ford, presented on day one of Project Voice X. "
 shorturls:
   share: 
   twitter: 

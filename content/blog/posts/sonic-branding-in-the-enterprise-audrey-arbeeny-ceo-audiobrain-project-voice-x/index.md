@@ -1,6 +1,6 @@
 ---
 title: "Sonic Branding in the Enterprise - Audrey Arbeeny, CEO, Audiobrain - Project Voice X"
-description: ""Sonic Branding in the Enterprise" presented by Audrey Arbeeny, CEO of Audiobrain, presented on day one of Project Voice X. "
+description: "'Sonic Branding in the Enterprise" presented by Audrey Arbeeny, CEO of Audiobrain, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981391/blog/sonic-branding-in-the-enterprise-audrey-arbeeny-ceo-audiobrain-project-voice-x/proj-voice-x-session-audrey-arbeeny-blog-thumb-554.png
 authors:
@@ -11,7 +11,7 @@ tags:
   - sonic-branding
 seo:
   title: "Sonic Branding in the Enterprise - Audrey Arbeeny, CEO, Audiobrain - Project Voice X"
-  description: ""Sonic Branding in the Enterprise" presented by Audrey Arbeeny, CEO of Audiobrain, presented on day one of Project Voice X. "
+  description: "'Sonic Branding in the Enterprise" presented by Audrey Arbeeny, CEO of Audiobrain, presented on day one of Project Voice X. "
 shorturls:
   share: 
   twitter: 

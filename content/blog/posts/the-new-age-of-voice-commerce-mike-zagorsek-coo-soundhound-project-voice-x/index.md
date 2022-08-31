@@ -1,6 +1,6 @@
 ---
 title: "The New Age of Voice Commerce - Mike Zagorsek, COO, SoundHound - Project Voice X"
-description: ""The New Age of Voice Commerce" presented by Mike Zagorsek, COO of SoundHound, presented on day one of Project Voice X. "
+description: "'The New Age of Voice Commerce" presented by Mike Zagorsek, COO of SoundHound, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981399/blog/the-new-age-of-voice-commerce-mike-zagorsek-coo-soundhound-project-voice-x/proj-voice-x-session-mike-zagorsek-blog-thumb-554x.png
 authors:
@@ -12,7 +12,7 @@ tags:
   - project-voice-x
 seo:
   title: "The New Age of Voice Commerce - Mike Zagorsek, COO, SoundHound - Project Voice X"
-  description: ""The New Age of Voice Commerce" presented by Mike Zagorsek, COO of SoundHound, presented on day one of Project Voice X. "
+  description: "'The New Age of Voice Commerce" presented by Mike Zagorsek, COO of SoundHound, presented on day one of Project Voice X. "
 shorturls:
   share: 
   twitter: 

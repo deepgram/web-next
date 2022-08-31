@@ -1,5 +1,5 @@
 ---
-title: "The History of the Word "Hacker""
+title: "The History of the Word 'Hacker""
 description: ""
 date: 2019-02-22
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981348/blog/the-history-of-the-word-hacker-2/history-of-hacker%402x.jpg
@@ -10,7 +10,7 @@ tags:
   - education
   - linguistics
 seo:
-  title: "The History of the Word "Hacker""
+  title: "The History of the Word 'Hacker""
   description: ""
 shorturls:
   share: 

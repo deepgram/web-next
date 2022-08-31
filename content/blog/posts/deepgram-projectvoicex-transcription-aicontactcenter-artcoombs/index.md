@@ -1,6 +1,6 @@
 ---
 title: "What's Next for AI in the Contact Center - Art Coombs, CEO, KomBea - Project Voice X"
-description: "What's Next for AI in the Contact Center" presented by Art Coombs, CEO of KomBea, presented on day one of Project Voice X. "
+description: "What's Next for AI in the Contact Center' presented by Art Coombs, CEO of KomBea, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981390/blog/deepgram-projectvoicex-transcription-aicontactcenter-artcoombs/proj-voice-x-session-art-coombs-blog-thumb-554x220.png
 authors:
@@ -11,7 +11,7 @@ tags:
   - project-voice-x
 seo:
   title: "What's Next for AI in the Contact Center - Art Coombs, CEO, KomBea - Project Voice X"
-  description: "What's Next for AI in the Contact Center" presented by Art Coombs, CEO of KomBea, presented on day one of Project Voice X. "
+  description: "What's Next for AI in the Contact Center' presented by Art Coombs, CEO of KomBea, presented on day one of Project Voice X. "
 shorturls:
   share: 
   twitter: 

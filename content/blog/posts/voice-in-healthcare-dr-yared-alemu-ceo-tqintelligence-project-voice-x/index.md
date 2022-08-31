@@ -1,6 +1,6 @@
 ---
 title: "Voice in Healthcare- Dr. Yared Alemu, CEO, TQIntelligence- Project Voice X"
-description: ""Voice in Healthcare" presented by Dr. Yared Alemu, CEO of TQIntelligence, presented on day one of Project Voice X. "
+description: "'Voice in Healthcare" presented by Dr. Yared Alemu, CEO of TQIntelligence, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981395/blog/voice-in-healthcare-dr-yared-alemu-ceo-tqintelligence-project-voice-x/proj-voice-x-session-dr-yared-alemu-blog-thumb-554.png
 authors:
@@ -11,7 +11,7 @@ tags:
   - project-voice-x
 seo:
   title: "Voice in Healthcare- Dr. Yared Alemu, CEO, TQIntelligence- Project Voice X"
-  description: ""Voice in Healthcare" presented by Dr. Yared Alemu, CEO of TQIntelligence, presented on day one of Project Voice X. "
+  description: "'Voice in Healthcare" presented by Dr. Yared Alemu, CEO of TQIntelligence, presented on day one of Project Voice X. "
 shorturls:
   share: 
   twitter: 
