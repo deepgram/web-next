@@ -1,6 +1,6 @@
 ---
 title: "Building the Future of Voice - Scott Stephenson, CEO, Deepgram - Project Voice X"
-description: ""Building the future of Voice" presented by Scott Stephenson, CEO of Deepgram, presented on day one of Project Voice X. "
+description: "'Building the future of Voice' presented by Scott Stephenson, CEO of Deepgram, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981393/blog/building-the-future-of-voice-scott-stephenson-ceo-deepgram-project-voice-x/proj-voice-x-session-scott-stephenson-blog-thumb-5.png
 authors:
