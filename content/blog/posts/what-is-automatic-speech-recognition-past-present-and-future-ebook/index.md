@@ -1,5 +1,5 @@
 ---
-title: "'What is Automatic Speech Recognition: Past, Present, and Future?" ebook"
+title: "'What is Automatic Speech Recognition: Past, Present, and Future?' ebook"
 description: "Learn about automatic speech recognition (ASR), the 3 different methods out there and why End to End Deep Learning is the future."
 date: 2021-05-03
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981369/blog/what-is-automatic-speech-recognition-past-present-and-future-ebook/what-is-asr-ebook%402x.jpg
@@ -9,7 +9,7 @@ category: speech-trends
 tags:
 
 seo:
-  title: "'What is Automatic Speech Recognition: Past, Present, and Future?" ebook"
+  title: "'What is Automatic Speech Recognition: Past, Present, and Future?' ebook"
   description: "Learn about automatic speech recognition (ASR), the 3 different methods out there and why End to End Deep Learning is the future."
 shorturls:
   share: 

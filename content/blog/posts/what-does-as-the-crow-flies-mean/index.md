@@ -1,6 +1,6 @@
 ---
 title: "As the Crow Flies — What Does It Mean?"
-description: "Why are idioms used and where does the 'as the crow flies" idiom come from?"
+description: "Why are idioms used and where does the 'as the crow flies' idiom come from?"
 date: 2019-02-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981347/blog/what-does-as-the-crow-flies-mean/as-the-crow-flies%402x.jpg
 authors:
@@ -12,7 +12,7 @@ tags:
   - linguistics
 seo:
   title: "As the Crow Flies — What Does It Mean?"
-  description: "Why are idioms used and where does the 'as the crow flies" idiom come from?"
+  description: "Why are idioms used and where does the 'as the crow flies' idiom come from?"
 shorturls:
   share: 
   twitter: 

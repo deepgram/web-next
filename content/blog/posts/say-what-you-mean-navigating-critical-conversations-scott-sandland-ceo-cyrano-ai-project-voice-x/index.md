@@ -1,6 +1,6 @@
 ---
 title: "Say What You Mean: Navigating Critical Conversations - Scott Sandland, CEO, Cyrano.ai - Project Voice X"
-description: "'Say What You Mean: Navigating Critical Conversations " presented by Scott Sandland, CEO of Cyrano.ai, presented on day one of Project Voice X. "
+description: "Say What You Mean: Navigating Critical Conversations presented by Scott Sandland, CEO of Cyrano.ai, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981394/blog/say-what-you-mean-navigating-critical-conversations-scott-sandland-ceo-cyrano-ai-project-voice-x/proj-voice-x-session-scott-sandland-blog-thumb-554.png
 authors:
@@ -11,7 +11,7 @@ tags:
   - project-voice-x
 seo:
   title: "Say What You Mean: Navigating Critical Conversations - Scott Sandland, CEO, Cyrano.ai - Project Voice X"
-  description: "'Say What You Mean: Navigating Critical Conversations " presented by Scott Sandland, CEO of Cyrano.ai, presented on day one of Project Voice X. "
+  description: "Say What You Mean: Navigating Critical Conversations presented by Scott Sandland, CEO of Cyrano.ai, presented on day one of Project Voice X. "
 shorturls:
   share: 
   twitter: 

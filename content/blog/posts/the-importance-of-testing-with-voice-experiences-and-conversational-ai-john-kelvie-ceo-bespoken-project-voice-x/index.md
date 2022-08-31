@@ -1,6 +1,6 @@
 ---
 title: "The Importance of Testing with Voice Experiences and Conversational AI - John Kelvie, CEO, Bespoken - Project Voice X"
-description: "'The Importance of Testing with Voice Experiences and Conversational AI" presented by John Kelvie, CEO of Bespoken, presented on day one of Project Voice X. "
+description: "The Importance of Testing with Voice Experiences and Conversational AI presented by John Kelvie, CEO of Bespoken, presented on day one of Project Voice X. "
 date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981398/blog/the-importance-of-testing-with-voice-experiences-and-conversational-ai-john-kelvie-ceo-bespoken-project-voice-x/proj-voice-x-session-john-kelvie-blog-thumb-554x22.png
 authors:
@@ -12,7 +12,7 @@ tags:
   - project-voice-x
 seo:
   title: "The Importance of Testing with Voice Experiences and Conversational AI - John Kelvie, CEO, Bespoken - Project Voice X"
-  description: "'The Importance of Testing with Voice Experiences and Conversational AI" presented by John Kelvie, CEO of Bespoken, presented on day one of Project Voice X. "
+  description: "The Importance of Testing with Voice Experiences and Conversational AI presented by John Kelvie, CEO of Bespoken, presented on day one of Project Voice X. "
 shorturls:
   share: 
   twitter: 
