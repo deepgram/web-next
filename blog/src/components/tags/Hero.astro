@@ -9,9 +9,10 @@ const { title, svg } = Astro.props;
 
 <div class="grid grid-cols-1 xl:grid-cols-3">
 	<h1 class="mb-20 text-white">{title}</h1>
+	<p class="text-white">Tag Hero</p>
 	<div class="xl:order-last">
 		<RightDecoration icon="star-left" class="text-white w-6 lg:w-8 xl:-mt-10" />
 		<LeftDecoration icon="star-right" class="text-white w-5 lg:w-6 mt-4 xl:mt-20" />
 	</div>
-	<div><Svg class="opacity-0 -mb-10" name="starburst-gradient" /></div>
+	<div><Svg class="opacity-0 -mb-10" name="tag" /></div>
 </div>
