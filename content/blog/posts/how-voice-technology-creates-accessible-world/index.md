@@ -2,24 +2,23 @@
 title: "How Voice Technology Creates a More Accessible World [7 Ways]"
 description: "Voice tech isn’t just shaking up enterprises; it’s also providing real quality-of-life improvements for people. Here are 7 examples."
 date: 2022-04-26
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981419/blog/how-voice-technology-creates-accessible-world/how-voice-tech-creates-more-accessible-world-thumb.png
+cover: 
 authors:
   - chris-doty
 category: speech-trends
 tags:
   - inclusion
-  - speech-recognition
 seo:
   title: "How Voice Technology Creates a More Accessible World [7 Ways]"
   description: "Voice tech isn’t just shaking up enterprises; it’s also providing real quality-of-life improvements for people. Here are 7 examples."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/51c97f7
+  twitter: https://dpgr.am/dd56c70
+  linkedin: https://dpgr.am/acb7944
+  reddit: https://dpgr.am/35b7b88
+  facebook: https://dpgr.am/2e4a3f6
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981419/blog/how-voice-technology-creates-accessible-world/how-voice-tech-creates-more-accessible-world-thumb.png
+  image: 
 ---
 
 Voice technologies like speech-to-text (STT) (also called automatic speech recognition, or ASR) have had a profound impact across the enterprise. From contact centers analyzing interactions with customers to automatically creating meeting transcripts, voice tech is a huge part of businesses today. In fact, in the recent [State of Voice Tech 2022](https://offers.deepgram.com/2022-state-of-voice-technology-report) report, 99% of respondents indicated that voice technologies are going to be a large part of their future plans. But something that's often overlooked is the way that voice technologies are improving lives.  Being able to interact with one's voice is creating improvements in accessibility and access to information for everyone, but especially for those who might have trouble using things like computers or smartphones. In this blog post, we'll provide an overview of the top 7 ways that voice tech is supporting accessibility and inclusion today.

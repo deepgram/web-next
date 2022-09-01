@@ -2,7 +2,7 @@
 title: "How to Test Automatic Speech Recognition (ASR) Providers For Your Business"
 description: "Learn how to test various ASR providers and the variables to consider to truly vet an ASR provider"
 date: 2021-03-03
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981357/blog/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/how-to-test-asr-providers%402x.jpg
+cover: 
 authors:
   - scott-stephenson
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "How to Test Automatic Speech Recognition (ASR) Providers For Your Business"
   description: "Learn how to test various ASR providers and the variables to consider to truly vet an ASR provider"
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/938d0da
+  twitter: https://dpgr.am/ad7550f
+  linkedin: https://dpgr.am/ecade3a
+  reddit: https://dpgr.am/d96ab93
+  facebook: https://dpgr.am/0dcb8c7
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981357/blog/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/how-to-test-asr-providers%402x.jpg
+  image: 
 ---
 
 Selecting the best [ASR](https://blog.deepgram.com/what-is-asr/) option for your company is an important decision. While the bulk of this article is an educational piece on how to most effectively test for ASR providers, the first step when making an important buying decision is identifying your priorities:

@@ -7,16 +7,16 @@ authors:
   - natalie-rutgers
 category: product-news
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "Upcoming January Releases"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/89014cb
+  twitter: https://dpgr.am/4ea1d79
+  linkedin: https://dpgr.am/182a7fb
+  reddit: https://dpgr.am/3d8384d
+  facebook: https://dpgr.am/9500f56
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069487/blog/upcoming-january-releases/placeholder-post-image%402x.jpg
 ---

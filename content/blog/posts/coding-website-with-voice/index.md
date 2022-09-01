@@ -7,7 +7,7 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase
+    - javascript
 seo:
     title: "Video: Coding a Website With Your Voice"
     description: "Deepgram community member Filip builds a project which creates websites through voice commands. Find out how."

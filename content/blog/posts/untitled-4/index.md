@@ -7,16 +7,16 @@ authors:
   - scott-stephenson
 category: speech-trends
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "53-second expert interview - Enterprise Connect"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/fff3d87
+  twitter: https://dpgr.am/c4172f4
+  linkedin: https://dpgr.am/e5d9bbb
+  reddit: https://dpgr.am/3ac24a3
+  facebook: https://dpgr.am/f7774a5
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069450/blog/untitled-4/placeholder-post-image%402x.jpg
 ---

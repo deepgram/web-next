@@ -2,7 +2,7 @@
 title: "Deepgram Has Received SOC 2 Type II Certification"
 description: "Deepgram has both SOC 2 Type I and Type II certifications, as defined by the American Institute of Certified Public Accountants (AICPA)."
 date: 2022-02-04
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981390/blog/deepgram-reached-soc-2-type-1-certification/DG-reached-SOC2-type1-thumb-554x220%402x.png
+cover: 
 authors:
   - ehab-el-ali
 category: product-news
@@ -13,13 +13,13 @@ seo:
   title: "Deepgram Has Received SOC 2 Type II Certification"
   description: "Deepgram has both SOC 2 Type I and Type II certifications, as defined by the American Institute of Certified Public Accountants (AICPA)."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/cf58fc4
+  twitter: https://dpgr.am/35b4719
+  linkedin: https://dpgr.am/dcb5464
+  reddit: https://dpgr.am/8f4f14c
+  facebook: https://dpgr.am/ca8e6f3
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981390/blog/deepgram-reached-soc-2-type-1-certification/DG-reached-SOC2-type1-thumb-554x220%402x.png
+  image: 
 ---
 
 Deepgram received a SOC 2 Type II "clean bill of health" from [Cyberguard Compliance](https://www.cgcompliance.com/). Their six-month audit of Deepgram's security, availability, and confidentiality found no exceptions to the SOC 2 Type II industry standards as defined by the American Institute of Certified Public Accountants (AICPA). Their audit was conducted from July to December 2021. The SOC 2 Type II report is the gold standard in SOC audits and provides customers the confidence that a SaaS company has security controls in place, monitors the controls, and optimizes security for their customers. We've also previously achieved SOC 2 Type I certification. Type I describes a vendor's systems and whether their design is suitable to meet relevant trust principles, while Type II details the operational effectiveness of those systems.

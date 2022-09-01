@@ -2,7 +2,7 @@
 title: "Import a Docker Container in Python"
 description: "Learn how to import a Docker container using Python."
 date: 2016-02-24
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981208/blog/import-a-docker-container-in-python/import-docker-container%402x.jpg
+cover: 
 authors:
   - scott-stephenson
 category: ai-and-engineering
@@ -12,16 +12,16 @@ seo:
   title: "Import a Docker Container in Python"
   description: "Learn how to import a Docker container using Python."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/47a216f
+  twitter: https://dpgr.am/dfee0de
+  linkedin: https://dpgr.am/b684405
+  reddit: https://dpgr.am/50163a7
+  facebook: https://dpgr.am/b67e46a
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981208/blog/import-a-docker-container-in-python/import-docker-container%402x.jpg
+  image: 
 ---
 
-![](https://res.cloudinary.com/deepgram/image/upload/v1661721061/blog/import-a-docker-container-in-python/Screen-Shot-2016-02-23-at-11-29-48-AM.png)
+![](/wp-content/uploads/2016/02/Screen-Shot-2016-02-23-at-11-29-48-AM.png)
 
 ## Why would you do this?
 

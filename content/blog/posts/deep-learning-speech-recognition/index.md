@@ -2,24 +2,23 @@
 title: "Why Deep Learning is the Best Approach for Speech Recognition"
 description: "Most ASR systems rely on a combination of legacy systems that are slow, inaccurate, and inflexible. Learn why deep learning is a better approach."
 date: 2022-02-01
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981403/blog/deep-learning-speech-recognition/why-dl-is-best-for-speech-recognition-thumb-554x22.png
+cover: 
 authors:
   - sam-zegas
 category: ai-and-engineering
 tags:
   - deep-learning
-  - speech-recognition
 seo:
   title: "Why Deep Learning is the Best Approach for Speech Recognition"
   description: "Most ASR systems rely on a combination of legacy systems that are slow, inaccurate, and inflexible. Learn why deep learning is a better approach."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/9a02532
+  twitter: https://dpgr.am/f2c508b
+  linkedin: https://dpgr.am/dd81b36
+  reddit: https://dpgr.am/fa0379a
+  facebook: https://dpgr.am/7bee70b
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981403/blog/deep-learning-speech-recognition/why-dl-is-best-for-speech-recognition-thumb-554x22.png
+  image: 
 ---
 
 [Automatic speech recognition](https://blog.deepgram.com/what-is-asr/) isn't new. It has its origins in Cold War-era research with narrow military implementations, which was followed in the 1960s, 70s, and 80s by developments from leaders like Marvin Minsky and research funded by [DARPA](https://en.wikipedia.org/wiki/DARPA). However, it wasn't until the 1990s that researchers saw real progress thanks to government-funded projects like the Wall Street Journal Speech Dataset. Even then, these small datasets of around 30 hours of audio only yielded accuracies of about 30-50% in a research setting. Continued developments in speech technology have led to a variety of improvements and consumer use cases that we're all familiar with today-Alexa, Siri, telling the automated bank system that you need a PIN, etc. But if you've ever used any of these speech recognition tools, you know that they're far from perfect. That's because they rely on an old-fashioned way of doing speech recognition that has its roots back in those original experiments in the 1960s. In this blog post, we'll walk through the old-fashioned way of doing speech recognition-because it's the one that's still used by most companies today-and then show why the new way, which relies on end-to-end deep learning to process speech, is far superior.

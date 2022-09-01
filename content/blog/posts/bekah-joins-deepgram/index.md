@@ -5,7 +5,7 @@ date: 2022-02-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643986477/blog/2022/02/bekah-joins-deepgram/kettlebells%402x.jpg
 authors:
     - bekah-hawrot-weigel
-category: careers
+category: devlife
 tags:
     - team
 seo:

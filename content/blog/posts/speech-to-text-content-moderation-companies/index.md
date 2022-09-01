@@ -2,24 +2,23 @@
 title: "How Speech-to-Text Supports Content Moderation Companies"
 description: "Many content moderation companies specialize in assessing text—but with automatic speech recognition, they can also look at audio and video."
 date: 2022-08-24
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981434/blog/speech-to-text-content-moderation-companies/how-ASR-supports-content-moderation-companies-thum.png
+cover: 
 authors:
   - chris-doty
 category: speech-trends
 tags:
-  - speech-recognition
   - voice-strategy
 seo:
   title: "How Speech-to-Text Supports Content Moderation Companies"
   description: "Many content moderation companies specialize in assessing text—but with automatic speech recognition, they can also look at audio and video."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/10cd3e5
+  twitter: https://dpgr.am/fee8ffa
+  linkedin: https://dpgr.am/f9e4ea2
+  reddit: https://dpgr.am/787b78f
+  facebook: https://dpgr.am/008c4f0
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981434/blog/speech-to-text-content-moderation-companies/how-ASR-supports-content-moderation-companies-thum.png
+  image: 
 ---
 
 Content moderation companies and departments work hard to keep offensive language out of video games, off platforms like forums, out of ad campaigns, and more. Most content moderation looks specifically at text, meaning that videos and audio chats can slip past the moderation efforts that a company might have in place-or else be extremely expensive, hiring multiple people to review this kind of content. That's where content moderation with speech-to-text comes in-by converting speech to text, the same processes that apply to written content can be applied to spoken content, providing additional options for moderation. To get started, let's look at what content moderation is and how it typically works, before we dive into some of the benefits of content moderation and how AI-powered automatic speech recognition solutions like Deepgram can help.

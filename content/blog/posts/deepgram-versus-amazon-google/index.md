@@ -2,7 +2,7 @@
 title: "5 Reasons Amazon and Google are Losing Customers to Deepgram"
 description: "Amazon and Google might be your first thought for ASR, but theyre not the best game in town. Learn why people are switching to Deepgram."
 date: 2022-01-18
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981404/blog/deepgram-versus-amazon-google/5-reasons-amazon-google-losing-customers-thumb-554.png
+cover: 
 authors:
   - chris-doty
 category: dg-insider
@@ -13,13 +13,13 @@ seo:
   title: "5 Reasons Amazon and Google are Losing Customers to Deepgram"
   description: "Amazon and Google might be your first thought for ASR, but theyre not the best game in town. Learn why people are switching to Deepgram."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/075e450
+  twitter: https://dpgr.am/efd91d2
+  linkedin: https://dpgr.am/7763013
+  reddit: https://dpgr.am/49b15da
+  facebook: https://dpgr.am/8e36316
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981404/blog/deepgram-versus-amazon-google/5-reasons-amazon-google-losing-customers-thumb-554.png
+  image: 
 ---
 
 [Amazon](https://offers.deepgram.com/head-to-head-dg-vs-amazon-webinar-on-demand) and [Google](https://offers.deepgram.com/head-to-head-dg-vs-google-webinar-on-demand) are often people's first thought when it comes to speech recognition systems, but if you've ever tried to use these [ASR](https://blog.deepgram.com/what-is-asr/) tools, you know that the big name doesn't help you get accurate, timely results. In fact, people's first encounter with Big Tech speech recognition often leaves them wanting more, and sends them searching for a better solution to power their voice-driven future. According to an upcoming survey conducted by Opus Research, **only 1% of respondents didn't think that voice-enabled experiences were going to be a critical part of their company's future enterprise strategy.** That means that you need fast, accurate ASR that's easy to use if you're going to keep pace with your peers and competitors.

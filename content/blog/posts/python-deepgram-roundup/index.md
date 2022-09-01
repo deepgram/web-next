@@ -5,7 +5,7 @@ date: 2022-06-23
 cover: https://res.cloudinary.com/deepgram/image/upload/v1655914351/blog/2022/06/python-deepgram-roundup/Transcribing-Real-Time-Audio-Using-Python-in-5-Minutes%402x.jpg
 authors:
     - tonya-sims
-category: thought-leadership
+category: tutorial
 tags:
     - python
     - fastapi

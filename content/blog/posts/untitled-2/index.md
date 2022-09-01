@@ -7,16 +7,16 @@ authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "Live from Enterprise Connect!"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/af58f3d
+  twitter: https://dpgr.am/70dd5f0
+  linkedin: https://dpgr.am/c34dd83
+  reddit: https://dpgr.am/3b38211
+  facebook: https://dpgr.am/8c2662e
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069448/blog/untitled-2/placeholder-post-image%402x.jpg
 ---

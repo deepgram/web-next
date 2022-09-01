@@ -2,7 +2,7 @@
 title: "How Meeting Analysis Platforms Utilize ASR Solutions"
 description: "Meeting analysis platforms run on automatic speech recognition. Learn more about the benefits of these platforms and how ASR powers them."
 date: 2022-08-01
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981428/blog/meeting-analysis-platforms-automatic-speech-recognition-solutions/how-meeting-analysisplatforms-utilize-asr-solution.png
+cover: 
 authors:
   - aimie-ye
 category: speech-trends
@@ -10,18 +10,17 @@ tags:
   - deep-learning
   - meeting-transcription
   - nlu
-  - speech-recognition
 seo:
   title: "How Meeting Analysis Platforms Utilize ASR Solutions"
   description: "Meeting analysis platforms run on automatic speech recognition. Learn more about the benefits of these platforms and how ASR powers them."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/60dbe76
+  twitter: https://dpgr.am/531fc80
+  linkedin: https://dpgr.am/74060c8
+  reddit: https://dpgr.am/4a6eb6d
+  facebook: https://dpgr.am/7795749
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981428/blog/meeting-analysis-platforms-automatic-speech-recognition-solutions/how-meeting-analysisplatforms-utilize-asr-solution.png
+  image: 
 ---
 
 If you're like most business professionals, you probably spend a good chunk of your day in meetings. But you probably also hate all of the work that comes post-meeting, things like drafting meeting minutes, assigning tasks, and following up with the appropriate people. All of this takes you away from more important work you could be doing. Meeting analysis platforms are here to take on much of this rote work. By utilizing top ASR tools, these platforms can automatically convert meetings into text, so you can get a clear understanding of what transpired during the meeting. Not only will this save you time, but it will also help improve decision-making and communication within your organization. In this blog post, we'll look at what meeting analysis platforms are, their benefits for your business, and how they benefit from using state-of-the-art speech-to-text systems like Deepgram. Let's jump in.

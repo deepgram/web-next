@@ -2,7 +2,7 @@
 title: "Celebrating Jewish American Heritage Month"
 description: "Learn about the history of the Jewish people & how their culture and languages have influenced the US—and maybe pick up some Yiddish, too."
 date: 2022-05-19
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981422/blog/celebrating-jewish-american-history-month/celebrating-jewish-american-history-month-thumb-55.png
+cover: 
 authors:
   - sam-zegas
 category: tutorial
@@ -13,13 +13,13 @@ seo:
   title: "Celebrating Jewish American Heritage Month"
   description: "Learn about the history of the Jewish people & how their culture and languages have influenced the US—and maybe pick up some Yiddish, too."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/19aea1f
+  twitter: https://dpgr.am/c5090b6
+  linkedin: https://dpgr.am/f62e8e5
+  reddit: https://dpgr.am/92cf814
+  facebook: https://dpgr.am/34950aa
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981422/blog/celebrating-jewish-american-history-month/celebrating-jewish-american-history-month-thumb-55.png
+  image: 
 ---
 
 May is Jewish American History Month, and _oy vey_, there is so much to write about! At Deepgram, we always have speech and language on our minds-and this month, we're excited to write about Jewish American language. But to start, who _are_ the Jewish people anyway, and how did their communities develop into the form we know today?

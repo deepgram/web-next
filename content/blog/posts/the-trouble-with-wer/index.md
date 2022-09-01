@@ -12,11 +12,11 @@ seo:
   title: "The Trouble with Word Error Rate (WER)"
   description: "Word error rate (WER) is one of the most common ways to evaluate automatic speech recognition. But is it the best choice?"
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/7ebb796
+  twitter: https://dpgr.am/1d0099c
+  linkedin: https://dpgr.am/fa78c33
+  reddit: https://dpgr.am/95ea8ae
+  facebook: https://dpgr.am/6cfcd00
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661981951/blog/the-trouble-with-wer/placeholder-post-image%402x.jpg
 ---
@@ -35,7 +35,7 @@ Have you ever wondered why the NATO phonetic alphabet exists? The NATO phonetic 
 
 > **"Delta bravo eight nine six cleared to land two six right."**
 
-The NATO phonetic alphabet was created to address the very same problem that causes WER to vary greatly for any one system: the variety of accents in language and the noisiness of communication methods make comprehension difficult. In 2018, top-performing call center representatives all know the NATO-PA because the [phone-POTS](https://blog.deepgram.com/is-your-infrastructure-supporting-you-or-weighing-you-down/) and VoIP-are noisy, compressed communication media. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976790/blog/the-trouble-with-wer/nato-alphabet.png) Today, we have a variety of voice communication channels, but we still face the same problem that WW2 pilots faced: The phone systems our customers call us on introduce a lot of noise into the voice data. The noise may come from problems in the line, compression, and ambient noise.
+The NATO phonetic alphabet was created to address the very same problem that causes WER to vary greatly for any one system: the variety of accents in language and the noisiness of communication methods make comprehension difficult. In 2018, top-performing call center representatives all know the NATO-PA because the [phone-POTS](https://blog.deepgram.com/is-your-infrastructure-supporting-you-or-weighing-you-down/) and VoIP-are noisy, compressed communication media. ![Alt](/wp-content/uploads/2018/12/nato-alphabet.png) Today, we have a variety of voice communication channels, but we still face the same problem that WW2 pilots faced: The phone systems our customers call us on introduce a lot of noise into the voice data. The noise may come from problems in the line, compression, and ambient noise.
 
 ### Line Noise
 
@@ -92,7 +92,7 @@ We're all using the words everyone else is using. This is an observation made by
     *   They
     *   So
 
-From a linguistics point of view, these glue words **collectively carry a lot of meaning.** You change their order, add an adverb or adjective and you've said a lot. However, this also means that the rare words, the 80% or so of words we use only once or twice in a conversation, are **individually loaded with meaning.** ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976791/blog/the-trouble-with-wer/podcast-words-1.jpg) _Take a look at an episode of our podcast and you'll see we used 922 unique words. Here we see the 50 most used words. This means 5% of the individual words account for 50% of all words said! **Notice that 3 of the words are "meaningful" and the rest are just grammar.** These are the meaningful words that actually made it into the top fifty most used words. Despite this they only account for 1.7% of all words. Most truly meaningful words are used less than 2 times in the 30 minute podcast (less than .03%)_ These rare words are the ones that ASR systems often fail to recognize. In our businesses and sciences, we have extra words: our own common glue words and our own rare used-once-in-a-conversation words. These words are called jargon. Jargon words are the loaded-with-meaning words that general model speech recognition APIs often miss.
+From a linguistics point of view, these glue words **collectively carry a lot of meaning.** You change their order, add an adverb or adjective and you've said a lot. However, this also means that the rare words, the 80% or so of words we use only once or twice in a conversation, are **individually loaded with meaning.** ![Alt](/wp-content/uploads/2018/12/podcast-words-1.jpg) _Take a look at an episode of our podcast and you'll see we used 922 unique words. Here we see the 50 most used words. This means 5% of the individual words account for 50% of all words said! **Notice that 3 of the words are "meaningful" and the rest are just grammar.** These are the meaningful words that actually made it into the top fifty most used words. Despite this they only account for 1.7% of all words. Most truly meaningful words are used less than 2 times in the 30 minute podcast (less than .03%)_ These rare words are the ones that ASR systems often fail to recognize. In our businesses and sciences, we have extra words: our own common glue words and our own rare used-once-in-a-conversation words. These words are called jargon. Jargon words are the loaded-with-meaning words that general model speech recognition APIs often miss.
 
 *   *   "Fraudulent payment"
     *   "Action item"

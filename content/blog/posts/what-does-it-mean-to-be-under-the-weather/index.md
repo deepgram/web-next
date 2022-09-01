@@ -13,11 +13,11 @@ seo:
   title: "Under the Weather — What Does it Mean?"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/de7979b
+  twitter: https://dpgr.am/c0ba0e4
+  linkedin: https://dpgr.am/5e5c268
+  reddit: https://dpgr.am/0896b12
+  facebook: https://dpgr.am/223810e
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661981953/blog/what-does-it-mean-to-be-under-the-weather/placeholder-post-image%402x.jpg
 ---
@@ -28,7 +28,7 @@ We know this means to be sick or ill, but why?
 
 
 
-<figure style="float: right; max-width: 18vw; padding-left: 1vw;">![](https://res.cloudinary.com/deepgram/image/upload/v1661976797/blog/what-does-it-mean-to-be-under-the-weather/U.S.S.-Seminole--Thursday--November-07--1861---Shi.jpg)
+<figure style="float: right; max-width: 18vw; padding-left: 1vw;">![](/wp-content/uploads/2019/01/U.S.S.-Seminole--Thursday--November-07--1861---Ship-s-log-.jpg)
 
 <figcaption>_A picture the ship's log from the [U.S.S. Seminole](https://en.wikipedia.org/wiki/USS_Seminole_(1859)), Thursday, November 07, 1861._</figcaption>
 

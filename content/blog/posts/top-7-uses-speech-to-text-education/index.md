@@ -2,24 +2,23 @@
 title: "Top 7 Uses for Speech-to-Text in Education"
 description: "Speech recognition can have a big impact in education. Here are 7 of the top use cases."
 date: 2022-07-29
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981427/blog/top-7-uses-speech-to-text-education/use-cases-for-speech-recognition-in-education-thum.png
+cover: 
 authors:
   - chris-doty
 category: speech-trends
 tags:
   - education
-  - speech-recognition
 seo:
   title: "Top 7 Uses for Speech-to-Text in Education"
   description: "Speech recognition can have a big impact in education. Here are 7 of the top use cases."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/c3e6ad4
+  twitter: https://dpgr.am/08bf785
+  linkedin: https://dpgr.am/44fb6b1
+  reddit: https://dpgr.am/e70d6f5
+  facebook: https://dpgr.am/30cc5b2
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981427/blog/top-7-uses-speech-to-text-education/use-cases-for-speech-recognition-in-education-thum.png
+  image: 
 ---
 
 When most people think about speech recognition, they think about personal assistant applications like Siri or Alexa. But as speech technology becomes cheaper and faster, we're seeing more and more use cases in domains and industries where speech-to-text tools haven't been used much in the past. In this post, we're going to discuss 7 of the most common use cases of speech recognition for learning and education, as well as who can benefit most from this technology. But to start, let's clarify what speech recognition in learning is.

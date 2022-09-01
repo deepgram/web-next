@@ -2,7 +2,7 @@
 title: "Happy National Native American Heritage Month!"
 description: "Happy Native American Heritage Month. The contribution of Native Americans to our culture and nation are underrepresented due to past and currently discrimination. As a nation, we hope to better embrace their culture and important languages for future generations."
 date: 2021-11-30
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981388/blog/happy-national-native-american-heritage-month/blog-native-american-heritage-month-2021-thumb-554.png
+cover: 
 authors:
   - sam-zegas
 category: tutorial
@@ -13,13 +13,13 @@ seo:
   title: "Happy National Native American Heritage Month!"
   description: "Happy Native American Heritage Month. The contribution of Native Americans to our culture and nation are underrepresented due to past and currently discrimination. As a nation, we hope to better embrace their culture and important languages for future generations."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/8891a00
+  twitter: https://dpgr.am/7baf07a
+  linkedin: https://dpgr.am/046957e
+  reddit: https://dpgr.am/7f17e00
+  facebook: https://dpgr.am/9a9b63c
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981388/blog/happy-national-native-american-heritage-month/blog-native-american-heritage-month-2021-thumb-554.png
+  image: 
 ---
 
 November is [National Native American Heritage Month](https://nativeamericanheritagemonth.gov/)! We're celebrating by giving you a tour of some topics related to Native American history and contemporary life that we have on our minds this month. Stick around till the end for some recommendations on books, influencers, and other resources for connecting with Native American voices. First, though, this post should rightly begin with a personal note: I write this post as someone without Native American heritage. My work with anthropology, history, and linguistics give me an academic perspective on these topics, but I can't speak from the perspective of someone with Native American heritage and do not have first-hand experience with issues that native communities face today. As Deepgram's team grows, I very much look forward to a day when we can bring you those perspectives too.

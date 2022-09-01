@@ -2,7 +2,7 @@
 title: "What is Word Error Rate (WER)?"
 description: ""
 date: 2018-12-04
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981330/blog/what-is-word-error-rate/what-is-wer%402x.jpg
+cover: 
 authors:
   - morris-gevirtz
 category: ai-and-engineering
@@ -12,24 +12,24 @@ seo:
   title: "What is Word Error Rate (WER)?"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/8eae245
+  twitter: https://dpgr.am/953af85
+  linkedin: https://dpgr.am/093ff02
+  reddit: https://dpgr.am/cb9b94a
+  facebook: https://dpgr.am/a2567ec
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981330/blog/what-is-word-error-rate/what-is-wer%402x.jpg
+  image: 
 ---
 
 Word Error Rate (WER) is a common metric used to compare the accuracy of the transcripts produced by speech recognition APIs. Speech recognition APIs are used to surface actionable insights from large volumes of audio data in addition to powering robust IVRs and voice-command-enabled devices such as the Amazon Echo. Product developers and data scientists can choose from many speech recognition APIs. How are they to judge which will be a good fit for their application? When evaluating speech recognition APIs, the first metric they'll consider is likely to be WER. However, a metric has no value unless we understand what it tells us. Let's break down WER to find out what it means and how useful a metric it is.
 
 ## How to Calculate WER
 
-Word error rate is the most common metric used today to evaluate the effectiveness of an [automatic speech recognition system (ASR)](https://blog.deepgram.com/what-is-asr/). It is simply calculated as: ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976771/blog/what-is-word-error-rate/wer-1.jpg)
+Word error rate is the most common metric used today to evaluate the effectiveness of an [automatic speech recognition system (ASR)](https://blog.deepgram.com/what-is-asr/). It is simply calculated as: ![Alt](/wp-content/uploads/2018/12/wer-1.jpg)
 
 **S** stands for substitutions (replacing a word). **I** stands for insertions (inserting a word). **D** stands for deletions (omitting a word). **N** is the number of words that were actually said _Note: WER will be calculated incorrectly if you forget to normalize capitalization, punctuation, numbers, etc. across all transcripts_
 
-Imagine you are using speech recognition to find out why customers are calling. You have thousands of hours of calls, and you want to automatically categorize the calls. On playback, one such call starts as follows: ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976772/blog/what-is-word-error-rate/creditcardcall-1.jpg) However, when the machine transcribes this same call, the output may look like this: ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976773/blog/what-is-word-error-rate/transcript_creditcardcall-1.jpg) If you compare this transcript with the one above, it's clear that the machine's one has problems. Let's analyze them in terms of our WER formula.
+Imagine you are using speech recognition to find out why customers are calling. You have thousands of hours of calls, and you want to automatically categorize the calls. On playback, one such call starts as follows: ![Alt](/wp-content/uploads/2018/12/creditcardcall-1.jpg) However, when the machine transcribes this same call, the output may look like this: ![Alt](/wp-content/uploads/2018/12/transcript_creditcardcall-1.jpg) If you compare this transcript with the one above, it's clear that the machine's one has problems. Let's analyze them in terms of our WER formula.
 
 1.  In line one, we see that the word "Upsilon", has been interpreted as "up silent". We will say that this represents (1) **substitution**-a wrong word in place of the correct word-and (1) **insertion**-adding of a word that was never said.
 2.  On line two, we have (1) **substitution:** "brat" instead of "Pratt."
@@ -62,11 +62,11 @@ There's a reason that human transcriptionists charge more for technical or indus
 
 ### Accented Language
 
-Accent is a highly relative, very human concept. This author has a strong accent in Dublin, but almost none in New York. The speech recognition systems built by large companies such as Google, Nuance and IBM are very familiar with the sort of English one hears on TV: "general American English" and RP (received pronunciation-the form of British English spoken by the Queen, the BBC and Oxford graduates). They are not necessarily familiar with the "real" English spoken in Palo Alto, CA; Athens, Georgia; New Dehli, India or Edinburgh, Scotland. However, companies are interested in the "real" language since a very tiny subset of their employees are TV anchors. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976774/blog/what-is-word-error-rate/raghu-nayyar-501556-unsplash-1.jpg) In New Delhi-English is spoken natively and non-natively by a large percentage of the population.Photo Credit: [Raghu Nayyar](https://unsplash.com/photos/EpAq2EE-shg). Therefore, if your data has a wider variety of accents (it almost certainly does), or is limited to a set of accents not well represented in the data used to create general speech recognition APIs, then you probably need a [custom-built model](https://deepgram.com/product/train/) to really get a good look at your data.
+Accent is a highly relative, very human concept. This author has a strong accent in Dublin, but almost none in New York. The speech recognition systems built by large companies such as Google, Nuance and IBM are very familiar with the sort of English one hears on TV: "general American English" and RP (received pronunciation-the form of British English spoken by the Queen, the BBC and Oxford graduates). They are not necessarily familiar with the "real" English spoken in Palo Alto, CA; Athens, Georgia; New Dehli, India or Edinburgh, Scotland. However, companies are interested in the "real" language since a very tiny subset of their employees are TV anchors. ![Alt](/wp-content/uploads/2018/12/raghu-nayyar-501556-unsplash-1.jpg) In New Delhi-English is spoken natively and non-natively by a large percentage of the population.Photo Credit: [Raghu Nayyar](https://unsplash.com/photos/EpAq2EE-shg). Therefore, if your data has a wider variety of accents (it almost certainly does), or is limited to a set of accents not well represented in the data used to create general speech recognition APIs, then you probably need a [custom-built model](https://deepgram.com/product/train/) to really get a good look at your data.
 
 ### Noisy Data
 
-Wouldn't it be nice if everyone who called us to do business did so from a sound studio? Wouldn't you love that crisp, bassy, noise-free audio? Better yet, how about they didn't call us over the phone, since VoIP and traditional phone systems compress audio, cut off many frequencies and add noise artifacts? The real world is full of noise. Phone calls are inherently bad quality, people call while rushing to work, or walking by a seemingly endless line of jackhammers, fire engines and screaming 4-month-olds. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976774/blog/what-is-word-error-rate/baby-firetruck-jackhammer.jpg) Somehow, human transcribers do okay with such noisy data, and speech recognition APIs, if properly trained, can do okay too. However, as you can imagine, when companies advertise super-low word error rates, these are not the WERs they get when transcribing audio captured at Iron Maiden concerts held in the middle of 16 lane interstate highways.
+Wouldn't it be nice if everyone who called us to do business did so from a sound studio? Wouldn't you love that crisp, bassy, noise-free audio? Better yet, how about they didn't call us over the phone, since VoIP and traditional phone systems compress audio, cut off many frequencies and add noise artifacts? The real world is full of noise. Phone calls are inherently bad quality, people call while rushing to work, or walking by a seemingly endless line of jackhammers, fire engines and screaming 4-month-olds. ![Alt](/wp-content/uploads/2018/12/baby-firetruck-jackhammer.jpg) Somehow, human transcribers do okay with such noisy data, and speech recognition APIs, if properly trained, can do okay too. However, as you can imagine, when companies advertise super-low word error rates, these are not the WERs they get when transcribing audio captured at Iron Maiden concerts held in the middle of 16 lane interstate highways.
 
 ## Choosing an Speech Recognition API
 
@@ -74,7 +74,7 @@ Speech recognition APIs are fantastic tools that allow us to look into vast amou
 
 <whitepaperpromo whitepaper="latest"></whitepaperpromo>
 
-I like analogies, so here is one: Asking which is the best metric to judge the quality of a bicycle could end in disaster. If your say "weight is the best metric, the lighter the better," then people like me who use their bikes to carry heavy groceries, 2 months of laundry and the occasional 2x4 would be in trouble. If you said "the number of pannier racks on a bike" is a good metric, then Tour de France cyclists would become a lot more winded, faster. All in all, you need to choose what's right for you. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976775/blog/what-is-word-error-rate/derek-thomson-271991-unsplash.jpg) _This bike is a robust touring bike with pannier racks-great for shopping and 10,000 mile tours, bad for Tour de France. Photo credit: [Derek Thomson](https://unsplash.com/photos/AJ-7QpXV9U4)_ When you want to decide which speech recognition API to use, ask yourself:
+I like analogies, so here is one: Asking which is the best metric to judge the quality of a bicycle could end in disaster. If your say "weight is the best metric, the lighter the better," then people like me who use their bikes to carry heavy groceries, 2 months of laundry and the occasional 2x4 would be in trouble. If you said "the number of pannier racks on a bike" is a good metric, then Tour de France cyclists would become a lot more winded, faster. All in all, you need to choose what's right for you. ![Alt](/wp-content/uploads/2018/12/derek-thomson-271991-unsplash.jpg) _This bike is a robust touring bike with pannier racks-great for shopping and 10,000 mile tours, bad for Tour de France. Photo credit: [Derek Thomson](https://unsplash.com/photos/AJ-7QpXV9U4)_ When you want to decide which speech recognition API to use, ask yourself:
 
 *   Are there particular audio types that you need the speech recognition API to perform well on (phone call, TV, radio, meetings)?
 *   Are there certain words or accents that the speech recognition API should do well on?

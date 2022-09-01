@@ -7,16 +7,16 @@ authors:
   - morris-gevirtz
 category: speech-trends
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "Is your infrastructure supporting you or weighing you down?"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/4c70bee
+  twitter: https://dpgr.am/f4d6b6b
+  linkedin: https://dpgr.am/879c8e7
+  reddit: https://dpgr.am/a972ebb
+  facebook: https://dpgr.am/6fd2ba8
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069458/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/placeholder-post-image%402x.jpg
 ---
@@ -29,7 +29,7 @@ In 2016, the telecommunications giant AT&T asked the State of California for per
 
 #### AT&T argued that the large environmental and financial costs of maintaining the copper-wire network hinder innovations and improvement of other aspects of its communications infrastructure; i.e. fiber optic and mobile networks.
 
-![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976751/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/Great-Eastern-cable-July1865-3000-3x2gty-56a48a0c5.webp)
+![Alt](/wp-content/uploads/2018/10/Great-Eastern-cable-July1865-3000-3x2gty-56a48a0c5f9b58b7d0d7714c.jpg)
 
 _[The Transatlantic Cable](http://atlantic-cable.com/) first lain in 1858 (unsuccessfully), to be successfully relain in 1866, could mark the beginning of an interconnected world -in the modern sense. Photo: [the Great Eastern](https://www.thoughtco.com/atlantic-telegraph-cable-timeline-1773793) steamship laying cable between Newfoundland and the UK in July 1865._
 
@@ -43,7 +43,7 @@ However, as the 2016 California State Assembly bill evidences, <mark>AT&T is not
 
 Increasingly, our modern economy depends on technologies like GPS, mobile computing, and wireless communications. Consumers and industries alike demand fast, flexible and adaptable communications networks. Vast, yet often overlooked sectors of our modern society such as banking, securities, shipping, depend on high-capacity, high-speed, highly reliable networks. Copper just can't keep up -it's weighing us down (literally and metaphorically speaking!)
 
-![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976390/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/FIBER-OPTICS-CABLES.png)
+![Alt](/wp-content/uploads/2018/10/FIBER-OPTICS-CABLES.png)
 
 _In the 1970's and 80's fiber optics where on the very cutting edge of communications technology and a prominent feature in [futuristic-looking photography](https://picryl.com/media/fiber-optics-cables-f10105). 1988 is the year that the first fiber optic transatlantic cable was lain. Today [all of our undersea cables](https://www.submarinecablemap.com/) are made of glass, as are the links between most cell towers._
 
@@ -63,7 +63,7 @@ Consider the example of telephony and mobile networks in sub-Saharan Africa. The
 
 Between 2002 to 2014, cell phone networks in 7 Sub-Saharan countries grew more than they did in the US -the world's largest economy.
 
-![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976391/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/Africa-phones-7.png)
+![Alt](/wp-content/uploads/2018/10/Africa-phones-7.png)
 
 _A graphical comparison of 5 Sub-Saharan African statesGraphic courtesy of [Pew Research Center](http://www.pewglobal.org/2015/04/15/cell-phones-in-africa-communication-lifeline/)_
 
@@ -85,7 +85,7 @@ You can see a similar progression in the newer world of ASR -Automatic Speech Re
 
 Much like the US' cell networks, ASR technology hangs on to remnants of its past. Whereas products like Nuance Dragon Transcribe were revolutionary in the 1990s, the costly and time-intensive methodologies that gave birth to the industry 25 years ago have become insufficient to do the smart, AI-driven analytics that drive modern industries. The parallel here is clear: in the same way as the POTS system was cleverly upgraded, adapted and modified to enable internet connectivity, and television (AT&T U-Verse), ASR technologies were tweaked, duct-taped and wrangled into the Siri and Google Home products that we know and love today.
 
-![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976752/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/A-virtual-reality-system-in-use.-The-3-D-helmet-co.jpg)
+![Alt](/wp-content/uploads/2018/10/A-virtual-reality-system-in-use.-The-3-D-helmet-controls-a-large-image-screen-with-voice-and-glove-interfacing-to-the-computer-system.-The-system--currently-in-use-at-Rome-Laboratory-could-be-used-in-conjunction-with-other-application-progr-2.jpg)
 
 _Advanced Research Projects Agency was responsible for funding research which led to the creation of many technologies that are an integral part of the present day.[](https://picryl.com/media/a-virtual-reality-system-in-use-the-3-d-helmet-controls-a-large-image-screen-eebcec)In the image, a virtual reality system._
 
@@ -99,7 +99,7 @@ The developments in fiber optics from the 60s, 70s and 80s inspired the imaginat
 
 The creation and general adoption of the internet in the 90s and early 2000s (made possible by hybrid fiber optic/POTS networks) gave us the big data we needed. Finally, in the second decade of the 21st century the powerful computing needed to make deep learning ASR feasible came into existence. Now all the key pieces were there. End-to-end deep learning ASR frees engineers from scaling problems, enabling them to accurately process voice data in real time. This allows companies to learn much more from the voice data they've been unable to access (for nearly a century).
 
-![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976753/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/-Radio-Show---This-is-Europe--Jean-Desailly--Sophi.jpg)
+![Alt](/wp-content/uploads/2018/10/-Radio-Show---This-is-Europe--Jean-Desailly--Sophie-Desmarets---1.jpg)
 
 _Imagine how many hours of recorded radio exist in an archive somewhere. ASR technologies allow us to search vast stores of audio data and find actionable insights for business and science. For example: Are my call center operators staying compliant with disclosure regulations?_
 

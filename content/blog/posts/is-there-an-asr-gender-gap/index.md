@@ -2,7 +2,7 @@
 title: "Is There an ASR Gender Gap?"
 description: "Is there a gender gap with speech recognition technology? Is there differences with automatic speech recognition between genders? Here is what we see."
 date: 2021-03-31
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981365/blog/is-there-an-asr-gender-gap/is-there-asr-gender-gap%402x.jpg
+cover: 
 authors:
   - sam-zegas
 category: tutorial
@@ -10,18 +10,17 @@ tags:
   - inclusion
   - language
   - womens-history
-  - womens-voices
 seo:
   title: "Is There an ASR Gender Gap?"
   description: "Is there a gender gap with speech recognition technology? Is there differences with automatic speech recognition between genders? Here is what we see."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/5350601
+  twitter: https://dpgr.am/2b69ed9
+  linkedin: https://dpgr.am/8805e9e
+  reddit: https://dpgr.am/c4578cc
+  facebook: https://dpgr.am/72b37e7
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981365/blog/is-there-an-asr-gender-gap/is-there-asr-gender-gap%402x.jpg
+  image: 
 ---
 
 To close out Women's History Month, we're taking a look at the intersection of women's voices and speech technology.
@@ -44,4 +43,4 @@ That brings us to the intersection of language and technology, where we have to 
 
 ## ASR Gender Gap
 
-We took a look at Automatic Speech Recognition (ASR) data from ourselves and our competitors to see what evidence there is of a gender gap in ASR. For this study, we compiled 1000 short audio files from an open speech dataset, totaling just under 4 hours of audio. 500 of the files were female speakers, 500 were male. We set aside a small validation set and then ran the rest of these audio files through three models: the [Deepgram](https://deepgram.com/) general model, a Deepgram-trained model, and the model of a leading competitor. The results show that in terms of overall performance, Deepgram's trained model had the best performance at ~5.5% WER, followed by Deepgram's general model at ~9.8%, and then the leading competitor's model at ~11.8%. Overall, the data shows that the accuracy gap between male and female speakers is very small. This is an encouraging sign given the historical legacy of women's voices not being prioritized in tech. ![](https://res.cloudinary.com/deepgram/image/upload/v1661976839/blog/is-there-an-asr-gender-gap/Screen-Shot-2021-03-30-at-11.21.49-AM.png) We're in the business of making human speech intelligible to machines because we know there's power in voice. Equality in speech technology will be a precondition for getting your voice out into the world. At Deepgram, our Research team tracks our ability to process speech of different demographic groups, including women, and aims for continuous improvement. 
+We took a look at Automatic Speech Recognition (ASR) data from ourselves and our competitors to see what evidence there is of a gender gap in ASR. For this study, we compiled 1000 short audio files from an open speech dataset, totaling just under 4 hours of audio. 500 of the files were female speakers, 500 were male. We set aside a small validation set and then ran the rest of these audio files through three models: the [Deepgram](https://deepgram.com/) general model, a Deepgram-trained model, and the model of a leading competitor. The results show that in terms of overall performance, Deepgram's trained model had the best performance at ~5.5% WER, followed by Deepgram's general model at ~9.8%, and then the leading competitor's model at ~11.8%. Overall, the data shows that the accuracy gap between male and female speakers is very small. This is an encouraging sign given the historical legacy of women's voices not being prioritized in tech. ![](https://deepgram.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-30-at-11.21.49-AM.png) We're in the business of making human speech intelligible to machines because we know there's power in voice. Equality in speech technology will be a precondition for getting your voice out into the world. At Deepgram, our Research team tracks our ability to process speech of different demographic groups, including women, and aims for continuous improvement. 

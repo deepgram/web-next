@@ -2,7 +2,7 @@
 title: "Embracing the diversity of Spanish"
 description: "Spanish language diversity should be embraced by everyone including speech recognition solutions. There should not be just one Spanish speech model but multiple ones that start with a base model."
 date: 2021-10-14
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981383/blog/embracing-the-diversity-of-spanish/embracing-diversity-of-spanish-thumb-554x220%402x.png
+cover: 
 authors:
   - morris-gevirtz
 category: tutorial
@@ -14,13 +14,13 @@ seo:
   title: "Embracing the diversity of Spanish"
   description: "Spanish language diversity should be embraced by everyone including speech recognition solutions. There should not be just one Spanish speech model but multiple ones that start with a base model."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/7ce3097
+  twitter: https://dpgr.am/e54cc2f
+  linkedin: https://dpgr.am/04ab413
+  reddit: https://dpgr.am/4fbadb5
+  facebook: https://dpgr.am/aec0b5c
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981383/blog/embracing-the-diversity-of-spanish/embracing-diversity-of-spanish-thumb-554x220%402x.png
+  image: 
 ---
 
 This National Hispanic Heritage Month, _¡tenemos el español en cuenta!_ There are about [61 million people of Hispanic heritage](https://www.census.gov/quickfacts/fact/table/US/RHI725219) in the United States today, of which at least [43 million speak Spanish at home](https://www.forbes.com/sites/soniathompson/2021/05/27/the-us-has-the-second-largest-population-of-spanish-speakers-how-to-equip-your-brand-to-serve-them/?sh=343abf57793a). Spanish is also widely spoken as a second language throughout the US. Of course, Spanish is also a major world language. According to [Ethnologue](https://www.ethnologue.com/guides/most-spoken-languages), it has the second largest population of native speakers in the world at 471 million, after Mandarin Chinese at 971 million and ahead of English at 370 million.  Like all languages, Spanish has a high degree of internal variation. I am Chilean, and when I read statistics citing the 471 million native Spanish speakers, I have to ask myself: _which Spanish do they mean?_ I know that people from many parts of the Spanish-speaking world have a hard time with the Chilean dialect I grew up around. Though some of my Spanish-speaking friends might smirk and disagree, Chilean Spanish is still Spanish. At least, that's what I have always thought. But why is Chilean Spanish considered Spanish while the Asturiano "language" spoken in Spain is not considered Spanish (or Portuguese)? That question fascinates me. At its core, it boils down to: _what is the difference between a language and a dialect_? It may surprise you that there is no one definition of either concept in linguistics. There are no signposts that tell you when you've left Spanish and entered Portuguese or French or Catalan. There are only conventions for how we talk about language boundaries, which are usually loaded with political history. The language names we know hide a vast amount of diversity under the surface. As the colonial Spanish invaded much of what today is North and South America, disease and oppression made it so that the primary language of business in the cities was Spanish. However, neither the Spaniards who invaded nor the indigenous people who lost their lands were one homogenous people. Rather they represented a countless variety of traditions and cultures. Moreover, Spanish usually did not fully replace indigenous languages in the countryside. Thousands of indigenous languages survived and are still in use throughout Latin America, influencing the local dialects of Spanish in vocabulary and pronunciation. 

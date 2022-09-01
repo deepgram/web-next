@@ -2,7 +2,7 @@
 title: "Celebrating Black History Month with a Vision of More Inclusive Speech Recognition"
 description: "To mark Black History Month, we’re shining a spotlight on a major dialect of American English, African American Vernacular English (AAVE), and its status in speech recognition."
 date: 2021-02-26
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981362/blog/celebrating-black-history-month-with-a-vision-of-more-inclusive-speech-recognition/celebrating-black-history-2021%402x.jpg
+cover: 
 authors:
   - sam-zegas
 category: tutorial
@@ -14,13 +14,13 @@ seo:
   title: "Celebrating Black History Month with a Vision of More Inclusive Speech Recognition"
   description: "To mark Black History Month, we’re shining a spotlight on a major dialect of American English, African American Vernacular English (AAVE), and its status in speech recognition."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/29a9341
+  twitter: https://dpgr.am/cf517c0
+  linkedin: https://dpgr.am/3cfb21b
+  reddit: https://dpgr.am/6959f73
+  facebook: https://dpgr.am/86b5d9a
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981362/blog/celebrating-black-history-month-with-a-vision-of-more-inclusive-speech-recognition/celebrating-black-history-2021%402x.jpg
+  image: 
 ---
 
 February is Black History Month! To mark this time of celebration and reflection, we'd like to shine a spotlight on one of the major dialects of American English, African American Vernacular English (AAVE), and share our perspective on its status in [speech recognition](https://blog.deepgram.com/what-is-asr/).

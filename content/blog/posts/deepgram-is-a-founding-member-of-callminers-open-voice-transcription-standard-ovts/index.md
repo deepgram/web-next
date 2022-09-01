@@ -2,7 +2,7 @@
 title: "Deepgram is a Founding Member of CallMiner’s Open Voice Transcription Standard (OVTS)"
 description: "CallMiner has created a standard to provide flexibility in choosing the right speech recognition solution for your voice use case."
 date: 2021-05-27
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981372/blog/deepgram-is-a-founding-member-of-callminers-open-voice-transcription-standard-ovts/dg-founding-member-callminer-OVTS%402x.jpg
+cover: 
 authors:
   - keith-lam
 category: dg-insider
@@ -12,13 +12,13 @@ seo:
   title: "Deepgram is a Founding Member of CallMiner’s Open Voice Transcription Standard (OVTS)"
   description: "CallMiner has created a standard to provide flexibility in choosing the right speech recognition solution for your voice use case."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/4e414b4
+  twitter: https://dpgr.am/7f71d52
+  linkedin: https://dpgr.am/bb5fcd1
+  reddit: https://dpgr.am/f866da7
+  facebook: https://dpgr.am/9a3875b
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981372/blog/deepgram-is-a-founding-member-of-callminers-open-voice-transcription-standard-ovts/dg-founding-member-callminer-OVTS%402x.jpg
+  image: 
 ---
 
 Deepgram is proud to be a founding member of [CallMiner's Open Voice Transcription Standard (OVTS)](https://callminer.com/news/press-releases/callminer-introduces-open-voice-transcription-standard-ovts). This standard programming framework enables CallMiner's customers to choose the best speech recognition provider for their use cases. The OVTS API allows an easier integration to any automatic speech recognition (ASR) solution to the CallMiner [Eureka](https://callminer.com/products/eureka) platform. The flexibility of this new standard provides organizations more options for ASR providers depending on use cases. Businesses are not locked into an ASR provider that is good for simple transcription summaries of phone calls but is poor at real-time transcriptions for call analytics and alerts. Now, they can use one ASR provider for phone call summaries and use a faster ASR provider for real-time call analytics and alerts.

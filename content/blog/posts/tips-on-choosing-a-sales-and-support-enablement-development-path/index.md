@@ -2,7 +2,7 @@
 title: "Tips on Choosing a Sales and Support Enablement Development Path"
 description: "Looking to use voice for sales or support enablement, learn some tips on choosing the right solution and what is available out in the market."
 date: 2021-11-01
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981384/blog/tips-on-choosing-a-sales-and-support-enablement-development-path/choosing-sales-support-enablement-dev-path-blog-th.png
+cover: 
 authors:
   - keith-lam
 category: ai-and-engineering
@@ -13,13 +13,13 @@ seo:
   title: "Tips on Choosing a Sales and Support Enablement Development Path"
   description: "Looking to use voice for sales or support enablement, learn some tips on choosing the right solution and what is available out in the market."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/a0832a8
+  twitter: https://dpgr.am/eb0ad3c
+  linkedin: https://dpgr.am/41b9541
+  reddit: https://dpgr.am/dadd1ee
+  facebook: https://dpgr.am/a6213c7
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981384/blog/tips-on-choosing-a-sales-and-support-enablement-development-path/choosing-sales-support-enablement-dev-path-blog-th.png
+  image: 
 ---
 
 Sales and support enablement has changed dramatically with the use of speech recognition.  Sales and support teams can perform situational training and analysis before the employee takes their first call.  They can analyze their voice, facial expressions, tone of voice, speed of delivery to provide coaching on better sales or support conversations.  During calls, the software can record and analyze the conversation and provide on-screen feedback and tips for add-on sales or solutions to issues, thereby improving the customer experience.  Post-call, the conversations can be analyzed for coaching purposes. As such, sales and support enablement reference architecture varies depending on the use case.  The three main use cases can be bucketed as:
@@ -34,7 +34,7 @@ Overall, these software solutions aim to improve customer satisfaction, improve 
 
 Onboarding tools help sales to better understand and deliver the right message, sales pitch and offer to customers.  Overall, reduce the onboarding time for a new salesperson. This could be analyzing the sales pitch or determining how well they did with sales objections or obstacles.
 
-#### ![](https://res.cloudinary.com/deepgram/image/upload/v1661976849/blog/tips-on-choosing-a-sales-and-support-enablement-development-path/coaching-reference-architecture%402x.png)
+#### ![](https://deepgram.com/wp-content/uploads/2021/10/coaching-reference-architecture@2x.png)
 
 #### **Coaching**
 
@@ -44,7 +44,7 @@ Sales and support coaching solutions allow sales management to review sales and 
 
 #### **Real-time Sales and Support**
 
-Real-time sales and support enablement is a new type of solution to provide hints and tips to the salesperson or support agent as they are making phone calls to customers.  As they are speaking with the customer, the solution parses out keywords and phrases and return to the salesperson or support agent information to help them with the customer encounter, including tips to close the sale, recommended add-on products or services, tips to prevent customer churn, links to articles on a solution to the customer issue.  It is very much like an advisor or coach pushing the agent information as they need it.  The goal is to increase sales or increase customer satisfaction, but it can also be used to assist new salespeople or support agents. ![](https://res.cloudinary.com/deepgram/image/upload/v1661976850/blog/tips-on-choosing-a-sales-and-support-enablement-development-path/real-time-sales-support-reference-architecture%402x.png) **Audio and Meta-Data Collection** Audio capture is normally done with existing infrastructure; UCaaS, CCaaS, on-device applications, smart speakers, PBX, or VOIP.  Depending on the speech-to-text (STT) solution, the audio capture may need to be converted into different file formats for real-time streaming to the STT.  More sophisticated systems may capture audio patterns, tone, and frequency. **Speech-to-text** speech-to-text transcribes the speech in the audio capture into text for the NLU/NLP to parse and use.  The more accurate the STT the better the results from the NLU/NLP.  In addition, some STT systems also provide diarization, audio sentiment, speaker ID, speaker isolation, noise reduction, and metadata on pitch, pace, tone, and utterances.  This is normally a separate best-of-breed vendor.  STT providers include Deepgram, Google speech-to-text, Amazon Transcribe, Nuance, and IBM Watson **Natural Language Processing and Understanding** NLU/NLP is the main process to turn words, sentences, sentiment, audio metadata into intent and sentiment.  What does the speaker want to convey?  It matches the words to the intent so the data integration engine can organize the data and provide additional tags on the speakers. This can be part of a complete coaching solution or a separate best-of-breed vendor, such as OneReach.ai, Rasa, or Cognigy.ai **Data Integration** Data integration takes all the text and organizes it so you can perform queries on the data.  It also organizes the meta-data to be able to query also.  Was the customer happy, neutral, or sad?  Was this a sales inquiry or support call?  This step sorts that conversation into these buckets. **Data Query** Data query engine does the work of pulling the right data for the business intelligence application.  The end-user might ask the business intelligence application to show him where the salesperson lost the sale. **Business intelligence** This business intelligence end-user application is where you see the analytics and gain insight into the sales calls.   Or the BI can create a chart to see which salesperson is always mentioning a new add-on service and the success rate of these sales.
+Real-time sales and support enablement is a new type of solution to provide hints and tips to the salesperson or support agent as they are making phone calls to customers.  As they are speaking with the customer, the solution parses out keywords and phrases and return to the salesperson or support agent information to help them with the customer encounter, including tips to close the sale, recommended add-on products or services, tips to prevent customer churn, links to articles on a solution to the customer issue.  It is very much like an advisor or coach pushing the agent information as they need it.  The goal is to increase sales or increase customer satisfaction, but it can also be used to assist new salespeople or support agents. ![](https://deepgram.com/wp-content/uploads/2021/10/real-time-sales-support-reference-architecture@2x.png) **Audio and Meta-Data Collection** Audio capture is normally done with existing infrastructure; UCaaS, CCaaS, on-device applications, smart speakers, PBX, or VOIP.  Depending on the speech-to-text (STT) solution, the audio capture may need to be converted into different file formats for real-time streaming to the STT.  More sophisticated systems may capture audio patterns, tone, and frequency. **Speech-to-text** speech-to-text transcribes the speech in the audio capture into text for the NLU/NLP to parse and use.  The more accurate the STT the better the results from the NLU/NLP.  In addition, some STT systems also provide diarization, audio sentiment, speaker ID, speaker isolation, noise reduction, and metadata on pitch, pace, tone, and utterances.  This is normally a separate best-of-breed vendor.  STT providers include Deepgram, Google speech-to-text, Amazon Transcribe, Nuance, and IBM Watson **Natural Language Processing and Understanding** NLU/NLP is the main process to turn words, sentences, sentiment, audio metadata into intent and sentiment.  What does the speaker want to convey?  It matches the words to the intent so the data integration engine can organize the data and provide additional tags on the speakers. This can be part of a complete coaching solution or a separate best-of-breed vendor, such as OneReach.ai, Rasa, or Cognigy.ai **Data Integration** Data integration takes all the text and organizes it so you can perform queries on the data.  It also organizes the meta-data to be able to query also.  Was the customer happy, neutral, or sad?  Was this a sales inquiry or support call?  This step sorts that conversation into these buckets. **Data Query** Data query engine does the work of pulling the right data for the business intelligence application.  The end-user might ask the business intelligence application to show him where the salesperson lost the sale. **Business intelligence** This business intelligence end-user application is where you see the analytics and gain insight into the sales calls.   Or the BI can create a chart to see which salesperson is always mentioning a new add-on service and the success rate of these sales.
 
 #### **Tips for Choosing Your Development Path**
 

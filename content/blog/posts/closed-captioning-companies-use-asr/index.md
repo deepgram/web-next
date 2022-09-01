@@ -2,23 +2,23 @@
 title: "How Closed Captioning is Enabled by ASR"
 description: "Closed captioning provides accessibility to people who have trouble hearing audio—and with ASR, it’s getting faster and more powerful."
 date: 2022-08-10
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981430/blog/closed-captioning-companies-use-asr/how-closed-captioning-is-enabled-by-ASR-thumb-554x.png
+cover: 
 authors:
   - chris-doty
 category: speech-trends
 tags:
-  - speech-recognition
+  - ohsnap
 seo:
   title: "How Closed Captioning is Enabled by ASR"
   description: "Closed captioning provides accessibility to people who have trouble hearing audio—and with ASR, it’s getting faster and more powerful."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/be60bd8
+  twitter: https://dpgr.am/4ef444a
+  linkedin: https://dpgr.am/34aa658
+  reddit: https://dpgr.am/f8a9650
+  facebook: https://dpgr.am/78de3b6
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981430/blog/closed-captioning-companies-use-asr/how-closed-captioning-is-enabled-by-ASR-thumb-554x.png
+  image: 
 ---
 
 There are many different ways that closed captioning is enabled by speech-to-text and automatic speech recognition (ASR). In this blog post, we'll discuss some of the most common of these use cases, including creating captions for live events, podcasts, and transcribing videos. We'll also explore the benefits that state-of-the-art, AI-powered speech-to-text solutions like Deepgram can provide to closed captioning companies. But before we start, let's define what exactly closed captioning is.

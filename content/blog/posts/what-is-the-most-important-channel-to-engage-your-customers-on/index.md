@@ -7,16 +7,16 @@ authors:
   - morris-gevirtz
 category: speech-trends
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "What is the Most Important Channel to Engage Your Customers On?"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/c0241bd
+  twitter: https://dpgr.am/f28a4d4
+  linkedin: https://dpgr.am/644466a
+  reddit: https://dpgr.am/a8a2b47
+  facebook: https://dpgr.am/1d2abda
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069472/blog/what-is-the-most-important-channel-to-engage-your-customers-on/placeholder-post-image%402x.jpg
 ---

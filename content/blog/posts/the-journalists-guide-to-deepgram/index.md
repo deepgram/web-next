@@ -7,16 +7,16 @@ authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "The Journalists Guide To Deepgram"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/dcb7fc5
+  twitter: https://dpgr.am/80a02d8
+  linkedin: https://dpgr.am/2a13ace
+  reddit: https://dpgr.am/ea8e168
+  facebook: https://dpgr.am/779b0f6
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661983098/blog/the-journalists-guide-to-deepgram/placeholder-post-image%402x.jpg
 ---

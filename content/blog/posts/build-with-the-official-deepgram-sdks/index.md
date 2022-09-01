@@ -2,7 +2,7 @@
 title: "Build With the Official Deepgram SDKs"
 description: "Add speech-to-text to your application even faster with the new Node.js and Python SDKs for the Deepgram API."
 date: 2021-07-22
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981374/blog/build-with-the-official-deepgram-sdks/build-w-official-dg-sdks%402x.jpg
+cover: 
 authors:
   - michael-jolley
 category: product-news
@@ -14,13 +14,13 @@ seo:
   title: "Build With the Official Deepgram SDKs"
   description: "Add speech-to-text to your application even faster with the new Node.js and Python SDKs for the Deepgram API."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/adc80c7
+  twitter: https://dpgr.am/5d34b63
+  linkedin: https://dpgr.am/e7c3bc2
+  reddit: https://dpgr.am/25b3a33
+  facebook: https://dpgr.am/e6cb084
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981374/blog/build-with-the-official-deepgram-sdks/build-w-official-dg-sdks%402x.jpg
+  image: 
 ---
 
 We love empowering our developer communities to take full advantage of voice in their applications. So, we're announcing two new official SDKs for Node.js and Python. Both of these SDKs make it easier than ever to add automated speech-to-text recognition to your applications.

@@ -5,7 +5,7 @@ date: 2021-11-19
 cover: https://res.cloudinary.com/deepgram/image/upload/v1636422499/blog/2021/11/michael-jolley-joins-deepgram/birmingham-city-scape.jpg
 authors:
     - michael-jolley
-category: careers
+category: devlife
 tags:
     - team
 seo:

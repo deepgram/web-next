@@ -2,26 +2,25 @@
 title: "Best Speech-to-Text APIs in 2022"
 description: "There’re a lot of options out there for speech-to-text APIs. Learn about the pros and cons of the various options here."
 date: 2022-04-19
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981417/blog/best-speech-to-text-apis/best-stt-apis-in-2022-thumb-554x220%402x.png
+cover: 
 authors:
   - aimie-ye
 category: speech-trends
 tags:
   - amazon
   - deep-learning
-  - speech-recognition
   - voice-strategy
 seo:
   title: "Best Speech-to-Text APIs in 2022"
   description: "There’re a lot of options out there for speech-to-text APIs. Learn about the pros and cons of the various options here."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/cbe028e
+  twitter: https://dpgr.am/1b57ba8
+  linkedin: https://dpgr.am/cc72083
+  reddit: https://dpgr.am/aaf834f
+  facebook: https://dpgr.am/bb797db
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981417/blog/best-speech-to-text-apis/best-stt-apis-in-2022-thumb-554x220%402x.png
+  image: 
 ---
 
 If you've been shopping for a speech-to-text (STT) solution for your business, you're not alone. In our recent [State of Voice Technology 2022](https://deepgram.com/state-of-voice-technology-2022/) report, 99% of respondents said they viewed voice-enabled experiences as a critical part of their company's future enterprise strategy. But the sheer number of options for speech transcription might be overwhelming if you aren't familiar with the space-from Big Tech to open source options, there's a ton of choices, with different price points and different feature sets to choose from. Although this diversity is great, it can also make it confusing when you're trying to compare different options and pick the right solution for you. In this blog post, we're going to break down the various STT APIs available today, telling you their various pros and cons, and providing a ranking that we think accurately represents the current STT landscape.  Before we get to the ranking, we're going to break down exactly what a speech-to-text API is, the core features you'd expect a STT API to have, and some key use cases for speech-to-text APIs. If you're familiar with that and want to just skip to the rankings, [click here to jump down](#top-8).
@@ -181,7 +180,7 @@ With that background out of the way, let's dive into our ranking, and what we th
     *   Lots of developer work needed to integrate well with your systems.
 *   **Price:** $0.00/audio hour
 
-![](https://res.cloudinary.com/deepgram/image/upload/v1661976859/blog/best-speech-to-text-apis/Screen-Shot-2022-04-19-at-10.15.45-AM.png)
+![](https://deepgram.com/wp-content/uploads/2022/04/Screen-Shot-2022-04-19-at-10.15.45-AM.png)
 
 ## Conclusion
 

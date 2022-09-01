@@ -2,23 +2,23 @@
 title: "How Randall-Reilly Uses Deepgram to Match Drivers to a Leading Ridesharing Company"
 description: ""
 date: 2018-08-31
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981312/blog/customer-story-rideshare-smartrhino-deepgram/how-randall-reilly-uses-dg%402x.jpg
+cover: 
 authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "How Randall-Reilly Uses Deepgram to Match Drivers to a Leading Ridesharing Company"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/a853350
+  twitter: https://dpgr.am/8088613
+  linkedin: https://dpgr.am/29f91c0
+  reddit: https://dpgr.am/1744c17
+  facebook: https://dpgr.am/d846e7c
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981312/blog/customer-story-rideshare-smartrhino-deepgram/how-randall-reilly-uses-dg%402x.jpg
+  image: 
 ---
 
 Randall-Reilly is _the_ recruiting powerhouse for fast growing companies. They utilize more than 30 web properties, an assortment of strategic media channels, and in-house high-tech call center campaigns to rapidly find, promote, and assist candidates through the recruiting and partnering processes of innovative companies. By engaging the services of Randall-Reilly, one of the largest ridesharing companies can scale their partnering process without losing focus on the important things - finding the right people.

@@ -2,25 +2,24 @@
 title: "Why Deepgrams Speech-to-Text API is #1 for Developers on G2"
 description: "Take a look at some of the reasons that developers love using Deepgrams speech-to-text API for their speech recognition needs."
 date: 2022-07-11
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981426/blog/deepgrams-speech-to-text-api-number-1-for-developers-g2/G2-summer-2022-report-blog-thumb-554x220%402x.png
+cover: 
 authors:
   - alexa-de-la-torre
 category: dg-insider
 tags:
   - deep-learning
   - nlp
-  - speech-recognition
 seo:
   title: "Why Deepgrams Speech-to-Text API is #1 for Developers on G2"
   description: "Take a look at some of the reasons that developers love using Deepgrams speech-to-text API for their speech recognition needs."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/05d45e1
+  twitter: https://dpgr.am/e09263f
+  linkedin: https://dpgr.am/5cd8ad7
+  reddit: https://dpgr.am/b969cc0
+  facebook: https://dpgr.am/4f71f75
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981426/blog/deepgrams-speech-to-text-api-number-1-for-developers-g2/G2-summer-2022-report-blog-thumb-554x220%402x.png
+  image: 
 ---
 
 Automatic speech recognition (ASR) has become less of a "nice to have" and more of a requirement as accessibility and a positive user experience have become more core to customer loyalty. But the ways that ASR, especially in API form, can be integrated into an application or multiple applications are endless. This means that finding an API that checks all the boxes-accuracy, speed, latency for real-time, deployment models for cloud and on-prem, and scalability-and has great documentation and support are key to success. We're happy to say that Deepgram has been reviewed and recognized as [the leader](https://www.g2.com/categories/voice-recognition?tab=highest_rated) in the [G2 Summer Grid® Report](https://www.g2.com/reports/grid-report-for-voice-recognition-summer-2022?secure%5Bpid%5D=77169&secure%5Brid%5D=2999985&secure%5Btoken%5D=68581f65247c290b4e9b0f8cb3a3d262be18bcc421e819e448c5579b93cda711) for Voice Recognition software by checking all those boxes and then some! Here we compiled some of the reasons that developers said make Deepgram the best automatic speech-to-text API available.

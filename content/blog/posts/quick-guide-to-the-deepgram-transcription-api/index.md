@@ -7,16 +7,16 @@ authors:
   - scott-stephenson
 category: product-news
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "Quick Guide to the Deepgram Brain Transcription API"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/69db914
+  twitter: https://dpgr.am/ca6bbcf
+  linkedin: https://dpgr.am/2fd0dd1
+  reddit: https://dpgr.am/771f752
+  facebook: https://dpgr.am/72c23c5
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069447/blog/quick-guide-to-the-deepgram-transcription-api/placeholder-post-image%402x.jpg
 ---

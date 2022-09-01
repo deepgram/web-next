@@ -2,26 +2,25 @@
 title: "How Contact-Center-as-a-Service Companies (CCaaS) Utilize ASR Solutions"
 description: "ASR solutions represent critical functionality for the contact-center-as-a-service industry. Learn more."
 date: 2022-08-03
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981429/blog/contact-center-as-a-service-utilize-solutions/how-contact-center-as-a-service-companies-utilize-.png
+cover: 
 authors:
   - aimie-ye
 category: speech-trends
 tags:
   - call-analytics
   - contact-center
-  - speech-recognition
   - support-enablement
 seo:
   title: "How Contact-Center-as-a-Service Companies (CCaaS) Utilize ASR Solutions"
   description: "ASR solutions represent critical functionality for the contact-center-as-a-service industry. Learn more."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/12e2685
+  twitter: https://dpgr.am/0eb01ad
+  linkedin: https://dpgr.am/ac75d76
+  reddit: https://dpgr.am/da8a46f
+  facebook: https://dpgr.am/a730e5a
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981429/blog/contact-center-as-a-service-utilize-solutions/how-contact-center-as-a-service-companies-utilize-.png
+  image: 
 ---
 
 Contact-center-as-a-service (CCaaS) platforms help businesses automate and ease the processing of customer inquiries. Critical to this functionality is automatic speech recognition, or ASR, which converts speech into written text so that a computer can understand what was said. In this blog post, we'll discuss how CCaaS companies use speech-to-text solutions and what benefits they provide, as well as how ASR tools fit in and the benefits they provide for CCaaS platforms. But before we get started-what exactly does "contact center as a service" mean?

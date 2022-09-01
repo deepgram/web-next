@@ -2,25 +2,24 @@
 title: "6 Biggest Challenges of Automatic Speech Recognition (ASR) for Hindi"
 description: "Speech-to-text systems for Hindi can encounter some unique challenges. Here are 6 of the biggest ones that tend to crop up."
 date: 2022-03-17
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981411/blog/6-challenges-asr-hindi/6-biggest-challenges-of-ASR-for-Hindi-thumb-554x22.png
+cover: 
 authors:
   - dan-shafer
 category: tutorial
 tags:
   - deep-learning
   - language
-  - speech-recognition
 seo:
   title: "6 Biggest Challenges of Automatic Speech Recognition (ASR) for Hindi"
   description: "Speech-to-text systems for Hindi can encounter some unique challenges. Here are 6 of the biggest ones that tend to crop up."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/d9adcd6
+  twitter: https://dpgr.am/cb91970
+  linkedin: https://dpgr.am/d398c58
+  reddit: https://dpgr.am/30dd385
+  facebook: https://dpgr.am/cbe9445
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981411/blog/6-challenges-asr-hindi/6-biggest-challenges-of-ASR-for-Hindi-thumb-554x22.png
+  image: 
 ---
 
 As Deepgram expands [the number of languages that we offer automatic speech recognition (ASR) for](https://deepgram.com/product/languages/), we're bound to run into languages that present different challenges than we encountered for English. In this blog post, we'll review six of the biggest challenges that are present for people looking to create a Hindi speech-to-text model. Before we dive into the specifics, let's take a look at what Hindi is and where it's spoken.

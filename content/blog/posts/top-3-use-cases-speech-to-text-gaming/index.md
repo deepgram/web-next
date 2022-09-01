@@ -2,24 +2,23 @@
 title: "Top 3 Use Cases for Speech-to-Text in Gaming"
 description: "Learn three of the top ways that companies are using speech-to-text to improve everyones gaming experience."
 date: 2022-06-02
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981422/blog/top-3-use-cases-speech-to-text-gaming/top-use-cases-asr-video-games-thumb-554x220%402x.png
+cover: 
 authors:
   - chris-doty
 category: speech-trends
 tags:
   - gaming
-  - speech-recognition
 seo:
   title: "Top 3 Use Cases for Speech-to-Text in Gaming"
   description: "Learn three of the top ways that companies are using speech-to-text to improve everyones gaming experience."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/1837237
+  twitter: https://dpgr.am/941b757
+  linkedin: https://dpgr.am/b260007
+  reddit: https://dpgr.am/ebd33b9
+  facebook: https://dpgr.am/16707c9
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981422/blog/top-3-use-cases-speech-to-text-gaming/top-use-cases-asr-video-games-thumb-554x220%402x.png
+  image: 
 ---
 
 In the gaming industry, speech-to-text and voice recognition technology are becoming more and more commonplace. This is due to the fact that they offer a number of advantages for both developers and players alike. In this blog post, we'll cover some of the most common use cases for speech-to-text and voice technology in the video game industry. We'll also discuss the benefits that these technologies offer to both developers and players. Let's get started!

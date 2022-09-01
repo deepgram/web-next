@@ -2,7 +2,7 @@
 title: "Why ASR is Important for the Deaf and Hard-of-Hearing Community"
 description: "This blog post provides some information about the deaf and hard-of-hearing community, including challenges, as well as how ASR can help."
 date: 2022-04-08
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981415/blog/asr-important-deaf-hoh-community/why-asr-important-deaf-hoh-community-thumb-554x220.png
+cover: 
 authors:
   - sam-zegas
 category: tutorial
@@ -13,13 +13,13 @@ seo:
   title: "Why ASR is Important for the Deaf and Hard-of-Hearing Community"
   description: "This blog post provides some information about the deaf and hard-of-hearing community, including challenges, as well as how ASR can help."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/c74321f
+  twitter: https://dpgr.am/b2f966f
+  linkedin: https://dpgr.am/bc3c399
+  reddit: https://dpgr.am/9266013
+  facebook: https://dpgr.am/2a475a0
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981415/blog/asr-important-deaf-hoh-community/why-asr-important-deaf-hoh-community-thumb-554x220.png
+  image: 
 ---
 
 Speech recognition and speech understanding technologies are powerful tools for everyone. But for many people with hearing, the implications of speech technology on the deaf community are not immediately obvious. In recognition of [Deaf History Month](https://www.nad.org/2022/01/31/national-deaf-history-month-dates/), we wanted to take stock of the ways that speech technology is being used to serve the deaf and hard-of-hearing (HOH) community, as well as the places where more work is needed.

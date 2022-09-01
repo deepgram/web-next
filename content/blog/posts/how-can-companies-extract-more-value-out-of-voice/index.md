@@ -2,23 +2,23 @@
 title: "How Can Companies Extract More Value Out of Voice?"
 description: ""
 date: 2018-11-22
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981328/blog/how-can-companies-extract-more-value-out-of-voice/how-can-cos-extract-value%402x.jpg
+cover: 
 authors:
   - morris-gevirtz
 category: speech-trends
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "How Can Companies Extract More Value Out of Voice?"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/2e02935
+  twitter: https://dpgr.am/d36d2dc
+  linkedin: https://dpgr.am/fc081e0
+  reddit: https://dpgr.am/a7938f1
+  facebook: https://dpgr.am/96f0059
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981328/blog/how-can-companies-extract-more-value-out-of-voice/how-can-cos-extract-value%402x.jpg
+  image: 
 ---
 
 There is a good reason why voice communication is the "gold standard" for interacting with customers. <iframe src="https://www.youtube.com/embed/Q5K2tiZQS6k" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>When we communicate with others, we try to understand what is being said by paying attention to three particular areas: the hands, face and voice. Each of these systems were co-opted by evolution for highly complex, fine-grained communication. In fact, these three take up more processing space in the brain than any other part of the body. The vocal organs, mouth, tongue, pharynx, seem to take the lion's share.

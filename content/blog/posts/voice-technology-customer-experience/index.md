@@ -2,25 +2,24 @@
 title: "Voice Technology and the Changing Landscape of Customer Experience"
 description: "Customer experience is a major differentiator for companies, and voice is providing new ways to drive incredible customer interactions."
 date: 2022-02-08
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981407/blog/voice-technology-customer-experience/voice-tech-and-changing-landscape-of-CX-thumb-554x.png
+cover: 
 authors:
   - chris-doty
 category: speech-trends
 tags:
-  - speech-recognition
   - voice-strategy
   - voice-tech
 seo:
   title: "Voice Technology and the Changing Landscape of Customer Experience"
   description: "Customer experience is a major differentiator for companies, and voice is providing new ways to drive incredible customer interactions."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/fbb01f2
+  twitter: https://dpgr.am/621baca
+  linkedin: https://dpgr.am/78a615c
+  reddit: https://dpgr.am/99f3d50
+  facebook: https://dpgr.am/42db934
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981407/blog/voice-technology-customer-experience/voice-tech-and-changing-landscape-of-CX-thumb-554x.png
+  image: 
 ---
 
 Customer experience is a major differentiator for companies. And with the rise of voice technology, businesses are gaining an improved ability to better understand customer needs and sentiment. As customer conversations are analyzed, companies will be able to more quickly and easily identify appropriate actions to take to improve customer experience. As Amy Brown, founder and CEO of [Authenticx](https://authenticx.com/), said in the recent webinar [**The Importance of Voice Technology for Customer Experiences**](https://offers.deepgram.com/importance-of-voice-technology-for-customer-experiences-on-demand), her company was founded to "help humans understand humans" with technology, including voice technology. This is ultimately the goal of any implementation of voice tech in the realm of customer experience: to empower your employees to better understand your customers and support them. Let's take a look at four of the ways that voice technologies are changing the landscape of customer experience, now and in the coming years.

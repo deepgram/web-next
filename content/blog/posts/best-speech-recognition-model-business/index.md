@@ -2,24 +2,23 @@
 title: "Which Speech Recognition Model is Best for My Business?"
 description: "If youre shopping for automatic speech recognition (ASR), you have options. Learn some of the features that make Deepgram the best choice."
 date: 2022-05-23
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981408/blog/best-speech-recognition-model-business/which-speech-model-best-for-biz-thumb-554x220%402x.png
+cover: 
 authors:
   - keith-lam
 category: product-news
 tags:
   - deep-learning
-  - speech-recognition
 seo:
   title: "Which Speech Recognition Model is Best for My Business?"
   description: "If youre shopping for automatic speech recognition (ASR), you have options. Learn some of the features that make Deepgram the best choice."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/bf8ceac
+  twitter: https://dpgr.am/93dcbad
+  linkedin: https://dpgr.am/f13b2bb
+  reddit: https://dpgr.am/fc359f3
+  facebook: https://dpgr.am/5e4f9ca
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981408/blog/best-speech-recognition-model-business/which-speech-model-best-for-biz-thumb-554x220%402x.png
+  image: 
 ---
 
 A funny thing happened when Deepgram first decided to use [end-to-end deep learning](https://blog.deepgram.com/deep-learning-speech-recognition/) (E2EDL) to design our next-generation speech-to-text (STT) solution. We found that this approach was hugely flexible and easier to optimize than traditional STT. We didn't have to reconnect and optimize multiple models (acoustic, pronunciation, and language) every time we wanted to make a change. And we could retrain and enhance our speech models without starting from scratch. With transfer learning, we could build new speech models faster. This trait of our technology has allowed us to build different base speech models for different use cases and needs. It also allows us to tailor models in cases where a customer needs something specific that we don't currently offer. Let's take a look at the two types of models that we offer here at Deepgram and what each is good for.

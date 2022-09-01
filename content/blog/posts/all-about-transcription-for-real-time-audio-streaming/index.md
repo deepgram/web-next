@@ -2,34 +2,32 @@
 title: "All About Transcription for Real-Time (Live) Audio Streaming"
 description: "Curious how you can get real-time transcriptions from a live audio or video stream? This post as your answers."
 date: 2022-08-22
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981433/blog/all-about-transcription-for-real-time-audio-streaming/all-about-real-time-audio-streaming-thumb-554x220-.png
+cover: 
 authors:
   - keith-lam
 category: dg-insider
 tags:
   - contact-center
   - conversational-ai
-  - speech-recognition
   - voice-strategy
-  - voicebots
 seo:
   title: "All About Transcription for Real-Time (Live) Audio Streaming"
   description: "Curious how you can get real-time transcriptions from a live audio or video stream? This post as your answers."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/a16a1b2
+  twitter: https://dpgr.am/4cd9c57
+  linkedin: https://dpgr.am/3b292da
+  reddit: https://dpgr.am/043f00e
+  facebook: https://dpgr.am/3ccb340
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981433/blog/all-about-transcription-for-real-time-audio-streaming/all-about-real-time-audio-streaming-thumb-554x220-.png
+  image: 
 ---
 
 Real-time streaming transcriptions involves taking audio that's being generated live and transcribing it into text. One of the major use cases for real-time streaming is [live captioning](https://blog.deepgram.com/closed-captioning-companies-use-asr/). As speakers talk, text is generated and displayed on the screen. Real-time streaming can also transcribe or caption pre-recorded media that's presented during an event.
 
 ## How Does Real-Time Streaming Transcription Work?
 
-Real-time streaming is similar to pre-recorded transcription. The audio goes through the same [speech model](https://offers.deepgram.com/how-ai-speech-models-work-whitepaper) for transcriptions but the audio input and output is configured differently. Input is sent through a live streaming protocol like websocket. The output can be text over websockets also. Adding speech understanding feature to the output stream is mostly done post transcription processing.  Post transcription processing can include [diarization](https://blog.deepgram.com/what-is-speaker-diarization/), [profanity filtering](https://developers.deepgram.com/documentation/features/profanity-filter/), [redaction](https://developers.deepgram.com/documentation/features/redact/), and other features depending on the speech recognition and understanding provider. Here's a code sample of how we do real-time transcription with Deepgram: ![](https://res.cloudinary.com/deepgram/image/upload/v1661976862/blog/all-about-transcription-for-real-time-audio-streaming/code_snippet.png) You can get the full instructions and code in our [streaming quickstart guide](https://developers.deepgram.com/documentation/getting-started/streaming/).
+Real-time streaming is similar to pre-recorded transcription. The audio goes through the same [speech model](https://offers.deepgram.com/how-ai-speech-models-work-whitepaper) for transcriptions but the audio input and output is configured differently. Input is sent through a live streaming protocol like websocket. The output can be text over websockets also. Adding speech understanding feature to the output stream is mostly done post transcription processing.  Post transcription processing can include [diarization](https://blog.deepgram.com/what-is-speaker-diarization/), [profanity filtering](https://developers.deepgram.com/documentation/features/profanity-filter/), [redaction](https://developers.deepgram.com/documentation/features/redact/), and other features depending on the speech recognition and understanding provider. Here's a code sample of how we do real-time transcription with Deepgram: ![](https://deepgram.com/wp-content/uploads/2022/08/code_snippet.png) You can get the full instructions and code in our [streaming quickstart guide](https://developers.deepgram.com/documentation/getting-started/streaming/).
 
 ## Why is Live Audio Streaming Transcription Used?
 

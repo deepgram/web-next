@@ -7,16 +7,16 @@ authors:
   - scott-stephenson
 category: product-news
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "HamPanda: You get Hams for Playing and Pandas for Winning"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/2c93712
+  twitter: https://dpgr.am/fd104dd
+  linkedin: https://dpgr.am/c091242
+  reddit: https://dpgr.am/52530cd
+  facebook: https://dpgr.am/6560e9e
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069442/blog/hampanda-you-get-hams-for-playing-and-pandas-for-winning/placeholder-post-image%402x.jpg
 ---

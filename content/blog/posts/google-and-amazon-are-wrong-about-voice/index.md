@@ -7,16 +7,16 @@ authors:
   - scott-stephenson
 category: ai-and-engineering
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "Google and Amazon are wrong about voice"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/394175e
+  twitter: https://dpgr.am/d7ff5a3
+  linkedin: https://dpgr.am/fb2a8e2
+  reddit: https://dpgr.am/780514a
+  facebook: https://dpgr.am/1fc77b3
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069451/blog/google-and-amazon-are-wrong-about-voice/placeholder-post-image%402x.jpg
 ---
@@ -31,13 +31,13 @@ Voice assistants will be a component for consumers, but the sleeping giant is sp
 
 Speech recognition hasn't been trained to handle real-life use cases. So, when you're calling your insurance company from the side of a busy freeway, the resulting data may look something like this:
 
-![](https://res.cloudinary.com/deepgram/image/upload/v1661976372/blog/google-and-amazon-are-wrong-about-voice/google%402x.png)
+![](/wp-content/uploads/2018/05/google@2x.png)
 
 _Actual result from leading speech recognition provider_
 
 Rather than:
 
-![](https://res.cloudinary.com/deepgram/image/upload/v1661976373/blog/google-and-amazon-are-wrong-about-voice/full%402x-1.png)
+![](/wp-content/uploads/2018/05/full@2x-1.png)
 
 **Higher accuracy speech recognition allows for faster action and greater insight into your customer's wants and needs.**
 

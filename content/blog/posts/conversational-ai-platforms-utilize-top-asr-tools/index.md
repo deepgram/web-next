@@ -2,25 +2,24 @@
 title: "How Conversational AI Platforms Utilize Top ASR Tools"
 description: "Conversational AI platforms are powering changes across industries. Learn more about their benefits and how ASR powers them."
 date: 2022-07-25
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981427/blog/conversational-ai-platforms-utilize-top-asr-tools/how-conversational-ai-platforms-utilize-top-asr-to.png
+cover: 
 authors:
   - aimie-ye
 category: speech-trends
 tags:
   - call-analytics
   - conversational-ai
-  - voicebots
 seo:
   title: "How Conversational AI Platforms Utilize Top ASR Tools"
   description: "Conversational AI platforms are powering changes across industries. Learn more about their benefits and how ASR powers them."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/925f16c
+  twitter: https://dpgr.am/d461541
+  linkedin: https://dpgr.am/22473ac
+  reddit: https://dpgr.am/86d202e
+  facebook: https://dpgr.am/e48bf68
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981427/blog/conversational-ai-platforms-utilize-top-asr-tools/how-conversational-ai-platforms-utilize-top-asr-to.png
+  image: 
 ---
 
 [Conversational AI](https://deepgram.com/solutions/voicebots/) platforms are on the rise. As more and more businesses move towards conversational interfaces, the need for platforms that can handle these interactions grows. And their impact is being recognized. In this year's [State of Voice Technology 2022 report](https://deepgram.com/state-of-voice-technology-2022/), 54% of respondents said that conversational AI is the most impactful use case in speech tech today. In this blog post, we'll take a look at conversational AI platforms and how they utilize top automatic speech recognition (ASR) tools to delight customers with new experiences. We'll also explore some of the problems these platforms solve and some of the most common use cases for conversational AI, as well as how ASR powers them. Before we start looking at how speech-to-text tools can help power conversational AI, let's take a look at what exactly conversational AI is, and how it helps businesses.

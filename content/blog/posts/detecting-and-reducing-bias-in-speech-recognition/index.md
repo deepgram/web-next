@@ -2,7 +2,7 @@
 title: "Detecting and Reducing Bias in Speech Recognition"
 description: "Machine learning bias is top of mind for many people. This blog post will teach you how to identify ASR bias and what to do about it."
 date: 2022-03-09
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981409/blog/detecting-and-reducing-bias-in-speech-recognition/Detecting-Reducing-Bias-in-Speech-thumb-554x220%402x.png
+cover: 
 authors:
   - chris-doty
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "Detecting and Reducing Bias in Speech Recognition"
   description: "Machine learning bias is top of mind for many people. This blog post will teach you how to identify ASR bias and what to do about it."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/c5605cc
+  twitter: https://dpgr.am/06c8953
+  linkedin: https://dpgr.am/c6be640
+  reddit: https://dpgr.am/122807a
+  facebook: https://dpgr.am/275e6be
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981409/blog/detecting-and-reducing-bias-in-speech-recognition/Detecting-Reducing-Bias-in-Speech-thumb-554x220%402x.png
+  image: 
 ---
 
 Bias in machine learning has been a hot topic in the news lately, and bias in ASR is no exception. In the recent [State of Voice Technology 2022 report](https://deepgram.com/state-of-voice-technology-2022/), we saw that 92% of companies believe voice technology bias has an important impact on their customers, including in the domains of gender, race, age, and accent (both native and non-native speaker). So how do you detect bias in your automated speech recognition (ASR) systems? And what do you do if you find it? We've got answers below. But before we dive in, let's start with a definition of what "bias" is to make sure we're all on the same page.

@@ -5,7 +5,7 @@ date: 2021-11-16
 cover: https://res.cloudinary.com/deepgram/image/upload/v1636992625/blog/2021/11/meet-kevin-lewis/belvoir-castle.jpg
 authors:
     - kevin-lewis
-category: careers
+category: devlife
 tags:
     - team
 seo:

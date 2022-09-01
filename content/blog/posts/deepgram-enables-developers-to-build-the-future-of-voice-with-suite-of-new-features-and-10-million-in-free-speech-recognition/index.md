@@ -2,23 +2,23 @@
 title: "Deepgram Enables Developers To Build The Future Of Voice With Suite Of New Features And $10 Million In Free Speech Recognition"
 description: "Deepgram, the leading automatic speech recognition (ASR) provider, today announced a new startup program, in partnership with top accelerators such as Y Combinator, that puts the power of voice recognition in the hands of developers."
 date: 2021-08-03
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981378/blog/deepgram-enables-developers-to-build-the-future-of-voice-with-suite-of-new-features-and-10-million-in-free-speech-recognition/dg-enables-developers%402x.jpg
+cover: 
 authors:
   - katie-byrne
 category: dg-insider
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "Deepgram Enables Developers To Build The Future Of Voice With Suite Of New Features And $10 Million In Free Speech Recognition"
   description: "Deepgram, the leading automatic speech recognition (ASR) provider, today announced a new startup program, in partnership with top accelerators such as Y Combinator, that puts the power of voice recognition in the hands of developers."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/90b46b9
+  twitter: https://dpgr.am/5283147
+  linkedin: https://dpgr.am/8ff02a9
+  reddit: https://dpgr.am/b2e416d
+  facebook: https://dpgr.am/08cf6a6
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981378/blog/deepgram-enables-developers-to-build-the-future-of-voice-with-suite-of-new-features-and-10-million-in-free-speech-recognition/dg-enables-developers%402x.jpg
+  image: 
 ---
 
 ## ASR leader launches developer tools, free speech recognition, enabling developers to put voice at the heart of their business

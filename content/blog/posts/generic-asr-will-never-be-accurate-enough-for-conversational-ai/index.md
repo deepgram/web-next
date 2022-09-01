@@ -2,7 +2,7 @@
 title: "Generic ASR will never be accurate enough for Conversational AI"
 description: "Intent and focus matters for speech understanding for Conversational AI and voicebots. Generic ASRs cannot be tailored for Conversational AI needs. An End to End Deep Learning ASR is needed."
 date: 2021-04-07
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981366/blog/generic-asr-will-never-be-accurate-enough-for-conversational-ai/generic-asr-never-accurate-enough%402x.jpg
+cover: 
 authors:
   - keith-lam
 category: ai-and-engineering
@@ -13,13 +13,13 @@ seo:
   title: "Generic ASR will never be accurate enough for Conversational AI"
   description: "Intent and focus matters for speech understanding for Conversational AI and voicebots. Generic ASRs cannot be tailored for Conversational AI needs. An End to End Deep Learning ASR is needed."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/267c552
+  twitter: https://dpgr.am/19e9469
+  linkedin: https://dpgr.am/37bc821
+  reddit: https://dpgr.am/9d49a16
+  facebook: https://dpgr.am/8f7ef44
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981366/blog/generic-asr-will-never-be-accurate-enough-for-conversational-ai/generic-asr-never-accurate-enough%402x.jpg
+  image: 
 ---
 
 The human brain is amazing in terms of how we can process speech and understand what is said.  If we are talking about a baseball game, your brain understands that when I say "pitcher" and "batter", I don't mean a large vessel for pouring drinks and a mix to cook pancakes.  Your brain matches the words to the context and the intent of the conversation.  Your brain also has an amazing noise filter to focus on the important parts of a conversation.  If you are at a baseball game, there is constant noise around you but when your buddy talks to you, you can focus on his voice, hear him and understand him clearly.  

@@ -2,7 +2,7 @@
 title: "Real-time routing of conversational data is table stakes for enterprises"
 description: "Fuel your companys strategy, insights, and growth with capturing and using the valuable voice data from all your meetings, phone calls, and video conferences."
 date: 2021-07-08
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981377/blog/real-time-routing-of-conversational-data-is-table-stakes-for-enterprises/real-time-routing-convo-data%402x.jpg
+cover: 
 authors:
   - richard-stevenson
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "Real-time routing of conversational data is table stakes for enterprises"
   description: "Fuel your companys strategy, insights, and growth with capturing and using the valuable voice data from all your meetings, phone calls, and video conferences."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/c1a98a3
+  twitter: https://dpgr.am/62017c5
+  linkedin: https://dpgr.am/e0f6aa8
+  reddit: https://dpgr.am/a7cb604
+  facebook: https://dpgr.am/fa6a617
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981377/blog/real-time-routing-of-conversational-data-is-table-stakes-for-enterprises/real-time-routing-convo-data%402x.jpg
+  image: 
 ---
 
 **_With voice data increasingly seen as a strategic asset awash with rich insights, timely access to real-time high-quality audio and transcripts for AI engines to reason over is critical. _** In fact, the advanced capabilities of speech analytics and associated use-cases are making enterprises wake up to the value held in call recordings, with almost 76%* of C-level executives regarding voice data as "valuable" or "very valuable" to their organization.  Add to this the 85%** of organizations regarding ASR as "important" to their future AI strategies, it is evident that the value of the spoken word is rising.

@@ -2,7 +2,7 @@
 title: "Democratizing Speech Analytics: Deepgram + Callbi"
 description: "Callbi has partnered with Deepgram to provide speech analytics in call centers with thousands of agents around the world. Learn more."
 date: 2022-06-21
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981424/blog/democratizing-speech-analytics-deepgram-callbi/deepgram-callbi-thumb-554x220%402x.png
+cover: 
 authors:
   - keith-lam
 category: dg-insider
@@ -12,13 +12,13 @@ seo:
   title: "Democratizing Speech Analytics: Deepgram + Callbi"
   description: "Callbi has partnered with Deepgram to provide speech analytics in call centers with thousands of agents around the world. Learn more."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/4de0bbf
+  twitter: https://dpgr.am/b223380
+  linkedin: https://dpgr.am/6af2ef2
+  reddit: https://dpgr.am/22f135f
+  facebook: https://dpgr.am/4c07300
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981424/blog/democratizing-speech-analytics-deepgram-callbi/deepgram-callbi-thumb-554x220%402x.png
+  image: 
 ---
 
 [Callbi](https://callbi.io/), based in South Africa, has expanded the availability of speech analytics by offering an economical speech analytics solution for contact centers with from twenty agents to thousands of agents. Now they are expanding to the UK, US, Western Europe, and Australia, powered by Deepgram's highly accurate automatic speech recognition solution. Callbi will be able to take advantage of our [24 languages and dialects](https://deepgram.com/product/languages/) and our continuous improvements in accuracy and [feature enhancements](https://deepgram.com/product/speech-to-text-api-overview/). For speech analytics, accuracy is the key. Inaccurate audio transcriptions mean poor insights and outcomes. Deepgram provides Callbi with the highest accuracy plus transcription speeds that allow contact centers to easily transcribe all their calls within the day for faster insights to make critical decisions. Cost has been a barrier to many smaller contact centers that want to implement speech analytics. With this partnership, we are lowering the cost of speech analytics, so large and small contact centers can achieve the benefits that were normally reserved for large enterprises. We both believe that access to new technology should be simple, fast, and easy. See how fast, accurate, and cost-effective, speech analytics can be with Callbi and Deepgram.

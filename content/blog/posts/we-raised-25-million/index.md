@@ -2,25 +2,24 @@
 title: "We Raised $25 Million from Tiger Global and Others to Unlock the Power of Voice Data and Fuel the World’s Big Ideas"
 description: "Deepgrams excited to announce a $25 million Series B, led by Tiger Global, to ensure we can continue the momentum built in 2020. Learn more."
 date: 2021-02-03
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981360/blog/we-raised-25-million/we-raised-25M%402x.png
+cover: 
 authors:
   - scott-stephenson
 category: dg-insider
 tags:
   - machine-learning
-  - speech-recognition
   - voice-strategy
 seo:
   title: "We Raised $25 Million from Tiger Global and Others to Unlock the Power of Voice Data and Fuel the World’s Big Ideas"
   description: "Deepgrams excited to announce a $25 million Series B, led by Tiger Global, to ensure we can continue the momentum built in 2020. Learn more."
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/94780a6
+  twitter: https://dpgr.am/a09a0ba
+  linkedin: https://dpgr.am/d55031c
+  reddit: https://dpgr.am/5febca5
+  facebook: https://dpgr.am/be38106
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981360/blog/we-raised-25-million/we-raised-25M%402x.png
+  image: 
 ---
 
 Over the past year, we have seen the speech recognition market evolve like never before. When we first announced our [Series A](https://blog.deepgram.com/deepgram-series-a/) in March 2020, enterprises were starting to recognize the impact a tailored approach to speech could have on their business. Yet, there was no "race to space" moment driving companies to adopt a new solution, especially when their existing provider was working "fine." That quickly changed when COVID-19 hit. Companies were at an inflection point and forced to fast track digital transformation initiatives, compressing years of well-thought-out plans into mere months, and quickly transitioning teams to a remote workforce. The pandemic exposed the cracks in the foundation-while many enterprises were loosely prepared to adopt a remote workforce, the technology in play was not adequate. Voice enabled technology for example, which was considered a "nice to have", quickly became a necessity for many businesses. **At Deepgram, we take our role in this evolution very seriously. We are on a mission to set the standard for how to build voice enabled applications, and help enterprises differentiate themselves.** 

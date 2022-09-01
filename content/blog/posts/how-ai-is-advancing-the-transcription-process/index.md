@@ -2,23 +2,23 @@
 title: "How AI is Advancing the Transcription Process"
 description: ""
 date: 2019-02-12
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981344/blog/how-ai-is-advancing-the-transcription-process/how-ai-is-advancing-the-transcription-process-blog.jpg
+cover: 
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "How AI is Advancing the Transcription Process"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/daab02b
+  twitter: https://dpgr.am/d0c6100
+  linkedin: https://dpgr.am/7fa1d8e
+  reddit: https://dpgr.am/42bed9d
+  facebook: https://dpgr.am/727a669
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981344/blog/how-ai-is-advancing-the-transcription-process/how-ai-is-advancing-the-transcription-process-blog.jpg
+  image: 
 ---
 
 ![](https://images.unsplash.com/photo-1522165078649-823cf4dbaf46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80) Until recently, there's only been one way to accurately produce real-time audio transcription: voice writers use dictation software to convert audio to text and real-time editors clean up the resulting transcript to produce the final output. Yet, it's costly to have voice writing in the process. Now, companies are shifting from this model, employing automatic speech recognition in place of voice writers.

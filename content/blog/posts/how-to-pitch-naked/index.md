@@ -2,23 +2,23 @@
 title: "How To Pitch Naked"
 description: ""
 date: 2016-11-03
-cover: https://res.cloudinary.com/deepgram/image/upload/v1662069399/blog/how-to-pitch-naked/placeholder-post-image%402x.jpg
+cover: 
 authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "How To Pitch Naked"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/7ae2705
+  twitter: https://dpgr.am/d9d7269
+  linkedin: https://dpgr.am/b934863
+  reddit: https://dpgr.am/cff9815
+  facebook: https://dpgr.am/edcd133
 og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069399/blog/how-to-pitch-naked/placeholder-post-image%402x.jpg
+  image: 
 ---
 
 A few weeks ago, we announced in a _TechCrunch_ exclusive that [Deepgram raised a $1.8 million seed round](https://techcrunch.com/2016/09/27/launching-a-google-for-sound-deepgram-raises-1-8-million/).
@@ -238,7 +238,7 @@ Twitter
 
 SnapChat
 
-![](https://res.cloudinary.com/deepgram/image/upload/v1661725708/blog/how-to-pitch-naked/Screen-Shot-2016-11-02-at-4.16.43-PM.png)
+![](/wp-content/uploads/2016/11/Screen-Shot-2016-11-02-at-4.16.43-PM.png)
 
 
 

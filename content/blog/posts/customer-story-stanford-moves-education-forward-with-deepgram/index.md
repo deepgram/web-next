@@ -7,16 +7,16 @@ authors:
   - natalie-rutgers
 category: dg-insider
 tags:
-  - michael
+  - ohsnap
 seo:
   title: "Stanford Moves Education Forward with Deepgram"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/3fe607a
+  twitter: https://dpgr.am/78c0a02
+  linkedin: https://dpgr.am/9a6da1b
+  reddit: https://dpgr.am/49a58f5
+  facebook: https://dpgr.am/f132aa4
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661981936/blog/customer-story-stanford-moves-education-forward-with-deepgram/placeholder-post-image%402x.jpg
 ---

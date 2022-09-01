@@ -12,11 +12,11 @@ seo:
   title: "New Tech Lets Journalists Find Damning Soundbites"
   description: ""
 shorturls:
-  share: 
-  twitter: 
-  linkedin: 
-  reddit: 
-  facebook: 
+  share: https://dpgr.am/c27f8dc
+  twitter: https://dpgr.am/55db5ef
+  linkedin: https://dpgr.am/dfb2969
+  reddit: https://dpgr.am/6e53dfc
+  facebook: https://dpgr.am/9a2fda5
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069399/blog/new-tech-lets-journalists-find-damning-soundbites/placeholder-post-image%402x.jpg
 ---

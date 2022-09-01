@@ -5,7 +5,7 @@ date: 2021-11-12
 cover: https://res.cloudinary.com/deepgram/image/upload/v1636482805/blog/2021/11/meet-sandra-rodgers/dog-computer-cover.jpg
 authors:
     - sandra-rodgers
-category: careers
+category: devlife
 tags:
     - team
 seo:
