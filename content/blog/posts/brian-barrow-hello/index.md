@@ -5,9 +5,8 @@ date: 2021-11-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1641852668/blog/2021/11/brian-barrow-hello/disc-golf-cover.png
 authors:
     - brian-barrow
-category: devlife
+category: careers
 tags:
-    - careers
     - team
 seo:
     title: "Brian Barrow Joins the Developer Relations Team"

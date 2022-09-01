@@ -5,10 +5,9 @@ date: 2021-11-19
 cover: https://res.cloudinary.com/deepgram/image/upload/v1636422499/blog/2021/11/michael-jolley-joins-deepgram/birmingham-city-scape.jpg
 authors:
     - michael-jolley
-category: devlife
+category: careers
 tags:
     - team
-    - careers
 seo:
     title: "Michael Jolley Joins the Developer Relations Team"
     description: "Welcome Michael Jolley, the bald, bearded, builder to the Deepgram Developer Relations team."

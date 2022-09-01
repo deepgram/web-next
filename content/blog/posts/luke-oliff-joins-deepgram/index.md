@@ -5,9 +5,8 @@ date: 2021-11-30
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638199198/blog/2021/11/luke-oliff-joins-deepgram/luke-oliff-joins-developer-relations-at-deepgram.jpg
 authors:
     - luke-oliff
-category: devlife
+category: careers
 tags:
-    - careers
     - team
 seo:
     title: "Luke Oliff joins the Developer Relations team at Deepgram as a Senior Developer Experience Engineer"

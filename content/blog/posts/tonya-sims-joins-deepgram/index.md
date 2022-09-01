@@ -5,9 +5,8 @@ date: 2022-02-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643739380/blog/2022/02/tonya-sims-joins-deepgram/tonya-city.jpg
 authors:
     - tonya-sims
-category: devlife
+category: careers
 tags:
-    - careers
     - team
 seo:
     title: "Tonya Sims Joins the Developer Relations Team"

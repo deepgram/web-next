@@ -5,9 +5,8 @@ date: 2021-11-16
 cover: https://res.cloudinary.com/deepgram/image/upload/v1636992625/blog/2021/11/meet-kevin-lewis/belvoir-castle.jpg
 authors:
     - kevin-lewis
-category: devlife
+category: careers
 tags:
-    - careers
     - team
 seo:
     title: "Kevin Lewis Joins the Developer Relations Team"

@@ -5,9 +5,8 @@ date: 2022-02-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643986477/blog/2022/02/bekah-joins-deepgram/kettlebells%402x.jpg
 authors:
     - bekah-hawrot-weigel
-category: devlife
+category: careers
 tags:
-    - careers
     - team
 seo:
     title: "Bekah Hawrot Weigel joins the Developer Relations team at Deepgram as the Technical Community Builder"
