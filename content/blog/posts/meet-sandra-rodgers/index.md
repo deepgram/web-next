@@ -8,7 +8,6 @@ authors:
 category: devlife
 tags:
     - careers
-    - team
 seo:
     title: "Sandra Rodgers Joins the Developer Relations Team"
     description: "Sandra Rodgers Joins the Developer Relations Team"

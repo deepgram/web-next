@@ -8,8 +8,6 @@ authors:
 category: tutorial
 tags:
     - raspberrypi
-    - javascript
-    - iot
 seo:
     title: "Video: Building a Live Transcription Badge With Deepgram"
     description: "We show you how we built our popular live transcription badge project."

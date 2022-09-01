@@ -9,7 +9,6 @@ category: tutorial
 tags:
     - graphQL
     - nextjs
-    - stepzen
 seo:
     title: "How to Use Deepgram with Next.js Using StepZen"
     description: "Do you want to learn how to convert Deepgram's API into your own GraphQL API? This post is for you!"

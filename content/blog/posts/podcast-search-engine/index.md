@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - python
-    - podcast
 seo:
     title: "How to Build the World's Ugliest Podcast Search Engine with Python"
     description: "In this post, you'll learn how to search podcast episode transcripts to find words and phrases that were discussed."

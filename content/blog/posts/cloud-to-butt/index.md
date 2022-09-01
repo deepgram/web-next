@@ -7,7 +7,6 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - terminal
 seo:
     title: "Remembering Cloud To Butt"
     description: "Who remembers the Cloud to Butt extension? Say no to buzzwords and use Deepgram's Find and Replace feature to make transcripts way more fun to read."

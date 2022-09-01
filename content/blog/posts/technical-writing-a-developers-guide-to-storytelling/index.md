@@ -9,6 +9,7 @@ category: best-practice
 tags:
     - careers
     - technical-writing
+    - technical-writing
 seo:
     title: "Technical Writing: A Developer's Guide to Storytelling"
     description: "A complete developer's guide with tips and tricks for implementing storytelling into technical writing and documentation. Read more here."

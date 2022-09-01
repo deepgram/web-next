@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - mediastream
-    - javascript
 seo:
     title: "Getting Started with the MediaStream API"
     description: "Get to know the basics of the MediaStream API"

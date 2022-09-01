@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - python
-    - twilio
 seo:
     title: "Speech Recognition with Twilio and Python"
     description: "Use Deepgram's speech-to-text features with Python and Twilio to transcribe audio such as incoming phone calls."

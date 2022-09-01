@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - game-dev
-    - nuxtjs
 seo:
     title: "Building 404 Pages That Bring Joy"
     description: "How we transformed the bad experience of landing on a 404 page into an enjoyable experience with a game."

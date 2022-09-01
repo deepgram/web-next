@@ -8,6 +8,7 @@ authors:
 category: careers
 tags:
     - technical-writing
+    - technical-writing
 seo:
     title: "What is DevRel anyway: A Deepgram Approach to Developer Relations"
     description: "Developer Relations can mean many things. Keep reading for a high-level understanding of what a DevRel team does and a close-up of how our Deepgram team works."

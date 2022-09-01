@@ -7,8 +7,6 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - terminal
-    - podcast
 seo:
     title: "Transcribing Podcast Feeds From Your Terminal"
     description: "Using some terminal magic, learn how to fetch and transcribe podcast episodes. This is a beginner-friendly guide going through every step."

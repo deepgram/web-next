@@ -7,7 +7,6 @@ authors:
     - kevin-lewis
 category: tutorial
 tags:
-    - terminal
 seo:
     title: "Saving Transcripts From Your Terminal"
     description: "Learn how to use cURL to generate and save Deepgram transcripts directly from your terminal. Start now!"

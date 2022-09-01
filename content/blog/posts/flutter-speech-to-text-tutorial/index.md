@@ -54,7 +54,7 @@ Next, find the following two lines:
 
 Update these to the versions shown in the example below:
 
-```
+```txt
 minSdkVersion 24
 targetSdkVersion 32
 ```
@@ -63,7 +63,7 @@ targetSdkVersion 32
 
 For your application to access the microphone on your iPhone or iPad, you'll need to grant permission to this component. Inside your `Podfile`, locate the line: `flutter_additional_ios_build_settings(target)` and below this add the following:
 
-```
+```txt
 target.build_configurations.each do |config|
   config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= [
     '$(inherited)',

@@ -9,6 +9,7 @@ category: best-practice
 tags:
     - careers
     - technical-writing
+    - technical-writing
 seo:
     title: "Technical Writing: Ethics and Honesty for Developers"
     description: "Ethics protects your credibility as a writer and developer and helps to create trust with your readers. Read more about technical writing ethics here."

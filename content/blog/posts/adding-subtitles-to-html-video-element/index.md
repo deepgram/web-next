@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - beginner
-    - javascript
 seo:
     title: "How to Add Captions and Subtitles to HTML5 Videos"
     description: "Generating accurate transcripts is often just the start of a journey. Learn how to use Deepgram's best-in-class transcriptions in HTML Video elements."

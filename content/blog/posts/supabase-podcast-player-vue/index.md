@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - supabase
-    - vuejs
 seo:
     title: "How to Build a Podcast Player with Transcriptions using Vue and Supabase"
     description: "In this post we will walk through setting up a Podcast Player app using Supabase and Vue 3, including getting transcriptions for the podcasts."

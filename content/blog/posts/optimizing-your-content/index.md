@@ -8,6 +8,7 @@ authors:
 category: best-practice
 tags:
     - technical-writing
+    - technical-writing
 seo:
     title: "Technical Writing: Optimize Your Content Creation"
     description: "We spend a lot of time working on developer content. Optimizing your writing by creating a content creation life cycle can help to ensure a larger audience and greater value for the time you put into your writing."

@@ -9,6 +9,7 @@ category: best-practice
 tags:
     - careers
     - technical-writing
+    - technical-writing
 seo:
     title: "Technical Writing: A Beginner's Guide"
     description: "A developer's guide for creating written and technical documentation."

@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - video
-    - daily
 seo:
     title: "Video: Add Live Transcriptions to a Daily Video Call With Deepgram"
     description: "How to set up a Daily video call with live transcriptions."

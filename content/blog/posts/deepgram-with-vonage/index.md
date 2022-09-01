@@ -8,7 +8,6 @@ authors:
 category: tutorial
 tags:
     - python
-    - vonage
 seo:
     title: "Speech Recognition with Vonage and Python"
     description: "Use Deepgram's speech-to-text features with Python and Vonage's API to transcribe real-time audio such as incoming phone calls."

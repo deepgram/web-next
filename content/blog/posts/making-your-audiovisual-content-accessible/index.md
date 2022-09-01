@@ -8,6 +8,7 @@ authors:
 category: tutorial
 tags:
     - accessibility
+    - accessibility
 seo:
     title: "Making Your Audio and Visual Content Accessible"
     description: "Creating audio visual content can be a fresh way to repackage your written developer content, but it’s important to make sure your content is accessible."
