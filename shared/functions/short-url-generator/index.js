@@ -1,4 +1,4 @@
-import { Client, query } from "faunadb";
+const { Client, query } = require("faunadb");
 
 const client = new Client({
 	secret: process.env.FAUNADBSECRET,
