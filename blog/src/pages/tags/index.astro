@@ -39,7 +39,7 @@ tags = [...new Set(tags)];
 			<Link href="/posts" class={`text-lg font-semibold stroke-[3]`} icon="arrow-right" iconSuffix><span>View All Posts</span></Link>
 		</div>
 		<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 lg:grid-cols-4 auto-cols-max grid-flow-row-dense">
-			{uniqueTags.map((tag) => (
+			{tags.map((tag) => (
 				<li class="">
 					<a class="text-darkCharcoal inline-flex items-center text-lg" href={`/tags/${tag}`}>
 						<Icon class="h-4 w-4" icon="tag" />
