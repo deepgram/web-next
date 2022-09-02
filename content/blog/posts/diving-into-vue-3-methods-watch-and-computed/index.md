@@ -54,7 +54,7 @@ Here's what the rendered component looks like:
 
 I am familiar with the **Vue 2** way of adding functions to the component: add each function to the `methods` object:
 
-```js
+```html
 <script>
 export default {
   data() {
