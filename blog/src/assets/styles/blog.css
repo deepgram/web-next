@@ -33,7 +33,7 @@
 }
 
 @media screen(lg) {
-	.bg-svg {
+	.bg-responsive-svg {
 		background-position: center bottom 3rem;
 	}
 }
