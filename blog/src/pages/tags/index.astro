@@ -13,9 +13,10 @@ import Backlink from "../../components/nav/Backlink.astro";
 let tags = [];
 const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
 
-allPosts.forEach((post, i) => {
-	tags = [...tags, ...post.frontmatter.tags];
+allPosts.forEach((post) => {
+  tags.push(...post.frontmatter.tags)
 });
+
 const uniqueTags = Array.from(new Set(tags));
 ---
 
