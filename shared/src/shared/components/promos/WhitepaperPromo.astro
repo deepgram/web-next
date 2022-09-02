@@ -1,10 +1,45 @@
 ---
+import { getSluggedJson } from "../../util";
 import AbstractPromo from "./AbstractPromo.astro";
 import PromoForm from "./PromoForm.astro";
 
-const { strapline, backgroundImage, theme, formProps, buttonText, ...rest } = Astro.props;
+export interface Props {
+	whitepaper: string;
+	[key: string]: string;
+}
+
+export interface Whitepaper {
+	title: string;
+	url: string;
+	theme: string;
+	image: string;
+	date: string;
+	slug?: string;
+}
+
+const { whitepaper: whitepaperSlug, ...rest } = Astro.props as Props;
+
+let whitepaper: Whitepaper;
+const allWhitepapers: Whitepaper[] = await getSluggedJson("whitepapers");
+
+if (whitepaperSlug === "latest") {
+	whitepaper = allWhitepapers.pop();
+} else {
+	whitepaper = allWhitepapers.find((wp) => wp.slug === whitepaperSlug);
+}
+
+const { theme, title, image, url } = whitepaper;
 ---
 
-<AbstractPromo strapline="White Paper" backgroundImage={backgroundImage} theme={theme} {...rest}>
-	<PromoForm theme={theme} formProps={formProps} buttonText={buttonText} />
+<AbstractPromo strapline="White Paper" backgroundImage={image} theme={theme} title={title} {...rest}>
+	<PromoForm
+		theme={theme}
+		url={url}
+		formProps={[
+			{ name: "name", label: "Name (first and last)", placeholder: "Your name" },
+			{ name: "email", label: "Work email", placeholder: "you@company.com", type: "email" },
+			{ name: "role", label: "Role", placeholder: "Role/Title" },
+		]}
+		buttonText="Download"
+	/>
 </AbstractPromo>

@@ -6,26 +6,18 @@ import Title from "../../../shared/components/meta/Title.astro";
 import Description from "../../../shared/components/meta/Description.astro";
 import Meta from "../../../shared/components/meta/Meta.astro";
 import JsonLD from "../../../shared/components/meta/JsonLD.astro";
+import { getSluggedJson } from "../../../shared/util";
 
 export async function getStaticPaths({ paginate }) {
-	const categoryFiles = import.meta.glob("../../../content/blog/category/*.json");
-
-	async function getCategories() {
-		let paths = [];
-		for (const path in categoryFiles) {
-			const category = await categoryFiles[path]();
-			paths.push({ title: category.title, slug: path.split("/").pop().replace(".json", " ").trim() });
-		}
-		return paths;
-	}
-
-	const categories = await getCategories();
+	const categories = await getSluggedJson("blog/category");
 	const allPosts = await Astro.glob("../../../content/blog/posts/**/index.md");
+
 	const sortedPosts = allPosts.sort((a, b) => {
 		const aDate = new Date(b.frontmatter.date);
 		const bDate = new Date(a.frontmatter.date);
 		return aDate.getTime() - bDate.getTime();
 	});
+
 	return categories.map((category) => {
 		const posts = sortedPosts.filter((post) => {
 			return post.frontmatter.category === category.slug;

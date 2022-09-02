@@ -239,11 +239,11 @@ html {
 
 @layer utilities {
 	.form--inline {
-		@apply flex items-end;
+		@apply block lg:flex lg:max-w-full lg:items-end;
 	}
 
 	.form--inline .input-group {
-		@apply grow;
+		@apply max-w-full grow xl:max-w-[50%];
 	}
 
 	.form--inline .input-group input[type="email"],
@@ -259,7 +259,7 @@ html {
 	.form--inline .input-group + .button,
 	.form--inline .input-group + .input-group,
 	.form--inline .button + .input-group {
-		@apply mt-0 ml-4;
+		@apply mt-4 ml-0 xl:ml-4;
 	}
 
 	.input-group--light-bg {
