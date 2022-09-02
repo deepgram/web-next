@@ -1,19 +1,18 @@
 ---
-const { type = "info" } = Astro.props;
+import Icon from "../general/Icon.astro";
+const { type = "info", icon } = Astro.props;
 ---
 
 <div class={`alert ${type}`}>
 	<div class="heading">
-		<div class="icon">
-			<div class={`${type}`}></div>
-		</div>
+		<Icon class="icon" icon={type === "info" ? "info" : type === "warning" ? "warning" : type === "language" ? "language" : icon} />
 	</div>
 	<div class="text w-5/6">
 		<slot />
 	</div>
 </div>
 
-<style scoped>
+<style>
 	.alert {
 		@apply flex flex-row flex-wrap align-middle;
 		@apply text-sm text-black;
@@ -69,11 +68,20 @@ const { type = "info" } = Astro.props;
 		@apply m-4;
 		@apply w-4/6 sm:w-5/6;
 	}
-	/* p + p {
-		@apply mt-0;
+
+	.text :global(ul > li) {
+		@apply list-disc;
 	}
-	ul,
-	ol {
-		@apply mt-0 mb-0;
-	} */
+
+	.text :global(ol > li) {
+		@apply list-decimal;
+	}
+
+	.text :global(li) {
+		@apply ml-10 pb-1;
+	}
+
+	.text :global(p) {
+		@apply py-2;
+	}
 </style>
