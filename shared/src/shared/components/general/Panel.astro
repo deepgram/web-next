@@ -1,0 +1,79 @@
+---
+import Icon from "../general/Icon.astro";
+const { type = "info", title = "Information", fill = "fill-black" } = Astro.props;
+---
+
+<div class={`panel ${type}`}>
+	<div class="heading">
+		<Icon class={`icon h-6 w-6 ${type === "info" ? "fill-casper" : type === "warning" ? "fill-sunflower" : fill}`} icon={type} />
+		<div class="title">
+			{title}
+		</div>
+	</div>
+
+	<div class="text">
+		<slot />
+	</div>
+</div>
+
+<style scoped>
+	.panel {
+		@apply flex flex-row flex-wrap align-middle;
+		@apply text-sm text-black;
+	}
+
+	.heading {
+		@apply border-casper border-b;
+		@apply w-full;
+		@apply flex flex-row flex-wrap items-center;
+		@apply mt-1 sm:mt-0;
+	}
+	.icon {
+		@apply flex flex-col flex-wrap align-middle;
+		@apply m-1 border-0;
+	}
+	.info {
+		@apply border-casper/20 rounded-sm border;
+		@apply bg-casper/20;
+	}
+
+	.warning {
+		@apply border-sunflower/20 rounded-sm border;
+		@apply bg-sunflower/20;
+	}
+
+	.title {
+		@apply flex flex-wrap;
+		@apply m-4;
+		@apply w-4/6 md:w-5/6;
+	}
+
+	.text {
+		@apply ml-3.5 mr-1 w-full py-5;
+		@apply w-11/12;
+	}
+
+	p + p,
+	p + ul,
+	p + ol,
+	p + h3,
+	p + h4 {
+		@apply mt-0;
+	}
+
+	.text :global(ul > li) {
+		@apply list-disc;
+	}
+
+	.text :global(ol > li) {
+		@apply list-decimal;
+	}
+
+	.text :global(li) {
+		@apply ml-10 pb-1 pl-7;
+	}
+
+	.text :global(p) {
+		@apply py-2;
+	}
+</style>
