@@ -27,7 +27,7 @@
 }
 
 @media screen(md) {
-	.bg-svg {
+	.bg-responsive-svg {
 		background-position: center bottom 2rem;
 	}
 }
