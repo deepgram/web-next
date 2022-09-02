@@ -7,7 +7,6 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase
     - machine-learning
     - gpt-3
 seo:
