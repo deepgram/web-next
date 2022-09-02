@@ -17,7 +17,7 @@ allPosts.forEach((post) => {
   tags.push(...post.frontmatter.tags)
 });
 
-const uniqueTags = Array.from(new Set(tags));
+tags = [...new Set(tags)];
 ---
 
 <Layout>
