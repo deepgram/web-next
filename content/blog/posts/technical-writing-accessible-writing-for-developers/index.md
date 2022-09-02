@@ -7,7 +7,6 @@ authors:
     - bekah-hawrot-weigel
 category: tutorial
 tags:
-    - careers
     - technical-writing
 seo:
     title: "Technical Writing: Accessible Writing for Developers"

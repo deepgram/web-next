@@ -7,7 +7,6 @@ authors:
     - kevin-lewis
 category: project-showcase
 tags:
-    - showcase
     - computer-vision
     - hackathon
 seo:
