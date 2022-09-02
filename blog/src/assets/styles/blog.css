@@ -39,7 +39,7 @@
 }
 
 @media screen(xl) {
-	.bg-svg {
+	.bg-responsive-svg {
 		background-position: center bottom 4rem;
 	}
 }
