@@ -3,7 +3,6 @@ import PrimarySection from "../layout/PrimarySection.astro";
 import Svg from "../general/Svg.astro";
 import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
-import ContrastSection from "../decoration/ContrastSection.astro";
 import AmplifyQuote from "../quotes/AmplifyQuote.astro";
 import Button from "../general/Button.astro";
 ---
@@ -35,15 +34,9 @@ import Button from "../general/Button.astro";
 }"
 	class="text-white text-base bg-black"
 >
-	<ContrastSection contrast="black" background="white" topDivider="eclipse-divider" class="mt-20 pb-20">
-		<PrimarySection>
-			<AmplifyQuote>
-				<h1>Ready to see Deepgram in Action?</h1>
-				<p>Get your API key and unlock $150 in free credit.</p>
-				<Link href="https://console.deepgram.com/signup">Start Free</Link>
-			</AmplifyQuote>
-		</PrimarySection>
-	</ContrastSection>
+	<PrimarySection>
+		<AmplifyQuote class="bg-black text-white" type="standard" title="Ready to see Deepgram in Action?" subtitle="Get your API key and unlock $150 in free credit." />
+	</PrimarySection>
 	<PrimarySection>
 		<div class="grid grid-cols-1 w-full sm:w-2/3 lg:w-full lg:grid-cols-5 xl:grid-cols-6 gap-10 items-end pb-14">
 			<div class="lg:col-start-1 lg:col-end-3 flex flex-col space-y-6">

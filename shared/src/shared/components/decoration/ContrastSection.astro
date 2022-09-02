@@ -10,11 +10,11 @@ const { class: classes, background, contrast, topOverlay, bottomOverlay, topDivi
 			<Svg name={topDivider} class:list={["block w-full", "h-4 sm:h-8 md:h-12 lg:h-16 xl:h-20", `bg-${background}`, `fill-${contrast}`]} />
 		</div>
 	)}
-	<div class:list={["relative contrast-content", { "z-[2]": bottomDivider && bottomOverlay }]}>
+	<div class:list={["relative contrast-content", { "z-[-1]": bottomDivider && bottomOverlay }]}>
 		<slot />
 	</div>
 	{bottomDivider && (
-		<div class:list={[{ "z-[1] -mt-12 sm:-mt-20 md:-mt-28 lg:-mt-36 xl:-mt-44": bottomOverlay }]}>
+		<div class:list={[{ "z-[-1] -mt-12 sm:-mt-20 md:-mt-28 lg:-mt-36 xl:-mt-44": bottomOverlay }]}>
 			<Svg name={bottomDivider} class:list={["block w-full", "h-4 sm:h-8 md:h-12 lg:h-16 xl:h-20", `fill-${background}`]} />
 		</div>
 	)}
