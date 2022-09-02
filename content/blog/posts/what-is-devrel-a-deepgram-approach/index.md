@@ -5,7 +5,7 @@ date: 2022-04-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1649423317/blog/2022/04/what-is-devrel-a-deepgram-approach/DevRel-at-DG%402x.jpg
 authors:
     - bekah-hawrot-weigel
-category: careers
+category: devlife
 tags:
     - technical-writing
 seo:

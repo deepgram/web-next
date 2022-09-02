@@ -7,7 +7,6 @@ authors:
     - kevin-lewis
 category: devlife
 tags:
-    - careers
     - team
 seo:
     title: "Kevin Lewis Joins the Developer Relations Team"

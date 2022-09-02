@@ -87,8 +87,10 @@ const og = {
 };
 
 // resize-og-image-to-fit
-const version = og.image.match(/(.*)\/image\/upload\/(?<version>v[0-9]+)\/(.*)\.(.*)/).groups.version;
-og.image = og.image.replace(version, "c_fit,h_627,w_1200");
+if (og.image) {
+	const version = og.image.match(/(.*)\/image\/upload\/(?<version>v[0-9]+)\/(.*)\.(.*)/).groups.version;
+	og.image = og.image.replace(version, "c_fit,h_627,w_1200");
+}
 
 // build short URLs
 const shorturls = {

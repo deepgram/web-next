@@ -7,7 +7,6 @@ authors:
     - tonya-sims
 category: devlife
 tags:
-    - careers
     - team
 seo:
     title: "Tonya Sims Joins the Developer Relations Team"
