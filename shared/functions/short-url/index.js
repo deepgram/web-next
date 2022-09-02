@@ -1,4 +1,5 @@
 const { Client, query } = require("faunadb");
+require("dotenv").config();
 
 const client = new Client({
 	secret: process.env.FAUNADBSECRET,
