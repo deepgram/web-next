@@ -17,7 +17,6 @@ allPosts.forEach((post, i) => {
 	tags = [...tags, ...post.frontmatter.tags];
 });
 const uniqueTags = Array.from(new Set(tags));
-// console.log({ uniqueTags });
 ---
 
 <Layout>
