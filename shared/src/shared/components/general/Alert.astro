@@ -1,0 +1,87 @@
+---
+import Icon from "../general/Icon.astro";
+const { type = "info", fill = "fill-black" } = Astro.props;
+---
+
+<div class={`alert ${type}`}>
+	<div class="heading">
+		<Icon class={`icon h-6 w-6 ${type === "info" ? "fill-casper" : type === "warning" ? "fill-sunflower" : fill}`} icon={type} />
+	</div>
+	<div class="text w-5/6">
+		<slot />
+	</div>
+</div>
+
+<style>
+	.alert {
+		@apply flex flex-row flex-wrap align-middle;
+		@apply text-sm text-black;
+		@apply mt-4;
+	}
+
+	.info {
+		@apply border-casper/20 rounded-sm border;
+		@apply bg-casper/20;
+	}
+	.warning {
+		@apply border-sunflower/20 rounded-sm border;
+		@apply bg-sunflower/20;
+	}
+	.language {
+		@apply border-casper rounded-sm border border-opacity-20;
+		@apply bg-casper bg-opacity-100;
+		@apply m-2.5;
+	}
+
+	.heading {
+		@apply flex flex-row flex-wrap items-start sm:items-center;
+		@apply mt-1 sm:mt-0;
+	}
+	.icon {
+		@apply m-1 border-0;
+	}
+	.icon > * {
+		@apply m-2.5 mr-0;
+		@apply border-0;
+	}
+
+	.icon > .info {
+		background: url("../../../shared/assets/images/info.svg");
+		@apply bg-no-repeat;
+		@apply h-6 w-6;
+	}
+
+	.icon > .warning {
+		background: url("../../../shared/assets/images/warning.svg");
+		@apply bg-no-repeat;
+		@apply h-6 w-6;
+	}
+	.icon > .language {
+		background: url("../../../shared/assets/images/language.svg");
+		@apply bg-no-repeat;
+		@apply h-6 w-6;
+
+		@apply text-white;
+	}
+
+	.text {
+		@apply m-4;
+		@apply w-4/6 sm:w-5/6;
+	}
+
+	.text :global(ul > li) {
+		@apply list-disc;
+	}
+
+	.text :global(ol > li) {
+		@apply list-decimal;
+	}
+
+	.text :global(li) {
+		@apply ml-10 pb-1;
+	}
+
+	.text :global(p) {
+		@apply py-2;
+	}
+</style>
