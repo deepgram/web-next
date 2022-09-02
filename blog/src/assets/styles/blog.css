@@ -20,7 +20,7 @@
 }
 
 @media screen(sm) {
-	.bg-svg {
+	.bg-responsive-svg {
 		background-position: center bottom 1rem;
 		background-size: auto;
 	}
