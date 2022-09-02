@@ -2,7 +2,7 @@
 title: "Whats the Difference Between a Language and a Dialect?"
 description: "Whats a language, what's a dialect? And for that matter, what's an accent? We've got answers—sort of. It's complicated."
 date: 2022-06-14
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981423/blog/difference-between-language-dialect/difference-between-Language-n-dialect-thumb-554x22.png
 authors:
   - chris-doty
 category: tutorial
@@ -12,13 +12,13 @@ seo:
   title: "Whats the Difference Between a Language and a Dialect?"
   description: "Whats a language, what's a dialect? And for that matter, what's an accent? We've got answers—sort of. It's complicated."
 shorturls:
-  share: https://dpgr.am/c8b3746
-  twitter: https://dpgr.am/9cb6068
-  linkedin: https://dpgr.am/7c8b465
-  reddit: https://dpgr.am/bac052b
-  facebook: https://dpgr.am/f9aacca
+  share: https://dpgr.am/678720d
+  twitter: https://dpgr.am/ae1a193
+  linkedin: https://dpgr.am/4f80ef0
+  reddit: https://dpgr.am/87e6e72
+  facebook: https://dpgr.am/5170d87
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981423/blog/difference-between-language-dialect/difference-between-Language-n-dialect-thumb-554x22.png
 ---
 
 There's a long-standing joke that a language is just a dialect with an army and a navy. Part of the reason this phrase has stuck around is because it's pithy, but it's also true in some cases. The language variety considered as a standard is typically that spoken by the leaders, or people who live in the capital (whether the actual political capital or a cultural capital). In the case of "the Queen's English", that's even part of the name of the particular variety. Although this might seem to address the issue of language versus dialect, it's actually quite a bit trickier to define these two terms and to group different language varieties accordingly. In this post, I'm going to walk you through how linguists think about this issue, the usual definition used in linguistics, and some of the problems with that definition. But before we dive into that, let's take a moment to define our terms.
@@ -73,7 +73,7 @@ For example, what if you're comparing Swedish, Norwegian, and Danish which are a
 
 As should be obvious, these languages are extremely similar, but not identical. So what do we do with mutual intelligibility if someone understands 70% of what someone says? Are they speaking the same language? What if they understand 50%? 30%? Where is the cut-off to decide that the varieties are dialects of the same language, or two different languages? I once worked with a linguistic consultant from Bhutan. I was trying to get a sense of how similar his variety was to others spoken in the country (since, another problem with mutual intelligibility-I didn't have speakers of all of them to do experiments and see who could understand who), and I asked him if he could understand the people who lived in the next valley over from where he grew up. He thought for a moment and then described it as a "three-day dialect", meaning that he needed about three days of living around people who spoke the language before he could understand what people there were saying. Are these two varieties of the same language, or two different languages?
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

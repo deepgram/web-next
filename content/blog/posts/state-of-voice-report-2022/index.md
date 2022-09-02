@@ -2,7 +2,7 @@
 title: "State of Voice Tech 2022: New Report Highlights Biggest Voice Tech Adoption Motivators"
 description: "Learn about the motivations for using voice technology, the most impactful uses of voice tech today, and what the future holds for voice."
 date: 2022-01-25
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981405/blog/state-of-voice-report-2022/State-of-Voice-2022-thumb-554x220%402x.png
 authors:
   - shadi-baqleh
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "State of Voice Tech 2022: New Report Highlights Biggest Voice Tech Adoption Motivators"
   description: "Learn about the motivations for using voice technology, the most impactful uses of voice tech today, and what the future holds for voice."
 shorturls:
-  share: https://dpgr.am/84be7e8
-  twitter: https://dpgr.am/64d2a6d
-  linkedin: https://dpgr.am/fe50bc3
-  reddit: https://dpgr.am/53d39f9
-  facebook: https://dpgr.am/b958c42
+  share: https://dpgr.am/d5a530e
+  twitter: https://dpgr.am/2231b16
+  linkedin: https://dpgr.am/90e3d4c
+  reddit: https://dpgr.am/70b6698
+  facebook: https://dpgr.am/aaa7e49
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981405/blog/state-of-voice-report-2022/State-of-Voice-2022-thumb-554x220%402x.png
 ---
 
 In last year's inaugural State of ASR report, we partnered with [Opus Research](https://opusresearch.net/wordpress/) to examine how companies of all sizes use voice technologies built on [ASR (Automatic Speech Recognition)](https://blog.deepgram.com/what-is-asr/) to drive efficiencies and productivity through their organizations. But businesses have come to understand the inherent value of voice and the data it holds, so this year, we wanted to expand beyond just ASR to the entire speech technology industry. We wanted to dig deeper into the motivations for using voice technology, what the future holds for voice, and the most impactful uses of speech and voice technology that companies are seeing today-the [State of Voice Technology](https://deepgram.com/state-of-voice-technology-2022/) report was born. To make it happen, we again partnered with Opus Research, who surveyed 400 North American decision makers-from managers to the C-suite in various industries from finance to healthcare to hospitality-to understand how they are currently using voice technology and what they think is coming in the future. Let's take a look at some of the major findings from this year's report.

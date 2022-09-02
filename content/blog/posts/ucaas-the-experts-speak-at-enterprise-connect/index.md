@@ -12,11 +12,11 @@ seo:
   title: "UCaaS - the experts speak at Enterprise Connect"
   description: ""
 shorturls:
-  share: https://dpgr.am/6e26f2d
-  twitter: https://dpgr.am/a7b3657
-  linkedin: https://dpgr.am/127c13b
-  reddit: https://dpgr.am/65a123a
-  facebook: https://dpgr.am/5c17bb3
+  share: https://dpgr.am/59e4136
+  twitter: https://dpgr.am/8db846b
+  linkedin: https://dpgr.am/6f06257
+  reddit: https://dpgr.am/d903f7b
+  facebook: https://dpgr.am/5a2141d
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069447/blog/ucaas-the-experts-speak-at-enterprise-connect/placeholder-post-image%402x.jpg
 ---

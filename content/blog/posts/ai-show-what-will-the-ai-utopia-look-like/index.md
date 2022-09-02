@@ -2,7 +2,7 @@
 title: "What will the AI Utopia look like? — AI Show"
 description: ""
 date: 2019-02-27
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981351/blog/ai-show-what-will-the-ai-utopia-look-like/what-will-ai-utopia-look-like%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "What will the AI Utopia look like? — AI Show"
   description: ""
 shorturls:
-  share: https://dpgr.am/404fdca
-  twitter: https://dpgr.am/1805bed
-  linkedin: https://dpgr.am/31e6aad
-  reddit: https://dpgr.am/9d5cb36
-  facebook: https://dpgr.am/fd173ea
+  share: https://dpgr.am/e00ea0d
+  twitter: https://dpgr.am/466176f
+  linkedin: https://dpgr.am/069de14
+  reddit: https://dpgr.am/b04485e
+  facebook: https://dpgr.am/2c79813
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981351/blog/ai-show-what-will-the-ai-utopia-look-like/what-will-ai-utopia-look-like%402x.jpg
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pE5-K7gg0kE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/576097014&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
@@ -45,7 +45,7 @@ og:
 
 **Scott:** Take this thing that used to be slices, turn it into something that you can rotate around and look at it and be like, "Oh, there it is."
 
-![bosluk](/wp-content/uploads/2019/02/bos-luk.png)
+![bosluk](https://res.cloudinary.com/deepgram/image/upload/v1661976828/blog/ai-show-what-will-the-ai-utopia-look-like/bos-luk.png)
 
 _An MRI image of a person with an arachnoid cyst in their left, inferior frontal lobe._
 
@@ -101,7 +101,7 @@ Pretty much everybody has seen cars driving around their city mapping everything
 
 **Susan:** They can still make it to Sunday dinners.
 
-![dindin](/wp-content/uploads/2019/02/A-Swedish-American-family-in-a-small-Minnesota-town-entertaining-a-soldier-at-Sunday-dinner.jpg)
+![dindin](https://res.cloudinary.com/deepgram/image/upload/v1661976829/blog/ai-show-what-will-the-ai-utopia-look-like/A-Swedish-American-family-in-a-small-Minnesota-tow.jpg)
 
 **Scott:** Exactly. Take a trip to go shopping, do all of that.
 
@@ -259,7 +259,7 @@ Often people don't really realize what that means for the redesign of an aircraf
 
 **Susan:** Exactly. The same argument now comes over to the self driving car world. You can see it there too. If you got rid of the center, you know the front steering wheel and all the stuff on the console and all that stuff, you'd get a lot more room.
 
-![car](/wp-content/uploads/2019/02/columnless-cart.jpg)
+![car](https://res.cloudinary.com/deepgram/image/upload/v1661976830/blog/ai-show-what-will-the-ai-utopia-look-like/columnless-cart.jpg)
 
 _Courtesy: [Bajiao Studio](http://www.bajiaostudio.com/en/designers/yi-jing)_
 
@@ -305,7 +305,7 @@ And saying, "Hey, here are the laws of physics and here are the constraints that
 
 **Susan:** I'm super, super stoked.
 
-![tokamak](/wp-content/uploads/2019/02/TOKAMAK.JPG)
+![tokamak](https://res.cloudinary.com/deepgram/image/upload/v1661976831/blog/ai-show-what-will-the-ai-utopia-look-like/TOKAMAK.jpg)
 
 _A picture of TOKAMAK at the [Princeton Plasma Physics Laboratory (PPPL)](https://www.pppl.gov/)_
 

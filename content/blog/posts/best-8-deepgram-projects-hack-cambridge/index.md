@@ -2,7 +2,7 @@
 title: "The Best 8 Deepgram Projects from Hack Cambridge"
 description: "Deepgram recently participated in Hack Cambridge—here are the top 8 projects that used our API to create something amazing."
 date: 2022-05-11
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981420/blog/best-8-deepgram-projects-hack-cambridge/best-dg-projects-hack-cambridge-thumb-554x220%402x.png
 authors:
   - chris-doty
 category: dg-insider
@@ -12,18 +12,18 @@ seo:
   title: "The Best 8 Deepgram Projects from Hack Cambridge"
   description: "Deepgram recently participated in Hack Cambridge—here are the top 8 projects that used our API to create something amazing."
 shorturls:
-  share: https://dpgr.am/95ed051
-  twitter: https://dpgr.am/b5c2761
-  linkedin: https://dpgr.am/d24d3de
-  reddit: https://dpgr.am/7b45923
-  facebook: https://dpgr.am/a0f7ec1
+  share: https://dpgr.am/8a4831c
+  twitter: https://dpgr.am/4f84b00
+  linkedin: https://dpgr.am/ccd93c1
+  reddit: https://dpgr.am/3811f57
+  facebook: https://dpgr.am/1442a9c
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981420/blog/best-8-deepgram-projects-hack-cambridge/best-dg-projects-hack-cambridge-thumb-554x220%402x.png
 ---
 
 Back in January, we had the opportunity to support [Hack Cambridge](https://hackcambridge.com/)-a student hackathon sponsored by the University of Cambridge. We ran a challenge for participants to use Deepgram in some way to create a fun and unique hackathon project. [Developer outreach and support](https://developers.deepgram.com/blog/) is a big focus for the Deepgram team, and supporting these students in building cutting-edge projects using our API is a passion for the whole company-we're always pumped to see folks attending events and running hackathons. I don't think it's any exaggeration to say that we were absolutely blown away by the quality of the projects that incorporated Deepgram and used speech-to-text to create something new. Over the last few months, [Kevin Lewis](https://developers.deepgram.com/blog/authors/kevinlewis/), a Senior Developer Advocate here at Deepgram, has been publishing descriptions of some of the projects that used Deepgram. Read on to learn more about the incredibly creative projects that came out of Hack Cambridge 2022.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

@@ -2,7 +2,7 @@
 title: "Hell Yes, We Have SDKs, APIs, and Docs"
 description: "Phase One of our Developer-First initiative to help voice technology developers more easily implement our revolutionary End-to-End AI Speech Platform."
 date: 2021-08-03
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981380/blog/hell-yes-we-have-sdks-apis-and-docs/hell-yes-sdks%402x.jpg
 authors:
   - keith-lam
 category: product-news
@@ -12,13 +12,13 @@ seo:
   title: "Hell Yes, We Have SDKs, APIs, and Docs"
   description: "Phase One of our Developer-First initiative to help voice technology developers more easily implement our revolutionary End-to-End AI Speech Platform."
 shorturls:
-  share: https://dpgr.am/d4d02a8
-  twitter: https://dpgr.am/1ea069c
-  linkedin: https://dpgr.am/5d5dff2
-  reddit: https://dpgr.am/ddf0733
-  facebook: https://dpgr.am/4109c38
+  share: https://dpgr.am/3d69218
+  twitter: https://dpgr.am/19425e4
+  linkedin: https://dpgr.am/2bcb0a1
+  reddit: https://dpgr.am/1cc2dc5
+  facebook: https://dpgr.am/440ed0e
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981380/blog/hell-yes-we-have-sdks-apis-and-docs/hell-yes-sdks%402x.jpg
 ---
 
 We are excited to introduce Phase One of our Developer-First initiative to help voice technology developers implement our revolutionary End-to-End AI Speech Platform more easily**.**

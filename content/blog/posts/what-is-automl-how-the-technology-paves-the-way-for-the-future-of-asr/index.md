@@ -2,7 +2,7 @@
 title: "What is AutoML? How the Technology Paves the Way for the Future of ASR"
 description: ""
 date: 2020-10-22
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981357/blog/what-is-automl-how-the-technology-paves-the-way-for-the-future-of-asr/what-is-automl%402x.jpg
 authors:
   - katie-byrne
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "What is AutoML? How the Technology Paves the Way for the Future of ASR"
   description: ""
 shorturls:
-  share: https://dpgr.am/eed49a8
-  twitter: https://dpgr.am/82c3741
-  linkedin: https://dpgr.am/6ccb220
-  reddit: https://dpgr.am/06ded1d
-  facebook: https://dpgr.am/405de05
+  share: https://dpgr.am/6c64f6c
+  twitter: https://dpgr.am/8542cd5
+  linkedin: https://dpgr.am/2f06f98
+  reddit: https://dpgr.am/e042049
+  facebook: https://dpgr.am/6155e95
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981357/blog/what-is-automl-how-the-technology-paves-the-way-for-the-future-of-asr/what-is-automl%402x.jpg
 ---
 
 There is a lot of buzz around the term "AutoML" and what it can really do for companies. When you hear the term "AI creating AI", it's bound to incite a lot of excitement... and curiosity. At its core, AutoML means automated machine learning. It gives enterprises the power to train and deploy thousands of models to fit the needs of various customers and industries through an automated approach. This capability especially benefits speech recognition, which is notoriously time-consuming, complex and expensive. With 73 percent of organizations [expecting to spend more money](https://deepgram.com/state-of-asr-report/) on speech recognition in the next 12 months, it's critical to ensure that the technology is worth the investment and is as efficient as possible. Our team recently announced [Deepgram AutoML](https://blog.deepgram.com/deepgram-pioneers-novel-training-approach-setting-new-standard-for-ai-companies-2/), a new training capability that streamlines AI model development, reducing manual cycles for data scientists and developers, while providing them with the best accuracy on the market. In light of this exciting news, we wanted to provide a deeper dive into what AutoML actually is and how it can unlock value for companies' voice data.

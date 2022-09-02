@@ -12,11 +12,11 @@ seo:
   title: "What makes Alexa, Siri and HAL tick"
   description: ""
 shorturls:
-  share: https://dpgr.am/6fe77a2
-  twitter: https://dpgr.am/fb55018
-  linkedin: https://dpgr.am/6c33c1f
-  reddit: https://dpgr.am/9c99201
-  facebook: https://dpgr.am/50f5034
+  share: https://dpgr.am/3c94802
+  twitter: https://dpgr.am/29de424
+  linkedin: https://dpgr.am/202a446
+  reddit: https://dpgr.am/4e8f2a8
+  facebook: https://dpgr.am/cd38314
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069455/blog/what-makes-alexa-siri-terminator-and-hal-tick/placeholder-post-image%402x.jpg
 ---

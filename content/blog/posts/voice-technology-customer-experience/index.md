@@ -2,7 +2,7 @@
 title: "Voice Technology and the Changing Landscape of Customer Experience"
 description: "Customer experience is a major differentiator for companies, and voice is providing new ways to drive incredible customer interactions."
 date: 2022-02-08
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981407/blog/voice-technology-customer-experience/voice-tech-and-changing-landscape-of-CX-thumb-554x.png
 authors:
   - chris-doty
 category: speech-trends
@@ -13,13 +13,13 @@ seo:
   title: "Voice Technology and the Changing Landscape of Customer Experience"
   description: "Customer experience is a major differentiator for companies, and voice is providing new ways to drive incredible customer interactions."
 shorturls:
-  share: https://dpgr.am/fbb01f2
-  twitter: https://dpgr.am/621baca
-  linkedin: https://dpgr.am/78a615c
-  reddit: https://dpgr.am/99f3d50
-  facebook: https://dpgr.am/42db934
+  share: https://dpgr.am/7989905
+  twitter: https://dpgr.am/7f075ac
+  linkedin: https://dpgr.am/9f5e1b3
+  reddit: https://dpgr.am/adbdc69
+  facebook: https://dpgr.am/b307a50
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981407/blog/voice-technology-customer-experience/voice-tech-and-changing-landscape-of-CX-thumb-554x.png
 ---
 
 Customer experience is a major differentiator for companies. And with the rise of voice technology, businesses are gaining an improved ability to better understand customer needs and sentiment. As customer conversations are analyzed, companies will be able to more quickly and easily identify appropriate actions to take to improve customer experience. As Amy Brown, founder and CEO of [Authenticx](https://authenticx.com/), said in the recent webinar [**The Importance of Voice Technology for Customer Experiences**](https://offers.deepgram.com/importance-of-voice-technology-for-customer-experiences-on-demand), her company was founded to "help humans understand humans" with technology, including voice technology. This is ultimately the goal of any implementation of voice tech in the realm of customer experience: to empower your employees to better understand your customers and support them. Let's take a look at four of the ways that voice technologies are changing the landscape of customer experience, now and in the coming years.
@@ -32,7 +32,7 @@ There are a range of possible impacts that voice can have on customer experience
 
 One of the primary ways that voice technology is impacting customer experience is by providing new avenues to analyze customer conversations. Audio data is notoriously difficult to deal with; if you want to extract insights for your organization, you need to turn that audio into text. Through [automatic speech recognition](https://blog.deepgram.com/what-is-asr/) (ASR), businesses can create transcripts of spoken conversations in order to get insight into customer interactions. Transcripts create a searchable database of conversations that can be mined for information to improve products, services, and customer support. This text data can also be used for things like internal machine learning projects.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

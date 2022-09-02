@@ -12,11 +12,11 @@ seo:
   title: "Gators at Enterprise Connect?"
   description: ""
 shorturls:
-  share: https://dpgr.am/1c84195
-  twitter: https://dpgr.am/bf35ac5
-  linkedin: https://dpgr.am/a775f00
-  reddit: https://dpgr.am/7d2d72c
-  facebook: https://dpgr.am/32890bd
+  share: https://dpgr.am/d4c4078
+  twitter: https://dpgr.am/83d090c
+  linkedin: https://dpgr.am/0acfa8b
+  reddit: https://dpgr.am/5e82b9a
+  facebook: https://dpgr.am/6fcb347
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069449/blog/gators-at-enterprise-connect/placeholder-post-image%402x.jpg
 ---

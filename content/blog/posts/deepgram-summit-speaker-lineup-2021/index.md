@@ -2,7 +2,7 @@
 title: "Deepgram Announces Final Speaker Lineup and Sessions at Inaugural What’s Next in Voice Summit [on demand]"
 description: ""
 date: 2021-11-18
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981387/blog/deepgram-summit-speaker-lineup-2021/final-speaker-lineup-at-dg-summit-blog-thumb-554x2.png
 authors:
   - katie-byrne
 category: dg-insider
@@ -12,13 +12,13 @@ seo:
   title: "Deepgram Announces Final Speaker Lineup and Sessions at Inaugural What’s Next in Voice Summit [on demand]"
   description: ""
 shorturls:
-  share: https://dpgr.am/e51b7f1
-  twitter: https://dpgr.am/2a6e49f
-  linkedin: https://dpgr.am/8daaa28
-  reddit: https://dpgr.am/11351d6
-  facebook: https://dpgr.am/e0b3acf
+  share: https://dpgr.am/36672ea
+  twitter: https://dpgr.am/c84598c
+  linkedin: https://dpgr.am/9ac4aac
+  reddit: https://dpgr.am/6850667
+  facebook: https://dpgr.am/ac4f1cb
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981387/blog/deepgram-summit-speaker-lineup-2021/final-speaker-lineup-at-dg-summit-blog-thumb-554x2.png
 ---
 
 _Executives from Volley, Red Box and other leading companies will discuss latest industry trends, cutting-edge use cases._ **SAN FRANCISCO, Calif.,  November** **18****, 2021** - [Deepgram](https://deepgram.com/), the leading automatic speech recognition (ASR) provider, today announced the final speaker lineup for its inaugural What's Next in Voice Summit. The virtual event will take place from 11:00 a.m. to 1:30 p.m. PT on Thursday, November 18\. The summit will highlight emerging voice startups and shine a light on the importance of voice across industries - including retail, finance, healthcare and space.  The speaker lineup includes the brightest minds from both legacy enterprise companies and the venture-backed startup community. Confirmed speakers include:

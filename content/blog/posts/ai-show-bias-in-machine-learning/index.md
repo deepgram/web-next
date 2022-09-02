@@ -2,7 +2,7 @@
 title: "What role does bias have in machine learning? — AI Show"
 description: "Welcome to the AI Show. On the AI Show, we talk about all things AI. Today we ask this question:What role does bias have in machine learning?"
 date: 2018-10-19
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981322/blog/ai-show-bias-in-machine-learning/what-role-does-bias-have-in-ml-blog-thumb%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "What role does bias have in machine learning? — AI Show"
   description: "Welcome to the AI Show. On the AI Show, we talk about all things AI. Today we ask this question:What role does bias have in machine learning?"
 shorturls:
-  share: https://dpgr.am/9916d8b
-  twitter: https://dpgr.am/81fdbee
-  linkedin: https://dpgr.am/c42bd1b
-  reddit: https://dpgr.am/365dc8e
-  facebook: https://dpgr.am/25f6bda
+  share: https://dpgr.am/1df2844
+  twitter: https://dpgr.am/06306ca
+  linkedin: https://dpgr.am/634934f
+  reddit: https://dpgr.am/6b81f61
+  facebook: https://dpgr.am/e26011d
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981322/blog/ai-show-bias-in-machine-learning/what-role-does-bias-have-in-ml-blog-thumb%402x.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/mvvbPmYSHcY" width="600" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>**Scott:** Welcome to the AI Show. On the AI Show, we talk about all things AI. Today we ask this question:
@@ -38,7 +38,7 @@ We're biased because we're predisposed towards one thing, but we're picking agai
 
 ### What's a good example?
 
-**Scott:** You have an image recognition program, and you want it to tell the difference between cats and dogs, and all you do is give it cats and dogs, fine. But all of the cats that you give it are brown, and all the dogs that you give it are black. But, then you show it a black cat, and now it guesses that it's a dog. And you're like, "What is that about?" It's because all of the cats that you gave it, or all the dogs you gave it were black, and all the cats were brown, or whatever. It learns these, it doesn't necessarily always learn that, "Hey, that's a cat." How a person would think of it, they think like, "Oh, it's a brown cat." But anything that's brown, I think of it as a cat or something like that. ![alt](/wp-content/uploads/2018/10/Havana_Brown_-_choco.jpg) _ Brown cats are actually rather rare. However, the [Havana Brown Cat](https://commons.wikimedia.org/wiki/File:Havana_Brown_-_choco.jpg) just such a cat._
+**Scott:** You have an image recognition program, and you want it to tell the difference between cats and dogs, and all you do is give it cats and dogs, fine. But all of the cats that you give it are brown, and all the dogs that you give it are black. But, then you show it a black cat, and now it guesses that it's a dog. And you're like, "What is that about?" It's because all of the cats that you gave it, or all the dogs you gave it were black, and all the cats were brown, or whatever. It learns these, it doesn't necessarily always learn that, "Hey, that's a cat." How a person would think of it, they think like, "Oh, it's a brown cat." But anything that's brown, I think of it as a cat or something like that. ![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976754/blog/ai-show-bias-in-machine-learning/Havana_Brown_-_choco.jpg) _ Brown cats are actually rather rare. However, the [Havana Brown Cat](https://commons.wikimedia.org/wiki/File:Havana_Brown_-_choco.jpg) just such a cat._
 
 ### Where is bias introduced?
 
@@ -102,7 +102,7 @@ So going forward there's a chance that machine learning could really help us und
 
 "No, no, no. There should and will probably always be a human in the loop." Use the human intellect. Use the creativity of a person. Use the ability to use common sense as best, you know, in the places that make sense. Essentially, in the ambiguous cases.
 
-Right? There'll always be a human in the loop. The same way that there aren't manufacturing facilities where there's just literally zero people in the building. There are people there. They're making sure the machines are running the way they're supposed to be and they're watching over it. **Susan:** I did a tour of a brewery, which was phenomenal. There they had people constantly running around checking how things are going, because you know, that one little can could throw the whole thing off. **Scott** If they're not putting the labels on, they're just making sure that the labels are put on the right way. **Susan** When you get 4,000 cases of beer that are with an upside down label, what are you going to do with that? Maybe... ![Alt](/wp-content/uploads/2018/10/Bottles-beer-fill--food-drink..jpg) _[Filling machines](https://picryl.com/media/bottles-beer-fill-food-drink-d92590) have automatically filled, capped and labeled beer and other drinks since the 19th century. As machine learning has improved, humans have had to oversee less and less of the process, focusing on more creative aspects of the process, such as creating labels and making tastier beer."_ **Scott:** Ship them to the Deepgram office. **Susan** Yeah, please. **Scott** Any parting thoughts? **Susan:** Man, what's my favorite bias? My favorite bias, I'm biased against raw onions on pizza. Sorry. **Scott:** Huge. Yeah, me too. Onions, tomatoes, yeah, get them out of here. **Susan:** Yeah. **Scott:** I know you won't agree on the tomatoes. **Susan:** Yeah, I mean, tomatoes are pretty amazing.
+Right? There'll always be a human in the loop. The same way that there aren't manufacturing facilities where there's just literally zero people in the building. There are people there. They're making sure the machines are running the way they're supposed to be and they're watching over it. **Susan:** I did a tour of a brewery, which was phenomenal. There they had people constantly running around checking how things are going, because you know, that one little can could throw the whole thing off. **Scott** If they're not putting the labels on, they're just making sure that the labels are put on the right way. **Susan** When you get 4,000 cases of beer that are with an upside down label, what are you going to do with that? Maybe... ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976755/blog/ai-show-bias-in-machine-learning/Bottles-beer-fill--food-drink..jpg) _[Filling machines](https://picryl.com/media/bottles-beer-fill-food-drink-d92590) have automatically filled, capped and labeled beer and other drinks since the 19th century. As machine learning has improved, humans have had to oversee less and less of the process, focusing on more creative aspects of the process, such as creating labels and making tastier beer."_ **Scott:** Ship them to the Deepgram office. **Susan** Yeah, please. **Scott** Any parting thoughts? **Susan:** Man, what's my favorite bias? My favorite bias, I'm biased against raw onions on pizza. Sorry. **Scott:** Huge. Yeah, me too. Onions, tomatoes, yeah, get them out of here. **Susan:** Yeah. **Scott:** I know you won't agree on the tomatoes. **Susan:** Yeah, I mean, tomatoes are pretty amazing.
 
 * * *
 

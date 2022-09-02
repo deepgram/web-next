@@ -2,7 +2,7 @@
 title: "Which Speech Recognition Model is Best for My Business?"
 description: "If youre shopping for automatic speech recognition (ASR), you have options. Learn some of the features that make Deepgram the best choice."
 date: 2022-05-23
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981408/blog/best-speech-recognition-model-business/which-speech-model-best-for-biz-thumb-554x220%402x.png
 authors:
   - keith-lam
 category: product-news
@@ -12,13 +12,13 @@ seo:
   title: "Which Speech Recognition Model is Best for My Business?"
   description: "If youre shopping for automatic speech recognition (ASR), you have options. Learn some of the features that make Deepgram the best choice."
 shorturls:
-  share: https://dpgr.am/bf8ceac
-  twitter: https://dpgr.am/93dcbad
-  linkedin: https://dpgr.am/f13b2bb
-  reddit: https://dpgr.am/fc359f3
-  facebook: https://dpgr.am/5e4f9ca
+  share: https://dpgr.am/4c2774a
+  twitter: https://dpgr.am/ccd2306
+  linkedin: https://dpgr.am/a945e65
+  reddit: https://dpgr.am/83efd1c
+  facebook: https://dpgr.am/ecd2b58
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981408/blog/best-speech-recognition-model-business/which-speech-model-best-for-biz-thumb-554x220%402x.png
 ---
 
 A funny thing happened when Deepgram first decided to use [end-to-end deep learning](https://blog.deepgram.com/deep-learning-speech-recognition/) (E2EDL) to design our next-generation speech-to-text (STT) solution. We found that this approach was hugely flexible and easier to optimize than traditional STT. We didn't have to reconnect and optimize multiple models (acoustic, pronunciation, and language) every time we wanted to make a change. And we could retrain and enhance our speech models without starting from scratch. With transfer learning, we could build new speech models faster. This trait of our technology has allowed us to build different base speech models for different use cases and needs. It also allows us to tailor models in cases where a customer needs something specific that we don't currently offer. Let's take a look at the two types of models that we offer here at Deepgram and what each is good for.
@@ -27,7 +27,7 @@ A funny thing happened when Deepgram first decided to use [end-to-end deep learn
 
 All of our use case-specific models are available in various English dialects. We are expanding into different language-by-use case combinations as we continue to train and optimize our speech models for specific circumstances, such as call centers or meeting transcription, as well as expanding [the spoken languages we offer](https://deepgram.com/product/languages/). Our customers have found that combining a spoken language and use case to create a speech model that works specifically for their needs is more accurate than Big Tech's out-of-the-box, one-size-fits-none models. These targeted models have the fastest speed and are optimized for the best scalability. Our models can transcribe one hour of pre-recorded audio in 30 seconds. These models are great for all applications, especially ones that need very high speeds or cost savings for on-prem use. You also don't need to trade off speed or scalability for high accuracy and because we have multiple models for different use cases-unlike Big Tech-our models tend to be more accurate as well.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

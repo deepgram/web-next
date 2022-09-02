@@ -2,7 +2,7 @@
 title: "New Releases - Five New Languages and Three New Use Case Speech Models"
 description: "Deepgram announces five new languages (French, French Canadian, German, Hindi and Spanish) and three new use case (Earnings Calls, Voicemail, and Video) speech models"
 date: 2021-11-18
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981386/blog/new-releases-five-new-languages-and-three-new-use-case-speech-models/blog-updated-models-use-cases-11-2021-thumb-554x22.png
 authors:
   - natalie-rutgers
 category: product-news
@@ -13,13 +13,13 @@ seo:
   title: "New Releases - Five New Languages and Three New Use Case Speech Models"
   description: "Deepgram announces five new languages (French, French Canadian, German, Hindi and Spanish) and three new use case (Earnings Calls, Voicemail, and Video) speech models"
 shorturls:
-  share: https://dpgr.am/46334d2
-  twitter: https://dpgr.am/33bdd3a
-  linkedin: https://dpgr.am/232edea
-  reddit: https://dpgr.am/5c60789
-  facebook: https://dpgr.am/3129f09
+  share: https://dpgr.am/164df95
+  twitter: https://dpgr.am/7ad57df
+  linkedin: https://dpgr.am/5e47166
+  reddit: https://dpgr.am/fd2dffb
+  facebook: https://dpgr.am/98b4b27
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981386/blog/new-releases-five-new-languages-and-three-new-use-case-speech-models/blog-updated-models-use-cases-11-2021-thumb-554x22.png
 ---
 
 Deepgram is excited to continue executing the vision of having everyone heard and understood through speech recognition.  To that end, we are announcing five new languages and three new use case speech models.  In addition, we have improved our Hindi and Spanish language models and our Conversational AI and Meetings models.  These improvements mean better accuracy for your transcription applications. Through transfer learning backed by our End-to-End Deep Learning architecture and the process of creating conversational audio datasets for training, we have been able to achieve very high accuracy on our new speech models.  Our new models are trained on real conversations, not Libraspeech type datasets of people reading audiobooks because no one talks like they are reading audiobooks.  This allows our speech models to better transcribe jargon, accents, dialects, code-switching (switching from Hindi to English words), terminology (ROI, EBITDA), and alphanumerics.  This means our models provide better real-world transcription accuracy than standard language or general one-size-fits-all speech models. **Improved Production Language Models**

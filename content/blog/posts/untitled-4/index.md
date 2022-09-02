@@ -12,11 +12,11 @@ seo:
   title: "53-second expert interview - Enterprise Connect"
   description: ""
 shorturls:
-  share: https://dpgr.am/fff3d87
-  twitter: https://dpgr.am/c4172f4
-  linkedin: https://dpgr.am/e5d9bbb
-  reddit: https://dpgr.am/3ac24a3
-  facebook: https://dpgr.am/f7774a5
+  share: https://dpgr.am/23d02f4
+  twitter: https://dpgr.am/430e18a
+  linkedin: https://dpgr.am/d3f3e36
+  reddit: https://dpgr.am/400d25a
+  facebook: https://dpgr.am/29d1537
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069450/blog/untitled-4/placeholder-post-image%402x.jpg
 ---

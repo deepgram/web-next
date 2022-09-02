@@ -2,7 +2,7 @@
 title: "Deepgram Announces UniMRCP Integration to Power Modern Customer Experience"
 description: ""
 date: 2020-09-30
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981356/blog/deepgram-announces-unimrcp-integration-to-power-modern-customer-experience/dg-announces-unimrcp-integration%402x.jpg
 authors:
   - katie-byrne
 category: product-news
@@ -12,13 +12,13 @@ seo:
   title: "Deepgram Announces UniMRCP Integration to Power Modern Customer Experience"
   description: ""
 shorturls:
-  share: https://dpgr.am/4c0ede6
-  twitter: https://dpgr.am/2bd6e27
-  linkedin: https://dpgr.am/8c4635d
-  reddit: https://dpgr.am/ccd39cd
-  facebook: https://dpgr.am/6205c64
+  share: https://dpgr.am/3305da7
+  twitter: https://dpgr.am/365425f
+  linkedin: https://dpgr.am/55b72ea
+  reddit: https://dpgr.am/48aa7a5
+  facebook: https://dpgr.am/475e9cb
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981356/blog/deepgram-announces-unimrcp-integration-to-power-modern-customer-experience/dg-announces-unimrcp-integration%402x.jpg
 ---
 
 COVID-19 has created a twofold challenge for customer service operations, inundating contact center employees with customer service queries while simultaneously requiring significant changes to accommodate a reduced and remote workforce. Even before the pandemic, organizations were increasing their focus on customer experience, and that focus has only heightened with less access to in-person customer service and a completely virtual holiday shopping season around the corner. How can organizations increase efficiency, improve complaint resolution and continue to provide a high standard of support under these circumstances?

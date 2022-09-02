@@ -2,7 +2,7 @@
 title: "How Gender Shows up in Language"
 description: "Ever been curious about what gender in language really means? Give this a read to get a high-level, cross-linguistic overview."
 date: 2022-06-28
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981425/blog/how-gender-shows-up-in-language/pride-thumb-554x220%402x.png
 authors:
   - sam-zegas
 category: tutorial
@@ -14,13 +14,13 @@ seo:
   title: "How Gender Shows up in Language"
   description: "Ever been curious about what gender in language really means? Give this a read to get a high-level, cross-linguistic overview."
 shorturls:
-  share: https://dpgr.am/91a2b1f
-  twitter: https://dpgr.am/9f6e348
-  linkedin: https://dpgr.am/78eb52e
-  reddit: https://dpgr.am/175719e
-  facebook: https://dpgr.am/1bb776e
+  share: https://dpgr.am/48a29fe
+  twitter: https://dpgr.am/a0a8b9f
+  linkedin: https://dpgr.am/e430da1
+  reddit: https://dpgr.am/97502ba
+  facebook: https://dpgr.am/9e07a5d
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981425/blog/how-gender-shows-up-in-language/pride-thumb-554x220%402x.png
 ---
 
 Happy Pride! This time last year, we published an article about the language of allyship that included a brief discussion of the history of the [singular they](https://blog.deepgram.com/the-language-of-lgbtq-inclusion-and-allyship/) in English. As this year's Pride Month wraps up, we're coming back to the theme of gender and language for a look at how languages around the world incorporate gender and are influenced by the concept of gender in turn.

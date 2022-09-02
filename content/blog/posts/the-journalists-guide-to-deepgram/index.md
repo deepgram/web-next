@@ -12,11 +12,11 @@ seo:
   title: "The Journalists Guide To Deepgram"
   description: ""
 shorturls:
-  share: https://dpgr.am/dcb7fc5
-  twitter: https://dpgr.am/80a02d8
-  linkedin: https://dpgr.am/2a13ace
-  reddit: https://dpgr.am/ea8e168
-  facebook: https://dpgr.am/779b0f6
+  share: https://dpgr.am/3b6846d
+  twitter: https://dpgr.am/27751ce
+  linkedin: https://dpgr.am/70ba9ed
+  reddit: https://dpgr.am/b27b97c
+  facebook: https://dpgr.am/237f39c
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661983098/blog/the-journalists-guide-to-deepgram/placeholder-post-image%402x.jpg
 ---

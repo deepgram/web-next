@@ -2,7 +2,7 @@
 title: "How Closed Captioning is Enabled by ASR"
 description: "Closed captioning provides accessibility to people who have trouble hearing audio—and with ASR, it’s getting faster and more powerful."
 date: 2022-08-10
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981430/blog/closed-captioning-companies-use-asr/how-closed-captioning-is-enabled-by-ASR-thumb-554x.png
 authors:
   - chris-doty
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "How Closed Captioning is Enabled by ASR"
   description: "Closed captioning provides accessibility to people who have trouble hearing audio—and with ASR, it’s getting faster and more powerful."
 shorturls:
-  share: https://dpgr.am/be60bd8
-  twitter: https://dpgr.am/4ef444a
-  linkedin: https://dpgr.am/34aa658
-  reddit: https://dpgr.am/f8a9650
-  facebook: https://dpgr.am/78de3b6
+  share: https://dpgr.am/d8cecee
+  twitter: https://dpgr.am/1474e89
+  linkedin: https://dpgr.am/289671c
+  reddit: https://dpgr.am/d2c4efd
+  facebook: https://dpgr.am/3318e59
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981430/blog/closed-captioning-companies-use-asr/how-closed-captioning-is-enabled-by-ASR-thumb-554x.png
 ---
 
 There are many different ways that closed captioning is enabled by speech-to-text and automatic speech recognition (ASR). In this blog post, we'll discuss some of the most common of these use cases, including creating captions for live events, podcasts, and transcribing videos. We'll also explore the benefits that state-of-the-art, AI-powered speech-to-text solutions like Deepgram can provide to closed captioning companies. But before we start, let's define what exactly closed captioning is.
@@ -47,7 +47,7 @@ Captioning can also be used to transcribe pre-recorded videos or podcasts. This 
 
 Although you might mostly associate captions with video content, they're also a critical component of accessibility for podcasts. Podcast content has exploded in recent years and has become a major type of media. But it's one that can be difficult or impossible for people who are deaf or hard-of-hearing to access without captions. These captions can help other people, too-non-native speakers, people listening with background noise, and those who'd rather read content than listen to it, to name a few. You can read more about the importance of captioning for podcasts at [Podcast Accessibility](https://podcast-accessibility.com/).
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

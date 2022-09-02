@@ -2,7 +2,7 @@
 title: "5 Ways to Understand the Voice of the Customer with Voice Technology"
 description: "Surveys and interviews are old—use voice technology to understand the voice of your customers better than ever before."
 date: 2022-05-18
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981421/blog/5-ways-understand-voice-of-the-customer-voice-technology/harness-voice-customer-thumb-554x220%402x.png
 authors:
   - chris-doty
 category: speech-trends
@@ -14,18 +14,18 @@ seo:
   title: "5 Ways to Understand the Voice of the Customer with Voice Technology"
   description: "Surveys and interviews are old—use voice technology to understand the voice of your customers better than ever before."
 shorturls:
-  share: https://dpgr.am/2f8465e
-  twitter: https://dpgr.am/7438f1f
-  linkedin: https://dpgr.am/d911190
-  reddit: https://dpgr.am/8ce5d64
-  facebook: https://dpgr.am/6a12f07
+  share: https://dpgr.am/83269b5
+  twitter: https://dpgr.am/804d622
+  linkedin: https://dpgr.am/8ab7271
+  reddit: https://dpgr.am/6ce738c
+  facebook: https://dpgr.am/2112978
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981421/blog/5-ways-understand-voice-of-the-customer-voice-technology/harness-voice-customer-thumb-554x220%402x.png
 ---
 
 There's no doubt that customer feedback is important for businesses. It can help you understand what you're doing well and where you need to make improvements. But in the past, capturing and understanding the voice of the customer was a difficult process-it often involved surveys or focus groups that were time-consuming and expensive to conduct. But now, with the advent of voice technology, businesses have a new way to collect customer feedback and harness the voice of the customer. Voice technology is already being used in a number of customer-facing applications, such as customer service and call center operations. But it's also starting to be used in other areas, such as market research and product development. Voice technology can help businesses collect customer feedback in a more natural and efficient way, and can provide insights that traditional surveys and focus groups may not be able to provide. Before we dive into 5 ways that voice technology is being used to capture the voice of the customer, let's discuss what exactly the voice of the customer is.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

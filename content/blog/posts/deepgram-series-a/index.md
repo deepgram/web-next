@@ -2,7 +2,7 @@
 title: "We Raised $12 Million to Solve Speech Recognition in the Enterprise"
 description: ""
 date: 2020-03-18
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981352/blog/deepgram-series-a/we-raised-12M%402x.jpg
 authors:
   - scott-stephenson
 category: dg-insider
@@ -12,13 +12,13 @@ seo:
   title: "We Raised $12 Million to Solve Speech Recognition in the Enterprise"
   description: ""
 shorturls:
-  share: https://dpgr.am/0f26ecd
-  twitter: https://dpgr.am/69af4f3
-  linkedin: https://dpgr.am/8926a1d
-  reddit: https://dpgr.am/fa7bfc3
-  facebook: https://dpgr.am/3609168
+  share: https://dpgr.am/a68bc67
+  twitter: https://dpgr.am/c4ce8c9
+  linkedin: https://dpgr.am/198c56f
+  reddit: https://dpgr.am/8eeb6ea
+  facebook: https://dpgr.am/366d594
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981352/blog/deepgram-series-a/we-raised-12M%402x.jpg
 ---
 
 The excitement around speech recognition is real: it has the potential to power the next wave of modern applications and give businesses and vendors a competitive advantage. But, with excitement comes misaligned expectations. Speech recognition is a messy, tough and persistent problem for enterprises, one that has languished under existing technology providers for decades. At [Deepgram](https://www.deepgram.com/) we have been working to change that by rebuilding speech recognition from the ground up. Today, we celebrate a key milestone on our path with a $12 million Series A round led by Wing VC, with participation from NVIDIA, Y Combinator, Compound and SAP.iO.
@@ -35,7 +35,7 @@ You can read [Zach's blog post](https://medium.com/wing-vc/wings-investment-in-d
 
 ## Rebuilding Speech From the Ground up
 
-The idea for Deepgram began while I was a PhD student at University of Michigan. My cofounder and I were researching the detection of dark matter two miles underground and in the hours not devoted to research, we life-logged (we made devices that recorded backup copies of the audio surrounding us, 24/7). When we tried to go back and find key conversations and specific moments in those audio files, we felt the very real pain of not having a good tool available to help process the recordings and pinpoint valuable timestamps. That was the spark that created Deepgram. Deepgram has taken an entirely new approach to speech recognition, replacing what hasn't worked-heuristics-based speech processing-with fully end-to-end deep learning. Audio recordings are complex and infinitely varied, meaning there is no one quick-fix to speech recognition. That's why we train speech models to learn and adapt under complex, real-world conditions with customers' unique vocabularies, accents, product names and acoustic environments. Companies dealing with challenging audio from conference calls or call centers previously struggled to make speech scalable, precise and fast enough. With Deepgram, they can transform their speech data into an enterprise asset. Our speech recognition reliably acts as a foundational layer within the next generation of business applications, allowing companies to build something with speech that actually works. ![](/wp-content/uploads/2020/03/Deepgram_SpeechStacks_v5-01.jpg)
+The idea for Deepgram began while I was a PhD student at University of Michigan. My cofounder and I were researching the detection of dark matter two miles underground and in the hours not devoted to research, we life-logged (we made devices that recorded backup copies of the audio surrounding us, 24/7). When we tried to go back and find key conversations and specific moments in those audio files, we felt the very real pain of not having a good tool available to help process the recordings and pinpoint valuable timestamps. That was the spark that created Deepgram. Deepgram has taken an entirely new approach to speech recognition, replacing what hasn't worked-heuristics-based speech processing-with fully end-to-end deep learning. Audio recordings are complex and infinitely varied, meaning there is no one quick-fix to speech recognition. That's why we train speech models to learn and adapt under complex, real-world conditions with customers' unique vocabularies, accents, product names and acoustic environments. Companies dealing with challenging audio from conference calls or call centers previously struggled to make speech scalable, precise and fast enough. With Deepgram, they can transform their speech data into an enterprise asset. Our speech recognition reliably acts as a foundational layer within the next generation of business applications, allowing companies to build something with speech that actually works. ![](https://res.cloudinary.com/deepgram/image/upload/v1661976832/blog/deepgram-series-a/Deepgram_SpeechStacks_v5-01.jpg)
 
 ## Making Speech Work In The Enterprise
 

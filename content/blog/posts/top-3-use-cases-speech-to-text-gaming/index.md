@@ -2,7 +2,7 @@
 title: "Top 3 Use Cases for Speech-to-Text in Gaming"
 description: "Learn three of the top ways that companies are using speech-to-text to improve everyones gaming experience."
 date: 2022-06-02
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981422/blog/top-3-use-cases-speech-to-text-gaming/top-use-cases-asr-video-games-thumb-554x220%402x.png
 authors:
   - chris-doty
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "Top 3 Use Cases for Speech-to-Text in Gaming"
   description: "Learn three of the top ways that companies are using speech-to-text to improve everyones gaming experience."
 shorturls:
-  share: https://dpgr.am/1837237
-  twitter: https://dpgr.am/941b757
-  linkedin: https://dpgr.am/b260007
-  reddit: https://dpgr.am/ebd33b9
-  facebook: https://dpgr.am/16707c9
+  share: https://dpgr.am/7acb112
+  twitter: https://dpgr.am/a67806b
+  linkedin: https://dpgr.am/30fbcbd
+  reddit: https://dpgr.am/5ab6b59
+  facebook: https://dpgr.am/5200007
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981422/blog/top-3-use-cases-speech-to-text-gaming/top-use-cases-asr-video-games-thumb-554x220%402x.png
 ---
 
 In the gaming industry, speech-to-text and voice recognition technology are becoming more and more commonplace. This is due to the fact that they offer a number of advantages for both developers and players alike. In this blog post, we'll cover some of the most common use cases for speech-to-text and voice technology in the video game industry. We'll also discuss the benefits that these technologies offer to both developers and players. Let's get started!
@@ -31,7 +31,7 @@ One of the main benefits of speech-to-text and voice recognition technology is i
 
 Another benefit of speech-to-text and voice recognition technology is improved accessibility. This is because these technologies can allow players with disabilities to play video games that they otherwise would not be able to play. This can be extremely beneficial for players who want to be able to enjoy their favorite hobby, regardless of their physical abilities. Voice commands, for instance, allow players to issue commands to their characters without having to use a controller or type them out. This can help players who have limited mobility or otherwise encounter challenges with traditional gaming interfaces. This winning project from the Gram Gamers category of our recent Deepgram + Dev Hackathon, for example, [lets you control a video game character using only your voice](https://dev.to/sandy_codes_py/play-real-steel-boxing-with-your-voice-atom-the-peoples-champion-e8h). This technology can also let players use voice commands to navigate menus without having to use a controller or mouse.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

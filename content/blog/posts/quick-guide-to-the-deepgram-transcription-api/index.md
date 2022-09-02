@@ -12,11 +12,11 @@ seo:
   title: "Quick Guide to the Deepgram Brain Transcription API"
   description: ""
 shorturls:
-  share: https://dpgr.am/69db914
-  twitter: https://dpgr.am/ca6bbcf
-  linkedin: https://dpgr.am/2fd0dd1
-  reddit: https://dpgr.am/771f752
-  facebook: https://dpgr.am/72c23c5
+  share: https://dpgr.am/12d8503
+  twitter: https://dpgr.am/d89fb0b
+  linkedin: https://dpgr.am/7dd9896
+  reddit: https://dpgr.am/66653d8
+  facebook: https://dpgr.am/89dd0f2
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069447/blog/quick-guide-to-the-deepgram-transcription-api/placeholder-post-image%402x.jpg
 ---

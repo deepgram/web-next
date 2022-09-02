@@ -2,7 +2,7 @@
 title: "5 Reasons Deep Learning for Speech Recognition is Business-Ready Now"
 description: "Have you heard that deep learning for ASR only exists in the lab? Its not true! Here are five ways that deep learning is business-ready now."
 date: 2022-02-15
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981406/blog/deep-learning-asr-for-business/blog-5-Reasons-DL-for-SR-Biz-Ready-Now-thumb-554x2.png
 authors:
   - keith-lam
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "5 Reasons Deep Learning for Speech Recognition is Business-Ready Now"
   description: "Have you heard that deep learning for ASR only exists in the lab? Its not true! Here are five ways that deep learning is business-ready now."
 shorturls:
-  share: https://dpgr.am/75b67b3
-  twitter: https://dpgr.am/2634edd
-  linkedin: https://dpgr.am/dfb10b1
-  reddit: https://dpgr.am/03b0f5f
-  facebook: https://dpgr.am/8b9daea
+  share: https://dpgr.am/a45bacf
+  twitter: https://dpgr.am/0556101
+  linkedin: https://dpgr.am/e941a69
+  reddit: https://dpgr.am/fb544c2
+  facebook: https://dpgr.am/608b4ee
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981406/blog/deep-learning-asr-for-business/blog-5-Reasons-DL-for-SR-Biz-Ready-Now-thumb-554x2.png
 ---
 
 I'm frustrated. When I read from tech authors, advisors, and our competitor's blogs that End-to-End Deep Learning (E2EDL) Speech Recognition software is only being researched or not production-ready, I want to scream...
@@ -35,7 +35,7 @@ Whether you're most interested in lower costs, higher accuracy, faster turnaroun
 
 E2EDL technology is much harder to develop initially but costs less to use. That's because DNNs can utilize hardware acceleration and GPUs to do multiple things at the same time, rather than running things in sequence like a CPU. Overall, you need less computing power than traditional ASR that runs on CPUs. This means you pay for less computer usage time to get transcripts back from your model or from a speech recognition API. Plus, you also save time and money on the model maintenance side, as you only have to maintain one thing, rather than a [Franken-model](https://blog.deepgram.com/what-is-asr/) composed of multiple parts.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

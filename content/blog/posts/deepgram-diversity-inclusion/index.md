@@ -2,7 +2,7 @@
 title: "Building Diversity, Equity, and Inclusion at Deepgram: Every Voice. Heard and Understood"
 description: "This Black History Month, we’re rolling out a new DE&I program. Here’s what’s inside."
 date: 2022-02-28
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981406/blog/deepgram-diversity-inclusion/building-diversity-equity-inclusion-at-DG-thumb-55.png
 authors:
   - sam-zegas
 category: dg-insider
@@ -12,13 +12,13 @@ seo:
   title: "Building Diversity, Equity, and Inclusion at Deepgram: Every Voice. Heard and Understood"
   description: "This Black History Month, we’re rolling out a new DE&I program. Here’s what’s inside."
 shorturls:
-  share: https://dpgr.am/f5c8e0f
-  twitter: https://dpgr.am/5ca63c4
-  linkedin: https://dpgr.am/e31b3a9
-  reddit: https://dpgr.am/a78f4c3
-  facebook: https://dpgr.am/ca3aab1
+  share: https://dpgr.am/978c481
+  twitter: https://dpgr.am/867c88e
+  linkedin: https://dpgr.am/b584234
+  reddit: https://dpgr.am/371d360
+  facebook: https://dpgr.am/67075dc
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981406/blog/deepgram-diversity-inclusion/building-diversity-equity-inclusion-at-DG-thumb-55.png
 ---
 
 Happy Black History Month! This month, we honor the many contributions that Black people have made to the world we live in through their long history of struggles and victories. We are proud of the accomplishments of our Black team members at Deepgram and are taking a moment to reflect on the state of black wellness and the future of success on our team. 

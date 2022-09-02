@@ -12,11 +12,11 @@ seo:
   title: "Do Your Call Transcripts Read Like Mad Libs?"
   description: ""
 shorturls:
-  share: https://dpgr.am/829dde6
-  twitter: https://dpgr.am/9eaf5e0
-  linkedin: https://dpgr.am/28d78e6
-  reddit: https://dpgr.am/48b39ff
-  facebook: https://dpgr.am/841f2bc
+  share: https://dpgr.am/930f41a
+  twitter: https://dpgr.am/9c6307a
+  linkedin: https://dpgr.am/db80e3a
+  reddit: https://dpgr.am/b091cde
+  facebook: https://dpgr.am/3fba72a
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069472/blog/do-your-call-transcripts-read-like-mad-libs/placeholder-post-image%402x.jpg
 ---

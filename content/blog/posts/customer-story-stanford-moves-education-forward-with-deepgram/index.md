@@ -12,11 +12,11 @@ seo:
   title: "Stanford Moves Education Forward with Deepgram"
   description: ""
 shorturls:
-  share: https://dpgr.am/3fe607a
-  twitter: https://dpgr.am/78c0a02
-  linkedin: https://dpgr.am/9a6da1b
-  reddit: https://dpgr.am/49a58f5
-  facebook: https://dpgr.am/f132aa4
+  share: https://dpgr.am/7c2b833
+  twitter: https://dpgr.am/f7d8118
+  linkedin: https://dpgr.am/44aca79
+  reddit: https://dpgr.am/2a1fb73
+  facebook: https://dpgr.am/3bbec6a
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661981936/blog/customer-story-stanford-moves-education-forward-with-deepgram/placeholder-post-image%402x.jpg
 ---

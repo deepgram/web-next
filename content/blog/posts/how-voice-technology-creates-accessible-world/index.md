@@ -2,7 +2,7 @@
 title: "How Voice Technology Creates a More Accessible World [7 Ways]"
 description: "Voice tech isn’t just shaking up enterprises; it’s also providing real quality-of-life improvements for people. Here are 7 examples."
 date: 2022-04-26
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981419/blog/how-voice-technology-creates-accessible-world/how-voice-tech-creates-more-accessible-world-thumb.png
 authors:
   - chris-doty
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "How Voice Technology Creates a More Accessible World [7 Ways]"
   description: "Voice tech isn’t just shaking up enterprises; it’s also providing real quality-of-life improvements for people. Here are 7 examples."
 shorturls:
-  share: https://dpgr.am/51c97f7
-  twitter: https://dpgr.am/dd56c70
-  linkedin: https://dpgr.am/acb7944
-  reddit: https://dpgr.am/35b7b88
-  facebook: https://dpgr.am/2e4a3f6
+  share: https://dpgr.am/2434c02
+  twitter: https://dpgr.am/5da4554
+  linkedin: https://dpgr.am/abbb9ba
+  reddit: https://dpgr.am/af3a26b
+  facebook: https://dpgr.am/c74c058
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981419/blog/how-voice-technology-creates-accessible-world/how-voice-tech-creates-more-accessible-world-thumb.png
 ---
 
 Voice technologies like speech-to-text (STT) (also called automatic speech recognition, or ASR) have had a profound impact across the enterprise. From contact centers analyzing interactions with customers to automatically creating meeting transcripts, voice tech is a huge part of businesses today. In fact, in the recent [State of Voice Tech 2022](https://offers.deepgram.com/2022-state-of-voice-technology-report) report, 99% of respondents indicated that voice technologies are going to be a large part of their future plans. But something that's often overlooked is the way that voice technologies are improving lives.  Being able to interact with one's voice is creating improvements in accessibility and access to information for everyone, but especially for those who might have trouble using things like computers or smartphones. In this blog post, we'll provide an overview of the top 7 ways that voice tech is supporting accessibility and inclusion today.
@@ -43,7 +43,7 @@ Most of us take for granted being able to easily move around our homes and do th
 
 Voice tech can be used to provide real-time captioning and transcription services. The options for this, as the technology has improved in recent years and moved to [end-to-end deep learning systems](https://deepgram.com/blog/deep-learning-speech-recognition/), are nearly endless. For example, you might use a speech-to-text system to automatically transcribe what you're saying and display it on a badge, as in [this project by Deepgram Senior Developer Advocate Kevin Lewis](https://blog.deepgram.com/live-transcription-badge-video/). A similar, commercial product is being developed by one of our customers, [Badger](https://satellitedisplay.com/#Product). In addition to real-time captioning, transcriptions after the fact can also help some people. For example, [classroom lectures can present a number of accessibility challenges](https://blog.deepgram.com/automatic-speech-recognition-education/), but [using a system that provides transcripts of classes](https://blog.deepgram.com/classroom-captioner/) can help those students both during class and after. [Jamworks](https://jamworks.com/us/), another Deepgram customer, is working to make education more inclusive and accessible.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

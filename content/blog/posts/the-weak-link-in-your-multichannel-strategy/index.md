@@ -2,7 +2,7 @@
 title: "Is Speech the Weak Link in Your Multichannel Strategy?"
 description: ""
 date: 2018-07-19
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981314/blog/the-weak-link-in-your-multichannel-strategy/speech-weak-link%402x.jpg
 authors:
   - scott-stephenson
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "Is Speech the Weak Link in Your Multichannel Strategy?"
   description: ""
 shorturls:
-  share: https://dpgr.am/512bd86
-  twitter: https://dpgr.am/0684969
-  linkedin: https://dpgr.am/97eaeb8
-  reddit: https://dpgr.am/b9f3d45
-  facebook: https://dpgr.am/c5a141d
+  share: https://dpgr.am/3e670d8
+  twitter: https://dpgr.am/63dcaa0
+  linkedin: https://dpgr.am/0e8d7ea
+  reddit: https://dpgr.am/5515887
+  facebook: https://dpgr.am/6970f46
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981314/blog/the-weak-link-in-your-multichannel-strategy/speech-weak-link%402x.jpg
 ---
 
 With the prevalence of mobile technologies like smartphones and laptops, it's no surprise that today's customers have come to expect seamless communication. They want answers in seconds, and companies are taking steps to make that expectation a reality.

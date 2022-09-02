@@ -12,11 +12,11 @@ seo:
   title: "Bitcoin Beat the Trough of Sorrow"
   description: ""
 shorturls:
-  share: https://dpgr.am/b8fc334
-  twitter: https://dpgr.am/734754d
-  linkedin: https://dpgr.am/6d12ab4
-  reddit: https://dpgr.am/80bde33
-  facebook: https://dpgr.am/3e0c99a
+  share: https://dpgr.am/ed6bcde
+  twitter: https://dpgr.am/e00db47
+  linkedin: https://dpgr.am/e9a5cfc
+  reddit: https://dpgr.am/a3e42d5
+  facebook: https://dpgr.am/9c6145a
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069441/blog/bitcoin-beat-the-trough-of-sorrow/placeholder-post-image%402x.jpg
 ---
@@ -25,13 +25,13 @@ It's official-**Bitcoin has survived the Trough of Sorrow** [[1]](#cit1)[[2]](#c
 
 ### BTC price since birth
 
-![](/wp-content/uploads/2016/12/Screen-Shot-2016-12-02-at-3.33.21-PM.png)
+![](https://res.cloudinary.com/deepgram/image/upload/v1661725764/blog/bitcoin-beat-the-trough-of-sorrow/Screen-Shot-2016-12-02-at-3.33.21-PM.png)
 
 Look familiar? _It should._ It's a spitting image of The Startup Curve [[4]](#cit4):
 
 ### The Startup Curve
 
-![](/wp-content/uploads/2016/12/pg_startup_curve-1.png)
+![](https://res.cloudinary.com/deepgram/image/upload/v1661725765/blog/bitcoin-beat-the-trough-of-sorrow/pg_startup_curve-1.png)
 
 **Uncanny, right?**
 
@@ -45,7 +45,7 @@ Some blame the Chinese Bitcoin buyers for the crash, others just thought BTC was
 
 Some festivities are in order. For me, I've fired up the old GPU mining rigs in [Deepgram's](https://www.deepgram.com/) AI Lab. It's gettin' hot in here. ;)
 
-![](/wp-content/uploads/2016/12/deepgram_gpus.jpg)
+![](https://res.cloudinary.com/deepgram/image/upload/v1661725766/blog/bitcoin-beat-the-trough-of-sorrow/deepgram_gpus.jpg)
 
 <a id="cit1"></a>[1] Hacker News: [The Startup Curve](https://news.ycombinator.com/item?id=173261)  
 <a id="cit2"></a>[2] Shirlaws Coaching: [From Paul Graham's Trough of Sorrow to Infinity and Beyond](http://www.shirlawscoaching.co.uk/shirlawsresources/2011/8/25/from-paul-grahams-trough-of-sorrow-to-infinity-and-beyond.html)  

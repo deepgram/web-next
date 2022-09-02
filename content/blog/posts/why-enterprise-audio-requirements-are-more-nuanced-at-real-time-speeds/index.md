@@ -2,7 +2,7 @@
 title: "Why Enterprise Audio Requirements are More “Nuanced” at Real-time Speeds"
 description: "Review of Nuance and Deepgram for Real-Time Speech to Text Transcriptions"
 date: 2021-02-16
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981361/blog/why-enterprise-audio-requirements-are-more-nuanced-at-real-time-speeds/enterprise-audio-reqs-more-nuanced%402x.jpg
 authors:
   - keith-lam
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "Why Enterprise Audio Requirements are More “Nuanced” at Real-time Speeds"
   description: "Review of Nuance and Deepgram for Real-Time Speech to Text Transcriptions"
 shorturls:
-  share: https://dpgr.am/d255f26
-  twitter: https://dpgr.am/d6be9f7
-  linkedin: https://dpgr.am/fe4dbbf
-  reddit: https://dpgr.am/c7c769d
-  facebook: https://dpgr.am/e27bd9b
+  share: https://dpgr.am/bb88bde
+  twitter: https://dpgr.am/fe888c1
+  linkedin: https://dpgr.am/da9bdf3
+  reddit: https://dpgr.am/f02c6da
+  facebook: https://dpgr.am/79ef36a
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981361/blog/why-enterprise-audio-requirements-are-more-nuanced-at-real-time-speeds/enterprise-audio-reqs-more-nuanced%402x.jpg
 ---
 
 Nuance recently acquired Saykara, a mobile speech recognition technology provider to expand their medical transcription business. This acquisition is one of many major investments and acquisitions in the Natural Language Processing (NLP) and Customer Service space that we are monitoring at Deepgram. Due to the recent acquisition of Saykara, we thought it would be a good time to review Nuance speech recognition capabilities and why customers creating real-time experiences should consider alternatives. Enterprise audio is more nuanced than it may seem - pun intended! 

@@ -12,11 +12,11 @@ seo:
   title: "Upcoming January Releases"
   description: ""
 shorturls:
-  share: https://dpgr.am/89014cb
-  twitter: https://dpgr.am/4ea1d79
-  linkedin: https://dpgr.am/182a7fb
-  reddit: https://dpgr.am/3d8384d
-  facebook: https://dpgr.am/9500f56
+  share: https://dpgr.am/1ab8fb6
+  twitter: https://dpgr.am/2c214bb
+  linkedin: https://dpgr.am/ecc7afb
+  reddit: https://dpgr.am/7a16a37
+  facebook: https://dpgr.am/1fe2dd1
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069487/blog/upcoming-january-releases/placeholder-post-image%402x.jpg
 ---

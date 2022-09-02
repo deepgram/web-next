@@ -2,7 +2,7 @@
 title: "Does unsupervised learning create superior speech recognition?"
 description: "Learn about the three major AI speech model training methods used and which method yields more accurate results."
 date: 2021-06-02
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981373/blog/does-unsupervised-learning-create-superior-speech-recognition/does-unsupervised-learning-create%402x.jpg
 authors:
   - katie-byrne
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "Does unsupervised learning create superior speech recognition?"
   description: "Learn about the three major AI speech model training methods used and which method yields more accurate results."
 shorturls:
-  share: https://dpgr.am/b08d43a
-  twitter: https://dpgr.am/8f824d4
-  linkedin: https://dpgr.am/9c95794
-  reddit: https://dpgr.am/7852bcd
-  facebook: https://dpgr.am/ec79b21
+  share: https://dpgr.am/cf7c30a
+  twitter: https://dpgr.am/e74f6e7
+  linkedin: https://dpgr.am/aec3d90
+  reddit: https://dpgr.am/67b5505
+  facebook: https://dpgr.am/4ab06b0
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981373/blog/does-unsupervised-learning-create-superior-speech-recognition/does-unsupervised-learning-create%402x.jpg
 ---
 
 Recently there have been a number of articles published around the use of unsupervised learning for speech recognition. We asked members of our research team for their take on this type of training, and if it yields more accurate results. The short answer is No. Read further to learn why. 

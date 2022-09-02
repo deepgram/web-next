@@ -2,7 +2,7 @@
 title: "What is Speaker Diarization?"
 description: "Want to learn more about what speaker diarization is and how it works? Weve got you—this post has everything you need to know."
 date: 2022-08-16
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981430/blog/what-is-speaker-diarization/what-is-speaker-diarization-thumb-554x220-1.png
 authors:
   - keith-lam
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "What is Speaker Diarization?"
   description: "Want to learn more about what speaker diarization is and how it works? Weve got you—this post has everything you need to know."
 shorturls:
-  share: https://dpgr.am/42212f8
-  twitter: https://dpgr.am/4b8aa0e
-  linkedin: https://dpgr.am/ade4ef4
-  reddit: https://dpgr.am/4f36015
-  facebook: https://dpgr.am/d4919e6
+  share: https://dpgr.am/5c88637
+  twitter: https://dpgr.am/8dab2fc
+  linkedin: https://dpgr.am/3d52c5d
+  reddit: https://dpgr.am/aa2ece3
+  facebook: https://dpgr.am/b33a9a4
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981430/blog/what-is-speaker-diarization/what-is-speaker-diarization-thumb-554x220-1.png
 ---
 
 Speaker diarization is a process of separating individual speakers in an audio stream so that, in the automatic speech recognition (ASR) transcript, each speaker's utterances are separated. Each speaker is separated by their unique audio characteristics and their utterances are bucketed together. This type of feature can also be called speaker labels or speaker change detection. Customers who use audio with multiple speakers and want transcripts to appear in a more readable format often use speaker diarization.  Example without speaker diarization:
@@ -62,7 +62,7 @@ As we mentioned above, creating readable transcripts is one major use, but other
 
 ## What Are the Metrics for Speaker Diarization?
 
-The main metric used for speaker diarization in the business world is the accuracy of identifying the individual speakers or "who spoke what". Most of the measures in academia are measures of "who spoke when". We believe the best way to measure speaker diarization improvement is to measure time base confusion error rate (tCER) and time based time based diarization error rate (tDER). **Time-based Confusion Error Rate ** (tCER)  = confusion time / total reference and model speech time **Time-based Diarization Error Rate ** (tDER) = false alarm time + missed detection time + confusion time / total reference and model speech time ![](https://deepgram.com/wp-content/uploads/2022/08/speaker-diarization-blog.gif) **Key** M = Missed model F = False alarm C = Confusion tCER is based on how much time the diarization identifies the wrong speaker over the total time of audio with speech. The smaller the CER the better the diarization. If there are four speakers and the diarization process has a CER of 10% then for one hour of spoken audio, it misidentified speakers for 6 minutes.  A tCER of less than 10% would be considered very good. However, this measurement is not weighted by the number of speakers or other measures, so you can have a 10% tCER result with identifying one speaker on a two-speaker call when one speaker dominates the conversation for 90% of the time and the secondary speaker only speaks 10%. Deepgram's testing consists of audio with widely varying durations and speaker counts. The other metric is tDER which adds to tCER by including false alarm time (time the model thinks someone is talking when there is just noise or silence) and missed detection time (time where there is speech but the model does not pick it up as speech). tDER is a more standard measure and can provide some more insights into model performance.
+The main metric used for speaker diarization in the business world is the accuracy of identifying the individual speakers or "who spoke what". Most of the measures in academia are measures of "who spoke when". We believe the best way to measure speaker diarization improvement is to measure time base confusion error rate (tCER) and time based time based diarization error rate (tDER). **Time-based Confusion Error Rate ** (tCER)  = confusion time / total reference and model speech time **Time-based Diarization Error Rate ** (tDER) = false alarm time + missed detection time + confusion time / total reference and model speech time ![](https://res.cloudinary.com/deepgram/image/upload/v1661976860/blog/what-is-speaker-diarization/speaker-diarization-blog.gif) **Key** M = Missed model F = False alarm C = Confusion tCER is based on how much time the diarization identifies the wrong speaker over the total time of audio with speech. The smaller the CER the better the diarization. If there are four speakers and the diarization process has a CER of 10% then for one hour of spoken audio, it misidentified speakers for 6 minutes.  A tCER of less than 10% would be considered very good. However, this measurement is not weighted by the number of speakers or other measures, so you can have a 10% tCER result with identifying one speaker on a two-speaker call when one speaker dominates the conversation for 90% of the time and the secondary speaker only speaks 10%. Deepgram's testing consists of audio with widely varying durations and speaker counts. The other metric is tDER which adds to tCER by including false alarm time (time the model thinks someone is talking when there is just noise or silence) and missed detection time (time where there is speech but the model does not pick it up as speech). tDER is a more standard measure and can provide some more insights into model performance.
 
 ## Speaker Diarization with Deepgram vs. Others
 
@@ -79,6 +79,6 @@ The [full documentation and implementation guides](https://developers.deepgram.c
 
 If you're looking to get started with a speech-to-text solution, [feel free to contact us](https://deepgram.com/contact-us/) and we'll be happy to discuss your use case and help you get started. Or, you can [sign up for Console for free and get $150 in credits](https://console.deepgram.com/signup) to give Deepgram a try.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 

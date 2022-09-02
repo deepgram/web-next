@@ -2,7 +2,7 @@
 title: "Propelled by Product, Customer and Industry Momentum, Deepgram Continues to Build the Future of Speech Recognition"
 description: "Deepgram, the leading automatic speech recognition vendor, today announces continued momentum following impressive company and customer growth as the demand for automatic speech recognition (ASR) continues to rise. Deepgram will mark the end of Q2 2021 with 3.2x YoY revenue growth and 2.7x YoY employee growth."
 date: 2021-06-29
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981377/blog/propelled-by-product-customer-and-industry-momentum-deepgram-continues-to-build-the-future-of-speech-recognition/propelled-by-product%402x.jpg
 authors:
   - katie-byrne
 category: dg-insider
@@ -12,13 +12,13 @@ seo:
   title: "Propelled by Product, Customer and Industry Momentum, Deepgram Continues to Build the Future of Speech Recognition"
   description: "Deepgram, the leading automatic speech recognition vendor, today announces continued momentum following impressive company and customer growth as the demand for automatic speech recognition (ASR) continues to rise. Deepgram will mark the end of Q2 2021 with 3.2x YoY revenue growth and 2.7x YoY employee growth."
 shorturls:
-  share: https://dpgr.am/df757b6
-  twitter: https://dpgr.am/5fbe111
-  linkedin: https://dpgr.am/0d08691
-  reddit: https://dpgr.am/55403c0
-  facebook: https://dpgr.am/8a2419a
+  share: https://dpgr.am/afd1751
+  twitter: https://dpgr.am/48398ba
+  linkedin: https://dpgr.am/fd312e3
+  reddit: https://dpgr.am/b720800
+  facebook: https://dpgr.am/7af8826
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981377/blog/propelled-by-product-customer-and-industry-momentum-deepgram-continues-to-build-the-future-of-speech-recognition/propelled-by-product%402x.jpg
 ---
 
 ## Growth fueled by increased ASR adoption, expanding software customer base and key executive hires

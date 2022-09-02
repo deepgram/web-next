@@ -2,7 +2,7 @@
 title: "New Spanish and Turkish Language Models and Updated General Models"
 description: "We have general released a new Spanish and Turkish speech model, improve all our general models and are limited releasing a Hindi and Conversational AI model"
 date: 2021-05-10
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981370/blog/new-spanish-and-turkish-language-models-and-updated-general-models/new-spanish-turkish-models%402x.jpg
 authors:
   - keith-lam
 category: product-news
@@ -12,13 +12,13 @@ seo:
   title: "New Spanish and Turkish Language Models and Updated General Models"
   description: "We have general released a new Spanish and Turkish speech model, improve all our general models and are limited releasing a Hindi and Conversational AI model"
 shorturls:
-  share: https://dpgr.am/21eedb1
-  twitter: https://dpgr.am/89aca81
-  linkedin: https://dpgr.am/790989a
-  reddit: https://dpgr.am/70c0450
-  facebook: https://dpgr.am/69449d3
+  share: https://dpgr.am/6ac16c4
+  twitter: https://dpgr.am/7606b8e
+  linkedin: https://dpgr.am/10c5121
+  reddit: https://dpgr.am/d22ac7d
+  facebook: https://dpgr.am/8068d70
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981370/blog/new-spanish-and-turkish-language-models-and-updated-general-models/new-spanish-turkish-models%402x.jpg
 ---
 
 Our Production Team and Deepgram Labs are releasing new languages and speech models.

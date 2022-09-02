@@ -2,7 +2,7 @@
 title: "Top 7 Uses for Speech-to-Text in Education"
 description: "Speech recognition can have a big impact in education. Here are 7 of the top use cases."
 date: 2022-07-29
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981427/blog/top-7-uses-speech-to-text-education/use-cases-for-speech-recognition-in-education-thum.png
 authors:
   - chris-doty
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "Top 7 Uses for Speech-to-Text in Education"
   description: "Speech recognition can have a big impact in education. Here are 7 of the top use cases."
 shorturls:
-  share: https://dpgr.am/c3e6ad4
-  twitter: https://dpgr.am/08bf785
-  linkedin: https://dpgr.am/44fb6b1
-  reddit: https://dpgr.am/e70d6f5
-  facebook: https://dpgr.am/30cc5b2
+  share: https://dpgr.am/ccbd569
+  twitter: https://dpgr.am/c3b7901
+  linkedin: https://dpgr.am/e375afd
+  reddit: https://dpgr.am/0977cc5
+  facebook: https://dpgr.am/e4b2401
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981427/blog/top-7-uses-speech-to-text-education/use-cases-for-speech-recognition-in-education-thum.png
 ---
 
 When most people think about speech recognition, they think about personal assistant applications like Siri or Alexa. But as speech technology becomes cheaper and faster, we're seeing more and more use cases in domains and industries where speech-to-text tools haven't been used much in the past. In this post, we're going to discuss 7 of the most common use cases of speech recognition for learning and education, as well as who can benefit most from this technology. But to start, let's clarify what speech recognition in learning is.
@@ -51,7 +51,7 @@ Some research projects require students to transcribe interviews or speeches. Sp
 
 Speech recognition can be used to help students learn languages. For example, there are applications that allow students to practice their pronunciation by speaking into the app. Automatic speech recognition can be used to assess a student's pronunciation skills. This is valuable for language learners who need to practice their speaking skills, or want to check how well they're pronouncing certain words or phrases.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

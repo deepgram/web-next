@@ -2,7 +2,7 @@
 title: "How to Get a Job In Deep Learning"
 description: ""
 date: 2016-09-23
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981209/blog/how-to-get-a-job-in-deep-learning/how-to-get-job-deep-learning%402x.jpg
 authors:
   - scott-stephenson
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "How to Get a Job In Deep Learning"
   description: ""
 shorturls:
-  share: https://dpgr.am/7934f93
-  twitter: https://dpgr.am/5552f73
-  linkedin: https://dpgr.am/2156541
-  reddit: https://dpgr.am/bddeb99
-  facebook: https://dpgr.am/ea3c60e
+  share: https://dpgr.am/2135e00
+  twitter: https://dpgr.am/b0c8183
+  linkedin: https://dpgr.am/c21ca8a
+  reddit: https://dpgr.am/5337044
+  facebook: https://dpgr.am/a1bf486
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981209/blog/how-to-get-a-job-in-deep-learning/how-to-get-job-deep-learning%402x.jpg
 ---
 
 ![alt](http://c.statcounter.com/11113593/0/bc92dd0f/1/)If you're a software engineer (or someone who's learning the craft), chances are that you've heard about deep learning (which we'll sometimes abbreviate as "DL"). It's an interesting and rapidly developing field of research that's now being used in industry to address a wide range of problems, from image classification and handwriting recognition, to machine translation and, infamously, [beating the world champion Go player in four games out of five.](http://www.theverge.com/2016/3/15/11213518/alphago-deepmind-go-match-5-result) A lot of people think you need a PhD or tons of experience to get a job in deep learning, but if you're already a decent engineer, you can pick up the requisite skills and techniques pretty quickly. At least, that's our philosophy. (So even if you're a beginner with deep learning, you're welcome to apply for [one of our open positions](https://deepgram.com/company/careers/).) **Important point:** You need motivation and the ability to code and problem solve well. That's about it. Here at [Deepgram](https://www.deepgram.com/) we're using deep learning to tackle the problem of [speech search](https://blog.deepgram.com/search-through-sound-finding-phrases-in-audio/). Basically, we're teaching machines to listen to and remember the contents of recorded conversation, phone calls, online videos, podcasts, and anything else that has audio of people talking. But listening is just half of it. We're also teaching machines to recall key words and phrases from these recordings in a similar way to how our brains search for memories of conversation: by the sound of those key words and phrases you type into the search bar. Getting involved in deep learning may seem a bit daunting at first, but the good news is that there are more resources out there now than ever before. (There's also a huge, pent up demand for engineers who know how to implement deep learning in software.) So, if you want to get yourself a job in deep learning but need to get yourself up to speed first, let this be your guide! _(If you already know a lot about deep learning and you're just looking for information about getting a job in the field, skip to the bottom.)_

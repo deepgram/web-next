@@ -2,7 +2,7 @@
 title: "Detecting and Reducing Bias in Speech Recognition"
 description: "Machine learning bias is top of mind for many people. This blog post will teach you how to identify ASR bias and what to do about it."
 date: 2022-03-09
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981409/blog/detecting-and-reducing-bias-in-speech-recognition/Detecting-Reducing-Bias-in-Speech-thumb-554x220%402x.png
 authors:
   - chris-doty
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "Detecting and Reducing Bias in Speech Recognition"
   description: "Machine learning bias is top of mind for many people. This blog post will teach you how to identify ASR bias and what to do about it."
 shorturls:
-  share: https://dpgr.am/c5605cc
-  twitter: https://dpgr.am/06c8953
-  linkedin: https://dpgr.am/c6be640
-  reddit: https://dpgr.am/122807a
-  facebook: https://dpgr.am/275e6be
+  share: https://dpgr.am/4911de4
+  twitter: https://dpgr.am/d10214e
+  linkedin: https://dpgr.am/a82d026
+  reddit: https://dpgr.am/5852ee4
+  facebook: https://dpgr.am/3da44b9
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981409/blog/detecting-and-reducing-bias-in-speech-recognition/Detecting-Reducing-Bias-in-Speech-thumb-554x220%402x.png
 ---
 
 Bias in machine learning has been a hot topic in the news lately, and bias in ASR is no exception. In the recent [State of Voice Technology 2022 report](https://deepgram.com/state-of-voice-technology-2022/), we saw that 92% of companies believe voice technology bias has an important impact on their customers, including in the domains of gender, race, age, and accent (both native and non-native speaker). So how do you detect bias in your automated speech recognition (ASR) systems? And what do you do if you find it? We've got answers below. But before we dive in, let's start with a definition of what "bias" is to make sure we're all on the same page.
@@ -27,7 +27,7 @@ Bias in machine learning has been a hot topic in the news lately, and bias in AS
 
 It's important to understand that when people talk about bias and machine learning, they might be talking about two different things. On the one hand, they might mean **real-world bias** related to things like race, gender, age, etc. But the term bias is also used in **machine learning** when a model is overpredicting or underpredicting the probability for a given category. That's true even if that category is something that we might not apply the term "bias" to in the real world. For example, a model developed by a brewery to track when its vats are at risk of overheating might sound the alarm frequently, even when there is no risk of overheating-a problem of machine learning bias, but not real-world bias. In many cases, though, when people talk about "machine learning bias" generally-especially in the media-they're referring to the intersection of real world and machine learning bias: a case where a model is overpredicting or underpredicting in terms of something like gender or race. With these definitions out of the way, let's turn to examining where bias comes from before moving on to how you might figure out if you've got bias in your ASR system, as well as what your next steps are if you've found it.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

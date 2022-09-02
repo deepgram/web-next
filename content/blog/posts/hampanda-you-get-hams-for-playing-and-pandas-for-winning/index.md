@@ -12,11 +12,11 @@ seo:
   title: "HamPanda: You get Hams for Playing and Pandas for Winning"
   description: ""
 shorturls:
-  share: https://dpgr.am/2c93712
-  twitter: https://dpgr.am/fd104dd
-  linkedin: https://dpgr.am/c091242
-  reddit: https://dpgr.am/52530cd
-  facebook: https://dpgr.am/6560e9e
+  share: https://dpgr.am/5a2688c
+  twitter: https://dpgr.am/df6d163
+  linkedin: https://dpgr.am/6c1ae3d
+  reddit: https://dpgr.am/4678e7e
+  facebook: https://dpgr.am/d4433ff
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069442/blog/hampanda-you-get-hams-for-playing-and-pandas-for-winning/placeholder-post-image%402x.jpg
 ---

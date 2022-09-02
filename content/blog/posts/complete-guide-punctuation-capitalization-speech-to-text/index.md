@@ -2,7 +2,7 @@
 title: "The Complete Guide to Punctuation & Capitalization in Speech-to-Text"
 description: "Punctuation and capitalization make text more readable, but they aren’t a part of every ASR system. In this post, youll learn why they matter."
 date: 2022-08-17
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981431/blog/complete-guide-punctuation-capitalization-speech-to-text/mplete-guide-to-punctuation-capitalization-in-spee.png
 authors:
   - chris-doty
 category: tutorial
@@ -13,13 +13,13 @@ seo:
   title: "The Complete Guide to Punctuation & Capitalization in Speech-to-Text"
   description: "Punctuation and capitalization make text more readable, but they aren’t a part of every ASR system. In this post, youll learn why they matter."
 shorturls:
-  share: https://dpgr.am/7a386bc
-  twitter: https://dpgr.am/d75d2ef
-  linkedin: https://dpgr.am/ee652e8
-  reddit: https://dpgr.am/646cfcb
-  facebook: https://dpgr.am/52929db
+  share: https://dpgr.am/9da2db0
+  twitter: https://dpgr.am/2edede0
+  linkedin: https://dpgr.am/7e36e39
+  reddit: https://dpgr.am/240a42e
+  facebook: https://dpgr.am/db5fb50
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981431/blog/complete-guide-punctuation-capitalization-speech-to-text/mplete-guide-to-punctuation-capitalization-in-spee.png
 ---
 
 Do you ever get frustrated when you're trying to dictate a text message or email and your phone keeps capitalizing the wrong words? Or adding extra periods at the end of your sentences? You're not alone! Automatic speech recognition for punctuation and capitalization can be tricky. In this blog post, we'll explore what punctuation and capitalization mean, how they're used, and some of the problems they present for speech-to-text solutions. We'll also explain what your best option for a speech recognition solution is if you need a transcript that's punctuated and capitalized correctly. To get started, let's take a look at what punctuation and capitalization are, how they're used, and how they different cross-linguistically.
@@ -56,7 +56,7 @@ If you need punctuation in your transcripts, what are your options? ASR provider
 
 You might have said "a period", which is probably what one of these _post hoc_ models would have said. But is this a question or a statement? From the text alone, without any context, it's impossible to determine-it could be a statement or a question. If I played the audio for you, though, you'd immediately understand whether the sentence is a question or a statement based on the speaker's intonation. Determining the correct punctuation in this case is impossible with the words alone; it's much easier if you have access to the audio. This leads us to the second way to add punctuation to a transcript. If you're using an [end-to-end deep learning system](https://blog.deepgram.com/deep-learning-speech-recognition/) as part of the process to generate your transcript, it's possible to have it output punctuation and capitalization at the same time as the words. A model that creates both text and punctuation can make decisions based on acoustic information, which is often the difference between good and bad punctuation. Let's consider another example. 
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 Consider how the word "huh" might be used in speech:
 
@@ -68,7 +68,7 @@ All of these are clearly different to a native speaker of English, and you'd hav
 
 ## How to Evaluate Punctuation and Capitalization Accuracy
 
-So how do you evaluate the accuracy of different punctuation and capitalization methods? You can do similar calculations that are used for [word error rate (WER)](https://blog.deepgram.com/what-is-word-error-rate/), a standard way of calculating the accuracy of ASR transcripts. For punctuation, we use the Punctuation Error Rate (PER). When calculating the PER, we care about how punctuation is placed relative to the words (its grammatical accuracy); PER is thus the number of punctuation errors (including misplacements relative to the truth words) divided by the number of truth punctuation tokens; i.e., number of real places that should have punctuation, as seen below. ![](https://deepgram.com/wp-content/uploads/2022/08/per_def.png) The Capitalization Error (CapER) is used for capitalization accuracy, and has its own subtlety. If we were to compare capitalization across all words in a text, we'd have a very skewed metric because most words aren't capitalized. Rather than comparing the first letter of all words in the truth/predicted sequences, we compare just the aligned words which are capitalized in the truth and/or predicted text. ![](https://deepgram.com/wp-content/uploads/2022/08/caper_example.png) In the example above, we see that there are two capitalization errors in a sentence with only two capitalized words in the truth text.
+So how do you evaluate the accuracy of different punctuation and capitalization methods? You can do similar calculations that are used for [word error rate (WER)](https://blog.deepgram.com/what-is-word-error-rate/), a standard way of calculating the accuracy of ASR transcripts. For punctuation, we use the Punctuation Error Rate (PER). When calculating the PER, we care about how punctuation is placed relative to the words (its grammatical accuracy); PER is thus the number of punctuation errors (including misplacements relative to the truth words) divided by the number of truth punctuation tokens; i.e., number of real places that should have punctuation, as seen below. ![](https://res.cloudinary.com/deepgram/image/upload/v1661976861/blog/complete-guide-punctuation-capitalization-speech-to-text/per_def.png) The Capitalization Error (CapER) is used for capitalization accuracy, and has its own subtlety. If we were to compare capitalization across all words in a text, we'd have a very skewed metric because most words aren't capitalized. Rather than comparing the first letter of all words in the truth/predicted sequences, we compare just the aligned words which are capitalized in the truth and/or predicted text. ![](https://res.cloudinary.com/deepgram/image/upload/v1661976861/blog/complete-guide-punctuation-capitalization-speech-to-text/caper_example.png) In the example above, we see that there are two capitalization errors in a sentence with only two capitalized words in the truth text.
 
 ## Deepgram's Punctuation and Capitalization for ASR Offerings
 

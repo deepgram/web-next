@@ -2,7 +2,7 @@
 title: "6 Biggest Challenges of Automatic Speech Recognition (ASR) for Hindi"
 description: "Speech-to-text systems for Hindi can encounter some unique challenges. Here are 6 of the biggest ones that tend to crop up."
 date: 2022-03-17
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981411/blog/6-challenges-asr-hindi/6-biggest-challenges-of-ASR-for-Hindi-thumb-554x22.png
 authors:
   - dan-shafer
 category: tutorial
@@ -13,13 +13,13 @@ seo:
   title: "6 Biggest Challenges of Automatic Speech Recognition (ASR) for Hindi"
   description: "Speech-to-text systems for Hindi can encounter some unique challenges. Here are 6 of the biggest ones that tend to crop up."
 shorturls:
-  share: https://dpgr.am/d9adcd6
-  twitter: https://dpgr.am/cb91970
-  linkedin: https://dpgr.am/d398c58
-  reddit: https://dpgr.am/30dd385
-  facebook: https://dpgr.am/cbe9445
+  share: https://dpgr.am/1fb276e
+  twitter: https://dpgr.am/f7bd5e2
+  linkedin: https://dpgr.am/eb4f800
+  reddit: https://dpgr.am/ee4763e
+  facebook: https://dpgr.am/a927f55
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981411/blog/6-challenges-asr-hindi/6-biggest-challenges-of-ASR-for-Hindi-thumb-554x22.png
 ---
 
 As Deepgram expands [the number of languages that we offer automatic speech recognition (ASR) for](https://deepgram.com/product/languages/), we're bound to run into languages that present different challenges than we encountered for English. In this blog post, we'll review six of the biggest challenges that are present for people looking to create a Hindi speech-to-text model. Before we dive into the specifics, let's take a look at what Hindi is and where it's spoken.
@@ -40,7 +40,7 @@ Perhaps the first challenge that arises when trying to build an ASR model for Hi
 
 Because Hindi is a lingua franca in India, maybe people speak it as a second (or even third or fourth) language. This means that, even in conversations that are in Hindi, speakers may be switching between it and other languages, a phenomenon called [code switching](https://en.wikipedia.org/wiki/Code-switching). This can make it difficult for an ASR model to track what's being said. Even if speakers from other languages aren't code switching, Hindi has a lot of loanwords from other languages. This can make it difficult for ASR to correctly identify the words, since the pronunciation may not follow the usual rules of Hindi. Add on to that the fact that Hindi has several different dialects, and this can again make it difficult for ASR to correctly recognize words, since the same word can be pronounced differently in different dialects.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

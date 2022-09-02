@@ -2,7 +2,7 @@
 title: "Tips on Choosing a Call Analytics Development Path"
 description: ""
 date: 2021-10-13
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981382/blog/tips-on-choosing-a-call-analytics-development-path/choosing-call-analytics-dev-path-blog-thumb-554x22.png
 authors:
   - keith-lam
 category: ai-and-engineering
@@ -12,18 +12,18 @@ seo:
   title: "Tips on Choosing a Call Analytics Development Path"
   description: ""
 shorturls:
-  share: https://dpgr.am/759ae98
-  twitter: https://dpgr.am/bc752f9
-  linkedin: https://dpgr.am/4e63cb0
-  reddit: https://dpgr.am/23e4eba
-  facebook: https://dpgr.am/e1f20d1
+  share: https://dpgr.am/32b250a
+  twitter: https://dpgr.am/b295c2c
+  linkedin: https://dpgr.am/447bbd8
+  reddit: https://dpgr.am/7536bf0
+  facebook: https://dpgr.am/3c00d41
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981382/blog/tips-on-choosing-a-call-analytics-development-path/choosing-call-analytics-dev-path-blog-thumb-554x22.png
 ---
 
 Call analysis can be real-time or post-call to pull out relevant data or review to make sure the agent said, "This call is being recorded for coaching purposes," or "Prices can fluctuate before you book." Data analysis can look at how many times customers say, "stop my service," use profanity, are angry, are happy, or used words that indicate customer churn. On the positive side, analysis can see how many times a salesperson recommended an add-on service, provided promotional free items, talked less than the customer, or was in a good mood. This process starts with recording and collecting the audio from both the customer and the agent, normally on two channels, and sending it to a speech-to-text solution that converts the audio to text. The speech-to-text platform may also send other metadata to help the Natural Language Processing/Understanding solution determine the intent of the conversation. NLP/NLU solutions take the text and try to find the intent of the conversation and sentiment. Is the conversation about a product sale or product issue? Are the customer and agent happy or angry? This data is fed into a data integrator that organizes the text and meta-data, like sentiment, into a database that can be queried. The end-user business intelligence (BI) application uses the data query to create the dashboards for supervision and management of all the calls. The overall goal of call analytics is to improve customer experience, improve customer support, increase sales or reduce costs.
 
-#### ![](https://deepgram.com/wp-content/uploads/2021/10/call-analytics-reference-architecture@2x-1.png)
+#### ![](https://res.cloudinary.com/deepgram/image/upload/v1661976848/blog/tips-on-choosing-a-call-analytics-development-path/call-analytics-reference-architecture%402x-1.png)
 
 #### Audio and Meta-Data Collection
 

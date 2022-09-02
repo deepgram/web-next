@@ -12,11 +12,11 @@ seo:
   title: "What is the Most Important Channel to Engage Your Customers On?"
   description: ""
 shorturls:
-  share: https://dpgr.am/c0241bd
-  twitter: https://dpgr.am/f28a4d4
-  linkedin: https://dpgr.am/644466a
-  reddit: https://dpgr.am/a8a2b47
-  facebook: https://dpgr.am/1d2abda
+  share: https://dpgr.am/b7484fd
+  twitter: https://dpgr.am/7efb009
+  linkedin: https://dpgr.am/a2dbb8d
+  reddit: https://dpgr.am/9ab6a68
+  facebook: https://dpgr.am/dcc327c
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069472/blog/what-is-the-most-important-channel-to-engage-your-customers-on/placeholder-post-image%402x.jpg
 ---

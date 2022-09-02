@@ -2,7 +2,7 @@
 title: "Opening Keynote - Jeff Blankenberg, Principal Technical Evangelist, Amazon Alexa - Project Voice X"
 description: "Opening Keynote presented by Jeff Blankenberg, Principal Technical Evangelist at Amazon Alexa, presented on day one of Project Voice X. "
 date: 2021-12-09
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981394/blog/opening-keynote-jeff-blankenberg-principal-technical-evangelist-amazon-alexa-project-voice-x/proj-voice-x-session-jeff-blankenberg-blog-thumb-5.png
 authors:
   - claudia-ring
 category: speech-trends
@@ -13,13 +13,13 @@ seo:
   title: "Opening Keynote - Jeff Blankenberg, Principal Technical Evangelist, Amazon Alexa - Project Voice X"
   description: "Opening Keynote presented by Jeff Blankenberg, Principal Technical Evangelist at Amazon Alexa, presented on day one of Project Voice X. "
 shorturls:
-  share: https://dpgr.am/eb3d14f
-  twitter: https://dpgr.am/52ffe8a
-  linkedin: https://dpgr.am/a641363
-  reddit: https://dpgr.am/60e7812
-  facebook: https://dpgr.am/c81d001
+  share: https://dpgr.am/3f51f66
+  twitter: https://dpgr.am/c9c956c
+  linkedin: https://dpgr.am/81098ee
+  reddit: https://dpgr.am/5c101a2
+  facebook: https://dpgr.am/43755d3
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981394/blog/opening-keynote-jeff-blankenberg-principal-technical-evangelist-amazon-alexa-project-voice-x/proj-voice-x-session-jeff-blankenberg-blog-thumb-5.png
 ---
 
 _This is the transcript for the opening keynote presented by Jeff Blankenberg, Principal Technical Evangelist at Amazon Alexa, presented on day one of Project Voice X._ _The transcript below has been modified by the Deepgram team for readability as a blog post, but the original Deepgram ASR-generated transcript was **94% accurate.**  Features like diarization, custom vocabulary (keyword boosting), redaction, punctuation, profanity filtering and numeral formatting are all available through Deepgram's API.  If you want to see if Deepgram is right for your use case, [contact us](https://deepgram.com/contact-us/)._ [Jeff Blankenberg:] I just wanna make sure I'm really clear on that disclaimer because the last thing I need is my PR team saying, what did you say? That's that's the worst thing that could happen. Ok. So the future for us is still really fuzzy. We're looking at it from a perspective like this. Right? We're out in space, and we know there's a thing there, but it's really unclear. It's it's it's quite fuzzy. But what we do know at the center of all of this is people. People are the reason for everything we do. We go to work to create products and services for people. We create free time to spend time with the people in our lives that are important to us. People are the reason for pretty much everything we do in our lives. I want you to imagine for a minute, if you're skeptical about that point, about being the only person left on earth. For a few of us, this probably sounds awesome. I'm so tired of all the noise and nonsense that some people can bring into our lives. But this guy specifically, his life has changed fundamentally. His entire world is about survival, and how am I gonna get on to the next thing. Because there aren't people there to create and generate all of the things that we just take for granted in our lives. But it's not just about the people. Right? It's also about all the technology that surrounds us. In fact, I wanted to think of a world where we had people and technology combined, and I wanted to find a way in which that specifically created a ton of stress and anxiety for all of us. Like, the the mixture of people in technology, and I found one. And so I want you guys to be prepared here when you see this next image 'cause this brings a lot of stress to my life. The incoming call. Anyone else? This this just gives me a little bit of tension, a little anxiety. When you think about the idea that someone's just calling me out of the blue, no. That's not how it works anymore. When someone says, hey. You know what? I'll just call you later. I know what my response is. Chill. Just text me, bro. Like, I don't need a phone call right now. And I thought a lot about this. Why is it that the incoming phone call is so off putting? Aside from the fact that we're spammed to death from, you know, extended warranties on our cars and stuff like that,

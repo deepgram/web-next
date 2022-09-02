@@ -2,7 +2,7 @@
 title: "What are the different types of machine learning? - AI Show"
 description: ""
 date: 2018-09-15
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981314/blog/ai-show-different-types-of-machine-learning/what-are-the-different-types-of-machine-learning-b.jpg
 authors:
   - scott-stephenson
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "What are the different types of machine learning? - AI Show"
   description: ""
 shorturls:
-  share: https://dpgr.am/1b1b2cc
-  twitter: https://dpgr.am/4da1592
-  linkedin: https://dpgr.am/5184400
-  reddit: https://dpgr.am/b9d5514
-  facebook: https://dpgr.am/50c5477
+  share: https://dpgr.am/5c9136c
+  twitter: https://dpgr.am/cd3415f
+  linkedin: https://dpgr.am/b61ac44
+  reddit: https://dpgr.am/af0a17a
+  facebook: https://dpgr.am/4bfcd8a
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981314/blog/ai-show-different-types-of-machine-learning/what-are-the-different-types-of-machine-learning-b.jpg
 ---
 
 <iframe width="600" height="315" src="https://www.youtube.com/embed/7VMio8Tk2so" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
@@ -36,7 +36,7 @@ Usually people think about three different types, like reinforcement learning, u
 
 **Scott**: So, people play the game Go. AlphaGo is a machine playing Go, being very good at it, and beating the world's top Go players.
 
- [![alt](/wp-content/uploads/2018/09/alphago.jpg)](https://www.independent.co.uk/life-style/gadgets-and-tech/news/google-alphago-computer-beats-professional-at-worlds-most-complex-board-game-go-a6837506.html)
+ [![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976374/blog/ai-show-different-types-of-machine-learning/alphago.jpg)](https://www.independent.co.uk/life-style/gadgets-and-tech/news/google-alphago-computer-beats-professional-at-worlds-most-complex-board-game-go-a6837506.html)
 
 **Susan**: Another one that's really fun and has popped up the last couple of years is based off of Atari games. Atari specifically has a great tool kit if you're into this world. If you want to learn more, dig up the [Atari learning environment](http://yavar.naddaf.name/ale/) and start going through a lot of go of code associated with that. It's a phenomenal toolkit for all sorts of stuff, but specifically it's been helping reinforcement learning because these games are a series actions. They lead to reward, a score.
 
@@ -69,7 +69,7 @@ You know, the classic, "I take a move, my opponent takes a move, I take a move, 
 
 So, say I have four options in front of me. I choose A and I'm in state _n_ right now. There's some probability based off of the action I choose for what state I'll end up in after that. Reinforcement learning allows me to understand those probabilities, these transitions, and also what's called the best policy. In other words, given all this information, "What is the best action I should take to get some sort of reward in the end?" But, it sounds dry and academic when you start talking that way. It's a lot better when you say, "Hey, I'm gonna play Pole Position. Do I move the car left? Do I move it right? Do I tell it to speed up? Do I tell it to slow down?" It's the same thing.
 
- [![alt](/wp-content/uploads/2018/09/poleposition.png)](https://en.wikipedia.org/wiki/Pole_Position)
+ [![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976374/blog/ai-show-different-types-of-machine-learning/poleposition.png)](https://en.wikipedia.org/wiki/Pole_Position)
 
 **Scott**: Yeah, it might have access to the image - it can look around, it could look on the screen, it can see if a car has passed it or not - but it has to figure all those things out on its own. It's getting the input from the screen, it knows what position it's in, and it's trying to make that position number one or make its lap time faster in the game.
 
@@ -81,7 +81,7 @@ So, say I have four options in front of me. I choose A and I'm in state _n_ righ
 
 One of the most famous examples that people start off with is the [MNIST](http://yann.lecun.com/exdb/mnist/) handwriting digit recognition.
 
- [![alt](/wp-content/uploads/2018/09/mnist.png)](https://en.wikipedia.org/wiki/MNIST_database)
+ [![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976375/blog/ai-show-different-types-of-machine-learning/mnist.png)](https://en.wikipedia.org/wiki/MNIST_database)
 
 **Scott**: These are images where people have handwritten numbers on a piece of paper. That means 0, 1, 2, 3, 4, 5, 6, 7, 8, 9\. Many different people have written many different digits, but they've all been labeled. So somebody has gone through and said, "A one is a 1 and a five is a 5, and an eight is an 8." It's collections of 28x28 pixels. This was done in the late nineties, but it's a large number, I think sixty thousand images. It's just black and white images of 28x28 pixels, but you can read it. You can look at it as a human and be like, "Yep. That's a two."
 
@@ -99,7 +99,7 @@ One of the most famous examples that people start off with is the [MNIST](http:/
 
 **Scott**: It's a large number of color images. It's the same ones, but they're labeled differently. They're either labeled into ten categories or a hundred categories.
 
- [![alt](/wp-content/uploads/2018/09/cifar.png)](https://www.researchgate.net/figure/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The_fig1_322148855)
+ [![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976376/blog/ai-show-different-types-of-machine-learning/cifar.png)](https://www.researchgate.net/figure/Heterogeneousness-and-diversity-of-the-CIFAR-10-entries-in-their-10-image-categories-The_fig1_322148855)
 
 **Susan**: Yeah, same number of pixels and colors and all that stuff so you can use basically the same model.
 

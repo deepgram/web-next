@@ -2,7 +2,7 @@
 title: "Voicebots Will Enhance Your Life (Not Destroy It)"
 description: "Voicebots are getting better and are moving to more human-like conversations instead of command and control. Learn from the experts at the cutting edge of voicebots."
 date: 2021-07-16
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981379/blog/voicebots-will-enhance-your-life-not-destroy-it/voicebots-enhance-life%402x.jpg
 authors:
   - keith-lam
 category: speech-trends
@@ -14,13 +14,13 @@ seo:
   title: "Voicebots Will Enhance Your Life (Not Destroy It)"
   description: "Voicebots are getting better and are moving to more human-like conversations instead of command and control. Learn from the experts at the cutting edge of voicebots."
 shorturls:
-  share: https://dpgr.am/b9976a0
-  twitter: https://dpgr.am/20678d2
-  linkedin: https://dpgr.am/3c49b14
-  reddit: https://dpgr.am/b9a3974
-  facebook: https://dpgr.am/28ae9f5
+  share: https://dpgr.am/8317646
+  twitter: https://dpgr.am/35ef0b4
+  linkedin: https://dpgr.am/999c225
+  reddit: https://dpgr.am/f97324a
+  facebook: https://dpgr.am/023130c
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981379/blog/voicebots-will-enhance-your-life-not-destroy-it/voicebots-enhance-life%402x.jpg
 ---
 
 We have been lucky to have two interesting and informative panel discussions on the evolution, current state, and future predictions of Conversational AI voicebots. 

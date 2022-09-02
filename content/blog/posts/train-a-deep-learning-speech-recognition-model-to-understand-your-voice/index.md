@@ -2,7 +2,7 @@
 title: "Train a Deep Learning Speech Recognition model to understand your voice"
 description: ""
 date: 2020-06-19
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981354/blog/train-a-deep-learning-speech-recognition-model-to-understand-your-voice/trouble-w-wer%402x.jpg
 authors:
   - natalie-rutgers
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "Train a Deep Learning Speech Recognition model to understand your voice"
   description: ""
 shorturls:
-  share: https://dpgr.am/c6b6ec1
-  twitter: https://dpgr.am/2426d30
-  linkedin: https://dpgr.am/452c814
-  reddit: https://dpgr.am/0aa5a2d
-  facebook: https://dpgr.am/00bd689
+  share: https://dpgr.am/2bbab35
+  twitter: https://dpgr.am/6ff1b78
+  linkedin: https://dpgr.am/fa3e037
+  reddit: https://dpgr.am/c8e778b
+  facebook: https://dpgr.am/758e888
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981354/blog/train-a-deep-learning-speech-recognition-model-to-understand-your-voice/trouble-w-wer%402x.jpg
 ---
 
 Here we'll train a speech recognition model to transcribe a phrase that it previously failed to recognize. To do this, we'll record some audio files and train a model using <a target="_blank" rel="noopener noreferrer">Deepgram MissionControl</a> - Deepgram's all-in-one platform for custom training and deploying custom trained speech recognition. To explore custom training with MissionControl, we'll train our model to recognize the phrase: "The proof is in the pudding." We'll do this by recording 50 audio files, pairing those files with accurate labels, and then training a model. That should get us from Deepgram General models belief that I'm saying, "is this in this footing" to a model that knows "The proof is in the pudding."

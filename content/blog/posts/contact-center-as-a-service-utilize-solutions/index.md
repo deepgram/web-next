@@ -2,7 +2,7 @@
 title: "How Contact-Center-as-a-Service Companies (CCaaS) Utilize ASR Solutions"
 description: "ASR solutions represent critical functionality for the contact-center-as-a-service industry. Learn more."
 date: 2022-08-03
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981429/blog/contact-center-as-a-service-utilize-solutions/how-contact-center-as-a-service-companies-utilize-.png
 authors:
   - aimie-ye
 category: speech-trends
@@ -14,13 +14,13 @@ seo:
   title: "How Contact-Center-as-a-Service Companies (CCaaS) Utilize ASR Solutions"
   description: "ASR solutions represent critical functionality for the contact-center-as-a-service industry. Learn more."
 shorturls:
-  share: https://dpgr.am/12e2685
-  twitter: https://dpgr.am/0eb01ad
-  linkedin: https://dpgr.am/ac75d76
-  reddit: https://dpgr.am/da8a46f
-  facebook: https://dpgr.am/a730e5a
+  share: https://dpgr.am/e82d0d3
+  twitter: https://dpgr.am/58a4340
+  linkedin: https://dpgr.am/634365a
+  reddit: https://dpgr.am/2d19b42
+  facebook: https://dpgr.am/80b9979
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981429/blog/contact-center-as-a-service-utilize-solutions/how-contact-center-as-a-service-companies-utilize-.png
 ---
 
 Contact-center-as-a-service (CCaaS) platforms help businesses automate and ease the processing of customer inquiries. Critical to this functionality is automatic speech recognition, or ASR, which converts speech into written text so that a computer can understand what was said. In this blog post, we'll discuss how CCaaS companies use speech-to-text solutions and what benefits they provide, as well as how ASR tools fit in and the benefits they provide for CCaaS platforms. But before we get started-what exactly does "contact center as a service" mean?
@@ -53,7 +53,7 @@ By utilizing ASR tools, CCaaS companies can provide their customers with an easi
 
 ASR is one of the critical technologies that CCaaS platforms need to succeed. By turning speech into text, CCaaS can take action with more data, and in more ways, than if relied only on other metrics like call length, number of calls taken per agent, etc. But not all speech-to-text solutions work equally well for contact centers. Because of things like industry-specific jargon and poor call quality, old-school speech recognition models often don't provide sufficient accuracy to be truly effective. But speech recognition solutions built on [end-to-end deep learning](https://blog.deepgram.com/deep-learning-asr-for-business/) are able to take advantage of [transfer learning](https://blog.deepgram.com/transfer-learning-spanish-portuguese/), which allows one accurate model to quickly and easily be retrained on new data to create a new model for a different use case. This technology has allowed Deepgram to offer both [a use-case model specifically for telephone calls](https://deepgram.com/product/use-cases/), as well as the ability to tailor a model with your own data if you need even higher accuracy. Overall, the specific speech recognition features of the top AI-powered speech-to-text systems that support CCaaS businesses can be divided into two categories: speech recognition and speech understanding. Let's look at each in turn.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

@@ -2,7 +2,7 @@
 title: "What Makes a Great Conversational AI Experience?"
 description: "Find out what experts in Speech to Text, Natural Language Understanding and Conversational AI have to say about the creating great voicebots."
 date: 2021-06-14
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981375/blog/what-makes-a-great-conversational-ai-experience/what-makes-great-convo-ai-experience%402x.jpg
 authors:
   - keith-lam
 category: speech-trends
@@ -14,13 +14,13 @@ seo:
   title: "What Makes a Great Conversational AI Experience?"
   description: "Find out what experts in Speech to Text, Natural Language Understanding and Conversational AI have to say about the creating great voicebots."
 shorturls:
-  share: https://dpgr.am/e7c8ce3
-  twitter: https://dpgr.am/94615e5
-  linkedin: https://dpgr.am/80a8a7e
-  reddit: https://dpgr.am/452acaa
-  facebook: https://dpgr.am/8516c48
+  share: https://dpgr.am/433491f
+  twitter: https://dpgr.am/fbc016b
+  linkedin: https://dpgr.am/1cf38f4
+  reddit: https://dpgr.am/4b93fd5
+  facebook: https://dpgr.am/9763498
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981375/blog/what-makes-a-great-conversational-ai-experience/what-makes-great-convo-ai-experience%402x.jpg
 ---
 
 You are not alone if you have ever experienced a poor interaction with a voicebot. Perhaps you heard, "Sorry, I didn't get that. Can you repeat your request?" or have been transferred to a human agent after a simple question. Unfortunately, these experiences are common across various industries, resulting in a negative customer experience and ultimately cause churn.  When you look at the leading edge of Conversational AI, what is currently possible?  Well, we are getting much closer to having voicebots that converse like humans, but only on specific subjects or use cases.  There is still not a voicebot that you can universally converse on everything or be a real personal assistant.

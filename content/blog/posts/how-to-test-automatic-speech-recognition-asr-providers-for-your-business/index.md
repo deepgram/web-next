@@ -2,7 +2,7 @@
 title: "How to Test Automatic Speech Recognition (ASR) Providers For Your Business"
 description: "Learn how to test various ASR providers and the variables to consider to truly vet an ASR provider"
 date: 2021-03-03
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981357/blog/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/how-to-test-asr-providers%402x.jpg
 authors:
   - scott-stephenson
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "How to Test Automatic Speech Recognition (ASR) Providers For Your Business"
   description: "Learn how to test various ASR providers and the variables to consider to truly vet an ASR provider"
 shorturls:
-  share: https://dpgr.am/938d0da
-  twitter: https://dpgr.am/ad7550f
-  linkedin: https://dpgr.am/ecade3a
-  reddit: https://dpgr.am/d96ab93
-  facebook: https://dpgr.am/0dcb8c7
+  share: https://dpgr.am/9503902
+  twitter: https://dpgr.am/5452614
+  linkedin: https://dpgr.am/24d5b7c
+  reddit: https://dpgr.am/46dd6c6
+  facebook: https://dpgr.am/ebd4cf1
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981357/blog/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/how-to-test-asr-providers%402x.jpg
 ---
 
 Selecting the best [ASR](https://blog.deepgram.com/what-is-asr/) option for your company is an important decision. While the bulk of this article is an educational piece on how to most effectively test for ASR providers, the first step when making an important buying decision is identifying your priorities:
@@ -86,6 +86,6 @@ Take note of what each provider deems an acceptable audio format and how it fits
 
 At this point, you will know where each ASR provider stands from a general accuracy perspective on audio representative of your use case. Next, consider the other variables in **[How to Vet an Automatic Speech Recognition Solution Provider?](https://offers.deepgram.com/how-to-vet-an-asr-provider-thank-you)** and drill down on accuracy improvements with keywords, libraries, reprogramming, and custom training. With a good handle on where each competitor stands in terms all these variables, you can confidently go into pricing conversations and make better decisions for your business. If you're ready to compare Deepgram's AI Speech Platform with other ASR providers, [contact us](https://www.deepgram.com/contact-us).
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 

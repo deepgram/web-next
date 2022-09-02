@@ -2,7 +2,7 @@
 title: "Sentiment Analysis and Emotion Recognition: Whats the Difference?"
 description: "Sentiment analysis and emotion regulation are hot topics in speech recognition today, but the two are often confused. So what’s the difference?"
 date: 2022-04-01
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981414/blog/sentiment-analysis-emotion-regulation-difference/Sentiment-Analysis-Emotional-Recognition-thumb-554.png
 authors:
   - chris-doty
 category: tutorial
@@ -14,13 +14,13 @@ seo:
   title: "Sentiment Analysis and Emotion Recognition: Whats the Difference?"
   description: "Sentiment analysis and emotion regulation are hot topics in speech recognition today, but the two are often confused. So what’s the difference?"
 shorturls:
-  share: https://dpgr.am/94d9071
-  twitter: https://dpgr.am/b8b34d7
-  linkedin: https://dpgr.am/e9ca618
-  reddit: https://dpgr.am/34b1c8c
-  facebook: https://dpgr.am/0fa633a
+  share: https://dpgr.am/dd94c45
+  twitter: https://dpgr.am/acc49c8
+  linkedin: https://dpgr.am/30b3228
+  reddit: https://dpgr.am/a20a2c7
+  facebook: https://dpgr.am/bee1fe5
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981414/blog/sentiment-analysis-emotion-regulation-difference/Sentiment-Analysis-Emotional-Recognition-thumb-554.png
 ---
 
 Sentiment analysis and emotion recognition are two of the hottest topics in speech understanding today. But they're often confused for one another-so much so that people often say "sentiment analysis" when they're referring to emotion recognition. In this post, we'll explain what both sentiment analysis and emotional recognition are, [how they are used in business](https://blog.deepgram.com/voice-technology-customer-experience/), and some of the limitations and challenges of each.
@@ -33,7 +33,7 @@ Sentiment analysis and emotion recognition are two of the hottest topics in spee
 
 There are, of course, limitations to systems like this. Sarcasm, for example, can be hard for sentiment analysis to detect (which isn't surprising since humans also struggle to correctly identify sarcasm in written language). That might be less of a problem when you're training and have the groundtruth of someone's rating, but in the real world, the goal of sentiment analysis is to determine how someone felt in the absence of a rating.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

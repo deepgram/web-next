@@ -2,7 +2,7 @@
 title: "Sparking the Future of Conversation Design - Braden Ream, CEO, Voiceflow - Project Voice X"
 description: "Speaking the Future of Conversation design voiceflow. This is the transcript for the session presented by Braden Ream, CEO of Voiceflow"
 date: 2021-12-09
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981392/blog/sparking-the-future-of-conversation-design-braden-ream-ceo-voiceflow-project-voice-x/proj-voice-x-session-braden-ream-blog-thumb-554x22.png
 authors:
   - claudia-ring
 category: speech-trends
@@ -13,13 +13,13 @@ seo:
   title: "Sparking the Future of Conversation Design - Braden Ream, CEO, Voiceflow - Project Voice X"
   description: "Speaking the Future of Conversation design voiceflow. This is the transcript for the session presented by Braden Ream, CEO of Voiceflow"
 shorturls:
-  share: https://dpgr.am/8d42769
-  twitter: https://dpgr.am/33dcd65
-  linkedin: https://dpgr.am/5ab011c
-  reddit: https://dpgr.am/a853018
-  facebook: https://dpgr.am/2d3411b
+  share: https://dpgr.am/2113016
+  twitter: https://dpgr.am/f6fcfa7
+  linkedin: https://dpgr.am/7a45a55
+  reddit: https://dpgr.am/0429d31
+  facebook: https://dpgr.am/a5d913b
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981392/blog/sparking-the-future-of-conversation-design-braden-ream-ceo-voiceflow-project-voice-x/proj-voice-x-session-braden-ream-blog-thumb-554x22.png
 ---
 
 _This is the transcript for the session "Sparking the Future of Conversation Design" presented by Braden Ream, CEO of Voiceflow, presented on day one of Project Voice X._ _The transcript below has been modified by the Deepgram team for readability as a blog post, but the original Deepgram ASR-generated transcript was **94% accurate.**  Features like diarization, custom vocabulary (keyword boosting), redaction, punctuation, profanity filtering and numeral formatting are all available through Deepgram's API.  If you want to see if Deepgram is right for your use case, [contact us](https://deepgram.com/contact-us/)._ [Braden Ream:] Alrighty. Hi, everyone. Thanks for having me here. So I've given a bunch of talks on conversation design in the past, and the one I most often give is how to structure a conversation design team, so how to build one internally, build out the best practices. I thought what may be kinda fun is... you know, we learn a lot about conversation design through the practices of actually building Voiceflow. And so I thought it could be interesting to talk about the challenges of building a conversation design tool, which will, hopefully, in effect, teach you a little bit about conversation design itself. So there's gonna be a lot of product shots, talk about a lot of a a specific customer problems, you know, without naming any names, and kinda run you through the process of actually building a tool. I'll try to keep it fairly short to sync to the point. And, you know, if you wanna chat a little bit more about Voiceflow, we've got a social later today as well as a booth at the back. Love chatting product, but I'll try to keep it fairly succinct 'cause I know we're going into into lunch here. So this is thoughts on building a conversation design tool. First time running this, so bear with me. Little bit a... yep. We already went through the goal here. Got ahead of myself. Little bit about Voiceflow, so we're used by over eighty thousand teams now. Lots of great customers out there, actually, lots of great customers here as well. I've raised about twenty five million dollars from some great investors, including Amazon and Google, who are are present as well as some other awesome design tool folks, including Figma and InVision and and others. Cool. So why does conversation design matter? A lot of folks might actually not be familiar with it. You know, it's really come to prominent sites over the past two years.

@@ -2,7 +2,7 @@
 title: "How will data influence the future of machine learning? — AI Show"
 description: ""
 date: 2018-10-26
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981323/blog/ai-show-how-will-data-influence-the-future-of-machine-learning/how-will-data-influence-future-ML%402x.jpg
 authors:
   - natalie-rutgers
 category: ai-and-engineering
@@ -12,13 +12,13 @@ seo:
   title: "How will data influence the future of machine learning? — AI Show"
   description: ""
 shorturls:
-  share: https://dpgr.am/4f6796b
-  twitter: https://dpgr.am/6b04480
-  linkedin: https://dpgr.am/efcb5d9
-  reddit: https://dpgr.am/19ec093
-  facebook: https://dpgr.am/5cc64f5
+  share: https://dpgr.am/dcc16aa
+  twitter: https://dpgr.am/fccf518
+  linkedin: https://dpgr.am/7f19b8b
+  reddit: https://dpgr.am/b9410a7
+  facebook: https://dpgr.am/2b63b3d
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981323/blog/ai-show-how-will-data-influence-the-future-of-machine-learning/how-will-data-influence-future-ML%402x.jpg
 ---
 
 <iframe width="600" height="315" src="https://www.youtube.com/embed/HqVoulU4uRA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>

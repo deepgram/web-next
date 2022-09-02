@@ -2,7 +2,7 @@
 title: "A Voice Destin-ation: Project Voice X 2021"
 description: "Project Voice X was a voice destination for all things conversational AI, NLP and the next big things in speech recognition."
 date: 2021-12-09
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981402/blog/a-voice-destin-ation-project-voice-x-2021/proj-voice-x-session-overview-blog-thumb-554x220%402.png
 authors:
   - claudia-ring
 category: speech-trends
@@ -12,16 +12,16 @@ seo:
   title: "A Voice Destin-ation: Project Voice X 2021"
   description: "Project Voice X was a voice destination for all things conversational AI, NLP and the next big things in speech recognition."
 shorturls:
-  share: https://dpgr.am/bdc0a64
-  twitter: https://dpgr.am/9ab1bab
-  linkedin: https://dpgr.am/52f124e
-  reddit: https://dpgr.am/6402955
-  facebook: https://dpgr.am/4431bce
+  share: https://dpgr.am/763ff32
+  twitter: https://dpgr.am/b165811
+  linkedin: https://dpgr.am/e14d7a4
+  reddit: https://dpgr.am/79b90a5
+  facebook: https://dpgr.am/075af13
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981402/blog/a-voice-destin-ation-project-voice-x-2021/proj-voice-x-session-overview-blog-thumb-554x220%402.png
 ---
 
-Face-to-face events are (kind of) back - and we decided to rejoin the fray for Project Voice X held in Destin, Florida.  It was great to meet and listen to the innovators and futurists in the panel sessions which ran the gamut from why voice is the next interface to diagnosing mental declines in patients.  Voice technology has moved from command and response smart speakers to true business, retail and medical uses that will change how we interface with machines.  How about a multi-channel NLU based, voicebot, SMS, and email interface AI that can provide customers solutions in the method that works best for them?  Or supplement doctors' regular in person visits with voicebots calls that can determine if the patient is doing well between visits.  Or analyzing a speaker to determine psychographic information on their predilection to certain topics, their overall sentiment, and voice personality. ![](https://deepgram.com/wp-content/uploads/2021/12/Project-Voice-X-Scott-Keynote-1024x496.jpeg)
+Face-to-face events are (kind of) back - and we decided to rejoin the fray for Project Voice X held in Destin, Florida.  It was great to meet and listen to the innovators and futurists in the panel sessions which ran the gamut from why voice is the next interface to diagnosing mental declines in patients.  Voice technology has moved from command and response smart speakers to true business, retail and medical uses that will change how we interface with machines.  How about a multi-channel NLU based, voicebot, SMS, and email interface AI that can provide customers solutions in the method that works best for them?  Or supplement doctors' regular in person visits with voicebots calls that can determine if the patient is doing well between visits.  Or analyzing a speaker to determine psychographic information on their predilection to certain topics, their overall sentiment, and voice personality. ![](https://res.cloudinary.com/deepgram/image/upload/v1661976852/blog/a-voice-destin-ation-project-voice-x-2021/Project-Voice-X-Scott-Keynote-1024x496.jpg)
 
 _Scott Stephenson, Deepgram CEO, presenting "Building the Future of Voice" at Project Voice X 2021._
 

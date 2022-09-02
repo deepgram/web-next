@@ -12,11 +12,11 @@ seo:
   title: "Expert insights from Enterprise Connect"
   description: ""
 shorturls:
-  share: https://dpgr.am/74f3087
-  twitter: https://dpgr.am/2ff712d
-  linkedin: https://dpgr.am/19ff7a8
-  reddit: https://dpgr.am/5f9cf6d
-  facebook: https://dpgr.am/99d7e5b
+  share: https://dpgr.am/2530a02
+  twitter: https://dpgr.am/be3855e
+  linkedin: https://dpgr.am/62bb39f
+  reddit: https://dpgr.am/b62090d
+  facebook: https://dpgr.am/347b13c
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069449/blog/untitled-3/placeholder-post-image%402x.jpg
 ---

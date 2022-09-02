@@ -2,7 +2,7 @@
 title: "Deepgram Pioneers Novel Training Approach Setting New Standard for AI Companies"
 description: "Deepgram sets a new standard for AI companies by pioneering novel training approach."
 date: 2020-08-27
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981355/blog/deepgram-pioneers-novel-training-approach-setting-new-standard-for-ai-companies-2/dg-pioneers-novel-training%402x.jpg
 authors:
   - scott-stephenson
 category: product-news
@@ -12,13 +12,13 @@ seo:
   title: "Deepgram Pioneers Novel Training Approach Setting New Standard for AI Companies"
   description: "Deepgram sets a new standard for AI companies by pioneering novel training approach."
 shorturls:
-  share: https://dpgr.am/edb5dfc
-  twitter: https://dpgr.am/042dfdd
-  linkedin: https://dpgr.am/018571d
-  reddit: https://dpgr.am/277f8e4
-  facebook: https://dpgr.am/5c7c42f
+  share: https://dpgr.am/955cb45
+  twitter: https://dpgr.am/d7c00e6
+  linkedin: https://dpgr.am/a03d53c
+  reddit: https://dpgr.am/f03b590
+  facebook: https://dpgr.am/f96d435
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981355/blog/deepgram-pioneers-novel-training-approach-setting-new-standard-for-ai-companies-2/dg-pioneers-novel-training%402x.jpg
 ---
 
 Artificial intelligence has made astonishing technological advances in recent years and more companies are turning to AI to improve internal functions and unlock the potential of enterprise datasets. [IDC](https://www.cio.com/article/3519273/key-to-sustained-digital-transformation-in-2020-people.html) has characterized AI as "inescapable" and estimates that by 2025, at least 90% of new enterprise apps will embed AI. But getting to the right models to effectively power AI is hard - and especially hard for speech. Building a model is tedious, requiring multiple stages of training and refinement, and deep learning expertise is hard to find. Compound that with the endless variations of speech, lack of high-quality training data, and astronomical computing costs, it's no wonder homegrown and off-the-shelf speech recognition has been slow to succeed.

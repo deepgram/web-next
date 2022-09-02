@@ -2,7 +2,7 @@
 title: "How Automatic Speech Recognition Can Help Educators"
 description: "ASR in the classroom can support students with a wide range of learning needs. Learn how current tools are lacking and how ASR can help."
 date: 2022-03-11
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981410/blog/automatic-speech-recognition-education/How-ASR-can-help-educators-thumb-554x220%402x.png
 authors:
   - chris-doty
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "How Automatic Speech Recognition Can Help Educators"
   description: "ASR in the classroom can support students with a wide range of learning needs. Learn how current tools are lacking and how ASR can help."
 shorturls:
-  share: https://dpgr.am/8755336
-  twitter: https://dpgr.am/fce260b
-  linkedin: https://dpgr.am/8a3541e
-  reddit: https://dpgr.am/f9f3f11
-  facebook: https://dpgr.am/97643bc
+  share: https://dpgr.am/14164ee
+  twitter: https://dpgr.am/b5fa773
+  linkedin: https://dpgr.am/f826d8b
+  reddit: https://dpgr.am/95e5d3b
+  facebook: https://dpgr.am/f9161d2
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981410/blog/automatic-speech-recognition-education/How-ASR-can-help-educators-thumb-554x220%402x.png
 ---
 
 If you've ever been in a large classroom for a lecture or talk, you've probably experienced struggling to hear the speaker. Even with modern A/V equipment (which isn't present in every classroom), it can still sometimes be hard to hear what a speaker is saying. Now imagine you're not a native speaker of English. Or you have issues with your hearing. Or you have a learning disability that makes it hard to keep up with spoken speech. Paired with poor classroom acoustics, any one of these issues can make it difficult for students to succeed. As a university lecturer, I've encountered all of these problems in the classroom. And it's hard to figure out how best to help students who are struggling with these issues. In this blogpost, I want to review some of the ways that these issues are currently dealt with, and then look at a new solution, powered by [automatic speech recognition](https://blog.deepgram.com/what-is-asr/), that's the best option for creating a classroom that's accessible to everyone.
@@ -43,7 +43,7 @@ One option for students with a documented disability is to have someone else in 
 
 What students need is the ability to revisit the material in a way that makes what happens in the classroom accessible to as many people as possible, and is something that can be used on the fly so that students have help understanding what is happening when it's happening. 
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 Our Senior Developer Advocate Kevin Lewis recently [built a tool to transcribe classroom lectures](https://blog.deepgram.com/classroom-captioner/), providing a live, automatically generated transcript to make classroom content more accessible. This method can also help people who have difficulty hearing the speaker, for whatever reason, or keeping track of what's been said and how the lecture is organized. Live transcripts are also useful for non-native speakers, who might hear a word they don't know, but not know how to spell it to look it up (a common problem with English)-and it works either during class from the live transcript, or by reviewing it later.
 

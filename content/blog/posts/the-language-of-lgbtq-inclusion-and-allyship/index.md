@@ -2,7 +2,7 @@
 title: "The Language of LGBTQ Inclusion and Allyship"
 description: ""
 date: 2021-06-24
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981376/blog/the-language-of-lgbtq-inclusion-and-allyship/language-of-lgbtq-inclusion%402x.jpg
 authors:
   - sam-zegas
 category: tutorial
@@ -13,13 +13,13 @@ seo:
   title: "The Language of LGBTQ Inclusion and Allyship"
   description: ""
 shorturls:
-  share: https://dpgr.am/12c803a
-  twitter: https://dpgr.am/7ad559d
-  linkedin: https://dpgr.am/6b4b260
-  reddit: https://dpgr.am/612acce
-  facebook: https://dpgr.am/0c68360
+  share: https://dpgr.am/1eff158
+  twitter: https://dpgr.am/9bfd162
+  linkedin: https://dpgr.am/7045e3e
+  reddit: https://dpgr.am/13e813f
+  facebook: https://dpgr.am/37b5c0a
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981376/blog/the-language-of-lgbtq-inclusion-and-allyship/language-of-lgbtq-inclusion%402x.jpg
 ---
 
 Happy Pride!  Pride is about expressing your authentic self, being visible, and telling your story. At Deepgram, that's right up our alley. One of our core beliefs is that every voice should be heard and understood. When it comes to the LGBTQ community, there are a lot of terms to keep track of - so many that it can get confusing, even to allies. We're here to help! This post is a guide to inclusive language, common LGBTQ terms, and allyship. Throughout this post, you'll see us use LGBTQ as an umbrella term for all LGBTQ+ people, since this is one of the most widely recognized names for the community. There's a great deal packed into that name though, and many other letters that are sometimes represented in the list. We'll provide more information about _LGBTQ_ and other terms in the _Guide to common LGBTQ terms_ section below. But for starters, LGBTQ stands for _Lesbian, Gay, Bisexual, Trans, and Queer/Questioning_.  Before we dive in, it's important to understand that language is always changing. That's certainly true for the LGBTQ community. This post is a snapshot of some current issues in LGBTQ language and terminology at the time of publication. Things change, though, and we look forward to seeing how these topics develop in the future. 

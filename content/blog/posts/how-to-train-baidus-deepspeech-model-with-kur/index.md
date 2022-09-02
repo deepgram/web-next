@@ -12,11 +12,11 @@ seo:
   title: "How to train Baidus Deepspeech model"
   description: ""
 shorturls:
-  share: https://dpgr.am/2384bc2
-  twitter: https://dpgr.am/3b1244f
-  linkedin: https://dpgr.am/942ba91
-  reddit: https://dpgr.am/9f80366
-  facebook: https://dpgr.am/b609ef7
+  share: https://dpgr.am/85061c2
+  twitter: https://dpgr.am/febaff5
+  linkedin: https://dpgr.am/41bf9c7
+  reddit: https://dpgr.am/70fb579
+  facebook: https://dpgr.am/b693c50
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661981932/blog/how-to-train-baidus-deepspeech-model-with-kur/placeholder-post-image%402x.jpg
 ---
@@ -27,7 +27,7 @@ Me too. It was two years ago and I was a particle physicist finishing a PhD at U
 
 ## Turn this input audio ⬇⬇⬇
 
-<figure>![missing](/wp-content/uploads/2017/02/Screen-Shot-2017-02-03-at-8.56.51-PM.png)
+<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725768/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-03-at-8.56.51-PM.png)
 
 <figcaption style="text-align: center;">_A spectrogram of an ordinary squishy human saying "I am a human saying human things."_</figcaption>
 
@@ -45,7 +45,7 @@ Listen to the audio.
 
 ## Into this text ⬇⬇⬇
 
-<figure style="margin-top: 0px;">![missing](/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-12.51.52-PM.png)
+<figure style="margin-top: 0px;">![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725769/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-12.51.52-PM.png)
 
 <figure style="margin-top: 0px;">
 
@@ -55,7 +55,7 @@ Listen to the audio.
 
 # Why we did it
 
-We'll probably write a "This is Deepgram" post sometime, but suffice to say: we are building a Google for Audio and **we needed a deep learning model for speech recognition** to accomplish that goal. Good thing Baidu had just released the first of the Deepspeech papers two years ago when we were starting [[1]](https://arxiv.org/abs/1412.5567). This gave us the push we needed to figure out how deep learning can work for audio search. Here's a picture of the Deepspeech RNN for inspiration. ![](/wp-content/uploads/2017/02/NVIDIA_Baidu_Deep_Speech_Neural_Network_600-1.jpg) _Baidu's Andrew Ng at NVidia's GTC conference talking about Deepspeech_ Deep Learning is hard. There are a few reasons why that is but some obvious ones are that models and frameworks involving differentiable tensor graphs are complicated, the hardware to run them efficiently is finicky (GPUs), and it's difficult to get data. Getting a working Deepspeech model is pretty hard too, even with a paper outlining it. **The first step was to build an end-to-end deep learning speech recognition system.** We started working on that and based the DNN on the Baidu Deepspeech paper. After a lot of toil, we put together a genuinely good end-to-end DNN speech recognition model. We've [open sourced](https://kur.deepgram.com/) the Deepspeech model in the [Kur](https://kur.deepgram.com) framework running on [TensorFlow](https://www.github.com/tensorflow/tensorflow).
+We'll probably write a "This is Deepgram" post sometime, but suffice to say: we are building a Google for Audio and **we needed a deep learning model for speech recognition** to accomplish that goal. Good thing Baidu had just released the first of the Deepspeech papers two years ago when we were starting [[1]](https://arxiv.org/abs/1412.5567). This gave us the push we needed to figure out how deep learning can work for audio search. Here's a picture of the Deepspeech RNN for inspiration. ![](https://res.cloudinary.com/deepgram/image/upload/v1661725769/blog/how-to-train-baidus-deepspeech-model-with-kur/NVIDIA_Baidu_Deep_Speech_Neural_Network_600-1.jpg) _Baidu's Andrew Ng at NVidia's GTC conference talking about Deepspeech_ Deep Learning is hard. There are a few reasons why that is but some obvious ones are that models and frameworks involving differentiable tensor graphs are complicated, the hardware to run them efficiently is finicky (GPUs), and it's difficult to get data. Getting a working Deepspeech model is pretty hard too, even with a paper outlining it. **The first step was to build an end-to-end deep learning speech recognition system.** We started working on that and based the DNN on the Baidu Deepspeech paper. After a lot of toil, we put together a genuinely good end-to-end DNN speech recognition model. We've [open sourced](https://kur.deepgram.com/) the Deepspeech model in the [Kur](https://kur.deepgram.com) framework running on [TensorFlow](https://www.github.com/tensorflow/tensorflow).
 
 > _Quick Aside:_ We had to build Kur for Deepgram's survival. It's the wild west out here in A.I. and it's not possible to quickly build cutting edge models unless you have a simple way to do it.
 
@@ -121,7 +121,7 @@ It's just two days old and didn't make a single mistake on that utterance. **Our
 
 ##### Training and Validation Loss of Kur Deepspeech Model
 
-<figure>![missing](/wp-content/uploads/2017/02/loss-kur-up.png)
+<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725770/blog/how-to-train-baidus-deepspeech-model-with-kur/loss-kur-up.png)
 
 <figcaption style="text-align: center;">_Loss as a function of batch for both training and validation data in the [Kur](http://github.com/deepgram/kur) `speech.yml` example. The validation data seems a little easier._</figcaption>
 
@@ -131,7 +131,7 @@ It's just two days old and didn't make a single mistake on that utterance. **Our
 
 We abstracted away some of the time consuming bits. A little help comes from the descriptive nature of Kur, too. You can write down what you mean.
 
-<figure>![missing](/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-10.15.51-AM.png)
+<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725771/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-10.15.51-AM.png)
 
 <figcaption style="text-align: center;">_Hyperparameters for Deepspeech in the example Kurfile_</figcaption>
 
@@ -139,7 +139,7 @@ We abstracted away some of the time consuming bits. A little help comes from the
 
 These are the handful of hyperparameters needed to construct the DNN. There's a single one dimensional CNN that operates on a time slice of FFT outputs. Then there's an RNN stack which is 3 layers deep and 1000 nodes wide each. The vocab size is how many 'letters' we'll be choosing from (`a` to `z`, a space and an apostrophe `'`-that's 28 total). The hyperparameters are grabbed in the model section of the Kurfile (that's the `speech.yml`). The CNN layer is built like this.
 
-<figure>![missing](/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-10.20.24-AM.png)
+<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725772/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-10.20.24-AM.png)
 
 <figcaption style="text-align: center;">_The CNN layer specification_</figcaption>
 
@@ -151,7 +151,7 @@ This puts in a single [CNN layer](https://en.wikipedia.org/wiki/Convolutional_ne
 
 The stack of [RNN layers](https://en.wikipedia.org/wiki/Recurrent_neural_network) is built with a `for` loop that stamps out three layers in a row-_three_ because of the `depth` hyperparameter.
 
-<figure>![missing](/wp-content/uploads/2017/02/Screen-Shot-2017-02-09-at-5.05.32-PM.png)
+<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725772/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-09-at-5.05.32-PM.png)
 
 <figcaption style="text-align: center;">_The RNN stack specification_</figcaption>
 
@@ -167,7 +167,7 @@ When training modern speech DNNs you generally slice up the audio into ~20 milli
 
 Kur takes in normal `wav` audio files. Then it grabs the spectrogram (FFT over time) of the file and jams it into a DNN with a CNN layer and a stack of three RNN layers. Out pops probabilities of latin characters, which (when read by a human) form words. As the model trains, there will be validation steps that give you an updated prediction on a random test audio file. You'll see the true text listed next to each prediction. You can watch the predicted text outputs get better as the network trains. _It's learning._ At first it will learn about spaces (ya know, this ), then it'll figure out good ratios for vowels and consonants, then it'll learn common easy words like `the`, `it`, `a`, `good` and build up it's vocabulary from there. It's fascinating to watch.
 
-<figure>![missing](/wp-content/uploads/2017/02/Screen-Shot-2017-02-02-at-12.21.53-PM.png)
+<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725773/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-12.21.53-PM.png)
 
 <figcaption style="text-align: center;">_Take in time slices of audio frequencies and infer the letters that are being spoken. Time goes to the right. Image by Baidu._</figcaption>
 

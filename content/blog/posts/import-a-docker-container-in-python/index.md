@@ -2,7 +2,7 @@
 title: "Import a Docker Container in Python"
 description: "Learn how to import a Docker container using Python."
 date: 2016-02-24
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981208/blog/import-a-docker-container-in-python/import-docker-container%402x.jpg
 authors:
   - scott-stephenson
 category: ai-and-engineering
@@ -12,16 +12,16 @@ seo:
   title: "Import a Docker Container in Python"
   description: "Learn how to import a Docker container using Python."
 shorturls:
-  share: https://dpgr.am/47a216f
-  twitter: https://dpgr.am/dfee0de
-  linkedin: https://dpgr.am/b684405
-  reddit: https://dpgr.am/50163a7
-  facebook: https://dpgr.am/b67e46a
+  share: https://dpgr.am/64a12b2
+  twitter: https://dpgr.am/e24d798
+  linkedin: https://dpgr.am/c05bac8
+  reddit: https://dpgr.am/a832ff1
+  facebook: https://dpgr.am/8d9edfc
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981208/blog/import-a-docker-container-in-python/import-docker-container%402x.jpg
 ---
 
-![](/wp-content/uploads/2016/02/Screen-Shot-2016-02-23-at-11-29-48-AM.png)
+![](https://res.cloudinary.com/deepgram/image/upload/v1661721061/blog/import-a-docker-container-in-python/Screen-Shot-2016-02-23-at-11-29-48-AM.png)
 
 ## Why would you do this?
 
@@ -88,7 +88,7 @@ The example below will grab audio from a URL, transcode it, and print debug mess
 
 If you wanted to actually save the transcoded audio from this process, you would replace the line `stdout=False` with `stderr=False` and make sure to write each line of output from the container process (raw audio data) to a file.
 
-<whitepaperpromo whitepaper="latest"></whitepaperpromo>
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

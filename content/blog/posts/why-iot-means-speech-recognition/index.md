@@ -2,7 +2,7 @@
 title: "Why IoT Means Speech Recognition"
 description: ""
 date: 2018-11-29
-cover: 
+cover: https://res.cloudinary.com/deepgram/image/upload/v1661981329/blog/why-iot-means-speech-recognition/why-IOT-means-speech-rec%402x.jpg
 authors:
   - morris-gevirtz
 category: speech-trends
@@ -12,13 +12,13 @@ seo:
   title: "Why IoT Means Speech Recognition"
   description: ""
 shorturls:
-  share: https://dpgr.am/94e0074
-  twitter: https://dpgr.am/0923d01
-  linkedin: https://dpgr.am/c0204ab
-  reddit: https://dpgr.am/91a130b
-  facebook: https://dpgr.am/31cc52c
+  share: https://dpgr.am/1d1cea7
+  twitter: https://dpgr.am/453e052
+  linkedin: https://dpgr.am/be5817c
+  reddit: https://dpgr.am/a5bbccb
+  facebook: https://dpgr.am/1567b21
 og:
-  image: 
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981329/blog/why-iot-means-speech-recognition/why-IOT-means-speech-rec%402x.jpg
 ---
 
 People now use their voice to control an increasing number of their devices-from TVs to cars, and everything in between. The technology that makes voice control possible is speech recognition - technology that transforms your verbal commands into executable actions via an API.
@@ -33,7 +33,7 @@ There are probably a couple dozen voice assistants available on the market today
 
 ### Smart Speakers
 
-![Alt](/wp-content/uploads/2018/11/rahul-chakraborty-556155-unsplash.jpg) The Amazon Echo and Google Home are two renowned examples of smart speakers-voice recognition-enabled devices. These devices are screenless extensions of the digital voice assistants that "live" in your phone, except with better sound and [Space Odyssey 2001](https://blog.deepgram.com/what-makes-alexa-siri-terminator-and-hal-tick/)-like lines. Like the voice assistants on your phone, these two allow you to make appointments, send texts, and, depending on the product, even make purchases. Users make use of them to look up recipes while their hands are covered in chocolate mousse, buy concert tickets while parents clean up said abandoned chocolate mousse, and of course, to turn on music without interrupting more important activities. What makes the consumer experience different for each smart speaker depends on three factors:
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976769/blog/why-iot-means-speech-recognition/rahul-chakraborty-556155-unsplash.jpg) The Amazon Echo and Google Home are two renowned examples of smart speakers-voice recognition-enabled devices. These devices are screenless extensions of the digital voice assistants that "live" in your phone, except with better sound and [Space Odyssey 2001](https://blog.deepgram.com/what-makes-alexa-siri-terminator-and-hal-tick/)-like lines. Like the voice assistants on your phone, these two allow you to make appointments, send texts, and, depending on the product, even make purchases. Users make use of them to look up recipes while their hands are covered in chocolate mousse, buy concert tickets while parents clean up said abandoned chocolate mousse, and of course, to turn on music without interrupting more important activities. What makes the consumer experience different for each smart speaker depends on three factors:
 
 1.  The accuracy of the speech recognition API running behind the scenes
 2.  The suite of apps and services that are integrated with the speaker-e.g. Spotify vs. iTunes, Apple Maps vs. Google Maps.
@@ -41,7 +41,7 @@ There are probably a couple dozen voice assistants available on the market today
 
 ### Controlling homes
 
-Apple HomeKit, GoogleHome and the Athom Homey are three examples of devices designed to allow humans to talk to their machines, rather than push buttons. Now, the 30 possible functions of the modern home thermostat, as well as the 40 billion possible functions of a modern television set can be controlled by speaking. We can think of these devices as smart speakers more richly integrated into the home. ![ALT](/wp-content/uploads/2018/11/brandon-jacoby-306845-unsplash.jpg) **Smart home solutions are a transformational technology.** Here's why:
+Apple HomeKit, GoogleHome and the Athom Homey are three examples of devices designed to allow humans to talk to their machines, rather than push buttons. Now, the 30 possible functions of the modern home thermostat, as well as the 40 billion possible functions of a modern television set can be controlled by speaking. We can think of these devices as smart speakers more richly integrated into the home. ![ALT](https://res.cloudinary.com/deepgram/image/upload/v1661976770/blog/why-iot-means-speech-recognition/brandon-jacoby-306845-unsplash.jpg) **Smart home solutions are a transformational technology.** Here's why:
 
 1.  They bring all the home machines, i.e. heating, cooling, refrigerator, alarm system, into one ecosystem. Such unification is the sort of disruptive change that makes economic successes.
 2.  Smart home solutions connect your home to the cloud, and thus your mobile phone. As a result they make any home part of a village - no matter where you go, you are always close to home.
