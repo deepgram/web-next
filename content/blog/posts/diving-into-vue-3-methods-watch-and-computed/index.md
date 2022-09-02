@@ -54,7 +54,7 @@ Here's what the rendered component looks like:
 
 I am familiar with the **Vue 2** way of adding functions to the component: add each function to the `methods` object:
 
-```js
+```html
 <script>
 export default {
   data() {
@@ -288,7 +288,7 @@ At this point, I have logic that does the following:
 *   Computes the total headcount based on any changes
 
 <div>
-<code-playground :height="'670'" :width="'100%'" :src="'https://codepen.io/sandrarodgers/embed/ZEaQRLR'"/>
+<code-embed height="670" src="https://codepen.io/sandrarodgers/embed/ZEaQRLR"/>
 </div>
 
 ## Conclusion
