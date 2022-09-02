@@ -3,27 +3,47 @@ import PrimarySection from "../layout/PrimarySection.astro";
 import Svg from "../general/Svg.astro";
 import LeftDecoration from "../decoration/LeftDecoration.astro";
 import RightDecoration from "../decoration/RightDecoration.astro";
+import Link from "../general/Link.astro";
 
-const { class: classes } = Astro.props;
+const { theme, type, title, subtitle, class: classes } = Astro.props;
 ---
 
-<PrimarySection class={`amplify-quote flex ${classes ? classes : ""}`}>
+<section class={`amplify-quote flex ${classes ? classes : ""} max-w-screen-2xl mx-auto px-0 lg:px-10`}>
 	<div class="flex items-center">
 		<Svg name="amplify" class="h-[12rem] sm:h-[18rem] md:h-[24rem] lg:h-[36rem] xl:h-[48rem] w-auto" />
 	</div>
-	<div class="flex flex-col justify-center pl-9">
-		<LeftDecoration icon="star-left" class="w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 mb-6 sm:mb-10 md:mb-20 lg:mb-30 xl:mb-40" />
-		<slot />
-		<RightDecoration icon="star-right" class="w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 mt-6 sm:mt-10 md:mt-20 lg:mt-30 xl:mt-40 text-fireEngine" />
+	<div class="flex flex-col justify-center pl-2 sm:pl-9">
+		<LeftDecoration icon="four-point-star" class={`w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 mb-6 sm:mb-10 md:mb-20 lg:mb-30 xl:mb-40 ${theme === "light" ? "fill-black" : "fill-white"}`} />
+
+		{type === "standard" ? <h2>tl;dr</h2> : null}
+		<h1>{title}</h1>
+		{type === "standard" ? <p class="text-base leading-6 sm:text-lg ">{subtitle}</p> : null}
+		<div class="flex flex-col xl:flex-row mt-2 sm:mt-6 md:mt-10 items-start xl:items-end">
+			<div>
+				<Link
+					href="https://console.deepgram.com/signup"
+					class={`${theme === "light" ? "text-iris" : "text-irisLight"} text-xl sm:text-4xl font-bold leading-10 font-favorit underline`}
+					>Start Free
+				</Link><span class="text-xl sm:text-4xl">💰</span>
+			</div>
+
+			{type === "standard" ? (
+				<p class="ml-0 mt-0 flex flex-col sm:mt-2 sm:flex-row xl:mt-0 xl:ml-7">
+					Got questions? <Link class={`${theme === "light" ? "text-iris" : "text-irisLight"} ml-0 underline sm:ml-1`}>Talk to an expert.</Link>
+				</p>
+			) : null}
+		</div>
+		<RightDecoration icon="eight-point-star" class="w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 mt-6 sm:mt-10 md:mt-20 lg:mt-30 xl:mt-40 fill-coral" />
 	</div>
-</PrimarySection>
+</section>
 
 <style>
 	.amplify-quote :global(h2) {
-		@apply text-storm text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl;
+		@apply text-storm text-lg md:text-4xl lg:text-[2.5rem];
 	}
 
 	.amplify-quote :global(h1) {
-		@apply text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+		@apply text-[1.4rem] sm:text-[3.4rem];
+		@apply leading-[1.6rem] sm:leading-[3.6rem];
 	}
 </style>
