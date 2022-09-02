@@ -13,7 +13,7 @@
 	background-image: url("/tag-gradient.svg");
 }
 
-.bg-svg {
+.bg-responsive-svg {
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: 60%;
