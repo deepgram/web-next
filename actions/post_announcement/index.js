@@ -9,12 +9,11 @@ try {
     const inputfiles = core.getInput("files");
 
     console.log(inputfiles);
-    const files = inputfiles.split[' ']
-    console.dir(files);
+    const files = inputfiles.split(" ");
 
-    // for (const file of files) {
-    //     await processPost(file);
-    // }
+    for (const file of files) {
+        await processPost(file);
+    }
 
 } catch (error) {
     core.setFailed(error.message);

@@ -1,6 +1,6 @@
 ---
 title: "Best Python Tools for Manipulating Audio Data"
-description: "A comprehensive guide on using Python to work with audio files. "
+description: "A comprehensive guide on using Python to work with audio files."
 date: 2022-06-13
 cover: https://res.cloudinary.com/deepgram/image/upload/v1654884969/blog/2022/06/best-python-audio-manipulation-tools/cover.jpg
 authors:
