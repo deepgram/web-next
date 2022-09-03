@@ -23,6 +23,7 @@ jobs:
       - name: Get changed files
         id: changes
         run: |
+          git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.event.after }}
           echo "::set-output name=files::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.event.after }} | grep .md$ | xargs)"
 
       - name: Build post_announcement Action
