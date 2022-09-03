@@ -30,7 +30,7 @@ const processPost = async (filename) => {
     }
 
     const socials = shortUrls.map(s => `${s.label}: ${s.shortUrl}\n`).join('')
-    const message = `A new blog post has been published.\nPost URL:\n${postUrl}\n\nShort urls were generated for this post to use in socials & cross-posting.\n${socials}**Cross-posted link UTMs:**  ?utm_source={medium|devto|hashnode|etc}&utm_campaign=blog&utm_content=${slug}\n\n/cc @dgsocial`
+    const message = `A new blog post has been published.\nPost URL:\n${postUrl}\n\nShort urls were generated for this post to use in socials & cross-posting.\n\n${socials}**Cross-posted link UTMs:**  ?utm_source={medium|devto|hashnode|etc}&utm_campaign=blog&utm_content=${slug}\n\n/cc @dgsocial`
 
     console.log(message)
 
@@ -47,7 +47,6 @@ const getShortUrl = async (longUrl) => {
         }),
         {
             headers: {
-                Accept: "application/json",
                 "Content-Type": "application/json",
             },
         }
@@ -55,6 +54,9 @@ const getShortUrl = async (longUrl) => {
 
     const body = await result.readBody();
     const urls = JSON.parse(body);
+
+    console.log(body)
+    console.log(urls)
 
     return urls.shortUrl;
 };
