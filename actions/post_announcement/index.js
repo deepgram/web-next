@@ -52,8 +52,10 @@ const getShortUrl = async (longUrl) => {
         }
     );
 
+    console.log(result.result)
+
     if (result.result) {
-        return result.result.json.shortUrl;
+        return result.result?.json.shortUrl;
     }
 
     return undefined;
