@@ -1,0 +1,31 @@
+name: POST_ANNOUNCEMENT
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    # paths: 
+    # - 'content/blog/**'
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Build post_announcement Action
+        id: build-post-announcement
+        env:
+          SHORT_URL_FUNCTION_URL: ${{ secrets.SHORT_URL_FUNCTION_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          cd ./actions/post_announcement
+          yarn install
+          yarn build
+
+      - name: Announce New Blog Posts
+        uses: ./actions/post_announcement/
