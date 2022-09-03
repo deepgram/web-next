@@ -10,7 +10,7 @@ tags:
   - education
 seo:
   title: "2021 State of Automatic Speech Recognition Infographic"
-  description: "The 2021 State of Automatic Speech Recognition (ASR) report details where enterprises are currently using this technology and where they see the most value.  Find out why 85% of enterprises say that ASR is important or very important to their future strategy."
+  description: "The 2021 State of Automatic Speech Recognition (ASR) report details where enterprises are currently using this technology and where they see the most value. Find out why 85% of enterprises say that ASR is important or very important to their future strategy."
 shorturls:
   share: https://dpgr.am/51a2e3b
   twitter: https://dpgr.am/8a7f914
