@@ -6,6 +6,9 @@ import Link from "../general/Link.astro";
 import ContrastSection from "../decoration/ContrastSection.astro";
 import AmplifyQuote from "../quotes/AmplifyQuote.astro";
 import Button from "../general/Button.astro";
+import { getUuid } from "../../util";
+
+const formUuid = await getUuid();
 ---
 
 <footer class="text-white text-base bg-black">
@@ -57,13 +60,13 @@ import Button from "../general/Button.astro";
 				<form>
 					<div class="flex flex-col space-y-4">
 						<div class="input-group flex-row items-baseline space-x-1">
-							<label><input type="checkbox" /> I’m good with the</label>
+							<label for={`terms-${formUuid}`}><input id={`terms-${formUuid}`} type="checkbox" /> I’m good with the</label>
 							<Link href="/" target="_blank" class="text-lightIris">Privacy Policy</Link>
 						</div>
 
 						<div class="form--inline">
 							<div class="input-group">
-								<input type="text" id="email" placeholder="you@work-email.com" />
+								<input type="text" id={`email-${formUuid}`} placeholder="you@work-email.com" />
 							</div>
 							<Button type="submit" value="test" class="button button--secondary">Submit</Button>
 						</div>

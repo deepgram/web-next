@@ -24,3 +24,17 @@ export async function getSluggedJson(path: string) {
 
 	return items;
 }
+
+export async function getUuid() {
+	let uuid;
+
+	try {
+		const crypto = await import("node:crypto");
+		uuid = crypto.randomUUID();
+	} catch (err) {
+		uuid = Math.floor(Math.random() * 100);
+		console.log("crypto support is disabled! make sure you're on at least node 16.7");
+	}
+
+	return uuid;
+}

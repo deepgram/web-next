@@ -84,9 +84,10 @@ import JsonLD from "../shared/components/meta/JsonLD.astro";
 		<slot name="head" />
 
 		<Meta property="DC.date.issued" content={new Date().toISOString()} />
+		<Meta name="theme-color" content="#0a121b" />
 		<Meta name="robots" content="noodp, noydir" />
-		<Meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-		<ScriptSrc src="//unpkg.com/alpinejs" />
+		<Meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+		<ScriptSrc src="//unpkg.com/alpinejs" defer />
 
 		<slot name="json:ld">
 			<JsonLD />

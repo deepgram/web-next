@@ -245,10 +245,8 @@ const schema = [
 				</div>
 			</HasGutters>
 			<div class="mt-20">
-				<center>
-					<h3 class="mb-10">Related Resources</h3>
-					<RelatedResources post={post} />
-				</center>
+				<h3 class="mb-10 text-center">Related Resources</h3>
+				<RelatedResources post={post} />
 			</div>
 		</PrimarySection>
 	</article>
@@ -278,7 +276,7 @@ const schema = [
 	}
 
 	.post-prose :global(p) {
-		@apply pb-4;
+		@apply pb-4 leading-loose lg:leading-normal;
 	}
 
 	.post-prose :global(* a) {

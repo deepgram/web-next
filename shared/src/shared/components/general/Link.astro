@@ -4,6 +4,6 @@ import InlineIcon from "./InlineIcon.astro";
 const { icon, iconSuffix, iconStroke, ...rest } = Astro.props;
 ---
 
-<a role="link" {...rest}>
+<a {...rest}>
 	<InlineIcon {icon} {iconSuffix} {iconStroke}><slot /></InlineIcon>
 </a>

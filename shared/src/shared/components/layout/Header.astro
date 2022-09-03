@@ -16,7 +16,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 
 <header x-data="{ menu: null }" class="sticky top-0 z-10">
 	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none;" x-show="menu !== null" x-on:click="menu = null"></div>
-	<div class="absolute inset-x-0 bg-almostBlack/80 text-white">
+	<nav class="absolute inset-x-0 bg-almostBlack/80 text-white">
 		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start">
 			<div class="mr-[2.875rem]">
 				<Link href="/" class="flex">
@@ -26,7 +26,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 			</div>
 			<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
 				<Link href="https://console.deepgram.com/signup" class="button button--mini sm:button--small button--primary">Sign Up</Link>
-				<Button class="button button--mini sm:button--small button--secondary" x-on:click="menu = 'Mobile'">Menu</Button>
+				<Button class="button button--mini sm:button--small button--secondary" x-on:click="menu = 'Mobile'" aria-label="Mobile Menu">Menu</Button>
 
 				<!-- <button type="button" class="button button--secondary button--small" aria-expanded="false"> Menu</button> -->
 				<!-- <NavItem href="/" class="button button--primary button--small">Sign Up</NavItem> -->
@@ -76,7 +76,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 					</NavMenu>
 				</nav>
 				<div class="flex space-x-[1rem] items-center xl:ml-12">
-					<Button icon="search" class="button big-icon button--main-nav" />
+					<Button icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 					<Link href="https://console.deepgram.com/" class="button button--small button--main-nav text-white">Log In</Link>
 					<Link href="/contact" class="button button--secondary button--small w-[7rem]">Contact Us</Link>
 					<Link href="https://console.deepgram.com/signup" class="button button--primary button--small w-[7rem]">Sign Up</Link>
@@ -94,8 +94,8 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 						</Link>
 					</div>
 					<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
-						<Button icon="search" class="button big-icon button--main-nav" />
-						<Button icon="xmark-large" class="button big-icon button--main-nav" x-on:click="menu = null" />
+						<Button icon="search" class="button big-icon button--main-nav" aria-label="Search" />
+						<Button icon="xmark-large" class="button big-icon button--main-nav" x-on:click="menu = null" aria-label="Close Menu" />
 					</div>
 				</div>
 			</div>
@@ -151,5 +151,5 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 				<Link href="/contact" class="col-span-2 button button--small button--primary button--block">Contact Us</Link>
 			</div>
 		</div>
-	</div>
+	</nav>
 </header>
