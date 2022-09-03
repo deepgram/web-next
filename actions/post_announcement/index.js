@@ -4,21 +4,6 @@ import httpm from "@actions/http-client";
 
 const { SHORT_URL_FUNCTION_URL } = process.env;
 
-try {
-    // Identify files & slugs to generate
-    const inputfiles = core.getInput("files");
-
-    console.log(inputfiles);
-    const files = inputfiles.split(" ");
-
-    for (const file of files) {
-        await processPost(file);
-    }
-
-} catch (error) {
-    core.setFailed(error.message);
-}
-
 const processPost = async (filename) => {
     console.log(filename)
 }
@@ -44,3 +29,18 @@ const getShortUrl = async (longUrl) => {
 
     return urls.shortUrl;
 };
+
+try {
+    // Identify files & slugs to generate
+    const inputfiles = core.getInput("files");
+
+    console.log(inputfiles);
+    const files = inputfiles.split(" ");
+
+    for (const file of files) {
+        await processPost(file);
+    }
+
+} catch (error) {
+    core.setFailed(error.message);
+}
