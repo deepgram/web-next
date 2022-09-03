@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    # paths: 
-    # - 'content/blog/**'
+    paths: 
+    - 'content/blog/**'
 
 jobs:
   post-announcement:

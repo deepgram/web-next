@@ -14,6 +14,8 @@ const utm_sources = [
     { label: 'Facebook', source: 'facebook' }
 ]
 
+const https = new httpm.HttpClient();
+
 const processPost = async (filename) => {
     const slug = filename.split('/')[3];
     const postUrl = `https://blog.deepgram.com/${slug}/`;
@@ -36,7 +38,6 @@ const processPost = async (filename) => {
 }
 
 const getShortUrl = async (longUrl) => {
-    const https = new httpm.HttpClient();
     const result = await https.postJson(
         SHORT_URL_FUNCTION_URL,
         {
