@@ -39,12 +39,12 @@ const processPost = async (filename) => {
 
 const getShortUrl = async (longUrl) => {
     const https = new httpm.HttpClient();
-    const result = await https.post(
+    const result = await https.postJson(
         SHORT_URL_FUNCTION_URL,
-        JSON.stringify({
+        {
             longUrl,
             honeypot: "",
-        }),
+        },
         {
             headers: {
                 "Content-Type": "application/json",
