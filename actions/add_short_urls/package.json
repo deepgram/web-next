@@ -1,5 +1,5 @@
 {
-  "name": "@deepgram-actions/post_announcement",
+  "name": "@deepgram-actions/add_short_urls",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@actions/core": "^1.9.1",
-    "@actions/http-client": "^2.0.1"
+    "@actions/exec": "^1.1.1",
+    "@actions/http-client": "^2.0.1",
+    "actions-toolkit": "^6.0.1"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.34.0"

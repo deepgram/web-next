@@ -1,14 +1,14 @@
-name: POST_ANNOUNCEMENT
+name: ADD_SHORT_URLS
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: 
+    paths:
     - 'content/blog/**'
 
 jobs:
-  post-announcement:
+  add-short-urls:
     if: ${{ github.event.head_commit.committer.name != 'Short Url Action' }}
     runs-on: ubuntu-latest
     steps:
@@ -27,19 +27,19 @@ jobs:
           git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.event.after }} | grep ^content/blog/posts/*
           echo "::set-output name=files::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.event.after }} | grep ^content/blog/posts/* | xargs)"
 
-      - name: Build post_announcement Action
-        id: build-post-announcement
+      - name: Build add_short_urls Action
+        id: build-add-short-urls
         if: ${{ steps.changes.outputs.files }}
         run: |
-          cd ./actions/post_announcement
+          cd ./actions/add_short_urls
           yarn install
           yarn build
 
-      - name: Announce New Blog Posts
-        uses: ./actions/post_announcement/
+      - name: Add Short URLs
+        uses: ./actions/add_short_urls/
         if: ${{ steps.changes.outputs.files }}
         env:
           SHORT_URL_FUNCTION_URL: ${{ secrets.SHORT_URL_FUNCTION_URL }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
+          github_token: ${{ secrets.GH_ACCESS_TOKEN }}
           files: ${{ steps.changes.outputs.files }}

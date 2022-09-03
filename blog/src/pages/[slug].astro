@@ -94,11 +94,11 @@ if (og.image) {
 
 // build short URLs
 const shorturls = {
-	share: post.frontmatter.shorturls.share ? post.frontmatter.shorturls.share : Astro.url,
-	twitter: post.frontmatter.shorturls.twitter ? post.frontmatter.shorturls.twitter : Astro.url,
-	linkedin: post.frontmatter.shorturls.linkedin ? post.frontmatter.shorturls.linkedin : Astro.url,
-	reddit: post.frontmatter.shorturls.reddit ? post.frontmatter.shorturls.reddit : Astro.url,
-	facebook: post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
+	share: post.frontmatter.shorturls && post.frontmatter.shorturls.share ? post.frontmatter.shorturls.share : Astro.url,
+	twitter: post.frontmatter.shorturls && post.frontmatter.shorturls.twitter ? post.frontmatter.shorturls.twitter : Astro.url,
+	linkedin: post.frontmatter.shorturls && post.frontmatter.shorturls.linkedin ? post.frontmatter.shorturls.linkedin : Astro.url,
+	reddit: post.frontmatter.shorturls && post.frontmatter.shorturls.reddit ? post.frontmatter.shorturls.reddit : Astro.url,
+	facebook: post.frontmatter.shorturls && post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
 };
 
 // build json schema object
