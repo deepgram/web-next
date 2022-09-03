@@ -1,6 +1,6 @@
-const core = require("@actions/core");
-const github = require("@actions/github");
-const httpm = require("@actions/http-client");
+import core from "@actions/core";
+import github from "@actions/github";
+import httpm from "@actions/http-client";
 
 const { SHORT_URL_FUNCTION_URL } = process.env;
 
