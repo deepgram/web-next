@@ -11,20 +11,28 @@ jobs:
   post-announcement:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
       - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 2
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
+      - name: Get changed files
+        id: changes
+        run: |
+          echo "::set-output name=files::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep .md$ | xargs)"
 
       - name: Build post_announcement Action
         id: build-post-announcement
+        if: ${{ steps.changes.files }}
         env:
           SHORT_URL_FUNCTION_URL: ${{ secrets.SHORT_URL_FUNCTION_URL }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        with:
+          files: ${{ steps.changes.files }}
         run: |
           cd ./actions/post_announcement
           yarn install

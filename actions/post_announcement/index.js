@@ -6,9 +6,9 @@ const { SHORT_URL_FUNCTION_URL } = process.env;
 
 try {
     // Identify files & slugs to generate
-    //const files = github.context?.payload?.head_commit?.added;
+    const files = core.getInput('files');
 
-    console.dir(github.context.payload, { depth: null });
+    console.dir(files);
 
     // for (const file of files) {
     //     if (file.indexOf("blog/posts/") >= 0 && file.indexOf("index.md") >= 0) {
