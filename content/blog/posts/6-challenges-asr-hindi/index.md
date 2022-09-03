@@ -42,8 +42,6 @@ Because Hindi is a lingua franca in India, maybe people speak it as a second (or
 
 <WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
-
-
 ### 3\. Data Quality Problems
 
 To address the lack of available data, teams will sometimes purchase labeled audio data from data vendors to help make their model more robust-a common practice when trying to bump up the amount of data they have to train a model. However, purchased data can be of mixed quality, which means you need an internal quality control process to make sure the data will actually improve the accuracy of your model instead of harming it. And even if you get good data, it might not be labeled and annotated in the same way as your model expects, creating an additional hurdle for using purchased data. And data labeling itself can also be a challenge, as we are about to see.
