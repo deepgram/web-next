@@ -52,13 +52,11 @@ const getShortUrl = async (longUrl) => {
         }
     );
 
-    const body = await result.readBody();
-    const urls = JSON.parse(body);
+    if (result.result) {
+        return result.result.json.shortUrl;
+    }
 
-    console.log(body)
-    console.log(urls)
-
-    return urls.shortUrl;
+    return undefined;
 };
 
 const sendToSlack = async (message) => {
