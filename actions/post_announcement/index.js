@@ -8,12 +8,13 @@ try {
     // Identify files & slugs to generate
     const inputfiles = core.getInput("files");
 
+    console.log(inputfiles);
     const files = inputfiles.split[' ']
     console.dir(files);
 
-    for (const file of files) {
-        await processPost(file);
-    }
+    // for (const file of files) {
+    //     await processPost(file);
+    // }
 
 } catch (error) {
     core.setFailed(error.message);
