@@ -28,7 +28,7 @@ jobs:
 
       - name: Build post_announcement Action
         id: build-post-announcement
-        if: ${{ steps.changes.files }}
+        if: ${{ steps.changes.outputs.files }}
         run: |
           cd ./actions/post_announcement
           yarn install
@@ -36,9 +36,9 @@ jobs:
 
       - name: Announce New Blog Posts
         uses: ./actions/post_announcement/
-        if: ${{ steps.changes.files }}
+        if: ${{ steps.changes.outputs.files }}
         env:
           SHORT_URL_FUNCTION_URL: ${{ secrets.SHORT_URL_FUNCTION_URL }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         with:
-          files: ${{ steps.changes.files }}
+          files: ${{ steps.changes.outputs.files }}
