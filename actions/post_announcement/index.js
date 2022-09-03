@@ -32,9 +32,7 @@ const processPost = async (filename) => {
     const socials = shortUrls.map(s => `${s.label}: ${s.shortUrl}\n`).join('')
     const message = `A new blog post has been published.\nPost URL:\n${postUrl}\n\nShort urls were generated for this post to use in socials & cross-posting.\n\n${socials}**Cross-posted link UTMs:**  ?utm_source={medium|devto|hashnode|etc}&utm_campaign=blog&utm_content=${slug}\n\n/cc @dgsocial`
 
-    console.log(message)
-
-    //await sendToSlack(message);
+    await sendToSlack(message);
 }
 
 const getShortUrl = async (longUrl) => {
@@ -52,21 +50,19 @@ const getShortUrl = async (longUrl) => {
         }
     );
 
-    console.log(result.result)
-
     if (result.result) {
-        return result.result?.json.shortUrl;
+        return result.result?.shortUrl;
     }
 
     return undefined;
 };
 
 const sendToSlack = async (message) => {
-    await https.post(
+    await https.postJson(
         SLACK_WEBHOOK_URL,
-        JSON.stringify({
+        {
             message
-        }),
+        },
         {
             headers: {
                 "Content-Type": "application/json",
