@@ -1,0 +1,5 @@
+name: post-announcement
+description: A GitHub Action to automate announcing new DG blog posts in Slack
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
