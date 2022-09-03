@@ -1,7 +1,7 @@
 const { Client, query } = require("faunadb");
 
 const client = new Client({
-	secret: process.env.FAUNADBSECRET,
+	secret: process.env.FAUNA_DB_SECRET,
 });
 
 // Example Body Payload:
@@ -104,7 +104,7 @@ const generateShortUrl = async (longUrl, shortCode) => {
 	const existingRecord = await longUrlLookup(longUrl);
 
 	if (existingRecord) {
-		return `https://dpgr.am/${existingRecord.source}`;
+		return `https://dpgr.am/${existingRecord.data.source}`;
 	}
 
 	if (shortCode) {
@@ -115,7 +115,7 @@ const generateShortUrl = async (longUrl, shortCode) => {
 
 	try {
 		await client.query(
-			q.Create(q.Collection("shortcodes"), {
+			query.Create(query.Collection("shortcodes"), {
 				data: {
 					source: shortCode.toLowerCase(),
 					target: longUrl.toLowerCase(),
@@ -123,7 +123,9 @@ const generateShortUrl = async (longUrl, shortCode) => {
 			})
 		);
 	} catch (err) {
+		console.log(err);
 		return undefined;
 	}
+
 	return `https://dpgr.am/${shortCode}`;
 };
