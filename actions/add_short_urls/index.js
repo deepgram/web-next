@@ -1,6 +1,6 @@
-import core from "@actions/core";
-import exec from "@actions/exec";
-import httpm from "@actions/http-client";
+import * as core from "@actions/core";
+import * as exec from "@actions/exec";
+import * as httpm from "@actions/http-client";
 import fs from "fs";
 import { remark } from "remark";
 import remarkParse from "remark-parse";
