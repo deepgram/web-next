@@ -1,12 +1,12 @@
-import core from "@actions/core";
-import exec from "@actions/exec";
-import httpm from "@actions/http-client";
-import fs from "fs/promises";
-import { remark } from "remark";
-import remarkParse from "remark-parse";
-import remarkFrontmatter from "remark-frontmatter";
-import yaml from "yaml";
-import { Toolkit } from "actions-toolkit";
+const core = require("@actions/core");
+const exec = require("@actions/exec");
+const httpm = require("@actions/http-client");
+const fs = require("fs/promises");
+const { remark } = require("remark");
+const remarkParse = require("remark-parse");
+const remarkFrontmatter = require("remark-frontmatter");
+const yaml = require("yaml");
+const { Toolkit } = require("actions-toolkit");
 
 let filesChanged = false;
 
