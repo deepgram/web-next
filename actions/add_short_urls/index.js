@@ -27,9 +27,7 @@ const processPost = async (filename) => {
 
 	const orig = fs.readFileSync(filename);
 
-	const processor = remark()
-		.use(remarkParse)
-		.use(remarkFrontmatter, ['yaml']);
+	const processor = remark().use(remarkParse).use(remarkFrontmatter, ["yaml"]);
 
 	let originalTree = processor.parse(orig);
 	const transformedTree = processor.runSync(originalTree);
@@ -110,5 +108,3 @@ try {
 } catch (error) {
 	core.setFailed(error.message);
 }
-
-
