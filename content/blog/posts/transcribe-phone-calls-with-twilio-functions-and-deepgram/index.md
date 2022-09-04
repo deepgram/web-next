@@ -12,6 +12,8 @@ tags:
   - serverless
 ---
 
+
+
 Twilio is a cloud communication platform that lets developers integrate a whole set of communication technologies into applications. On top of providing APIs, they also have Twilio Runtime - which allows the development and deployment of serverless applications directly in the Twilio Console. Super cool.
 
 Today you will be using Twilio Functions to build a phone number that gives callers a prompt, then records a message similar to a voicemail. Once completed, a transcript will be generated with Deepgram and sent to the caller.

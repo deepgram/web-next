@@ -17,40 +17,36 @@ const https = new httpm.HttpClient();
 Toolkit.run(async (tools) => {
 	{
 		try {
-
 			const filterChildren = (opts) => {
 				return (tree) => {
 					return Object.assign({}, tree, {
-						children: tree.children.filter(opts.filter)
-					})
-				}
-			}
+						children: tree.children.filter(opts.filter),
+					});
+				};
+			};
 
 			const processPost = async (filename) => {
 				const slug = filename.split("/")[3];
 				const postUrl = `https://blog.deepgram.com/${slug}/`;
 
-				const orig = fs.readFileSync(filename)
+				const orig = fs.readFileSync(filename);
 
 				const processor = remark()
 					.use(remarkParse)
-					.use(remarkFrontmatter, [{ type: 'yaml', marker: '-' }])
+					.use(remarkFrontmatter, ['yaml']);
 
-				let originalTree = processor.parse(orig)
-				const transformedTree = processor.runSync(originalTree)
+				let originalTree = processor.parse(orig);
+				const transformedTree = processor.runSync(originalTree);
 
-				tools.log(transformedTree.children.map(m => m.type).join(','))
+				tools.log(transformedTree.children.map((m) => m.type).join(","));
 
-				tools.log(`|${orig.toString()}`)
+				const yamlNode = transformedTree.children.find((c) => c.type === "yaml");
+				const outputProcessor = processor().use(filterChildren, { filter: (c) => c.type !== "yaml" });
 
-				const yamlNode = transformedTree.children.find(c => c.type === 'yaml')
-				const outputProcessor = processor()
-					.use(filterChildren, { filter: c => c.type !== 'yaml' })
+				const outputTree = outputProcessor.runSync(transformedTree);
+				const newMdText = outputProcessor.stringify(outputTree);
 
-				const outputTree = outputProcessor.runSync(transformedTree)
-				const newMdText = outputProcessor.stringify(outputTree)
-
-				const yml = yaml.parse(yamlNode.value)
+				const yml = yaml.parse(yamlNode.value);
 				const shorturls = yml.shorturls || {};
 
 				for (const source of utm_sources) {
