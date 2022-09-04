@@ -1,11 +1,11 @@
-const core = require("@actions/core");
-const exec = require("@actions/exec");
-const httpm = require("@actions/http-client");
-const fs = require("fs");
-const { remark } = require("remark");
-const remarkParse = require("remark-parse");
-const remarkFrontmatter = require("remark-frontmatter");
-const yaml = require("yaml");
+import core from "@actions/core";
+import exec from "@actions/exec";
+import httpm from "@actions/http-client";
+import fs from "fs";
+import { remark } from "remark";
+import remarkParse from "remark-parse";
+import remarkFrontmatter from "remark-frontmatter";
+import yaml from "yaml";
 
 let filesChanged = false;
 
@@ -93,24 +93,22 @@ const commitChanges = async (slug) => {
 	await exec("git", ["push", "origin", `HEAD:main`]);
 };
 
-(async function main() {
-	try {
-		// Identify files & slugs to generate
-		const inputfiles = core.getInput("files");
+try {
+	// Identify files & slugs to generate
+	const inputfiles = core.getInput("files");
 
-		const files = inputfiles.split(" ");
+	const files = inputfiles.split(" ");
 
-		for (const file of files) {
-			await processPost(file);
-		}
-
-		// If we made changes, we need to commit and push
-		if (filesChanged) {
-			await commitChanges();
-		}
-	} catch (error) {
-		core.setFailed(error.message);
+	for (const file of files) {
+		await processPost(file);
 	}
-})();
+
+	// If we made changes, we need to commit and push
+	if (filesChanged) {
+		await commitChanges();
+	}
+} catch (error) {
+	core.setFailed(error.message);
+}
 
 
