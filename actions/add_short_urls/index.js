@@ -30,23 +30,23 @@ Toolkit.run(async (tools) => {
 				const slug = filename.split("/")[3];
 				const postUrl = `https://blog.deepgram.com/${slug}/`;
 
-				const orig = fs.readFileSync(filename);
+				const orig = fs.readFileSync(filename)
 
-				const processor = remark().use(remarkParse).use(remarkFrontmatter, ["yaml"]);
+				const processor = remark()
+					.use(remarkParse)
+					.use(remarkFrontmatter, ['yaml'])
 
-				let originalTree = processor.parse(orig);
-				const transformedTree = processor.runSync(originalTree);
+				let originalTree = processor.parse(orig)
+				const transformedTree = processor.runSync(originalTree)
 
-				const yamlNode = transformedTree.children.find((c) => c.type === "yaml");
+				const yamlNode = transformedTree.children.find(c => c.type === 'yaml')
+				const outputProcessor = processor()
+					.use(filterChildren, { filter: c => c.type !== 'yaml' })
 
-				tools.log(transformedTree.children.map(m => m.type).join(','))
+				const outputTree = outputProcessor.runSync(transformedTree)
+				const newMdText = outputProcessor.stringify(outputTree)
 
-
-				const outputProcessor = processor().use(filterChildren, { filter: (c) => c.type !== "yaml" });
-				const outputTree = outputProcessor.runSync(transformedTree);
-				const newMdText = outputProcessor.stringify(outputTree);
-
-				const yml = yaml.parse(yamlNode.value);
+				const yml = yaml.parse(yamlNode.value)
 				const shorturls = yml.shorturls || {};
 
 				for (const source of utm_sources) {
