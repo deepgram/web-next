@@ -39,6 +39,10 @@ Toolkit.run(async (tools) => {
 				let originalTree = processor.parse(orig)
 				const transformedTree = processor.runSync(originalTree)
 
+				tools.log(transformedTree.children.map(m => m.type).join(','))
+
+				tools.log(orig.toString())
+
 				const yamlNode = transformedTree.children.find(c => c.type === 'yaml')
 				const outputProcessor = processor()
 					.use(filterChildren, { filter: c => c.type !== 'yaml' })
