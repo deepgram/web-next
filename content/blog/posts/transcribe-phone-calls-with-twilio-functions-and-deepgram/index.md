@@ -10,6 +10,12 @@ category: tutorial
 tags:
   - twilio
   - serverless
+shorturls:
+  share: https://dpgr.am/a20fc02
+  twitter: https://dpgr.am/2f19bb2
+  linkedin: https://dpgr.am/3c905b6
+  reddit: https://dpgr.am/49ab62b
+  facebook: https://dpgr.am/081054f
 ---
 
 Twilio is a cloud communication platform that lets developers integrate a whole set of communication technologies into applications. On top of providing APIs, they also have Twilio Runtime - which allows the development and deployment of serverless applications directly in the Twilio Console. Super cool.
@@ -145,3 +151,4 @@ exports.handler = async function(context, event, callback) {
 ```
 
 Don't forget to install dependencies and set your environment variables. If you have any questions about this project, feel free to get in touch.
+
