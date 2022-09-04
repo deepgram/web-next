@@ -87,7 +87,7 @@ const commitChanges = async (slug) => {
 	await exec.exec("git", ["config", "--local", "user.email", "devrel@deepgram.com"]);
 	await exec.exec("git", ["pull", "origin", "main", "--tags"]);
 	await exec.exec("git", ["add", "."]);
-	await exec.exec("git", ["commit", "--no-commit-hooks", "-m", `Adding short urls for blog posts`]);
+	await exec.exec("git", ["commit", "-m", `Adding short urls for blog posts`]);
 
 	// push new version
 	await exec.exec("git", ["push", "origin", `HEAD:main`]);
