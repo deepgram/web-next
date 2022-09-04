@@ -9,7 +9,14 @@ authors:
 category: tutorial
 tags:
   - javascript
+shorturls:
+  share: https://dpgr.am/fabf193
+  twitter: https://dpgr.am/c1cae38
+  linkedin: https://dpgr.am/62941ab
+  reddit: https://dpgr.am/549cebe
+  facebook: https://dpgr.am/7d895a9
 ---
+
 Personal language usage is a journey of learning and adapting, which certainly extends to terms you may not yet realize are non-inclusive or potentially profane to others. By detecting and pointing out some potentially-problematic language, you can work towards being more considerate and kind to others.
 
 [alex](https://alexjs.com) is a lovely command-line tool that takes in text or markdown files and, using [`retext-equality`](https://github.com/retextjs/retext-equality/blob/main/rules.md) and [`retext-profanities`](https://github.com/retextjs/retext-profanities/blob/main/rules.md), highlights suggestions for improvement. alex checks for gendered work titles, gendered proverbs, ableist language, condescending or intolerant language, profanities, and much more.
@@ -22,15 +29,11 @@ Before we start, you will need a Deepgram API Key - [get one here](https://conso
 
 Create a new directory and open it in your code editor, navigate to it in your terminal, create a new `package.json` file by running `npm init -y`, and install dependencies:
 
-```
-npm install retext retext-equality retext-profanities vfile-reporter-json @deepgram/sdk
-```
+    npm install retext retext-equality retext-profanities vfile-reporter-json @deepgram/sdk
 
 The `retext` packages require an ES6 project. The easiest way to do this without needing to compile code with a tool like Babel is to add the following property to your `package.json` file:
 
-```
-"type": "module"
-```
+    "type": "module"
 
 Create and open an `index.js` file in your code editor.
 
@@ -188,3 +191,4 @@ for(let utterance of results.utterances) {
 
 console.log(suggestions)
 ```
+
