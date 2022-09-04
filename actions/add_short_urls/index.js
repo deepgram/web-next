@@ -41,7 +41,7 @@ Toolkit.run(async (tools) => {
 
 				tools.log(transformedTree.children.map(m => m.type).join(','))
 
-				tools.log(orig.toString())
+				tools.log(`|${orig.toString()}`)
 
 				const yamlNode = transformedTree.children.find(c => c.type === 'yaml')
 				const outputProcessor = processor()
