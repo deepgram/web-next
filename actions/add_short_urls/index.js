@@ -32,10 +32,14 @@ Toolkit.run(async (tools) => {
 
 				const orig = await fs.readFile(filename);
 
+				tools.log(`${filename}: ${orig.length}`);
+
 				const processor = remark().use(remarkParse).use(remarkFrontmatter, ["yaml"]);
 
 				let originalTree = processor.parse(orig);
 				const transformedTree = processor.runSync(originalTree);
+
+				tools.log(`children: ${transformedTree.children.length}`);
 
 				const yamlNode = transformedTree.children.find((c) => c.type === "yaml");
 				const outputProcessor = processor().use(filterChildren, { filter: (c) => c.type !== "yaml" });
