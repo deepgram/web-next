@@ -17,6 +17,15 @@ const https = new httpm.HttpClient();
 Toolkit.run(async (tools) => {
 	{
 		try {
+
+			const filterChildren = (opts) => {
+				return (tree) => {
+					return Object.assign({}, tree, {
+						children: tree.children.filter(opts.filter)
+					})
+				}
+			}
+
 			const processPost = async (filename) => {
 				const slug = filename.split("/")[3];
 				const postUrl = `https://blog.deepgram.com/${slug}/`;
