@@ -34,7 +34,7 @@ Toolkit.run(async (tools) => {
 
 				const processor = remark()
 					.use(remarkParse)
-					.use(remarkFrontmatter, ['yaml'])
+					.use(remarkFrontmatter, [{ type: 'yaml', marker: '-' }])
 
 				let originalTree = processor.parse(orig)
 				const transformedTree = processor.runSync(originalTree)
