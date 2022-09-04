@@ -83,14 +83,14 @@ const getShortUrl = async (longUrl) => {
 
 const commitChanges = async (slug) => {
 	// git login & pull
-	await exec("git", ["config", "--local", "user.name", "Short Url Action"]);
-	await exec("git", ["config", "--local", "user.email", "devrel@deepgram.com"]);
-	await exec("git", ["pull", "origin", "main", "--tags"]);
-	await exec("git", ["add", "."]);
-	await exec("git", ["commit", "--no-commit-hooks", "-m", `Adding short urls for blog posts`]);
+	await exec.exec("git", ["config", "--local", "user.name", "Short Url Action"]);
+	await exec.exec("git", ["config", "--local", "user.email", "devrel@deepgram.com"]);
+	await exec.exec("git", ["pull", "origin", "main", "--tags"]);
+	await exec.exec("git", ["add", "."]);
+	await exec.exec("git", ["commit", "--no-commit-hooks", "-m", `Adding short urls for blog posts`]);
 
 	// push new version
-	await exec("git", ["push", "origin", `HEAD:main`]);
+	await exec.exec("git", ["push", "origin", `HEAD:main`]);
 };
 
 try {
