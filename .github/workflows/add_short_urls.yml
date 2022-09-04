@@ -32,8 +32,8 @@ jobs:
         if: ${{ steps.changes.outputs.files }}
         run: |
           cd ./actions/add_short_urls
-          npm install
-          npm run build
+          yarn install
+          yarn build
 
       - name: Add Short URLs
         uses: ./actions/add_short_urls/
