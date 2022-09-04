@@ -1,7 +1,7 @@
 const core = require("@actions/core");
 const exec = require("@actions/exec");
 const httpm = require("@actions/http-client");
-const fs = require("fs/promises");
+const fs = require("fs");
 const { remark } = require("remark");
 const remarkParse = require("remark-parse");
 const remarkFrontmatter = require("remark-frontmatter");
@@ -30,7 +30,7 @@ Toolkit.run(async (tools) => {
 				const slug = filename.split("/")[3];
 				const postUrl = `https://blog.deepgram.com/${slug}/`;
 
-				const orig = await fs.readFile(filename);
+				const orig = fs.readFileSync(filename);
 
 				const processor = remark().use(remarkParse).use(remarkFrontmatter, ["yaml"]);
 
@@ -39,7 +39,7 @@ Toolkit.run(async (tools) => {
 
 				const yamlNode = transformedTree.children.find((c) => c.type === "yaml");
 
-				tools.log(yamlNode)
+				tools.log(transformedTree.children.map(m => m.type).join(','))
 
 
 				const outputProcessor = processor().use(filterChildren, { filter: (c) => c.type !== "yaml" });
