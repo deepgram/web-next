@@ -4,6 +4,10 @@ runs:
   using: "composite"
   steps:
     - name: Test
+      env:
+        URL: https://${{ env.PRODUCTION_DOMAIN }}
+      runs: echo "FOO=${FOO}" >> $GITHUB_ENV
+
     # - if: ${{ env.IS_PRODUCTION == true }}
     #   env:
     #     URL: https://${{ env.PRODUCTION_DOMAIN }}

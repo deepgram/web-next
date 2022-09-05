@@ -30,3 +30,4 @@ jobs:
         uses: actions/checkout@v2
       - name: Configure dynamic environment variables
         uses: ./actions/environment/
+      - run:  env
