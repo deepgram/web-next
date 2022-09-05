@@ -52,7 +52,8 @@ jobs:
           echo "BUILD_ALIAS=${{ github.head_ref }}" >> $GITHUB_ENV
           echo "DEPLOY_MESSAGE=Deployment from GitHub Action" >> $GITHUB_ENV
           echo "ENVIRONMENT_NAME=manual-deploy-${{ github.head_ref || github.run_id }}" >> $GITHUB_ENV
-          echo "ENVIRONMENT_DESC=Deploy preview for ${{ env.DEPLOY_PREFIX }} site" >> $GITHUB_ENV      - name: Check out repository
+          echo "ENVIRONMENT_DESC=Deploy preview for ${{ env.DEPLOY_PREFIX }} site" >> $GITHUB_ENV
+      - name: Check out repository
         uses: actions/checkout@v2
       - name: Set up Node.js
         uses: actions/setup-node@v3
