@@ -1,44 +1,10 @@
 ---
-import Button from "../general/Button.astro";
-
-const { theme, url, formProps, hook, buttonText } = Astro.props;
+const { url, hook } = Astro.props;
 ---
 
 <form action="/.netlify/functions/forms/" method="POST">
 	{url && <input type="hidden" name="redirect" value={url} />}
-	<input type="hidden" name="hook" value={hook ? hook : "blj5az4"} />
-	<div class="form--inline max-w-[50%] lg:max-w-[75%] xl:max-w-full">
-		{formProps &&
-			formProps.map((form, key) => {
-				const { label, type, name, placeholder } = form;
+	{hook && <input type="hidden" name="hook" value={url} />}
 
-				return (
-					<div class={`input-group ${theme === "white" ? "input-group--light-bg" : ""} ${theme === "red" ? "theme--red" : ""}`}>
-						{label && <label for={`form-promo-${key}`}>{label}</label>}
-						<input id={`form-promo-${key}`} name={name ? name : key} type={type ? type : "text"} placeholder={placeholder ? placeholder : ""} />
-					</div>
-				);
-			})}{(
-			<Button type="submit" value="test" class={`button button--primary ${theme === "red" ? "button--alternative" : ""}`}>
-				{buttonText}
-			</Button>
-		)}
-	</div>
+	<slot />
 </form>
-
-<style>
-	.input-group.theme--red label {
-		@apply text-black;
-	}
-
-	.input-group.theme--red input[type="email"],
-	.input-group.theme--red input[type="password"],
-	.input-group.theme--red input[type="search"],
-	.input-group.theme--red input[type="tel"],
-	.input-group.theme--red input[type="text"],
-	.input-group.theme--red input[type="url"],
-	.input-group.theme--red input[type="text"],
-	.input-group.theme--red textarea {
-		@apply bg-crimson placeholder:text-cottonCandy/80 text-white;
-	}
-</style>

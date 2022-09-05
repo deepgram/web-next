@@ -1,15 +1,18 @@
 ---
-import { getSluggedJson } from "../../util";
+import { getSluggedJson, getUuid } from "../../util";
 import AbstractPromo from "./AbstractPromo.astro";
 import PromoForm from "./PromoForm.astro";
+import Button from "../general/Button.astro";
 
-export interface Props {
+interface Props {
 	whitepaper: string;
 	[key: string]: string;
 }
 
-export interface Whitepaper {
+interface Whitepaper {
 	title: string;
+	zapHook: string;
+	hubSpotId: string;
 	url: string;
 	theme: string;
 	image: string;
@@ -17,9 +20,9 @@ export interface Whitepaper {
 	slug?: string;
 }
 
+let whitepaper: Whitepaper;
 const { whitepaper: whitepaperSlug, ...rest } = Astro.props as Props;
 
-let whitepaper: Whitepaper;
 const allWhitepapers: Whitepaper[] = await getSluggedJson("whitepapers");
 
 if (whitepaperSlug === "latest") {
@@ -28,18 +31,51 @@ if (whitepaperSlug === "latest") {
 	whitepaper = allWhitepapers.find((wp) => wp.slug === whitepaperSlug);
 }
 
-const { theme, title, image, url } = whitepaper;
+const { theme, title, image, url, hubSpotId, zapHook } = whitepaper;
+const formId = await getUuid();
 ---
 
 <AbstractPromo strapline="White Paper" backgroundImage={image} theme={theme} title={title} {...rest}>
-	<PromoForm
-		theme={theme}
-		url={url}
-		formProps={[
-			{ name: "name", label: "Name (first and last)", placeholder: "Your name" },
-			{ name: "email", label: "Work email", placeholder: "you@company.com", type: "email" },
-			{ name: "role", label: "Role", placeholder: "Role/Title" },
-		]}
-		buttonText="Download"
-	/>
+	<PromoForm theme={theme} url={url} hook={zapHook}>
+		<input type="hidden" name="hubSpotId" value={hubSpotId} />
+		<div class="grid grid-cols-5 form--inline">
+			<div class:list={["input-group", theme === "white" ? "input-group--light-bg" : "", theme === "red" ? "theme--red" : ""]}>
+				<label for={`firstname-${formId}`}>First name</label>
+				<input type="text" id={`firstname-${formId}`} name="firstname" required placeholder="Ada" />
+			</div>
+			<div class:list={["input-group", theme === "white" ? "input-group--light-bg" : "", theme === "red" ? "theme--red" : ""]}>
+				<label for={`lastname-${formId}`}>Last name</label>
+				<input type="text" id={`lastname-${formId}`} name="lastname" required placeholder="Lovelace" />
+			</div>
+			<div class:list={["input-group", theme === "white" ? "input-group--light-bg" : "", theme === "red" ? "theme--red" : ""]}>
+				<label for={`email-${formId}`}>Work email</label>
+				<input type="text" id={`email-${formId}`} name="email" required placeholder="ada@lovelace.com" />
+			</div>
+			<div class:list={["input-group", theme === "white" ? "input-group--light-bg" : "", theme === "red" ? "theme--red" : ""]}>
+				<label for={`jobtitle-${formId}`}>Title</label>
+				<input type="text" id={`jobtitle-${formId}`} name="jobtitle" required placeholder="First Engineer" />
+			</div>
+
+			<div class="input-group">
+				<Button type="submit" value="test" class={`button button--primary shrink ${theme === "red" ? "button--alternative" : ""}`}>Download</Button>
+			</div>
+		</div>
+	</PromoForm>
 </AbstractPromo>
+
+<style>
+	.input-group.theme--red label {
+		@apply text-black;
+	}
+
+	.input-group.theme--red input[type="email"],
+	.input-group.theme--red input[type="password"],
+	.input-group.theme--red input[type="search"],
+	.input-group.theme--red input[type="tel"],
+	.input-group.theme--red input[type="text"],
+	.input-group.theme--red input[type="url"],
+	.input-group.theme--red input[type="text"],
+	.input-group.theme--red textarea {
+		@apply bg-crimson placeholder:text-cottonCandy/80 text-white;
+	}
+</style>
