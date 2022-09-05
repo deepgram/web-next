@@ -1,12 +1,11 @@
 name: Configure dynamic environment variables
 description: A GitHub Action to configure dynamic environment variables for the build actions.
+
 runs:
   using: "composite"
   steps:
-    - name: Test
-      env:
-        URL: https://${{ env.PRODUCTION_DOMAIN }}
-      runs: echo "FOO=${FOO}" >> $GITHUB_ENV
+    - run: echo Hello
+      shell: bash
 
     # - if: ${{ env.IS_PRODUCTION == true }}
     #   env:
