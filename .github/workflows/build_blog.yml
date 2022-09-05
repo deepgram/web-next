@@ -28,7 +28,7 @@ jobs:
         if: ${{ env.IS_PRODUCTION != 'true' }}
         run: |
           echo "URL=https://$(echo $STAGING_DOMAIN)" >> $GITHUB_ENV
-          echo "ENVIRONMENT_NAME=$(echo $DEPLOY_PREFIX)-deploy-preview" >> $GITHUB_ENV
-          echo "BUILD_ALIAS=deploy-preview" >> $GITHUB_ENV
+          echo "ENVIRONMENT_NAME=$(echo $DEPLOY_PREFIX)-deploy-preview-${{ github.event.number }}" >> $GITHUB_ENV
+          echo "BUILD_ALIAS=deploy-preview-${{ github.event.number }}" >> $GITHUB_ENV
       - run: echo $URL
       - run: env
