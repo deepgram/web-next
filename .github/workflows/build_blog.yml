@@ -31,3 +31,4 @@ jobs:
           echo "ENVIRONMENT_NAME=$(echo $DEPLOY_PREFIX)-deploy-preview" >> $GITHUB_ENV
           echo "BUILD_ALIAS=deploy-preview" >> $GITHUB_ENV
       - run: echo $URL
+      - run: env
