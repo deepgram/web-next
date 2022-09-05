@@ -1,0 +1,16 @@
+name: Configure dynamic environment variables
+description: A GitHub Action to configure dynamic environment variables for the build actions.
+runs:
+  using: "composite"
+  steps:
+    - name: Test
+    # - if: ${{ env.IS_PRODUCTION == true }}
+    #   env:
+    #     URL: https://${{ env.PRODUCTION_DOMAIN }}
+    #     ENVIRONMENT_NAME: ${{ env.DEPLOY_PREFIX }}-production
+    #     BUILD_ALIAS: null
+    # - if: ${{ env.IS_PRODUCTION != true }}
+    #   env:
+    #     URL: https://${{ env.PRODUCTION_DOMAIN }}
+    #     ENVIRONMENT_NAME: ${{ env.DEPLOY_PREFIX }}-production
+    #     BUILD_ALIAS: deploy-preview

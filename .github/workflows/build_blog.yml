@@ -14,45 +14,17 @@ on:
     - 'blog/**'
     - 'content/**'
     - 'shared/**'
-    
+
 jobs:
   blog:
     name: Build Blog
     runs-on: ubuntu-latest
     env:
-      URL: "https://sweet-pie-c52a63-blog.netlify.app"
-      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
+      PRODUCTION_DOMAIN: blog.deepgram.com
+      STAGING_DOMAIN: sweet-pie-c52a63-blog.netlify.app
+      BUILD_PATH: ./blog
+      IS_PRODUCTION: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+      DEPLOY_PREFIX: blog
     steps:
-      - uses: actions/checkout@v2
-      - name: Read .nvmrc file
-        run: echo ::set-output name=NODE_VERSION::$(cat ./blog/.nvmrc)
-        id: nvm
-      - uses: actions/setup-node@v3
-        with:
-          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
-      - name: Install Dependencies
-        run: |
-          cd ./blog
-          yarn install
-      - name: Copy netlify functions from shared
-        run: |
-          cd ./blog
-          yarn functions:clean && yarn functions:copy
-      - name: Build
-        run: |
-          cd ./blog
-          ./node_modules/.bin/ntl build
-      - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2
-        with:
-          publish-dir: './blog/dist'
-          production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "Deploy from GitHub Actions"
-          enable-pull-request-comment: true
-          enable-commit-comment: true
-          overwrites-pull-request-comment: true
-          production-deploy: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
-          functions-dir: ./blog/functions
-        timeout-minutes: 2
+      - name: Configure dynamic environment variables
+        uses: ./actions/environment/
