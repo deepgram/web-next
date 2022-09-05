@@ -18,16 +18,16 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
-      - name: Configure dynamic environment variables
+      - name: Configure dynamic environment variables for production
         if: ${{ env.IS_PRODUCTION == true }}
-        env:
-          URL: https://${{ env.PRODUCTION_DOMAIN }}
-          ENVIRONMENT_NAME: ${{ env.DEPLOY_PREFIX }}-production
-          BUILD_ALIAS: null
-      - name: Configure dynamic environment variables
+        run: |
+          echo "URL=https://$(echo $PRODUCTION_DOMAIN)" >> $GITHUB_ENV
+          echo "ENVIRONMENT_NAME=$(echo $DEPLOY_PREFIX)-production" >> $GITHUB_ENV
+          echo "BUILD_ALIAS=" >> $GITHUB_ENV
+      - name: Configure dynamic environment variables for staging
         if: ${{ env.IS_PRODUCTION != true }}
-        env:
-          URL: https://${{ env.STAGING_DOMAIN }}
-          ENVIRONMENT_NAME: ${{ env.DEPLOY_PREFIX }}-deploy-preview
-          BUILD_ALIAS: deploy-preview
+        run: |
+          echo "URL=https://$(echo $STAGING_DOMAIN)" >> $GITHUB_ENV
+          echo "ENVIRONMENT_NAME=$(echo $DEPLOY_PREFIX)-deploy-preview" >> $GITHUB_ENV
+          echo "BUILD_ALIAS=deploy-preview" >> $GITHUB_ENV
       - run: echo $URL
