@@ -3,17 +3,7 @@ name: "Blog: CI/CD"
 on:
   workflow_dispatch:
   push:
-    branches: [main]
-    paths: 
-    - 'blog/**'
-    - 'content/**'
-    - 'shared/**'
   pull_request:
-    branches: [main]
-    paths: 
-    - 'blog/**'
-    - 'content/**'
-    - 'shared/**'
 
 jobs:
   blog:
