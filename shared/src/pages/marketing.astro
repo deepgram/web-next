@@ -169,32 +169,28 @@ import Button from "../shared/components/general/Button.astro";
 			<ComponentStaticPreview
 				id="quote-amplify"
 				title="Amplify Quote"
-				snippet={`<AmplifyQuote>
-	<h1>Ready to see Deepgram in Action?</h1>
-	<p>Get your API key and unlock $150 in free credit.</p>
-	<a href="https://console.deepgram.com/signup">Start Free</a>
-</AmplifyQuote>`}
+				snippet={`<AmplifyQuote theme="light" type="standard" title="Ready to see Deepgram in Action?" subtitle="Get your API key and unlock $150 in free credit." />`}
 			>
-				<AmplifyQuote>
-					<h1>Ready to see Deepgram in Action?</h1>
-					<p>Get your API key and unlock $150 in free credit.</p>
-					<a href="https://console.deepgram.com/signup">Start Free</a>
-				</AmplifyQuote>
+				<AmplifyQuote theme="light" type="standard" title="Ready to see Deepgram in Action?" subtitle="Get your API key and unlock $150 in free credit." />
 			</ComponentStaticPreview>
 			<ComponentStaticPreview
 				id="quote-amplify-dark"
 				title="Amplify Quote (dark)"
-				snippet={`<AmplifyQuote>
-	<h1>Ready to see Deepgram in Action?</h1>
-	<p>Get your API key and unlock $150 in free credit.</p>
-	<a href="https://console.deepgram.com/signup">Start Free</a>
-</AmplifyQuote>`}
+				snippet={`<AmplifyQuote class="bg-black text-white" type="standard" title="Ready to see Deepgram in Action?" subtitle="Get your API key and unlock $150 in free credit." />`}
 			>
-				<AmplifyQuote class="bg-black text-white">
-					<h1>Ready to see Deepgram in Action?</h1>
-					<p>Get your API key and unlock $150 in free credit.</p>
-					<a href="https://console.deepgram.com/signup">Start Free</a>
-				</AmplifyQuote>
+				<AmplifyQuote class="bg-black text-white" type="standard" title="Ready to see Deepgram in Action?" subtitle="Get your API key and unlock $150 in free credit." />
+			</ComponentStaticPreview>
+			<ComponentStaticPreview
+				id="quote-amplify-simple"
+				title="Amplify Quote (simple)"
+				snippet={`<AmplifyQuote class="bg-black text-white" type="simple" title="Ready to see Deepgram in Action?" subtitle="Get your API key and unlock $150 in free credit." />`}
+			>
+				<AmplifyQuote
+					class="bg-black text-white"
+					type="simple"
+					title="Stop building work-arounds for STT that don’t work."
+					subtitle="Get your API key and unlock $150 in free credit."
+				/>
 			</ComponentStaticPreview>
 		</ComponentSection>
 

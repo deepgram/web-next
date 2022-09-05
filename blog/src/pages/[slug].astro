@@ -54,28 +54,30 @@ const allCategories = await getSluggedJson("blog/category");
 const postCategory = allCategories.find((c) => (post.frontmatter.category = c.slug));
 
 const seo = {
-	title: post.frontmatter.seo.title ? post.frontmatter.seo.title : post.frontmatter.title,
-	description: post.frontmatter.seo.description ? post.frontmatter.seo.description : post.frontmatter.description,
-	url: post.frontmatter.seo.canonical ? post.frontmatter.seo.canonical : Astro.url,
+	title: post.frontmatter.seo && post.frontmatter.seo.title ? post.frontmatter.seo.title : post.frontmatter.title,
+	description: post.frontmatter.seo && post.frontmatter.seo.description ? post.frontmatter.seo.description : post.frontmatter.description,
+	url: post.frontmatter.seo && post.frontmatter.seo.canonical ? post.frontmatter.seo.canonical : Astro.url,
 };
 
 const og = {
-	title: post.frontmatter.og.title ? post.frontmatter.og.title : seo.title,
-	description: post.frontmatter.og.description ? post.frontmatter.og.description : seo.description,
-	image: post.frontmatter.og.image ? post.frontmatter.og.image : post.frontmatter.cover,
+	title: post.frontmatter.og && post.frontmatter.og.title ? post.frontmatter.og.title : seo.title,
+	description: post.frontmatter.og && post.frontmatter.og.description ? post.frontmatter.og.description : seo.description,
+	image: post.frontmatter.og && post.frontmatter.og.image ? post.frontmatter.og.image : post.frontmatter.cover,
 };
 
 // resize-og-image-to-fit
-const version = og.image.match(/(.*)\/image\/upload\/(?<version>v[0-9]+)\/(.*)\.(.*)/).groups.version;
-og.image = og.image.replace(version, "c_fit,h_627,w_1200");
+if (og && og.image) {
+	const version = og.image.match(/(.*)\/image\/upload\/(?<version>v[0-9]+)\/(.*)\.(.*)/).groups.version;
+	og.image = og.image.replace(version, "c_fit,h_627,w_1200");
+}
 
 // build short URLs
 const shorturls = {
-	share: post.frontmatter.shorturls.share ? post.frontmatter.shorturls.share : Astro.url,
-	twitter: post.frontmatter.shorturls.twitter ? post.frontmatter.shorturls.twitter : Astro.url,
-	linkedin: post.frontmatter.shorturls.linkedin ? post.frontmatter.shorturls.linkedin : Astro.url,
-	reddit: post.frontmatter.shorturls.reddit ? post.frontmatter.shorturls.reddit : Astro.url,
-	facebook: post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
+	share: post.frontmatter.shorturls && post.frontmatter.shorturls.share ? post.frontmatter.shorturls.share : Astro.url,
+	twitter: post.frontmatter.shorturls && post.frontmatter.shorturls.twitter ? post.frontmatter.shorturls.twitter : Astro.url,
+	linkedin: post.frontmatter.shorturls && post.frontmatter.shorturls.linkedin ? post.frontmatter.shorturls.linkedin : Astro.url,
+	reddit: post.frontmatter.shorturls && post.frontmatter.shorturls.reddit ? post.frontmatter.shorturls.reddit : Astro.url,
+	facebook: post.frontmatter.shorturls && post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
 };
 
 // build json schema object

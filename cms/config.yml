@@ -119,18 +119,23 @@ collections:
           - label: Share Link Short URL
             name: share
             widget: string
+            required: false
           - label: Twitter Short URL
             name: twitter
             widget: string
+            required: false
           - label: LinkedIn Short URL
             name: linkedin
             widget: string
+            required: false
           - label: Reddit Short URL
             name: reddit
             widget: string
+            required: false
           - label: Facebook Short URL
             name: facebook
             widget: string
+            required: false
   - name: authors
     label: "Authors"
     label_singular: Author

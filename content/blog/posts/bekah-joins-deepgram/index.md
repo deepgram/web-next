@@ -7,11 +7,10 @@ authors:
     - bekah-hawrot-weigel
 category: devlife
 tags:
-    - careers
     - team
 seo:
     title: "Bekah Hawrot Weigel joins the Developer Relations team at Deepgram as the Technical Community Builder"
-    description: "Bekah Hawrot Weigel joins the Developer Relations team at Deepgram!"
+    description: "Bekah Hawrot Weigel joins the Developer Relations team at Deepgram! "
 shorturls:
     share: https://dpgr.am/1038070
     twitter: https://dpgr.am/37b7b7f

@@ -19,7 +19,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 	<nav class="absolute inset-x-0 bg-almostBlack/80 text-white">
 		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start">
 			<div class="mr-[2.875rem]">
-				<Link href="/" class="flex">
+				<Link href="https://deepgram.com" class="flex">
 					<span class="sr-only">Deepgram</span>
 					<Svg name="deepgram" class="my-[1.125rem] h-[2.3125rem] w-auto text-coral" />
 				</Link>
@@ -35,50 +35,52 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 				<nav class="flex space-x-[2.1875rem]" x-on:click.outside="menu = null">
 					<!-- Product -->
 					<NavMenu name="Product" primary>
-						<NavMenuPrimaryItem slot="primary" href="/product" icon="star" description="Meet the Deepgram speech‑to‑text API">View Product</NavMenuPrimaryItem>
+						<NavMenuPrimaryItem slot="primary" href="https://deepgram.com/product/overview/" icon="star" description="Meet the Deepgram speech‑to‑text API"
+							>View Product
+						</NavMenuPrimaryItem>
 
-						<NavMenuItem href="/product/model-overview" icon="model">Model Overview</NavMenuItem>
-						<NavMenuItem href="/product/sdks-tools" icon="box">SDKs + Tools</NavMenuItem>
-						<NavMenuItem href="/product/languages" icon="globe">Languages</NavMenuItem>
-						<NavMenuItem href="/product/free-api-key" icon="code">Free API Key</NavMenuItem>
-						<NavMenuItem href="/product/why-deepgram" icon="question">Why Deepgram</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/product/model-overview" icon="model">Model Overview</NavMenuItem>
+						<NavMenuItem href="https://developers.deepgram.com/sdks-tools" icon="box">SDKs + Tools</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/product/languages" icon="globe">Languages</NavMenuItem>
+						<NavMenuItem href="https://console.deepgram.com/signup?jump=keys" icon="code">Free API Key</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/product/why-deepgram" icon="question">Why Deepgram</NavMenuItem>
 					</NavMenu>
 
 					<!-- Solutions -->
 					<NavMenu name="Solutions" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
-						<NavMenuItem href="/built-with-dg" icon="sparkles">Built with Deepgram</NavMenuItem>
-						<NavMenuItem href="/" icon="head-headphones">Contact Centers</NavMenuItem>
-						<NavMenuItem href="/" icon="mag-glass-soundwave">Speech Analytics</NavMenuItem>
-						<NavMenuItem href="/" icon="robot-head">Conversational AI</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/built-with-deepgram" icon="sparkles">Built with Deepgram</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/solutions/contact-centers/" icon="head-headphones">Contact Centers</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/solutions/speech-analytics/" icon="mag-glass-soundwave">Speech Analytics</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/solutions/voicebots/" icon="robot-head">Conversational AI</NavMenuItem>
 					</NavMenu>
 
 					<!-- Pricing -->
-					<NavItem href="/pricing" class="text-white">Pricing</NavItem>
+					<NavItem href="https://deepgram.com/pricing/" class="text-white">Pricing</NavItem>
 
 					<!-- Docs -->
 					<NavMenu name="Docs">
-						<NavMenuItem href="/" icon="file">Documentation</NavMenuItem>
-						<NavMenuItem href="/" icon="code-laptop">API Reference</NavMenuItem>
-						<NavMenuItem href="/" icon="book">Guides</NavMenuItem>
-						<NavMenuItem href="/" icon="heartbeat">Status</NavMenuItem>
-						<NavMenuItem href="/" icon="grad">Tutorials</NavMenuItem>
-						<NavMenuItem href="/" icon="rotating-gear">Changelog</NavMenuItem>
+						<NavMenuItem href="https://developers.deepgram.com/documentation/" icon="file">Documentation</NavMenuItem>
+						<NavMenuItem href="https://developers.deepgram.com/api-reference/" icon="code-laptop">API Reference</NavMenuItem>
+						<NavMenuItem href="https://developers.deepgram.com/documentation/guides/" icon="book">Guides</NavMenuItem>
+						<NavMenuItem href="https://status.deepgram.com/" icon="heartbeat">Status</NavMenuItem>
+						<NavMenuItem href="https://developers.deepgram.com/tags/tutorial/" icon="grad">Tutorials</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/changelog/" icon="rotating-gear">Changelog</NavMenuItem>
 					</NavMenu>
 
 					<!-- Blog -->
-					<NavItem href="/" class="text-white">Blog</NavItem>
+					<NavItem href="https://developers.deepgram.com/blog/" class="text-white">Blog</NavItem>
 
 					<!-- About -->
 					<NavMenu name="About" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
-						<NavMenuItem href="/" icon="deepgram-d">About Us</NavMenuItem>
-						<NavMenuItem href="/" icon="newspaper">Newsroom</NavMenuItem>
-						<NavMenuItem href="/" icon="open-door">Careers</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/company/about/" icon="deepgram-d">About Us</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/company/newsroom/" icon="newspaper">Newsroom</NavMenuItem>
+						<NavMenuItem href="https://deepgram.com/company/careers/" icon="open-door">Careers</NavMenuItem>
 					</NavMenu>
 				</nav>
 				<div class="flex space-x-[1rem] items-center xl:ml-12">
 					<Button icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 					<Link href="https://console.deepgram.com/" class="button button--small button--main-nav text-white">Log In</Link>
-					<Link href="/contact" class="button button--secondary button--small w-[7rem]">Contact Us</Link>
+					<Link href="https://deepgram.com/contact-us/" class="button button--secondary button--small w-[7rem]">Contact Us</Link>
 					<Link href="https://console.deepgram.com/signup" class="button button--primary button--small w-[7rem]">Sign Up</Link>
 				</div>
 			</div>
@@ -88,7 +90,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 			<div class="relative inset-x-0 bg-almostBlack text-white">
 				<div class="max-w-screen-2xl mx-auto px-6 flex justify-between items-center xl:justify-start">
 					<div class="mr-[2.875rem]">
-						<Link href="/" class="flex">
+						<Link href="https://deepgram.com" class="flex">
 							<span class="sr-only">Deepgram</span>
 							<Svg name="deepgram" class="my-[1.125rem] h-[2.3125rem] w-auto text-coral" />
 						</Link>
@@ -104,43 +106,43 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 					<nav class="grid font-bold">
 						<!-- Product -->
 						<MobileNavMenu name="Product" primary>
-							<MobileNavMenuItem href="/product" icon="star">View Product</MobileNavMenuItem>
-							<MobileNavMenuItem href="/product/model-overview" icon="model">Model Overview</MobileNavMenuItem>
-							<MobileNavMenuItem href="/product/sdks-tools" icon="box">SDKs + Tools</MobileNavMenuItem>
-							<MobileNavMenuItem href="/product/languages" icon="globe">Languages</MobileNavMenuItem>
-							<MobileNavMenuItem href="/product/free-api-key" icon="code">Free API Key</MobileNavMenuItem>
-							<MobileNavMenuItem href="/product/why-deepgram" icon="question">Why Deepgram</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/product/overview/" icon="star">View Product</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/product/model-overview/" icon="model">Model Overview</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://developers.deepgram.com/sdks-tools/" icon="box">SDKs + Tools</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/product/languages/" icon="globe">Languages</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://console.deepgram.com/signup?jump=keys" icon="code">Free API Key</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/why-deepgram/" icon="question">Why Deepgram</MobileNavMenuItem>
 						</MobileNavMenu>
 
 						<!-- Solutions -->
 						<MobileNavMenu name="Solutions">
-							<MobileNavMenuItem href="/built-with-dg" icon="sparkles">Built with Deepgram</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="head-headphones">Contact Centers</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="mag-glass-soundwave">Speech Analytics</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="robot-head">Convo AI</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/built-with-deepgram" icon="sparkles">Built with Deepgram</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/solutions/contact-centers/" icon="head-headphones">Contact Centers</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/solutions/speech-analytics/" icon="mag-glass-soundwave">Speech Analytics</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/solutions/voicebots/" icon="robot-head">Convo AI</MobileNavMenuItem>
 						</MobileNavMenu>
 
 						<!-- Pricing -->
-						<MobileNavItem href="/pricing" class="text-white">Pricing</MobileNavItem>
+						<MobileNavItem href="https://deepgram.com/pricing" class="text-white">Pricing</MobileNavItem>
 
 						<!-- Docs -->
 						<MobileNavMenu name="Docs">
-							<MobileNavMenuItem href="/" icon="file">Documentation</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="code-laptop">Guides</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="book">Status</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="heartbeat">Changelog</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="grad">API Reference</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="rotating-gear">Tutorials</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://developers.deepgram.com/documentation/" icon="file">Documentation</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://developers.deepgram.com/documentation/guides/" icon="code-laptop">Guides</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://status.deepgram.com/" icon="book">Status</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/changelog/" icon="heartbeat">Changelog</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://developers.deepgram.com/api-reference/" icon="grad">API Reference</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://developers.deepgram.com/tags/tutorial/" icon="rotating-gear">Tutorials</MobileNavMenuItem>
 						</MobileNavMenu>
 
 						<!-- Blog -->
-						<MobileNavItem href="/" class="text-white">Blog</MobileNavItem>
+						<MobileNavItem href="https://developers.deepgram.com/blog/" class="text-white">Blog</MobileNavItem>
 
 						<!-- About -->
 						<MobileNavMenu name="About">
-							<MobileNavMenuItem href="/" icon="deepgram-d">About Us</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="newspaper">Newsroom</MobileNavMenuItem>
-							<MobileNavMenuItem href="/" icon="open-door">Careers</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/company/about/" icon="deepgram-d">About Us</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/company/newsroom/" icon="newspaper">Newsroom</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://deepgram.com/company/careers/" icon="open-door">Careers</MobileNavMenuItem>
 						</MobileNavMenu>
 					</nav>
 				</div>
