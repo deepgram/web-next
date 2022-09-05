@@ -25,12 +25,9 @@ jobs:
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_WWW }}
     steps:
       - uses: actions/checkout@v2
-      - name: Read .nvmrc file
-        run: echo ::set-output name=NODE_VERSION::$(cat ./blog/.nvmrc)
-        id: nvm
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
+          node-version-file: ./www/.nvmrc
       - name: Install Dependencies
         run: |
           cd ./www
