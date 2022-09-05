@@ -4,8 +4,10 @@ description: A GitHub Action to configure dynamic environment variables for the 
 runs:
   using: "composite"
   steps:
-    - run: echo Hello
+    - run: echo "FOO=test" >> $GITHUB_ENV
       shell: bash
+      env:
+        FOO: test2
 
     # - if: ${{ env.IS_PRODUCTION == true }}
     #   env:
