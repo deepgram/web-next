@@ -1,11 +1,20 @@
 name: Configure dynamic environment variables
 description: A GitHub Action to configure dynamic environment variables for the build actions.
 
+outputs:
+  url:
+    description: "Random number"
+    value: ${{ steps.random-number-generator.outputs.random-number }}
+
 runs:
   using: "composite"
   steps:
-    - run: env
+    - run: echo "::set-output name=url::https://$(echo env.PRODUCTION_DOMAIN)"
       shell: bash
+      if: ${{ env.IS_PRODUCTION == true }}
+    - run: echo "::set-output name=url::https://$(echo env.STAGING_DOMAIN)"
+      shell: bash
+      if: ${{ env.IS_PRODUCTION != true }}
 
     # - if: ${{ env.IS_PRODUCTION == true }}
     #   env:
