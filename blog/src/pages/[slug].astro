@@ -18,6 +18,7 @@ import Link from "../shared/components/general/Link.astro";
 import Backlink from "../components/nav/Backlink.astro";
 import InlineIcon from "../shared/components/general/InlineIcon.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
+import { getSluggedJson } from "../shared/util";
 
 export async function getStaticPaths() {
 	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
@@ -46,32 +47,10 @@ const { slug } = Astro.params;
 
 const headings = await post.getHeadings();
 
-async function getAuthors() {
-	const authorFiles = import.meta.glob("../../../content/blog/authors/*.json");
-	let authors = [];
-	for (const path in authorFiles) {
-		const author = await authorFiles[path]();
-		const slug = path.split("/").pop().replace(".json", " ").trim();
-		authors.push({ ...(author as object), slug });
-	}
-	return authors;
-}
-
-const allAuthors = await getAuthors();
+const allAuthors = await getSluggedJson("blog/authors");
 const postAuthors = allAuthors.filter((a) => post.frontmatter.authors.includes(a.slug));
 
-async function getCategories() {
-	const categoryFiles = import.meta.glob("../../../content/blog/category/*.json");
-	let categories = [];
-	for (const path in categoryFiles) {
-		const category = await categoryFiles[path]();
-		const slug = path.split("/").pop().replace(".json", " ").trim();
-		categories.push({ ...(category as object), slug });
-	}
-	return categories;
-}
-
-const allCategories = await getCategories();
+const allCategories = await getSluggedJson("blog/category");
 const postCategory = allCategories.find((c) => (post.frontmatter.category = c.slug));
 
 const seo = {
@@ -268,10 +247,8 @@ const schema = [
 				</div>
 			</HasGutters>
 			<div class="mt-20">
-				<center>
-					<h3 class="mb-10">Related Resources</h3>
-					<RelatedResources post={post} />
-				</center>
+				<h3 class="mb-10 text-center">Related Resources</h3>
+				<RelatedResources post={post} />
 			</div>
 		</PrimarySection>
 	</article>
@@ -301,7 +278,7 @@ const schema = [
 	}
 
 	.post-prose :global(p) {
-		@apply pb-4;
+		@apply pb-4 leading-loose lg:leading-normal;
 	}
 
 	.post-prose :global(* a) {
