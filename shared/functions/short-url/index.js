@@ -1,7 +1,7 @@
 const { Client, query } = require("faunadb");
 
 const client = new Client({
-	secret: process.env.FAUNADBSECRET,
+	secret: process.env.FAUNA_DB_SECRET,
 });
 
 exports.handler = async (event, context) => {

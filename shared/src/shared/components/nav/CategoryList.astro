@@ -1,19 +1,9 @@
 ---
+import { getSluggedJson } from "../../util";
 import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 
-const modules = import.meta.glob("../../../../src/content/blog/category/*.json");
-
-async function getCategories() {
-	let paths = [];
-	for (const path in modules) {
-		const result = await modules[path]();
-		paths.push({ slug: "/categories/" + path.split("/").pop().replace(".json", " ").trim(), title: result.title });
-	}
-	return paths;
-}
-
-const categories = await getCategories();
+const categories = await getSluggedJson("blog/category");
 ---
 
 <div>
