@@ -90,6 +90,6 @@ As ASR technologies improve, not only will consumer products like Google Home pe
 
 The list of potential uses of ASR is nearly endless but definitely includes sentient robots and adventure-packed interstellar travel.
 
-<iframe src="https://giphy.com/embed/q97q8DviQEzXG" width="480" height="192 frameBorder=" 0"="" class="giphy-embed" allowfullscreen=""></iframe>
+<iframe src="https://giphy.com/embed/q97q8DviQEzXG" width="480" height="192" frameBorder="0" class="giphy-embed" allowfullscreen=""></iframe>
 
 [via GIPHY](https://giphy.com/gifs/movie-2014-interstellar-q97q8DviQEzXG)

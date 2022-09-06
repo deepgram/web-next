@@ -136,6 +136,6 @@ async function transcribeRemoteVideo(url) {
 }
 ```
 
-The complete project is available at <https://github.com/deepgram-devs/transcribe-videos> and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
+The complete project is available at `https://github.com/deepgram-devs/transcribe-videos` and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
         

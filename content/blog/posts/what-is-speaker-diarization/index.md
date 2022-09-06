@@ -29,7 +29,36 @@ With speaker diarization:
 
 > [Speaker:0] Hello, and thank you for calling premier phone service. Please be aware that this call may be recorded for quality and training purposes. [Speaker:0] My name is Beth, and I will be assisting you today. How are you doing? [Speaker:1] Not too bad. How are you today? [Speaker:0] I'm doing well. Thank you. May I please have your name? [Speaker:1] My name is Blake.
 
-In a world-class speech API, like Deepgram, this is how you would request diarization: `curl \` ` --request POST \ ` --url 'https://api.deepgram.com/v1/listen?diarize=true&punctuate=true&utterances=true' \` ` --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \` ` --header 'content-type: audio/mp3' \` ` --data-binary @Premier_broken-phone_numbers.mp3 ' jq -r '.results.utterances[] ' "[Speaker:\(.speaker)] \(.transcript)"'`` When the file is finished processing (often after only a few seconds), you'll receive a JSON response that has the following basic structure: `{` ` "metadata": {` `  "transaction_key": "string",` `  "request_id": "string",` `  "sha256": "string",` `  "created": "string",` `  "duration": 0,` `  "channels": 0` ` },` `"results": {` `  "channels": [` `   {` `    "alternatives":[]` `   }` `  ]` ` }` The outputs from the API can then be used to build downstream workflows. Speaker diarization is different from channel diarization, where each channel in a multi-channel audio stream is separated; i.e., channel 1 is speaker 1 and channel 2 is speaker 2\. Channel diarization can be used for one-to-one phone calls, where there is only one speaker per channel. When there are multiple speakers per channel, such as in the recording of a meeting, speaker diarization is needed to separate the speakers.
+In a world-class speech API, like Deepgram, this is how you would request diarization: 
+```
+curl \
+ --request POST \
+ --url 'https://api.deepgram.com/v1/listen?diarize=true&punctuate=true&utterances=true' \
+ --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+ --header 'content-type: audio/mp3' \
+ --data-binary @Premier_broken-phone_numbers.mp3 | jq -r '.results.utterances[] | "[Speaker:\(.speaker)] \(.transcript)"'
+```
+
+When the file is finished processing (often after only a few seconds), you'll receive a JSON response that has the following basic structure: 
+```
+{
+ "metadata": {
+  "transaction_key": "string",
+  "request_id": "string",
+  "sha256": "string",
+  "created": "string",
+  "duration": 0,
+  "channels": 0
+ },
+"results": {
+  "channels": [
+   {
+    "alternatives":[]
+   }
+  ]
+ }
+``` 
+The outputs from the API can then be used to build downstream workflows. Speaker diarization is different from channel diarization, where each channel in a multi-channel audio stream is separated; i.e., channel 1 is speaker 1 and channel 2 is speaker 2\. Channel diarization can be used for one-to-one phone calls, where there is only one speaker per channel. When there are multiple speakers per channel, such as in the recording of a meeting, speaker diarization is needed to separate the speakers.
 
 ## How does Speaker Diarization Work?
 

@@ -1,33 +1,29 @@
-name: "Blog: CI/CD"
+name: "CMS: CI/CD"
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths: 
-    - 'blog/**'
-    - 'content/**'
-    - 'shared/**'
+    - 'cms/**'
   pull_request:
     branches: [main]
     paths: 
-    - 'blog/**'
-    - 'content/**'
-    - 'shared/**'
+    - 'cms/**'
     
 jobs:
-  blog:
-    name: Build Blog
+  www:
+    name: Build WWW
     runs-on: ubuntu-latest
     env:
-      PRODUCTION_DOMAIN: blog.deepgram.com
-      STAGING_DOMAIN: sweet-pie-c52a63-blog.netlify.app
-      BUILD_PATH: ./blog
+      PRODUCTION_DOMAIN: cms.deepgram.com
+      STAGING_DOMAIN: glittery-crepe-25f12e-cms.netlify.app
+      BUILD_PATH: ./cms
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_CMS }}
       IS_PRODUCTION: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       IS_STAGING: ${{ github.ref != 'refs/heads/main' && github.event_name == 'pull_request' }}
-      DEPLOY_PREFIX: blog
+      DEPLOY_PREFIX: cms
     steps:
       - name: Configure dynamic environment variables for production
         if: ${{ env.IS_PRODUCTION == 'true' }}
@@ -55,26 +51,10 @@ jobs:
           echo "ENVIRONMENT_DESC=Deploy preview for ${{ env.DEPLOY_PREFIX }} site" >> $GITHUB_ENV
       - name: Check out repository
         uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version-file: ${{ env.BUILD_PATH }}/.nvmrc
-      - name: Install dependencies
-        run: |
-          cd ${{ env.BUILD_PATH }}
-          yarn install
-      - name: Copy Netlify functions from shared
-        run: |
-          cd ${{ env.BUILD_PATH }}
-          yarn functions:clean && yarn functions:copy
-      - name: Build ${{ env.DEPLOY_PREFIX }} site
-        run: |
-          cd ${{ env.BUILD_PATH }}
-          ./node_modules/.bin/ntl build
       - name: Deploy ${{ env.DEPLOY_PREFIX }} site to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: ${{ env.BUILD_PATH }}/dist
+          publish-dir: ${{ env.BUILD_PATH }}/
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: ${{ env.DEPLOY_MESSAGE }}
@@ -82,7 +62,6 @@ jobs:
           enable-commit-comment: true                         # default: true
           overwrites-pull-request-comment: false              # default: true
           production-deploy: ${{ env.IS_PRODUCTION }}
-          functions-dir: ${{ env.BUILD_PATH }}/functions
           alias: ${{ env.BUILD_ALIAS }}
           github-deployment-environment: ${{ env.ENVIRONMENT_NAME }}
           github-deployment-description: ${{ env.ENVIRONMENT_DESC }}

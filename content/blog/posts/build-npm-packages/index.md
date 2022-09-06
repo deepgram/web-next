@@ -25,7 +25,7 @@ If you're a JavaScript developer, you've almost certainly used npm before. The N
 
 In this post, we'll create, publish, install, and use our first npm package. We'll then extend the functionality and end up with a more complex package that will let users query [The Open Movie Database](http://www.omdbapi.com).
 
-Our final class-based package code can be found at <https://github.com/deepgram-devs/npm-package>.
+Our final class-based package code can be found at <a href="https://github.com/deepgram-devs/npm-package">https://github.com/deepgram-devs/npm-package</a>.
 
 ## Before We Start
 
@@ -76,7 +76,7 @@ npm login
 npm publish --access=public
 ```
 
-You have now published your first ever npm package - congratulations! If you go to <https://www.npmjs.com/package/@username/first-package> you should see it. Reminder: if ever you are publishing again, you must increase the version in `package.json`,or you will get an error.
+You have now published your first ever npm package - congratulations! If you go to <a href="https://www.npmjs.com/package/@username/first-package">https://www.npmjs.com/package/@username/first-package</a> you should see it. Reminder: if ever you are publishing again, you must increase the version in `package.json`,or you will get an error.
 
 ## Testing Your npm Package
 
@@ -222,8 +222,8 @@ This package lacks lots of features I would expect as a user:
 *   Checking required parameters are provided and providing useful errors if not.
 *   Splitting the 'get' and 'search' requests.
 
-Our final class-based package code can be found at <https://github.com/deepgram-devs/npm-package>.
+Our final class-based package code can be found at <a href="https://github.com/deepgram-devs/npm-package">https://github.com/deepgram-devs/npm-package</a>.
 
-When putting together my first npm packages, I found most tutorials stopped at the most basic examples or assumed lots of additional knowledge. I hope this has provided more helpful context and helped you get your first package published. If it did - please let us know what you've published so we can celebrate together - we are [@DeepgramDevs](https://twitter.com/DeepgramDevs) on Twitter or <devrel@deepgram.com> via email.
+When putting together my first npm packages, I found most tutorials stopped at the most basic examples or assumed lots of additional knowledge. I hope this has provided more helpful context and helped you get your first package published. If it did - please let us know what you've published so we can celebrate together - we are [@DeepgramDevs](https://twitter.com/DeepgramDevs) on Twitter or <a href="mailto:devrel@deepgram.com">devrel@deepgram.com</a> via email. 
 
         

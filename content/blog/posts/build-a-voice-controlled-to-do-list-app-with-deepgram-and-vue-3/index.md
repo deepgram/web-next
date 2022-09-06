@@ -48,10 +48,11 @@ In this iteration of the project, I'll continue to use [Pinia](https://pinia.vue
 There are several articles on Deepgram Docs about how to use Deepgram in Javascript to convert an audio stream of speech into text, including one I wrote about how to use it with Vue 3. I won't go over in detail here how I built Vue composables to integrate Deepgram's speech-to-text API. Use these resources or take a look at my repo (in the [composables folder](https://github.com/deepgram-devs/todo-pinia-deepgram/tree/main/src/composables)) to learn how I did this using Vue 3 and the Deepgram Node SDK:
 
 <panel type="info" title="Additional Resources">
-
-*   [Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component](https://developers.deepgram.com/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/) by [Sandra Rodgers](https://developers.deepgram.com/blog/authors/sandrarodgers/)</li>
-*   [Get Live Speech Transcriptions In Your Browser](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/) by [Kevin Lewis](https://developers.deepgram.com/blog/authors/kevinlewis/)
-*   [Browser Live Transcription - Protecting Your API Key](https://developers.deepgram.com/blog/2022/01/protecting-api-key/) by [Kevin Lewis](https://developers.deepgram.com/blog/authors/kevinlewis/)
+<ul>
+<li><a href="https://developers.deepgram.com/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/) by [Sandra Rodgers](https://developers.deepgram.com/blog/authors/sandrarodgers/">Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component</a></li>
+<li><a href="https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/">Get Live Speech Transcriptions In Your Browser</a> by <a href="https://developers.deepgram.com/blog/authors/kevinlewis/">Kevin Lewis</a></li>
+<li><a href="https://developers.deepgram.com/blog/2022/01/protecting-api-key/">Browser Live Transcription - Protecting Your API Key</a> by <a href="https://developers.deepgram.com/blog/authors/kevinlewis/">Kevin Lewis</a></li>
+</ul>
 
 </panel>
 
@@ -216,11 +217,11 @@ if (transcript && received.is_final) {
 This is a pretty cool feature because it means that a user can speak a command, such as "Add walk the dog to the list", and Deepgram can identify that it is the end of the command based on the flow of the speech. It will send me that sentence back to deal with in text form, and then I can use logic to dig in and find the specific command word, such as *add* or *delete*. Nice!
 
 <panel type="info" title="Additional Resources">
-
-*   [Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio](https://developers.deepgram.com/documentation/guides/understand-endpointing-interim-results/)</li>
-*   [Interim Results](https://developers.deepgram.com/documentation/features/interim-results/)</li>
-*   [Endpointing](https://developers.deepgram.com/documentation/features/endpointing/)</li>
-
+<ul>
+<li><a href="https://developers.deepgram.com/documentation/guides/understand-endpointing-interim-results/">Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio</a></li>
+<li><a href="https://developers.deepgram.com/documentation/features/interim-results/">Interim Results</a></li>
+<li><a href="https://developers.deepgram.com/documentation/features/endpointing/"> Endpointing</a></li>
+</ul>
 </panel>
 
 ## Add To-Do Item With Voice-Control

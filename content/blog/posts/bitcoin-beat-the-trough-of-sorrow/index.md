@@ -21,7 +21,7 @@ og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1662069441/blog/bitcoin-beat-the-trough-of-sorrow/placeholder-post-image%402x.jpg
 ---
 
-It's official-**Bitcoin has survived the Trough of Sorrow** [[1]](#cit1)[[2]](#cit2). Take a look at Bitcoin's price (BTC) for it's full lifetime [[3]](#cit3):
+It's official-**Bitcoin has survived the Trough of Sorrow** [[1]](#cit1)[[2]](#cit2). Take a look at Bitcoin's price (BTC) for its full lifetime [[3]](#cit3):
 
 ### BTC price since birth
 
@@ -63,17 +63,3 @@ Twitter
 SnapChat
 
 ![](https://res.cloudinary.com/deepgram/image/upload/v1661725716/blog/bitcoin-beat-the-trough-of-sorrow/Screen-Shot-2016-11-02-at-4.16.43-PM.png)
-
-
-
-Deepgram Newsletter
-
-<input class="newsletter-signup-input-name" type="text" placeholder="your full name" style="width:275px;">  
-<input class="newsletter-signup-input" type="text" placeholder="your email address" style="width:275px;">  
-<button class="newsletter-signup-btn" style="color:white;background-color:black;width:275px;">submit for amazing</button>
-
-
-
-
-
-<script>$('.newsletter-signup-btn').click(function(event){ $.post( 'https://www.deepgram.com/newsletter_signup', JSON.stringify({ 'from_url': window.location.href, 'email': $('.newsletter-signup-input').val(), 'name': $('.newsletter-signup-input-name').val() }), function(response){ $('.newsletter-signup-btn').html('thanks, sign up your friends!'); $('.newsletter-signup-input-name').val(""); $('.newsletter-signup-input').val(""); } ); }); $('.newsletter-signup-input').keyup(function(event){ if(e.keyCode == 13){ $('.newsletter-signup-btn').click(); } });</script>

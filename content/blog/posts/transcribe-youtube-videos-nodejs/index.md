@@ -25,7 +25,7 @@ og:
 
 In this blog post we will be creating transcripts for YouTube videos using Deepgram's Speech Recognition API. First, we will download videos and convert them to mp3 audio files. Then, we will use Deepgram to generate a transcript. Finally, we will store the transcript in a text file and delete the media file.
 
-The final project code can be found at <https://github.com/deepgram-devs/youtube-transcripts>.
+The final project code can be found at `https://github.com/deepgram-devs/youtube-transcripts`.
 
 Watch this tutorial as a video:
 
@@ -147,7 +147,7 @@ fs.unlinkSync(videoFileName)
 
 ## Summary
 
-Transcribing YouTube videos has never been easier thanks to Deepgram's Speech Recognition API and the Deepgram Node SDK. You can find the final project code at <https://github.com/deepgram-devs/youtube-transcripts>
+Transcribing YouTube videos has never been easier thanks to Deepgram's Speech Recognition API and the Deepgram Node SDK. You can find the final project code at `https://github.com/deepgram-devs/youtube-transcripts`
 
 Check out the other options supported by the [Deepgram Node SDK](https://github.com/deepgram/node-sdk) and if you have any questions feel free to reach out to us on Twitter (we are [@DeepgramDevs](https://twitter.com/DeepgramDevs)).
 

@@ -96,10 +96,13 @@ more at your leisure, feel free to skip to the [Running the Server and Testing w
 
 Create a new Rust project using `cargo new`:
 
+```
     cargo new deepgram-twilio-streaming-rust
+```
 
 Go into the project directory and edit the `Cargo.toml` file, giving it the following contents:
 
+```toml
     [package]
     name = "deepgram-twilio-streaming-rust"
     version = "0.1.0"
@@ -116,9 +119,10 @@ Go into the project directory and edit the `Cargo.toml` file, giving it the foll
     tokio = { version = "1.17.0", features = ["macros", "rt", "rt-multi-thread"] }
     tokio-tungstenite = { version = "0.15.0", features = ["native-tls"] }
     tungstenite = "0.14.0"
-
+```
 Now let's modify `src/main.rs`. Let's begin by adding the `use` statements we will need, and defining some modules:
 
+```rust
     use axum::{routing::get, Extension, Router};
     use axum_server::tls_rustls::RustlsConfig;
     use futures::lock::Mutex;
@@ -129,6 +133,7 @@ Now let's modify `src/main.rs`. Let's begin by adding the `use` statements we wi
     mod message;
     mod state;
     mod twilio_response;
+```
 
 The modules we declared are: `audio`, `handlers`, `message`, `state`, and `twilio_response`.
 We will go over each one, but briefly these will be for the following:
@@ -141,6 +146,7 @@ We will go over each one, but briefly these will be for the following:
 
 Now, let's start defining our `main` function and set up the state to be shared among the handlers:
 
+```rust
     #[tokio::main]
     async fn main() {
         let proxy_url = std::env::var("PROXY_URL").unwrap_or_else(|_| "127.0.0.1:5000".to_string());
@@ -171,6 +177,7 @@ Now, let's start defining our `main` function and set up the state to be shared 
             api_key,
             subscribers: Mutex::new(HashMap::new()),
         });
+```
 
 Our `main` function is set up to be asynchronous via the use of the `#[tokio::main]` macro.
 `main` and every async function that `main` then calls will be executed by
@@ -185,9 +192,9 @@ the Tokio runtime. Inside `main` we grab the following environment variables:
 
 We use these environment variables to construct an `Arc<State>` object to store the global server state.
 
-Now, let's finish filling in our `main` function by configuring our routes and spinning up the `axum` server
-to serve these routes:
+Now, let's finish filling in our `main` function by configuring our routes and spinning up the `axum` server to serve these routes:
 
+```rust
         let app = Router::new()
             .route("/twilio", get(handlers::twilio::twilio_handler))
             .route("/client", get(handlers::subscriber::subscriber_handler))
@@ -208,6 +215,7 @@ to serve these routes:
             }
         }
     }
+```
 
 The `axum` server is spun up with or without TLS support depending on whether
 or not the `CERT_PEM` and `KEY_PEM` environment variables are set.
@@ -219,6 +227,7 @@ let's go over some of the objects the server will use.
 
 Create the file `src/state.rs` and give it the following contents:
 
+```rust
     use axum::extract::ws::WebSocket;
     use futures::lock::Mutex;
     use std::collections::HashMap;
@@ -228,14 +237,15 @@ Create the file `src/state.rs` and give it the following contents:
         pub api_key: String,
         pub subscribers: Mutex<HashMap<String, Vec<WebSocket>>>,
     }
+```
 
-This will represent the global state of the server. The server will need to know the URL of Deepgram's streaming endpoint
-and a Deepgram API Key to use as authentication when connecting to this endpoint. Additionally, the server will contain
+This will represent the global state of the server. The server will need to know the URL of Deepgram's streaming endpoint and a Deepgram API Key to use as authentication when connecting to this endpoint. Additionally, the server will contain
 a `HashMap` of websocket handlers for subscribers, one for each incoming connection from Twilio. These websocket handlers will be accessed
 via the `callsid` of the Twilio call, and wrapped in a `Mutex` to handle concurrency.
 
 Next, create the file `src/twilio_response.rs` and give it the following contents:
 
+```rust
     //! Definitions for the Twilio messages we need to parse
 
     use serde::{Deserialize, Serialize};
@@ -288,12 +298,14 @@ Next, create the file `src/twilio_response.rs` and give it the following content
         pub timestamp: String,
         pub payload: String,
     }
+```
 
 These are just basic structs defining the shape of the messages Twilio will send our server. Feel free to checkout
 [Twilio's documentation](https://www.twilio.com/docs/voice/twiml/stream#websocket-messages-from-twilio) for more details.
 
 Finally, create the file `src/message.rs` and give it the following contents:
 
+```rust
     #[derive(Clone)]
     pub enum Message {
         Text(String),
@@ -354,6 +366,7 @@ Finally, create the file `src/message.rs` and give it the following contents:
             }
         }
     }
+```
 
 This is also a straightforward module which creates our own websocket `Message` type which can
 be used to convert to and from `axum` websocket messages and `tungstenite` websocket messages.
@@ -365,13 +378,16 @@ connections to `/client` and Twilio connections to `/twilio`. Let's start with t
 
 Start by creating `src/handlers/mod.rs` with the following contents:
 
+```rust
     pub mod subscriber;
     pub mod twilio;
+```
 
 This simply declares the modules we will use to handle the client/subsriber and Twilio websocket connections.
 
 Then, create the file `src/handlers/subscriber.rs` with the following contents:
 
+```rust
     use crate::message::Message;
     use crate::state::State;
     use axum::{
@@ -409,6 +425,7 @@ Then, create the file `src/handlers/subscriber.rs` with the following contents:
             }
         }
     }
+```
 
 As we saw in `main.rs`, `subscriber_handler` is the function which will be called when a client tries to connect to the
 `/client` endpoint of our server. From there, we perform an upgrade from HTTP to websockets. Then, we try to obtain the
@@ -421,6 +438,7 @@ subscribers, including the one we just pushed. That's it for `subscriber.rs`!
 Now let's look at the bulkier `twilio.rs`. Create `src/handlers/twilio.rs`. Let's build this module
 piece by piece, starting with some `use` statements:
 
+```rust
     use crate::audio;
     use crate::message::Message;
     use crate::state::State;
@@ -480,6 +498,7 @@ Then, add the following functions:
             deepgram_sender,
         ));
     }
+```
 
 Incoming Twilio connections hitting `/twilio` will be first directed to the function
 `twilio_handler` where the websocket upgrade will be performed. Then `handle_socket` will split the websocket connection
@@ -492,6 +511,7 @@ when Twilio sends this information in a Twilio `start` event websocket message.
 
 Let's now define the `handle_to_subscribers` function:
 
+```rust
     async fn handle_to_subscribers(
         state: Arc<State>,
         callsid_rx: oneshot::Receiver<String>,
@@ -520,6 +540,7 @@ Let's now define the `handle_to_subscribers` function:
             }
         }
     }
+```
 
 This function first waits to receive the `callsid`
 from `handle_from_twilio` and then proceeds to read messages off the Deepgram websocket receiver, broadcasting all
@@ -527,6 +548,7 @@ messages that it obtains to all subscribers to that `callsid`.
 
 Now let's define `handle_from_twilio` as follows:
 
+```rust
     async fn handle_from_twilio(
         state: Arc<State>,
         callsid_tx: oneshot::Sender<String>,
@@ -600,6 +622,7 @@ Now let's define `handle_from_twilio` as follows:
             }
         }
     }
+```
 
 This function begins by setting up an object to help handle the audio buffers
 from the inbound and outbound callers. We then start reading websocket messages from the Twilio websocket receiver.
@@ -616,6 +639,7 @@ from the subscriber `HashMap` and close the connections to those subscribers.
 When discussing the Twilio websocket handler, the processing of Twilio media events was delegated to `audio::process_twilio_media`.
 We will define this function in `src/audio.rs`. Make `src/audio.rs` with the following contents:
 
+```rust
     use crate::twilio_response;
 
     const MULAW_SILENCE: u8 = 0xff;
@@ -703,6 +727,7 @@ We will define this function in `src/audio.rs`. Make `src/audio.rs` with the fol
             None
         }
     }
+```
 
 Twilio sends its audio data as 8000 Hz `mulaw` data, independently for inbound and outbound callers. Additionally, sometimes Twilio
 (or the phones which use Twilio) will drop packets of audio. The function `process_twilio_media`, then, handles inserting silence

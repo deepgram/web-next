@@ -186,11 +186,13 @@ async def get_recordings():
 
 We can see how the utterances will look after they’re formatted:
 
+```
     [{'channel': 0, 'transcript': 'Hello?', 'id': 288397603074461838},
     {'channel': 1, 'transcript': 'Hello?', 'id': 109089630999017748},
     {'channel': 0, 'transcript': "Hey. How's it going? It's good to hear from you.", 'id': 124620676610936565},
     {'channel': 0, 'transcript': 'Thanks. You too.', 'id': 182036969834868158},
     {'channel': 1, 'transcript': 'Thanks. You too.', 'id': 817052835121297399}]
+```
 
 Lastly, let’s add our `/transcribe` route and a templates folder with an `index.html` file that will display our phone speech-to-text transcript.
 

@@ -170,7 +170,7 @@ Now, if I go back to the OBS controls and click on **Start Streaming**, my strea
 
 The back-end is done (AWS takes care of most of the work). Now I can build the front-end, which I will do using vanilla Javascript and HTML.
 
-In the <head> tag of my HTML document, I will include the script for the Amazon IVS player. Amazon IVS explains how to do this setup [here](https://docs.aws.amazon.com/ivs/latest/userguide/player-web.html), for those who want to go straight to the source.
+In the `<head>` tag of my HTML document, I will include the script for the Amazon IVS player. Amazon IVS explains how to do this setup [here](https://docs.aws.amazon.com/ivs/latest/userguide/player-web.html), for those who want to go straight to the source.
 
 ```html
 <head>

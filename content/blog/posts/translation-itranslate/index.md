@@ -55,7 +55,7 @@ const deepgram = new Deepgram(process.env.DG_KEY)
 ## An Introduction to iTranslate
 
 iTranslate supports text translation for over 50 languages. You may either specify the 'source dialect' with a value such as `en` (English) or `es` (Spanish), or set the value to `auto` and let iTranslate detect the language automatically. You must also specify a 'target dialect' for translation to work. An API request would look like this:
-
+```
     POST https://dev-api.itranslate.com/translation/v2/
     data: {
        'source': { 'dialect': 'en', 'text': 'Hello World' },
@@ -65,7 +65,7 @@ iTranslate supports text translation for over 50 languages. You may either speci
         'Authorization': 'Bearer YOUR-API-KEY'
         'Content-Type': 'application/json'
     }
-
+```
 The result looks like this:
 
 ```js

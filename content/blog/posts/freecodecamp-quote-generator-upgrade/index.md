@@ -80,9 +80,8 @@ As you work on this project, it’s useful to have some understanding of APIs an
 
 <panel type="info" title="Resource Break!">
 
-*   [Getting Started with APIs](https://developers.deepgram.com/blog/2021/11/getting-started-with-apis/) by [Kevin Lewis](https://developers.deepgram.com/blog/authors/kevinlewis/)</li>
-*   [Getting Started with JSON](https://developers.deepgram.com/blog/2021/11/getting-started-with-json/) by [Sandra Rodgers](https://developers.deepgram.com/blog/authors/sandrarodgers/)
-
+<li><a href="https://developers.deepgram.com/blog/2021/11/getting-started-with-apis/">Getting Started with APIs</a>  by <a href="https://developers.deepgram.com/blog/authors/kevinlewis/">Kevin Lewis</a></li>
+<li><a href="https://developers.deepgram.com/blog/2021/11/getting-started-with-json/">Getting Started with JSON</a>  by <a href="https://developers.deepgram.com/blog/authors/sandrarodgers/">Sandra Rodgers</a></li>
 </panel>
 
 ### Overview

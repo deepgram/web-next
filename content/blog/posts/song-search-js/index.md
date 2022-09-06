@@ -30,7 +30,7 @@ This is what we'll be building:
 
 ![A diagram showing 9 steps. 1 - emit mic data from browser to server using socket.io. 2 - send mic data from server to Deepgram via Deepgram SDK. 3 - Deepgram returns utterances to server. 4 - the server stores utterances. 5 - a user presses a button and emits search event to server. 6 - server searches song on Genius. 7 - Genius sends response to server. 8 - Server emits response to browser. 9 - browser shows result. Steps 1-3 have a green background and steps 4-9 have a blue background.](https://res.cloudinary.com/deepgram/image/upload/v1637178711/blog/2021/12/song-search-js/diagram.png)
 
-The green area is one set of steps that gets us to the point of transcripts. The blue area covers searching for and displaying songs. Don't worry if that looks like a lot - we'll take it step by step. If you want to look at the final project code, you can find it at <https://github.com/deepgram-devs/song-search>.
+The green area is one set of steps that gets us to the point of transcripts. The blue area covers searching for and displaying songs. Don't worry if that looks like a lot - we'll take it step by step. If you want to look at the final project code, you can find it at `https://github.com/deepgram-devs/song-search`.
 
 ## Before We Start
 
@@ -98,7 +98,7 @@ io.on('connection', (socket) => {
 http.listen(3000, console.log(`Started at ${new Date().toISOString()}`))
 ```
 
-For this tutorial, I would leave the comments in as I refer to sections later by their names. Start the server in your terminal by navigating to the directory and running `node index.js`. Open your browser to <http://localhost:3000>, and you should see 'Connected at {date}' in your terminal. Once this connection is established, we can send and listen for events on both the server and the client.
+For this tutorial, I would leave the comments in as I refer to sections later by their names. Start the server in your terminal by navigating to the directory and running `node index.js`. Open your browser to `http://localhost:3000`, and you should see 'Connected at {date}' in your terminal. Once this connection is established, we can send and listen for events on both the server and the client.
 
 ## Access and Send Audio
 
@@ -309,6 +309,6 @@ There are quite a lot of improvements you could make here:
 
 This post has also introduced you to the code required to stream your microphone from the browser to Deepgram via a server, thus protecting your API Key from being exposed.
 
-We'll have some more posts coming out before Christmas, but from me, this is it until January, so please have a wonderful festive period and a wonderful new year. The complete project is available at <https://github.com/deepgram-devs/song-search>, and if you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
+We'll have some more posts coming out before Christmas, but from me, this is it until January, so please have a wonderful festive period and a wonderful new year. The complete project is available at `https://github.com/deepgram-devs/song-search`, and if you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
         

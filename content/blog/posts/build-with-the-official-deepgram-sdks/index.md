@@ -31,17 +31,17 @@ To get started, make sure you have a Deepgram account by signing up at [https://
 
 #### **Node.js**
 
-<pre>npm install @deepgram/sdk</pre>
+```npm install @deepgram/sdk```
 
 #### **Python**
 
-<pre>pip install deepgram-sdk</pre>
+```pip install deepgram-sdk```
 
 Once the SDK has been installed, the following snippets will allow you to transcribe a prerecorded audio file. Be sure to replace `YOUR_DEEPGRAM_API_KEY` with the API key, you created earlier.
 
 #### **Node.js**
 
-<pre>const { Deepgram } = require('@deepgram/sdk');
+```const { Deepgram } = require('@deepgram/sdk');
 
 const deepgramApiKey = 'YOUR_DEEPGRAM_API_KEY';
 
@@ -65,11 +65,11 @@ function main() {
  })()
  });
 } 
-main();</pre>
+main();```
 
 #### **Python**
 
-<pre>from deepgram import Deepgram
+```from deepgram import Deepgram
 
 import asyncio, json
 
@@ -87,7 +87,7 @@ async def main():
 
     print(json.dumps(response, indent=4))
 
-asyncio.run(main())</pre>
+asyncio.run(main())```
 
 ## Contributions Welcome
 

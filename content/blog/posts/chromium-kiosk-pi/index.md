@@ -21,7 +21,7 @@ shorturls:
 og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453839/blog/chromium-kiosk-pi/ograph.png
 ---
-
+<Alert type="warning">This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post...</Alert>
 <Alert type="info">This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post, you can do so [here](https://developers.deepgram.com/blog/2021/12/build-npm-packages/).</Alert>
 
 Earlier this month [I built a wearable transcription device](https://twitter.com/_phzn/status/1478504862170161152) using Deepgram and a Raspberry Pi. The project is a web application running in a fullscreen browser on the Pi. However, when the device first starts, it requires a fiddly set of touchscreen interactions to get it in a ready state - opening the browser, navigating to the correct URL, and then fullscreening the browser. In this quick guide, I will show you the steps I took to automate this on device launch.

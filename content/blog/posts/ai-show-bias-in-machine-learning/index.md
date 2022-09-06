@@ -106,4 +106,4 @@ Right? There'll always be a human in the loop. The same way that there aren't ma
 
 * * *
 
-Tune in to the AI Show every week on [YouTube](https://www.youtube.com/watch?v=7VMio8Tk2so&t=914s) or [Twitch](https://www.twitch.tv/videos/310181430) and share your thoughts in the comments or Tweet Us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en)</pwp-uploads
+Tune in to the AI Show every week on [YouTube](https://www.youtube.com/watch?v=7VMio8Tk2so&t=914s) or [Twitch](https://www.twitch.tv/videos/310181430) and share your thoughts in the comments or Tweet Us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en)
