@@ -10,6 +10,7 @@ import Hero from "../../components/tags/Hero.astro";
 import LinkCardListTitle from "../../shared/components/titles/LinkCardListTitle.astro";
 import Link from "../../shared/components/general/Link.astro";
 import Backlink from "../../components/nav/Backlink.astro";
+import JsonLD from "../../shared/components/meta/JsonLD.astro";
 
 let tags = [];
 const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
@@ -19,9 +20,34 @@ allPosts.forEach((post) => {
 });
 
 tags = [...new Set(tags)];
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	itemListElement: [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Deepgram Home",
+			item: "https://deepgram.com",
+		},
+		{
+			"@type": "ListItem",
+			position: 2,
+			name: "Blog",
+			item: Astro.url.origin,
+		},
+		{
+			"@type": "ListItem",
+			position: 3,
+			name: "Tags",
+			item: `${Astro.url.origin}/tags`,
+		},
+	],
+};
 ---
 
 <Layout>
+	<JsonLD slot="json:ld" {schema} />
 	<Title slot="head:title" title="All tags - Deepgram Blog ⚡️" />
 	<Description slot="head:description" name="description" content="All the tags on the Deepgram blog." />
 	<Meta slot="og:title" property="og:title" content="All tags - Deepgram Blog ⚡️" />
