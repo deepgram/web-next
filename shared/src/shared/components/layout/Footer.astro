@@ -5,6 +5,9 @@ import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 import AmplifyQuote from "../quotes/AmplifyQuote.astro";
 import Button from "../general/Button.astro";
+import { getUuid } from "../../util";
+
+const formUuid = await getUuid();
 ---
 
 <footer
@@ -84,13 +87,13 @@ import Button from "../general/Button.astro";
 					<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
 					<div class="flex flex-col space-y-4">
 						<div class="input-group flex-row items-baseline space-x-1">
-							<label><input type="checkbox" x-model="privacyAgree" /> I’m good with the</label>
+							<label for={`terms-${formUuid}`}><input id={`terms-${formUuid}`} type="checkbox" x-model="privacyAgree" /> I’m good with the</label>
 							<Link href="https://www.iubenda.com/privacy-policy/88905781" target="_blank" class="text-lightIris">Privacy Policy</Link>
 						</div>
 
 						<div class="form--inline">
 							<div class="input-group">
-								<input type="text" name="email" id="email" x-model="email" placeholder="you@work-email.com" />
+								<input type="text" name="email" id={`email-${formUuid}`} x-model="email" placeholder="you@work-email.com" />
 								<input type="hidden" name="hook" value="blj5az4" />
 							</div>
 							<Button type="submit" :disabled="!privacyAgree" value="test" class="button button--secondary">Submit</Button>

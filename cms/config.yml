@@ -184,7 +184,35 @@ collections:
       - label: YouTube URL 
         name: youtube
         widget: string
-  - name: category
+  - name: whitepapers
+    label: "Whitepapers"
+    label_singular: Whitepaper
+    folder: "content/whitepapers"
+    path: "{{slug}}"
+    create: true
+    slug: "{{slug}}"
+    format: json
+    fields:
+      - label: Name
+        name: title
+        widget: string
+      - label: URL 
+        name: url
+        widget: string
+      - label: Theme
+        name: theme
+        widget: select
+        options: [{label: "Black", value: "black" }, {label: "White", value: "white" }, {label: "Red", value: "red"}]
+      - label: "Cover Image"
+        name: image
+        widget: image
+      - label: "Publish Date"
+        name: date
+        widget: datetime
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: true
+  - name: category 
     label: "Categories"
     label_singular: Category
     folder: "content/blog/category"

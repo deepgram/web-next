@@ -9,6 +9,7 @@ import CodeBlock from "../shared/components/code/CodeBlock.astro";
 import CodeEmbed from "../shared/components/code/CodeEmbed.astro";
 import Code from "astro/components/Code.astro";
 import YouTube from "../shared/components/general/YouTube.astro";
+import Alert from "../shared/components/general/Alert.astro";
 ---
 
 <Layout>
@@ -73,11 +74,40 @@ import YouTube from "../shared/components/general/YouTube.astro";
 					<YouTube id="kgCUn4fQTsc" />
 				</div>
 			</ComponentPreview>
-			<ComponentStaticPreview id="youtube" title="YouTube Component" snippet={`<YouTube id="" />`}>
+			<ComponentPreview
+				id="alert-info"
+				title="Alert Component - Info"
+				snippet={`<Alert type="info">This post is effectively part 2 on building and publishing npm packages.</Alert>`}
+			>
 				<div class="max-w-2xl">
-					<YouTube id="kgCUn4fQTsc" />
+					<Alert type="info"
+						><p>This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post, click here <a href="/">Test link</a></p>
+						<ul>
+							<li>point one</li>
+							<li>point two</li>
+							<li>point three</li>
+						</ul>
+					</Alert>
 				</div>
-			</ComponentStaticPreview>
+			</ComponentPreview>
+			<ComponentPreview
+				id="alert-warning"
+				title="Alert Component - Warning"
+				snippet={`<Alert type="warning">This post is effectively part 2 on building and publishing npm packages.</Alert>`}
+			>
+				<div class="max-w-2xl">
+					<Alert type="warning">This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post...</Alert>
+				</div>
+			</ComponentPreview>
+			<ComponentPreview
+				id="alert-language"
+				title="Alert Component - Language"
+				snippet={`<Alert type="language">This post is effectively part 2 on building and publishing npm packages.</Alert>`}
+			>
+				<div class="max-w-2xl">
+					<Alert type="language">This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post...</Alert>
+				</div>
+			</ComponentPreview>
 		</ComponentSection>
 	</PrimarySection>
 </Layout>

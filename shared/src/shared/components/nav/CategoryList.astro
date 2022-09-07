@@ -1,19 +1,9 @@
 ---
+import { getSluggedJson } from "../../util";
 import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 
-const modules = import.meta.glob("../../../content/blog/category/*.json");
-
-async function getCategories() {
-	let paths = [];
-	for (const path in modules) {
-		const result = await modules[path]();
-		paths.push({ slug: "/categories/" + path.split("/").pop().replace(".json", " ").trim(), title: result.title, plural: result.plural || null });
-	}
-	return paths;
-}
-
-const categories = await getCategories();
+const categories = await getSluggedJson("blog/category");
 const pathname = Astro.url.pathname;
 const index = pathname.lastIndexOf("/");
 let fileName = pathname.substring(index).substring(1);
