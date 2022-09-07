@@ -1,24 +1,26 @@
 ---
-title: "How is Machine Learning, or Deep Learning, Affecting Science?  — AI Show"
-description: ""
+title: How is Machine Learning, or Deep Learning, Affecting Science?  — AI Show
+description: Learn more about how deep learning is affecting science in this
+  episode of the AI Show.
 date: 2018-12-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981337/blog/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/how-ml-dl-affecting-science-blog-thumb%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - machine-learning
+  - deep-learning
 seo:
-  title: "How is Machine Learning, or Deep Learning, Affecting Science?  — AI Show"
+  title: How is Machine Learning, or Deep Learning, Affecting Science?  — AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981337/blog/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/how-ml-dl-affecting-science-blog-thumb%402x.jpg
 shorturls:
   share: https://dpgr.am/8d2bec2
   twitter: https://dpgr.am/f836824
   linkedin: https://dpgr.am/9d340bd
   reddit: https://dpgr.am/962e0be
   facebook: https://dpgr.am/43c94c9
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981337/blog/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/how-ml-dl-affecting-science-blog-thumb%402x.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/5tip6JR_AN8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>**Scott:** Welcome to the AI Show. Today we're asking the question: How is machine learning, or deep learning, affecting science? **Susan:** Actually I'm asking a question of you! For those that do not know, Scott here has a little bit of a science background. **Scott:** A little bit. **Susan:** And a little bit of machine learning in science background. Scott, can you at least give us the 10,000 foot overview of a little bit of what you've done?
