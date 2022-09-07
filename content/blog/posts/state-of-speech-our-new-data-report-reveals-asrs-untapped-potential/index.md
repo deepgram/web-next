@@ -1,24 +1,27 @@
 ---
 title: "State of Speech: Our New Data Report Reveals ASR’s Untapped Potential"
-description: ""
+description: Speech is a powerful tool for the enterprise with the ability to
+  unlock a whole new treasure trove of data. This space is growing and almost
+  every company is investing in some form of Automatic Speech Recognition (ASR)
+  - but the question remains, are they using speech to its full potential?
 date: 2021-03-03
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981362/blog/state-of-speech-our-new-data-report-reveals-asrs-untapped-potential/2021-state-of-asr-infogfx%402x.jpg
 authors:
   - scott-stephenson
 category: speech-trends
 tags:
-  - ohsnap
+  - state-of-voice-tech
 seo:
   title: "State of Speech: Our New Data Report Reveals ASR’s Untapped Potential"
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981362/blog/state-of-speech-our-new-data-report-reveals-asrs-untapped-potential/2021-state-of-asr-infogfx%402x.jpg
 shorturls:
   share: https://dpgr.am/b04ca40
   twitter: https://dpgr.am/6b0c910
   linkedin: https://dpgr.am/ed77ce6
   reddit: https://dpgr.am/f3bd46e
   facebook: https://dpgr.am/793714c
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981362/blog/state-of-speech-our-new-data-report-reveals-asrs-untapped-potential/2021-state-of-asr-infogfx%402x.jpg
 ---
 
 Speech is a powerful tool for the enterprise with the ability to unlock a whole new treasure trove of data. This space is growing and almost every company is investing in some form of Automatic Speech Recognition (ASR) - but the question remains, are they using speech to its full potential? To answer this question, we partnered with [Opus Research](https://opusresearch.net/wordpress/) to examine the state of ASR in the enterprise. We surveyed 400 North American decision-makers, from managers to the C-suite, and in industries from retail and hospitality to financial services and government, to understand how they are currently using ASR and what future investment looks like. Through our research, we discovered specific opportunities where companies could expand ASR use to better support company growth. We also found that while companies are interested in capitalizing on the insights that ASR can unearth, they have yet to take full advantage of the technology. This may be a result of company decision-makers not understanding what their ASR provider can offer, or due to the sophistication of the technology itself. Here are some of the key takeaways we discovered through our research:
