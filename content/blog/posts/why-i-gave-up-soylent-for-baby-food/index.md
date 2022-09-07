@@ -47,8 +47,8 @@ I love [this treasure trove of creative adult use cases for baby food pouches](h
 
 I can only assume my new diet is healthier because:
 
-1.  baby food contains nutrients
-2.  My _wellness_ is high
+1. baby food contains nutrients
+2. My _wellness_ is high
 
 Unfortunately I haven't been able to get the opinion of my PCP. This was his goodbye:
 
@@ -59,16 +59,3 @@ I can only speculate how they lost control of the startup. I hope we don't suffe
 Also please let me know if you're still my PCP.
 
 Pouches up!
-
-## Follow us to A.I. land
-
-
-
-Twitter
-
-[@DeepgramAI](https://twitter.com/DeepgramAI)
-
-SnapChat
-
-![](https://res.cloudinary.com/deepgram/image/upload/v1661725714/blog/why-i-gave-up-soylent-for-baby-food/Screen-Shot-2016-11-02-at-4.16.43-PM.png)
-

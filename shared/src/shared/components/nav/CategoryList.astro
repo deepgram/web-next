@@ -14,12 +14,12 @@ const isActive = (path) => {
 	<h3 class="pb-8">Categories</h3>
 	<ul>
 		{categories &&
-			categories.map((cat) => {
-				const path = `/categories/${cat.slug}`;
+			categories.map((category) => {
+				const path = `/categories/${category.slug}`;
 				return (
 					<li class="pb-4">
 						<Link class:list={["hover:text-iris font-semibold leading-5", { "text-darkCharcoal": !isActive(path) }, { "text-storm": isActive(path) }]} href={path}>
-							{cat.plural}
+							{category.title}
 						</Link>
 					</li>
 				);
@@ -39,11 +39,11 @@ const isActive = (path) => {
 	<ul class="hidden absolute w-full z-20 bg-rock overflow-y-auto max-h-[36rem]" x-bind:class="{hidden: !open, block: open}">
 		<hr class="sticky top-0 left-[3%] md:left-[2%] w-[97%] mb-4 bg-steel opacity-30" />
 		{categories &&
-			categories.map((cat) => {
+			categories.map((category) => {
 				return (
 					<li class="pb-4">
-						<Link class="font-inter pl-4 font-normal text-white" href={`/categories/${cat.slug}`}>
-							{cat.title}
+						<Link class="font-inter pl-4 font-normal text-white" href={`/categories/${category.slug}`}>
+							{category.title}
 						</Link>
 					</li>
 				);
