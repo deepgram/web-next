@@ -356,7 +356,7 @@ Finally, add the following CSS to the `<style>` tag in the `<head>`:
 
 ```css
 * { margin: 0; padding: 0; font-family: sans-serif; }
-#app { display: grid; grid-template-columns: 1fr 1fr; paddi g: 1em; gap: 2em }
+#app { display: grid; grid-template-columns: 1fr 1fr; padding: 1em; gap: 2em }
 input { grid-column: 1 / span 2; font-size: 1em; padding: 0.5em; }
 li { list-style: none; margin-bottom: 1em; }
 #results li { cursor: pointer; }
