@@ -294,7 +294,7 @@ Before we try this add this minimal styling inside of your `<head>` tag:
 
 Restart your server, refresh your browser, and try it out! You can display any of the information provided by Genius.
 
-<youtube id="IFuJiNNoYYw"></youtube>
+<YouTube id="IFuJiNNoYYw"></YouTube>
 
 No one ever said I was a good singer.
 

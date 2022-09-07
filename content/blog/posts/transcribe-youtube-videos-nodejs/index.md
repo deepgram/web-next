@@ -29,11 +29,11 @@ The final project code can be found at `https://github.com/deepgram-devs/youtube
 
 Watch this tutorial as a video:
 
-<youtube id="LrNS_q886uQ"></youtube>
+<YouTube id="LrNS_q886uQ"></YouTube>
 
 We need a sample video, so I am using a [Shang-Chi and The Legend of The Ten Rings teaser trailer](https://www.youtube.com/watch?v=ir-mWUYH_uo) - if that is a spoiler for you please go ahead and grab another video link.
 
-<youtube id="ir-mWUYH_uo"></youtube>
+<YouTube id="ir-mWUYH_uo"></YouTube>
 
 ## Before We Start
 

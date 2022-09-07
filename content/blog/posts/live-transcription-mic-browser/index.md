@@ -26,7 +26,7 @@ There are so many projects you can build with Deepgram's streaming audio transcr
 
 Watch this tutorial as a video:
 
-<youtube id="kIyPX16zuQY"></youtube>
+<YouTube id="kIyPX16zuQY"></YouTube>
 
 ## Before We Start
 

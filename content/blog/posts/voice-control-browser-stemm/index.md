@@ -34,7 +34,7 @@ Fortunately, some of the team saw our live demo at the event that highlighted ho
 
 After bouncing around ideas, they chose to expand their knowledge from October's event. They landed on what would become Stëmm - the aim was to build a browser interface for users with motor disabilities. The team leveraged both the Deepgram API and Chrome API into a Chrome extension that, once installed and given microphone permissions, lets users control Chrome hands-free with voice commands like "chrome, open tab," "chrome, search for recipes," and "chrome, add bookmark."
 
-<youtube id="8w6rmlqOW6o"></youtube>
+<YouTube id="8w6rmlqOW6o"></YouTube>
 
 ## Command and Control
 

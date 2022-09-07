@@ -23,13 +23,13 @@ og:
 
 Deepgram community member Filip Grebowski recently built a really cool demo which allows him to build websites by dictating elements and their attributes.
 
-<youtube id="rhFlRPz-AxQ"></youtube>
+<YouTube id="rhFlRPz-AxQ"></YouTube>
 
 In Part 1, Filip expands on our [Get Live Speech Transcriptions In Your Browser](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/) demo to detect keywords and build a webpage.
 
 ![Actions: add, delete, modify, save, structure. Elements: button, title, paragraph, input. Sub-actions: all, at index. Sub-category: name, palceholder, default.](https://res.cloudinary.com/deepgram/image/upload/v1646692165/blog/2022/02/coding-website-with-voice/keywords.png)
 
-<youtube id="HgoUIIhjc2A"></youtube>
+<YouTube id="HgoUIIhjc2A"></YouTube>
 
 In Part 2, more functionality was introduced to add layout and styling to a webpage.
 

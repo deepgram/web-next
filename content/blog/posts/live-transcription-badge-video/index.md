@@ -29,7 +29,7 @@ Something about a solution to this simple and universal problem made this projec
 
 In this video, I show you how I built this project, along with the parts you need and steps to take to create your own. This project was build with JavaScript, Vue.js, Node.js, Deepgram, and iTranslate. It is hosted for free on Glitch.
 
-<youtube id="VPdvo6fF0zc"></youtube>
+<YouTube id="VPdvo6fF0zc"></YouTube>
 
 Important links:
 

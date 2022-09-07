@@ -50,8 +50,8 @@ Then change into that directory so we can start adding things to it.
 
 We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one.
 
-<panel> Panel with important note
-It’s recommended in Python to use a virtual environment so our project can be installed inside a container rather than installing it system-wide. </panel>
+<Panel> Panel with important note
+It’s recommended in Python to use a virtual environment so our project can be installed inside a container rather than installing it system-wide. </Panel>
 
 Ensure our virtual environment is activated because we’ll install dependencies inside. If our virtual environment is named `venv`, then activate it.
 

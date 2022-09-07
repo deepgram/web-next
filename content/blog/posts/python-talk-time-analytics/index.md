@@ -51,11 +51,11 @@ Then change into that directory so we can start adding things to it.
 
 We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one.
 
-<panel type="info" title="Important Note">
+<Panel type="info" title="Important Note">
 
 It’s recommended in Python to use a virtual environment so our project can be installed inside a container rather than installing it system-wide.
 
-</panel>
+</Panel>
 
 Now we can open up our favorite editor and create a file called `deepgram_analytics.py`. If you’d like to make it from the command line, do this:
 
@@ -105,11 +105,11 @@ Where you’d replace `YOUR_API_KEY` with your api\_key you got from Deepgram.
 
 Next, let’s add the audio file to our project by [downloading it here](https://developers.deepgram.com/data/audio/premier_broken-phone.mp3), and adding it to our project directory.
 
-<panel type="info" title="Important Note">
+<Panel type="info" title="Important Note">
 
 This audio file is a sample phone call from Premier Phone Services. To follow along, we’ll need to download this .mp3 file.
 
-</panel>
+</Panel>
 
 Our project directory structure should look like this:
 
