@@ -21,7 +21,7 @@ const categoryPosts = posts.filter((p) => category.slug === p.frontmatter.catego
 {categoryPosts.length > 0 && (
 	<>
 		<BlogCardList class="mb-32">
-			<LinkCardListTitle slot="title" href={`/categories/${category.slug}`} title={category.title} linkClass="draw-underline nudge-icon nudge-icon--right text-iris">
+			<LinkCardListTitle slot="title" href={`/categories/${category.slug}`} title={category.plural} linkClass="draw-underline nudge-icon nudge-icon--right text-iris">
 				<h3>{category.title}</h3>
 			</LinkCardListTitle>
 			<CategoryPosts posts={categoryPosts} />
