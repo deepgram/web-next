@@ -39,7 +39,7 @@ With speaker diarization:
 >
 > \[Speaker:1] My name is Blake.
 
-The outputs from the Deepgram's API, with diarized text, can then be used to build downstream workflows. Speaker diarization is different from channel diarization, where each channel in a multi-channel audio stream is separated; i.e., channel 1 is speaker 1 and channel 2 is speaker 2. Channel diarization can be used for one-to-one phone calls, where there is only one speaker per channel. When there are multiple speakers per channel, such as in the recording of a meeting, speaker diarization is needed to separate the speakers.
+The outputs from Deepgram's API, with diarized text, can then be used to build downstream workflows. Speaker diarization is different from channel diarization, where each channel in a multi-channel audio stream is separated; i.e., channel 1 is speaker 1 and channel 2 is speaker 2. Channel diarization can be used for one-to-one phone calls, where there is only one speaker per channel. When there are multiple speakers per channel, such as in the recording of a meeting, speaker diarization is needed to separate the speakers.
 
 ## How does Speaker Diarization Work?
 
