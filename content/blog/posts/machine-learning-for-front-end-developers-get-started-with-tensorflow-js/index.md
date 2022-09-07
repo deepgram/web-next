@@ -11,7 +11,14 @@ category: tutorial
 tags:
   - machine-learning
   - tensorflowjs
+shorturls:
+  share: https://dpgr.am/4a1060f
+  twitter: https://dpgr.am/15b7a58
+  linkedin: https://dpgr.am/fc88674
+  reddit: https://dpgr.am/ecae480
+  facebook: https://dpgr.am/4ff184b
 ---
+
 Machine Learning (ML) has historically belonged to Python engineers, Data Scientists, and mathematicians, with frontend developers having very usage and support. In fact, JavaScript ranks 5th of all languages used for Machine Learning, coming in at around 7%. With access to microphones and webcams in the browser, we're just getting started with exploring a whole new landscape of what we can do as front-end developers. This is where TensorFlow.js comes in.
 
 TensorFlow.js (TFJS) is a JavaScript framework that we can use to create machine learning models for desktop, web, mobile, and cloud, giving us access to images, video, audio, and text models. We can use this technology for augmented reality, sound recognition, sentiment analysis, web page optimization, accessibility, and more.
@@ -28,11 +35,11 @@ TensorFlow Hub is a centralized site with hundreds of trained models. It include
 
 ## Getting Started with TFJS
 
-There are three different ways we can use TFJS; each requiring a little more knowledge and understanding of how the models work. 
+There are three different ways we can use TFJS; each requiring a little more knowledge and understanding of how the models work.
 
 ### Import an Existing, Pre-trained Model
 
-We can take a TensorFlow or Keras model that's been trained offline and load it into the browser. If we want to explore existing models and their demos, we can check out the [TFJS models repository](https://github.com/tensorflow/tfjs-models/). 
+We can take a TensorFlow or Keras model that's been trained offline and load it into the browser. If we want to explore existing models and their demos, we can check out the [TFJS models repository](https://github.com/tensorflow/tfjs-models/).
 
 When we take an existing model, we can get it working immediately with a couple of lines of JavaScript. We can get this up and running using a script tag or installing with `npm` or `yarn`.
 
@@ -75,22 +82,23 @@ We're going to implement the MobileNet model, using the code they've give us in 
 
 ```
 
-Notice in the console, we're given three predictions for the image. And all of this is put together in fewer than 30 lines of code. 
+Notice in the console, we're given three predictions for the image. And all of this is put together in fewer than 30 lines of code.
 
 ![](https://res.cloudinary.com/deepgram/image/upload/v1660235143/blog/2022/08/getting-started-with-tensorflowjs/predictions.png)
 
 ### Retrain an Imported Machine Learning Model
 
-We can do more than use existing models straight of out the box. We can use transfer learning to continue to train a model (known as a base model) that was trained offline with data we collect from the browser. Transfer learning is when we take a pre-trained model and re-use it for a related task. For example, we might take a model trained with image detection. It already knows how to identify features of objects like shapes. We might take this model and further train it to identify a specific object. This gives us a speedy way to train that doesn't require us to invest the full amount of time training and developing a new model. 
+We can do more than use existing models straight of out the box. We can use transfer learning to continue to train a model (known as a base model) that was trained offline with data we collect from the browser. Transfer learning is when we take a pre-trained model and re-use it for a related task. For example, we might take a model trained with image detection. It already knows how to identify features of objects like shapes. We might take this model and further train it to identify a specific object. This gives us a speedy way to train that doesn't require us to invest the full amount of time training and developing a new model.
 
 ### Create a New Model
 
-Once we understand models and layers, we can progress to creating our own model. Using the Layers API or the Core API, we can create our own model. This allows us to have control over defining what our model will do, how we train our model, and the output when we run it. It's generally recommended to use the Layers API first since it's modeled after the Keras API. 
+Once we understand models and layers, we can progress to creating our own model. Using the Layers API or the Core API, we can create our own model. This allows us to have control over defining what our model will do, how we train our model, and the output when we run it. It's generally recommended to use the Layers API first since it's modeled after the Keras API.
 
 ## Should we use TensorFlow.js for Deep Learning?
 
-Depending on your use case, TFJS can be an incredible valuable tool that allows for browser interaction, including using the webcam and the microphone. There are use cases that create more interactive experiences for education, healthcare support, accessibility advancements, and opportunities for just plain fun. 
+Depending on your use case, TFJS can be an incredible valuable tool that allows for browser interaction, including using the webcam and the microphone. There are use cases that create more interactive experiences for education, healthcare support, accessibility advancements, and opportunities for just plain fun.
 
 As front-end developers, we're often kept out of conversations about ML, data science, etc. Tensorflow.js gives us an opportunity to help shape a developing field, access tools we haven't before, and expand the horizon of the frontend experience.  Having a variety of voices in conversations that impact, well, everyone is critical. Diversity of thought, input into development, and different backgrounds can help to not only push the industry forward, but to redefine what we can do in the frontend landscape. Tech that's belonged to Data Scientists can be part of what we do and allow us to keep pushing boundaries on what we're creating and the problems we're solving.
 
 To get started with TensorFlow.js, you can find a tutorial [here](https://www.tensorflow.org/js/tutorials). If you want to see a TFJS + Deepgram Project, you can check out [Add Live Speech Bubbles to YouTube Videos with Autobubble](https://blog.deepgram.com/autobubble-youtube-speech-bubbles/), and, as always, you can hit us up with any questions on Twitter [@deepgramAI](https://twitter.com/DeepgramAI).
+
