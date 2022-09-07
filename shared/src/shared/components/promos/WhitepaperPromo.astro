@@ -65,4 +65,13 @@ const formId = await getUuid();
 	:global(.hbspt-form .hs-form-field) {
 		@apply mt-2;
 	}
+
+	:global(.hbspt-form form fieldset) {
+		@apply flex max-w-full flex-col md:flex-row md:flex-nowrap md:items-end md:gap-5;
+	}
+
+	:global(.hbspt-form form fieldset .field) {
+		width: auto !important;
+		float: none;
+	}
 </style>
