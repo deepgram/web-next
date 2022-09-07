@@ -1,26 +1,26 @@
 ---
-title: "Transcriptions Without a Server Using Netlify and Deepgram"
-description: "Use Netlify Functions to transcribe pre-recorded audio without a server"
+title: Transcriptions Without a Server Using Netlify and Deepgram
+description: Use Netlify Functions to transcribe pre-recorded audio without a server
 date: 2022-01-31
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643628688/blog/2022/01/transcription-netlify-functions/Transcribe-without-server-Netlify-Deepgram%402x.jpg
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: tutorial
 tags:
-    - nodejs
-    - netlify
-    - serverless
+  - nodejs
+  - netlify
+  - serverless
 seo:
-    title: "Transcriptions Without a Server Using Netlify and Deepgram"
-    description: "Use Netlify Functions to transcribe pre-recorded audio without a server"
-shorturls:
-    share: https://dpgr.am/a0ed7cf
-    twitter: https://dpgr.am/838386f
-    linkedin: https://dpgr.am/038d7a4
-    reddit: https://dpgr.am/f2a916e
-    facebook: https://dpgr.am/1f580fd
+  title: Transcriptions Without a Server Using Netlify and Deepgram
+  description: Use Netlify Functions to transcribe pre-recorded audio without a server
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661453852/blog/transcription-netlify-functions/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661453852/blog/transcription-netlify-functions/ograph.png
+shorturls:
+  share: https://dpgr.am/a0ed7cf
+  twitter: https://dpgr.am/838386f
+  linkedin: https://dpgr.am/038d7a4
+  reddit: https://dpgr.am/f2a916e
+  facebook: https://dpgr.am/1f580fd
 ---
 
 Traditional server applications typically need to be always on, always using resources and require maintenance to ensure availability. Serverless works differently - functionality is exposed via URLs. When a request is made they spin up, execute logic, and spin back down. Each serverless script (known as a 'function') can be run many times in parallel, so this approach may be suitable for scale, dependent on your use case.
@@ -187,5 +187,3 @@ Netlify also supports push-to-deploy with GitHub if you configure your project t
 ## Wrapping Up
 
 Netlify makes deploying serverless functions reasonably straightforward, but if you have any questions after reading this guide, we are here to help! Just pop us a line at [@DeepgramDevs](https://twitter.com/deepgramdevs).
-
-        
