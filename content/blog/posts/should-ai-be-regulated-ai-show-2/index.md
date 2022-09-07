@@ -1,24 +1,27 @@
 ---
-title: "Should AI be Regulated? — AI Show"
-description: ""
+title: Should AI be Regulated? — AI Show
+description: Should AI be regulated or not? Listen to this episode of the AI
+  Show and see what you think.
 date: 2019-01-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981342/blog/should-ai-be-regulated-ai-show-2/should-ai-be-regulated%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - machine-learning
+  - deep-learning
+  - voice-tech
 seo:
-  title: "Should AI be Regulated? — AI Show"
+  title: Should AI be Regulated? — AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981342/blog/should-ai-be-regulated-ai-show-2/should-ai-be-regulated%402x.jpg
 shorturls:
   share: https://dpgr.am/f4c2af8
   twitter: https://dpgr.am/155967e
   linkedin: https://dpgr.am/22de798
   reddit: https://dpgr.am/c43597e
   facebook: https://dpgr.am/1fc0b5f
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981342/blog/should-ai-be-regulated-ai-show-2/should-ai-be-regulated%402x.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/OKkF7k8r0GM" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/570094422&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe>**Scott:** Welcome to the AI show. Today we're asking the question, should AI be regulated? **Susan:** This is a big one-The government has figured out that AI exists. **Scott:** Like, "Whoa. Wait a minute. This is important stuff." **Susan:** It's like the government has realized that maybe the world can change and all sorts of things can happen. And that means we're going to regulate it. Should A.I. be there? It's going to be.
