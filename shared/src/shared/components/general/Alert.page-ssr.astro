@@ -35,10 +35,10 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 
 	.heading {
 		@apply flex flex-row flex-wrap items-start sm:items-center;
-		@apply mt-1 sm:mt-0;
+		@apply my-4 ml-4;
 	}
 	.icon {
-		@apply m-1 border-0;
+		@apply border-0;
 	}
 	.icon > * {
 		@apply m-2.5 mr-0;
@@ -82,6 +82,6 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 	}
 
 	.text :global(p) {
-		@apply py-2;
+		@apply pb-2;
 	}
 </style>
