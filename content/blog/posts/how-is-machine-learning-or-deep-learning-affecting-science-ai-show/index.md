@@ -1,5 +1,5 @@
 ---
-title: How is Machine Learning, or Deep Learning, Affecting Science?  — AI Show
+title: How is Machine Learning, or Deep Learning, Affecting Science? — AI Show
 description: Learn more about how deep learning is affecting science in this
   episode of the AI Show.
 date: 2018-12-14
