@@ -498,3 +498,4 @@ while i < len(data):
    pygame.display.update()
    tick += 0.005 # or 0.001 or 0.0001
 ```
+
