@@ -1,24 +1,28 @@
 ---
 title: "What is DevRel anyway: A Deepgram Approach to Developer Relations"
-description: "Developer Relations can mean many things. Keep reading for a high-level understanding of what a DevRel team does and a close-up of how our Deepgram team works."
+description: Developer Relations can mean many things. Keep reading for a
+  high-level understanding of what a DevRel team does and a close-up of how our
+  Deepgram team works.
 date: 2022-04-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1649423317/blog/2022/04/what-is-devrel-a-deepgram-approach/DevRel-at-DG%402x.jpg
 authors:
-    - bekah-hawrot-weigel
+  - bekah-hawrot-weigel
 category: devlife
 tags:
-    - technical-writing
+  - technical-writing
 seo:
-    title: "What is DevRel anyway: A Deepgram Approach to Developer Relations"
-    description: "Developer Relations can mean many things. Keep reading for a high-level understanding of what a DevRel team does and a close-up of how our Deepgram team works."
-shorturls:
-    share: https://dpgr.am/1e7b253
-    twitter: https://dpgr.am/133fbb5
-    linkedin: https://dpgr.am/8c7f3f0
-    reddit: https://dpgr.am/7e80e1c
-    facebook: https://dpgr.am/e5819e2
+  title: "What is DevRel anyway: A Deepgram Approach to Developer Relations"
+  description: Developer Relations can mean many things. Keep reading for a
+    high-level understanding of what a DevRel team does and a close-up of how
+    our Deepgram team works.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454076/blog/what-is-devrel-a-deepgram-approach/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454076/blog/what-is-devrel-a-deepgram-approach/ograph.png
+shorturls:
+  share: https://dpgr.am/1e7b253
+  twitter: https://dpgr.am/133fbb5
+  linkedin: https://dpgr.am/8c7f3f0
+  reddit: https://dpgr.am/7e80e1c
+  facebook: https://dpgr.am/e5819e2
 ---
 
 There’s been a developer relations (DevRel) explosion over the last couple of years, and the pandemic has forced many teams to redefine what their DevRel teams are doing and how they’re doing it. Many teams who have spent most of their time doing conference talks and in-person interactions have been forced to pivot their focus to online content creation, including talks, and exploring new modes of engagement like voice chats. Before we jump into the [Deepgram DevRel team](https://developers.deepgram.com/blog/categories/devlife/), let’s take a look at some approaches to developer relations.
@@ -65,5 +69,4 @@ Our team members are involved in each of the pillars and we value the support an
 As a DevRel team, we want our interactions to build up the developers we’re engaging with--whether through our site and tools, content, or other interactions. We want developers to dream big, and we want to help make those dreams happen. We’re here to help developers become better developers.
 
 If you have questions or want to hear more about starting in DevRel, you can check our upcoming Twitter Space or let us know what questions you have about DevRel in general or how our team works together: [@DeepgramDevs](https://twitter.com/DeepgramDevs)
-
-        
+
