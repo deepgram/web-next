@@ -68,6 +68,7 @@ There is another form of 'noise' that really dizzies brains and off-the-shelf sp
 
 There are few standards developed to deal with the "crosstalk error." As a result, what gets transcribed is done in many different ways: sometimes correctly but in the wrong line (so it looks like deletion AND substitution errors at the same time) or completely omitting one speaker's words entirely. Naturally, such confusing standards would confound ASR and greatly impact WER. Data scientists should therefore consider how much crosstalk there is likely to be in their data. Web conference audio data likely has a lot and YouTube recipe videos likely have little, unless it's Giada attempting to teach Nicole Kidman and Ellen Degeneres to cook. <iframe src="https://www.youtube.com/embed/PCSs_nj0938?start=10" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>When choosing a speech recognition API, look at where the errors occur. If the crosstalk errors are not important, consider re-calculating the error rate for yourself.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

@@ -75,6 +75,8 @@ With that background out of the way, let's dive into our ranking, and what we th
 
 
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 ### 2\. Amazon Transcribe

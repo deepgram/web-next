@@ -51,6 +51,7 @@ Some research projects require students to transcribe interviews or speeches. Sp
 
 Speech recognition can be used to help students learn languages. For example, there are applications that allow students to practice their pronunciation by speaking into the app. Automatic speech recognition can be used to assess a student's pronunciation skills. This is valuable for language learners who need to practice their speaking skills, or want to check how well they're pronouncing certain words or phrases.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

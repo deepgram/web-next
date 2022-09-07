@@ -27,6 +27,7 @@ Bias in machine learning has been a hot topic in the news lately, and bias in AS
 
 It's important to understand that when people talk about bias and machine learning, they might be talking about two different things. On the one hand, they might mean **real-world bias** related to things like race, gender, age, etc. But the term bias is also used in **machine learning** when a model is overpredicting or underpredicting the probability for a given category. That's true even if that category is something that we might not apply the term "bias" to in the real world. For example, a model developed by a brewery to track when its vats are at risk of overheating might sound the alarm frequently, even when there is no risk of overheating-a problem of machine learning bias, but not real-world bias. In many cases, though, when people talk about "machine learning bias" generally-especially in the media-they're referring to the intersection of real world and machine learning bias: a case where a model is overpredicting or underpredicting in terms of something like gender or race. With these definitions out of the way, let's turn to examining where bias comes from before moving on to how you might figure out if you've got bias in your ASR system, as well as what your next steps are if you've found it.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

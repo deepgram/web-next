@@ -27,6 +27,7 @@ A funny thing happened when Deepgram first decided to use [end-to-end deep learn
 
 All of our use case-specific models are available in various English dialects. We are expanding into different language-by-use case combinations as we continue to train and optimize our speech models for specific circumstances, such as call centers or meeting transcription, as well as expanding [the spoken languages we offer](https://deepgram.com/product/languages/). Our customers have found that combining a spoken language and use case to create a speech model that works specifically for their needs is more accurate than Big Tech's out-of-the-box, one-size-fits-none models. These targeted models have the fastest speed and are optimized for the best scalability. Our models can transcribe one hour of pre-recorded audio in 30 seconds. These models are great for all applications, especially ones that need very high speeds or cost savings for on-prem use. You also don't need to trade off speed or scalability for high accuracy and because we have multiple models for different use cases-unlike Big Tech-our models tend to be more accurate as well.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

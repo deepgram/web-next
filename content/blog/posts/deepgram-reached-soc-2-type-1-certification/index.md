@@ -24,6 +24,7 @@ og:
 
 Deepgram received a SOC 2 Type II "clean bill of health" from [Cyberguard Compliance](https://www.cgcompliance.com/). Their six-month audit of Deepgram's security, availability, and confidentiality found no exceptions to the SOC 2 Type II industry standards as defined by the American Institute of Certified Public Accountants (AICPA). Their audit was conducted from July to December 2021. The SOC 2 Type II report is the gold standard in SOC audits and provides customers the confidence that a SaaS company has security controls in place, monitors the controls, and optimizes security for their customers. We've also previously achieved SOC 2 Type I certification. Type I describes a vendor's systems and whether their design is suitable to meet relevant trust principles, while Type II details the operational effectiveness of those systems.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

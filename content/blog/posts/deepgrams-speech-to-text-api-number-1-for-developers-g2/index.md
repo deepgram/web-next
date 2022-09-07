@@ -64,6 +64,7 @@ Deepgram provides the fastest transcription on the market, with a 120x real-time
 
 We would like to thank our amazing developer community. The honest feedback we have received has allowed us to continue to improve our product to better serve their needs. As a result, Deepgram continues to [rank as the #1 solution](https://www.g2.com/categories/voice-recognition?tab=highest_rated) on G2 for the second consecutive quarter. Most notably, in [G2 Summer Grid® Report](https://www.g2.com/reports/grid-report-for-voice-recognition-summer-2022?secure%5Bpid%5D=77169&secure%5Brid%5D=2999985&secure%5Btoken%5D=68581f65247c290b4e9b0f8cb3a3d262be18bcc421e819e448c5579b93cda711), Deepgram received a 96 satisfaction rating and scored above the average across ease of use (90%), ease of set up (89%), quality of support (92%), and more.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

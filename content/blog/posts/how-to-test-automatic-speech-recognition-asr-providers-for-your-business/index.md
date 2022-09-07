@@ -86,6 +86,6 @@ Take note of what each provider deems an acceptable audio format and how it fits
 
 At this point, you will know where each ASR provider stands from a general accuracy perspective on audio representative of your use case. Next, consider the other variables in **[How to Vet an Automatic Speech Recognition Solution Provider?](https://offers.deepgram.com/how-to-vet-an-asr-provider-thank-you)** and drill down on accuracy improvements with keywords, libraries, reprogramming, and custom training. With a good handle on where each competitor stands in terms all these variables, you can confidently go into pricing conversations and make better decisions for your business. If you're ready to compare Deepgram's AI Speech Platform with other ASR providers, [contact us](https://www.deepgram.com/contact-us).
 
-
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 

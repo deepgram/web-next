@@ -103,7 +103,7 @@ ASR is a technology that converts speech into text. ASR technology works by taki
 
 ASR is important because it enables meeting analysis platforms to automatically transcribe contents of the conversation. Because this is a key component of what meeting analysis platforms do, having a fast, accurate ASR solution behind the scenes is absolutely critical to delivering an excellent user experience. Plus, with the addition of natural language processing and understanding technologies to ASR, these meeting analysis providers  can go even further by, for example, using the accurate transcriptions from an ASR provider to create summaries of key points and identifying tasks for follow up.
 
-
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

@@ -56,6 +56,7 @@ If you need punctuation in your transcripts, what are your options? ASR provider
 
 You might have said "a period", which is probably what one of these _post hoc_ models would have said. But is this a question or a statement? From the text alone, without any context, it's impossible to determine-it could be a statement or a question. If I played the audio for you, though, you'd immediately understand whether the sentence is a question or a statement based on the speaker's intonation. Determining the correct punctuation in this case is impossible with the words alone; it's much easier if you have access to the audio. This leads us to the second way to add punctuation to a transcript. If you're using an [end-to-end deep learning system](https://blog.deepgram.com/deep-learning-speech-recognition/) as part of the process to generate your transcript, it's possible to have it output punctuation and capitalization at the same time as the words. A model that creates both text and punctuation can make decisions based on acoustic information, which is often the difference between good and bad punctuation. Let's consider another example. 
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 Consider how the word "huh" might be used in speech:
 

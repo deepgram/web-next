@@ -58,6 +58,7 @@ Content moderation can serve a number of purposes for ecommerce platforms, from 
 
 Although they might not be the first things that come to mind when you think of content moderation, the health care and finance industries can make use of content moderation technologies. With lots of personal identifiable information (PII) and the need for HIPAA compliance, content moderation companies like [Private AI](https://www.private-ai.com/) can help to clean and process data to remove identifying information before the data is used for other purposes.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

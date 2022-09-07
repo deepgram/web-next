@@ -31,6 +31,7 @@ One of the main benefits of speech-to-text and voice recognition technology is i
 
 Another benefit of speech-to-text and voice recognition technology is improved accessibility. This is because these technologies can allow players with disabilities to play video games that they otherwise would not be able to play. This can be extremely beneficial for players who want to be able to enjoy their favorite hobby, regardless of their physical abilities. Voice commands, for instance, allow players to issue commands to their characters without having to use a controller or type them out. This can help players who have limited mobility or otherwise encounter challenges with traditional gaming interfaces. This winning project from the Gram Gamers category of our recent Deepgram + Dev Hackathon, for example, [lets you control a video game character using only your voice](https://dev.to/sandy_codes_py/play-real-steel-boxing-with-your-voice-atom-the-peoples-champion-e8h). This technology can also let players use voice commands to navigate menus without having to use a controller or mouse.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

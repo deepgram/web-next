@@ -33,6 +33,7 @@ Sentiment analysis and emotion recognition are two of the hottest topics in spee
 
 There are, of course, limitations to systems like this. Sarcasm, for example, can be hard for sentiment analysis to detect (which isn't surprising since humans also struggle to correctly identify sarcasm in written language). That might be less of a problem when you're training and have the groundtruth of someone's rating, but in the real world, the goal of sentiment analysis is to determine how someone felt in the absence of a rating.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

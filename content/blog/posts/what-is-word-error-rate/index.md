@@ -84,7 +84,9 @@ Wouldn't it be nice if everyone who called us to do business did so from a sound
 
 ## Choosing an Speech Recognition API
 
-Speech recognition APIs are fantastic tools that allow us to look into vast amounts of audio data in order to learn meaningful things about our customers, our operations and the world in general. WER is one metric that allows us to compare speech recognition APIs. However, as it is the case in any science, there is no one "best" metric. 
+Speech recognition APIs are fantastic tools that allow us to look into vast amounts of audio data in order to learn meaningful things about our customers, our operations and the world in general. WER is one metric that allows us to compare speech recognition APIs. However, as it is the case in any science, there is no one "best" metric.
+
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 I like analogies, so here is one: Asking which is the best metric to judge the quality of a bicycle could end in disaster. If your say "weight is the best metric, the lighter the better," then people like me who use their bikes to carry heavy groceries, 2 months of laundry and the occasional 2x4 would be in trouble. If you said "the number of pannier racks on a bike" is a good metric, then Tour de France cyclists would become a lot more winded, faster. All in all, you need to choose what's right for you. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976775/blog/what-is-word-error-rate/derek-thomson-271991-unsplash.jpg) *This bike is a robust touring bike with pannier racks-great for shopping and 10,000 mile tours, bad for Tour de France. Photo credit: [Derek Thomson](https://unsplash.com/photos/AJ-7QpXV9U4)* When you want to decide which speech recognition API to use, ask yourself:
 

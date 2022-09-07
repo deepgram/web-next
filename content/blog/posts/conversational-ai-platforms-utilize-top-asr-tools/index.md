@@ -72,6 +72,7 @@ Effective customer service is one of the ways that companies can help retain cus
 
 Conversational AI platforms provide a way to capture the conversations that your customer service agents are having with customers, which can provide an excellent starting place for understanding what your customers want and need. By turning to this database, you might be able to identify patterns that help you improve how information is presented on your website, create training materials for human agents, or even build new automated workflows for your conversational AI platform to handle.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
 

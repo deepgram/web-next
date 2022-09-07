@@ -31,5 +31,6 @@ Callbi is a global, easy to use, cloud-based SaaS contact center speech analytic
 
 Deepgram is the leader in scalable speech recognition. With our easy-to-use API, developers easily convert audio to text and build experiences that increase revenues and maximize employee productivity. Unlike previous generations, Deepgram has taken an entirely new approach to speech recognition, ditching brittle methods-heuristics-based speech processing- for an end-to-end deep learning AI architecture. With this patented approach, users can access the industry's fastest, most accurate and highly scalable AI technology with a simple API call. Deepgram takes the heavy lifting out of noisy, multi-speaker, hard-to-understand audio transcriptions, so companies can focus on what they do best.
 
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 
