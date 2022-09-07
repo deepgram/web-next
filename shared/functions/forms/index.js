@@ -1,5 +1,5 @@
 const axios = require("axios");
-const querystring = require("node:querystring");
+const querystring = require("querystring");
 
 exports.handler = async function (event, context) {
 	let body = {};
