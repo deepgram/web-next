@@ -30,8 +30,6 @@ Reality hit us when we noticed a problem. Sometimes the phrase was definitely sp
 
 <WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
-
-
 ### Can audio search work well?
 
 This got us wondering, _'can we improve the audio search situation?'_. We landed on something we think is pretty good- search based on how a phrase sounds, not on the precise spelling in text. We were sure this would provide better results but we weren't sure just how much better it would be. We dug into research to see if this technique had been tried in a production form. We turned up quite a few papers-most were not totally relevant-but a Google academic paper on searching through political speeches from 2008 was striking. _'What was their method?'_, you might wonder. They used just regular old text transcription with no additional incorporation of the way the audio actually sounded. Bummer, right?

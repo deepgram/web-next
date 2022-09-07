@@ -6,11 +6,11 @@ import Layout from "../layouts/Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import CodeGroup from "../shared/components/code/CodeGroup.astro";
 import CodeBlock from "../shared/components/code/CodeBlock.astro";
-import CodeEmbed from "../shared/components/code/CodeEmbed.astro";
+import CodeEmbed from "../shared/components/code/CodeEmbed.page-ssr.astro";
 import Code from "astro/components/Code.astro";
-import YouTube from "../shared/components/general/YouTube.astro";
-import Alert from "../shared/components/general/Alert.astro";
-import Panel from "../shared/components/general/Panel.astro";
+import YouTube from "../shared/components/general/YouTube.page-ssr.astro";
+import Alert from "../shared/components/general/Alert.page-ssr.astro";
+import Panel from "../shared/components/general/Panel.page-ssr.astro";
 ---
 
 <Layout>
@@ -67,7 +67,7 @@ import Panel from "../shared/components/general/Panel.astro";
 		</ComponentSection>
 
 		<ComponentSection>
-			<ComponentStaticPreview id="code-embed" title="Code Embed Component" snippet={`<CodeEmbed src=""/>`}>
+			<ComponentStaticPreview id="CodeEmbed" title="Code Embed Component" snippet={`<CodeEmbed src=""/>`}>
 				<CodeEmbed src="https://codepen.io/sandrarodgers/embed/jOBrmrw" />
 			</ComponentStaticPreview>
 			<ComponentPreview id="youtube" title="YouTube Component" snippet={`<YouTube id="kgCUn4fQTsc" />`}>

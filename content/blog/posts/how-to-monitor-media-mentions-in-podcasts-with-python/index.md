@@ -63,12 +63,12 @@ I added the Search feature as a parameter in the Python code like this:
 Since I wanted to find where the podcast hosts mentioned sponsorships, searching for the world `sponsor` made sense. Imagine them saying something like, “Now a word from our sponsor”.
 
 After printing the results, I received a response similar to this:
-
+```
     [{'confidence': 1.0, 'end': 23.57, 'snippet': 'our sponsor', 'start': 23.09},
      {'confidence': 0.7023809, 'end': 79.82909, 'snippet': 'spotify', 'start': 79.38954},
      {'confidence': 0.6279762, 'end': 120.18001, 'snippet': 'stocks','start': 119.740005},
      {'confidence': 0.5535714, 'end': 241.19926,'snippet': 'focus on','start': 240.92029}]
-
+```
 The response is a list of dictionaries with the closest match for my search term indicated by the confidence. The higher the confidence, the more likely it matches the search. This feature helped tremendously since all I had to do was pass in a word to search for in the transcript to the speech-to-text Python SDK and spit out a result.
 
 Next, I used SpaCy to handle the entity detection. SpaCy is a Python library used for Machine Learning and Natural Language Processing. I was looking for a way to tag the entities in the transcribed audio as an organization.

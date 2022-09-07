@@ -23,11 +23,11 @@ og:
 
 Imagine you’re a Python Machine Learning Engineer. Your work day is getting ready to start with the dreaded stand-up meeting, but you're looking the most forward to deep diving into topic detection algorithms.
 
-<panel title="Important Note">
+<Panel title="Important Note">
 
 If you want to see the whole Python code snippet for topic detection, please scroll to the bottom of this post.
 
-</panel>
+</Panel>
 
 You step out to get coffee down the street. A black SUV pulls up next to you, the door opens, and someone tells you to get in the truck.
 

@@ -54,7 +54,7 @@ const schema = {
 		<h1 class="mb-8">Deepgram Blog ⚡️</h1>
 		<HasAside>
 			<CategoryList slot="aside" />
-			{categories && categories.map((category, index) => <CategorySection index={index} category={category} />)}
+			{categories && categories.map((category) => <CategorySection category={category} />)}
 			<center class="-mt-10 mb-20">
 				<Link href="/posts" icon="arrow-right" iconSuffix class="button button--secondary button--small">View All</Link>
 			</center>

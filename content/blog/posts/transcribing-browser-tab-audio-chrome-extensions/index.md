@@ -48,7 +48,7 @@ The `host_permissions` specify which webpages this extension will be active on -
 
 The `permissions` specified are also needed for this project - `"storage"` allows the extension to store small amounts of data on the machine, `"tabs"` provides access to all data fields regarding tabs in the browser, and `"scripting"` allows us to execute JavaScript files - more on this later.
 
-At this point, you actually have a valid Chrome Extension - let's load it in. Head to <chrome://extensions>, toggle Developer Mode on and click *Load Unpacked*. Select the folder with your `manifest.json` file, and you should see the extension appear in your browser.
+At this point, you actually have a valid Chrome Extension - let's load it in. Head to `chrome://extensions`, toggle Developer Mode on and click *Load Unpacked*. Select the folder with your `manifest.json` file, and you should see the extension appear in your browser.
 
 It's a bit rubbish right now—time to fix that.
 

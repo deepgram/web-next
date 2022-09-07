@@ -84,7 +84,7 @@ Wouldn't it be nice if everyone who called us to do business did so from a sound
 
 ## Choosing an Speech Recognition API
 
-Speech recognition APIs are fantastic tools that allow us to look into vast amounts of audio data in order to learn meaningful things about our customers, our operations and the world in general. WER is one metric that allows us to compare speech recognition APIs. However, as it is the case in any science, there is no one "best" metric. 
+Speech recognition APIs are fantastic tools that allow us to look into vast amounts of audio data in order to learn meaningful things about our customers, our operations and the world in general. WER is one metric that allows us to compare speech recognition APIs. However, as it is the case in any science, there is no one "best" metric.
 
 <WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 

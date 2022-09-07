@@ -32,7 +32,7 @@ This tutorial covers:
 2.  How to enable live transcriptions for your Daily domain.
 3.  How to start transcribing your Daily video calls.
 
-<youtube id="nyDnC5iCU_I"></youtube>
+<YouTube id="nyDnC5iCU_I"></YouTube>
 
 Important links:
 

@@ -58,11 +58,11 @@ Then change into that directory so we can start adding things to it.
 
 We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one.
 
-<panel type="info" title="Important Note">
+<Panel type="info" title="Important Note">
 
 It’s recommended in Python to use a virtual environment so our project can be installed inside a container rather than installing it system-wide.
 
-</panel>
+</Panel>
 
 Now we can open up our favorite editor and create a file called `script_compliance.py`. If you’d like to make it from the command line, do this:
 
@@ -139,11 +139,11 @@ We replace `YOUR_API_KEY` with our api\_key, which we got from Deepgram.
 
 Next, let’s add the audio file to our project by [downloading it here](https://developers.deepgram.com/data/audio/gettysburg.wav) and adding it to our project directory.
 
-<panel type="info" title="Important Note">
+<Panel type="info" title="Important Note">
 
 To follow along, we’ll need to download this .wav file. If you’d like to use another file, please note you’ll have to change the `flagged_words` and `search_words` for the project to work correctly.
 
-</panel>
+</Panel>
 
 Our project directory structure should look like this:
 

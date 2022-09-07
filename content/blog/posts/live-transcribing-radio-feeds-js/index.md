@@ -67,9 +67,9 @@ Make sure you have a direct audio stream for the radio station. A good way of te
 
 Here are a few URLs for you to try:
 
-*   BBC Radio 4 (works outside the UK): <http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw_online_nonuk>
-*   BBC Radio 4 (works in the UK): <http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw>
-*   France Inter: <https://direct.franceinter.fr/live/franceinter-midfi.mp3>
+*   BBC Radio 4 (works outside the UK): [http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw_online_nonuk](http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw_online_nonuk)
+*   BBC Radio 4 (works in the UK): [http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw](http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw)
+*   France Inter: [https://direct.franceinter.fr/live/franceinter-midfi.mp3](https://direct.franceinter.fr/live/franceinter-midfi.mp3)
 
 If you use the French channel, be sure to add `language: fr` to your Deepgram session options.
 
@@ -172,6 +172,6 @@ deepgramLive.addListener('transcriptReceived', (message) => {
 })
 ```
 
-If you have any questions, please feel free to reach out to us over email (<devrel@deepgram.com>) or via Twitter ([@DeepgramDevs](DeepgramDevs)).
+If you have any questions, please feel free to reach out to us over email (`devrel@deepgram.com`) or via Twitter ([@DeepgramDevs](DeepgramDevs)).
 
         

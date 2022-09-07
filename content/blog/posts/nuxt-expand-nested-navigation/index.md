@@ -176,6 +176,6 @@ I then changed the template tag that was containing the child `NavList` componen
 
 That made the expand/collapse transition much smoother and created a better user experience. It was a challenging problem that was fun to figure out. If you want to see a working example of it, you can check out this [code sandbox](https://codesandbox.io/s/serene-stitch-30zmi). If you want to see it on our production site, you can see it on our [Documentation page](https://developers.deepgram.com/documentation/).
 
-<code-embed src="https://codesandbox.io/s/serene-stitch-30zmi" />
+<CodeEmbed src="https://codesandbox.io/s/serene-stitch-30zmi" />
 
         

@@ -288,7 +288,7 @@ At this point, I have logic that does the following:
 *   Computes the total headcount based on any changes
 
 <div>
-<code-embed height="670" src="https://codepen.io/sandrarodgers/embed/ZEaQRLR"/>
+<CodeEmbed height="670" src="https://codepen.io/sandrarodgers/embed/ZEaQRLR"/>
 </div>
 
 ## Conclusion

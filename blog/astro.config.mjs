@@ -21,4 +21,8 @@ export default defineConfig({
 			preserveSymlinks: true, // required for dev to read contents of symlinked directory
 		},
 	},
+	legacy: {
+		// Adds support for legacy Markdown features
+		astroFlavoredMarkdown: true,
+	},
 });

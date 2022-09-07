@@ -119,15 +119,6 @@ SnapChat
 ![](/content/images/2016/11/Screen-Shot-2016-11-02-at-4.16.43-PM.png)
 
 
-
-Deepgram Newsletter
-
-<input class="newsletter-signup-input-name" style="width: 275px;" type="text" placeholder="your full name"> <input class="newsletter-signup-input" style="width: 275px;" type="text" placeholder="your email address"> <button class="newsletter-signup-btn" style="color: white; background-color: black; width: 275px;">submit to amazing</button>
-
-
-
-<script>$('.newsletter-signup-btn').click(function(event){ $.post( 'https://www.deepgram.com/newsletter_signup', JSON.stringify({ 'from_url': window.location.href, 'email': $('.newsletter-signup-input').val(), 'name': $('.newsletter-signup-input-name').val() }), function(response){ $('.newsletter-signup-btn').html('thanks, sign up your friends!'); $('.newsletter-signup-input-name').val(""); $('.newsletter-signup-input').val(""); } ); }); $('.newsletter-signup-input').keyup(function(event){ if(e.keyCode == 13){ $('.newsletter-signup-btn').click(); } });</script>
-
 * * *
 
 _This article was written in collaboration with [Jason D. Rowley](http://jasondrowley.com)._

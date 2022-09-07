@@ -1,11 +1,9 @@
 ---
-import WhitepaperPromo from "../../shared/components/promos/WhitepaperPromo.astro";
 import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
 import LinkCardListTitle from "../../shared/components/titles/LinkCardListTitle.astro";
 import CategoryPosts from "./CategoryPosts.astro";
-import whitepaperImg from "../../shared/assets/temp_images/black-quote.svg";
 
-const { index, category } = Astro.props;
+const { category } = Astro.props;
 
 const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
 

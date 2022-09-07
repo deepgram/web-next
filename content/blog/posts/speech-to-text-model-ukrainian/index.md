@@ -31,11 +31,13 @@ We've been asked by a few different organizations to help with humanitarian effo
 
 If you'd like to get access to Ukrainian speech-to-text, you can [sign up for a Deepgram account](https://console.deepgram.com/) and select Ukrainian as your audio language in our drop down menu, as seen in the image below. ![](https://res.cloudinary.com/deepgram/image/upload/v1661976853/blog/speech-to-text-model-ukrainian/image1-1024x732.png) To transcribe Ukrainian audio with Deepgram's API, simply add **language=uk** to your transcription requests. You can visit [our documentation](https://developers.deepgram.com/documentation/features/language/) for more information about our language support.
 
-<pre>curl -X POST \
+```
+curl -X POST \
  -H "Authorization:Token YOUR_API_KEY" \
  -H 'content-type: application/json' \
  -d '{"url":"LINK_TO_YOUR_FILE"}' \
-"https://api.deepgram.com/v1/listen?language=uk"</pre>
+"https://api.deepgram.com/v1/listen?language=uk"
+```
 
 ## Conclusion
 

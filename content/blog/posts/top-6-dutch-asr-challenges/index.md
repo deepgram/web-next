@@ -39,8 +39,6 @@ There are many dialects spoken across the Netherlands and Belgium, and they aren
 
 <WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
-
-
 ## 4\. Getting Large Amounts of Diverse Dutch Data
 
 Another challenge of building a model for Dutch is finding a large enough _amount_ of the diverse data that you need to represent all of these different dialects. If you're going for the second option above and training a Dutch speech recognition model on as many varieties as possible, it's important that any data used for model training accurately represent the possible variation in the language. However, not all varieties are equally represented in readily available media and corpora. Maybe people might be bidialectal-they grew up speaking one dialect but might switch to the standard version when, for example, appearing on TV or lecturing in a classroom. This can make it difficult to get the data you need so that the model can understand everyone's words regardless of the speech context.

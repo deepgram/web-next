@@ -25,15 +25,15 @@ og:
 
 In this blog post we will be creating transcripts for YouTube videos using Deepgram's Speech Recognition API. First, we will download videos and convert them to mp3 audio files. Then, we will use Deepgram to generate a transcript. Finally, we will store the transcript in a text file and delete the media file.
 
-The final project code can be found at <https://github.com/deepgram-devs/youtube-transcripts>.
+The final project code can be found at [https://github.com/deepgram-devs/youtube-transcripts](https://github.com/deepgram-devs/youtube-transcripts).
 
 Watch this tutorial as a video:
 
-<youtube id="LrNS_q886uQ"></youtube>
+<YouTube id="LrNS_q886uQ"></YouTube>
 
 We need a sample video, so I am using a [Shang-Chi and The Legend of The Ten Rings teaser trailer](https://www.youtube.com/watch?v=ir-mWUYH_uo) - if that is a spoiler for you please go ahead and grab another video link.
 
-<youtube id="ir-mWUYH_uo"></youtube>
+<YouTube id="ir-mWUYH_uo"></YouTube>
 
 ## Before We Start
 
@@ -45,7 +45,9 @@ You will need:
 
 Create a new directory and navigate to it with your terminal. Run `npm init -y` to create a `package.json` file and then install the following packages:
 
-    npm install @deepgram/sdk ffmpeg-static youtube-mp3-downloader
+```
+npm install @deepgram/sdk ffmpeg-static youtube-mp3-downloader
+```
 
 Create an `index.js` file, and open it in your code editor.
 
@@ -147,7 +149,7 @@ fs.unlinkSync(videoFileName)
 
 ## Summary
 
-Transcribing YouTube videos has never been easier thanks to Deepgram's Speech Recognition API and the Deepgram Node SDK. You can find the final project code at <https://github.com/deepgram-devs/youtube-transcripts>
+Transcribing YouTube videos has never been easier thanks to Deepgram's Speech Recognition API and the Deepgram Node SDK. You can find the final project code at [https://github.com/deepgram-devs/youtube-transcripts](https://github.com/deepgram-devs/youtube-transcripts)
 
 Check out the other options supported by the [Deepgram Node SDK](https://github.com/deepgram/node-sdk) and if you have any questions feel free to reach out to us on Twitter (we are [@DeepgramDevs](https://twitter.com/DeepgramDevs)).
 
