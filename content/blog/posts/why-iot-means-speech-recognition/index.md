@@ -1,24 +1,25 @@
 ---
-title: "Why IoT Means Speech Recognition"
-description: ""
+title: Why IoT Means Speech Recognition
+description: Voice assistants and smart speakers are at the forefront of the
+  Internet of Things—and they're powered by speech recognition.
 date: 2018-11-29
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981329/blog/why-iot-means-speech-recognition/why-IOT-means-speech-rec%402x.jpg
 authors:
   - morris-gevirtz
 category: speech-trends
 tags:
-  - ohsnap
+  - voice-tech
 seo:
-  title: "Why IoT Means Speech Recognition"
+  title: Why IoT Means Speech Recognition
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981329/blog/why-iot-means-speech-recognition/why-IOT-means-speech-rec%402x.jpg
 shorturls:
   share: https://dpgr.am/1d1cea7
   twitter: https://dpgr.am/453e052
   linkedin: https://dpgr.am/be5817c
   reddit: https://dpgr.am/a5bbccb
   facebook: https://dpgr.am/1567b21
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981329/blog/why-iot-means-speech-recognition/why-IOT-means-speech-rec%402x.jpg
 ---
 
 People now use their voice to control an increasing number of their devices-from TVs to cars, and everything in between. The technology that makes voice control possible is speech recognition - technology that transforms your verbal commands into executable actions via an API.
