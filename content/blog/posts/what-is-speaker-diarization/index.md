@@ -31,7 +31,21 @@ With speaker diarization:
 
 > \[Speaker:0] Hello, and thank you for calling premier phone service. Please be aware that this call may be recorded for quality and training purposes. \[Speaker:0] My name is Beth, and I will be assisting you today. How are you doing? \[Speaker:1] Not too bad. How are you today? \[Speaker:0] I'm doing well. Thank you. May I please have your name? \[Speaker:1] My name is Blake.
 
-In a world-class speech API, like Deepgram, this is how you would request diarization: `curl \` `--request POST \` --url 'https://api.deepgram.com/v1/listen?diarize=true&punctuate=true&utterances=true' --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' ` `--header 'content-type: audio/mp3' \` ```--data-binary @Premier_broken-phone_numbers.mp3 ' jq -r '.results.utterances[] ' "[Speaker:\(.speaker)] \(.transcript)"'`` When the file is finished processing (often after only a few seconds), you'll receive a JSON response that has the following basic structure:```{ "metadata": {  "transaction_key": "string",  "request_id": "string",  "sha256": "string",  "created": "string",  "duration": 0,  "channels": 0 },"results": {  "channels": \[   {    "alternatives":[]   }  ] }` The outputs from the API can then be used to build downstream workflows. Speaker diarization is different from channel diarization, where each channel in a multi-channel audio stream is separated; i.e., channel 1 is speaker 1 and channel 2 is speaker 2. Channel diarization can be used for one-to-one phone calls, where there is only one speaker per channel. When there are multiple speakers per channel, such as in the recording of a meeting, speaker diarization is needed to separate the speakers.
+In a world-class speech API, like Deepgram, this is how you would request diarization:
+
+```
+
+```
+
+
+
+ `curl \` `--request POST \` --url 'https://api.deepgram.com/v1/listen?diarize=true&punctuate=true&utterances=true' --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' --header 'content-type: audio/mp3' ` ```--data-binary @Premier_broken-phone_numbers.mp3 ' jq -r '.results.utterances[] ' "[Speaker:\(.speaker)] \(.transcript)"'`` ```
+
+``
+
+`When the file is finished processing (often after only a few seconds), you'll receive a JSON response that has the following basic structure:`{ "metadata": {  "transaction_key": "string",  "request_id": "string",  "sha256": "string",  "created": "string",  "duration": 0,  "channels": 0 },"results": {  "channels": \[   {    "alternatives":[]   }  ] }` 
+
+The outputs from the API can then be used to build downstream workflows. Speaker diarization is different from channel diarization, where each channel in a multi-channel audio stream is separated; i.e., channel 1 is speaker 1 and channel 2 is speaker 2. Channel diarization can be used for one-to-one phone calls, where there is only one speaker per channel. When there are multiple speakers per channel, such as in the recording of a meeting, speaker diarization is needed to separate the speakers.
 
 ## How does Speaker Diarization Work?
 
@@ -42,7 +56,15 @@ Speaker diarization is generally broken down into four major subtasks:
 3. **Representation** - Use a discriminative vector to represent those segments.
 4. **Attribution** - Add a speaker label to each segment based on its discriminative representation.
 
-Diarization systems can include additional subtasks. For a [true end-to-end AI diarization system](https://blog.deepgram.com/deep-learning-speech-recognition/), one or more of these subtasks may be joined together to improve efficiency. Let's dig a bit deeper into what these subtasks accomplish for speaker diarization. **Detection** is often accomplished by a Voice Activity Detection (VAD) model, which determines if a region of audio contains voice activity (which includes but is not limited to speech) or not. For a more precise outcome, Deepgram leverages the millisecond-level word timings that come with our ASR transcripts. This gives us very accurate regions in time where we are confident that there is speech. **Segmentation** is often done uniformly, using a very small window of a few hundred milliseconds or a slightly longer sliding window. Small windows are used to ensure that segments contain a single speaker, but smaller segments produce less informative representations; i.e., it is also hard for people to decide who's talking from a very short clip. So, instead of relying on fixed windowing, we use a neural model to produce segments based on speaker changes. **Representation** of a segment usually means embedding it. Statistical representations like i-vectors have been broadly surpassed by embeddings like d- or x-vectors that are produced by a neural model trained to distinguish between different speakers. **Attribution** is approached in many different ways and is an active area of research in the field. Notable approaches include the Spectral and Agglomerative Hierarchical Clustering algorithms, Variational Bayes inference algorithms, and various trained neural architectures. Our approach successively refines an initial, density-based clustering result to produce accurate and reliable attributions.
+Diarization systems can include additional subtasks. For a [true end-to-end AI diarization system](https://blog.deepgram.com/deep-learning-speech-recognition/), one or more of these subtasks may be joined together to improve efficiency. Let's dig a bit deeper into what these subtasks accomplish for speaker diarization.
+
+**Detection** is often accomplished by a Voice Activity Detection (VAD) model, which determines if a region of audio contains voice activity (which includes but is not limited to speech) or not. For a more precise outcome, Deepgram leverages the millisecond-level word timings that come with our ASR transcripts. This gives us very accurate regions in time where we are confident that there is speech.
+
+**Segmentation** is often done uniformly, using a very small window of a few hundred milliseconds or a slightly longer sliding window. Small windows are used to ensure that segments contain a single speaker, but smaller segments produce less informative representations; i.e., it is also hard for people to decide who's talking from a very short clip. So, instead of relying on fixed windowing, we use a neural model to produce segments based on speaker changes.
+
+**Representation** of a segment usually means embedding it. Statistical representations like i-vectors have been broadly surpassed by embeddings like d- or x-vectors that are produced by a neural model trained to distinguish between different speakers.
+
+**Attribution** is approached in many different ways and is an active area of research in the field. Notable approaches include the Spectral and Agglomerative Hierarchical Clustering algorithms, Variational Bayes inference algorithms, and various trained neural architectures. Our approach successively refines an initial, density-based clustering result to produce accurate and reliable attributions.
 
 ## Why is Speaker Diarization Used?
 
@@ -64,7 +86,15 @@ As we mentioned above, creating readable transcripts is one major use, but other
 
 ## What Are the Metrics for Speaker Diarization?
 
-The main metric used for speaker diarization in the business world is the accuracy of identifying the individual speakers or "who spoke what". Most of the measures in academia are measures of "who spoke when". We believe the best way to measure speaker diarization improvement is to measure time base confusion error rate (tCER) and time based time based diarization error rate (tDER). **Time-based Confusion Error Rate**  (tCER)  = confusion time / total reference and model speech time **Time-based Diarization Error Rate**  (tDER) = false alarm time + missed detection time + confusion time / total reference and model speech time ![](https://res.cloudinary.com/deepgram/image/upload/v1661976860/blog/what-is-speaker-diarization/speaker-diarization-blog.gif) **Key** M = Missed model F = False alarm C = Confusion tCER is based on how much time the diarization identifies the wrong speaker over the total time of audio with speech. The smaller the CER the better the diarization. If there are four speakers and the diarization process has a CER of 10% then for one hour of spoken audio, it misidentified speakers for 6 minutes.  A tCER of less than 10% would be considered very good. However, this measurement is not weighted by the number of speakers or other measures, so you can have a 10% tCER result with identifying one speaker on a two-speaker call when one speaker dominates the conversation for 90% of the time and the secondary speaker only speaks 10%. Deepgram's testing consists of audio with widely varying durations and speaker counts. The other metric is tDER which adds to tCER by including false alarm time (time the model thinks someone is talking when there is just noise or silence) and missed detection time (time where there is speech but the model does not pick it up as speech). tDER is a more standard measure and can provide some more insights into model performance.
+The main metric used for speaker diarization in the business world is the accuracy of identifying the individual speakers or "who spoke what". Most of the measures in academia are measures of "who spoke when". We believe the best way to measure speaker diarization improvement is to measure time base confusion error rate (tCER) and time based time based diarization error rate (tDER). 
+
+**Time-based Confusion Error Rate**  (tCER)  = confusion time / total reference and model speech time 
+
+**Time-based Diarization Error Rate**  (tDER) = false alarm time + missed detection time + confusion time / total reference and model speech time 
+
+![](https://res.cloudinary.com/deepgram/image/upload/v1661976860/blog/what-is-speaker-diarization/speaker-diarization-blog.gif) **Key** M = Missed model, F = False alarm, C = Confusion 
+
+tCER is based on how much time the diarization identifies the wrong speaker over the total time of audio with speech. The smaller the CER the better the diarization. If there are four speakers and the diarization process has a CER of 10% then for one hour of spoken audio, it misidentified speakers for 6 minutes.  A tCER of less than 10% would be considered very good. However, this measurement is not weighted by the number of speakers or other measures, so you can have a 10% tCER result with identifying one speaker on a two-speaker call when one speaker dominates the conversation for 90% of the time and the secondary speaker only speaks 10%. Deepgram's testing consists of audio with widely varying durations and speaker counts. The other metric is tDER which adds to tCER by including false alarm time (time the model thinks someone is talking when there is just noise or silence) and missed detection time (time where there is speech but the model does not pick it up as speech). tDER is a more standard measure and can provide some more insights into model performance.
 
 ## Speaker Diarization with Deepgram vs. Others
 
