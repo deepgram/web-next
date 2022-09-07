@@ -10,6 +10,7 @@ import CodeEmbed from "../shared/components/code/CodeEmbed.astro";
 import Code from "astro/components/Code.astro";
 import YouTube from "../shared/components/general/YouTube.astro";
 import Alert from "../shared/components/general/Alert.astro";
+import Panel from "../shared/components/general/Panel.astro";
 ---
 
 <Layout>
@@ -76,8 +77,15 @@ import Alert from "../shared/components/general/Alert.astro";
 			</ComponentPreview>
 			<ComponentPreview
 				id="alert-info"
-				title="Alert Component - Info"
-				snippet={`<Alert type="info">This post is effectively part 2 on building and publishing npm packages.</Alert>`}
+				title="Alert - Info"
+				snippet={`<Alert type="info">
+	<p>This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post, click here <a href="/">Test link</a></p>
+		<ul>
+			<li>point one</li>
+			<li>point two</li>
+			<li>point three</li>
+	</ul>
+</Alert>`}
 			>
 				<div class="max-w-2xl">
 					<Alert type="info"
@@ -92,7 +100,7 @@ import Alert from "../shared/components/general/Alert.astro";
 			</ComponentPreview>
 			<ComponentPreview
 				id="alert-warning"
-				title="Alert Component - Warning"
+				title="Alert - Warning"
 				snippet={`<Alert type="warning">This post is effectively part 2 on building and publishing npm packages.</Alert>`}
 			>
 				<div class="max-w-2xl">
@@ -101,11 +109,81 @@ import Alert from "../shared/components/general/Alert.astro";
 			</ComponentPreview>
 			<ComponentPreview
 				id="alert-language"
-				title="Alert Component - Language"
+				title="Alert - Language"
 				snippet={`<Alert type="language">This post is effectively part 2 on building and publishing npm packages.</Alert>`}
 			>
 				<div class="max-w-2xl">
 					<Alert type="language">This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post...</Alert>
+				</div>
+			</ComponentPreview>
+			<ComponentPreview
+				id="panel-info"
+				title="Panel - Info"
+				snippet={`<Panel type="info" title="Build a Live Streaming Web Application with Amazon IVS and Deepgram (SERIES)">
+	<ol>
+		<li>
+			<a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/"
+				>How to Build a Live Streaming Web Application with Amazon IVS and Deepgram
+			</a>
+		</li>
+		<li>
+			<a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/">
+				Build a Live Streaming Web Application: Vue and Express Setup
+			</a>
+		</li>
+		<li>
+			<a href="https://developers.deepgram.com/blog/2022/03/how-to-write-vue-3-composables-for-a-third-party-API-integration/">
+				How to Write Vue 3 Composables for a Third-Party API Integration
+			</a>
+		</li>
+
+		<li>
+			<a href="https://developers.deepgram.com/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/">
+				Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component
+			</a>
+		</li>
+	</ol>
+</Panel>`}
+			>
+				<div class="max-w-2xl">
+					<Panel type="info" title="Build a Live Streaming Web Application with Amazon IVS and Deepgram (SERIES)">
+						<ol>
+							<li>
+								<a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/"
+									>How to Build a Live Streaming Web Application with Amazon IVS and Deepgram
+								</a>
+							</li>
+							<li>
+								<a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/">
+									Build a Live Streaming Web Application: Vue and Express Setup
+								</a>
+							</li>
+							<li>
+								<a href="https://developers.deepgram.com/blog/2022/03/how-to-write-vue-3-composables-for-a-third-party-API-integration/">
+									How to Write Vue 3 Composables for a Third-Party API Integration
+								</a>
+							</li>
+
+							<li>
+								<a href="https://developers.deepgram.com/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/">
+									Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component
+								</a>
+							</li>
+						</ol>
+					</Panel>
+				</div>
+			</ComponentPreview>
+			<ComponentPreview
+				id="panel-warning"
+				title="Panel - Warning"
+				snippet={`<Panel type="warning" title="Node only">
+	The SDK only supports sending Buffers from Node. The in-browser version of the SDK only provides the capability to send URL sources.
+</Panel>`}
+			>
+				<div class="max-w-2xl">
+					<Panel type="warning" title="Node only">
+						The SDK only supports sending Buffers from Node. The in-browser version of the SDK only provides the capability to send URL sources.
+					</Panel>
 				</div>
 			</ComponentPreview>
 		</ComponentSection>
