@@ -1,24 +1,24 @@
 ---
-title: "What Does it Mean for a Machine to Learn? — AI Show"
-description: ""
+title: What Does it Mean for a Machine to Learn? — AI Show
+description: In this AI Show episode, we talk about what it means for a machine to learn.
 date: 2018-11-02
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981324/blog/ai-show-what-does-it-mean-for-a-machine-to-learn/what-does-it-mean-for-machine-to-learn-blog-thumb%40.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - machine-learning
 seo:
-  title: "What Does it Mean for a Machine to Learn? — AI Show"
+  title: What Does it Mean for a Machine to Learn? — AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981324/blog/ai-show-what-does-it-mean-for-a-machine-to-learn/what-does-it-mean-for-machine-to-learn-blog-thumb%40.jpg
 shorturls:
   share: https://dpgr.am/3edfeb5
   twitter: https://dpgr.am/3448424
   linkedin: https://dpgr.am/647bb8d
   reddit: https://dpgr.am/020286a
   facebook: https://dpgr.am/44a48c4
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981324/blog/ai-show-what-does-it-mean-for-a-machine-to-learn/what-does-it-mean-for-machine-to-learn-blog-thumb%40.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/ZWIi3Ah-VHY" width="600" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>**Scott:** Welcome to the AI Show, I'm Scott Stephenson, co-founder of Deep Gram. With me is Jeff Ward, aka Susan. On the AI show, we talk about all things AI. Today we're asking the very big question, "What does it mean for a machine to learn?" **Susan:** What do you think it means for a machine to learn, Scott? **Scott:** I think a basic way to look at it is by asking the question:
