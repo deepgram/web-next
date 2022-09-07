@@ -26,21 +26,5 @@ const categoryPosts = posts.filter((p) => category.slug === p.frontmatter.catego
 			</LinkCardListTitle>
 			<CategoryPosts posts={categoryPosts} />
 		</BlogCardList>
-
-		{index === 0 && (
-			<div class="mb-32">
-				<WhitepaperPromo
-					title="How to Make Your Application Voice-Ready"
-					theme="black"
-					backgroundImage={whitepaperImg}
-					formProps={[
-						{ label: "Name (first and last)", placeholder: "Your name" },
-						{ label: "Work email", placeholder: "you@company.com", type: "email" },
-						{ label: "Role", placeholder: "Role/Title" },
-					]}
-					buttonText="Download"
-				/>
-			</div>
-		)}
 	</>
 )}

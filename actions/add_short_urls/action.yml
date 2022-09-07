@@ -1,0 +1,12 @@
+name: add-short-urls
+description: A GitHub Action to automate adding short urls to new blog posts
+inputs:
+  github_token:
+    required: true
+    description: GitHub access token
+  files:
+    required: true
+    description: Files that changed
+runs:
+  using: "node16"
+  main: "dist/index.js"
