@@ -47,32 +47,32 @@ We're going to implement the MobileNet model, using the code they've give us in 
 <!DOCTYPE html>
 <html>
   <head>
-    </head>
+  </head>
     <body>
       <h1>Check the console for our predictions!</h1>
     </body>
-  </html>
   
-<!-- Load TensorFlow.js. This is required to use MobileNet. -->
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
-<!-- Load the MobileNet model. -->
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
-<!-- Replace this with your image. Make sure CORS settings allow reading the image! -->
-<img id="img" src="cat.jpg" style="width:200px;height:300px"></img>
-<!-- Place your code in the script tag below. You can also use an external .js file -->
-<script>
-  // Notice there is no 'import' statement. 'mobilenet' and 'tf' is
-  // available on the index-page because of the script tag above.
-  const img = document.getElementById('img');
-  // Load the model.
-  mobilenet.load().then(model => {
-    // Classify the image.
-    model.classify(img).then(predictions => {
-      console.log('Predictions: ');
-      console.log(predictions);
-    });
-  });
-</script>
+    <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
+    <!-- Load the MobileNet model. -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet@1.0.0"> </script>
+    <!-- Replace this with your image. Make sure CORS settings allow reading the image! -->
+    <img id="img" src="cat.jpg" style="width:200px;height:300px">
+    <!-- Place your code in the script tag below. You can also use an external .js file -->
+    <script>
+      // Notice there is no 'import' statement. 'mobilenet' and 'tf' is
+      // available on the index-page because of the script tag above.
+      const img = document.getElementById('img');
+      // Load the model.
+      mobilenet.load().then(model => {
+        // Classify the image.
+        model.classify(img).then(predictions => {
+          console.log({predictions});
+        });
+      });
+    </script>
+</html>
+
 ```
 
 Notice in the console, we're given three predictions for the image. And all of this is put together in fewer than 30 lines of code. 
