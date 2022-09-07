@@ -1,24 +1,25 @@
 ---
-title: "Why Does Your Speech Recognition Need Context?"
-description: ""
+title: Why Does Your Speech Recognition Need Context?
+description: Learn what context means in speech recognition, and why it's so important.
 date: 2018-12-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069465/blog/why-does-your-speech-recognition-need-context/placeholder-post-image%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - machine-learning
+  - voice-tech
 seo:
-  title: "Why Does Your Speech Recognition Need Context?"
+  title: Why Does Your Speech Recognition Need Context?
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069465/blog/why-does-your-speech-recognition-need-context/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/57466dd
   twitter: https://dpgr.am/fdd6127
   linkedin: https://dpgr.am/8e14aa4
   reddit: https://dpgr.am/ec104f3
   facebook: https://dpgr.am/6526000
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069465/blog/why-does-your-speech-recognition-need-context/placeholder-post-image%402x.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/04YXLTnafTc" width="600" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Alexa and Siri are great and all, but they often make funny, if not serious mistakes. Why is this? ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976769/blog/why-does-your-speech-recognition-need-context/Screen-Shot-2018-11-19-at-4.19.58-PM-1.png) I conducted an experiment to measure how important context is in understanding audio-especially when the audio is noisy. As humans we tend to enter conversations with some knowledge of what the topic is, which allows us to follow along. The speech recognition APIs which power Google Assistant, Siri, and Amazon Alexa, do not have this context. **As far as they know, every time you speak to them is like the first time you have ever spoken to them.** Suspecting this might be the reason they often misunderstand things which they shouldn't, I decided to test this:

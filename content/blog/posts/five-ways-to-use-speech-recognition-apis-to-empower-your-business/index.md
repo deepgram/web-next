@@ -1,24 +1,27 @@
 ---
-title: "5 Ways to Use Speech Recognition APIs to Empower Your Business"
-description: ""
+title: 5 Ways to Use Speech Recognition APIs to Empower Your Business
+description: Take a look at these five ways that speech recognition APIs can be
+  used to improve your business's voice strategy.
 date: 2018-11-15
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069462/blog/five-ways-to-use-speech-recognition-apis-to-empower-your-business/placeholder-post-image%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - voice-strategy
+  - sales-enablement
+  - healthcare
 seo:
-  title: "5 Ways to Use Speech Recognition APIs to Empower Your Business"
+  title: 5 Ways to Use Speech Recognition APIs to Empower Your Business
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069462/blog/five-ways-to-use-speech-recognition-apis-to-empower-your-business/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/b2d5c5e
   twitter: https://dpgr.am/7fdbc91
   linkedin: https://dpgr.am/f32d1c7
   reddit: https://dpgr.am/17ca373
   facebook: https://dpgr.am/856902c
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069462/blog/five-ways-to-use-speech-recognition-apis-to-empower-your-business/placeholder-post-image%402x.jpg
 ---
 
 Humans evolved to share complex information by talking. As a result, it is in the conversations we have with our customers, business partners, patients and friends that we can find meaningful information. In the 21st century, access to self-service solutions on the internet have driven up call volumes, not lowered them. In fact, at Opentalk 2018 Talkdesk shared that 40% of customers reach out to a support center after they've gone through self-service. Companies can make use of this counterintuitive truth to discover insights from their call data. Gathering insights allows companies to do three key things:

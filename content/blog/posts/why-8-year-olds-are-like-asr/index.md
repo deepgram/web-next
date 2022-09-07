@@ -1,24 +1,25 @@
 ---
-title: "Why 8-year-olds are like Automatic Speech Recognition"
-description: ""
+title: Why 8-year-olds are Like Automatic Speech Recognition
+description: Learn how ASR models have similarities to the way that children
+  acquire vocabulary.
 date: 2018-10-03
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981316/blog/why-8-year-olds-are-like-asr/why-8-yr-olds-like-speech-rec%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - speech-models
 seo:
-  title: "Why 8-year-olds are like Automatic Speech Recognition"
+  title: Why 8-year-olds are like Automatic Speech Recognition
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981316/blog/why-8-year-olds-are-like-asr/why-8-yr-olds-like-speech-rec%402x.jpg
 shorturls:
   share: https://dpgr.am/285775e
   twitter: https://dpgr.am/b340279
   linkedin: https://dpgr.am/481bc5a
   reddit: https://dpgr.am/1b5427c
   facebook: https://dpgr.am/30d39cc
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981316/blog/why-8-year-olds-are-like-asr/why-8-yr-olds-like-speech-rec%402x.jpg
 ---
 
 ### In ASR, familiarity with vocabulary matters

@@ -1,24 +1,26 @@
 ---
-title: "What will the AI Utopia look like? — AI Show"
-description: ""
+title: What will the AI Utopia look like? — AI Show
+description: Is there an AI utopia coming? What will it look like? Have a listen
+  to this episode of the AI Show for our ideas.
 date: 2019-02-27
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981351/blog/ai-show-what-will-the-ai-utopia-look-like/what-will-ai-utopia-look-like%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - machine-learning
+  - deep-learning
 seo:
-  title: "What will the AI Utopia look like? — AI Show"
+  title: What will the AI Utopia look like? — AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981351/blog/ai-show-what-will-the-ai-utopia-look-like/what-will-ai-utopia-look-like%402x.jpg
 shorturls:
   share: https://dpgr.am/e00ea0d
   twitter: https://dpgr.am/466176f
   linkedin: https://dpgr.am/069de14
   reddit: https://dpgr.am/b04485e
   facebook: https://dpgr.am/2c79813
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981351/blog/ai-show-what-will-the-ai-utopia-look-like/what-will-ai-utopia-look-like%402x.jpg
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pE5-K7gg0kE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/576097014&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
