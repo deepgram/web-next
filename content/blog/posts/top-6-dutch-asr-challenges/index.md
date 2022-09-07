@@ -1,24 +1,26 @@
 ---
 title: "Top 6 Dutch ASR Challenges: Diverse Dialects, Data, and Dictionaries"
-description: "The history and diversity of Dutch present unique challenges when building a Dutch ASR system. Here are the top six."
+description: The history and diversity of Dutch present unique challenges when
+  building a Dutch ASR system. Here are the top six.
 date: 2022-04-21
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981418/blog/top-6-dutch-asr-challenges/top-6-dutch-asr-challenges-thumb-554x220%402x.png
 authors:
   - conner-goodrum
 category: tutorial
 tags:
-  - ohsnap
+  - language
 seo:
   title: "Top 6 Dutch ASR Challenges: Diverse Dialects, Data, and Dictionaries"
-  description: "The history and diversity of Dutch present unique challenges when building a Dutch ASR system. Here are the top six."
+  description: The history and diversity of Dutch present unique challenges when
+    building a Dutch ASR system. Here are the top six.
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981418/blog/top-6-dutch-asr-challenges/top-6-dutch-asr-challenges-thumb-554x220%402x.png
 shorturls:
   share: https://dpgr.am/e54e446
   twitter: https://dpgr.am/4076e4f
   linkedin: https://dpgr.am/c84af2d
   reddit: https://dpgr.am/ee61a6c
   facebook: https://dpgr.am/d99589f
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981418/blog/top-6-dutch-asr-challenges/top-6-dutch-asr-challenges-thumb-554x220%402x.png
 ---
 
 Dutch is an Indo-European language, spoken in Northern Europe, primarily in Holland and Belgium. The language has about 25 million native speakers, and another 5 million second language learners. The term "Dutch" actually encompasses two different language varieties-_Nederlands_, the variety of the language spoken in Holland, and _Vlaams_ (or Flemish in English), spoken mainly in Northern Belgium. The two varieties are so similar that they are largely mutually intelligible, and have the same International Organization for Standardization (ISO) code, although there are non-trivial differences in vocabulary and pronunciation between the two. This blog post outlines some of the challenges in training a Dutch automatic speech recognition model that works well on different varieties of the language, given the diversity that we see on the ground.
