@@ -1,24 +1,26 @@
 ---
-title: "Deepgram Now Offers More than 20 Language and Dialect Speech Models "
-description: "We pleased to announce that we now offer more than 20 languages and dialect speech models—read on to learn more about what we offer."
+title: Deepgram Now Offers More than 20 Language and Dialect Speech Models 
+description: We pleased to announce that we now offer more than 20 languages and
+  dialect speech models—read on to learn more about what we offer.
 date: 2022-03-29
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981413/blog/deepgram-language-speech-models/DG-offers-over-20-language-models-thumb-554x220%402x.png
 authors:
   - keith-lam
 category: dg-insider
 tags:
-  - ohsnap
+  - language
 seo:
-  title: "Deepgram Now Offers More than 20 Language and Dialect Speech Models "
-  description: "We pleased to announce that we now offer more than 20 languages and dialect speech models—read on to learn more about what we offer."
+  title: Deepgram Now Offers More than 20 Language and Dialect Speech Models 
+  description: We pleased to announce that we now offer more than 20 languages and
+    dialect speech models—read on to learn more about what we offer.
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981413/blog/deepgram-language-speech-models/DG-offers-over-20-language-models-thumb-554x220%402x.png
 shorturls:
   share: https://dpgr.am/14da294
   twitter: https://dpgr.am/5de8ab3
   linkedin: https://dpgr.am/57f1aa3
   reddit: https://dpgr.am/c255159
   facebook: https://dpgr.am/3641d94
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981413/blog/deepgram-language-speech-models/DG-offers-over-20-language-models-thumb-554x220%402x.png
 ---
 
 One of our driving principles at Deepgram is to make every voice heard and understood. If your business has international locations or customers, you need a speech recognition solution that can deliver the same level of accuracy, regardless of language or dialect. We're thrilled to announce that we now offer more than 20 language and dialect models, all of which provide the level of speed and accuracy that sets Deepgram apart.  This announcement marks Deepgram's commitment to expanding to new regions and improving accuracy for as many users as possible. Adding this new suite of languages is a significant step towards delivering a global language experience that is on par with the success we've seen from our English model. Deepgram provides businesses with the fastest, most efficient language models from day one, and outperforms the other ASR providers in the space.
