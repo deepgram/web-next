@@ -1,24 +1,25 @@
 ---
-title: "Is your infrastructure supporting you or weighing you down?"
-description: ""
+title: Is your infrastructure supporting you or weighing you down?
+description: Learn about some of the ways that infrastructure can hold back your
+  growth, and how this relates to automatic speech recognition.
 date: 2018-10-26
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069458/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/placeholder-post-image%402x.jpg
 authors:
   - morris-gevirtz
 category: speech-trends
 tags:
-  - ohsnap
+  - voice-strategy
 seo:
-  title: "Is your infrastructure supporting you or weighing you down?"
+  title: Is your infrastructure supporting you or weighing you down?
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069458/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/05ae792
   twitter: https://dpgr.am/5ccf119
   linkedin: https://dpgr.am/af5d31e
   reddit: https://dpgr.am/768d050
   facebook: https://dpgr.am/493b152
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069458/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/placeholder-post-image%402x.jpg
 ---
 
 According to [RootMetrics](http://www.rootmetrics.com/us/blog/special-reports/which-us-cities-have-the-best-mobile-performance), a mobile industry analytics firm, San Francisco and other Bay Area cities have among the worst wireless networks in the US. How is it that at the center of technology innovation, businesses and consumers must put up with close to the worst mobile networks in the United States? Part of the answer can be found in the archives of the California State Assembly.

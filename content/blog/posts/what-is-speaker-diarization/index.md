@@ -108,6 +108,4 @@ The [full documentation and implementation guides](https://developers.deepgram.c
 
 If you're looking to get started with a speech-to-text solution, [feel free to contact us](https://deepgram.com/contact-us/) and we'll be happy to discuss your use case and help you get started. Or, you can [sign up for Console for free and get $150 in credits](https://console.deepgram.com/signup) to give Deepgram a try.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
-
 

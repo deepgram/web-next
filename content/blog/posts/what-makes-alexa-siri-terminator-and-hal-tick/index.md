@@ -1,24 +1,24 @@
 ---
-title: "What makes Alexa, Siri and HAL tick"
-description: ""
+title: What makes Alexa, Siri, and HAL tick
+description: How do your favorite (or least favorite) AI systems work? Find out here.
 date: 2018-10-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069455/blog/what-makes-alexa-siri-terminator-and-hal-tick/placeholder-post-image%402x.jpg
 authors:
   - morris-gevirtz
 category: dg-insider
 tags:
-  - ohsnap
+  - voice-tech
 seo:
-  title: "What makes Alexa, Siri and HAL tick"
+  title: What makes Alexa, Siri and HAL tick
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069455/blog/what-makes-alexa-siri-terminator-and-hal-tick/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/3c94802
   twitter: https://dpgr.am/29de424
   linkedin: https://dpgr.am/202a446
   reddit: https://dpgr.am/4e8f2a8
   facebook: https://dpgr.am/cd38314
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069455/blog/what-makes-alexa-siri-terminator-and-hal-tick/placeholder-post-image%402x.jpg
 ---
 
 ### Before computers can rule the world, they first have to recognize the words we use

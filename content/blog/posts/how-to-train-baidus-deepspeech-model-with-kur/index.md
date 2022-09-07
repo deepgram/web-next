@@ -1,24 +1,24 @@
 ---
-title: "How to train Baidus Deepspeech model"
-description: ""
+title: How to train Baidus Deepspeech model
+description: Learn how to train a deep neural network for speech recognition.
 date: 2017-02-21
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981932/blog/how-to-train-baidus-deepspeech-model-with-kur/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - speech-models
 seo:
-  title: "How to train Baidus Deepspeech model"
+  title: How to train Baidus Deepspeech model
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981932/blog/how-to-train-baidus-deepspeech-model-with-kur/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/85061c2
   twitter: https://dpgr.am/febaff5
   linkedin: https://dpgr.am/41bf9c7
   reddit: https://dpgr.am/70fb579
   facebook: https://dpgr.am/b693c50
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981932/blog/how-to-train-baidus-deepspeech-model-with-kur/placeholder-post-image%402x.jpg
 ---
 
 ## You want to train a Deep Neural Network for Speech Recognition?

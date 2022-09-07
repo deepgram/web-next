@@ -1,24 +1,24 @@
 ---
 title: "HamPanda: You get Hams for Playing and Pandas for Winning"
-description: ""
+description: You get hams for playing and pandas for winning!
 date: 2017-01-12
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069442/blog/hampanda-you-get-hams-for-playing-and-pandas-for-winning/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: product-news
 tags:
-  - ohsnap
+  - speech-models
 seo:
   title: "HamPanda: You get Hams for Playing and Pandas for Winning"
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069442/blog/hampanda-you-get-hams-for-playing-and-pandas-for-winning/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/5a2688c
   twitter: https://dpgr.am/df6d163
   linkedin: https://dpgr.am/6c1ae3d
   reddit: https://dpgr.am/4678e7e
   facebook: https://dpgr.am/d4433ff
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069442/blog/hampanda-you-get-hams-for-playing-and-pandas-for-winning/placeholder-post-image%402x.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/Kjgp8eYlOxc" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>![](/content/images/2017/01/Screen-Shot-2017-01-11-at-8.12.38-PM.png)

@@ -1,24 +1,26 @@
 ---
-title: "Pechtel Law Returns Power to Clients with the Help of Deepgram"
-description: ""
+title: Pechtel Law Returns Power to Clients with the Help of Deepgram
+description: Learn how Deepgram and audio search can help protect those in
+  wrongful termination suits.
 date: 2018-09-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069453/blog/customer-story-legal-transcription/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - ohsnap
+  - search
+  - voice-tech
 seo:
-  title: "Pechtel Law Returns Power to Clients with the Help of Deepgram"
+  title: Pechtel Law Returns Power to Clients with the Help of Deepgram
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069453/blog/customer-story-legal-transcription/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/e2a509e
   twitter: https://dpgr.am/6c45ed6
   linkedin: https://dpgr.am/4c8f598
   reddit: https://dpgr.am/8eae5d5
   facebook: https://dpgr.am/507ed72
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069453/blog/customer-story-legal-transcription/placeholder-post-image%402x.jpg
 ---
 
 [Adam Pechtel](http://pechtellaw.com/) is a practicing lawyer of the Washington State Bar devoted to protecting the dignity and respect of his clients. As an attorney advising employees who have been cheated out of wages or wrongfully discharged, or protecting the constitutional rights of the accused, it's Pechtel's responsibility to present the strongest argument possible.
