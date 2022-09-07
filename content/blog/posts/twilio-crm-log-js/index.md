@@ -1,25 +1,25 @@
 ---
-title: "Build a Searchable Phone Call Dashboard with Twilio"
-description: "Automatically log and search your inbound Twilio calls"
+title: Build a Searchable Phone Call Dashboard with Twilio
+description: Automatically log and search your inbound Twilio calls
 date: 2021-12-02
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638306971/blog/2021/12/twilio-crm-log-js/Build-CRM-w-Searchable-Call-Transcripts-twilio-blog%402x.jpg
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: tutorial
 tags:
-    - nodejs
-    - twilio
+  - nodejs
+  - twilio
 seo:
-    title: "Build a Searchable Phone Call Dashboard with Twilio"
-    description: "Automatically log and search your inbound Twilio calls"
-shorturls:
-    share: https://dpgr.am/6b12fa8
-    twitter: https://dpgr.am/66efe38
-    linkedin: https://dpgr.am/20d5645
-    reddit: https://dpgr.am/91a22f2
-    facebook: https://dpgr.am/87e4c65
+  title: Build a Searchable Phone Call Dashboard with Twilio
+  description: Automatically log and search your inbound Twilio calls
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661453836/blog/twilio-crm-log-js/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661453836/blog/twilio-crm-log-js/ograph.png
+shorturls:
+  share: https://dpgr.am/6b12fa8
+  twitter: https://dpgr.am/66efe38
+  linkedin: https://dpgr.am/20d5645
+  reddit: https://dpgr.am/91a22f2
+  facebook: https://dpgr.am/87e4c65
 ---
 
 Imagine being able to search phrases in every call you've had to find exactly what was said. That's the dream, right? Well - it's my dream, and it's what we're building today.
@@ -376,5 +376,3 @@ We've done quite a lot here - how to forward and record calls with Twilio, how t
 *   Use a more permanent database like Supabase - [Brian wrote a getting started post here](https://developers.deepgram.com/blog/2021/11/getting-started-with-supabase/)
 
 The complete project is available at <https://github.com/deepgram-devs/twilio-voice-searchable-log> and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
-
-        
