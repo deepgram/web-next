@@ -1,24 +1,26 @@
 ---
-title: "How to Use Voice to Control Music with Python and Deepgram"
-description: "This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano."
+title: How to Use Voice to Control Music with Python and Deepgram
+description: This tutorial will use Python and the Deepgram API speech-to-text
+  audio transcription to play voice-controlled music with the piano.
 date: 2022-08-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1660765739/blog/2022/08/voice-controlled-music-with-python/2208-How-to-Use-Voice-to-Control-Music-with-Python-and-Deepgram-blog%402x.jpg
 authors:
-    - tonya-sims
+  - tonya-sims
 category: tutorial
 tags:
-    - python
+  - python
 seo:
-    title: "How to Use Voice to Control Music with Python and Deepgram"
-    description: "This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play voice-controlled music with the piano."
-shorturls:
-    share: https://dpgr.am/3eb1ffd
-    twitter: https://dpgr.am/568a128
-    linkedin: https://dpgr.am/b4afffb
-    reddit: https://dpgr.am/345ca5a
-    facebook: https://dpgr.am/67e6c9c
+  title: How to Use Voice to Control Music with Python and Deepgram
+  description: This tutorial will use Python and the Deepgram API speech-to-text
+    audio transcription to play voice-controlled music with the piano.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454126/blog/voice-controlled-music-with-python/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454126/blog/voice-controlled-music-with-python/ograph.png
+shorturls:
+  share: https://dpgr.am/3eb1ffd
+  twitter: https://dpgr.am/568a128
+  linkedin: https://dpgr.am/b4afffb
+  reddit: https://dpgr.am/345ca5a
+  facebook: https://dpgr.am/67e6c9c
 ---
 
 Move over Beethoven. This tutorial will use Python and the Deepgram API speech-to-text audio transcription to play a piano with your voice. The song we’ll play is the first few phrases of [Lady Gaga’s Bad Romance](https://youtu.be/-bsMuWw-v6c). It’s a simple piece in C Major, meaning no flats and sharps! We’ll only use pitches C, D, E, F, G, A, and B, and no black keys. What a beautiful chance for someone learning how to play the piano without a keyboard, tapping into the power of voice to play music!
@@ -496,5 +498,3 @@ while i < len(data):
    pygame.display.update()
    tick += 0.005 # or 0.001 or 0.0001
 ```
-
-        
