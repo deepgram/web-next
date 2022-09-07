@@ -1,24 +1,25 @@
 ---
-title: "What is the Most Important Channel to Engage Your Customers On?"
-description: ""
+title: What is the Most Important Channel to Engage Your Customers On?
+description: "The 2018 Talkdesk Opentalk conference made patent one fact: A.I.
+  will revolutionize customer service. Learn how here."
 date: 2018-12-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069472/blog/what-is-the-most-important-channel-to-engage-your-customers-on/placeholder-post-image%402x.jpg
 authors:
   - morris-gevirtz
 category: speech-trends
 tags:
-  - ohsnap
+  - voice-strategy
 seo:
-  title: "What is the Most Important Channel to Engage Your Customers On?"
+  title: What is the Most Important Channel to Engage Your Customers On?
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069472/blog/what-is-the-most-important-channel-to-engage-your-customers-on/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/b7484fd
   twitter: https://dpgr.am/7efb009
   linkedin: https://dpgr.am/a2dbb8d
   reddit: https://dpgr.am/9ab6a68
   facebook: https://dpgr.am/dcc327c
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069472/blog/what-is-the-most-important-channel-to-engage-your-customers-on/placeholder-post-image%402x.jpg
 ---
 
 At the Talkdesk Opentalk 2018 Conference, Deepgram had the opportunity to talk to leaders about customer care. <iframe src="https://www.youtube.com/embed/LX4PlTxK5P8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>The 2018 Talkdesk Opentalk conference made patent one fact: <mark>A.I. will revolutionize customer service.</mark> We at Deepgram were curious to get the pulse on what people thought of voice, CX and A.I. We interviewed fellow attendees and speakers at the 2018 Opentalk conference and discovered a few things.

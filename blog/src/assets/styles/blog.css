@@ -7,32 +7,39 @@
 
 .bg-starburst-gradient {
 	background-image: url("/starburst-gradient.svg");
+}
+
+.bg-tag-gradient {
+	background-image: url("/tag-gradient.svg");
+}
+
+.bg-responsive-svg {
 	background-repeat: no-repeat;
 	background-position: center bottom;
 	background-size: 60%;
 }
 
 @media screen(sm) {
-	.bg-starburst-gradient {
+	.bg-responsive-svg {
 		background-position: center bottom 1rem;
 		background-size: auto;
 	}
 }
 
 @media screen(md) {
-	.bg-starburst-gradient {
+	.bg-responsive-svg {
 		background-position: center bottom 2rem;
 	}
 }
 
 @media screen(lg) {
-	.bg-starburst-gradient {
+	.bg-responsive-svg {
 		background-position: center bottom 3rem;
 	}
 }
 
 @media screen(xl) {
-	.bg-starburst-gradient {
+	.bg-responsive-svg {
 		background-position: center bottom 4rem;
 	}
 }

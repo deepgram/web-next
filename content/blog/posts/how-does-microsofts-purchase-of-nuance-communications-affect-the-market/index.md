@@ -1,24 +1,27 @@
 ---
-title: "How Does Microsoft’s Purchase of Nuance Communications Affect the Market?"
-description: ""
+title: How Does Microsoft’s Purchase of Nuance Communications Affect the Market?
+description: "Microsoft's offer to purchase Nuance Communications for $19.7B
+  validates Automatic Speech Recognition (ASR) has become an essential
+  technology for business. "
 date: 2021-04-15
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981368/blog/how-does-microsofts-purchase-of-nuance-communications-affect-the-market/how-does-msft-purchase-nuance-affect-market%402x.jpg
 authors:
   - scott-stephenson
 category: speech-trends
 tags:
-  - ohsnap
+  - voice-strategy
+  - voice-tech
 seo:
-  title: "How Does Microsoft’s Purchase of Nuance Communications Affect the Market?"
+  title: How Does Microsoft’s Purchase of Nuance Communications Affect the Market?
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981368/blog/how-does-microsofts-purchase-of-nuance-communications-affect-the-market/how-does-msft-purchase-nuance-affect-market%402x.jpg
 shorturls:
   share: https://dpgr.am/9644796
   twitter: https://dpgr.am/363d87a
   linkedin: https://dpgr.am/3722112
   reddit: https://dpgr.am/c507d18
   facebook: https://dpgr.am/a4d15aa
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981368/blog/how-does-microsofts-purchase-of-nuance-communications-affect-the-market/how-does-msft-purchase-nuance-affect-market%402x.jpg
 ---
 
 Microsoft's offer to purchase Nuance Communications for $19.7B validates Automatic Speech Recognition (ASR) has become an essential technology for business. It's exciting to see an AI powerhouse like Microsoft, which has amazing talent and tools in house, finding extreme value in acquiring speech solutions at this scale. Overall, this acquisition is a great sign for AI companies like Deepgram and the Speech Recognition industry. 

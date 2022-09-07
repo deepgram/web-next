@@ -1,24 +1,26 @@
 ---
-title: "What Does the AI Dystopia Look Like? — AI Show"
-description: ""
+title: What Does the AI Dystopia Look Like? — AI Show
+description: Is an AI dystopia coming? If so, what will it look like? Have a
+  listen to this episode of the AI Show.
 date: 2019-02-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981345/blog/what-does-the-ai-dystopia-look-like-ai-show-2/what-will-ai-dystopia-look-like%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - deep-learning
+  - machine-learning
 seo:
-  title: "What Does the AI Dystopia Look Like? — AI Show"
+  title: What Does the AI Dystopia Look Like? — AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981345/blog/what-does-the-ai-dystopia-look-like-ai-show-2/what-will-ai-dystopia-look-like%402x.jpg
 shorturls:
   share: https://dpgr.am/18715f2
   twitter: https://dpgr.am/84d89dd
   linkedin: https://dpgr.am/02f3c73
   reddit: https://dpgr.am/ba0efa7
   facebook: https://dpgr.am/103b135
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981345/blog/what-does-the-ai-dystopia-look-like-ai-show-2/what-will-ai-dystopia-look-like%402x.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/SysGF0MxjRo" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/570095520&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe>**Scott:** Welcome to the AI Show. Today, we're asking the question: What does the AI dystopia look like? **Susan:** Oh, man, we are going down the tubes. It's going to be terrible. **Scott:** Let's take it to negative town. The world is over. **Susan:** The world, as we knew it, ends basically every year and a half as the next revolution hits, but this is the last one. **Scott:** There's a law against that, isn't there? **Susan:** There is? **Scott:** Everything has a life expectancy about twice what its current age is, but until it abruptly dies. **Susan:** Oh, yeah, that's cool. I've got to look that one up. **Scott:** Yeah, so the abrupt death is coming. Everything looks like we're going to live twice as long. **Susan:** Well, exactly. Well, everybody keeps saying, "Hey, the pendulum's going to swing back, and technology is going to help us more than hurt." **Scott:** Hey, we're still alive, right? **Susan:** That's all true up until the very last time. Then, that last time, people are like, "Well, I guess it didn't swing back that time." **Susan:** Man, there's a lot to be pessimistic about.
