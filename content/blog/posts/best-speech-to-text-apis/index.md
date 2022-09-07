@@ -77,8 +77,6 @@ With that background out of the way, let's dive into our ranking, and what we th
 
 
 
-
-
 ### 2\. Amazon Transcribe
 
 *   **Summary:** Amazon Transcribe is a consumer oriented product coming out of the development of the Alexa voice assistant. Transcribe's command-and-response transcription for short audio is very good. Their accuracy is on the higher end of ASR providers for consumer audio data but not as good with business audio. Their speed is slow with only a 4X speed up on batch transcriptions. Limited customization can be done with their Custom Language Model or keyword boosting. Besides their general speech model, they also have a more expensive medical offering. Limited support as it is not one of their main products. Can be deployed in the cloud only.

@@ -36,7 +36,6 @@ Although this old way of building speech recognition models is intuitive to huma
 
 
 
-
 ### Problems with the Traditional Approach
 
 There are three big problems with the old-fashioned method of speech recognition: it's slow, it's inaccurate, and it's brittle. The slowness makes it expensive and time consuming. The inaccuracy makes the traditional methods ineffective and frustrating to use, especially for enterprises and domains that require high levels of accuracy, like the health and legal fields. And the brittleness makes engineers afraid to change any code for fear that the house of cards will come crashing down.

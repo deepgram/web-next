@@ -25,9 +25,6 @@ og:
 
 There's no doubt that customer feedback is important for businesses. It can help you understand what you're doing well and where you need to make improvements. But in the past, capturing and understanding the voice of the customer was a difficult process-it often involved surveys or focus groups that were time-consuming and expensive to conduct. But now, with the advent of voice technology, businesses have a new way to collect customer feedback and harness the voice of the customer. Voice technology is already being used in a number of customer-facing applications, such as customer service and call center operations. But it's also starting to be used in other areas, such as market research and product development. Voice technology can help businesses collect customer feedback in a more natural and efficient way, and can provide insights that traditional surveys and focus groups may not be able to provide. Before we dive into 5 ways that voice technology is being used to capture the voice of the customer, let's discuss what exactly the voice of the customer is.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
-
-
 
 ## What is the Voice of the Customer?
 

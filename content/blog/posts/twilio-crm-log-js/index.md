@@ -40,17 +40,18 @@ You will need:
 *   Use of two phones to test your project - one to make the call and one to receive.
 
 Create a new directory and navigate to it with your terminal. Run `npm init -y` to create a `package.json` file and then install the following packages:
-
-    npm install @deepgram/sdk twilio dotenv express body-parser nedb-promises
-
+```
+npm install @deepgram/sdk twilio dotenv express body-parser nedb-promises
+```
 Create a `.env` file, open it in your code editor, and populate it with your credentials and settings:
 
-    DG_KEY=replace_with_deepgram_key
-    TWILIO_ACCOUNT_SID=replace_with_sid
-    TWILIO_AUTH_TOKEN=replace_with_auth_token
-    TWILIO_NUMBER=replace_with_twilio_phone_number
-    FORWARDING_NUMBER=replace_with_your_phone_number
-
+```
+DG_KEY=replace_with_deepgram_key
+TWILIO_ACCOUNT_SID=replace_with_sid
+TWILIO_AUTH_TOKEN=replace_with_auth_token
+TWILIO_NUMBER=replace_with_twilio_phone_number
+FORWARDING_NUMBER=replace_with_your_phone_number
+```
 <Alert type="warning">You should not share this .env file as it contains sensitive credentials. If you are using git version control, make sure to ignore this file.</Alert>
 
 Create an `index.js` file, and open it in your code editor.
@@ -375,6 +376,6 @@ We've done quite a lot here - how to forward and record calls with Twilio, how t
 *   Allow users to make notes for calls or callers
 *   Use a more permanent database like Supabase - [Brian wrote a getting started post here](https://developers.deepgram.com/blog/2021/11/getting-started-with-supabase/)
 
-The complete project is available at `https://github.com/deepgram-devs/twilio-voice-searchable-log` and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
+The complete project is available at [https://github.com/deepgram-devs/twilio-voice-searchable-log](https://github.com/deepgram-devs/twilio-voice-searchable-log) and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
         

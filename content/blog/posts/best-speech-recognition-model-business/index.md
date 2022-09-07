@@ -30,7 +30,6 @@ All of our use case-specific models are available in various English dialects. W
 
 
 
-
 ## 2\. Higher Accuracy Enhanced Models
 
 We also built our next-generation architecture with the highest English language accuracy on long-tail words or words that are not as common in regular conversations. This new architecture was rebuilt from our current architecture to optimize accuracy on more words.  This new enhanced speech model architecture is best suited where you have keywords and terms that you must get correct but are not in normal conversations; like fiduciary, biodiversity, formulae. Some use cases can be Conversational AI for B2B, technical support contact centers, or technical meetings or seminars.

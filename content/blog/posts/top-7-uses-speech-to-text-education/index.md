@@ -54,7 +54,6 @@ Speech recognition can be used to help students learn languages. For example, th
 
 
 
-
 ### 6\. Assistive Technologies
 
 Automatic speech recognition can also be used to create accessible education materials for students with disabilities. For example, students who are blind or have low vision can use text-to-speech applications to listen to textbooks and other educational materials. Students who are deaf or hard of hearing can use automatic speech recognition to create subtitles for education videos. Speech recognition can be used to help students with dyslexia write essays by allowing dictation and readback of the content.

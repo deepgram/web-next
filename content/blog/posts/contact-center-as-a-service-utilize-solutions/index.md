@@ -56,7 +56,6 @@ ASR is one of the critical technologies that CCaaS platforms need to succeed. By
 
 
 
-
 ### Speech Recognition
 
 Speech recognition is the ability of the system to identify spoken words and convert them into text. This is a crucial capability for contact-center-as-a-service companies, as it can help to automate the process of handling customer inquiries, as well as the other benefits discussed above.

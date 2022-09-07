@@ -61,7 +61,6 @@ Although they might not be the first things that come to mind when you think of 
 
 
 
-
 ## Benefits of Content Moderation
 
 There are a number of benefits that come from using content moderation for your company. Here are a few of the biggest impacts that content moderation can have.

@@ -76,7 +76,6 @@ As should be obvious, these languages are extremely similar, but not identical. 
 
 
 
-
 #### Asymmetrical intelligibility
 
 There are also cases of asymmetrical intelligibility, where it's easier for speakers of one language to understand speakers of another than vice versa. For example, speakers of Portuguese often report being able to understand quite a bit of Spanish, but Spanish speakers typically can't understand much Portuguese at all. A similar situation exists in Scandinavia, where Danish speakers typically have an easier time understanding Swedish and Norwegian than the other way around. (If you're curious, in both cases, this is due to some changes in the pronunciation of words that affected Portuguese but not Spanish, and Danish but not Swedish or Norwegian.)

@@ -26,7 +26,6 @@ Back in January, we had the opportunity to support [Hack Cambridge](https://hack
 
 
 
-
 ## Deepgram Hack Cambridge Projects
 
 Here's a list of eight of the best projects from the hackathon. Each one is linked to Kevin's full post about the project on our [developer blog](https://developers.deepgram.com/blog/) if you'd like to read more or take a look at the code for the projects.

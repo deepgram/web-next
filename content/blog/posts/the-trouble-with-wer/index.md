@@ -71,7 +71,6 @@ There are few standards developed to deal with the "crosstalk error." As a resul
 
 
 
-
 ## 3\. Accents: They're Sexy and Confusing
 
 English is spoken natively by nearly a billion people. You can imagine that in such a large number of speakers there is going to be some variety in accents. Plenty of academic research (and our own experience) tells us that people often have trouble recognizing accents they are unfamiliar with-even when these are dialectical accents (from their own language). As you can expect, speech recognition systems also need to be trained on different accents. The NATO phonetic alphabet we mentioned above was created to address two problems with aviation communications: noise and accent. At the beginning of World War II, the Australian, American and British pilots had trouble understanding each other over the radio. Several radio alphabets were devised as a fail-proof system to communicate vital flight data across English accents. These were eventually formalized and standardized in the 1950s for use in commercial aviation. If we could train all English speakers to spell out every word they say with the NATO-PA, speech recognition would be a solved problem. Such a proposition is absurd.

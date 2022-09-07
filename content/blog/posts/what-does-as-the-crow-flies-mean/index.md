@@ -41,7 +41,6 @@ Neither of the above phrases mention crows specifically, but both translate roug
 
 
 
-
 ## What Are Idioms?
 
 Idioms are phrases in language that are used to convey emotions about certain topics. They are fascinating to everyday language speakers and linguists for a couple of reasons. They exist in a space between grammar and single words-this means that they somewhat conform to grammatical rules, yet have to be learned phrase by phrase just like most words need to be learned. Idioms also preserve in them the history of how and where they came to be. Certain idioms haven't left their villages in rural England. Others are universal. Variations in one idiom tell us about where they have been in time and place. They remind us of times long-gone and places near and far-when and where the world was different but people were the same. [Header photo credit: Tim Spouge.](https://www.flickr.com/photos/98714794@N08/16659577056/in/photolist-ro9FRb-aPmDAk-jauEdK-jax4o7-dXgkse-7kzpso-YNa3xs-qh4Puq-6HDFby-6bFdAU-MYabD9-2cTBxvw-4PARtH-6fi142-27kLb4d-jatYxH-TUtBHR-6Ntd9s-qpxz3q-do23Xr-Vgx7Nr-JQRRbk-pDAew9-277XF9N-93iTev-TPQcbo-UiGuMx-2a2mfrA-ihnEDp-SFqmsY-jazaJ1-ihor1P-4mkbdg-jayt5q-4Yv71p-9C1iB-VtdAE6-javpFz-dWXWRP-92Sxuk-x6GBB5-pmhCZ-7B2wSH-21wBy9C-cue81N-nfX5pN-7yUxuw-9C1id-4QCRdR-ogrrkZ) [newsletter_signup]

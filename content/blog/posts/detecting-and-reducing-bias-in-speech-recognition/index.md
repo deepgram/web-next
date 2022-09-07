@@ -30,7 +30,6 @@ It's important to understand that when people talk about bias and machine learni
 
 
 
-
 ## Where Does Bias Come From?
 
 Machine learning bias often comes from data-biased data leads to a biased model. If you've taken a statistics course, you're familiar with **sampling bias,** which is when data that is supposed to represent the true range of possibilities is instead skewed in some way. If you use data like this to train a model, the model is going to be skewed in the same way as the data. This sampling bias can show up in your model as machine learning or real-world bias because many organizations who want to create models rely on their own past decisions. If your company has a history of making biased decisions, any model trained on that data will likewise be biased. For example, if a company that trains a model to help make promotion decisions has a poor track record of promoting women, it's likely that their model will make the same kinds of biased decisions if it's trained on the company's past behavior. In some cases, however, a model might be biased towards a certain group of people for less nefarious reasons. For example, an initial ASR model might simply be biased because it was trained on speech that was easy for the creator to collect-from themself, their family, and their friends, who likely all speak similarly. Here, the issue isn't biased past decisions, per se, but simply a lack of data to cover different possibilities.

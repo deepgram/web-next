@@ -36,7 +36,6 @@ There are, of course, limitations to systems like this. Sarcasm, for example, ca
 
 
 
-
 ## 2\. What is Emotion Recognition?
 
 The second way that people use the term sentiment analysis is to refer to what is more appropriately known as **emotion recognition** (sometimes called emotion detection, or incorrectly called emotion_al_ recognition). Unlike sentiment analysis, emotion recognition typically relies on audio data, rather than text, and uses things like intonation, volume, and speed to determine what emotion a speaker is feeling, usually coded as one of several categories like, happy, sad, angry, etc. It's important to note that this doesn't automatically correlate with how someone feels about a topic. Someone can be happy talking about how they don't like something (who doesn't love to vent?), so ultimately, emotion recognition is trying to get at different information than sentiment analysis. Uses of emotion recognition include helping call center agents understand how a caller is feeling, monitoring hospital patients for stress and pain, and even tracking responses to advertisements.

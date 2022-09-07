@@ -38,7 +38,6 @@ E2EDL technology is much harder to develop initially but costs less to use. That
 
 
 
-
 ### 2\. Higher accuracy
 
 For traditional ASR, "you get what you get." E2EDL allows you to maintain context through the entire process because you're not going through independent steps or models and hence the accuracy of each word and sentence improves. For example, deep learning is much quicker to train to focus on the speakers and transcribe the audio to get the important keywords correct. That's because you only have to update a single model, rather than each step of a traditional ASR model. This makes it feasible to train a new model for specific use cases with very little effort, rather than having to tweak multiple, connected models to get the output you want.  No other architecture can quickly train use case-specific models.

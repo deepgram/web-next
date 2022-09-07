@@ -75,7 +75,6 @@ Conversational AI platforms provide a way to capture the conversations that your
 
 
 
-
 ## Top Use Cases for Conversational AI
 
 Conversational AI platforms are being used across industries for a variety of different use cases. The below examples are some of the most common, but they're far from the only places that conversational AI is having an impact in business today.

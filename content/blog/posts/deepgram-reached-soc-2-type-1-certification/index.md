@@ -27,7 +27,6 @@ Deepgram received a SOC 2 Type II "clean bill of health" from [Cyberguard Compli
 
 
 
-
 ## What does SOC 2 mean to our customers and prospects?  
 
 The SOC 2 certifications mean that an independent auditor has examined our systems and processes and determined that we have best practices in place for securely managing data to protect the interests and privacy of our customers. We have been a trusted partner for many SaaS and Enterprise companies and this certification confirms our systems are using industry best practices for security, confidentiality, and privacy. If you are engaged with any SaaS company, they should meet SOC 2 Type I certification requirements _at a minimum_ to ensure their customer's data is secure, available, and private. SOC 2 has five main principles:

@@ -30,7 +30,6 @@ At Deepgram, however, we aspire to go beyond these kinds of transactional busine
 
 
 
-
 ## Give Deepgram a Try
 
 If you'd like to see the difference that stellar customer service makes-especially when paired with the best speed and accuracy on the market-[contact us](https://deepgram.com/contact-us/) or, if you're a developer, [sign up for a free API key](https://console.deepgram.com/) and try Deepgram for yourself.

@@ -35,7 +35,6 @@ One of the primary ways that voice technology is impacting customer experience i
 
 
 
-
 ### 2\. Real-time Listening
 
 Another way that voice technology is impacting customer experience is by giving businesses the ability to listen to and understand customer conversations in real-time. This allows companies to address customer concerns and questions as they are happening. Real-time listening can be used to, for example, help agents on the phone easily find the right information quickly, or suggest marketing assets to sales team members at the right time in their conversations with prospects. As customer service becomes more [conversational](https://deepgram.com/solutions/voicebots/), businesses will be better equipped to provide excellent customer support by using real-time listening to understand what's being discussed and empower agents to more quickly and easily respond.

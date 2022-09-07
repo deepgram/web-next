@@ -34,7 +34,6 @@ Another benefit of speech-to-text and voice recognition technology is improved a
 
 
 
-
 ## 3\. Content Moderation
 
 Speech-to-text and voice recognition technology can also be used for content moderation purposes by allowing developers to automatically moderate chat rooms and in-game chat. By converting speech to text, game developers can apply all of the same rules that they apply to text chats. And, with technologies like Deepgram that return results in real time, you can moderate conversations as they happen. This helps keeping players safe from inappropriate or offensive content. In addition, content moderation can also be used to simply keep players from being disruptive to other players. Two companies in this space are [Modulate.ai](https://www.modulate.ai/) and [Spectrum Labs](https://www.spectrumlabsai.com/).

@@ -36,7 +36,6 @@ At Deepgram, transfer learning is highly valued. For a specific language, when w
 
 
 
-
 ## Why Spanish to Portuguese
 
 Let's get started with the basic question of why we picked Spanish to help train our Portuguese model from scratch. Spanish and Portuguese come from the same language family and are closely related. Italian, French, Spanish, and Portuguese all belong to this language family-the Romance family. However, even if you didn't know that, a quick glance is enough for one to see the similarities between Spanish and Portuguese just by looking at a piece of text. Here's an example text pair, taken from Alice in Wonderland, to explain what we mean: **Spanish**

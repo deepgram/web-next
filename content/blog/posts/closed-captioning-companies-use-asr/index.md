@@ -52,7 +52,6 @@ Although you might mostly associate captions with video content, they're also a 
 
 
 
-
 ## Benefits of AI-Powered ASR for Closed Captioning
 
 It should be clear from the above that closed captioning powered by AI speech recognition has a lot of potential use cases. But not all speech-to-text solutions can be used for real-time closed captioning. Older systems that rely on a legacy approach are typically too slow for live use cases. However, [end-to-end deep-learning ASR solutions like Deepgram](https://blog.deepgram.com/deep-learning-speech-recognition/) can turn around transcriptions in fractions of a second, creating a truly real-time experience. So what are some of the specific benefits that AI-powered speech-to-text tools can provide when compared to a human? Let's take a look.
