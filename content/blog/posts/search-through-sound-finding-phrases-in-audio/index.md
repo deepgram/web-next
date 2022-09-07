@@ -1,24 +1,25 @@
 ---
 title: "Search Through Sound: Finding Phrases in Audio"
-description: ""
+description: Searching through audio is now a reality with Deepgram's ability to
+  find specific phrases in audio.
 date: 2016-01-07
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981169/blog/search-through-sound-finding-phrases-in-audio/search-through-sound%402x.jpg
 authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - ohsnap
+  - search
 seo:
   title: "Search Through Sound: Finding Phrases in Audio"
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981169/blog/search-through-sound-finding-phrases-in-audio/search-through-sound%402x.jpg
 shorturls:
   share: https://dpgr.am/933768f
   twitter: https://dpgr.am/23223ba
   linkedin: https://dpgr.am/15d0c34
   reddit: https://dpgr.am/b782bb0
   facebook: https://dpgr.am/47817dc
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981169/blog/search-through-sound-finding-phrases-in-audio/search-through-sound%402x.jpg
 ---
 
 ![](https://res.cloudinary.com/deepgram/image/upload/v1661721060/blog/search-through-sound-finding-phrases-in-audio/Screen-Shot-2016-01-25-at-7-42-58-PM.png) My Co-Founder and I were kicking around the idea of a search engine that would let a person find phrases in a block of audio. We were looking for something that could peer into interviews, podcasts, video lectures - things like that. And if it was done right, you would be able to search through many seasons of a certain TV show and find all the crucial moments like, "You're fired!". We thought, _'This has to exist, right?'_. Surprisingly, no. There wasn't a company out there that really provided the functionality. Certainly not in a way that was useful to us, at least. So we started hacking together a Google-based transcription to see if we can get a barebones prototype going. In a couple days it was running - _search for something,_ and _most of the time_ you got it. Huge pat on the back, right?

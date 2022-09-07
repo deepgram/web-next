@@ -1,24 +1,26 @@
 ---
-title: "Stanford Moves Education Forward with Deepgram"
-description: ""
+title: Stanford Moves Education Forward with Deepgram
+description: With Deepgram's help, researchers at Stanford's Graduate School of
+  Education have embraced natural language processing and machine learning to
+  elegantly speed up research and make it more useful for teachers and students.
 date: 2018-10-19
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981936/blog/customer-story-stanford-moves-education-forward-with-deepgram/placeholder-post-image%402x.jpg
 authors:
   - natalie-rutgers
 category: dg-insider
 tags:
-  - ohsnap
+  - education
 seo:
-  title: "Stanford Moves Education Forward with Deepgram"
+  title: Stanford Moves Education Forward with Deepgram
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981936/blog/customer-story-stanford-moves-education-forward-with-deepgram/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/7c2b833
   twitter: https://dpgr.am/f7d8118
   linkedin: https://dpgr.am/44aca79
   reddit: https://dpgr.am/2a1fb73
   facebook: https://dpgr.am/3bbec6a
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981936/blog/customer-story-stanford-moves-education-forward-with-deepgram/placeholder-post-image%402x.jpg
 ---
 
 Educational research is important for understanding how to enhance educational outcomes and experiences for everyone. To do this, quantitative and qualitative analyses can help researchers determine what goes into effective teaching. Unfortunately, quantitative and qualitative studies in classrooms are also notoriously time intensive and laborious. And, of course, the bigger the study, the longer it takes. Or, does it? With Deepgram's help, researchers at Stanford's Graduate School of Education have embraced natural language processing and machine learning to elegantly speed up research and make it more useful for teachers and students.

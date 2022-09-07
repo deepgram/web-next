@@ -1,24 +1,28 @@
 ---
-title: "What is ASR?"
-description: "ASR is a technology that process audio data (phone calls, voice searches, podcasts, etc.) into a format computers can understand."
+title: What is ASR?
+description: ASR is a technology that process audio data (phone calls, voice
+  searches, podcasts, etc.) into a format computers can understand.
 date: 2018-10-16
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981317/blog/what-is-asr/what-is-asr%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - machine-learning
+  - deep-learning
+  - voice-tech
 seo:
-  title: "What is ASR?"
-  description: "ASR is a technology that process audio data (phone calls, voice searches, podcasts, etc.) into a format computers can understand."
+  title: What is ASR?
+  description: ASR is a technology that process audio data (phone calls, voice
+    searches, podcasts, etc.) into a format computers can understand.
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981317/blog/what-is-asr/what-is-asr%402x.jpg
 shorturls:
   share: https://dpgr.am/fd26d4f
   twitter: https://dpgr.am/e00b23a
   linkedin: https://dpgr.am/db02f18
   reddit: https://dpgr.am/0c68606
   facebook: https://dpgr.am/a328c4e
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981317/blog/what-is-asr/what-is-asr%402x.jpg
 ---
 
 Automatic Speech Recognition, also known as ASR or Voice Recognition, is a term you've heard a lot in recent years. In a sentence,
