@@ -49,13 +49,12 @@ export default function Search() {
 			initialQuery={initialQuery}
 			initialScrollY={window.scrollY}
 			onClose={onClose}
-			indexName="astro"
-			appId="7AFBU8EPJU"
-			apiKey="4440670147c44d744fd8da35ff652518"
-			// indexName="netlify_6dedb30f-38ed-4005-9871-e9bdc5fbd7c6_main_all"
-			// appId="SKG3CU3YQM"
-			// apiKey="846a11bfd01d698dbd7b4d2b24a65471"
-			searchParameters={{ facetFilters: [[`lang:en`]] }}
+			// indexName="astro"
+			// appId="7AFBU8EPJU"
+			// apiKey="4440670147c44d744fd8da35ff652518"
+			indexName="crawler_unified"
+			appId="SKG3CU3YQM"
+			apiKey="79ba039ddf2bbd8467463afa6b576de3"
 			getMissingResultsUrl={({ query }) => `https://github.com/orgs/deepgram/discussions/new?category=q-a&title=Search+term+missing+results+%22${encodeURIComponent(query)}%22`}
 			placeholder="Search..."
 		/>,
