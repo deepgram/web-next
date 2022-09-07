@@ -98,7 +98,7 @@ io.on('connection', (socket) => {
 http.listen(3000, console.log(`Started at ${new Date().toISOString()}`))
 ```
 
-For this tutorial, I would leave the comments in as I refer to sections later by their names. Start the server in your terminal by navigating to the directory and running `node index.js`. Open your browser to `http://localhost:3000`, and you should see 'Connected at {date}' in your terminal. Once this connection is established, we can send and listen for events on both the server and the client.
+For this tutorial, I would leave the comments in as I refer to sections later by their names. Start the server in your terminal by navigating to the directory and running `node index.js`. Open your browser to `http://localhost:3000`, and you should see 'Connected at `date`' in your terminal. Once this connection is established, we can send and listen for events on both the server and the client.
 
 ## Access and Send Audio
 
