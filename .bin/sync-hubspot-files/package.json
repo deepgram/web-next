@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "sync-hubspot-files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hubspot/api-client": "^7.1.2",
+    "dotenv": "^16.0.2"
+  }
+}

@@ -1,6 +1,8 @@
 ---
+import { getUuid } from "../../util";
 import Svg from "../general/Svg.astro";
 
+const formUuid = await getUuid();
 const url = Astro.url;
 ---
 
@@ -63,29 +65,33 @@ const url = Astro.url;
 	<div>
 		<p class="feedback-question">Was this article useful or interesting to you?</p>
 		<div x-show="!thanks" class="thumbs flex items-center justify-start">
-			<form id="thumbsup-form" :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating" @submit.prevent="ratePage">
-				<input id="thumbup" type="submit" aria-hidden="true" class="hidden" />
-				<label for="thumbup" class="text-3xl">
+			<form id={`thumbsup-form-${formUuid}`} :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating" @submit.prevent="ratePage">
+				<input id={`thumbsup-${formUuid}`} type="submit" aria-hidden="true" class="hidden" />
+				<label for={`thumbsup-${formUuid}`} class="text-3xl">
 					<Svg name="thumbsup" class="my-4 h-8 w-auto" />
 				</label>
 
-				<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
+				<label for={`thumbsup-honeypot-${formUuid}`} class="hidden"
+					><input id={`thumbsup-honeypot-${formUuid}`} type="text" aria-label="Don't fill this in if you're a human." name="bot-field" /> Don't fill this in if you're a human.
+				</label>
 				<input type="hidden" name="thumb" value="up" />
 				<input type="hidden" name="hook" value="bgv9wf1" />
 				<input type="hidden" name="page" value={url} />
 			</form>
-			<form id="thumbsdown-form" :class="thumb === 'down' ? 'active' : ''" class="thumb inline down" name="rating" @submit.prevent="ratePage">
-				<input id="thumbdown" type="submit" aria-hidden="true" class="hidden" />
-				<label for="thumbdown" class="text-3xl">
+			<form id={`thumbsdown-form-${formUuid}`} :class="thumb === 'down' ? 'active' : ''" class="thumb inline down" name="rating" @submit.prevent="ratePage">
+				<input id={`thumbsdown-${formUuid}`} type="submit" aria-hidden="true" class="hidden" />
+				<label for={`thumbsdown-${formUuid}`} class="text-3xl">
 					<Svg name="thumbsdown" class="mt-4 h-8 w-auto" />
 				</label>
 
-				<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
+				<label for={`thumbsdown-honeypot-${formUuid}`} class="hidden"
+					><input id={`thumbsdown-honeypot-${formUuid}`} type="text" aria-label="Don't fill this in if you're a human." name="bot-field" /> Don't fill this in if you're a human.
+				</label>
 				<input type="hidden" name="thumb" value="down" />
 				<input type="hidden" name="hook" value="bgv9wf1" />
 			</form>
 		</div>
-		<form x-show="thumb !== null" name="feedback" method="POST" @submit.prevent="sendFeedback">
+		<form id={`feedback-form-${formUuid}`} x-show="thumb !== null" name="feedback" method="POST" @submit.prevent="sendFeedback">
 			<div class="mb-4">
 				<p x-show="thumb ==='up'">Thank you! Can you tell us what you liked about it? (Optional)</p>
 				<p x-show="thumb !=='up'">Thank you. What could we have done better? (Optional)</p>
@@ -95,18 +101,27 @@ const url = Astro.url;
 				</p>
 			</div>
 			<div class="input-group input-group--light-bg">
-				<label for="feedback">Your message<span class="text-fireEngine">*</span></label>
-				<textarea id="feedback" ref="feedback" name="feedback" class="invalid:outline-fireEngine" required placeholder="Share your thoughts" x-model="feedback"></textarea>
+				<label for={`feedback-message-${formUuid}`}>Your message<span class="text-fireEngine">*</span></label>
+				<textarea
+					id={`feedback-message-${formUuid}`}
+					ref="feedback"
+					name="feedback"
+					class="invalid:outline-fireEngine"
+					required
+					placeholder="Share your thoughts"
+					x-model="feedback"></textarea>
 			</div>
 			<div class="input-group input-group--light-bg">
-				<label for="email">Your email</label>
-				<input id="email" type="email" name="email" placeholder="you@email.com" x-model="email" />
+				<label for={`feedback-email-${formUuid}`}>Your email</label>
+				<input id={`feedback-email-${formUuid}`} type="email" name="email" placeholder="you@email.com" x-model="email" />
 			</div>
 			<div class="flex mt-4 justify-end">
 				<button type="submit" aria-label="Send Feedback" title="Send Feedback" class="button button--primary">Send Feedback</button>
 			</div>
 
-			<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
+			<label for={`feedback-honeypot-${formUuid}`} class="hidden"
+				><input id={`feedback-honeypot-${formUuid}`} type="text" aria-label="Don't fill this in if you're a human." name="bot-field" /> Don't fill this in if you're a human.
+			</label>
 			<input type="hidden" name="thumb" value="thumb" />
 			<input type="hidden" name="hook" value="bgvnn9g" />
 		</form>

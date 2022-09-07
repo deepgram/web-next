@@ -7,7 +7,6 @@ authors:
     - luke-oliff
 category: devlife
 tags:
-    - careers
     - team
 seo:
     title: "Luke Oliff joins the Developer Relations team at Deepgram as a Senior Developer Experience Engineer"

@@ -7,7 +7,6 @@ authors:
     - bekah-hawrot-weigel
 category: best-practice
 tags:
-    - careers
     - technical-writing
 seo:
     title: "Technical Writing: A Developer's Guide to Storytelling"

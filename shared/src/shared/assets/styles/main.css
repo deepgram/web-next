@@ -239,27 +239,11 @@ html {
 
 @layer utilities {
 	.form--inline {
-		@apply flex items-end;
+		@apply gap-4 lg:items-end;
 	}
 
 	.form--inline .input-group {
-		@apply grow;
-	}
-
-	.form--inline .input-group input[type="email"],
-	.form--inline .input-group input[type="password"],
-	.form--inline .input-group input[type="search"],
-	.form--inline .input-group input[type="tel"],
-	.form--inline .input-group input[type="text"],
-	.form--inline .input-group input[type="url"],
-	.form--inline .input-group input[type="text"] {
-		@apply w-full;
-	}
-
-	.form--inline .input-group + .button,
-	.form--inline .input-group + .input-group,
-	.form--inline .button + .input-group {
-		@apply mt-0 ml-4;
+		@apply col-span-5 m-0 w-full md:col-span-3 lg:col-span-2 xl:col-span-1;
 	}
 
 	.input-group--light-bg {

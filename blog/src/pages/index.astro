@@ -10,6 +10,8 @@ import CategoryList from "../shared/components/nav/CategoryList.astro";
 import CategorySection from "../components/homepage/CategorySection.astro";
 import Link from "../shared/components/general/Link.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
+import { getSluggedJson } from "../shared/util";
+import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.astro";
 
 const allPosts = await Astro.glob("../content/blog/posts/**/index.md");
 
@@ -36,22 +38,7 @@ const otherPosts = sortedPosts.filter((post) => {
 });
 
 const latestPosts = otherPosts.splice(0, 2);
-
-async function getCategories() {
-	const categoryFiles = import.meta.glob("../content/blog/category/*.json");
-	let categories = [];
-
-	for (const path in categoryFiles) {
-		const category = await categoryFiles[path]();
-		const slug = path.split("/").pop().replace(".json", " ").trim();
-
-		categories.push({ ...(category as object), slug });
-	}
-
-	return categories;
-}
-
-const categories = await getCategories();
+const categories = await getSluggedJson("blog/category");
 
 // build json schema object
 const schema = {
@@ -84,7 +71,17 @@ const schema = {
 	<PrimarySection class="mt-32 xl:mt-52">
 		<HasAside>
 			<CategoryList slot="aside" />
-			{categories && categories.map((category, index) => <CategorySection index={index} category={category} />)}
+			{categories &&
+				categories.map((category, index) => (
+					<>
+						<CategorySection index={index} category={category} />
+						{index === 0 && (
+							<div class="mb-32">
+								<WhitepaperPromo whitepaper="latest" />
+							</div>
+						)}
+					</>
+				))}
 			<center class="-mt-10 mb-20">
 				<Link href="/posts" icon="arrow-right" iconSuffix class="button button--secondary button--small">View All</Link>
 			</center>

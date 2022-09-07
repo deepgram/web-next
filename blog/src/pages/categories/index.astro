@@ -10,19 +10,9 @@ import Meta from "../../shared/components/meta/Meta.astro";
 import Backlink from "../../components/nav/Backlink.astro";
 import Link from "../../shared/components/general/Link.astro";
 import JsonLD from "../../shared/components/meta/JsonLD.astro";
+import { getSluggedJson } from "../../shared/util";
 
-const categoryFiles = import.meta.glob("../../content/blog/category/*.json");
-
-async function getCategories() {
-	let paths = [];
-	for (const path in categoryFiles) {
-		const category = await categoryFiles[path]();
-		paths.push({ title: category.title, slug: path.split("/").pop().replace(".json", " ").trim() });
-	}
-	return paths;
-}
-
-const categories = await getCategories();
+const categories = await getSluggedJson("blog/category");
 
 // build json schema object
 const schema = {
