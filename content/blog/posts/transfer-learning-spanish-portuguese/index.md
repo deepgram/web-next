@@ -1,8 +1,6 @@
 ---
-title: "Transfer Learning from Spanish to Portuguese: How Neighbors on the Map
-  Also Share Vectors"
-description: Spanish and Portuguese are very similar languages, which makes them
-  a great example of the power of transfer learning. Read on to learn more.
+title: "Transfer Learning from Spanish to Portuguese: How Neighbors on the Map Also Share Vectors"
+description: Spanish and Portuguese are very similar languages, which makes them a great example of the power of transfer learning. Read on to learn more.
 date: 2022-04-13
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981415/blog/transfer-learning-spanish-portuguese/transfer-learning-from-spanish-to-portuguese-thumb.png
 authors:
@@ -13,10 +11,8 @@ tags:
   - language
   - nlu
 seo:
-  title: "Transfer Learning from Spanish to Portuguese: How Neighbors on the Map
-    Also Share Vectors"
-  description: Spanish and Portuguese are very similar languages, which makes them
-    a great example of the power of transfer learning. Read on to learn more.
+  title: "Transfer Learning from Spanish to Portuguese: How Neighbors on the Map Also Share Vectors"
+  description: Spanish and Portuguese are very similar languages, which makes them a great example of the power of transfer learning. Read on to learn more.
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661981415/blog/transfer-learning-spanish-portuguese/transfer-learning-from-spanish-to-portuguese-thumb.png
 shorturls:
@@ -26,13 +22,14 @@ shorturls:
   reddit: https://dpgr.am/7d13a38
   facebook: https://dpgr.am/9c9ac3b
 ---
+
 Transfer learning is one of the hottest topics of natural language processing-and, indeed, machine learning in general-in recent years. In this post, I want to share with you what transfer learning is, why it's so helpful when thinking about language-related tasks, and how we've used it to create a high-accuracy model for Portuguese based on the work that we'd already done for Spanish.  In this blog post, we'll discuss some of our specific logic here, including the intuition of picking Spanish for helping Portuguese model training and the similarities between these languages on many levels. But to get started, let's talk about what transfer learning is and why it's so valued at Deepgram before diving into the specifics of Spanish and Portuguese.
 
 ## What is Transfer Learning? A Very Brief History
 
 In short, we can say that transfer learning is taking a model that has been trained on one task, and using it for a different one by changing its training data. Transfer learning started its journey with word vectors, which are static vectors for each word in the corpus. For our purposes, you can think of a vector as a way of describing the relationship between words in a large, abstract space. To get an idea of how this works, you can see an example of word vectors in Figure 1, below. If you look at the 1st box for the words *man* and *woman*, they're the same, but the word *king* is different because he's not an ordinary human; he's the king. Also *man*, *woman*, and *king* share the same third box, because they're all human. The fourth box of *king* is identical to *man* (baby blue), but *woman* has a different fourth box, pink. So *king* is more similar to *man* in this regard. ![](https://res.cloudinary.com/deepgram/image/upload/v1661976854/blog/transfer-learning-spanish-portuguese/pic1.png) 
 
-**Figure 1.** Word2vec, the ancestor of transfer learning, showing word similarities and differences (from <https://jalammar.github.io/illustrated-word2vec/>).
+**Figure 1.** Word2vec, the ancestor of transfer learning, showing word similarities and differences (from https://jalammar.github.io/illustrated-word2vec/).
 
 Next, contextual word vectors came with ELMo, or Embeddings from Language Models, which is "a type of deep contextualized word representation that models both (1) complex characteristics of word use (e.g., syntax and semantics), and (2) how these uses vary across linguistic contexts (i.e., to model polysemy)" ([source](https://paperswithcode.com/method/elmo#:~:text=Embeddings%20from%20Language%20Models%2C%20or,i.e.%2C%20to%20model%20polysemy).)). This provided a way to look at the relationship between words at a greater depth and with more . Finally transformers-a type of deep learning model that differentially weights input data-were developed to generate contextual word vectors as well as a sentence-level vector, which is even better for linguistic analysis.
 
