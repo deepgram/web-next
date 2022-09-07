@@ -1,10 +1,20 @@
 ---
+import { getUuid } from "../../util";
+
 const { url, hook } = Astro.props;
+let { formUuid } = Astro.props;
+
+if (!formUuid) {
+	formUuid = await getUuid();
+}
 ---
 
-<form action="/.netlify/functions/forms/" method="POST">
-	{url && <input type="hidden" name="redirect" value={url} />}
-	{hook && <input type="hidden" name="hook" value={url} />}
+<form id={`form-${formUuid}`} action="/.netlify/functions/forms/" method="POST">
+	{url && <input id={`form-${formUuid}-redirect`} type="hidden" name="redirect" value={url} />}
+	{hook && <input id={`form-${formUuid}-hook`} type="hidden" name="hook" value={hook} />}
+	<label for={`form-${formUuid}-honeypot`} class="hidden"
+		><input id={`form-${formUuid}-honeypot`} type="text" aria-label="Don't fill this in if you're a human." name="honeypot" /> Don't fill this in if you're a human.
+	</label>
 
 	<slot />
 </form>

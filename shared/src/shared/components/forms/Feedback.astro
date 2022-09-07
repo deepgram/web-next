@@ -75,7 +75,7 @@ const url = Astro.url;
 					><input id={`thumbsup-honeypot-${formUuid}`} type="text" aria-label="Don't fill this in if you're a human." name="bot-field" /> Don't fill this in if you're a human.
 				</label>
 				<input type="hidden" name="thumb" value="up" />
-				<input type="hidden" name="hook" value="bgv9wf1" />
+				<input type="hidden" name="hook" value="11179787/bgv9wf1" />
 				<input type="hidden" name="page" value={url} />
 			</form>
 			<form id={`thumbsdown-form-${formUuid}`} :class="thumb === 'down' ? 'active' : ''" class="thumb inline down" name="rating" @submit.prevent="ratePage">
@@ -88,7 +88,7 @@ const url = Astro.url;
 					><input id={`thumbsdown-honeypot-${formUuid}`} type="text" aria-label="Don't fill this in if you're a human." name="bot-field" /> Don't fill this in if you're a human.
 				</label>
 				<input type="hidden" name="thumb" value="down" />
-				<input type="hidden" name="hook" value="bgv9wf1" />
+				<input type="hidden" name="hook" value="11179787/bgv9wf1" />
 			</form>
 		</div>
 		<form id={`feedback-form-${formUuid}`} x-show="thumb !== null" name="feedback" method="POST" @submit.prevent="sendFeedback">
@@ -123,7 +123,7 @@ const url = Astro.url;
 				><input id={`feedback-honeypot-${formUuid}`} type="text" aria-label="Don't fill this in if you're a human." name="bot-field" /> Don't fill this in if you're a human.
 			</label>
 			<input type="hidden" name="thumb" value="thumb" />
-			<input type="hidden" name="hook" value="bgvnn9g" />
+			<input type="hidden" name="hook" value="11179787/bgvnn9g" />
 		</form>
 		<div x-show="thanks" class="px-1">
 			<p class="text-watercourse text-2xl font-bold">Thank you!</p>
