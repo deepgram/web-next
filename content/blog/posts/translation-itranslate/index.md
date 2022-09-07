@@ -1,25 +1,25 @@
 ---
-title: "Adding Translation to Your Transcription Project"
-description: "Use iTranslate's API to translate both pre-recorded and live transcription."
+title: Adding Translation to Your Transcription Project
+description: Use iTranslate's API to translate both pre-recorded and live transcription.
 date: 2022-01-26
 cover: https://res.cloudinary.com/deepgram/image/upload/v1642934713/blog/2022/01/translation-itranslate/Adding-Live-Translation-to-Your-Transcription-Project%402x.jpg
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: tutorial
 tags:
-    - translation
-    - nodejs
+  - translation
+  - nodejs
 seo:
-    title: "Adding Translation to Your Transcription Project"
-    description: "Use iTranslate's API to translate both pre-recorded and live transcription."
-shorturls:
-    share: https://dpgr.am/ea626e0
-    twitter: https://dpgr.am/291f11b
-    linkedin: https://dpgr.am/2f4977d
-    reddit: https://dpgr.am/4810389
-    facebook: https://dpgr.am/dbbcb17
+  title: Adding Translation to Your Transcription Project
+  description: Use iTranslate's API to translate both pre-recorded and live transcription.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661453854/blog/translation-itranslate/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661453854/blog/translation-itranslate/ograph.png
+shorturls:
+  share: https://dpgr.am/ea626e0
+  twitter: https://dpgr.am/291f11b
+  linkedin: https://dpgr.am/2f4977d
+  reddit: https://dpgr.am/4810389
+  facebook: https://dpgr.am/dbbcb17
 ---
 
 Getting fast and accurate transcripts with Deepgram is often just one step in a broader project. We frequently get asked about adding translations to projects once transcripts are returned, and that's what we'll be doing in this project.
@@ -155,5 +155,3 @@ deepgramLive.addListener('transcriptReceived', async (transcript) => {
 Because iTranslate is such a fast translation service, it is a good pairing with Deepgram's super fast speech recognition API.
 
 If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
-
-        
