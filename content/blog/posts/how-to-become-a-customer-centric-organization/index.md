@@ -1,24 +1,25 @@
 ---
-title: "How to Become a Customer-Centric Organization"
-description: ""
+title: How to Become a Customer-Centric Organization
+description: Customer-centric organizations understand that their mission is to
+  give their customers good service. Learn more here.
 date: 2018-11-16
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981326/blog/how-to-become-a-customer-centric-organization/how-to-become-customer-centric%402x.jpg
 authors:
   - morris-gevirtz
 category: speech-trends
 tags:
-  - ohsnap
+  - voice-strategy
 seo:
-  title: "How to Become a Customer-Centric Organization"
+  title: How to Become a Customer-Centric Organization
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981326/blog/how-to-become-a-customer-centric-organization/how-to-become-customer-centric%402x.jpg
 shorturls:
   share: https://dpgr.am/bca7025
   twitter: https://dpgr.am/42994cf
   linkedin: https://dpgr.am/7cc91f0
   reddit: https://dpgr.am/260a203
   facebook: https://dpgr.am/f74fc35
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981326/blog/how-to-become-a-customer-centric-organization/how-to-become-customer-centric%402x.jpg
 ---
 
 Customer-centric organizations understand that their mission is to give their customers good service. The businesses that succeed, have figured out how to do so while making a profit. If you listen to companies like Zappos, the secret sauce, then, is to listen to the customer. Saying that you listen to your customers is one thing, but how do you listen to them strategically? <mark>[Speech recognition APIs](https://www.deepgram.com/) are one powerful tool that businesses use to listen, transcribe, and analyze their customer calls programmatically.</mark> To make this happen, data teams use speech recognition APIs to dive into call data, surfacing actionable insights that allow [contact center](https://deepgram.com/solutions/contact-centers/) managers to lower costs and increase customer satisfaction. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976764/blog/how-to-become-a-customer-centric-organization/tanialee-gonzalez-791790-unsplash.jpg) _[Unsplash](https://unsplash.com/photos/rDs8xeljOwc)_ One thing business have learned from analyzing at their call data is that customers appreciate good service, but are not looking to be delighted. In ["Stop Trying to Delight Your Customers"](https://hbr.org/2010/07/stop-trying-to-delight-your-customers) published in the Harvard Business Review, customer service researchers observed companies spending a lot of resources trying to "delight" their customers, while often failing to deliver on the core product promises. They note that if customers are calling, it's probably to solve problems they've already tried to fix with self-service, a prior phone call, or chat. Their expectation is that you will be able to help them fix said problem quickly, nothing more.
