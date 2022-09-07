@@ -38,7 +38,7 @@ Neither of the above phrases mention crows specifically, but both translate roug
 
 ![canal](https://res.cloudinary.com/deepgram/image/upload/v1661976820/blog/what-does-as-the-crow-flies-mean/3330472560_9981b433d7_o.jpg) _A canal somewhere in Togo. It is approximately 140 miles **as the crow flies** from the eastern border of Togo to the western border of Nigeria. [photo credit](https://www.flickr.com/photos/attawayjl/3330472560/in/photolist-65ixsG-nG4ruZ-pnfhTN-83NHu9-99S7dk-21thCX5-6H2Dun-5dM6PH-iNPTLy-4d8ov3-9LQbGK-2cCFUZ5-djztHb-q5PDfZ-hUi55H-rKeLsa-aEenUv-7jLggZ-r8Kimy-DiR8rk-b675hT-JzzU6H-hhJVnE-8M6N49-2cd88mR-dY7gWE-dPurPF-EisYZu-8gRCaZ-5RaVMt-8MmHJi-9RmhLF-vqrvaM-bsQrbb-prWZdz-2diU3f9-dKWnrX-aVUzTH-992mMi-7A8fpX-496oEb-2djWyR6-97o5nt-6TyiE1-2o88rs-a4Lert-nutk2i-5NBAM7-cohUGA-28V6wvL)_ By comparison, in Nembe, a language from Nigeria, the same idea of "as the crow flies" is communicated with the phrase: _Ongo dug_ which roughly translates as "take the canal". Perhaps the "crow road" the Scots spoke of in the 18th century is nothing more than a canal! In any case, English may be richer than most languages; when it comes to flight-related "move in a straight line" animal metaphors, we have two! To make a beeline for something roughly means to move directly toward some item, usually a desirable one. Why it is that these animals have been chosen as the biological embodiments of linear movement, it may never be known. We might have chosen ¨as shooting star falls.¨ 
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

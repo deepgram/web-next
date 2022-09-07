@@ -73,7 +73,7 @@ For example, what if you're comparing Swedish, Norwegian, and Danish which are a
 
 As should be obvious, these languages are extremely similar, but not identical. So what do we do with mutual intelligibility if someone understands 70% of what someone says? Are they speaking the same language? What if they understand 50%? 30%? Where is the cut-off to decide that the varieties are dialects of the same language, or two different languages? I once worked with a linguistic consultant from Bhutan. I was trying to get a sense of how similar his variety was to others spoken in the country (since, another problem with mutual intelligibility-I didn't have speakers of all of them to do experiments and see who could understand who), and I asked him if he could understand the people who lived in the next valley over from where he grew up. He thought for a moment and then described it as a "three-day dialect", meaning that he needed about three days of living around people who spoke the language before he could understand what people there were saying. Are these two varieties of the same language, or two different languages?
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

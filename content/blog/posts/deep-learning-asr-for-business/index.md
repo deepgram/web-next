@@ -35,7 +35,7 @@ Whether you're most interested in lower costs, higher accuracy, faster turnaroun
 
 E2EDL technology is much harder to develop initially but costs less to use. That's because DNNs can utilize hardware acceleration and GPUs to do multiple things at the same time, rather than running things in sequence like a CPU. Overall, you need less computing power than traditional ASR that runs on CPUs. This means you pay for less computer usage time to get transcripts back from your model or from a speech recognition API. Plus, you also save time and money on the model maintenance side, as you only have to maintain one thing, rather than a [Franken-model](https://blog.deepgram.com/what-is-asr/) composed of multiple parts.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

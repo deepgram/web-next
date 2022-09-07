@@ -43,7 +43,7 @@ One option for students with a documented disability is to have someone else in 
 
 What students need is the ability to revisit the material in a way that makes what happens in the classroom accessible to as many people as possible, and is something that can be used on the fly so that students have help understanding what is happening when it's happening. 
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 Our Senior Developer Advocate Kevin Lewis recently [built a tool to transcribe classroom lectures](https://blog.deepgram.com/classroom-captioner/), providing a live, automatically generated transcript to make classroom content more accessible. This method can also help people who have difficulty hearing the speaker, for whatever reason, or keeping track of what's been said and how the lecture is organized. Live transcripts are also useful for non-native speakers, who might hear a word they don't know, but not know how to spell it to look it up (a common problem with English)-and it works either during class from the live transcript, or by reviewing it later.
 

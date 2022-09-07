@@ -33,7 +33,7 @@ In short, we can say that transfer learning is taking a model that has been trai
 
 At Deepgram, transfer learning is highly valued. For a specific language, when we want to train a new version of a specific model, we don't want to start from scratch. Instead, when we want to train a model for a brand new language, we want to transfer some knowledge from a similar language's model when possible. To illustrate the power of these processes, we'll look at a specific case of transfer learning-going from Spanish to Portuguese-to show how you can train a model for a new language from scratch by the help of a similar language's model. 
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

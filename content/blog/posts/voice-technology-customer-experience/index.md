@@ -32,7 +32,7 @@ There are a range of possible impacts that voice can have on customer experience
 
 One of the primary ways that voice technology is impacting customer experience is by providing new avenues to analyze customer conversations. Audio data is notoriously difficult to deal with; if you want to extract insights for your organization, you need to turn that audio into text. Through [automatic speech recognition](https://blog.deepgram.com/what-is-asr/) (ASR), businesses can create transcripts of spoken conversations in order to get insight into customer interactions. Transcripts create a searchable database of conversations that can be mined for information to improve products, services, and customer support. This text data can also be used for things like internal machine learning projects.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

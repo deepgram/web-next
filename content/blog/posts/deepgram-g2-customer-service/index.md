@@ -27,7 +27,7 @@ We're pleased to announce that we've recently received recognition from two diff
 
 At Deepgram, however, we aspire to go beyond these kinds of transactional business relationships with our customers and instead aim to build partnerships. We want to ensure that all of our customers are achieving their desired outcomes and seeing the value of their partnership with Deepgram. Our Customer Success team works hand-in-hand with each customer to have a clear view into what's important for the customer, what their target milestones are, and what a path for growing our partnership looks like. We strive to provide an exceptional customer experience throughout the entire customer journey, from dedicated technical resources for deploying our services to dedicated customer success managers to advocate on their behalf. Deepgram gives each of our customers access to various resources throughout our organization. Need help with scaling? We'll pair you with a Solutions Engineer. Need a tailored model? We'll pair you with a Research Engineer. We're committed to the success of each customer that partners with Deepgram. For example, you can [read](https://deepgram.com/case-study-elerian-ai/) how Elerian.ai developed a partnership with us to create voicebots that are up to 98% accurate in speech to text.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

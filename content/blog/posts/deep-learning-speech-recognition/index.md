@@ -33,7 +33,7 @@ The smallest units of sound in spoken language are called phonemes. For example,
 
 Although this old way of building speech recognition models is intuitive to humans, and is motivated to some extent by how linguists think about language, it's highly lossy to a computer. At each step in this process, your models have to make simplifying assumptions to fit the computations in memory or finish within the lifetime of the universe-not kidding. There are just too many combinations and permutations for the models to return results if they consider all of the possibilities. This is why, for instance, the language model portions are typically very limited trigram language models. The _tri-_ in trigram means "three" and indicates that the model only looks back two words to see if the current word makes sense in context. That might only be half of a sentence-or less! These simplifications are rampant and result in a performance-limited, pipelined approach for optimizing sub-problems at each step of the process, rather than an end-to-end approach that can simultaneously optimize across the entire problem domain. This creates three major problems with traditional methods.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

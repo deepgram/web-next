@@ -59,7 +59,7 @@ There are essentially three ways to do automatic speech recognition:
 
 ASR technologies began development in the 1950 and 1960s, when researchers made hard-wired (vacuum tubes, resistors, transistors and solder) systems that could recognize **individual words** -not sentences or phrases. That technology, as you might imagine, is essentially obsolete (I do suspect, however, that those people who are into vacuum tube amps, might still be into it).
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

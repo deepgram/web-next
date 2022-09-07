@@ -49,7 +49,7 @@ Captioning can also be used to transcribe pre-recorded videos or podcasts. This 
 
 Although you might mostly associate captions with video content, they're also a critical component of accessibility for podcasts. Podcast content has exploded in recent years and has become a major type of media. But it's one that can be difficult or impossible for people who are deaf or hard-of-hearing to access without captions. These captions can help other people, too-non-native speakers, people listening with background noise, and those who'd rather read content than listen to it, to name a few. You can read more about the importance of captioning for podcasts at [Podcast Accessibility](https://podcast-accessibility.com/).
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

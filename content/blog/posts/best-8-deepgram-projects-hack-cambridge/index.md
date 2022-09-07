@@ -23,7 +23,7 @@ og:
 
 Back in January, we had the opportunity to support [Hack Cambridge](https://hackcambridge.com/)-a student hackathon sponsored by the University of Cambridge. We ran a challenge for participants to use Deepgram in some way to create a fun and unique hackathon project. [Developer outreach and support](https://developers.deepgram.com/blog/) is a big focus for the Deepgram team, and supporting these students in building cutting-edge projects using our API is a passion for the whole company-we're always pumped to see folks attending events and running hackathons. I don't think it's any exaggeration to say that we were absolutely blown away by the quality of the projects that incorporated Deepgram and used speech-to-text to create something new. Over the last few months, [Kevin Lewis](https://developers.deepgram.com/blog/authors/kevinlewis/), a Senior Developer Advocate here at Deepgram, has been publishing descriptions of some of the projects that used Deepgram. Read on to learn more about the incredibly creative projects that came out of Hack Cambridge 2022.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 

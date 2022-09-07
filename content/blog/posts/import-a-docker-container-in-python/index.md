@@ -88,7 +88,7 @@ The example below will grab audio from a URL, transcode it, and print debug mess
 
 If you wanted to actually save the transcoded audio from this process, you would replace the line `stdout=False` with `stderr=False` and make sure to write each line of output from the container process (raw audio data) to a file.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+
 
 
 
