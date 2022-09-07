@@ -14,6 +14,7 @@ export default function globals() {
 					files.forEach((file) => {
 						const info = path.parse(file);
 						const name = info.name.replace(".page-ssr", "");
+						console.log(`$ importing ${name} into the global scope.`);
 						injectScript("page-ssr", `import ${name} from "${cwd}/${file}"; global.${name} = ${name};`);
 					});
 				});
