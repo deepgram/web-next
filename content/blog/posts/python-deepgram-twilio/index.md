@@ -99,7 +99,7 @@ Copy the ngrok url and add it to Twilio by navigating to ‘Phone Numbers -> Man
 
 ![manage Twilio phone number](https://res.cloudinary.com/deepgram/image/upload/v1649274531/blog/2022/04/python-deepgram-twilio/active-twilio-numbers.png)
 
-Scroll down to the ‘Voice’ section and add the webhook, our ngrok URL with the recordings endpoint and save. Like this `https://6d71-104-6-9-133.ngrok.io/recordings`
+Scroll down to the ‘Voice’ section and add the webhook, our ngrok URL with the recordings endpoint and save. Like this [https://6d71-104-6-9-133.ngrok.io/recordings](https://6d71-104-6-9-133.ngrok.io/recordings)
 
 ![twilio webhook ngrok](https://res.cloudinary.com/deepgram/image/upload/v1649274530/blog/2022/04/python-deepgram-twilio/twilio-webhook-ngrok.png)
 
@@ -108,10 +108,10 @@ We’ll implement the `/recordings` endpoint in a few.
 Leave both terminals running as we’ll need these to run our application and receive the phone call.
 
 Let’s store our environment variables in a `.env` file with the following:
-
-    DEEPGRAM_API_KEY=[‘YOUR_API_KEY’]
-    RECEIVER_NUMBER=[‘PHONE_NUMBER_TO_RECEIVE_CALL’]
-
+```
+DEEPGRAM_API_KEY=[‘YOUR_API_KEY’]
+RECEIVER_NUMBER=[‘PHONE_NUMBER_TO_RECEIVE_CALL’]
+```
 We can replace `YOUR_API_KEY` with the API key we received from signing up in the Deepgram console, and the `PHONE_NUMBER_TO_RECEIVE_CALL` is the phone number we would like to receive the call.
 
 Let’s replace the code in our `deepgram-twilio-call.py` with the following:

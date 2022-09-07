@@ -78,7 +78,7 @@ You will need:
 
 *   Node.js installed on your machine - [download it here](https://nodejs.org/en/).
 *   A Deepgram API Key - [get one here](https://console.deepgram.com/signup?jump=keys).
-*   A hosted audio file URL to transcribe - you can use `https://static.deepgram.com/examples/deep-learning-podcast-clip.wav` if you don't have one.
+*   A hosted audio file URL to transcribe - you can use [https://static.deepgram.com/examples/deep-learning-podcast-clip.wav](https://static.deepgram.com/examples/deep-learning-podcast-clip.wav) if you don't have one.
 
 Create a new directory and navigate to it with your terminal. Run `npm init -y` to create a `package.json` file and then install the Deepgram Node.js SDK with `npm install @deepgram/sdk`.
 

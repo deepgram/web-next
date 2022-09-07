@@ -31,63 +31,66 @@ To get started, make sure you have a Deepgram account by signing up at [https://
 
 #### **Node.js**
 
-```npm install @deepgram/sdk```
+```
+npm install @deepgram/sdk
+```
 
 #### **Python**
 
-```pip install deepgram-sdk```
+```
+pip install deepgram-sdk
+```
 
 Once the SDK has been installed, the following snippets will allow you to transcribe a prerecorded audio file. Be sure to replace `YOUR_DEEPGRAM_API_KEY` with the API key, you created earlier.
 
 #### **Node.js**
 
-```const { Deepgram } = require('@deepgram/sdk');
+```js
+const { Deepgram } = require("@deepgram/sdk");
 
-const deepgramApiKey = 'YOUR_DEEPGRAM_API_KEY';
+const deepgramApiKey = "YOUR_DEEPGRAM_API_KEY";
 
 function main() {
- return new Promise((resolve, reject) => {
- (async () => {
- try {
- const deepgram = new Deepgram(deepgramApiKey);
- const transcription = await newDeepgram.transcription.preRecorded({
- url: 'https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav'
- }, {
- punctuate: true
- });
- console.dir(transcription, { depth: null });
- resolve();
- }
- catch (err) {
- console.log(`Err: ${err}`);
- reject(err);
- }
- })()
- });
-} 
-main();```
+  return new Promise((resolve, reject) => {
+    (async () => {
+      try {
+        const deepgram = new Deepgram(deepgramApiKey);
+        const transcription = await newDeepgram.transcription.preRecorded(
+          {
+            url: "https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav",
+          },
+          {
+            punctuate: true,
+          }
+        );
+        console.dir(transcription, { depth: null });
+        resolve();
+      } catch (err) {
+        console.log(`Err: ${err}`);
+        reject(err);
+      }
+    })();
+  });
+}
+main();
+```
 
 #### **Python**
 
-```from deepgram import Deepgram
-
-import asyncio, json
+```python
+from deepgram import Deepgramimport asyncio, json
 
 DEEPGRAM_API_KEY = 'YOUR_API_KEY'
 
 async def main():
-
     # Initializes the Deepgram SDK
+  dg_client = Deepgram(DEEPGRAM_API_KEY)
+  source = {'url': 'https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav'}
+  response = await dg_client.transcription.prerecorded(source)
+  print(json.dumps(response, indent=4))
 
-    dg_client = Deepgram(DEEPGRAM_API_KEY)
-
-    source = {'url': 'https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav'}
-
-    response = await dg_client.transcription.prerecorded(source)
-
-    print(json.dumps(response, indent=4))
-
-asyncio.run(main())```
+asyncio.run(main())
+```
 
 ## Contributions Welcome
 

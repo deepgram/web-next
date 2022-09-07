@@ -136,7 +136,7 @@ Create an `index.html` file in your main directory:
 </html>
 ```
 
-Navigate to `http://localhost:8888` in your browser, click the button, and provide a static file URL (if you don't have one, use `https://static.deepgram.com/examples/nasa-spacewalk-interview.wav`). Open your browser console, and you should see the response from Deepgram.
+Navigate to `http://localhost:8888` in your browser, click the button, and provide a static file URL (if you don't have one, use [https://static.deepgram.com/examples/nasa-spacewalk-interview.wav](https://static.deepgram.com/examples/nasa-spacewalk-interview.wav)). Open your browser console, and you should see the response from Deepgram.
 
 ![Browser console showing a large object from Deepgram](https://res.cloudinary.com/deepgram/image/upload/v1640794184/blog/2022/01/transcription-netlify-functions/console.png)
 

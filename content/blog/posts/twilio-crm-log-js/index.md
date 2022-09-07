@@ -28,7 +28,7 @@ Users can call a Twilio phone number, which will be forwarded to your agent whil
 
 ![Webpage with three parts - a text box along the top, a list of phone calls on the left with phrases matching the keyword, and a full transcript on the right.](https://res.cloudinary.com/deepgram/image/upload/v1638306976/blog/2021/12/twilio-crm-log-js/final-project.png)
 
-If you want to look at the final project code, you can find it at `https://github.com/deepgram-devs/twilio-voice-searchable-log`.
+If you want to look at the final project code, you can find it at [https://github.com/deepgram-devs/twilio-voice-searchable-log](https://github.com/deepgram-devs/twilio-voice-searchable-log).
 
 ## Before We Start
 
