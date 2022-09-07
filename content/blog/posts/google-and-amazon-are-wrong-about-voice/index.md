@@ -1,24 +1,25 @@
 ---
-title: "Google and Amazon are wrong about voice"
-description: ""
+title: Google and Amazon are Wrong About Voice
+description: Google and Amazon are often thought of as the forefront of voice
+  technology—but they're getting it wrong.
 date: 2018-05-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069451/blog/google-and-amazon-are-wrong-about-voice/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - voice-tech
 seo:
-  title: "Google and Amazon are wrong about voice"
+  title: Google and Amazon are wrong about voice
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069451/blog/google-and-amazon-are-wrong-about-voice/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/472d6e5
   twitter: https://dpgr.am/7e3cc62
   linkedin: https://dpgr.am/4dbfb6e
   reddit: https://dpgr.am/a206172
   facebook: https://dpgr.am/58a8676
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069451/blog/google-and-amazon-are-wrong-about-voice/placeholder-post-image%402x.jpg
 ---
 
 [Speech recognition](https://blog.deepgram.com/what-is-asr/) is a hot topic. Google just announced new features for its [voice assistant](https://blog.deepgram.com/what-makes-alexa-siri-terminator-and-hal-tick/) like continued conversation and multiple actions. Amazon Alexa has been leading the way in voice-enabled shopping. Both companies are making vast improvements, but they're missing the big picture.
