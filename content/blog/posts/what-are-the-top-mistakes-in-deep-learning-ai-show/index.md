@@ -304,8 +304,4 @@ Even from the engineering standpoint, you're not gonna do that. From the model b
 
 **Scott:** Yeah, "Oh weird. It's not doing what I thought it would do. But what if I just do this little trick?" Two days later: "Huh, okay," and then eight days later, "Huh."
 
-**Susan:** It's a big time thing, that's for sure.
-
-* * *
-
-Share your thoughts by tweeting us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en)
+**Susan:** It's a big time thing, that's for sure.
