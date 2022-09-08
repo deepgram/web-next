@@ -38,10 +38,10 @@ const { theme, title, image, script } = whitepaper;
 
 <style>
 	:global(.hbspt-form) {
-		@apply dg-form-text;
+		@apply text-cloud;
 	}
 	:global(.hbspt-form label) {
-		@apply dg-label;
+		@apply text-body-smallest;
 	}
 	:global(.hbspt-form input[type="email"]),
 	:global(.hbspt-form input[type="password"]),
@@ -51,7 +51,7 @@ const { theme, title, image, script } = whitepaper;
 	:global(.hbspt-form input[type="url"]),
 	:global(.hbspt-form input[type="text"]),
 	:global(.hbspt-form textarea) {
-		@apply dg-input;
+		@apply placeholder:text-stone bg-almostBlack w-full px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
 	}
 	:global(.hbspt-form input[type="submit"]),
 	:global(.hbspt-form input[type="button"]),
