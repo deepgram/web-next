@@ -37,7 +37,9 @@ shorturls:
 
 **Scott:** You have tubes, and huge rooms.
 
-**Susan:** A series of tubes. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976780/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/IBM-Electronic-Data-Processing-Machine.jpg)
+**Susan:** A series of tubes.
+
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976780/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/IBM-Electronic-Data-Processing-Machine.jpg)
 
 **Scott:** Vacuum tubes filling rooms, generating lots of heat, back in the '50s, '60s, and maybe into the '70s.
 
@@ -69,7 +71,9 @@ shorturls:
 
 **Susan:** But even then the computers still don't have what it takes to power, the ML systems of today. You see as the architectures get more RAM, more compute, you see a steady trickle of more and more come out from the 80s, through the 90s, and then the 2000s hit, and the world changed.
 
-**Scott:** The Pentium 1, Pentium 2, Pentium 3, that kind of happened throughout the 90s. CPUs got bigger, better, faster, a little more memory, the hard drives got bigger, clock speeds got faster, and it sort of famously, Moore's law-that stuff happened. But then into the late 90s, mid 90s you have graphics processing units, or GPUs that start to become popular. And then mid 2000s is when NVIDIA (who is actually an investor in Deepgram) started doing Cuda. Which is very big ... Cuda. If you don't know what it is, it made it so that a normal programmer could access a GPU and use it to perform tasks in a way that they're used to. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976781/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/Moore-s_Law_Transistor_Count_1971-2016.png) *Moore's Law-named after the the famed Intel co-founder Gordon Moore-is an observation that the number of transistors on integrated circuits has doubled every year since their inception. Has that [doubling of transistor number come to an end?](https://www.technologyreview.com/s/601441/moores-law-is-dead-now-what/)*
+**Scott:** The Pentium 1, Pentium 2, Pentium 3, that kind of happened throughout the 90s. CPUs got bigger, better, faster, a little more memory, the hard drives got bigger, clock speeds got faster, and it sort of famously, Moore's law-that stuff happened. But then into the late 90s, mid 90s you have graphics processing units, or GPUs that start to become popular. And then mid 2000s is when NVIDIA (who is actually an investor in Deepgram) started doing Cuda. Which is very big ... Cuda. If you don't know what it is, it made it so that a normal programmer could access a GPU and use it to perform tasks in a way that they're used to.
+
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976781/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/Moore-s_Law_Transistor_Count_1971-2016.png) *Moore's Law-named after the the famed Intel co-founder Gordon Moore-is an observation that the number of transistors on integrated circuits has doubled every year since their inception. Has that [doubling of transistor number come to an end?](https://www.technologyreview.com/s/601441/moores-law-is-dead-now-what/)*
 
 **Susan:** C-like interface.
 
@@ -119,10 +123,11 @@ shorturls:
 
 It's not that suddenly brand new ideas magically appeared out of nowhere. It's the ideas that everybody wanted to do, it just took them a long time to do. They were finally able to rip through it.
 
-
 **Scott:** This is why the infrastructure is so important, you finally got all your stuff together, your hard drives are big enough, your memory is large enough, your memory bandwidth is fast enough, your computation speed is fast enough, the number of flops that you can do is enough.
 
-**Susan:** And the tools. This is again is the big thing, like Cuda-it has enabled a huge set of tools. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976782/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/Screen-Shot-2018-12-11-at-12.19.09-PM.png) *[Cuda](https://devblogs.nvidia.com/easy-introduction-cuda-c-and-c/) was a key element in the deep learning revolution.*
+**Susan:** And the tools. This is again is the big thing, like Cuda-it has enabled a huge set of tools.
+
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976782/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/Screen-Shot-2018-12-11-at-12.19.09-PM.png) *[Cuda](https://devblogs.nvidia.com/easy-introduction-cuda-c-and-c/) was a key element in the deep learning revolution.*
 
 **Scott:** There are layers upon layers here where there's a GPU that has hardware stuff going on inside it, but then that is abstracted away by Cuda, but then Cuda is abstracted away by other deep learning frameworks as well.
 
@@ -150,7 +155,6 @@ It's not that suddenly brand new ideas magically appeared out of nowhere. It's t
 
 ## Are we seeing another architecture shift?
 
-
 **Scott:** Well I think the AI chip, and iPhone, people have heard about that, where you can use ML Kit to do stuff on the iPhone and it's not using the CPU anymore, or it's using a lot less.
 
 **Susan:** They hope. Apple opened it up to other developers before. I think this was all enclosed and only they had access to it. Now they've opened it up to developers.
@@ -163,12 +167,9 @@ It's not that suddenly brand new ideas magically appeared out of nowhere. It's t
 
 Susan: GPUs do the same operations that it takes to take a 3D scene, and rotate it around, and do all these special effects there.
 
-**Scott:** If you're gaming and the guy shoots this, or the plane flies here, this all has to be generated in a virtual world, and there are all the polygons, and points, but then it has to be projected onto your 2D screen. ![Alt](https://ak2.cdn.9appsdownloading.com/group1/M00/4B/0F/poYBAFX3MbiAW9T0AAC7m-PsvmU092.jpg)
+**Scott:** If you're gaming and the guy shoots this, or the plane flies here, this all has to be generated in a virtual world, and there are all the polygons, and points, but then it has to be projected onto your 2D screen.
 
-**Susan:** Yep, exactly. Those same calculations, that matrix math, is also at the core of most deep learning at the moment.
-
-Deep learning has jumped, and adapted itself towards that GPU world that was in the 3D rendering world.
-
+**Susan:** Yep, exactly. Those same calculations, that matrix math, is also at the core of most deep learning at the moment. Deep learning has jumped, and adapted itself towards that GPU world that was in the 3D rendering world.
 
 **Scott:** Scientists were using CPUs, and they're sitting there waiting, patiently tapping their fingers, saying "This is taking a long time." And, they look out and say, "What else is going on in the world? Is there anything fast out there? Is there anything that's massively parallel by any chance, because the operations that we're doing could be very parallelized." Then they see GPUs: "Wait a minute, we should be using those." It takes awhile to sort of migrate over but once you see the first little nibbles of it actually working, then the flood gates open.
 
@@ -260,15 +261,21 @@ Everybody knows it, but not too many people are really stating that seed change.
 
 **Susan:** That's so 2000s.
 
-**Scott:** But if you're trying to do something more complicated, then you're probably not going to be able to. Like time delaying your neurons or something, that's not gonna happen on that chip. You probably can do it in a more flexible architecture. Maybe it'll be easier to do it in CPUs, hard and time consuming to train, but then morph it to a GPU-land where it can actually grow up a bit there, and then maybe you ship it off to that AI chip. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976783/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/AI-chip-2.jpg)
+**Scott:** But if you're trying to do something more complicated, then you're probably not going to be able to. Like time delaying your neurons or something, that's not gonna happen on that chip. You probably can do it in a more flexible architecture. Maybe it'll be easier to do it in CPUs, hard and time consuming to train, but then morph it to a GPU-land where it can actually grow up a bit there, and then maybe you ship it off to that AI chip.
+
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976783/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/AI-chip-2.jpg)
 
 **Susan:** I totally one hundred percent agree with you, and for those who don't know, Scott and I have had this kind of running debate which goes: "What is the future of machine learning like?" One of my first shots across a bow with Scott was, matrix math, 10,000 wide whatever. I think that we're gonna see much incredibly more complex and fine-grained structures come out-ones that are not as compatible with today's efficient, and large matrix multiplication.
 
 **Scott:** Right now, the idea is: Take whatever problem you have and think really hard so you can shoehorn it into doing a matrix multiplication. If you can do that then it'll probably be fast enough in order to train, and you can see the result.
 
-**Susan:** We've taken a brand new big, high resource area of all this compute that GPUs have given us and we've adapted to that. Now that we're seeing the hardware adapt to us, I think we're going to see an explosion of new architecture ideas. There's a lot more revived interest in and thinking about the basic structure: thinking about the basic neurons going back to biology again, and pulling in new things like time delays. Of course there's pulling in brand new types of ways of connecting them. Again going down to single connections as opposed to thinking, "Oh I've got this 1024 layer, fully connected layer to it, now it's a 1024 to fully connect the layer, just because it's efficient and fits right in perfectly memory wise and all these different things." But nothing about the problem said a 1024. How do you appropriately connect these things? ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976784/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/Artificial_neural_network.jpg) 
+**Susan:** We've taken a brand new big, high resource area of all this compute that GPUs have given us and we've adapted to that. Now that we're seeing the hardware adapt to us, I think we're going to see an explosion of new architecture ideas. There's a lot more revived interest in and thinking about the basic structure: thinking about the basic neurons going back to biology again, and pulling in new things like time delays. Of course there's pulling in brand new types of ways of connecting them. Again going down to single connections as opposed to thinking, "Oh I've got this 1024 layer, fully connected layer to it, now it's a 1024 to fully connect the layer, just because it's efficient and fits right in perfectly memory wise and all these different things." But nothing about the problem said a 1024. How do you appropriately connect these things?
 
-*This is a representation of a generic neural network. Note the connections between the first layer of three nodes, and the second layer of four.* Now that we're merging back and we're having hardware starting to adapt to us, I think that we're going to start seeing that the current situation is an iteration number 1. By the time we get to iteration number 3 we'll be looking back at the first stuff and see that it can't run anything. This would be because we've been able to explore these crazy amazing, brand new, out there, fun, architectures.
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976784/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/Artificial_neural_network.jpg) 
+
+*This is a representation of a generic neural network. Note the connections between the first layer of three nodes, and the second layer of four.* 
+
+**Susan:** Now that we're merging back and we're having hardware starting to adapt to us, I think that we're going to start seeing that the current situation is an iteration number 1. By the time we get to iteration number 3 we'll be looking back at the first stuff and see that it can't run anything. This would be because we've been able to explore these crazy amazing, brand new, out there, fun, architectures.
 
 **Scott:** The backwards compatibility isn't going to be that good.
 
