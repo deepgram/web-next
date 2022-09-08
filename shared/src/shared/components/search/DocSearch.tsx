@@ -4,8 +4,8 @@ import { useCallback, useEffect, useRef, useState } from "preact/hooks";
 
 export default function Search() {
 	const [isOpen, setIsOpen] = useState(false);
-	const searchButtonD = useRef(document.getElementById("docsearch-button-d"));
-	const searchButtonM = useRef(document.getElementById("docsearch-button-m"));
+	const searchButton = useRef(document.getElementById("docsearch-button"));
+	const searchButtonMobileobile = useRef(document.getElementById("docsearch-button-mobile"));
 	const [initialQuery, setInitialQuery] = useState<string>();
 
 	const onOpen = useCallback(() => {
@@ -25,21 +25,21 @@ export default function Search() {
 	);
 
 	useEffect(() => {
-		searchButtonD.current?.addEventListener("click", onOpen);
-		searchButtonM.current?.addEventListener("click", onOpen);
+		searchButton.current?.addEventListener("click", onOpen);
+		searchButtonMobile.current?.addEventListener("click", onOpen);
 		return () => {
-			searchButtonD.current?.removeEventListener("click", onOpen);
-			searchButtonM.current?.removeEventListener("click", onOpen);
+			searchButton.current?.removeEventListener("click", onOpen);
+			searchButtonMobile.current?.removeEventListener("click", onOpen);
 		};
-	}, [searchButtonD.current, searchButtonM.current, onOpen]);
+	}, [searchButton.current, searchButtonMobile.current, onOpen]);
 
 	useDocSearchKeyboardEvents({
 		isOpen,
 		onOpen,
 		onClose,
 		onInput,
-		searchButtonD,
-		searchButtonM,
+		searchButton,
+		searchButtonMobile,
 	});
 
 	if (!isOpen) return null;
