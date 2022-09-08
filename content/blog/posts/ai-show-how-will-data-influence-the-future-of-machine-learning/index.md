@@ -77,7 +77,7 @@ shorturls:
 
 Images are like that a lot. It's easy to find a lot of images that are labeled. Not super easy, but you can search for a "tool" and you'll find tons of pictures of tools. Okay, that's pretty easy. But, there isn't an easy way for speech recognition to say the word, "tool." "Give me all the examples of everybody saying that word." That's a harder problem.
 
-![Alt](http://1.bp.blogspot.com/-2WefVFMGytE/VL_k4Wh-R-I/AAAAAAAAGFE/DNkTHbE4Bx4/s1600/Tool%2BBelt%2BLabeled.jpg)
+![Alt](https://1.bp.blogspot.com/-2WefVFMGytE/VL_k4Wh-R-I/AAAAAAAAGFE/DNkTHbE4Bx4/s1600/Tool%2BBelt%2BLabeled.jpg)
 
 **Susan:** Well, by the time that becomes easy it probably means that the problem has been
 

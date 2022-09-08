@@ -29,7 +29,7 @@ This could make many feel vulnerable. For us, it was one of the best decisions w
 
 ## Why Pitch "Naked"?
 
-![Imgur](http://i.imgur.com/k1v2cgQ.png)
+![Imgur](https://i.imgur.com/k1v2cgQ.png)
 
 This isn't breaking news to anyone: In early stage startups, speed and efficiency are everything.
 
@@ -63,7 +63,7 @@ I was forced to recollect and form the story over and over then witnessed how th
 
 ## How We Structured Our Naked Pitch
 
-![Imgur](http://i.imgur.com/DLVCPlC.png)
+![Imgur](https://i.imgur.com/DLVCPlC.png)
 
 First we need to think about the goal of the pitch. **The real goal is to get the investor interested enough after the meeting to dive into your market and see how your company fits in.** Once you have them caring about what you are up to and you've got them rooting for your company, that's when you are in a place of possible investment.
 
