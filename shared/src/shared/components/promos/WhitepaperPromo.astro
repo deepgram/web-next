@@ -40,9 +40,16 @@ const { theme, title, image, script } = whitepaper;
 	:global(.hbspt-form) {
 		@apply text-cloud;
 	}
+
+	:global(.hbspt-form form) {
+		@apply flex flex-col md:flex-row;
+		@apply max-w-md md:max-w-full;
+	}
+
 	:global(.hbspt-form label) {
 		@apply text-body-smallest;
 	}
+
 	:global(.hbspt-form input[type="email"]),
 	:global(.hbspt-form input[type="password"]),
 	:global(.hbspt-form input[type="search"]),
@@ -51,21 +58,49 @@ const { theme, title, image, script } = whitepaper;
 	:global(.hbspt-form input[type="url"]),
 	:global(.hbspt-form input[type="text"]),
 	:global(.hbspt-form textarea) {
-		@apply placeholder:text-stone bg-almostBlack w-full px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
+		@apply placeholder:text-stone bg-almostBlack;
+		@apply w-full px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
 	}
+
+	:global(.hbspt-form) {
+		@apply mt-4;
+	}
+
+	:global(.hbspt-form .hs-form-field) {
+		@apply mt-4;
+	}
+
+	:global(.hbspt-form form fieldset) {
+		@apply flex max-w-full flex-col md:flex-row;
+	}
+
+	:global(.hbspt-form form fieldset.form-columns-2 .input) {
+		@apply mr-0 md:mr-4;
+	}
+
 	:global(.hbspt-form input[type="submit"]),
 	:global(.hbspt-form input[type="button"]),
 	:global(.hbspt-form button) {
-		@apply button button--primary mt-4;
+		@apply mt-4;
+		@apply bg-meadow text-darkCharcoal;
+		@apply mb-0 min-h-[3.375rem] grow-0 px-[2.75rem] pb-[1.1rem] pt-[1.15rem] text-center text-[1rem] font-[700] leading-[1rem];
+		@apply w-full;
 	}
-	:global(.hbspt-form .hs-form-field) {
-		@apply mt-2;
+
+	:global(.hbspt-form .hs_submit) {
+		@apply flex items-end;
 	}
-	:global(.hbspt-form form fieldset) {
-		@apply flex max-w-full flex-col md:flex-row md:flex-nowrap md:items-end md:gap-5;
+
+	:global(.hbspt-form .hs_submit .actions) {
+		@apply w-full;
 	}
+
 	:global(.hbspt-form form fieldset .field) {
 		width: auto !important;
 		float: none;
+	}
+
+	:global(.hbspt-form form fieldset ul) {
+		@apply absolute;
 	}
 </style>

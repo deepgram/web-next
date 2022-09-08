@@ -34,12 +34,17 @@ const rawHTMLString = "&nbsp;";
 		@apply max-w-[76.25rem];
 		@apply min-h-[13rem] w-full;
 		@apply flex flex-col space-y-1;
-		@apply py-4 px-8 pb-52 md:pb-4;
+		@apply mt-20 py-4 px-8 pb-36 md:pb-4;
 		@apply justify-between;
 		@apply drop-shadow-md;
-		@apply bg-right-bottom bg-no-repeat lg:bg-right;
-		@apply bg-contain;
+		@apply bg-right bg-no-repeat md:bg-center md:bg-right;
+		@apply bg-[percentage:70%] md:bg-contain;
 	}
+
+	.promo > header > h6 {
+		@apply mb-4;
+	}
+
 	/* White Theme Styles */
 	.theme--white {
 		@apply bg-white;
@@ -52,6 +57,12 @@ const rawHTMLString = "&nbsp;";
 	.theme--white :global(p) {
 		@apply text-black;
 	}
+
+	:global(.theme--white form fieldset li) {
+		@apply pl-0;
+		@apply text-black !important;
+	}
+
 	/* Black Theme Styles */
 	.theme--black {
 		@apply bg-ink;
@@ -64,6 +75,12 @@ const rawHTMLString = "&nbsp;";
 	.theme--black :global(p) {
 		@apply text-white;
 	}
+
+	:global(.theme--black form fieldset li) {
+		@apply pl-0;
+		@apply text-coral !important;
+	}
+
 	/* Red Theme Styles */
 	.theme--red {
 		@apply bg-fireEngine;
@@ -73,5 +90,10 @@ const rawHTMLString = "&nbsp;";
 	.theme--red :global(h4.date),
 	.theme--red :global(p) {
 		@apply text-black;
+	}
+
+	:global(.theme--red form fieldset li) {
+		@apply pl-0;
+		@apply text-white !important;
 	}
 </style>
