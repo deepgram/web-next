@@ -25,7 +25,11 @@
     "@types/node": "^17.0.42",
     "astro": "^1.0.0-rc.2",
     "glob": "^8.0.3",
-    "node-html-parser": "^5.3.3"
+    "node-html-parser": "^5.3.3",
+    "preact": "^10.6.5",
+    "@astrojs/preact": "^1.0.2",
+    "@docsearch/react": "3",
+    "@preact/preset-vite": "^2.3.0"
   },
   "dependencies": {
     "netlify-cli": "^10.17.3",

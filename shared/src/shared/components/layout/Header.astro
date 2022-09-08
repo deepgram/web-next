@@ -1,17 +1,18 @@
 ---
-import Icon from "../general/Icon.astro";
-import Svg from "../general/Svg.astro";
-import Link from "../general/Link.astro";
+import "@docsearch/css/dist/style.css";
+import "../search/DocSearch.css";
+
 import Button from "../general/Button.astro";
-
-import NavMenu from "../nav/NavMenu.astro";
-import NavMenuPrimaryItem from "../nav/NavMenuPrimaryItem.astro";
-import NavMenuItem from "../nav/NavMenuItem.astro";
-import NavItem from "../nav/NavItem.astro";
-
+import DocSearch from "../search/DocSearch";
+import Link from "../general/Link.astro";
+import MobileNavItem from "../nav/MobileNavItem.astro";
 import MobileNavMenu from "../nav/MobileNavMenu.astro";
 import MobileNavMenuItem from "../nav/MobileNavMenuItem.astro";
-import MobileNavItem from "../nav/MobileNavItem.astro";
+import NavItem from "../nav/NavItem.astro";
+import NavMenu from "../nav/NavMenu.astro";
+import NavMenuItem from "../nav/NavMenuItem.astro";
+import NavMenuPrimaryItem from "../nav/NavMenuPrimaryItem.astro";
+import Svg from "../general/Svg.astro";
 ---
 
 <header x-data="{ menu: null }" class="sticky top-0 z-10">
@@ -27,9 +28,6 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 			<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
 				<Link href="https://console.deepgram.com/signup" class="button button--mini sm:button--small button--primary">Sign Up</Link>
 				<Button class="button button--mini sm:button--small button--secondary" x-on:click="menu = 'Mobile'" aria-label="Mobile Menu">Menu</Button>
-
-				<!-- <button type="button" class="button button--secondary button--small" aria-expanded="false"> Menu</button> -->
-				<!-- <NavItem href="/" class="button button--primary button--small">Sign Up</NavItem> -->
 			</div>
 			<div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
 				<nav class="flex space-x-[2.1875rem]" x-on:click.outside="menu = null">
@@ -78,7 +76,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 					</NavMenu>
 				</nav>
 				<div class="flex space-x-[1rem] items-center xl:ml-12">
-					<Button icon="search" class="button big-icon button--main-nav" aria-label="Search" />
+					<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 					<Link href="https://console.deepgram.com/" class="button button--small button--main-nav text-white">Log In</Link>
 					<Link href="https://deepgram.com/contact-us/" class="button button--secondary button--small w-[7rem]">Contact Us</Link>
 					<Link href="https://console.deepgram.com/signup" class="button button--primary button--small w-[7rem]">Sign Up</Link>
@@ -96,7 +94,7 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 						</Link>
 					</div>
 					<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
-						<Button icon="search" class="button big-icon button--main-nav" aria-label="Search" />
+						<Button id="docsearch-button-mobile" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 						<Button icon="xmark-large" class="button big-icon button--main-nav" x-on:click="menu = null" aria-label="Close Menu" />
 					</div>
 				</div>
@@ -154,4 +152,5 @@ import MobileNavItem from "../nav/MobileNavItem.astro";
 			</div>
 		</div>
 	</nav>
+	<DocSearch client:only="preact" />
 </header>
