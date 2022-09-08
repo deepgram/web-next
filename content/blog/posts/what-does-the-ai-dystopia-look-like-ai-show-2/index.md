@@ -538,8 +538,4 @@ _["Napercise"](https://www.forbes.com/sites/brucelee/2017/04/29/napercise-why-na
 
 **Scott:** Are there some good things?
 
-**Susan:** There just might be.
-
-* * *
-
-Tweet Us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en) with your thoughts!
+**Susan:** There just might be.
