@@ -164,8 +164,6 @@ Kur takes in normal `wav` audio files. Then it grabs the spectrogram (FFT over t
 
 At Deepgram, we're really open about what we're working on. We know that A.I. is going to be huuuge and there are not enough trained people or good tools in the world to help it along ... yet. We hope [Kur](http://kur.deepgram.com), [KurHub](http://www.kurhub.com), our upcoming [Deep Learning Hackathon](http://www.deeplearninghackathon.com), and blog posts like this help out the community, gets people excited, and shows that the good stuff can now be used by everyone. We're a startup and our research team can only produce so much helpful material per unit time. The best way to help us is to implement your [favorite Deep Learning papers](https://github.com/terryum/awesome-deep-learning-papers) in [Kur](https://www.github.com/deepgram/kur) and upload it to [KurHub](http://www.kurhub.com/). You can also contribute to the Kur framework directly on [GitHub](https://github.com/deepgram/kur). You'll be showered with thanks from us and a pile of others that are hungry for good implementations.
 
-![missing](http://kur.deepgram.com/images/logo.png)
-
 <div style="text-align: center;">_We build A.I. Audio Brains._</div>
 
 ## Follow us to A.I. land
