@@ -125,7 +125,7 @@ async function downloadFile(url) {
 }
 ```
 
-This allows us to download a file to our machine. The file name will be derived from the last part of the URL - for example <https://example.com/directory/directory2/file.mp4> becomes `file.mp4` locally.
+This allows us to download a file to our machine. The file name will be derived from the last part of the URL - for example https://example.com/directory/directory2/file.mp4 becomes `file.mp4` locally.
 
 With this in place, we first download the video and then use our existing `transcribeLocalVideo()` function:
 
@@ -137,4 +137,4 @@ async function transcribeRemoteVideo(url) {
 }
 ```
 
-The complete project is available at <https://github.com/deepgram-devs/transcribe-videos> and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
+The complete project is available at https://github.com/deepgram-devs/transcribe-videos and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).

@@ -99,7 +99,7 @@ Copy the ngrok url and add it to Twilio by navigating to ‘Phone Numbers -> Man
 
 ![manage Twilio phone number](https://res.cloudinary.com/deepgram/image/upload/v1649274531/blog/2022/04/python-deepgram-twilio/active-twilio-numbers.png)
 
-Scroll down to the ‘Voice’ section and add the webhook, our ngrok URL with the recordings endpoint and save. Like this [https://6d71-104-6-9-133.ngrok.io/recordings](https://6d71-104-6-9-133.ngrok.io/recordings)
+Scroll down to the ‘Voice’ section and add the webhook, our ngrok URL with the recordings endpoint and save. Like this https://6d71-104-6-9-133.ngrok.io/recordings
 
 ![twilio webhook ngrok](https://res.cloudinary.com/deepgram/image/upload/v1649274530/blog/2022/04/python-deepgram-twilio/twilio-webhook-ngrok.png)
 
