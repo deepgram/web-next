@@ -25,7 +25,7 @@ og:
 
 ## **About Callbi Speech Analytics**
 
-Callbi is a global, easy to use, cloud-based SaaS contact center speech analytics solution that dominates the South African market. Callbi is recorder agnostic and needs no API integration with call recorder platforms, enabling non-technical users to get started within hours rather than months. It is a low-cost, highly effective solution that enables contact centers to maximize revenue, improve efficiencies and effectiveness, to reduce costs and to mitigate business risks. Callbi is a member of [Alphawave Group](https://alphawave.co.za), with over 350 employees specializing in the development and deployment of leading-edge technologies used all over the world. Callbi is easy to deploy, easy to learn, and easy to drive fast ROI. For more information or to arrange a demonstration please visit [https://callbi.io](https://callbi.io).
+Callbi is a global, easy to use, cloud-based SaaS contact center speech analytics solution that dominates the South African market. Callbi is recorder agnostic and needs no API integration with call recorder platforms, enabling non-technical users to get started within hours rather than months. It is a low-cost, highly effective solution that enables contact centers to maximize revenue, improve efficiencies and effectiveness, to reduce costs and to mitigate business risks. Callbi is a member of [Alphawave Group](https://alphawave.co.za), with over 350 employees specializing in the development and deployment of leading-edge technologies used all over the world. Callbi is easy to deploy, easy to learn, and easy to drive fast ROI. For more information or to arrange a demonstration please visit https://callbi.io.
 
 ## **About Deepgram **
 
