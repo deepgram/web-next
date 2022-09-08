@@ -1,27 +1,28 @@
 ---
 title: "Technical Writing: A Developer's Guide to Storytelling"
-description: "A complete developer's guide with tips and tricks for implementing storytelling into technical writing and documentation. Read more here."
+description: A complete developer's guide with tips and tricks for implementing
+  storytelling into technical writing and documentation. Read more here.
 date: 2022-03-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1647092465/blog/2022/03/technical-writing-a-developers-guide-to-storytelling/storytelling-in-technical-blog-posts%402x.jpg
 authors:
-    - bekah-hawrot-weigel
+  - bekah-hawrot-weigel
 category: best-practice
 tags:
-    - technical-writing
+  - technical-writing
 seo:
-    title: "Technical Writing: A Developer's Guide to Storytelling"
-    description: "A complete developer's guide with tips and tricks for implementing storytelling into technical writing and documentation. Read more here."
-shorturls:
-    share: https://dpgr.am/66fd1e9
-    twitter: https://dpgr.am/d61100d
-    linkedin: https://dpgr.am/45312be
-    reddit: https://dpgr.am/ec7d7cf
-    facebook: https://dpgr.am/7419fdb
+  title: "Technical Writing: A Developer's Guide to Storytelling"
+  description: A complete developer's guide with tips and tricks for implementing
+    storytelling into technical writing and documentation. Read more here.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454051/blog/technical-writing-a-developers-guide-to-storytelling/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454051/blog/technical-writing-a-developers-guide-to-storytelling/ograph.png
+shorturls:
+  share: https://dpgr.am/66fd1e9
+  twitter: https://dpgr.am/d61100d
+  linkedin: https://dpgr.am/45312be
+  reddit: https://dpgr.am/ec7d7cf
+  facebook: https://dpgr.am/7419fdb
 ---
-
-When I went to college, I wanted to be a Math major. Calculus II wasn’t offered my first semester, so I took *British and American Authors* instead. I have always loved reading, and to be able to talk about stories and share that experience with others made it a natural fit as my major. That chance class led to my ten years of teaching college English before coming into tech. Although I enjoyed reading novels and stories, I didn’t see the practicality in creative writing until I started learning how to write screenplays. That’s when I dove into [*The Writer’s Journey*](https://en.wikipedia.org/wiki/The_Writer%27s_Journey:_Mythic_Structure_for_Writers) by Christopher Vogler and learned more about why we tell stories, why we want to hear stories, and the connections we make through storytelling. And then suddenly I saw stories everywhere.
+When I went to college, I wanted to be a Math major. Calculus II wasn’t offered my first semester, so I took *British and American Authors* instead. I have always loved reading, and to be able to talk about stories and share that experience with others made it a natural fit as my major. That chance class led to my ten years of teaching college English before coming into tech. Although I enjoyed reading novels and stories, I didn’t see the practicality in creative writing until I started learning how to write screenplays. That’s when I dove into *[The Writer’s Journey](https://en.wikipedia.org/wiki/The_Writer%27s_Journey:_Mythic_Structure_for_Writers)* by Christopher Vogler and learned more about why we tell stories, why we want to hear stories, and the connections we make through storytelling. And then suddenly I saw stories everywhere.
 
 As I started teaching Technical Communication, I saw a lot of examples of technical writing that hadn’t seen the value of storytelling. In fact, my students probably would’ve called them “dry,” “boring,” or “personality-free.”  But that doesn’t mean that technical writing *should* be that way. Using storytelling in technical writing can actually enhance the effectiveness of your writing and help your audience to better comprehend and remember your content.
 
@@ -31,12 +32,12 @@ In my [last post on Technical Writing](https://developers.deepgram.com/blog/2022
 
 If we look at this from [a neuroscience perspective](https://contentmarketinginstitute.com/cco-digital/april-2019/storytelling-neuroscience-joe-lazauskas/), storytelling is effective for two reasons:
 
-1.  Humans are hard-wired to respond to storytelling. Our brains light up when we hear stories, which creates the connections we need to remember them.
-2.  Oxytocin - a neurochemical that helps us to feel connected with others - is released when we hear and connect to stories.
+1. Humans are hard-wired to respond to storytelling. Our brains light up when we hear stories, which creates the connections we need to remember them.
+2. Oxytocin - a neurochemical that helps us to feel connected with others - is released when we hear and connect to stories.
 
 It should be no surprise, then, that storytelling helps to connect us to our audience.
 
-According to Paul J. Zak in [*Why Your Brain Loves Good Storytelling*](https://hbr.org/2014/10/why-your-brain-loves-good-storytelling), “When you want to motivate, persuade, or be remembered, start with a story of human struggle and eventual triumph. It will capture people’s hearts – by first attracting their brains.”
+According to Paul J. Zak in *[Why Your Brain Loves Good Storytelling](https://hbr.org/2014/10/why-your-brain-loves-good-storytelling)*, “When you want to motivate, persuade, or be remembered, start with a story of human struggle and eventual triumph. It will capture people’s hearts – by first attracting their brains.”
 
 ### How to Storytell Effectively
 
@@ -64,10 +65,8 @@ Depending on the type of writing you’re doing, the approach will vary. For exa
 
 **Theme**: When I was writing a lot of [Cypress](https://www.cypress.io/) tests, I would frequently name things after characters from the tv show [Parks and Recreation](https://www.imdb.com/title/tt1266020/). In a sense, I wasn’t telling a story, but I was bringing in storytelling through my references. Beyond pop culture, other themes for writing can be derived from shared identities, cultures, and communities.
 
-**Visuals**: The Henrik Ibsen quote "A picture is worth a thousand words" tells how powerful images can be. Images can be woven into your writing and provide an opportunity for visual storytelling. Kevin's post on ["Building a Live Transcription Badge with Deepgram"](https://developers.deepgram.com/blog/2022/01/live-transcription-badge-video/), is an introduction to the video with essential links. However, if you look at [his incredibly popular tweet](https://twitter.com/_phzn/status/1478504862170161152?s=20\&t=uNmXTFv2kvTpml4CH19sYQ) that he references, you can see the added value of the initial short video.
+**Visuals**: The Henrik Ibsen quote "A picture is worth a thousand words" tells how powerful images can be. Images can be woven into your writing and provide an opportunity for visual storytelling. Kevin's post on ["Building a Live Transcription Badge with Deepgram"](https://developers.deepgram.com/blog/2022/01/live-transcription-badge-video/), is an introduction to the video with essential links. However, if you look at [his incredibly popular tweet](https://twitter.com/_phzn/status/1478504862170161152?s=20&t=uNmXTFv2kvTpml4CH19sYQ) that he references, you can see the added value of the initial short video.
 
 Writing, of course is a skill learned on its own aside from technical knowledge. One of my favorite essays on writing is Anne Lamott's ["Shitty First Drafts"](https://wrd.as.uky.edu/sites/default/files/1-Shitty%20First%20Drafts.pdf) from *Bird by Bird* because it captures the process of writing drafts and making changes so well. I first read the essay when I was doing my undergraduate degree, and I taught it to my undergraduates when I was still teaching. When you're incorporating storytelling into your writing, it will be a process. You'll have to decide what story you want to tell, how to tell the story, and where you want to tell the story. And then you'll evaluate if you've chosen the best path for the story, if you need to cut it down, if you've missed the purpose and connection. It's worth it though. Next week, we'll continue diving into finding your writing voice when I cover honesty and ethics in our writing.
 
 If you're enjoying this series, be sure to check out the Twitter Spaces we're doing by following us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
-
-        
