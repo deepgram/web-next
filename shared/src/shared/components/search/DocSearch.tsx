@@ -39,6 +39,13 @@ export default function Search() {
 		onClose,
 		onInput,
 		searchButton,
+	});
+
+	useDocSearchKeyboardEvents({
+		isOpen,
+		onOpen,
+		onClose,
+		onInput,
 		searchButtonMobile,
 	});
 
