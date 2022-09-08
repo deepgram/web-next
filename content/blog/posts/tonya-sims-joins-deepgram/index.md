@@ -1,26 +1,27 @@
 ---
-title: "Tonya Sims Joins the Developer Relations Team"
-description: "Meet Deepgram's new Developer Advocate and learn her story of getting into tech."
+title: Tonya Sims Joins the Developer Relations Team
+description: Meet Deepgram's new Developer Advocate and learn her story of
+  getting into tech.
 date: 2022-02-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643739380/blog/2022/02/tonya-sims-joins-deepgram/tonya-city.jpg
 authors:
-    - tonya-sims
+  - tonya-sims
 category: devlife
 tags:
-    - team
+  - team
 seo:
-    title: "Tonya Sims Joins the Developer Relations Team"
-    description: "Meet Deepgram's new Developer Advocate and learn her story of getting into tech."
-shorturls:
-    share: https://dpgr.am/1823103
-    twitter: https://dpgr.am/19b24a3
-    linkedin: https://dpgr.am/74ab82e
-    reddit: https://dpgr.am/6a40500
-    facebook: https://dpgr.am/9c02c30
+  title: Tonya Sims Joins the Developer Relations Team
+  description: Meet Deepgram's new Developer Advocate and learn her story of
+    getting into tech.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454001/blog/tonya-sims-joins-deepgram/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454001/blog/tonya-sims-joins-deepgram/ograph.png
+shorturls:
+  share: https://dpgr.am/1823103
+  twitter: https://dpgr.am/19b24a3
+  linkedin: https://dpgr.am/74ab82e
+  reddit: https://dpgr.am/6a40500
+  facebook: https://dpgr.am/9c02c30
 ---
-
 Fainting in an operating room during surgery launched my tech career.
 
 Yes, you read that correctly. As a pharmaceutical sales representative for the company I worked for, we observed someone undergoing surgery as part of our training.
@@ -50,5 +51,3 @@ Outside of work, I enjoy listening to music (anything from Tiesto!) and playing 
 ## Let's Connect
 
 It would be great to connect with you! I'm looking forward to learning more about you and what you're working on! Please feel free to reach out to me on [Twitter](https://twitter.com/tonyasims). I hope we have a chance to connect throughout your journey!
-
-        

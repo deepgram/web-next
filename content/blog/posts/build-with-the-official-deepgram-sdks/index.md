@@ -27,7 +27,7 @@ We love empowering our developer communities to take full advantage of voice in 
 
 ## How Easy Is It?
 
-To get started, make sure you have a Deepgram account by signing up at [https://console.deepgram.com/signup](https://console.deepgram.com/signup). After signing up, log in and get an API key. Then, in your terminal, run the appropriate command below to install the SDK.
+To get started, make sure you have a Deepgram account by signing up at https://console.deepgram.com/signup. After signing up, log in and get an API key. Then, in your terminal, run the appropriate command below to install the SDK.
 
 #### **Node.js**
 

@@ -28,6 +28,11 @@ jobs:
       IS_PRODUCTION: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       IS_STAGING: ${{ github.ref != 'refs/heads/main' && github.event_name == 'pull_request' }}
       DEPLOY_PREFIX: blog
+      WWW_DOMAIN: https://deepgramstg.wpengine.com
+      BLOG_DOMAIN: $URL
+      DOCS_DOMAIN: https://developers.deepgram.com
+      CONSOLE_DOMAIN: https://console.deepgram.com
+      STATUS_DOMAIN: https://status.deepgram.com
     steps:
       - name: Configure dynamic environment variables for production
         if: ${{ env.IS_PRODUCTION == 'true' }}

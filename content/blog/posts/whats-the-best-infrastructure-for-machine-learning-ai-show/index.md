@@ -41,7 +41,7 @@ It's not that suddenly brand new ideas magically appeared out of nowhere. It's t
 
 ### Why are GPUs so good?
 
-Susan: GPUs do the same operations that it takes to take a 3D scene, and rotate it around, and do all these special effects there. **Scott:** If you're gaming and the guy shoots this, or the plane flies here, this all has to be generated in a virtual world, and there are all the polygons, and points, but then it has to be projected onto your 2D screen. ![Alt](http://ak2.cdn.9appsdownloading.com/group1/M00/4B/0F/poYBAFX3MbiAW9T0AAC7m-PsvmU092.jpg) **Susan:** Yep, exactly. Those same calculations, that matrix math, is also at the core of most deep learning at the moment.
+Susan: GPUs do the same operations that it takes to take a 3D scene, and rotate it around, and do all these special effects there. **Scott:** If you're gaming and the guy shoots this, or the plane flies here, this all has to be generated in a virtual world, and there are all the polygons, and points, but then it has to be projected onto your 2D screen. ![Alt](https://ak2.cdn.9appsdownloading.com/group1/M00/4B/0F/poYBAFX3MbiAW9T0AAC7m-PsvmU092.jpg) **Susan:** Yep, exactly. Those same calculations, that matrix math, is also at the core of most deep learning at the moment.
 
 Deep learning has jumped, and adapted itself towards that GPU world that was in the 3D rendering world.
 
