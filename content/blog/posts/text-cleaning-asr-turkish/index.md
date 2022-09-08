@@ -96,10 +96,38 @@ Phew, that was a lot! The good news is, we can relax a bit when processing some 
 
 Hence, a simple piece of code is enough to clean up currencies. We first parse out the currency symbols with a tiny regex, look them up from a predefined dictionary of currency words, and finally replace them in the text. The code for this is below in Figure 3. 
 
-![](https://res.cloudinary.com/deepgram/image/upload/v1661981077/blog/text-cleaning-asr-turkish/currency-code.png)
+```python
+import re
 
-```
+CURR_SYMS = {
+"$": "dolar",
+"€": "euro",
+"£": "sterlin",
+"¥": "yen",
+"tl": "lira",
+"ytl": "lira",
+"₺": "lira"
+}
 
+CURR_REGEX = r"([$€£¥₺]|y?tl|try)"
+
+def convert_currency_syms(token):
+  token = token.lower()
+  words = CURR_SYMS.get(token, token)
+  return words
+
+def clean_currency_symbols(sentence):
+  match = re.search(CURR_REGEX, sentence)
+  while match:
+    mstring = match.group()
+    mstart, mend = match.span()
+    sentence = sentence[:mstart] + " " + convert_currency_syms(mstring) + sentence[mend:]
+    match = re.search(CURR_REGEX, sentence)
+  return sentence
+
+sent = "Hepsine 100$ verdim."
+>> clean_currency_symbols(sent)
+"Hepsine 100 dolar verdim."
 ```
 
 **Figure 3.** A sample code for running a regex to get correct Turkish currencies. 
