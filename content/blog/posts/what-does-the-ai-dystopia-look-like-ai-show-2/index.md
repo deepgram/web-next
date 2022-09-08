@@ -62,6 +62,7 @@ shorturls:
 **Scott:** What is privacy anyway?
 
 ![bigbro](https://res.cloudinary.com/deepgram/image/upload/v1661976812/blog/what-does-the-ai-dystopia-look-like-ai-show-2/1984_by_iskallvinter_d15owbe.jpg)
+
 _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70025882)_
 
 **Susan:** Now, we're going to take the loss of privacy to the next level. Not only will they have your data, but they'll have the computing power and the algorithms to actually do something with it.
@@ -128,7 +129,9 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 
 **Scott:** Well, have you ever seen the show Black Mirror?
-![mirror](https://res.cloudinary.com/deepgram/image/upload/v1661976813/blog/what-does-the-ai-dystopia-look-like-ai-show-2/download-1.jpg) _"Fifteen Million Merits" Series 1, episode 2 of Black Mirror._
+![mirror](https://res.cloudinary.com/deepgram/image/upload/v1661976813/blog/what-does-the-ai-dystopia-look-like-ai-show-2/download-1.jpg)
+
+_"Fifteen Million Merits" Series 1, episode 2 of Black Mirror._
 
 **Susan:** First of all, if you see the first episode... Go to the second or third episode. The first one will just...
 
@@ -158,7 +161,9 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Susan:** Oh, whew. That is is tremendous.
 
+
 ## Are they going to take our jobs?
+
 
 **Susan:** If you drive something, you can forget about it. Cars, trucks, planes, which ... Man, get in an aircraft. There's no cockpit.
 
@@ -168,7 +173,9 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Scott:** They could poison you. Or they just selectively, "Oh, you're not a Trump supporter? Your food is going to be cold."
 
+
 ## Technology is high-tech mediocrity
+
 
 **Susan:** I was just thinking the whole drone revolution there, delivery revolution, suddenly you're starting to get the seconds stuff. You've got to pay for Prime to get the fresh eggs, right? These are still technically good, but they're one day away from expiration. It's like, magically, all the food that gets delivered to your house, unless you pay the premium, is one day away from expiration.
 
@@ -238,7 +245,9 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Susan:** Another interesting thing is, as technology gets better we're able to enforce laws that when they were put in place they were never intended to be enforced at that level. Just think about speeding tickets and the like. The idea of speeding and the resources put into catching people and all that were from before we had technology - like cameras and stuff like that. The laws were put in place back then.
 
-![cops](https://res.cloudinary.com/deepgram/image/upload/v1661976815/blog/what-does-the-ai-dystopia-look-like-ai-show-2/lexus_police_edition_by_eun_su_d4xr1fd-1.jpg) _Photo credit: [Eun-su](https://www.deviantart.com/eun-su/art/Lexus-Police-Edition-298553593)_
+![cops](https://res.cloudinary.com/deepgram/image/upload/v1661976815/blog/what-does-the-ai-dystopia-look-like-ai-show-2/lexus_police_edition_by_eun_su_d4xr1fd-1.jpg)
+
+_Photo credit: [Eun-su](https://www.deviantart.com/eun-su/art/Lexus-Police-Edition-298553593)_
 
 **Scott:** Yeah, a while ago.
 
@@ -304,7 +313,9 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Susan:** Yeah, DeadElectron! I like it, DeadElectron.
 
-<iframe src="https://www.youtube.com/embed/gA03iyI3yEA" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>_This company really does make AI music._
+<iframe src="https://www.youtube.com/embed/gA03iyI3yEA" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+*This company really does make AI music.*
 
 **Scott:** There we go, yeah. Is anything going to get better? Is my life going to be easy now, because AI dictates my life? Are you going to get the Jetson's finger cramp from pressing the button?
 
@@ -338,7 +349,9 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Susan:** Ooh, they can go on a pre-date.
 
-![dating](https://res.cloudinary.com/deepgram/image/upload/v1661976816/blog/what-does-the-ai-dystopia-look-like-ai-show-2/dating-bots.jpg) _**The press seem to believe that we will be dating robots, when indeed, it's the robots who'll date in our stead-proxy dating.**_
+![dating](https://res.cloudinary.com/deepgram/image/upload/v1661976816/blog/what-does-the-ai-dystopia-look-like-ai-show-2/dating-bots.jpg)
+
+*The press seem to believe that we will be dating robots, when indeed, it's the robots who'll date in our stead-proxy dating.*
 
 **Scott:** Yeah, a pre-date to figure out if the ... It's like blind dating, but you blame the AI now, if it doesn't go well.
 
@@ -378,7 +391,9 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Susan:** Everywhere.
 
+
 > "They'll be looking at your email. Have you sent enough emails today? Have you attended enough meetings? Have you spoken enough words to your coworkers? Have you said enough buzzwords?"
+
 
 **Susan:** A performance review will come into your email, completely crafted by some sort of machine learning algorithm.
 
@@ -398,7 +413,10 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Susan:** There's huge promise in that. Don't get me wrong, but there are dangers of fitting too much to the mean there.
 
+
+
 ## The machines use us for only one thing
+
 
 **Scott:** What's the value of a human anymore? I mean, this is just going to be The Matrix soon, where we're just a power source for AI overlords. What's the deal?
 
@@ -412,7 +430,9 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Susan:** Oh, is only creativity left?
 
-![imagine](https://res.cloudinary.com/deepgram/image/upload/v1661976817/blog/what-does-the-ai-dystopia-look-like-ai-show-2/04-11_Robots_repost-unsplash-web.jpg) _Source: [Jehyun Sung](https://unsplash.com/photos/xdEeLyK4iBo)_
+![imagine](https://res.cloudinary.com/deepgram/image/upload/v1661976817/blog/what-does-the-ai-dystopia-look-like-ai-show-2/04-11_Robots_repost-unsplash-web.jpg) 
+
+_Source: [Jehyun Sung](https://unsplash.com/photos/xdEeLyK4iBo)_
 
 **Scott:** Our only job ... Yeah, that's it, and you take in all the inputs and you're like, "No, it should be this way."
 
@@ -452,7 +472,9 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Susan:** It's going to be awesome. Yeah, the lights slowly go down.
 
-![nap](https://res.cloudinary.com/deepgram/image/upload/v1661976818/blog/what-does-the-ai-dystopia-look-like-ai-show-2/napercise.jpg) _["Napercise"](https://www.forbes.com/sites/brucelee/2017/04/29/napercise-why-nap-for-free-when-you-can-pay-for-it/#68e889164be4), as David Lloyd Clubs in London calls it, is not far off. Soon all humans will do is be randomly creative and drink juice from sippy cups._
+![nap](https://res.cloudinary.com/deepgram/image/upload/v1661976818/blog/what-does-the-ai-dystopia-look-like-ai-show-2/napercise.jpg)
+
+_["Napercise"](https://www.forbes.com/sites/brucelee/2017/04/29/napercise-why-nap-for-free-when-you-can-pay-for-it/#68e889164be4), as David Lloyd Clubs in London calls it, is not far off. Soon all humans will do is be randomly creative and drink juice from sippy cups._
 
 **Scott:** Is this something you did at school back in the day? This is something that they do at school now in California, at least. You have your own blanket. You get your milk. You take a nap.
 
