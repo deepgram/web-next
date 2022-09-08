@@ -61,7 +61,8 @@ shorturls:
 
 **Scott:** What is privacy anyway?
 
-![bigbro](https://res.cloudinary.com/deepgram/image/upload/v1661976812/blog/what-does-the-ai-dystopia-look-like-ai-show-2/1984_by_iskallvinter_d15owbe.jpg) _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70025882)_
+![bigbro](https://res.cloudinary.com/deepgram/image/upload/v1661976812/blog/what-does-the-ai-dystopia-look-like-ai-show-2/1984_by_iskallvinter_d15owbe.jpg)
+_Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70025882)_
 
 **Susan:** Now, we're going to take the loss of privacy to the next level. Not only will they have your data, but they'll have the computing power and the algorithms to actually do something with it.
 
