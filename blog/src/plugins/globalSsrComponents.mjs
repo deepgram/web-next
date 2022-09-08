@@ -10,10 +10,10 @@ export default function globals() {
 		name: "astro-global-ssr-components",
 		hooks: {
 			"astro:config:setup": ({ injectScript }) => {
-				glob("src/{components,shared}/components/global/*.page-ssr.astro", {}, function (er, files) {
+				glob("src/{components,shared}/components/global/*.astro", {}, function (er, files) {
 					files.forEach((file) => {
 						const info = path.parse(file);
-						const name = info.name.replace(".page-ssr", "");
+						const name = info.name;
 						console.log(`$ importing ${name} into the global scope.`);
 						injectScript("page-ssr", `import ${name} from "${cwd}/${file}"; global.${name} = ${name};`);
 					});
