@@ -300,7 +300,3 @@ Everybody knows it, but not too many people are really stating that seed change.
 **Susan:** Yeah, like I said, we start off adapting to the hardware, and now we're seeing the hardware adapt to us, and it's the circle of computer life.
 
 **Scott:** The circle of life. They eat each other too and they recycle the silicone.
-
-- - -
-
-Tweet Us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en) with your thoughts!
