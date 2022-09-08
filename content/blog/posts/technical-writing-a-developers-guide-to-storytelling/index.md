@@ -26,7 +26,7 @@ When I went to college, I wanted to be a Math major. Calculus II wasn’t offere
 
 As I started teaching Technical Communication, I saw a lot of examples of technical writing that hadn’t seen the value of storytelling. In fact, my students probably would’ve called them “dry,” “boring,” or “personality-free.”  But that doesn’t mean that technical writing *should* be that way. Using storytelling in technical writing can actually enhance the effectiveness of your writing and help your audience to better comprehend and remember your content.
 
-### Why should we incorporate storytelling?
+## Why should we incorporate storytelling?
 
 In my [last post on Technical Writing](https://developers.deepgram.com/blog/2022/03/technical-writing-a-beginners-guide/), we covered the basics. Adding storytelling makes your writing memorable. Storytelling, at its core, is about sharing: sharing your experience, your knowledge, the things that have inspired you. When we share stories, we’re inviting people to participate in the experience, and that’s why stories are so impactful. They allow us to relate to each other, better understand concepts, and acknowledge the voices of those around us. Because stories encourage personal connection, they’re an effective method for engaging an audience and helping them to remember the content we’re sharing.
 
@@ -39,19 +39,19 @@ It should be no surprise, then, that storytelling helps to connect us to our aud
 
 According to Paul J. Zak in *[Why Your Brain Loves Good Storytelling](https://hbr.org/2014/10/why-your-brain-loves-good-storytelling)*, “When you want to motivate, persuade, or be remembered, start with a story of human struggle and eventual triumph. It will capture people’s hearts – by first attracting their brains.”
 
-### How to Storytell Effectively
+## How to Storytell Effectively
 
 We should think of storytelling as a decoration for our writing. Too much decoration and the reader won’t be able to see the main point or will get frustrated trying to find it and quit reading. Too little storytelling and your reader is less likely to be invested. Have you ever landed on a blog post for a recipe but the writer tells you the whole history of their grandma’s kitchen before getting to the actual recipe? That is *not* what we want in our writing. We want to grab the reader’s attention with the story, but make sure we’re not waiting to long to get to the point. And that means knowing your audience and the purpose of your writing.
 
-#### Audience
+### Audience
 
 In the [last post](https://developers.deepgram.com/blog/2022/03/technical-writing-a-beginners-guide/), we covered audience, but it’s important to note that *which* story you choose will largely depend on your audience. If you think about *who* your audience is, you can more effectively choose which story or example to tell. For example, if you’re writing for a general audience, you’ll need to choose a story that most of the readers can relate to. I have a talk on mentorship where I look at the mythological journey of the hero and the impact of the mentor. My go-to references are to *Lord of the Rings*, *Star Wars*, and *Harry Potter* and the mentors the heroes find in Gandolf, Yoda, and Dumbledore. They’re popular enough that I get broad understanding and also the connection that those characters have with readers.
 
-#### Purpose
+### Purpose
 
 We should never tell a story for the sake of telling a story. We gain reader trust by giving them a meaningful story that enhances the writing and illuminates our main ideas. It should be like a piece of thread that fits into the pattern and helps to hold the cloth together. In my mentor talk, I don't just name drop the movies and mentors, I still connect it to the purpose of the talk and provide context for the examples and explanation of how those paths to the mentors relate to paths we can create for our teammates, mentees, and people coming into tech. One trick to determine if the story contributes to the purpose of your writing is to remove the story and see if your writing loses meaning. If it does, chances are you’ve used the story well.
 
-### Ways to Implement Storytelling in Your Writing
+## Ways to Implement Storytelling in Your Writing
 
 Depending on the type of writing you’re doing, the approach will vary. For example, it’s more natural to see a story integrated in a blog post. We expect this in many of the blogs we read. However, we might not expect it from technical documentation or in user manuals. Here are some options for using storytelling in your writing:
 
