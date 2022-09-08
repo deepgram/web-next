@@ -1,39 +1,40 @@
 ---
-title: "Python Speech Recognition Locally with TorchAudio"
-description: "Learn how to use the Python TorchAudio library and its Emformer Model for local speech recognition"
+title: Python Speech Recognition Locally with TorchAudio
+description: Learn how to use the Python TorchAudio library and its Emformer
+  Model for local speech recognition
 date: 2022-07-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1657708926/blog/2022/07/python-speech-recognition-locally-torchaudio/cov.jpg
 authors:
-    - yujian-tang
+  - yujian-tang
 category: tutorial
 tags:
-    - python
+  - python
 seo:
-    title: "Python Speech Recognition Locally with TorchAudio"
-    description: "Learn how to use the Python TorchAudio library and its Emformer Model for local speech recognition"
-shorturls:
-    share: https://dpgr.am/6f6eb4e
-    twitter: https://dpgr.am/7fdfd20
-    linkedin: https://dpgr.am/d2e2258
-    reddit: https://dpgr.am/1385e37
-    facebook: https://dpgr.am/b02940e
+  title: Python Speech Recognition Locally with TorchAudio
+  description: Learn how to use the Python TorchAudio library and its Emformer
+    Model for local speech recognition
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454110/blog/python-speech-recognition-locally-torchaudio/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454110/blog/python-speech-recognition-locally-torchaudio/ograph.png
+shorturls:
+  share: https://dpgr.am/6f6eb4e
+  twitter: https://dpgr.am/7fdfd20
+  linkedin: https://dpgr.am/d2e2258
+  reddit: https://dpgr.am/1385e37
+  facebook: https://dpgr.am/b02940e
 ---
-
 "Your call may be recorded for quality assurance purposes."
 
 We’ve all heard this when calling customer service. What are they doing with that call? How are they transcribing it? Back in the early 2000s and late 1990s, companies were using people to transcribe these. Now, [natural language processing](https://en.wikipedia.org/wiki/Natural_language_processing) has come far along enough that we can use Python and machine learning to do automatic speech recognition.
 
 In this post, we’ll focus on how to do speech recognition locally on your device using TorchAudio’s pre-built Emformer RNN-T model. We will cover:
 
-*   [Understanding PyTorch TorchAudio](#understanding-pytorch-torchaudio)
-*   [Setting Up TorchAudio for Speech Recognition](#setting-up-torchaudio-for-speech-recognition)
-*   [Building a Python Audio Data Streaming Function for Speech Recognition](#building-a-python-audio-data-streaming-function-for-speech-recognition)
-*   [Setting up Python Speech Recognition Inference Pipeline](#setting-up-python-speech-recognition-inference-pipeline)
-*   [Creating a Context Cache to Store Audio Data for Speech Recognition](#creating-a-context-cache-to-store-audio-data-for-speech-recognition)
-*   [Using TorchAudio’s Emformer Model for Local Speech Recognition in Python](#using-torchaudios-emformer-model-for-local-speech-recognition-in-python)
-*   [In Summary](#in-summary)
+* [Understanding PyTorch TorchAudio](#understanding-pytorch-torchaudio)
+* [Setting Up TorchAudio for Speech Recognition](#setting-up-torchaudio-for-speech-recognition)
+* [Building a Python Audio Data Streaming Function for Speech Recognition](#building-a-python-audio-data-streaming-function-for-speech-recognition)
+* [Setting up Python Speech Recognition Inference Pipeline](#setting-up-python-speech-recognition-inference-pipeline)
+* [Creating a Context Cache to Store Audio Data for Speech Recognition](#creating-a-context-cache-to-store-audio-data-for-speech-recognition)
+* [Using TorchAudio’s Emformer Model for Local Speech Recognition in Python](#using-torchaudios-emformer-model-for-local-speech-recognition-in-python)
+* [In Summary](#in-summary)
 
 ## Understanding PyTorch TorchAudio
 
@@ -198,5 +199,3 @@ Speech recognition has come a long way from its first inception. We can now use 
 In this post, we covered how to run speech recognition locally with their Emformer RNN-T. First, we created an audio data streaming function. Next, we defined a pipeline object which can run speech recognition on tensors and turn them into text. Then, we created a cache to cache the audio data as it came in. We also created a main function to handle running the audio data stream as a subprocess and run inference on it while it ran. Finally, we ran that main function with varying parameters to let it know we are streaming data in from the mic and using an Emformer RNN-T model.
 
 Want to do speech recognition without all that code? [Sign up for Deepgram](https://console.deepgram.com) today and be up and running in just a few minutes.
-
-        
