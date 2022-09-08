@@ -26,7 +26,7 @@ Call analysis can be real-time or post-call to pull out relevant data or review 
 
 This process starts with recording and collecting the audio from both the customer and the agent, normally on two channels, and sending it to a speech-to-text solution that converts the audio to text. The speech-to-text platform may also send other metadata to help the Natural Language Processing/Understanding solution determine the intent of the conversation. NLP/NLU solutions take the text and try to find the intent of the conversation and sentiment. Is the conversation about a product sale or product issue? Are the customer and agent happy or angry? This data is fed into a data integrator that organizes the text and meta-data, like sentiment, into a database that can be queried. The end-user business intelligence (BI) application uses the data query to create the dashboards for supervision and management of all the calls. The overall goal of call analytics is to improve customer experience, improve customer support, increase sales or reduce costs.
 
-
+![](https://res.cloudinary.com/deepgram/image/upload/v1661976848/blog/tips-on-choosing-a-call-analytics-development-path/call-analytics-reference-architecture%402x-1.png)
 
 ### Audio and Meta-Data Collection
 
