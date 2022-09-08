@@ -1,25 +1,29 @@
 ---
-title: "Voice Control Your Browser with Stëmm"
-description: "Leveraging both the Deepgram API & Chrome APIs into a Chrome extension that lets users control the browser hands-free with voice commands. Learn how we did it here."
+title: Voice Control Your Browser with Stëmm
+description: Leveraging both the Deepgram API & Chrome APIs into a Chrome
+  extension that lets users control the browser hands-free with voice commands.
+  Learn how we did it here.
 date: 2022-03-07
 cover: https://res.cloudinary.com/deepgram/image/upload/v1646056012/blog/2022/03/voice-control-browser-stemm/stemm.jpg
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: project-showcase
 tags:
-    - nodejs
-    - hackathon
+  - nodejs
+  - hackathon
 seo:
-    title: "Voice Control Your Browser with Stëmm"
-    description: "Leveraging both the Deepgram API & Chrome APIs into a Chrome extension that lets users control the browser hands-free with voice commands. Learn how we did it here."
-shorturls:
-    share: https://dpgr.am/af2c780
-    twitter: https://dpgr.am/7bd62ea
-    linkedin: https://dpgr.am/57dae70
-    reddit: https://dpgr.am/6b556e8
-    facebook: https://dpgr.am/f8fce58
+  title: Voice Control Your Browser with Stëmm
+  description: Leveraging both the Deepgram API & Chrome APIs into a Chrome
+    extension that lets users control the browser hands-free with voice
+    commands. Learn how we did it here.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454056/blog/voice-control-browser-stemm/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454056/blog/voice-control-browser-stemm/ograph.png
+shorturls:
+  share: https://dpgr.am/af2c780
+  twitter: https://dpgr.am/7bd62ea
+  linkedin: https://dpgr.am/57dae70
+  reddit: https://dpgr.am/6b556e8
+  facebook: https://dpgr.am/f8fce58
 ---
 
 Back in January, we supported Hack Cambridge - a 24-hour student hackathon. The team behind Stëmm wanted to bring voice control to one of the most used applications globally - Google Chrome. I sat down with [Benedek Der](https://www.linkedin.com/in/benedek-dér-b8b410200/), [Bianca Sandu](https://www.linkedin.com/in/bianca-sandu-89b364202), [Julius Weisser](https://www.linkedin.com/in/julius-weisser-4895a61b8), and [Siddharth Srivastava](http://siddharthsrivastava0501.github.io) to ask them about their project.
@@ -34,7 +38,7 @@ Fortunately, some of the team saw our live demo at the event that highlighted ho
 
 After bouncing around ideas, they chose to expand their knowledge from October's event. They landed on what would become Stëmm - the aim was to build a browser interface for users with motor disabilities. The team leveraged both the Deepgram API and Chrome API into a Chrome extension that, once installed and given microphone permissions, lets users control Chrome hands-free with voice commands like "chrome, open tab," "chrome, search for recipes," and "chrome, add bookmark."
 
-<youtube id="8w6rmlqOW6o"></youtube>
+<YouTube id="8w6rmlqOW6o"></YouTube>
 
 ## Command and Control
 
@@ -49,5 +53,4 @@ As you might imagine, Google has a strict set of security provisions for extensi
 Once the extension could access a user's microphone and get transcripts from Deepgram, the result used a language processing algorithm built by Benedek & Bianca to identify the commands in the recorded text, and by integrating these commands with the Chrome developer tools, it executes them to control the browser.
 
 The extension is still somewhat limited in terms of commands, but the team directly welcomes contributions to their project repository to add new features. You can find setup and contribution guidelines [directly on GitHub](https://github.com/siddharthsrivastava0501/hackcambridge-2022).
-
-        
+

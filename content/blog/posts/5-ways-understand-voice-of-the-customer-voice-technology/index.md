@@ -27,8 +27,6 @@ There's no doubt that customer feedback is important for businesses. It can help
 
 <WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
-
-
 ## What is the Voice of the Customer?
 
 Voice of the customer (or VoC, also occasionally called "customer voice") is the customer's opinion about a company, including general impressions as well as specific feedback about a company's products and services. It can be positive or negative. Customer voice is important for businesses because it can help them understand what customers think about their business and where they need to make improvements. There are a number of ways to collect the voice of the customer, such as surveys, customer interviews, and focus groups, but there are problems with each of these methods. Surveys, for example, often only get 2% or 3% response rates, and those responses are typically only from people who are either very happy or very upset. Additionally, although surveys can be sent quickly after transactions, the other methods-like customer interviews-come with a time lag, which can lead to lost information as people forget how they felt about their experiences.

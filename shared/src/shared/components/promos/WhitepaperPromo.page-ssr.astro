@@ -35,7 +35,7 @@ const { theme, title, image, url, hubSpotId, zapHook } = whitepaper;
 const formId = await getUuid();
 ---
 
-<AbstractPromo strapline="White Paper" backgroundImage={image} theme={theme} title={title} {...rest}>
+<AbstractPromo class="my-10" strapline="White Paper" backgroundImage={image} theme={theme} title={title} {...rest}>
 	<PromoForm theme={theme} url={url} hook={zapHook}>
 		<input type="hidden" name="hubSpotId" value={hubSpotId} />
 		<div class="grid grid-cols-5 form--inline">

@@ -258,11 +258,13 @@ We then create an empty list called `data` and check if there are any `results` 
 
 Example output may look like the below, depending on which song we create.
 
+```
     [
     {'word': '1', 'start': 2.0552316, 'end': 2.4942129, 'confidence': 0.99902344, 'punctuated_word': '1'}, 
     {'word': '4', 'start': 2.8533795, 'end': 3.172639, 'confidence': 0.9980469, 'punctuated_word': '4'}, 
     {'word': '3', 'start': 3.6116204, 'end': 4.1116204, 'confidence': 0.9975586, 'punctuated_word': '3'}
     ]
+```
 
 We notice that the `word` key in the above response correlates to a numeral we speak into the microphone when recording the song.
 
@@ -497,4 +499,3 @@ while i < len(data):
    tick += 0.005 # or 0.001 or 0.0001
 ```
 
-        

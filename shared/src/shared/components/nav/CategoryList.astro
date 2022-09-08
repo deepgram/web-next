@@ -4,60 +4,49 @@ import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 
 const categories = await getSluggedJson("blog/category");
+
+const isActive = (path) => {
+	return path === Astro.url.pathname;
+};
 ---
 
-<div>
-	<div class="hidden lg:block mb-10">
-		<h3>Categories</h3>
-		<ul class="mb-4">
-			{categories &&
-				categories.map((cat) => {
-					return (
-						<li>
-							<Link href={cat.slug}>{cat.title}</Link>
-						</li>
-					);
-				})}
-		</ul>
+<div class="hidden lg:block lg:sticky lg:top-20 mb-20">
+	<h3 class="pb-8">Categories</h3>
+	<ul>
+		{categories &&
+			categories.map((category) => {
+				const path = `/categories/${category.slug}`;
+				return (
+					<li class="pb-4">
+						<Link class:list={["hover:text-iris font-semibold leading-5", { "text-darkCharcoal": !isActive(path) }, { "text-storm": isActive(path) }]} href={path}>
+							{category.title}
+						</Link>
+					</li>
+				);
+			})}
+	</ul>
+	<div class="mt-6">
 		<Link href="/posts" class="button button--secondary button--small" iconSuffix icon="arrow-right">View All</Link>
 	</div>
-	<!-- mobile -->
-	<div x-data="{ open: false }" class="block bg-rock lg:hidden mb-10">
-		<Link @click="open = !open" class="button button--senary button--small button--block flex justify-between items-center text-white">
-			<h3 class="pb-0">Categories</h3>
-			<Icon icon="angle-down" class="fill-gray-300 w-[1em] h-[1em]" x-bind:class="{ 'rotate-180' : open }" />
-		</Link>
-
-		<ul class="hidden absolute w-full z-10 bg-rock overflow-y-auto max-h-[36rem]" x-bind:class="{hidden: !open, block: open}">
-			<hr class="sticky top-0 left-[3%] md:left-[2%] w-[97%] mb-4 bg-steel opacity-30" />
-			{categories &&
-				categories.map((cat) => {
-					return (
-						<li>
-							<Link class="font-inter pl-4 font-normal text-white" href={cat.slug}>
-								{cat.title}
-							</Link>
-						</li>
-					);
-				})}
-		</ul>
-	</div>
 </div>
+<!-- mobile -->
+<div x-data="{ open: false }" class="block bg-rock lg:hidden mb-10">
+	<Link @click="open = !open" class="button button--senary button--small button--block flex justify-between items-center text-white">
+		<h3 class="pb-0">Categories</h3>
+		<Icon icon="angle-down" class="fill-gray-300 w-[1em] h-[1em]" x-bind:class="{ 'rotate-180' : open }" />
+	</Link>
 
-<style>
-	h3 {
-		@apply pb-8;
-	}
-
-	li a {
-		@apply text-darkCharcoal hover:text-fireEngine font-semibold leading-5;
-	}
-
-	li {
-		@apply pb-4;
-	}
-
-	button {
-		@apply mt-6;
-	}
-</style>
+	<ul class="hidden absolute w-full z-20 bg-rock overflow-y-auto max-h-[36rem]" x-bind:class="{hidden: !open, block: open}">
+		<hr class="sticky top-0 left-[3%] md:left-[2%] w-[97%] mb-4 bg-steel opacity-30" />
+		{categories &&
+			categories.map((category) => {
+				return (
+					<li class="pb-4">
+						<Link class="font-inter pl-4 font-normal text-white" href={`/categories/${category.slug}`}>
+							{category.title}
+						</Link>
+					</li>
+				);
+			})}
+	</ul>
+</div>

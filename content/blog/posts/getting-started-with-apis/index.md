@@ -26,7 +26,7 @@ When I first started building websites it took me a while to gain confidence wit
 
 This is a blog post summary of a talk I gave at codebar Festival in March 2021. If you'd rather learn this in video form I've included it here.
 
-<youtube id="66xLBqosPog"></youtube>
+<YouTube id="66xLBqosPog"></YouTube>
 
 ## What are APIs
 

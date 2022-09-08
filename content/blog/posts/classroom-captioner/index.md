@@ -35,7 +35,7 @@ This project, Classroom Captioner, aims to alleviate the concerns of students wh
 3.  Provide the room code to students to put in the same web application.
 4.  Speak as usual - the tab can be left in the background.
 
-If you want to see the finished code and deploy your own version of this project in one click, visit <https://github.com/deepgram-devs/classroom-captioner>.
+If you want to see the finished code and deploy your own version of this project in one click, visit <a href="https://github.com/deepgram-devs/classroom-captioner">https://github.com/deepgram-devs/classroom-captioner</a>.
 
 ## Before We Start
 
@@ -136,7 +136,7 @@ We'll create the student and lecturer views later. For now, add an `index.html` 
 </html>
 ```
 
-Start your server by running `node index.js` and navigate to <http://localhost:3000>. Type a value into the first input and submit the form. You should be sent to `http://localhost:3000/student?id=TYPEDVALUE` (which should present an error as there is no file yet for that page). However, this confirms that our landing page can direct users to the student and lecturer pages.
+Start your server by running `node index.js` and navigate to `http://localhost:3000`. Type a value into the first input and submit the form. You should be sent to `http://localhost:3000/student?id=TYPEDVALUE` (which should present an error as there is no file yet for that page). However, this confirms that our landing page can direct users to the student and lecturer pages.
 
 ![Webpage with the title "Classroom Captioner" with two forms. The first form says "join as a student" and asks for a Room ID. The second form is the same except it starts "create as a lecturer".](https://res.cloudinary.com/deepgram/image/upload/v1644272676/blog/2022/02/classroom-captioner/landing-no-style.png)
 
@@ -433,7 +433,7 @@ Restart your server one final time and your application should look like this:
 
 ## Run Your Own
 
-If you want to see the finished code and deploy your own version of this project in one click, visit <https://github.com/deepgram-devs/classroom-captioner>.
+If you want to see the finished code and deploy your own version of this project in one click, visit <a href="https://github.com/deepgram-devs/classroom-captioner">https://github.com/deepgram-devs/classroom-captioner</a>.
 
 ## Wrapping Up
 

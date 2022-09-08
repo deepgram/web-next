@@ -1,24 +1,26 @@
 ---
-title: "How Does Santa Do It? — AI Show"
-description: ""
+title: How Does Santa Do It? — AI Show
+description: How does Santa make it around the world in one night to deliver
+  presents? We've cracked his secrets.
 date: 2018-12-20
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981339/blog/how-does-santa-do-it-ai-show/how-does-santa-do-it%402x.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - deep-learning
+  - machine-learning
 seo:
-  title: "How Does Santa Do It? — AI Show"
+  title: How Does Santa Do It? — AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981339/blog/how-does-santa-do-it-ai-show/how-does-santa-do-it%402x.jpg
 shorturls:
   share: https://dpgr.am/182c55e
   twitter: https://dpgr.am/3642cab
   linkedin: https://dpgr.am/23a76c1
   reddit: https://dpgr.am/32fc3a4
   facebook: https://dpgr.am/6940d6f
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981339/blog/how-does-santa-do-it-ai-show/how-does-santa-do-it%402x.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/yf7MdVgMlbk" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe><iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/555973752&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe>**Scott:** Welcome to the AI show. Today we're asking the question. The big question, the really big question, the secret deep down thing that we think we've uncovered: What is Santa's secret. **Susan:** Yeah how? How does that big jolly red guy do it? **Scott:** How does he do it? We think we figured it out though. **Susan:** I mean it's pretty obvious what he's doing. **Scott:** Yeah, it's really obvious. **Susan:** When you lay out the facts, like he's got a horde of tasks he's gotta do. The orders of magnitudes of tasks that he's gotta do. Like it's not normal to be able to do this kind of thing. Just one man, he has elves, in the North Pole, cold place. And he has all these millions, billions of people to visit around the world.

@@ -1,24 +1,26 @@
 ---
 title: "Top 6 Dutch ASR Challenges: Diverse Dialects, Data, and Dictionaries"
-description: "The history and diversity of Dutch present unique challenges when building a Dutch ASR system. Here are the top six."
+description: The history and diversity of Dutch present unique challenges when
+  building a Dutch ASR system. Here are the top six.
 date: 2022-04-21
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981418/blog/top-6-dutch-asr-challenges/top-6-dutch-asr-challenges-thumb-554x220%402x.png
 authors:
   - conner-goodrum
 category: tutorial
 tags:
-  - ohsnap
+  - language
 seo:
   title: "Top 6 Dutch ASR Challenges: Diverse Dialects, Data, and Dictionaries"
-  description: "The history and diversity of Dutch present unique challenges when building a Dutch ASR system. Here are the top six."
+  description: The history and diversity of Dutch present unique challenges when
+    building a Dutch ASR system. Here are the top six.
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981418/blog/top-6-dutch-asr-challenges/top-6-dutch-asr-challenges-thumb-554x220%402x.png
 shorturls:
   share: https://dpgr.am/e54e446
   twitter: https://dpgr.am/4076e4f
   linkedin: https://dpgr.am/c84af2d
   reddit: https://dpgr.am/ee61a6c
   facebook: https://dpgr.am/d99589f
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981418/blog/top-6-dutch-asr-challenges/top-6-dutch-asr-challenges-thumb-554x220%402x.png
 ---
 
 Dutch is an Indo-European language, spoken in Northern Europe, primarily in Holland and Belgium. The language has about 25 million native speakers, and another 5 million second language learners. The term "Dutch" actually encompasses two different language varieties-_Nederlands_, the variety of the language spoken in Holland, and _Vlaams_ (or Flemish in English), spoken mainly in Northern Belgium. The two varieties are so similar that they are largely mutually intelligible, and have the same International Organization for Standardization (ISO) code, although there are non-trivial differences in vocabulary and pronunciation between the two. This blog post outlines some of the challenges in training a Dutch automatic speech recognition model that works well on different varieties of the language, given the diversity that we see on the ground.
@@ -36,8 +38,6 @@ Further complicating the issue with dictionary size, Dutch also has a large numb
 There are many dialects spoken across the Netherlands and Belgium, and they aren't always widely understandable by people who speak a different variety. In the introduction, two large dialect groups were defined-_Nederlands_ and _Vlaams_-but the situation is actually much more complicated and diverse, with each of those two varieties having multiple different dialects subsumed under them. And Frisian-technically a different language, but extremely similar to Dutch (and English!)-is also sometimes included in the general Dutch language area, further complicating matters. This creates challenges when training an ASR model due to different spellings of words, different pronunciations, and altogether different vocabulary items-Flemish, for example, tends to have more words borrowed from French due to being in Belgium.  The dictionaries that models use have limited vocabularies, as discussed above, so you have two options. The first is to standardize everything to one type of Dutch, which requires laborious and careful preprocessing of data and can introduce ambiguities. This also brings into question whether it is actually correct to 'translate' a specific word in one variety of Dutch into another variety-especially if you want to create a model that can handle any kind of Dutch thrown at it. These changes can also [introduce bias](https://blog.deepgram.com/detecting-and-reducing-bias-in-speech-recognition/) into your work, making the model favor some varieties of the language over others. The second option is simply training your model on all of the data with the hopes it does decently well across all varieties. This is [easiest to do with deep learning](https://blog.deepgram.com/deep-learning-speech-recognition/), as you can iterate through different data sets quickly and easily.
 
 <WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
-
-
 
 ## 4\. Getting Large Amounts of Diverse Dutch Data
 

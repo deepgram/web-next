@@ -1,0 +1,20 @@
+:root {
+	--docsearch-container-background: rgba(0, 0, 0, 0.8);
+	--docsearch-modal-background: rgba(20, 30, 41, 1);
+	--docsearch-searchbox-focus-background: black;
+	--docsearch-text-color: white;
+	--docsearch-primary-color: rgba(56, 237, 172, 1);
+	--docsearch-hit-background: rgba(53, 70, 89, 1);
+	--docsearch-hit-active-color: black;
+	--docsearch-hit-color: white;
+}
+
+.DocSearch-Modal {
+	border-radius: 0px;
+	margin: 0 auto auto;
+	box-shadow: none;
+}
+
+.DocSearch-Hit-icon {
+	display: none;
+}

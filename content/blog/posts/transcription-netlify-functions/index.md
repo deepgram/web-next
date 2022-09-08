@@ -1,26 +1,26 @@
 ---
-title: "Transcriptions Without a Server Using Netlify and Deepgram"
-description: "Use Netlify Functions to transcribe pre-recorded audio without a server"
+title: Transcriptions Without a Server Using Netlify and Deepgram
+description: Use Netlify Functions to transcribe pre-recorded audio without a server
 date: 2022-01-31
 cover: https://res.cloudinary.com/deepgram/image/upload/v1643628688/blog/2022/01/transcription-netlify-functions/Transcribe-without-server-Netlify-Deepgram%402x.jpg
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: tutorial
 tags:
-    - nodejs
-    - netlify
-    - serverless
+  - nodejs
+  - netlify
+  - serverless
 seo:
-    title: "Transcriptions Without a Server Using Netlify and Deepgram"
-    description: "Use Netlify Functions to transcribe pre-recorded audio without a server"
-shorturls:
-    share: https://dpgr.am/a0ed7cf
-    twitter: https://dpgr.am/838386f
-    linkedin: https://dpgr.am/038d7a4
-    reddit: https://dpgr.am/f2a916e
-    facebook: https://dpgr.am/1f580fd
+  title: Transcriptions Without a Server Using Netlify and Deepgram
+  description: Use Netlify Functions to transcribe pre-recorded audio without a server
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661453852/blog/transcription-netlify-functions/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661453852/blog/transcription-netlify-functions/ograph.png
+shorturls:
+  share: https://dpgr.am/a0ed7cf
+  twitter: https://dpgr.am/838386f
+  linkedin: https://dpgr.am/038d7a4
+  reddit: https://dpgr.am/f2a916e
+  facebook: https://dpgr.am/1f580fd
 ---
 
 Traditional server applications typically need to be always on, always using resources and require maintenance to ensure availability. Serverless works differently - functionality is exposed via URLs. When a request is made they spin up, execute logic, and spin back down. Each serverless script (known as a 'function') can be run many times in parallel, so this approach may be suitable for scale, dependent on your use case.
@@ -62,10 +62,10 @@ exports.handler = async (event) => {
 
 ### Test Your Function
 
-Run `netlify dev` and wait for the local server to start - usually at http://localhost:8888. Open another terminal and run the following command to see the response:
-
+Run `netlify dev` and wait for the local server to start - usually at `http://localhost:8888`. Open another terminal and run the following command to see the response:
+```
     curl http://localhost:8888/.netlify/functions/hello
-
+```
 <Alert type="info">Don't be alarmed by the . in the URL - your local directory, which contains your functions, should just be /netlify</Alert>
 
 Your terminal should look something like this:
@@ -102,9 +102,9 @@ exports.handler = async (event) => {
 ```
 
 Once you save the file, the new URL is immediately available. This function requires a data payload with a `url` property. You can test it by once again using cURL:
-
-    curl -X POST -H "Content-Type: application/json" -d '{"url": "https://static.deepgram.com/examples/nasa-spacewalk-interview.wav"}' http://localhost:8888/.netlify/functions/hosted
-
+```
+  curl -X POST -H "Content-Type: application/json" -d '{"url": "https://static.deepgram.com/examples/nasa-spacewalk-interview.wav"}' http://localhost:8888/.netlify/functions/hosted
+```
 ## Accessing Functions From The Web
 
 Netlify makes your functions available on the same domain as your main application (just under the `/.netlify/functions` path). Due to this, we can call Netlify Functions from our main application by specifying the relative URL. This means it will work both locally and once deployed.
@@ -136,7 +136,7 @@ Create an `index.html` file in your main directory:
 </html>
 ```
 
-Navigate to <http://localhost:8888> in your browser, click the button, and provide a static file URL (if you don't have one, use `https://static.deepgram.com/examples/nasa-spacewalk-interview.wav`). Open your browser console, and you should see the response from Deepgram.
+Navigate to `http://localhost:8888` in your browser, click the button, and provide a static file URL (if you don't have one, use [https://static.deepgram.com/examples/nasa-spacewalk-interview.wav](https://static.deepgram.com/examples/nasa-spacewalk-interview.wav)). Open your browser console, and you should see the response from Deepgram.
 
 ![Browser console showing a large object from Deepgram](https://res.cloudinary.com/deepgram/image/upload/v1640794184/blog/2022/01/transcription-netlify-functions/console.png)
 
@@ -187,5 +187,3 @@ Netlify also supports push-to-deploy with GitHub if you configure your project t
 ## Wrapping Up
 
 Netlify makes deploying serverless functions reasonably straightforward, but if you have any questions after reading this guide, we are here to help! Just pop us a line at [@DeepgramDevs](https://twitter.com/deepgramdevs).
-
-        

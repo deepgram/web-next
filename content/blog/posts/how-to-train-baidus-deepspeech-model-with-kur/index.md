@@ -1,24 +1,24 @@
 ---
-title: "How to train Baidus Deepspeech model"
-description: ""
+title: How to train Baidus Deepspeech model
+description: Learn how to train a deep neural network for speech recognition.
 date: 2017-02-21
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981932/blog/how-to-train-baidus-deepspeech-model-with-kur/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - speech-models
 seo:
-  title: "How to train Baidus Deepspeech model"
+  title: How to train Baidus Deepspeech model
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981932/blog/how-to-train-baidus-deepspeech-model-with-kur/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/85061c2
   twitter: https://dpgr.am/febaff5
   linkedin: https://dpgr.am/41bf9c7
   reddit: https://dpgr.am/70fb579
   facebook: https://dpgr.am/b693c50
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981932/blog/how-to-train-baidus-deepspeech-model-with-kur/placeholder-post-image%402x.jpg
 ---
 
 ## You want to train a Deep Neural Network for Speech Recognition?
@@ -27,11 +27,11 @@ Me too. It was two years ago and I was a particle physicist finishing a PhD at U
 
 ## Turn this input audio ⬇⬇⬇
 
-<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725768/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-03-at-8.56.51-PM.png)
+![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725768/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-03-at-8.56.51-PM.png)
 
-<figcaption style="text-align: center;">_A spectrogram of an ordinary squishy human saying "I am a human saying human things."_</figcaption>
+<div style="text-align: center;">_A spectrogram of an ordinary squishy human saying "I am a human saying human things."_</div>
 
-</figure>
+
 
 
 
@@ -45,13 +45,10 @@ Listen to the audio.
 
 ## Into this text ⬇⬇⬇
 
-<figure style="margin-top: 0px;">![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725769/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-12.51.52-PM.png)
+![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725769/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-12.51.52-PM.png)
 
-<figure style="margin-top: 0px;">
+<div style="text-align: center; styl;margin-top: 0px;">_The prediction from a DNN that just heard the "I am a human saying human things" audio file._</div>
 
-<figcaption style="text-align: center; styl;margin-top: 0px;">_The prediction from a DNN that just heard the "I am a human saying human things" audio file._</figcaption>
-
-</figure>
 
 # Why we did it
 
@@ -121,29 +118,23 @@ It's just two days old and didn't make a single mistake on that utterance. **Our
 
 ##### Training and Validation Loss of Kur Deepspeech Model
 
-<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725770/blog/how-to-train-baidus-deepspeech-model-with-kur/loss-kur-up.png)
+![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725770/blog/how-to-train-baidus-deepspeech-model-with-kur/loss-kur-up.png)
 
-<figcaption style="text-align: center;">_Loss as a function of batch for both training and validation data in the [Kur](http://github.com/deepgram/kur) `speech.yml` example. The validation data seems a little easier._</figcaption>
-
-</figure>
+<div style="text-align: center;">_Loss as a function of batch for both training and validation data in the [Kur](http://github.com/deepgram/kur) `speech.yml` example. The validation data seems a little easier._</div>
 
 #### There's a lot of things to try
 
 We abstracted away some of the time consuming bits. A little help comes from the descriptive nature of Kur, too. You can write down what you mean.
 
-<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725771/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-10.15.51-AM.png)
+![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725771/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-10.15.51-AM.png)
 
-<figcaption style="text-align: center;">_Hyperparameters for Deepspeech in the example Kurfile_</figcaption>
-
-</figure>
+<div style="text-align: center;">_Hyperparameters for Deepspeech in the example Kurfile_</div>
 
 These are the handful of hyperparameters needed to construct the DNN. There's a single one dimensional CNN that operates on a time slice of FFT outputs. Then there's an RNN stack which is 3 layers deep and 1000 nodes wide each. The vocab size is how many 'letters' we'll be choosing from (`a` to `z`, a space and an apostrophe `'`-that's 28 total). The hyperparameters are grabbed in the model section of the Kurfile (that's the `speech.yml`). The CNN layer is built like this.
 
-<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725772/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-10.20.24-AM.png)
+![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725772/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-10.20.24-AM.png)
 
-<figcaption style="text-align: center;">_The CNN layer specification_</figcaption>
-
-</figure>
+<div style="text-align: center;">_The CNN layer specification_</div>
 
 This puts in a single [CNN layer](https://en.wikipedia.org/wiki/Convolutional_neural_network#Convolutional_layer) with a few sensible hyperparameters and slaps on a [Rectified Linear Unit](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)) activation layer. _Note: The hyperparameters are filled in using the [Jinja2](http://jinja.pocoo.org/docs/2.9/) templating engine._
 
@@ -151,11 +142,9 @@ This puts in a single [CNN layer](https://en.wikipedia.org/wiki/Convolutional_ne
 
 The stack of [RNN layers](https://en.wikipedia.org/wiki/Recurrent_neural_network) is built with a `for` loop that stamps out three layers in a row-_three_ because of the `depth` hyperparameter.
 
-<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725772/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-09-at-5.05.32-PM.png)
+![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725772/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-09-at-5.05.32-PM.png)
 
-<figcaption style="text-align: center;">_The RNN stack specification_</figcaption>
-
-</figure>
+<div style="text-align: center;">_The RNN stack specification_</div>
 
 The batch normalization layer uses a technique to keep layer weights distributed in a non-crazy way, speeding up training. The rnn `sequence` hyperparameter just means you want the full sequence of outputs passed along (every single time slice of the audio) while generating a guess for the transcript. _Quick Summary:_ The CNN layer ingests the FFT input then connects to RNNs and eventually to a fully connected layer which predicts from 28 letters. That's Deepspeech.
 
@@ -167,21 +156,17 @@ When training modern speech DNNs you generally slice up the audio into ~20 milli
 
 Kur takes in normal `wav` audio files. Then it grabs the spectrogram (FFT over time) of the file and jams it into a DNN with a CNN layer and a stack of three RNN layers. Out pops probabilities of latin characters, which (when read by a human) form words. As the model trains, there will be validation steps that give you an updated prediction on a random test audio file. You'll see the true text listed next to each prediction. You can watch the predicted text outputs get better as the network trains. _It's learning._ At first it will learn about spaces (ya know, this ), then it'll figure out good ratios for vowels and consonants, then it'll learn common easy words like `the`, `it`, `a`, `good` and build up it's vocabulary from there. It's fascinating to watch.
 
-<figure>![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725773/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-12.21.53-PM.png)
+![missing](https://res.cloudinary.com/deepgram/image/upload/v1661725773/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2017-02-02-at-12.21.53-PM.png)
 
-<figcaption style="text-align: center;">_Take in time slices of audio frequencies and infer the letters that are being spoken. Time goes to the right. Image by Baidu._</figcaption>
-
-</figure>
+<div style="text-align: center;">_Take in time slices of audio frequencies and infer the letters that are being spoken. Time goes to the right. Image by Baidu._</div>
 
 ## Tell us what you think
 
 At Deepgram, we're really open about what we're working on. We know that A.I. is going to be huuuge and there are not enough trained people or good tools in the world to help it along ... yet. We hope [Kur](http://kur.deepgram.com), [KurHub](http://www.kurhub.com), our upcoming [Deep Learning Hackathon](http://www.deeplearninghackathon.com), and blog posts like this help out the community, gets people excited, and shows that the good stuff can now be used by everyone. We're a startup and our research team can only produce so much helpful material per unit time. The best way to help us is to implement your [favorite Deep Learning papers](https://github.com/terryum/awesome-deep-learning-papers) in [Kur](https://www.github.com/deepgram/kur) and upload it to [KurHub](http://www.kurhub.com/). You can also contribute to the Kur framework directly on [GitHub](https://github.com/deepgram/kur). You'll be showered with thanks from us and a pile of others that are hungry for good implementations.
 
-<figure>![missing](http://kur.deepgram.com/images/logo.png)
+![missing](http://kur.deepgram.com/images/logo.png)
 
-<figcaption style="text-align: center;">_We build A.I. Audio Brains._</figcaption>
-
-</figure>
+<div style="text-align: center;">_We build A.I. Audio Brains._</div>
 
 ## Follow us to A.I. land
 
@@ -196,19 +181,3 @@ Twitter
 SnapChat
 
 ![](https://res.cloudinary.com/deepgram/image/upload/v1661725775/blog/how-to-train-baidus-deepspeech-model-with-kur/Screen-Shot-2016-11-02-at-4.16.43-PM.png)
-
-
-
-Deepgram Newsletter
-
-<input class="newsletter-signup-input-name" style="width: 275px;" type="text" placeholder="your full name">
-
-<input class="newsletter-signup-input" style="width: 275px;" type="text" placeholder="your email address">
-
-<button class="newsletter-signup-btn" style="color: white; background-color: black; width: 275px; font-size: 14px; font-weight: 800;">sign up</button>
-
-
-
-
-
-<script>$('.newsletter-signup-btn').click(function(event){ $.post( 'https://www.deepgram.com/newsletter_signup', JSON.stringify({ 'from_url': window.location.href, 'email': $('.newsletter-signup-input').val(), 'name': $('.newsletter-signup-input-name').val() }), function(response){ $('.newsletter-signup-btn').html('thanks! sign up your friends!'); $('.newsletter-signup-input-name').val(""); $('.newsletter-signup-input').val(""); } ); });</script></figure>

@@ -1,24 +1,24 @@
 ---
-title: "What Does it Mean for a Machine to Learn? — AI Show"
-description: ""
+title: What Does it Mean for a Machine to Learn? — AI Show
+description: In this AI Show episode, we talk about what it means for a machine to learn.
 date: 2018-11-02
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981324/blog/ai-show-what-does-it-mean-for-a-machine-to-learn/what-does-it-mean-for-machine-to-learn-blog-thumb%40.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - machine-learning
 seo:
-  title: "What Does it Mean for a Machine to Learn? — AI Show"
+  title: What Does it Mean for a Machine to Learn? — AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981324/blog/ai-show-what-does-it-mean-for-a-machine-to-learn/what-does-it-mean-for-machine-to-learn-blog-thumb%40.jpg
 shorturls:
   share: https://dpgr.am/3edfeb5
   twitter: https://dpgr.am/3448424
   linkedin: https://dpgr.am/647bb8d
   reddit: https://dpgr.am/020286a
   facebook: https://dpgr.am/44a48c4
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981324/blog/ai-show-what-does-it-mean-for-a-machine-to-learn/what-does-it-mean-for-machine-to-learn-blog-thumb%40.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/ZWIi3Ah-VHY" width="600" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>**Scott:** Welcome to the AI Show, I'm Scott Stephenson, co-founder of Deep Gram. With me is Jeff Ward, aka Susan. On the AI show, we talk about all things AI. Today we're asking the very big question, "What does it mean for a machine to learn?" **Susan:** What do you think it means for a machine to learn, Scott? **Scott:** I think a basic way to look at it is by asking the question:
@@ -88,7 +88,7 @@ The reality is, they're gonna take the 95% that's boring and leave the 5%. That 
 
 ### What is intelligence?
 
-**Scott:** We said what is learning a little bit, but what is intelligence? **Susan:** Intelligence is a really hard thing to nail down, especially when it comes to machines. There's a very good chance, a very real chance, the first alien species we'll meet will be a machine, i.e. we create it somehow and suddenly realize it's intelligent. But, there's also a really high chance we'll realize it too late, meaning it was intelligent for a while but it was so alien to us we didn't understand it. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976760/blog/ai-show-what-does-it-mean-for-a-machine-to-learn/27640481_cf17dc2133_b.jpg) _Beluga Whales are have a particularly developed sonar system which they use for "seeing" in the pitch-black waters 1000m+ below the sea. They also use this sound system for communication. As humans, we have no appreciation for their sensory experience. Photo: <a "href=https://www.flickr.com/photos/criminalintent/27640481">Lars Pougmann._ When we think of intelligence, we always think human intelligence. **You go out into the animal world and you see things that humans couldn't possibly do from a mental standpoint.** Yet, we don't call them intelligent, at least self-aware, like we would think of as ourselves. So there is no one answer, this is what intelligence looks like. **Scott:** People tend to define it, though, like what can a human do that's hard.
+**Scott:** We said what is learning a little bit, but what is intelligence? **Susan:** Intelligence is a really hard thing to nail down, especially when it comes to machines. There's a very good chance, a very real chance, the first alien species we'll meet will be a machine, i.e. we create it somehow and suddenly realize it's intelligent. But, there's also a really high chance we'll realize it too late, meaning it was intelligent for a while but it was so alien to us we didn't understand it. ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976760/blog/ai-show-what-does-it-mean-for-a-machine-to-learn/27640481_cf17dc2133_b.jpg) _Beluga Whales are have a particularly developed sonar system which they use for "seeing" in the pitch-black waters 1000m+ below the sea. They also use this sound system for communication. As humans, we have no appreciation for their sensory experience. Photo: <a href="https://www.flickr.com/photos/criminalintent/27640481">Lars Pougmann</a> When we think of intelligence, we always think human intelligence. **You go out into the animal world and you see things that humans couldn't possibly do from a mental standpoint.** Yet, we don't call them intelligent, at least self-aware, like we would think of as ourselves. So there is no one answer, this is what intelligence looks like. **Scott:** People tend to define it, though, like what can a human do that's hard.
 
 *   Can you speak some sound waves and a human can turn that into words?
 *   Can you show a human an image and they can tell you what the object is?

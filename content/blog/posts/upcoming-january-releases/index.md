@@ -1,24 +1,26 @@
 ---
-title: "Upcoming January Releases"
-description: ""
+title: Upcoming January Releases
+description: Learn about some of the language and model improvements coming to
+  Deepgram this January.
 date: 2021-01-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069487/blog/upcoming-january-releases/placeholder-post-image%402x.jpg
 authors:
   - natalie-rutgers
 category: product-news
 tags:
-  - ohsnap
+  - language
+  - speech-models
 seo:
-  title: "Upcoming January Releases"
+  title: Upcoming January Releases
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069487/blog/upcoming-january-releases/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/1ab8fb6
   twitter: https://dpgr.am/2c214bb
   linkedin: https://dpgr.am/ecc7afb
   reddit: https://dpgr.am/7a16a37
   facebook: https://dpgr.am/1fe2dd1
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069487/blog/upcoming-january-releases/placeholder-post-image%402x.jpg
 ---
 
 # **General Release Information**
