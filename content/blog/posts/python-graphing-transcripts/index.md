@@ -1,27 +1,30 @@
 ---
-title: "How to Turn Transcripts into Data Visualizations with Python"
-description: "Use Deepgram's speech-to-text features with Python to transcribe audio and graphing library Matplotlib to create a data visualization dashboard."
+title: How to Turn Transcripts into Data Visualizations with Python
+description: Use Deepgram's speech-to-text features with Python to transcribe
+  audio and graphing library Matplotlib to create a data visualization
+  dashboard.
 date: 2022-05-12
 cover: https://res.cloudinary.com/deepgram/image/upload/v1652286544/blog/2022/05/python-graphing-transcripts/Build-Dashboard-Visualize-Real-Time-Speech-Python%402x.jpg
 authors:
-    - tonya-sims
+  - tonya-sims
 category: tutorial
 tags:
-    - python
-    - data-visualization
+  - python
+  - data-visualization
 seo:
-    title: "How to Turn Transcripts into Data Visualizations with Python"
-    description: "Use Deepgram's speech-to-text features with Python to transcribe audio and graphing library Matplotlib to create a data visualization dashboard."
-shorturls:
-    share: https://dpgr.am/19fc3de
-    twitter: https://dpgr.am/cae50e6
-    linkedin: https://dpgr.am/a9a4fcf
-    reddit: https://dpgr.am/983a9bf
-    facebook: https://dpgr.am/3e7c681
+  title: How to Turn Transcripts into Data Visualizations with Python
+  description: Use Deepgram's speech-to-text features with Python to transcribe
+    audio and graphing library Matplotlib to create a data visualization
+    dashboard.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454089/blog/python-graphing-transcripts/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454089/blog/python-graphing-transcripts/ograph.png
+shorturls:
+  share: https://dpgr.am/19fc3de
+  twitter: https://dpgr.am/cae50e6
+  linkedin: https://dpgr.am/a9a4fcf
+  reddit: https://dpgr.am/983a9bf
+  facebook: https://dpgr.am/3e7c681
 ---
-
 240 million emergency 911 calls are made in the United States per year. That averages out to roughly 600,000 calls per day. However, many of those calls are not emergencies. First responders often respond to barking dog complaints when people in need could use those resources.
 
 It’s estimated that nearly 10,000 lives could be saved every year if emergency response times were reduced by one minute. Is there a way to visualize emergency calls by their type? Can we analyze the result and measure how to limit wasting resources on non-emergencies? Can we help increase the well-being of others when they’re having an emergency?
@@ -44,28 +47,38 @@ Before we start, it’s essential to generate a Deepgram API key to use in our p
 
 Next, we'll make a directory anywhere we’d like.
 
-    mkdir deepgram-dashboard
+```
+mkdir deepgram-dashboard
+```
 
 Then we'll change into that directory to start adding things to it.
 
-    cd deepgram-dashboard
+```
+cd deepgram-dashboard
+```
 
 We’ll also need to set up a virtual environment to hold the project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one. It’s recommended in Python to use a virtual environment so the project can be installed inside a container rather than installing it system-wide.
 We need to ensure the virtual environment is activated because we’ll install dependencies inside. If the virtual environment is named `venv`, we'll need to activate it.
 
-    source venv/bin/activate
+```
+source venv/bin/activate
+```
 
 We'll install the dependencies for the project by running the below `pip` installs from the terminal inside the virtual environment.
 
-    pip install deepgram-sdk
-    pip install python-dotenv
-    pip install matplotlib
+```
+pip install deepgram-sdk
+pip install python-dotenv
+pip install matplotlib
+```
 
 We now can open up an editor and create an environment variable file to store the Deepgram API Key from the [Deepgram Console](https://console.deepgram.com/). Create a new file called `.env` at the project level and add the following Python environment variable, replacing `[YOUR_API_KEY]` with the API Key from the console:
 
-    DEEPGRAM_API_KEY=”[YOUR_API_KEY]”
+```
+DEEPGRAM_API_KEY=”[YOUR_API_KEY]”
+```
 
-Lastly, files with audio need to be added to the project so Deepgram can transcribe them. This project uses small audio-created samples using the PCM recorder lite for [Apple](https://apps.apple.com/us/app/pcm-recorder-lite/id439572045) or [Android](https://play.google.com/store/apps/details?id=com.kohei.android.pcmrecorder\&hl=en_US\&gl=US). This app will create `.wav`audio files but please note that Deepgram supports over [100+ audio formats and encodings](https://developers.deepgram.com/documentation/getting-started/audio-formats/).
+Lastly, files with audio need to be added to the project so Deepgram can transcribe them. This project uses small audio-created samples using the PCM recorder lite for [Apple](https://apps.apple.com/us/app/pcm-recorder-lite/id439572045) or [Android](https://play.google.com/store/apps/details?id=com.kohei.android.pcmrecorder&hl=en_US&gl=US). This app will create `.wav`audio files but please note that Deepgram supports over [100+ audio formats and encodings](https://developers.deepgram.com/documentation/getting-started/audio-formats/).
 
 ## The Code for the Deepgram Speech-to-Text Python Project with Matplotlib Graphing
 
@@ -89,13 +102,13 @@ from matplotlib import pyplot as plt
 from matplotlib.ticker import MaxNLocator
 ```
 
-*   `import asyncio` helps with writing asynchronous code in Python with the `async` and `await` keywords.
-*   `import os` helps working with files and directories.
-*   `from collections import Counter` helps to count key/value pairs in an object which is needed to track the words from the transcript and how many times they were spoken.
-*   `from deepgram import Deepgram` allows access to the Deepgram Python SDK and its types like pre-recorded and live streaming transcription.
-*   `from dotenv import load_dotenv` reads the key/value pairs from the `.env` file and sets them as environment variables.
-*   `from matplotlib import pyplot as plt` creates a figure, a plotting area in a figure, plots some lines in a plotting area and decorates the plot with labels.
-*   `from matplotlib.ticker import MaxNLocator` helps provide the graph with friendly integer tick values.
+* `import asyncio` helps with writing asynchronous code in Python with the `async` and `await` keywords.
+* `import os` helps working with files and directories.
+* `from collections import Counter` helps to count key/value pairs in an object which is needed to track the words from the transcript and how many times they were spoken.
+* `from deepgram import Deepgram` allows access to the Deepgram Python SDK and its types like pre-recorded and live streaming transcription.
+* `from dotenv import load_dotenv` reads the key/value pairs from the `.env` file and sets them as environment variables.
+* `from matplotlib import pyplot as plt` creates a figure, a plotting area in a figure, plots some lines in a plotting area and decorates the plot with labels.
+* `from matplotlib.ticker import MaxNLocator` helps provide the graph with friendly integer tick values.
 
 ### The Python Globals
 
@@ -242,7 +255,9 @@ pps = ax.bar([i - width/2 for i in x], words.values(), width, label='words')
 
 Now, run the project by going to a command line prompt in the terminal and type:
 
-    python3 transcribe-with-deepgram.py
+```
+python3 transcribe-with-deepgram.py
+```
 
 A beautiful bar graph with Deepgram Python speech-to-text transcription and Matplotlib data visualization will get generated and look something like this (depending on the audio files used):
 
@@ -251,5 +266,3 @@ A beautiful bar graph with Deepgram Python speech-to-text transcription and Matp
 ## Conclusion of Deepgram Speech-to-Text with Python and Matplotlib
 
 There are many other use cases for why one might want to use Python with Deepgram for voice-to-text transcription and data visualization. This project is just an example, and it’s encouraged to continue brainstorming innovative and game-changing ideas for speech-to-text and graphing. Can you think of other use cases for Deepgram and our Python SDK? To let us know, you can Tweet us at [@deepgramdevs](https://twitter.com/DeepgramDevs). We would love to hear from you!
-
-        
