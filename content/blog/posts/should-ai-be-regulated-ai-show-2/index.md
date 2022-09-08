@@ -238,7 +238,4 @@ Kinder eggs is a good example. You can't import Kinder eggs because a kid may ch
 **Scott:** I think it's a decision point here. If you want the US to truly just become China's vacation spot, it's the new Europe, there wasn't really anything going on here. Everybody just chills out and coasts for the rest of their lives, then you regulate a whole bunch. And you keep your lifestyle the way it is, and that's that. If you still want to be the dominant world power in the world, you can't go hard on regulation in AI and/or software or whatever. You can't start protecting. You can't go into protect mode.
 
 **Susan:** If you crack down on innovation, you're going to to kill this industry. Obviously China's been the example, but my time is Scotland, there was a lot of push to get innovators to stay. We're seeing other areas, other regions of the world that are doing a lot more than the US to encourage things. When I first came to the Bay Area was a good example. People are coming into Bay Area because that's where all the ideas were at, and that's where everybody wanted to be. There was this huge upwelling of, "This is where it's going to be at." Now it's still there, but there's a lot more people that are saying, "I'm here because of the momentum." Whereas, go to say Edinburgh and there's lot of programs. They're building that momentum. People are going there because there's a lot of press to make this stuff happen, and they're building what we are now coasting on.
-
-* * *
-
-Tweet Us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en)
+
