@@ -22,6 +22,7 @@ shorturls:
 ---
 
 <iframe src="https://www.youtube.com/embed/ZWIi3Ah-VHY" width="600" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
 **Scott:** Welcome to the AI Show, I'm Scott Stephenson, co-founder of Deepgram. With me is Jeff Ward, aka Susan. On the AI show, we talk about all things AI. Today we're asking the very big question, "What does it mean for a machine to learn?"
 
 **Susan:** What do you think it means for a machine to learn, Scott?
