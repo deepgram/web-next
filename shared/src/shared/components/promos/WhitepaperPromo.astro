@@ -1,0 +1,71 @@
+---
+import { getSluggedJson } from "../../util";
+import AbstractPromo from "./AbstractPromo.astro";
+
+interface Props {
+	whitepaper: string;
+	[key: string]: string;
+}
+
+interface Whitepaper {
+	title: string;
+	script: string;
+	theme: string;
+	image: string;
+	date: string;
+	slug?: string;
+}
+
+let whitepaper: Whitepaper;
+const { whitepaper: whitepaperSlug, ...rest } = Astro.props as Props;
+
+const allWhitepapers: Whitepaper[] = await getSluggedJson("whitepapers");
+
+if (whitepaperSlug === "latest") {
+	whitepaper = allWhitepapers.pop();
+} else {
+	whitepaper = allWhitepapers.find((wp) => wp.slug === whitepaperSlug);
+}
+
+const { theme, title, image, script } = whitepaper;
+---
+
+<AbstractPromo strapline="White Paper" backgroundImage={image} theme={theme} title={title} {...rest}>
+	<script set:html={script}>
+
+	</script>
+</AbstractPromo>
+
+<style>
+	:global(.hbspt-form) {
+		@apply dg-form-text;
+	}
+	:global(.hbspt-form label) {
+		@apply dg-label;
+	}
+	:global(.hbspt-form input[type="email"]),
+	:global(.hbspt-form input[type="password"]),
+	:global(.hbspt-form input[type="search"]),
+	:global(.hbspt-form input[type="tel"]),
+	:global(.hbspt-form input[type="text"]),
+	:global(.hbspt-form input[type="url"]),
+	:global(.hbspt-form input[type="text"]),
+	:global(.hbspt-form textarea) {
+		@apply dg-input;
+	}
+	:global(.hbspt-form input[type="submit"]),
+	:global(.hbspt-form input[type="button"]),
+	:global(.hbspt-form button) {
+		@apply button button--primary mt-4;
+	}
+	:global(.hbspt-form .hs-form-field) {
+		@apply mt-2;
+	}
+	:global(.hbspt-form form fieldset) {
+		@apply flex max-w-full flex-col md:flex-row md:flex-nowrap md:items-end md:gap-5;
+	}
+	:global(.hbspt-form form fieldset .field) {
+		width: auto !important;
+		float: none;
+	}
+</style>
