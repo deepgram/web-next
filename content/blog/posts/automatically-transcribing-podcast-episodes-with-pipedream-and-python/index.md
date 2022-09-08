@@ -2,7 +2,7 @@
 title: Automatically Transcribing Podcast Episodes with Pipedream and Python
 description: Learn how to automatically transcribe and email new podcast
   episodes as a newsletter with Deepgram's Speech Recognition API and Pipedream.
-date: 2022-09-07T18:59:15.762Z
+date: 2022-09-09T18:59:15.762Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981800/blog/2022/09/automatically-transcribe-new-podcasts-pipedream-python/cover.jpg
 authors:
   - kevin-lewis
