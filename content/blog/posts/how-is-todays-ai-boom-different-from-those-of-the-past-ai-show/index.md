@@ -261,7 +261,4 @@ _The impact of the the moveable type printing press is immeasurable. Invented by
 **Scott:** Yeah. Well, when you don't have those constraints, right?
 
 **Susan:** Yeah, yeah.
-
-* * *
-
-Tweet Us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en)
+
