@@ -52,7 +52,7 @@ the URL to the mp3 files.
 Neil deGrasse Tyson has a great podcast called
 [StarTalk Radio](https://startalkmedia.com/) that would provide tons of
 searchable words. Its RSS feed is located at
-`https://feeds.simplecast.com/4T39_jAj`, so I needed to read that and pull in
+[https://feeds.simplecast.com/4T39_jAj](https://feeds.simplecast.com/4T39_jAj), so I needed to read that and pull in
 individual episodes. Originally, I planned to save the data from the feed into
 a PostgreSQL or MySQL database but decided to keep it simple by just saving the
 info from one episode to a Python file.

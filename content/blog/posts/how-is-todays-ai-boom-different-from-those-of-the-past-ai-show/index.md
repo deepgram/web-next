@@ -1,24 +1,26 @@
 ---
-title: "How is Todays AI Boom Different From Those of the Past? — AI Show"
-description: ""
+title: How is Today's AI Boom Different From Those of the Past? — AI Show
+description: In this episode of the AI Show, we explore how today's AI boom
+  different from those in the past.
 date: 2018-11-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069464/blog/how-is-todays-ai-boom-different-from-those-of-the-past-ai-show/placeholder-post-image%402x.jpg
 authors:
   - morris-gevirtz
 category: speech-trends
 tags:
-  - ohsnap
+  - machine-learning
+  - deep-learning
 seo:
-  title: "How is Todays AI Boom Different From Those of the Past? — AI Show"
+  title: How is Todays AI Boom Different From Those of the Past? — AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069464/blog/how-is-todays-ai-boom-different-from-those-of-the-past-ai-show/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/7093f34
   twitter: https://dpgr.am/cb165e9
   linkedin: https://dpgr.am/e5aee4b
   reddit: https://dpgr.am/2858980
   facebook: https://dpgr.am/917238b
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069464/blog/how-is-todays-ai-boom-different-from-those-of-the-past-ai-show/placeholder-post-image%402x.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/LvP_lih3_yc" width="600" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>**Scott:** Welcome to the AI Show. Today we're asking the question: How is today's AI boom different from the past?

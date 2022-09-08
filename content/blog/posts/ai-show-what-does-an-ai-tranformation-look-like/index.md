@@ -1,24 +1,25 @@
 ---
-title: "What does an AI transformation look like? — AI Show"
-description: ""
+title: What does an AI transformation look like? — AI Show
+description: How is AI transforming the world? Have a listen to this episode of
+  the AI Show and see what we think.
 date: 2018-10-12
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981319/blog/ai-show-what-does-an-ai-tranformation-look-like/what-does-ai-transformation-look-like-blog-thumb%402.jpg
 authors:
   - morris-gevirtz
 category: ai-and-engineering
 tags:
-  - ohsnap
+  - voice-tech
 seo:
-  title: "What does an AI transformation look like? — AI Show"
+  title: What does an AI transformation look like? — AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981319/blog/ai-show-what-does-an-ai-tranformation-look-like/what-does-ai-transformation-look-like-blog-thumb%402.jpg
 shorturls:
   share: https://dpgr.am/1e57b96
   twitter: https://dpgr.am/8f8b6c6
   linkedin: https://dpgr.am/8680425
   reddit: https://dpgr.am/0590832
   facebook: https://dpgr.am/971b8a2
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981319/blog/ai-show-what-does-an-ai-tranformation-look-like/what-does-ai-transformation-look-like-blog-thumb%402.jpg
 ---
 
 <iframe src="https://www.youtube.com/embed/naC8T4FG0Nc" width="600" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>**Scott:** Welcome to the AI Show. On the AI Show we talk about all things AI. Today we're asking the question, "What does an AI transformation look like?"

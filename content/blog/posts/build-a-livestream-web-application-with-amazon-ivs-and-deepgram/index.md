@@ -25,7 +25,7 @@ og:
 
 In this series, I will build a live streaming web application with text captions. Companies such as Twitch, StreamYard, Facebook Live, and many others provide live streaming on the web as a product, so I got curious about how I might go about building my own version.
 
-<panel type="info" title="Build a Live Streaming Web Application with Amazon IVS and Deepgram (SERIES)">
+<Panel type="info" title="Build a Live Streaming Web Application with Amazon IVS and Deepgram (SERIES)">
 <ol>
 <li><a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/">How to Build a Live Streaming Web Application with Amazon IVS and Deepgram</a></li>
 <li><a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/"> Build a Live Streaming Web Application: Vue and Express Setup</a></li>
@@ -33,7 +33,7 @@ In this series, I will build a live streaming web application with text captions
 
 <li><a href="https://developers.deepgram.com/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/"> Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component</a></li>
 </ol>
-</panel>
+</Panel>
 
 The main technologies I will use to build the live stream and text captions functionality are:
 
@@ -170,7 +170,7 @@ Now, if I go back to the OBS controls and click on **Start Streaming**, my strea
 
 The back-end is done (AWS takes care of most of the work). Now I can build the front-end, which I will do using vanilla Javascript and HTML.
 
-In the <head> tag of my HTML document, I will include the script for the Amazon IVS player. Amazon IVS explains how to do this setup [here](https://docs.aws.amazon.com/ivs/latest/userguide/player-web.html), for those who want to go straight to the source.
+In the `<head>` tag of my HTML document, I will include the script for the Amazon IVS player. Amazon IVS explains how to do this setup [here](https://docs.aws.amazon.com/ivs/latest/userguide/player-web.html), for those who want to go straight to the source.
 
 ```html
 <head>

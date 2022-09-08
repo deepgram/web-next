@@ -25,7 +25,7 @@ og:
 
 ## Introduction
 
-<panel type="info" title="Build a Live Streaming Web Application with Amazon IVS and Deepgram (SERIES)">
+<Panel type="info" title="Build a Live Streaming Web Application with Amazon IVS and Deepgram (SERIES)">
 <ol> 
 <li><a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/">How to Build a Live Streaming Web Application with Amazon IVS and Deepgram</a></li>
 <li><a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/"> Build a Live Streaming Web Application: Vue and Express Setup</a></li>
@@ -33,7 +33,7 @@ og:
 
 <li><a href="https://developers.deepgram.com/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/"> Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component</a></li>
 </ol>
-</panel>
+</Panel>
 
 In my last post, I introduced how to build a vanilla Javascript and HTML live streaming web application with text captions. It included a barebones frontend that was just one page - the video player and captions.
 

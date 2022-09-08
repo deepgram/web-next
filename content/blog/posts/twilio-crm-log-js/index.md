@@ -1,25 +1,25 @@
 ---
-title: "Build a Searchable Phone Call Dashboard with Twilio"
-description: "Automatically log and search your inbound Twilio calls"
+title: Build a Searchable Phone Call Dashboard with Twilio
+description: Automatically log and search your inbound Twilio calls
 date: 2021-12-02
 cover: https://res.cloudinary.com/deepgram/image/upload/v1638306971/blog/2021/12/twilio-crm-log-js/Build-CRM-w-Searchable-Call-Transcripts-twilio-blog%402x.jpg
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: tutorial
 tags:
-    - nodejs
-    - twilio
+  - nodejs
+  - twilio
 seo:
-    title: "Build a Searchable Phone Call Dashboard with Twilio"
-    description: "Automatically log and search your inbound Twilio calls"
-shorturls:
-    share: https://dpgr.am/6b12fa8
-    twitter: https://dpgr.am/66efe38
-    linkedin: https://dpgr.am/20d5645
-    reddit: https://dpgr.am/91a22f2
-    facebook: https://dpgr.am/87e4c65
+  title: Build a Searchable Phone Call Dashboard with Twilio
+  description: Automatically log and search your inbound Twilio calls
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661453836/blog/twilio-crm-log-js/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661453836/blog/twilio-crm-log-js/ograph.png
+shorturls:
+  share: https://dpgr.am/6b12fa8
+  twitter: https://dpgr.am/66efe38
+  linkedin: https://dpgr.am/20d5645
+  reddit: https://dpgr.am/91a22f2
+  facebook: https://dpgr.am/87e4c65
 ---
 
 Imagine being able to search phrases in every call you've had to find exactly what was said. That's the dream, right? Well - it's my dream, and it's what we're building today.
@@ -28,7 +28,7 @@ Users can call a Twilio phone number, which will be forwarded to your agent whil
 
 ![Webpage with three parts - a text box along the top, a list of phone calls on the left with phrases matching the keyword, and a full transcript on the right.](https://res.cloudinary.com/deepgram/image/upload/v1638306976/blog/2021/12/twilio-crm-log-js/final-project.png)
 
-If you want to look at the final project code, you can find it at <https://github.com/deepgram-devs/twilio-voice-searchable-log>.
+If you want to look at the final project code, you can find it at [https://github.com/deepgram-devs/twilio-voice-searchable-log](https://github.com/deepgram-devs/twilio-voice-searchable-log).
 
 ## Before We Start
 
@@ -40,17 +40,18 @@ You will need:
 *   Use of two phones to test your project - one to make the call and one to receive.
 
 Create a new directory and navigate to it with your terminal. Run `npm init -y` to create a `package.json` file and then install the following packages:
-
-    npm install @deepgram/sdk twilio dotenv express body-parser nedb-promises
-
+```
+npm install @deepgram/sdk twilio dotenv express body-parser nedb-promises
+```
 Create a `.env` file, open it in your code editor, and populate it with your credentials and settings:
 
-    DG_KEY=replace_with_deepgram_key
-    TWILIO_ACCOUNT_SID=replace_with_sid
-    TWILIO_AUTH_TOKEN=replace_with_auth_token
-    TWILIO_NUMBER=replace_with_twilio_phone_number
-    FORWARDING_NUMBER=replace_with_your_phone_number
-
+```
+DG_KEY=replace_with_deepgram_key
+TWILIO_ACCOUNT_SID=replace_with_sid
+TWILIO_AUTH_TOKEN=replace_with_auth_token
+TWILIO_NUMBER=replace_with_twilio_phone_number
+FORWARDING_NUMBER=replace_with_your_phone_number
+```
 <Alert type="warning">You should not share this .env file as it contains sensitive credentials. If you are using git version control, make sure to ignore this file.</Alert>
 
 Create an `index.js` file, and open it in your code editor.
@@ -295,7 +296,7 @@ this.fuse = new Fuse(this.calls.all, {
 })
 ```
 
-Restart your server, navigate to <http://localhost:3000> in your browser. Open the DevTools Console and type `app.calls.all` to see if the value was populated correctly:
+Restart your server, navigate to `http://localhost:3000` in your browser. Open the DevTools Console and type `app.calls.all` to see if the value was populated correctly:
 
 ![Browser console showing app.calls.all as an array containing four objects](https://res.cloudinary.com/deepgram/image/upload/v1638306976/blog/2021/12/twilio-crm-log-js/app-calls-all.png)
 
@@ -375,6 +376,4 @@ We've done quite a lot here - how to forward and record calls with Twilio, how t
 *   Allow users to make notes for calls or callers
 *   Use a more permanent database like Supabase - [Brian wrote a getting started post here](https://developers.deepgram.com/blog/2021/11/getting-started-with-supabase/)
 
-The complete project is available at <https://github.com/deepgram-devs/twilio-voice-searchable-log> and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
-
-        
+The complete project is available at [https://github.com/deepgram-devs/twilio-voice-searchable-log](https://github.com/deepgram-devs/twilio-voice-searchable-log) and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).

@@ -30,7 +30,7 @@ You will need a Deepgram API Key - [get one here](https://console.deepgram.com/s
 
 This tutorial will be a set of building blocks, slowly growing in complexity towards our end goal. We'll take it slow and explain each step so you can apply this knowledge in other contexts, too.
 
-We'll use the [NPR Morning Edition](https://www.npr.org/programs/morning-edition/) Podcast Feed: `https://feeds.npr.org/510318/podcast.xml`, but this can be swapped out for your favorite podcast.
+We'll use the [NPR Morning Edition](https://www.npr.org/programs/morning-edition/) Podcast Feed: [https://feeds.npr.org/510318/podcast.xml](https://feeds.npr.org/510318/podcast.xml), but this can be swapped out for your favorite podcast.
 
 ## Getting Started
 

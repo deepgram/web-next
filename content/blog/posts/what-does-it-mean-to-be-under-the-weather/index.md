@@ -28,11 +28,9 @@ We know this means to be sick or ill, but why?
 
 
 
-<figure style="float: right; max-width: 18vw; padding-left: 1vw;">![](https://res.cloudinary.com/deepgram/image/upload/v1661976797/blog/what-does-it-mean-to-be-under-the-weather/U.S.S.-Seminole--Thursday--November-07--1861---Shi.jpg)
+![](https://res.cloudinary.com/deepgram/image/upload/v1661976797/blog/what-does-it-mean-to-be-under-the-weather/U.S.S.-Seminole--Thursday--November-07--1861---Shi.jpg)
 
-<figcaption>_A picture the ship's log from the [U.S.S. Seminole](https://en.wikipedia.org/wiki/USS_Seminole_(1859)), Thursday, November 07, 1861._</figcaption>
-
-</figure>
+<div>_A picture the ship's log from the [U.S.S. Seminole](https://en.wikipedia.org/wiki/USS_Seminole_(1859)), Thursday, November 07, 1861._</div>
 
 1.  Back in the sailing days, captains kept logs of all the activity on the boat, including who was ill. When the number of sick sailors exceeded the space allotted in the ship's log for sick sailors their names were written under the weather section of the log.
 2.  In the days of sailing and even in the golden days of steam powered ships, passengers would often get seasick. The ill would be advised to sleep off their nausea under the ship's weather rail. This is the below-deck area on the side of the boat that faces the wind.

@@ -27,22 +27,22 @@ I spend a lot of time with folks learning to code and early-career developers. O
 
 ## Prepping our Project
 
-<panel type="info" title="freeCodeCamp Side Note">
+<Panel type="info" title="freeCodeCamp Side Note">
 
 For this tutorial, we’re assuming that you have completed the project. If you haven’t, you can find the <a href="https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-random-quote-machine">directions for the quote generator here</a> or take a look at <a href="https://codepen.io/freeCodeCamp/pen/qRZeGZ">freeCodeCamp’s demo project</a> to get you started.
 
-</panel>
+</Panel>
 
 *   Download Node.js if you haven’t already - get it [here](https://nodejs.org/en/)
 *   Create a Deepgram API Key with an admin or owner role - [get it here](https://console.deepgram.com/signup?jump=keys)
 *   Create a file called .env and add `DG_KEY='your-api-key'`.
 
-<panel type="info" title="Notes on API keys">
+<Panel type="info" title="Notes on API keys">
 
 *   Your API key should be a string of letters and numbers that you wrap in single quotes.
 *   .env files contain sensitive values. We’ll use a .gitignore file to ensure we don’t expose our information, but if you’re sharing your code with others, don’t include your sensitive information.
 
-</panel>
+</Panel>
 
 ### Where we started
 
@@ -78,12 +78,11 @@ As you can see, the project fetches quotes from a JSON file of quotes and author
 
 As you work on this project, it’s useful to have some understanding of APIs and JSON.
 
-<panel type="info" title="Resource Break!">
+<Panel type="info" title="Resource Break!">
 
-*   [Getting Started with APIs](https://developers.deepgram.com/blog/2021/11/getting-started-with-apis/) by [Kevin Lewis](https://developers.deepgram.com/blog/authors/kevinlewis/)</li>
-*   [Getting Started with JSON](https://developers.deepgram.com/blog/2021/11/getting-started-with-json/) by [Sandra Rodgers](https://developers.deepgram.com/blog/authors/sandrarodgers/)
-
-</panel>
+<li><a href="https://developers.deepgram.com/blog/2021/11/getting-started-with-apis/">Getting Started with APIs</a>  by <a href="https://developers.deepgram.com/blog/authors/kevinlewis/">Kevin Lewis</a></li>
+<li><a href="https://developers.deepgram.com/blog/2021/11/getting-started-with-json/">Getting Started with JSON</a>  by <a href="https://developers.deepgram.com/blog/authors/sandrarodgers/">Sandra Rodgers</a></li>
+</Panel>
 
 ### Overview
 
@@ -119,14 +118,14 @@ These are all the packages we’ll need to get us up and running in this project
 *   [gitignore node and gitignore node](https://github.com/msfeldstein/gitignore) - “​​Automatically fetch github's excellent .gitignore files for any of your new projects”
 *   [express](https://expressjs.com/) - Node framework that connects your server-side to your client-side.
 
-<panel type="info" title="Another Resource Break!">
+<Panel type="info" title="Another Resource Break!">
 
 If you’re getting started with learning express like I was, here are a couple of resources to get you started:
 
 *   Sandra’s post [Sending Audio Files to Your Express.js Server](https://developers.deepgram.com/blog/2021/11/sending-audio-files-to-expressjs-server/) can help you better understand express.
 *   [Express/Node Introduction](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
 
-</panel>
+</Panel>
 
 ## Updating Your Project with Deepgram
 

@@ -78,6 +78,6 @@ const schema = {
 	<Meta slot="og:description" property="og:description" content={`All posts in the ${category.title} category on the Deepgram Blog.`} />
 
 	<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
-		<GeneralPostsPage slug={`categories/${category.slug}`} page={page} posts={page.data} link="/categories" linkText="All categories" subtitle={`All ${category.title} posts`} />
+		<GeneralPostsPage slug={`categories/${category.slug}`} page={page} posts={page.data} link="/categories" linkText="All categories" subtitle={`All ${category.plural}`} />
 	</PrimarySection>
 </Layout>

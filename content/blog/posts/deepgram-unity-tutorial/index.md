@@ -78,7 +78,7 @@ Then click the "+" drop-down and click "Add package from git URL...".
 
 <img src="https://res.cloudinary.com/deepgram/image/upload/v1647377746/blog/2022/03/deepgram-unity-tutorial/assets/add_package_from_git_url.png" alt="Add a package from a git URL." style="max-width: 400px;display: block;margin-left: auto;margin-right: auto;">
 
-Enter the URL: `https://github.com/endel/NativeWebSocket.git#upm` and click "Add."
+Enter the URL: [https://github.com/endel/NativeWebSocket.git#upm](https://github.com/endel/NativeWebSocket.git#upm) and click "Add."
 
 We are now ready to start putting the demo together!
 
@@ -117,6 +117,7 @@ Finally, let's attach a script to our "Ball" object. In the bottom panel, select
 panel and select `Create -> C# Script`. Name the script `Ball` (on your OS's filesystem, the file will exist as `Ball.cs`). Open this script with your text
 editor of choice, and paste the following contents:
 
+```
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
@@ -156,6 +157,7 @@ editor of choice, and paste the following contents:
             rigidBody.AddForce(Vector2.down * forceFactor);
         }
     }
+```
 
 This script defines the class `Ball`, which inherits from Unity's `MonoBehavior` class. The class has one member variable, `forceFactor`, and defines
 4 methods that can be used to move the object, `PushLeft`, `PushRight`, `PushUp`, and `PushDown`. We will not use these methods yet, but when we
@@ -172,6 +174,7 @@ connection to Deepgram.
 Let's start with the websocket handler. Right-click in the "Hierarchy" tab and select "Create Empty" - name this object "DeepgramObject." Now,
 create a new script and name it "DeepgramInstance." Edit the script and add the following contents:
 
+```
     using System;
     using System.Collections;
     using System.Collections.Generic;
@@ -288,6 +291,7 @@ create a new script and name it "DeepgramInstance." Edit the script and add the 
             }
         }
     }
+```
 
 Insert your Deepgram API key where the script says "INSERT\_YOUR\_API\_KEY," then
 attach this script to the "DeepgramObject", and in the "Inspector" tab click the "Ball" field and select the "Ball" object we created earlier.
@@ -310,6 +314,7 @@ will then check to see if the websocket connection is open, and if it is, pass t
 Now let's create an object to handle the microphone input. Right-click in the "Hierarchy" tab, select `Audio -> AudioSource`, and name this object "MicrophoneObject."
 Then create a new script called "MicrophoneInstance" and make its contents the following:
 
+```
     using System.Collections;
     using System.Collections.Generic;
     using UnityEngine;
@@ -381,6 +386,7 @@ Then create a new script called "MicrophoneInstance" and make its contents the f
             return (short) sample;
         }
     }
+```
 
 Attach this script to the "MicrophoneObject", and in the "Inspector" tab click the "DeepgramInstance" field and select the "DeepgramObject" object we created earlier.
 

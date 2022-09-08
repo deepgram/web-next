@@ -1,5 +1,5 @@
 ---
-const { strapline, title, backgroundImage, theme } = Astro.props;
+const { class: classes, strapline, title, backgroundImage, theme } = Astro.props;
 
 let themeStyles;
 if (theme) {
@@ -19,7 +19,7 @@ if (theme) {
 const rawHTMLString = "&nbsp;";
 ---
 
-<div class:list={["promo", themeStyles]} style={`background-image: url('${backgroundImage}');`}>
+<div class:list={["promo", classes ? classes : "", themeStyles]} style={`background-image: url('${backgroundImage}');`}>
 	<header>
 		{strapline ? <h6 class="uppercase">{strapline}</h6> : <h6 class="uppercase" set:html={rawHTMLString} />}
 		<h2>{title}</h2>

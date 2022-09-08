@@ -26,7 +26,7 @@ The team behind TomScottPlus used Deepgram to analyze YouTube videos in real-tim
 
 [Tom is an English YouTuber](https://www.youtube.com/TomScottGo) who mostly makes videos about geography, history, science, technology, and linguistics. His style is 'talk to camera' as he explains various nerdy topics, sometimes with cutaways to other experts explaining a concept.
 
-<youtube id="cdPymLgfXSY"></youtube>
+<YouTube id="cdPymLgfXSY"></YouTube>
 
 The team took their inspiration from Tom's YouTube experience, where he shares interesting facts that inspire watchers to learn more. As they talked about learning through YouTube videos, they all agreed that it was cumbersome to learn more about topics mentioned in the videos. They found themselves often pausing videos, opening a browser tab, and searching for a mentioned topic for further reading. That's how the idea for TomScottPlus was born. TomScottPlus is a Chrome extension that aims to make this as seamless as possible by providing clickable overlay for videos with contextual Wikipedia article links in a video overlay as topics are mentioned in the video.
 

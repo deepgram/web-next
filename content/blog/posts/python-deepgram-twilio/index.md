@@ -50,8 +50,8 @@ Then change into that directory so we can start adding things to it.
 
 We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one.
 
-<panel> Panel with important note
-It’s recommended in Python to use a virtual environment so our project can be installed inside a container rather than installing it system-wide. </panel>
+<Panel> Panel with important note
+It’s recommended in Python to use a virtual environment so our project can be installed inside a container rather than installing it system-wide. </Panel>
 
 Ensure our virtual environment is activated because we’ll install dependencies inside. If our virtual environment is named `venv`, then activate it.
 
@@ -99,7 +99,7 @@ Copy the ngrok url and add it to Twilio by navigating to ‘Phone Numbers -> Man
 
 ![manage Twilio phone number](https://res.cloudinary.com/deepgram/image/upload/v1649274531/blog/2022/04/python-deepgram-twilio/active-twilio-numbers.png)
 
-Scroll down to the ‘Voice’ section and add the webhook, our ngrok URL with the recordings endpoint and save. Like this `https://6d71-104-6-9-133.ngrok.io/recordings`
+Scroll down to the ‘Voice’ section and add the webhook, our ngrok URL with the recordings endpoint and save. Like this [https://6d71-104-6-9-133.ngrok.io/recordings](https://6d71-104-6-9-133.ngrok.io/recordings)
 
 ![twilio webhook ngrok](https://res.cloudinary.com/deepgram/image/upload/v1649274530/blog/2022/04/python-deepgram-twilio/twilio-webhook-ngrok.png)
 
@@ -108,10 +108,10 @@ We’ll implement the `/recordings` endpoint in a few.
 Leave both terminals running as we’ll need these to run our application and receive the phone call.
 
 Let’s store our environment variables in a `.env` file with the following:
-
-    DEEPGRAM_API_KEY=[‘YOUR_API_KEY’]
-    RECEIVER_NUMBER=[‘PHONE_NUMBER_TO_RECEIVE_CALL’]
-
+```
+DEEPGRAM_API_KEY=[‘YOUR_API_KEY’]
+RECEIVER_NUMBER=[‘PHONE_NUMBER_TO_RECEIVE_CALL’]
+```
 We can replace `YOUR_API_KEY` with the API key we received from signing up in the Deepgram console, and the `PHONE_NUMBER_TO_RECEIVE_CALL` is the phone number we would like to receive the call.
 
 Let’s replace the code in our `deepgram-twilio-call.py` with the following:
@@ -186,11 +186,13 @@ async def get_recordings():
 
 We can see how the utterances will look after they’re formatted:
 
+```
     [{'channel': 0, 'transcript': 'Hello?', 'id': 288397603074461838},
     {'channel': 1, 'transcript': 'Hello?', 'id': 109089630999017748},
     {'channel': 0, 'transcript': "Hey. How's it going? It's good to hear from you.", 'id': 124620676610936565},
     {'channel': 0, 'transcript': 'Thanks. You too.', 'id': 182036969834868158},
     {'channel': 1, 'transcript': 'Thanks. You too.', 'id': 817052835121297399}]
+```
 
 Lastly, let’s add our `/transcribe` route and a templates folder with an `index.html` file that will display our phone speech-to-text transcript.
 

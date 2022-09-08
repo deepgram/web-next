@@ -38,7 +38,7 @@ If you want to follow along with this project, you can find the [code for the fr
 
 Once you’ve forked or cloned the code, cd into the app.
 
-In your terminal run `npm install` to install the dependencies you can find the `package.json` file. Then run `npm run start` and navigate to <http://localhost:3000/>. You should see your app up and running. Right now, everything you see is being rendered from the `App.js` file. Here’s what you should see.
+In your terminal run `npm install` to install the dependencies you can find the `package.json` file. Then run `npm run start` and navigate to `http://localhost:3000/`. You should see your app up and running. Right now, everything you see is being rendered from the `App.js` file. Here’s what you should see.
 
 ![Image of affirmation screen](https://res.cloudinary.com/deepgram/image/upload/v1654259676/blog/2022/06/how-to-add-speech-recognition-to-your-react-project/affirmation-screen.png)
 

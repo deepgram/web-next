@@ -25,7 +25,7 @@ Here at Deepgram we run GRAM JAM - a series of internal hackathons to have Deepg
 
 Sometimes we all let "unprovoked or unintended utterances" slip out of our mouth, and often it's the job of an editor to go through recordings and overlay a bleep so no one has to hear the original word. Historically this has been a manual process, but with Deepgram's Speech Recognition API we can work to censor them automatically.
 
-If you want to look at the final project code you can find it at <https://github.com/deepgram-devs/censor-audio>.
+If you want to look at the final project code you can find it at <a href="https://github.com/deepgram-devs/censor-audio">https://github.com/deepgram-devs/censor-audio</a>.
 
 ## Before We Start
 
@@ -186,6 +186,6 @@ And run your script with `node index.js`. Once completed, your `output.wav` file
 
 A transcript is not always the final step in a project - you can use the structured data returned by Deepgram to do further processing or analysis, as demonstrated by this post. I hope you found it interesting.
 
-The complete project is available at <https://github.com/deepgram-devs/censor-audio> and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
+The complete project is available at <a href="https://github.com/deepgram-devs/censor-audio">https://github.com/deepgram-devs/censor-audio</a> and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
         

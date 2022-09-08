@@ -226,12 +226,12 @@ def on_event():
 ```
 
 We can see how the utterances will look after they’re formatted:
-
+```
     [{'channel': 0, 'transcript': 'Hello?', 'id': 288397603074461838},
     {'channel': 1, 'transcript': 'Hey. How's it going?', 'id': 109089630999017748},
     {'channel': 0, 'transcript': 'Thank you for using Deepgram.', 'id': 124620676610936565},
     {'channel': 1, 'transcript': 'Have a good day.', 'id': 182036969834868158}]
-
+```
 Lastly, we'll add the `/transcribe` route and a templates folder with an `index.html` file that will display the phone speech-to-text transcript.
 
 In the Python file, we'll add the following code to get the voice-to-text transcript from the database and render them in the HTML template.
