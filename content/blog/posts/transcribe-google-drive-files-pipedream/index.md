@@ -1,27 +1,28 @@
 ---
-title: "Automatically Transcribe Google Drive Files with Pipedream"
-description: "Learn how to automate the creation of transcriptions by simply dropping files into a Google Drive folder."
+title: Automatically Transcribe Google Drive Files with Pipedream
+description: Learn how to automate the creation of transcriptions by simply
+  dropping files into a Google Drive folder.
 date: 2022-08-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1659956235/blog/2022/08/transcribe-google-drive-files-pipedream/cover.png
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: tutorial
 tags:
-    - javascript
-    - low-code
+  - javascript
+  - low-code
 seo:
-    title: "Automatically Transcribe Google Drive Files with Pipedream"
-    description: "Learn how to automate the creation of transcriptions by simply dropping files into a Google Drive folder."
-shorturls:
-    share: https://dpgr.am/76f6af6
-    twitter: https://dpgr.am/23ffeae
-    linkedin: https://dpgr.am/0ead30b
-    reddit: https://dpgr.am/d45be9f
-    facebook: https://dpgr.am/7c87314
+  title: Automatically Transcribe Google Drive Files with Pipedream
+  description: Learn how to automate the creation of transcriptions by simply
+    dropping files into a Google Drive folder.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454123/blog/transcribe-google-drive-files-pipedream/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454123/blog/transcribe-google-drive-files-pipedream/ograph.png
+shorturls:
+  share: https://dpgr.am/76f6af6
+  twitter: https://dpgr.am/23ffeae
+  linkedin: https://dpgr.am/0ead30b
+  reddit: https://dpgr.am/d45be9f
+  facebook: https://dpgr.am/7c87314
 ---
-
 Pipedream is one of my new discoveries, and I've quickly become a fan. It's a low-code automation builder with a solid offering for developers with the ability to install npm packages and write code for the Node.js runtime (as well as other languages). There's ~2GB of ephemeral storage available to your workflows. With hundreds of integrations available, much of the time spent doing CRUD operations is taken away. You can focus on the task-specific 'glue' that brings your automation to life.
 
 In this tutorial, you will build a Pipedream workflow that will listen for new files to be added to a Google Drive folder, transcribe them with the [Deepgram Node.js SDK](https://developers.deepgram.com/sdks-tools/sdks/node-sdk/), and email you the result.
@@ -122,5 +123,3 @@ module.exports = defineComponent({
 ```
 
 You can now deploy your workflow and automatically receive Deepgram transcripts via email. You can, of course, edit any of the steps to be more useful to your specific use case. If you have any questions, please feel free to reach out to us - we love to help!
-
-        

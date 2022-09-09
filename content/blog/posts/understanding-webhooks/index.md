@@ -88,7 +88,7 @@ app.post('/hook', (req, res) => {
 app.listen(3000);
 ```
 
-Since webhooks create a POST request to your application, you will need to create a POST route handler in your application. Assuming our application's URL is [https://myDIYstore.com](https://myDIYstore.com), our webhook consumer’s URL will be [https://myDIYstore.com/hook](https://myDIYstore.com/hook).
+Since webhooks create a POST request to your application, you will need to create a POST route handler in your application. Assuming our application's URL is https://myDIYstore.com, our webhook consumer’s URL will be https://myDIYstore.com/hook.
 
 ## Webhooks vs. Polling
 

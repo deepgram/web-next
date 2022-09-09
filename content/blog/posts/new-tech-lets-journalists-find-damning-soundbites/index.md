@@ -74,8 +74,6 @@ Searching through recordings is really difficult. In terms of workflow, usually 
 
 Deepgram finds speech with A.I.
 
-![Deepgram Infographic](http://i.imgur.com/pW0Ajuk.png)
-
 Deepgram is an artificial intelligence tool that makes searching for keywords in speeches, private conversations and phone calls faster, cheaper and easier than the old way of doing things. Deepgram indexes audio files in more than half the time of a human transcriber, and **costs only 75¢ per hour of audio**. Compare that to the 75¢ _per minute_ charged by most human transcription services-it's a pretty good deal.
 
 And, Deepgram takes out the extra step of feeding transcriptions into a search platform. You can search for keywords directly within the audio recording, and jump straight to the times the keyword was mentioned in the audio. This lets reporters listen for intonation and inflection, which are totally lost during the transcription process. Deepgram makes finding the timestamp of those sound bites a breeze (I'm looking at you radio and podcast producers).

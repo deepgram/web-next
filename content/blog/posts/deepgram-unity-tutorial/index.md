@@ -78,7 +78,7 @@ Then click the "+" drop-down and click "Add package from git URL...".
 
 <img src="https://res.cloudinary.com/deepgram/image/upload/v1647377746/blog/2022/03/deepgram-unity-tutorial/assets/add_package_from_git_url.png" alt="Add a package from a git URL." style="max-width: 400px;display: block;margin-left: auto;margin-right: auto;">
 
-Enter the URL: [https://github.com/endel/NativeWebSocket.git#upm](https://github.com/endel/NativeWebSocket.git#upm) and click "Add."
+Enter the URL: https://github.com/endel/NativeWebSocket.git#upm and click "Add."
 
 We are now ready to start putting the demo together!
 

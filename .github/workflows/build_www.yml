@@ -20,7 +20,7 @@ jobs:
     name: Build WWW
     runs-on: ubuntu-latest
     env:
-      PRODUCTION_DOMAIN: www.deepgram.com
+      PRODUCTION_DOMAIN: deepgram.com
       STAGING_DOMAIN: nimble-treacle-4f6711-www.netlify.app
       BUILD_PATH: ./www
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -28,6 +28,11 @@ jobs:
       IS_PRODUCTION: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       IS_STAGING: ${{ github.ref != 'refs/heads/main' && github.event_name == 'pull_request' }}
       DEPLOY_PREFIX: www
+      WWW_DOMAIN: $URL
+      BLOG_DOMAIN: https://blog.deepgram.com
+      DOCS_DOMAIN: https://developers.deepgram.com
+      CONSOLE_DOMAIN: https://console.deepgram.com
+      STATUS_DOMAIN: https://status.deepgram.com
     steps:
       - name: Configure dynamic environment variables for production
         if: ${{ env.IS_PRODUCTION == 'true' }}
