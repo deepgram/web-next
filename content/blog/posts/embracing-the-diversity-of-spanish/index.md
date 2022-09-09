@@ -1,5 +1,5 @@
 ---
-title: Embracing the diversity of Spanish
+title: Embracing the Diversity of Spanish
 description: Spanish language diversity should be embraced by everyone including
   speech recognition solutions. There should not be just one Spanish speech
   model but multiple ones that start with a base model.
