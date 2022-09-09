@@ -22,8 +22,7 @@ shorturls:
   reddit: https://dpgr.am/b04485e
   facebook: https://dpgr.am/2c79813
 ---
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/pE5-K7gg0kE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe><iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/576097014&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/576097014&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 
 **Scott:** Welcome to the AI show. Today we're asking the question, the very big question. What will the AI Utopia look like?
 
@@ -37,7 +36,7 @@ shorturls:
 
 **Susan:** Oh, I'm just looking for all the easy ones, you're going to live longer. Do you want to live longer, Scott?
 
-### How's AI going to help us live longer?
+## How's AI going to help us live longer?
 
 **Susan:** Bioinformatics. NVIDIA had this really cool demo last year where they took an MRI or something and used machine learning to turn it into a 3D view. You know, automatically segmenting out organs and all sorts of stuff. I mean, this is just like the level one stuff.
 
@@ -59,9 +58,7 @@ _An MRI image of a person with an arachnoid cyst in their left, inferior frontal
 
 **Scott:** Everybody likes that one.
 
-**Susan:** The world is just wide open for amazing new things, transformative things.
-
-Pretty much everybody has seen cars driving around their city mapping everything around. We all know the autonomous revolution is going to come upon us, but there's so many cool things that it's going to enable.
+**Susan:** The world is just wide open for amazing new things, transformative things. Pretty much everybody has seen cars driving around their city mapping everything around. We all know the autonomous revolution is going to come upon us, but there's so many cool things that it's going to enable.
 
 **Scott:** The cars drive you around, you can take a nap.
 
@@ -109,9 +106,7 @@ Pretty much everybody has seen cars driving around their city mapping everything
 
 **Susan:** So what do you think, Scott, what's a big area you're thinking of?
 
-**Scott:** I'm really big on my life becoming easier, that would be awesome.
-
-You get in your car and you're about to drive somewhere and you have to fumble with your Google maps and put in a stupid address for it and be like, "No, not that address, this other address." And, "Oh, I also want to make a stop along the way to go get some donuts or cookies or, whatever, because, hey I'm going to this meeting." Why can't I make all this easier, just talk to it like a human or it just knows that, "Hey, it's nine o'clock and, Scott's going to work."
+**Scott:** I'm really big on my life becoming easier, that would be awesome. You get in your car and you're about to drive somewhere and you have to fumble with your Google maps and put in a stupid address for it and be like, "No, not that address, this other address." And, "Oh, I also want to make a stop along the way to go get some donuts or cookies or, whatever, because, hey I'm going to this meeting." Why can't I make all this easier, just talk to it like a human or it just knows that, "Hey, it's nine o'clock and, Scott's going to work."
 
 **Susan:** "Should we stop at the coffee shop, Scott?" Politely ask.
 
@@ -137,7 +132,7 @@ Food is another big one for people. Not just agriculture - we should get there -
 
 **Susan:** If AI can solve that problem, how many more marriages would be saved?
 
-### Solving the discovery problem
+## Solving the discovery problem
 
 **Scott:** It's a discovery problem in a lot of ways, right? If this machine learning program was able to give you something that you guys would both agree on, that's new, that's interesting, that's great.
 
@@ -151,7 +146,7 @@ And not only that, it suggests a couple of options for that. You probably would 
 
 **Susan:** I'm loving the offloading blame right now.
 
-### What about agriculture?
+## What about agriculture?
 
 **Susan:** Agriculture is rife with disruption for AI in very amazingly good ways. One of my big hopes is that we will re-enable the small farmer again, and that is because when you look at big agriculture, they're all about taking huge tracts of land and trying to make it look very similar and not flatten it all out, grow the exact same crop and because you get the economies of scale, you get everything the same.
 
@@ -175,11 +170,7 @@ _[Unsplash](https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=r
 
 **Scott:** Well, I think it's more like, "Here's the plan, is that okay?"
 
-**Susan:** "Yeah, go ahead, go do it, go to town." That will allow farmers, like any profession and any professional to focus more on the harder pieces of it.
-
-Start taking care of the average, give me a rough plan and maybe I'll tweak it for those little interesting things. I predict prices on this are going to be different, or, maybe farm costs over here are going to be different for things the machine can't take into account and tweak it that way.
-
-And those are just a few of the small things. You know, talk about distribution that's going to be revolutionized in farming. It's going to be faster to your table, it's going to be fresher to your table, it's going to be more diverse. If you do enable utilizing more of the land, you're going to enable a more diverse set of crops to come to market.
+**Susan:** "Yeah, go ahead, go do it, go to town." That will allow farmers, like any profession and any professional to focus more on the harder pieces of it. Start taking care of the average, give me a rough plan and maybe I'll tweak it for those little interesting things. I predict prices on this are going to be different, or, maybe farm costs over here are going to be different for things the machine can't take into account and tweak it that way. And those are just a few of the small things. You know, talk about distribution that's going to be revolutionized in farming. It's going to be faster to your table, it's going to be fresher to your table, it's going to be more diverse. If you do enable utilizing more of the land, you're going to enable a more diverse set of crops to come to market.
 
 **Scott:** What about robots cooking?
 
@@ -195,13 +186,11 @@ And those are just a few of the small things. You know, talk about distribution 
 
 **Scott:** I would assume the first one is like, "No, it's disgusting, you don't want to go there."But, hey, "No, it's okay, it was fine." That's a pretty ringing endorsement then.
 
-**Susan:** Yeah, ringing endorsement for a burger from scratch.
-
-Well their big thing, I think, was it was literally ground exactly at that point, the moment it was ordered. But, when they grind it they grind it in a way so that it makes it more tender because, now they can literally control as little pieces of meat are put together.
+**Susan:** Yeah, ringing endorsement for a burger from scratch. Well their big thing, I think, was it was literally ground exactly at that point, the moment it was ordered. But, when they grind it they grind it in a way so that it makes it more tender because, now they can literally control as little pieces of meat are put together.
 
 **Scott:** Well, that's cute. Everybody has to have a story so, yeah, that makes sense.
 
-### What about the medical perspective?
+## What about the medical perspective?
 
 **Scott:** We're all going to live longer, we already heard that.
 
@@ -210,10 +199,6 @@ Well their big thing, I think, was it was literally ground exactly at that point
 **Scott:** And motivate you to get better.
 
 **Susan:** Wait five more minutes or, right now is the exact perfect time. You know, last time you did exercises these were the ones that seemed to help you more than those, you know? The 16 ounce curls worked best only once a week, not five times a week.
-
-<iframe src="https://giphy.com/embed/K34FVrUx8ggyA" width="100%" height="100%" style="position:absolute;" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
-
-[via GIPHY](https://giphy.com/gifs/K34FVrUx8ggyA)
 
 **Susan:** But, monitoring those things that actually make a difference in your life.
 
@@ -287,11 +272,7 @@ _Courtesy: [Bajiao Studio](http://www.bajiaostudio.com/en/designers/yi-jing)_
 
 ### Think about the energy sector
 
-**Scott:** I think also in the energy sector there's going to be a big deal. For example, better use of the grid. This is already kind of happening but, better systems designed for that and then, systems to switch between, choose what you should do, price it, et cetera, make it more efficient. But also, machine learning techniques to find out new power sources.
-
-So, what I mean is, [fusion has been a promise for a long time](https://blog.deepgram.com/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/) and, it actually is really close to happening and it's like, man, what's the real problem here? It might be the people.
-
-And saying, "Hey, here are the laws of physics and here are the constraints that we have, it's probably going to be real complicated to make this work. Can we throw some computing power and a machine learning algorithm to guess at what the best type of fusion device would be?" And, there's been progress made on [this](https://www.pppl.gov/news/press-releases/2017/12/artificial-intelligence-helps-accelerate-progress-toward-efficient).
+**Scott:** I think also in the energy sector there's going to be a big deal. For example, better use of the grid. This is already kind of happening but, better systems designed for that and then, systems to switch between, choose what you should do, price it, et cetera, make it more efficient. But also, machine learning techniques to find out new power sources. So, what I mean is, [fusion has been a promise for a long time](https://blog.deepgram.com/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/) and, it actually is really close to happening and it's like, man, what's the real problem here? It might be the people. And saying, "Hey, here are the laws of physics and here are the constraints that we have, it's probably going to be real complicated to make this work. Can we throw some computing power and a machine learning algorithm to guess at what the best type of fusion device would be?" And, there's been progress made on [this](https://www.pppl.gov/news/press-releases/2017/12/artificial-intelligence-helps-accelerate-progress-toward-efficient).
 
 **Susan:** Lots of progress. Yeah, I mean, I'm actually hearing the eternal joke of fusion's only 20 years away.
 
@@ -319,13 +300,9 @@ _A picture of TOKAMAK at the [Princeton Plasma Physics Laboratory (PPPL)](https:
 
 **Susan:** I'm no physics guy.
 
-**Scott:** Let the machine learning algorithm figure out the problems.
+**Scott:** Let the machine learning algorithm figure out the problems. Tesla's Power wall?
 
-Tesla's Power wall?
-
-**Susan:** They've done some pretty cool stuff with big batteries in Australia that's really paid off, but their next set of big projects are all about decentralized power. The power wall in the home but also becoming now a municipal power grid because all these things are linked together intelligently to take load and push load and all sorts of different stuff. They're really trying to reshape the grid and, to do that, you're going to have to have some very intelligent controls because it only takes a little bit, everybody deciding at the exact same moment to turn on their toaster, to really throw a system out of whack.
-
-You know, talk about civil disobedience, you just put on a big billboard at 6:00PM on Tuesday, every single person go make toast. And then, bam.
+**Susan:** They've done some pretty cool stuff with big batteries in Australia that's really paid off, but their next set of big projects are all about decentralized power. The power wall in the home but also becoming now a municipal power grid because all these things are linked together intelligently to take load and push load and all sorts of different stuff. They're really trying to reshape the grid and, to do that, you're going to have to have some very intelligent controls because it only takes a little bit, everybody deciding at the exact same moment to turn on their toaster, to really throw a system out of whack. You know, talk about civil disobedience, you just put on a big billboard at 6:00PM on Tuesday, every single person go make toast. And then, bam.
 
 **Scott:** I love this idea. I love this idea.
 
@@ -335,13 +312,9 @@ You know, talk about civil disobedience, you just put on a big billboard at 6:00
 
 **Susan:** Right after we're done here I'm going to open up my browser and I'm going to see an advertisement to sell me a toaster.
 
-**Scott:** I think there's some things in the medical side that we didn't talk about like, identifying cancer, or like, being able to go into this imagery a lot better and tell you what's going on.
+**Scott:** I think there's some things in the medical side that we didn't talk about like, identifying cancer, or like, being able to go into this imagery a lot better and tell you what's going on. You touched on like three dimensional reconstruction and being able to look at it better but, you can also have areas pointed out to you like, "Well, this looks like a problem."
 
-You touched on like three dimensional reconstruction and being able to look at it better but, you can also have areas pointed out to you like, "Well, this looks like a problem."
-
-**Susan:** This is not your standard kidney. One of the classic things in facial recognition, the first thing you always learn about is using [principal component analysis](https://en.wikipedia.org/wiki/Principal_component_analysis) or something along those lines to say, "This is what the standard face looks like" so, recognizing faces and recognizing those things. You can do that with, effectively, a kidney but, with a lot better results as you use much stronger techniques.
-
-And, now you walk in for your weekly, your monthly, your yearly exam and, you quickly zip around, do an MRI or whatever technique they're going to use to scan the inside of your body and, poof, areas in you are marked with little highlights. You know, green, yellow, red, black.
+**Susan:** This is not your standard kidney. One of the classic things in facial recognition, the first thing you always learn about is using [principal component analysis](https://en.wikipedia.org/wiki/Principal_component_analysis) or something along those lines to say, "This is what the standard face looks like" so, recognizing faces and recognizing those things. You can do that with, effectively, a kidney but, with a lot better results as you use much stronger techniques. And, now you walk in for your weekly, your monthly, your yearly exam and, you quickly zip around, do an MRI or whatever technique they're going to use to scan the inside of your body and, poof, areas in you are marked with little highlights. You know, green, yellow, red, black.
 
 **Scott:** Ooh, shouldn't have done that when I was 18, yeah.
 
@@ -351,21 +324,13 @@ And, now you walk in for your weekly, your monthly, your yearly exam and, you qu
 
 **Scott:** Or strap you into a chair dentists that do your dental work for you?
 
-**Susan:** Well the whole thing has been a growing thing for a long time and, one of the biggest problems, I understand, in that field is latency. You know, a thousand miles, speed of light and all the equipment in between means, if you're going to move a scalpel and you've got a little bit of a delay there, machine learning could enable that a lot more. Again, getting to the point where the surgeon is maybe doing more about guiding what's going to go on and not exactly doing what's going to go on.
-
-It does the perfect stitch for them, they don't actually have to do it themselves.
+**Susan:** Well the whole thing has been a growing thing for a long time and, one of the biggest problems, I understand, in that field is latency. You know, a thousand miles, speed of light and all the equipment in between means, if you're going to move a scalpel and you've got a little bit of a delay there, machine learning could enable that a lot more. Again, getting to the point where the surgeon is maybe doing more about guiding what's going to go on and not exactly doing what's going to go on. It does the perfect stitch for them, they don't actually have to do it themselves.
 
 **Scott:** Do a perfect stitch here and then, do a perfect stitch here.
 
-**Susan:** Exactly.
-
-Cauterize over there. I saw a while ag, a really cool thing where they were taking imagery of a beating heart and fixing it with, I think there was like some sort of strobe light that would sync up to it so the doctor would see it synced up and then the scalpel would actually, the tip of the scalpel would move to stay the same amount away from the beating heart so that it looks like it's a still heart and they can actually do surgery in real time on a beating heart.
+**Susan:** Exactly. Cauterize over there. I saw a while ag, a really cool thing where they were taking imagery of a beating heart and fixing it with, I think there was like some sort of strobe light that would sync up to it so the doctor would see it synced up and then the scalpel would actually, the tip of the scalpel would move to stay the same amount away from the beating heart so that it looks like it's a still heart and they can actually do surgery in real time on a beating heart.
 
 **Susan:** That is the future of medicine. There's a competition to basically build the tricorder, you know, like every single year they try to incorporate more and more of those things into it and, it only makes sense.
-
-<iframe src="https://giphy.com/embed/dYPJ07nWx5FqE" width="100%" height="100%" style="position:absolute;" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
-
-[via GIPHY](https://giphy.com/gifs/scanner-dYPJ07nWx5FqE)
 
 **Susan:** Don't you want your doctor to be able to come in and just go, "Done." You didn't have to set up some sort of appointment and there it is.
 
@@ -375,17 +340,9 @@ In 10 years try to find a researcher that's not using machine learning to analyz
 
 **Susan:** Well that was your world, teasing a weak signal out using machine learning techniques.
 
-**Scott:** Absolutely. You could try to set up rules and write them but it becomes hard because there are all these exceptions.
+**Scott:** Absolutely. You could try to set up rules and write them but it becomes hard because there are all these exceptions. It might be better if I just tell it: "That's right, that's wrong, that's right, that's wrong. If this is of that type, that's of this type." Then you just do that a few thousand times and then say, "Figure it out yourself." You pick all the parameters in order to satisfy that and it works very well. And, it totally changes how you think about the world. I could spend all my time writing an algorithm or, I could spend all my time getting relevant data and labeling it and then, how is that going to turn out in the end? We're seeing over and over that spending the time on the algorithm is not usually the best option unless you have a very small amount of data.
 
-It might be better if I just tell it: "That's right, that's wrong, that's right, that's wrong. If this is of that type, that's of this type." Then you just do that a few thousand times and then say, "Figure it out yourself." You pick all the parameters in order to satisfy that and it works very well.
-
-And, it totally changes how you think about the world. I could spend all my time writing an algorithm or, I could spend all my time getting relevant data and labeling it and then, how is that going to turn out in the end?
-
-We're seeing over and over that spending the time on the algorithm is not usually the best option unless you have a very small amount of data.
-
-**Susan:** Well, you know,
-
-There's a truism in the machine learning world and, we've kind of hit this before but, data will live forever, your algorithm likely won't.
+**Susan:** Well, you know, there's a truism in the machine learning world and, we've kind of hit this before but, data will live forever, your algorithm likely won't.
 
 **Scott:** It always gets better.
 
@@ -393,24 +350,18 @@ There's a truism in the machine learning world and, we've kind of hit this befor
 
 **Scott:** You see this all over the place. The academic datasets and texts and images and speech that have existed for the past 40 years are still used to train models today.
 
-### What does your AI Utopia look like?
+## What does your AI Utopia look like?
 
-**Scott:** So for my Utopia I want my robot friend. I don't know if it's a phone, if it's a physical thing that can roll around and dance or something stupid but, you know, something that you can talk to and it does stuff for you. Maybe it doesn't have to physically do it for you but, call somebody up or schedule a cake to be ordered or pick up donuts o, suggest food. You're actually like, "I like that, I'm glad I didn't have to go do that discovery. This is great, you know? Tell me more, friend."
-
-That will be really dope for me. What about you?
+**Scott:** So for my Utopia I want my robot friend. I don't know if it's a phone, if it's a physical thing that can roll around and dance or something stupid but, you know, something that you can talk to and it does stuff for you. Maybe it doesn't have to physically do it for you but, call somebody up or schedule a cake to be ordered or pick up donuts o, suggest food. You're actually like, "I like that, I'm glad I didn't have to go do that discovery. This is great, you know? Tell me more, friend." That will be really dope for me. What about you?
 
 **Susan:** My personal, I like the travel aspect. Personally, that's driven a large chunk of my life - the freedom to go places easily and see places easily.
 
 **Scott:** Teleporter. You're sleeping, you come in and out of consciousness and you wake up in a new place. Hey, that's teleporting man, if you can get moved while you're sleeping.
 
-**Susan:** One of my best travel experiences was we were in Seville in Southern Spain and, we got a night train to Barcelona. We were dead tired because,long story but, we get on this train, we fall asleep in a nice comfortable sleeping car, and we woke up to the Catalina coast with the sunrise. It was like, "This is what I want for every trip."
+**Susan:** One of my best travel experiences was we were in Seville in Southern Spain and, we got a night train to Barcelona. We were dead tired because, long story but, we get on this train, we fall asleep in a nice comfortable sleeping car, and we woke up to the Catalina coast with the sunrise. It was like, "This is what I want for every trip."
 
 **Scott:** All traveling should be like this.
 
 **Susan:** It should be the same thing, we're going to Yellowstone or, going to Grand Canyon or just going skiing. It's like," I'm going to fall asleep at the end of a normal day. Those dead hours that I'm not conscious of the world, use them productively, get me somewhere cool." Get me to wake up at a great place every day and I'll be happy. That to me is a really, really huge thing.
 
 **Scott:** Well we should ask our listeners, what do you think will make the most positive impact? What are the things you're excited about? We'd love to hear about it.
-
-* * *
-
-Tune in to the AI Show every week on [YouTube](https://www.youtube.com/watch?v=7VMio8Tk2so&t=914s) or [Twitch](https://www.twitch.tv/videos/310181430) and share your thoughts in the comments or Tweet Us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en)
