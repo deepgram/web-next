@@ -24,12 +24,15 @@ shorturls:
   reddit: https://dpgr.am/c87d7dc
   facebook: https://dpgr.am/8bc4171
 ---
-
 We've been asked by a few different organizations to help with humanitarian efforts in Eastern Europe by creating a speech model to transcribe Ukrainian. Such a model is needed in, for example, call centers that have been set up to help refugees fleeing the conflict. We'd like to offer access to that model to anyone who needs it to help with the current crisis-all Ukrainian speech transcription will be free for at least the next 6 months.
 
 ## How to Get Access to Ukrainian ASR
 
-If you'd like to get access to Ukrainian speech-to-text, you can [sign up for a Deepgram account](https://console.deepgram.com/) and select Ukrainian as your audio language in our drop down menu, as seen in the image below. ![](https://res.cloudinary.com/deepgram/image/upload/v1661976853/blog/speech-to-text-model-ukrainian/image1-1024x732.png) To transcribe Ukrainian audio with Deepgram's API, simply add **language=uk** to your transcription requests. You can visit [our documentation](https://developers.deepgram.com/documentation/features/language/) for more information about our language support.
+If you'd like to get access to Ukrainian speech-to-text, you can [sign up for a Deepgram account](https://console.deepgram.com/) and select Ukrainian as your audio language in our drop down menu, as seen in the image below. 
+
+![](https://res.cloudinary.com/deepgram/image/upload/v1661976853/blog/speech-to-text-model-ukrainian/image1-1024x732.png) 
+
+To transcribe Ukrainian audio with Deepgram's API, simply add **language=uk** to your transcription requests. You can visit [our documentation](https://developers.deepgram.com/documentation/features/language/) for more information about our language support.
 
 ```
 curl -X POST \
