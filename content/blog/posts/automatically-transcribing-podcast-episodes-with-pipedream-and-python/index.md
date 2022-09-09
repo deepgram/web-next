@@ -9,7 +9,14 @@ authors:
 category: tutorial
 tags:
   - python
+shorturls:
+  share: https://dpgr.am/870760a
+  twitter: https://dpgr.am/aad9a28
+  linkedin: https://dpgr.am/6e3bb68
+  reddit: https://dpgr.am/51f5012
+  facebook: https://dpgr.am/4a3ecae
 ---
+
 I love podcasts, but I rarely find the time to listen to all the new episodes of the ones I love. However, I often find time to read an article or newsletter so I thought it would be fun to automatically transcribe new episodes and send myself the output via email.
 
 We'll be using Pipedream - an online workflow builder that integrates with many services while allowing us to write code in Python, JavaScript, Go, and more. Each workflow has one trigger that starts it and any number of actions that can happen as a result.
@@ -100,18 +107,15 @@ Now a transcript has been automatically generated, you can do anything with it -
 
 Add a **Send Email To Self** step, and set the subject line to:
 
-```
-New episode of {{steps.trigger.event.meta.title}}: {{steps.trigger.event.title}}
-```
+    New episode of {{steps.trigger.event.meta.title}}: {{steps.trigger.event.title}}
 
 Set the text to:
 
-```
-Episode description: {{steps.trigger.event.description}}\n\n{{steps.python.$return_value}}
-```
+    Episode description: {{steps.trigger.event.description}}\n\n{{steps.python.$return_value}}
 
 It should look like the following:
 
 ![A send email to self step with a subject line and text containing variables](https://res.cloudinary.com/deepgram/image/upload/v1661981806/blog/2022/09/automatically-transcribe-new-podcasts-pipedream-python/email-config.png)
 
 Test the step, and you should receive an email in just a few seconds. Deploy the workflow, and enjoy reading new podcast episodes. If you have any questions about this project or anything else to do with Deepgram, please get in touch!
+
