@@ -1,26 +1,27 @@
 ---
-title: "Speech Recognition Analytics for Audio with Python"
-description: "Learn how to combine speech recognition on real-time audio with analytics by utilizing Python and Deepgram's Speech-to-Text API."
+title: Speech Recognition Analytics for Audio with Python
+description: Learn how to combine speech recognition on real-time audio with
+  analytics by utilizing Python and Deepgram's Speech-to-Text API.
 date: 2022-03-23
 cover: https://res.cloudinary.com/deepgram/image/upload/v1647974816/blog/2022/03/python-talk-time-analytics/Speech-Analytics-Real-Time-Audio-w-Python%402x.jpg
 authors:
-    - tonya-sims
+  - tonya-sims
 category: tutorial
 tags:
-    - python
+  - python
 seo:
-    title: "Speech Recognition Analytics for Audio with Python"
-    description: "Learn how to combine speech recognition on real-time audio with analytics by utilizing Python and Deepgram's Speech-to-Text API."
-shorturls:
-    share: https://dpgr.am/ad5301e
-    twitter: https://dpgr.am/035d8b3
-    linkedin: https://dpgr.am/6994e98
-    reddit: https://dpgr.am/4d26964
-    facebook: https://dpgr.am/3828283
+  title: Speech Recognition Analytics for Audio with Python
+  description: Learn how to combine speech recognition on real-time audio with
+    analytics by utilizing Python and Deepgram's Speech-to-Text API.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454048/blog/python-talk-time-analytics/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454048/blog/python-talk-time-analytics/ograph.png
+shorturls:
+  share: https://dpgr.am/ad5301e
+  twitter: https://dpgr.am/035d8b3
+  linkedin: https://dpgr.am/6994e98
+  reddit: https://dpgr.am/4d26964
+  facebook: https://dpgr.am/3828283
 ---
-
 Have you ever wondered what you could build using voice-to-text and analytics? This article will discover how we can combine a speech recognition provider that transcribes audio to text with Python using Deepgram and speech-to-text analytics.
 
 Analytics is all about measuring patterns in data to discover insights that help us make better decisions. These decisions could improve business capacity, raise sales, enhance communication between a customer service agent and customer, and much more.
@@ -33,9 +34,9 @@ This tutorial will use the Deepgram Python SDK to build a simple script that doe
 
 Then we’ll focus on analytics by measuring the following:
 
-*   The amount of time each speaker spoke per phrase
-*   The average amount of time they spoke
-*   The total time of conversation for each speaker
+* The amount of time each speaker spoke per phrase
+* The average amount of time they spoke
+* The total time of conversation for each speaker
 
 # Getting Started
 
@@ -43,11 +44,15 @@ Before we start, it’s essential to generate a Deepgram API key to use in our p
 
 Next, let’s make a directory anywhere we’d like.
 
-    mkdir deepgram_analytics_project
+```
+mkdir deepgram_analytics_project
+```
 
 Then change into that directory so we can start adding things to it.
 
-    cd deepgram_analytics_project
+```
+cd deepgram_analytics_project
+```
 
 We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one.
 
@@ -59,21 +64,27 @@ It’s recommended in Python to use a virtual environment so our project can be 
 
 Now we can open up our favorite editor and create a file called `deepgram_analytics.py`. If you’d like to make it from the command line, do this:
 
-    touch deepgram_analytics.py
+```
+touch deepgram_analytics.py
+```
 
 Finally, let’s install our dependencies for our project. Ensure our virtual environment is activated because we’ll install those dependencies inside. If your virtual environment is named `venv` then activate it.
 
-    source venv/bin/activate
+```
+source venv/bin/activate
+```
 
 After activation, we install the dependencies, including:
 
-*   The Deepgram Python SDK
-*   The dotenv library, which helps us work with our environment variables
+* The Deepgram Python SDK
+* The dotenv library, which helps us work with our environment variables
 
 <!---->
 
-    pip install deepgram-sdk
-    pip install python-dotenv
+```
+pip install deepgram-sdk
+pip install python-dotenv
+```
 
 # The Code
 
@@ -99,9 +110,11 @@ The `PATH_TO_FILE = 'premier_broken-phone.mp3'` is a path to our audio file we�
 
 Create an `env` file at the same level as our `deepgram_analytics.py`. Put the following inside of it:
 
-    DEEPGRAM_API_KEY = “YOUR_API_KEY”
+```
+DEEPGRAM_API_KEY = “YOUR_API_KEY”
+```
 
-Where you’d replace `YOUR_API_KEY` with your api\_key you got from Deepgram.
+Where you’d replace `YOUR_API_KEY` with your api_key you got from Deepgram.
 
 Next, let’s add the audio file to our project by [downloading it here](https://developers.deepgram.com/data/audio/premier_broken-phone.mp3), and adding it to our project directory.
 
@@ -213,7 +226,7 @@ We define an empty dictionary called `total_speaker_time` and empty list `speake
 
 Next, we loop through the transcript and find which speaker is talking. We append their `speaker_number`, an empty list `[]` to add their transcript, and `0`, the total time per phrase for each speaker.
 
-We use a `try/except` block to add to our `total_speaker_time` dictionary. We check if the key `speaker_number` is already in the dictionary. If so, then we just add how many times the speaker speaks ` total_speaker_time[speaker_number][1] += 1`. If not in the dictionary, we add the key and its values `total_speaker_time[speaker_number] = [0,1]`, with `0` as the time spoken in seconds and `1` is how many times they speak.
+We use a `try/except` block to add to our `total_speaker_time` dictionary. We check if the key `speaker_number` is already in the dictionary. If so, then we just add how many times the speaker speaks `total_speaker_time[speaker_number][1] += 1`. If not in the dictionary, we add the key and its values `total_speaker_time[speaker_number] = [0,1]`, with `0` as the time spoken in seconds and `1` is how many times they speak.
 
 The below lines of code get the transcript from each speaker `get_word = speaker["word"]`. We then appended those to our `speaker_words` list. Finally, we get the `total_speaker_time` for each speaker by subtracting their `end` and `start` speaking times and adding them together.
 
@@ -249,5 +262,3 @@ Here’s an example of what our output would look like:
 ![terminal output for Deepgram talk time analytics](https://res.cloudinary.com/deepgram/image/upload/v1647974833/blog/2022/03/python-talk-time-analytics/terminal_output.png)
 
 Congratulations on transcribing audio to text with Python using Deepgram with speech-to-text analytics! You can find the [code here](https://github.com/deepgram-devs/python-talk-time-analytics) with instructions on how to run the project. If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs)
-
-        
