@@ -25,7 +25,7 @@ shorturls:
 ---
 Randall-Reilly is *the* recruiting powerhouse for fast growing companies. They utilize more than 30 web properties, an assortment of strategic media channels, and in-house high-tech call center campaigns to rapidly find, promote, and assist candidates through the recruiting and partnering processes of innovative companies. By engaging the services of Randall-Reilly, one of the largest ridesharing companies can scale their partnering process without losing focus on the important things - finding the right people.
 
-### Challenge: Discovering that unique gem
+## Challenge: Discovering that Unique Gem
 
 Finding the right people starts simply - often with a phone call. But when you handle an enormous amount of calls, you're faced with a massive challenge: sorting through millions of minutes of recorded audio in hopes of discovering a unique gem buried within complex and diverse conversations.
 
@@ -33,7 +33,7 @@ Randell-Reilly analyzes millions of minutes of phone interviews in an effort to 
 
 > "They receive an enormous number of driver-partner applications per year. Analyzing their phone contact processes is key to finding amazing safe drivers. Working with Deepgram is the most effective way to do it." —*Dennis Evanson, Head of Quality Assurance, Randall-Reilly*
 
-### Better Speech Processing, Better Outcomes
+## Better Speech Processing, Better Outcomes
 
 > "We tried Google's Cloud Speech API and Nuance Dragon, and investigated several other products from companies including Amazon, Tethr, Prosodica and Zoom. Deepgram had the best accuracy and program by far." —Brett Evanson, CTO, Randall-Reilly
 
@@ -41,7 +41,7 @@ After facing inaccurate results produced by leading providers, and struggling th
 
 > Before Deepgram, Randall-Reilly found that when it audited its speech-to-text query results from other vendors, only 80% of the search results produced confirmable matches. <mark>*Using Deepgram they were able to increase audit-confirmed results to levels exceeding 95% accuracy.*</mark>
 
-### Faster, better, and more reliable compliance
+## Faster, Better, and More Reliable Compliance
 
 > "The reason we went with Deepgram is because it's a way that we can touch and have some level of QA assessment on every single call. **It gives us the ability to scale compliance operations without hiring a hundred people**. We're able to get more comfortable with compliance in a more flexible and efficient manner; rather than wading through speech-to-text and its inherent inaccuracies, Deepgram's approach is a faster and more accurate assessment."
 
