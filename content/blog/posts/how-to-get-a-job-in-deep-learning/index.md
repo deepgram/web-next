@@ -1,5 +1,5 @@
 ---
-title: How to Get a Job In Deep Learning
+title: How to Get a Job in Deep Learning
 description: Want to work in deep learning? Here are some tips and tricks to
   start your learning.
 date: 2016-09-23
