@@ -224,6 +224,3 @@ collections:
       - label: Name
         name: title
         widget: string
-      - label: Plural
-        name: plural
-        widget: string

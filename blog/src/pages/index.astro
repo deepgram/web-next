@@ -11,7 +11,7 @@ import CategorySection from "../components/homepage/CategorySection.astro";
 import Link from "../shared/components/general/Link.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
 import { getSluggedJson } from "../shared/util";
-import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.page-ssr.astro";
+import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.astro";
 
 const allPosts = await Astro.glob("../content/blog/posts/**/index.md");
 
@@ -74,7 +74,7 @@ const schema = {
 			{categories &&
 				categories.map((category, index) => (
 					<>
-						<CategorySection category={category} />
+						<CategorySection index={index} category={category} />
 						{index === 0 && (
 							<div class="mb-32">
 								<WhitepaperPromo whitepaper="latest" />
