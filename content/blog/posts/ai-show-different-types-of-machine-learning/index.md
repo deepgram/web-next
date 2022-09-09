@@ -1,6 +1,7 @@
 ---
-title: "What are the different types of machine learning? - AI Show"
-description: ""
+title: What are the different types of machine learning? - AI Show
+description: Learn about the different kinds of machine learning in this episode
+  of the AI Show.
 date: 2018-09-15
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981314/blog/ai-show-different-types-of-machine-learning/what-are-the-different-types-of-machine-learning-b.jpg
 authors:
@@ -9,16 +10,16 @@ category: ai-and-engineering
 tags:
   - deep-learning
 seo:
-  title: "What are the different types of machine learning? - AI Show"
+  title: What are the different types of machine learning? - AI Show
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981314/blog/ai-show-different-types-of-machine-learning/what-are-the-different-types-of-machine-learning-b.jpg
 shorturls:
   share: https://dpgr.am/5c9136c
   twitter: https://dpgr.am/cd3415f
   linkedin: https://dpgr.am/b61ac44
   reddit: https://dpgr.am/af0a17a
   facebook: https://dpgr.am/4bfcd8a
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981314/blog/ai-show-different-types-of-machine-learning/what-are-the-different-types-of-machine-learning-b.jpg
 ---
 
 <iframe width="600" height="315" src="https://www.youtube.com/embed/7VMio8Tk2so" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
@@ -30,7 +31,7 @@ og:
 
 Usually people think about three different types, like reinforcement learning, unsupervised, or supervised.
 
-#### What is Reinforcement Learning?
+## What is Reinforcement Learning?
 
 **Susan**: [Reinforcement learning](https://en.wikipedia.org/wiki/Reinforcement_learning) is learning from a series of actions where you get a series of choices and rewards along away. So, a classic one that's been in the news is [AlphaGo](https://en.wikipedia.org/wiki/AlphaGo). A large chunk of reinforcement learning techniques are used in there, specifically Monte Carlo tree research techniques.
 
@@ -51,7 +52,7 @@ Usually people think about three different types, like reinforcement learning, u
 
 There's a lot of great techniques that can draw you in there. You can do simple stuff or really complex stuff. It is just a fun, awesome environment to explore nothing but a bunch of great technologies.
 
-#### What is Reinforcement Learning good at?
+## What is Reinforcement Learning good at?
 
 **Scott**: What kind of problem would you throw at reinforcement learning, say, "Go" and expect it to work?
 
@@ -75,7 +76,7 @@ So, say I have four options in front of me. I choose A and I'm in state _n_ righ
 
 **Susan**: Exactly, it's great. And going back to the Atari learning environment, when you're trying to frame this as a reinforcement learning problem, you've got to figure out how to identify the state you're in and what actions are available and do those different things.
 
-#### What is supervised learning?
+## What is supervised learning?
 
 **Susan**: So, when we talk about unsupervised, supervised, semi-supervised the classic definitions are all around data. So [supervised learning](https://en.wikipedia.org/wiki/Supervised_learning), you've got a bunch of labeled, training data. Labeled meaning like "I've got a picture of a cat and I've got right next to it `cat`. Every single piece of information I've got has the answer of what it is right next to it.
 
@@ -93,7 +94,7 @@ One of the most famous examples that people start off with is the [MNIST](http:/
 
 **Scott**: Yeah you only have to pick from ten. It's not that hard, but there are many different objects in the world for other datasets.
 
-#### Let's talk datasets
+## Let's talk datasets
 
 **Susan**: [ImageNet](https://en.wikipedia.org/wiki/ImageNet) or [CIFAR](https://www.cs.toronto.edu/~kriz/cifar.html) is one of my favorites. 10 and 100 there. That one's actually great because you can start off with the simpler world, the 10, and then go to 100.
 
@@ -109,7 +110,7 @@ One of the most famous examples that people start off with is the [MNIST](http:/
 
 **Scott**: Yeah, not all images are the same size or zoomed in to the same leveling.
 
-#### What is semi-supervised learning?
+## What is semi-supervised learning?
 
 **Susan**: [Semi-supervised](https://en.wikipedia.org/wiki/Semi-supervised_learning) says, "I have some of the labels and I'm going to use unlabeled data to help me boost my results in some way." Think of audio normalization as an example - I've got a bunch of audio and I'm going to use that to help me normalize background, but I'm really only learning on the subset that I have.
 
@@ -131,7 +132,7 @@ This is a traditional [unsupervised](https://en.wikipedia.org/wiki/Unsupervised_
 
 "Supervised world, there's a lot more canned answers. Semi-supervised, a lot less canned answers. Unsupervised, it's pretty hard to find answers."
 
-#### Machine learning in business
+## Machine learning in business
 
 **Scott**: We started out with the more academic side - reinforcement learning. Is that super useful in real world business? Not so much, right?
 
@@ -161,7 +162,7 @@ You could dream up ways, but is that what people are running right now in order 
 
 **Susan**: But you definitely have to have data. If you don't understand your problem enough to have a dataset of examples and answers, then you definitely don't understand the problem well enough to train something to figure it out.
 
-#### What are the different types of data? What do you do with it?
+## What are the different types of data? What do you do with it?
 
 **Susan**: Image and audio.
 
@@ -185,7 +186,7 @@ First of all, we've got a lot of great techniques that are sifting signal from n
 
 **Scott**: Not necessarily the case. There are other constraints that come into play.
 
-#### Dealing with data
+## Dealing with data
 
 **Susan**: Just purely dealing with that data becomes a problem. More data means a longer time before your model converges, before it starts being able to get predictive power. Sometimes it's so far that it just never gets there.
 
@@ -199,7 +200,7 @@ It's all about getting to a baseline because, in general, a lot of our technique
 
 So, if you can get it through some simple statistical technique or whatever to a reasonable baseline, it's a lot easier for your model to nudge it in the right direction and get the right answer.
 
-#### What's considered a large dataset?
+## What's considered a large dataset?
 
 **Scott**: MNIST was sixty thousand images. That's not generally considered a large image dataset. It's pretty big. It's good for what it's trying to do. It can tell handwritten digits pretty well, but the large datasets in the world like ImageNet, which is actually not ten or a hundred like CIFAR, but a thousand categories. I think it's nineteen million images labeled into those categories. That's a pretty big dataset, but is it the biggest dataset in the world? No!
 
@@ -207,7 +208,7 @@ So, if you can get it through some simple statistical technique or whatever to a
 
 **Scott**: They also need data that's segmented. It's not just, "Is there a cat in this image?" It's, "There are three people in this image, I've drawn the outline of the person, I've drawn the shape of the road, I've drawn the traffic light," and things like that. It knows exactly where it is.
 
-#### Thinking about your task
+## Thinking about your task
 
 **Scott**: So, you kind have to think about your task, right? If you're choosing from one of ten categories, then maybe like sixty thousand or ten thousand or a hundred thousand. Somewhere in that range is the number of labeled pieces of data that you would need.
 
@@ -227,7 +228,7 @@ If you're choosing from a hundred categories, maybe it's five or ten times that.
 
 So a human is semi-supervised - at about ten thousand hours it can master language. But, a machine at ten thousand hours, even supervised, hasn't really mastered the language. It's doing pretty well, but it's not mastered. Maybe 10x that, now you're getting to the territory where it feels like it mastered the language. Still, it was a supervised way, not a semi-supervised way.
 
-#### What mechanisms do humans have that machines don't?
+## What mechanisms do humans have that machines don't?
 
 **Susan**: What are the mechanisms that allow a human to do that that we you don't have available to us? Is it how we're representing the information? Is it the structure of the model inside? Are we asking the question the right way?
 
@@ -243,7 +244,7 @@ _We_ know, but the machine is kind of like, "Huh?"
 
 **Scott**: Yeah, what was the "saw" here? There's a lot of common sense here that humans are able to apply really easily. Another really large dataset is text though.
 
-#### Let's talk about text
+## Let's talk about text
 
 **Scott**: Text is huge.
 
@@ -259,7 +260,7 @@ Text is a great secondary source to so many problems out there if you can figure
 
 **Susan**: Yeah you know, "a picture's worth a thousand words." A thousand words may be worth more than single picture in all honesty in how much meaning it conveys. There's a lot of great stuff in text, huge things. The synthetic world, just as a big, broad category, synthetic versus truly labeled, supervised data versus unsupervised.
 
-#### How do you label data?
+## How do you label data?
 
 **Scott**: Humans do it! You have a bunch of humans that look at images and say, "That is a cat" or they circle the person and say, "That's a person" or they listen to audio and they type out what was said. It's very, very tough work.
 
@@ -270,7 +271,3 @@ Text is a great secondary source to so many problems out there if you can figure
 **Scott**: Right now there isn't just a, "Here's a ten million dollar check" and get a dataset labeled. It's more like, you're going to be waiting two years or a year or half a year, and you're going to be orchestrating the effort. You have to do it.
 
 **Susan**: Just think about the data it takes to go out and build a map in the world, physically getting people out there. That data will be useful not only today and for the problem you've got, but probably ten, twenty, fifty years from now.
-
-* * *
-
-Tune in to the AI Show every week on [YouTube](https://www.youtube.com/watch?v=7VMio8Tk2so&t=914s) or [Twitch](https://www.twitch.tv/videos/310181430) and share your thoughts in the comments or Tweet Us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en)
