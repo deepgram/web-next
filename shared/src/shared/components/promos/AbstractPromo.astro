@@ -1,5 +1,5 @@
 ---
-const { class: classes, strapline, title, backgroundImage, theme, insideBlog } = Astro.props;
+const { class: classes, strapline, title, backgroundImage, theme, outsideBlog } = Astro.props;
 
 let themeStyles;
 if (theme) {
@@ -19,7 +19,7 @@ if (theme) {
 const rawHTMLString = "&nbsp;";
 ---
 
-<div class:list={["promo", classes ? classes : "", themeStyles, insideBlog ? "inside-blog" : ""]} style={`background-image: url('${backgroundImage}');`}>
+<div class:list={["promo", classes ? classes : "", themeStyles, outsideBlog ? "outsideBlog" : ""]} style={`background-image: url('${backgroundImage}');`}>
 	<header>
 		{strapline ? <h6 class="uppercase">{strapline}</h6> : <h6 class="uppercase" set:html={rawHTMLString} />}
 		<h2>{title}</h2>
@@ -32,13 +32,39 @@ const rawHTMLString = "&nbsp;";
 <style>
 	.promo {
 		@apply max-w-[76.25rem];
-		@apply min-h-[13rem] w-full;
+		@apply min-h-[13rem];
 		@apply flex flex-col space-y-1;
-		@apply mt-20 py-4 px-8 pb-36 md:pb-4;
+		@apply mt-0 py-4 px-8 pb-36 md:pb-4;
 		@apply justify-between;
 		@apply drop-shadow-md;
 		@apply bg-right bg-no-repeat md:bg-center md:bg-right;
 		@apply bg-[percentage:70%] md:bg-contain;
+	}
+	.outsideBlog {
+		@apply mt-20;
+	}
+
+	@screen xl {
+		.promo {
+			position: relative;
+			width: 75vw;
+			left: calc(-25vw + 25%);
+			margin-top: 0;
+		}
+
+		.outsideBlog {
+			@apply static mt-20 w-full;
+			left: unset;
+		}
+	}
+
+	@screen xl {
+		.inside-blog {
+			position: relative;
+			width: 75vw;
+			left: calc(-25vw + 25%);
+			margin-top: 0;
+		}
 	}
 
 	.promo > header > h6 {
@@ -95,17 +121,5 @@ const rawHTMLString = "&nbsp;";
 	:global(.theme--red form fieldset li) {
 		@apply pl-0;
 		@apply text-white !important;
-	}
-	.inside-blog {
-		margin-top: 0px;
-	}
-
-	@screen xl {
-		.inside-blog {
-			position: relative;
-			width: 75vw;
-			left: calc(-25vw + 25%);
-			margin-top: 0;
-		}
 	}
 </style>
