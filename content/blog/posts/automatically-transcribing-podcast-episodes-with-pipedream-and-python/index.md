@@ -107,11 +107,15 @@ Now a transcript has been automatically generated, you can do anything with it -
 
 Add a **Send Email To Self** step, and set the subject line to:
 
-    New episode of {{steps.trigger.event.meta.title}}: {{steps.trigger.event.title}}
+```
+New episode of {{steps.trigger.event.meta.title}}: {{steps.trigger.event.title}}
+```
 
 Set the text to:
 
-    Episode description: {{steps.trigger.event.description}}\n\n{{steps.python.$return_value}}
+```
+Episode description: {{steps.trigger.event.description}}\n\n{{steps.python.$return_value}}
+```
 
 It should look like the following:
 
