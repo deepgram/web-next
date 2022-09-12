@@ -144,7 +144,7 @@ const customers = [
 		<!-- Filtered Use cases -->
 		<!-- This will be similar to blog post section. will duplicate it here. -->
 
-		<section class="customers contrast contrast--white">
+		<section class="customers contrast contrast--white ">
 			<h2>Leading the voice ecosystem</h2>
 			<p class="text-large">
 				Join the growing list of customers who are innovating with Deepgram and creating new voice technology products and services without compromising speed accuracy, costs or
@@ -152,15 +152,13 @@ const customers = [
 			</p>
 			<p class="text-small">From individuals to enterprises, see what developers all over the world are building with Deepgram.</p>
 			<div class="logos">
-				{
-					customers.map((customer) => {
-						return (
-							<div class="logo">
-								<img src={`/brand-showcase${customer.logo}`} alt={customer.name} />
-							</div>
-						);
-					})
-				}
+				{customers.map((customer) => {
+					return (
+						<div class="logo">
+							<img src={`/brand-showcase${customer.logo}`} alt={customer.name} />
+						</div>
+					);
+				})}
 			</div>
 			<!-- TODO: update link -->
 			<p class="join-us">

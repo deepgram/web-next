@@ -17,13 +17,11 @@ const dateNotPast = dateIsBeforeToday === false;
 const datePast = dateIsBeforeToday === true;
 ---
 
-{
-	dateNotPast && (
-		<AbstractPromo strapline="Webinar" backgroundImage={backgroundImage} theme={theme} {...rest}>
-			<PromoDate humanReadableDate={humanReadableDate} />
-			<PromoForm theme={theme} formProps={formProps} buttonText={buttonText} humanReadableDate={humanReadableDate} />
-		</AbstractPromo>
-	)
-}
+{dateNotPast && (
+	<AbstractPromo strapline="Webinar" backgroundImage={backgroundImage} theme={theme} {...rest}>
+		<PromoDate humanReadableDate={humanReadableDate} />
+		<PromoForm theme={theme} formProps={formProps} buttonText={buttonText} humanReadableDate={humanReadableDate} />
+	</AbstractPromo>
+)}
 
 {datePast && <NewsletterPromo />}

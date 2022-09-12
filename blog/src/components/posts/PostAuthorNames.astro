@@ -5,17 +5,15 @@ import AuthorName from "../../shared/components/strings/AuthorName.astro";
 const { authors } = Astro.props;
 ---
 
-{
-	authors && (
-		<span class="author-names">
-			{authors.map((author, index, array) => (
-				<Link href={`/authors/${author}`} class="text-iris inline-block">
-					<AuthorName author={author} />
-				</Link>
-			))}
-		</span>
-	)
-}
+{authors && (
+	<span class="author-names">
+		{authors.map((author, index, array) => (
+			<Link href={`/authors/${author}`} class="text-iris inline-block">
+				<AuthorName author={author} />
+			</Link>
+		))}
+	</span>
+)}
 
 <style>
 	.author-names a:not(:first-child)::before {
