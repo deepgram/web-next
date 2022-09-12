@@ -125,13 +125,15 @@ const schema = [
 	<Meta slot="og:description" property="og:description" content={author.bio ? author.bio : `${author.title} is a ${author.jobtitle} writing content for the Deepgram blog.`} />
 	<Meta slot="og:type" property="og:type" content="profile" />
 	{author.picture && <Meta slot="og:image" property="og:image" content={author.picture} />}
-	{author.picture && (
-		<Meta
-			slot="og:image:alt"
-			property="og:image:alt"
-			content={author.bio ? `Profile pic for ${author.title}. ${author.bio}` : `Profile pic for ${author.title}, a ${author.jobtitle} writing content for the Deepgram blog.`}
-		/>
-	)}
+	{
+		author.picture && (
+			<Meta
+				slot="og:image:alt"
+				property="og:image:alt"
+				content={author.bio ? `Profile pic for ${author.title}. ${author.bio}` : `Profile pic for ${author.title}, a ${author.jobtitle} writing content for the Deepgram blog.`}
+			/>
+		)
+	}
 	<Meta slot="head" property="profile:username" content={author.slug} />
 	<Meta slot="head" property="profile:first_name" content={firstName} />
 	<Meta slot="head" property="profile:last_name" content={lastName} />
