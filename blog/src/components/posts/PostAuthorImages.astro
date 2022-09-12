@@ -5,14 +5,16 @@ import AuthorPicture from "../../shared/components/images/AuthorPicture.astro";
 const { authors } = Astro.props;
 ---
 
-{authors && (
-	<ul class="mr-4">
-		{authors.map((author, index, array) => (
-			<li class="-mt-5 first:mt-0 first:ml-0 sm:mt-0 sm:-ml-4 sm:inline">
-				<Link href={`/authors/${author}`} class="relative inline-block">
-					<AuthorPicture author={author} class="shadow-dg h-14 w-14 rounded-full object-cover" />
-				</Link>
-			</li>
-		))}
-	</ul>
-)}
+{
+	authors && (
+		<ul class="mr-4">
+			{authors.map((author, index, array) => (
+				<li class="-mt-5 first:mt-0 first:ml-0 sm:mt-0 sm:-ml-4 sm:inline">
+					<Link href={`/authors/${author}`} class="relative inline-block">
+						<AuthorPicture author={author} class="shadow-dg h-14 w-14 rounded-full object-cover" />
+					</Link>
+				</li>
+			))}
+		</ul>
+	)
+}

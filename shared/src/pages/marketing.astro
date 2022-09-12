@@ -9,7 +9,7 @@ import Feedback from "../shared/components/forms/Feedback.astro";
 import NarrowSection from "../shared/components/layout/NarrowSection.astro";
 import NewsletterPromo from "../shared/components/promos/NewsletterPromo.astro";
 import WebinarPromo from "../shared/components/promos/WebinarPromo.astro";
-import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.astro";
+import WhitepaperPromo from "../shared/components/promos/WhitepaperPromo.page-ssr.astro";
 import EventPromo from "../shared/components/promos/EventPromo.astro";
 import LinkPromo from "../shared/components/promos/LinkPromo.astro";
 
@@ -116,7 +116,7 @@ import Button from "../shared/components/general/Button.astro";
 			<ComponentStaticPreview id="forms-inputs" title="Forms and Inputs" snippet={``} class="flex-col">
 				<div class="w-full mb-5">
 					<p class="text-purple-500">Simple Form</p>
-					<div class=" bg-darkCharcoal text-white p-10 w-full">
+					<div class="bg-darkCharcoal text-white p-10 w-full">
 						<div class="input-group">
 							<label for="input-1">Name (first and last)</label>
 							<input type="text" id="input-1" placeholder="Your name" />
@@ -267,8 +267,8 @@ import Button from "../shared/components/general/Button.astro";
 					buttonText="Register"
 				/>
 			</ComponentStaticPreview>
-			<ComponentStaticPreview id="promo-whitepaper" title="Whitepaper Promo" snippet={`<WhitepaperPromo whitepaper="latest" />`}>
-				<WhitepaperPromo whitepaper="latest" />
+			<ComponentStaticPreview id="promo-whitepaper" title="Whitepaper Promo" snippet={`<WhitepaperPromo whitepaper="latest" />`}
+				><WhitepaperPromo whitepaper="latest" />
 			</ComponentStaticPreview>
 			<ComponentStaticPreview
 				id="promo-link"
