@@ -6,13 +6,15 @@ const { tabs, title, default: defaultLang, ...rest } = Astro.props;
 	<header>
 		<span class="text-sm tracking-wide">{title}</span>
 
-		{tabs && tabs.length > 1 && (
-			<select x-on:change="lang = $el.value">
-				{tabs.map((l: string) => {
-					return <option id={`install-${l}`}>{l}</option>;
-				})}
-			</select>
-		)}
+		{
+			tabs && tabs.length > 1 && (
+				<select x-on:change="lang = $el.value">
+					{tabs.map((l: string) => {
+						return <option id={`install-${l}`}>{l}</option>;
+					})}
+				</select>
+			)
+		}
 	</header>
 
 	<slot />

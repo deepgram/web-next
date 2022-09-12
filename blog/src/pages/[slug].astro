@@ -233,16 +233,18 @@ const schema = [
 
 					{headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">In this blog post</h5>}
 					<ul class="hidden xl:block">
-						{headings.length > 0 &&
-							headings
-								.filter((heading) => heading.depth <= 2)
-								.map((heading) => (
-									<li class="pb-4">
-										<Link class="text-black" href={`#${heading.slug}`}>
-											{heading.text}
-										</Link>
-									</li>
-								))}
+						{
+							headings.length > 0 &&
+								headings
+									.filter((heading) => heading.depth <= 2)
+									.map((heading) => (
+										<li class="pb-4">
+											<Link class="text-black" href={`#${heading.slug}`}>
+												{heading.text}
+											</Link>
+										</li>
+									))
+						}
 					</ul>
 				</div>
 			</HasGutters>
