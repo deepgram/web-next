@@ -70,8 +70,8 @@ const schema = {
 			<NoLinkCardListTitle slot="title"><h2>Guest Authors</h2></NoLinkCardListTitle>
 			{guests.map((author) => <AuthorCard author={author} />)}
 		</AuthorCardList>
-		<AuthorCardList class="mt-10 lg:mt-16 xl:mt-20">
-			<NoLinkCardListTitle slot="title"><h2>Deepgram Alumni</h2></NoLinkCardListTitle>
+		<AuthorCardList class="mt-10 lg:mt-16 xl:mt-20 mb-6">
+			<NoLinkCardListTitle slot="title"><h2>Deepgram {alumni.length > 1 ? "Alumni" : "Alum"}</h2></NoLinkCardListTitle>
 			{alumni.map((author) => <AuthorCard author={author} />)}
 		</AuthorCardList>
 	</PrimarySection>
