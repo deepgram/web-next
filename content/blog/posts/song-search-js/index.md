@@ -1,27 +1,26 @@
 ---
-title: "Building a Voice-Powered Song Search"
-description: "🎅  Let Deepgram detect the Christmas song"
+title: Building a Voice-Powered Song Search
+description: 🎅  Let Deepgram detect the Christmas song
 date: 2021-12-16
 cover: https://res.cloudinary.com/deepgram/image/upload/v1639662018/blog/2021/12/song-search-js/Building-Voice-Powered-Song-Search%402x.jpg
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: tutorial
 tags:
-    - javascript
-    - microphone
+  - javascript
+  - microphone
 seo:
-    title: "Building a Voice-Powered Song Search"
-    description: "🎅  Let Deepgram detect the Christmas song"
-shorturls:
-    share: https://dpgr.am/15b5006
-    twitter: https://dpgr.am/73a2300
-    linkedin: https://dpgr.am/3e7d48b
-    reddit: https://dpgr.am/e2319b5
-    facebook: https://dpgr.am/cd65bc2
+  title: Building a Voice-Powered Song Search
+  description: 🎅  Let Deepgram detect the Christmas song
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661453835/blog/song-search-js/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661453835/blog/song-search-js/ograph.png
+shorturls:
+  share: https://dpgr.am/15b5006
+  twitter: https://dpgr.am/73a2300
+  linkedin: https://dpgr.am/3e7d48b
+  reddit: https://dpgr.am/e2319b5
+  facebook: https://dpgr.am/cd65bc2
 ---
-
 Love it or hate it, Christmas is a period for music, and that comes the frustrating scenario of knowing lyrics but not quite knowing the song. Of course, you could just search the lyrics, but where's the fun in that? In this project, we will warm up our vocal cords and use Deepgram and the Genius Song Lyrics API to build a website that should correctly guess spoken or sung lyrics.
 
 While doing this, we'll learn how to stream microphone data to Deepgram via a server, so you don't need to worry about exposing your API Key.
@@ -30,24 +29,28 @@ This is what we'll be building:
 
 ![A diagram showing 9 steps. 1 - emit mic data from browser to server using socket.io. 2 - send mic data from server to Deepgram via Deepgram SDK. 3 - Deepgram returns utterances to server. 4 - the server stores utterances. 5 - a user presses a button and emits search event to server. 6 - server searches song on Genius. 7 - Genius sends response to server. 8 - Server emits response to browser. 9 - browser shows result. Steps 1-3 have a green background and steps 4-9 have a blue background.](https://res.cloudinary.com/deepgram/image/upload/v1637178711/blog/2021/12/song-search-js/diagram.png)
 
-The green area is one set of steps that gets us to the point of transcripts. The blue area covers searching for and displaying songs. Don't worry if that looks like a lot - we'll take it step by step. If you want to look at the final project code, you can find it at [https://github.com/deepgram-devs/song-search](https://github.com/deepgram-devs/song-search).
+The green area is one set of steps that gets us to the point of transcripts. The blue area covers searching for and displaying songs. Don't worry if that looks like a lot - we'll take it step by step. If you want to look at the final project code, you can find it at https://github.com/deepgram-devs/song-search.
 
 ## Before We Start
 
 You will need:
 
-*   Node.js installed on your machine - [download it here](https://nodejs.org/en/).
-*   A Deepgram API Key - [get one here](https://console.deepgram.com/signup?jump=keys).
-*   A Genius API Access Token - [get one here](https://genius.com/api-clients).
+* Node.js installed on your machine - [download it here](https://nodejs.org/en/).
+* A Deepgram API Key - [get one here](https://console.deepgram.com/signup?jump=keys).
+* A Genius API Access Token - [get one here](https://genius.com/api-clients).
 
 Create a new directory and navigate to it with your terminal. Run `npm init -y` to create a `package.json` file and then install the following packages:
 
-    npm install dotenv @deepgram/sdk express socket.io axios
+```
+npm install dotenv @deepgram/sdk express socket.io axios
+```
 
 Create a `.env` file and add the following:
 
-    DG_KEY=replace_with_deepgram_api_key
-    GENIUS_TOKEN=replace_with_genius_access_token
+```
+DG_KEY=replace_with_deepgram_api_key
+GENIUS_TOKEN=replace_with_genius_access_token
+```
 
 Create an `index.js` file, a folder called `public`, and inside of the public folder create an `index.html` file. In `index.html` create a boilerplate HTML file:
 
@@ -191,7 +194,9 @@ Because a set of lyrics can take up multiple utterances, we need to have a way t
 
 In `index.html` add a `<button>` at the top of your `<body>` tag:
 
-    <button>Search Song</button>
+```
+<button>Search Song</button>
+```
 
 Just below `mediaRecorder.start(1000)` add the following logic:
 
@@ -257,7 +262,9 @@ socket.emit('result', topThree)
 
 In `index.html` add an empty `<ul>` under the `<button>`:
 
-    <ul></ul>
+```
+<ul></ul>
+```
 
 At the bottom of the `<script>` tag, below all other code, listen for the `results` event and add items to the new list:
 
@@ -302,13 +309,11 @@ No one ever said I was a good singer.
 
 There are quite a lot of improvements you could make here:
 
-*   Show utterances to users in the browser
-*   Do searches as soon as utterances are available, and update them as more words are said
-*   Allow multiple songs without needing to 'reset' by refreshing
-*   Give it a festive theme
+* Show utterances to users in the browser
+* Do searches as soon as utterances are available, and update them as more words are said
+* Allow multiple songs without needing to 'reset' by refreshing
+* Give it a festive theme
 
 This post has also introduced you to the code required to stream your microphone from the browser to Deepgram via a server, thus protecting your API Key from being exposed.
 
-We'll have some more posts coming out before Christmas, but from me, this is it until January, so please have a wonderful festive period and a wonderful new year. The complete project is available at [https://github.com/deepgram-devs/song-search](https://github.com/deepgram-devs/song-search), and if you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
-
-        
+We'll have some more posts coming out before Christmas, but from me, this is it until January, so please have a wonderful festive period and a wonderful new year. The complete project is available at https://github.com/deepgram-devs/song-search, and if you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).

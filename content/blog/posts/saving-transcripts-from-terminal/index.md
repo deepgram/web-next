@@ -1,26 +1,27 @@
 ---
-title: "Saving Transcripts From Your Terminal"
-description: "Learn how to use cURL to generate and save Deepgram transcripts directly from your terminal. Start now!"
+title: Saving Transcripts From Your Terminal
+description: Learn how to use cURL to generate and save Deepgram transcripts
+  directly from your terminal. Start now!
 date: 2022-08-15
 cover: https://res.cloudinary.com/deepgram/image/upload/v1660569910/blog/2022/08/saving-transcripts-from-terminal/cover.jpg
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: tutorial
 tags:
-    - terminal
+  - terminal
 seo:
-    title: "Saving Transcripts From Your Terminal"
-    description: "Learn how to use cURL to generate and save Deepgram transcripts directly from your terminal. Start now!"
-shorturls:
-    share: https://dpgr.am/8c8743f
-    twitter: https://dpgr.am/4db85ee
-    linkedin: https://dpgr.am/76ca356
-    reddit: https://dpgr.am/c6681df
-    facebook: https://dpgr.am/282a2d3
+  title: Saving Transcripts From Your Terminal
+  description: Learn how to use cURL to generate and save Deepgram transcripts
+    directly from your terminal. Start now!
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454119/blog/saving-transcripts-from-terminal/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454119/blog/saving-transcripts-from-terminal/ograph.png
+shorturls:
+  share: https://dpgr.am/8c8743f
+  twitter: https://dpgr.am/4db85ee
+  linkedin: https://dpgr.am/76ca356
+  reddit: https://dpgr.am/c6681df
+  facebook: https://dpgr.am/282a2d3
 ---
-
 I've recently started doing a lot more work directly in my terminal - and I've learned that writing Bash scripts doesn't have to be scary. Today, we'll write a set of commands and scripts to execute directly in our terminal.
 
 ## Before You Start
@@ -44,12 +45,12 @@ curl \
 
 Let's break down each part of this request:
 
-*   `--request POST`: is a HTTP request with the POST method.
-*   `--header 'Authorization: Token YOUR_DEEPGRAM_API_KEY'` - include details to link this request with our account/project.
-*   `--header 'Content-Type: application/json'` - JSON data will be sent with this request.
-*   `--data '{"url":"https://static.deepgram.com/examples/nasa-spacewalk-interview.wav"}'`. - is the JSON data sent to Deepgram (an object containing one url parameter).
-*   `--url 'https://api.deepgram.com/v1/listen?punctuate=true'` - the URL to make the request to (Deepgram's endpoint). `punctuate=true` enables the [punctuation](https://developers.deepgram.com/documentation/features/punctuate/) feature.
-*   `\` allows us to break one command over several lines for readability.
+* `--request POST`: is a HTTP request with the POST method.
+* `--header 'Authorization: Token YOUR_DEEPGRAM_API_KEY'` - include details to link this request with our account/project.
+* `--header 'Content-Type: application/json'` - JSON data will be sent with this request.
+* `--data '{"url":"https://static.deepgram.com/examples/nasa-spacewalk-interview.wav"}'`. - is the JSON data sent to Deepgram (an object containing one url parameter).
+* `--url 'https://api.deepgram.com/v1/listen?punctuate=true'` - the URL to make the request to (Deepgram's endpoint). `punctuate=true` enables the [punctuation](https://developers.deepgram.com/documentation/features/punctuate/) feature.
+* `\` allows us to break one command over several lines for readability.
 
 ## Shortening Your Request
 
@@ -70,7 +71,7 @@ The first thing you'll notice is that the URL comes immediately after the `curl`
 
 This jq expression will extract just the transcript from the returned data object:
 
-` | jq '.results.channels[0].alternatives[0].transcript'`
+`| jq '.results.channels[0].alternatives[0].transcript'`
 
 You can add it to the end of your cURL request like so:
 
@@ -125,13 +126,14 @@ done
 
 Let's break down each part of this file:
 
-*   The first line - `#!/bin/bash` - is a shebang, and specifies which program should be called to run the script. In this case, bash.
-*   `urls` is a variable containing an array with three URLs. Notice that arrays use parentheses, and items are separated by a space only.
-*   `dg_features` and `dg_key` are variables you should alter for your exact use case.
-*   Inside of the `for` loop:
-    *   `filename` extracts the last part of the URL (the filename), which will later be used to name the output file.
-    *   The `curl` command is the same as before, with variables interpolated. The output is stored in a new variable called `RESPONSE`.
-    *   `RESPONSE` is sent to `jq`, and then redirected into a new text file.
+* The first line - `#!/bin/bash` - is a shebang, and specifies which program should be called to run the script. In this case, bash.
+* `urls` is a variable containing an array with three URLs. Notice that arrays use parentheses, and items are separated by a space only.
+* `dg_features` and `dg_key` are variables you should alter for your exact use case.
+* Inside of the `for` loop:
+
+  * `filename` extracts the last part of the URL (the filename), which will later be used to name the output file.
+  * The `curl` command is the same as before, with variables interpolated. The output is stored in a new variable called `RESPONSE`.
+  * `RESPONSE` is sent to `jq`, and then redirected into a new text file.
 
 Run the file in your terminal with `./transcripts.sh`. As a note, this request uses Deepgram's punctuation, utterances, diarize, and tier features.
 
@@ -145,12 +147,12 @@ echo $RESPONSE | jq -r '.results.utterances[] | "[Speaker:\(.speaker)] \(.transc
 
 The output looks like this:
 
-    [Speaker:0] agreement on other things that are really good. Nancy, would you like to say something?
-    [Speaker:1] Well, thank you, mister president for the opportunity to meet with you so that we can work together in a bipartisan way
-    [Speaker:1] to meet the needs of the American people. I think the American people recognize
-    [Speaker:1] that we must keep government open, that a shutdown is not worth anything.
-    [Speaker:1] And that you should
+```
+[Speaker:0] agreement on other things that are really good. Nancy, would you like to say something?
+[Speaker:1] Well, thank you, mister president for the opportunity to meet with you so that we can work together in a bipartisan way
+[Speaker:1] to meet the needs of the American people. I think the American people recognize
+[Speaker:1] that we must keep government open, that a shutdown is not worth anything.
+[Speaker:1] And that you should
+```
 
 I hope you found this valuable and interesting. If you have any questions, please feel free to get in touch - we love to help!
-
-        

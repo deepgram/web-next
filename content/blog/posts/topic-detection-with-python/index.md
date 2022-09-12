@@ -1,26 +1,29 @@
 ---
-title: "Topic Detection in Podcast Episodes with Python"
-description: "This tutorial will use Python and the Deepgram API speech-to-text to perform Topic Detection using the TF-IDF Machine Learning Algorithm and KMeans Clustering."
+title: Topic Detection in Podcast Episodes with Python
+description: This tutorial will use Python and the Deepgram API speech-to-text
+  to perform Topic Detection using the TF-IDF Machine Learning Algorithm and
+  KMeans Clustering.
 date: 2022-08-23
 cover: https://res.cloudinary.com/deepgram/image/upload/v1660892766/blog/2022/08/topic-detection-with-python/2208-Detect-Topics-in-Podcast-Episodes-with-Python-blog%402x.jpg
 authors:
-    - tonya-sims
+  - tonya-sims
 category: tutorial
 tags:
-    - python
+  - python
 seo:
-    title: "Topic Detection in Podcast Episodes with Python"
-    description: "This tutorial will use Python and the Deepgram API speech-to-text to perform Topic Detection using the TF-IDF Machine Learning Algorithm and KMeans Clustering."
-shorturls:
-    share: https://dpgr.am/c1098c5
-    twitter: https://dpgr.am/335341b
-    linkedin: https://dpgr.am/11c3f1c
-    reddit: https://dpgr.am/e460418
-    facebook: https://dpgr.am/26c7cfa
+  title: Topic Detection in Podcast Episodes with Python
+  description: This tutorial will use Python and the Deepgram API speech-to-text
+    to perform Topic Detection using the TF-IDF Machine Learning Algorithm and
+    KMeans Clustering.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454121/blog/topic-detection-with-python/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454121/blog/topic-detection-with-python/ograph.png
+shorturls:
+  share: https://dpgr.am/c1098c5
+  twitter: https://dpgr.am/335341b
+  linkedin: https://dpgr.am/11c3f1c
+  reddit: https://dpgr.am/e460418
+  facebook: https://dpgr.am/26c7cfa
 ---
-
 Imagine you’re a Python Machine Learning Engineer. Your work day is getting ready to start with the dreaded stand-up meeting, but you're looking the most forward to deep diving into topic detection algorithms.
 
 <Panel title="Important Note">
@@ -83,16 +86,20 @@ You first create a [virtual environment](https://developers.deepgram.com/blog/20
 
 Next, from the command line, you `pip install` the following Python packages inside of the virtual environment:
 
-    pip install deepgram-sdk
-    pip install python-dotenv
-    pip install -U scikit-learn
-    pip install -U nltk
+```
+pip install deepgram-sdk
+pip install python-dotenv
+pip install -U scikit-learn
+pip install -U nltk
+```
 
-Then you create a `.env` file inside your project directory to hold your Deepgram API Key, so it’s not exposed to the whole world. Inside of your `.env` file, you assign your API Key from Deepgram to a variable \`DEEPGRAM\_API\_KEY, like so:
+Then you create a `.env` file inside your project directory to hold your Deepgram API Key, so it’s not exposed to the whole world. Inside of your `.env` file, you assign your API Key from Deepgram to a variable `DEEPGRAM_API_KEY, like so:
 
-    DEEPGRAM_AP_KEY=”abc123”
+```
+DEEPGRAM_AP_KEY=”abc123”
+```
 
-Next, you create a new file called \`python\_topic\_detection.py. You write the following code that imports Python libraries and handles the Deepgram prerecorded audio speech-to-text transcription:
+Next, you create a new file called `python_topic_detection.py. You write the following code that imports Python libraries and handles the Deepgram prerecorded audio speech-to-text transcription:
 
 ```python
 from ast import keyword
@@ -235,41 +242,43 @@ You quickly read about the options passed into the vectorizer like `max_features
 
 You have a little bit on time with 15% battery life, so you decide to use K-Means to create 10 clusters of topics. This way, they can get a more meaningful sense of the data structure from the podcast. You write the K-Means clusters to a file called `results.txt`.
 
-To run the program, type `python3 python_topic_detection.py ` from the terminal.
+To run the program, type `python3 python_topic_detection.py` from the terminal.
 
 When you print the topics, you see a list like the following:
 
-    sort
-    little
-    sitting
-    went
-    new
-    knew
-    comedy
-    remember
-    guys
-    funny
-    jerry
-    club
-    point
-    gilbert
-    york
-    chris
-    rock
-    famous
-    later
-    getting
-    long
-    love
-    night
-    year
-    bob
-    norm
-    car
-    news
-    space
-    astronauts
-    nasa
+```
+sort
+little
+sitting
+went
+new
+knew
+comedy
+remember
+guys
+funny
+jerry
+club
+point
+gilbert
+york
+chris
+rock
+famous
+later
+getting
+long
+love
+night
+year
+bob
+norm
+car
+news
+space
+astronauts
+nasa
+```
 
 Bingo!
 
@@ -277,56 +286,58 @@ You can now make inferences about the AI Topic Detection to determine the subjec
 
 Then, peek at your `results.txt` file to verify that you received 10 clusters. Here’s an example of four of the ten groups of words using KMeans clustering:
 
-    Cluster 0
-    yeah
-    think
-    ve
-    roast
-    got
-    space
-    cat
-    say
-    joke
-    oh
+```
+Cluster 0
+yeah
+think
+ve
+roast
+got
+space
+cat
+say
+joke
+oh
 
 
-    Cluster 1
-    person
-    york
-    joke
-    gonna
-    good
-    got
-    great
-    guy
-    guys
-    heard
+Cluster 1
+person
+york
+joke
+gonna
+good
+got
+great
+guy
+guys
+heard
 
 
-    Cluster 2
-    know
-    york
-    jokes
-    gonna
-    good
-    got
-    great
-    guy
-    guys
-    heard
+Cluster 2
+know
+york
+jokes
+gonna
+good
+got
+great
+guy
+guys
+heard
 
 
-    Cluster 3
-    right
-    york
-    joke
-    gonna
-    good
-    got
-    great
-    guy
-    guys
-    heard
+Cluster 3
+right
+york
+joke
+gonna
+good
+got
+great
+guy
+guys
+heard
+```
 
 Just before your laptop battery dies, you show them the topics for Team Coco. They are very happy with your results and drive off.
 
@@ -448,5 +459,3 @@ async def cleaned_docs_to_vectorize():
 
 asyncio.run(cleaned_docs_to_vectorize())
 ```
-
-        

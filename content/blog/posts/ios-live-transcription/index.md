@@ -26,7 +26,7 @@ og:
 
 Deepgram's Speech Recognition API can provide accurate transcripts with pre-recorded and live audio. In this post, you will build an iOS app that takes the user's microphone and prints transcripts to the screen in real-time.
 
-The final project code is available at [https://github.com/deepgram-devs/deepgram-live-transcripts-ios](https://github.com/deepgram-devs/deepgram-live-transcripts-ios).
+The final project code is available at https://github.com/deepgram-devs/deepgram-live-transcripts-ios.
 
 ## Before We Start
 
@@ -39,7 +39,7 @@ Once you open Xcode, create a new Xcode project. Select the App template, give i
 
 Choose a place to save your project and hit finish to open your new project.
 
-You will be using the WebSocket library [Starscream](https://github.com/daltoniam/Starscream) for this project. You can add it as a Swift Package by going to *File > Add Packages*, then entering the URL ([https://github.com/daltoniam/Starscream](https://github.com/daltoniam/Starscream)) into the search box. Click add package and wait for the package to download.
+You will be using the WebSocket library [Starscream](https://github.com/daltoniam/Starscream) for this project. You can add it as a Swift Package by going to *File > Add Packages*, then entering the URL (https://github.com/daltoniam/Starscream) into the search box. Click add package and wait for the package to download.
 
 ## Get Microphone Permissions
 
@@ -269,6 +269,6 @@ Once you have a `DeepgramResponse` instance, you will check if it is final, mean
 
 ![iPhone simulator showing the text hello blog](https://res.cloudinary.com/deepgram/image/upload/v1638827585/blog/2022/01/ios-live-transcription/simulator.png)
 
-The final project code is available at [https://github.com/deepgram-devs/deepgram-live-transcripts-ios](https://github.com/deepgram-devs/deepgram-live-transcripts-ios), and if you have any questions, please feel free to reach out to the Deepgram team on Twitter - [@DeepgramDevs](https://twitter.com/DeepgramDevs).
+The final project code is available at https://github.com/deepgram-devs/deepgram-live-transcripts-ios, and if you have any questions, please feel free to reach out to the Deepgram team on Twitter - [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
         

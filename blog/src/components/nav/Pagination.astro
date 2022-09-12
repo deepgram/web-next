@@ -28,25 +28,27 @@ pageStatuses[pageStatuses.length - 1].isDisabled = false;
 		<li>
 			<Link icon="chevron-left" class="stroke-2 text-storm" iconSuffix iconStroke href={page.url.prev === undefined ? null : `${page.url.prev}`} />
 		</li>
-		{pageStatuses.map((pageStatus, index) =>
-			pageStatus.isActive ? (
-				<li>
-					<Link class="page text-darkCharcoal border-darkCharcoal  font-bold">{page.currentPage}</Link>
-				</li>
-			) : pageStatus.isDisabled && !pageStatuses[index - 1].isDisabled ? (
-				<li>
-					<Link class="page disabled:opacity-75">...</Link>
-				</li>
-			) : (
-				!pageStatus.isDisabled && (
+		{
+			pageStatuses.map((pageStatus, index) =>
+				pageStatus.isActive ? (
 					<li>
-						<Link class="page" href={`/${slug}/${pageStatus.pageNumber === 0 ? "" : pageStatus.pageNumber}`}>
-							{pageStatus.pageNumber === 0 ? 1 : pageStatus.pageNumber}
-						</Link>
+						<Link class="page text-darkCharcoal border-darkCharcoal  font-bold">{page.currentPage}</Link>
 					</li>
+				) : pageStatus.isDisabled && !pageStatuses[index - 1].isDisabled ? (
+					<li>
+						<Link class="page disabled:opacity-75">...</Link>
+					</li>
+				) : (
+					!pageStatus.isDisabled && (
+						<li>
+							<Link class="page" href={`/${slug}/${pageStatus.pageNumber === 0 ? "" : pageStatus.pageNumber}`}>
+								{pageStatus.pageNumber === 0 ? 1 : pageStatus.pageNumber}
+							</Link>
+						</li>
+					)
 				)
 			)
-		)}
+		}
 		<li>
 			<Link icon="chevron-right" class="stroke-2 text-storm" iconStroke href={page.url.next === undefined ? null : `${page.url.next}`} />
 		</li>

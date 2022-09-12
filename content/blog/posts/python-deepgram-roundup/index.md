@@ -1,27 +1,30 @@
 ---
-title: "Starting Out with Python and Deepgram Live Streaming Audio"
-description: "Learn how to perform real-time Automatic Speech Recognition using various Python web frameworks and Deepgram's Speech-to-Text API with this roundup post."
+title: Starting Out with Python and Deepgram Live Streaming Audio
+description: Learn how to perform real-time Automatic Speech Recognition using
+  various Python web frameworks and Deepgram's Speech-to-Text API with this
+  roundup post.
 date: 2022-06-23
 cover: https://res.cloudinary.com/deepgram/image/upload/v1655914351/blog/2022/06/python-deepgram-roundup/Transcribing-Real-Time-Audio-Using-Python-in-5-Minutes%402x.jpg
 authors:
-    - tonya-sims
+  - tonya-sims
 category: tutorial
 tags:
-    - python
-    - fastapi
+  - python
+  - fastapi
 seo:
-    title: "Starting Out with Python and Deepgram Live Streaming Audio"
-    description: "Learn how to perform real-time Automatic Speech Recognition using various Python web frameworks and Deepgram's Speech-to-Text API with this roundup post."
-shorturls:
-    share: https://dpgr.am/bf4bebf
-    twitter: https://dpgr.am/d4a669d
-    linkedin: https://dpgr.am/f0f7a33
-    reddit: https://dpgr.am/039d224
-    facebook: https://dpgr.am/02c041e
+  title: Starting Out with Python and Deepgram Live Streaming Audio
+  description: Learn how to perform real-time Automatic Speech Recognition using
+    various Python web frameworks and Deepgram's Speech-to-Text API with this
+    roundup post.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454100/blog/python-deepgram-roundup/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454100/blog/python-deepgram-roundup/ograph.png
+shorturls:
+  share: https://dpgr.am/bf4bebf
+  twitter: https://dpgr.am/d4a669d
+  linkedin: https://dpgr.am/f0f7a33
+  reddit: https://dpgr.am/039d224
+  facebook: https://dpgr.am/02c041e
 ---
-
 ## Python Web Frameworks for Live Audio Transcription
 
 This blog post will summarize how to transcribe speech-to-text streaming audio in real-time using Deepgram with four different Python web frameworks. At Deepgram, we have a Python SDK that handles pre-recorded and live streaming speech recognition transcription, which can be used with your framework of choice.
@@ -59,5 +62,3 @@ Django uses [Channels](https://channels.readthedocs.io/en/stable/introduction.ht
 Hopefully, you can see that regardless of your application's Python web framework choice, you can use Deepgram speech-to-text live streaming transcription. As a next step, you can go to the [Deepgram console](https://console.deepgram.com/) and grab an API Key. You'll need this key to do speech-to-text transcription with Deepgram and Python. We also have missions to try in the console to get up and running quickly with real-time or pre-recorded audio-to-text transcription.
 
 Please feel free to Tweet us at [@deepgramdevs](https://twitter.com/DeepgramDevs). We would love to hear from you!
-
-        

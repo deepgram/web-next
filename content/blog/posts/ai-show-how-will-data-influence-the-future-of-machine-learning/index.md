@@ -26,7 +26,7 @@ shorturls:
 
 **Scott:** Welcome to the AI Show. On the AI Show, we talk about all things AI. Today we have the question, our big question today:
 
-### How will data influence the future of machine learning?
+## How will data influence the future of machine learning?
 
 **Susan:** You know, it's a pretty key thing, as we've discussed many times before.
 
@@ -38,7 +38,7 @@ shorturls:
 
 **Susan:** You know, I think we're starting to see some trends here.
 
-### How do normal machine learning problems go?
+## How do normal machine learning problems go?
 
 **Scott:** Well, if you have a small amount of data, then you use some simplistic models and things like that. If you have a large amount of data you probably will have to use a lot of computational power. But, also it can shape your model and make it more intricate, more nuanced. That's usually how that goes. But, it isn't necessarily that the bigger the data, the better your model is going to be, right?
 
@@ -54,7 +54,9 @@ shorturls:
 
 **Scott:** Yep. So if you're drawing "0, 1, 2, 3, 4, 5, 6, 7, 8, 9," just writing it. "Hey, can you recognize those?" That type of dataset. Maybe another simple one like, "What category does this fall into? Is it a human? Is it an airplane? Is it a cat?"
 
-![](https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png) _[The MNIST dataset](https://en.wikipedia.org/wiki/MNIST_database)_
+![](https://upload.wikimedia.org/wikipedia/commons/2/27/MnistExamples.png)
+
+_[The MNIST dataset](https://en.wikipedia.org/wiki/MNIST_database)_
 
 **Susan:** Yeah, we've talked about [CIFAR dataset](https://en.wikipedia.org/wiki/CIFAR-10) and stuff like that. But, those standardized public datasets really help frame the problem. Then following that, you get some tools that will generally come out. We're seeing [Tensorflow](https://www.tensorflow.org/), [PyTorch](https://pytorch.org/), all these standardized tools kind of follow along. But, people start standardizing: [ImageNet](http://www.image-net.org/) and stuff like that. Like, "Hey, here's eight ways to attack this problem."
 
@@ -77,7 +79,7 @@ shorturls:
 
 Images are like that a lot. It's easy to find a lot of images that are labeled. Not super easy, but you can search for a "tool" and you'll find tons of pictures of tools. Okay, that's pretty easy. But, there isn't an easy way for speech recognition to say the word, "tool." "Give me all the examples of everybody saying that word." That's a harder problem.
 
-![Alt](http://1.bp.blogspot.com/-2WefVFMGytE/VL_k4Wh-R-I/AAAAAAAAGFE/DNkTHbE4Bx4/s1600/Tool%2BBelt%2BLabeled.jpg)
+![Alt](https://1.bp.blogspot.com/-2WefVFMGytE/VL_k4Wh-R-I/AAAAAAAAGFE/DNkTHbE4Bx4/s1600/Tool%2BBelt%2BLabeled.jpg)
 
 **Susan:** Well, by the time that becomes easy it probably means that the problem has been
 
@@ -176,9 +178,7 @@ Maybe this is why he's saying those things, so that competitors like Google, Fac
 
 **Susan:** Also, [if you come out early as an advocate, knowing that it's going to go down the route of tighter and stricter laws, maybe you have more influence](https://www.cnet.com/news/us-privacy-law-is-on-the-horizon-heres-how-tech-companies-want-to-shape-it/). Maybe you can shape those laws more in your favor. Apple definitely would want to shape those laws in their favor, any big company is going to say, "Hey, make it work for me, as best as I can." So you come out waving the flag of privacy first, and you get a bit more of a voice and that's inevitable.
 
-**Scott:** Sure.
-
-> "You want to build a company, or you want to build products, that people aren't going to hate, they're going to like, they're going to want to keep using, and they provide value. You just have to find that balance. Apple will have to find that balance. Every company will have to find that balance. With data and the models that they build."
+**Scott:** Sure. You want to build a company, or you want to build products, that people aren't going to hate, they're going to like, they're going to want to keep using, and they provide value. You just have to find that balance. Apple will have to find that balance. Every company will have to find that balance. With data and the models that they build.
 
 **Susan:** It's true. But it is interesting, again, going back to the general theme here, seeing the arc of these problems, and seeing that simple arc is getting more and more complex by the day. But that complexity is also growing.
 
@@ -202,17 +202,13 @@ Maybe we have a first dataset on there. But there's a lot of concerns with that.
 
 **Scott:** It's like 1900 trying to talk about electricity.
 
-**Susan:** Exactly. I mean, I think first of all, without talking about restricting what is and isn't there. Susan's personal take is, openness is the number one thing.
-
-> "Being open about what data's being collected and what it's being used for. I'm not saying restrictions anything like that, but that will help. That'll help frame the conversation, and help educate consumers and individuals and companies. That way we can go into an informed future and make more informed decisions. I can guarantee you that whatever is being hidden right now, eventually will come out. That's the nature of the digital age. If you're more open right about now, it'll go a lot easier when the harder privacy laws inevitably start hitting."
+**Susan:** Exactly. I mean, I think first of all, without talking about restricting what is and isn't there. Susan's personal take is, openness is the number one thing. Being open about what data's being collected and what it's being used for. I'm not saying restrictions anything like that, but that will help. That'll help frame the conversation, and help educate consumers and individuals and companies. That way we can go into an informed future and make more informed decisions. I can guarantee you that whatever is being hidden right now, eventually will come out. That's the nature of the digital age. If you're more open right about now, it'll go a lot easier when the harder privacy laws inevitably start hitting.
 
 **Scott:** If you're asking me to make a prediction, "Hey, how are people going to feel about this in the future or what's going to happen?" I think if you just look back into the past - year 2000, Internet hits the world in a big way and everybody's afraid of it. They're like, "I don't know if I'm going to go on there. Is this thing watching me? I have a webcam. Oh, no, it can see my entire life. Should I put my credit card in here? I'm not going to trust anything. How could I get anything through the mail, through eBay and trust that?"
 
 There's a lot of things that have to be figured out. But, they get figured out. So, a similar thing with AI. A lot of things have to be figured out. Do you have to fear everything? No. Are people going to fear everything at some point in time? Yes. Are they going to be resolved? For the most part, yeah.
 
-**Susan:**
-
-> "Fear is not a good way to approach the future, no matter the problem.It should be a motivator to understand, but not to stop you from going into the future. Because no matter what, there's only really one guarantee, the future is going to happen. So you can either be part of shaping it, or you can hide in the corner."
+**Susan:** Fear is not a good way to approach the future, no matter the problem.It should be a motivator to understand, but not to stop you from going into the future. Because no matter what, there's only really one guarantee, the future is going to happen. So you can either be part of shaping it, or you can hide in the corner.
 
 **Scott:** In the back and watch what happens.
 
@@ -228,9 +224,7 @@ But to answer our big question, how is data going to influence the future of mac
 
 Data defining the problems. That's a big piece of what's going to shape what the machine learning world looks like five, ten years down the road.
 
-**Scott:**
-
-> "This is a really interesting part of AI, in that the data that is collected, labeled, used to train models, has transferred very heavily from being small academic datasets to very large datasets that are captured by companies and used to build models. So this is why you see talent moving from academia to big companies. That's not really going to end because that's where all the data is. The big companies have the big data and in order to do AI well, you need big data."
+**Scott:** This is a really interesting part of AI, in that the data that is collected, labeled, used to train models, has transferred very heavily from being small academic datasets to very large datasets that are captured by companies and used to build models. So this is why you see talent moving from academia to big companies. That's not really going to end because that's where all the data is. The big companies have the big data and in order to do AI well, you need big data.
 
 **Susan:** And, people that want to solve problems want to solve problems where the problems are interesting. Early on it's interesting in the public sector and later on it becomes interesting in the academic world. It gets its seeds in academia, flourishes in public, and then goes back to academia.
 
@@ -246,7 +240,8 @@ Data defining the problems. That's a big piece of what's going to shape what the
 
 **Susan:** Well, think about judging. We'll make up a hypothetical doctor program. They have their test set of diagnostic cases that you must pass.
 
-![Alt](/content/images/2018/11/TEST-RIGS-AND-SCIENTISTS.jpg)
+
+
 
 **Scott:** Answer yes or no.
 
@@ -278,6 +273,4 @@ I think data obviously plays a big part now, but it's going to play a very big p
 
 **Scott:** You've got to form it in the right way and then it grows.
 
-* * *
-
-Tune in to the AI Show every week on [YouTube](https://www.youtube.com/watch?v=7VMio8Tk2so&t=914s) or [Twitch](https://www.twitch.tv/videos/310181430) and share your thoughts in the comments or Tweet Us at [@DeepgramAI](https://twitter.com/deepgramai?lang=en)
+

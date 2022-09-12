@@ -1,33 +1,36 @@
 ---
-title: "Speech Recognition to Monitor Script Compliance in Python"
-description: "Use Deepgram with Python for script compliance, monitoring real-time audio such as phone calls for specific words and phrases that are legally required."
+title: Speech Recognition to Monitor Script Compliance in Python
+description: Use Deepgram with Python for script compliance, monitoring
+  real-time audio such as phone calls for specific words and phrases that are
+  legally required.
 date: 2022-03-30
 cover: https://res.cloudinary.com/deepgram/image/upload/v1648578346/blog/2022/03/python-script-compliance/Speech-Recognition-Monitor-Script-Compliance%402x.jpg
 authors:
-    - tonya-sims
+  - tonya-sims
 category: tutorial
 tags:
-    - python
+  - python
 seo:
-    title: "Speech Recognition to Monitor Script Compliance in Python"
-    description: "Use Deepgram with Python for script compliance, monitoring real-time audio such as phone calls for specific words and phrases that are legally required."
-shorturls:
-    share: https://dpgr.am/cbb4071
-    twitter: https://dpgr.am/b461e6a
-    linkedin: https://dpgr.am/ba726b8
-    reddit: https://dpgr.am/6a4598c
-    facebook: https://dpgr.am/33fe5fc
+  title: Speech Recognition to Monitor Script Compliance in Python
+  description: Use Deepgram with Python for script compliance, monitoring
+    real-time audio such as phone calls for specific words and phrases that are
+    legally required.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454046/blog/python-script-compliance/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454046/blog/python-script-compliance/ograph.png
+shorturls:
+  share: https://dpgr.am/cbb4071
+  twitter: https://dpgr.am/b461e6a
+  linkedin: https://dpgr.am/ba726b8
+  reddit: https://dpgr.am/6a4598c
+  facebook: https://dpgr.am/33fe5fc
 ---
-
 Imagine having the ability to monitor certain words or phrases during phone conversations by doing voice transcription with Python. This capability is a typical use case for a call center where calls are monitored between a customer service agent and a customer. Most of these conversations start with the agent saying, “This call is recorded for quality assurance purposes”. This phrase is usually legally required to inform the person on the other end that they are being recorded, and this scenario is a common use case for ASR technology known as script compliance.
 
 Combining voice transcription with Python using Deepgram, there are many innovative ways to monitor script compliance without manually listening to each recorded call. Deepgram provides a speech-to-text solution that transcribes audio to text with Python, real-time and pre-recorded calls. This solution is ideal to:
 
-*   Provide insights into how the agent handled the call by running analytics in Python (you can read more about analytics with Deepgram and Python [here](https://developers.deepgram.com/blog/2022/03/python-talk-time-analytics/).
-*   Keep customers happy by improving their experience and satisfaction, increasing sales and revenue.
-*   Reduce costs and save time by identifying non-compliance immediately.
+* Provide insights into how the agent handled the call by running analytics in Python (you can read more about analytics with Deepgram and Python [here](https://developers.deepgram.com/blog/2022/03/python-talk-time-analytics/).
+* Keep customers happy by improving their experience and satisfaction, increasing sales and revenue.
+* Reduce costs and save time by identifying non-compliance immediately.
 
 In the next section, let’s review the project we’ll build together. If you’d like to jump ahead and grab the code for this project, you can do so [here in our Github repo](https://github.com/deepgram-devs/python-script-compliance).
 
@@ -37,10 +40,10 @@ This tutorial will use the Deepgram Python SDK to build a simple script that tra
 
 We’ll focus on monitoring script compliance by doing the following:
 
-*   Read our audio and receive our transcript
-*   Write a function that searches for flagged words and phrases
-*   Use the same function to search for wanted keywords and phrases
-*   Create a scorecard of how many flagged words and keywords are spoken
+* Read our audio and receive our transcript
+* Write a function that searches for flagged words and phrases
+* Use the same function to search for wanted keywords and phrases
+* Create a scorecard of how many flagged words and keywords are spoken
 
 Now that we’re clear on what we’re building let’s get started!
 
@@ -50,11 +53,15 @@ Before we start, it’s essential to generate a Deepgram API key to use in our p
 
 Next, let’s make a directory anywhere we’d like.
 
-    mkdir deepgram_script_compliance
+```
+mkdir deepgram_script_compliance
+```
 
 Then change into that directory so we can start adding things to it.
 
-    cd deepgram_script_compliance
+```
+cd deepgram_script_compliance
+```
 
 We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one.
 
@@ -66,25 +73,31 @@ It’s recommended in Python to use a virtual environment so our project can be 
 
 Now we can open up our favorite editor and create a file called `script_compliance.py`. If you’d like to make it from the command line, do this:
 
-    touch script_compliance.py
+```
+touch script_compliance.py
+```
 
 Finally, let’s install our dependencies for our project. Ensure our virtual environment is activated because we’ll install those dependencies inside. If your virtual environment is named `venv`, then activate it.
 
-    source venv/bin/activate
+```
+source venv/bin/activate
+```
 
 After activation, we install the dependencies, including:
 
-*   The Deepgram Python SDK
-*   The dotenv library helps us work with our environment variables
-*   The library Tabulate to pretty-print our tables
-*   The Colorama library to color-code our terminal
+* The Deepgram Python SDK
+* The dotenv library helps us work with our environment variables
+* The library Tabulate to pretty-print our tables
+* The Colorama library to color-code our terminal
 
 <!---->
 
-    pip install deepgram-sdk
-    pip install python-dotenv
-    pip install tabulate
-    pip install colorama
+```
+pip install deepgram-sdk
+pip install python-dotenv
+pip install tabulate
+pip install colorama
+```
 
 The following section will show the ease of using Python with Deepgram to monitor search terms with a newbie-friendly script.
 
@@ -133,9 +146,11 @@ The `score_card` will keep track of how many flagged words and search words our 
 
 Create an `env` file at the same level as our `script_compliance.py`. Put the following inside of it:
 
-    DEEPGRAM_API_KEY = “YOUR_API_KEY”
+```
+DEEPGRAM_API_KEY = “YOUR_API_KEY”
+```
 
-We replace `YOUR_API_KEY` with our api\_key, which we got from Deepgram.
+We replace `YOUR_API_KEY` with our api_key, which we got from Deepgram.
 
 Next, let’s add the audio file to our project by [downloading it here](https://developers.deepgram.com/data/audio/gettysburg.wav) and adding it to our project directory.
 
@@ -242,7 +257,6 @@ for item in search_words:
         words.append(["No", item])
 
 print(Fore.GREEN, tabulate(words, headers=["Word(s) Found", "item"]))
-
 ```
 
 We define a `words` list that will hold all of the search words we find in the transcript.
@@ -264,5 +278,3 @@ Here’s an example of what our output would look like:
 ![terminal output for Deepgram script compliance with Python](https://res.cloudinary.com/deepgram/image/upload/v1648586684/blog/2022/03/python-script-compliance/terminal-output.png)
 
 Congratulations on building a Python application with Deepgram to monitor script compliance! You can find the [code here](https://github.com/deepgram-devs/python-script-compliance) with instructions on how to run the project. If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
-
-        
