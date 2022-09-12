@@ -8,7 +8,7 @@ authors:
   - alexa-de-la-torre
 category: dg-insider
 tags:
-  - ohsnap
+  - recognition
 seo:
   title: Deepgram Named a High Performer for Voice Recognition in G2 Fall Report
   description: "Deepgram is listed as one of the best solutions for Voice
