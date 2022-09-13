@@ -31,7 +31,7 @@ We're also teaching machines to recall key words and phrases from these recordin
 
 In a nutshell, deep learning involves building and training a large artificial neural network with many hidden layers between the input side of the network and the output side. It's because of these many hidden layers that we call this kind of neural network "deep". Deep neural networks have at least three hidden layers, but some neural networks have hundreds. 
 
-![Deep Neural Network Example - Image Credit: Texample](https://www.texample.net/media/tikz/examples/PNG/neural-network.png) 
+![Deep Neural Network Example - Image Credit: Texample](https://www.texample.net/media/tikz/examples/PNG/neural-network.png)
 
 Neural networks are complex statistical models that allow computers to create a remarkably accurate abstract representation of information. What kind of information, you ask? Like we mentioned, Deepgram's deep neural network is specifically trained to "understand" and act upon spoken word data, but deep neural networks have been used in plenty of other contexts, from detecting cancers in medical scans to forecasting energy prices and modeling the weather.
 
@@ -117,7 +117,7 @@ Companies want to see if you did cool stuff before you applied for the job. If y
 >
 > * ***the accuracy I achieved***
 > * ***a link to what I wrote about it***
-> * ***a link to github for the code"***
+> * ***a link to github for the code***
 
 That type of thing will get you in the door. Then you can work your magic with coding chops and problem solving skills during the interview. Deepgram is also hiring, so if you're interested in solving hard problems and building great tools, [give us a holler](https://deepgram.com/company/careers/)!
 
