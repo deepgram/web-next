@@ -11,35 +11,43 @@ const { author } = Astro.props;
 		<h1 class="name">{author.title}</h1>
 		<h2 class="title">{author.jobtitle}</h2>
 		<ul class="socials">
-			{author.twitter && (
-				<li>
-					<Link href={`https://twitter.com/${author.twitter}`} target="_blank" rel="nofollow">
-						<Icon icon="twitter" />
-					</Link>
-				</li>
-			)}
+			{
+				author.twitter && (
+					<li>
+						<Link href={`https://twitter.com/${author.twitter}`} target="_blank" rel="nofollow">
+							<Icon icon="twitter" />
+						</Link>
+					</li>
+				)
+			}
 
-			{author.linkedin && (
-				<li>
-					<Link href={author.linkedin} target="_blank" rel="nofollow">
-						<Icon icon="linkedin" />
-					</Link>
-				</li>
-			)}
-			{author.github && (
-				<li>
-					<Link href={author.github} target="_blank" rel="nofollow">
-						<Icon icon="github" />
-					</Link>
-				</li>
-			)}
-			{author.twitch && (
-				<li>
-					<Link href={author.twitch} target="_blank" rel="nofollow">
-						<Icon icon="twitch" />
-					</Link>
-				</li>
-			)}
+			{
+				author.linkedin && (
+					<li>
+						<Link href={author.linkedin} target="_blank" rel="nofollow">
+							<Icon icon="linkedin" />
+						</Link>
+					</li>
+				)
+			}
+			{
+				author.github && (
+					<li>
+						<Link href={author.github} target="_blank" rel="nofollow">
+							<Icon icon="github" />
+						</Link>
+					</li>
+				)
+			}
+			{
+				author.twitch && (
+					<li>
+						<Link href={author.twitch} target="_blank" rel="nofollow">
+							<Icon icon="twitch" />
+						</Link>
+					</li>
+				)
+			}
 		</ul>
 		<p class="bio">{author.bio}</p>
 	</div>
