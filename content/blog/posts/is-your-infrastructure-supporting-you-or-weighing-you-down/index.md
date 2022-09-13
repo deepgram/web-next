@@ -21,18 +21,17 @@ shorturls:
   reddit: https://dpgr.am/768d050
   facebook: https://dpgr.am/493b152
 ---
-
 According to [RootMetrics](http://www.rootmetrics.com/us/blog/special-reports/which-us-cities-have-the-best-mobile-performance), a mobile industry analytics firm, San Francisco and other Bay Area cities have among the worst wireless networks in the US. How is it that at the center of technology innovation, businesses and consumers must put up with close to the worst mobile networks in the United States? Part of the answer can be found in the archives of the California State Assembly.
 
 ### The trouble with old infrastructure
 
 In 2016, the telecommunications giant AT&T asked the State of California for permission to dismantle its existing copper-based, landline telephone network. [In the bill](https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201520160AB2395), AT&T explained to lawmakers that **85% of California households no longer use landline phones**.
 
-#### AT&T argued that the large environmental and financial costs of maintaining the copper-wire network hinder innovations and improvement of other aspects of its communications infrastructure; i.e. fiber optic and mobile networks.
+AT&T argued that the large environmental and financial costs of maintaining the copper-wire network hinder innovations and improvement of other aspects of its communications infrastructure; i.e. fiber optic and mobile networks.
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976751/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/Great-Eastern-cable-July1865-3000-3x2gty-56a48a0c5.webp)
 
-_[The Transatlantic Cable](http://atlantic-cable.com/) first lain in 1858 (unsuccessfully), to be successfully relain in 1866, could mark the beginning of an interconnected world -in the modern sense. Photo: [the Great Eastern](https://www.thoughtco.com/atlantic-telegraph-cable-timeline-1773793) steamship laying cable between Newfoundland and the UK in July 1865._
+*[The Transatlantic Cable](http://atlantic-cable.com/) first lain in 1858 (unsuccessfully), to be successfully relain in 1866, could mark the beginning of an interconnected world -in the modern sense. Photo: [the Great Eastern](https://www.thoughtco.com/atlantic-telegraph-cable-timeline-1773793) steamship laying cable between Newfoundland and the UK in July 1865.*
 
 The Plain Old Telephone System (POTS) evolved out of the telegraph network of the early 19th century and was the first (electric) global communications network. In 1865, sending a message (a letter, a note) from New York to London took about 6-8 weeks. In 1866, when the transatlantic telegraph line was completed, an 80 word message took 1 minute to travel the Atlantic ocean.
 
@@ -42,11 +41,11 @@ However, as the 2016 California State Assembly bill evidences, <mark>AT&T is not
 
 ### When infrastructure technology can't grow with you
 
-Increasingly, our modern economy depends on technologies like GPS, mobile computing, and wireless communications. Consumers and industries alike demand fast, flexible and adaptable communications networks. Vast, yet often overlooked sectors of our modern society such as banking, securities, shipping, depend on high-capacity, high-speed, highly reliable networks. Copper just can't keep up -it's weighing us down (literally and metaphorically speaking!)
+Increasingly, our modern economy depends on technologies like GPS, mobile computing, and wireless communications. Consumers and industries alike demand fast, flexible and adaptable communications networks. Vast, yet often overlooked sectors of our modern society such as banking, securities, shipping, depend on high-capacity, high-speed, highly reliable networks. Copper just can't keep up—it's weighing us down (literally and metaphorically speaking!)
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976390/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/FIBER-OPTICS-CABLES.png)
 
-_In the 1970's and 80's fiber optics where on the very cutting edge of communications technology and a prominent feature in [futuristic-looking photography](https://picryl.com/media/fiber-optics-cables-f10105). 1988 is the year that the first fiber optic transatlantic cable was lain. Today [all of our undersea cables](https://www.submarinecablemap.com/) are made of glass, as are the links between most cell towers._
+*In the 1970's and 80's fiber optics where on the very cutting edge of communications technology and a prominent feature in [futuristic-looking photography](https://picryl.com/media/fiber-optics-cables-f10105). 1988 is the year that the first fiber optic transatlantic cable was lain. Today [all of our undersea cables](https://www.submarinecablemap.com/) are made of glass, as are the links between most cell towers.*
 
 #### POTS is an evolutionary dead-end. There are physical limits to how much information can be transmitted over existing copper wire networks.
 
@@ -66,11 +65,11 @@ Between 2002 to 2014, cell phone networks in 7 Sub-Saharan countries grew more t
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976391/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/Africa-phones-7.png)
 
-_A graphical comparison of 5 Sub-Saharan African statesGraphic courtesy of [Pew Research Center](http://www.pewglobal.org/2015/04/15/cell-phones-in-africa-communication-lifeline/)_
+*A graphical comparison of 5 Sub-Saharan African statesGraphic courtesy of [Pew Research Center](http://www.pewglobal.org/2015/04/15/cell-phones-in-africa-communication-lifeline/)*
 
-While in 2002, only 12.2% of the population in the Sub-Saharan countries had cell phones, 78.4% had cell phones in 2014\. This constitutes roughly a 66 percentage point increase. In the same period of time, the US was only able to increase mobile networks by a mere 25 percentage points.
+While in 2002, only 12.2% of the population in the Sub-Saharan countries had cell phones, 78.4% had cell phones in 2014. This constitutes roughly a 66 percentage point increase. In the same period of time, the US was only able to increase mobile networks by a mere 25 percentage points.
 
-Unencumbered by a legacy system (neither landlines nor legacy mobile networks), the 7 African countries in the study were able to build a modern communications system that scales well and that can continue to evolve, delivering customers [solutions that legacy systems could never have.](https://www.cdcfoundation.org/wp-content/uploads-health-how-phones-are-reshaping-healthcare-africa)
+Unencumbered by a legacy system (neither landlines nor legacy mobile networks), the 7 African countries in the study were able to build a modern communications system that scales well and that can continue to evolve, delivering customers solutions that legacy systems could never have.
 
 ### The Take-Home lesson
 
@@ -88,7 +87,7 @@ Much like the US' cell networks, ASR technology hangs on to remnants of its past
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976752/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/A-virtual-reality-system-in-use.-The-3-D-helmet-co.jpg)
 
-_Advanced Research Projects Agency was responsible for funding research which led to the creation of many technologies that are an integral part of the present day.[](https://picryl.com/media/a-virtual-reality-system-in-use-the-3-d-helmet-controls-a-large-image-screen-eebcec)In the image, a virtual reality system._
+*Advanced Research Projects Agency was responsible for funding research which led to the creation of many technologies that are an integral part of the present day.*[](https://picryl.com/media/a-virtual-reality-system-in-use-the-3-d-helmet-controls-a-large-image-screen-eebcec)*In the image, a virtual reality system.*
 
 In the 1990's the chipsets that allowed engineers to bully internet over the aging copper wire network finally became cheap enough to make DSL available to the average consumer. This was a brilliant intermediate step that brought broadband internet to the homes of billions of people in the around the world -but it was just that, an intermediate step.
 
@@ -102,7 +101,7 @@ The creation and general adoption of the internet in the 90s and early 2000s (ma
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976753/blog/is-your-infrastructure-supporting-you-or-weighing-you-down/-Radio-Show---This-is-Europe--Jean-Desailly--Sophi.jpg)
 
-_Imagine how many hours of recorded radio exist in an archive somewhere. ASR technologies allow us to search vast stores of audio data and find actionable insights for business and science. For example: Are my call center operators staying compliant with disclosure regulations?_
+*Imagine how many hours of recorded radio exist in an archive somewhere. ASR technologies allow us to search vast stores of audio data and find actionable insights for business and science. For example: Are my call center operators staying compliant with disclosure regulations?*
 
 One of the game-changing aspects of end-to-end speech recognition systems is their ability to rapidly train custom models. Rather than relying on the general models of early hybrid ASR giants like Nuance and IBM Watson -which ask your data to fit their systems, end-to-end ASR technology enables custom models that fit your data, with all of its unique quirks and business-specific language. This means that <mark>rather than investing in a static, monolithic ASR system, you invest in technology that continually adapts and improves to fit your needs</mark>.
 
@@ -112,9 +111,9 @@ Every once in a while, a new technology appears that radically changes human soc
 
 The same evolutionary process is evident in the world of ASR. Rather than typing into a computer, increasingly we talk to it with Siri, Alexa, etc. The technology that makes such a conversation possible, ASR, has taken another step in its evolution now allowing us to probe voice data, look at large amounts of call data to extract actionable information-something essentially impossible even a few years ago. Deep learning ASR allows companies to
 
-*   Stay compliant with regulations by looking at 100% of their calls
-*   Track sales trends in phone call data
-*   Efficiently understand your customers attitudes
-*   Provide meeting summaries automatically
+* Stay compliant with regulations by looking at 100% of their calls
+* Track sales trends in phone call data
+* Efficiently understand your customers attitudes
+* Provide meeting summaries automatically
 
 ASR represents a major step towards communicating more naturally and without impediments. Watching deep learning ASR make this a reality in the years to come will be fascinating.
