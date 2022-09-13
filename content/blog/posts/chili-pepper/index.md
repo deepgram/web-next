@@ -31,4 +31,4 @@ I ate the world's hottest pepper to get you to respond to this email. Your move.
 
 
 
-It hurts, a lot. Ready to get started? [Sign up for a free API key](https://console.deepgram.com/signup) or [contact us](https://deepgram.com/contact-us/) if you have questions. Want to stay in touch? Drop your email below to get the latest updates from Deepgram. [newsletter_signup]
+It hurts, a lot. Ready to get started? [Sign up for a free API key](https://console.deepgram.com/signup) or [contact us](https://deepgram.com/contact-us/) if you have questions.

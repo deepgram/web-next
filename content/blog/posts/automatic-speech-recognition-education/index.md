@@ -1,6 +1,7 @@
 ---
-title: "How Automatic Speech Recognition Can Help Educators"
-description: "ASR in the classroom can support students with a wide range of learning needs. Learn how current tools are lacking and how ASR can help."
+title: How Automatic Speech Recognition Can Help Educators
+description: ASR in the classroom can support students with a wide range of
+  learning needs. Learn how current tools are lacking and how ASR can help.
 date: 2022-03-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981410/blog/automatic-speech-recognition-education/How-ASR-can-help-educators-thumb-554x220%402x.png
 authors:
@@ -9,18 +10,18 @@ category: speech-trends
 tags:
   - education
 seo:
-  title: "How Automatic Speech Recognition Can Help Educators"
-  description: "ASR in the classroom can support students with a wide range of learning needs. Learn how current tools are lacking and how ASR can help."
+  title: How Automatic Speech Recognition Can Help Educators
+  description: ASR in the classroom can support students with a wide range of
+    learning needs. Learn how current tools are lacking and how ASR can help.
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981410/blog/automatic-speech-recognition-education/How-ASR-can-help-educators-thumb-554x220%402x.png
 shorturls:
   share: https://dpgr.am/14164ee
   twitter: https://dpgr.am/b5fa773
   linkedin: https://dpgr.am/f826d8b
   reddit: https://dpgr.am/95e5d3b
   facebook: https://dpgr.am/f9161d2
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981410/blog/automatic-speech-recognition-education/How-ASR-can-help-educators-thumb-554x220%402x.png
 ---
-
 If you've ever been in a large classroom for a lecture or talk, you've probably experienced struggling to hear the speaker. Even with modern A/V equipment (which isn't present in every classroom), it can still sometimes be hard to hear what a speaker is saying. Now imagine you're not a native speaker of English. Or you have issues with your hearing. Or you have a learning disability that makes it hard to keep up with spoken speech. Paired with poor classroom acoustics, any one of these issues can make it difficult for students to succeed. As a university lecturer, I've encountered all of these problems in the classroom. And it's hard to figure out how best to help students who are struggling with these issues. In this blogpost, I want to review some of the ways that these issues are currently dealt with, and then look at a new solution, powered by [automatic speech recognition](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/), that's the best option for creating a classroom that's accessible to everyone.
 
 ## Current Solutions and Their Problems
@@ -49,4 +50,4 @@ Our Senior Developer Advocate Kevin Lewis recently [built a tool to transcribe c
 
 ## Conclusion
 
-Although there are lots of options for supporting students in the classroom, providing live transcriptions has definite advantages to support all students, regardless of their specific needs. If you'd like to see how in-class transcription can help you, [check out Kevin's blogpost with all the details](https://sweet-pie-c52a63-blog.netlify.app/classroom-captioner/)-and a one-click deploy. If you've got other ideas for using speech recognition in the classroom, you can contact us or fill out our [Speech-to-text Self Assessment](https://deepgram.typeform.com/to/d3zTk2eI) to see if Deepgram might be able to help.
+Although there are lots of options for supporting students in the classroom, providing live transcriptions has definite advantages to support all students, regardless of their specific needs. If you'd like to see how in-class transcription can help you, [check out Kevin's blogpost with all the details](https://sweet-pie-c52a63-blog.netlify.app/classroom-captioner/)—and a one-click deploy. If you've got other ideas for using speech recognition in the classroom, you can contact us or fill out our [Speech-to-text Self Assessment](https://deepgram.typeform.com/to/d3zTk2eI) to see if Deepgram might be able to help.
