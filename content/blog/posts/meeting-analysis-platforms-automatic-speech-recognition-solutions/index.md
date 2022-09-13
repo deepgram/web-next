@@ -1,6 +1,7 @@
 ---
-title: "How Meeting Analysis Platforms Utilize ASR Solutions"
-description: "Meeting analysis platforms run on automatic speech recognition. Learn more about the benefits of these platforms and how ASR powers them."
+title: How Meeting Analysis Platforms Utilize ASR Solutions
+description: Meeting analysis platforms run on automatic speech recognition.
+  Learn more about the benefits of these platforms and how ASR powers them.
 date: 2022-08-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981428/blog/meeting-analysis-platforms-automatic-speech-recognition-solutions/how-meeting-analysisplatforms-utilize-asr-solution.png
 authors:
@@ -11,19 +12,21 @@ tags:
   - meeting-transcription
   - nlu
 seo:
-  title: "How Meeting Analysis Platforms Utilize ASR Solutions"
-  description: "Meeting analysis platforms run on automatic speech recognition. Learn more about the benefits of these platforms and how ASR powers them."
+  title: How Meeting Analysis Platforms Utilize ASR Solutions
+  description: Meeting analysis platforms run on automatic speech recognition.
+    Learn more about the benefits of these platforms and how ASR powers them.
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981428/blog/meeting-analysis-platforms-automatic-speech-recognition-solutions/how-meeting-analysisplatforms-utilize-asr-solution.png
 shorturls:
   share: https://dpgr.am/b76de2b
   twitter: https://dpgr.am/d2c3630
   linkedin: https://dpgr.am/4b91ba5
   reddit: https://dpgr.am/c33ebab
   facebook: https://dpgr.am/b194567
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981428/blog/meeting-analysis-platforms-automatic-speech-recognition-solutions/how-meeting-analysisplatforms-utilize-asr-solution.png
 ---
+If you're like most business professionals, you probably spend a good chunk of your day in meetings. But you probably also hate all of the work that comes post-meeting, things like drafting meeting minutes, assigning tasks, and following up with the appropriate people. All of this takes you away from more important work you could be doing. Meeting analysis platforms are here to take on much of this rote work. By utilizing top ASR tools, these platforms can automatically convert meetings into text, so you can get a clear understanding of what transpired during the meeting. Not only will this save you time, but it will also help improve decision-making and communication within your organization.
 
-If you're like most business professionals, you probably spend a good chunk of your day in meetings. But you probably also hate all of the work that comes post-meeting, things like drafting meeting minutes, assigning tasks, and following up with the appropriate people. All of this takes you away from more important work you could be doing. Meeting analysis platforms are here to take on much of this rote work. By utilizing top ASR tools, these platforms can automatically convert meetings into text, so you can get a clear understanding of what transpired during the meeting. Not only will this save you time, but it will also help improve decision-making and communication within your organization. In this blog post, we'll look at what meeting analysis platforms are, their benefits for your business, and how they benefit from using state-of-the-art speech-to-text systems like Deepgram. Let's jump in.
+In this blog post, we'll look at what meeting analysis platforms are, their benefits for your business, and how they benefit from using state-of-the-art speech-to-text systems like Deepgram. Let's jump in.
 
 ## What is a Meeting Analysis Platform?
 
@@ -85,9 +88,9 @@ If you've ever had to take notes for a meeting while also trying to participate,
 
 There are many meeting analysis platforms on the market, so how do you choose the right one for your organization? The top three factors to consider are:
 
-1.  **Ease of use:** You want a platform that's easy to use, so you don't waste time trying to figure out how to use it.
-2.  **Pricing:** The platform should be affordable for your organization and provide good value by offering relevant features.
-3.  **Accuracy:** The platform should be able to transcribe meeting minutes with a high degree of accuracy.
+1. **Ease of use:** You want a platform that's easy to use, so you don't waste time trying to figure out how to use it.
+2. **Pricing:** The platform should be affordable for your organization and provide good value by offering relevant features.
+3. **Accuracy:** The platform should be able to transcribe meeting minutes with a high degree of accuracy.
 
 Although we listed it third here, accuracy is perhaps the most important consideration, as any meeting analysis platform is only going to be as good as the transcripts that it generates. Let's take a look at what automatic speech recognition is, and why speech-to-text tools for meeting analysis platforms are so important when it comes to accuracy.
 
@@ -105,12 +108,14 @@ ASR is important because it enables meeting analysis platforms to automatically 
 
 <WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
-
-
 ## Benefits of End-to-End Deep Learning ASR Solutions for Meeting Analytics
 
-If you want the best meeting analytics platform, make sure to choose one that uses [an end-to-end deep learning ASR solution](https://blog.deepgram.com/deep-learning-speech-recognition/) for transcription. This type of speech recognition is the quickest and most accurate speech-to-text solution for meeting analysis platforms that's available today. Why is end-to-end deep learning so important? Because of [transfer learning](https://blog.deepgram.com/transfer-learning-spanish-portuguese/), which makes it easy to take an accurate model and provide it with new data to make it more accurate. For example, [Deepgram offers a use-case model that's been specifically trained on meeting audio](https://deepgram.com/product/use-cases/), making it even more adept at understanding and transcribing meetings. With older ASR solutions that don't use end-to-end deep learning, this kind of training simply takes too long for providers to create multiple, use case-specific models. They thus rely on singular, out-of-the-box solutions that provide _okay_ accuracy across a range of domains but never hit great accuracy. In addition to use case-specific models, Deepgram also offers the option to tailor a model based on audio you provide, which creates further increases in accuracy. This is especially helpful if your meetings contain a lot of industry-specific jargon or unique terms. By training a model with data that includes these items, you'll be able to have a model that's uniquely able to identify the kind of language used in your meetings.
+If you want the best meeting analytics platform, make sure to choose one that uses [an end-to-end deep learning ASR solution](https://blog.deepgram.com/deep-learning-speech-recognition/) for transcription. This type of speech recognition is the quickest and most accurate speech-to-text solution for meeting analysis platforms that's available today. Why is end-to-end deep learning so important? Because of [transfer learning](https://blog.deepgram.com/transfer-learning-spanish-portuguese/), which makes it easy to take an accurate model and provide it with new data to make it more accurate. For example, [Deepgram offers a use-case model that's been specifically trained on meeting audio](https://deepgram.com/product/use-cases/), making it even more adept at understanding and transcribing meetings.
+
+With older ASR solutions that don't use end-to-end deep learning, this kind of training simply takes too long for providers to create multiple, use case-specific models. They thus rely on singular, out-of-the-box solutions that provide *okay* accuracy across a range of domains but never hit great accuracy. In addition to use case-specific models, Deepgram also offers the option to tailor a model based on audio you provide, which creates further increases in accuracy. This is especially helpful if your meetings contain a lot of industry-specific jargon or unique terms. By training a model with data that includes these items, you'll be able to have a model that's uniquely able to identify the kind of language used in your meetings.
 
 ## Wrapping Up
 
-Deep learning ASR technology is revolutionizing meeting analytics and making it easier than ever to get the information you need from meetings. Just make sure your meeting analysis platform is using state-of-the-art, end-to-end deep learning ASR technology so you can enjoy all the benefits that these tools offer. Deepgram has [a use-case model specifically for meeting transcription](https://deepgram.com/product/use-cases/), providing excellent out-of-the-box accuracy. If you'd like to give us a try, you can check out how we stack up to Big Tech with our [ASR Comparison Tool](https://deepgram.com/asr-comparison/). You can also [sign up for Console and $150 in free credits](https://console.deepgram.com/signup) to check out what we offer. Still not sure how to start? [Reach out](https://deepgram.com/contact-us/) and we'll help you explore your use case and see how we can help.
+Deep learning ASR technology is revolutionizing meeting analytics and making it easier than ever to get the information you need from meetings. Just make sure your meeting analysis platform is using state-of-the-art, end-to-end deep learning ASR technology so you can enjoy all the benefits that these tools offer. Deepgram has [a use-case model specifically for meeting transcription](https://deepgram.com/product/use-cases/), providing excellent out-of-the-box accuracy.
+
+If you'd like to give us a try, you can check out how we stack up to Big Tech with our [ASR Comparison Tool](https://deepgram.com/asr-comparison/). You can also [sign up for Console and $150 in free credits](https://console.deepgram.com/signup) to check out what we offer. Still not sure how to start? [Reach out](https://deepgram.com/contact-us/) and we'll help you explore your use case and see how we can help.
