@@ -370,4 +370,27 @@ const schema = [
 	.post-prose :global(th) {
 		@apply px-6 py-2;
 	}
+	.post-prose :global(blockquote) {
+		box-sizing: border-box;
+		display: block;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+		padding-left: 45px;
+		position: relative;
+		width: 100%;
+	}
+
+	.post-prose :global(blockquote p) {
+		padding-bottom: 0px;
+	}
+
+	.post-prose :global(blockquote:before) {
+		background-color: #fe5c5c;
+		bottom: 5px;
+		content: "";
+		left: 25px;
+		position: absolute;
+		top: 5px;
+		width: 2px;
+	}
 </style>
