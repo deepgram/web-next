@@ -143,7 +143,7 @@ done
 
 ## Transcribing Each Episode
 
-Now that each podcast item is available in a loop, with both the `url` and `title` properties individually addressable, we can generate a transcript using cURL. We go through it in more detail in our [recent blog post](https://developers.deepgram.com/blog/2022/08/saving-transcripts-from-terminal/).
+Now that each podcast item is available in a loop, with both the `url` and `title` properties individually addressable, we can generate a transcript using cURL. We go through it in more detail in our [recent blog post](https://sweet-pie-c52a63-blog.netlify.app/saving-transcripts-from-terminal/).
 
 Make sure you replace `YOUR_DEEPGRAM_API_KEY` with your own Deepgram API Key.
 

@@ -29,7 +29,7 @@ When you’re submitting to a hackathon, you want to stand out. The quickest way
 
 ## Don’t Shy Away from Storytelling with Your Hackathon Submission
 
-You might remember from my [Technical Writing: A Developer’s Guide to Storytelling](https://developers.deepgram.com/blog/2022/03/technical-writing-a-developers-guide-to-storytelling/) that storytelling connects you to the reader on a more personal level. It takes it a step deeper than getting the reader’s attention. How will you stay in the reader’s memory? Think about what your reader needs--I wrote more about this in [Technical Writing: a Beginner’s Guide](https://developers.deepgram.com/blog/2022/03/technical-writing-a-beginners-guide/) if you want to learn more. Can you help solve their problem? When they read through your blog, will they say, “I could **really** use that!” If they do, you’ve pulled them into your story, and they’ll remember you.
+You might remember from my [Technical Writing: A Developer’s Guide to Storytelling](https://sweet-pie-c52a63-blog.netlify.app/technical-writing-a-developers-guide-to-storytelling/) that storytelling connects you to the reader on a more personal level. It takes it a step deeper than getting the reader’s attention. How will you stay in the reader’s memory? Think about what your reader needs--I wrote more about this in [Technical Writing: a Beginner’s Guide](https://sweet-pie-c52a63-blog.netlify.app/technical-writing-a-beginners-guide/) if you want to learn more. Can you help solve their problem? When they read through your blog, will they say, “I could **really** use that!” If they do, you’ve pulled them into your story, and they’ll remember you.
 
 ## Create a Clear Purpose and Explain your Project Approach
 

@@ -27,11 +27,11 @@ In this series, I will build a live streaming web application with text captions
 
 <Panel type="info" title="Build a Live Streaming Web Application with Amazon IVS and Deepgram (SERIES)">
 <ol>
-<li><a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/">How to Build a Live Streaming Web Application with Amazon IVS and Deepgram</a></li>
-<li><a href="https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/"> Build a Live Streaming Web Application: Vue and Express Setup</a></li>
-<li><a href="https://developers.deepgram.com/blog/2022/03/how-to-write-vue-3-composables-for-a-third-party-API-integration/"> How to Write Vue 3 Composables for a Third-Party API Integration</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/">How to Build a Live Streaming Web Application with Amazon IVS and Deepgram</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/build-a-livestream-web-application-vue-and-express-setup/"> Build a Live Streaming Web Application: Vue and Express Setup</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/how-to-write-vue-3-composables-for-a-third-party-API-integration/"> How to Write Vue 3 Composables for a Third-Party API Integration</a></li>
 
-<li><a href="https://developers.deepgram.com/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/"> Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/"> Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component</a></li>
 </ol>
 </Panel>
 
@@ -231,7 +231,7 @@ I will need to do two things: use my computer's microphone to listen to the audi
 
 The browser contains several APIs for working with audio and video. I need to use one that lets me **gain access to the user's microphone**. If I can gain that access, I can record the audio from the live stream and send it on to Deepgram to get the text transcript.
 
-The **Media Streams API** contains many interfaces and methods for working with **audio and video data**. There is already a really great guide for how it works [here](https://developers.deepgram.com/blog/2021/12/getting-started-with-mediastream-api/), so I won't go over all the details. I just need to understand that the Media Streams API has so much that I can use when I'm working with audio or video data in the browser. In fact, I'm pretty sure the Amazon IVS SDK uses it under the hood as part of their video player.
+The **Media Streams API** contains many interfaces and methods for working with **audio and video data**. There is already a really great guide for how it works [here](https://sweet-pie-c52a63-blog.netlify.app/getting-started-with-mediastream-api/), so I won't go over all the details. I just need to understand that the Media Streams API has so much that I can use when I'm working with audio or video data in the browser. In fact, I'm pretty sure the Amazon IVS SDK uses it under the hood as part of their video player.
 
 ### Get Audio with Media Streams API
 
@@ -274,7 +274,7 @@ I want to get the transcription and display it under the video player, so I will
 <p id="captions"></p>
 ```
 
-I'm going to follow the tutorial my colleague Kevin Lewis wrote about [getting live speech transcriptions in the browser](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/). He explains that I need to connect to Deepgram with a WebSocket. I have to make sure I have access to the microphone before I open the WebSocket, so I will put the logic to connect to Deepgram inside the `.then()` that is attached to the `getUserMedia` function call.
+I'm going to follow the tutorial my colleague Kevin Lewis wrote about [getting live speech transcriptions in the browser](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/). He explains that I need to connect to Deepgram with a WebSocket. I have to make sure I have access to the microphone before I open the WebSocket, so I will put the logic to connect to Deepgram inside the `.then()` that is attached to the `getUserMedia` function call.
 
 ```js
 navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
@@ -392,7 +392,7 @@ But most front-end developers rely on frameworks to build projects like these. A
 
 In the next part of the series, **I will improve this project by building it using Vue.js (specifically Vue 3) for the front-end, and node.js for the back-end**. I will include some of the real-world practices for building a full-stack application. I'll need a server file so I can incorporate more security, which I'll build with node.js, and I'll build an entry page with VueRouter navigation guards so that users must enter a code to see my live stream.
 
-Vue.js is my favorite Javascript framework, and I have written a series on [Diving Into Vue 3](https://developers.deepgram.com/blog/2022/02/diving-into-vue-3-setup-function/), which is worth checking out if you want to come along with me for the rest of this series to build a full-stack live stream application in Vue.js.
+Vue.js is my favorite Javascript framework, and I have written a series on [Diving Into Vue 3](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-setup-function/), which is worth checking out if you want to come along with me for the rest of this series to build a full-stack live stream application in Vue.js.
 
 Please follow me on [Twitter](https://twitter.com/sandra_rodgers_) if you find my tutorials useful!
 

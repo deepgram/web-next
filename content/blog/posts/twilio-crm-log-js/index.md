@@ -374,6 +374,6 @@ We've done quite a lot here - how to forward and record calls with Twilio, how t
 *   Implement outbound call recording
 *   Group calls under specific callers
 *   Allow users to make notes for calls or callers
-*   Use a more permanent database like Supabase - [Brian wrote a getting started post here](https://developers.deepgram.com/blog/2021/11/getting-started-with-supabase/)
+*   Use a more permanent database like Supabase - [Brian wrote a getting started post here](https://sweet-pie-c52a63-blog.netlify.app/getting-started-with-supabase/)
 
 The complete project is available at https://github.com/deepgram-devs/twilio-voice-searchable-log and if you have any questions please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).

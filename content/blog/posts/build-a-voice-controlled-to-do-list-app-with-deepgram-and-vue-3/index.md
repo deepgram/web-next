@@ -28,18 +28,18 @@ Recently I wrote about a project I did to help me learn Pinia, Vue 3's new offic
 
 It dawned on me that a fun way to jazz up this project would be to use Deepgram to make the app **voice-powered** so that a user can **speak** commands to add, delete, or check-off items on the list.
 
-I'm inspired by my colleague Bekah's series about [updating portfolio projects](https://developers.deepgram.com/blog/2022/03/freecodecamp-quote-generator-upgrade/). A voice-based to-do list app would be a lot more interesting than a regular to-do list app!
+I'm inspired by my colleague Bekah's series about [updating portfolio projects](https://sweet-pie-c52a63-blog.netlify.app/freecodecamp-quote-generator-upgrade/). A voice-based to-do list app would be a lot more interesting than a regular to-do list app!
 
 ## Project Overview
 
 <Panel type="info" title="Build a To-Do List App With Vue 3, Pinia, and Deepgram (SERIES)">
 <ol>
-<li><a href="https://developers.deepgram.com/blog/2022/04/build-a-todo-list-with-pinia-and-vue-3/" target="_blank">Build a To-do List App with Pinia and Vue 3</a></li>
-<li><a href="https://developers.deepgram.com/blog/2022/05/build-a-voice-controlled-to-do-list-app-with-deepgram-and-vue-3/" target="_blank"> Build a Voice Controlled To-Do List App with Deepgram and Vue 3</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/build-a-todo-list-with-pinia-and-vue-3/" target="_blank">Build a To-do List App with Pinia and Vue 3</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/build-a-voice-controlled-to-do-list-app-with-deepgram-and-vue-3/" target="_blank"> Build a Voice Controlled To-Do List App with Deepgram and Vue 3</a></li>
 </ol>
 </Panel>
 
-The project I originally did can be found in this [repo](https://github.com/deepgram-devs/todo-pinia), and the accompanying blog post is [here](https://developers.deepgram.com/blog/2022/04/build-a-todo-list-with-pinia-and-vue-3/). Check it out to build the standard to-do list project with Vue 3 and Pinia.
+The project I originally did can be found in this [repo](https://github.com/deepgram-devs/todo-pinia), and the accompanying blog post is [here](https://sweet-pie-c52a63-blog.netlify.app/build-a-todo-list-with-pinia-and-vue-3/). Check it out to build the standard to-do list project with Vue 3 and Pinia.
 
 In this iteration of the project, I'll continue to use [Pinia](https://pinia.vuejs.org/) to manage global state, but I'll add Deepgram so I can use Deepgram's speech-to-text API to help me power the voice-control feature. If you want to build this voice-control feature along with me, I've created a starting branch [here](https://github.com/deepgram-devs/todo-pinia-deepgram/tree/starter-branch).
 
@@ -49,9 +49,9 @@ There are several articles on Deepgram Docs about how to use Deepgram in Javascr
 
 <Panel type="info" title="Additional Resources">
 <ul>
-<li><a href="https://developers.deepgram.com/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/) by [Sandra Rodgers](https://developers.deepgram.com/blog/authors/sandrarodgers/">Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component</a></li>
-<li><a href="https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/">Get Live Speech Transcriptions In Your Browser</a> by <a href="https://developers.deepgram.com/blog/authors/kevinlewis/">Kevin Lewis</a></li>
-<li><a href="https://developers.deepgram.com/blog/2022/01/protecting-api-key/">Browser Live Transcription - Protecting Your API Key</a> by <a href="https://developers.deepgram.com/blog/authors/kevinlewis/">Kevin Lewis</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/">Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component</a> by <a href="https://sweet-pie-c52a63-blog.netlify.app/authors/sandra-rodgers/">Sandra Rodgers</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/">Get Live Speech Transcriptions In Your Browser</a> by <a href="https://sweet-pie-c52a63-blog.netlify.app/authors/kevin-lewis/">Kevin Lewis</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/protecting-api-key/">Browser Live Transcription - Protecting Your API Key</a> by <a href="https://sweet-pie-c52a63-blog.netlify.app/authors/kevin-lewis/">Kevin Lewis</a></li>
 </ul>
 
 </Panel>
