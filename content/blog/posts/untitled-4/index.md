@@ -8,7 +8,7 @@ authors:
   - scott-stephenson
 category: speech-trends
 tags:
-  - musings
+  - enterprise-connect
 seo:
   title: 53-second expert interview - Enterprise Connect
   description: ""
