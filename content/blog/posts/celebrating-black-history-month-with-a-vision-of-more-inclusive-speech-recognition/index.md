@@ -53,5 +53,3 @@ The consequence is that speakers of AAVE and other dialects may need to code-swi
 * [African American Vernacular English ' Morgan Gill ' TEDxYouth@RMSST](https://www.youtube.com/watch?v=rNjhB1DW_-s)
 * [Linguists on African American Language: John Baugh](https://www.youtube.com/watch?v=6EQdJy24JrQ)
 * ["African American English through the Years" - A Presentation by Dr. Lisa Green of UMass Amherst](https://www.youtube.com/watch?v=x6UpGwH6YBs)
-
-\[newsletter_signup]
