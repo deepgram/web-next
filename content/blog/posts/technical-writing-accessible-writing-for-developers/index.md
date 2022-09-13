@@ -22,7 +22,7 @@ shorturls:
   reddit: https://dpgr.am/129c6dc
   facebook: https://dpgr.am/c47d954
 ---
-Our primary goal as technical writers is to be understood. It’s not to sound smart, be elite, be gatekeepers of knowledge. It’s to convey information to our readers in a way that’s effective for understanding. Beyond that primary goal, there are other benefits. Using strategies to make your writing accessible makes you more likely to retain your audience, have a broader audience, and have readers return to your content. We’ve talked about some of the concepts in the post in [Technical Writing: A Beginner’s Guide](https://developers.deepgram.com/blog/2022/03/technical-writing-a-beginners-guide/), but in this post about accessible writing, we’ll take a deeper look at understanding our audience, our word choice, and even go into sentence structure.
+Our primary goal as technical writers is to be understood. It’s not to sound smart, be elite, be gatekeepers of knowledge. It’s to convey information to our readers in a way that’s effective for understanding. Beyond that primary goal, there are other benefits. Using strategies to make your writing accessible makes you more likely to retain your audience, have a broader audience, and have readers return to your content. We’ve talked about some of the concepts in the post in [Technical Writing: A Beginner’s Guide](https://sweet-pie-c52a63-blog.netlify.app/technical-writing-a-beginners-guide/), but in this post about accessible writing, we’ll take a deeper look at understanding our audience, our word choice, and even go into sentence structure.
 
 ## Audience
 

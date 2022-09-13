@@ -260,7 +260,7 @@ It's going to be is a new honed, sharpened tool, is machine learning. Create dat
 
 **Scott:** Similar story with quantum field theory in physics and math, and theory of knots and strings coming back in, and math and physics and that sort of thing. All these things tie together and they feed off of each other. So I think there will be contributions from the applied AI side that are actually fundamental contributions in machine learning as well. And there already have been.
 
-**Susan:** What we've already obviously seen this in the medical field, studying the brain has made contributions and the machine learning huge contributions in machine learning. And vice versa. [Reinforcement learning](https://blog.deepgram.com/ai-show-different-types-of-machine-learning/), talking about potentially how parts of the brain works and back and forth. Like you said, other fields that we're going to see those same things coming out of it.
+**Susan:** What we've already obviously seen this in the medical field, studying the brain has made contributions and the machine learning huge contributions in machine learning. And vice versa. [Reinforcement learning](https://sweet-pie-c52a63-blog.netlify.app/ai-show-different-types-of-machine-learning/), talking about potentially how parts of the brain works and back and forth. Like you said, other fields that we're going to see those same things coming out of it.
 
 **Susan:** That's what's super exciting about this. When you start pushing it out into the sciences, you get incredibly brilliant people that are brilliant in ways not exactly the same as everybody around you.
 

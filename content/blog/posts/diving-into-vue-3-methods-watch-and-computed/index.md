@@ -26,7 +26,7 @@ In this series, I'm focusing on the basics needed to start working in **Vue 3** 
 
 Check out my previous posts in the series:
 
-1.  [Diving Into Vue 3: Getting Started](https://developers.deepgram.com/blog/2022/01/diving-into-vue-3-getting-started/)
+1.  [Diving Into Vue 3: Getting Started](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-getting-started/)
 
 2.  [Diving Into Vue 3: The Setup Function]()
 

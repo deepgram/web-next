@@ -22,7 +22,7 @@ shorturls:
   facebook: https://dpgr.am/58a8676
 ---
 
-[Speech recognition](https://blog.deepgram.com/what-is-asr/) is a hot topic. Google just announced new features for its [voice assistant](https://blog.deepgram.com/what-makes-alexa-siri-terminator-and-hal-tick/) like continued conversation and multiple actions. Amazon Alexa has been leading the way in voice-enabled shopping. Both companies are making vast improvements, but they're missing the big picture.
+[Speech recognition](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/) is a hot topic. Google just announced new features for its [voice assistant](https://sweet-pie-c52a63-blog.netlify.app/what-makes-alexa-siri-terminator-and-hal-tick/) like continued conversation and multiple actions. Amazon Alexa has been leading the way in voice-enabled shopping. Both companies are making vast improvements, but they're missing the big picture.
 
 ## Voice assistants are not the future of voice.
 
@@ -50,6 +50,6 @@ That's why companies like [NVIDIA, a leader in AI Computing, has invested in Dee
 
 > "While many companies already implement accelerated speech recognition, true speech analytics has until recently been largely untouched by deep learning," said Jeff Herbst, vice president of business development at NVIDIA. "Deepgram has done an amazing job introducing deep learning to this field, and we look forward to working closely with them to advance deep learning-driven speech analytics to the next level."
 
-[Deepgram](https://www.deepgram.com/business) works with companies that facilitate these critical moments by building speech recognition models directly trained and tailored to deliver high accuracy on everyday audio. By pushing our models to perform under complex, real-life conditions with background-noise, multiple speakers, diverse accents, and more, our [customers achieve accuracy rates miles above what they were seeing from competitor solutions](https://blog.deepgram.com/customer-story-rideshare-smartrhino-deepgram/). With Deepgram's speech recognition, they finally get visibility into a pivotal piece of the customer journey.
+[Deepgram](https://www.deepgram.com/business) works with companies that facilitate these critical moments by building speech recognition models directly trained and tailored to deliver high accuracy on everyday audio. By pushing our models to perform under complex, real-life conditions with background-noise, multiple speakers, diverse accents, and more, our [customers achieve accuracy rates miles above what they were seeing from competitor solutions](https://sweet-pie-c52a63-blog.netlify.app/customer-story-rideshare-smartrhino-deepgram/). With Deepgram's speech recognition, they finally get visibility into a pivotal piece of the customer journey.
 
 To learn more about Deepgram's speech recognition built for business, contact [sales@deepgram.com](https://deepgram.comnull/).

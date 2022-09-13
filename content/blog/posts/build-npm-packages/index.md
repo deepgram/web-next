@@ -65,7 +65,7 @@ module.exports = value
 
 This is a viable, though not terribly useful, npm package - it will always return a fixed value of `42`. The `module.exports` value can be anything - a fixed value, an object with multiple values, a function, a class, or any other data.
 
-While fixed values may have limited use, they are useful in some contexts - the `profane-words` package I used in my [automatic profanity censoring](https://developers.deepgram.com/blog/2021/11/censor-profanity-nodejs/) post used a fixed array value to include a list of almost 3000 profanities instead of me needing to include them a more manual way.
+While fixed values may have limited use, they are useful in some contexts - the `profane-words` package I used in my [automatic profanity censoring](https://sweet-pie-c52a63-blog.netlify.app/censor-profanity-nodejs/) post used a fixed array value to include a list of almost 3000 profanities instead of me needing to include them a more manual way.
 
 ## Publishing an npm Package
 

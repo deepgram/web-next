@@ -23,7 +23,7 @@ og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454040/blog/p5js-deepgram-game/ograph.png
 ---
 
-This is the final part in a series on P5.js (from here 'P5') - a creative coding library that makes working with the Canvas API much easier. [In part one](https://developers.deepgram.com/blog/2022/03/p5js-getting-started/), we covered how to draw elements on the screen and react to keyboard and mouse input. We learned how to create common game features in [part two](https://developers.deepgram.com/blog/2022/03/blog/2022/03/p5js-game-logic/) - collision detection, entity management, and state management.
+This is the final part in a series on P5.js (from here 'P5') - a creative coding library that makes working with the Canvas API much easier. [In part one](https://sweet-pie-c52a63-blog.netlify.app/p5js-getting-started/), we covered how to draw elements on the screen and react to keyboard and mouse input. We learned how to create common game features in [part two](https://sweet-pie-c52a63-blog.netlify.app/blog/2022/03/p5js-game-logic/) - collision detection, entity management, and state management.
 
 In today's tutorial, we'll bring together everything we know to create a voice-controlled game - [try the game out now](https://deepgram-p5-game.glitch.me/). A new enemy appears coming from one of four directions and begins moving towards you every few seconds. Each direction has a random word associated with it, and if said correctly, a bullet will fly in that direction. If an enemy reaches you, the game is over.
 
@@ -81,7 +81,7 @@ On your computer, create a new directory and open it in your code editor. Create
 </html>
 ```
 
-In the second post in this series, you learned how to [keep score and show a game over screen](https://developers.deepgram.com/blog/2022/03/blog/2022/03/p5js-game-logic/) - we are using both approaches here.
+In the second post in this series, you learned how to [keep score and show a game over screen](https://sweet-pie-c52a63-blog.netlify.app/blog/2022/03/p5js-game-logic/) - we are using both approaches here.
 
 The only new thing here is `translate(width/2, height/2)`, which moves the origin (0, 0) to the center of the canvas. This means the top-left is now (-500, -500), and the bottom-right is (500, 500). It makes sense to do this when entities often need to refer to the center position.
 
@@ -124,7 +124,7 @@ class Enemy {
 
 When an instance is created, you must provide two arguments - `direction` - one of `'UP'`, `'DOWN'`, `'LEFT'`, or `'RIGHT'`, and `distance` - which dictates how far away from the center point the enemy should spawn.
 
-In the `constructor`, the enemies are initially placed, and in `move()` they move one pixel closer to the center. `touchedPlayer()` uses collision detection -- we [learned about that last week](https://developers.deepgram.com/blog/2022/03/blog/2022/03/p5js-game-logic/) -- to set `gameOver` to `true` if an enemy touches the player in the center of the canvas. Finally, the enemy is drawn at its new (x, y) position.
+In the `constructor`, the enemies are initially placed, and in `move()` they move one pixel closer to the center. `touchedPlayer()` uses collision detection -- we [learned about that last week](https://sweet-pie-c52a63-blog.netlify.app/blog/2022/03/p5js-game-logic/) -- to set `gameOver` to `true` if an enemy touches the player in the center of the canvas. Finally, the enemy is drawn at its new (x, y) position.
 
 In your global variable section, add these line:
 
@@ -293,7 +293,7 @@ currentWords[enemy.direction] = getRandomWord()
 
 It's time to create bullets with your voice! A persistent WebSocket connection will be made with Deepgram, allowing Deepgram to constantly listen to your mic to hear what you say.
 
-This part of the tutorial will assume you know how to do live browser transcription with Deepgram. If not, we have a [written and video tutorial available](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/) that explains every step in more detail.
+This part of the tutorial will assume you know how to do live browser transcription with Deepgram. If not, we have a [written and video tutorial available](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/) that explains every step in more detail.
 
 In your global variable section, create one final value so we can display to the user what was heard:
 
@@ -348,7 +348,7 @@ The fact it was so little code to integrate voice control into this game should 
 
 Once again, a live version of the game can be found [here](https://deepgram-p5-game.glitch.me/) and the final codebase on [GitHub](https://github.com/deepgram-devs/playing-with-p5).
 
-If you want to deploy your own, I encourage you to also read how to [protect your API Key](https://developers.deepgram.com/blog/2022/01/protecting-api-key/) when doing live transcription directly in your browser.
+If you want to deploy your own, I encourage you to also read how to [protect your API Key](https://sweet-pie-c52a63-blog.netlify.app/protecting-api-key/) when doing live transcription directly in your browser.
 
 If you have any questions, please feel free to reach out to us on Twitter at [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
