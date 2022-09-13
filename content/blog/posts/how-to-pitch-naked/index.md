@@ -1,24 +1,25 @@
 ---
-title: "How To Pitch Naked"
-description: ""
+title: How To Pitch Naked
+description: We recently pitched our investors "naked", and did so pretty
+  shamelessly. What does that mean? Read on to find out.
 date: 2016-11-03
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069399/blog/how-to-pitch-naked/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - ohsnap
+  - musings
 seo:
-  title: "How To Pitch Naked"
+  title: How To Pitch Naked
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069399/blog/how-to-pitch-naked/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/c1b82e6
   twitter: https://dpgr.am/9bdce9f
   linkedin: https://dpgr.am/58f3320
   reddit: https://dpgr.am/144667a
   facebook: https://dpgr.am/e817474
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069399/blog/how-to-pitch-naked/placeholder-post-image%402x.jpg
 ---
 
 A few weeks ago, we announced in a _TechCrunch_ exclusive that [Deepgram raised a $1.8 million seed round](https://techcrunch.com/2016/09/27/launching-a-google-for-sound-deepgram-raises-1-8-million/).
