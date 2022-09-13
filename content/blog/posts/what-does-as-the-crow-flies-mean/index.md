@@ -21,7 +21,7 @@ shorturls:
   reddit: https://dpgr.am/8465909
   facebook: https://dpgr.am/e840451
 ---
-![map](https://res.cloudinary.com/deepgram/image/upload/v1661976819/blog/what-does-as-the-crow-flies-mean/Screen-Shot-2019-02-11-at-5.04.43-PM.png) 
+![map](https://res.cloudinary.com/deepgram/image/upload/v1661976819/blog/what-does-as-the-crow-flies-mean/Screen-Shot-2019-02-11-at-5.04.43-PM.png)
 
 *By road, the shortest road route is in fact 141.685 miles, and **as the crow flies** it is 120.495 miles. One assumes, that this is from the pinnacle of one capitol dome the other. [Source here.](https://www.freemaptools.com/how-far-is-it-between.htm)*
 
@@ -39,7 +39,7 @@ Neither of the above phrases mention crows specifically, but both translate roug
 * **Spanish:** en línea recta
 * **German:** Luftlinienentfernung
 
-![canal](https://res.cloudinary.com/deepgram/image/upload/v1661976820/blog/what-does-as-the-crow-flies-mean/3330472560_9981b433d7_o.jpg) 
+![canal](https://res.cloudinary.com/deepgram/image/upload/v1661976820/blog/what-does-as-the-crow-flies-mean/3330472560_9981b433d7_o.jpg)
 
 *A canal somewhere in Togo. It is approximately 140 miles **as the crow flies** from the eastern border of Togo to the western border of Nigeria. [photo credit](https://www.flickr.com/photos/attawayjl/3330472560/in/photolist-65ixsG-nG4ruZ-pnfhTN-83NHu9-99S7dk-21thCX5-6H2Dun-5dM6PH-iNPTLy-4d8ov3-9LQbGK-2cCFUZ5-djztHb-q5PDfZ-hUi55H-rKeLsa-aEenUv-7jLggZ-r8Kimy-DiR8rk-b675hT-JzzU6H-hhJVnE-8M6N49-2cd88mR-dY7gWE-dPurPF-EisYZu-8gRCaZ-5RaVMt-8MmHJi-9RmhLF-vqrvaM-bsQrbb-prWZdz-2diU3f9-dKWnrX-aVUzTH-992mMi-7A8fpX-496oEb-2djWyR6-97o5nt-6TyiE1-2o88rs-a4Lert-nutk2i-5NBAM7-cohUGA-28V6wvL)*
 
@@ -49,6 +49,4 @@ By comparison, in Nembe, a language from Nigeria, the same idea of "as the crow 
 
 ## What Are Idioms?
 
-Idioms are phrases in language that are used to convey emotions about certain topics. They are fascinating to everyday language speakers and linguists for a couple of reasons. They exist in a space between grammar and single words-this means that they somewhat conform to grammatical rules, yet have to be learned phrase by phrase just like most words need to be learned. Idioms also preserve in them the history of how and where they came to be. Certain idioms haven't left their villages in rural England. Others are universal. Variations in one idiom tell us about where they have been in time and place. They remind us of times long-gone and places near and far-when and where the world was different but people were the same. 
-
-[Header photo credit: Tim Spouge](https://www.flickr.com/photos/98714794@N08/16659577056/in/photolist-ro9FRb-aPmDAk-jauEdK-jax4o7-dXgkse-7kzpso-YNa3xs-qh4Puq-6HDFby-6bFdAU-MYabD9-2cTBxvw-4PARtH-6fi142-27kLb4d-jatYxH-TUtBHR-6Ntd9s-qpxz3q-do23Xr-Vgx7Nr-JQRRbk-pDAew9-277XF9N-93iTev-TPQcbo-UiGuMx-2a2mfrA-ihnEDp-SFqmsY-jazaJ1-ihor1P-4mkbdg-jayt5q-4Yv71p-9C1iB-VtdAE6-javpFz-dWXWRP-92Sxuk-x6GBB5-pmhCZ-7B2wSH-21wBy9C-cue81N-nfX5pN-7yUxuw-9C1id-4QCRdR-ogrrkZ)
+Idioms are phrases in language that are used to convey emotions about certain topics. They are fascinating to everyday language speakers and linguists for a couple of reasons. They exist in a space between grammar and single words-this means that they somewhat conform to grammatical rules, yet have to be learned phrase by phrase just like most words need to be learned. Idioms also preserve in them the history of how and where they came to be. Certain idioms haven't left their villages in rural England. Others are universal. Variations in one idiom tell us about where they have been in time and place. They remind us of times long-gone and places near and far-when and where the world was different but people were the same.
