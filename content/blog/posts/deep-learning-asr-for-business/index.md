@@ -1,6 +1,7 @@
 ---
-title: "5 Reasons Deep Learning for Speech Recognition is Business-Ready Now"
-description: "Have you heard that deep learning for ASR only exists in the lab? Its not true! Here are five ways that deep learning is business-ready now."
+title: 5 Reasons Deep Learning for Speech Recognition is Business-Ready Now
+description: Have you heard that deep learning for ASR only exists in the lab?
+  Its not true! Here are five ways that deep learning is business-ready now.
 date: 2022-02-15
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981406/blog/deep-learning-asr-for-business/blog-5-Reasons-DL-for-SR-Biz-Ready-Now-thumb-554x2.png
 authors:
@@ -9,21 +10,22 @@ category: ai-and-engineering
 tags:
   - deep-learning
 seo:
-  title: "5 Reasons Deep Learning for Speech Recognition is Business-Ready Now"
-  description: "Have you heard that deep learning for ASR only exists in the lab? Its not true! Here are five ways that deep learning is business-ready now."
+  title: 5 Reasons Deep Learning for Speech Recognition is Business-Ready Now
+  description: Have you heard that deep learning for ASR only exists in the lab?
+    Its not true! Here are five ways that deep learning is business-ready now.
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981406/blog/deep-learning-asr-for-business/blog-5-Reasons-DL-for-SR-Biz-Ready-Now-thumb-554x2.png
 shorturls:
   share: https://dpgr.am/a45bacf
   twitter: https://dpgr.am/0556101
   linkedin: https://dpgr.am/e941a69
   reddit: https://dpgr.am/fb544c2
   facebook: https://dpgr.am/608b4ee
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981406/blog/deep-learning-asr-for-business/blog-5-Reasons-DL-for-SR-Biz-Ready-Now-thumb-554x2.png
 ---
 
 I'm frustrated. When I read from tech authors, advisors, and our competitor's blogs that End-to-End Deep Learning (E2EDL) Speech Recognition software is only being researched or not production-ready, I want to scream...
 
-> **"Listen people! End-to-end deep learning speech recognition is ready and in production now, with customers running millions of hours of new audio transcribed per month****."**
+> **"Listen people! End-to-end deep learning speech recognition is ready and in production now, with customers running millions of hours of new audio transcribed per month."**
 
 Do these numbers make it sound like E2EDL is just a research project? Absolutely not. E2EDL has moved from research into stable production and shown the world that E2EDL is not just a pipe dream but a reality.  [In a previous post](https://blog.deepgram.com/deep-learning-speech-recognition/), we covered some of the technical differences between the traditional way of doing ASR-the one used by every company except Deepgram-and [using E2EDL for speech recognition](https://www.deepgram.com/blog/deep-learning-speech-recognition). But at this point, you might be saying, "Who cares, as long as the transcript I get is accurate?" If you only care about accuracy, I have good news for you-deep learning approaches to ASR **_are_** more accurate than traditional approaches. But I'd guess you care about more than accuracy. You want a technology that can enable real-time communications. You want something that's cost-effective while also being easy to maintain and ready to adapt to future challenges. If that's true, I have even more good news-**E2EDL approaches to speech recognition provide all of this and more.** Let's dive in and talk about five of the key ways that deep learning for voice recognition can support your business.
 
