@@ -8,7 +8,7 @@ authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - ohsnap
+  - recognition
 seo:
   title: We Raised $12 Million to Solve Speech Recognition in the Enterprise
   description: ""
