@@ -48,7 +48,7 @@ Then we'll change into that directory so we can start adding things to it.
 
     cd deepgram-vonage
 
-We’ll also need to set up a virtual environment to hold the project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one. It’s recommended in Python to use a virtual environment so the project can be installed inside a container rather than installing it system-wide.
+We’ll also need to set up a virtual environment to hold the project and its dependencies. We can read more about those [here](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/) and how to create one. It’s recommended in Python to use a virtual environment so the project can be installed inside a container rather than installing it system-wide.
 
 We need to ensure the virtual environment is activated because we’ll install dependencies inside. If the virtual environment is named `venv`, then we'll need to activate it.
 

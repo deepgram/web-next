@@ -41,7 +41,7 @@ Speech-to-text and voice recognition technology can also be used for content mod
 
 ## Want to Add Deepgram to Your Game?
 
-If you're curious how you might add speech-to-text to your game? We've got developer resources for that. Check out [How to Add Deepgram Speech Recognition to Your Unity Game](https://blog.deepgram.com/deepgram-unity-tutorial/) and [Playing With P5.js: Creating a Voice-Controlled Game](https://blog.deepgram.com/p5js-deepgram-game/) for some tutorials looking at how easily Deepgram can be incorporated into what you're building. You can also check out this project that we did to turn [the 404 page on our developer site into a game](https://blog.deepgram.com/building-404-pages-that-bring-joy/) if you need more gamespiration.
+If you're curious how you might add speech-to-text to your game? We've got developer resources for that. Check out [How to Add Deepgram Speech Recognition to Your Unity Game](https://sweet-pie-c52a63-blog.netlify.app/deepgram-unity-tutorial/) and [Playing With P5.js: Creating a Voice-Controlled Game](https://sweet-pie-c52a63-blog.netlify.app/p5js-deepgram-game/) for some tutorials looking at how easily Deepgram can be incorporated into what you're building. You can also check out this project that we did to turn [the 404 page on our developer site into a game](https://sweet-pie-c52a63-blog.netlify.app/building-404-pages-that-bring-joy/) if you need more gamespiration.
 
 ## Wrapping Up
 

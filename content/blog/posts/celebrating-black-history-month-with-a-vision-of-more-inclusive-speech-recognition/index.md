@@ -28,7 +28,7 @@ shorturls:
   reddit: https://dpgr.am/e96216d
   facebook: https://dpgr.am/5d70ef9
 ---
-February is Black History Month! To mark this time of celebration and reflection, we'd like to shine a spotlight on one of the major dialects of American English, African American Vernacular English (AAVE), and share our perspective on its status in [speech recognition](https://blog.deepgram.com/what-is-asr/).
+February is Black History Month! To mark this time of celebration and reflection, we'd like to shine a spotlight on one of the major dialects of American English, African American Vernacular English (AAVE), and share our perspective on its status in [speech recognition](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/).
 
 ## What Exactly is AAVE?
 

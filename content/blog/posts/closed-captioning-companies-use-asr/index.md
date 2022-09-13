@@ -27,7 +27,7 @@ There are many different ways that closed captioning is enabled by speech-to-tex
 
 ## What is Closed Captioning?
 
-Closed captioning is a means of adding a transcript of what is said to video files. It's similar to subtitles, but while subtitles are usually intended for someone who doesn't speak or understand the language used in the video, closed captions are intended for those who might be [deaf or hard of hearing](https://blog.deepgram.com/asr-important-deaf-hoh-community/). However, [Verizon Media](https://www.streamingmedia.com/Articles/News/Online-Video-News/80-of-Video-Caption-Users-Arent-Hearing-Impaired-Finds-Verizon-131860.aspx?) found that 80% of closed caption users aren't hearing impaired, so this is a feature that's expanding in use. And, in case you're curious-"closed" here means that the captions aren't visible to the viewer until they turn them on.
+Closed captioning is a means of adding a transcript of what is said to video files. It's similar to subtitles, but while subtitles are usually intended for someone who doesn't speak or understand the language used in the video, closed captions are intended for those who might be [deaf or hard of hearing](https://sweet-pie-c52a63-blog.netlify.app/asr-important-deaf-hoh-community/). However, [Verizon Media](https://www.streamingmedia.com/Articles/News/Online-Video-News/80-of-Video-Caption-Users-Arent-Hearing-Impaired-Finds-Verizon-131860.aspx?) found that 80% of closed caption users aren't hearing impaired, so this is a feature that's expanding in use. And, in case you're curious-"closed" here means that the captions aren't visible to the viewer until they turn them on.
 
 ## Use Cases for Speech-to-Text in Closed Captioning
 
@@ -53,7 +53,7 @@ Although you might mostly associate captions with video content, they're also a 
 
 ## Benefits of AI-Powered ASR for Closed Captioning
 
-It should be clear from the above that closed captioning powered by AI speech recognition has a lot of potential use cases. But not all speech-to-text solutions can be used for real-time closed captioning. Older systems that rely on a legacy approach are typically too slow for live use cases. However, [end-to-end deep-learning ASR solutions like Deepgram](https://blog.deepgram.com/deep-learning-speech-recognition/) can turn around transcriptions in fractions of a second, creating a truly real-time experience. So what are some of the specific benefits that AI-powered speech-to-text tools can provide when compared to a human? Let's take a look.
+It should be clear from the above that closed captioning powered by AI speech recognition has a lot of potential use cases. But not all speech-to-text solutions can be used for real-time closed captioning. Older systems that rely on a legacy approach are typically too slow for live use cases. However, [end-to-end deep-learning ASR solutions like Deepgram](https://sweet-pie-c52a63-blog.netlify.app/deep-learning-speech-recognition/) can turn around transcriptions in fractions of a second, creating a truly real-time experience. So what are some of the specific benefits that AI-powered speech-to-text tools can provide when compared to a human? Let's take a look.
 
 ### Speed
 
@@ -61,7 +61,7 @@ As noted above, if you've ever tried to watch a sporting event in a bar, for exa
 
 ### Accuracy
 
-Another issue you might have seen with live events is that the accuracy of the captions can suffer. This can be anything from small typos to misheard words to complete gibberish. AI-powered speech recognition systems can have accuracies of over 90%. And, with [custom model training](https://deepgram.com/product/custom-training/), you can use audio from your particular domain to further improve a model thanks to [transfer learning](https://blog.deepgram.com/transfer-learning-spanish-portuguese/)-something that's not possible with older speech-to-text systems.
+Another issue you might have seen with live events is that the accuracy of the captions can suffer. This can be anything from small typos to misheard words to complete gibberish. AI-powered speech recognition systems can have accuracies of over 90%. And, with [custom model training](https://deepgram.com/product/custom-training/), you can use audio from your particular domain to further improve a model thanks to [transfer learning](https://sweet-pie-c52a63-blog.netlify.app/transfer-learning-spanish-portuguese/)-something that's not possible with older speech-to-text systems.
 
 ### Automatically Align Audio and Captions
 
