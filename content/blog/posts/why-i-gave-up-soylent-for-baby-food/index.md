@@ -1,24 +1,24 @@
 ---
-title: "Notes on Migrating from Soylent to Baby Food"
-description: ""
+title: Notes on Migrating from Soylent to Baby Food
+description: Notes on Migrating from Soylent to Baby Food
 date: 2016-11-03
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069439/blog/why-i-gave-up-soylent-for-baby-food/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - ohsnap
+  - musings
 seo:
-  title: "Notes on Migrating from Soylent to Baby Food"
+  title: Notes on Migrating from Soylent to Baby Food
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069439/blog/why-i-gave-up-soylent-for-baby-food/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/d0a50e8
   twitter: https://dpgr.am/bf1c709
   linkedin: https://dpgr.am/a7dc6b9
   reddit: https://dpgr.am/2a2c166
   facebook: https://dpgr.am/36f59b7
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069439/blog/why-i-gave-up-soylent-for-baby-food/placeholder-post-image%402x.jpg
 ---
 
 ![wellness](https://res.cloudinary.com/deepgram/image/upload/v1661725758/blog/why-i-gave-up-soylent-for-baby-food/WellnessWordel.jpg)
