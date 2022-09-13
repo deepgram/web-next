@@ -1,3 +1,5 @@
+@import "../fonts/inter.css";
+
 .bg-sound-wave-cloud-dark {
 	background-image: url("/sound-wave-cloud-dark.svg");
 	background-size: 50rem;
