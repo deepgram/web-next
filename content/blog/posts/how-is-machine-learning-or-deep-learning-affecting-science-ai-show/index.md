@@ -88,7 +88,9 @@ shorturls:
 
 ## Efficiency and Processing
 
-**Susan:** I think the other bent on the same note though is efficiency and processing. Have you seen the stuff going on with protein folding? I mean huge processing advances are going on just because they're using deep learning models, or they're using machine learning models to accelerate the guess at what that protein will fold into. For those that don't know, the challenge is you've got a whole bunch of atoms that are strung together in this big complicated molecule, and when you let them go they all kind of fold and convolute into this weird shape. ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Protein_folding.png/360px-Protein_folding.png)
+**Susan:** I think the other bent on the same note though is efficiency and processing. Have you seen the stuff going on with protein folding? I mean huge processing advances are going on just because they're using deep learning models, or they're using machine learning models to accelerate the guess at what that protein will fold into. For those that don't know, the challenge is you've got a whole bunch of atoms that are strung together in this big complicated molecule, and when you let them go they all kind of fold and convolute into this weird shape.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Protein_folding.png/360px-Protein_folding.png)
 
 **Susan:** And that weird shape is the point, right?
 
@@ -134,7 +136,7 @@ shorturls:
 
 **Scott:** It's a really hard complicated thing to build some of these reactors, and they said, "We've tried many things over the last 50, 60 years and spent many billions of dollars trying to build these reactors." We've gotten pretty good, but they're still research-y. They're still not able to be turned into a real one that actually produces power on a large scale for all of humanity and things like that.
 
-**Scott:** [Let's throw machine learning]("https://www.iflscience.com/technology/supercomputer-will-help-us-tackle-nuclear-fusion/") at the problem and see what happens. Now there's talk that these designs are actually able to be built, and they probably will serve the purpose.
+**Scott:** [Let's throw machine learning](https://www.iflscience.com/technology/supercomputer-will-help-us-tackle-nuclear-fusion/) at the problem and see what happens. Now there's talk that these designs are actually able to be built, and they probably will serve the purpose.
 
 **Susan:** What was the last one? They reached some milestone, like 100 seconds or something like that. There are so many challenges going into confining so high of energies in such a small space.
 
@@ -202,8 +204,7 @@ It's going to be is a new honed, sharpened tool, is machine learning. Create dat
 
 **Susan:** I had an argument with some friends a while ago where I was saying all the sciences in all the fields, and the idea that we have a machine learning degree path, maybe we need to fragment that. Saying you're in paleontology, there should be machine learning in paleontology. There should be machine learning in archaeology. There should machine learning in all sorts of different fields because just like basic stats from the math point of view, you go out there and you do really good math in whatever field acts.
 
-![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976795/blog/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/Crete-archaeology-sissi..jpg) 
-
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976795/blog/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/Crete-archaeology-sissi..jpg)
 
 *As long as there is data-or enough data-ML methods can help researchers discover truly novel things. If you are interested, here is one article to read:*  Van Den Dries, M. H. (1998). 
 
