@@ -1,24 +1,24 @@
 ---
-title: "The Journalists Guide To Deepgram"
-description: ""
+title: The Journalists Guide To Deepgram
+description: Learn about how journalists can use Deepgram.
 date: 2016-10-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661983098/blog/the-journalists-guide-to-deepgram/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - ohsnap
+  - musings
 seo:
-  title: "The Journalists Guide To Deepgram"
+  title: The Journalists Guide To Deepgram
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661983098/blog/the-journalists-guide-to-deepgram/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/3b6846d
   twitter: https://dpgr.am/27751ce
   linkedin: https://dpgr.am/70ba9ed
   reddit: https://dpgr.am/b27b97c
   facebook: https://dpgr.am/237f39c
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661983098/blog/the-journalists-guide-to-deepgram/placeholder-post-image%402x.jpg
 ---
 
 Just before the second presidential debate, we at Deepgram [announced an initiative](https://blog.deepgram.com/new-tech-lets-journalists-find-damning-soundbites/) to give accredited journalists free access to our powerful speech search engine until Election Day (November 8, 2016). The response, quite frankly, has been amazing! We've signed up journalists from dozens of national and international outlets, and have really enjoyed speaking with them over the past week. Our initiative has been [covered in](https://techcrunch.com/2016/10/10/deepgrams-speech-search-engine-is-now-free-for-journalists-until-election-day/) [_TechCrunch_](https://techcrunch.com/2016/10/10/deepgrams-speech-search-engine-is-now-free-for-journalists-until-election-day/), and we were named one of the ["Five Tools for Journalists To Enhance Election Coverage"](http://www.cjr.org/innovations/trump_clinton_journalist_technology.php) by _The Columbia Journalism Review_. Here, we'll discuss some possible ways to use our platform that go beyond searching for sound-bites, and extend an invitation for feedback on how to make Deepgram more useful.

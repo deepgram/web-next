@@ -71,17 +71,19 @@ const schema = {
 	<PrimarySection class="mt-32 xl:mt-52">
 		<HasAside>
 			<CategoryList slot="aside" />
-			{categories &&
-				categories.map((category, index) => (
-					<>
-						<CategorySection category={category} />
-						{index === 0 && (
-							<div class="mb-32">
+			{
+				categories &&
+					categories.map((category, index) => (
+						<>
+							<CategorySection category={category} />
+							{index === 0 && (
+								<div class="mb-32">
 								<WhitepaperPromo whitepaper="latest" outsideBlog="true" />
-							</div>
-						)}
-					</>
-				))}
+								</div>
+							)}
+						</>
+					))
+			}
 			<center class="-mt-10 mb-20">
 				<Link href="/posts" icon="arrow-right" iconSuffix class="button button--secondary button--small">View All</Link>
 			</center>

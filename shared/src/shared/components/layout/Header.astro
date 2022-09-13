@@ -22,7 +22,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 	<nav class="absolute inset-x-0 bg-almostBlack/80 text-white">
 		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start">
 			<div class="mr-[2.875rem]">
-				<Link href={`${WWW_DOMAIN}`} class="flex">
+				<Link href={WWW_DOMAIN} class="flex">
 					<span class="sr-only">Deepgram</span>
 					<Svg name="deepgram" class="my-[1.125rem] h-[2.3125rem] w-auto text-coral" />
 				</Link>
@@ -35,52 +35,44 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				<nav class="flex space-x-[2.1875rem]" x-on:click.outside="menu = null">
 					<!-- Product -->
 					<NavMenu name="Product" primary>
-						<NavMenuPrimaryItem slot="primary" href={`${WWW_DOMAIN}/product/overview/`} icon="star" description="Meet the Deepgram speech‑to‑text API"
-							>View Product
-						</NavMenuPrimaryItem>
-
+						<NavMenuPrimaryItem slot="primary" href={`${WWW_DOMAIN}/product-new`} icon="star" description="Meet the Deepgram speech‑to‑text API">View Product</NavMenuPrimaryItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/product/model-overview`} icon="model">Model Overview</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/sdks-tools`} icon="box">SDKs + Tools</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/product/languages`} icon="globe">Languages</NavMenuItem>
 						<NavMenuItem href={`${CONSOLE_DOMAIN}/signup?jump=keys`} icon="code">Free API Key</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/product/why-deepgram`} icon="question">Why Deepgram</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/why-deepgram`} icon="question">Why Deepgram</NavMenuItem>
 					</NavMenu>
-
 					<!-- Solutions -->
 					<NavMenu name="Solutions" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
 						<NavMenuItem href={`${WWW_DOMAIN}/built-with-deepgram`} icon="sparkles">Built with Deepgram</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/solutions/contact-centers/`} icon="head-headphones">Contact Centers</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/solutions/speech-analytics/`} icon="mag-glass-soundwave">Speech Analytics</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/solutions/voicebots/`} icon="robot-head">Conversational AI</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/solutions/contact-centers`} icon="head-headphones">Contact Centers</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/solutions/speech-analytics`} icon="mag-glass-soundwave">Speech Analytics</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/solutions/voicebots`} icon="robot-head">Conversational AI</NavMenuItem>
 					</NavMenu>
-
 					<!-- Pricing -->
-					<NavItem href={`${WWW_DOMAIN}/pricing/`} class="text-white">Pricing</NavItem>
-
+					<NavItem href={`${WWW_DOMAIN}/pricing`} class="text-white">Pricing</NavItem>
 					<!-- Docs -->
 					<NavMenu name="Docs">
-						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/`} icon="file">Documentation</NavMenuItem>
-						<NavMenuItem href={`${DOCS_DOMAIN}/api-reference/`} icon="code-laptop">API Reference</NavMenuItem>
-						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/guides/`} icon="book">Guides</NavMenuItem>
-						<NavMenuItem href={`${STATUS_DOMAIN}/`} icon="heartbeat">Status</NavMenuItem>
-						<NavMenuItem href={`${DOCS_DOMAIN}/tags/tutorial/`} icon="grad">Tutorials</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/changelog/`} icon="rotating-gear">Changelog</NavMenuItem>
+						<NavMenuItem href={DOCS_DOMAIN} icon="file">Documentation</NavMenuItem>
+						<NavMenuItem href={`${DOCS_DOMAIN}/api-reference`} icon="code-laptop">API Reference</NavMenuItem>
+						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/guides`} icon="book">Guides</NavMenuItem>
+						<NavMenuItem href={STATUS_DOMAIN} icon="heartbeat">Status</NavMenuItem>
+						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/getting-started`} icon="grad">Tutorials</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/changelog`} icon="rotating-gear">Changelog</NavMenuItem>
 					</NavMenu>
-
 					<!-- Blog -->
-					<NavItem href={`${BLOG_DOMAIN}/`} class="text-white">Blog</NavItem>
-
+					<NavItem href={BLOG_DOMAIN} class="text-white">Blog</NavItem>
 					<!-- About -->
 					<NavMenu name="About" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
-						<NavMenuItem href={`${WWW_DOMAIN}/company/about/`} icon="deepgram-d">About Us</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/company/newsroom/`} icon="newspaper">Newsroom</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/company/careers/`} icon="open-door">Careers</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/about`} icon="deepgram-d">About Us</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/company/newsroom`} icon="newspaper">Newsroom</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/company/careers`} icon="open-door">Careers</NavMenuItem>
 					</NavMenu>
 				</nav>
 				<div class="flex space-x-[1rem] items-center xl:ml-12">
 					<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
-					<Link href={`${CONSOLE_DOMAIN}/`} class="button button--small button--main-nav text-white">Log In</Link>
-					<Link href={`${WWW_DOMAIN}/contact-us/`} class="button button--secondary button--small w-[7rem]">Contact Us</Link>
+					<Link href={CONSOLE_DOMAIN} class="button button--small button--main-nav text-white">Log In</Link>
+					<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem]">Contact Us</Link>
 					<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[7rem]">Sign Up</Link>
 				</div>
 			</div>
@@ -90,7 +82,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 			<div class="relative inset-x-0 bg-almostBlack text-white">
 				<div class="max-w-screen-2xl mx-auto px-6 flex justify-between items-center xl:justify-start">
 					<div class="mr-[2.875rem]">
-						<Link href={`${WWW_DOMAIN}`} class="flex">
+						<Link href={WWW_DOMAIN} class="flex">
 							<span class="sr-only">Deepgram</span>
 							<Svg name="deepgram" class="my-[1.125rem] h-[2.3125rem] w-auto text-coral" />
 						</Link>
@@ -101,56 +93,51 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					</div>
 				</div>
 			</div>
-			<div class="grow flex flex-col justify-between mt-4  overflow-y-auto">
+			<div class="grow flex flex-col justify-between mt-4 overflow-y-auto">
 				<div class="bg-darkCharcoal">
 					<nav class="grid font-bold">
 						<!-- Product -->
 						<MobileNavMenu name="Product" primary>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/product/overview/`} icon="star">View Product</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/product/model-overview/`} icon="model">Model Overview</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${DOCS_DOMAIN}/sdks-tools/`} icon="box">SDKs + Tools</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/product/languages/`} icon="globe">Languages</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/product`} icon="star">View Product</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/product/model-overview`} icon="model">Model Overview</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${DOCS_DOMAIN}/sdks-tools`} icon="box">SDKs + Tools</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/product/languages`} icon="globe">Languages</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${CONSOLE_DOMAIN}/signup?jump=keys`} icon="code">Free API Key</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/why-deepgram/`} icon="question">Why Deepgram</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/why-deepgram`} icon="question">Why Deepgram</MobileNavMenuItem>
 						</MobileNavMenu>
-
 						<!-- Solutions -->
 						<MobileNavMenu name="Solutions">
 							<MobileNavMenuItem href={`${WWW_DOMAIN}/built-with-deepgram`} icon="sparkles">Built with Deepgram</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/solutions/contact-centers/`} icon="head-headphones">Contact Centers</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/solutions/speech-analytics/`} icon="mag-glass-soundwave">Speech Analytics</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/solutions/voicebots/`} icon="robot-head">Convo AI</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/solutions/contact-centers`} icon="head-headphones">Contact Centers</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/solutions/speech-analytics`} icon="mag-glass-soundwave">Speech Analytics</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/solutions/voicebots`} icon="robot-head">Convo AI</MobileNavMenuItem>
 						</MobileNavMenu>
-
 						<!-- Pricing -->
 						<MobileNavItem href={`${WWW_DOMAIN}/pricing`} class="text-white">Pricing</MobileNavItem>
-
 						<!-- Docs -->
 						<MobileNavMenu name="Docs">
-							<MobileNavMenuItem href={`${DOCS_DOMAIN}/documentation/`} icon="file">Documentation</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${DOCS_DOMAIN}/documentation/guides/`} icon="code-laptop">Guides</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${STATUS_DOMAIN}/`} icon="book">Status</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/changelog/`} icon="heartbeat">Changelog</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${DOCS_DOMAIN}/api-reference/`} icon="grad">API Reference</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${DOCS_DOMAIN}/tags/tutorial/`} icon="rotating-gear">Tutorials</MobileNavMenuItem>
+							<MobileNavMenuItem href={DOCS_DOMAIN} icon="file">Documentation</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${DOCS_DOMAIN}/documentation/guides`} icon="code-laptop">Guides</MobileNavMenuItem>
+							<MobileNavMenuItem href={STATUS_DOMAIN} icon="book">Status</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/changelog`} icon="heartbeat">Changelog</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${DOCS_DOMAIN}/api-reference`} icon="grad">API Reference</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${DOCS_DOMAIN}/tags/tutorial`} icon="rotating-gear">Tutorials</MobileNavMenuItem>
 						</MobileNavMenu>
-
 						<!-- Blog -->
-						<MobileNavItem href={`${BLOG_DOMAIN}/`} class="text-white">Blog</MobileNavItem>
-
+						<MobileNavItem href={BLOG_DOMAIN} class="text-white">Blog</MobileNavItem>
 						<!-- About -->
 						<MobileNavMenu name="About">
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/company/about/`} icon="deepgram-d">About Us</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/company/newsroom/`} icon="newspaper">Newsroom</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${WWW_DOMAIN}/company/careers/`} icon="open-door">Careers</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/about`} icon="deepgram-d">About Us</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/company/newsroom`} icon="newspaper">Newsroom</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/company/careers`} icon="open-door">Careers</MobileNavMenuItem>
 						</MobileNavMenu>
 					</nav>
 				</div>
 			</div>
 			<div class="bg-black grid grid-cols-2 grid-rows-2 gap-4 p-6 shadow-menu">
-				<Link href={`${CONSOLE_DOMAIN}`} class="button button--small button--secondary button--block">Log In</Link>
-				<Link href={`${CONSOLE_DOMAIN}`} class="button button--small button--tertiary button--block">Sign Up</Link>
-				<Link href={`${WWW_DOMAIN}/contact-us/`} class="col-span-2 button button--small button--primary button--block">Contact Us</Link>
+				<Link href={CONSOLE_DOMAIN} class="button button--small button--secondary button--block">Log In</Link>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--small button--tertiary button--block">Sign Up</Link>
+				<Link href={`${WWW_DOMAIN}/contact-us`} class="col-span-2 button button--small button--primary button--block">Contact Us</Link>
 			</div>
 		</div>
 	</nav>

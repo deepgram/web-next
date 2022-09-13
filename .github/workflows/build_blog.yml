@@ -28,11 +28,6 @@ jobs:
       IS_PRODUCTION: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       IS_STAGING: ${{ github.ref != 'refs/heads/main' && github.event_name == 'pull_request' }}
       DEPLOY_PREFIX: blog
-      WWW_DOMAIN: https://deepgramstg.wpengine.com
-      BLOG_DOMAIN: $URL
-      DOCS_DOMAIN: https://developers.deepgram.com
-      CONSOLE_DOMAIN: https://console.deepgram.com
-      STATUS_DOMAIN: https://status.deepgram.com
     steps:
       - name: Configure dynamic environment variables for production
         if: ${{ env.IS_PRODUCTION == 'true' }}
@@ -58,6 +53,13 @@ jobs:
           echo "DEPLOY_MESSAGE=Deployment from GitHub Action" >> $GITHUB_ENV
           echo "ENVIRONMENT_NAME=manual-deploy-${{ github.head_ref || github.run_id }}" >> $GITHUB_ENV
           echo "ENVIRONMENT_DESC=Deploy preview for ${{ env.DEPLOY_PREFIX }} site" >> $GITHUB_ENV
+      - name: Generate site URLs
+        run: |
+          echo "WWW_DOMAIN=https://deepgramstg.wpengine.com" >> $GITHUB_ENV
+          echo "BLOG_DOMAIN=${{ env.URL }}" >> $GITHUB_ENV
+          echo "DOCS_DOMAIN=https://developers.deepgram.com" >> $GITHUB_ENV
+          echo "CONSOLE_DOMAIN=https://console.deepgram.com" >> $GITHUB_ENV
+          echo "STATUS_DOMAIN=https://status.deepgram.com" >> $GITHUB_ENV
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Set up Node.js
@@ -91,4 +93,4 @@ jobs:
           alias: ${{ env.BUILD_ALIAS }}
           github-deployment-environment: ${{ env.ENVIRONMENT_NAME }}
           github-deployment-description: ${{ env.ENVIRONMENT_DESC }}
-        timeout-minutes: 2
+        timeout-minutes: 5

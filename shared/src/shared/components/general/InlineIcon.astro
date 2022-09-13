@@ -6,8 +6,12 @@ const { icon, iconSuffix, iconStroke } = Astro.props;
 const hasSlotContent = await Astro.slots.has("default");
 ---
 
-{icon && !iconSuffix && (
-	<Icon icon={icon} class:list={["inline-icon", { "inline-icon--left": hasSlotContent }, { "stroke-current fill-transparent": iconStroke }, { "fill-current": !iconStroke }]} />
-)}<slot />{icon && !!iconSuffix && (
-	<Icon icon={icon} class:list={["inline-icon", { "inline-icon--right": hasSlotContent }, { "stroke-current fill-transparent": iconStroke }, { "fill-current": !iconStroke }]} />
-)}
+{
+	icon && !iconSuffix && (
+		<Icon icon={icon} class:list={["inline-icon", { "inline-icon--left": hasSlotContent }, { "stroke-current fill-transparent": iconStroke }, { "fill-current": !iconStroke }]} />
+	)
+}<slot />{
+	icon && !!iconSuffix && (
+		<Icon icon={icon} class:list={["inline-icon", { "inline-icon--right": hasSlotContent }, { "stroke-current fill-transparent": iconStroke }, { "fill-current": !iconStroke }]} />
+	)
+}

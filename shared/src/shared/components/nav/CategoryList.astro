@@ -13,17 +13,19 @@ const isActive = (path) => {
 <div class="hidden lg:block lg:sticky lg:top-20 mb-20">
 	<h3 class="pb-8">Categories</h3>
 	<ul>
-		{categories &&
-			categories.map((category) => {
-				const path = `/categories/${category.slug}`;
-				return (
-					<li class="pb-4">
-						<Link class:list={["hover:text-iris font-semibold leading-5", { "text-darkCharcoal": !isActive(path) }, { "text-storm": isActive(path) }]} href={path}>
-							{category.title}
-						</Link>
-					</li>
-				);
-			})}
+		{
+			categories &&
+				categories.map((category) => {
+					const path = `/categories/${category.slug}`;
+					return (
+						<li class="pb-4">
+							<Link class:list={["hover:text-iris font-semibold leading-5", { "text-darkCharcoal": !isActive(path) }, { "text-storm": isActive(path) }]} href={path}>
+								{category.title}
+							</Link>
+						</li>
+					);
+				})
+		}
 	</ul>
 	<div class="mt-6">
 		<Link href="/posts" class="button button--secondary button--small" iconSuffix icon="arrow-right">View All</Link>
@@ -38,15 +40,17 @@ const isActive = (path) => {
 
 	<ul class="hidden absolute w-full z-20 bg-rock overflow-y-auto max-h-[36rem]" x-bind:class="{hidden: !open, block: open}">
 		<hr class="sticky top-0 left-[3%] md:left-[2%] w-[97%] mb-4 bg-steel opacity-30" />
-		{categories &&
-			categories.map((category) => {
-				return (
-					<li class="pb-4">
-						<Link class="font-inter pl-4 font-normal text-white" href={`/categories/${category.slug}`}>
-							{category.title}
-						</Link>
-					</li>
-				);
-			})}
+		{
+			categories &&
+				categories.map((category) => {
+					return (
+						<li class="pb-4">
+							<Link class="font-inter pl-4 font-normal text-white" href={`/categories/${category.slug}`}>
+								{category.title}
+							</Link>
+						</li>
+					);
+				})
+		}
 	</ul>
 </div>
