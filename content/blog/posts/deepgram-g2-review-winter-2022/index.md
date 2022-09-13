@@ -1,6 +1,6 @@
 ---
 title: Deepgram Named High Performer by G2 for the Second Quarter Running
-description: Were pumped to announce that we're a High Performer for the second
+description: We're pumped to announce that we're a High Performer for the second
   quarter running, and second overall for Voice Recognition Software!
 date: 2021-12-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981403/blog/deepgram-g2-review-winter-2022/blog-G2-high-performer-winter-21-thumb-554x220%402x.png
