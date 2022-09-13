@@ -49,11 +49,11 @@ Product development is another area where voice technology can be used to collec
 
 ### 4\. Social Media Monitoring
 
-Social media monitoring can help businesses track customer sentiment about their products and services. This information can be used to make improvements or take corrective action if necessary. Social media monitoring sometimes makes use of [sentiment analysis](https://deepgram.com/blog/sentiment-analysis-emotion-regulation-difference/), which is a process that analyzes customer feedback to understand the customer's overall attitude towards a product or service. This information can be used to improve customer satisfaction or take other actions to improve the customer experience.
+Social media monitoring can help businesses track customer sentiment about their products and services. This information can be used to make improvements or take corrective action if necessary. Social media monitoring sometimes makes use of [sentiment analysis](https://sweet-pie-c52a63-blog.netlify.app/sentiment-analysis-emotion-regulation-difference/), which is a process that analyzes customer feedback to understand the customer's overall attitude towards a product or service. This information can be used to improve customer satisfaction or take other actions to improve the customer experience.
 
 ### 5\. Sales and Marketing
 
-Sales and marketing has been using surveys to understand what messages, sales pitch, or ads resonate with their customers. But with voice technology, agents could simply ask where a customer saw the business or how they felt about the message, sales pitch, or ad and get immediate emotional feedback-audio that can be stored for later analysis, or quickly turned into a transcript. In the near future, using [emotion detection](https://deepgram.com/blog/sentiment-analysis-emotion-regulation-difference/), the company could also determine how the customer truly felt about the messages that they'd seen.
+Sales and marketing has been using surveys to understand what messages, sales pitch, or ads resonate with their customers. But with voice technology, agents could simply ask where a customer saw the business or how they felt about the message, sales pitch, or ad and get immediate emotional feedback-audio that can be stored for later analysis, or quickly turned into a transcript. In the near future, using [emotion detection](https://sweet-pie-c52a63-blog.netlify.app/sentiment-analysis-emotion-regulation-difference/), the company could also determine how the customer truly felt about the messages that they'd seen.
 
 ## Wrapping up
 
