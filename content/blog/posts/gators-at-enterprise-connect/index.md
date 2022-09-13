@@ -7,7 +7,7 @@ authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - musings
+  - enterprise-connect
 seo:
   title: Gators at Enterprise Connect?
   description: ""
