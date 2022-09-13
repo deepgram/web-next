@@ -22,8 +22,9 @@ shorturls:
   reddit: https://dpgr.am/feabd6e
   facebook: https://dpgr.am/76375a2
 ---
+![](https://images.unsplash.com/photo-1522165078649-823cf4dbaf46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80) 
 
-![](https://images.unsplash.com/photo-1522165078649-823cf4dbaf46?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80) Until recently, there's only been one way to accurately produce real-time audio transcription: voice writers use dictation software to convert audio to text and real-time editors clean up the resulting transcript to produce the final output. Yet, it's costly to have voice writing in the process. Now, companies are shifting from this model, employing automatic speech recognition in place of voice writers.
+Until recently, there's only been one way to accurately produce real-time audio transcription: voice writers use dictation software to convert audio to text and real-time editors clean up the resulting transcript to produce the final output. Yet, it's costly to have voice writing in the process. Now, companies are shifting from this model, employing automatic speech recognition in place of voice writers.
 
 ## The Traditional Transcription Pipeline: Voice Writers, Scopists, and Editors
 
@@ -43,15 +44,15 @@ This is largely thanks to the ability to train custom models which are tailor fi
 
 ## The Process for Adopting ASR
 
-The first step in using custom ASR in the transcription process is to select 100 or more hours of labeled (transcribed) audio. The more hours of labeled data, the more accurate the custom model will be. ASR providers use this data to create one or many custom models. Custom models can be created for as many audio types as the customer wants-given that there is enough labeled data for each model. This customization step is key. Whereas some vendors define customization loosely, evaluating the various outputs will tell you which methods are most effective. Most vendors maintain a traditional speech recognition infrastructure that involves four separate steps. In this case, customization is a shallow layer of understanding added to the model only at the end. Think of this shallow customization _as you would a 2 week intensive Mandarin class_. Sure, you'll be able to say and do some things, but you won't be fluent. In other words, your accuracy is subpar. **In contrast, a custom model that trains using end-to-end deep learning, incorporates the learning from labeled data from the very beginning**. In this way, you end up with a custom model that inherently understands your audio, just _as a child who grew up speaking_ Mandarin would.
+The first step in using custom ASR in the transcription process is to select 100 or more hours of labeled (transcribed) audio. The more hours of labeled data, the more accurate the custom model will be. ASR providers use this data to create one or many custom models. Custom models can be created for as many audio types as the customer wants-given that there is enough labeled data for each model. This customization step is key. Whereas some vendors define customization loosely, evaluating the various outputs will tell you which methods are most effective. Most vendors maintain a traditional speech recognition infrastructure that involves four separate steps. In this case, customization is a shallow layer of understanding added to the model only at the end. Think of this shallow customization *as you would a 2 week intensive Mandarin class*. Sure, you'll be able to say and do some things, but you won't be fluent. In other words, your accuracy is subpar. **In contrast, a custom model that trains using end-to-end deep learning, incorporates the learning from labeled data from the very beginning**. In this way, you end up with a custom model that inherently understands your audio, just *as a child who grew up speaking* Mandarin would.
 
 ## A Modern Transcription Pipeline: Custom ASR, Scopists, and Editors
 
 Using a custom real-time speech API, companies get real-time transcription that vastly outperforms previous solutions. As the transcription industry continues to grow, those that are able to consistently compete on accuracy, scale, and cost will thrive. Clearly, incorporating a high performing ASR solution is necessary in order to achieve the highest levels of accuracy, while also reducing operational costs and delivering on turnaround times. Those that fail to transition quickly risk falling behind their competitors that recognize this as the secret weapon to a quickly evolving industry.
 
-## The Takeaway
+## The Takeaways
 
-1.  Select a modern speech recognition company that can tailor build custom ASR models for your specific needs.
-2.  Provide the ASR vendor with audio you have already transcribed in the past.
-3.  The ASR provider trains models that natively understand your audio.
-4.  Deliver high accuracy transcripts to your editors in real-time, while lowering costs.
+1. Select a modern speech recognition company that can tailor build custom ASR models for your specific needs.
+2. Provide the ASR vendor with audio you have already transcribed in the past.
+3. The ASR provider trains models that natively understand your audio.
+4. Deliver high accuracy transcripts to your editors in real-time, while lowering costs.
