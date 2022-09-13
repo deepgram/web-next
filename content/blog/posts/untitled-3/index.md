@@ -9,7 +9,7 @@ authors:
   - scott-stephenson
 category: speech-trends
 tags:
-  - musings
+  - enterprise-connect
 seo:
   title: Expert insights from Enterprise Connect
   description: ""
