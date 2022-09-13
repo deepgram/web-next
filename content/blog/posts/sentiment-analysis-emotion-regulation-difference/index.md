@@ -1,5 +1,5 @@
 ---
-title: "Sentiment Analysis and Emotion Recognition: Whats the Difference?"
+title: "Sentiment Analysis and Emotion Recognition: What's the Difference?"
 description: Sentiment analysis and emotion regulation are hot topics in speech
   recognition today, but the two are often confused. So what’s the difference?
 date: 2022-04-01
