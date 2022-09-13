@@ -21,7 +21,7 @@ shorturls:
   reddit: https://dpgr.am/b782bb0
   facebook: https://dpgr.am/47817dc
 ---
-![](https://res.cloudinary.com/deepgram/image/upload/v1661721060/blog/search-through-sound-finding-phrases-in-audio/Screen-Shot-2016-01-25-at-7-42-58-PM.png) 
+![](https://res.cloudinary.com/deepgram/image/upload/v1661721060/blog/search-through-sound-finding-phrases-in-audio/Screen-Shot-2016-01-25-at-7-42-58-PM.png)
 
 My Co-Founder and I were kicking around the idea of a search engine that would let a person find phrases in a block of audio. We were looking for something that could peer into interviews, podcasts, video lectures - things like that. And if it was done right, you would be able to search through many seasons of a certain TV show and find all the crucial moments like, "You're fired!". We thought, *'This has to exist, right?'*. Surprisingly, no. There wasn't a company out there that really provided the functionality. Certainly not in a way that was useful to us, at least. So we started hacking together a Google-based transcription to see if we can get a barebones prototype going. In a couple days it was running - *search for something,* and *most of the time* you got it. Huge pat on the back, right?
 
@@ -37,7 +37,7 @@ This got us wondering, *'can we improve the audio search situation?'*. We landed
 
 ### Use the way words sound
 
-What we were stumbling across was what speech researchers call **keyword search**. There is an existing method for doing this called acoustic keyword spotting, but that requires reprocessing the data every time for each and every search - that's totally impractical. So, yeah, applying this idea is a fairly difficult problem. We didn't really know just how hard at the time, but we know now (eight months of coding our first search engine and starting a company along the way helps beat that into you). [Our API](https://developers.deepgram.com/) allows you to upload audio and have the server process that audio into a giant searchable lattice. With a lattice like this, you can fuzzily go through the entire audio file for your search phrase in a fraction of a second. There is a huge improvement using this method when compared to the text-based approach - search recall goes from a tepid 45% to a grin-inducing 90%+. [Now we have our secret sauce](https://www.deepgram.com/).
+What we were stumbling across was what speech researchers call **keyword search**. There is an existing method for doing this called acoustic keyword spotting, but that requires reprocessing the data every time for each and every search - that's totally impractical. So, yeah, applying this idea is a fairly difficult problem. We didn't really know just how hard at the time, but we know now (eight months of coding our first search engine and starting a company along the way helps beat that into you). [Our API](https://developers.deepgram.com/) allows you to upload audio and have the server process that audio into a giant searchable lattice. With a lattice like this, you can fuzzily go through the entire audio file for your search phrase in a fraction of a second. There is a huge improvement using this method when compared to the text-based approach - search recall goes from a tepid 45% to a grin-inducing 90%+. Now we have our secret sauce.
 
 - - -
 
