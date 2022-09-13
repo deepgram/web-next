@@ -81,8 +81,8 @@ A more practical use case could involve loading all of a candidate's speeches, t
 
 Deepgram's speech search engine won't replace researchers and investigative reporters, but it will make them faster and more effective. Now you can search through dozens or thousands of hours of audio recordings quickly, easily, and without the hassle and expense of transcription.
 
-If you're a journalist or news organization and want to see how Deepgram can fit into your workflow, [reach out and say hello](https://www.deepgram.com/contact).
+If you're a journalist or news organization and want to see how Deepgram can fit into your workflow, [reach out and say hello](https://deepgram.com/contact-us/).
 
-***
+- - -
 
 With contribution from [Jason D. Rowley](https://twitter.com/Jason_Rowley). Image: Gage Skidmore from [Flickr](https://www.flickr.com/photos/gageskidmore/8567825104).
