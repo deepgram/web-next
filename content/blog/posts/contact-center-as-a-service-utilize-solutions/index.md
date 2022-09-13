@@ -1,6 +1,7 @@
 ---
-title: "How Contact-Center-as-a-Service Companies (CCaaS) Utilize ASR Solutions"
-description: "ASR solutions represent critical functionality for the contact-center-as-a-service industry. Learn more."
+title: How Contact-Center-as-a-Service Companies (CCaaS) Utilize ASR Solutions
+description: ASR solutions represent critical functionality for the
+  contact-center-as-a-service industry. Learn more.
 date: 2022-08-03
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981429/blog/contact-center-as-a-service-utilize-solutions/how-contact-center-as-a-service-companies-utilize-.png
 authors:
@@ -11,23 +12,25 @@ tags:
   - contact-center
   - support-enablement
 seo:
-  title: "How Contact-Center-as-a-Service Companies (CCaaS) Utilize ASR Solutions"
-  description: "ASR solutions represent critical functionality for the contact-center-as-a-service industry. Learn more."
+  title: How Contact-Center-as-a-Service Companies (CCaaS) Utilize ASR Solutions
+  description: ASR solutions represent critical functionality for the
+    contact-center-as-a-service industry. Learn more.
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981429/blog/contact-center-as-a-service-utilize-solutions/how-contact-center-as-a-service-companies-utilize-.png
 shorturls:
   share: https://dpgr.am/e82d0d3
   twitter: https://dpgr.am/58a4340
   linkedin: https://dpgr.am/634365a
   reddit: https://dpgr.am/2d19b42
   facebook: https://dpgr.am/80b9979
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981429/blog/contact-center-as-a-service-utilize-solutions/how-contact-center-as-a-service-companies-utilize-.png
 ---
-
 Contact-center-as-a-service (CCaaS) platforms help businesses automate and ease the processing of customer inquiries. Critical to this functionality is automatic speech recognition, or ASR, which converts speech into written text so that a computer can understand what was said. In this blog post, we'll discuss how CCaaS companies use speech-to-text solutions and what benefits they provide, as well as how ASR tools fit in and the benefits they provide for CCaaS platforms. But before we get started-what exactly does "contact center as a service" mean?
 
 ## What is a Contact Center as a Service (CCaaS)?
 
-Contact center as a service refers to a SaaS-based application that provides management and analytics to contact centers. These tools are typically multichannel, providing ways of managing text chat, phone calls with agents, and even conversational AI solutions for customers to solve their own problems. These solutions provide intelligent contact center automation, built on a backbone of speech-to-text solutions. Using CCaaS platforms offers many benefits for business, including flexible delivery of customer service, analytics and insights based on industry best practices, and access to advanced contact center features and technologies that a company might not be able to provide if they built their own contact center software.  One of the most important technologies for CCaaS platforms is ASR, or automatic speech recognition. This technology allows contact center agents to quickly and easily handle customer inquiries without the need for human intervention. ASR solutions are the foundation of services that do things like route calls, provide customer support, and transcribe call recordings, which are commonly included as part of a CCaaS offering. Let's take a look at some of the key benefits that CCaaS solutions offer before turning to an understanding of how ASR can support them.
+Contact center as a service refers to a SaaS-based application that provides management and analytics to contact centers. These tools are typically multichannel, providing ways of managing text chat, phone calls with agents, and even conversational AI solutions for customers to solve their own problems. These solutions provide intelligent contact center automation, built on a backbone of speech-to-text solutions. Using CCaaS platforms offers many benefits for business, including flexible delivery of customer service, analytics and insights based on industry best practices, and access to advanced contact center features and technologies that a company might not be able to provide if they built their own contact center software.
+
+One of the most important technologies for CCaaS platforms is ASR, or automatic speech recognition. This technology allows contact center agents to quickly and easily handle customer inquiries without the need for human intervention. ASR solutions are the foundation of services that do things like route calls, provide customer support, and transcribe call recordings, which are commonly included as part of a CCaaS offering. Let's take a look at some of the key benefits that CCaaS solutions offer before turning to an understanding of how ASR can support them.
 
 ## Why are CCaaS Solutions so Beneficial?
 
@@ -51,11 +54,11 @@ By utilizing ASR tools, CCaaS companies can provide their customers with an easi
 
 ## End-to-End Deep Learning Automatic Speech Recognition for CCaaS
 
-ASR is one of the critical technologies that CCaaS platforms need to succeed. By turning speech into text, CCaaS can take action with more data, and in more ways, than if relied only on other metrics like call length, number of calls taken per agent, etc. But not all speech-to-text solutions work equally well for contact centers. Because of things like industry-specific jargon and poor call quality, old-school speech recognition models often don't provide sufficient accuracy to be truly effective. But speech recognition solutions built on [end-to-end deep learning](https://blog.deepgram.com/deep-learning-asr-for-business/) are able to take advantage of [transfer learning](https://blog.deepgram.com/transfer-learning-spanish-portuguese/), which allows one accurate model to quickly and easily be retrained on new data to create a new model for a different use case. This technology has allowed Deepgram to offer both [a use-case model specifically for telephone calls](https://deepgram.com/product/use-cases/), as well as the ability to tailor a model with your own data if you need even higher accuracy. Overall, the specific speech recognition features of the top AI-powered speech-to-text systems that support CCaaS businesses can be divided into two categories: speech recognition and speech understanding. Let's look at each in turn.
+ASR is one of the critical technologies that CCaaS platforms need to succeed. By turning speech into text, CCaaS can take action with more data, and in more ways, than if relied only on other metrics like call length, number of calls taken per agent, etc. But not all speech-to-text solutions work equally well for contact centers. Because of things like industry-specific jargon and poor call quality, old-school speech recognition models often don't provide sufficient accuracy to be truly effective.
+
+But speech recognition solutions built on [end-to-end deep learning](https://blog.deepgram.com/deep-learning-asr-for-business/) are able to take advantage of [transfer learning](https://blog.deepgram.com/transfer-learning-spanish-portuguese/), which allows one accurate model to quickly and easily be retrained on new data to create a new model for a different use case. This technology has allowed Deepgram to offer both [a use-case model specifically for telephone calls](https://deepgram.com/product/use-cases/), as well as the ability to tailor a model with your own data if you need even higher accuracy. Overall, the specific speech recognition features of the top AI-powered speech-to-text systems that support CCaaS businesses can be divided into two categories: speech recognition and speech understanding. Let's look at each in turn.
 
 <WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
-
-
 
 ### Speech Recognition
 
@@ -75,7 +78,7 @@ Another big benefit of using an end-to-end deep learning speech-to-text solution
 
 ### Speech Understanding
 
-Speech understanding is the ability of a system to interpret the _meaning_ of spoken words. This is an important capability for CCaaS companies, as it can help businesses improve their contact center operations. Some of the most impactful features of speech understanding for CCaaS centers are discussed below.
+Speech understanding is the ability of a system to interpret the *meaning* of spoken words. This is an important capability for CCaaS companies, as it can help businesses improve their contact center operations. Some of the most impactful features of speech understanding for CCaaS centers are discussed below.
 
 #### Diarization
 
@@ -137,7 +140,7 @@ Another great benefit of using a CCaaS with ASR is that these platforms provide 
 
 CCaaS platforms using ASR solutions can also help businesses improve compliance. This is because ASR tools can help businesses record calls and track contact data-transcripts can be mined for data, and topic detection, summarization, and diarization can all help to understand who is saying what and that all policies and procedures are being followed.
 
-### Easier Onboarding and Training 
+### Easier Onboarding and Training
 
 Onboarding and training can also be supported by speech recognition by providing a record of previous calls so that trainers can understand what typical calls look like, what problems agents typically face, and more. By using transcripts of previous calls, CCaaS companies can quickly and easily provide their agents with the information they need to handle customer inquiries in an efficient manner.
 
@@ -151,4 +154,6 @@ Finally, CCaaS that leverage state-of-the-art ASR tools can also help businesses
 
 ## Wrapping up
 
-Overall, contact-center-as-a-service companies that use advanced speech recognition APIs like Deepgram benefit their customers in many ways. These tools can help businesses automate the process of handling customer inquiries, improving contact center operations, and providing accurate transcriptions of contact recordings, all with the ultimate goal of delighting customers, reducing churn, and increasing revenues. If you'd like to learn how Deepgram can help you transcribe your calls, reach out and [we'll be happy to help you get you started](https://deepgram.com/contact-us/). Or, you can [sign up for Console for free](https://console.deepgram.com/signup) and get $150 in credits to give us a try.
+Overall, contact-center-as-a-service companies that use advanced speech recognition APIs like Deepgram benefit their customers in many ways. These tools can help businesses automate the process of handling customer inquiries, improving contact center operations, and providing accurate transcriptions of contact recordings, all with the ultimate goal of delighting customers, reducing churn, and increasing revenues.
+
+If you'd like to learn how Deepgram can help you transcribe your calls, reach out and [we'll be happy to help you get you started](https://deepgram.com/contact-us/). Or, you can [sign up for Console for free](https://console.deepgram.com/signup) and get $150 in credits to give us a try.
