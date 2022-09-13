@@ -1,5 +1,5 @@
 ---
-title: Why 8-year-olds are Like Automatic Speech Recognition
+title: Why 8-Year-Olds Are Like Automatic Speech Recognition
 description: Learn how ASR models have similarities to the way that children
   acquire vocabulary.
 date: 2018-10-03
@@ -23,7 +23,9 @@ shorturls:
 ---
 ## In ASR, familiarity with vocabulary matters
 
-The worlds of [Automatic Speech Recognition (ASR)](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/) and human language learning are strikingly similar. **How effectively an ASR system transcribes a conversation strongly depends on how familiar that ASR is with the words being used.** Try to think back to a time when you were 8 or 9 years old, sitting at the table of a large family gathering listening to the adults talk about adult stuff. More than likely, you listened for a while, then began to get restless, and decided to pick on your kid brother, or tug at someone's sleeve. In my case, I broke stuff. If you have kids, you don't need to think back to this. Your kids likely begin carrying on 7 minutes after the adults get to talking about real issues: politics, science and Bertrand Russel's take on metaphysics. Why do children get bored at these conversations? After all, humans are, by definition, the best speech recognition systems we have. And, 7, 8, 9-year-old children certainly are native speakers of their own language(s). Are kids simply not interested in adult stuff? No. In fact, kids just want to be adults—and fast! ![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976379/blog/why-8-year-olds-are-like-asr/37169945362_89c8683805_o.jpg)
+The worlds of [Automatic Speech Recognition (ASR)](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/) and human language learning are strikingly similar. **How effectively an ASR system transcribes a conversation strongly depends on how familiar that ASR is with the words being used.** Try to think back to a time when you were 8 or 9 years old, sitting at the table of a large family gathering listening to the adults talk about adult stuff. More than likely, you listened for a while, then began to get restless, and decided to pick on your kid brother, or tug at someone's sleeve. In my case, I broke stuff. If you have kids, you don't need to think back to this. Your kids likely begin carrying on 7 minutes after the adults get to talking about real issues: politics, science and Bertrand Russel's take on metaphysics. Why do children get bored at these conversations? After all, humans are, by definition, the best speech recognition systems we have. And, 7, 8, 9-year-old children certainly are native speakers of their own language(s). Are kids simply not interested in adult stuff? No. In fact, kids just want to be adults—and fast! 
+
+![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976379/blog/why-8-year-olds-are-like-asr/37169945362_89c8683805_o.jpg)
 
 ## It's not the grammar or language model, it's just knowing the words!
 
@@ -31,4 +33,6 @@ The answer in great part has to do with the fact that humans, like ASR systems, 
 
 ## If you can, go custom
 
-**The beauty of getting a custom ASR model trained on *your audio data* is that you get significant increases in accuracy over the standard models available today.** In terms of our analogy, this is like hiring a college student with a major *in your field* to do your transcription instead of the eight-year-old. When [considering an ASR provider](https://sweet-pie-c52a63-blog.netlify.app/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/), find out what data they've used to train their speech models and what customization steps they offer. While a large sample of the world's data might sound impressive, it's not nearly as helpful as teaching an ASR system to specialize in your data. Also, don't hire 8-year-olds to do transcription. Learn how Deepgram [customizes speech models](https://deepgram.com/product/train/) for your specific use case. ![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976380/blog/why-8-year-olds-are-like-asr/ben-mullins-785443-unsplash.jpg)
+**The beauty of getting a custom ASR model trained on *your audio data* is that you get significant increases in accuracy over the standard models available today.** In terms of our analogy, this is like hiring a college student with a major *in your field* to do your transcription instead of the eight-year-old. When [considering an ASR provider](https://sweet-pie-c52a63-blog.netlify.app/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/), find out what data they've used to train their speech models and what customization steps they offer. While a large sample of the world's data might sound impressive, it's not nearly as helpful as teaching an ASR system to specialize in your data. Also, don't hire 8-year-olds to do transcription. Learn how Deepgram [customizes speech models](https://deepgram.com/product/train/) for your specific use case. 
+
+![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976380/blog/why-8-year-olds-are-like-asr/ben-mullins-785443-unsplash.jpg)
