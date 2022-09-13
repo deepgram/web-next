@@ -21,7 +21,7 @@ og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661981357/blog/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/how-to-test-asr-providers%402x.jpg
 ---
 
-Selecting the best [ASR](https://blog.deepgram.com/what-is-asr/) option for your company is an important decision. While the bulk of this article is an educational piece on how to most effectively test for ASR providers, the first step when making an important buying decision is identifying your priorities:
+Selecting the best [ASR](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/) option for your company is an important decision. While the bulk of this article is an educational piece on how to most effectively test for ASR providers, the first step when making an important buying decision is identifying your priorities:
 
 1.  What do you want?
 2.  What do you need?
@@ -38,7 +38,7 @@ Getting a sense of what features your company might need before starting talks w
 
 > **Buyer**: "We've been looking at a couple ASR providers...what's your accuracy rate?" **ASR Provider**: "Fantastic. On an academic data set that is publicly known, we claim a 95% accuracy rate." **Buyer**: "That sounds great! But how does that relate to our audio data?" **ASR Provider**:"Trust me, we'll do great on that too!" **Buyer**: "Hmm..."
 
-For a long time, ASR companies have avoided doing real comparisons on company specific audio data by focusing marketing dollars and sales narratives on impressive outcomes from public datasets. ([Like new advances on word error rates](https://blog.deepgram.com/the-trouble-with-wer/)). By distracting companies from the fact that gamed success statistics don't translate to real world applications, ASR providers have been able to trick companies into buying a car without test driving it first. So, what is the best way to actually test drive and walk away with a great deal?
+For a long time, ASR companies have avoided doing real comparisons on company specific audio data by focusing marketing dollars and sales narratives on impressive outcomes from public datasets. ([Like new advances on word error rates](https://sweet-pie-c52a63-blog.netlify.app/the-trouble-with-wer/)). By distracting companies from the fact that gamed success statistics don't translate to real world applications, ASR providers have been able to trick companies into buying a car without test driving it first. So, what is the best way to actually test drive and walk away with a great deal?
 
 ## How to test an ASR Solution?
 
@@ -75,7 +75,7 @@ Take note of what each provider deems an acceptable audio format and how it fits
 
 ### **Step 4: Do a Word Error Rate (WER) comparison on the files**
 
-[Word Error Rate (WER)](https://blog.deepgram.com/what-is-word-error-rate/) will give you a sense of the overall accuracy of the transcripts, but don't just look at the number. You also want to look at _where_ the output was wrong and _why_ the output was wrong. This includes what words were incorrectly added, omitted, or simply misinterpreted.
+[Word Error Rate (WER)](https://sweet-pie-c52a63-blog.netlify.app/what-is-word-error-rate/) will give you a sense of the overall accuracy of the transcripts, but don't just look at the number. You also want to look at _where_ the output was wrong and _why_ the output was wrong. This includes what words were incorrectly added, omitted, or simply misinterpreted.
 
 ### **Step 5: Make a visual representation of what was wrong**
 

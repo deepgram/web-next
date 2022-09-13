@@ -64,9 +64,9 @@ With a rise in audio content through podcasts, Twitter Spaces, and other forms o
 
 ### Examples Using Deepgram
 
-*   [Adding Live Captions To Your Classroom with Deepgram](https://developers.deepgram.com/blog/2022/02/classroom-captioner/)
-*   [Video: Building a Live Transcription Badge With Deepgram](https://developers.deepgram.com/blog/2022/01/live-transcription-badge-video/)
-*   [Transcribe YouTube Videos with Node.js](https://developers.deepgram.com/blog/2021/11/transcribe-youtube-videos-nodejs/)
+*   [Adding Live Captions To Your Classroom with Deepgram](https://sweet-pie-c52a63-blog.netlify.app/classroom-captioner/)
+*   [Video: Building a Live Transcription Badge With Deepgram](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-badge-video/)
+*   [Transcribe YouTube Videos with Node.js](https://sweet-pie-c52a63-blog.netlify.app/transcribe-youtube-videos-nodejs/)
 
 ### Additional Resources for Accessible AV Content Creation
 

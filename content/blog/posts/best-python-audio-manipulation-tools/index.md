@@ -349,7 +349,7 @@ mp3_audio = wav_audio.export("louder.mp3", format="mp3")
 
 ## Transcribe Audio Data With a Web API
 
-Finally, we come to the last bit of audio data manipulation to be covered in this primer to audio data in Python. Having the transcription of an audio file can be useful for many reasons. You can use it to [visualize your data](https://developers.deepgram.com/blog/2022/05/python-graphing-transcripts/), [search for keywords from a library of audio files](https://developers.deepgram.com/blog/2022/03/python-script-compliance/), or get inputs for Natural Language Understanding (NLU) models.
+Finally, we come to the last bit of audio data manipulation to be covered in this primer to audio data in Python. Having the transcription of an audio file can be useful for many reasons. You can use it to [visualize your data](https://sweet-pie-c52a63-blog.netlify.app/python-graphing-transcripts/), [search for keywords from a library of audio files](https://sweet-pie-c52a63-blog.netlify.app/python-script-compliance/), or get inputs for Natural Language Understanding (NLU) models.
 
 To transcribe your audio with a Web API, you’ll need to sign up for a [free Deepgram API key](https://console.deepgram.com/signup?jump=keys) and run `pip install deepgram-sdk` in your terminal.
 

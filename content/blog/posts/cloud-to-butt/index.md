@@ -25,7 +25,7 @@ Every morning I cycle through the same few apps on my phone before I get up, and
 
 On the day I'm writing this, I was made to remember the [Cloud to Butt Chrome Extension](https://www.gizmodo.com.au/2014/08/a-chrome-extension-that-replaces-cloud-with-butts-wins-everything/) - which replaces instances of "cloud" with "butt". I'm all for slapping the wrists of those who lean into buzzwords, which in 2014, "the cloud" definitely was.
 
-Chrome Extensions are so last month ([cough cough here's a blog post I wrote on them](https://developers.deepgram.com/blog/2022/07/transcribing-browser-tab-audio-chrome-extensions/)), so I thought it'd be fun to use the new Deepgram [Find and Replace feature](https://developers.deepgram.com/documentation/features/replace/) to get my nostalgia trip in 2022.
+Chrome Extensions are so last month ([cough cough here's a blog post I wrote on them](https://sweet-pie-c52a63-blog.netlify.app/transcribing-browser-tab-audio-chrome-extensions/)), so I thought it'd be fun to use the new Deepgram [Find and Replace feature](https://developers.deepgram.com/documentation/features/replace/) to get my nostalgia trip in 2022.
 
 I recorded some words based on [this 2014 talk from Maciej Cegłowski](https://idlewords.com/talks/internet_with_a_human_face.htm). [Here is the audio file we're going to use](http://lws.io/static/the-cloud.mp3).
 

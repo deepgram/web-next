@@ -28,7 +28,7 @@ Imagine having the ability to monitor certain words or phrases during phone conv
 
 Combining voice transcription with Python using Deepgram, there are many innovative ways to monitor script compliance without manually listening to each recorded call. Deepgram provides a speech-to-text solution that transcribes audio to text with Python, real-time and pre-recorded calls. This solution is ideal to:
 
-* Provide insights into how the agent handled the call by running analytics in Python (you can read more about analytics with Deepgram and Python [here](https://developers.deepgram.com/blog/2022/03/python-talk-time-analytics/).
+* Provide insights into how the agent handled the call by running analytics in Python (you can read more about analytics with Deepgram and Python [here](https://sweet-pie-c52a63-blog.netlify.app/python-talk-time-analytics/).
 * Keep customers happy by improving their experience and satisfaction, increasing sales and revenue.
 * Reduce costs and save time by identifying non-compliance immediately.
 
@@ -36,7 +36,7 @@ In the next section, let’s review the project we’ll build together. If you�
 
 # What We’ll Build
 
-This tutorial will use the Deepgram Python SDK to build a simple script that transcribes audio to text with Python and simulates monitoring script compliance by searching words and phrases. Although Deepgram has a [diarize feature](https://developers.deepgram.com/documentation/features/diarize/) to help us recognize speakers when multiple people are talking (which is very useful for script compliance examples with an agent and a customer), we’ll use a script with one person speaking to keep things simple. In a [previous article](https://developers.deepgram.com/blog/2022/03/python-talk-time-analytics/) we built a project using the `diarize` feature to gather transcripts for multiple speakers if you'd like to learn more.
+This tutorial will use the Deepgram Python SDK to build a simple script that transcribes audio to text with Python and simulates monitoring script compliance by searching words and phrases. Although Deepgram has a [diarize feature](https://developers.deepgram.com/documentation/features/diarize/) to help us recognize speakers when multiple people are talking (which is very useful for script compliance examples with an agent and a customer), we’ll use a script with one person speaking to keep things simple. In a [previous article](https://sweet-pie-c52a63-blog.netlify.app/python-talk-time-analytics/) we built a project using the `diarize` feature to gather transcripts for multiple speakers if you'd like to learn more.
 
 We’ll focus on monitoring script compliance by doing the following:
 
@@ -63,7 +63,7 @@ Then change into that directory so we can start adding things to it.
 cd deepgram_script_compliance
 ```
 
-We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one.
+We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/) and how to create one.
 
 <Panel type="info" title="Important Note">
 

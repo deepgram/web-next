@@ -174,7 +174,7 @@ Add a `<form>` just below the `<button>` in `index.html`:
 </form>
 ```
 
-Refresh your browser and upload a file - you should see the results in your browser. If you want to handle the results within the page, [Sandra details how to submit a form using JavaScript here](https://developers.deepgram.com/blog/2021/11/sending-audio-files-to-expressjs-server/#html-and-js-using-a-formdata-object).
+Refresh your browser and upload a file - you should see the results in your browser. If you want to handle the results within the page, [Sandra details how to submit a form using JavaScript here](https://sweet-pie-c52a63-blog.netlify.app/sending-audio-files-to-expressjs-server/#html-and-js-using-a-formdata-object).
 
 ## Deploying Functions
 

@@ -54,7 +54,7 @@ Then change into that directory so we can start adding things to it.
 cd deepgram_analytics_project
 ```
 
-We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one.
+We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/) and how to create one.
 
 <Panel type="info" title="Important Note">
 

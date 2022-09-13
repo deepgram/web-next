@@ -26,7 +26,7 @@ shorturls:
 ---
 In our internal Deepgram Slack workspace, there's a channel where folks can share fun and wacky things they've achieved on the terminal (`#bash-hall-of-fame`). Over five years ago, our CEO Scott shared a nice little snippet that allows you to download just the audio from a YouTube video. Today, I'm going to take that still-functional piece of code and show you how to download audio from a YouTube video and then transcribe it with Deepgram's Speech Recognition API.
 
-The steps are remarkably similar to our [Transcribing YouTube Videos with Node.js](https://developers.deepgram.com/blog/2021/11/transcribe-youtube-videos-nodejs/) post, but entirely on the terminal.
+The steps are remarkably similar to our [Transcribing YouTube Videos with Node.js](https://sweet-pie-c52a63-blog.netlify.app/transcribe-youtube-videos-nodejs/) post, but entirely on the terminal.
 
 You will need to download [`youtube-dl`](http://ytdl-org.github.io/youtube-dl/download.html), [`ffmpeg`](http://ffmpeg.org/download.html), and [`jq`](https://stedolan.github.io/jq/) for this tutorial to work. If you use macOS and have homebrew installed, this is `brew install youtube-dl`, `brew install ffmpeg`, and `brew install jq`. You will also need a Deepgram API Key - [get one here](https://console.deepgram.com/signup?jump=keys).
 

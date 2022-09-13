@@ -64,7 +64,7 @@ Here is what my table looked like after I inserted two rows of data.
 
 ## Querying the Database
 
-With the data added, we can now look at how to send [API requests](https://developers.deepgram.com/blog/2021/11/getting-started-with-apis/) to it in order to read that data.
+With the data added, we can now look at how to send [API requests](https://sweet-pie-c52a63-blog.netlify.app/getting-started-with-apis/) to it in order to read that data.
 
 In the left hand navigation, there is a link to the API documentation. This is auto-generated for us by Supabase and allows us to connect with our database in our code. Right now, we want to test that we can get the data we want from our `books` table. In the left hand menu, there is a section called "Tables and Views". Select the `books` table. Since we don't have a JavaScript app set up yet, select the "Bash" tab at the top of the right hand column above the code output. This will show us how a basic request is structured. I am going to be using Postman [(which you can get here)](https://www.postman.com/downloads/) to send these requests.
 

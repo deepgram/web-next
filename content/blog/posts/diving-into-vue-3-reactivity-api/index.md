@@ -26,9 +26,9 @@ This is the fourth post in my 'Diving Into Vue 3' series. Today I hope to give a
 
 The other posts in this series that have already come out are:
 
-*   [Diving Into Vue 3 - Getting Started](https://developers.deepgram.com/blog/2022/01/diving-into-vue-3-getting-started/)
-*   [Diving Into Vue 3 - The Setup Function](https://developers.deepgram.com/blog/2022/02/diving-into-vue-3-setup-function/)
-*   [Diving Into Vue 3: Methods, Watch, and Computed](https://developers.deepgram.com/blog/2022/02/diving-into-vue-3-methods-watch-and-computed/)
+*   [Diving Into Vue 3 - Getting Started](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-getting-started/)
+*   [Diving Into Vue 3 - The Setup Function](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-setup-function/)
+*   [Diving Into Vue 3: Methods, Watch, and Computed](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-methods-watch-and-computed/)
 
 But first, a little background on **reactivity**. Feel free to skip ahead to the section on [how to make data properties reactive](#how-to-make-data-properties-reactive) if you just want to learn about `ref` and `reactive`.
 
@@ -144,7 +144,7 @@ As I said earlier, if I want to make data properties reactive in Vue 2, I have t
   }
 ```
 
-If I am using the Vue 3 setup function (see my [post on the setup function](https://developers.deepgram.com/blog/2022/02/diving-into-vue-3-setup-function/) if you need an explainer on that), I can make data reactive by using the `reactive` or `ref` helpers.
+If I am using the Vue 3 setup function (see my [post on the setup function](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-setup-function/) if you need an explainer on that), I can make data reactive by using the `reactive` or `ref` helpers.
 
 ### ref
 

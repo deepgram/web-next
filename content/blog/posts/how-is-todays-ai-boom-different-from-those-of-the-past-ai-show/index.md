@@ -100,7 +100,7 @@ Generating entire new industries like, potentially, the autonomous vehicle world
 
 **Susan:** You talked about the forces in the past driving it, pretty academic forces were driving, and traditional governmental research agencies.
 
-**Scott:** [DARPA](https://blog.deepgram.com/what-is-asr/), etc.
+**Scott:** [DARPA](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/), etc.
 
 **Susan:** But again, this boom area is showing a very steep turn towards more corporate money based research because they're getting value out of it.
 
@@ -118,7 +118,7 @@ Generating entire new industries like, potentially, the autonomous vehicle world
 
 **Susan:** Why doesn't it make sense? If the ground is fertile, finally, and they're planting these seeds that are getting huge amounts of revenue.
 
-**Just think about the role that [reinforcement learning](https://blog.deepgram.com/ai-show-bias-in-machine-learning/)-in a classic way of trying to take a series of actions and get rewards out of-is affecting the web, and affecting how we guide people to click on what we want them to click, and buy the things we want them to buy.** How much is that shaping product placement and all these different things? When you go onto your favorite storefront site X, and it says, "I suggest these six things for you."
+**Just think about the role that [reinforcement learning](https://sweet-pie-c52a63-blog.netlify.app/ai-show-bias-in-machine-learning/)-in a classic way of trying to take a series of actions and get rewards out of-is affecting the web, and affecting how we guide people to click on what we want them to click, and buy the things we want them to buy.** How much is that shaping product placement and all these different things? When you go onto your favorite storefront site X, and it says, "I suggest these six things for you."
 
 **Scott:** It's a recommendation system.
 
@@ -204,7 +204,7 @@ In the grand scheme of things, how AI should be affecting companies is, the amou
 
 This is the moment where you can say the past is clearly separated from the future, and you need to be investing and figuring out how to get to that future quickly, 'cause it's happening whether you want it to happen or not.
 
-**Scott:** It's really the intelligence revolution. You had the [agricultural revolution](https://blog.deepgram.com/ai-show-what-does-an-ai-tranformation-look-like/) back in the day. Hey, you had to go search for your food and whatnot, now you can grow it. Now, you can mechanize it, now that means another thing, and now, hey, it's steam power, wow. Now electricity, now transportation. Now, it's intelligence. Machines can also be intelligent. You can pump electricity into them and they can give real, good insights about the world for not nearly as much as what it would cost a human to do.
+**Scott:** It's really the intelligence revolution. You had the [agricultural revolution](https://sweet-pie-c52a63-blog.netlify.app/ai-show-what-does-an-ai-tranformation-look-like/) back in the day. Hey, you had to go search for your food and whatnot, now you can grow it. Now, you can mechanize it, now that means another thing, and now, hey, it's steam power, wow. Now electricity, now transportation. Now, it's intelligence. Machines can also be intelligent. You can pump electricity into them and they can give real, good insights about the world for not nearly as much as what it would cost a human to do.
 
 **Susan:** It's a truly amazing thing to be a part of such a transformative boom that's going on. But that brings up is, is this the last boom? Is this it? This is AI and we're never going to see it take off like this again, or?
 
@@ -236,7 +236,7 @@ _The impact of the the moveable type printing press is immeasurable. Invented by
 
 **Susan:** You know, we'll find out soon, I think, whether or not we're going to get it in the next 15 years. It's going to be one of those things that, it'll either happen in the next five years, or may not happen for the next 20 years. So, my wild speculation is that we'll be the related cap, talking about where the cool on the AI side of the house is. We've developed all these great tools for automating things that we as humans can automate within our our own minds. Self driving cars are a great example. You don't really remember driving 150 miles in the middle part of it because you've automated that so much in your head. That probably means a machine can automate it too. But, those tasks where you are mentally, constantly thinking and fighting and scratching and clawing, to figure out that angle on how to improve the problem, those that are a brand new game that is probably gonna be related to, maybe, the next revolution, That's my wild speculation.
 
-**Scott:** Agreed. I think, if you look into the future, it's going to be business adoption over the next five years, and it'll just become old news like, "Yeah, yeah, we're integrating AI and we're doing whatever, yeah, fine." Also seeing value, like how every business from like the 70s until now embraces software. "Okay, fine. Yes, we have software, yes we use developers." That's a sort of baseline. Probably at the five year mark, or three year mark, or seven year mark away from now, consumers will get something that feels a lot like a general intelligence AI. Some nice, rounded assistant. [Maybe Alexa, maybe Google Assistant](https://blog.deepgram.com/five-ways-to-use-speech-recognition-apis-to-empower-your-business/), maybe some other thing evolves from other companies, where you actually feel like you're talking to a person, and it does nice things for you, and you're happy about it. I think that's going to happen. Other than businesses getting more efficient and integrating AI, fine, that's kind of boring to people who aren't in the business world. Consumers, I think, will be touched by this too, but it's probably going to be a few years away. But you'll be like, "Wow, this is really nice." Kinda like when you get used to using Uber versus hailing taxis, or something like that. You're like, "Duh, why would I do the other thing?"
+**Scott:** Agreed. I think, if you look into the future, it's going to be business adoption over the next five years, and it'll just become old news like, "Yeah, yeah, we're integrating AI and we're doing whatever, yeah, fine." Also seeing value, like how every business from like the 70s until now embraces software. "Okay, fine. Yes, we have software, yes we use developers." That's a sort of baseline. Probably at the five year mark, or three year mark, or seven year mark away from now, consumers will get something that feels a lot like a general intelligence AI. Some nice, rounded assistant. [Maybe Alexa, maybe Google Assistant](https://sweet-pie-c52a63-blog.netlify.app/five-ways-to-use-speech-recognition-apis-to-empower-your-business/), maybe some other thing evolves from other companies, where you actually feel like you're talking to a person, and it does nice things for you, and you're happy about it. I think that's going to happen. Other than businesses getting more efficient and integrating AI, fine, that's kind of boring to people who aren't in the business world. Consumers, I think, will be touched by this too, but it's probably going to be a few years away. But you'll be like, "Wow, this is really nice." Kinda like when you get used to using Uber versus hailing taxis, or something like that. You're like, "Duh, why would I do the other thing?"
 
 ## Are robots going to take over?
 
@@ -261,4 +261,5 @@ _The impact of the the moveable type printing press is immeasurable. Invented by
 **Scott:** Yeah. Well, when you don't have those constraints, right?
 
 **Susan:** Yeah, yeah.
-
+
+
