@@ -25,8 +25,14 @@ shorturls:
 <iframe src="https://www.youtube.com/embed/5tip6JR_AN8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 **Scott:** Welcome to the AI Show. Today we're asking the question: How is machine learning, or deep learning, affecting science? 
+
+
 **Susan:** Actually I'm asking a question of you! For those that do not know, Scott here has a little bit of a science background. 
+
+
 **Scott:** A little bit. 
+
+
 **Susan:** And a little bit of machine learning in science background. Scott, can you at least give us the 10,000 foot overview of a little bit of what you've done?
 
 ## Finding Dark Matter with AI
