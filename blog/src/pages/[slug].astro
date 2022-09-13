@@ -51,7 +51,7 @@ const allAuthors = await getSluggedJson("blog/authors");
 const postAuthors = allAuthors.filter((a) => post.frontmatter.authors.includes(a.slug));
 
 const allCategories = await getSluggedJson("blog/category");
-const postCategory = allCategories.find((c) => (post.frontmatter.category = c.slug));
+const postCategory = allCategories.find((c) => post.frontmatter.category === c.slug);
 
 const seo = {
 	title: post.frontmatter.seo && post.frontmatter.seo.title ? post.frontmatter.seo.title : post.frontmatter.title,
