@@ -22,7 +22,7 @@ og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453858/blog/classroom-captioner/ograph.png
 ---
 
-Many places of study offer accessibility accommodations for students who need them to understand and participate in lectures and seminars. However, the process for asking for and receiving this help can limit who can have it, and it really [isn't good enough](https://deepgram.com/blog/automatic-speech-recognition-education/).
+Many places of study offer accessibility accommodations for students who need them to understand and participate in lectures and seminars. However, the process for asking for and receiving this help can limit who can have it, and it really [isn't good enough](https://sweet-pie-c52a63-blog.netlify.app/automatic-speech-recognition-education/).
 
 ![A lecturer at the front of a classroom](https://res.cloudinary.com/deepgram/image/upload/v1644272678/blog/2022/02/classroom-captioner/iglt.jpg)
 
@@ -218,7 +218,7 @@ Restart your server, and navigate to a room as a lecturer. Look at your terminal
 
 ### Accessing Lecturer's Microphone
 
-There are parts of this project which build on our ["Get Live Speech Transcriptions In Your Browser"](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/) blog post and video. I'll call these out, and go into less depth about the code. This is one of them - add this code to `lecturer.html` to get access to the user's mic:
+There are parts of this project which build on our ["Get Live Speech Transcriptions In Your Browser"](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/) blog post and video. I'll call these out, and go into less depth about the code. This is one of them - add this code to `lecturer.html` to get access to the user's mic:
 
 ```js
 navigator.mediaDevices
@@ -296,7 +296,7 @@ ws.onopen = start
 ws.onmessage = handleResponse
 ```
 
-In the second annotated spot, add our event handlers for a connection being opened, and receiving data back from Deepgram. Take a look at ["Get Live Speech Transcriptions In Your Browser"](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/) for more explanation.
+In the second annotated spot, add our event handlers for a connection being opened, and receiving data back from Deepgram. Take a look at ["Get Live Speech Transcriptions In Your Browser"](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/) for more explanation.
 
 ```js
 function start() {

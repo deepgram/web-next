@@ -79,7 +79,7 @@ const socket = new WebSocket('wss://api.deepgram.com/v1/listen', [ 'token', 'YOU
 ```
 
 <Alert type="warning">
-A reminder that this key is client-side and, therefore, your users can see it. Any user with access to your key can access the Deepgram APIs, which, in turn, may provide full account access. Refer to our post on <a href="https://developers.deepgram.com/blog/2022/01/protecting-api-key/">protecting your API key with browser live transcription</a>.
+A reminder that this key is client-side and, therefore, your users can see it. Any user with access to your key can access the Deepgram APIs, which, in turn, may provide full account access. Refer to our post on <a href="https://sweet-pie-c52a63-blog.netlify.app/protecting-api-key/">protecting your API key with browser live transcription</a>.
 </Alert>
 
 Then, log when socket `onopen`, `onmessage`, `onclose`, and `onerror` events are triggered:
