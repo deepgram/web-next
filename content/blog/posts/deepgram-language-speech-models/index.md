@@ -62,4 +62,4 @@ By providing a best-of-breed, API-based solution, Deepgram is creating meaningfu
 
 ## Wrapping Up
 
-We've got lots more planned for the year ahead. If you'd like to stay in the know about any new language releases, you can sign up for our newsletter below, or keep an eye on our [languages page](https://deepgram.com/product/languages/) for updates on the models we offer. And if you'd like to give these languages a try, sign up for a [free API key](https://sweet-pie-c52a63-blog.netlify.app/deep-learning-speech-recognition/) or [contact us](https://console.deepgram.com/) to see how we can help with your multilingual ASR needs. [newsletter_signup]
+We've got lots more planned for the year ahead. If you'd like to stay in the know about any new language releases, you can sign up for our newsletter below, or keep an eye on our [languages page](https://deepgram.com/product/languages/) for updates on the models we offer. And if you'd like to give these languages a try, sign up for a [free API key](https://console.deepgram.com/) or [contact us](https://deepgram.com/contact-us/) to see how we can help with your multilingual ASR needs.
