@@ -10,7 +10,7 @@ category: dg-insider
 tags:
   - contact-center
   - conversational-ai
-  - voice-strategy
+  # - voice-strategy
 seo:
   title: All About Transcription for Real-Time (Live) Audio Streaming
   description: Curious how you can get real-time transcriptions from a live audio
