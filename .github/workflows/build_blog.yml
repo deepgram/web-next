@@ -93,4 +93,4 @@ jobs:
           alias: ${{ env.BUILD_ALIAS }}
           github-deployment-environment: ${{ env.ENVIRONMENT_NAME }}
           github-deployment-description: ${{ env.ENVIRONMENT_DESC }}
-        timeout-minutes: 2
+        timeout-minutes: 5
