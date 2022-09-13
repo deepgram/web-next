@@ -1,7 +1,7 @@
 ---
 title: Deepgram Now Offers More than 20 Language and Dialect Speech Models 
-description: We pleased to announce that we now offer more than 20 languages and
-  dialect speech models—read on to learn more about what we offer.
+description: We're pleased to announce that we now offer more than 20 languages
+  and dialect speech models—read on to learn more about what we offer.
 date: 2022-03-29
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981413/blog/deepgram-language-speech-models/DG-offers-over-20-language-models-thumb-554x220%402x.png
 authors:
