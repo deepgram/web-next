@@ -41,7 +41,7 @@ How can you be more public with your writing process? This is the first step in 
 
 ## Posting Your Content
 
-Once you've completed your writing, take advantage of the many places to gain visibility. If you’re posting your blog and not sharing anywhere else, you’re losing your reach. For example, I post on [my own site](https://bekahhw.github.io/) and [Dev.to](https://dev.to/bekahhw) or on [the Deepgram Developers blog](https://developers.deepgram.com/blog/) and Dev.to links on Twitter and LinkedIn and sometimes Instagram and Polywork. I’m familiar with those platforms, audiences, and how to post. You might also post on reddit, Hashnode, Facebook--there’s no short list of where to post.
+Once you've completed your writing, take advantage of the many places to gain visibility. If you’re posting your blog and not sharing anywhere else, you’re losing your reach. For example, I post on [my own site](https://bekahhw.github.io/) and [Dev.to](https://dev.to/bekahhw) or on [the Deepgram Developers blog](https://sweet-pie-c52a63-blog.netlify.app/) and Dev.to links on Twitter and LinkedIn and sometimes Instagram and Polywork. I’m familiar with those platforms, audiences, and how to post. You might also post on reddit, Hashnode, Facebook--there’s no short list of where to post.
 
 ## Types of Content
 
@@ -67,7 +67,7 @@ My next step will involve reaching out to my network. To do this, I could create
 
 ### Writing Phase
 
-After the exploration phase, I have a pretty good sense of the direction I want to take things. This is the perfect time to start drafting my blog post. Within that post, I can link to previous posts I’ve written like [Technical Writing: A Beginner's Guide](https://developers.deepgram.com/blog/2022/03/technical-writing-a-beginners-guide/) because it’s relevant to the topic of Storytelling-it’s useful to know writing basics before telling the story.
+After the exploration phase, I have a pretty good sense of the direction I want to take things. This is the perfect time to start drafting my blog post. Within that post, I can link to previous posts I’ve written like [Technical Writing: A Beginner's Guide](https://sweet-pie-c52a63-blog.netlify.app/technical-writing-a-beginners-guide/) because it’s relevant to the topic of Storytelling-it’s useful to know writing basics before telling the story.
 
 ### Repurpose Phase
 

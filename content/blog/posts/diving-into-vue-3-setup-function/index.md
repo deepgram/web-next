@@ -26,7 +26,7 @@ In this series of posts, I'm diving into Vue 3 as someone who is new to the Comp
 
 Today, I'll take a look at the `setup` function that is new to Vue 3.
 
-And if you want to start at the beginning of the series, take a look at my first post: [Diving into Vue 3: Getting Started](https://developers.deepgram.com/blog/2022/01/diving-into-vue-3-getting-started/).
+And if you want to start at the beginning of the series, take a look at my first post: [Diving into Vue 3: Getting Started](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-getting-started/).
 
 ## The Old Way: Vue 2 Options API
 
@@ -46,7 +46,7 @@ The Options API is familiar to those of us who have used Vue 2. A single-file-co
 </script>
 ```
 
-The Options API is all the properties and methods we get on our Vue instance, the instance we initialize when we set up the project in the **main.js** file (see my [previous post](https://developers.deepgram.com/blog/2022/01/diving-into-vue-3-getting-started/) for more info on initializing the Vue application object).
+The Options API is all the properties and methods we get on our Vue instance, the instance we initialize when we set up the project in the **main.js** file (see my [previous post](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-getting-started/) for more info on initializing the Vue application object).
 
 This organization of a component seems very easy to read at first glance, and it is one of the things that made me feel unafraid to jump into Vue initially. We clearly see how the different logic is separated by its type - `methods` versus `computed` versus `watch`.
 

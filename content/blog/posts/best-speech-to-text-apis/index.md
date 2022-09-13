@@ -57,7 +57,7 @@ As noted at the outset, voice technology that's built on the back of STT APIs is
 * **Sales and support enablement** - Sales and support digital assistants that provide tips, hints, and solutions to agents by transcribing, analyzing and pulling up information in real time. It can also be used to gauge sales pitches or sales calls with a customer.
 * **Contact centers** - Contact centers can use STT to create transcripts of their calls, providing more ways to evaluate their agents, understand what customers are asking about, and provide insight into different aspects of their business that are typically hard to assess.
 * **Speech analytics** - Broadly speaking, speech analytics is any attempt to process spoken audio to extract insights. This might be done in a call center, as above, but it could also be done in other environments, like meetings or even speeches and talks.
-* **Accessibility** - Providing transcriptions of spoken speech can be a huge win for accessibility, whether it's [providing captions for classroom lectures](https://blog.deepgram.com/classroom-captioner/) or creating badges that transcribe speech on the fly.
+* **Accessibility** - Providing transcriptions of spoken speech can be a huge win for accessibility, whether it's [providing captions for classroom lectures](https://sweet-pie-c52a63-blog.netlify.app/classroom-captioner/) or creating badges that transcribe speech on the fly.
 
 ## Top 8 Speech Recognition APIs
 
@@ -66,7 +66,7 @@ With that background out of the way, let's dive into our ranking, and what we th
 ### 1. Deepgram Speech-to-Text API
 
 * **Summary:** We might be biased, but we think Deepgram is the best STT API on the market. We're a [developer-focused ASR provider with SDKs](https://developers.deepgram.com/), providing an API that data scientists and developers can use to convert messy, unstructured audio data into accurate and structured transcriptions in batch or real-time-both on premises and in the cloud. Deepgram out of the box accuracies are in the 90%+ range with an option to customize speech models and reach even higher accuracies. Deepgram also has the fastest ASR in the market, with a 1200x real-time speed for batch processing and has less than a 300 millisecond lag on real-time streaming. If you'd like to give Deepgram a try, you can sign up for a [free API key](https://console.deepgram.com/signup) or [contact us](https://deepgram.com/contact-us/) if you have questions.
-* **Architecture:** Built on the latest [end-to-end deep learning neural networks](https://blog.deepgram.com/deep-learning-speech-recognition/)
+* **Architecture:** Built on the latest [end-to-end deep learning neural networks](https://sweet-pie-c52a63-blog.netlify.app/deep-learning-speech-recognition/)
 * **Pros:**
 
   * Highest out-of-the-box and tailored model accuracy
@@ -75,7 +75,7 @@ With that background out of the way, let's dive into our ranking, and what we th
   * Easy to start with [Console](https://console.deepgram.com/) 
 * **Cons:**
 
-  * Fewer languages than big tech ASR, but [we're regularly releasing new languages](https://blog.deepgram.com/deepgram-language-speech-models/)
+  * Fewer languages than big tech ASR, but [we're regularly releasing new languages](https://sweet-pie-c52a63-blog.netlify.app/deepgram-language-speech-models/)
 * **Price:** $0.75/audio hour
 
 <WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
@@ -182,7 +182,7 @@ With that background out of the way, let's dive into our ranking, and what we th
 
 ### 8. Kaldi
 
-* **Summary:** Kaldi isn't technically a STT API, but it is one of the best-known [open-source](https://blog.deepgram.com/top-9-problems-open-source-software-businesses/) tools, so it's worth discussing here. Because Kaldi is not a ready built ASR solution, the ASR solution needs to be built from Kaldi and trained with various audio corpora with Kaldi to have an actual ASR solution. The biggest issue with Kaldi is the training data that is available to use. If the training data matches your real-world audio well, the accuracy is fair, if not, then it will be very poor. There is no support but documentation and an open source community.
+* **Summary:** Kaldi isn't technically a STT API, but it is one of the best-known [open-source](https://sweet-pie-c52a63-blog.netlify.app/top-9-problems-open-source-software-businesses/) tools, so it's worth discussing here. Because Kaldi is not a ready built ASR solution, the ASR solution needs to be built from Kaldi and trained with various audio corpora with Kaldi to have an actual ASR solution. The biggest issue with Kaldi is the training data that is available to use. If the training data matches your real-world audio well, the accuracy is fair, if not, then it will be very poor. There is no support but documentation and an open source community.
 * **Architecture:** Traditional four-step STT model with the acoustic model using AI
 * **Pro:**
 
