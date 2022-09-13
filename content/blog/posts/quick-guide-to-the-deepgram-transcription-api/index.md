@@ -1,24 +1,26 @@
 ---
-title: "Quick Guide to the Deepgram Brain Transcription API"
-description: ""
+title: Quick Guide to the Deepgram Brain Transcription API
+description: Quick Guide to the Deepgram Brain Transcription API
 date: 2018-03-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069447/blog/quick-guide-to-the-deepgram-transcription-api/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: product-news
 tags:
-  - ohsnap
+  - machine-learning
+  - nlp
+  - deep-learning
 seo:
-  title: "Quick Guide to the Deepgram Brain Transcription API"
+  title: Quick Guide to the Deepgram Brain Transcription API
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069447/blog/quick-guide-to-the-deepgram-transcription-api/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/12d8503
   twitter: https://dpgr.am/d89fb0b
   linkedin: https://dpgr.am/7dd9896
   reddit: https://dpgr.am/66653d8
   facebook: https://dpgr.am/89dd0f2
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069447/blog/quick-guide-to-the-deepgram-transcription-api/placeholder-post-image%402x.jpg
 ---
 
 This is a quick guide for using Deepgram Brain, our general transcription service.
