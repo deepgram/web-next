@@ -106,3 +106,4 @@ If you have to write python bindings for some complex software, consider contain
 ## Why'd we make this?
 
 We created the Deepgram API, a search engine for audio and video that makes speech searchable. Deepgram uses a complex stack of signal processing, statistics, and machine learning software working in concert to give a seamless "upload and search" experience. Sidomo lets us rapidly containerize finicky software and integrate it with python, our glue. To learn more about what we're up to and the functionality of our API, check out our [full documentation](https://developers.deepgram.com/documentation/), or sign up below to get our newsletter and stay in touch.
+
