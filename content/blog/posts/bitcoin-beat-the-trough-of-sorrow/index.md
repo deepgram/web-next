@@ -1,24 +1,24 @@
 ---
-title: "Bitcoin Beat the Trough of Sorrow"
-description: ""
+title: Bitcoin Beat the Trough of Sorrow
+description: Bitcoin Beat the Trough of Sorrow
 date: 2016-12-03
 cover: https://res.cloudinary.com/deepgram/image/upload/v1662069441/blog/bitcoin-beat-the-trough-of-sorrow/placeholder-post-image%402x.jpg
 authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - ohsnap
+  - musings
 seo:
-  title: "Bitcoin Beat the Trough of Sorrow"
+  title: Bitcoin Beat the Trough of Sorrow
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1662069441/blog/bitcoin-beat-the-trough-of-sorrow/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/ed6bcde
   twitter: https://dpgr.am/e00db47
   linkedin: https://dpgr.am/e9a5cfc
   reddit: https://dpgr.am/a3e42d5
   facebook: https://dpgr.am/9c6145a
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1662069441/blog/bitcoin-beat-the-trough-of-sorrow/placeholder-post-image%402x.jpg
 ---
 
 It's official-**Bitcoin has survived the Trough of Sorrow** [[1]](#cit1)[[2]](#cit2). Take a look at Bitcoin's price (BTC) for its full lifetime [[3]](#cit3):
