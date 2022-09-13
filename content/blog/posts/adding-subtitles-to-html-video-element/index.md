@@ -26,7 +26,7 @@ Generating accurate transcripts is often just the start of a journey. Learn how 
 
 ## Generating Transcriptions
 
-To add subtitles to a HTML `<video>` element requires a WebVTT file. We previously wrote about [generating WebVTT captions with Node.js](https://developers.deepgram.com/blog/2021/11/generate-webvtt-srt-captions-nodejs/). Assuming you have an MP4 video to transcribe, you can use this snippet to generate a subtitles file:
+To add subtitles to a HTML `<video>` element requires a WebVTT file. We previously wrote about [generating WebVTT captions with Node.js](https://sweet-pie-c52a63-blog.netlify.app/generate-webvtt-srt-captions-nodejs/). Assuming you have an MP4 video to transcribe, you can use this snippet to generate a subtitles file:
 
 ```js
 // npm install @deepgram/sdk

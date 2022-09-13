@@ -21,7 +21,7 @@ og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453846/blog/npx-script/ograph.png
 ---
 
-<Alert type="info">This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post, you can do so [here](https://developers.deepgram.com/blog/2021/12/build-npm-packages/).</Alert>
+<Alert type="info">This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post, you can do so [here](https://sweet-pie-c52a63-blog.netlify.app/build-npm-packages/).</Alert>
 
 Node Package Manager (npm) allows JavaScript developers to manage and include packages in their projects. Bundled with npm is an additional utility - `npx` - which can be used to **run** Node.js scripts hosted in npm packages or at any other URL. Even if not already installed, it will download the package into a cache to execute the files.
 
@@ -31,7 +31,7 @@ Scripts with npx are often used to:
 *   Run common long-living tooling (`nodemon`, `tailwindcss`, and `ngrok`)
 *   Make you smile (`workin-hard`, `cowsay`)
 
-[We showed you how to create an npm package in a previous blog post.](https://developers.deepgram.com/blog/2021/12/build-npm-packages) In this post, we'll extend on that sample project and build an npx command to interact with our package that queried [The Open Movie Database](http://www.omdbapi.com).
+[We showed you how to create an npm package in a previous blog post.](https://sweet-pie-c52a63-blog.netlify.app/build-npm-packages) In this post, we'll extend on that sample project and build an npx command to interact with our package that queried [The Open Movie Database](http://www.omdbapi.com).
 
 The final project code is available on the [npx branch of our npm-package repository](https://github.com/deepgram-devs/npm-package/tree/npx).
 

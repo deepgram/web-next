@@ -46,7 +46,7 @@ The full-stack application will be expanded from the barebones version to includ
 *   a state management library (**Vuex**) which will update state to allow access to the stream page if the correct code is entered
 *   a backend server (**node.js** and **express**) with two endpoints, one for getting a **Deepgram** temporary key so I can keep my Deepgram API key secure, and one for verifying the secret code the user must input to enter the site
 
-I recommend reading [the first post](https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/#setting-up-amazon-ivs) to go through how to set up the video streaming technologies, **Open Broadcaster Software**, and **Amazon IVS**. And for an introduction to Vue 3, it might be worth checking out my series [Diving Into Vue 3](https://developers.deepgram.com/blog/2022/01/diving-into-vue-3-getting-started/).
+I recommend reading [the first post](https://sweet-pie-c52a63-blog.netlify.app/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/#setting-up-amazon-ivs) to go through how to set up the video streaming technologies, **Open Broadcaster Software**, and **Amazon IVS**. And for an introduction to Vue 3, it might be worth checking out my series [Diving Into Vue 3](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-getting-started/).
 
 ## What I'll Build Today
 
@@ -134,7 +134,7 @@ This is the folder that contains the routes and creates the router, so that each
 
 ### composables
 
-This folder contains composition functions that run the logic to make stuff happen, such as getting the user's microphone or bringing in the Amazon IVS player. Composition functions, or 'composables', are a Vue 3 way of encapsulating logic that can then be run inside the setup function inside a component. Read more about composables [here](https://developers.deepgram.com/blog/2022/02/diving-into-vue-3-reusability-with-composables/#reusability-in-the-composition-api).
+This folder contains composition functions that run the logic to make stuff happen, such as getting the user's microphone or bringing in the Amazon IVS player. Composition functions, or 'composables', are a Vue 3 way of encapsulating logic that can then be run inside the setup function inside a component. Read more about composables [here](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-reusability-with-composables/#reusability-in-the-composition-api).
 
 ### components
 

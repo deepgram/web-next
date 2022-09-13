@@ -67,7 +67,7 @@ My next step will involve reaching out to my network. To do this, I could create
 
 ### Writing Phase
 
-After the exploration phase, I have a pretty good sense of the direction I want to take things. This is the perfect time to start drafting my blog post. Within that post, I can link to previous posts I’ve written like [Technical Writing: A Beginner's Guide](https://developers.deepgram.com/blog/2022/03/technical-writing-a-beginners-guide/) because it’s relevant to the topic of Storytelling-it’s useful to know writing basics before telling the story.
+After the exploration phase, I have a pretty good sense of the direction I want to take things. This is the perfect time to start drafting my blog post. Within that post, I can link to previous posts I’ve written like [Technical Writing: A Beginner's Guide](https://sweet-pie-c52a63-blog.netlify.app/technical-writing-a-beginners-guide/) because it’s relevant to the topic of Storytelling-it’s useful to know writing basics before telling the story.
 
 ### Repurpose Phase
 

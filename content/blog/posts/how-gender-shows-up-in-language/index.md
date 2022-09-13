@@ -24,7 +24,7 @@ shorturls:
   reddit: https://dpgr.am/97502ba
   facebook: https://dpgr.am/9e07a5d
 ---
-Happy Pride! This time last year, we published an article about the language of allyship that included a brief discussion of the history of the [singular they](https://blog.deepgram.com/the-language-of-lgbtq-inclusion-and-allyship/) in English. As this year's Pride Month wraps up, we're coming back to the theme of gender and language for a look at how languages around the world incorporate gender and are influenced by the concept of gender in turn.
+Happy Pride! This time last year, we published an article about the language of allyship that included a brief discussion of the history of the [singular they](https://sweet-pie-c52a63-blog.netlify.app/the-language-of-lgbtq-inclusion-and-allyship/) in English. As this year's Pride Month wraps up, we're coming back to the theme of gender and language for a look at how languages around the world incorporate gender and are influenced by the concept of gender in turn.
 
 ## What is Grammatical Gender?
 

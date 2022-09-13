@@ -218,7 +218,7 @@ Restart your server, and navigate to a room as a lecturer. Look at your terminal
 
 ### Accessing Lecturer's Microphone
 
-There are parts of this project which build on our ["Get Live Speech Transcriptions In Your Browser"](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/) blog post and video. I'll call these out, and go into less depth about the code. This is one of them - add this code to `lecturer.html` to get access to the user's mic:
+There are parts of this project which build on our ["Get Live Speech Transcriptions In Your Browser"](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/) blog post and video. I'll call these out, and go into less depth about the code. This is one of them - add this code to `lecturer.html` to get access to the user's mic:
 
 ```js
 navigator.mediaDevices
@@ -296,7 +296,7 @@ ws.onopen = start
 ws.onmessage = handleResponse
 ```
 
-In the second annotated spot, add our event handlers for a connection being opened, and receiving data back from Deepgram. Take a look at ["Get Live Speech Transcriptions In Your Browser"](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/) for more explanation.
+In the second annotated spot, add our event handlers for a connection being opened, and receiving data back from Deepgram. Take a look at ["Get Live Speech Transcriptions In Your Browser"](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/) for more explanation.
 
 ```js
 function start() {

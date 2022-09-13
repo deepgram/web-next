@@ -28,7 +28,7 @@ Recently I wrote about a project I did to help me learn Pinia, Vue 3's new offic
 
 It dawned on me that a fun way to jazz up this project would be to use Deepgram to make the app **voice-powered** so that a user can **speak** commands to add, delete, or check-off items on the list.
 
-I'm inspired by my colleague Bekah's series about [updating portfolio projects](https://developers.deepgram.com/blog/2022/03/freecodecamp-quote-generator-upgrade/). A voice-based to-do list app would be a lot more interesting than a regular to-do list app!
+I'm inspired by my colleague Bekah's series about [updating portfolio projects](https://sweet-pie-c52a63-blog.netlify.app/freecodecamp-quote-generator-upgrade/). A voice-based to-do list app would be a lot more interesting than a regular to-do list app!
 
 ## Project Overview
 
@@ -39,7 +39,7 @@ I'm inspired by my colleague Bekah's series about [updating portfolio projects](
 </ol>
 </Panel>
 
-The project I originally did can be found in this [repo](https://github.com/deepgram-devs/todo-pinia), and the accompanying blog post is [here](https://developers.deepgram.com/blog/2022/04/build-a-todo-list-with-pinia-and-vue-3/). Check it out to build the standard to-do list project with Vue 3 and Pinia.
+The project I originally did can be found in this [repo](https://github.com/deepgram-devs/todo-pinia), and the accompanying blog post is [here](https://sweet-pie-c52a63-blog.netlify.app/build-a-todo-list-with-pinia-and-vue-3/). Check it out to build the standard to-do list project with Vue 3 and Pinia.
 
 In this iteration of the project, I'll continue to use [Pinia](https://pinia.vuejs.org/) to manage global state, but I'll add Deepgram so I can use Deepgram's speech-to-text API to help me power the voice-control feature. If you want to build this voice-control feature along with me, I've created a starting branch [here](https://github.com/deepgram-devs/todo-pinia-deepgram/tree/starter-branch).
 

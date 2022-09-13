@@ -37,11 +37,11 @@ With the advent of voice technology, however, businesses now have a way to colle
 
 ### 1\. Customer Service
 
-Customer service is one of the most obvious applications for voice technology. Call center agents can use it to collect customer feedback after a call. This feedback can be used to improve the customer service experience and make sure that customers are getting the help they need. What's more, [searchable audio](https://blog.deepgram.com/search-through-sound-finding-phrases-in-audio/) can help managers and marketers quickly pull out customer comments about specific things based on information that already exists-no focus groups needed.
+Customer service is one of the most obvious applications for voice technology. Call center agents can use it to collect customer feedback after a call. This feedback can be used to improve the customer service experience and make sure that customers are getting the help they need. What's more, [searchable audio](https://sweet-pie-c52a63-blog.netlify.app/search-through-sound-finding-phrases-in-audio/) can help managers and marketers quickly pull out customer comments about specific things based on information that already exists-no focus groups needed.
 
 ### 2\. Market Research
 
-Market research is another area where voice technology is starting to make an impact. Businesses can use voice technology to collect customer feedback about new products or services. This feedback can help businesses make better decisions about what to develop and how to market their products. For example, voice technology can help businesses understand how customers feel about their products and services. This is because it can capture the customer's tone of voice, which [can provide valuable insights into their emotional state](https://blog.deepgram.com/sentiment-analysis-emotion-regulation-difference/). Voice technology can also help businesses track customer satisfaction over time and across different channels.
+Market research is another area where voice technology is starting to make an impact. Businesses can use voice technology to collect customer feedback about new products or services. This feedback can help businesses make better decisions about what to develop and how to market their products. For example, voice technology can help businesses understand how customers feel about their products and services. This is because it can capture the customer's tone of voice, which [can provide valuable insights into their emotional state](https://sweet-pie-c52a63-blog.netlify.app/sentiment-analysis-emotion-regulation-difference/). Voice technology can also help businesses track customer satisfaction over time and across different channels.
 
 ### 3\. Product Development
 

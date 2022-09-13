@@ -45,9 +45,9 @@ Today's post will cover how to use Vue 3 composables to power a text-captions co
 *   Using Vue 3's `watch` method to react to data that is updating in real-time as Deepgram sends a text transcription back through a browser WebSocket.
 *   Writing logic that is sensitive to the order things occur - i.e., asynchronous logic that flows between the component and the composable.
 
-This post assumes some knowledge of Vue 3, in particular Vue composables. For a refresher on Vue 3, check out my series [Diving Into Vue 3](https://developers.deepgram.com/blog/2022/01/diving-into-vue-3-getting-started/).
+This post assumes some knowledge of Vue 3, in particular Vue composables. For a refresher on Vue 3, check out my series [Diving Into Vue 3](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-getting-started/).
 
-Today I will build the `AudioCaptions.vue` component. (For the `VideoPlayer` component, see my [previous post](https://developers.deepgram.com/blog/2022/03/how-to-write-vue-3-composables-for-a-third-party-API-integration/#composable-to-bring-in-an-external-script) in the series.) Here is the page with minimal styling. I've put a red box around the `AudioCaptions.vue` component:
+Today I will build the `AudioCaptions.vue` component. (For the `VideoPlayer` component, see my [previous post](https://sweet-pie-c52a63-blog.netlify.app/how-to-write-vue-3-composables-for-a-third-party-API-integration/#composable-to-bring-in-an-external-script) in the series.) Here is the page with minimal styling. I've put a red box around the `AudioCaptions.vue` component:
 
 ![StreamChannel page emphasizing AudioCaptions.vue component](https://res.cloudinary.com/deepgram/image/upload/v1648829348/blog/2022/03/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/StreamChannel_captions.png)
 
@@ -97,7 +97,7 @@ In the template where it says "Status Will Go Here," I plan to add a reactive va
 
 ### useDeepgramKey Composable
 
-The first composable I'm going to write will be called `useDeepgramKey.js`, and its purpose will be to fetch a temporary API key. If I fetch a temporary API key from Deepgram, I can use the key in the browser and not worry about exposing the key since the key will expire almost immediately. Read more about this feature in a blog post that Kevin wrote about [protecting your Deepgram API key](https://developers.deepgram.com/blog/2022/01/protecting-api-key/).
+The first composable I'm going to write will be called `useDeepgramKey.js`, and its purpose will be to fetch a temporary API key. If I fetch a temporary API key from Deepgram, I can use the key in the browser and not worry about exposing the key since the key will expire almost immediately. Read more about this feature in a blog post that Kevin wrote about [protecting your Deepgram API key](https://sweet-pie-c52a63-blog.netlify.app/protecting-api-key/).
 
 On the backend, I have set up an endpoint to receive the fetch request from the composable. That endpoint can be seen in the `server.js` file in my repo [here](https://github.com/deepgram-devs/livestream-amazonIVS-and-deepgram/blob/deepgram-composables/server.js).
 
@@ -246,7 +246,7 @@ I haven't created the `useMicrophone` composable yet, so I'll make a quick detou
 
 ### useMicrophone Composable
 
-The `useMicrophone` composable will rely on the browser Media Stream API and the `getUserMedia` method to request permission to use the browser microphone of the user and pull the audio from it. Since there are several other blog posts in [Deepgram Docs](https://developers.deepgram.com/) about this nifty API, I won't go into detail about how it works. Check out [Brian's post](https://developers.deepgram.com/blog/2021/12/getting-started-with-mediastream-api/) for a general introduction to it.
+The `useMicrophone` composable will rely on the browser Media Stream API and the `getUserMedia` method to request permission to use the browser microphone of the user and pull the audio from it. Since there are several other blog posts in [Deepgram Docs](https://developers.deepgram.com/) about this nifty API, I won't go into detail about how it works. Check out [Brian's post](https://sweet-pie-c52a63-blog.netlify.app/getting-started-with-mediastream-api/) for a general introduction to it.
 
 This composable is also going to use an `async` function since the `getUserMedia` method requires waiting for the user to give permission to use the microphone. The time involved means that this method returns a promise. I already know how to write this type of composable since I just did it in the last section.
 
