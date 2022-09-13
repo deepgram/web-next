@@ -9,12 +9,40 @@
 	--docsearch-hit-color: white;
 }
 
-.DocSearch-Modal {
+.DocSearch-Hit {
 	border-radius: 0px;
+	@apply my-2 py-0;
+}
+.DocSearch-Hit a {
+	border-radius: 1px;
+	box-shadow: none;
+}
+
+.DocSearch-Modal {
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
 	margin: 0 auto auto;
 	box-shadow: none;
 }
 
 .DocSearch-Hit-icon {
 	display: none;
+}
+
+.DocSearch-Dropdown {
+	border: 0px;
+}
+
+.DocSearch-Footer {
+	@apply bg-darkCharcoal;
+	border-bottom-left-radius: 1px;
+	border-bottom-right-radius: 1px;
+	filter: drop-shadow(0px -8px 8px rgba(0, 0, 0, 0.7));
+	border: 0px;
+	box-shadow: none;
+}
+
+.DocSearch-Commands-Key {
+	background: transparent;
+	@apply border-stone rounded-sm border;
 }

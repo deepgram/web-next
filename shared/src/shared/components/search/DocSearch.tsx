@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "preact/hooks";
 export default function Search() {
 	const [isOpen, setIsOpen] = useState(false);
 	const searchButton = useRef(document.getElementById("docsearch-button"));
-	const searchButtonMobileobile = useRef(document.getElementById("docsearch-button-mobile"));
+	const searchButtonMobile = useRef(document.getElementById("docsearch-button-mobile"));
 	const [initialQuery, setInitialQuery] = useState<string>();
 
 	const onOpen = useCallback(() => {
@@ -39,6 +39,13 @@ export default function Search() {
 		onClose,
 		onInput,
 		searchButton,
+	});
+
+	useDocSearchKeyboardEvents({
+		isOpen,
+		onOpen,
+		onClose,
+		onInput,
 		searchButtonMobile,
 	});
 

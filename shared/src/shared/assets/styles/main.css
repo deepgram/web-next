@@ -95,6 +95,30 @@ html {
 }
 
 @layer components {
+	/** 
+	 * dg util styles
+	 *
+	 * ONLY abstracting these to use them here and 
+	 * for hubspot forms, please do not replicate
+	 * this pattern 
+	 */
+	.dg-form-text {
+		@apply text-cloud;
+	}
+
+	.dg-label {
+		@apply text-body-smallest;
+	}
+
+	.dg-input {
+		@apply placeholder:text-stone bg-almostBlack w-full px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
+	}
+
+	.dg-checkbox {
+		@apply border-stone checked:bg-meadow h-4 w-4 appearance-none border-2;
+	}
+	/* end */
+
 	.button {
 		@apply mb-0 min-h-[3.375rem] grow-0 px-[2.75rem] pb-[1.1rem] pt-[1.15rem] text-center text-[1rem] font-[700] leading-[1rem];
 	}
@@ -108,11 +132,11 @@ html {
 	}
 
 	.input-group label {
-		@apply text-body-smallest;
+		@apply dg-label;
 	}
 
 	.input-group {
-		@apply text-cloud flex w-full flex-col;
+		@apply dg-form-text flex w-full flex-col;
 	}
 
 	.input-group + .button,
@@ -147,7 +171,7 @@ html {
 	}
 
 	.input-group input[type="checkbox"] {
-		@apply border-stone checked:bg-meadow h-4 w-4 appearance-none border-2;
+		@apply dg-checkbox;
 	}
 
 	.input-group input[type="email"],
@@ -158,7 +182,7 @@ html {
 	.input-group input[type="url"],
 	.input-group input[type="text"],
 	.input-group textarea {
-		@apply placeholder:text-stone bg-almostBlack w-full px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
+		@apply dg-input;
 	}
 
 	.small-icon svg {
@@ -317,5 +341,44 @@ html {
 
 	.nudge-icon--bottom:hover .inline-icon {
 		@apply -mb-[0.3em] mt-[0.3em];
+	}
+
+	/** hbspot forms */
+	:global(.hbspt-form) {
+		@apply dg-form-text;
+	}
+
+	:global(.hbspt-form label) {
+		@apply dg-label;
+	}
+
+	:global(.hbspt-form input[type="email"]),
+	:global(.hbspt-form input[type="password"]),
+	:global(.hbspt-form input[type="search"]),
+	:global(.hbspt-form input[type="tel"]),
+	:global(.hbspt-form input[type="text"]),
+	:global(.hbspt-form input[type="url"]),
+	:global(.hbspt-form input[type="text"]),
+	:global(.hbspt-form textarea) {
+		@apply dg-input;
+	}
+
+	:global(.hbspt-form input[type="submit"]),
+	:global(.hbspt-form input[type="button"]),
+	:global(.hbspt-form button) {
+		@apply button button--primary mt-4;
+	}
+
+	:global(.hbspt-form .hs-form-field) {
+		@apply mt-2;
+	}
+
+	:global(.hbspt-form form fieldset) {
+		@apply flex max-w-full flex-col md:flex-row md:flex-nowrap md:items-end md:gap-5;
+	}
+
+	:global(.hbspt-form form fieldset .field) {
+		width: auto !important;
+		float: none;
 	}
 }

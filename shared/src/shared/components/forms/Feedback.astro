@@ -60,10 +60,10 @@ const url = Astro.url;
     }
   }"
 >
-	<h4>Share your feedback</h4>
+	<h4 x-show="!thanks">Share your feedback</h4>
 	<div x-show="error" x-text="error"></div>
 	<div>
-		<p class="feedback-question">Was this article useful or interesting to you?</p>
+		<p x-show="!thanks" class="feedback-question">Was this article useful or interesting to you?</p>
 		<div x-show="!thanks" class="thumbs flex items-center justify-start">
 			<form id={`thumbsup-form-${formUuid}`} :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating" @submit.prevent="ratePage">
 				<input id={`thumbsup-${formUuid}`} type="submit" aria-hidden="true" class="hidden" />
@@ -126,7 +126,7 @@ const url = Astro.url;
 			<input type="hidden" name="hook" value="bgvnn9g" />
 		</form>
 		<div x-show="thanks" class="px-1">
-			<p class="text-watercourse text-2xl font-bold">Thank you!</p>
+			<p class="text-watercourse text-2xl font-bold pt-4 pb-2">Thank you!</p>
 			<p>We appreciate your response.</p>
 		</div>
 	</div>

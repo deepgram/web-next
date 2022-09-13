@@ -24,7 +24,8 @@ export default defineConfig({
 	vite: {
 		plugins: [vitePreact()],
 		resolve: {
-			preserveSymlinks: true, // required for dev to read contents of symlinked directory
+			// required for dev to read contents of symlinked directory
+			preserveSymlinks: true,
 		},
 	},
 	legacy: {
