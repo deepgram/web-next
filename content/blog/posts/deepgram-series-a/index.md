@@ -1,7 +1,7 @@
 ---
 title: We Raised $12 Million to Solve Speech Recognition in the Enterprise
 description: At Deepgram, we're working to change the speech recognition game
-  from the ground up.
+  from the ground up. Learn about our Series A here.
 date: 2020-03-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981352/blog/deepgram-series-a/we-raised-12M%402x.jpg
 authors:
