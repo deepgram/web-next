@@ -8,7 +8,7 @@ authors:
   - scott-stephenson
 category: speech-trends
 tags:
-  - musings
+  - enterprise-connect
 seo:
   title: UCaaS - the experts speak at Enterprise Connect
   description: ""
