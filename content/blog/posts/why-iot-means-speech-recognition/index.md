@@ -45,7 +45,7 @@ The Amazon Echo and Google Home are two renowned examples of smart speakers-voic
 
 Apple HomeKit, GoogleHome and the Athom Homey are three examples of devices designed to allow humans to talk to their machines, rather than push buttons. Now, the 30 possible functions of the modern home thermostat, as well as the 40 billion possible functions of a modern television set can be controlled by speaking. We can think of these devices as smart speakers more richly integrated into the home. 
 
-![ALT](https://res.cloudinary.com/deepgram/image/upload/v1661976770/blog/why-iot-means-speech-recognition/brandon-jacoby-306845-unsplash.jpg) 
+![ALT](https://res.cloudinary.com/deepgram/image/upload/v1661976770/blog/why-iot-means-speech-recognition/brandon-jacoby-306845-unsplash.jpg)
 
 **Smart home solutions are a transformational technology.** Here's why:
 
@@ -62,4 +62,4 @@ Speech recognition APIs make it possible to interact with the machines, apps and
 
 1. Products will increasingly be designed with voice in mind.
 2. Advertisers will take the [voice channel](https://sweet-pie-c52a63-blog.netlify.app/how-can-companies-extract-more-value-out-of-voice/)-listening and speaking-into account. Advertising campaigns must be designed to work with this changing, multichannel ecosystem.
-3. As companies design products that rely on more and more accurate speech recognition APIs, product leaders will look to [next generation automatic speech recognition](https://www.deepgram.com/) technologies to reliably build better voice experiences for their users.
+3. As companies design products that rely on more and more accurate speech recognition APIs, product leaders will look to [next-generation automatic speech recognition](https://sweet-pie-c52a63-blog.netlify.app/deep-learning-speech-recognition/) technologies to reliably build better voice experiences for their users.
