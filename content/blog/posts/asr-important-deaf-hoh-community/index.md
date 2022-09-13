@@ -60,4 +60,4 @@ And social challenges also exist for the deaf and HOH community. Without a share
 
 ## Wrapping Up
 
-If you're working on a project to transcribe speech for the deaf and HOH community and would like to learn more about how Deepgram can help, [feel free to reach out](https://deepgram.com/contact-us/), or [sign up for a free API key](https://console.deepgram.com/signup) to give the system a try on your own. \[newsletter_signup]
+If you're working on a project to transcribe speech for the deaf and HOH community and would like to learn more about how Deepgram can help, [feel free to reach out](https://deepgram.com/contact-us/), or [sign up for a free API key](https://console.deepgram.com/signup) to give the system a try on your own.
