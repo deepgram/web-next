@@ -22,8 +22,6 @@ shorturls:
   reddit: https://dpgr.am/7a16a37
   facebook: https://dpgr.am/1fe2dd1
 ---
-## **General Release Information**
-
 Deepgram regularly releases new Automatic Speech Recognition (ASR) models and other enterprise features. These releases are planned on a monthly basis with releases occurring throughout the month.
 
 ## Opting In
