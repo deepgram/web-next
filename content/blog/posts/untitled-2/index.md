@@ -9,7 +9,7 @@ authors:
   - scott-stephenson
 category: dg-insider
 tags:
-  - musings
+  - enterprise-connect
 seo:
   title: Live from Enterprise Connect!
   description: ""
