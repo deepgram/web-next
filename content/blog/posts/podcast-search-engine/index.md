@@ -136,7 +136,7 @@ terms to.
 ## Building the Podcast Search Engine
 
 I spent some time reading
-[Tonya](https://developers.deepgram.com/blog/authors/tonyasims/)'s blog posts on
+[Tonya](https://sweet-pie-c52a63-blog.netlify.app/authors/tonya-sims/)'s blog posts on
 [FastAPI](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-fastapi/) and
 [Django](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-django/),
 but eventually decided on [Flask](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-flask/)

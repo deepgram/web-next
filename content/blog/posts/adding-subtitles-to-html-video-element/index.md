@@ -95,6 +95,6 @@ You can add as many subtitle tracks as you want, but only one can have the `defa
 </video>
 ```
 
-As a final note, if you've not seen [Scott's Chili Pepper video](https://deepgram.com/blog/chili-pepper/) which is in the header image for this post - you should. It's hilarious. If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
+As a final note, if you've not seen [Scott's Chili Pepper video](https://sweet-pie-c52a63-blog.netlify.app/chili-pepper/) which is in the header image for this post - you should. It's hilarious. If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
         

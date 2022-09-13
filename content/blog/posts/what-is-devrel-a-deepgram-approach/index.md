@@ -25,7 +25,7 @@ shorturls:
   facebook: https://dpgr.am/e5819e2
 ---
 
-There’s been a developer relations (DevRel) explosion over the last couple of years, and the pandemic has forced many teams to redefine what their DevRel teams are doing and how they’re doing it. Many teams who have spent most of their time doing conference talks and in-person interactions have been forced to pivot their focus to online content creation, including talks, and exploring new modes of engagement like voice chats. Before we jump into the [Deepgram DevRel team](https://developers.deepgram.com/blog/categories/devlife/), let’s take a look at some approaches to developer relations.
+There’s been a developer relations (DevRel) explosion over the last couple of years, and the pandemic has forced many teams to redefine what their DevRel teams are doing and how they’re doing it. Many teams who have spent most of their time doing conference talks and in-person interactions have been forced to pivot their focus to online content creation, including talks, and exploring new modes of engagement like voice chats. Before we jump into the [Deepgram DevRel team](https://sweet-pie-c52a63-blog.netlify.app/categories/devlife/), let’s take a look at some approaches to developer relations.
 
 ## What is DevRel?
 
@@ -69,4 +69,4 @@ Our team members are involved in each of the pillars and we value the support an
 As a DevRel team, we want our interactions to build up the developers we’re engaging with--whether through our site and tools, content, or other interactions. We want developers to dream big, and we want to help make those dreams happen. We’re here to help developers become better developers.
 
 If you have questions or want to hear more about starting in DevRel, you can check our upcoming Twitter Space or let us know what questions you have about DevRel in general or how our team works together: [@DeepgramDevs](https://twitter.com/DeepgramDevs)
-
+

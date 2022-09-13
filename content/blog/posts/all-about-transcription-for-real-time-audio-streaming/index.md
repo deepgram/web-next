@@ -36,7 +36,7 @@ You can get the full instructions and code in our [streaming quickstart guide](h
 
 ## Why is Live Audio Streaming Transcription Used?
 
-Real-time streaming transcription is used to get immediate transcriptions of an audio stream, which is then provided to a human reader or a machine. For a human reader, this is called [live captioning](https://deepgram.com/blog/closed-captioning-companies-use-asr/). The text appears within seconds of the speaker finishing a word. [Captioning](https://deepgram.com/blog/closed-captioning-companies-use-asr/) has many benefits, but one compelling example is to allow hearing-impaired individuals to follow what a speaker is saying.
+Real-time streaming transcription is used to get immediate transcriptions of an audio stream, which is then provided to a human reader or a machine. For a human reader, this is called [live captioning](https://sweet-pie-c52a63-blog.netlify.app/closed-captioning-companies-use-asr/). The text appears within seconds of the speaker finishing a word. [Captioning](https://sweet-pie-c52a63-blog.netlify.app/closed-captioning-companies-use-asr/) has many benefits, but one compelling example is to allow hearing-impaired individuals to follow what a speaker is saying.
 
 For a machine, real-time streaming transcription can be used to transcribe a user's audio responses to an IVR, [voicebot](https://deepgram.com/solutions/voicebots/), or virtual assistant to continue a human-to-machine conversation. Real-time streaming can also be used to search for important information in a conversation as it's happening, and then provide a contact center agent with on-screen tips or hints to help solve a customer's issues or recommend an upsell.
 

@@ -74,7 +74,7 @@ One of the benefits of using a speech recognition API like [Deepgram is that it 
 
 #### Tailored Models
 
-Another big benefit of using an end-to-end deep learning speech-to-text solution like Deepgram is that it offers tailored models via [transfer learning](https://deepgram.com/blog/transfer-learning-spanish-portuguese/). This means that businesses can create custom models that are specifically designed for their needs, based on their own data. This can be extremely helpful for businesses that have specific requirements or complicated audio data. For example, [NASA was able to use this ability to transcribe space-to-ground communications](https://deepgram.com/case-study-nasa/) more accurately than any other tool they tried.
+Another big benefit of using an end-to-end deep learning speech-to-text solution like Deepgram is that it offers tailored models via [transfer learning](https://sweet-pie-c52a63-blog.netlify.app/transfer-learning-spanish-portuguese/). This means that businesses can create custom models that are specifically designed for their needs, based on their own data. This can be extremely helpful for businesses that have specific requirements or complicated audio data. For example, [NASA was able to use this ability to transcribe space-to-ground communications](https://deepgram.com/case-study-nasa/) more accurately than any other tool they tried.
 
 ### Speech Understanding
 

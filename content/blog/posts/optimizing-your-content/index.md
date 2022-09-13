@@ -41,7 +41,7 @@ How can you be more public with your writing process? This is the first step in 
 
 ## Posting Your Content
 
-Once you've completed your writing, take advantage of the many places to gain visibility. If you’re posting your blog and not sharing anywhere else, you’re losing your reach. For example, I post on [my own site](https://bekahhw.github.io/) and [Dev.to](https://dev.to/bekahhw) or on [the Deepgram Developers blog](https://developers.deepgram.com/blog/) and Dev.to links on Twitter and LinkedIn and sometimes Instagram and Polywork. I’m familiar with those platforms, audiences, and how to post. You might also post on reddit, Hashnode, Facebook--there’s no short list of where to post.
+Once you've completed your writing, take advantage of the many places to gain visibility. If you’re posting your blog and not sharing anywhere else, you’re losing your reach. For example, I post on [my own site](https://bekahhw.github.io/) and [Dev.to](https://dev.to/bekahhw) or on [the Deepgram Developers blog](https://sweet-pie-c52a63-blog.netlify.app/) and Dev.to links on Twitter and LinkedIn and sometimes Instagram and Polywork. I’m familiar with those platforms, audiences, and how to post. You might also post on reddit, Hashnode, Facebook--there’s no short list of where to post.
 
 ## Types of Content
 

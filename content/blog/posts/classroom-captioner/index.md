@@ -22,7 +22,7 @@ og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453858/blog/classroom-captioner/ograph.png
 ---
 
-Many places of study offer accessibility accommodations for students who need them to understand and participate in lectures and seminars. However, the process for asking for and receiving this help can limit who can have it, and it really [isn't good enough](https://deepgram.com/blog/automatic-speech-recognition-education/).
+Many places of study offer accessibility accommodations for students who need them to understand and participate in lectures and seminars. However, the process for asking for and receiving this help can limit who can have it, and it really [isn't good enough](https://sweet-pie-c52a63-blog.netlify.app/automatic-speech-recognition-education/).
 
 ![A lecturer at the front of a classroom](https://res.cloudinary.com/deepgram/image/upload/v1644272678/blog/2022/02/classroom-captioner/iglt.jpg)
 

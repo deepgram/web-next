@@ -80,8 +80,8 @@ As you work on this project, it’s useful to have some understanding of APIs an
 
 <Panel type="info" title="Resource Break!">
 
-<li><a href="https://developers.deepgram.com/blog/2021/11/getting-started-with-apis/">Getting Started with APIs</a>  by <a href="https://developers.deepgram.com/blog/authors/kevinlewis/">Kevin Lewis</a></li>
-<li><a href="https://developers.deepgram.com/blog/2021/11/getting-started-with-json/">Getting Started with JSON</a>  by <a href="https://developers.deepgram.com/blog/authors/sandrarodgers/">Sandra Rodgers</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/getting-started-with-apis/">Getting Started with APIs</a>  by <a href="https://sweet-pie-c52a63-blog.netlify.app/authors/kevin-lewis/">Kevin Lewis</a></li>
+<li><a href="https://sweet-pie-c52a63-blog.netlify.app/getting-started-with-json/">Getting Started with JSON</a>  by <a href="https://sweet-pie-c52a63-blog.netlify.app/authors/sandra-rodgers/">Sandra Rodgers</a></li>
 </Panel>
 
 ### Overview
