@@ -9,6 +9,11 @@ authors:
 category: announcement
 tags:
   - on-prem
+seo:
+  title: Deepgram On-premises Improved Diarization, New Ways to Invoke Models, and
+    Streaming Callback Troubleshooting
+  description: Deepgram's August feature release includes support for improved
+    diarization with significantly improved accuracy. Read more here!
 ---
 ## Deepgram On-premises Improved Diarization, New Ways to Invoke Models, and Streaming Callback Troubleshooting
 
