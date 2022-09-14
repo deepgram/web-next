@@ -1,16 +1,10 @@
+@import url(../fonts/inter.css);
+@import url(../fonts/favorit.css);
+@import url(../fonts/fira.css);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-	font-family: "favorit";
-	src: url("../fonts/ABCFavorit-Bold.woff2");
-}
-
-@font-face {
-	font-family: "Fira Code";
-	src: url("../fonts/FiraCode-Light.ttf");
-}
 
 /* for the notch */
 html {

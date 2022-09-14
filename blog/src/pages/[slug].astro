@@ -15,6 +15,7 @@ import Meta from "../shared/components/meta/Meta.astro";
 import Icon from "../shared/components/general/Icon.astro";
 import RelatedResources from "../components/posts/RelatedResources.astro";
 import Link from "../shared/components/general/Link.astro";
+import MetaLink from "../shared/components/meta/Link.astro";
 import Backlink from "../components/nav/Backlink.astro";
 import InlineIcon from "../shared/components/general/InlineIcon.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
@@ -162,7 +163,7 @@ const schema = [
 
 	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />
 	<Description slot="head:description" name="description" content={seo.description} />
-	<Link slot="head:canonical" rel="canonical" href={seo.url} />
+	<MetaLink slot="head:canonical" rel="canonical" href={seo.url} />
 
 	<Meta slot="og:title" property="og:title" content={og.title} />
 	<Meta slot="og:description" property="og:description" content={og.description} />
