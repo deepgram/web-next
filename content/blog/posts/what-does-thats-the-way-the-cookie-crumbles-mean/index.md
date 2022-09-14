@@ -32,7 +32,9 @@ It is, however, worthwhile to look at the origins of the word "cookie." Finding 
 
  ![jaffa](https://res.cloudinary.com/deepgram/image/upload/v1661976806/blog/what-does-thats-the-way-the-cookie-crumbles-mean/jaffa.jpg) 
 
-*Is it a cake? is it a cookie? Lingustically they're arguably the same, but as far as the taxman is concerned, they're a cake-in the UK.* Cookies and all baked goods changed in character after the 1860s when pelleted yeasts where invented. Prior to this date, and especially before the 17th century, it was hard (if not impossible) to make sweet AND leavened pastries. Much of the calories eaten in the Western world, were made of breads that looked nothing like our breads.
+*Is it a cake? is it a cookie? Lingustically they're arguably the same, but as far as the taxman is concerned, they're a cake-in the UK.*
+
+Cookies and all baked goods changed in character after the 1860s when pelleted yeasts where invented. Prior to this date, and especially before the 17th century, it was hard (if not impossible) to make sweet AND leavened pastries. Much of the calories eaten in the Western world, were made of breads that looked nothing like our breads.
 
 ## What Are Idioms?
 

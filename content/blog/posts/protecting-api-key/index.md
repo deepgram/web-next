@@ -23,7 +23,7 @@ og:
 
 We love how little code is needed to get live transcripts directly from a web browser with Deepgram, but doing so may leave your API Key vulnerable in a user-accessible client. Any user with access to your key can access the Deepgram APIs, which, in turn, may provide full account access.
 
-This post will cover three approaches to live transcription from the browser while protecting your account. Before reading this guide, you should understand how to open a WebSocket connection and send data to Deepgram in the browser - if not, we cover it in this [blog post](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/).
+This post will cover three approaches to live transcription from the browser while protecting your account. Before reading this guide, you should understand how to open a WebSocket connection and send data to Deepgram in the browser - if not, we cover it in this [blog post](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/).
 
 ## Scopes and Roles
 

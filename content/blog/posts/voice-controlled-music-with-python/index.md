@@ -55,7 +55,7 @@ Now that we have our Deepgram API Key let’s set up our Python AI piano project
 
 Make a Python directory called `play-piano` to hold our project. Inside of it, create a new file called `piano-with-deepgram.py`, which will have our main code for the project.
 
-We need to create a virtual environment and activate it so we can `pip` install our Python packages. We have a more in-depth article about virtual environments on our Deepgram Developer [blog](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/).
+We need to create a virtual environment and activate it so we can `pip` install our Python packages. We have a more in-depth article about virtual environments on our Deepgram Developer [blog](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/).
 
 Activate the virtual environment after it’s created and install the following Python packages from the terminal.
 

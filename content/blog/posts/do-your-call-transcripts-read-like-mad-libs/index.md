@@ -23,7 +23,7 @@ shorturls:
 ---
 <iframe src="https://www.youtube.com/embed/Hh9Og9reNBs" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-When the speech recognition API you use fails to recognize the words that matter to you, it produces absurd sounding and often useless transcripts. Such annoying (though sometimes funny) errors can be avoided by using a custom speech recognition model designed to understand your particular call data. \[Accurate, custom speech recognition APIs](https://developers.deepgram.com/documentation/) can be the key to leveraging the full potential of your voice data.
+When the speech recognition API you use fails to recognize the words that matter to you, it produces absurd sounding and often useless transcripts. Such annoying (though sometimes funny) errors can be avoided by using a custom speech recognition model designed to understand your particular call data. [Accurate, custom speech recognition APIs](https://developers.deepgram.com/documentation/) can be the key to leveraging the full potential of your voice data.
 
 ### About Mad Libs
 

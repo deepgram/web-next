@@ -25,7 +25,7 @@ Word Error Rate (WER) is a common metric used to compare the accuracy of the tra
 
 ## How to Calculate WER
 
-Word error rate is the most common metric used today to evaluate the effectiveness of an [automatic speech recognition system (ASR)](https://blog.deepgram.com/what-is-asr/). It is simply calculated as: 
+Word error rate is the most common metric used today to evaluate the effectiveness of an [automatic speech recognition system (ASR)](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/). It is simply calculated as: 
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976771/blog/what-is-word-error-rate/wer-1.jpg)
 
@@ -76,13 +76,15 @@ Accent is a highly relative, very human concept. This author has a strong accent
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976774/blog/what-is-word-error-rate/raghu-nayyar-501556-unsplash-1.jpg)
 
-In New Delhi-English is spoken natively and non-natively by a large percentage of the population.Photo Credit: [Raghu Nayyar](https://unsplash.com/photos/EpAq2EE-shg). Therefore, if your data has a wider variety of accents (it almost certainly does), or is limited to a set of accents not well represented in the data used to create general speech recognition APIs, then you probably need a [custom-built model](https://deepgram.com/product/train/) to really get a good look at your data.
+*In New Delhi-English is spoken natively and non-natively by a large percentage of the population. Photo Credit: [Raghu Nayyar](https://unsplash.com/photos/EpAq2EE-shg).* 
+
+Therefore, if your data has a wider variety of accents (it almost certainly does), or is limited to a set of accents not well represented in the data used to create general speech recognition APIs, then you probably need a [custom-built model](https://deepgram.com/product/train/) to really get a good look at your data.
 
 ### Noisy Data
 
 Wouldn't it be nice if everyone who called us to do business did so from a sound studio? Wouldn't you love that crisp, bassy, noise-free audio? Better yet, how about they didn't call us over the phone, since VoIP and traditional phone systems compress audio, cut off many frequencies and add noise artifacts? The real world is full of noise. Phone calls are inherently bad quality, people call while rushing to work, or walking by a seemingly endless line of jackhammers, fire engines and screaming 4-month-olds.
 
-![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976774/blog/what-is-word-error-rate/baby-firetruck-jackhammer.jpg) 
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976774/blog/what-is-word-error-rate/baby-firetruck-jackhammer.jpg)
 
 Somehow, human transcribers do okay with such noisy data, and speech recognition APIs, if properly trained, can do okay too. However, as you can imagine, when companies advertise super-low word error rates, these are not the WERs they get when transcribing audio captured at Iron Maiden concerts held in the middle of 16 lane interstate highways.
 
@@ -104,4 +106,4 @@ When you want to decide which speech recognition API to use, ask yourself:
 * Are there certain words or accents that the speech recognition API should do well on?
 * Can you [customize the API](https://deepgram.com/product/train/) to perform better on your data?
 
-For more, check out our [step by step guide on how to evaluate an ASR provider](https://blog.deepgram.com/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/) or [have us evaluate](https://deepgram.com/contact-us) the ASR provider for you.
+For more, check out our [step by step guide on how to evaluate an ASR provider](https://sweet-pie-c52a63-blog.netlify.app/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/) or [have us evaluate](https://deepgram.com/contact-us) the ASR provider for you.

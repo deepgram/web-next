@@ -30,6 +30,6 @@ Spelling Hero is a spelling bee simulator to emulate the experience of participa
 
 Spelling Hero's data was manually curated in this first version, and each word also includes a definition, origin, type, and a sample sentence - all options given to spelling bee participants.
 
-The team used the Deepgram Speech Recognition API to understand a user's voice input, basing their code on our [Browser Live Transcription](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/) tutorial. The user interface was built with P5.js ([see our P5.js tutorial here](https://developers.deepgram.com/blog/2022/03/p5js-getting-started/)), and you can check out the [code on GitHub](https://github.com/saksham-shah/deepgram-game).
+The team used the Deepgram Speech Recognition API to understand a user's voice input, basing their code on our [Browser Live Transcription](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/) tutorial. The user interface was built with P5.js ([see our P5.js tutorial here](https://sweet-pie-c52a63-blog.netlify.app/p5js-getting-started/)), and you can check out the [code on GitHub](https://github.com/saksham-shah/deepgram-game).
 
         

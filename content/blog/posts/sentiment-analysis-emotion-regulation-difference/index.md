@@ -1,5 +1,5 @@
 ---
-title: "Sentiment Analysis and Emotion Recognition: Whats the Difference?"
+title: "Sentiment Analysis and Emotion Recognition: What's the Difference?"
 description: Sentiment analysis and emotion regulation are hot topics in speech
   recognition today, but the two are often confused. So what’s the difference?
 date: 2022-04-01
@@ -24,7 +24,7 @@ shorturls:
   reddit: https://dpgr.am/a20a2c7
   facebook: https://dpgr.am/bee1fe5
 ---
-Sentiment analysis and emotion recognition are two of the hottest topics in speech understanding today. But they're often confused for one another-so much so that people often say "sentiment analysis" when they're referring to emotion recognition. In this post, we'll explain what both sentiment analysis and emotional recognition are, [how they are used in business](https://blog.deepgram.com/voice-technology-customer-experience/), and some of the limitations and challenges of each.
+Sentiment analysis and emotion recognition are two of the hottest topics in speech understanding today. But they're often confused for one another-so much so that people often say "sentiment analysis" when they're referring to emotion recognition. In this post, we'll explain what both sentiment analysis and emotional recognition are, [how they are used in business](https://sweet-pie-c52a63-blog.netlify.app/voice-technology-customer-experience/), and some of the limitations and challenges of each.
 
 ## 1. What is Sentiment Analysis?
 

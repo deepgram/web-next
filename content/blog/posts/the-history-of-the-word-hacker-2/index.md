@@ -32,17 +32,17 @@ More than a thousand years ago, in a place called Hackney-once pastureland, now 
 
 We will revisit the word "hook" later. Hackney nags were general purpose horses, work horses: used for [drayage](https://www.etymonline.com/word/drayage#etymonline_v_31869) and riding about town. They were not the classy horses used in hunting or war. They were certainly not the horses that the nobility rode with great pomp or under any circumstance.
 
-![nag](https://res.cloudinary.com/deepgram/image/upload/v1661976821/blog/the-history-of-the-word-hacker-2/hackney-fares.jpg) 
+![nag](https://res.cloudinary.com/deepgram/image/upload/v1661976821/blog/the-history-of-the-word-hacker-2/hackney-fares.jpg)
 
 *[Source](https://janeaustenslondon.com/2017/01/02/paying-the-correct-fare-hackney-carriages-and-watermen/)* 
 
 Eventually, it was these hackney nags that were often, if not principally, used to pull carriages-the sort that were used to shuttle folk from place to place. Even after Hackney was paved over and built up, the horses that pulled taxi carbriolets (taxicabs, i.e. cabs) where known as hacks. Taxicabs were hired on the street-they did not belong to nice families. In other words, **they were commonplace, ordinary and for-hire.** Such horse-and-cart drivers came to be known as hackney drivers, then just "hacks" for short. In the 18th century, those who did work for hire, like writers, came to be known as hack-writer or hack-`insert-profession-here`. The "transportation professional" use-of-the-word "hack" fell out of fashion as it was replaced by the French word "taxi." (Soon, that word too might be replaced by the word "uber"). Hack authors produce copious works, often anonymously for public consumption. It's not art. Hack work is laborious, tedious, unrefined. This etymology of an earlier tech-world "hack" is nicely supported by the first [dictionary of tech terms](http://www.gricer.com/tmrc/dictionary1959.html). In 1959, a member of MIT's Tech Model Railroad Club, Peter R. Sampson, wrote a dictionary of tech terms used in then nascent computer world saying of "hack" the following: 
 
-![sampson](https://res.cloudinary.com/deepgram/image/upload/v1661976822/blog/the-history-of-the-word-hacker-2/Screen-Shot-2019-02-19-at-10.21.29-AM.png) 
+![sampson](https://res.cloudinary.com/deepgram/image/upload/v1661976822/blog/the-history-of-the-word-hacker-2/Screen-Shot-2019-02-19-at-10.21.29-AM.png)
 
 It's worth noting that MIT's [TMRC](https://en.wikipedia.org/wiki/Tech_Model_Railroad_Club)'s members, the original hackers, eventually seeded MIT's Artificial Intelligence Laboratory which is now [CSAIL](https://www.csail.mit.edu/). A meaningful portion of the lingo of the tech world today was born at the TMRC, e.g. [cruft](https://en.wikipedia.org/wiki/Cruft), [Internet of Things.](https://www.rfidjournal.com/articles/view?4986) As the world of computers became more mainstream-in the mid 1970s-so did new terms come into common English usage. The word "hacker" appeared and came to describe intrepid, anti-authoritarian, even criminal computer engineers who would illegally bypass communications security measures gaining access to data and software. 
 
-![ngram](https://res.cloudinary.com/deepgram/image/upload/v1661976823/blog/the-history-of-the-word-hacker-2/hack-ngram.png) 
+![ngram](https://res.cloudinary.com/deepgram/image/upload/v1661976823/blog/the-history-of-the-word-hacker-2/hack-ngram.png)
 
 *Google nGram viewer chart shows the frequency of the labeled terms as found in books scanned by Google (subject to sampling bias). Note the sudden uptick in incidence at about the year 1975.* 
 
@@ -52,15 +52,15 @@ Does this use stem from the earlier "bad, unoriginal" hack? The [answer](https:/
 
 `"to hack", verb` has meant roughly the same thing for thousands of years: to cut up roughly, as with an axe or hatchet. Take a look at this snippet from Anglo-Saxon-language Legends of St. Andrew and St. Veronica-apocryphal tales of the apostles/saints which became popular in Anglo-Saxon England in the 10th century A.D. 
 
-![tohaccode](https://res.cloudinary.com/deepgram/image/upload/v1661976824/blog/the-history-of-the-word-hacker-2/Screen-Shot-2019-02-19-at-10.11.31-AM.png) 
+![tohaccode](https://res.cloudinary.com/deepgram/image/upload/v1661976824/blog/the-history-of-the-word-hacker-2/Screen-Shot-2019-02-19-at-10.11.31-AM.png)
 
 **Translation into Modern English:**
 
 \[...]and some were pierced through with a spear, and some were sold into slavery, and some they were hacked into four parts\[...]
 
-In the snippet above, we see the ancestor of the verb "to hack" (highlighted) in a passage where the Roman army, under orders from Titus and Vespasian Christian/Jewish citizens of Judea tortured, killed and also sold into slavery. Astoundingly enough, linguistic research shows that the `to hack verb` comes from the same place as the word hook-unsurprising when you consider what many Iron Age axes [looked like](https://www.kelticos.org/forum/viewtopic.php?f=3&t=942). To be clear, `to hack verb` [harkens back](https://indo-european.info/pokorny-etymological-dictionary/whnjs.htm) to `hook/hack, noun` not the other way around. 
+In the snippet above, we see the ancestor of the verb "to hack" (highlighted) in a passage where the Roman army, under orders from Titus and Vespasian Christian/Jewish citizens of Judea tortured, killed and also sold into slavery. Astoundingly enough, linguistic research shows that the `to hack verb` comes from the same place as the word hook-unsurprising when you consider what many Iron Age axes looked like. To be clear, `to hack verb` [harkens back](https://indo-european.info/pokorny-etymological-dictionary/whnjs.htm) to `hook/hack, noun` not the other way around. 
 
-![](https://res.cloudinary.com/deepgram/image/upload/v1661976825/blog/the-history-of-the-word-hacker-2/axe.jpg) 
+![](https://res.cloudinary.com/deepgram/image/upload/v1661976825/blog/the-history-of-the-word-hacker-2/axe.jpg)
 
 *This is an example of an Iron Age axe (a reproduction). The word in Anglo-Saxon was "æx."*
 
@@ -70,11 +70,11 @@ The people who invaded and settled the place that would be called "Hack's Island
 
 Brute force can be used for good and bad. Since the early days of the second "hacker" term there has been an ambivalence towards those who use the epithet. This contribution to the Association for Computing Machinery SIGART bulletin from 1976 makes this evident. 
 
-![sigart](https://res.cloudinary.com/deepgram/image/upload/v1661976826/blog/the-history-of-the-word-hacker-2/Screen-Shot-2019-02-19-at-10.51.25-AM-1.png) 
+![sigart](https://res.cloudinary.com/deepgram/image/upload/v1661976826/blog/the-history-of-the-word-hacker-2/Screen-Shot-2019-02-19-at-10.51.25-AM-1.png)
 
 *[Source](https://dl.acm.org/citation.cfm?id=1045340)*
 
-No doubt, today's crowd can identify with the sentiments of Mr. McDermott of the MIT AI lab. As pressure for [regulation begins to build](https://blog.deepgram.com/should-ai-be-regulated-ai-show/), the dual notion of the Robin Hood begins to color us members of the AI field as well. Are we brilliant, motivated creators of the avant-garde? Or, are we reckless, undisciplined technologists? 
+No doubt, today's crowd can identify with the sentiments of Mr. McDermott of the MIT AI lab. As pressure for [regulation begins to build](https://sweet-pie-c52a63-blog.netlify.app/should-ai-be-regulated-ai-show/), the dual notion of the Robin Hood begins to color us members of the AI field as well. Are we brilliant, motivated creators of the avant-garde? Or, are we reckless, undisciplined technologists? 
 
 By the mid-80's and into the 90's, `hacker noun` came to mean both things: brilliant programmers who could produce elegant code to solve difficult problems as well as evil, or pathological programmers who threatened public safety by infiltrating secure locations remotely. There is no doubt that this second, negative meaning was fueled by the end of the cold war and the rise of the internet. The world needed new enemies and the internet was a new, unknown land in need of antagonists.
 
@@ -105,7 +105,7 @@ Today we have a number of tech words that all come from the same root, but tend 
 
 What is fascinating to consider, is how the notion of a <mark>bend, hook, curve</mark> came to mean different things with opposite connotations. Then, over time, two or three currents of meaning were brought together in a new human endeavor of logical thinking, binary logic and clear lines - the world of computing. This new endeavor is equal parts tedious, destructive, violent, daring and creative with some amounts of evil sprinkled in. Ironically (or predictably), harnessing ambiguity-the natural enemy of computing-is now the goal of the tech world. In the modern world of computing we are trying to build machines that behave in this distinctly non-binary, highly-stochastic way.
 
-[Neural nets, or more broadly AI](https://blog.deepgram.com/ai-show-different-types-of-machine-learning/), work because they are a mimesis of the squishy, non-binary, probabilistic brains that created all the meanings of "hack" from one original noun. And yet, the image of the human brain is still one that connotes a meaning of utmost intelligence for us.
+[Neural nets, or more broadly AI](https://sweet-pie-c52a63-blog.netlify.app/ai-show-different-types-of-machine-learning/), work because they are a mimesis of the squishy, non-binary, probabilistic brains that created all the meanings of "hack" from one original noun. And yet, the image of the human brain is still one that connotes a meaning of utmost intelligence for us.
 
 ## Bonus Material
 

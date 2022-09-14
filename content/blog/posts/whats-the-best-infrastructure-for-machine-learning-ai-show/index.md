@@ -1,5 +1,5 @@
 ---
-title: Whats the Best Infrastructure for Machine Learning — AI Show
+title: What's the Best Infrastructure for Machine Learning — AI Show
 description: "Today we ask the question: what's the best infrastructure for
   machine learning?"
 date: 2018-11-30
@@ -233,7 +233,7 @@ Everybody knows it, but not too many people are really stating that seed change.
 
 **Susan:** But there's a turn, please connect it! There's a turn!!
 
-****Scott:** Buffering, buffering.
+\***\*Scott:** Buffering, buffering.
 
 **Susan:** Please stand by.
 
@@ -271,7 +271,7 @@ Everybody knows it, but not too many people are really stating that seed change.
 
 **Susan:** We've taken a brand new big, high resource area of all this compute that GPUs have given us and we've adapted to that. Now that we're seeing the hardware adapt to us, I think we're going to see an explosion of new architecture ideas. There's a lot more revived interest in and thinking about the basic structure: thinking about the basic neurons going back to biology again, and pulling in new things like time delays. Of course there's pulling in brand new types of ways of connecting them. Again going down to single connections as opposed to thinking, "Oh I've got this 1024 layer, fully connected layer to it, now it's a 1024 to fully connect the layer, just because it's efficient and fits right in perfectly memory wise and all these different things." But nothing about the problem said a 1024. How do you appropriately connect these things?
 
-![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976784/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/Artificial_neural_network.jpg) 
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976784/blog/whats-the-best-infrastructure-for-machine-learning-ai-show/Artificial_neural_network.jpg)
 
 *This is a representation of a generic neural network. Note the connections between the first layer of three nodes, and the second layer of four.* 
 
@@ -285,7 +285,7 @@ Everybody knows it, but not too many people are really stating that seed change.
 
 **Susan:** It's an exciting time to be here, to see this stuff. Just seeing all the new worlds we can work in. The idea that you can really apply these tools in the browser, you can apply them on your phone, you can apply them on an internet of things device, you can apply them on something rolling down the road at 100 miles an hour. I don't drive at 100 miles an hour, honest.
 
-**Scott:** I think, you're going to see it deployed in those areas, server, personal computer, on your phone you're already seeing it happen, but you're gonna see it just integrated more and more, and the inference especially. Training not so much, that's still gonna stay in the servers for awhile. But you know, people discuss about [federated training](https://towardsdatascience.com/whats-new-in-deep-learning-research-understanding-federated-learning-b14e7c3c6f89), right like using your mobile phone or your CPU or something to train a model, but like very slowly, locally, but then aggregating all the results on a server. That might be a thing, but has not been a thing even though people have talked about it for a few years.
+**Scott:** I think, you're going to see it deployed in those areas, server, personal computer, on your phone you're already seeing it happen, but you're gonna see it just integrated more and more, and the inference especially. Training not so much, that's still gonna stay in the servers for awhile. But you know, people discuss about federated training, right like using your mobile phone or your CPU or something to train a model, but like very slowly, locally, but then aggregating all the results on a server. That might be a thing, but has not been a thing even though people have talked about it for a few years.
 
 **Susan:** This is a little off-the-infrastructure-side, but these pieces of infrastructure, enabling rapid prototyping, we get breakthroughs every once in awhile that radically change the playing field. Often what we find is we were doing something incredibly inefficiently before, but because we didn't have the resources to just do that thing fast enough to try the next thing, and next thing, and next thing, it was just a huge roadblock. Had we known this one weird trick.
 

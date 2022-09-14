@@ -25,8 +25,11 @@ shorturls:
 <iframe src="https://www.youtube.com/embed/5tip6JR_AN8" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 **Scott:** Welcome to the AI Show. Today we're asking the question: How is machine learning, or deep learning, affecting science? 
+
 **Susan:** Actually I'm asking a question of you! For those that do not know, Scott here has a little bit of a science background. 
+
 **Scott:** A little bit. 
+
 **Susan:** And a little bit of machine learning in science background. Scott, can you at least give us the 10,000 foot overview of a little bit of what you've done?
 
 ## Finding Dark Matter with AI
@@ -85,7 +88,9 @@ shorturls:
 
 ## Efficiency and Processing
 
-**Susan:** I think the other bent on the same note though is efficiency and processing. Have you seen the stuff going on with protein folding? I mean huge processing advances are going on just because they're using deep learning models, or they're using machine learning models to accelerate the guess at what that protein will fold into. For those that don't know, the challenge is you've got a whole bunch of atoms that are strung together in this big complicated molecule, and when you let them go they all kind of fold and convolute into this weird shape. ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Protein_folding.png/360px-Protein_folding.png)
+**Susan:** I think the other bent on the same note though is efficiency and processing. Have you seen the stuff going on with protein folding? I mean huge processing advances are going on just because they're using deep learning models, or they're using machine learning models to accelerate the guess at what that protein will fold into. For those that don't know, the challenge is you've got a whole bunch of atoms that are strung together in this big complicated molecule, and when you let them go they all kind of fold and convolute into this weird shape.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Protein_folding.png/360px-Protein_folding.png)
 
 **Susan:** And that weird shape is the point, right?
 
@@ -131,7 +136,7 @@ shorturls:
 
 **Scott:** It's a really hard complicated thing to build some of these reactors, and they said, "We've tried many things over the last 50, 60 years and spent many billions of dollars trying to build these reactors." We've gotten pretty good, but they're still research-y. They're still not able to be turned into a real one that actually produces power on a large scale for all of humanity and things like that.
 
-**Scott:** [Let's throw machine learning]("https://www.iflscience.com/technology/supercomputer-will-help-us-tackle-nuclear-fusion/") at the problem and see what happens. Now there's talk that these designs are actually able to be built, and they probably will serve the purpose.
+**Scott:** [Let's throw machine learning](https://www.iflscience.com/technology/supercomputer-will-help-us-tackle-nuclear-fusion/) at the problem and see what happens. Now there's talk that these designs are actually able to be built, and they probably will serve the purpose.
 
 **Susan:** What was the last one? They reached some milestone, like 100 seconds or something like that. There are so many challenges going into confining so high of energies in such a small space.
 
@@ -199,8 +204,11 @@ It's going to be is a new honed, sharpened tool, is machine learning. Create dat
 
 **Susan:** I had an argument with some friends a while ago where I was saying all the sciences in all the fields, and the idea that we have a machine learning degree path, maybe we need to fragment that. Saying you're in paleontology, there should be machine learning in paleontology. There should be machine learning in archaeology. There should machine learning in all sorts of different fields because just like basic stats from the math point of view, you go out there and you do really good math in whatever field acts.
 
-![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976795/blog/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/Crete-archaeology-sissi..jpg) 
-*As long as there is data-or enough data-ML methods can help researchers discover truly novel things. If you are interested, here is one article to read:*  Van Den Dries, M. H. (1998). Archaeology and the application of artificial intelligence: case-studies on use-wear analysis of prehistoric flint tools.
+![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976795/blog/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/Crete-archaeology-sissi..jpg)
+
+*As long as there is data-or enough data-ML methods can help researchers discover truly novel things. If you are interested, here is one article to read:*  Van Den Dries, M. H. (1998). 
+
+Archaeology and the application of artificial intelligence: case-studies on use-wear analysis of prehistoric flint tools.
 
 **Susan:** Now machine learning is related, but it's a new set of skills. It's like you said, honing those data sets and understanding how to churn them through a good model and all that stuff.
 
@@ -260,7 +268,7 @@ It's going to be is a new honed, sharpened tool, is machine learning. Create dat
 
 **Scott:** Similar story with quantum field theory in physics and math, and theory of knots and strings coming back in, and math and physics and that sort of thing. All these things tie together and they feed off of each other. So I think there will be contributions from the applied AI side that are actually fundamental contributions in machine learning as well. And there already have been.
 
-**Susan:** What we've already obviously seen this in the medical field, studying the brain has made contributions and the machine learning huge contributions in machine learning. And vice versa. [Reinforcement learning](https://blog.deepgram.com/ai-show-different-types-of-machine-learning/), talking about potentially how parts of the brain works and back and forth. Like you said, other fields that we're going to see those same things coming out of it.
+**Susan:** What we've already obviously seen this in the medical field, studying the brain has made contributions and the machine learning huge contributions in machine learning. And vice versa. [Reinforcement learning](https://sweet-pie-c52a63-blog.netlify.app/ai-show-different-types-of-machine-learning/), talking about potentially how parts of the brain works and back and forth. Like you said, other fields that we're going to see those same things coming out of it.
 
 **Susan:** That's what's super exciting about this. When you start pushing it out into the sciences, you get incredibly brilliant people that are brilliant in ways not exactly the same as everybody around you.
 

@@ -22,7 +22,7 @@ shorturls:
   reddit: https://dpgr.am/1e7447d
   facebook: https://dpgr.am/6844267
 ---
-The most exciting time to be in the Automatic Speech Recognition (ASR) space is right now. Consumers are using Siri and Alexa daily to ask questions, order products, play music, play games, and do simple tasks. This is the norm, and it started less than 15 years ago with Google Voice Search. On the enterprise side, we see [voicebots & conversational AI](https://deepgram.com/solutions/voicebots/), and [speech analytics](https://deepgram.com/solutions/speech-analytics/) that can determine [sentiment and emotions](https://blog.deepgram.com/sentiment-analysis-emotion-regulation-difference/) as well as [languages](https://deepgram.com/product/languages/).
+The most exciting time to be in the Automatic Speech Recognition (ASR) space is right now. Consumers are using Siri and Alexa daily to ask questions, order products, play music, play games, and do simple tasks. This is the norm, and it started less than 15 years ago with Google Voice Search. On the enterprise side, we see [voicebots & conversational AI](https://deepgram.com/solutions/voicebots/), and [speech analytics](https://deepgram.com/solutions/speech-analytics/) that can determine [sentiment and emotions](https://sweet-pie-c52a63-blog.netlify.app/sentiment-analysis-emotion-regulation-difference/) as well as [languages](https://deepgram.com/product/languages/).
 
 ## **Early Years: Hidden Markov Models and Trigram Models**
 

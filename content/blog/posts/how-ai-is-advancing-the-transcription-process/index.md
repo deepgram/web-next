@@ -36,7 +36,7 @@ To compensate for this, highly trained voice writers listen to real-world audio 
 
 ## The Need for a New Approach: ASR as the First Step
 
-For this reason, companies have started using an [Automatic Speech Recognition (ASR)](https://blog.deepgram.com/what-is-asr/)-first approach to doing highly-accurate real-time transcription. Instead of voice-writing the first level, audio is transcribed with ASR and then passed onto real-time editors.
+For this reason, companies have started using an [Automatic Speech Recognition (ASR)](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/)-first approach to doing highly-accurate real-time transcription. Instead of voice-writing the first level, audio is transcribed with ASR and then passed onto real-time editors.
 
 In the last few years, the advent of end-to-end deep learning ASR systems has made it possible to reach real-time transcription accuracies of 85% or greater, without the need for human mediation.
 
