@@ -82,7 +82,7 @@ You won’t let anything get in your way, not even a twister.
 
 ## Python Code for AI Machine Learning Topic Detection
 
-You first create a [virtual environment](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) to install your Python packages inside.
+You first create a [virtual environment](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/) to install your Python packages inside.
 
 Next, from the command line, you `pip install` the following Python packages inside of the virtual environment:
 

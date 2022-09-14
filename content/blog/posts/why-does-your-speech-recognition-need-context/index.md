@@ -21,7 +21,15 @@ shorturls:
   reddit: https://dpgr.am/ec104f3
   facebook: https://dpgr.am/6526000
 ---
-<iframe src="https://www.youtube.com/embed/04YXLTnafTc" width="600" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>Alexa and Siri are great and all, but they often make funny, if not serious mistakes. Why is this? !\[Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976769/blog/why-does-your-speech-recognition-need-context/Screen-Shot-2018-11-19-at-4.19.58-PM-1.png) I conducted an experiment to measure how important context is in understanding audio-especially when the audio is noisy. As humans we tend to enter conversations with some knowledge of what the topic is, which allows us to follow along. The speech recognition APIs which power Google Assistant, Siri, and Amazon Alexa, do not have this context. \*\*As far as they know, every time you speak to them is like the first time you have ever spoken to them.\*\* Suspecting this might be the reason they often misunderstand things which they shouldn't, I decided to test this:
+<iframe src="https://www.youtube.com/embed/04YXLTnafTc" width="600" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+Alexa and Siri are great and all, but they often make funny, if not serious mistakes. Why is this?
+
+![](https://res.cloudinary.com/deepgram/image/upload/v1661976769/blog/why-does-your-speech-recognition-need-context/Screen-Shot-2018-11-19-at-4.19.58-PM-1.png)
+
+
+
+I conducted an experiment to measure how important context is in understanding audio-especially when the audio is noisy. As humans we tend to enter conversations with some knowledge of what the topic is, which allows us to follow along. The speech recognition APIs which power Google Assistant, Siri, and Amazon Alexa, do not have this context. **As far as they know, every time you speak to them is like the first time you have ever spoken to them.** Suspecting this might be the reason they often misunderstand things which they shouldn't, I decided to test this:
 
 ## The Experiment
 

@@ -94,7 +94,7 @@ It's time to pause. You've made it as far as you can without connecting to the s
 
 Now you’re going to work on setting up your connection to Deepgram’s Node.js SDK and WebSocket connection.
 
-Because you’re using API keys, you want to keep them safe. To learn more about keeping your API keys safe, check out Kevin’s post [Browser Live Transcription - Protecting Your API Key](https://developers.deepgram.com/blog/2022/01/protecting-api-key/). Using the terminal, let’s run
+Because you’re using API keys, you want to keep them safe. To learn more about keeping your API keys safe, check out Kevin’s post [Browser Live Transcription - Protecting Your API Key](https://sweet-pie-c52a63-blog.netlify.app/protecting-api-key/). Using the terminal, let’s run
 `npm i @deepgram/sdk dotenv` to add Deepgram and `dotenv` to your project.
 
 Next, you’ll need to:

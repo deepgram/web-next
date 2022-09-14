@@ -30,7 +30,7 @@ If you want to jump ahead, the final code for this project is located [here in G
 
 ## Getting Started
 
-Before we start, it’s essential to generate a Deepgram API key to use in our project. We can [go here](https://console.deepgram.com/signup?jump=keys). For this tutorial, we’ll be using Python 3.10, but Deepgram supports some earlier versions of Python as well. We’ll also need to set up a virtual environment to hold our project. We can read more about those [here](https://developers.deepgram.com/blog/2022/02/python-virtual-environments/) and how to create one.
+Before we start, it’s essential to generate a Deepgram API key to use in our project. We can [go here](https://console.deepgram.com/signup?jump=keys). For this tutorial, we’ll be using Python 3.10, but Deepgram supports some earlier versions of Python as well. We’ll also need to set up a virtual environment to hold our project. We can read more about those [here](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/) and how to create one.
 
 ## Install Dependencies
 
@@ -140,7 +140,7 @@ Use this code inside the `<script></script>` tag in `index.html` to access the u
 </script>
 ```
 
-If you want to learn more about working with the mic in the browser, please check out [this post](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/).
+If you want to learn more about working with the mic in the browser, please check out [this post](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/).
 
 ## Websocket Connection Between Server and Browser
 
@@ -227,7 +227,7 @@ The `process_audio` function takes `fast_socket` as an argument, which will keep
 
 The `connect_to_deepgram` function creates a socket connection to deepgram, listens for the connection to close, and gets incoming transcription objects.
 
-Lastly, in our `index.html`, we need to receive and obtain data with the below events. Notice they are getting logged to our console. If you want to know more about what these events do, check out [this blog post](https://developers.deepgram.com/blog/2021/11/live-transcription-mic-browser/).
+Lastly, in our `index.html`, we need to receive and obtain data with the below events. Notice they are getting logged to our console. If you want to know more about what these events do, check out [this blog post](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/).
 
 ```js
 <script>

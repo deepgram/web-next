@@ -28,7 +28,7 @@ shorturls:
   reddit: https://dpgr.am/e96216d
   facebook: https://dpgr.am/5d70ef9
 ---
-February is Black History Month! To mark this time of celebration and reflection, we'd like to shine a spotlight on one of the major dialects of American English, African American Vernacular English (AAVE), and share our perspective on its status in [speech recognition](https://blog.deepgram.com/what-is-asr/).
+February is Black History Month! To mark this time of celebration and reflection, we'd like to shine a spotlight on one of the major dialects of American English, African American Vernacular English (AAVE), and share our perspective on its status in [speech recognition](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/).
 
 ## What Exactly is AAVE?
 
@@ -53,5 +53,3 @@ The consequence is that speakers of AAVE and other dialects may need to code-swi
 * [African American Vernacular English ' Morgan Gill ' TEDxYouth@RMSST](https://www.youtube.com/watch?v=rNjhB1DW_-s)
 * [Linguists on African American Language: John Baugh](https://www.youtube.com/watch?v=6EQdJy24JrQ)
 * ["African American English through the Years" - A Presentation by Dr. Lisa Green of UMass Amherst](https://www.youtube.com/watch?v=x6UpGwH6YBs)
-
-\[newsletter_signup]

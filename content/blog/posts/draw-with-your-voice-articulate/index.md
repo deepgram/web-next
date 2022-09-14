@@ -38,7 +38,7 @@ ARTiculate introduces a hands-free drawing experience. Commands like "bold," "do
 
 Thanks to Deepgram's Speech Recognition API and our [documentation](https://developers.deepgram.com/documentation/), the team got a minimal viable project completed very quickly. Then, they expanded the use of Deepgram to utilize our [search](https://developers.deepgram.com/documentation/features/search/) feature to find command words.
 
-The canvas was built with [P5.js](https://p5js.org), a library for creative coding in JavaScript. We just finished publishing a [three-part series on using P5.js](https://developers.deepgram.com/blog/2022/03/p5js-getting-started/) earlier this week. The team also utilized React, enabling team members to work on their own components and easily glue them together into a complete application later. Because the team created a highly-visual application, they focused attention to detail on smaller elements, such as animations.
+The canvas was built with [P5.js](https://p5js.org), a library for creative coding in JavaScript. We just finished publishing a [three-part series on using P5.js](https://sweet-pie-c52a63-blog.netlify.app/p5js-getting-started/) earlier this week. The team also utilized React, enabling team members to work on their own components and easily glue them together into a complete application later. Because the team created a highly-visual application, they focused attention to detail on smaller elements, such as animations.
 
 The team has plenty of extensions planned, including the ability to fluidly pull images from online and insert them into the canvas, and additional accessibility options such as custom voice commands and color-blindness options to assist with color mixing.
 

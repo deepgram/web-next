@@ -23,7 +23,7 @@ og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453154/blog/build-a-todo-list-with-pinia-and-vue-3/ograph.png
 ---
 
-I was building a Vue 3 project for my recent blog series on [how to build a full-stack live streaming web app](https://developers.deepgram.com/blog/2022/03/build-a-livestream-web-application-vue-and-express-setup/). I wanted to use Vuex to manage some global state properties. It was my first time using Vuex with Vue 3 since I began my journey to learn the Composition API.
+I was building a Vue 3 project for my recent blog series on [how to build a full-stack live streaming web app](https://sweet-pie-c52a63-blog.netlify.app/build-a-livestream-web-application-vue-and-express-setup/). I wanted to use Vuex to manage some global state properties. It was my first time using Vuex with Vue 3 since I began my journey to learn the Composition API.
 
 When I arrived at the [Vuex documentation page](https://vuex.vuejs.org/), I saw this:
 
@@ -45,7 +45,7 @@ The project repo can be found [here](https://github.com/SandraRodgers/todo-pinia
 
 ## Getting Started with Pinia
 
-I'll create my Vue project (making sure to select Vue 3 since I want to use the Composition API). Pinia also works with Vue 2, but I've personally gone totally in on Vue 3 (and haven't looked back - check out [my series on Vue 3](https://developers.deepgram.com/blog/2022/01/diving-into-vue-3-getting-started/) to read about my journey).
+I'll create my Vue project (making sure to select Vue 3 since I want to use the Composition API). Pinia also works with Vue 2, but I've personally gone totally in on Vue 3 (and haven't looked back - check out [my series on Vue 3](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-getting-started/) to read about my journey).
 
 ```bash
 vue create todo-pinia

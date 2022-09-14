@@ -35,11 +35,11 @@ FastAPI is a new, innovative Python web framework gaining popularity because of 
 
 Working with WebSockets in FastAPI is a breeze because it uses the [WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API), making it easier to establish two-way communication between the browser and server. There’s a section about working with WebSockets in the [FastAPI documentation](https://fastapi.tiangolo.com/advanced/websockets/).
 
-FastAPI is very easy to use because of its thorough documentation, so even beginners can get started. Remember that supporting community resources, as a newer Python web framework, may not be as robust as other options. It didn’t take long to get FastAPI up and running with Deepgram’s live streaming audio speech-to-text transcription in Python. We wrote a [step-by-step tutorial](https://developers.deepgram.com/blog/2022/03/live-transcription-fastapi/) on using FastAPI with Deepgram for real-time audio transcription in Python.
+FastAPI is very easy to use because of its thorough documentation, so even beginners can get started. Remember that supporting community resources, as a newer Python web framework, may not be as robust as other options. It didn’t take long to get FastAPI up and running with Deepgram’s live streaming audio speech-to-text transcription in Python. We wrote a [step-by-step tutorial](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-fastapi/) on using FastAPI with Deepgram for real-time audio transcription in Python.
 
 ### Flask 2.0 Live Streaming Audio
 
-Flask 2.0 is a familiar, lightweight, micro web framework that is very flexible. It doesn't make decisions for you, meaning you are free to choose which database, templating engine, etc., to use without lacking functionality. Check out the [tutorial we wrote on using Flask](https://developers.deepgram.com/blog/2022/03/live-transcription-flask/) to get up and running with a live-streamed audio speech-to-text transcript in Python.
+Flask 2.0 is a familiar, lightweight, micro web framework that is very flexible. It doesn't make decisions for you, meaning you are free to choose which database, templating engine, etc., to use without lacking functionality. Check out the [tutorial we wrote on using Flask](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-flask/) to get up and running with a live-streamed audio speech-to-text transcript in Python.
 
 Flask does not have WebSocket support built-in, but there is a workaround. You use [aiohttp](https://docs.aiohttp.org/en/v3.8.1/faq.html), an Async HTTP client/server for asyncio and Python. It also supports server and client WebSockets out of the box.
 
@@ -47,7 +47,7 @@ Once you get aiohttp configured for WebSockets, getting Flask 2.0 working with D
 
 ### Quart Live Streaming Audio
 
-Quart is a Python web microframework that is asynchronous, making it easier to serve WebSockets. Quart is an asyncio reimplementation of Flask. If you're familiar with Flask, you'll be able to ramp up on Quart quickly. We have a tutorial on using [Quart with Deepgram](https://developers.deepgram.com/blog/2022/03/live-transcription-quart/) live streaming audio speech-to-text.
+Quart is a Python web microframework that is asynchronous, making it easier to serve WebSockets. Quart is an asyncio reimplementation of Flask. If you're familiar with Flask, you'll be able to ramp up on Quart quickly. We have a tutorial on using [Quart with Deepgram](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-quart/) live streaming audio speech-to-text.
 
 Getting started with Quart was very simple. They have a short [tutorial on WebSockets](https://pgjones.gitlab.io/quart/tutorials/websocket_tutorial.html) on their website that covers the basics. Since Quart is very similar to Flask, there wasn’t as much ramp-up time, which is nice. Quart also has support for WebSockets, so there was no need for extra configuration, and it worked perfectly with Deepgram’s live streaming audio.
 
@@ -55,7 +55,7 @@ Getting started with Quart was very simple. They have a short [tutorial on WebSo
 
 Django is a familiar Python web framework for rapid development. It provides a lot of things you need "out of the box" and everything is included with the framework, following a “Batteries included” philosophy.
 
-Django uses [Channels](https://channels.readthedocs.io/en/stable/introduction.html) to handle WebSockets. It allows for real-time communication to happen between a browser and a server. The Django Channels setup was different than the other three Python web frameworks but was easy to follow because of their documentation. It might be good to have a little experience with Django, but if you want to use it with Deepgram, check out the [blog post](https://developers.deepgram.com/blog/2022/03/live-transcription-django/) we wrote on using Django to handle real-time speech-to-text transcription.
+Django uses [Channels](https://channels.readthedocs.io/en/stable/introduction.html) to handle WebSockets. It allows for real-time communication to happen between a browser and a server. The Django Channels setup was different than the other three Python web frameworks but was easy to follow because of their documentation. It might be good to have a little experience with Django, but if you want to use it with Deepgram, check out the [blog post](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-django/) we wrote on using Django to handle real-time speech-to-text transcription.
 
 ## Final Words
 

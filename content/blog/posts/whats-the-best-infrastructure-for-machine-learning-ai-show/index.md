@@ -1,5 +1,5 @@
 ---
-title: Whats the Best Infrastructure for Machine Learning — AI Show
+title: What's the Best Infrastructure for Machine Learning — AI Show
 description: "Today we ask the question: what's the best infrastructure for
   machine learning?"
 date: 2018-11-30
