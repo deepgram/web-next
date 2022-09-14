@@ -129,7 +129,6 @@ sent = "Hepsine 100$ verdim."
 >> clean_currency_symbols(sent)
 "Hepsine 100 dolar verdim."
 ```
-
 **Figure 3.** A sample code for running a regex to get correct Turkish currencies. 
 
 We literally did **nothing** to currency words; no plural suffix or any other suffixes were added by us. If we were processing English, though, we would need to parse the currency symbol together with the number to check if the number is 1 or not; if it's not 1, we need to add a plural suffix to the currency word. Please note that the code segment in Figure 3 shows only one step of processing, that related to processing the currency symbols. As we mentioned previously, all conversions are done in individual steps, hence the number *100* would be processed in a separate number-cleaning step.
@@ -142,14 +141,14 @@ Cleaning numbers is challenging for each language indeed. Quite a number of rege
 
 ## Wrapping Up
 
-When it comes down to it, all languages are beautiful and yet challenging at the same time; dealing with natural language is never easy. At Deepgram, we all enjoy working with speech and text, and we embrace both the difficulty and the beauty of natural language. We hope you enjoyed this article and share our joy for Turkish, too! Please join us for more content on our blog and follow us on [Linkedin](https://www.linkedin.com/company/deepgram/). 
+When it comes down to it, all languages are beautiful and yet challenging at the same time; dealing with natural language is never easy. At Deepgram, we all enjoy working with speech and text, and we embrace both the difficulty and the beauty of natural language. We hope you enjoyed this article and share our joy for Turkish, too! Please join us for more content on our blog and follow us on [LinkedIn](https://www.linkedin.com/company/deepgram/).
 
 And, if you'd like to give Deepgram a try for yourself, [sign up for Console](https://console.deepgram.com/signup) for free and get $150 in free credits to give it a try. 
-
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
 
 - - -
 
 \* Of course, sometimes we might *want* an email to appear in a final transcript. In that case, we can do a bit of postprocessing to the model output to get the final transcription in order to reverse normalize *...-at-...-dot-com* word sequences into a single email token. But for the purposes of this post, because we're looking at the phonetic level, we'll want to represent the pronunciation rather than what we want the final output to look like. 
 
 \*\* The /d/ becomes /t/ due to assimilation with the preceding sound, and the A represents a vowel that changes depending on vowel harmony, which in this word, becomes /e/. Thus, we end up with /te/ for the suffix.
+
+<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
