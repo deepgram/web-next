@@ -54,7 +54,7 @@ By "cleaner" here we mean "closer to the actual phonetics of what was said". Tak
 
 ![](https://res.cloudinary.com/deepgram/image/upload/v1661981074/blog/text-cleaning-asr-turkish/blog-image-1-1.png)
 
-**Figure 1.** Text cleaning for the Turkish sentence "I sent an email to the email address hello@company.com yesterday."
+**Figure 1.** Text cleaning for the Turkish sentence "I sent an email to the email address `hello@company.com` yesterday."
 
 ## Challenges for Turkish Text Cleaning
 
@@ -129,6 +129,7 @@ sent = "Hepsine 100$ verdim."
 >> clean_currency_symbols(sent)
 "Hepsine 100 dolar verdim."
 ```
+
 **Figure 3.** A sample code for running a regex to get correct Turkish currencies. 
 
 We literally did **nothing** to currency words; no plural suffix or any other suffixes were added by us. If we were processing English, though, we would need to parse the currency symbol together with the number to check if the number is 1 or not; if it's not 1, we need to add a plural suffix to the currency word. Please note that the code segment in Figure 3 shows only one step of processing, that related to processing the currency symbols. As we mentioned previously, all conversions are done in individual steps, hence the number *100* would be processed in a separate number-cleaning step.
