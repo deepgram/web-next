@@ -30,7 +30,7 @@ Automatic Speech Recognition, also known as ASR or Voice Recognition, is a term 
 
 Since its fledgeling beginnings in the 1950s, ASR has come a long way-once an ARPA (DARPA) project in the 70's, then a frustrating dictation product in the 90's to a buzzword today. 
 
-![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976380/blog/what-is-asr/Sputnik_asm-2.jpg) 
+![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976380/blog/what-is-asr/Sputnik_asm-2.jpg)
 
 *News of the successful launch of the first artificial satellite ["Sputnik"](https://en.wikipedia.org/wiki/Sputnik_1#/media/File:Sputnik_asm.jpg) by the USSR (1957) spurred President Eisenhower to create ARPA (Advanced Research Projects Agency) in 1958. This agency is responsible for the creation of some minor 20th century inventions such as the computer mouse and the Internet, as well as every Tom Clancy plot ever.*
 
@@ -70,7 +70,7 @@ ASR technologies began development in the 1950 and 1960s, when researchers made 
 
 In the 1970's, with ARPA funding, a team at [Carnegie Melon University](https://asa.scitation.org/doi/abs/10.1121/1.381666?journalCode=jas) developed technology that could produce transcripts from context-specific speech, e.g. voice-controlled versions of chess, chart-plotting for GIS and navigation and office-environment document management. Briefly, in that approach (revolutionary at the time) audio was converted into machine-readable text in a series of logical steps: load audio, reduce noise, cut up into meaningful sounds, statistically guess the sounds, statistically combine said sounds to guess the words, compare resulting options, output a best guess. In the 1990s, this approach (with improvements) allowed Nuance to make a piece of software (Dragon Translate) that was not too bad at transcribing single speakers when they spoke clearly in low-noise environments. Unfortunately, it took many hours to train the software to transcribe what one person said -again, assuming perfect acoustic surroundings -like the back of my closet, where all the clothes muffle any noise, especially my gentle cries of frustration. Products like these had one major limitation: they could only reliably convert speech to text for one person. This is because **no two people speak alike**. Among any two speakers there are variations in pronunciation, tone, word-choice, grammar choice, even amount of lung pressure, that from a mathematical perspective (computers speak math) make what they say completely different-*even if it's the same to you and me*. In fact, even if the same person utters a sentence twice, the sounds when recorded and measured are mathematically different! 
 
-![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976381/blog/what-is-asr/Butterfly_v4-1.png) 
+![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976381/blog/what-is-asr/Butterfly_v4-1.png)
 
 *These are two spectrograms of two people saying the same word: **butterfly.** Spectrograms are one way to visualize audio data. As you can see, these two spectrograms are very different from one another. Pay special attention to the slopes of the darker lines and their relative shapes. Same word to our human, meat-based brains, two mathematical realities for silicon brains!*
 
@@ -80,9 +80,9 @@ Though unable to transcribe the utterances of multiple speakers, these ASR-based
 
 In the mid-2000s, companies like Nuance, Google and Amazon figured out that they could make the old-school 1970s approach to ASR work for multiple speakers and better in noisy environments. To do this, these big companies replaced a small part of their speech recognition contraption with a new gizmo: neural networks. Rather than having to train ASR to understand one individual, these franken-ASRs were able to understand multiple speakers decently well - a considerable feat given the acoustic and mathematical realities of spoken language (see above). The reason that this is possible is because these neural-network algorithms can "learn on their own" when given certain stimuli. In the case of stimuli for ASR, that stimulus is painstakingly human-transcribed audio data. As a result, some pretty neat products were made possible. However, **the downside is that by slapping a neural network on top of the older machinery (recall, based on techniques from the 1970s), results in bulky, complex and resource hungry machines like the DeLorean from Back-to-the-Future** or my college bicycle: a franken-bike that worked, when the tides and winds were just right, usually, except when it didn't. (note: just cause you add a Mr. Fusion to your time-machine/bicycle, it does not mean that the other parts will work any better). 
 
-![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976382/blog/what-is-asr/Frankenstein-s_monster_-Boris_Karloff--1.png) 
+![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976382/blog/what-is-asr/Frankenstein-s_monster_-Boris_Karloff--1.png)
 
-*No picture of my franken-bike available as it is still classified. Above, [Boris Karloff](https://www.pexels.com/photo/actor-black-and-white-boris-karloff-cinema-276013/) portrays Frankenstein's monster in the 1931 Hollywood classic.*
+*No picture of my franken-bike available as it is still classified. Above, [Boris Karloff](https://en.wikipedia.org/wiki/Boris_Karloff) portrays Frankenstein's monster in the 1931 Hollywood classic.*
 
 While clunky, the hybrid approach to ASR developed in the mid-2000s, works well enough for certain applications, after all, you don't expect to solve any real data questions with Siri. Philosophical ones however...
 
@@ -90,7 +90,7 @@ While clunky, the hybrid approach to ASR developed in the mid-2000s, works well 
 
 The newest approach, **end-to-end deep learning ASR**, leverages the power of neural nets and scraps the clunky 1970's approach. Essentially, this new approach allows you to do something that was not possible even 2 years ago: [to quickly train the ASR to recognize dialects, accents and industry-specific word sets and to do so accurately](https://deepgram.com/product/train/). Think of this as a purpose-built, Mr. Fusion bicycle, no rusty bike-frames or ill-fated auto brands. The magic behind this depends on a few things: break-through math from the 80's, computing power/technology from the mid 2010s, big data, and the ability to rapidly innovate. This last idea is important. Being able to try new architectures, technologies and approaches is critical. Consider something known as the Concorde syndrome: if a company university (or any entity) has invested a lot of time and money in a huge machine that works more or less, they won't have much motivation to start from scratch even *if doing so makes engineering/financial/logical sense.* 
 
-![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976383/blog/what-is-asr/concorde.jpg) 
+![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976383/blog/what-is-asr/concorde.jpg)
 
 *The [Concorde](https://picryl.com/media/concorde-british-french-supersonic-transport-airplane-db633e) project, first devised before humans walked on the moon, and completed long after, wound up costing 20 times the projected amount. In 2003, when it made its last commercial flight, a seat on the plane cost about $5,500 ($7,300 in 2018 dollars).*
 

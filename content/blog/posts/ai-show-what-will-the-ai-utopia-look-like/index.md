@@ -48,7 +48,7 @@ shorturls:
 
 ![bosluk](https://res.cloudinary.com/deepgram/image/upload/v1661976828/blog/ai-show-what-will-the-ai-utopia-look-like/bos-luk.png)
 
-_An MRI image of a person with an arachnoid cyst in their left, inferior frontal lobe._
+*An MRI image of a person with an arachnoid cyst in their left, inferior frontal lobe.*
 
 **Susan:** It's amazing. Even without being a doctor you can look at some of the stuff now and say, "That's clearly not supposed to be there, you may want to get that looked at."
 
@@ -160,8 +160,6 @@ And not only that, it suggests a couple of options for that. You probably would 
 
 ![farm](https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)
 
-_[Unsplash](https://images.unsplash.com/photo-1429991889170-afd56b2a1210?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)_
-
 **Susan:** Then you take it to the next level - the automated machinery of the future could help automate doing all the farm tasks in a much more varied world.
 
 **Scott:** Well it decides what to plant where, it goes and harvests it.
@@ -248,8 +246,6 @@ Often people don't really realize what that means for the redesign of an aircraf
 
 ![car](https://res.cloudinary.com/deepgram/image/upload/v1661976830/blog/ai-show-what-will-the-ai-utopia-look-like/columnless-cart.jpg)
 
-_Courtesy: [Bajiao Studio](http://www.bajiaostudio.com/en/designers/yi-jing)_
-
 **Scott:** Got room to lounge, man.
 
 **Susan:** And this is not a plug for Tesla but, one of their things is, "Hey, because we've gotten rid of a lot of the engine components, there's a lot more room inside the cabin." Well, now you get even more of those components gone and there's even more you can do.
@@ -290,7 +286,7 @@ _Courtesy: [Bajiao Studio](http://www.bajiaostudio.com/en/designers/yi-jing)_
 
 ![tokamak](https://res.cloudinary.com/deepgram/image/upload/v1661976831/blog/ai-show-what-will-the-ai-utopia-look-like/TOKAMAK.jpg)
 
-_A picture of TOKAMAK at the [Princeton Plasma Physics Laboratory (PPPL)](https://www.pppl.gov/)_
+*A picture of TOKAMAK at the [Princeton Plasma Physics Laboratory (PPPL)](https://www.pppl.gov/)*
 
 **Scott:** I mean if you're turning into a steam thing and you just need to cool it down and whatnot, it can't be too hard to do that but, you know, heat is kind of easy to transport.
 

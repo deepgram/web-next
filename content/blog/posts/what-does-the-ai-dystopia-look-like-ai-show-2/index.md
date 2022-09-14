@@ -22,7 +22,6 @@ shorturls:
   reddit: https://dpgr.am/ba0efa7
   facebook: https://dpgr.am/103b135
 ---
-
 <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/570095520&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" width="100%" height="166" frameborder="no" scrolling="no"></iframe>
 
 **Scott:** Welcome to the AI Show. Today, we're asking the question: What does the AI dystopia look like?
@@ -63,7 +62,7 @@ shorturls:
 
 ![bigbro](https://res.cloudinary.com/deepgram/image/upload/v1661976812/blog/what-does-the-ai-dystopia-look-like-ai-show-2/1984_by_iskallvinter_d15owbe.jpg)
 
-_Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70025882)_
+*Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70025882)*
 
 **Susan:** Now, we're going to take the loss of privacy to the next level. Not only will they have your data, but they'll have the computing power and the algorithms to actually do something with it.
 
@@ -125,13 +124,14 @@ _Photo credit [iskallvinter](https://www.deviantart.com/iskallvinter/art/1984-70
 
 **Susan:** As you're in the car, you're sitting here. You're buying stuff.
 
-**Susan:** As you're in your car, you're looking around over there, and a little advertisement pops up. It's like, "You can also have this flowerpot for $9.99\. Just press here." It sees your eyes, and there you go. The attention economy.
-
+**Susan:** As you're in your car, you're looking around over there, and a little advertisement pops up. It's like, "You can also have this flowerpot for $9.99. Just press here." It sees your eyes, and there you go. The attention economy.
 
 **Scott:** Well, have you ever seen the show Black Mirror?
+
+
 ![mirror](https://res.cloudinary.com/deepgram/image/upload/v1661976813/blog/what-does-the-ai-dystopia-look-like-ai-show-2/download-1.jpg)
 
-_"Fifteen Million Merits" Series 1, episode 2 of Black Mirror._
+*"Fifteen Million Merits" Series 1, episode 2 of Black Mirror.*
 
 **Susan:** First of all, if you see the first episode... Go to the second or third episode. The first one will just...
 
@@ -161,9 +161,7 @@ _"Fifteen Million Merits" Series 1, episode 2 of Black Mirror._
 
 **Susan:** Oh, whew. That is is tremendous.
 
-
 ## Are they going to take our jobs?
-
 
 **Susan:** If you drive something, you can forget about it. Cars, trucks, planes, which ... Man, get in an aircraft. There's no cockpit.
 
@@ -173,9 +171,7 @@ _"Fifteen Million Merits" Series 1, episode 2 of Black Mirror._
 
 **Scott:** They could poison you. Or they just selectively, "Oh, you're not a Trump supporter? Your food is going to be cold."
 
-
 ## Technology is high-tech mediocrity
-
 
 **Susan:** I was just thinking the whole drone revolution there, delivery revolution, suddenly you're starting to get the seconds stuff. You've got to pay for Prime to get the fresh eggs, right? These are still technically good, but they're one day away from expiration. It's like, magically, all the food that gets delivered to your house, unless you pay the premium, is one day away from expiration.
 
@@ -247,7 +243,7 @@ _"Fifteen Million Merits" Series 1, episode 2 of Black Mirror._
 
 ![cops](https://res.cloudinary.com/deepgram/image/upload/v1661976815/blog/what-does-the-ai-dystopia-look-like-ai-show-2/lexus_police_edition_by_eun_su_d4xr1fd-1.jpg)
 
-_Photo credit: [Eun-su](https://www.deviantart.com/eun-su/art/Lexus-Police-Edition-298553593)_
+*Photo credit: [Eun-su](https://www.deviantart.com/eun-su/art/Lexus-Police-Edition-298553593)*
 
 **Scott:** Yeah, a while ago.
 
@@ -391,9 +387,7 @@ _Photo credit: [Eun-su](https://www.deviantart.com/eun-su/art/Lexus-Police-Editi
 
 **Susan:** Everywhere.
 
-
 > "They'll be looking at your email. Have you sent enough emails today? Have you attended enough meetings? Have you spoken enough words to your coworkers? Have you said enough buzzwords?"
-
 
 **Susan:** A performance review will come into your email, completely crafted by some sort of machine learning algorithm.
 
@@ -413,10 +407,7 @@ _Photo credit: [Eun-su](https://www.deviantart.com/eun-su/art/Lexus-Police-Editi
 
 **Susan:** There's huge promise in that. Don't get me wrong, but there are dangers of fitting too much to the mean there.
 
-
-
 ## The machines use us for only one thing
-
 
 **Scott:** What's the value of a human anymore? I mean, this is just going to be The Matrix soon, where we're just a power source for AI overlords. What's the deal?
 
@@ -430,9 +421,9 @@ _Photo credit: [Eun-su](https://www.deviantart.com/eun-su/art/Lexus-Police-Editi
 
 **Susan:** Oh, is only creativity left?
 
-![imagine](https://res.cloudinary.com/deepgram/image/upload/v1661976817/blog/what-does-the-ai-dystopia-look-like-ai-show-2/04-11_Robots_repost-unsplash-web.jpg) 
+![imagine](https://res.cloudinary.com/deepgram/image/upload/v1661976817/blog/what-does-the-ai-dystopia-look-like-ai-show-2/04-11_Robots_repost-unsplash-web.jpg)
 
-_Source: [Jehyun Sung](https://unsplash.com/photos/xdEeLyK4iBo)_
+*Source: [Jehyun Sung](https://unsplash.com/photos/xdEeLyK4iBo)*
 
 **Scott:** Our only job ... Yeah, that's it, and you take in all the inputs and you're like, "No, it should be this way."
 
@@ -474,7 +465,7 @@ _Source: [Jehyun Sung](https://unsplash.com/photos/xdEeLyK4iBo)_
 
 ![nap](https://res.cloudinary.com/deepgram/image/upload/v1661976818/blog/what-does-the-ai-dystopia-look-like-ai-show-2/napercise.jpg)
 
-_["Napercise"](https://www.forbes.com/sites/brucelee/2017/04/29/napercise-why-nap-for-free-when-you-can-pay-for-it/#68e889164be4), as David Lloyd Clubs in London calls it, is not far off. Soon all humans will do is be randomly creative and drink juice from sippy cups._
+*["Napercise"](https://www.forbes.com/sites/brucelee/2017/04/29/napercise-why-nap-for-free-when-you-can-pay-for-it/#68e889164be4), as David Lloyd Clubs in London calls it, is not far off. Soon all humans will do is be randomly creative and drink juice from sippy cups.*
 
 **Scott:** Is this something you did at school back in the day? This is something that they do at school now in California, at least. You have your own blanket. You get your milk. You take a nap.
 
@@ -538,4 +529,4 @@ _["Napercise"](https://www.forbes.com/sites/brucelee/2017/04/29/napercise-why-na
 
 **Scott:** Are there some good things?
 
-**Susan:** There just might be.
+**Susan:** There just might be.
