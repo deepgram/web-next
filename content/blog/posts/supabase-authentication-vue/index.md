@@ -22,7 +22,7 @@ shorturls:
   reddit: https://dpgr.am/d5d0e76
   facebook: https://dpgr.am/60f3165
 ---
-Following on from my "[Getting Started with Supabase](https://sweet-pie-c52a63-blog.netlify.app/getting-started-with-supabase/)" blog post, this guest post on the freeCodeCamp blog covers how to implement authentication into your Vue 3 application.
+Following on from my "[Getting Started with Supabase](https://blog.deepgram.com/getting-started-with-supabase/)" blog post, this guest post on the freeCodeCamp blog covers how to implement authentication into your Vue 3 application.
 
 We cover how to include and set up Supabase, create components to manage registration and login, gate content behind authentication, how to log out, and finally how to complete the flow with a 'magic link' via email.
 

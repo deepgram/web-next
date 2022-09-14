@@ -22,11 +22,11 @@ og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1661981404/blog/deepgram-versus-amazon-google/5-reasons-amazon-google-losing-customers-thumb-554.png
 ---
 
-[Amazon](https://offers.deepgram.com/head-to-head-dg-vs-amazon-webinar-on-demand) and [Google](https://offers.deepgram.com/head-to-head-dg-vs-google-webinar-on-demand) are often people's first thought when it comes to speech recognition systems, but if you've ever tried to use these [ASR](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/) tools, you know that the big name doesn't help you get accurate, timely results. In fact, people's first encounter with Big Tech speech recognition often leaves them wanting more, and sends them searching for a better solution to power their voice-driven future. According to an upcoming survey conducted by Opus Research, **only 1% of respondents didn't think that voice-enabled experiences were going to be a critical part of their company's future enterprise strategy.** That means that you need fast, accurate ASR that's easy to use if you're going to keep pace with your peers and competitors.
+[Amazon](https://offers.deepgram.com/head-to-head-dg-vs-amazon-webinar-on-demand) and [Google](https://offers.deepgram.com/head-to-head-dg-vs-google-webinar-on-demand) are often people's first thought when it comes to speech recognition systems, but if you've ever tried to use these [ASR](https://blog.deepgram.com/what-is-asr/) tools, you know that the big name doesn't help you get accurate, timely results. In fact, people's first encounter with Big Tech speech recognition often leaves them wanting more, and sends them searching for a better solution to power their voice-driven future. According to an upcoming survey conducted by Opus Research, **only 1% of respondents didn't think that voice-enabled experiences were going to be a critical part of their company's future enterprise strategy.** That means that you need fast, accurate ASR that's easy to use if you're going to keep pace with your peers and competitors.
 
 ## Top 5 Reasons to Switch to Deepgram
 
-So what are five of the top reasons that companies are switching from Big Tech to Deepgram for their automated speech recognition needs? And why are they [delighted with Deepgram](https://sweet-pie-c52a63-blog.netlify.app/deepgram-g2-review-winter-2022/) when they've made the switch? Let's take a look.
+So what are five of the top reasons that companies are switching from Big Tech to Deepgram for their automated speech recognition needs? And why are they [delighted with Deepgram](https://blog.deepgram.com/deepgram-g2-review-winter-2022/) when they've made the switch? Let's take a look.
 
 ### 1\. Speed
 

@@ -22,7 +22,7 @@ shorturls:
   reddit: https://dpgr.am/586df97
   facebook: https://dpgr.am/be5be02
 ---
-Imagine the [contact center](https://deepgram.com/solutions/contact-centers/) of the future where your agent is sitting in a cockpit type workstation. All relevant sales and support information for that customer is readily available and automatically sent to the agent depending on the conversation topic through an AI knowledge base and [automatic speech recognition](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/). 360 degree awareness of the customer is easily pulled from all customer facing channels. This future is already beginning but lets first talk about current AI use in the contact center.
+Imagine the [contact center](https://deepgram.com/solutions/contact-centers/) of the future where your agent is sitting in a cockpit type workstation. All relevant sales and support information for that customer is readily available and automatically sent to the agent depending on the conversation topic through an AI knowledge base and [automatic speech recognition](https://blog.deepgram.com/what-is-asr/). 360 degree awareness of the customer is easily pulled from all customer facing channels. This future is already beginning but lets first talk about current AI use in the contact center.
 
 ## **Current Use AI in the Contact Center**
 

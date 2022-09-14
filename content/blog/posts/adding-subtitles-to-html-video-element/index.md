@@ -26,7 +26,7 @@ Generating accurate transcripts is often just the start of a journey. Learn how 
 
 ## Generating Transcriptions
 
-To add subtitles to a HTML `<video>` element requires a WebVTT file. We previously wrote about [generating WebVTT captions with Node.js](https://sweet-pie-c52a63-blog.netlify.app/generate-webvtt-srt-captions-nodejs/). Assuming you have an MP4 video to transcribe, you can use this snippet to generate a subtitles file:
+To add subtitles to a HTML `<video>` element requires a WebVTT file. We previously wrote about [generating WebVTT captions with Node.js](https://blog.deepgram.com/generate-webvtt-srt-captions-nodejs/). Assuming you have an MP4 video to transcribe, you can use this snippet to generate a subtitles file:
 
 ```js
 // npm install @deepgram/sdk
@@ -95,6 +95,6 @@ You can add as many subtitle tracks as you want, but only one can have the `defa
 </video>
 ```
 
-As a final note, if you've not seen [Scott's Chili Pepper video](https://sweet-pie-c52a63-blog.netlify.app/chili-pepper/) which is in the header image for this post - you should. It's hilarious. If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
+As a final note, if you've not seen [Scott's Chili Pepper video](https://blog.deepgram.com/chili-pepper/) which is in the header image for this post - you should. It's hilarious. If you have any questions, please feel free to reach out on Twitter - we're [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 
         

@@ -34,7 +34,7 @@ In this video, I show you how I built this project, along with the parts you nee
 Important links:
 
 *   [Glitch Remix URL](https://glitch.com/edit/#!/remix/deepgram-transcription-badge)
-*   [How to automatically launch Chromium in Kiosk Mode](https://sweet-pie-c52a63-blog.netlify.app/chromium-kiosk-pi/)
+*   [How to automatically launch Chromium in Kiosk Mode](https://blog.deepgram.com/chromium-kiosk-pi/)
 
 Code:
 
