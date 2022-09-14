@@ -1,6 +1,6 @@
 ---
-title: "Under the Weather — What Does it Mean?"
-description: ""
+title: Under the Weather — What Does it Mean?
+description: Where does the phrase "under the weather" come from? Find out here!
 date: 2019-01-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981953/blog/what-does-it-mean-to-be-under-the-weather/placeholder-post-image%402x.jpg
 authors:
@@ -10,16 +10,16 @@ tags:
   - education
   - language
 seo:
-  title: "Under the Weather — What Does it Mean?"
+  title: Under the Weather — What Does it Mean?
   description: ""
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661981953/blog/what-does-it-mean-to-be-under-the-weather/placeholder-post-image%402x.jpg
 shorturls:
   share: https://dpgr.am/ad4b98f
   twitter: https://dpgr.am/8e092ec
   linkedin: https://dpgr.am/12f4966
   reddit: https://dpgr.am/9c7fae0
   facebook: https://dpgr.am/738d63f
-og:
-  image: https://res.cloudinary.com/deepgram/image/upload/v1661981953/blog/what-does-it-mean-to-be-under-the-weather/placeholder-post-image%402x.jpg
 ---
 
 We know this means to be sick or ill, but why?
