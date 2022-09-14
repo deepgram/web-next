@@ -38,7 +38,7 @@ Neural networks are complex statistical models that allow computers to create a 
 There are a number of notable players in the deep learning space. On the academic side, the [Geoffrey Hinton's lab at University of Toronto](http://learning.cs.toronto.edu/), [Yann LeCun's group at New York University](http://www.cs.nyu.edu/~yann/) and [Stanford's AI lab](http://ai.stanford.edu/) are some of the major leaders in deep learning research. On the private side, Google has led the way in applying deep learning to search and computer vision, and Baidu's Chief Scientist, Andrew Ng, is a major contributor to the scientific literature around deep learning on top of being the cofounder of Coursera. Why is deep learning so accessible today, even for newcomers to the field? There are two primary factors:
 
 1. Computing hardware is now fast and cheap enough to make deep learning accessible to just about anyone with a decent graphics card in their PC. (In our own testing, we've found that one GPU server is about as fast as 400 CPU cores for running the algorithms we're using.)
-2. Second, new open source deep learning platforms like [TensorFlow](https://www.tensorflow.org/), [Theano](http://deeplearning.net/software/theano/) and [Caffe](http://caffe.berkeleyvision.org/) make spinning up your own deep neural network fairly easy, especially when compared to having to build one from scratch.
+2. Second, new open source deep learning platforms like [TensorFlow](https://www.tensorflow.org/), Theano and [Caffe](http://caffe.berkeleyvision.org/) make spinning up your own deep neural network fairly easy, especially when compared to having to build one from scratch.
 
 There's a lot more to deep learning, of course, but that's what this guide is for!
 
@@ -48,7 +48,7 @@ Speaking of math, you should have some familiarity with calculus, probability an
 
 ![Neural network math - Image Credit: Wikimedia](https://upload.wikimedia.org/wikipedia/commons/f/ff/Rosenblattperceptron.png)
 
-Obviously, there is also going to be some programming involved. As you can see [from this list of deep learning libraries](http://www.teglor.com/b/deep-learning-libraries-language-cm569/), most of the popular libraries are written in Python and R, so some knowledge of Python or R would also be helpful. If you need to bone up on your math or programming skills, there are plenty of very high quality resources online to use. Also, as we mentioned above, having a decent graphics card (or accessing a GPU instance through a cloud computing platform like Amazon Web Services or one of the other hosting providers listed [here](http://www.nvidia.com/object/gpu-cloud-computing-services.html)).
+Obviously, there is also going to be some programming involved. As you can see [from this list of deep learning libraries](http://www.teglor.com/b/deep-learning-libraries-language-cm569/), most of the popular libraries are written in Python and R, so some knowledge of Python or R would also be helpful. If you need to bone up on your math or programming skills, there are plenty of very high quality resources online to use. Also, as we mentioned above, having a decent graphics card (or accessing a GPU instance through a cloud computing platform like Amazon Web Services or another hosting provider).
 
 ## Where To Learn About Deep Learning
 
@@ -58,8 +58,8 @@ Obviously, there is also going to be some programming involved. As you can see [
 
 * The University of Wisconsin has a nice, [one-webpage overview of neural networks](http://pages.cs.wisc.edu/~bolo/shipyard/neural/local.html).
 * [Brandon Rohrer](https://twitter.com/_brohrer_), Microsoft's principal data scientist, gave a talk that aims to explain and demystify deep learning without using fancy math or computer jargon at the Boston Open Data Science conference. He has the [video and slides on this page](http://brohrer.github.io/deep_learning_demystified.html).
-* Deep learning pioneer [Geoffrey Hinton](https://twitter.com/geoff_hinton) was the first to demonstrate the use of backpropogation algorithms for training deep neural networks. He now leads some of Google's AI research efforts when he's not attending to academic responsibilities at the University of Toronto. He gave a brief but illuminating talk on ["How Neural Networks Really Work"](https://www.youtube.com/watch?v=l2dVjADTEDU) that we really like. You can also find a list of his papers on DL "without much math" on his [faculty page](http://www.cs.toronto.edu/~hinton/).
-* [Steve Jurvetson](https://twitter.com/dfjsteve), the founding partner of DFJ, a large Silicon Valley venture capital firm, led a panel discussion at the Stanford Graduate School of Business on the subject. If you're interested in learning about deep learning from the perspective of some startup founders and engineers implementing DL in industry, [check out the video](https://www.youtube.com/watch?v=czLI3oLDe8M).
+* Deep learning pioneer [Geoffrey Hinton](https://twitter.com/geoff_hinton) was the first to demonstrate the use of backpropogation algorithms for training deep neural networks. He now leads some of Google's AI research efforts when he's not attending to academic responsibilities at the University of Toronto. You can find a list of his papers on DL "without much math" on his [faculty page](http://www.cs.toronto.edu/~hinton/).
+* Steve Jurvetson, the founding partner of DFJ, a large Silicon Valley venture capital firm, led a panel discussion at the Stanford Graduate School of Business on the subject. If you're interested in learning about deep learning from the perspective of some startup founders and engineers implementing DL in industry, [check out the video](https://www.youtube.com/watch?v=czLI3oLDe8M).
 
 **If you just want to dive right in and are comfortable with some math, simple code examples, and discussions of applying DL in practice** check out Stanford grad [Andrej Karpathy](https://twitter.com/karpathy?)'s blog post on "[The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)".
 
@@ -71,7 +71,6 @@ If you're the type of person who enjoys and gets a lot out of taking online cour
 * Udacity has a free, [ten week introductory course in machine learning](https://www.udacity.com/course/intro-to-machine-learning--ud120) that focuses on both theory and real-world applications. Again, it's a decent preparatory course for those interested in eventually pursuing deep learning.
 * Caltech's Yaser S. Abu-Mostafa's self-paced course, "[Learning From Data](https://work.caltech.edu/telecourse.html)" is less mathematically dense, but it's still a very solid survey of machine learning theory and techniques.
 * Andrej Karpathy's "[CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/)" at Stanford is challenging but well-done course in deep neural networks, and the syllabus and detailed course notes are available online.
-* Geoffrey Hinton's course on "[Neural Networks for Machine Learning](https://www.coursera.org/learn/neural-networks)" is good, and it's taught by one of the godfathers of the field.
 
 ### Books
 
@@ -83,7 +82,7 @@ Maybe online courses aren't your thing, or maybe you just prefer reading to watc
 ### Other Learning Resources & Websites
 
 * Metacademy is a very cool site with [a very, very solid overview of deep learning](https://metacademy.org/roadmaps/rgrosse/deep_learning) and tons of links to specific topics in the field.
-* Denny Britz of the Google Brain team has [a pretty comprehensive glossary of deep learning terminology](http://www.wildml.com/deep-learning-glossary/) on his website, WildML. He also curates [a weekly newsletter](https://www.getrevue.co/profile/wildml) that contains links to both technical and non-technical articles about machine learning and deep learning.
+* Denny Britz of the Google Brain team curates [a weekly newsletter](https://www.getrevue.co/profile/wildml) that contains links to both technical and non-technical articles about machine learning and deep learning.
 
 ## Where to Practice Deep Learning
 
@@ -100,14 +99,12 @@ Regardless of whether you're a rank amateur or a PhD at the bleeding edge of dee
 * You should see if your city has a machine learning or deep learning group on a site like Meetup.com. Most major cities have something going on.
 * There are several online communities devoted to deep learning and deriving insights from data:
 
-  * [Deeplearning.net](http://deeplearning.net/) is one of the major online hubs for deep learning related information. Resources include: a [comprehensive reading list](http://deeplearning.net/reading-list/), a [list of deep learning research labs](http://deeplearning.net/deep-learning-research-groups-and-labs/), and [a collection of nifty demos](http://deeplearning.net/demos/) so you can see DL in practice.
-  * [Datatau](http://www.datatau.com/) is kind of like Hacker News, but specifically focused on data and machine learning. The comments sections aren't very active but there are new links posted regularly.
+  * [DataTau](http://www.datatau.com/) is kind of like Hacker News, but specifically focused on data and machine learning. The comments sections aren't very active but there are new links posted regularly.
   * There is a [machine learning subreddit](https://www.reddit.com/r/machinelearning) that's fairly active. (They also have a very helpful wiki with even more resources.) The [deep learning subreddit](https://www.reddit.com/r/deeplearning) is a little quieter.
-  * There's a surprisingly active [Google Plus group](https://plus.google.com/communities/112866381580457264725) devoted to deep learning with over 30,000 members. (Soon to be extinct)
 
 ## Where To Find A Job in Deep Learning
 
-The good news is that basically everyone is hiring people that understand deep learning. You probably know all the usual places to go looking: AngelList, the monthly "Who's Hiring" thread on hacker news, the StackOverflow jobs board, and the dozens of general-purpose job search sites. One of the few jobs boards that specializes in DL positions is found at [Deeplearning.net](http://deeplearning.net/deep-learning-job-listings/), and there is a more [general machine learning jobs board on Kaggle](https://www.kaggle.com/jobs). These are definitely great points. Most companies looking for DL/ML talent aren't interested in setting up HR hoops for the applicant to jump through.
+The good news is that basically everyone is hiring people that understand deep learning. You probably know all the usual places to go looking: AngelList, the monthly "Who's Hiring" thread on hacker news, the StackOverflow jobs board, and the dozens of general-purpose job search sites. Most companies looking for DL/ML talent aren't interested in setting up HR hoops for the applicant to jump through.
 
 ## What To Do When Applying
 
