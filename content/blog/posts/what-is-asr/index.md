@@ -34,7 +34,7 @@ Since its fledgeling beginnings in the 1950s, ASR has come a long way-once an AR
 
 *News of the successful launch of the first artificial satellite ["Sputnik"](https://en.wikipedia.org/wiki/Sputnik_1#/media/File:Sputnik_asm.jpg) by the USSR (1957) spurred President Eisenhower to create ARPA (Advanced Research Projects Agency) in 1958. This agency is responsible for the creation of some minor 20th century inventions such as the computer mouse and the Internet, as well as every Tom Clancy plot ever.*
 
-Since the advent of products like Siri, Alexa, and Google Home there has been a lot of excitement around the term. This is because [ASR technologies are the driving force behind a wide array of modern technologies](https://sweet-pie-c52a63-blog.netlify.app/what-makes-alexa-siri-terminator-and-hal-tick/). If you have a smartphone -66% of living humans do (and at least one [Rhesus monkey](https://www.youtube.com/watch?v=YQW2mNcZT5o)), then you have ASR technologies at your fingertips. And it's used by 83% of business to transcribe speech, according to respondents in [The State of Voice 2022](https://deepgram.com/state-of-voice-technology-2022/). However, like so many oft-thrown-about terms, ASR seems to remain a nebulous term.
+Since the advent of products like Siri, Alexa, and Google Home there has been a lot of excitement around the term. This is because [ASR technologies are the driving force behind a wide array of modern technologies](https://blog.deepgram.com/what-makes-alexa-siri-terminator-and-hal-tick/). If you have a smartphone -66% of living humans do (and at least one [Rhesus monkey](https://www.youtube.com/watch?v=YQW2mNcZT5o)), then you have ASR technologies at your fingertips. And it's used by 83% of business to transcribe speech, according to respondents in [The State of Voice 2022](https://deepgram.com/state-of-voice-technology-2022/). However, like so many oft-thrown-about terms, ASR seems to remain a nebulous term.
 
 * What is ASR really?
 * What does ASR do?
@@ -103,7 +103,7 @@ Hopefully, by now, you have had a few of your questions answered. Most likely yo
 * Where else can I find ASR?
 * What can you do with a good transcript of audio data?
 * What sorts of secrets lie hidden in all that talk?
-* [How do I evaluate speech recognition providers?](https://sweet-pie-c52a63-blog.netlify.app/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/)
+* [How do I evaluate speech recognition providers?](https://blog.deepgram.com/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/)
 * What are the steps to test ASR providers?
 
 **ASR is the technology that, deployed intelligently, creates highly accurate transcripts and opens the door to insights that lead to lower costs, higher revenue and academic discovery.**

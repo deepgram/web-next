@@ -44,7 +44,7 @@ The team behind AutoBubble are all first-year Computer Science students at the U
 
 As soon as the team landed on an idea, they broke it down into pieces and assigned work to each member. They created a shared document to detail what each of their modules would do and the expected inputs/outputs, making it much easier to glue the project together at the end.
 
-Conall got to work on integrating Deepgram, and thanks to the [documentation](https://developers.deepgram.com/documentation/), [tutorials](https://sweet-pie-c52a63-blog.netlify.app/categories/tutorial/), and [example projects](https://developers.deepgram.com/use-cases/), he could treat them as building blocks to build what they needed.
+Conall got to work on integrating Deepgram, and thanks to the [documentation](https://developers.deepgram.com/documentation/), [tutorials](https://blog.deepgram.com/categories/tutorial/), and [example projects](https://developers.deepgram.com/use-cases/), he could treat them as building blocks to build what they needed.
 
 Meanwhile, Lochlann started to work on facial recognition with [face-api.js](https://github.com/justadudewhohacks/face-api.js), which was a challenge. Still, the moment he overcame the hurdle and got it working, the team knew it provided many cool opportunities for this project.
 

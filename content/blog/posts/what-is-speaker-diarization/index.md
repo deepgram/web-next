@@ -50,7 +50,7 @@ Speaker diarization is generally broken down into four major subtasks:
 3. **Representation** - Use a discriminative vector to represent those segments.
 4. **Attribution** - Add a speaker label to each segment based on its discriminative representation.
 
-Diarization systems can include additional subtasks. For a [true end-to-end AI diarization system](https://sweet-pie-c52a63-blog.netlify.app/deep-learning-speech-recognition/), one or more of these subtasks may be joined together to improve efficiency. Let's dig a bit deeper into what these subtasks accomplish for speaker diarization.
+Diarization systems can include additional subtasks. For a [true end-to-end AI diarization system](https://blog.deepgram.com/deep-learning-speech-recognition/), one or more of these subtasks may be joined together to improve efficiency. Let's dig a bit deeper into what these subtasks accomplish for speaker diarization.
 
 **Detection** is often accomplished by a Voice Activity Detection (VAD) model, which determines if a region of audio contains voice activity (which includes but is not limited to speech) or not. For a more precise outcome, Deepgram leverages the millisecond-level word timings that come with our ASR transcripts. This gives us very accurate regions in time where we are confident that there is speech.
 
@@ -62,7 +62,7 @@ Diarization systems can include additional subtasks. For a [true end-to-end AI d
 
 ## Why is Speaker Diarization Used?
 
-Speaker diarization is used to increase transcript readability and better understand what a conversation is about. Speaker diarization can help extract important points or action items from the conversation and identify who said what. It also helps to identify how many speakers were on the audio.  Some examples uses are when reviewing a post-call sales meeting and you need to know did if the customer agreed to the business terms or if the salesperson just say they did. Who gave the final buying decision? For [real-time educational use](https://sweet-pie-c52a63-blog.netlify.app/top-7-uses-speech-to-text-education/), caption diarization would help online students better understand who said what in the classroom. Was it the professor or a student?
+Speaker diarization is used to increase transcript readability and better understand what a conversation is about. Speaker diarization can help extract important points or action items from the conversation and identify who said what. It also helps to identify how many speakers were on the audio.  Some examples uses are when reviewing a post-call sales meeting and you need to know did if the customer agreed to the business terms or if the salesperson just say they did. Who gave the final buying decision? For [real-time educational use](https://blog.deepgram.com/top-7-uses-speech-to-text-education/), caption diarization would help online students better understand who said what in the classroom. Was it the professor or a student?
 
 ## What Are the Use Cases for Speaker Diarization?
 

@@ -27,7 +27,7 @@ If you have a podcast, or want to analyze podcasts, this is the post for you! We
 
 You must have Python installed on your machine - I'm using Python 3.10 at the time of writing. You will also need a Deepgram API Key - [get one here](https://console.deepgram.com/signup?jump=keys).
 
-Create a new directory and navigate to it in your terminal. [Create a virtual environment](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/) with `python3 -m venv virtual_env` and activate it with `source virtual_env/bin/activate`. Install dependencies with `pip install deepgram_sdk asyncio python-dotenv feedparser`.
+Create a new directory and navigate to it in your terminal. [Create a virtual environment](https://blog.deepgram.com/python-virtual-environments/) with `python3 -m venv virtual_env` and activate it with `source virtual_env/bin/activate`. Install dependencies with `pip install deepgram_sdk asyncio python-dotenv feedparser`.
 
 Open the directory in a code editor, and create an empty `.env` file. Take your Deepgram API Key, and add the following line to `.env`:
 

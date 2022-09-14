@@ -41,11 +41,11 @@ In this post, we'll cover:
 
 At the time of writing, `torchaudio` is on version `0.11.0` and only works with Python versions 3.6 to 3.9. For this example, we’ll be using Python 3.9. We’ll also need to install some libraries before we dive in. The first libraries we’ll need are `torch` and `torchaudio` from PyTorch. We’ll be using `matplotlib` to plot our visual representations, `requests` to get the data, and `librosa` to do some more visual manipulations for spectrograms.
 
-To get started we’ll pip install all of these into a new virtual environment. [To start a virtual environment](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/) run `python3 -m venv <new environment name>`. Then run `pip install torch torchaudio matplotlib requests librosa` and let `pip` install all the libraries necessary for this tutorial.
+To get started we’ll pip install all of these into a new virtual environment. [To start a virtual environment](https://blog.deepgram.com/python-virtual-environments/) run `python3 -m venv <new environment name>`. Then run `pip install torch torchaudio matplotlib requests librosa` and let `pip` install all the libraries necessary for this tutorial.
 
 ## Adding Effects for Audio Data Augmentation with PyTorch TorchAudio
 
-Recently, we covered the basics of [how to manipulate audio data in Python](https://sweet-pie-c52a63-blog.netlify.app/best-python-audio-manipulation-tools/). In this section we’re going to cover the basics of how to pass sound effect options to TorchAudio. Then, we’ll go into specifics about how to add background noise at different sound levels and how to add room reverb.
+Recently, we covered the basics of [how to manipulate audio data in Python](https://blog.deepgram.com/best-python-audio-manipulation-tools/). In this section we’re going to cover the basics of how to pass sound effect options to TorchAudio. Then, we’ll go into specifics about how to add background noise at different sound levels and how to add room reverb.
 
 Before we get into that, we have to set some stuff up. This section of code is entirely auxiliary code that you can [skip](#using-sound-effects-in-torchaudio). It would be good to understand this code if you’d like to continue testing on the provided data.
 

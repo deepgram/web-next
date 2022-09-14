@@ -26,7 +26,7 @@ shorturls:
 
 **Scott:** Welcome to the AI show. Today we're asking the question, the very big question. What will the AI Utopia look like?
 
-**Susan:** We were a little negative, Debbie Downer kind of not so happy on the [last podcast](https://sweet-pie-c52a63-blog.netlify.app/what-does-the-ai-dystopia-look-like-ai-show/).
+**Susan:** We were a little negative, Debbie Downer kind of not so happy on the [last podcast](https://blog.deepgram.com/what-does-the-ai-dystopia-look-like-ai-show/).
 
 **Scott:** Why be so negative, man?
 
@@ -268,7 +268,7 @@ Often people don't really realize what that means for the redesign of an aircraf
 
 ### Think about the energy sector
 
-**Scott:** I think also in the energy sector there's going to be a big deal. For example, better use of the grid. This is already kind of happening but, better systems designed for that and then, systems to switch between, choose what you should do, price it, et cetera, make it more efficient. But also, machine learning techniques to find out new power sources. So, what I mean is, [fusion has been a promise for a long time](https://sweet-pie-c52a63-blog.netlify.app/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/) and, it actually is really close to happening and it's like, man, what's the real problem here? It might be the people. And saying, "Hey, here are the laws of physics and here are the constraints that we have, it's probably going to be real complicated to make this work. Can we throw some computing power and a machine learning algorithm to guess at what the best type of fusion device would be?" And, there's been progress made on [this](https://www.pppl.gov/news/press-releases/2017/12/artificial-intelligence-helps-accelerate-progress-toward-efficient).
+**Scott:** I think also in the energy sector there's going to be a big deal. For example, better use of the grid. This is already kind of happening but, better systems designed for that and then, systems to switch between, choose what you should do, price it, et cetera, make it more efficient. But also, machine learning techniques to find out new power sources. So, what I mean is, [fusion has been a promise for a long time](https://blog.deepgram.com/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/) and, it actually is really close to happening and it's like, man, what's the real problem here? It might be the people. And saying, "Hey, here are the laws of physics and here are the constraints that we have, it's probably going to be real complicated to make this work. Can we throw some computing power and a machine learning algorithm to guess at what the best type of fusion device would be?" And, there's been progress made on [this](https://www.pppl.gov/news/press-releases/2017/12/artificial-intelligence-helps-accelerate-progress-toward-efficient).
 
 **Susan:** Lots of progress. Yeah, I mean, I'm actually hearing the eternal joke of fusion's only 20 years away.
 
@@ -342,7 +342,7 @@ In 10 years try to find a researcher that's not using machine learning to analyz
 
 **Scott:** It always gets better.
 
-**Susan:** The algorithm is [what makes you money right now](https://sweet-pie-c52a63-blog.netlify.app/ai-show-different-types-of-machine-learning/) but, I can almost guarantee you, 10 years from now, it's not going to be that same model structure, even, fundamental technology. But, you'll probably keep going back to the dataset that you collected.
+**Susan:** The algorithm is [what makes you money right now](https://blog.deepgram.com/ai-show-different-types-of-machine-learning/) but, I can almost guarantee you, 10 years from now, it's not going to be that same model structure, even, fundamental technology. But, you'll probably keep going back to the dataset that you collected.
 
 **Scott:** You see this all over the place. The academic datasets and texts and images and speech that have existed for the past 40 years are still used to train models today.
 
