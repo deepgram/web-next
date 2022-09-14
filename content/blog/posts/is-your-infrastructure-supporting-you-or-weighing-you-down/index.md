@@ -82,7 +82,7 @@ However, due to the vastness of the POTS network and the number of social instit
 
 ### A Similar Vein - Legacy ASR Systems
 
-You can see a similar progression in the newer world of ASR -Automatic Speech Recognition. In a sentence, [ASR technologies](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/) are what data scientists use to gather business and academic insights from large voice data sets like those found on smart sales enablement platforms such as 8x8 or Invoca, products like Siri, and call centers.
+You can see a similar progression in the newer world of ASR -Automatic Speech Recognition. In a sentence, [ASR technologies](https://blog.deepgram.com/what-is-asr/) are what data scientists use to gather business and academic insights from large voice data sets like those found on smart sales enablement platforms such as 8x8 or Invoca, products like Siri, and call centers.
 
 Much like the US' cell networks, ASR technology hangs on to remnants of its past. Whereas products like Nuance Dragon Transcribe were revolutionary in the 1990s, the costly and time-intensive methodologies that gave birth to the industry 25 years ago have become insufficient to do the smart, AI-driven analytics that drive modern industries. The parallel here is clear: in the same way as the POTS system was cleverly upgraded, adapted and modified to enable internet connectivity, and television (AT&T U-Verse), ASR technologies were tweaked, duct-taped and wrangled into the Siri and Google Home products that we know and love today.
 

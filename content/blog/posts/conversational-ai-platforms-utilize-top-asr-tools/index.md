@@ -31,7 +31,7 @@ Conversational AI is a type of artificial intelligence that enables computers to
 
 ## Why is Conversational AI Beneficial?
 
-There are a number of ways that conversational AI can benefit businesses today, especially given the complex financial environment. Although it can be challenging to [create a great conversational AI experience](https://sweet-pie-c52a63-blog.netlify.app/what-makes-a-great-conversational-ai-experience/), the benefits make it absolutely worth the effort. Let's look at some of the benefits that conversational AI can have for customers as well as the direct benefits that it can have for enterprises.
+There are a number of ways that conversational AI can benefit businesses today, especially given the complex financial environment. Although it can be challenging to [create a great conversational AI experience](https://blog.deepgram.com/what-makes-a-great-conversational-ai-experience/), the benefits make it absolutely worth the effort. Let's look at some of the benefits that conversational AI can have for customers as well as the direct benefits that it can have for enterprises.
 
 ### Customer Benefits of Conversational AI
 
@@ -99,9 +99,9 @@ One use case you might not have considered for conversational AI platforms is fo
 
 In order to understand and respond to humans, conversational AI platforms need some way to interpret human speech. This is where automatic speech recognition (ASR) comes in. ASR is a technology that enables computers to convert spoken language into text which, with the help of tools like natural language understanding, can be used to determine what a person is saying and respond in kind. There are a number of different ASR solutions available, each with its own advantages and disadvantages. The most important thing to consider when choosing an ASR solution is making sure you're using one that's well-suited for the task at hand.
 
-In the case of conversational AI, that means using a speech-to-text solution that can provide responses in real time, and not every ASR provider is able to provide that kind of turnaround on transcription. If it takes seconds or minutes to reply to someone using a conversational AI platform, you've left the realm of anything that seems conversational. The best way to ensure that you're getting a fast turnaround is to use an ASR solution like Deepgram that's [built on end-to-end deep learning](https://sweet-pie-c52a63-blog.netlify.app/deep-learning-asr-for-business/). Deep learning ASR systems are faster than other options, providing responses quickly enough that the interactions truly feel like a conversation.
+In the case of conversational AI, that means using a speech-to-text solution that can provide responses in real time, and not every ASR provider is able to provide that kind of turnaround on transcription. If it takes seconds or minutes to reply to someone using a conversational AI platform, you've left the realm of anything that seems conversational. The best way to ensure that you're getting a fast turnaround is to use an ASR solution like Deepgram that's [built on end-to-end deep learning](https://blog.deepgram.com/deep-learning-asr-for-business/). Deep learning ASR systems are faster than other options, providing responses quickly enough that the interactions truly feel like a conversation.
 
-Another advantage of end-to-end deep learning speech-to-text systems for conversational AI platforms is that it's quick and easy to train a new model based on your data. That means you have a model that knows exactly what your audio looks like, including things like background noise and specific jargon or industry terms, and can far exceed generic, out-of-the-box ASR, which [will never be good enough for conversational AI](https://sweet-pie-c52a63-blog.netlify.app/generic-asr-will-never-be-accurate-enough-for-conversational-ai/).
+Another advantage of end-to-end deep learning speech-to-text systems for conversational AI platforms is that it's quick and easy to train a new model based on your data. That means you have a model that knows exactly what your audio looks like, including things like background noise and specific jargon or industry terms, and can far exceed generic, out-of-the-box ASR, which [will never be good enough for conversational AI](https://blog.deepgram.com/generic-asr-will-never-be-accurate-enough-for-conversational-ai/).
 
 ## Benefits of Top ASR Tools for Conversational AI
 
@@ -129,7 +129,7 @@ ASR tools can help improve the accuracy of conversational AI platforms by provid
 
 ### 6. Custom Model Training
 
-Another advantage of using an ASR solution that's built on end-to-end deep learning is that its flexibility lets you train a custom model quickly and easily thanks to [transfer learning](https://sweet-pie-c52a63-blog.netlify.app/transfer-learning-spanish-portuguese/). Your business might have lots of unique vocabulary and acronyms that an off-the-shelf model struggles with. By training a custom model on your own data, you can drastically improve the quality of transcripts that the model outputs, as it now knows your lingo.
+Another advantage of using an ASR solution that's built on end-to-end deep learning is that its flexibility lets you train a custom model quickly and easily thanks to [transfer learning](https://blog.deepgram.com/transfer-learning-spanish-portuguese/). Your business might have lots of unique vocabulary and acronyms that an off-the-shelf model struggles with. By training a custom model on your own data, you can drastically improve the quality of transcripts that the model outputs, as it now knows your lingo.
 
 ## Wrapping up
 

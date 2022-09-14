@@ -29,11 +29,11 @@ This post is a continuation of the series "How to Build a Live Streaming Web App
 
 <Panel type="info" title="Build a Live Streaming Web Application with Amazon IVS and Deepgram (SERIES)">
 <ol> 
-<li><a href="https://sweet-pie-c52a63-blog.netlify.app/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/">How to Build a Live Streaming Web Application with Amazon IVS and Deepgram</a></li>
-<li><a href="https://sweet-pie-c52a63-blog.netlify.app/build-a-livestream-web-application-vue-and-express-setup/"> Build a Live Streaming Web Application: Vue and Express Setup</a></li>
-<li><a href="https://sweet-pie-c52a63-blog.netlify.app/how-to-write-vue-3-composables-for-a-third-party-API-integration/"> How to Write Vue 3 Composables for a Third-Party API Integration</a></li>
+<li><a href="https://blog.deepgram.com/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/">How to Build a Live Streaming Web Application with Amazon IVS and Deepgram</a></li>
+<li><a href="https://blog.deepgram.com/build-a-livestream-web-application-vue-and-express-setup/"> Build a Live Streaming Web Application: Vue and Express Setup</a></li>
+<li><a href="https://blog.deepgram.com/how-to-write-vue-3-composables-for-a-third-party-API-integration/"> How to Write Vue 3 Composables for a Third-Party API Integration</a></li>
 
-<li><a href="https://sweet-pie-c52a63-blog.netlify.app/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/"> Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component</a></li>
+<li><a href="https://blog.deepgram.com/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/"> Asynchronous Logic to Write a Vue 3 and Deepgram Captions Component</a></li>
 </ol>
 </Panel>
 
@@ -73,11 +73,11 @@ If you have wanted to learn more about how to write Vue 3 composables to use thi
 
 ### Background to the Series
 
-In the [first post](https://sweet-pie-c52a63-blog.netlify.app/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/) in the series, I explained how to build a live streaming web application using just Vanilla JS and HTML. That post covers setting up an Amazon IVS account, which is necessary to get the third-party technology example (Amazon IVS) in today's post working. **Setting up an Amazon IVS channel is necessary to build the second composable in this tutorial, but the first one can be built without doing that**.
+In the [first post](https://blog.deepgram.com/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/) in the series, I explained how to build a live streaming web application using just Vanilla JS and HTML. That post covers setting up an Amazon IVS account, which is necessary to get the third-party technology example (Amazon IVS) in today's post working. **Setting up an Amazon IVS channel is necessary to build the second composable in this tutorial, but the first one can be built without doing that**.
 
 In the second post, I started building a full-stack application using Vue 3. I set up Vue-Router, Vuex, and a backend server which all helped me build a feature to restrict access to the streaming page of my site. Visitors to the site are required to enter a code, and that code is verified on the backend, resulting in the user being able to navigate to the streaming page. **There is no need to read that post to be able to go through this tutorial on composables.**
 
-Today I'll build the video streaming page in Vue 3, focusing on building this feature with Vue composables. If you want a refresher on Vue composables, check out my post [Reusability with Composables](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-reusability-with-composables/).
+Today I'll build the video streaming page in Vue 3, focusing on building this feature with Vue composables. If you want a refresher on Vue composables, check out my post [Reusability with Composables](https://blog.deepgram.com/diving-into-vue-3-reusability-with-composables/).
 
 The code for today's tutorial can be found in [this Github repo](https://github.com/deepgram-devs/livestream-amazonIVS-and-deepgram/tree/amazonIVS-composables), the branch named "amazonIVS-composables."
 

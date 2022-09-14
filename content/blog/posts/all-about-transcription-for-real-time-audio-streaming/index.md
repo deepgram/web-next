@@ -24,11 +24,11 @@ shorturls:
   reddit: https://dpgr.am/7ce8adc
   facebook: https://dpgr.am/cdb2098
 ---
-Real-time streaming transcriptions involves taking audio that's being generated live and transcribing it into text. One of the major use cases for real-time streaming is [live captioning](https://sweet-pie-c52a63-blog.netlify.app/closed-captioning-companies-use-asr/). As speakers talk, text is generated and displayed on the screen. Real-time streaming can also transcribe or caption pre-recorded media that's presented during an event.
+Real-time streaming transcriptions involves taking audio that's being generated live and transcribing it into text. One of the major use cases for real-time streaming is [live captioning](https://blog.deepgram.com/closed-captioning-companies-use-asr/). As speakers talk, text is generated and displayed on the screen. Real-time streaming can also transcribe or caption pre-recorded media that's presented during an event.
 
 ## How Does Real-Time Streaming Transcription Work?
 
-Real-time streaming is similar to pre-recorded transcription. The audio goes through the same [speech model](https://offers.deepgram.com/how-ai-speech-models-work-whitepaper) for transcriptions but the audio input and output is configured differently. Input is sent through a live streaming protocol like websocket. The output can be text over websockets also. Adding speech understanding feature to the output stream is mostly done post transcription processing.  Post transcription processing can include [diarization](https://sweet-pie-c52a63-blog.netlify.app/what-is-speaker-diarization/), [profanity filtering](https://developers.deepgram.com/documentation/features/profanity-filter/), [redaction](https://developers.deepgram.com/documentation/features/redact/), and other features depending on the speech recognition and understanding provider. Here's a code sample of how we do real-time transcription with Deepgram: 
+Real-time streaming is similar to pre-recorded transcription. The audio goes through the same [speech model](https://offers.deepgram.com/how-ai-speech-models-work-whitepaper) for transcriptions but the audio input and output is configured differently. Input is sent through a live streaming protocol like websocket. The output can be text over websockets also. Adding speech understanding feature to the output stream is mostly done post transcription processing.  Post transcription processing can include [diarization](https://blog.deepgram.com/what-is-speaker-diarization/), [profanity filtering](https://developers.deepgram.com/documentation/features/profanity-filter/), [redaction](https://developers.deepgram.com/documentation/features/redact/), and other features depending on the speech recognition and understanding provider. Here's a code sample of how we do real-time transcription with Deepgram: 
 
 ![](https://res.cloudinary.com/deepgram/image/upload/v1661976862/blog/all-about-transcription-for-real-time-audio-streaming/code_snippet.png)
 
@@ -36,7 +36,7 @@ You can get the full instructions and code in our [streaming quickstart guide](h
 
 ## Why is Live Audio Streaming Transcription Used?
 
-Real-time streaming transcription is used to get immediate transcriptions of an audio stream, which is then provided to a human reader or a machine. For a human reader, this is called [live captioning](https://sweet-pie-c52a63-blog.netlify.app/closed-captioning-companies-use-asr/). The text appears within seconds of the speaker finishing a word. [Captioning](https://sweet-pie-c52a63-blog.netlify.app/closed-captioning-companies-use-asr/) has many benefits, but one compelling example is to allow hearing-impaired individuals to follow what a speaker is saying.
+Real-time streaming transcription is used to get immediate transcriptions of an audio stream, which is then provided to a human reader or a machine. For a human reader, this is called [live captioning](https://blog.deepgram.com/closed-captioning-companies-use-asr/). The text appears within seconds of the speaker finishing a word. [Captioning](https://blog.deepgram.com/closed-captioning-companies-use-asr/) has many benefits, but one compelling example is to allow hearing-impaired individuals to follow what a speaker is saying.
 
 For a machine, real-time streaming transcription can be used to transcribe a user's audio responses to an IVR, [voicebot](https://deepgram.com/solutions/voicebots/), or virtual assistant to continue a human-to-machine conversation. Real-time streaming can also be used to search for important information in a conversation as it's happening, and then provide a contact center agent with on-screen tips or hints to help solve a customer's issues or recommend an upsell.
 
@@ -46,7 +46,7 @@ As noted above, live audio streaming has a number of human and machine use cases
 
 * **Agent assistance** - Having an AI read the transcription data can provide support suggestions and upsell recommendations to an agent on the line in real time.
 * **IVR/Voicebots/Virtual assistants** - Quickly transcribe a user's responses so the AI can determine what is said and the intent of it in order to respond quickly and accurately.
-* **Live captioning -** Provide captioning of a live event, [lecture](https://sweet-pie-c52a63-blog.netlify.app/classroom-captioner/), concert, or webinar for the hearing impaired or others who prefer reading instead of just listening. This can be for in-person or online participants.
+* **Live captioning -** Provide captioning of a live event, [lecture](https://blog.deepgram.com/classroom-captioner/), concert, or webinar for the hearing impaired or others who prefer reading instead of just listening. This can be for in-person or online participants.
 * **Meeting summary and analytics** - Transcribing and analyzing a meeting in real-time allows quicker post-meeting actions, i.e., action items identified, meeting summary shared, and any sales coaching opportunities identified.
 * **Personal captioning** - Provide captioning so that a hearing-impaired patient can understand what's happening.
 * **Real-time analytics** - Stream the audio for transcription and analysis so any issues can immediately be resolved, for example, if an agent did not repeat the compliance statement.
@@ -75,7 +75,7 @@ The higher the WRR, the better the transcription is in terms of word accuracy. W
 * ASR latency is how long it takes to transcribe the audio.
 * Internet latency is how long it takes for the audio data to get to the ASR servers and how long it takes the text data to get back to you.
 
-For example, if you are building a voicebot, you want to minimize the wait time of the user from when a word is spoken to when the AI voicebot responds. Within that wait time, there are [a lot of processes](https://sweet-pie-c52a63-blog.netlify.app/tips-on-choosing-a-conversational-ai-development-path/) going on. If you want a true human-like voicebot experience, all processing must be done in milliseconds; thus, the ASR latency of that process must be in milliseconds. Internet latency can be minimized with an on-premises deployment of the ASR solution.
+For example, if you are building a voicebot, you want to minimize the wait time of the user from when a word is spoken to when the AI voicebot responds. Within that wait time, there are [a lot of processes](https://blog.deepgram.com/tips-on-choosing-a-conversational-ai-development-path/) going on. If you want a true human-like voicebot experience, all processing must be done in milliseconds; thus, the ASR latency of that process must be in milliseconds. Internet latency can be minimized with an on-premises deployment of the ASR solution.
 
 ## Real-time Streaming Transcription with Deepgram versus Others
 

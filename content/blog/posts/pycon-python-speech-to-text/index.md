@@ -27,7 +27,7 @@ Let’s discover how a voice-to-text AI provider like Deepgram, combined with co
 
 ## What is Deepgram?
 
-Deepgram is a speech recognition company that transcribes real-time or recorded audio from voice-to-text. You can see how this is super helpful with unstructured data by gathering from voice and changing it into machine-readable data for making decisions. You can even use Deepgram for video by overlaying on top, collecting subtitles, and running insights or analytics. Here’s an [example of speech recognition analytics in Python you can create](https://sweet-pie-c52a63-blog.netlify.app/python-talk-time-analytics/).
+Deepgram is a speech recognition company that transcribes real-time or recorded audio from voice-to-text. You can see how this is super helpful with unstructured data by gathering from voice and changing it into machine-readable data for making decisions. You can even use Deepgram for video by overlaying on top, collecting subtitles, and running insights or analytics. Here’s an [example of speech recognition analytics in Python you can create](https://blog.deepgram.com/python-talk-time-analytics/).
 
 This year, we also have a booth at PyCon in Salt Lake City, Utah, and we can’t wait to meet you! You’ll be able to try our technology and chat with people who work for Deepgram.
 
@@ -67,7 +67,7 @@ Check out [this article](https://deepgram.com/the-definitive-guide-to-speech-rec
 
 To get started with our Deepgram Python SDK, you can visit our open-sourced [Github repository here](https://github.com/deepgram/python-sdk). The samples in the `README.md` will help you get up and running with real-time streaming and recorded audio. We also created special Python documentation for developers, which you can access [here](https://developers.deepgram.com/sdks-tools/sdks/python-sdk/).
 
-If you’re interested in learning about different use cases for Deepgram, we just published an article about how [speech-to-text with Deepgram can transform lives around the world](https://sweet-pie-c52a63-blog.netlify.app/pycon-deepgram-usecases/).
+If you’re interested in learning about different use cases for Deepgram, we just published an article about how [speech-to-text with Deepgram can transform lives around the world](https://blog.deepgram.com/pycon-deepgram-usecases/).
 
 ## Will We See You at PyCon?
 

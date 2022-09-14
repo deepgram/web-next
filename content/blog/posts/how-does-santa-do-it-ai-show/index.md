@@ -232,7 +232,7 @@ _If Santa's sleigh is about the size of a Cadillac Escalade, then it can hold ro
 
 **Scott:** That's a good question. What is the real data he has to make these predictions?
 
-**Susan:** What's useful to determine naughty or nice? But more to the point, how did he train the classifiers in the first place, how does he calibrate naughty and nice. Is this a [reinforcement learning](https://sweet-pie-c52a63-blog.netlify.app/ai-show-different-types-of-machine-learning/) question where over time...
+**Susan:** What's useful to determine naughty or nice? But more to the point, how did he train the classifiers in the first place, how does he calibrate naughty and nice. Is this a [reinforcement learning](https://blog.deepgram.com/ai-show-different-types-of-machine-learning/) question where over time...
 
 **Scott:** Is Santa biased? Big deep one there.
 

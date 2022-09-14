@@ -63,13 +63,13 @@ No one likes to be asked for information they have already given. This is why sp
 
 ### 4. E-discovery
 
-Your firm just accepted a case which involves doing discovery on 10,000 hours of audio. How are you going to find the audio that matters? One solution-the fastest, and most efficient-is to use speech recognition APIs to [search the audio](https://sweet-pie-c52a63-blog.netlify.app/search-through-sound-finding-phrases-in-audio/). 
+Your firm just accepted a case which involves doing discovery on 10,000 hours of audio. How are you going to find the audio that matters? One solution-the fastest, and most efficient-is to use speech recognition APIs to [search the audio](https://blog.deepgram.com/search-through-sound-finding-phrases-in-audio/). 
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976762/blog/five-ways-to-use-speech-recognition-apis-to-empower-your-business/ingo-schulz-671677-unsplash.jpg) 
 
 *[Unsplash](https://unsplash.com/photos/mwWZTLr9Tcg)*
 
-[Legal technology companies already use speech recognition APIs to convert calls into searchable transcripts](https://sweet-pie-c52a63-blog.netlify.app/customer-story-legal-transcription/) allowing investigators and attorneys to search calls, find case relevant data, put it on legal hold and then dispose of the rest. Due to the sensitivity of the e-discovery process, it is one of the applications of speech recognition technology where transcription accuracy is most critical. This is because legal tech companies that prioritize a highly defensible discovery process choose only the most accurate speech recognition APIs when building e-discovery tools. When legal companies are faced with large volumes of call data to listen to, the most cost effective way of finding the calls that matter is using highly accurate speech recognition technology to find relevant information, fast.
+[Legal technology companies already use speech recognition APIs to convert calls into searchable transcripts](https://blog.deepgram.com/customer-story-legal-transcription/) allowing investigators and attorneys to search calls, find case relevant data, put it on legal hold and then dispose of the rest. Due to the sensitivity of the e-discovery process, it is one of the applications of speech recognition technology where transcription accuracy is most critical. This is because legal tech companies that prioritize a highly defensible discovery process choose only the most accurate speech recognition APIs when building e-discovery tools. When legal companies are faced with large volumes of call data to listen to, the most cost effective way of finding the calls that matter is using highly accurate speech recognition technology to find relevant information, fast.
 
 ### 5. Medical Transcription
 

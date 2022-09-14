@@ -74,7 +74,7 @@ Brute force can be used for good and bad. Since the early days of the second "ha
 
 *[Source](https://dl.acm.org/citation.cfm?id=1045340)*
 
-No doubt, today's crowd can identify with the sentiments of Mr. McDermott of the MIT AI lab. As pressure for [regulation begins to build](https://sweet-pie-c52a63-blog.netlify.app/should-ai-be-regulated-ai-show/), the dual notion of the Robin Hood begins to color us members of the AI field as well. Are we brilliant, motivated creators of the avant-garde? Or, are we reckless, undisciplined technologists? 
+No doubt, today's crowd can identify with the sentiments of Mr. McDermott of the MIT AI lab. As pressure for [regulation begins to build](https://blog.deepgram.com/should-ai-be-regulated-ai-show/), the dual notion of the Robin Hood begins to color us members of the AI field as well. Are we brilliant, motivated creators of the avant-garde? Or, are we reckless, undisciplined technologists? 
 
 By the mid-80's and into the 90's, `hacker noun` came to mean both things: brilliant programmers who could produce elegant code to solve difficult problems as well as evil, or pathological programmers who threatened public safety by infiltrating secure locations remotely. There is no doubt that this second, negative meaning was fueled by the end of the cold war and the rise of the internet. The world needed new enemies and the internet was a new, unknown land in need of antagonists.
 
@@ -105,7 +105,7 @@ Today we have a number of tech words that all come from the same root, but tend 
 
 What is fascinating to consider, is how the notion of a <mark>bend, hook, curve</mark> came to mean different things with opposite connotations. Then, over time, two or three currents of meaning were brought together in a new human endeavor of logical thinking, binary logic and clear lines - the world of computing. This new endeavor is equal parts tedious, destructive, violent, daring and creative with some amounts of evil sprinkled in. Ironically (or predictably), harnessing ambiguity-the natural enemy of computing-is now the goal of the tech world. In the modern world of computing we are trying to build machines that behave in this distinctly non-binary, highly-stochastic way.
 
-[Neural nets, or more broadly AI](https://sweet-pie-c52a63-blog.netlify.app/ai-show-different-types-of-machine-learning/), work because they are a mimesis of the squishy, non-binary, probabilistic brains that created all the meanings of "hack" from one original noun. And yet, the image of the human brain is still one that connotes a meaning of utmost intelligence for us.
+[Neural nets, or more broadly AI](https://blog.deepgram.com/ai-show-different-types-of-machine-learning/), work because they are a mimesis of the squishy, non-binary, probabilistic brains that created all the meanings of "hack" from one original noun. And yet, the image of the human brain is still one that connotes a meaning of utmost intelligence for us.
 
 ## Bonus Material
 

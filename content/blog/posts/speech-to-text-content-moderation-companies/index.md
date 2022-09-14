@@ -89,7 +89,7 @@ Depending on what you're moderating, it's possible that users could be posting c
 
 Whenever you're choosing a speech-to-text solution, you want to make sure that it supports your specific needs. If you're interested in content moderation using STT, that means you need something that works quickly, returning transcripts in real time if you want to do pre-moderation or any kind of content evaluation before something is posted or is live.
 
-That's because [AI-powered automatic speech recognition](https://sweet-pie-c52a63-blog.netlify.app/deep-learning-speech-recognition/) is faster than the alternatives, enabling real-time monitoring and removal of content that violates your guidelines. While many companies today rely on post-moderation or reactive moderation-especially for audio and video-with real-time STT, these media can also be pre-moderated. Let's take a look at some of the specific ways that AI-powered STT solutions like Deepgram can support content moderation companies and departments.
+That's because [AI-powered automatic speech recognition](https://blog.deepgram.com/deep-learning-speech-recognition/) is faster than the alternatives, enabling real-time monitoring and removal of content that violates your guidelines. While many companies today rely on post-moderation or reactive moderation-especially for audio and video-with real-time STT, these media can also be pre-moderated. Let's take a look at some of the specific ways that AI-powered STT solutions like Deepgram can support content moderation companies and departments.
 
 ### Unlocks New Moderation Channels
 
@@ -101,7 +101,7 @@ As mentioned in the introduction, it's certainly possible to moderate video and 
 
 ### Sentiment Analysis
 
-If you're only working with text, you can do some basic sentiment analysis to see what the tone of user-generated content is-positive or negative. But with the addition of audio streams, you can [add emotion recognition](https://sweet-pie-c52a63-blog.netlify.app/sentiment-analysis-emotion-regulation-difference/) to the mix, getting even more insight into how customers are feeling than would be possible from pure text or human moderators.
+If you're only working with text, you can do some basic sentiment analysis to see what the tone of user-generated content is-positive or negative. But with the addition of audio streams, you can [add emotion recognition](https://blog.deepgram.com/sentiment-analysis-emotion-regulation-difference/) to the mix, getting even more insight into how customers are feeling than would be possible from pure text or human moderators.
 
 ## Wrapping Up
 

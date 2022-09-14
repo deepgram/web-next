@@ -35,7 +35,7 @@ The answers are Yes, Yes, and Yes! We can combine speech-to-text using Deepgram 
 
 ​​Deepgram is an automated speech recognition voice-to-text company that allows you to build applications that transcribe speech-to-text. You’ll receive an actual transcript of the person speaking or a conversation between multiple people. One of the many reasons to choose Deepgram over other providers is that we build better voice applications with faster, more accurate transcription through AI Speech Recognition.
 
-We offer real-time transcription and pre-recorded speech-to-text. The latter allows uploading of a file that contains audio voice data to be transcribed. We recently published a few blog posts on using our Python SDK to do live transcription with some of the most popular Python web frameworks, including [FastAPI](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-fastapi/), [Flask](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-flask/), [Django](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-django/), and [Quart](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-quart/).
+We offer real-time transcription and pre-recorded speech-to-text. The latter allows uploading of a file that contains audio voice data to be transcribed. We recently published a few blog posts on using our Python SDK to do live transcription with some of the most popular Python web frameworks, including [FastAPI](https://blog.deepgram.com/live-transcription-fastapi/), [Flask](https://blog.deepgram.com/live-transcription-flask/), [Django](https://blog.deepgram.com/live-transcription-django/), and [Quart](https://blog.deepgram.com/live-transcription-quart/).
 
 ## The Deepgram Python SDK Project With Matplotlib Visualization
 
@@ -57,7 +57,7 @@ Then we'll change into that directory to start adding things to it.
 cd deepgram-dashboard
 ```
 
-We’ll also need to set up a virtual environment to hold the project and its dependencies. We can read more about those [here](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/) and how to create one. It’s recommended in Python to use a virtual environment so the project can be installed inside a container rather than installing it system-wide.
+We’ll also need to set up a virtual environment to hold the project and its dependencies. We can read more about those [here](https://blog.deepgram.com/python-virtual-environments/) and how to create one. It’s recommended in Python to use a virtual environment so the project can be installed inside a container rather than installing it system-wide.
 We need to ensure the virtual environment is activated because we’ll install dependencies inside. If the virtual environment is named `venv`, we'll need to activate it.
 
 ```

@@ -32,10 +32,10 @@ This is the fifth and final post of my 'Diving Into Vue 3' series. Today I will 
 
 Don't forget there are four previous posts in this series that might be useful to you:
 
-*   [Diving Into Vue 3 - Getting Started](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-getting-started/)
-*   [Diving Into Vue 3 - The Setup Function](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-setup-function/)
-*   [Diving Into Vue 3: Methods, Watch, and Computed](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-methods-watch-and-computed/)
-*   [Diving Into Vue 3: The Reactivity API](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-reactivity-api/)
+*   [Diving Into Vue 3 - Getting Started](https://blog.deepgram.com/diving-into-vue-3-getting-started/)
+*   [Diving Into Vue 3 - The Setup Function](https://blog.deepgram.com/diving-into-vue-3-setup-function/)
+*   [Diving Into Vue 3: Methods, Watch, and Computed](https://blog.deepgram.com/diving-into-vue-3-methods-watch-and-computed/)
+*   [Diving Into Vue 3: The Reactivity API](https://blog.deepgram.com/diving-into-vue-3-reactivity-api/)
 
 If you don't need the walk-through for building the example project, feel free to jump to the section on [reusability](#reusability-in-the-composition-api), where I show how to refactor the project to use composables.
 

@@ -25,7 +25,7 @@ Word Error Rate (WER) is a common metric used to compare the accuracy of the tra
 
 ## How to Calculate WER
 
-Word error rate is the most common metric used today to evaluate the effectiveness of an [automatic speech recognition system (ASR)](https://sweet-pie-c52a63-blog.netlify.app/what-is-asr/). It is simply calculated as: 
+Word error rate is the most common metric used today to evaluate the effectiveness of an [automatic speech recognition system (ASR)](https://blog.deepgram.com/what-is-asr/). It is simply calculated as: 
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976771/blog/what-is-word-error-rate/wer-1.jpg)
 
@@ -104,4 +104,4 @@ When you want to decide which speech recognition API to use, ask yourself:
 * Are there certain words or accents that the speech recognition API should do well on?
 * Can you [customize the API](https://deepgram.com/product/train/) to perform better on your data?
 
-For more, check out our [step by step guide on how to evaluate an ASR provider](https://sweet-pie-c52a63-blog.netlify.app/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/) or [have us evaluate](https://deepgram.com/contact-us) the ASR provider for you.
+For more, check out our [step by step guide on how to evaluate an ASR provider](https://blog.deepgram.com/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/) or [have us evaluate](https://deepgram.com/contact-us) the ASR provider for you.

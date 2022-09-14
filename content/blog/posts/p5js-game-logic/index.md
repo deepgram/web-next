@@ -23,7 +23,7 @@ og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454042/blog/p5js-game-logic/ograph.png
 ---
 
-This is the second in a three-part series on P5.js (from here 'P5') - a creative coding library that makes working with the Canvas API much easier. [In part one](https://sweet-pie-c52a63-blog.netlify.app/p5js-getting-started/), we covered how to draw elements on the screen and react to keyboard and mouse input.
+This is the second in a three-part series on P5.js (from here 'P5') - a creative coding library that makes working with the Canvas API much easier. [In part one](https://blog.deepgram.com/p5js-getting-started/), we covered how to draw elements on the screen and react to keyboard and mouse input.
 
 Today, we're taking that theoretical knowledge and building some features you may need when creating a game. Then, in next week's final part, we will add voice functionality to our game using Deepgram.
 
@@ -109,7 +109,7 @@ If you want to learn more about collision detection, check out [this lovely vide
 
 The P5-provided `width` and `height` variables are always set to the canvas values provided in `createCanvas()`. You can use these along with the collision detection conditionals above to ensure a user cannot navigate outside of the canvas.
 
-Expanding on our keyboard user input introduction in [last week's post](https://sweet-pie-c52a63-blog.netlify.app/p5js-getting-started/), try this:
+Expanding on our keyboard user input introduction in [last week's post](https://blog.deepgram.com/p5js-getting-started/), try this:
 
 ```js
 let playerX = 20

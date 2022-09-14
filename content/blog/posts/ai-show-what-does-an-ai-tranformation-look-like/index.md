@@ -84,7 +84,7 @@ shorturls:
 
 **Scott:** Aerial imagery of some sort, right?
 
-**Susan:** Aerial imagery, and that's a fun one, because not only the products that they return back, can you analyze with [different machine learning techniques](https://sweet-pie-c52a63-blog.netlify.app/ai-show-different-types-of-machine-learning/), but also the automation of flying around an area is inevitably going to be automated with machine learning. Right now a lot of it, the ones I've been looking at, is done by hand.
+**Susan:** Aerial imagery, and that's a fun one, because not only the products that they return back, can you analyze with [different machine learning techniques](https://blog.deepgram.com/ai-show-different-types-of-machine-learning/), but also the automation of flying around an area is inevitably going to be automated with machine learning. Right now a lot of it, the ones I've been looking at, is done by hand.
 
 **Scott:** People flying planes?
 

@@ -30,13 +30,13 @@ Sudarshan tells me that their interest in Augmented Reality goes back to attendi
 
 Tom continues, "We explored a few demos from the Apple Developer site. They have an AR game project demo, so we explored building a game first, and that naturally evolved into a shared AR workspace."
 
-Having seen our [Deepgram 5-minute demo](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/), they had the idea for AiRNote: an interactive, collaborative note-taking application using Augmented Reality.
+Having seen our [Deepgram 5-minute demo](https://blog.deepgram.com/live-transcription-mic-browser/), they had the idea for AiRNote: an interactive, collaborative note-taking application using Augmented Reality.
 
 ![An iPhone being held with the camera open pointing at a table. On the table is a green post-it note. Overlaid is a text box with the current speech being displayed, and an 'add note' button at the bottom of the screen.](https://res.cloudinary.com/deepgram/image/upload/v1651110488/blog/2022/04/ar-note-taking-airnote/airnote-pic.png)
 
 ## Building AirNote
 
-Shuntian was in charge of building the app's integration with Deepgram's Speech Recognition API and used our [Live Transcriptions with iOS](https://sweet-pie-c52a63-blog.netlify.app/ios-live-transcription/) blog post as a starting point. Thankfully, many of the snippets from our iOS post could be copied and pasted, meaning less time learning to use Deepgram and more time focusing on complex parts of their project.
+Shuntian was in charge of building the app's integration with Deepgram's Speech Recognition API and used our [Live Transcriptions with iOS](https://blog.deepgram.com/ios-live-transcription/) blog post as a starting point. Thankfully, many of the snippets from our iOS post could be copied and pasted, meaning less time learning to use Deepgram and more time focusing on complex parts of their project.
 
 Because there were so many new things for the AiRNote team to learn, they had to overcome a number of challenges, including learning how to write a native iOS app with ARKit and RealityKit, how to use Blender to create 3D models of sticky notes and pins, and how to collaborating on an XCode project - which, I'm told, was not the easiest thing to do while using git version control.
 

@@ -38,7 +38,7 @@ When I taught Rhetorical Argument, we talked about the concept of the rhetorical
 
 - - -
 
-In some ways, this series of posts on writing covers a piece of each of these concepts. In my [last post on storytelling](https://sweet-pie-c52a63-blog.netlify.app/technical-writing-a-developers-guide-to-storytelling/), we talked about enhancing your writing with storytelling, which we can also see as an appeal to *pathos* as we form a connection to our audience. In the [first post on writing](https://sweet-pie-c52a63-blog.netlify.app/technical-writing-a-beginners-guide/), we learned how to approach writing. In that post, I was appealing to writing knowledge and facts, which aligns with appealing to *logos*. In this post on ethics, we’re going to learn more about--you guessed it--*ethos*.
+In some ways, this series of posts on writing covers a piece of each of these concepts. In my [last post on storytelling](https://blog.deepgram.com/technical-writing-a-developers-guide-to-storytelling/), we talked about enhancing your writing with storytelling, which we can also see as an appeal to *pathos* as we form a connection to our audience. In the [first post on writing](https://blog.deepgram.com/technical-writing-a-beginners-guide/), we learned how to approach writing. In that post, I was appealing to writing knowledge and facts, which aligns with appealing to *logos*. In this post on ethics, we’re going to learn more about--you guessed it--*ethos*.
 
 The word “ethics” stems from “ethos.” When we talk about ethics in technical writing, we’re completing the rhetorical triangle approach and adding another layer to how we write and think about writing. Ethics protects your credibility as a writer and helps to create trust with your readers.
 
