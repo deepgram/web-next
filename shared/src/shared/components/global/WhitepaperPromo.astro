@@ -31,12 +31,11 @@ const { theme, title, image, script } = whitepaper;
 ---
 
 <AbstractPromo strapline="White Paper" oustideBlog={oustideBlog} backgroundImage={image} theme={theme} title={title} {...rest}>
-	<script set:html={script}>
-
-	</script>
+	<script set:html={script}></script>
 </AbstractPromo>
 
 <style>
+	:global(.hs-error-msg),
 	:global(.hbspt-form) {
 		@apply text-cloud;
 	}
@@ -83,8 +82,9 @@ const { theme, title, image, script } = whitepaper;
 	:global(.hbspt-form button) {
 		@apply mt-4;
 		@apply bg-meadow text-darkCharcoal;
-		@apply mb-0 min-h-[3.375rem] grow-0 px-[2.75rem] pb-[1.1rem] pt-[1.15rem] text-center text-[1rem] font-[700] leading-[1rem];
+		@apply mb-0 min-h-[3.375rem] grow-0 px-[1.5rem] pb-[1.1rem] pt-[1.15rem] text-center text-[1rem] font-[700] leading-[1rem];
 		@apply w-full;
+		@apply whitespace-nowrap;
 	}
 
 	:global(.hbspt-form .hs_submit) {

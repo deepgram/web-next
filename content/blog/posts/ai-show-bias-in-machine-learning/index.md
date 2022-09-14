@@ -1,7 +1,7 @@
 ---
 title: What Role Does Bias Have in Machine Learning? — AI Show
-description: Welcome to the AI Show. On the AI Show, we talk about all things
-  AI. Today we ask this question:What role does bias have in machine learning?
+description: "Welcome to the AI Show. Today we ask the question: What role does
+  bias have in machine learning?"
 date: 2018-10-19
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981322/blog/ai-show-bias-in-machine-learning/what-role-does-bias-have-in-ml-blog-thumb%402x.jpg
 authors:
@@ -9,6 +9,7 @@ authors:
 category: ai-and-engineering
 tags:
   - bias
+  - machine-learning
 seo:
   title: What role does bias have in machine learning? — AI Show
   description: Welcome to the AI Show. On the AI Show, we talk about all things
@@ -68,8 +69,8 @@ shorturls:
 
 **Susan:** Our models are predisposed towards certain answers. This is their prior probability here.
 
-*   When they're biased, what does that mean?
-*   Why is it biased?
+* When they're biased, what does that mean?
+* Why is it biased?
 
 We're biased because we're predisposed towards one thing, but we're picking against a different distribution. In other words, we train the model one way and we are biased against that training.
 
@@ -79,7 +80,7 @@ We're biased because we're predisposed towards one thing, but we're picking agai
 
 ![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976754/blog/ai-show-bias-in-machine-learning/Havana_Brown_-_choco.jpg)
 
-_Brown cats are actually rather rare. However, the [Havana Brown Cat](https://commons.wikimedia.org/wiki/File:Havana_Brown_-_choco.jpg) just such a cat._
+*Brown cats are actually rather rare. However, the \[Havana Brown Cat](https://commons.wikimedia.org/wiki/File:Havana_Brown*-*choco.jpg) just such a cat.*
 
 ## Where is bias introduced?
 
@@ -87,9 +88,9 @@ _Brown cats are actually rather rare. However, the [Havana Brown Cat](https://co
 
 **Scott:**
 
-*   Is it the model that is biased?
-*   Is it the data that's biased?
-*   Is it the way that you're training the model or something like that?
+* Is it the model that is biased?
+* Is it the data that's biased?
+* Is it the way that you're training the model or something like that?
 
 Well, it's usually not the model that's biased. But it's usually the data. So that might be the way you get a whole bunch of different data, and the way that you clean the data. Maybe you just cut out a whole section because you don't know how to deal with it. Maybe you can't tell whether it's a cat or a dog, and so you just never include that. That would be your biasing just the input dataset. Just the way that you can collect pictures of cats and dogs. Maybe it's more difficult to collect pictures of dogs, because people don't take as many pictures of them compared to their cats or something like that. So you have this overwhelming majority of pictures of cats or something like that.
 
@@ -111,7 +112,7 @@ Humans aren't necessarily growing up biased in the way that we think about it, b
 
 **Susan:** Yeah, what do you think about that?
 
-**Scott:** Yeah, the details behind that are essentially, they had a recruiting machine learning model that would automatically analyze resumes and then try to give a score for how likely that model would think it is to hire that person essentially. If you look at tech companies across the world, you see that they're predominantly male, and the males might tend to describe themselves in different ways. There's a really interesting example in there that was like, if you had just the word "women," or "women's," sort of anywhere in your resume - it doesn't say, "I'm a female" or anything like that. For example: "When I was in college I focused on women's studies." or something like that. Then it was "Negative, we don't think we should hire you." But it's not assessing you as a _person_ thinking that they shouldn't hire you, it's just that all of the examples of the people that they've hired didn't have that background. So it was biased against you.
+**Scott:** Yeah, the details behind that are essentially, they had a recruiting machine learning model that would automatically analyze resumes and then try to give a score for how likely that model would think it is to hire that person essentially. If you look at tech companies across the world, you see that they're predominantly male, and the males might tend to describe themselves in different ways. There's a really interesting example in there that was like, if you had just the word "women," or "women's," sort of anywhere in your resume - it doesn't say, "I'm a female" or anything like that. For example: "When I was in college I focused on women's studies." or something like that. Then it was "Negative, we don't think we should hire you." But it's not assessing you as a *person* thinking that they shouldn't hire you, it's just that all of the examples of the people that they've hired didn't have that background. So it was biased against you.
 
 **Susan:** That really points out a pretty significant thing about training data. You really need to know what you're targeting. In this case, it targeted being like the hiring process. It didn't focus on the result.
 
@@ -133,7 +134,7 @@ Humans aren't necessarily growing up biased in the way that we think about it, b
 
 **Scott:** In particular, biasing in a way that I don't want it to? You might want it to be biased toward good people!
 
-**Susan:** Or perhaps you're biasing it towards a specific population, not of people, but of things. It's like, "Hey, I know that for a fact this visual recognition system is only going to be applied on cars, so I'm not going to give it a bunch of underwater scenes." Probably not going to have many cars that are underwater, and I don't need it to recognize fish. It's a class of image data that you might want to get rid of. But those types of decisions are really, really hard. The more you include in the more noise your model may have to parse through to find the signal. ![Alt](https://cdn-images-1.medium.com/max/1600/1*oKycB6NgLgPJG31fiGwpUA.png) _Photo courtesy of the [Udacity self-driving dataset.](https://github.com/udacity/self-driving-car)_
+**Susan:** Or perhaps you're biasing it towards a specific population, not of people, but of things. It's like, "Hey, I know that for a fact this visual recognition system is only going to be applied on cars, so I'm not going to give it a bunch of underwater scenes." Probably not going to have many cars that are underwater, and I don't need it to recognize fish. It's a class of image data that you might want to get rid of. But those types of decisions are really, really hard. The more you include in the more noise your model may have to parse through to find the signal. ![Alt](https://cdn-images-1.medium.com/max/1600/1*oKycB6NgLgPJG31fiGwpUA.png) *Photo courtesy of the [Udacity self-driving dataset.](https://github.com/udacity/self-driving-car)*
 
 **Scott:** Yeah, it's true. It's like if you trained an autonomous driving car in fair weather California in the city streets, and then you take it to snowy country roads and say, "Drive." It's like, "I've never seen this before." It's very biased.
 
@@ -225,7 +226,7 @@ So going forward there's a chance that machine learning could really help us und
 
 ## Reinforcement and bias
 
-**Susan:** That's a really interesting thing. Sort of that <a>reinforcement</a> issue we spoke about. This thing maybe hires people that fit into this little pigeonhole that then causes them to hire more people that fit into this pigeonhole. It starts learning to narrow it down more and more and more. That's a really dangerous path, because you need diversity and everything to get those new ideas.
+**Susan:** That's a really interesting thing. Sort of that reinforcement issue we spoke about. This thing maybe hires people that fit into this little pigeonhole that then causes them to hire more people that fit into this pigeonhole. It starts learning to narrow it down more and more and more. That's a really dangerous path, because you need diversity and everything to get those new ideas.
 
 **Scott:** And you end up with the [Facebook feed phenomenon](https://www.wired.com/2016/11/facebook-echo-chamber/). Where it's echo chamber. That's biased right there. It's bias that feels really good to people. Search results.
 
@@ -299,7 +300,7 @@ Right? There'll always be a human in the loop. The same way that there aren't ma
 
 ![Alt](https://res.cloudinary.com/deepgram/image/upload/v1661976755/blog/ai-show-bias-in-machine-learning/Bottles-beer-fill--food-drink..jpg)
 
-_[Filling machines](https://picryl.com/media/bottles-beer-fill-food-drink-d92590) have automatically filled, capped and labeled beer and other drinks since the 19th century. As machine learning has improved, humans have had to oversee less and less of the process, focusing on more creative aspects of the process, such as creating labels and making tastier beer."_
+*Filling machines have automatically filled, capped and labeled beer and other drinks since the 19th century. As machine learning has improved, humans have had to oversee less and less of the process, focusing on more creative aspects of the process, such as creating labels and making tastier beer."*
 
 **Scott:** Ship them to the Deepgram office.
 

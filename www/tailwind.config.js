@@ -47,8 +47,8 @@ module.exports = {
 				"promo-xs": "300%",
 			},
 			fontFamily: {
-				favorit: ["favorit", "sans-serif"],
-				inter: ["inter", "sans-serif"],
+				favorit: ["Favorit", "sans-serif"],
+				inter: ["Inter", "sans-serif"],
 				firaCode: ["Fira Code", "monospace"],
 			},
 			lineHeight: {

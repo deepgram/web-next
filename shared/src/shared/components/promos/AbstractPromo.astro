@@ -1,5 +1,5 @@
 ---
-const { class: classes, strapline, title, backgroundImage, theme, outsideBlog } = Astro.props;
+const { class: classes, strapline, title, backgroundImage, theme } = Astro.props;
 
 let themeStyles;
 if (theme) {
@@ -19,107 +19,72 @@ if (theme) {
 const rawHTMLString = "&nbsp;";
 ---
 
-<div class:list={["promo", classes ? classes : "", themeStyles, outsideBlog ? "outsideBlog" : ""]} style={`background-image: url('${backgroundImage}');`}>
-	<header>
-		{strapline ? <h6 class="uppercase">{strapline}</h6> : <h6 class="uppercase" set:html={rawHTMLString} />}
-		<h2>{title}</h2>
-	</header>
-	<div>
-		<slot />
+<div class="promo-container">
+	<div class:list={["promo", classes ? classes : "", themeStyles]} style={`background-image: url('${backgroundImage}');`}>
+		<header>
+			{strapline ? <h6 class="uppercase">{strapline}</h6> : <h6 class="uppercase" set:html={rawHTMLString} />}
+			<h2>{title}</h2>
+		</header>
+		<div>
+			<slot />
+		</div>
 	</div>
 </div>
 
-<style>
+<style scoped>
+	.promo-container {
+	}
+
 	.promo {
 		@apply max-w-[76.25rem];
-		@apply min-h-[13rem];
+		@apply min-h-[13rem] w-full;
 		@apply flex flex-col space-y-1;
-		@apply mt-0 py-4 px-8 pb-36 md:pb-4;
+		@apply p-8;
 		@apply justify-between;
 		@apply drop-shadow-md;
-		@apply bg-right bg-no-repeat md:bg-center md:bg-right;
-		@apply bg-[percentage:70%] md:bg-contain;
-	}
-	.outsideBlog {
-		@apply mt-20;
-	}
-
-	@screen xl {
-		.promo {
-			position: relative;
-			width: 75vw;
-			left: calc(-25vw + 25%);
-			margin-top: 0;
-		}
-
-		.outsideBlog {
-			@apply static mt-20 w-full;
-			left: unset;
-		}
-	}
-
-	@screen xl {
-		.inside-blog {
-			position: relative;
-			width: 75vw;
-			left: calc(-25vw + 25%);
-			margin-top: 0;
-		}
-	}
-
-	.promo > header > h6 {
-		@apply mb-4;
+		@apply bg-right-bottom bg-no-repeat lg:bg-right;
+		@apply bg-promo-xs sm:bg-auto;
 	}
 
 	/* White Theme Styles */
 	.theme--white {
 		@apply bg-white;
 	}
+
 	.theme--white h6 {
 		@apply text-fireEngine;
 	}
+
 	.theme--white h2,
 	.theme--white :global(h4.date),
 	.theme--white :global(p) {
 		@apply text-black;
 	}
 
-	:global(.theme--white form fieldset li) {
-		@apply pl-0;
-		@apply text-black !important;
-	}
-
 	/* Black Theme Styles */
 	.theme--black {
 		@apply bg-ink;
 	}
+
 	.theme--black h6 {
 		@apply text-coral;
 	}
+
 	.theme--black h2,
 	.theme--black :global(h4.date),
 	.theme--black :global(p) {
 		@apply text-white;
 	}
 
-	:global(.theme--black form fieldset li) {
-		@apply pl-0;
-		@apply text-coral !important;
-	}
-
 	/* Red Theme Styles */
 	.theme--red {
 		@apply bg-fireEngine;
 	}
+
 	.theme--red h6,
 	.theme--red h2,
 	.theme--red :global(h4.date),
 	.theme--red :global(p) {
 		@apply text-black;
-	}
-
-	:global(.theme--red form fieldset li) {
-		@apply pl-0;
-		@apply text-white !important;
 	}
 </style>

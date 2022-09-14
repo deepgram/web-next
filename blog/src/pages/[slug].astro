@@ -15,6 +15,7 @@ import Meta from "../shared/components/meta/Meta.astro";
 import Icon from "../shared/components/general/Icon.astro";
 import RelatedResources from "../components/posts/RelatedResources.astro";
 import Link from "../shared/components/general/Link.astro";
+import MetaLink from "../shared/components/meta/Link.astro";
 import Backlink from "../components/nav/Backlink.astro";
 import InlineIcon from "../shared/components/general/InlineIcon.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
@@ -162,7 +163,7 @@ const schema = [
 
 	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />
 	<Description slot="head:description" name="description" content={seo.description} />
-	<Link slot="head:canonical" rel="canonical" href={seo.url} />
+	<MetaLink slot="head:canonical" rel="canonical" href={seo.url} />
 
 	<Meta slot="og:title" property="og:title" content={og.title} />
 	<Meta slot="og:description" property="og:description" content={og.description} />
@@ -261,118 +262,123 @@ const schema = [
 		@apply md:mx-20 lg:mx-32;
 	}
 
-	.post-prose :global(img) {
+	.post-prose > :global(img),
+	.post-prose > :global(p img) {
 		@apply mx-auto object-cover;
 	}
 
-	.post-prose :global(small) {
+	.post-prose > :global(small) {
 		@apply text-sm;
 	}
 
-	.post-prose :global(h1),
-	.post-prose :global(h2),
-	.post-prose :global(h3),
-	.post-prose :global(h4),
+	.post-prose > :global(h1),
+	.post-prose > :global(h2),
+	.post-prose > :global(h3),
+	.post-prose > :global(h4),
 	.post :global(h4),
-	.post-prose :global(h5),
-	.post-prose :global(h6) {
+	.post-prose > :global(h5),
+	.post-prose > :global(h6) {
 		@apply pt-6 pb-2;
 	}
 
-	.post-prose :global(p) {
+	.post-prose > :global(p) {
 		@apply pb-4 leading-loose lg:leading-normal;
 	}
 
-	.post-prose :global(* a) {
+	.post-prose > :global(* a) {
 		@apply text-iris;
 	}
 
-	.post-prose :global(pre.astro-code) {
+	.post-prose > :global(pre.astro-code) {
 		@apply m-0 mb-14;
 	}
 
-	.post-prose :global(:not(pre.astro-code) code) {
-		@apply bg-casper/50 p-1;
+	.post-prose > :global(p:not(pre.astro-code) code) {
+		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];
 	}
 
-	.post-prose :global(ol) {
+	.post-prose > :global(ol) {
 		@apply m-0 mb-5 pl-8;
 	}
 
-	.post-prose :global(ul:not(.contains-task-list)) {
+	.post-prose > :global(ul:not(.contains-task-list)) {
 		@apply m-0 mb-5 pl-6;
 	}
 
-	.post-prose :global(ol) {
+	.post-prose > :global(ol) {
 		counter-reset: li;
 	}
 
-	.post-prose :global(ol li) {
+	.post-prose > :global(ol li) {
 		@apply relative;
 	}
 
-	.post-prose :global(ol li),
-	.post-prose :global(ul:not(.contains-task-list) li),
-	.post-prose :global(ul li.task-list-item) {
+	.post-prose > :global(ol li),
+	.post-prose > :global(ul:not(.contains-task-list) li),
+	.post-prose > :global(ul li.task-list-item) {
 		@apply py-1;
 	}
 
-	.post-prose :global(ol li::before) {
+	.post-prose > :global(ol li::before) {
 		content: counter(li);
 		counter-increment: li;
 		@apply absolute -left-8 h-6 w-6 rounded-full border border-black text-center text-black;
 	}
 
-	.post-prose :global(ul:not(.contains-task-list)) {
+	.post-prose > :global(ul:not(.contains-task-list)) {
 		@apply list-disc;
 	}
 
-	.post-prose :global(ul:not(.contains-task-list) li::marker) {
+	.post-prose > :global(ul:not(.contains-task-list) li::marker) {
 		@apply text-casper;
 	}
 
-	.post-prose :global(ul:not(.contains-task-list) li) {
+	.post-prose > :global(ul:not(.contains-task-list) li) {
 		@apply pl-1 text-black;
 	}
 
-	.post-prose :global(li.task-list-item input) {
+	.post-prose > :global(li.task-list-item input) {
 		@apply appearance-none accent-pink-500;
 	}
 
-	.post-prose :global(li.task-list-item input:checked::before) {
+	.post-prose > :global(li.task-list-item input:checked::before) {
 		content: "✔";
 		@apply text-meadow text-lg;
 	}
 
-	.post-prose :global(li.task-list-item input:not(:checked)::before) {
+	.post-prose > :global(li.task-list-item input:not(:checked)::before) {
 		content: "✖";
 		@apply text-coral text-lg;
 	}
 
-	.post-prose :global(table) {
+	.post-prose > :global(table) {
 		@apply mb-4 block border-collapse overflow-auto whitespace-nowrap;
 	}
 
-	.post-prose :global(table) + :global(p small) {
+	.post-prose > :global(table) + :global(p small) {
 		@apply -mt-2 block text-center text-sm font-bold;
 	}
 
-	.post-prose :global(td),
-	.post-prose :global(th) {
+	.post-prose > :global(td),
+	.post-prose > :global(th) {
 		@apply border-casper table-auto  border;
 	}
 
-	.post-prose :global(th) {
+	.post-prose > :global(th) {
 		@apply bg-mist;
 	}
 
-	.post-prose :global(td),
-	.post-prose :global(th) {
+	.post-prose > :global(td),
+	.post-prose > :global(th) {
 		@apply px-6 py-2;
 	}
 
-	.post-prose :global(iframe) {
+	.post-prose > :global(.promo-container) {
+		@apply md:-mx-20 lg:-mx-32;
+	}
+
+	.post-prose > :global(iframe) {
 		margin-top: 1rem;
 		margin-bottom: 1.5rem;
-	}
+  }
 </style>
