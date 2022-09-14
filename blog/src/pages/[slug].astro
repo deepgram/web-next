@@ -234,18 +234,16 @@ const schema = [
 
 					{headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">In this blog post</h5>}
 					<ul class="hidden xl:block">
-						{
-							headings.length > 0 &&
-								headings
-									.filter((heading) => heading.depth <= 2)
-									.map((heading) => (
-										<li class="pb-4">
-											<Link class="text-black" href={`#${heading.slug}`}>
-												{heading.text}
-											</Link>
-										</li>
-									))
-						}
+						{headings.length > 0 &&
+							headings
+								.filter((heading) => heading.depth <= 2)
+								.map((heading) => (
+									<li class="pb-4">
+										<Link class="text-black" href={`#${heading.slug}`}>
+											{heading.text}
+										</Link>
+									</li>
+								))}
 					</ul>
 				</div>
 			</HasGutters>
@@ -381,4 +379,29 @@ const schema = [
 		margin-top: 1rem;
 		margin-bottom: 1.5rem;
   }
+
+	.post-prose :global(blockquote) {
+		box-sizing: border-box;
+		display: block;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+		@apply pl-[2.8125rem] font-[500];
+		position: relative;
+		width: 100%;
+	}
+
+	.post-prose :global(blockquote p) {
+		padding-bottom: 0rem;
+		@apply text-steel;
+		font-weight: 500;
+	}
+
+	.post-prose :global(blockquote:before) {
+		@apply bg-coral absolute;
+		bottom: 0.3125rem;
+		content: "";
+		left: 1.5625rem;
+		top: 0.3125rem;
+		width: 0.125rem;
+	}
 </style>
