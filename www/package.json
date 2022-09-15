@@ -27,21 +27,21 @@
     "lint": "cd .. && ./node_modules/.bin/prettier --check ./www"
   },
   "devDependencies": {
-    "astro": "^1.2.4",
-    "@astrojs/tailwind": "^0.2.1",
-    "@astrojs/vue": "^0.1.5",
-    "@types/node": "^17.0.42",
-    "glob": "^8.0.3",
-    "node-html-parser": "^5.3.3",
-    "preact": "^10.6.5",
     "@astrojs/preact": "^1.0.2",
-    "@docsearch/react": "3",
-    "@preact/preset-vite": "^2.3.0"
-  },
-  "dependencies": {
     "@astrojs/rss": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/tailwind": "^0.2.1",
+    "@astrojs/vue": "^0.1.5",
+    "@docsearch/react": "3",
+    "@preact/preset-vite": "^2.3.0",
+    "@storyblok/astro": "^1.0.0",
+    "@types/node": "^17.0.42",
+    "astro": "^1.2.4",
+    "axios": "^0.27.2",
+    "glob": "^8.0.3",
     "netlify-cli": "^10.17.3",
+    "node-html-parser": "^5.3.3",
+    "preact": "^10.6.5",
     "vue": "^3.2.33"
   }
 }

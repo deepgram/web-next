@@ -1452,6 +1452,20 @@
     escape-string-regexp "^5.0.0"
     lodash.deburr "^4.1.0"
 
+"@storyblok/astro@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@storyblok/astro/-/astro-1.0.0.tgz#f4087e01ae1796a75e2ded630d4afb78b847216c"
+  integrity sha512-i4qHaK5CT4b8bBWRvPQKzMYvlsER10MY+9jdZ60SRHoyfN6Jd8rv+IMHusF6JrlgtRw997RibNub9HW18DMWqQ==
+  dependencies:
+    "@storyblok/js" "^1.7.2"
+
+"@storyblok/js@^1.7.2":
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/@storyblok/js/-/js-1.8.3.tgz#a0e0350aa048dc949b713d282411dc0385edfb84"
+  integrity sha512-drSLsso7TfhgcaVmEscU7VoHMZOi7cT1xGfNcCDKYwM9W06i7+AMHBRzwoQnd8VKejsaFXdG86+gH5xb1/sJXA==
+  dependencies:
+    storyblok-js-client "^4.5.6"
+
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.2.tgz#b1665e2c461a2cd92f4c1bbf50d5454de0d4b421"
@@ -2411,6 +2425,14 @@ autoprefixer@^10.4.7:
     normalize-range "^0.1.2"
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
+
+axios@^0.27.2:
+  version "0.27.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
+  integrity sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==
+  dependencies:
+    follow-redirects "^1.14.9"
+    form-data "^4.0.0"
 
 babel-plugin-module-resolver@^4.1.0:
   version "4.1.0"
@@ -4673,7 +4695,7 @@ folder-walker@^3.2.0:
   dependencies:
     from2 "^2.1.0"
 
-follow-redirects@^1.0.0:
+follow-redirects@^1.0.0, follow-redirects@^1.14.9:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -4687,6 +4709,15 @@ form-data@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-3.0.1.tgz#ebd53791b78356a99af9a300d4282c4d5eb9755f"
   integrity sha512-RHkBKtLWUVwd7SqRIvCZMEvAMoGUp0XU+seQiZejj0COz3RI3hWP4sCv3gZWWLjJTd7rGwcsF5eKZGii0r/hbg==
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.8"
+    mime-types "^2.1.12"
+
+form-data@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.8"
@@ -9404,6 +9435,11 @@ statuses@2.0.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
+
+storyblok-js-client@^4.5.6:
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-4.5.7.tgz#9576f0e21e75cb6980bbf3a12817f1c0559d6ae9"
+  integrity sha512-4CmbB2yIxOdIi1L9CclfpiBaYBUn861X1xM0LozjFoqPyaHB/DSvkMEtywFGeCNdZL82vj98P/5LDxu/LxVgvg==
 
 strict-uri-encode@^1.0.0:
   version "1.1.0"
