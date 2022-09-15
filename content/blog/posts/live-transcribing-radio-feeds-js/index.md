@@ -177,7 +177,7 @@ deepgramLive.addListener('transcriptReceived', (message) => {
 })
 ```
 
-If you have any questions, please feel free to reach out to us over email (`devrel@deepgram.com`) or via Twitter ([@DeepgramDevs](https://mobile.twitter.com/deepgramdevs)).
+If you have any questions, please feel free to reach out to us over email (`devrel@deepgram.com`) or via Twitter ([@DeepgramDevs](https://twitter.com/deepgramdevs)).
 
 ```
     
