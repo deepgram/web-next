@@ -22,8 +22,6 @@ og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661453839/blog/chromium-kiosk-pi/ograph.png
 ---
 
-<Alert type="info">This post is effectively part 2 on building and publishing npm packages. If you haven't read the first post, you can do so [here](https://blog.deepgram.com/build-npm-packages/).</Alert>
-
 Earlier this month [I built a wearable transcription device](https://twitter.com/_phzn/status/1478504862170161152) using Deepgram and a Raspberry Pi. The project is a web application running in a fullscreen browser on the Pi. However, when the device first starts, it requires a fiddly set of touchscreen interactions to get it in a ready state - opening the browser, navigating to the correct URL, and then fullscreening the browser. In this quick guide, I will show you the steps I took to automate this on device launch.
 
 <Alert type="info">This tutorial works for Raspberry Pi OS 10 - Buster</Alert>
@@ -36,14 +34,16 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 
 This will open a new text file which will be executed when the desktop environment (LXDE) launches. In the file type the following:
 
-    @lxpanel --profile LXDE-pi
-    @pcmanfm --desktop --profile LXDE-pi
+```bash
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
 
-    @xset s off
-    @xset -dpms
-    @xset s noblank
+@xset s off
+@xset -dpms
+@xset s noblank
 
-    @chromium-browser --kiosk https://deepgram.com
+@chromium-browser --kiosk https://deepgram.com
+```
 
 Click **Control + X** to quit the app, and then **Y** to say 'yes' and save your file.
 

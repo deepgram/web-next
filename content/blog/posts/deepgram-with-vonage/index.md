@@ -41,28 +41,28 @@ We’ll also need two phones to make the outgoing call and another to receive a 
 In the project, we’ll use Ngrok, which provides a temporary URL that will act as the webhook in the application. Ngrok will forward requests to the application that is running locally. We can download it [here](https://ngrok.com/).
 
 Next, we'll make a directory anywhere we’d like.
-
-    mkdir deepgram-vonage
-
+```bash
+mkdir deepgram-vonage
+```
 Then we'll change into that directory so we can start adding things to it.
-
-    cd deepgram-vonage
-
+```bash
+cd deepgram-vonage
+```
 We’ll also need to set up a virtual environment to hold the project and its dependencies. We can read more about those [here](https://blog.deepgram.com/python-virtual-environments/) and how to create one. It’s recommended in Python to use a virtual environment so the project can be installed inside a container rather than installing it system-wide.
 
 We need to ensure the virtual environment is activated because we’ll install dependencies inside. If the virtual environment is named `venv`, then we'll need to activate it.
-
-    source venv/bin/activate
-
+```bash
+source venv/bin/activate
+```
 We'll install the dependencies for the project by running the below `pip` installs from the terminal inside the virtual environment.
-
-     pip install deepgram-sdk
-     pip install vonage
-     pip install python-dotenv
-     pip install Flask
-     pip install 'flask[async]'
-     pip install pysondb
-
+```bash
+pip install deepgram-sdk
+pip install vonage
+pip install python-dotenv
+pip install Flask
+pip install 'flask[async]'
+pip install pysondb
+```
 We now can open up an editor and create a file called `deepgram-vonage-call.py`.
 
 ## The Code
@@ -87,9 +87,9 @@ We'll run the Flask application by typing this into the terminal `python deepgra
 Then we'll pull up the browser window by going to `http://127.0.0.1:5000/` and we should see the text `Hello World`.
 
 At the same time the application is running, we'll open a new terminal window and type:
-
-    ngrok http 127.0.0.1:5000
-
+```bash
+ngrok http 127.0.0.1:5000
+```
 Here's a snapshot of the terminal running with ngrok:
 
 ![ngrok terminal with python flask](https://res.cloudinary.com/deepgram/image/upload/v1651757357/blog/2022/05/deepgram-with-vonage/ngrok-terminal-with-python-flask-deepgram.png)
@@ -117,13 +117,13 @@ We’ll implement the endpoints in a few.
 Leave both terminals running as those are needed to run the application and receive the phone call.
 
 Then we'll store the environment variables in a `.env` file with the following:
-
-    DEEPGRAM_API_KEY=[‘DEEPGRAM_API_KEY’]
-    VONAGE_NUMBER=['VONAGE_NUMBER']
-    RECIPIENT_NUMBER=['RECIPIENT_NUMBER']
-    VONAGE_APPLICATION_ID=['VONAGE_APPLICATION_ID']
-    VONAGE_APPLICATION_PRIVATE_KEY_PATH=['PATH_TO_PRIVATE_KEY']
-
+```bash
+DEEPGRAM_API_KEY=['DEEPGRAM_API_KEY']
+VONAGE_NUMBER=['VONAGE_NUMBER']
+RECIPIENT_NUMBER=['RECIPIENT_NUMBER']
+VONAGE_APPLICATION_ID=['VONAGE_APPLICATION_ID']
+VONAGE_APPLICATION_PRIVATE_KEY_PATH=['PATH_TO_PRIVATE_KEY']
+```
 Replace `DEEPGRAM_API_KEY` with the API key we received from signing up in the Deepgram console, and the `RECIPIENT_NUMBER` is the phone number we would like to receive the call.
 
 We'll replace the code in `deepgram-vonage-call.py` with the following:
@@ -136,7 +136,6 @@ from flask import Flask, request, jsonify, render_template
 from deepgram import Deepgram
 from pysondb import db
 from dotenv import load_dotenv
-
 
 load_dotenv()
 
@@ -154,7 +153,6 @@ client = vonage.Client(
     application_id=VONAGE_APPLICATION_ID,
     private_key=VONAGE_APPLICATION_PRIVATE_KEY_PATH,
 )
-
 
 @app.get("/webhooks/answer")
 def answer_call():
@@ -199,11 +197,10 @@ async def recordings():
 
     source = {'buffer': response, 'mimetype': 'audio/mp3'}
     transcript_data = await deepgram.transcription.prerecorded(source, {'punctuate': True,
-                                                                        'utterances': True,
-                                                                        'model': 'phonecall',
-                                                                        'multichannel': True
-                                                             })
-
+    'utterances': True,
+       'model': 'phonecall',
+        'multichannel': True 
+})
 
     if 'results' in transcript_data:
         utterances = [

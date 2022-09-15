@@ -14,7 +14,7 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 
 <style>
 	.alert {
-		@apply flex flex-row flex-wrap align-middle;
+		@apply flex flex-row flex-wrap items-center align-middle;
 		@apply text-sm text-black;
 		@apply my-4;
 	}
@@ -82,6 +82,6 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 	}
 
 	.text :global(p) {
-		@apply pb-2;
+		@apply pb-0;
 	}
 </style>
