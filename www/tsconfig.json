@@ -11,5 +11,6 @@
     "isolatedModules": true,
     // Add type definitions for our Astro runtime.
     "types": ["astro/client"]
-  }
+  },
+  "extends": "astro/tsconfigs/base"
 }
