@@ -51,7 +51,7 @@ jobs:
           echo "ENVIRONMENT_DESC=Deploy preview for ${{ env.DEPLOY_PREFIX }} site" >> $GITHUB_ENV
       - name: Generate site URLs
         run: |
-          echo "WWW_DOMAIN=https://deepgramstg.wpengine.com" >> $GITHUB_ENV
+          echo "WWW_DOMAIN=https://deepgram.com" >> $GITHUB_ENV
           echo "BLOG_DOMAIN=https://blog.deepgram.com" >> $GITHUB_ENV
           echo "DOCS_DOMAIN=https://developers.deepgram.com" >> $GITHUB_ENV
           echo "CONSOLE_DOMAIN=https://console.deepgram.com" >> $GITHUB_ENV
