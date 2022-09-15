@@ -30,6 +30,7 @@ In addition to improved Diarization, there are several user experience enhanceme
 
 For example:
 
+```sh
     curl -X GET 'http://localhost:8080/v2/models'
 
     {
@@ -49,15 +50,18 @@ For example:
       "tags": \[],
       "languages": \[]
     }
+```
 
 Another improvement is the ability to troubleshoot streaming callback responses which can be done by including the `inspect_response=true` parameter in the ASR request. This will send the contents of a transcription response to the original request connection in addition to the response callback to aid troubleshooting or debugging a streaming callback.
 
+```sh
     curl \
       --request POST \
       --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
       --header 'Content-Type: audio/wav' \
       --data-binary @youraudio.wav \
       --url 'https://api.deepgram.com/v1/listen?callback=URL&inspect_response=true'
+```
 
 For a full list of changes included in the August release, head over to the [changelog](https://deepgram.com/changelog/deepgram-on-premise-release-220831/ "https://deepgram.com/changelog/deepgram-on-premise-release-220831/").
 
