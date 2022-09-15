@@ -20,6 +20,7 @@ const { type = "info", title = "Information", fill = "fill-black" } = Astro.prop
 	.panel {
 		@apply flex flex-row flex-wrap align-middle;
 		@apply text-sm text-black;
+		@apply my-4;
 	}
 
 	.heading {
@@ -74,6 +75,6 @@ const { type = "info", title = "Information", fill = "fill-black" } = Astro.prop
 	}
 
 	.text :global(p) {
-		@apply py-2;
+		@apply py-0;
 	}
 </style>
