@@ -90,8 +90,6 @@ async def process_audio(fast_socket: WebSocket):
 
 
 
-
-
 The only change here are these lines to check if there’s a transcript and if the transcript or voice command is **scrape**, then call the `scrape_links` function:
 
 ```python
@@ -101,7 +99,7 @@ if transcript and transcript == 'scrape':
 
 
 
-Last but not least, when rendering the template, I passed in the `hold_links `list as a context object so the HTML page could display the links using Jinja.
+Last but not least, when rendering the template, I passed in the `hold_links` list as a context object so the HTML page could display the links using Jinja.
 
 ```python
 @app.get("/", response_class=HTMLResponse)
