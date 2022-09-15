@@ -80,7 +80,7 @@ We're biased because we're predisposed towards one thing, but we're picking agai
 
 ![alt](https://res.cloudinary.com/deepgram/image/upload/v1661976754/blog/ai-show-bias-in-machine-learning/Havana_Brown_-_choco.jpg)
 
-*Brown cats are actually rather rare. However, the \[Havana Brown Cat](https://commons.wikimedia.org/wiki/File:Havana_Brown*-*choco.jpg) just such a cat.*
+*Brown cats are actually rather rare. However, the \[Havana Brown Cat](https://commons.wikimedia.org/wiki/File:HavanaBrown-_choco.jpg) just such a cat.*
 
 ## Where is bias introduced?
 
