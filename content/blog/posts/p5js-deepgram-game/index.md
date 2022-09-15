@@ -236,7 +236,7 @@ That's the core game finished. Here's how it looks (recording is sped up):
 
 ## Add Word Prompts
 
-Create a new file called `words.js`, and copy and paste the content from [this file on GitHub](https://github.com/deepgram-devs/playing-with-p5/blob/main/words.js). This is a slight reformatting of the [adamjgrant/Random-English-Word-Generator-42k-Words](repository) of over 42,000 English words.
+Create a new file called `words.js`, and copy and paste the content from [this file on GitHub](https://github.com/deepgram-devs/playing-with-p5/blob/main/words.js). This is a slight reformatting of the [repository](https://github.com/adamjgrant/Random-English-Word-Generator-42k-Words-) of over 42,000 English words.
 
 As a note, this is a pretty long word list and includes some pretty long and complex words. You may want to experiment with the word selection you use to alter the difficulty.
 
