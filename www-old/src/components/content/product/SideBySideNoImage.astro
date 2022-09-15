@@ -1,0 +1,43 @@
+---
+import Hyperlink from "../../Hyperlink.astro";
+
+const { quote, name, role, image } = Astro.props;
+---
+
+<section>
+	<div class="max-w-screen-2xl mx-auto ">
+		<div class="flex flex-col items-center pt-16 lg:pt-0">
+			<div class="flex flex-col-reverse	items-center lg:flex-row">
+				<div class="flex flex-col w-full lg:w-8/12 pr-24">
+					<p class="text-coral text-xl font-bold leading-10 mb-5">TRANSCRIPTION</p>
+					<h2>Audio in. Accurate text out.</h2>
+					<p class="text-lg text-cloud mt-3">
+						Our flexible AI architecture is built to learn from real-world audio; to determine what to listen for (voices) and what not to listen for (noise, static). Then it takes
+						the important words into account (product names, terms, account numbers) to deliver accurate transcriptions you can actually use.
+					</p>
+					<div class="mt-6 mb-10">
+						<Hyperlink icon="arrow-right" href="">Compare for Yourself</Hyperlink>
+					</div>
+					<h2>Real-time or pre-recorded – get speed and scale without sacrifice.</h2>
+					<p class="text-lg text-cloud mt-3">Scale up your business without scaling up your costs or losing accuracy. Give it a try.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	section {
+		@apply px-8 md:px-16 lg:px-10 xl:px-36;
+		@apply mb-24;
+	}
+
+	h3 {
+		@apply text-2xl font-bold xl:text-3xl;
+		@apply mb-6;
+	}
+
+	a {
+		@apply mt-6;
+	}
+</style>

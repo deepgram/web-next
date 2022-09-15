@@ -1,0 +1,146 @@
+<div id="hero-pricing">
+	<div class="top">
+		<svg class="top-left" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				d="M21.0924 0.956299V1.40641C21.0924 11.8754 29.5805 20.3635 40.0495 20.3635H40.5V21.5483H40.0495C29.5805 21.5483 21.0924 30.0363 21.0924 40.5053V40.9563H19.9076V40.5053C19.9076 30.0363 11.4196 21.5483 0.950577 21.5483H0.5V20.3635H0.950577C11.4196 20.3635 19.9076 11.8754 19.9076 1.40641V0.956299H21.0924Z"
+				fill="#AAB8CD"></path>
+		</svg>
+		<h1>Transparent pricing designed to help you grow.</h1>
+
+		<svg class="bottom-right" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M27.0358 18.3206V1.91431H26.515V18.3206C26.515 22.9226 22.7837 26.6539 18.1816 26.6539H1.77539V27.1747H18.1816C22.7837 27.1747 26.515 30.906 26.515 35.5081V51.9143H27.0358V35.5081C27.0358 30.906 30.7671 27.1747 35.3691 27.1747H51.7754V26.6539H35.3691C30.7671 26.6539 27.0358 22.9226 27.0358 18.3206Z"
+				fill="#FE5C5C"
+				stroke="#FE5C5C"
+				stroke-width="2"></path>
+		</svg>
+	</div>
+	<div class="hero-ctas">
+		<div class="rainbow">
+			<h3>Try it Free</h3>
+			<p>
+				Get started with <strong>$150 Free Credits.</strong> Automatically transcribe pre-recorded or live streaming audio. No credit card required.
+			</p>
+			<a class="button" href="/sign-up">Get Started</a>
+		</div>
+		<div class="white">
+			<h3>Ready to scale up?</h3>
+			<p>
+				Contact our Sales Team about a Premium plan. Learn about tailored accuracy gains, volume pricing, private cloud as well as on-prem deployments, and dedicated support for
+				your team.
+			</p>
+			<a class="button" href="/">Talk to Sales</a>
+		</div>
+	</div>
+</div>
+
+<style scoped>
+	#hero-pricing {
+		@apply bg-almostBlack relative;
+		color: white;
+		display: grid;
+		grid-template-columns: 1fr repeat(4, minmax(155px, 1fr)) 1fr;
+		grid-template-rows: repeat(4, 7rem);
+		gap: 0.7rem;
+		@apply py-5;
+	}
+
+	#hero-pricing::before {
+		width: 400px;
+		height: 75px;
+		content: "";
+		position: absolute;
+		right: -130px;
+		top: 0px;
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-image: url("/images/top-planet.svg");
+	}
+
+	@screen md {
+		#hero-pricing {
+			background-image: url("/images/ring-planet.svg");
+			background-repeat: no-repeat;
+			background-position: bottom left;
+		}
+
+		#hero-pricing::before {
+			right: 0px;
+		}
+	}
+
+	.top {
+		@apply flex items-center justify-center text-white;
+		@apply col-start-2 col-end-6 row-start-1 row-end-3;
+		position: relative;
+	}
+
+	#hero-pricing .top h1 {
+		font-size: 3.5rem;
+		text-align: center;
+		max-width: 75%;
+	}
+
+	.top .top-left {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.top .bottom-right {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	.hero-ctas {
+		/* Parent Grid positioning */
+		@apply col-start-2 col-end-6 row-start-3 row-end-5;
+
+		/* Self and child grid */
+		@apply text-darkCharcoal;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr) 1rem repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 0.7rem;
+	}
+	.hero-ctas > * {
+		box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+		border-radius: 1px;
+		background-color: white;
+		grid-row: 1 / 3;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: baseline;
+		align-items: center;
+		font-size: 1rem;
+		padding: 1rem;
+		padding-top: 1rem;
+		/* display: grid;
+    grid-template-rows: 3rem 4rem 5rem; */
+	}
+	.hero-ctas .rainbow {
+		background: linear-gradient(270deg, #38edac 20.31%, #9ea9ff 52.6%, #fe5c5c 81.77%);
+		grid-column: 1 / 4;
+		color: black;
+	}
+	.hero-ctas .white {
+		grid-column: 5 / 8;
+	}
+	.hero-ctas h3 {
+		font-size: 2rem;
+		font-weight: 700;
+	}
+	.hero-ctas .button {
+		@apply flex items-center justify-center;
+		border-radius: 1px;
+		@apply mt-auto mb-3 w-1/2 p-2 font-semibold;
+		@apply bg-meadow;
+	}
+	.hero-ctas .rainbow .button {
+		@apply bg-white;
+	}
+</style>

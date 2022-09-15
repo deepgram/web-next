@@ -1,0 +1,14 @@
+---
+import FullWidthSection from "../../shared/components/layout/FullWidthSection.astro";
+import Hyperlink from "../Hyperlink.astro";
+import image from "../../shared/assets/images/sdk-languages.png";
+---
+
+<FullWidthSection class="sdk-showcase mt-32">
+	<div class="flex flex-col text-center items-center space-y-8">
+		<h3>Hell yes, we have SDKs.</h3>
+		<p>Audio goes in. Accurate text comes out. It’s just that simple. Use one of our SDKs to get started in your favorite programming language.</p>
+		<Hyperlink icon="arrow-right">Try it Free</Hyperlink>
+		<img src={image} />
+	</div>
+</FullWidthSection>
