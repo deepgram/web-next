@@ -43,13 +43,13 @@ In our project, we’ll use Ngrok, which provides a temporary URL that will act 
 
 Next, let’s make a directory anywhere we’d like.
 
-```
+```bash
 mkdir deepgram-twilio
 ```
 
 Then change into that directory so we can start adding things to it.
 
-```
+```bash
 cd deepgram-twilio
 ```
 
@@ -60,13 +60,13 @@ It’s recommended in Python to use a virtual environment so our project can be 
 
 Ensure our virtual environment is activated because we’ll install dependencies inside. If our virtual environment is named `venv`, then activate it.
 
-```
+```bash
 source venv/bin/activate
 ```
 
 Let’s install our dependencies for our project by running the below `pip` installs from our terminal inside our virtual environment.
 
-```
+```bash
  pip install deepgram-sdk
  pip install twilio
  pip install python-dotenv
@@ -136,14 +136,12 @@ import asyncio
 import json
 import os
 
-
 from flask import Flask, request, render_template
 from deepgram import Deepgram
 from twilio.twiml.voice_response import Dial, VoiceResponse
 from twilio.rest import Client
 from pysondb import db
 from dotenv import load_dotenv
-
 
 app = Flask(__name__)
 
@@ -179,11 +177,10 @@ async def get_recordings():
    recording_url = request.form['RecordingUrl']
    source = {'url': recording_url}
    transcript_data = await deepgram.transcription.prerecorded(source, {'punctuate': True,
-                                                                       'utterances': True,
-                                                                       'model': 'phonecall',
-                                                                       'multichannel': True
-                                                            })
-
+    'utterances': True,
+    'model': 'phonecall',
+    'multichannel': True
+  })
 
    if 'results' in transcript_data:
        utterances = [
@@ -201,11 +198,11 @@ async def get_recordings():
 We can see how the utterances will look after they’re formatted:
 
 ```
-    [{'channel': 0, 'transcript': 'Hello?', 'id': 288397603074461838},
-    {'channel': 1, 'transcript': 'Hello?', 'id': 109089630999017748},
-    {'channel': 0, 'transcript': "Hey. How's it going? It's good to hear from you.", 'id': 124620676610936565},
-    {'channel': 0, 'transcript': 'Thanks. You too.', 'id': 182036969834868158},
-    {'channel': 1, 'transcript': 'Thanks. You too.', 'id': 817052835121297399}]
+[{'channel': 0, 'transcript': 'Hello?', 'id': 288397603074461838},
+{'channel': 1, 'transcript': 'Hello?', 'id': 109089630999017748},
+{'channel': 0, 'transcript': "Hey. How's it going? It's good to hear from you.", 'id': 124620676610936565},
+{'channel': 0, 'transcript': 'Thanks. You too.', 'id': 182036969834868158},
+{'channel': 1, 'transcript': 'Thanks. You too.', 'id': 817052835121297399}]
 ```
 
 Lastly, let’s add our `/transcribe` route and a templates folder with an `index.html` file that will display our phone speech-to-text transcript.

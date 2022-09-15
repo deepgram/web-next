@@ -274,8 +274,9 @@ To run the project, we’ll need all the code. See the end of this post.
 
 Then in our terminal, we can run the project by typing:
 
-    python3 piano-with-deepgram.py
-
+```
+python3 piano-with-deepgram.py
+```
 Now, use our voice to say the following numerals, which correspond to piano notes, to play the first few phrases from Lady Gaga’s song Bad Romance:
 
 `12314 3333211 12314 3333211`

@@ -36,14 +36,16 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 
 This will open a new text file which will be executed when the desktop environment (LXDE) launches. In the file type the following:
 
-    @lxpanel --profile LXDE-pi
-    @pcmanfm --desktop --profile LXDE-pi
+```bash
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
 
-    @xset s off
-    @xset -dpms
-    @xset s noblank
+@xset s off
+@xset -dpms
+@xset s noblank
 
-    @chromium-browser --kiosk https://deepgram.com
+@chromium-browser --kiosk https://deepgram.com
+```
 
 Click **Control + X** to quit the app, and then **Y** to say 'yes' and save your file.
 
