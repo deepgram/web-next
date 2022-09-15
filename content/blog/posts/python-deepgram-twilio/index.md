@@ -165,7 +165,7 @@ def inbound_call():
   return str(response)
 ```
 
-Here we are importing our libraries and creating a new instance of a Flask application. Then we create a new database named `calls`. We are using a lightweight JSON database called [PysonDB](https://dev.to/fredysomy/pysondb-a-json-based-lightweight-database-for-python-ija]).
+Here we are importing our libraries and creating a new instance of a Flask application. Then we create a new database named `calls`. We are using a lightweight JSON database called [PysonDB](https://dev.to/fredysomy/pysondb-a-json-based-lightweight-database-for-python-ija).
 
 We create the `/inbound` endpoint, which allows us to make a voice call. The parameter `record='record-from-answer-dual'` will help us make a dual call or a phone that can call another.
 
