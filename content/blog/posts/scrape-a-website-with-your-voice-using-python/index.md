@@ -11,13 +11,20 @@ tags:
   - python
   - scraping
   - beautifulsoup
+shorturls:
+  share: https://dpgr.am/6af9220
+  twitter: https://dpgr.am/17235b9
+  linkedin: https://dpgr.am/b8a45f8
+  reddit: https://dpgr.am/b0903c3
+  facebook: https://dpgr.am/cc11378
 ---
+
 Voice commands are intriguing, especially with a speech recognition API. After getting exposure to Deepgram’s real-time transcription, and speech-to-text Python SDK, I thought it’d be cool to scrape a website with my voice.
 
 The way the project works is simple:
 
-1. Speak the command **scrape** into my computer’s microphone.
-2. That will kick off the Python scraper, which extracts links from a webpage.
+1.  Speak the command **scrape** into my computer’s microphone.
+2.  That will kick off the Python scraper, which extracts links from a webpage.
 
 Let’s take a closer look at how I built this project using Python, FastAPI, and Deepgram speech-to-text.
 
@@ -30,8 +37,6 @@ Since there’s already a tutorial about FastAPI written on Deepgram’s blog, I
 Let’s start with the installation.
 
 I installed two additional Python libraries from my terminal inside of a virtual environment:
-
-
 
 ```python
 pip install beautifulsoup4
@@ -47,11 +52,9 @@ import requests
 import re
 ```
 
-
-
-* `BeautifuSoup` is for web scraping. 
-* The `requests` library is to get the text from the page source. 
-* The `re` import is to get the links in a specific format.
+*   `BeautifuSoup` is for web scraping.
+*   The `requests` library is to get the text from the page source.
+*   The `re` import is to get the links in a specific format.
 
 The only new function in this file is `scrape_links`. I also defined a new list called `hold_links` which will hold all the links extracted from the webpage. I pass in a URL to scrape to `requests.get` and loop through a BeautifulSoup object. A link from the webpage gets appended to the list each time through the loop.
 
@@ -70,8 +73,6 @@ def scrape_links():
   return hold_links
 ```
 
-
-
 Next, is the `get_transcript` inner function.
 
 ```python
@@ -88,16 +89,12 @@ async def process_audio(fast_socket: WebSocket):
   return deepgram_socket
 ```
 
-
-
 The only change here are these lines to check if there’s a transcript and if the transcript or voice command is **scrape**, then call the `scrape_links` function:
 
 ```python
 if transcript and transcript == 'scrape':
   scrape_links()
 ```
-
-
 
 Last but not least, when rendering the template, I passed in the `hold_links` list as a context object so the HTML page could display the links using Jinja.
 
@@ -133,8 +130,7 @@ After speaking the word **scrape** into my computer’s microphone, a list of ex
 
 ![Scrape a website using voice commands with Python](https://res.cloudinary.com/deepgram/image/upload/v1663256081/blog/python-scrape-with-voice/python-scrape-with-voice_ijgh01.png "Scrape a website using voice commands with Python")
 
-
-
 ![Scrape and extract links using Beautiful Soup with Python](https://res.cloudinary.com/deepgram/image/upload/v1663256081/blog/python-scrape-with-voice/python-extract-links-with-voice_sc8lid.png "Scrape and extract links using Beautiful Soup with Python")
 
 If you found my project exciting or have questions, please feel free to [Tweet me](https://twitter.com/DeepgramAI)! I’m happy to help!
+
