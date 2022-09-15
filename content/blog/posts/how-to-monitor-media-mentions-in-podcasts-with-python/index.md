@@ -30,11 +30,17 @@ This method is interesting but not as effective as I’ll show later in this pos
 
 A readable formatted transcript with the speech-to-text diarize feature may look something like this:
 
-    [Speaker:0] All alright, guys, before we start, we got a special message from our sponsor.
-    [Speaker:1] If you wanna rank higher on Google, you gotta look at your page speed time. 
-    [Speaker:1] The faster website loads, the better off you are.
-    [Speaker:1] With Google's core vital update that makes it super important to optimize your site or load time.
-    [Speaker:1] And one easy way to do it is use the host that Eric and I use, Dream Host.
+```
+[Speaker:0] All alright, guys, before we start, we got a special message from our sponsor.
+
+[Speaker:1] If you wanna rank higher on Google, you gotta look at your page speed time. 
+
+[Speaker:1] The faster website loads, the better off you are.
+
+[Speaker:1] With Google's core vital update that makes it super important to optimize your site or load time.
+
+[Speaker:1] And one easy way to do it is use the host that Eric and I use, Dream Host.
+```
 
 In a podcast, there’s usually an even split time between the speakers or the hosts. The way diarization is used to monitor media mentions in podcasts is to determine if one person is a speaker for a more extended time than the other. In our above transcript example, you’ll notice that Speaker 1 talks the longest during that segment. This *could* indicate that’s where the ad is read on behalf of the sponsor.
 
@@ -63,11 +69,11 @@ I added the Search feature as a parameter in the Python code like this:
 Since I wanted to find where the podcast hosts mentioned sponsorships, searching for the world `sponsor` made sense. Imagine them saying something like, “Now a word from our sponsor”.
 
 After printing the results, I received a response similar to this:
-```
-    [{'confidence': 1.0, 'end': 23.57, 'snippet': 'our sponsor', 'start': 23.09},
-     {'confidence': 0.7023809, 'end': 79.82909, 'snippet': 'spotify', 'start': 79.38954},
-     {'confidence': 0.6279762, 'end': 120.18001, 'snippet': 'stocks','start': 119.740005},
-     {'confidence': 0.5535714, 'end': 241.19926,'snippet': 'focus on','start': 240.92029}]
+```bash
+[{'confidence': 1.0, 'end': 23.57, 'snippet': 'our sponsor', 'start': 23.09},
+    {'confidence': 0.7023809, 'end': 79.82909, 'snippet': 'spotify', 'start': 79.38954},
+    {'confidence': 0.6279762, 'end': 120.18001, 'snippet': 'stocks','start': 119.740005},
+    {'confidence': 0.5535714, 'end': 241.19926,'snippet': 'focus on','start': 240.92029}]
 ```
 The response is a list of dictionaries with the closest match for my search term indicated by the confidence. The higher the confidence, the more likely it matches the search. This feature helped tremendously since all I had to do was pass in a word to search for in the transcript to the speech-to-text Python SDK and spit out a result.
 
@@ -180,10 +186,11 @@ Finally, I extracted the entities and printed out the text or name of the compan
 
 Here’s what it looked like in my terminal:
 
-    Google ORG
-    Google ORG
-    Dream Host ORG
-
+```
+Google ORG
+Google ORG
+Dream Host ORG
+```
 As you can see, the podcast hosts mentioned the companies Google and Dream Host.
 
 ## Conclusion
