@@ -1,27 +1,30 @@
 ---
-title: "Transcribing Radio Broadcasts With Node.js"
-description: "Learn how to use Deepgram to generate and store transcripts for your favorite radio stations. An excellent starting point to learn more about live transcription."
+title: Transcribing Radio Broadcasts With Node.js
+description: Learn how to use Deepgram to generate and store transcripts for
+  your favorite radio stations. An excellent starting point to learn more about
+  live transcription.
 date: 2022-07-25
 cover: https://res.cloudinary.com/deepgram/image/upload/v1658753935/blog/2022/07/live-transcribing-radio-feeds-js/cover.png
 authors:
-    - kevin-lewis
+  - kevin-lewis
 category: tutorial
 tags:
-    - javascript
-    - nodejs
+  - javascript
+  - nodejs
 seo:
-    title: "Transcribing Radio Broadcasts With Node.js"
-    description: "Learn how to use Deepgram to generate and store transcripts for your favorite radio stations. An excellent starting point to learn more about live transcription."
-shorturls:
-    share: https://dpgr.am/dd89e87
-    twitter: https://dpgr.am/dc14509
-    linkedin: https://dpgr.am/ac23935
-    reddit: https://dpgr.am/0f3c3af
-    facebook: https://dpgr.am/151cdf6
+  title: Transcribing Radio Broadcasts With Node.js
+  description: Learn how to use Deepgram to generate and store transcripts for
+    your favorite radio stations. An excellent starting point to learn more
+    about live transcription.
 og:
-    image: https://res.cloudinary.com/deepgram/image/upload/v1661454108/blog/live-transcribing-radio-feeds-js/ograph.png
+  image: https://res.cloudinary.com/deepgram/image/upload/v1661454108/blog/live-transcribing-radio-feeds-js/ograph.png
+shorturls:
+  share: https://dpgr.am/dd89e87
+  twitter: https://dpgr.am/dc14509
+  linkedin: https://dpgr.am/ac23935
+  reddit: https://dpgr.am/0f3c3af
+  facebook: https://dpgr.am/151cdf6
 ---
-
 There are so many uses for Deepgram's live transcription service - from captioning meetings and events to creating home assistance and supporting call center operators by picking up on keywords.
 
 Today, you'll use the Deepgram JavaScript SDK to provide live transcriptions to live radio broadcasts and store spoken words in a file that can then be further analyzed.
@@ -32,8 +35,10 @@ You will need a Deepgram API Key - [get one here](https://console.deepgram.com/s
 
 Create a new directory, open it on a code editor, and navigate to it in your terminal. Initialize a new Node.js project and install this project's dependencies:
 
-    npm init -y
-    npm install cross-fetch @deepgram/sdk
+```
+npm init -y
+npm install cross-fetch @deepgram/sdk
+```
 
 [`cross-fetch`](https://npm.im/cross-fetch) is used to make HTTP requests more straightforward in your Node.js projects. Alternatives include `axios`, `got`, and `httpie` - use whatever works for you or the default `http` library in Node.js, which requires no dependencies.
 
@@ -67,9 +72,9 @@ Make sure you have a direct audio stream for the radio station. A good way of te
 
 Here are a few URLs for you to try:
 
-*   BBC Radio 4 (works outside the UK): http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw_online_nonuk
-*   BBC Radio 4 (works in the UK): http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw
-*   France Inter: https://direct.franceinter.fr/live/franceinter-midfi.mp3
+* BBC Radio 4 (works outside the UK): http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw_online_nonuk
+* BBC Radio 4 (works in the UK): http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw
+* France Inter: https://direct.franceinter.fr/live/franceinter-midfi.mp3
 
 If you use the French channel, be sure to add `language: fr` to your Deepgram session options.
 
@@ -172,6 +177,8 @@ deepgramLive.addListener('transcriptReceived', (message) => {
 })
 ```
 
-If you have any questions, please feel free to reach out to us over email (`devrel@deepgram.com`) or via Twitter ([@DeepgramDevs](DeepgramDevs)).
+If you have any questions, please feel free to reach out to us over email (`devrel@deepgram.com`) or via Twitter ([@DeepgramDevs](https://twitter.com/deepgramdevs)).
 
-        
+```
+    
+```
