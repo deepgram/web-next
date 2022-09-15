@@ -5,7 +5,7 @@ date: 2019-02-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981347/blog/what-does-as-the-crow-flies-mean/as-the-crow-flies%402x.jpg
 authors:
   - morris-gevirtz
-category: tutorial
+category: linguistics
 tags:
   - education
   - language

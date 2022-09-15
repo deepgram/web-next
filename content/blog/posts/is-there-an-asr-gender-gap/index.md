@@ -7,7 +7,7 @@ date: 2021-03-31
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981365/blog/is-there-an-asr-gender-gap/is-there-asr-gender-gap%402x.jpg
 authors:
   - sam-zegas
-category: tutorial
+category: identity-and-language
 tags:
   - inclusion
   - language

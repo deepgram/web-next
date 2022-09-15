@@ -6,7 +6,7 @@ date: 2021-05-26
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981370/blog/a-conversation-with-asian-american-pacific-islander-deepgrammers/convo-w-AAPI-dgers%402x.jpg
 authors:
   - sam-zegas
-category: dg-insider
+category: identity-and-language
 tags:
   - aapi
   - education

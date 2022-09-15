@@ -8,7 +8,7 @@ date: 2021-11-30
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981388/blog/happy-national-native-american-heritage-month/blog-native-american-heritage-month-2021-thumb-554.png
 authors:
   - sam-zegas
-category: tutorial
+category: identity-and-language
 tags:
   - inclusion
   - heritage

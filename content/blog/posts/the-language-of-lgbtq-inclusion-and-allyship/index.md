@@ -5,7 +5,7 @@ date: 2021-06-24
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981376/blog/the-language-of-lgbtq-inclusion-and-allyship/language-of-lgbtq-inclusion%402x.jpg
 authors:
   - sam-zegas
-category: tutorial
+category: identity-and-language
 tags:
   - inclusion
   - lgbtq

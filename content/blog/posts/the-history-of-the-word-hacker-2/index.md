@@ -5,7 +5,7 @@ date: 2019-02-22
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981348/blog/the-history-of-the-word-hacker-2/history-of-hacker%402x.jpg
 authors:
   - morris-gevirtz
-category: tutorial
+category: linguistics
 tags:
   - language
 seo:

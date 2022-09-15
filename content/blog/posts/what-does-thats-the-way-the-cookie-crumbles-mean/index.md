@@ -5,7 +5,7 @@ date: 2019-01-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981341/blog/what-does-thats-the-way-the-cookie-crumbles-mean/the-way-the-cookie-crumbles%402x.jpg
 authors:
   - morris-gevirtz
-category: tutorial
+category: linguistics
 tags:
   - language
 seo:
