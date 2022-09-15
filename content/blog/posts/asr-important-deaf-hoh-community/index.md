@@ -6,7 +6,7 @@ date: 2022-04-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981415/blog/asr-important-deaf-hoh-community/why-asr-important-deaf-hoh-community-thumb-554x220.png
 authors:
   - sam-zegas
-category: tutorial
+category: identity-and-language
 tags:
   - heritage
   - language

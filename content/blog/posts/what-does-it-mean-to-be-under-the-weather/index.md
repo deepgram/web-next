@@ -5,7 +5,7 @@ date: 2019-01-08
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981953/blog/what-does-it-mean-to-be-under-the-weather/placeholder-post-image%402x.jpg
 authors:
   - morris-gevirtz
-category: tutorial
+category: linguistics
 tags:
   - education
   - language

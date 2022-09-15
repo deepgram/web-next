@@ -8,7 +8,7 @@ cover: https://res.cloudinary.com/deepgram/image/upload/v1661981383/blog/embraci
 authors:
   - morris-gevirtz
   - sam-zegas
-category: tutorial
+category: identity-and-language
 tags:
   - inclusion
   - language

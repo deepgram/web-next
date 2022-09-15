@@ -6,7 +6,7 @@ date: 2021-11-23
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981387/blog/what-makes-your-voice-uniquely-yours/what-makes-your-voice-yours-blog-thumb-554x220%402x.png
 authors:
   - morris-gevirtz
-category: tutorial
+category: linguistics
 tags:
   - language
 seo:

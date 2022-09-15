@@ -6,7 +6,7 @@ date: 2022-04-21
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981418/blog/top-6-dutch-asr-challenges/top-6-dutch-asr-challenges-thumb-554x220%402x.png
 authors:
   - conner-goodrum
-category: tutorial
+category: linguistics
 tags:
   - language
 seo:

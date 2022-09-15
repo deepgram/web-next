@@ -8,7 +8,7 @@ authors:
   - duygu-altinok
   - morris-gevirtz
   - chris-doty
-category: tutorial
+category: linguistics
 tags:
   - deep-learning
   - language
