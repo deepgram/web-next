@@ -40,7 +40,7 @@ If you chose F, All of the above, you are correct!
 
 Deepgram is an automated voice-to-text company that allows you to build applications that transcribe speech-to-text, where you’ll receive an actual transcript of the person speaking or a conversation between multiple people. One of the many reasons to choose us over other providers is that we build better voice applications with faster, more accurate transcription through AI Speech Recognition.
 
-We offer real-time transcription and pre-recorded speech-to-text, allowing you to upload a file with voice. We recently published a blog post on using our Python SDK to do live transcription with some of the most popular Python web frameworks, including [FastAPI](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-fastapi/), [Flask](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-flask/), [Django](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-django/), and [Quart](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-quart/).
+We offer real-time transcription and pre-recorded speech-to-text, allowing you to upload a file with voice. We recently published a blog post on using our Python SDK to do live transcription with some of the most popular Python web frameworks, including [FastAPI](https://blog.deepgram.com/live-transcription-fastapi/), [Flask](https://blog.deepgram.com/live-transcription-flask/), [Django](https://blog.deepgram.com/live-transcription-django/), and [Quart](https://blog.deepgram.com/live-transcription-quart/).
 
 Now that you have a better understanding of Deepgram let’s see how you can use us to change the world.
 

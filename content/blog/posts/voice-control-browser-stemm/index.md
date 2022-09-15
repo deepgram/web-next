@@ -34,7 +34,7 @@ Most of the team met up a week before Hack Cambridge to start brainstorming idea
 
 ## The Project
 
-Fortunately, some of the team saw our live demo at the event that highlighted how easy it is to [get started with Deepgram's Speech Recognition API in the browser](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/). While they had to decide which sponsored challenge categories they would incorporate into their project, the team "instantly recognized the vast potential the Deepgram API gives developers by allowing us to use speech recognition in innovative ways within our projects" says Sid.
+Fortunately, some of the team saw our live demo at the event that highlighted how easy it is to [get started with Deepgram's Speech Recognition API in the browser](https://blog.deepgram.com/live-transcription-mic-browser/). While they had to decide which sponsored challenge categories they would incorporate into their project, the team "instantly recognized the vast potential the Deepgram API gives developers by allowing us to use speech recognition in innovative ways within our projects" says Sid.
 
 After bouncing around ideas, they chose to expand their knowledge from October's event. They landed on what would become Stëmm - the aim was to build a browser interface for users with motor disabilities. The team leveraged both the Deepgram API and Chrome API into a Chrome extension that, once installed and given microphone permissions, lets users control Chrome hands-free with voice commands like "chrome, open tab," "chrome, search for recipes," and "chrome, add bookmark."
 

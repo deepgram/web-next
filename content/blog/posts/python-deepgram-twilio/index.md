@@ -53,7 +53,7 @@ Then change into that directory so we can start adding things to it.
 cd deepgram-twilio
 ```
 
-We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://sweet-pie-c52a63-blog.netlify.app/python-virtual-environments/) and how to create one.
+We’ll also need to set up a virtual environment to hold our project and its dependencies. We can read more about those [here](https://blog.deepgram.com/python-virtual-environments/) and how to create one.
 
 <Panel> Panel with important note
 It’s recommended in Python to use a virtual environment so our project can be installed inside a container rather than installing it system-wide. </Panel>

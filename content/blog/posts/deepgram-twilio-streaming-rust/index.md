@@ -22,7 +22,7 @@ og:
     image: https://res.cloudinary.com/deepgram/image/upload/v1661454095/blog/deepgram-twilio-streaming-rust/ograph.png
 ---
 
-In a [previous blog post](https://sweet-pie-c52a63-blog.netlify.app/deepgram-twilio-streaming/), we showed how to build an integration
+In a [previous blog post](https://blog.deepgram.com/deepgram-twilio-streaming/), we showed how to build an integration
 between Deepgram and Twilio for real-time, live transcription using Python. In this post, we will revisit this integration and implement
 it in Rust. The [Rust programming language](https://www.rust-lang.org/) is a favorite among Deepgram engineers, and is known for its
 type safety, performance, and powerful memory management achieved via a strict ownership system which eliminates entire categories of bugs!

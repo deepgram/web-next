@@ -304,7 +304,7 @@ The final code looks like this:
 </html>
 ```
 
-This is the most simple implementation with Vue and is written for clarity over conciseness. If you want to learn more about Vue 3, including its setup() function and composables, then Sandra wrote [an excellent tutorial series on Vue 3](https://sweet-pie-c52a63-blog.netlify.app/diving-into-vue-3-getting-started/).
+This is the most simple implementation with Vue and is written for clarity over conciseness. If you want to learn more about Vue 3, including its setup() function and composables, then Sandra wrote [an excellent tutorial series on Vue 3](https://blog.deepgram.com/diving-into-vue-3-getting-started/).
 
 If you have questions, please feel free to message us on Twitter, [@DeepgramDevs](https://twitter.com/DeepgramDevs).
 

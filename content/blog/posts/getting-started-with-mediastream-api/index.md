@@ -26,7 +26,7 @@ When building web applications, you will sometimes need to work with audio and/o
 
 ## Getting Started
 
-To get started, you'll need to gain access to the user's audio/video devices which provide data in a 'stream.' A common use case would be getting access to the user's microphone and camera. One of the most common ways to do this is through the [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) method that is built into the browser. This post is more about understanding the different parts of the API. To see this method used in action, refer to [Kevin's post about getting audio in the browser](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/).
+To get started, you'll need to gain access to the user's audio/video devices which provide data in a 'stream.' A common use case would be getting access to the user's microphone and camera. One of the most common ways to do this is through the [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) method that is built into the browser. This post is more about understanding the different parts of the API. To see this method used in action, refer to [Kevin's post about getting audio in the browser](https://blog.deepgram.com/live-transcription-mic-browser/).
 
 Let's take the following code, insert it into an HTML file, and then open that file in the browser.
 

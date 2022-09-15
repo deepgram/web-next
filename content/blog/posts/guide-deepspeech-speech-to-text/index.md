@@ -24,7 +24,7 @@ og:
 
 No, we’re not talking about you Cthulhu. This is a different type of DeepSpeech. The DeepSpeech we’re talking about today is a Python speech to text library. Speech to text is part of [Natural Language Processing (NLP)](https://pythonalgos.com/?p=1436). Automated speech recognition, or ASR, started out as an offshoot of NLP in the 1990s.
 
-Today, there are tons of audio libraries that can help you [manipulate audio data](https://sweet-pie-c52a63-blog.netlify.app/best-python-audio-manipulation-tools/) such as DeepSpeech and [PyTorch](https://sweet-pie-c52a63-blog.netlify.app/pytorch-intro-with-torchaudio/). In this post, we will be using DeepSpeech to do both asynchronous and real time speech transcription. We will cover:
+Today, there are tons of audio libraries that can help you [manipulate audio data](https://blog.deepgram.com/best-python-audio-manipulation-tools/) such as DeepSpeech and [PyTorch](https://blog.deepgram.com/pytorch-intro-with-torchaudio/). In this post, we will be using DeepSpeech to do both asynchronous and real time speech transcription. We will cover:
 
 *   [What is DeepSpeech?](#what-is-deepspeech)
 *   [Set Up for Local Speech to Text with DeepSpeech](#set-up-for-local-speech-to-text-with-deepspeech)

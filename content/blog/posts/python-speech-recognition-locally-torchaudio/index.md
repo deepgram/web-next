@@ -40,7 +40,7 @@ In this post, we’ll focus on how to do speech recognition locally on your devi
 
 PyTorch is a versatile and powerful Python library for quickly developing machine learning models. Is it the open-source Python version of the Torch library (built on Lua) and primarily developed by Meta/Facebook. TorchAudio is an additional library to PyTorch that handles dealing with audio data for machine learning models.
 
-TorchAudio isn’t just for creating machine learning models, you can also use it to do some audio data manipulation. We previously covered how to [use TorchAudio to manipulate audio data in Python](https://sweet-pie-c52a63-blog.netlify.app/pytorch-intro-with-torchaudio/). In this piece, we’re going to use it to build an inference pipeline to do speech recognition in real time.
+TorchAudio isn’t just for creating machine learning models, you can also use it to do some audio data manipulation. We previously covered how to [use TorchAudio to manipulate audio data in Python](https://blog.deepgram.com/pytorch-intro-with-torchaudio/). In this piece, we’re going to use it to build an inference pipeline to do speech recognition in real time.
 
 ## Setting Up TorchAudio for Speech Recognition
 

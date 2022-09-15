@@ -152,7 +152,7 @@ print(json.loads(jedi_string))
 
 ## Find Specific Data in a Real JSON Object
 
-A common, real-world scenario for encountering JSON would be if you were making a request to a third-party API. (Check out [this blog post](https://sweet-pie-c52a63-blog.netlify.app/getting-started-with-apis/) to learn more about working with APIs).
+A common, real-world scenario for encountering JSON would be if you were making a request to a third-party API. (Check out [this blog post](https://blog.deepgram.com/getting-started-with-apis/) to learn more about working with APIs).
 
 For example, if you were to use the Deepgram API to transcribe audio, you would make a POST request that sends the audio file to Deepgram, and in response you would get your transcription of that audio file as text in the form of a JSON object.
 

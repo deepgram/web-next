@@ -25,7 +25,7 @@ Deepgram community member Filip Grebowski recently built a really cool demo whic
 
 <YouTube id="rhFlRPz-AxQ"></YouTube>
 
-In Part 1, Filip expands on our [Get Live Speech Transcriptions In Your Browser](https://sweet-pie-c52a63-blog.netlify.app/live-transcription-mic-browser/) demo to detect keywords and build a webpage.
+In Part 1, Filip expands on our [Get Live Speech Transcriptions In Your Browser](https://blog.deepgram.com/live-transcription-mic-browser/) demo to detect keywords and build a webpage.
 
 ![Actions: add, delete, modify, save, structure. Elements: button, title, paragraph, input. Sub-actions: all, at index. Sub-category: name, palceholder, default.](https://res.cloudinary.com/deepgram/image/upload/v1646692165/blog/2022/02/coding-website-with-voice/keywords.png)
 
