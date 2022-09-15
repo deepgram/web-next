@@ -6,7 +6,7 @@ date: 2022-06-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981425/blog/how-gender-shows-up-in-language/pride-thumb-554x220%402x.png
 authors:
   - sam-zegas
-category: tutorial
+category: identity-and-language
 tags:
   - gender
   - inclusion

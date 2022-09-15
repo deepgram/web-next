@@ -7,7 +7,7 @@ date: 2022-02-28
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981406/blog/deepgram-diversity-inclusion/building-diversity-equity-inclusion-at-DG-thumb-55.png
 authors:
   - sam-zegas
-category: dg-insider
+category: identity-and-language
 tags:
   - inclusion
 seo:

@@ -6,7 +6,7 @@ date: 2022-06-14
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981423/blog/difference-between-language-dialect/difference-between-Language-n-dialect-thumb-554x22.png
 authors:
   - chris-doty
-category: tutorial
+category: linguistics
 tags:
   - language
 seo:

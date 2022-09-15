@@ -6,7 +6,7 @@ date: 2022-04-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981414/blog/sentiment-analysis-emotion-regulation-difference/Sentiment-Analysis-Emotional-Recognition-thumb-554.png
 authors:
   - chris-doty
-category: tutorial
+category:  ai-and-engineering
 tags:
   - sentiment-analysis
   - language

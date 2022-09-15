@@ -5,7 +5,7 @@ date: 2022-03-17
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981411/blog/6-challenges-asr-hindi/6-biggest-challenges-of-ASR-for-Hindi-thumb-554x22.png
 authors:
   - dan-shafer
-category: tutorial
+category: linguistics
 tags:
   - deep-learning
   - language
