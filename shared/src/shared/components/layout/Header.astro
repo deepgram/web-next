@@ -28,8 +28,8 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				</Link>
 			</div>
 			<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
-				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--mini sm:button--small button--primary">Sign Up</Link>
 				<Button class="button button--mini sm:button--small button--secondary" x-on:click="menu = 'Mobile'" aria-label="Mobile Menu">Menu</Button>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--mini sm:button--small button--primary">Sign Up</Link>
 			</div>
 			<div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
 				<nav class="flex space-x-[2.1875rem]" x-on:click.outside="menu = null">
@@ -53,7 +53,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					<NavItem href={`${WWW_DOMAIN}/pricing`} class="text-white">Pricing</NavItem>
 					<!-- Docs -->
 					<NavMenu name="Docs">
-						<NavMenuItem href={DOCS_DOMAIN} icon="file">Documentation</NavMenuItem>
+						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/`} icon="file">Documentation</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/api-reference`} icon="code-laptop">API Reference</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/guides`} icon="book">Guides</NavMenuItem>
 						<NavMenuItem href={STATUS_DOMAIN} icon="heartbeat">Status</NavMenuItem>
@@ -78,7 +78,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 			</div>
 		</div>
 
-		<div class="fixed flex flex-col inset-0 xl:hidden bg-black" style="display: none;" x-show="menu === 'Mobile'">
+		<div class="fixed flex flex-col h-screen inset-0 xl:hidden bg-black" style="display: none;" x-show="menu === 'Mobile'">
 			<div class="relative inset-x-0 bg-almostBlack text-white">
 				<div class="max-w-screen-2xl mx-auto px-6 flex justify-between items-center xl:justify-start">
 					<div class="mr-[2.875rem]">
@@ -93,7 +93,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					</div>
 				</div>
 			</div>
-			<div class="grow flex flex-col justify-between mt-4 overflow-y-auto">
+			<div class="grow flex flex-col justify-between overflow-y-scroll">
 				<div class="bg-darkCharcoal">
 					<nav class="grid font-bold">
 						<!-- Product -->
@@ -116,7 +116,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 						<MobileNavItem href={`${WWW_DOMAIN}/pricing`} class="text-white">Pricing</MobileNavItem>
 						<!-- Docs -->
 						<MobileNavMenu name="Docs">
-							<MobileNavMenuItem href={DOCS_DOMAIN} icon="file">Documentation</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${DOCS_DOMAIN}/documentation/`} icon="file">Documentation</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${DOCS_DOMAIN}/documentation/guides`} icon="code-laptop">Guides</MobileNavMenuItem>
 							<MobileNavMenuItem href={STATUS_DOMAIN} icon="book">Status</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${WWW_DOMAIN}/changelog`} icon="heartbeat">Changelog</MobileNavMenuItem>
