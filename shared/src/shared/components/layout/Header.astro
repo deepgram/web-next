@@ -34,7 +34,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 			<div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
 				<nav class="flex space-x-[2.1875rem]" x-on:click.outside="menu = null">
 					<!-- Product -->
-					<NavMenu name="Product" primary>
+					<NavMenu name="Product" primary gridClass="lg:grid-cols-1 min-w-[18.25rem]">
 						<NavMenuPrimaryItem slot="primary" href={`${WWW_DOMAIN}/product-new`} icon="star" description="Meet the Deepgram speech‑to‑text API">View Product</NavMenuPrimaryItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/product/model-overview`} icon="model">Model Overview</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/product/languages`} icon="globe">Languages</NavMenuItem>
