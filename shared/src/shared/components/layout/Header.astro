@@ -53,7 +53,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					<!-- Docs -->
 					<NavMenu name="Docs">
 						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/`} icon="file">Documentation</NavMenuItem>
-						<NavMenuItem href={`${DOCS_DOMAIN}/on-prem/`} icon="box">On-Prem Deployment</NavMenuItem>
+						<NavMenuItem href={`${DOCS_DOMAIN}/on-prem/`} icon="server-icon">On-Prem Deployment</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/guides/`} icon="book">Guides</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/api-reference/`} icon="code-laptop">API Reference</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/getting-started/`} icon="grad">Tutorials</NavMenuItem>
@@ -66,6 +66,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					<!-- About -->
 					<NavMenu name="About" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
 						<NavMenuItem href={`${WWW_DOMAIN}/about`} icon="deepgram-d">About Us</NavMenuItem>
+						<NavMenuItem href="https://github.com/orgs/deepgram/discussions" icon="github">Community Forum</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/company/newsroom`} icon="newspaper">Newsroom</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/company/careers`} icon="open-door">Careers</NavMenuItem>
 					</NavMenu>
@@ -117,7 +118,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 						<!-- Docs -->
 						<MobileNavMenu name="Docs">
 							<MobileNavMenuItem href={`${DOCS_DOMAIN}/documentation/`} icon="file">Documentation</MobileNavMenuItem>
-							<MobileNavMenuItem href={`${DOCS_DOMAIN}/on-prem/`} icon="box">On-Prem Deployment</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${DOCS_DOMAIN}/on-prem/`} icon="server-icon">On-Prem Deployment</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${DOCS_DOMAIN}/documentation/guides/`} icon="code-laptop">Guides</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${DOCS_DOMAIN}/api-reference/`} icon="grad">API Reference</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${DOCS_DOMAIN}/tags/tutorial/`} icon="rotating-gear">Tutorials</MobileNavMenuItem>
@@ -130,6 +131,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 						<!-- About -->
 						<MobileNavMenu name="About">
 							<MobileNavMenuItem href={`${WWW_DOMAIN}/about`} icon="deepgram-d">About Us</MobileNavMenuItem>
+							<MobileNavMenuItem href="https://github.com/orgs/deepgram/discussions" icon="github">Community Forum</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${WWW_DOMAIN}/company/newsroom`} icon="newspaper">Newsroom</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${WWW_DOMAIN}/company/careers`} icon="open-door">Careers</MobileNavMenuItem>
 						</MobileNavMenu>
