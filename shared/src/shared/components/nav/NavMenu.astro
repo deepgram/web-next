@@ -21,7 +21,7 @@ const { name, gridClass, primary } = Astro.props;
 				<slot name="primary" />
 			</div>
 		)}
-		<div class={`bg-darkCharcoal grid pl-12 pr-8 py-12 gap-8 ${gridClass ? gridClass : "lg:grid-cols-2 min-w-[35.6875rem]"}`}>
+		<div class={`bg-darkCharcoal grid pl-12 py-12 gap-8 ${gridClass ? gridClass : "lg:grid-cols-2 min-w-[35.6875rem]"}`}>
 			<slot />
 		</div>
 	</div>
