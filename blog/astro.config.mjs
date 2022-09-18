@@ -27,6 +27,13 @@ export default defineConfig({
 			// required for dev to read contents of symlinked directory
 			preserveSymlinks: true,
 		},
+    build: {
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[ext]/[name][extname]?build=[hash]',
+        }
+      }
+    }
 	},
 	legacy: {
 		// Adds support for legacy Markdown features
