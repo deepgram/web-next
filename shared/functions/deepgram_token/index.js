@@ -52,7 +52,7 @@ exports.handler = async function (event) {
 			};
 		case "GET":
 			try {
-				const key = await deepgram.keys.create(deepgramProjectId, "Temporary key", ["member"], {
+				const key = await deepgram.keys.create(deepgramProjectId, "Temporary key", ["usage:write"], {
 					timeToLive: 5,
 				});
 

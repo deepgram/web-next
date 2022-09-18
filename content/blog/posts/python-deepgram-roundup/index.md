@@ -49,7 +49,7 @@ Once you get aiohttp configured for WebSockets, getting Flask 2.0 working with D
 
 Quart is a Python web microframework that is asynchronous, making it easier to serve WebSockets. Quart is an asyncio reimplementation of Flask. If you're familiar with Flask, you'll be able to ramp up on Quart quickly. We have a tutorial on using [Quart with Deepgram](https://blog.deepgram.com/live-transcription-quart/) live streaming audio speech-to-text.
 
-Getting started with Quart was very simple. They have a short [tutorial on WebSockets](https://pgjones.gitlab.io/quart/tutorials/websocket_tutorial.html) on their website that covers the basics. Since Quart is very similar to Flask, there wasn’t as much ramp-up time, which is nice. Quart also has support for WebSockets, so there was no need for extra configuration, and it worked perfectly with Deepgram’s live streaming audio.
+Getting started with Quart was very simple. They have a short tutorial on WebSockets on their website that covers the basics. Since Quart is very similar to Flask, there wasn’t as much ramp-up time, which is nice. Quart also has support for WebSockets, so there was no need for extra configuration, and it worked perfectly with Deepgram’s live streaming audio.
 
 ### Django Live Streaming Audio
 

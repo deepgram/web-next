@@ -6,7 +6,7 @@ date: 2022-08-17
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981431/blog/complete-guide-punctuation-capitalization-speech-to-text/mplete-guide-to-punctuation-capitalization-in-spee.png
 authors:
   - chris-doty
-category: tutorial
+category: speech-trends
 tags:
   - language
   - word-error-rate

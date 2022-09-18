@@ -6,7 +6,7 @@ date: 2022-03-11
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981410/blog/automatic-speech-recognition-education/How-ASR-can-help-educators-thumb-554x220%402x.png
 authors:
   - chris-doty
-category: speech-trends
+category: thought-leadership
 tags:
   - education
 seo:

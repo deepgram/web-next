@@ -6,7 +6,7 @@ date: 2022-05-19
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981422/blog/celebrating-jewish-american-history-month/celebrating-jewish-american-history-month-thumb-55.png
 authors:
   - sam-zegas
-category: tutorial
+category: identity-and-language
 tags:
   - heritage
   - language

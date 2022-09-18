@@ -8,7 +8,7 @@ date: 2021-02-26
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981362/blog/celebrating-black-history-month-with-a-vision-of-more-inclusive-speech-recognition/celebrating-black-history-2021%402x.jpg
 authors:
   - sam-zegas
-category: tutorial
+category: identity-and-language
 tags:
   - education
   - inclusion
