@@ -1,7 +1,7 @@
 ---
 import { Debug } from "astro/components";
 import { useStoryblokApi } from "@storyblok/astro";
-import Component from "@storyblok/astro/StoryblokComponent.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import Layout from "../layouts/Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
@@ -32,9 +32,7 @@ const story = data.story;
 <Layout>
 	<!-- <JsonLD slot="json:ld" {schema} /> -->
 
-	<!-- <StoryblokComponent blok={story.content} /> -->
 	<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
-		{story.name}
 		<Component blok={story.content} />
 	</PrimarySection>
 </Layout>

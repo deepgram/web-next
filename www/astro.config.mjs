@@ -21,14 +21,12 @@ export default defineConfig({
 		preact(),
 		storyblok({
 			accessToken: "OsvNv534kS2nivAAj1EPVgtt",
-			apiOptions: {
-				cache: { clear: "auto", type: "memory" },
-			},
 			bridge: true,
 			components: {
 				page: "storyblok/Page",
 				feature: "storyblok/Feature",
 				grid: "storyblok/Grid",
+				teaser: "storyblok/Teaser",
 			},
 		}),
 	],

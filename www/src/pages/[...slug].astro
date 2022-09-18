@@ -1,6 +1,6 @@
 ---
 import { useStoryblokApi } from "@storyblok/astro";
-// import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import Layout from "../layouts/Default.astro";
 
 const sbApi = useStoryblokApi();
@@ -29,6 +29,5 @@ const story = data.story;
 ---
 
 <Layout>
-	{story.name}
-	<!-- <StoryblokComponent blok={story.content} /> -->
+	<StoryblokComponent blok={story.content} />
 </Layout>
