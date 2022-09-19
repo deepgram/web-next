@@ -20,7 +20,7 @@ export default defineConfig({
 		vue(),
 		preact(),
 		storyblok({
-			accessToken: "OsvNv534kS2nivAAj1EPVgtt",
+			accessToken: "yr1Aq22RabLVKwS0FwpQaAtt",
 			apiOptions: {
 				cache: { clear: "auto", type: "memory" },
 				region: "us",
@@ -31,6 +31,7 @@ export default defineConfig({
 				feature: "storyblok/Feature",
 				grid: "storyblok/Grid",
 				teaser: "storyblok/Teaser",
+				author: "storyblok/Author",
 			},
 		}),
 	],

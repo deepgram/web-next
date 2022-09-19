@@ -1,18 +1,21 @@
 ---
 import { useStoryblokApi } from "@storyblok/astro";
-// import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import Layout from "../layouts/Default.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 
 const sbApi = useStoryblokApi();
 
 export async function getStaticPaths() {
-	const { data } = await sbApi.get("cdn/links", {
+	const sbApi2 = useStoryblokApi();
+	const { data } = await sbApi2.get("cdn/links", {
 		version: "draft",
 	});
 	let links = data.links;
 	links = Object.values(links);
 
 	return links.map((link) => {
+		// console.log({ link });
 		return {
 			params: { slug: link.slug },
 		};
@@ -20,15 +23,18 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-
+// console.log("slug", slug);
 const { data } = await sbApi.get(`cdn/stories/${slug}`, {
 	version: "draft",
 });
 
 const story = data.story;
+// console.log({ story });
 ---
 
 <Layout>
-	{story.name}
-	<!-- <StoryblokComponent blok={story.content} /> -->
+	<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
+		<!-- {story.name} -->
+		<StoryblokComponent blok={story.content} />
+	</PrimarySection>
 </Layout>

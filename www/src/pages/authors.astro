@@ -6,28 +6,14 @@ import Layout from "../layouts/Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
 
-// // build json schema object
-// const schema = {
-// 	"@context": "https://schema.org",
-// 	"@type": "BreadcrumbList",
-// 	itemListElement: [
-// 		{
-// 			"@type": "ListItem",
-// 			position: 1,
-// 			name: "Deepgram Home",
-// 			item: "https://deepgram.com",
-// 		},
-// 	],
-// };
-
 const sbApi = useStoryblokApi();
 
-const { data } = await sbApi.get("cdn/stories/home", {
+const { data } = await sbApi.get("cdn/stories", {
 	version: "draft",
+	by_slugs: "authors/*",
 });
-const story = data.story;
-// console.log("data", data);
-// console.log("Story", story);
+const stories = data.stories;
+console.log("STORY", stories);
 ---
 
 <Layout>
@@ -35,7 +21,10 @@ const story = data.story;
 
 	<!-- <StoryblokComponent blok={story.content} /> -->
 	<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
-		{story.name}
-		<Component blok={story.content} />
+		<!-- {story.name}
+		<Component blok={story.content} /> -->
+		{stories.map((blok) => {
+			return <Component blok={blok.content} />;
+		})}
 	</PrimarySection>
 </Layout>
