@@ -24,7 +24,6 @@ shorturls:
   reddit: https://dpgr.am/7e80e1c
   facebook: https://dpgr.am/e5819e2
 ---
-
 There’s been a developer relations (DevRel) explosion over the last couple of years, and the pandemic has forced many teams to redefine what their DevRel teams are doing and how they’re doing it. Many teams who have spent most of their time doing conference talks and in-person interactions have been forced to pivot their focus to online content creation, including talks, and exploring new modes of engagement like voice chats. Before we jump into the [Deepgram DevRel team](https://blog.deepgram.com/categories/devlife/), let’s take a look at some approaches to developer relations.
 
 ## What is DevRel?
@@ -35,20 +34,21 @@ First, let’s give DevRel a definition. This is a little harder than it seems b
 
 One thing is for sure, not all developer relation teams will look the same. Each team's approach will depend on what department the team falls under and who leads the team. Some examples of different approaches include:
 
-Content creation, including writing and audio-visual
-Events, whether through sponsorships, hosting, or education opportunities
-Partnerships and feedback loops
-Developer Experience and documentation
-Community Building
+1. Content creation, including writing and audio-visual
+2. Events, whether through sponsorships, hosting, or education opportunities
+3. Partnerships and feedback loops
+4. Developer Experience and documentation
+5. Community Building
 
 ## Deepgram DevRel
 
 At Deepgram, our DevRel team frequently collaborates, provides each other with feedback, and works together to support developers in the wider tech industry, whether through the content we create, 1:1 support, or general involvement in communities and events. We all also create awareness of Deepgram and highlight the awesome projects we see in the community that use Deepgram, like [this post on creating automatic blog posts from videos](https://dev.to/karinakato/create-automatic-blog-posts-from-videos-1c6i)
 
 Together, our team takes a three-pillar approach:
-Community
-Education
-Experience
+
+* Community
+* Education
+* Experience
 
 ### Community
 
@@ -68,5 +68,4 @@ Our team members are involved in each of the pillars and we value the support an
 
 As a DevRel team, we want our interactions to build up the developers we’re engaging with--whether through our site and tools, content, or other interactions. We want developers to dream big, and we want to help make those dreams happen. We’re here to help developers become better developers.
 
-If you have questions or want to hear more about starting in DevRel, you can check our upcoming Twitter Space or let us know what questions you have about DevRel in general or how our team works together: [@DeepgramDevs](https://twitter.com/DeepgramDevs)
-
+If you have questions or want to hear more about starting in DevRel, you can check our upcoming Twitter Space or let us know what questions you have about DevRel in general or how our team works together: [@DeepgramA](https://twitter.com/DeepgramAI)
