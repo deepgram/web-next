@@ -23,12 +23,14 @@ export default defineConfig({
 			accessToken: "OsvNv534kS2nivAAj1EPVgtt",
 			apiOptions: {
 				cache: { clear: "auto", type: "memory" },
+				region: "us",
 			},
 			bridge: true,
 			components: {
 				page: "storyblok/Page",
 				feature: "storyblok/Feature",
 				grid: "storyblok/Grid",
+				teaser: "storyblok/Teaser",
 			},
 		}),
 	],
