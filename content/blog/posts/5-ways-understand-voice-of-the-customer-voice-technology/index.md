@@ -6,7 +6,7 @@ date: 2022-05-18
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981421/blog/5-ways-understand-voice-of-the-customer-voice-technology/harness-voice-customer-thumb-554x220%402x.png
 authors:
   - chris-doty
-category: thought-leadership
+category: speech-trends
 tags:
   - call-analytics
   - contact-center
