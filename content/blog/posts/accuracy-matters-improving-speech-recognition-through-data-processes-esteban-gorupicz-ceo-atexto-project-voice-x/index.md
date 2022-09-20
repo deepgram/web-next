@@ -8,7 +8,7 @@ date: 2021-12-09
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981396/blog/accuracy-matters-improving-speech-recognition-through-data-processes-esteban-gorupicz-ceo-atexto-project-voice-x/proj-voice-x-session-esteban-gorupicz-blog-thumb-5.png
 authors:
   - claudia-ring
-category: thought-leadership
+category: speech-trends
 tags:
   - accuracy
   - project-voice-x
