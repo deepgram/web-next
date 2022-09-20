@@ -10,7 +10,14 @@ category: tutorial
 tags:
   - python
   - podcasts
+shorturls:
+  share: https://dpgr.am/87bab2b
+  twitter: https://dpgr.am/b9de264
+  linkedin: https://dpgr.am/0ec29a6
+  reddit: https://dpgr.am/795f099
+  facebook: https://dpgr.am/8f5bfdf
 ---
+
 In this post, we'll cover how to check podcast episodes for mentions of your brand. This can be particularly useful for ensuring sponsorship obligations are met, or to check when competitors are spoken about.
 
 Given an input of a podcast feed URL, start/end dates, and a brand name, the script will generate a report of all mentions as detected by Deepgram's fast and accurate speech recognition API.
@@ -23,9 +30,7 @@ Create a new directory and navigate to it in your terminal. [Create a virtual en
 
 Open the directory in a code editor, and create an empty `.env` file. Take your Deepgram API Key, and add the following line to `.env`:
 
-```
-DEEPGRAM_API_KEY="replace-this-bit-with-your-key"
-```
+    DEEPGRAM_API_KEY="replace-this-bit-with-your-key"
 
 ## Dependency and File Setup
 
@@ -207,3 +212,4 @@ def check_if_in_date_range(episode):
 if __name__ == '__main__':
     asyncio.run(main())
 ```
+
