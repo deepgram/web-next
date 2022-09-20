@@ -3,7 +3,7 @@ title: Track Brand Mentions Across Podcast Episodes
 description: Learn how to generate a report for every podcast episode in a date
   range for mentions of your brand.
 date: 2022-09-13T09:01:01.100Z
-cover: https://res.cloudinary.com/practicaldev/image/fetch/s--bGQf7B5O--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/vzye6yeryo1o8p5qwkqx.jpg
+cover: https://res.cloudinary.com/deepgram/image/upload/v1662992286/blog/2022/09/find-podcast-brand-mentions/cover.jpg
 authors:
   - kevin-lewis
 category: tutorial
