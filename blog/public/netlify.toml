@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://dpgr.am/*"
+  to = "/.netlify/functions/short-url?path=:splat"
+  status = 301
+  force = true
