@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
 			location: redirectUrl,
 			"Cache-Control": "no-cache",
 		},
-		body: JSON.stringify({}),
+		body: JSON.stringify({redirectUrl}),
 	};
 };
 
@@ -26,7 +26,7 @@ const getLongUrl = async (path) => {
 		);
 
 		if (response.data && response.data.length > 0) {
-			return response.data[0];
+			return response.data[0].data;
 		}
 	} catch (err) {
 		console.log(err);
