@@ -121,5 +121,4 @@ It should look like the following:
 
 ![A send email to self step with a subject line and text containing variables](https://res.cloudinary.com/deepgram/image/upload/v1661981806/blog/2022/09/automatically-transcribe-new-podcasts-pipedream-python/email-config.png)
 
-Test the step, and you should receive an email in just a few seconds. Deploy the workflow, and enjoy reading new podcast episodes. If you have any questions about this project or anything else to do with Deepgram, please get in touch!
-
+Test the step, and you should receive an email in just a few seconds. Deploy the workflow, and enjoy reading new podcast episodes. If you have questions about anything in this post, we’d love to hear from you. Head over to [our forum](https://github.com/orgs/deepgram/discussions/categories/q-a) and create a new discussion with your questions, or send us a tweet [@DeepgramAI](https://twitter.com/DeepgramAI)
