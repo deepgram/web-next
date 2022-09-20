@@ -68,12 +68,16 @@ Take note of what each provider deems an acceptable audio format and how it fits
 
 ### **Step 3: Receive the text outputs and normalize them** for the "choices" that an ASR company makes with their out-of-the-box transcripts
 
-1. How are phone numbers transcribed?
+<ul>
+<li>How are phone numbers transcribed?</li>
+<ul>
+<li> - 905-678-1234?</li>
+<li> - nine zero five six seven eight one two three four?</li>
+<li> - 9 0 5 6 7 8 1 2 3 4?</li>
 
-  * 905-678-1234?
-  * nine zero five six seven eight one two three four?
-  * 9 0 5 6 7 8 1 2 3 4?
-2. Are outputs punctuated and capitalized?
+</ul>
+<li>Are outputs punctuated and capitalized?</li>
+</ul>
 
 ### **Step 4: Do a Word Error Rate (WER) comparison on the files**
 
