@@ -44,7 +44,7 @@ When reviewing Deepgram, our users were asked what they liked most about the pro
 Our easy-to-use API makes generating your first transcript a breeze (get a free API key, copy your sample script of choice and get your first transcript in less than 10 minutes). It also includes all the [features](https://developers.deepgram.com/documentation/features/) necessary for building amazing voice experiences ranging from diarization and multichannel to punctuation, redaction, utterances, and more.
 
 > **"Very easy to use speech to text api, setup in minutes and great results."** — "This was one of the easiest APIs that I ever used. There were examples on Deepgram that worked on the first try. I was testing the API within minutes of discovering it. The speech-to-text results were also accurate, comparable, or better than other APIs I was testing. There was a [$150 free credit](https://console.deepgram.com/signup) for users which allowed me to test the APIs without commitment."
-
+>
 > "**The Speech Recognition API for 99% of Projects."** — "It's ridiculously fast to get set up and going. As in - you sign up, write 5 lines of code, and you're done - kind of fast. And it just works! Its accuracy is really good, it's fast, and it has some fancy extra features to top it all off. And if you have some specialized audio type that most recognition services perform poorly on, they've got you covered too. And for the developers out there, the docs are seriously great."
 
 ### **2. Accuracy**
@@ -58,7 +58,7 @@ The proprietary architecture of Deepgram's out-of-the-box deep learning speech m
 We are on a mission to help developers implement AI-enabled speech recognition into their products more easily. This starts with user-friendly [documentation](https://developers.deepgram.com/documentation/) where users can easily reference how to build with the Deepgram API. Here are a few examples of what developers had to say about it:
 
 > **"An Automated Speech API with Intuitive Documentation**." — "My favorite part about using Deepgram was the ease of learning. The API documentation is complete and intuitive, and the tutorials in the console left me feeling confident that I could use the API and [SDK in either Node or Python](https://developers.deepgram.com/sdks-tools/) projects."
-
+>
 > **"API: Good Product, Good Documentation, Great Support."** — "The Deepgram API covers the languages we need (and then some), integrates easily with our audio source, is accurate enough, and delivers results quickly. The documentation made it easy to design our code, and the very helpful support engineers were quick to respond to questions and to help us debug our initial efforts."
 
 ### **4. Speed**
@@ -66,12 +66,12 @@ We are on a mission to help developers implement AI-enabled speech recognition i
 Deepgram provides the fastest transcription on the market, with a 120x real-time speed for batch processing (i.e., transcribe one hour of audio in 30 seconds), and has less than a 300 millisecond lag on real-time streaming. Use cases where real-time streaming can be particularly useful include Conversational AI, sales and support agent enablement, and real-time compliance monitoring to name a few.
 
 > **"Great speech-to-text results in seconds."** — "As a software developer, there is plenty to like about Deepgram - complete and easy to follow documentation; easy-to-use API that allows for quick language-independent implementation; great follow-up support; multiple models including one specifically for telephone-based dictation; not only one of the best but also one of the least expensive speech rec services available; a generous free number of credits are provided at sign-up - plenty enough for experimentation and testing of your application."
-
+>
 > **"The fastest Speech to Text service I've ever used!"** "The low latency of the response with high accuracy from the websocket connection is the most distinguishing feature from other providers. If this feature was not there then it's yet another Speech to Text service. I really love the community around it and the team which is driving it, kudos to the DevRel team."
 
 We would like to thank our amazing developer community. The honest feedback we have received has allowed us to continue to improve our product to better serve their needs. As a result, Deepgram continues to [rank as the #1 solution](https://www.g2.com/categories/voice-recognition?tab=highest_rated) on G2 for the second consecutive quarter. Most notably, in [G2 Summer Grid® Report](https://www.g2.com/reports/grid-report-for-voice-recognition-summer-2022?secure%5Bpid%5D=77169&secure%5Brid%5D=2999985&secure%5Btoken%5D=68581f65247c290b4e9b0f8cb3a3d262be18bcc421e819e448c5579b93cda711), Deepgram received a 96 satisfaction rating and scored above the average across ease of use (90%), ease of set up (89%), quality of support (92%), and more.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
 
 ## Only the Beginning
 
