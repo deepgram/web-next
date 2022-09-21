@@ -41,6 +41,8 @@ After facing inaccurate results produced by leading providers, and struggling th
 
 > Before Deepgram, Randall-Reilly found that when it audited its speech-to-text query results from other vendors, only 80% of the search results produced confirmable matches. <mark>*Using Deepgram they were able to increase audit-confirmed results to levels exceeding 95% accuracy.*</mark>
 
+<WhitepaperPromo whitepaper="deepgram-whitepaper-state-of-voice-2022"></WhitepaperPromo>
+
 ## Faster, Better, and More Reliable Compliance
 
 > "The reason we went with Deepgram is because it's a way that we can touch and have some level of QA assessment on every single call. **It gives us the ability to scale compliance operations without hiring a hundred people**. We're able to get more comfortable with compliance in a more flexible and efficient manner; rather than wading through speech-to-text and its inherent inaccuracies, Deepgram's approach is a faster and more accurate assessment."
