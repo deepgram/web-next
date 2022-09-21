@@ -11,9 +11,17 @@ tags:
   - partner
   - javascript
 ---
-[Recall](https://www.recall.ai) provides a developer API to get real-time meeting data from a number of different platforms. It does this by sending Recall bots into meetings to observe what is happening and then provide data on-demand or in real-time. They are also a Deepgram customer, so you can expect accurate transcripts as well!
+[Recall](https://www.recall.ai) provides a developer API to get real-time meeting data from a number of different platforms. It does this by sending Recall bots into meetings to observe what is happening and then provide data on-demand or in real-time.  As well as transcripts, they provide metadata including a participant list and linked calendar invite.
 
-In this tutorial, you will build a presentation coaching application. The application will allow you to send a Recall bot into a Zoom call, remove them, and get insights once the call is over.
+In this tutorial, you will build a virtual presentation coaching application. The application will allow you to send a Recall bot into a Zoom call, remove them, and get insights once the call is over. One of the great things about Recall is their support of other platforms like Google Meet, Microsoft Teams, and WebEx with no additional code.
+
+For this project, we'll complete the following steps:
+
+1. A﻿dd a bot to a Zoom call
+2. G﻿et data about speakers in the call
+3. C﻿alculate speaker turn counts (to see if you took up more turns than others)
+4. C﻿reate a speaker-separated transcript
+5. C﻿alcuate talk-time per speaker
 
 ## Before You Start
 
