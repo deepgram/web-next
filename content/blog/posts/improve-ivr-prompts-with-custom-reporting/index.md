@@ -10,7 +10,7 @@ tags:
   - conversational-ai
   - javascript
 ---
-One of the biggest challenges for conversational AI is anticipating all the ways iwhich a user may express a single phrase. Even with decent natural language processing, users often have frustrating experiences with 'retry rates' - the number of times a request is rejected before it succeeds. However, data around failed attempts can be key in improving understanding of how people frame their requests.
+One of the biggest challenges for conversational AI is anticipating all the ways in which a user may express a single phrase. Even with decent natural language processing, users often have frustrating experiences with 'retry rates' - the number of times a request is rejected before it succeeds. However, data around failed attempts can be key in improving understanding of how people frame their requests.
 
 In this project, we'll cover an approach to gather failed requests and infer their meaning based on the successful attempt. This data can ultimately be used to improve your intent triggers and improve customer experience.
 
