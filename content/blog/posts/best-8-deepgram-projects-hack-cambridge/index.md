@@ -24,8 +24,6 @@ shorturls:
 ---
 Back in January, we had the opportunity to support [Hack Cambridge](https://hackcambridge.com/)—a student hackathon sponsored by the University of Cambridge. We ran a challenge for participants to use Deepgram in some way to create a fun and unique hackathon project. [Developer outreach and support](https://blog.deepgram.com/) is a big focus for the Deepgram team, and supporting these students in building cutting-edge projects using our API is a passion for the whole company—we're always pumped to see folks attending events and running hackathons. I don't think it's any exaggeration to say that we were absolutely blown away by the quality of the projects that incorporated Deepgram and used speech-to-text to create something new. Over the last few months, [Kevin Lewis](https://blog.deepgram.com/authors/kevin-lewis/), a Senior Developer Advocate here at Deepgram, has been publishing descriptions of some of the projects that used Deepgram. Read on to learn more about the incredibly creative projects that came out of Hack Cambridge 2022.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
-
 ## Deepgram Hack Cambridge Projects
 
 Here's a list of eight of the best projects from the hackathon. Each one is linked to Kevin's full post about the project on our [developer blog](https://blog.deepgram.com/) if you'd like to read more or take a look at the code for the projects.
@@ -38,6 +36,8 @@ Here's a list of eight of the best projects from the hackathon. Each one is link
 6. [Use Your Voice to Draw with ARTiculate](https://blog.deepgram.com/draw-with-your-voice-articulate/) - If you've never thought about how you might draw verbally, you're certainly not alone. But for people who can't use traditional input devices, the ability to draw with their voice has the potential to unlock their creative potential. This project was created to provide a way for people to draw who can't use traditional input devices, using Deepgram to transcribe their commands.
 7. [Collaborative Augmented Reality Note-Taking with Airnote](https://blog.deepgram.com/ar-note-taking-airnote/) - The Airnote project combines augmented reality, note-taking, and Deepgram's speech-to-text API to create a collaborative experience to transcribe notes.
 8. [Practice Spelling Bees with Spelling Hero](https://blog.deepgram.com/practice-spelling-bees-hero/) - If you get pumped about spelling bees and dream of competing someday, you've now got a tool to help you practice and get ready for your next bee. Spelling Hero lets you set up drills with varying levels of difficulty, and uses Deepgram to transcribe your oral answer for the full bee experience.
+
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
 
 ## Wrapping up
 
