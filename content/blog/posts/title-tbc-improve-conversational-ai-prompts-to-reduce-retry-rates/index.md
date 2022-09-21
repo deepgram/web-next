@@ -9,7 +9,7 @@ category: tutorial
 tags:
   - conversational-ai
 ---
-One of the biggest challenges for conversational AI is anticipating all the ways which a user may express a single phrase. Even with decent natural language processing, users often have frustrating experiences with 'retry rates' - the number of times a request is rejected before it succeeds. However, data around failed attempts can be key in improving understanding in how people frame their requests.
+One of the biggest challenges for conversational AI is anticipating all the ways iwhich a user may express a single phrase. Even with decent natural language processing, users often have frustrating experiences with 'retry rates' - the number of times a request is rejected before it succeeds. However, data around failed attempts can be key in improving understanding of how people frame their requests.
 
 In this project, we'll cover an approach to gather failed requests and infer their meaning based on the successful attempt. This data can ultimately be used to improve your intent triggers and improve customer experience.
 
@@ -23,7 +23,7 @@ Create an empty `index.html` file and open it in your code editor.
 
 ## Set Up Live Transcription
 
-Add the following code to `index.html` to set up live transcription in your browser. For a detailed explanation on how this works, check out our [blog post on browser live transcription](https://blog.deepgram.com/live-transcription-mic-browser/).
+Add the following code to `index.html` to set up live transcription in your browser. For a detailed explanation of how this works, check out our [blog post on browser live transcription](https://blog.deepgram.com/live-transcription-mic-browser/).
 
 ```html
 <html>
@@ -70,7 +70,7 @@ In reality, your conversational AI system will be a lot more complex and robust 
 2. Each option has a number of phrases or terms that can be used to trigger it - 'triggers'
 3. An action to happen when an intent occurs - 'response'
 
-Intents normally inform a machine learning model which will match phrases similar but not identical, and responses may execute some logic before continuing. For this project, we'll need a partial match on an intent trigger and a response will be speaking a fixed phrase back to the user.
+Intents normally inform a machine learning model which will match phrases similar but not identical, and responses may execute some logic before continuing. For this project, we'll need a partial match on an intent trigger. The response will be speaking a fixed phrase back to the user.
 
 At the top of your `<script>` tag, add the following intents:
 
@@ -117,7 +117,7 @@ function handleResponse(transcript) {
 }
 ```
 
-`match` will either be the entire intent object for the matching item, or `undefined`.
+`match` will either be the entire intent object for the matching item or `undefined`.
 
 ![Browser console showing two undefined logs, and an object with one intent.](https://res.cloudinary.com/deepgram/image/upload/v1663768361/blog/2022/09/conversational-ai-retry-report/match_bf4zgt.png)
 
@@ -204,7 +204,7 @@ At any point, the `report` variable contains an array of potential improvements 
 
 ## In Practice
 
-This tutorial shows an overall approach for inferring the meaning of failed intent triggers, assuming that a user does not change their intent. To build this system out further, you should consider the common change in intent from interfacing with a bot to "speak to a human".
+This tutorial shows an overall approach for inferring the meaning of failed intent triggers, assuming that a user does not change their intent. To build this system out further, you should consider the common change in intent from interfacing with a bot to "speak to a human."
 
 You may also choose to do this after an interaction has ended rather than live, but you'll need to determine when a retry occurs.
 
