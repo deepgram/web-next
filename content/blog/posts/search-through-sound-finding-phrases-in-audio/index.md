@@ -29,7 +29,7 @@ My Co-Founder and I were kicking around the idea of a search engine that would l
 
 Reality hit us when we noticed a problem. Sometimes the phrase was definitely spoken-you could hear it plain as day in the audio stream-but the search missed it. It turns out this is due to the inaccuracy of automatic speech transcription software. We went on a quest to get our hands on some top quality speech recognition bad-assery. What we were met with was another dose of reality; *speech recognition is hard*. More evidence emerges when you dig into the current audio research scene and notice that this topic is still a very active topic. The big tech companies (Google, Microsoft, Apple, etc.) put forth large efforts to get this sort of thing right. Even after that, you generally only get 90% word accuracy. That's on very clean, well recorded speech. With input sources containing conversational speech of questionable quality-say, YouTube videos-the word error rate get pretty bad (more than half is wrong sometimes!).
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
 
 ### Can audio search work well?
 
