@@ -28,7 +28,7 @@ shorturls:
 ---
 You are not alone if you have ever experienced a poor interaction with a voicebot. Perhaps you heard, "Sorry, I didn't get that. Can you repeat your request?" or have been transferred to a human agent after a simple question. Unfortunately, these experiences are common across various industries, resulting in a negative customer experience and ultimately cause churn.  When you look at the leading edge of Conversational AI, what is currently possible?  Well, we are getting much closer to having voicebots that converse like humans, but only on specific subjects or use cases.  There is still not a voicebot that you can universally converse on everything or be a real personal assistant.
 
-## **The need to be persistent** 
+## **The need to be persistent**
 
 So what are the obstacles to human-like conversational AI?  Many technical and data obstacles exist to reach this goal.  Kevin Fredrick, Managing Partner of [OneReach.ai](https://onereach.ai/), expressed this best when he said, "Building a Conversational AI voicebot is like planning to summit a mountain.  Those who are looking for an 'easy button' get frustrated and quit.  The ones who think it will be too hard, don't ever start.  It is the ones who know the challenge is worth it and have the right partners and use the right tools who make the summit." There are still technical challenges we continue to overcome including transcription speed and accuracy optimization, better Natural Language Processing (NLP) and Natural Language Understanding (NLU), improved human-like text-to-speech engines, and tighter integrations between all the parts of this workflow, but we see the path to reaching this summit.
 
@@ -46,7 +46,9 @@ Yes, there is no easy button to a great overall Conversational AI voicebot but v
 
 ## **Want to hear from the experts**
 
-Our on-demand webinar with [Bitext](https://www.bitext.com/), [OneReach.ai](https://onereach.ai/), and [Deepgram](https://www.deepgram.com/) discusses why customers are rejecting simple IVRs, chatbots, and menu-driven voicebots to embrace more human-like bots that understand the customer intent and respond correctly to meet customer needs.  They also discuss what you need to consider in creating that great voicebot. [View the on-demand webinar](https://offers.deepgram.com/what-makes-a-great-conversational-ai-experience-webinar-on-demand)
+Our on-demand webinar with [Bitext](https://www.bitext.com/), [OneReach.ai](https://onereach.ai/), and [Deepgram](https://www.deepgram.com/) discusses why customers are rejecting simple IVRs, chatbots, and menu-driven voicebots to embrace more human-like bots that understand the customer intent and respond correctly to meet customer needs.  They also discuss what you need to consider in creating that great voicebot. [View the on-demand webinar](https://offers.deepgram.com/what-makes-a-great-conversational-ai-experience-webinar-on-demand).
+
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
 
 ## **Questions from the audience**
 
