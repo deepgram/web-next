@@ -140,6 +140,8 @@ Numbers can introduce other challenges as well. For example, converting ordinal 
 
 Cleaning numbers is challenging for each language indeed. Quite a number of regexes and other sorts of parsers (including NER and CF parsers) are used. For an example, this regex should parse out big numbers (such as 1,250,000) in English text: `\b\d{1,3}(,\d{3})+\b` Big numbers are written similarly in Turkish, but with a period instead of comma; hence, a tiny modification to this regex would suffice: `\b\d{1,3}([.]\d{3})+\b` It's totally expected, when we're building text cleaning pipelines, that we implement both language-specific and some "universal" cleaning methods. For each language we process, we find common token types and processing methods, but at the same time, we implement quite a lot of language specific text cleaning methods as well.
 
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
+
 ## Wrapping Up
 
 When it comes down to it, all languages are beautiful and yet challenging at the same time; dealing with natural language is never easy. At Deepgram, we all enjoy working with speech and text, and we embrace both the difficulty and the beauty of natural language. We hope you enjoyed this article and share our joy for Turkish, too! Please join us for more content on our blog and follow us on [LinkedIn](https://www.linkedin.com/company/deepgram/).
@@ -151,5 +153,3 @@ And, if you'd like to give Deepgram a try for yourself, [sign up for Console](ht
 \* Of course, sometimes we might *want* an email to appear in a final transcript. In that case, we can do a bit of postprocessing to the model output to get the final transcription in order to reverse normalize *...-at-...-dot-com* word sequences into a single email token. But for the purposes of this post, because we're looking at the phonetic level, we'll want to represent the pronunciation rather than what we want the final output to look like. 
 
 \*\* The /d/ becomes /t/ due to assimilation with the preceding sound, and the A represents a vowel that changes depending on vowel harmony, which in this word, becomes /e/. Thus, we end up with /te/ for the suffix.
-
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
