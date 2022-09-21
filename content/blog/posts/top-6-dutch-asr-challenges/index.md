@@ -42,7 +42,7 @@ There are many dialects spoken across the Netherlands and Belgium, and they aren
 
 The dictionaries that models use have limited vocabularies, as discussed above, so you have two options. The first is to standardize everything to one type of Dutch, which requires laborious and careful preprocessing of data and can introduce ambiguities. This also brings into question whether it is actually correct to 'translate' a specific word in one variety of Dutch into another variety-especially if you want to create a model that can handle any kind of Dutch thrown at it. These changes can also [introduce bias](https://blog.deepgram.com/detecting-and-reducing-bias-in-speech-recognition/) into your work, making the model favor some varieties of the language over others. The second option is simply training your model on all of the data with the hopes it does decently well across all varieties. This is [easiest to do with deep learning](https://blog.deepgram.com/deep-learning-speech-recognition/), as you can iterate through different data sets quickly and easily.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
 
 ## 4. Getting Large Amounts of Diverse Dutch Data
 
