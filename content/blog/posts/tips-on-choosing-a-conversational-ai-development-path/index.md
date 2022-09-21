@@ -56,6 +56,8 @@ How are you going to measure success for your Conversational AI voicebot?  Do yo
 
 * **Tip** - Study what is available in the current market and what the analysts are saying. A good start is this Gartner paper, ["Architecture of Conversational AI Platform"](https://emtemp.gcom.cloud/ngw/globalassets/en/doc/documents/723272-architecture-of-conversational-ai-platforms.pdf).  List out the end customer priorities for your voicebot and the features you need in priority order.  Then screen the choices down. We have found that a more tailored approach works best and provides a better customer experience than a more general voicebot. 
 
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
+
 ## Wrapping Up
 
 We hope this gave you the insight you need to take the next step in starting or advancing your conversational AI experience. We want to emphasize that this technology is changing rapidly and a one-stop-shop solution may sound great but may end up locking you into technology that's quickly dated. So make your implementations are flexible enough to allow you to pivot for the best voicebot experience possible now and in the future.
