@@ -63,6 +63,7 @@ module.exports = {
 			colors: {
 				// deepgram COSMOS styleguide colors
 				fireEngine: "rgba(251, 54, 64, 1)",
+				dgRed: "rgba(233, 61, 69, 1)",
 				cottonCandy: "rgba(255,235,235,1)",
 				coral: "rgba(254, 92, 92, 1)",
 				crimson: "rgba(171, 26, 34, 1)",
