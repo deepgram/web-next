@@ -33,6 +33,8 @@ Deepgram has been recognized as one of the best solutions for Voice Recognition 
 * [How to Vet an ASR Provider](https://offers.deepgram.com/how-to-vet-an-asr-provider-thank-you)
 * [How to Make Your Application Voice Ready](https://offers.deepgram.com/whitepaper-how-to-make-your-application-voice-ready)
 
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
+
 ### About Deepgram
 
 Deepgram is a Speech Company whose goal is to have every voice heard and understood. We have revolutionized speech-to-text (STT) with an End-to-End Deep Learning platform. This AI architectural advantage means you don't have to compromise on speed, accuracy, scalability, or cost to build the next big idea in voice. Our easy-to-use SDKs and APIs allow developers to quickly test and embed our STT solution into their voice products. For more information, visit [https://deepgram.com](https://deepgram.com/).
