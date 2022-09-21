@@ -3,12 +3,14 @@ title: Introducing Automatic Language Detection Capabilities
 description: Organize, tag,  and generate your transcripts in the identified
   dominant language with our Language Detection feature.
 date: 2022-09-21T16:35:38.551Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1663776783/blog/Introducing%20Automatic%20Language%20Detection%20Capabilities/2209-ntroducing-automatic-language-detection-capabilities-featured-1200x630_1_krxzpq.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1663779409/2209-ntroducing-automatic-language-detection-capabilities-thumb-554x220_1_yqwofm.png
 authors:
   - pankaj-trivedi
 category: announcement
 tags:
   - nlu
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1663779436/2209-ntroducing-automatic-language-detection-capabilities-featured-1200x630_1_ktk1g0.png
 shorturls:
   share: https://dpgr.am/e22d7cb
   twitter: https://dpgr.am/f34e2b9
