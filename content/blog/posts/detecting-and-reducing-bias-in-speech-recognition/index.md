@@ -30,8 +30,6 @@ It's important to understand that when people talk about bias and machine learni
 
 In many cases, though, when people talk about "machine learning bias" generally-especially in the media-they're referring to the intersection of real world and machine learning bias: a case where a model is overpredicting or underpredicting in terms of something like gender or race. With these definitions out of the way, let's turn to examining where bias comes from before moving on to how you might figure out if you've got bias in your ASR system, as well as what your next steps are if you've found it.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
-
 ## Where Does Bias Come From?
 
 Machine learning bias often comes from data-biased data leads to a biased model. If you've taken a statistics course, you're familiar with **sampling bias,** which is when data that is supposed to represent the true range of possibilities is instead skewed in some way. If you use data like this to train a model, the model is going to be skewed in the same way as the data. This sampling bias can show up in your model as machine learning or real-world bias because many organizations who want to create models rely on their own past decisions. If your company has a history of making biased decisions, any model trained on that data will likewise be biased. 
@@ -45,6 +43,8 @@ So how do you know if you've got bias on your ASR system? Detecting it is relati
 When you're thinking about how well your ASR system is performing, you're always going to encounter edge cases that it might have trouble understanding. For example, your model might encounter a non-native accent that it's never heard before-say, a native speaker of Polish who moved to South Africa at 16 and learned English there. To figure out if you've found bias in your ASR system, you need to be very nuanced in how you're looking at the data. For example, if you're finding a few sparse cases of poor transcripts in your ASR system, it could be that you're simply finding people with accents, like the Polish person mentioned above. In most cases, trying to chase down these edge cases and figure out how to fix them isn't going to be worth the time or effort, and isn't evidence that there's a systematic problem with your model.
 
 But what if the bias that you've detected seems to be for an entire group of people? Maybe you notice that your call center in the Southern US has transcripts that are consistently of poorer quality than call centers in other parts of the country. Because this looks like a systematic problem, rather than a one-off problem, you'll probably want to take some kind of action to address this bias.
+
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
 
 ## How to Reduce Bias in ASR Systems
 
