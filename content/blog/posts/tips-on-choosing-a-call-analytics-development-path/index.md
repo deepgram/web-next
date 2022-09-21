@@ -62,6 +62,8 @@ This business intelligence end-user application is where you see the analytics a
 
 * **Tip** - No data scientist ever said, "You know what, I have enough data to analyze and I know it is not going to change." With ongoing churn in your employee base and changing customer needs, you should find a solution that can provide you with all the call data at an affordable price. Sampling 5-10% of your calls may bias your decision. Why stop there when you can get a more comprehensive picture of your customer base? 
 
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
+
 ## Wrapping Up
 
 We hope this gave you the insight you need to start getting more out of your call analysis data. We want to emphasize that this technology is changing rapidly so having a partner that's actively evolving with it and with your needs rather than a vendor with a one-size-fits-all approach is essential. They should have a product that includes real-time analysis powered by AI, which will find insights you missed. Waiting for data and insights to act upon in our real-time world may cost you revenue and customers.
