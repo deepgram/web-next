@@ -17,7 +17,7 @@ const { name, gridClass, primary } = Astro.props;
 
 	<div class="absolute flex -ml-20 mt-[1.2rem]" style="display: none;" x-show="menu === name">
 		{primary && (
-			<div class="bg-ink min-w-[21.125rem] p-5 sm:p-8">
+			<div class="bg-highlight min-w-[21.125rem] p-5 sm:p-8">
 				<slot name="primary" />
 			</div>
 		)}
@@ -26,3 +26,9 @@ const { name, gridClass, primary } = Astro.props;
 		</div>
 	</div>
 </div>
+
+<style scoped>
+	.bg-highlight {
+		background: linear-gradient(311.36deg, #0a6252 15.18%, #253174 48.31%, #743539 85.19%);
+	}
+</style>
