@@ -6,7 +6,7 @@ date: 2022-04-01
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981414/blog/sentiment-analysis-emotion-regulation-difference/Sentiment-Analysis-Emotional-Recognition-thumb-554.png
 authors:
   - chris-doty
-category:  ai-and-engineering
+category: ai-and-engineering
 tags:
   - sentiment-analysis
   - language
@@ -34,7 +34,7 @@ Sentiment analysis and emotion recognition are two of the hottest topics in spee
 
 There are, of course, limitations to systems like this. Sarcasm, for example, can be hard for sentiment analysis to detect (which isn't surprising since humans also struggle to correctly identify sarcasm in written language). That might be less of a problem when you're training and have the groundtruth of someone's rating, but in the real world, the goal of sentiment analysis is to determine how someone felt in the absence of a rating.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
 
 ## 2. What is Emotion Recognition?
 
