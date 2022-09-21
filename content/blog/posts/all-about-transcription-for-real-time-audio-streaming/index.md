@@ -10,7 +10,6 @@ category: dg-insider
 tags:
   - contact-center
   - conversational-ai
-  # - voice-strategy
 seo:
   title: All About Transcription for Real-Time (Live) Audio Streaming
   description: Curious how you can get real-time transcriptions from a live audio
@@ -88,4 +87,4 @@ Now that you know more about how to gauge real-time streaming transcriptions. He
 
 Get started with our real-time streaming [guide](https://developers.deepgram.com/documentation/getting-started/streaming/), [SDKs](https://developers.deepgram.com/sdks-tools/), or our [API references](https://developers.deepgram.com/api-reference/)—or you can immediately try out our real-time features on our [Console](https://console.deepgram.com/)-sign up and get $150 in credits to give Deepgram a try.
 
-<WhitepaperPromo whitepaper="latest"></WhitepaperPromo>
+<WhitepaperPromo whitepaper="deepgram-whitepaper-how-deepgram-works"></WhitepaperPromo>
