@@ -3,7 +3,7 @@ title: "How to Use Whisper: OpenAI's Speech Recognition Model in 1 Minute"
 description: "Deepgram has made testing OpenAI's new open-sourced Whisper speech
   recognition model easy as copy and paste. "
 date: 2022-09-22T18:59:11.323Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1663197013/devrel-on-premise-release-blog_1_ejgm2u.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1663880277/blog/how-to-use-whisper-openais-speech-recognition-model-in-1-minute/2209-How-to-Use-Whisper-blog_2x_qb1eah.jpg
 authors:
   - michael-jolley
 category: ai-and-engineering
