@@ -17,12 +17,33 @@ As our team played with Whisper yesterday, we wanted to make sure as many people
 
 ## Announcing Whisper Multilingual AI Speech Recognition on Deepgram
 
-Today, we have released the Whisper "small" speech recognition model via the Deepgram API, with no sign up required. Simply copy and paste the code snippet below into your terminal and start transcribing now.
+Today, we have released the Whisper "small" speech recognition model via the Deepgram API. All accounts now have access to the whisper model
+
+Transcribe Speech with Whisper using cURL
+You can start testing the Whisper `small` model now by running the snippet below in your terminal.
 
 ```bash
 curl \
  --request POST \
  --data-binary @youraudio.wav \
- --url ‘https://api.deepgram.com/v1/listen?
-model=whisper’
+ --url 'https://api.deepgram.com/v1/listen?model=whisper'
 ```
+
+Don't have an audio file to test? You can also send the URL to a hosted file by changing your request to the code snippet below.
+
+```bash
+curl \
+  --request POST \
+  --url 'https://api.deepgram.com/v1/listen?model=whisper' \
+  --header 'content-type: application/json' \
+  --data '{"url":"https://static.deepgram.com/examples/dragons.wav"}'
+```
+
+We even provide several demo files that you can use:
+
+-﻿ https://static.deepgram.com/examples/dragons.wav
+-﻿ https://static.deepgram.com/examples/epi.wav
+-﻿ https://static.deepgram.com/examples/interview_speech-analytics.wav
+-﻿ https://static.deepgram.com/examples/koreanSampleFile.mp3
+-﻿ https://static.deepgram.com/examples/sofiavergaraspanish.clip.wav
+-﻿ https://static.deepgram.com/examples/timotheefrench.clip.wav
