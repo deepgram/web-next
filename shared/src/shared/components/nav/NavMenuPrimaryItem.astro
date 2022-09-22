@@ -7,7 +7,9 @@ const { href, description, icon } = Astro.props;
 ---
 
 <h4 class="text-white max-w-[21.125rem] mb-[2.3125rem]">{description}</h4>
-<Link href={href} icon={icon} class="flex text-cloud items-center gap-2 big-icon">
-	<slot />
-	<Icon icon="arrow-right" class="w-[1em] h-[1em] fill-lightIris" />
-</Link>
+<div class="flex">
+	<Link href={href} icon={icon} class=" underline underline-offset-4 flex text-white font-medium items-center gap-2 big-icon">
+		<slot />
+	</Link>
+	<slot name="emoji" />
+</div>
