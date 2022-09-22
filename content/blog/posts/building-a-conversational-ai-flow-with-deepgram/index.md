@@ -5,7 +5,7 @@ description: Learn how to use endpointing and interim results to build a
 date: 2022-09-23T17:38:18.493Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1661981433/blog/all-about-transcription-for-real-time-audio-streaming/all-about-real-time-audio-streaming-thumb-554x220-.png
 authors:
-  - kevin-lewis
+  - shir-goldberg
 category: tutorial
 tags:
   - conversational-ai
@@ -22,7 +22,7 @@ Business problems that need speech-to-text often also need an understanding of w
 
 Deepgram’s real-time speech-to-text service provides two mechanisms that can help build a conversational flow. One is interim results, and the other is endpointing. Together, the two can give you information about when a speaker has finished talking, and when your system should respond.
 
-Interim results send back transcription messages every few seconds. These messages will be marked with `is_final=false`. This indicates that Deepgram is still gathering more information about its transcription, and has not yet finalized its prediction for the results. Over a longer duration of time, Deepgram will finalize its transcription for these interim results and send back final messages marked with `is_final=true`.
+Interim results send back transcription messages every few seconds. This indicates that Deepgram is still gathering more audio and the transcription results may change as additional context is given. Once Deepgram has collected enough audio to make the best possible prediction, it will finalize the prediction and send back a transcript marked with `is_final=true`.
 
 Endpointing sends back a message as soon as no speech is detected (the default is after 10ms of silence). These messages will be marked with `speech_final=true` and `is_final=true`. 
 
@@ -34,7 +34,7 @@ To run the code, install beepy using `pip install beepy`. Then save the followin
 
 { insert speech_final.py }
 
-Rather than responding immediately, many applications will want to wait for a few seconds after a speaker finishes. This is a simple and relatively effective way of deciding when someone is done talking. Especially in conversational AI, where users may be speaking for longer and occasionally pause mid-thought, waiting to respond for a few seconds can give the best results. A combination of endpointing and interim results can be used to determine when a desired amount of silence has passed.
+Rather than responding immediately, many applications will want to wait for a few seconds after a speaker finishes talking. This can be especially effective in conversational AI, where users may be speaking for long durations and occasionally pause mid-thought—waiting a few seconds to respond may result in a more natural conversational flow. A combination of endpointing and interim results can be used to determine when a desired duration of silence has passed.
 
 Here’s a code example that uses your microphone and the Python package beepy to play a notification sound after the number of seconds defined in the `SILENCE_INTERVAL` on line 11 has passed. 
 
@@ -42,4 +42,4 @@ To run the code, install beepy using `pip install beepy`. Then save the followin
 
 `python silence_interval.py  -k 'YOUR_DG_API_KEY'`
 
-These two samples should give you an idea of how immediate different types of feedback feel, and how they can be incorporated into different types of real-time speech to text applications. After incorporating these into your application, you can have your downstream system decide how to best respond to the user's input. Happy building!
+These two samples should give you an idea of how immediate different types of feedback feel, and how they can be incorporated into different types of real-time speech to text applications. After applying one of the strategies shown here in your application, you can have your downstream system decide how to best respond to the user's input. Happy building!
