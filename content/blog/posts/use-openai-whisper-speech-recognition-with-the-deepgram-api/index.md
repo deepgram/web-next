@@ -10,7 +10,14 @@ category: ai-and-engineering
 tags:
   - speech-models
   - machine-learning
+shorturls:
+  share: https://dpgr.am/f4e76b9
+  twitter: https://dpgr.am/e7c9e87
+  linkedin: https://dpgr.am/525dce8
+  reddit: https://dpgr.am/dde3c8d
+  facebook: https://dpgr.am/8888e60
 ---
+
 Yesterday was a big day for voice intelligence as OpenAI released [Whisper](https://github.com/openai/whisper), a general-purpose speech recognition model. We’ve gotten several questions about what this means for the future of Voice AI and companies like Deepgram. We’ve also been humored by posts like this:
 
 ![Image of tweet from @LewisNWatson saying "Deepgram bricking it rn with whisper"](https://res.cloudinary.com/deepgram/image/upload/v1663883725/blog/use-openai-whisper-speech-recognition-with-the-deepgram-api/1572720107775995904_gvzzzg.jpg)
@@ -37,3 +44,4 @@ curl --request POST \
 ```
 
 Does this mean Deepgram is dead? No. Deepgram, voice tech, and the voice community are just getting started. Look out for trillion-dollar companies in a decade.
+
