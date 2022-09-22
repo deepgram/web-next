@@ -26,7 +26,7 @@ Today, we’re making Whisper available to anyone who wants to use it, hosted by
 
 To test it quickly, run this command:
 
-```bash
+```shell
 curl \
  --request POST \
  --data-binary @youraudio.wav \
