@@ -35,3 +35,5 @@ curl --request POST \
 	"url": "https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav"
 }'
 ```
+
+Does this mean Deepgram is dead? No. Deepgram, voice tech, and the voice community are just getting started. Look out for trillion-dollar companies in a decade.
