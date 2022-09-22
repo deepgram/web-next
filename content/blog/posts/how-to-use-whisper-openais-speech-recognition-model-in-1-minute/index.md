@@ -11,9 +11,18 @@ tags:
   - speech-models
   - machine-learning
 ---
-O﻿penAI's newly released "Whisper" speech recognition model claims it can provide accurate transcriptions in multiple languages and even translate them to English. As Deepgram CEO, [Scott Stephenson](https://twitter.com/deepgramscott), recently tweeted "OpenAI + Deepgram is all good — rising tide lifts all boats." We're stoked to see others are buying into what we've been doing for four years, transcribing speech to text with end-to-end deep learning.
+OpenAI's newly released "Whisper" speech recognition model claims it can provide accurate transcriptions in multiple languages and even translate them to English. As Deepgram CEO, Scott Stephenson, recently tweeted "OpenAI + Deepgram is all good — rising tide lifts all boats." We're stoked to see others are buying into what we've been preaching for nearly a decade: end-to-end deep learning is the answer to speech-to-text.
 
-W﻿ith that spirit of partnership, we decided to release the Whisper "small" on the Deepgram API for everyone to use.
+As our team played with Whisper yesterday, we wanted to make sure as many people as possible could try it with minimal effort. And since we already offer some of the most accurate and performant speech recognition models in the world, why not add another? 😁
 
+## Announcing Whisper Multilingual AI Speech Recognition on Deepgram
 
+Today, we have released the Whisper "small" speech recognition model via the Deepgram API, with no sign up required. Simply copy and paste the code snippet below into your terminal and start transcribing now.
 
+```bash
+curl \
+ --request POST \
+ --data-binary @youraudio.wav \
+ --url ‘https://api.deepgram.com/v1/listen?
+model=whisper’
+```
