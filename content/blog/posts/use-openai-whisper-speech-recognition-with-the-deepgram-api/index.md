@@ -27,8 +27,10 @@ Today, we’re making Whisper available to anyone who wants to use it, hosted by
 To test it quickly, run this command:
 
 ```shell
-curl \
- --request POST \
- --data-binary @youraudio.wav \
- --url 'https://api.deepgram.com/v1/listen?model=whisper'
+curl --request POST \
+  --url 'https://api.deepgram.com/v1/listen?model=whisper' \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"url": "https://static.deepgram.com/examples/Bueller-Life-moves-pretty-fast.wav"
+}'
 ```
