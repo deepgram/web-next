@@ -10,7 +10,7 @@ tags:
   - speech-models
   - machine-learning
 ---
-Yesterday was a big day for voice intelligence as OpenAI released Whisper, a general-purpose speech recognition model. We’ve gotten several questions about what this means for the future of Voice AI and companies like Deepgram. We’ve also been humored by posts like this:
+Yesterday was a big day for voice intelligence as OpenAI released [Whisper](https://github.com/openai/whisper), a general-purpose speech recognition model. We’ve gotten several questions about what this means for the future of Voice AI and companies like Deepgram. We’ve also been humored by posts like this:
 
 ![Image of tweet from @LewisNWatson saying "Deepgram bricking it rn with whisper"](https://res.cloudinary.com/deepgram/image/upload/v1663883725/blog/use-openai-whisper-speech-recognition-with-the-deepgram-api/1572720107775995904_gvzzzg.jpg)
 
@@ -22,7 +22,7 @@ Producing transcripts from voice data is just scratching the surface of what we 
 
 As our team, like so many others around the world, tried Whisper for the first time yesterday we thought it would be a great thing if people could use a hosted version. Deepgram’s speech API already hosts some of the most accurate and performant speech recognition models in the world, so we figured what’s one more?
 
-Today, we’re making Whisper available to anyone who wants to use it, hosted by Deepgram. Users that sign up to use Deepgram will find Whisper available as an additional model to use among our world-class language and use case models. Alternatively, anyone can access the Whisper model programmatically via a hosted API — no sign-up required.
+Today, we’re making Whisper available to anyone who wants to use it, hosted by Deepgram. Users that [sign up to use Deepgram](https://console.deepgram.com/signup) will find Whisper available as an additional model to use among our world-class language and use case models. Alternatively, anyone can access the Whisper model programmatically via a hosted API — no sign-up required.
 
 To test it quickly, run this command:
 
