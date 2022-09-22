@@ -14,9 +14,9 @@ tags:
 ---
 How do you know when someone is finished talking? Before I started working at Deepgram, I hadn’t thought about this question much. When having conversations in person, us humans can use all sorts of contextual cues, body language, and societal norms to figure out when someone has finished their thought and we can jump in with our own opinion. But as we’ve all seen over Zoom during the last few years, figuring out when someone is done talking is a lot harder to do virtually. It’s even harder when the listener isn’t human at all—and is a machine learning model transcribing speech!
 
-Business problems that need speech-to-text often also need an understanding of when a speaker has completed their thought. One common use case is building conversational AI bots that need to respond to a user’s queries. The bot needs to be careful both to not to cut the user off, and to respond in a timely enough manner that the conversation feels “real time”.
+Business problems that need speech-to-text often also need an understanding of when a speaker has completed their thought. One common use case for this is building conversational AI bots that need to respond to a user’s queries. The bot needs to be careful both to not to cut the user off, and to respond in a timely enough manner that the conversation feels “real time”.
 
-Deepgram’s real time speech-to-text service provides two mechanisms that can help build a conversational flow. One is interim results, and the other is endpointing. Together, the two can give you information about when a speaker has finished talking, and when your system should respond.
+Deepgram’s real-time speech-to-text service provides two mechanisms that can help build a conversational flow. One is interim results, and the other is endpointing. Together, the two can give you information about when a speaker has finished talking, and when your system should respond.
 
 Interim results send back transcription messages every few seconds. These messages will be marked with `is_final=false`. This indicates that Deepgram is still gathering more information about its transcription, and has not yet finalized its prediction for the results. Over a longer duration of time, Deepgram will finalize its transcription for these interim results and send back final messages marked with `is_final=true`.
 
@@ -39,11 +39,3 @@ To run the code, install beepy using `pip install beepy`. Then save the followin
 `python silence_interval.py  -k 'YOUR_DG_API_KEY'`
 
 These two samples should give you an idea of how immediate different types of feedback feel, and how they can be incorporated into different types of real-time speech to text applications. After incorporating these into your application, you can have your downstream system decide how to best respond to the user's input. Happy building!
-
-
-
-
-
-
-
-
