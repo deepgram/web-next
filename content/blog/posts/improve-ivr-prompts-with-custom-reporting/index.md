@@ -10,7 +10,14 @@ category: tutorial
 tags:
   - conversational-ai
   - javascript
+shorturls:
+  share: https://dpgr.am/752c048
+  twitter: https://dpgr.am/52437db
+  linkedin: https://dpgr.am/b56bdb2
+  reddit: https://dpgr.am/b846e8b
+  facebook: https://dpgr.am/4f5d2c8
 ---
+
 One of the biggest challenges for conversational AI is anticipating all the ways in which a user may express a single phrase. Even with decent natural language processing, users often have frustrating experiences with 'retry rates'  - the number of times a request is rejected before it succeeds, even more so in Interactive Voice Response (IVR) systems. However, data around failed attempts can be key in improving understanding of how people frame their requests.
 
 In this project, we'll cover an approach to gather failed failed IVR scripts and infer their meaning based on the successful attempt. This data can ultimately be used to improve your intent triggers and improve customer experience.
@@ -68,9 +75,9 @@ Open the file in your browser. You should immediately be prompted for access to 
 
 In reality, your conversational AI system will be a lot more complex and robust than what we'll build today, but they mostly have the same characteristics:
 
-1. A list of request options - 'intents'
-2. Each option has a number of phrases or terms that can be used to trigger it - 'triggers'
-3. An action to happen when an intent occurs - 'response'
+1.  A list of request options - 'intents'
+2.  Each option has a number of phrases or terms that can be used to trigger it - 'triggers'
+3.  An action to happen when an intent occurs - 'response'
 
 Intents normally inform a machine learning model which will match phrases similar but not identical, and responses may execute some logic before continuing. For this project, we'll need a partial match on an intent trigger. The response will be speaking a fixed phrase back to the user.
 
@@ -211,3 +218,4 @@ This tutorial shows an overall approach for inferring the meaning of failed inte
 You may also choose to do this after an interaction has ended rather than live, but you'll need to determine when a retry occurs.
 
 If you have questions about anything in this post, we’d love to hear from you. Head over to [our forum](https://github.com/orgs/deepgram/discussions/categories/q-a) and create a new discussion with your questions, or send us a tweet [@DeepgramAI](https://twitter.com/DeepgramAI)
+
