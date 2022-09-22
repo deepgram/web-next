@@ -1,8 +1,9 @@
 ---
 title: Improve IVR Prompts with Custom Reporting
-description: Learn how to improve your IVR prompts through reporting on what users said.
+description: Learn how to improve your IVR prompts through reporting on what
+  users said using Deepgram's speech recognition API.
 date: 2022-09-22T19:22:00.103Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1662119478/blog/2022/09/presentation-coaching-recall/blog-placeholder.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1663864118/blog/2022/09/conversational-ai-retry-report/2209-Improve-IVR-Prompts-w-Custom-Reporting-blog_2x_htqlwh.jpg
 authors:
   - kevin-lewis
 category: tutorial
@@ -10,9 +11,9 @@ tags:
   - conversational-ai
   - javascript
 ---
-One of the biggest challenges for conversational AI is anticipating all the ways in which a user may express a single phrase. Even with decent natural language processing, users often have frustrating experiences with 'retry rates' - the number of times a request is rejected before it succeeds. However, data around failed attempts can be key in improving understanding of how people frame their requests.
+One of the biggest challenges for conversational AI is anticipating all the ways in which a user may express a single phrase. Even with decent natural language processing, users often have frustrating experiences with 'retry rates'  - the number of times a request is rejected before it succeeds, even more so in Interactive Voice Response (IVR) systems. However, data around failed attempts can be key in improving understanding of how people frame their requests.
 
-In this project, we'll cover an approach to gather failed requests and infer their meaning based on the successful attempt. This data can ultimately be used to improve your intent triggers and improve customer experience.
+In this project, we'll cover an approach to gather failed failed IVR scripts and infer their meaning based on the successful attempt. This data can ultimately be used to improve your intent triggers and improve customer experience.
 
 ![Diagram showing a back and forth conversation in text. The first two messages from the user are not understood but the third is. This generates a report that shows the two failed phrases next to the eventually-successful intent.](https://res.cloudinary.com/deepgram/image/upload/v1663768360/blog/2022/09/conversational-ai-retry-report/diagram_kquxm1.png)
 
