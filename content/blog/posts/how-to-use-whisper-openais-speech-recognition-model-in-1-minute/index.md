@@ -1,5 +1,5 @@
 ---
-title: "Use Whisper: OpenAI's Speech Recognition Model in 1 Minute"
+title: "Try Whisper: OpenAI's Speech Recognition Model in 1 Minute"
 description: "Deepgram has made testing OpenAI's new open-sourced Whisper speech
   recognition model easy as copy and paste. "
 date: 2022-09-22T18:59:11.323Z
