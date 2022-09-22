@@ -21,10 +21,10 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none;" x-show="menu !== null" x-on:click="menu = null"></div>
 	<nav class="absolute inset-x-0 bg-almostBlack/80 text-white bg-blur">
 		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start">
-			<div class="mr-[2.875rem]">
+			<div class="mr-[2.875rem] pl-4">
 				<Link href={WWW_DOMAIN} class="flex">
 					<span class="sr-only">Deepgram</span>
-					<Svg name="deepgram" class="my-[1.125rem] h-[2.3125rem] w-auto text-dgRed" />
+					<Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" />
 				</Link>
 			</div>
 			<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
@@ -71,7 +71,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 						<NavMenuItem href={`${WWW_DOMAIN}/company/careers`} icon="open-door">Careers</NavMenuItem>
 					</NavMenu>
 				</nav>
-				<div class="flex space-x-[1rem] items-center xl:ml-12">
+				<div class="flex space-x-[1rem] items-center xl:ml-12 pr-4">
 					<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 					<Link href={CONSOLE_DOMAIN} class="button button--small button--main-nav text-white">Log In</Link>
 					<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem]">Contact Us</Link>
@@ -86,7 +86,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					<div class="mr-[2.875rem]">
 						<Link href={WWW_DOMAIN} class="flex">
 							<span class="sr-only">Deepgram</span>
-							<Svg name="deepgram" class="my-[1.125rem] h-[2.3125rem] w-auto text-dgRed" />
+							<Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] w-auto text-dgRed" />
 						</Link>
 					</div>
 					<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
