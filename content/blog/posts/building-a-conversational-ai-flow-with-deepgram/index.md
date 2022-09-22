@@ -11,6 +11,10 @@ tags:
   - conversational-ai
   - endpointing
   - interim-results
+seo:
+  title: Building a Conversational AI Flow with Deepgram
+  description: Learn how to use endpointing and interim results to build a
+    conversational AI flow.
 ---
 How do you know when someone is finished talking? Before I started working at Deepgram, I hadn’t thought about this question much. When having conversations in person, us humans can use all sorts of contextual cues, body language, and societal norms to figure out when someone has finished their thought and we can jump in with our own opinion. But as we’ve all seen over Zoom during the last few years, figuring out when someone is done talking is a lot harder to do virtually. It’s even harder when the listener isn’t human at all—and is a machine learning model transcribing speech!
 
