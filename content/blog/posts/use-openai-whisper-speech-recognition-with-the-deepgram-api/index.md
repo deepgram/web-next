@@ -12,7 +12,7 @@ tags:
 ---
 Yesterday was a big day for voice intelligence as OpenAI released Whisper, a general-purpose speech recognition model. We’ve gotten several questions about what this means for the future of Voice AI and companies like Deepgram. We’ve also been humored by posts like this:
 
-https://twitter.com/lewisnwatson/status/1572720107775995904?s=12&t=aG_B3v3FaO1s8r3eAechLg
+![Image of tweet from @LewisNWatson saying "Deepgram bricking it rn with whisper"](https://res.cloudinary.com/deepgram/image/upload/v1663883725/blog/use-openai-whisper-speech-recognition-with-the-deepgram-api/1572720107775995904_gvzzzg.jpg)
 
 Deepgram has advanced state-of-the-art speech recognition capabilities for almost a decade, so we feel uniquely positioned to understand the enormous amount of work it takes to bring something like Whisper to fruition. Congratulations from our team to theirs!
 
