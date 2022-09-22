@@ -10,9 +10,8 @@ category: ai-and-engineering
 tags:
   - speech-models
   - machine-learning
-  - deep-learning
 ---
-O﻿penAI's newly released "Whisper" speech recognition model claims it can provide accurate transcriptions in multiple languages and even translate them to English. As Deepgram CEO, [Scott Stephenson](https://twitter.com/deepgramscott), recently tweeted "OpenAI + Deepgram is all good—rising tide lifts all boats." We're stoked to see others are buying into what we've been doing for four years, transcribing speech to text with end-to-end deep learning.
+O﻿penAI's newly released "Whisper" speech recognition model claims it can provide accurate transcriptions in multiple languages and even translate them to English. As Deepgram CEO, [Scott Stephenson](https://twitter.com/deepgramscott), recently tweeted "OpenAI + Deepgram is all good — rising tide lifts all boats." We're stoked to see others are buying into what we've been doing for four years, transcribing speech to text with end-to-end deep learning.
 
 W﻿ith that spirit of partnership, we decided to release the Whisper "small" on the Deepgram API for everyone to use.
 
