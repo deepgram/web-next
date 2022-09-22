@@ -1,5 +1,5 @@
 ---
-title: "How to Use Whisper: OpenAI's Speech Recognition Model in 1 Minute"
+title: "Use Whisper: OpenAI's Speech Recognition Model in 1 Minute"
 description: "Deepgram has made testing OpenAI's new open-sourced Whisper speech
   recognition model easy as copy and paste. "
 date: 2022-09-22T18:59:11.323Z
@@ -17,9 +17,10 @@ As our team played with Whisper yesterday, we wanted to make sure as many people
 
 ## Announcing Whisper Multilingual AI Speech Recognition on Deepgram
 
-Today, we have released the Whisper "small" speech recognition model via the Deepgram API. All accounts now have access to the whisper model
+Yesterday, we released the Whisper "small" speech recognition model via the Deepgram API. All accounts now have access to the whisper model
 
-Transcribe Speech with Whisper using cURL
+### Transcribe Speech with Whisper using cURL
+
 You can start testing the Whisper `small` model now by running the snippet below in your terminal.
 
 ```shell
