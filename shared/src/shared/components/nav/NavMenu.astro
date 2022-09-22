@@ -11,7 +11,7 @@ const { name, gridClass, primary } = Astro.props;
 		x-on:click={`menu === name ? menu = null : menu = name`}
 		x-bind:class="{'button--active': menu === name }"
 		iconSuffix
-		class="button button--small button--main-nav button--nav-underline small-icon"
+		class="button button--small button--main-nav button--nav-underline small-icon font-medium"
 		>{name}
 	</Button>
 

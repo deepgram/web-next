@@ -114,7 +114,7 @@ html {
 	/* end */
 
 	.button {
-		@apply mb-0 min-h-[3.375rem] grow-0 px-[2.75rem] pb-[1.1rem] pt-[1.15rem] text-center text-[1rem] font-[700] leading-[1rem];
+		@apply mb-0 min-h-[3.375rem] grow-0 px-[2.75rem] pb-[1.1rem] pt-[1.15rem] text-center text-[1rem] font-[600] leading-[1rem];
 	}
 
 	.button:disabled {
@@ -308,7 +308,7 @@ html {
 	}
 
 	.button--main-nav {
-		@apply border-t-4 border-transparent px-0 text-[1rem] font-[600] leading-[1.125rem];
+		@apply border-t-4 border-transparent px-0 text-[1rem] font-[500] leading-[1.125rem];
 		@apply after:relative after:top-[1.45rem] after:block after:border-b-4 after:border-transparent;
 	}
 
