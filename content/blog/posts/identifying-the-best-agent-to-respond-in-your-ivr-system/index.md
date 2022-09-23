@@ -11,6 +11,11 @@ category: tutorial
 tags:
   - python
   - ivr
+seo:
+  title: Identifying the Best Agent to Respond in Your IVR System
+  description: This tutorial will use Python, Twilio, Flask 2.0, and Deepgram API
+    speech-to-text in an IVR system to identify the best customer support agent
+    to respond to various spoken conversations based on language detection.
 ---
 What would you say if I told you that you could detect spoken conversational language using AI in a speech-to-text transcript with Python? 
 
