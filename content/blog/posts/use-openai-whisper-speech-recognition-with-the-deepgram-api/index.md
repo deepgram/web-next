@@ -43,5 +43,5 @@ curl --request POST \
 }'
 ```
 
-Does this mean Deepgram is dead? No. Deepgram, voice tech, and the voice community are just getting started. Look out for trillion-dollar companies in a decade.
+So, what does this mean? Deepgram, voice tech, and the voice community are just getting started. Look out for trillion-dollar companies in a decade.
 
