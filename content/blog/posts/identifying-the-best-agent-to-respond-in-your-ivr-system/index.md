@@ -49,7 +49,7 @@ The following Python code breakdown demonstrates how to do so. There are just a 
 2. Create a Twilio account and voice phone number [here](https://www.twilio.com/login?g=%2Fconsole%2Fphone-numbers%2Fincoming%3F&t=98a31204d675661e83d6f3d24078fc1b9f3d6c8f85f0695f6c24ccb513fd05cf). This allowed me to make an outgoing call and navigate the IVR with dial prompts. 
 3. Install [ngrok](https://ngrok.com/) to test my webhooks locally. 
 
-Next, I made a new directory to hold all my Python files and activated a [virtual environment](https://blog.deepgram.com/python-virtual-environments/) to `pip install`all of my Python packages.
+Next, I made a new directory to hold all my Python files and activated a [virtual environment](https://blog.deepgram.com/python-virtual-environments/) to `pip install` all of my Python packages.
 
 These are the packages I installed:
 
@@ -201,7 +201,7 @@ async def _german_recording(response):
 
 I also created a **templates** folder in the main Python Flask project directory with a blank **index.html** file. We don’t need anything in this file but feel free to add any HTML or Jinja.
 
-To run the application, I fired up two terminals simultaneously in Visual Studio Codel, one to run my Flask application and another for ngrok. Both are important, and you’ll need the ngrok url to add to your Twilio dashboard.
+To run the application, I fired up two terminals simultaneously in Visual Studio Code, one to run my Flask application and another for ngrok. Both are important, and you’ll need the ngrok url to add to your Twilio dashboard.
 
 To run the Flask application, I used this command from the terminal:
 
