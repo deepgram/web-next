@@ -79,4 +79,4 @@ We even provide several demo files that you can use:
 
 
 
-Have you tried using any of the Whisper models since their release? Tell the community about your experience with Whisper in our [GitHub Discussions](https://github.com/orgs/deepgram/discussions/30).
+Have you tried using any of the Whisper models since their release? Tell the community about your experience in our [GitHub Discussions](https://github.com/orgs/deepgram/discussions/30).
