@@ -10,6 +10,10 @@ category: ai-and-engineering
 tags:
   - speech-models
   - machine-learning
+seo:
+  title: "Try Whisper: OpenAI's Speech Recognition Model in 1 Minute"
+  description: Deepgram has made testing OpenAI's new open-sourced Whisper speech
+    recognition model easy as copy and paste. Try it today!
 ---
 OpenAI's newly released "Whisper" speech recognition model claims it can provide accurate transcriptions in multiple languages and even translate them to English. As Deepgram CEO, Scott Stephenson, recently tweeted "OpenAI + Deepgram is all good — rising tide lifts all boats." We're stoked to see others are buying into what we've been preaching for nearly a decade: end-to-end deep learning is the answer to speech-to-text.
 
