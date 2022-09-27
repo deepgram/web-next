@@ -16,7 +16,14 @@ seo:
   description: This tutorial will use Python, Twilio, Flask 2.0, and Deepgram API
     speech-to-text in an IVR system to identify the best customer support agent
     to respond to various spoken conversations based on language detection.
+shorturls:
+  share: https://dpgr.am/f0a2b5d
+  twitter: https://dpgr.am/2643cd7
+  linkedin: https://dpgr.am/b789d4c
+  reddit: https://dpgr.am/b2138e4
+  facebook: https://dpgr.am/5b0468b
 ---
+
 What would you say if I told you that you could detect spoken conversational language using AI in a speech-to-text transcript with Python? 
 
 Would you spit your beer out?
@@ -45,21 +52,19 @@ Imagine you had to build a Python application that detects different conversatio
 
 The following Python code breakdown demonstrates how to do so. There are just a few things I had to set up before the coding started. It’s painless, I promise.  
 
-1. Grab a [Deepgram API Key](https://console.deepgram.com/signup?jump=keys). I needed this to tap into the speech-to-text Python SDK. 
-2. Create a Twilio account and voice phone number [here](https://www.twilio.com/login?g=%2Fconsole%2Fphone-numbers%2Fincoming%3F&t=98a31204d675661e83d6f3d24078fc1b9f3d6c8f85f0695f6c24ccb513fd05cf). This allowed me to make an outgoing call and navigate the IVR with dial prompts. 
-3. Install [ngrok](https://ngrok.com/) to test my webhooks locally. 
+1.  Grab a [Deepgram API Key](https://console.deepgram.com/signup?jump=keys). I needed this to tap into the speech-to-text Python SDK. 
+2.  Create a Twilio account and voice phone number [here](https://www.twilio.com/login?g=%2Fconsole%2Fphone-numbers%2Fincoming%3F\&t=98a31204d675661e83d6f3d24078fc1b9f3d6c8f85f0695f6c24ccb513fd05cf). This allowed me to make an outgoing call and navigate the IVR with dial prompts. 
+3.  Install [ngrok](https://ngrok.com/) to test my webhooks locally. 
 
 Next, I made a new directory to hold all my Python files and activated a [virtual environment](https://blog.deepgram.com/python-virtual-environments/) to `pip install` all of my Python packages.
 
 These are the packages I installed:
 
-```
-pip install Flask
-pip install ‘flask[async]’
-pip install Twilio
-pip install deepgram-sdk
-pip install python-dotenv
-```
+    pip install Flask
+    pip install ‘flask[async]’
+    pip install Twilio
+    pip install deepgram-sdk
+    pip install python-dotenv
 
 After creating my directory, I downloaded three audio files with different spoken languages from [this website](https://www.audio-lingua.eu/?lang=en) and added them to my project in a folder called **languages**.
 
@@ -379,7 +384,7 @@ def _redirect_welcome():
    return twiml(response)
 ```
 
-**view_helpers.py**
+**view\_helpers.py**
 
 ```python
 import flask
@@ -390,3 +395,4 @@ def twiml(resp):
 
    return resp
 ```
+
