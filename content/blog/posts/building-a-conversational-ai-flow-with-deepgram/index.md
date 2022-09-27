@@ -261,4 +261,4 @@ if __name__ == '__main__':
 
 These two examples should give you an idea of how different conversational flow mechanisms feel, and how they can be incorporated into different types of real-time speech-to-text applications. Both can be found in this [GitHub repo](https://github.com/deepgram/conversational-ai-flow).
 
-After applying one of the strategies shown here in your application, you can have your downstream system decide how to best respond to the user's input. Happy building!
+We hope these examples help as you decide how to best utilize Deepgram's functionality. Happy building!
