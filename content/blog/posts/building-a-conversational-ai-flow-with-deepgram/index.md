@@ -18,9 +18,9 @@ seo:
 ---
 How do you know when someone is finished talking? Before I started working at Deepgram, I hadn’t thought about this question much. When having conversations in person, us humans can use all sorts of contextual cues, body language, and societal norms to figure out when someone has finished their thought and we can jump in with our own opinion. But as we’ve all seen over Zoom during the last few years, figuring out when someone is done talking is a lot harder to do virtually. It’s even harder when the listener isn’t human at all—and is a machine learning model transcribing speech!
 
-Business problems that need speech-to-text often also need an understanding of when a speaker has completed their thought. One common use case for this is building conversational AI bots that need to respond to a user’s queries. The bot needs to be careful both to not to cut the user off, and to respond in a timely enough manner that the conversation feels “real time”.
+Business problems that need speech-to-text often also need an understanding of when a speaker has completed their thought. One common use case for this is building conversational AI bots that need to respond to a user’s queries. The bot needs to be careful both to not to cut the user off, and to respond in a timely enough manner that the conversation feels “real-time”.
 
-Deepgram’s real-time speech-to-text service provides two mechanisms that can help build a conversational flow. One is interim results, and the other is endpointing. Together, the two can give you information about when a speaker has finished talking, and when your system should respond.
+Deepgram’s real-time speech-to-text service provides two main mechanisms that can help build a conversational flow. One is interim results, and the other is endpointing. Together, the two can give you information about when a speaker has finished talking, and when your system should respond.
 
 [Interim results](https://developers.deepgram.com/documentation/features/interim-results/), which are disabled by default, are sent back every few seconds. These messages, marked with `is_final=false`,  indicate that Deepgram is still gathering more audio and the transcription results may change as additional context is given. Once Deepgram has collected enough audio to make the best possible prediction, it will finalize the prediction and send back a transcript marked with `is_final=true`.
 
@@ -124,7 +124,7 @@ if __name__ == '__main__':
     sys.exit(main() or 0)
 ```
 
-Rather than responding immediately, many applications will want to wait for a few seconds after a speaker finishes talking. This can be especially effective in conversational AI, where users may be speaking for long durations and occasionally pause mid-thought—waiting a few seconds to respond may result in a more natural conversational flow. A combination of endpointing and interim results can be used to determine when a desired duration of silence has passed.
+As you may notice when using `endpointing.py`, Deepgram will detect that you have finished speaking as soon as possible, meaning that in a conversational flow, this logic can easily cut you off mid-sentence every time you make even a minor pause. Rather than responding immediately, many applications will want to wait for a few seconds after a speaker finishes talking. This can be especially effective in conversational AI, where users may be speaking for long durations and occasionally pause mid-thought—waiting a few seconds to respond may result in a more natural conversational flow. A combination of endpointing and interim results can be used to determine when a desired duration of silence has passed.
 
 Here’s a code example that uses your microphone and the Python package beepy to play a notification sound after the number of seconds defined in a configurable `SILENCE_INTERVAL` has passed. (The default is 2.0, but this can be specified when running the script.)
 
@@ -259,6 +259,6 @@ if __name__ == '__main__':
     sys.exit(main() or 0)
 ```
 
-These two samples should give you an idea of how immediate different types of feedback feel, and how they can be incorporated into different types of real-time speech to text applications. Both samples can be found in this [GitHub repo](https://github.com/deepgram/conversational-ai-flow).
+These two examples should give you an idea of how different conversational flow mechanisms feel, and how they can be incorporated into different types of real-time speech-to-text applications. Both can be found in this [GitHub repo](https://github.com/deepgram/conversational-ai-flow).
 
 After applying one of the strategies shown here in your application, you can have your downstream system decide how to best respond to the user's input. Happy building!
