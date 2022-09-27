@@ -64,8 +64,9 @@ And you should be greeted with a large block of text containing information abou
 
 Some APIs allow you to provide additional information in your request using URL Parameters. You have certainly already seen these when sharing links with your friends - they go at the end of a URL and look like this:
 
-    https://example.com/product?utm_param=123&src=abc&campaign=xyz
-
+```
+https://example.com/product?utm_param=123&src=abc&campaign=xyz
+```
 We indicate URL Parameters are starting with the `?`, and then they follow the format `item=value`. Where there is more than one we separate them with a `&`. Let's make a new request to the [Data USA API](https://datausa.io) in our terminal:
 
 ```sh
