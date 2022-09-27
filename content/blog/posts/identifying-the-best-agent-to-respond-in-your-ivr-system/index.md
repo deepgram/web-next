@@ -205,7 +205,7 @@ To run the application, I fired up two terminals simultaneously in Visual Studio
 
 To run the Flask application, I used this command from the terminal:
 
-`FLASK_APP=main.py FLASK_DEBUG=1 flask run` allows my application to run in debug mode, so when changes are made to my code, there’s no need for me to keep stopping and starting the terminal. 
+`FLASK_APP=views.py FLASK_DEBUG=1 flask run` allows my application to run in debug mode, so when changes are made to my code, there’s no need for me to keep stopping and starting the terminal. 
 
 In the other terminal window, I ran this command:
 
