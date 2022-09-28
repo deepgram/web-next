@@ -3,7 +3,7 @@ title: Building a Conversational AI Flow with Deepgram
 description: Learn how to use endpointing and interim results to build a
   conversational AI flow.
 date: 2022-09-23T17:38:18.493Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1661981433/blog/all-about-transcription-for-real-time-audio-streaming/all-about-real-time-audio-streaming-thumb-554x220-.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1664336619/blog/Building-Conversational-AI-Flow-with-Deepgram/2209-Building-Conversational-AI-Flow-with-Deepgram-thumb-554x220_vkzldi.png
 authors:
   - shir-goldberg
 category: tutorial
