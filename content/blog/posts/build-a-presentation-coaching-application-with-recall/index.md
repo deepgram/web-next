@@ -21,7 +21,7 @@ For this project, we'll complete the following steps:
 2. G﻿et data about speakers in the call
 3. C﻿alculate speaker turn counts (to see if you took up more turns than others)
 4. C﻿reate a speaker-separated transcript
-5. C﻿alcuate talk-time per speaker
+5. C﻿alculate talk-time per speaker
 
 ## Before You Start
 
