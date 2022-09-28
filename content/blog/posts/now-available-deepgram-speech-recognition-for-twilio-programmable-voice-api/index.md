@@ -9,15 +9,22 @@ authors:
 category: product-news
 tags:
   - integrations
+shorturls:
+  share: https://dpgr.am/e5cf486
+  twitter: https://dpgr.am/eb76a92
+  linkedin: https://dpgr.am/a6ddcb5
+  reddit: https://dpgr.am/bf9791e
+  facebook: https://dpgr.am/dc09938
 ---
+
 Developers love Twilio, and developers love Deepgram. Now they'll love that it’s even easier to unlock the value of post-call recordings through the new Deepgram AI Speech Recognition Add-On in the Twilio Marketplace.
 
 What can developers do with post-call transcription?
 
-* Add sentiment analysis to every recorded call
-* Identify topic trends by contact center location
-* Analyze discussion points from recruiting and/or sales calls for coaching purposes
-* And much more! Check out some examples [Built with Deepgram.](http://deepgram.com/built-with-deepgram/) 
+*   Add sentiment analysis to every recorded call
+*   Identify topic trends by contact center location
+*   Analyze discussion points from recruiting and/or sales calls for coaching purposes
+*   And much more! Check out some examples [Built with Deepgram.](http://deepgram.com/built-with-deepgram/) 
 
 ## Post-Call Transcription Has Extended beyond Contact Center into the Enterprise
 
@@ -29,10 +36,10 @@ Deepgram has invested in our partnership and integration with Twilio to make it 
 
 With the new Deepgram AI Speech Recognition Add-on Twilio users can:
 
-* Get their first transcript in 10 minutes or less.
-* Transcribe 1 hour of audio in as quickly as 15s – thats anywhere from 95% to 99% faster depending which Speech Recognition add-on you used previously
-* Leverage the industry's highest accuracy. Many Developers see over 90% accuracy out of the box with Deepgram depending on their use case.
-* Easily add features such as punctuation, profanity filters, redaction, speaker diarization and more to their transcripts.
+*   Get their first transcript in 10 minutes or less.
+*   Transcribe 1 hour of audio in as quickly as 15s – thats anywhere from 95% to 99% faster depending which Speech Recognition add-on you used previously
+*   Leverage the industry's highest accuracy. Many Developers see over 90% accuracy out of the box with Deepgram depending on their use case.
+*   Easily add features such as punctuation, profanity filters, redaction, speaker diarization and more to their transcripts.
 
 ## Get Started in Twilio Console
 
@@ -42,17 +49,18 @@ From the Twilio console, Developers can easily add Deepgram to their Programmabl
 
 Twilio users can leverage these features to format and/or classify their transcriptions: 
 
-* Punctuation
-* Profanity Filter
-* Redaction
-* Diarization
-* Named Entity Recognition (NER)
-* Multichannel
-* Numerals
-* Callback
-* Paragraphs
-* Utterances
-* Utterance Split
-* Interim Results
+*   Punctuation
+*   Profanity Filter
+*   Redaction
+*   Diarization
+*   Named Entity Recognition (NER)
+*   Multichannel
+*   Numerals
+*   Callback
+*   Paragraphs
+*   Utterances
+*   Utterance Split
+*   Interim Results
 
 To learn more about the Deepgram Add-on for Twilio, please visit the Twilio Marketplace and checkout the [Deepgram listing](https://console.twilio.com/us1/develop/add-ons/catalog?frameUrl=%2Fconsole%2Fadd-ons%2FXBe7f38efe5b31c9ddce9f6fb05b666440%3F__override_layout__%3Dembed%26bifrost%3Dtrue%26x-target-region%3Dus1). We welcome your feedback also! Please share it with us at <https://deepgram.hellonext.co/b/feedback>. We can't wait to hear about what you build.
+
