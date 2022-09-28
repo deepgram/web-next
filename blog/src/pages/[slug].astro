@@ -79,7 +79,7 @@ const shorturls = {
 	linkedin: post.frontmatter.shorturls && post.frontmatter.shorturls.linkedin ? post.frontmatter.shorturls.linkedin : Astro.url,
 	reddit: post.frontmatter.shorturls && post.frontmatter.shorturls.reddit ? post.frontmatter.shorturls.reddit : Astro.url,
 	facebook: post.frontmatter.shorturls && post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
-	fullUrl: `{${Astro.url}?utm_medium=share&utm_source=linkedin&utm_campaign=blog}`,
+	fullUrl: Astro.url,
 };
 
 // build json schema object
