@@ -192,7 +192,7 @@ html {
 	}
 
 	.astro-code {
-		@apply overflow-hidden py-7 px-10;
+		@apply max-h-96 overflow-scroll py-7 px-10;
 	}
 
 	.draw-underline span {
