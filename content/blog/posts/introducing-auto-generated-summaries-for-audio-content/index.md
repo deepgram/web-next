@@ -9,7 +9,6 @@ authors:
 category: product-news
 tags:
   - summarization
-  - ""
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1664377293/2209-Introducing-Auto-Generated-Summaries-for-Audio-Content-featured-1200x630_l5pnli.png
 shorturls:
