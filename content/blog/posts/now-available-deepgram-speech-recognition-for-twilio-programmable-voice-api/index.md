@@ -9,7 +9,6 @@ authors:
 category: product-news
 tags:
   - integrations
-  - ""
 ---
 Developers love Twilio, and developers love Deepgram. Now they'll love that it’s even easier to unlock the value of post-call recordings through the new Deepgram AI Speech Recognition Add-On in the Twilio Marketplace.
 
