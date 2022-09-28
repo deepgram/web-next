@@ -79,6 +79,7 @@ const shorturls = {
 	linkedin: post.frontmatter.shorturls && post.frontmatter.shorturls.linkedin ? post.frontmatter.shorturls.linkedin : Astro.url,
 	reddit: post.frontmatter.shorturls && post.frontmatter.shorturls.reddit ? post.frontmatter.shorturls.reddit : Astro.url,
 	facebook: post.frontmatter.shorturls && post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
+	fullUrl: Astro.url,
 };
 
 // build json schema object
@@ -222,7 +223,7 @@ const schema = [
 							><Icon icon="twitter" class="w-[1em] fill-iris" />
 						</Link>
 						<Link
-							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shorturls.linkedin)}&title=${encodeURIComponent(post.frontmatter.title)}`}
+							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shorturls.fullUrl)}&title=${encodeURIComponent(post.frontmatter.title)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="linkedin" class="w-[1em] fill-iris" />
@@ -378,7 +379,7 @@ const schema = [
 	.post-prose > :global(iframe) {
 		margin-top: 1rem;
 		margin-bottom: 1.5rem;
-  }
+	}
 
 	.post-prose :global(blockquote) {
 		box-sizing: border-box;
