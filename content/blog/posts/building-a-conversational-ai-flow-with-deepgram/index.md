@@ -15,7 +15,14 @@ seo:
   title: Building a Conversational AI Flow with Deepgram
   description: Learn how to use endpointing and interim results to build a
     conversational AI flow.
+shorturls:
+  share: https://dpgr.am/daf3c23
+  twitter: https://dpgr.am/b6afcdf
+  linkedin: https://dpgr.am/3be026a
+  reddit: https://dpgr.am/96c7583
+  facebook: https://dpgr.am/a099e21
 ---
+
 How do you know when someone is finished talking? Before I started working at Deepgram, I hadn’t thought about this question much. When having conversations in person, us humans can use all sorts of contextual cues, body language, and societal norms to figure out when someone has finished their thought and we can jump in with our own opinion. But as we’ve all seen over Zoom during the last few years, figuring out when someone is done talking is a lot harder to do virtually. It’s even harder when the listener isn’t human at all—and is a machine learning model transcribing speech!
 
 Business problems that need speech-to-text often also need an understanding of when a speaker has completed their thought. One common use case for this is building conversational AI bots that need to respond to a user’s queries. The bot needs to be careful both to not to cut the user off, and to respond in a timely enough manner that the conversation feels “real-time”.
@@ -262,3 +269,4 @@ if __name__ == '__main__':
 These two examples should give you an idea of how different conversational flow mechanisms feel, and how they can be incorporated into different types of real-time speech-to-text applications. Both can be found in this [GitHub repo](https://github.com/deepgram/conversational-ai-flow).
 
 We hope these examples help as you decide how to best utilize Deepgram's functionality. Happy building!
+
