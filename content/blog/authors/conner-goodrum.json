@@ -1,14 +1,15 @@
 {
-    "team": true,
-    "alumni": false,
-    "title": "Conner Goodrum",
-    "jobtitle": "",
-    "picture": "https://res.cloudinary.com/deepgram/image/upload/v1662056398/authors/alf-placeholder_2x_ykehay.png",
-    "bio": "",
-    "twitter": "",
-    "github": "",
-    "twitch": "",
-    "website": "",
-    "linkedin": "",
-    "youtube": ""
+  "youtube": "",
+  "github": "",
+  "bio": "",
+  "pronouns": "he/him",
+  "twitter": "",
+  "twitch": "",
+  "title": "Conner Goodrum",
+  "website": "",
+  "jobtitle": "Data Scientist",
+  "team": true,
+  "linkedin": "",
+  "alumni": false,
+  "picture": "https://res.cloudinary.com/deepgram/image/upload/v1662056398/authors/alf-placeholder_2x_ykehay.png"
 }
