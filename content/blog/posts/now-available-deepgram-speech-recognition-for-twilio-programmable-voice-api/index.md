@@ -9,6 +9,7 @@ authors:
 category: product-news
 tags:
   - integrations
+  - twilio
 shorturls:
   share: https://dpgr.am/e5cf486
   twitter: https://dpgr.am/eb76a92
