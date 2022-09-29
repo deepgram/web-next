@@ -14,7 +14,14 @@ seo:
   title: "Try Whisper: OpenAI's Speech Recognition Model in 1 Minute"
   description: Deepgram has made testing OpenAI's new open-sourced Whisper speech
     recognition model easy as copy and paste. Try it today!
+shorturls:
+  share: https://dpgr.am/b61fe3d
+  twitter: https://dpgr.am/77c401a
+  linkedin: https://dpgr.am/d9c56c3
+  reddit: https://dpgr.am/e4a91e9
+  facebook: https://dpgr.am/08df744
 ---
+
 OpenAI's newly released "Whisper" speech recognition model has been said to provide accurate transcriptions in multiple languages and even translate them to English. As Deepgram CEO, Scott Stephenson, recently tweeted "OpenAI + Deepgram is all good — rising tide lifts all boats." We're stoked to see others are buying into what we've been preaching for nearly a decade: end-to-end deep learning is the answer to speech-to-text.
 
 As our team played with Whisper last week, we wanted to make sure as many people as possible could try it with minimal effort. And since we already offer some of the most accurate and performant speech recognition models in the world, why not add another? 😁
@@ -48,16 +55,16 @@ curl \
 
 We even provide several demo files that you can use:
 
-* https://static.deepgram.com/examples/dragons.wav
-* https://static.deepgram.com/examples/epi.wav
-* https://static.deepgram.com/examples/interview_speech-analytics.wav
-* https://static.deepgram.com/examples/koreanSampleFile.mp3
-* https://static.deepgram.com/examples/sofiavergaraspanish.clip.wav
-* https://static.deepgram.com/examples/timotheefrench.clip.wav
+*   https://static.deepgram.com/examples/dragons.wav
+*   https://static.deepgram.com/examples/epi.wav
+*   https://static.deepgram.com/examples/interview\_speech-analytics.wav
+*   https://static.deepgram.com/examples/koreanSampleFile.mp3
+*   https://static.deepgram.com/examples/sofiavergaraspanish.clip.wav
+*   https://static.deepgram.com/examples/timotheefrench.clip.wav
 
 ## Try Whisper in Your Browser
 
-You can also test the whisper model in your browser when you [signup for a free Deepgram account](https://console.deepgram.com/signup?jump=demo&f-whisper=true). Our getting started missions allow you to compare the whisper model to Deepgram models using your own files and/or sample files that we provide.
+You can also test the whisper model in your browser when you [signup for a free Deepgram account](https://console.deepgram.com/signup?jump=demo\&f-whisper=true). Our getting started missions allow you to compare the whisper model to Deepgram models using your own files and/or sample files that we provide.
 
 ![Transcribe pre-recorded files mission in Deepgram console](https://res.cloudinary.com/deepgram/image/upload/v1664390668/blog/how-to-use-whisper-openais-speech-recognition-model-in-1-minute/192859735-e30b782e-b6d8-49b9-b05c-c79f8c168078_mweppn.png)
 
@@ -988,8 +995,9 @@ There are a few empty data points that stand out, namely `confidence`, `start`, 
 
 ## I﻿s Whisper Right for Me?
 
-Are you an AI researcher? Sure! Where else can you get your hands on an implemented end-to-end deep-learning modern architecture to play with? As long as you don't need real-time transcription, whisper can be used for prototyping and experimenting. However, if you need real-time transcription, speed, and/or scalability, whisper is not ready for use today. 
+Are you an AI researcher? Sure! Where else can you get your hands on an implemented end-to-end deep-learning modern architecture to play with? As long as you don't need real-time transcription, whisper can be used for prototyping and experimenting. However, if you need real-time transcription, speed, and/or scalability, whisper is not ready for use today.
 
 ## Testing the OpenAI Whisper Models
 
 Have you tried using any of the Whisper models since their release? Tell the community about your experience in our [GitHub Discussions](https://github.com/orgs/deepgram/discussions/30).
+
