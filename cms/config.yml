@@ -154,9 +154,11 @@ collections:
       - label: Pronouns
         name: pronouns
         widget: string
+        required: false
       - label: Bio
         name: bio
         widget: markdown
+        required: false
       - label: Deepgram Team
         name: team
         widget: boolean
@@ -166,24 +168,31 @@ collections:
       - label: Picture
         name: picture
         widget: image
+        required: false
       - label: Twitter handle
         name: twitter
         widget: string
+        required: false
       - label: LinkedIn URL
         name: linkedin
         widget: string
+        required: false
       - label: GitHub Profile URL 
         name: github
         widget: string
+        required: false
       - label: Twitch URL 
         name: twitch
         widget: string
+        required: false
       - label: Website URL 
         name: website
         widget: string
+        required: false
       - label: YouTube URL 
         name: youtube
         widget: string
+        required: false
   - name: whitepapers
     label: "Whitepapers"
     label_singular: Whitepaper
