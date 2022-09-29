@@ -62,4 +62,4 @@ Twilio users can leverage these features to format and/or classify their transcr
 * Utterance Split
 * Interim Results
 
-To learn more about the Deepgram Add-on for Twilio, please visit the Twilio Marketplace and checkout the [Deepgram listing](https://console.twilio.com/us1/develop/add-ons/catalog?frameUrl=%2Fconsole%2Fadd-ons%2FXB0c5a7436735b94257335a1fd0e91a2ec%3Fx-target-region%3Dus1). We welcome your feedback also. Please share it with us as [deepgram.com/feedback](deepgram.com/feedback). We can't wait to hear about what you build.
+To learn more about the Deepgram Add-on for Twilio, please visit the Twilio Marketplace and checkout the [Deepgram listing](https://console.twilio.com/us1/develop/add-ons/catalog?frameUrl=%2Fconsole%2Fadd-ons%2FXB0c5a7436735b94257335a1fd0e91a2ec%3Fx-target-region%3Dus1). We welcome your feedback also. Please share it with us at [deepgram.com/feedback](deepgram.com/feedback). We can't wait to hear about what you build.
