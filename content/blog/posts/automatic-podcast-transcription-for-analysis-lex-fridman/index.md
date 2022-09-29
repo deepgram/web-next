@@ -18,26 +18,6 @@ First, we use Deepgram to transcribe some of his latest podcasts. Once we have t
 
 Find the [GitHub code here](https://github.com/ytang07/transcribe_and_analyze_podcasts).
 
-In this post we will cover:
-
-- Who is Lex Fridman?
-- Prerequisites for Automatic Podcast Transcription
-- Downloading Lex Fridman's Podcast for Transcription with Python
-- Getting the Podcast Transcription with Speaker Diarization
-- Pretty Print the Lex Fridman Podcast Transcripts
-    - Extracting the Podcast Transcript for Pretty Printing
-    - Assign Names to Recognized Speakers from Speaker Diarization
-- Time Spent Speaking on the Podcast
-    - Assigning Speaker Time through Speaker Diarization of the Podcast Transcript
-    - Finding the Number of Words said by each Speaker
-- Visualizing the Lex Fridman Podcast Transcript Speaker Breakdowns
-    - Visualizing Time Speaking and Words Said by Percentage
-- Most Common Phrases Mentioned in the Podcast Transcript
-    - A Look into the Most Common Phrases from Lex
-- Extracting Named Entities from a Transcribed Podcast
-- Summaries by Podcast Episode
-- Summary of Automatic Podcast Transcription for Analysis - Lex Fridman
-
 ## Prerequisites for Automatic Podcast Transcription
 
 This is a rather immersive project. We need two different web API tools, [the `youtube_dl`](https://developers.deepgram.com/blog/2022/08/transcribe-youtube-videos-from-terminal/), `requests`, and `matplotlib` libraries, and [FFMPEG](https://developers.deepgram.com/blog/2021/11/ffmpeg-beginners/). You can get FFMPEG in multiple ways. If you are on a Mac you can `brew install ffmpeg`. If you're on a Windows or Linux machine, you can find [FFMPEG here](https://ffmpeg.org/download.html).
@@ -325,6 +305,8 @@ words_said()
 
 ## Visualizing Lex Fridman's Podcast by Speaker
 
+![Visualization of Lex Fridman podcast by speaker](https://res.cloudinary.com/deepgram/image/upload/v1664491641/blog/2022/10/automatic-podcast-transcription-for-analysis-lex-fridman/visualizing-lex-fridman-podcast-by-speaker_hz26kr.png)
+
 Now comes the part where we plot the values. For this part, we need the `matplotlib` and `json` libraries. We are going to plot both the word separation and the time analysis (in two plots). 
 
 First, we plot the time speaking graph. We open up the graph and load in the JSON file as a dictionary. Next, we split the dictionary into values for time spoken by Lex vs the Guest as well as create a list containing the names of the guests. We pass these lists to `matplotlib` and give it some options to make the graph pretty and to stack the bars.
@@ -400,9 +382,13 @@ def vis_words():
 vis_words()
 ```
 
+![Visualization of Lex Fridman vs guests of words said](https://res.cloudinary.com/deepgram/image/upload/v1664491776/blog/2022/10/automatic-podcast-transcription-for-analysis-lex-fridman/visualization-lex-fridman-vs-guests-number-of-words-said_r2jzvf.png)
+
 ### Visualizing Time Speaking and Words Said by Percentage
 
 Since Lex's podcasts are all different lengths, we figured it would be helpful to also check out percentages. So here are the corresponding graphs but with the percentage of time spoken and percentage of words said. As you can see, Lex averages about 40% of the words said, but only 25% for the length of time speaking. 
+
+![Lex vs guests speaking time by percentage visualization](https://res.cloudinary.com/deepgram/image/upload/v1664491861/blog/2022/10/automatic-podcast-transcription-for-analysis-lex-fridman/lex-vs-guests-speaking-time-by-percentage_qb88vn.png)
 
 The code to create the visualizations is below. The only functional difference from the earlier visualizations is the three lines to convert the values into percentages. First, we sum the values in the time or word tracking dictionary. Next, we re-assign the value of each key to its value divided by the sum. This gives us a proportion to measure against. 
 
@@ -532,9 +518,11 @@ Looking through Lex Fridman's most common phrases from [this folder on GitHub](h
 
 The most common adjectives that Lex is known for show up in this order in his most common phrases:
 
+![Lex Fridman's most used adjectives](https://res.cloudinary.com/deepgram/image/upload/v1664491983/blog/2022/10/automatic-podcast-transcription-for-analysis-lex-fridman/lex-fridman-adjective-visualization_ulob4z.png)
 
 I was also curious on the topics of discussion, so here they are:
 
+![Lex Fridman subject of adjective visualization](https://res.cloudinary.com/deepgram/image/upload/v1664492053/blog/2022/10/automatic-podcast-transcription-for-analysis-lex-fridman/lex-fridman-subject-of-adjective-visualization_va5inm.png)
 
 I plotted these using a similar method to the time speaking visualizations. First we import the `matplotlib` and `os` libraries. Then we create a list of the files that specifically are Lex Fridman's most common phrases. From there we create two dictionaries to represent the words we are looking for. In this case, the adjectives "beautiful", "poetic", "fascinating", and "loving" as well as the subjects "things" and "people".
 
