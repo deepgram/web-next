@@ -9,8 +9,9 @@ authors:
 category: product-news
 tags:
   - polish
+  - language
 seo:
-  canonical: /base-polish-speech-to-text-language-model-released/
+  canonical: base-polish-speech-to-text-language-model-released
   title: We’re Releasing a Base Polish (beta) Speech-to-Text Language Model
 og:
   image: https://res.cloudinary.com/deepgram/image/upload/v1664543344/2209-How-Accurate-is-OpenAI-Whisper-Speech-to-Text-Model-social-1200x628_jsyzug.png
