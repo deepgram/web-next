@@ -50,7 +50,7 @@ curl \
 ## Key Benefits of Deepgram Base Polish Language Model
 
 * Accurately transcribe Polish speakers with our Phone Call, Meeting, Voicemail, Conversational AI use case models.
-* Many developers see upwards of 90% accuracy, depending on their use case.
+* Many developers see high accuracy, depending on their use case.
 * Available for pre-recorded and [streaming](https://deepgram.com/blog/all-about-transcription-for-real-time-audio-streaming/) ([getting started guide](https://developers.deepgram.com/documentation/getting-started/streaming/)).
 * Transcribe on-premises or through the Deepgram Cloud.
 * Use in conjunction with speech understanding features such as [Diarization](https://deepgram.com/blog/what-is-speaker-diarization/) ([docs](https://developers.deepgram.com/documentation/features/diarize/)), [Summarization](https://developers.deepgram.com/documentation/features/summarize/), Topic Detection and more.
