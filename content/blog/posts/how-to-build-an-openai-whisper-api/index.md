@@ -1,6 +1,7 @@
 ---
 title: How to Build an OpenAI Whisper API
-description: test
+description: In this blog, learn step-by-step how to build an API for OpenAI
+  Whisper, an open-source automatic speech recognition model.
 date: 2022-09-30T15:12:10.691Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1664552366/blog/how-to-build-an-openai-whisper-api/2209-How-to-Build-an-OpenAI-Whisper-API-featured-1200x630_sddsom.png
 authors:
