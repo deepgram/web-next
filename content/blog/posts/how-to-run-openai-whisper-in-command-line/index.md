@@ -118,7 +118,8 @@ Wireless is coming to mankind, and it's full meaning like a hurricane some of th
 
 Excellent observation! The local run was able to transcribe "LibriVox," while the API call returned "LeapRvox." This is an artifact of this kind of model - their results are not deterministic. That is, some optimizations for working with large quantities of audio depend on overall system state and do not produce precisely the same output between runs. Our observations are that the resulting differential is typically on the order of 1% (absolute) fluctuations in word-error rate.
 
-> I had a really rough time getting this up and going on a fairly standard Ubuntu laptop with a GPU, even in a clean `venv`. The `pip` install failed to build the `whisper` wheel for unclear reasons, although it did OK after I did a `pip3 install --upgrade pip` and then explicitly called pip3 on the second attempt.
+> **Author's Note:** I had a really rough time getting this up and going on a fairly standard Ubuntu laptop with a GPU, even in a clean `venv`. The `pip` install failed to build the `whisper` wheel for unclear reasons, although it did OK after I did a `pip3 install --upgrade pip` and then explicitly called pip3 on the second attempt.
+
 > Running `whisper` to do the actual transcriptions failed with an ugly CUDA error (pasted below). It looks as though it tried to fire up my GPU to do the work but balked on some kind of CUDA/Torch driver compatibility problem. It had already been a couple of hours and the thought of breaking a CUDA environment that is working for other stuff to try to fix this was horrifying, so I ran whisper in the [Colab Notebook](https://colab.research.google.com/drive/1bHrlPXLn-nYNZtf8k_q3sTmDL6phAf6p?usp=sharing) Nick has put together and pulled that output for this article.
 
 
