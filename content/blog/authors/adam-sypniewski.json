@@ -3,5 +3,8 @@
   "jobtitle": "Chief Technology Officer",
   "pronouns": "he/him",
   "team": true,
-  "alumni": false
+  "alumni": false,
+  "bio": "Adam Sypniewski is Deepgram's Chief Technology Officer. He earned his Ph.D. in experimental astrophysics from the University of Michigan, where he applied machine learning to help understand dark energy. After graduating, Adam went into industry, applying machine learning and deep learning to problems of autonomous vehicles and human-machine interaction. At Deepgram, he leads the research and engineering teams in building state-of-the-art speech recognition that are deployed on Deepgram's high-performance computing platform.",
+  "linkedin": "https://www.linkedin.com/in/adam-sypniewski-32a25982/",
+  "github": "https://github.com/ajsyp"
 }
