@@ -2,8 +2,8 @@
 title: Build a Presentation Coaching Application with Recall
 description: Learn how to use Deepgram customer Recall.ai to get data from live
   video calls in just a few lines of code.
-date: 2022-10-03T19:50:23.850Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1660574295/blog/2022/09/uninclusive-language-retext/blog-placeholder.png
+date: 2022-10-13T19:50:23.850Z
+cover: https://res.cloudinary.com/deepgram/image/upload/v1664560621/blog/build-a-presentation-coaching-application-with-recall/2209-Build-a-Presentation-Coaching-App-with-Recall-blog_2x_cnyagk.jpg
 authors:
   - kevin-lewis
 category: tutorial
