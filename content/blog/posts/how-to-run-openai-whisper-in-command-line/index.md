@@ -51,7 +51,7 @@ choco install ffmpeg
 scoop install ffmpeg
 ```
 
-## Using the tool
+## Using the Tool
 
 Great! You're ready to transcribe! In this example, we're working with Nicholas Tesla's vision of a wireless future - you can get [this audio file at the LibriVox archive](https://www.archive.org/download/nonfiction025_librivox/snf025_nikolateslawirelessvision_anonymous_gu.mp3) of public-domain audiobooks and bring it to your local machine if you don't have something queued up and ready to go.
 
@@ -114,7 +114,7 @@ jq .results.channels[0].alternatives[0].transcript n_tesla.json
 Wireless is coming to mankind, and it's full meaning like a hurricane some of these days. Some day there will be, say, six great wireless telephone stations in a world system, connecting all the inhabitants on this earth to one another, not only by voice, but by sight. It's surely coming. End of Nikola Tesla sees a wireless vision by anonymous, the New York Times 3rd October 1915."
 ```
 
-## But Wait. Those Transcripts aren't the Same.
+## But Wait. Those Transcripts Aren't the Same.
 
 Excellent observation! The local run was able to transcribe "LibriVox," while the API call returned "LeapRvox." This is an artifact of this kind of model - their results are not deterministic. That is, some optimizations for working with large quantities of audio depend on overall system state and do not produce precisely the same output between runs. Our observations are that the resulting differential is typically on the order of 1% (absolute) fluctuations in word-error rate.
 
