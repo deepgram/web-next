@@ -2,7 +2,7 @@
 title: How to Build an OpenAI Whisper API
 description: test
 date: 2022-09-30T15:12:10.691Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1664490424/blog/blog-placeholder_nhrr9p.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1664552366/blog/how-to-build-an-openai-whisper-api/2209-How-to-Build-an-OpenAI-Whisper-API-featured-1200x630_sddsom.png
 authors:
   - michael-jolley
 category: tutorial
@@ -10,7 +10,7 @@ tags:
   - whisper
   - machine-learning
 ---
-So, you've probably heard about OpenAI's [Whisper](https://openai.com/blog/whisper/) model; if not, it's a open-source automatic speech recognition (ASR) model – a fancy way of saying "speech-to-text" or just "speech recognition." What makes Whisper particularly interesting is that it works with multiple languages (at the time of writing, it supports 99 languages) and also supports translation into English. It also has surprisingly low word error rate (WER) out-of-the-box.
+So, you've probably heard about OpenAI's [Whisper](https://openai.com/blog/whisper/) model; if not, it's an open-source automatic speech recognition (ASR) model – a fancy way of saying "speech-to-text" or just "speech recognition." What makes Whisper particularly interesting is that it works with multiple languages (at the time of writing, it supports 99 languages) and also supports translation into English. It also has a surprisingly low word error rate (WER) out-of-the-box.
 
 Whisper makes it pretty easy to invoke at the command line, as a CLI:
 
@@ -49,17 +49,17 @@ Detected language: Spanish
 
 Okay, so maybe that wasn't a very good translation...
 
-CLI's are incredibly useful for getting things working locally **_fast_**. But they don't really scale well if you want to hook up other software systems. They aren't good for builders.
+CLI's are incredibly useful for getting things working locally **_fast_**. But they don't scale well if you want to hook up other software systems. They aren't good for builders.
 
-# The Gestalt of API's
+## The Gestalt of API's
 
-The moment you start thinking like a builder, you want things that you can piece together. Things that you can scale. Components that can be combined into more than the sum of their parts. That's where API's come in: you can build services that provide value to any other piece of your system that you want.
+The moment you start thinking like a builder, you want things that you can piece together. Things that you can scale. Components that can be combined into more than the sum of their parts. That's where APIs come in: you can build services that provide value to any other piece of your system that you want.
 
 Want to build a notetaking app that joins your Zoom calls, records the audio, and saves the transcript for browsing later? Well, you probably don't want to call `whisper` at the command line. You want a little service running, just waiting for requests. You want an API.
 
 So, let's build one. Specifically, let's build an HTTP API that we can send HTTP POST requests to with a tool like `curl` or [Postman](https://www.postman.com). And let's do it in the data science language _du jour_ – Python.
 
-The first thing we need to pick out is a webserver framework. There are lots available and range from full-fledged development platforms like [Django](https://www.djangoproject.com/), to simple synchronous frameworks like [Flask](https://palletsprojects.com/p/flask/), to pure-Python asynchronous frameworks like [Tornado](https://www.tornadoweb.org/).
+The first thing we need to pick out is a web server framework. There are lots available and range from full-fledged development platforms like [Django](https://www.djangoproject.com/), to simple synchronous frameworks like [Flask](https://palletsprojects.com/p/flask/), to pure-Python asynchronous frameworks like [Tornado](https://www.tornadoweb.org/).
 
 For this example, let's stick with Flask. It does everything we need without bringing too much extra support to the table, and is one of the simplest and easiest web frameworks to get started with. Let's install it:
 
@@ -67,7 +67,7 @@ For this example, let's stick with Flask. It does everything we need without bri
 $ pip install flask
 ```
 
-> Pro-tip. You should not install Python packages to your system Python distribution. You should always run in a [virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment). To [get started](https://blog.deepgram.com/python-virtual-environments/), first create a virtual environment: `python3 -m venv venv`. Then you can activate the virtual environment: `source venv/bin/activate`. That's it! Now you can install Flask or any other libraries using `pip`. Just remember that if you close and re-open your terminal, you'll need to start by activating the virtual environemnt again.
+> Pro-tip. You should not install Python packages to your system Python distribution. You should always run in a [virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment). To [get started](https://blog.deepgram.com/python-virtual-environments/), first create a virtual environment: `python3 -m venv venv`. Then you can activate the virtual environment: `source venv/bin/activate`. That's it! Now you can install Flask or any other libraries using `pip`. Just remember that if you close and re-open your terminal, you'll need to start by activating the virtual environment again.
 
 Let's look at what a "Hello, World!" application looks like in Flask:
 
@@ -148,7 +148,7 @@ $ curl -F file=@tenant_of_wildfell_hall.mp3 localhost:5000
 
 Perfect. Now we need to connect it to Whisper.
 
-# Making It Real
+## Making It Real
 
 At this point, it's time to get Whisper installed:
 
@@ -219,7 +219,7 @@ def handler():
 
 Okay, everyone. Drumroll, please!
 
-# Testing the API
+## Testing the API
 
 Run the Flask app, just like ever: `flask run`. And now let's submit our file:
 
