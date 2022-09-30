@@ -3,8 +3,8 @@ title: Automatically Transcribe, Summarize, and Send Phone Call Summaries
 description: Learn how to use Twilio Functions and Deepgram's summarization
   feature to send all phone call participants a bite-sized version of what
   happened.
-date: 2022-09-29T19:43:14.093Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1662989219/blog/2022/09/find-podcast-brand-mentions/blog-placeholder.png
+date: 2022-10-06T19:43:14.093Z
+cover: https://res.cloudinary.com/deepgram/image/upload/v1664560715/blog/automatically-transcribe-summarize-and-send-phone-call-summaries/2209-Automatically-Transcribe-Summarize-and-Send-Phone-Call-Summaries-blog_2x_wvgy7d.jpg
 authors:
   - kevin-lewis
 category: tutorial
