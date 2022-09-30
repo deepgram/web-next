@@ -4,7 +4,7 @@ description: In this blog, learn how to run the OpenAI Whisper speech
   recognition tool via Command-Line. Load it from the repository and get started
   now!
 date: 2022-10-04T14:53:35.183Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1664490424/blog/blog-placeholder_nhrr9p.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1664561631/blog/how-to-run-openai-whisper-in-command-line/2209-How-to-Run-OpenAI-Whisper-in-Command-Line-featured-1200x630_2x_tnwda5.png
 authors:
   - kate-weber
 category: tutorial
