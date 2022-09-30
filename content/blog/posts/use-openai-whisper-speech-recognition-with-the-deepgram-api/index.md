@@ -30,7 +30,7 @@ Producing transcripts from voice data is just scratching the surface of what hum
 
 As our team, like so many others around the world, tried Whisper for the first time yesterday we thought it would be a great thing if people could use a hosted version. Deepgram’s speech API already hosts some of the most accurate and performant speech recognition models in the world, so we figured what’s one more?
 
-Today, we’re making Whisper available to anyone who wants to use it, hosted by Deepgram. Users that [sign up to use Deepgram](https://console.deepgram.com/signup?jump=demo&f-whisper=true) will find Whisper available as an additional model to use among our world-class language and use case models. Alternatively, anyone can access the Whisper model programmatically via a hosted API — no sign-up required.
+Today, we’re making Whisper available to anyone who wants to use it, hosted by Deepgram. Users that [sign up to use Deepgram](https://console.deepgram.com/signup?jump=demo\&f-whisper=true) will find Whisper available as an additional model to use among our world-class language and use case models. Alternatively, anyone can access the Whisper model programmatically via a hosted API — no sign-up required.
 
 To test it quickly, run this command:
 

@@ -10,7 +10,14 @@ category: tutorial
 tags:
   - whisper
   - machine-learning
+shorturls:
+  share: https://dpgr.am/e2259be
+  twitter: https://dpgr.am/8d7811f
+  linkedin: https://dpgr.am/3aa5cea
+  reddit: https://dpgr.am/5b075fd
+  facebook: https://dpgr.am/d28c0f6
 ---
+
 So, you've probably heard about OpenAI's [Whisper](https://openai.com/blog/whisper/) model; if not, it's an open-source automatic speech recognition (ASR) model – a fancy way of saying "speech-to-text" or just "speech recognition." What makes Whisper particularly interesting is that it works with multiple languages (at the time of writing, it supports 99 languages) and also supports translation into English. It also has a surprisingly low word error rate (WER) out-of-the-box.
 
 Whisper makes it pretty easy to invoke at the command line, as a CLI:
@@ -50,7 +57,7 @@ Detected language: Spanish
 
 Okay, so maybe that wasn't a very good translation...
 
-CLI's are incredibly useful for getting things working locally **_fast_**. But they don't scale well if you want to hook up other software systems. They aren't good for builders.
+CLI's are incredibly useful for getting things working locally ***fast***. But they don't scale well if you want to hook up other software systems. They aren't good for builders.
 
 ## The Gestalt of API's
 
@@ -58,7 +65,7 @@ The moment you start thinking like a builder, you want things that you can piece
 
 Want to build a notetaking app that joins your Zoom calls, records the audio, and saves the transcript for browsing later? Well, you probably don't want to call `whisper` at the command line. You want a little service running, just waiting for requests. You want an API.
 
-So, let's build one. Specifically, let's build an HTTP API that we can send HTTP POST requests to with a tool like `curl` or [Postman](https://www.postman.com). And let's do it in the data science language _du jour_ – Python.
+So, let's build one. Specifically, let's build an HTTP API that we can send HTTP POST requests to with a tool like `curl` or [Postman](https://www.postman.com). And let's do it in the data science language *du jour* – Python.
 
 The first thing we need to pick out is a web server framework. There are lots available and range from full-fledged development platforms like [Django](https://www.djangoproject.com/), to simple synchronous frameworks like [Flask](https://palletsprojects.com/p/flask/), to pure-Python asynchronous frameworks like [Tornado](https://www.tornadoweb.org/).
 
@@ -229,7 +236,7 @@ $ curl -F file=@tenant_of_wildfell_hall.mp3 localhost:5000
 {"results":[{"filename":"file","transcript":" Hello, this is Steve Fuller. I'm a professor of social epistemology at the University of Warwick. And the question before us today is what is epistemology and why is it important? Epistemology is the branch philosophy that is concerned with the nature of knowledge. Now why is knowledge?"}]}
 ```
 
-_HOLY CRAP IT WORKED!_
+*HOLY CRAP IT WORKED!*
 
 And because we wrote the Flask app to loop over all submitted files, we can submit multiple files at once:
 
@@ -263,11 +270,13 @@ Beautiful.
 Congratulations! You now have a full-fledged HTTP API at your fingertips. What will you build now?
 
 Here are some ideas for your speech recognition server:
-- What features can you add to the API output? Take a look at the [Deepgram documentation](https://developers.deepgram.com/) for some inspiration.
-- [Hook up to an RSS feed](https://blog.deepgram.com/podcast-search-engine/#pulling-podcast-episodes-from-an-rss-feed) to automatically transcribe your favorite podcasts.
-- Monitor a local directory and automatically transcribe any audio files that land there.
-- Build a [voice-controlled car](https://deepgram.com/built-with-deepgram/voice-controlled-car).
+
+*   What features can you add to the API output? Take a look at the [Deepgram documentation](https://developers.deepgram.com/) for some inspiration.
+*   [Hook up to an RSS feed](https://blog.deepgram.com/podcast-search-engine/#pulling-podcast-episodes-from-an-rss-feed) to automatically transcribe your favorite podcasts.
+*   Monitor a local directory and automatically transcribe any audio files that land there.
+*   Build a [voice-controlled car](https://deepgram.com/built-with-deepgram/voice-controlled-car).
 
 Happy building!
 
-*Shortcut: If you've skipped to the bottom and decided you _don't_ want to build an API yourself, you're in luck. Deepgram hosts Whisper on it's API. [Check it out](https://deepgram.com/openai-whisper/).*
+*Shortcut: If you've skipped to the bottom and decided you *don't* want to build an API yourself, you're in luck. Deepgram hosts Whisper on it's API. [Check it out](https://deepgram.com/openai-whisper/).*
+
