@@ -13,6 +13,9 @@ tags:
 seo:
   canonical: enhanced-portuguese-speech-to-text-language-model-available
   title: Enhanced Portuguese (beta) Speech-to-Text Language Model Now Available
+og:
+  image: https://res.cloudinary.com/deepgram/image/upload/v1664544873/2209-How-Accurate-is-OpenAI-Whisper-Speech-to-Text-Model-social-1200x628_pbpaui.png
+  title: Enhanced Portuguese (beta) Speech-to-Text Language Model Now Available
 ---
 Several months ago, we released our Base Portuguese ASR model to support our customers in Europe and South America. Working closely with our customers in these regions to deeply understand their use cases and data, we’re excited to announce the next generation of our Enhanced Portuguese model as an additional option for use cases that require exceptional accuracy.
 
