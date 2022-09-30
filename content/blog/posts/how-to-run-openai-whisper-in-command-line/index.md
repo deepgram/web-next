@@ -1,5 +1,5 @@
 ---
-title: How to Run OpenAI Whisper in Command Line
+title: How to Run OpenAI Whisper in the Command Line
 description: test
 date: 2022-09-30T14:53:35.183Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1664490424/blog/blog-placeholder_nhrr9p.png
