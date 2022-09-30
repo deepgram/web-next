@@ -8,7 +8,7 @@ authors:
   - scott-stephenson
 category: ai-and-engineering
 tags:
-  - speech-models
+  - whisper
   - machine-learning
 shorturls:
   share: https://dpgr.am/f4e76b9
