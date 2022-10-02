@@ -59,11 +59,15 @@ The length of the document set is 18846 documents. Now that we know how long the
 print(docs[0])
 ```
 
+![First email](https://res.cloudinary.com/deepgram/image/upload/v1664751616/blog/2022/10/python-topic-modeling-with-a-bert-model/email-1_ol9brc.png)
+
 Then, if we look at another email … 
 
 ```python
 print(docs[99])
 ```
+
+![Hundredth email](https://res.cloudinary.com/deepgram/image/upload/v1664751616/blog/2022/10/python-topic-modeling-with-a-bert-model/email-100_mmjjfy.png)
 
 From these couple of emails, we can see that the text data consists of a bunch of emails that are not all on the same topic. Once you have the list, feel free to explore it more if you'd like a better understanding of the data.
 
@@ -86,6 +90,8 @@ model.get_topic_freq()
 
 We should see a result like the one below. The model shows us that it identified 359 topics. The topic marked "-1" is the set of topics that were too sparse to categorize. Interestingly, this is also the largest set of topics.
 
+![Topics](https://res.cloudinary.com/deepgram/image/upload/v1664751616/blog/2022/10/python-topic-modeling-with-a-bert-model/topic-row-counts_xlg50m.png)
+
 We can get a little more information with the `get_topic_info` call. 
 
 ```python
@@ -93,6 +99,8 @@ model.get_topic_info()
 ```
 
 As we can see in the image below, calling for topic info will also show us some of the top words in the topics. We can see some of the topics that the model picked out like guns, emails, and Jesus.
+
+![Topics and names](https://res.cloudinary.com/deepgram/image/upload/v1664751616/blog/2022/10/python-topic-modeling-with-a-bert-model/named-topic-row-count_blkjob.png)
 
 ### Visualizing BERTopic Modeled Topics
 
@@ -168,6 +176,8 @@ plt.show()
 ```
 
 The image below shows the example cluster plot created from the document set we used. You probably want to click on the image for a closer look. Or, just create it yourself from the code above!
+
+![Cluster plot](https://res.cloudinary.com/deepgram/image/upload/v1664751616/blog/2022/10/python-topic-modeling-with-a-bert-model/berttopic-image_ow9c3j.png)
 
 ## Summary of BERT Topic Modeling in Python
 
