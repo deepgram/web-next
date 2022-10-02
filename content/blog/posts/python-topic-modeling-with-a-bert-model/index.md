@@ -10,25 +10,25 @@ tags:
   - nlp
   - machine-learning
 ---
-Topic detection is a commonly sought after Natural Language Processing (NLP) technique. It's especially useful for getting high level views of your conversations, emails, or documents. In this example, we're going to take a look at BERT, a large language model, and how you can use a BERT derived library to do topic detection.
+Topic detection is a commonly sought-after Natural Language Processing (NLP) technique. It's especially useful for getting high-level views of your conversations, emails, or documents. In this example, we're going to take a look at BERT, a large language model, and how you can use a BERT-derived library to do topic detection.
 
 ## What is BERT?
 
-BERT is a popular large language model originally created and published in 2018. It gained popularity in the year since with Google's announcement of leveraging BERT in their search algorithms. BERT stands for "Bidirectional Encoder Representations from Transformers".
+BERT is a popular large language model created and published in 2018. It gained popularity in the year since with Google's announcement of leveraging BERT in their search algorithms. BERT stands for "Bidirectional Encoder Representations from Transformers".
 
 By 2020, BERT had become a standard benchmark for NLP applications with over 150 citations. At its core, it is built like many transformer models. The main difference between transformer models and [Recurrent Neural Networks](https://pythonalgos.com/build-a-recurrent-neural-network-from-scratch-in-python-3/) (RNNs), another NLP classic, is that they process the input all at once.
 
 While RNNs have been around for decades. Starting with the Hopfield network in the 1980s, RNNs evolved to include [Long Short Term Memory Models](https://pythonalgos.com/long-short-term-memory-lstm-in-keras/) by the end of the 1990s. More recent NLP architecture models hit the scene in the 2010s. In 2014, the [Gated Recurrent Unit model](https://pythonalgos.com/build-a-gru-rnn-in-keras/) was introduced to speed up LSTMs. 
 
-In 2017, transformer models were introduced. They not only allow for running predictions on the entire input at once, but also more parallelization at training time. In the years since, transformer models have become more and more popular as the model architecture for both NLP and image processing tasks.
+In 2017, transformer models were introduced. They not only allow for running predictions on the entire input at once but also more parallelization at training time. In the years since transformer models have become more and more popular as the model architecture for both NLP and image processing tasks.
 
 The original BERT language model was trained on over 800M words from Books and over 2500M words from Wikipedia. It was originally trained on two tasks: language modeling and next sentence prediction. Since its inception, BERT has inspired many other models and use cases. One example is in topic detection with BERTopic, which we'll cover below.
 
 ### Introduction to BERTopic
 
-BERTopic is an open source library that uses a BERT model to do [Topic Detection with class based TF-IDF procedure](https://arxiv.org/abs/2203.05794). TF-IDF stands for "Term Frequency - Inverse Document Frequency". TF-IDF is an algorithm that weights the importance of words in a corpus exactly as the name implies. The more often you see a word in a document, the more important it is, however the more you see that word across documents, the less important it becomes.
+BERTopic is an open-source library that uses a BERT model to do [Topic Detection with class-based TF-IDF procedure](https://arxiv.org/abs/2203.05794). TF-IDF stands for "Term Frequency - Inverse Document Frequency". TF-IDF is an algorithm that weights the importance of words in a corpus exactly as the name implies. The more often you see a word in a document, the more important it is, however, the more you see that word across documents, the less important it becomes.
 
-An example of this could be the word "the". You probably see the word "the" a lot in a single document. However, it also appears in many documents. On the other hand, a word like BERT would not appear in as many documents, but may appear many times in a document on NLP. In this case, a TF-IDF model would probably say that BERT is an important word that defines the topic of a small set of documents.
+An example of this could be the word "the". You probably see the word "the" a lot in a single document. However, it also appears in many documents. On the other hand, a word like BERT would not appear in as many documents but may appear many times in a document on NLP. In this case, a TF-IDF model would probably say that BERT is an important word that defines the topic of a small set of documents.
 
 ## Using BERTopic for Topic Modeling in Python
 
@@ -38,7 +38,7 @@ Before we get started, we'll need to install a few libraries. We need BERTopic, 
 
 ### Exploring a Topic Modeling Dataset
 
-The first thing we're going to do is get our BERTopic model and example dataset from `sklearn`. In this example, we use the set of documents stored in `fetch_20newsgroups` from the datasets in `sklearn`. All we need to do to get these documents is to call the `fetch_20newsgroups` function, and extract the data element.
+The first thing we're going to do is get our BERTopic model and example dataset from `sklearn`. In this example, we use the set of documents stored in `fetch_20newsgroups` from the datasets in `sklearn`. All we need to do to get these documents is to call the `fetch_20newsgroups` function and extract the data element.
 
 ```python
 from bertopic import BERTopic
@@ -65,7 +65,7 @@ Then, if we look at another email …
 print(docs[99])
 ```
 
-From these couple emails, we can see that the text data consists of a bunch of emails that are not all on the same topic. Once you have the list, feel free to explore it more if you'd like a better understanding of the data.
+From these couple of emails, we can see that the text data consists of a bunch of emails that are not all on the same topic. Once you have the list, feel free to explore it more if you'd like a better understanding of the data.
 
 ### This is Where the Magic Happens
 
@@ -78,7 +78,7 @@ topics, probs = model.fit_transform(docs)
 
 ### Understanding Modeled Topics
 
-Now that we've modeled the topics in the dataset, let's take a look into the model. We look at two things in this section, the topic frequency and the broader info about our topics. First, we look at the topic frequencies
+Now that we've modeled the topics in the dataset, let's take a look at the model. We look at two things in this section, the topic frequency and the broader info about our topics. First, we look at the topic frequencies
 
 ```python
 model.get_topic_freq()
@@ -102,7 +102,7 @@ After setting up our imports, we prep our data. We extract the model embeddings 
 
 From there, we define some plot parameters for our visualization. In this case, the number of topics we want to see and the font size. Next, we slice the data up so we only plot the top 10 topics and create a colormap for `matplotlib` to color our graph with.
 
-Now that we've configured the visualization, it's time to actually make the plot. We use `matplotlib` to create a scatter plot. The scatter plot we create in this example plots the outliers in gray and the top 10 as colored clusters. Then, we add the cluster centroid titles to the scatter plot, and voila.
+Now that we've configured the visualization, it's time to make the plot. We use `matplotlib` to create a scatter plot. The scatter plot we create in this example plots the outliers in gray and the top 10 as colored clusters. Then, we add the cluster centroid titles to the scatter plot, and voila.
 
 ```python
 import numpy as np
@@ -167,7 +167,7 @@ plt.savefig("BERTopic_Example_Cluster_Plot.png")
 plt.show()
 ```
 
-The image below shows the example cluster plot created from the document set we used. You probably want to click into the image for a closer look. Or, just create it yourself from the code above!
+The image below shows the example cluster plot created from the document set we used. You probably want to click on the image for a closer look. Or, just create it yourself from the code above!
 
 ## Summary of BERT Topic Modeling in Python
 
