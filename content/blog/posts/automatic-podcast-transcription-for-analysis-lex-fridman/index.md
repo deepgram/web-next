@@ -1,6 +1,8 @@
 ---
 title: Automatic Podcast Transcription for Analysis - Lex Fridman
-description: test
+description: In this post, learn what using Deepgram and Python to perform
+  automatic speech recognition and text analysis can tell us about a successful
+  podcast like Lex Fridman's.
 date: 2022-10-10T21:22:17.324Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1664490424/blog/blog-placeholder_nhrr9p.png
 authors:
