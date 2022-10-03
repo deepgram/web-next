@@ -212,6 +212,19 @@ html {
 		transform-origin: bottom left;
 	}
 
+	.draw-underline.underline-right span:after {
+		@apply absolute bottom-0 left-0 h-[0.125rem] w-full bg-current;
+		content: "";
+		transform: scaleX(0);
+		transform-origin: bottom right;
+		transition: transform 0.25s ease-out;
+	}
+
+	.draw-underline.underline-right:hover span:after {
+		transform: scaleX(1);
+		transform-origin: bottom right;
+	}
+
 	.inline-icon {
 		@apply -mt-[0.2em] inline w-[1em];
 	}
