@@ -11,7 +11,14 @@ category: tutorial
 tags:
   - whisper
   - machine-learning
+shorturls:
+  share: https://dpgr.am/3b50e18
+  twitter: https://dpgr.am/62629ca
+  linkedin: https://dpgr.am/4c3b882
+  reddit: https://dpgr.am/75e494b
+  facebook: https://dpgr.am/f1b2079
 ---
+
 So, you want to run the OpenAI Whisper tool on your machine? You can load it from the [OpenAI Github](https://github.com/openai/whisper) repository to get up and going!
 
 ## Setup
@@ -57,7 +64,7 @@ scoop install ffmpeg
 
 Great! You're ready to transcribe! In this example, we're working with Nicholas Tesla's vision of a wireless future - you can get [this audio file at the LibriVox archive](https://www.archive.org/download/nonfiction025_librivox/snf025_nikolateslawirelessvision_anonymous_gu.mp3) of public-domain audiobooks and bring it to your local machine if you don't have something queued up and ready to go.
 
-The OpenAI Whisper tool has a variety of models that are English-only or multilingual, and come in a range of sizes whose tradeoffs are speed vs. performance. You can learn more about this [here](https://github.com/openai/whisper#available-models-and-languages). We, the researchers at Deepgram, have found that the small model provides a good balance. 
+The OpenAI Whisper tool has a variety of models that are English-only or multilingual, and come in a range of sizes whose tradeoffs are speed vs. performance. You can learn more about this [here](https://github.com/openai/whisper#available-models-and-languages). We, the researchers at Deepgram, have found that the small model provides a good balance.
 
 ```shell
 whisper "snf025_nikolateslawirelessvision_anonymous_gu.mp3" --model small --language English
@@ -124,9 +131,6 @@ Excellent observation! The local run was able to transcribe "LibriVox," while th
 
 > Running `whisper` to do the actual transcriptions failed with an ugly CUDA error (pasted below). It looks as though it tried to fire up my GPU to do the work but balked on some kind of CUDA/Torch driver compatibility problem. It had already been a couple of hours and the thought of breaking a CUDA environment that is working for other stuff to try to fix this was horrifying, so I ran whisper in the [Colab Notebook](https://colab.research.google.com/drive/1bHrlPXLn-nYNZtf8k_q3sTmDL6phAf6p?usp=sharing) Nick has put together and pulled that output for this article.
 
-
-
-
 Error follows:
 
 ```shell
@@ -169,3 +173,4 @@ Traceback (most recent call last):
     return F.linear(
 RuntimeError: CUDA error: CUBLAS_STATUS_EXECUTION_FAILED when calling `cublasGemmEx( handle, opa, opb, m, n, k, &falpha, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, &fbeta, c, CUDA_R_16F, ldc, CUDA_R_32F, CUBLAS_GEMM_DFALT_TENSOR_OP)`
 ```
+
