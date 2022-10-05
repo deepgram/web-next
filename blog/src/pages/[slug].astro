@@ -182,7 +182,7 @@ const schema = [
 	<article>
 		<ContrastSection contrast="mist" background="white" bottomDivider="eclipse-divider" bottomOverlay>
 			<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
-				<Backlink linkClass="inline-block nudge-icon nudge-icon--left draw-underline underline-right" href="/posts" class="mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-darkIris"
+				<Backlink linkClass="inline-block nudge-icon nudge-icon--left draw-underline underline-right" href="/posts" class="mb-6 md:mb-8 lg:mb-10 xl:mb-12"
 					><span>All posts</span>
 				</Backlink>
 
@@ -216,22 +216,22 @@ const schema = [
 							)}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							><Icon icon="email" class="w-[1em] fill-iris" />
+							><Icon icon="email" class="w-[1em] fill-darkIris" />
 						</Link>
 						<Link
 							href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20post%20on%20Deepgram%20%40deepgramai%20%20${encodeURIComponent(shorturls.twitter)}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							><Icon icon="twitter" class="w-[1em] fill-iris" />
+							><Icon icon="twitter" class="w-[1em] fill-darkIris" />
 						</Link>
 						<Link
 							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shorturls.fullUrl)}&title=${encodeURIComponent(post.frontmatter.title)}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							><Icon icon="linkedin" class="w-[1em] fill-iris" />
+							><Icon icon="linkedin" class="w-[1em] fill-darkIris" />
 						</Link>
 						<Link href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shorturls.facebook)}`} target="_blank" rel="noopener noreferrer"
-							><Icon icon="facebook" class="w-[1em] fill-iris" />
+							><Icon icon="facebook" class="w-[1em] fill-darkIris" />
 						</Link>
 					</div>
 
@@ -287,7 +287,7 @@ const schema = [
 	}
 
 	.post-prose > :global(* a) {
-		@apply text-iris;
+		@apply text-darkIris;
 	}
 
 	.post-prose > :global(pre.astro-code) {

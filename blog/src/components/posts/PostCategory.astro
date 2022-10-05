@@ -5,4 +5,4 @@ import CategoryName from "../../shared/components/strings/CategoryName.astro";
 const { post } = Astro.props;
 ---
 
-<span>in <Link class="text-iris" href={`/categories/${post.frontmatter.category}`}><CategoryName category={post.frontmatter.category} /></Link></span>
+<span>in <Link href={`/categories/${post.frontmatter.category}`}><CategoryName category={post.frontmatter.category} /></Link></span>

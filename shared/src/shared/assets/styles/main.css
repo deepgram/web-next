@@ -84,7 +84,7 @@ html {
 	}
 
 	a {
-		@apply text-lightIris;
+		@apply text-darkIris;
 	}
 }
 

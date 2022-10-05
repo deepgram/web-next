@@ -87,7 +87,7 @@ code {
 	}
 
 	a {
-		@apply text-lightIris;
+		@apply text-darkIris;
 	}
 }
 
