@@ -5,7 +5,6 @@ import { Debug } from "astro/components";
 import AuthorCardList from "../../shared/components/lists/AuthorCardList.astro";
 import ContrastSection from "../../shared/components/decoration/ContrastSection.astro";
 import Hero from "../../components/authors/Hero.astro";
-import AuthorCard from "../../shared/components/cards/AuthorCard.astro";
 import NoLinkCardListTitle from "../../shared/components/titles/NoLinkCardListTitle.astro";
 import Title from "../../shared/components/meta/Title.astro";
 import Description from "../../shared/components/meta/Description.astro";
@@ -14,10 +13,19 @@ import Backlink from "../../components/nav/Backlink.astro";
 import JsonLD from "../../shared/components/meta/JsonLD.astro";
 import { getSluggedJson } from "../../shared/util";
 
-const authors = await getSluggedJson("blog/authors");
-const team = authors.filter((a) => a.team);
-const alumni = authors.filter((a) => !a.team && a.alumni);
-const guests = authors.filter((a) => !a.team && !a.alumni);
+import { useStoryblokApi } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+
+const sbApi = useStoryblokApi();
+
+const { data } = await sbApi.get("cdn/stories", {
+	version: "draft",
+	by_slugs: "authors/*",
+});
+const authors = data.stories;
+const team = authors.filter((a) => a.content.team === "team");
+const alumni = authors.filter((a) => a.content.team === "alum");
+const guests = authors.filter((a) => a.content.team === "guest");
 
 // build json schema object
 const schema = {
@@ -64,15 +72,15 @@ const schema = {
 	<PrimarySection>
 		<AuthorCardList class="mt-10 lg:mt-16 xl:mt-20">
 			<NoLinkCardListTitle slot="title"><h2>Deepgram Team</h2></NoLinkCardListTitle>
-			{team.map((author) => <AuthorCard author={author} />)}
+			{team.map((blok) => <StoryblokComponent blok={blok.content} slug={blok.slug} />)}
 		</AuthorCardList>
 		<AuthorCardList class="mt-10 lg:mt-16 xl:mt-20">
 			<NoLinkCardListTitle slot="title"><h2>Guest Authors</h2></NoLinkCardListTitle>
-			{guests.map((author) => <AuthorCard author={author} />)}
+			{guests.map((blok) => <StoryblokComponent blok={blok.content} slug={blok.slug} />)}
 		</AuthorCardList>
 		<AuthorCardList class="mt-10 lg:mt-16 xl:mt-20 mb-6">
 			<NoLinkCardListTitle slot="title"><h2>Deepgram {alumni.length > 1 ? "Alumni" : "Alum"}</h2></NoLinkCardListTitle>
-			{alumni.map((author) => <AuthorCard author={author} />)}
+			{alumni.map((blok) => <StoryblokComponent blok={blok.content} slug={blok.slug} />)}
 		</AuthorCardList>
 	</PrimarySection>
 </Layout>

@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 import vue from "@astrojs/vue";
 import vitePreact from "@preact/preset-vite";
 import preact from "@astrojs/preact";
+import storyblok from "@storyblok/astro";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,6 +21,21 @@ export default defineConfig({
 		}),
 		vue(),
 		preact(),
+		storyblok({
+			accessToken: "DQ5PVW2Hi8ZeawcnLc3nvQtt",
+			apiOptions: {
+				cache: { clear: "auto", type: "memory" },
+				region: "us",
+			},
+			bridge: true,
+			components: {
+				// page: "storyblok/Page",
+				// feature: "storyblok/Feature",
+				// grid: "storyblok/Grid",
+				// teaser: "storyblok/Teaser",
+				Author: "shared/components/cards/Author",
+			},
+		}),
 	],
 	vite: {
 		plugins: [vitePreact()],
