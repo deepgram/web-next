@@ -4,10 +4,7 @@ import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 
 const categories = await getSluggedJson("blog/category");
-
-const isActive = (path) => {
-	return path === Astro.url.pathname;
-};
+const pathname = Astro.url.pathname
 ---
 
 <div class="hidden lg:block lg:sticky lg:top-20 mb-20">
@@ -16,12 +13,13 @@ const isActive = (path) => {
 		{
 			categories &&
 				categories.map((category) => {
-					const path = `/categories/${category.slug}`;
+					const path = `/categories/${category.slug}/`;
 					return (
 						<li class="pb-4">
-							<Link class:list={["hover:text-iris font-semibold leading-5", { "text-darkCharcoal": !isActive(path) }, { "text-storm": isActive(path) }]} href={path}>
-								{category.title}
-							</Link>
+							<Link href={path} class={
+            `hover:text-iris font-semibold leading-5 ${pathname.endsWith(path) ? "text-storm" : "text-darkCharcoal"}`}>
+            {category.title}
+        </Link>
 						</li>
 					);
 				})
@@ -54,3 +52,9 @@ const isActive = (path) => {
 		}
 	</ul>
 </div>
+
+<style>
+	.active {
+		@apply text-storm;
+	}
+</style>
