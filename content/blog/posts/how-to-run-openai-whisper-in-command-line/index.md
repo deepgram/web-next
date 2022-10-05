@@ -18,7 +18,6 @@ shorturls:
   reddit: https://dpgr.am/75e494b
   facebook: https://dpgr.am/f1b2079
 ---
-
 So, you want to run the OpenAI Whisper tool on your machine? You can load it from the [OpenAI Github](https://github.com/openai/whisper) repository to get up and going!
 
 ## Setup
@@ -126,51 +125,3 @@ Wireless is coming to mankind, and it's full meaning like a hurricane some of th
 ## But Wait. Those Transcripts Aren't the Same.
 
 Excellent observation! The local run was able to transcribe "LibriVox," while the API call returned "LeapRvox." This is an artifact of this kind of model - their results are not deterministic. That is, some optimizations for working with large quantities of audio depend on overall system state and do not produce precisely the same output between runs. Our observations are that the resulting differential is typically on the order of 1% (absolute) fluctuations in word-error rate.
-
-> **Author's Note:** I had a really rough time getting this up and going on a fairly standard Ubuntu laptop with a GPU, even in a clean `venv`. The `pip` install failed to build the `whisper` wheel for unclear reasons, although it did OK after I did a `pip3 install --upgrade pip` and then explicitly called pip3 on the second attempt.
-
-> Running `whisper` to do the actual transcriptions failed with an ugly CUDA error (pasted below). It looks as though it tried to fire up my GPU to do the work but balked on some kind of CUDA/Torch driver compatibility problem. It had already been a couple of hours and the thought of breaking a CUDA environment that is working for other stuff to try to fix this was horrifying, so I ran whisper in the [Colab Notebook](https://colab.research.google.com/drive/1bHrlPXLn-nYNZtf8k_q3sTmDL6phAf6p?usp=sharing) Nick has put together and pulled that output for this article.
-
-Error follows:
-
-```shell
-whisper "snf025_nikolateslawirelessvision_anonymous_gu.mp3" --model small --language English
-
-Traceback (most recent call last):
-  File "/home/kate/projects/whisper/venv/bin/whisper", line 11, in <module>
-    load_entry_point('whisper==1.0', 'console_scripts', 'whisper')()
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/whisper/transcribe.py", line 300, in cli
-    result = transcribe(model, audio_path, temperature=temperature, **args)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/whisper/transcribe.py", line 182, in transcribe
-    result = decode_with_fallback(segment)[0]
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/whisper/transcribe.py", line 110, in decode_with_fallback
-    results = model.decode(segment, options)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
-    return func(*args, **kwargs)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/whisper/decoding.py", line 701, in decode
-    result = DecodingTask(model, options).run(mel)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/torch/autograd/grad_mode.py", line 27, in decorate_context
-    return func(*args, **kwargs)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/whisper/decoding.py", line 617, in run
-    audio_features: Tensor = self._get_audio_features(mel)  # encoder forward pass
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/whisper/decoding.py", line 561, in _get_audio_features
-    audio_features = self.model.encoder(mel)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/whisper/model.py", line 156, in forward
-    x = block(x)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/whisper/model.py", line 127, in forward
-    x = x + self.mlp(self.mlp_ln(x))
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
-    input = module(input)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
-    return forward_call(*input, **kwargs)
-  File "/home/kate/projects/whisper/venv/lib/python3.8/site-packages/whisper/model.py", line 36, in forward
-    return F.linear(
-RuntimeError: CUDA error: CUBLAS_STATUS_EXECUTION_FAILED when calling `cublasGemmEx( handle, opa, opb, m, n, k, &falpha, a, CUDA_R_16F, lda, b, CUDA_R_16F, ldb, &fbeta, c, CUDA_R_16F, ldc, CUDA_R_32F, CUBLAS_GEMM_DFALT_TENSOR_OP)`
-```
-
