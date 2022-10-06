@@ -6,7 +6,6 @@ import { useStoryblokApi } from "@storyblok/astro";
 const sbApi = useStoryblokApi();
 
 const { category } = Astro.props;
-console.log("category", category.name, category.uuid);
 const { data: allPosts } = await sbApi.get("cdn/stories", {
 	by_slugs: "blog-posts/*",
 	filter_query: {
