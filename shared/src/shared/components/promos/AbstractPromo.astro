@@ -34,17 +34,25 @@ const rawHTMLString = "&nbsp;";
 <style scoped>
 	.promo-container {
 		@apply my-20;
+		@apply shadow-dg;
 	}
 
 	.promo {
 		@apply max-w-[76.25rem];
-		@apply min-h-[15rem] w-full;
+		@apply  min-h-[35rem] md:min-h-[14rem] w-full;
 		@apply flex flex-col space-y-1;
-		@apply p-8;
+		@apply px-8 py-4;
 		@apply justify-between;
-		@apply drop-shadow-md;
-		@apply bg-right-bottom bg-no-repeat lg:bg-right;
-		@apply bg-promo-xs sm:bg-auto;
+		@apply shadow-dg rounded-[1px];
+		@apply bg-right-bottom bg-no-repeat lg:bg-right bg-contain;
+	}
+
+	header h2 {
+		@apply sm:text-h2-d text-h2-m;
+	}
+
+	header h6 {
+		@apply pb-2;
 	}
 
 	/* White Theme Styles */
