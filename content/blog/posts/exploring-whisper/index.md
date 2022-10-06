@@ -4,7 +4,7 @@ description: test
 date: 2022-10-13T20:59:18.175Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1664490424/blog/blog-placeholder_nhrr9p.png
 authors:
-  - michael-jolley
+  - julia-strout
 category: ai-and-engineering
 tags:
   - whisper
