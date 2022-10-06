@@ -5,19 +5,15 @@ import { useStoryblokApi } from "@storyblok/astro";
 
 const { authors, class: classes } = Astro.props;
 const sbApi = useStoryblokApi();
-const { data: authorArray } = await sbApi.get("cdn/stories", {
-	by_slugs: "authors/*",
-	filter_query: {
-		author: {
-			in: authors.toString(),
-		},
-	},
+const { data } = await sbApi.get("cdn/stories", {
+	by_uuids: authors.toString(),
 });
+const authorArray = data.stories;
 ---
 
-{authors && (
+{authorArray && (
 	<ul class:list={["inline list-none p-0 text-xs font-bold uppercase", classes]}>
-		{authors.map((author, index, array) => (
+		{authorArray.map((author, index, array) => (
 			<li class="inline-block p-0">
 				<AuthorName author={author} />
 			</li>
