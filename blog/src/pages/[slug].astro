@@ -3,6 +3,7 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Layout from "../layouts/Default.astro";
 import HasGutters from "../shared/components/layout/HasGutters.astro";
 import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
+import "gfm.css/gfm.css";
 
 import PostImage from "../components/posts/PostImage.astro";
 import PostMeta from "../components/posts/PostMeta.astro";
@@ -19,18 +20,22 @@ import MetaLink from "../shared/components/meta/Link.astro";
 import Backlink from "../components/nav/Backlink.astro";
 import InlineIcon from "../shared/components/general/InlineIcon.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
-import { getSluggedJson } from "../shared/util";
+import { useStoryblokApi, renderRichText } from "@storyblok/astro";
 
 export async function getStaticPaths() {
-	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
-	const sortedPosts = allPosts.sort((a, b) => {
-		const aDate = new Date(b.frontmatter.date);
-		const bDate = new Date(a.frontmatter.date);
+	const sbApi = useStoryblokApi();
+
+	const { data: allPosts } = await sbApi.get("cdn/stories", {
+		by_slugs: "blog-posts/*",
+	});
+	const sortedPosts = allPosts.stories.sort((a, b) => {
+		const aDate = new Date(b.content.date);
+		const bDate = new Date(a.content.date);
 		return aDate.getTime() - bDate.getTime();
 	});
 
 	return sortedPosts.map((post) => {
-		const slug = post.frontmatter.slug || post.file.split("/")[post.file.split("/").length - 2];
+		const slug = post.slug;
 
 		return {
 			params: {
@@ -43,42 +48,53 @@ export async function getStaticPaths() {
 	});
 }
 
+function getHeadingsSB(post) {
+	const headings = post.content.body.content.filter((content) => {
+		if (content.type === "heading") {
+			return content.content.text;
+		}
+	});
+
+	return headings;
+}
+const sbApi = useStoryblokApi();
+
 const { post } = Astro.props;
 const { slug } = Astro.params;
+const renderedRichText = renderRichText(post.content.body);
 
-const headings = await post.getHeadings();
+const headings = await getHeadingsSB(post);
 
-const allAuthors = await getSluggedJson("blog/authors");
-const postAuthors = allAuthors.filter((a) => post.frontmatter.authors.includes(a.slug));
+const postAuthors = post.content.authors;
+const { data: authorsWithContent } = await sbApi.get("cdn/stories", {
+	by_uuids: postAuthors.toString(),
+});
 
-const allCategories = await getSluggedJson("blog/category");
-const postCategory = allCategories.find((c) => post.frontmatter.category === c.slug);
-
+console.log("post.content.category", post.content.category);
+const { data: categoryData } = await sbApi.get(`cdn/stories/${post.content.category}`, {
+	find_by: "uuid",
+});
+console.log("categoryData", categoryData);
+const postCategory = categoryData.story;
 const seo = {
-	title: post.frontmatter.seo && post.frontmatter.seo.title ? post.frontmatter.seo.title : post.frontmatter.title,
-	description: post.frontmatter.seo && post.frontmatter.seo.description ? post.frontmatter.seo.description : post.frontmatter.description,
-	url: post.frontmatter.seo && post.frontmatter.seo.canonical ? post.frontmatter.seo.canonical : Astro.url,
+	title: post.content.seo_title ? post.content.seo_title : post.content.title,
+	description: post.content.seo_description ? post.content.seo_description : post.content.description,
+	url: post.content.seo && post.content.seo.canonical ? post.content.seo.canonical : Astro.url,
 };
 
 const og = {
-	title: post.frontmatter.og && post.frontmatter.og.title ? post.frontmatter.og.title : seo.title,
-	description: post.frontmatter.og && post.frontmatter.og.description ? post.frontmatter.og.description : seo.description,
-	image: post.frontmatter.og && post.frontmatter.og.image ? post.frontmatter.og.image : post.frontmatter.cover,
+	title: seo.title,
+	description: seo.description,
+	image: post.content.og && post.content.og.filename !== "" ? post.content.og.filename : post.content.cover_image.filename,
 };
-
-// resize-og-image-to-fit
-if (og && og.image) {
-	const version = og.image.match(/(.*)\/image\/upload\/(?<version>v[0-9]+)\/(.*)\.(.*)/).groups.version;
-	og.image = og.image.replace(version, "c_fit,h_627,w_1200");
-}
 
 // build short URLs
 const shorturls = {
-	share: post.frontmatter.shorturls && post.frontmatter.shorturls.share ? post.frontmatter.shorturls.share : Astro.url,
-	twitter: post.frontmatter.shorturls && post.frontmatter.shorturls.twitter ? post.frontmatter.shorturls.twitter : Astro.url,
-	linkedin: post.frontmatter.shorturls && post.frontmatter.shorturls.linkedin ? post.frontmatter.shorturls.linkedin : Astro.url,
-	reddit: post.frontmatter.shorturls && post.frontmatter.shorturls.reddit ? post.frontmatter.shorturls.reddit : Astro.url,
-	facebook: post.frontmatter.shorturls && post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
+	share: post.content.shorturls && post.content.shorturls.share ? post.content.shorturls.share : Astro.url,
+	twitter: post.content.shorturls && post.content.shorturls.twitter ? post.content.shorturls.twitter : Astro.url,
+	linkedin: post.content.shorturls && post.content.shorturls.linkedin ? post.content.shorturls.linkedin : Astro.url,
+	reddit: post.content.shorturls && post.content.shorturls.reddit ? post.content.shorturls.reddit : Astro.url,
+	facebook: post.content.shorturls && post.content.shorturls.facebook ? post.content.shorturls.facebook : Astro.url,
 	fullUrl: Astro.url,
 };
 
@@ -91,9 +107,9 @@ const schema = [
 		url: seo.url,
 		headline: seo.title,
 		alternativeHeadline: og.title,
-		dateCreated: post.frontmatter.date,
-		datePublished: post.frontmatter.date,
-		dateModified: post.frontmatter.date,
+		dateCreated: post.created_at,
+		datePublished: post.first_published_at,
+		dateModified: post.published_at,
 		inLanguage: "en-US",
 		isFamilyFriendly: "true",
 		copyrightYear: new Date().getFullYear(),
@@ -102,7 +118,7 @@ const schema = [
 			"@type": "Place",
 			name: "San Francisco, California, 94110, USA",
 		},
-		author: postAuthors.map((a) => ({
+		author: authorsWithContent.stories.map((a) => ({
 			"@type": "Person",
 			image: a.picture ? a.picture : null,
 			name: a.title,
@@ -121,18 +137,20 @@ const schema = [
 			},
 		},
 		mainEntityOfPage: "True",
-		keywords: post.frontmatter.tags,
+		keywords: post.tag_list,
 		genre: ["Speech Recognition", "Automatic Speech Recognition", "Speech-to-Text", "API"],
-		articleSection: postCategory.title,
+		articleSection: postCategory.content.title,
 	},
-	...postAuthors.map((a) => ({
-		"@context": "https://schema.org",
-		"@type": "Person",
-		image: a.picture ? a.picture : null,
-		name: a.title,
-		jobTitle: a.team ? (a.jobtitle ? a.jobtitle : "Deepgram Team") : a.alumni ? "Deepgram Alumni" : "Guest Author",
-		url: `${Astro.url.origin}/authors/${a.slug}`,
-	})),
+	...authorsWithContent.stories.map((a) => {
+		return {
+			"@context": "https://schema.org",
+			"@type": "Person",
+			image: a.content.picture.filename ? a.content.picture.filename : null,
+			name: a.content.title,
+			jobTitle: a.content.team === "team" ? "Deepgram Team" : a.content.team === "alum" ? "Deepgram Alumni" : "Guest Author",
+			url: `${Astro.url.origin}/authors/${a.slug}`,
+		};
+	}),
 	{
 		"@context": "https://schema.org",
 		"@type": "BreadcrumbList",
@@ -161,7 +179,6 @@ const schema = [
 
 <Layout>
 	<JsonLD slot="json:ld" {schema} />
-
 	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />
 	<Description slot="head:description" name="description" content={seo.description} />
 	<MetaLink slot="head:canonical" rel="canonical" href={seo.url} />
@@ -174,10 +191,10 @@ const schema = [
 	<Meta slot="og:image:height" property="og:image:height" content="762" />
 	<Meta slot="og:image:alt" property="og:image:alt" content={`Deepgram Blog - A post titled: ${og.title}`} />
 
-	<Meta slot="head" property="article:published_time" content={post.frontmatter.date} />
-	{postAuthors && postAuthors.map((author) => <Meta slot="head" property="article:author" content={author.title} />)}
-	<Meta slot="head" property="article:section" content={postCategory.title} />
-	{post.frontmatter.tags && post.frontmatter.tags.map((tag) => <Meta slot="head" property="article:tag" content={tag} />)}
+	<Meta slot="head" property="article:published_time" content={post.first_published_at} />
+	{authorsWithContent && authorsWithContent.stories.map((author) => <Meta slot="head" property="article:author" content={author.title} />)}
+	<Meta slot="head" property="article:section" content={postCategory.content.title} />
+	{post.tag_list && post.tag_list.map((tag) => <Meta slot="head" property="article:tag" content={tag} />)}
 
 	<article>
 		<ContrastSection contrast="mist" background="white" bottomDivider="eclipse-divider" bottomOverlay>
@@ -187,7 +204,7 @@ const schema = [
 				<HasGutters>
 					<header class="flex flex-col">
 						<PostHeading post={post} />
-						<PostMeta post={post} />
+						<PostMeta post={post} authors={authorsWithContent.stories} category={postCategory} />
 						<PostImage post={post} />
 					</header>
 				</HasGutters>
@@ -196,11 +213,12 @@ const schema = [
 		<PrimarySection class="pt-12">
 			<HasGutters>
 				<div class="post">
-					<div class="post-prose">
-						<post.Content />
+					<div class="post-prose markdown-body">
+						<!-- <post.Content /> -->
+						<div set:html={renderedRichText}></div>
 					</div>
 					<h4>More with these tags:</h4>
-					<TagsList tags={post.frontmatter.tags} link />
+					<TagsList tags={post.tag_list} link />
 
 					<Feedback />
 				</div>
@@ -209,9 +227,7 @@ const schema = [
 					<h5 class="pb-5"><InlineIcon icon="share">Share</InlineIcon></h5>
 					<div class="flex gap-2 text-2xl">
 						<Link
-							href={`mailto:?body=Check%20out%20this%20awesome%20post%20on%20Deepgram!%0A%0A${encodeURIComponent(post.frontmatter.title)}%0A%0A${encodeURIComponent(
-								shorturls.share
-							)}`}
+							href={`mailto:?body=Check%20out%20this%20awesome%20post%20on%20Deepgram!%0A%0A${encodeURIComponent(post.content.title)}%0A%0A${encodeURIComponent(shorturls.share)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="email" class="w-[1em] fill-iris" />
@@ -223,7 +239,7 @@ const schema = [
 							><Icon icon="twitter" class="w-[1em] fill-iris" />
 						</Link>
 						<Link
-							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shorturls.fullUrl)}&title=${encodeURIComponent(post.frontmatter.title)}`}
+							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shorturls.fullUrl)}&title=${encodeURIComponent(post.content.title)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="linkedin" class="w-[1em] fill-iris" />
@@ -250,7 +266,7 @@ const schema = [
 			</HasGutters>
 			<div class="mt-20">
 				<h3 class="mb-10 text-center">Related Resources</h3>
-				<RelatedResources post={post} />
+				<RelatedResources post={post} category={postCategory} />
 			</div>
 		</PrimarySection>
 	</article>

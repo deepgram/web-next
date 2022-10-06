@@ -1,16 +1,24 @@
 ---
-import BlogCard from "../../shared/components/cards/BlogCard.astro";
+import BlogCard from "../../shared/components/cards/BlogCardSB.astro";
+import { useStoryblokApi } from "@storyblok/astro";
 
-const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
-const sortedPosts = allPosts.sort((a, b) => {
-	const aDate = new Date(b.frontmatter.date);
-	const bDate = new Date(a.frontmatter.date);
-	return aDate.getTime() - bDate.getTime();
-});
+const sbApi = useStoryblokApi();
 
 const { post } = Astro.props;
-
-const relatedPosts = sortedPosts.filter((p) => p.frontmatter.category === post.frontmatter.category && p.file !== post.file).slice(0, 4);
+const { data: categoryPosts } = await sbApi.get("cdn/stories", {
+	by_slugs: "blog-posts/*",
+	filter_query: {
+		category: {
+			in: post.category,
+		},
+	},
+});
+const sortedPosts = categoryPosts.stories.sort((a, b) => {
+	const aDate = new Date(b.content.date);
+	const bDate = new Date(a.content.date);
+	return aDate.getTime() - bDate.getTime();
+});
+const relatedPosts = sortedPosts.slice(0, 4);
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid-flow-row-dense justify-items-center gap-4 lg:gap-6 text-left mb-10">

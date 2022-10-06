@@ -5,9 +5,9 @@ import PostDate from "./PostDate.astro";
 import PostMetaDivider from "./PostMetaDivider.astro";
 import PostCategory from "./PostCategory.astro";
 
-const { post } = Astro.props;
+const { post, authors, category } = Astro.props;
 
-const date = new Date(post.frontmatter.date);
+const date = new Date(post.first_published_at);
 const formattedDate = date.toLocaleDateString("en-US", {
 	year: "numeric",
 	month: "long",
@@ -16,8 +16,8 @@ const formattedDate = date.toLocaleDateString("en-US", {
 ---
 
 <div class="flex flex-row items-center my-4">
-	<PostAuthorImages authors={post.frontmatter.authors} />
+	<PostAuthorImages authors={authors} />
 	<p class="flex flex-col md:flex-none md:inline">
-		<PostAuthorNames authors={post.frontmatter.authors} /><PostMetaDivider /><PostDate post={post} /><PostCategory post={post} />
+		<PostAuthorNames authors={authors} /><PostMetaDivider /><PostDate post={post} /><PostCategory category={category} />
 	</p>
 </div>
