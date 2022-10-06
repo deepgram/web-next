@@ -5,7 +5,6 @@ import { storyblokEditable } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
 const { class: classes, blok } = Astro.props;
-console.log("blok", blok.slug);
 ---
 
 <a class={classes ? classes : ""} href={`/authors/${blok.slug}`} {...storyblokEditable(blok)}>

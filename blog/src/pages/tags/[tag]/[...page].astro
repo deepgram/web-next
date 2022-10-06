@@ -1,7 +1,7 @@
 ---
 import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../../layouts/Default.astro";
-import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+import GeneralPostsPage from "../../../components/posts/GeneralPostsPageSB.astro";
 import JsonLD from "../../../shared/components/meta/JsonLD.astro";
 import { useStoryblokApi } from "@storyblok/astro";
 
@@ -14,7 +14,6 @@ export async function getStaticPaths({ paginate }) {
 	const { data: allPosts } = await sbApi.get("cdn/stories", {
 		by_slugs: "blog-posts/*",
 	});
-	console.log("ALL POSTS", allPosts);
 	const sortedPosts = allPosts.stories.sort((a, b) => {
 		const aDate = new Date(b.content.date);
 		const bDate = new Date(a.content.date);
@@ -22,7 +21,6 @@ export async function getStaticPaths({ paginate }) {
 	});
 
 	return allBlogTags.map((tag) => {
-		console.log("HERAAE ATGSA", tag);
 		const filteredPosts = sortedPosts.filter((post) => {
 			if (post.tag_list) {
 				return post.tag_list.includes(tag.name);
