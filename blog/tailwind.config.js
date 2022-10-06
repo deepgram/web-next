@@ -15,7 +15,7 @@ module.exports = {
 				// desktop sizes
 				"hero-body-d": ["1.25rem", "1.75rem"],
 				"h6-d": ["1.125rem", "1.5rem"],
-				"h5-d": ["1.25rem", "1.625rem"],
+				"h5-d": ["1.25rem", "1.5rem"],
 				"h4-d": ["1.5rem", "1.75rem"],
 				"h3-d": ["1.875rem", "2.375rem"],
 				"h2-d": ["2.375rem", "2.75rem"],
@@ -24,7 +24,7 @@ module.exports = {
 
 				// mobile sizes
 				"h6-m": ["0.875rem", "1rem"],
-				"h5-m": ["1.125rem", "1.625rem"],
+				"h5-m": ["1.125rem", "1.55rem"],
 				"h4-m": ["1.25rem", "1.375rem"],
 				"h3-m": ["1.375rem", "1.625rem"],
 				"h2-m": ["1.625rem", "2rem"],
@@ -83,7 +83,7 @@ module.exports = {
 
 				lightIris: "rgba(150,162,255,1)",
 				iris: "rgba(93,111,208,1)",
-				darkIris: "rgba(17,42,175,1)",
+				darkIris: "rgba(52, 27, 203, 1)",
 
 				sunflower: "rgba(255, 211, 75, 1)",
 				gold: "rgba(251, 172, 24, 1)",

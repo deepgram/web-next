@@ -17,7 +17,7 @@ interface Whitepaper {
 }
 
 let whitepaper: Whitepaper;
-const { whitepaper: whitepaperSlug, oustideBlog, ...rest } = Astro.props as Props;
+const { whitepaper: whitepaperSlug, outsideBlog, ...rest } = Astro.props as Props;
 
 const allWhitepapers: Whitepaper[] = await getSluggedJson("whitepapers");
 
@@ -30,7 +30,7 @@ if (whitepaperSlug === "latest") {
 const { theme, title, image, script } = whitepaper;
 ---
 
-<AbstractPromo strapline="White Paper" oustideBlog={oustideBlog} backgroundImage={image} theme={theme} title={title} {...rest}>
+<AbstractPromo strapline="White Paper" outsideBlog={outsideBlog} backgroundImage={image} theme={theme} title={title} {...rest}>
 	<script set:html={script}></script>
 </AbstractPromo>
 
@@ -47,6 +47,7 @@ const { theme, title, image, script } = whitepaper;
 
 	:global(.hbspt-form label) {
 		@apply text-body-smallest;
+		@apply pb-4;
 	}
 
 	:global(.hbspt-form input[type="email"]),
@@ -59,6 +60,8 @@ const { theme, title, image, script } = whitepaper;
 	:global(.hbspt-form textarea) {
 		@apply placeholder:text-stone bg-almostBlack;
 		@apply w-full px-[1rem] pb-[1.1rem] pt-[1.15rem] text-[1rem] leading-[1rem];
+		height: 54px;
+		@apply mt-1;
 	}
 
 	:global(.hbspt-form) {

@@ -8,7 +8,7 @@ authors:
   - michael-jolley
 category: ai-and-engineering
 tags:
-  - speech-models
+  - whisper
   - machine-learning
 seo:
   title: "Try Whisper: OpenAI's Speech Recognition Model in 1 Minute"

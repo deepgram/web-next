@@ -1,7 +1,7 @@
 ---
-title: "Now Available: Deepgram Speech Recognition for Twilio Programmable Voice API"
+title: "Now Available: Deepgram Speech Recognition for Twilio Programmable Voice"
 description: Learn how you can use Deepgram's speech recognition with the Twilio
-  programmable voice API.
+  programmable voice.
 date: 2022-09-28T14:48:20.010Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1664378372/2209-dg-twilio-announcement-featured-1200x630_lakqpx.png
 authors:
