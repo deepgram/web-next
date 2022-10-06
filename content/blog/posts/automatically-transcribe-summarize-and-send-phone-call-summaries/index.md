@@ -11,7 +11,14 @@ category: tutorial
 tags:
   - javascript
   - twilio
+shorturls:
+  share: https://dpgr.am/bd1239a
+  twitter: https://dpgr.am/0daa6ee
+  linkedin: https://dpgr.am/e0856ca
+  reddit: https://dpgr.am/1e08cde
+  facebook: https://dpgr.am/969a1cd
 ---
+
 In this tutorial, we'll use Twilio Functions and Deepgram's [summarize](https://developers.deepgram.com/documentation/features/summarize/) feature to send call summaries via SMS once a conversation has ended.
 
 Users can call a Twilio phone number, which will be forwarded to your agent while recording. Once the call is completed, we will get a transcript and summary of the call using Deepgram. Finally, the summary will be sent to both the caller and the agent via SMS.
@@ -146,3 +153,4 @@ exports.handler = async function(context, event, callback) {
   return callback(null, true)
 }
 ```
+
