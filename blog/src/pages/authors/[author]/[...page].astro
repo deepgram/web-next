@@ -9,22 +9,28 @@ import Description from "../../../shared/components/meta/Description.astro";
 import Meta from "../../../shared/components/meta/Meta.astro";
 import Backlink from "../../../components/nav/Backlink.astro";
 import JsonLD from "../../../shared/components/meta/JsonLD.astro";
-import { getSluggedJson } from "../../../shared/util";
+
+import { useStoryblokApi } from "@storyblok/astro";
 
 export async function getStaticPaths({ paginate }) {
-	const authors = await getSluggedJson("blog/authors");
+	const sbApi = useStoryblokApi();
+	const { data: allPosts } = await sbApi.get("cdn/stories", {
+		by_slugs: "blog-posts/*",
+	});
+	const { data: authors } = await sbApi.get("cdn/stories", {
+		by_slugs: "authors/*",
+	});
 
-	const allPosts = await Astro.glob("../../../content/blog/posts/**/index.md");
-	const sortedPosts = allPosts.sort((a, b) => {
-		const aDate = new Date(b.frontmatter.date);
-		const bDate = new Date(a.frontmatter.date);
+	const sortedPosts = allPosts.stories.sort((a, b) => {
+		const aDate = new Date(b.content.date);
+		const bDate = new Date(a.content.date);
 		return aDate.getTime() - bDate.getTime();
 	});
 
-	return authors.map((author) => {
+	return authors.stories.map((author) => {
 		const posts = sortedPosts.filter((post) => {
-			if (post.frontmatter.authors) {
-				return post.frontmatter.authors.includes(author.slug);
+			if (post.content.authors) {
+				return post.content.authors.includes(author.uuid);
 			}
 
 			return false;
@@ -43,34 +49,34 @@ export async function getStaticPaths({ paginate }) {
 }
 
 const { page, author } = Astro.props;
-const name = author.title.split(" ");
+const name = author.content.title.split(" ");
 const firstName = name.pop();
 const lastName = name.join("");
 
 const socials = [];
 
-if (author.twitter) {
-	socials.push(`https://twitter.com/${author.twitter}`);
+if (author.content.twitter) {
+	socials.push(`https://twitter.com/${author.content.twitter}`);
 }
 
-if (author.linkedin) {
-	socials.push(author.linkedin);
+if (author.content.linkedin) {
+	socials.push(author.content.linkedin);
 }
 
-if (author.github) {
-	socials.push(author.github);
+if (author.content.github) {
+	socials.push(author.content.github);
 }
 
-if (author.twitch) {
-	socials.push(author.twitch);
+if (author.content.twitch) {
+	socials.push(author.content.twitch);
 }
 
-if (author.website) {
-	socials.push(author.website);
+if (author.content.website) {
+	socials.push(author.content.website);
 }
 
-if (author.youtube) {
-	socials.push(author.youtube);
+if (author.content.youtube) {
+	socials.push(author.content.youtube);
 }
 
 // build json schema as a string
@@ -78,9 +84,9 @@ const schema = [
 	{
 		"@context": "https://schema.org",
 		"@type": "Person",
-		image: author.picture ? author.picture : null,
-		name: author.title,
-		jobTitle: author.team ? (author.jobtitle ? author.jobtitle : "Deepgram Team") : author.alumni ? "Deepgram Alumni" : "Guest Author",
+		image: author.content.picture ? author.content.picture : null,
+		name: author.content.title,
+		jobTitle: author.content.team ? (author.content.jobtitle ? author.content.jobtitle : "Deepgram Team") : author.content.alumni ? "Deepgram Alumni" : "Guest Author",
 		url: Astro.url,
 		sameAs: socials,
 	},
@@ -109,7 +115,7 @@ const schema = [
 			{
 				"@type": "ListItem",
 				position: 4,
-				name: author.title,
+				name: author.content.title,
 			},
 		],
 	},
@@ -119,25 +125,35 @@ const schema = [
 <Layout>
 	<JsonLD slot="json:ld" {schema} />
 
-	<Title slot="head:title" title={`${author.title} - ${author.jobtitle} - Deepgram Blog ⚡️`} />
-	<Description slot="head:description" name="description" content={author.bio ? author.bio : `${author.title} is a ${author.jobtitle} writing content for the Deepgram blog.`} />
-	<Meta slot="og:title" property="og:title" content={`${author.title} - ${author.jobtitle} - Deepgram Blog ⚡️`} />
-	<Meta slot="og:description" property="og:description" content={author.bio ? author.bio : `${author.title} is a ${author.jobtitle} writing content for the Deepgram blog.`} />
+	<Title slot="head:title" title={`${author.content.title} - ${author.content.jobtitle} - Deepgram Blog ⚡️`} />
+	<Description
+		slot="head:description"
+		name="description"
+		content={author.content.bio ? author.content.bio : `${author.content.title} is a ${author.content.jobtitle} writing content for the Deepgram blog.`}
+	/>
+	<Meta slot="og:title" property="og:title" content={`${author.content.title} - ${author.content.jobtitle} - Deepgram Blog ⚡️`} />
+	<Meta
+		slot="og:description"
+		property="og:description"
+		content={author.content.bio ? author.content.bio : `${author.content.title} is a ${author.content.jobtitle} writing content for the Deepgram blog.`}
+	/>
 	<Meta slot="og:type" property="og:type" content="profile" />
-	{author.picture && <Meta slot="og:image" property="og:image" content={author.picture} />}
-	{
-		author.picture && (
-			<Meta
-				slot="og:image:alt"
-				property="og:image:alt"
-				content={author.bio ? `Profile pic for ${author.title}. ${author.bio}` : `Profile pic for ${author.title}, a ${author.jobtitle} writing content for the Deepgram blog.`}
-			/>
-		)
-	}
+	{author.content.picture.filename && <Meta slot="og:image" property="og:image" content={author.content.picture.filename} />}
+	{author.content.picture.filename && (
+		<Meta
+			slot="og:image:alt"
+			property="og:image:alt"
+			content={
+				author.content.bio
+					? `Profile pic for ${author.content.title}. ${author.content.bio}`
+					: `Profile pic for ${author.content.title}, a ${author.content.jobtitle} writing content for the Deepgram blog.`
+			}
+		/>
+	)}
 	<Meta slot="head" property="profile:username" content={author.slug} />
 	<Meta slot="head" property="profile:first_name" content={firstName} />
 	<Meta slot="head" property="profile:last_name" content={lastName} />
-	{author.twitter && <Meta slot="head" property="twitter:creator" content={`@${author.twitter}`} />}
+	{author.content.twitter && <Meta slot="head" property="twitter:creator" content={`@${author.content.twitter}`} />}
 
 	<ContrastSection contrast="darkCharcoal" background="white" bottomDivider="eclipse-divider" class="-mb-32">
 		<PrimarySection class="bg-darkCharcoal pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
@@ -147,6 +163,6 @@ const schema = [
 		</PrimarySection>
 	</ContrastSection>
 	<PrimarySection>
-		<AuthorPostsPage slug={`authors/${author.slug}`} page={page} posts={page.data} link="/authors" linkText="All authors" subtitle={`All ${author.title} posts`} />
+		<AuthorPostsPage slug={`authors/${author.slug}`} page={page} posts={page.data} link="/authors" linkText="All authors" subtitle={`All ${author.content.title} posts`} />
 	</PrimarySection>
 </Layout>

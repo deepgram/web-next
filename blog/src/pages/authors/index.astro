@@ -19,7 +19,6 @@ import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 const sbApi = useStoryblokApi();
 
 const { data } = await sbApi.get("cdn/stories", {
-	version: "draft",
 	by_slugs: "authors/*",
 });
 const authors = data.stories;

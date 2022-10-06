@@ -1,20 +1,29 @@
 ---
 import AuthorName from "../strings/AuthorName.astro";
 
+import { useStoryblokApi } from "@storyblok/astro";
+
 const { authors, class: classes } = Astro.props;
+const sbApi = useStoryblokApi();
+const { data: authorArray } = await sbApi.get("cdn/stories", {
+	by_slugs: "authors/*",
+	filter_query: {
+		author: {
+			in: authors.toString(),
+		},
+	},
+});
 ---
 
-{
-	authors && (
-		<ul class:list={["inline list-none p-0 text-xs font-bold uppercase", classes]}>
-			{authors.map((author, index, array) => (
-				<li class="inline-block p-0">
-					<AuthorName author={author} />
-				</li>
-			))}
-		</ul>
-	)
-}
+{authors && (
+	<ul class:list={["inline list-none p-0 text-xs font-bold uppercase", classes]}>
+		{authors.map((author, index, array) => (
+			<li class="inline-block p-0">
+				<AuthorName author={author} />
+			</li>
+		))}
+	</ul>
+)}
 
 <style>
 	ul li:not(:first-child)::before {
