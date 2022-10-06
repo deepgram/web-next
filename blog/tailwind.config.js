@@ -83,7 +83,7 @@ module.exports = {
 
 				lightIris: "rgba(150,162,255,1)",
 				iris: "rgba(93,111,208,1)",
-				darkIris: "rgba(17,42,175,1)",
+				darkIris: "rgba(52, 27, 203, 1)",
 
 				sunflower: "rgba(255, 211, 75, 1)",
 				gold: "rgba(251, 172, 24, 1)",
