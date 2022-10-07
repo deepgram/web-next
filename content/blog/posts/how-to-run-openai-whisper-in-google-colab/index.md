@@ -4,7 +4,7 @@ description: test
 date: 2022-10-11T21:00:38.699Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1664490424/blog/blog-placeholder_nhrr9p.png
 authors:
-  - michael-jolley
+  - ross-oconnell
 category: tutorial
 tags:
   - whisper
