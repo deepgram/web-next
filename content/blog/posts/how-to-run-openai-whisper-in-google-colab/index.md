@@ -2,7 +2,7 @@
 title: How to Run OpenAI Whisper in Google Colab
 description: test
 date: 2022-10-11T21:00:38.699Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1664490424/blog/blog-placeholder_nhrr9p.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1665154754/blog/how-to-run-openai-whisper-in-google-colab/2210-OpenAI-Whisper-in-Google-Colab-featured-1200x630_2x_fjnqcv.png
 authors:
   - ross-oconnell
 category: tutorial
