@@ -17,11 +17,14 @@ The researchers at [Deepgram](https://deepgram.com/) have enjoyed testing Whispe
 
 Google Colab provides a great preconfigured environment for trying out new tools like Whisper, so we've set up a [simple notebook](https://colab.research.google.com/drive/1ZjgNUs2r0x2A-ITG7LS2BC7J8Bo2oqt5?usp=sharing) there to let you see what Whisper can do. We set up the notebook so that you don't need anything extra to run it, you can just click through and go. The notebook will:
 
-- Install Whisper
-- Download audio from YouTube
-- Transcribe that audio with Whisper
-- Playback the audio in segments so you can check Whisper's work
+* Install Whisper
+* Download audio from YouTube
+* Transcribe that audio with Whisper
 
-- And finally... quantitatively evaluate Whisper's performance by computing the Word Error Rate (WER) for the transcription
+  ![Whisper transcription](https://res.cloudinary.com/deepgram/image/upload/v1665177914/blog/how-to-run-openai-whisper-in-google-colab/194656318-8a5b0e46-70b7-4017-aff3-43339334e60d_ribevw.png)
+* Playback the audio in segments so you can check Whisper's work
 
-We think the files we chose are fun, but if you have your own files that you want to test Whisper on, it should be easy to upload them and drop them in! 
+  ![Audio segments](https://res.cloudinary.com/deepgram/image/upload/v1665177914/blog/how-to-run-openai-whisper-in-google-colab/194656477-c9112775-ae9a-414a-847e-fa823b0b9a0b_ertwwq.png)
+* And finally... quantitatively evaluate Whisper's performance by computing the Word Error Rate (WER) for the transcription
+
+We think the files we chose are fun, but if you have your own files that you want to test Whisper on, it should be easy to upload them and drop them in!
