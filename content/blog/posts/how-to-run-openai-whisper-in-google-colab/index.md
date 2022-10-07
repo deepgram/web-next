@@ -13,19 +13,15 @@ tags:
 ---
 OpenAI's Whisper is an exciting new model for automatic speech recognition (ASR). It features a simple architecture based on [transformers](https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)), the same technology that drove recent advancements in natural language processing (NLP) and was trained on 680,000 hours of audio from a wide range of languages. The result is a new leader in open-source solutions for ASR.
 
-The researchers at [Deepgram](https://deepgram.com/) have enjoyed testing Whisper and seeing how it works, and we wanted to make it as easy as possible for you to try it out too. One of the things we've learned in our experiments is that, as with many deep learning tools, Whisper performs best when it has access to a GPU. While [downloading and installing Whisper](https://blog.deepgram.com/how-to-run-openai-whisper-in-command-line/) may be straightforward, configuring it to properly utilize a GPU (if you have one!) is a potential roadblock. 
+The researchers at [Deepgram](https://deepgram.com/) have enjoyed testing Whisper and seeing how it works, and we wanted to make it as easy as possible for you to try it out too. One of the things we've learned in our experiments is that, as with many deep learning tools, Whisper performs best when it has access to a GPU. While [downloading and installing Whisper](https://blog.deepgram.com/how-to-run-openai-whisper-in-command-line/) may be straightforward, configuring it to properly utilize a GPU (if you have one!) is a potential roadblock.
 
-Google Colab provides a great pre-configured environment for trying out new tools like Whisper, so we've set up a [simple notebook](https://colab.research.google.com/drive/1ZjgNUs2r0x2A-ITG7LS2BC7J8Bo2oqt5?usp=sharing) there to let you see what Whisper can do. We set up the notebook so that you don't need anything extra to run it, you can just click through and go. The notebook will:
-
-- Apply Whisper to two different audio files
-- Play back audio so that you can compare it to Whisper's transcript
-- Quantitatively evaluate Whisper's performance by computing the Word Error Rate (WER) for one of the files 
-
-We think the files we chose are fun, but if you have your own files that you want to test Whisper on, it should be easy to upload them and drop them in!
-
-The notebook will
+Google Colab provides a great preconfigured environment for trying out new tools like Whisper, so we've set up a [simple notebook](https://colab.research.google.com/drive/1ZjgNUs2r0x2A-ITG7LS2BC7J8Bo2oqt5?usp=sharing) there to let you see what Whisper can do. We set up the notebook so that you don't need anything extra to run it, you can just click through and go. The notebook will:
 
 - Install Whisper
 - Download audio from YouTube
 - Transcribe that audio with Whisper
+- Playback the audio in segments so you can check Whisper's work
 
+- And finally... quantitatively evaluate Whisper's performance by computing the Word Error Rate (WER) for the transcription
+
+We think the files we chose are fun, but if you have your own files that you want to test Whisper on, it should be easy to upload them and drop them in! 
