@@ -27,4 +27,4 @@ Google Colab provides a great preconfigured environment for trying out new tools
   ![Audio segments](https://res.cloudinary.com/deepgram/image/upload/v1665177914/blog/how-to-run-openai-whisper-in-google-colab/194656477-c9112775-ae9a-414a-847e-fa823b0b9a0b_ertwwq.png)
 * And finally... quantitatively evaluate Whisper's performance by computing the Word Error Rate (WER) for the transcription
 
-We think the files we chose are fun, but if you have your files that you want to test Whisper on, it should be easy to upload them and drop them in!
+We think the files we chose are fun, but if you have files that you want to test Whisper on, it should be easy to upload them and drop them in!
