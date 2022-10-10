@@ -1,10 +1,11 @@
 ---
+import render from "preact-render-to-string";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Layout from "../layouts/Default.astro";
 import HasGutters from "../shared/components/layout/HasGutters.astro";
 import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
 import "gfm.css/gfm.css";
-
+import Image from "../components/storyblok/Image.js";
 import PostImage from "../components/posts/PostImage.astro";
 import PostMeta from "../components/posts/PostMeta.astro";
 import PostHeading from "../components/posts/PostHeading.astro";
@@ -20,7 +21,7 @@ import MetaLink from "../shared/components/meta/Link.astro";
 import Backlink from "../components/nav/Backlink.astro";
 import InlineIcon from "../shared/components/general/InlineIcon.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
-import { useStoryblokApi, renderRichText } from "@storyblok/astro";
+import { useStoryblokApi, renderRichText, RichTextSchema } from "@storyblok/astro";
 
 export async function getStaticPaths() {
 	const sbApi = useStoryblokApi();
@@ -60,9 +61,21 @@ function getHeadingsSB(post) {
 const sbApi = useStoryblokApi();
 
 const { post } = Astro.props;
+// console.log("post text", post.content.body);
 const { slug } = Astro.params;
-const renderedRichText = renderRichText(post.content.body);
-
+const renderedRichText = renderRichText(post.content.body, {
+	resolver: (component, blok) => {
+		switch (component) {
+			case "Image":
+				// console.log("blok", <Image>);
+				// return `<img src=${blok.src} alt=${blok.alt} style='${blok.style + "margin-bottom: 20px;"}' />`;
+				return render(Image({ blok }));
+			default:
+				return null;
+		}
+	},
+});
+// console.log("renderedRichText", renderedRichText);
 const headings = await getHeadingsSB(post);
 
 const postAuthors = post.content.authors;
@@ -70,11 +83,9 @@ const { data: authorsWithContent } = await sbApi.get("cdn/stories", {
 	by_uuids: postAuthors.toString(),
 });
 
-console.log("post.content.category", post.content.category);
 const { data: categoryData } = await sbApi.get(`cdn/stories/${post.content.category}`, {
 	find_by: "uuid",
 });
-console.log("categoryData", categoryData);
 const postCategory = categoryData.story;
 const seo = {
 	title: post.content.seo_title ? post.content.seo_title : post.content.title,
