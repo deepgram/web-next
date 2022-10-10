@@ -146,7 +146,7 @@ We know our users need more than just raw transcripts, so we've built rich featu
             <th>Capability</th>
             <th>OpenAI Whisper</th>
             <th>Deepgram Enhanced</th>
-        <tr>
+        </tr>
     </thead>
     <tbody>
         <tr>
