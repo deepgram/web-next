@@ -2,7 +2,7 @@
 title: Exploring Whisper
 description: test
 date: 2022-10-13T20:59:18.175Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1664490424/blog/blog-placeholder_nhrr9p.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1665415885/blog/exploring-whisper/2210-Exploring_Whisper-featured-1200x630_2x_nut4uw.png
 authors:
   - julia-strout
 category: ai-and-engineering
