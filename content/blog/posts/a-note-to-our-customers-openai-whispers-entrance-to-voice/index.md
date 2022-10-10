@@ -131,7 +131,7 @@ Deepgram offers batch processing for pre-recorded audio as well as real-time pro
     <tr>
         <td>Latency (Live Streaming)</td>
         <td>N/A - not available for live streaming</td>
-        <td>&lt;300ms</td>
+        <td>&lt; 300ms</td>
     </tr>
 </table>
 
