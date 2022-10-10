@@ -11,7 +11,14 @@ category: tutorial
 tags:
   - podcast
   - python
+shorturls:
+  share: https://dpgr.am/a72f871
+  twitter: https://dpgr.am/1fe9f32
+  linkedin: https://dpgr.am/04de297
+  reddit: https://dpgr.am/5db89c8
+  facebook: https://dpgr.am/2fa7d4e
 ---
+
 What makes a legendary podcast? [Lex Fridman](https://en.wikipedia.org/wiki/Lex_Fridman) has gotten this down to an art. His podcasts are mostly over 2 hours long, and still get hundreds of thousands to millions of views on YouTube. Lex Fridman is not only a prolific podcaster but also a renowned AI researcher. He's known for as being a great interviewer and for commonly saying things like "poetic", "beautiful", "love", and "profound". We're curious, what makes Lex's podcast so successful?
 
 We know that Lex is a great host, he asks great questions, and he pushes back on his guests to clarify their statements. What else adds to his amazing podcasts? The guests and their topics of course. But what about the content? I wanted to dive even deeper. What can using Python to do ASR and text analysis tell us? Let's take a look.
@@ -30,7 +37,7 @@ The Python libraries can be installed with `pip install youtube_dl requests matp
 
 The first thing we need to do, as with most any ML task, is get the data. In this case, our data is the podcast audio. This is the part of the project that requires the use of `youtube_dl` and `ffmpeg`. We could go look for podcasts on another site, but luckily Lex posts all of his to YouTube and we have a YouTube downloader.
 
-We start by importing `youtube_dl` into our project. Next, we declare the parameters for downloading our YouTube videos. Our main goal here is to get the audio files, so we want the options to reflect that. 
+We start by importing `youtube_dl` into our project. Next, we declare the parameters for downloading our YouTube videos. Our main goal here is to get the audio files, so we want the options to reflect that.
 
 We choose `bestaudio/best` as our format to indicate that we want to download the best audio format. Then, we apply `postprocessors` which indicate what to do once we have the webpage. In this case, we tell `youtube_dl` that we want to use FFMPEG and extract the file into an `mp3` file at 192 kHz. Finally, the last option we provide is where to save the output. In this example, I'm saving it to `lex/audio`.
 
@@ -109,7 +116,7 @@ import os
 
 Let's create our first function. This function takes no parameters. It acts on all the transcripts in one go. First, we use the `os.listdir()` function to get all the transcripts. For each of these transcripts, we load the JSON file into a local variable for storage.
 
-Next, we need to parse the transcript. As shown above, the JSON format of the transcript has many embeds and has more information than we need. All we need from the JSON podcast transcript is the actual words of the transcript, we can disregard confidences and such. 
+Next, we need to parse the transcript. As shown above, the JSON format of the transcript has many embeds and has more information than we need. All we need from the JSON podcast transcript is the actual words of the transcript, we can disregard confidences and such.
 
 An example template of a JSON response from Deepgram with paragraphs and words looks like this:
 
@@ -166,7 +173,7 @@ An example template of a JSON response from Deepgram with paragraphs and words l
 }
 ```
 
-We dive into the results returned. Then the first element returned in the channels. Then the first element returned in the alternatives. From there, we extract the paragraph key for the set of paragraphs. Remember we used the `paragraphs = True` option earlier. 
+We dive into the results returned. Then the first element returned in the channels. Then the first element returned in the alternatives. From there, we extract the paragraph key for the set of paragraphs. Remember we used the `paragraphs = True` option earlier.
 
 From the paragraphs, we extract the speaker diarized transcript. Once we have that transcript, we loop through it and write each line to a new file. To create all the pretty transcripts, we just run the `create_transcripts` function. Another approach would be to have the loop of transcripts outside of the function and have the function just create one pretty script from a file.
 
@@ -309,7 +316,7 @@ words_said()
 
 ![Visualization of Lex Fridman podcast by speaker](https://res.cloudinary.com/deepgram/image/upload/v1664491641/blog/2022/10/automatic-podcast-transcription-for-analysis-lex-fridman/visualizing-lex-fridman-podcast-by-speaker_hz26kr.png)
 
-Now comes the part where we plot the values. For this part, we need the `matplotlib` and `json` libraries. We are going to plot both the word separation and the time analysis (in two plots). 
+Now comes the part where we plot the values. For this part, we need the `matplotlib` and `json` libraries. We are going to plot both the word separation and the time analysis (in two plots).
 
 First, we plot the time speaking graph. We open up the graph and load in the JSON file as a dictionary. Next, we split the dictionary into values for time spoken by Lex vs the Guest as well as create a list containing the names of the guests. We pass these lists to `matplotlib` and give it some options to make the graph pretty and to stack the bars.
 
@@ -388,11 +395,11 @@ vis_words()
 
 ### Visualizing Time Speaking and Words Said by Percentage
 
-Since Lex's podcasts are all different lengths, we figured it would be helpful to also check out percentages. So here are the corresponding graphs but with the percentage of time spoken and percentage of words said. As you can see, Lex averages about 40% of the words said, but only 25% for the length of time speaking. 
+Since Lex's podcasts are all different lengths, we figured it would be helpful to also check out percentages. So here are the corresponding graphs but with the percentage of time spoken and percentage of words said. As you can see, Lex averages about 40% of the words said, but only 25% for the length of time speaking.
 
 ![Lex vs guests speaking time by percentage visualization](https://res.cloudinary.com/deepgram/image/upload/v1664491861/blog/2022/10/automatic-podcast-transcription-for-analysis-lex-fridman/lex-vs-guests-speaking-time-by-percentage_qb88vn.png)
 
-The code to create the visualizations is below. The only functional difference from the earlier visualizations is the three lines to convert the values into percentages. First, we sum the values in the time or word tracking dictionary. Next, we re-assign the value of each key to its value divided by the sum. This gives us a proportion to measure against. 
+The code to create the visualizations is below. The only functional difference from the earlier visualizations is the three lines to convert the values into percentages. First, we sum the values in the time or word tracking dictionary. Next, we re-assign the value of each key to its value divided by the sum. This gives us a proportion to measure against.
 
 ```python
 def vis_time_percentage():
@@ -514,7 +521,7 @@ nlp()
 
 ### A Look into the Most Common Phrases from Lex
 
-Let's take a look into Lex Fridman's most common phrases via these podcast transcripts. As we mentioned above, Lex is known for saying things like "beautiful", "poetic", "loving", and more. Does the transcript agree though? 
+Let's take a look into Lex Fridman's most common phrases via these podcast transcripts. As we mentioned above, Lex is known for saying things like "beautiful", "poetic", "loving", and more. Does the transcript agree though?
 
 Looking through Lex Fridman's most common phrases from [this folder on GitHub](https://github.com/ytang07/transcribe_and_analyze_podcasts/tree/main/lex/most_common_phrases), we can see that he does use the words beautiful, loving, and poetic often enough that they get picked up! We can also see that a lot of the time, these conversations center around types of organizations and people.
 
@@ -627,7 +634,7 @@ def main():
 
 The last piece of analysis that we do in this post is going to look at the summaries of the podcasts we transcribed. Summaries provide a quick look at an overview of the given text. In this case, it's especially nice when we don't want to read 2+ hours of a podcast transcript. We use The Text API's [AI text summarizer](https://pythonalgos.com/build-your-own-ai-text-summarizer-in-python/) to create a summary of each podcast.
 
-We create a summary in much the same way we extract the named entities. We split the text file up, again into blocks of 1500 sentences max, and then summarize them and smash them together. We run the requests sequentially and then store the returned values into a text file. You can read all the [summaries of the transcribed podcasts on GitHub](https://github.com/ytang07/transcribe_and_analyze_podcasts/tree/main/lex/summarize). 
+We create a summary in much the same way we extract the named entities. We split the text file up, again into blocks of 1500 sentences max, and then summarize them and smash them together. We run the requests sequentially and then store the returned values into a text file. You can read all the [summaries of the transcribed podcasts on GitHub](https://github.com/ytang07/transcribe_and_analyze_podcasts/tree/main/lex/summarize).
 
 ```python
 def summarize(text: str, filename: str):
@@ -669,3 +676,4 @@ The first thing we did was take a look at talk time and words said. We plot our 
 Next, we use text analysis with The Text API to analyze the podcast transcripts further. First, we used it to find the most common phrases. This finding led us to confirm that Lex does indeed use the words "beautiful", "poetic", and "loving" a lot. After finding the most common phrases, we went and looked at how to extract the named entities and get the summaries.
 
 To recap: our podcast transcription + NLP analysis gave us a glimpse into the structure of the legendary podcast series by Lex Fridman. It showed us that Lex lets his guests talk much more than he does, and that he does use the words he's known for using a lot. Feel free to derive your own conclusions from the provided NER files and summaries from the GitHub repo.
+
