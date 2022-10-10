@@ -80,9 +80,7 @@ To give you a better sense of how Whisper and Deepgram accuracies compare on rea
     </tr>
 </table>
 
-
-
-Deepgram's Enhanced model outperform's Whisper on real-word data.
+![](https://res.cloudinary.com/deepgram/image/upload/v1665439308/blog/a-note-to-our-customers-openai-whispers-entrance-to-voice/194953371-601609cf-51ec-4d7b-90cd-c06aa77bcabf_yah89r.png "Deepgram's Enhanced model outperform's Whisper on real-word data.")
 
 You may have noticed that accuracy gains level off with Whisper's Medium and Large models, which might seem counterintuitive at first glance. There are several possible interpretations of this result, but the most salient is that while model size may be loosely correlated with accuracy, the correlation can be offset by a variety of factors. Our extensive research on speech processing through end-to-end deep learning suggests that when transformer models like Whisper encounter data that they aren't sure how to interpret (e.g., noisy phonecall data), they tend to generate outputs verbosely rather than being quiet. A larger model has more capacity to memorize text and be inventive, and so will tend to be more verbose in its errors, driving accuracy down. 
 
@@ -135,6 +133,8 @@ Deepgram offers batch processing for pre-recorded audio as well as real-time pro
     </tr>
 </table>
 
+![](https://res.cloudinary.com/deepgram/image/upload/v1665439308/blog/a-note-to-our-customers-openai-whispers-entrance-to-voice/194954878-c05182bb-e637-4132-9706-6cae1e4a6434_jdae8u.png)
+
 ## Functionality and Features
 
 We know our users need more than just raw transcripts, so we've built rich features to help everyone get the most out of their audio. Below is a comparison of functionality and features offered by Deepgram and Whisper.
@@ -181,123 +181,189 @@ We know our users need more than just raw transcripts, so we've built rich featu
         </tr>
         <tr>
             <td></td>
+            <td>Language Support*</td>
+            <td>38*</td>
+            <td>30</td>
+        </tr>
+        <tr>
             <td></td>
+            <td>Use Case Models</td>
+            <td>1 - General</td>
+            <td>7</td>
+        </tr>
+        <tr>
             <td></td>
+            <td>Model Training</td>
             <td></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Word Level Timestamps</td>
+            <td></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Punctuation</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Numeral Formatting</td>
+            <td>✅</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Paragraphs</td>
+            <td></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Utterances</td>
+            <td></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Find & Replace</td>
+            <td></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Profanity Filtering</td>
+            <td>✅\*\*</td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Deep Search</td>
+            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Keyword Boosting</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Interim Results</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Voice Activity Detection</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Request Tagging</td>
             <td></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Speech Understanding</td>
+            <td>Speaker Diarization</td>
             <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Language Detection</td>
+            <td>✅</td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Entity Detection</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Redaction</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Summarization</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Topic Detection</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Sentiment Analysis</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>Language Translation</td>
+            <td>✅</td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Speaker ID</td>
             <td></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Enterprise Support</td>
+            <td>Hosted or Virtual Private Cloud</td>
             <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>On-Prem Deployment</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Dedicated Customer Support</td>
             <td></td>
+            <td>✅</td>
+        </tr>
+        <tr>
+            <td>Partner Integrations</td>
+            <td>UniMRCP</td>
             <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
         <tr>
             <td></td>
+            <td>Twilio</td>
             <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>✅</td>
         </tr>
     </tbody>
 </table>
 
 * Whisper has 38 language models available at WER of 30% or less, as assessed on "easy" audio files. We consider 30% WER to be the outer limit of transcript usability, and consider WER of 15% to be the threshold of a high quality model. We therefore exclude their language models for which OpenAI's own studies indicate a WER of greater than 30%. Whisper's documentation states it achieves "strong ASR results in ~10 languages."
-** Profanity Filtering is listed as a Whisper feature for English models but our testing of Whisper indicates that the filter has inconsistent performance. We recommend further testing of this feature before adoption in production settings.
+  \*\* Profanity Filtering is listed as a Whisper feature for English models but our testing of Whisper indicates that the filter has inconsistent performance. We recommend further testing of this feature before adoption in production settings.
 
 ## The Bottom Line
 
