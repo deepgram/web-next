@@ -5,7 +5,7 @@ import { useStoryblokApi } from "@storyblok/astro";
 const sbApi = useStoryblokApi();
 
 const { tags, link } = Astro.props;
-const tagsArray = tags.slice(0, 3);
+const tagsArray = tags ? tags.slice(0, 3) : [];
 ---
 
 <ul class="pt-3 flex text-sm font-medium space-x-2">
@@ -20,5 +20,4 @@ const tagsArray = tags.slice(0, 3);
 				{!link && <>#{tag}</>}
 			</li>
 		))}
-
 </ul>
