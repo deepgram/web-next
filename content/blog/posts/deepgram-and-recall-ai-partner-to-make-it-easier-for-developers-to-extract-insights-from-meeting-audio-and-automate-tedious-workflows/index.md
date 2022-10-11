@@ -10,7 +10,14 @@ authors:
 category: product-news
 tags:
   - meetings
+shorturls:
+  share: https://dpgr.am/e89f348
+  twitter: https://dpgr.am/a2f0e18
+  linkedin: https://dpgr.am/9293d5b
+  reddit: https://dpgr.am/d6b861c
+  facebook: https://dpgr.am/d0a8252
 ---
+
 Developers can get started with Deepgram and Recall.ai with just a few lines of code, across variety of use cases
 
 San Francisco, CA – [Deepgram](http://www.deepgram.com), a leading AI speech recognition and understanding company, and [Recall.ai](https://www.recall.ai/), a real-time meeting API provider, today announced a partnership to streamline the process for developers to extract data from virtual meetings, making it easier to gain insights from voice data and automate tedious workflows to maximize speed, accuracy and scale, all while using minimal lines of code.  
@@ -21,13 +28,11 @@ Recall.ai provides companies with a single Developer API to access real-time mee
 
 Real-time virtual meeting integrations can be difficult to implement at scale, but with Recall.ai’s unified framework, companies can benefit from a single API that makes it easier to trigger actions based on who is speaking, when people join or leave a meeting, and more. Because Recall.ai can integrate with every virtual meeting platform, it reduces the overall development time and ongoing costs. Through this partnership, users can perform the following tasks: 
 
-* Transcribe conversations of real-time meeting platforms
-* Create a speaker-separated transcript with usernames 
-* Accurately transcribe live key phrases, named entities, numerals
-* Calculate speaker turn counts and talk-time per speaker live
-* Auto detect and classify languages spoken in meeting recordings
-
-
+*   Transcribe conversations of real-time meeting platforms
+*   Create a speaker-separated transcript with usernames 
+*   Accurately transcribe live key phrases, named entities, numerals
+*   Calculate speaker turn counts and talk-time per speaker live
+*   Auto detect and classify languages spoken in meeting recordings
 
 “At Deepgram, we’re passionate about innovating technology that alleviates developers' workloads,” said Scott Stephenson, CEO of Deepgram. “Recall.ai’s partnership puts control back in the hands of developers, and that control will help catalyze the next generation of voice experiences for customers.” 
 
@@ -39,10 +44,9 @@ Deepgram’s AI speech platform is revolutionizing the speech-to-text (STT) mark
 
 Press Contact
 
-[deepgram@inkhouse.com](mailto:deepgram@inkhouse.com) 
-
-
+<deepgram@inkhouse.com> 
 
 **About Recall.ai**
 
 Recall.ai provides a single API for accessing real-time meeting data from platforms like Zoom, Microsoft Teams, Google Meet, and more. Real-time meeting integrations require a lot of moving parts, so Recall.ai provides a unified framework that simplifies this process. Recall.ai makes it easy to trigger actions based on who is speaking, when people join or leave a meeting, and more, all with a single API for every platform which helps lower development time and upkeep costs. The API can be used with both audio and video streams, even for meeting platforms that do not have a publicly accessible API.
+
