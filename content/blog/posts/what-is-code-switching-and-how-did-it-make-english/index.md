@@ -27,7 +27,6 @@ shorturls:
   reddit: https://dpgr.am/5b96df7
   facebook: https://dpgr.am/04a9fb2
 ---
-
 You don't know this, but you don't speak English. You actually speak Fronglish—a mix of Anglo-Saxon, Norse, and Old French. You eat in French: pork, beef, poultry are French words. However, you hunt (and slaughter) in English: boar, cow, goose. Surprisingly, while you are born in English, the end of life comes in Viking. Death is taboo in many cultures, and so often the words used to refer to "the end" are euphemisms or foreign words. The word "to die" is a Norse word borrowing. 
 
 In addition to speaking fluent Fronglish, I also can speak Spanglish. I was raised in a more-or-less bilingual home—my mother is Chilean, my father a New Yorker. As a result, I have an easy time in California, where Spanglish is spoken as commonly as English and Spanish. I can read the New Yorker as well as Revueltas, a Chilean magazine. By contrast, being a Fronglish speaker is not sufficient training to understand French or Norwegian. This is different from being a Spanglish speaker. How do we explain this? 
@@ -56,8 +55,8 @@ But wait, If you go to a taco truck and say, "Can I have three birria tacos and 
 
 This second definition belies a few fascinating notions. 
 
-1.  This definition does not account for word borrowings.
-2.  For it to work, we must assume that the 2+ speakers have reasonably comparable understandings of the entirety of the code-switched languages. 
+1. This definition does not account for word borrowings.
+2. For it to work, we must assume that the 2+ speakers have reasonably comparable understandings of the entirety of the code-switched languages. 
 
 Let's unpack these concepts.
 
@@ -65,8 +64,10 @@ Let's unpack these concepts.
 
 Using words from a different culture in your speech does not necessarily entail that you are switching back and forth between languages. When you order a [taco](http://etimologias.dechile.net/?taco.n), refer to the [zeitgeist](https://www.etymonline.com/word/zeitgeist#etymonline_v_5006), or even say the word [Saturday](https://www.etymonline.com/word/Saturday#etymonline_v_22771), you are not engaging in code-switching despite the fact that none of those words is of English origin. No language is pure in any sense of the word. Words, grammar, ideas, technology, art, just about every element in any one culture has been inherited over the millennia through contact with “different” people.
 
-People come into contact with each other for different reasons, for different durations of time and as a result, cultural contact affects language and culture in unpredictable ways. Trade, war, migration, and invasion are four of the myriad reasons why large groups of people leave their home and travel to distant lands and interact with each other.\
-\
+People come into contact with each other for different reasons, for different durations of time and as a result, cultural contact affects language and culture in unpredictable ways. Trade, war, migration, and invasion are four of the myriad reasons why large groups of people leave their home and travel to distant lands and interact with each other.
+
+![](https://res.cloudinary.com/deepgram/image/upload/v1665500852/victor-ajayi-RUWOIbf01HY-unsplash_wq5mdf.jpg)
+
 In the middle ages, European traders traveled along long difficult roads and plied treacherous waters looking for things to trade. Deals were made, and traders returned with useful and beautiful things. 
 
 The European traders who did business with Turks, Indians, Persians, Morroccans, etc. often learned local tongues. When they returned home and spoke of the exotic places and things they had seen, they used their own vernaculars (or Latin), inserting foreign words where needed. While the traders came by these ideas and terms through long-term or iterative contact with “foreign” peoples, the majority of their countrymen never even left their village when they learned the exotic words. 
@@ -108,7 +109,7 @@ When people come together and share ideas, they just use the language, phrases, 
 
 ## How Code-Switching Helped Create English
 
-By the late 14th century, the Norman nobility in London had been intermarring with local pre-conquest nobility and as a result had begun to speak some English (Middle English), the language of Chaucer. As the Anglo-Normans gained power French remained the prestige language. But as the years wore on the value of Anglo-Saxon gained value and they code-switched with the fancy French and Latin, but used the structure of their “native” tongue. 
+By the late 14th century, the Norman nobility in London had been intermarrying with local pre-conquest nobility and as a result had begun to speak some English (Middle English), the language of Chaucer. As the Anglo-Normans gained power French remained the prestige language. But as the years wore on, the value of Anglo-Saxon gained increased and they code-switched with the fancy French and Latin, but used the structure of their “native” tongue. 
 
 The plebeians probably spoke a less Frenchy form of Middle English but whatever they spoke was not fit to print. Only the language of the fancy people was immortalized on sheep’s skins—parchment. That simplified Anglo-Saxon, full of French terms, was the prestige language of the capital. The farther you got from the throne, the less Frenchy was the Anglo-Saxon you heard. The power of this particular code-switched language became cemented when [John Wycliffe used it to translate the Bible](https://textusreceptusbibles.com/Wycliffe/17/1).\
 \
@@ -120,13 +121,12 @@ This form of “English” became the prestige language in the British Isles whe
 
 Code-switching is a communicative behavior in which two or more speakers are able to communicate more fully by using words, set phrases, grammar, and other cultural elements from different languages. In many code-switching situations, speakers have at their disposal something like 2x the synonyms and grammatical structures than do the speakers of any of the languages used in code-switching which means that there is choice in what gets said and how. Depending on unpredictable sociological factors, code-switching can lead to language change, even to new languages. Most of the time, code-switching is simply a more complete way to share ideas with others when you have more than one language in common.
 
-The notion that all participants need to be well versed in the languages/cultures involved in code-switching is important as it has serious implications for AI. Back in 1100, you could not have understood fancy codewitched Anglo-Saxon/Old French unless you knew both languages. Likewise, today, to create automatic speech recognition for Spanglish or Hinglish, it is not enough to “mix” two “pure” datasets and train a model. This suggests that somehow code-switched speech is more than the sum of the component languages. 
+The notion that all participants need to be well versed in the languages/cultures involved in code-switching is important as it has serious implications for AI. Back in 1100, you could not have understood fancy code-switched Anglo-Saxon/Old French unless you knew both languages. Likewise, today, to create automatic speech recognition for Spanglish or Hinglish, it is not enough to “mix” two “pure” datasets and train a model. This suggests that somehow code-switched speech is more than the sum of the component languages. 
 
 As a result, you have to treat code-switched speech like its own language or dialect. If you have read this essay you won’t find this assertion to be very surprising. In our next article we will look at some data science-based approaches to drawing a line between code-switching and other forms of language switching. 
 
 ### Additional Reading
 
-*   [Indigenous languages of the Americas at Wikipedia](https://en.wikipedia.org/wiki/Indigenous_languages_of_the_Americas)
-*   [The Anglo-Saxon Bible](https://www.bible-researcher.com/anglosaxon.html)
-*   [The Lord’s Prayer over time](https://www.wtamu.edu/~mjacobsen/lp.htm)
-
+* [Indigenous languages of the Americas at Wikipedia](https://en.wikipedia.org/wiki/Indigenous_languages_of_the_Americas)
+* [The Anglo-Saxon Bible](https://www.bible-researcher.com/anglosaxon.html)
+* [The Lord’s Prayer over time](https://www.wtamu.edu/~mjacobsen/lp.htm)
