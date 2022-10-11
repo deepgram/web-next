@@ -10,6 +10,7 @@ category: linguistics
 tags:
   - code-switching
   - english
+  - language
 seo:
   description: What is code-switching, why is it an important concept to
     understand, and how did it make English what it is today? Read on to find
