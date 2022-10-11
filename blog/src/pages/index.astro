@@ -27,10 +27,10 @@ const { data: featured } = await sbApi.get("cdn/stories", {
 	by_slugs: "featured-posts",
 });
 const featuredData = featured.stories[0].content;
-const [featuredPost] = allPosts.stories.filter((post) => {
+const featuredPosts = allPosts.stories.filter((post) => {
 	return post.uuid === featuredData.Featured.id;
 });
-
+const featuredPost = featuredPosts[0];
 const homepagePosts = allPosts.stories.filter((post) => {
 	return featuredData.Homepage.some((id) => id === post.uuid);
 });

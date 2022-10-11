@@ -5,7 +5,6 @@ import Layout from "../layouts/Default.astro";
 import HasGutters from "../shared/components/layout/HasGutters.astro";
 import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
 import "gfm.css/gfm.css";
-import Image from "../components/storyblok/Image.js";
 import PostImage from "../components/posts/PostImage.astro";
 import PostMeta from "../components/posts/PostMeta.astro";
 import PostHeading from "../components/posts/PostHeading.astro";
@@ -22,6 +21,7 @@ import Backlink from "../components/nav/Backlink.astro";
 import InlineIcon from "../shared/components/general/InlineIcon.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
 import { useStoryblokApi, renderRichText, RichTextSchema } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
 export async function getStaticPaths() {
 	const sbApi = useStoryblokApi();
@@ -49,11 +49,23 @@ export async function getStaticPaths() {
 	});
 }
 
+function snakeCase(heading) {
+	return heading
+		.toLowerCase()
+		.replace(/[^a-z0-9]/g, "-")
+		.replace(/-+/g, "-");
+}
+
 function getHeadingsSB(post) {
-	const headings = post.content.body.content.filter((content) => {
-		if (content.type === "heading") {
-			return content.content.text;
-		}
+	const richTextSections = post.content.body.filter((section) => {
+		return section.component === "RichTextSection";
+	});
+	const [headings] = richTextSections.map((section) => {
+		return section.content.content.filter((richText) => {
+			if (richText.type === "heading") {
+				return richText.content[0].text;
+			}
+		});
 	});
 
 	return headings;
@@ -61,23 +73,9 @@ function getHeadingsSB(post) {
 const sbApi = useStoryblokApi();
 
 const { post } = Astro.props;
-// console.log("post text", post.content.body);
 const { slug } = Astro.params;
-const renderedRichText = renderRichText(post.content.body, {
-	resolver: (component, blok) => {
-		switch (component) {
-			case "Image":
-				// console.log("blok", <Image>);
-				// return `<img src=${blok.src} alt=${blok.alt} style='${blok.style + "margin-bottom: 20px;"}' />`;
-				return render(Image({ blok }));
-			default:
-				return null;
-		}
-	},
-});
-// console.log("renderedRichText", renderedRichText);
-const headings = await getHeadingsSB(post);
 
+const headings = await getHeadingsSB(post);
 const postAuthors = post.content.authors;
 const { data: authorsWithContent } = await sbApi.get("cdn/stories", {
 	by_uuids: postAuthors.toString(),
@@ -226,9 +224,8 @@ const schema = [
 		<PrimarySection class="mt-32 xl:mt-56">
 			<HasGutters>
 				<div class="post">
-					<div class="post-prose markdown-body">
-						<!-- <post.Content /> -->
-						<div set:html={renderedRichText}></div>
+					<div class="post-prose ">
+						{post.content.body.map((section) => <StoryblokComponent blok={section} />)}
 					</div>
 					<h4>More with these tags:</h4>
 					<TagsList tags={post.tag_list} link />
@@ -262,15 +259,16 @@ const schema = [
 						</Link>
 					</div>
 
-					{headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">In this blog post</h5>}
+					{headings && headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">In this blog post</h5>}
 					<ul class="hidden xl:block">
-						{headings.length > 0 &&
+						{headings &&
+							headings.length > 0 &&
 							headings
-								.filter((heading) => heading.depth <= 2)
+								.filter((heading) => heading.attrs.level <= 2)
 								.map((heading) => (
 									<li class="pb-4">
-										<Link class="text-black" href={`#${heading.slug}`}>
-											{heading.text}
+										<Link class="text-black" href={`#${snakeCase(heading.content[0].text)}`}>
+											{heading.content[0].text}
 										</Link>
 									</li>
 								))}
