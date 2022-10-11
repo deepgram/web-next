@@ -19,7 +19,14 @@ og:
   description: What is code-switching, why is it an important concept to
     understand, and how did it make English what it is today? Read on to find
     out.
+shorturls:
+  share: https://dpgr.am/9db52f2
+  twitter: https://dpgr.am/2b5e3fb
+  linkedin: https://dpgr.am/c96294f
+  reddit: https://dpgr.am/5b96df7
+  facebook: https://dpgr.am/04a9fb2
 ---
+
 You don't know this, but you don't speak English. You actually speak Fronglish—a mix of Anglo-Saxon, Norse, and Old French. You eat in French: pork, beef, poultry are French words. However, you hunt (and slaughter) in English: boar, cow, goose. Surprisingly, while you are born in English, the end of life comes in Viking. Death is taboo in many cultures, and so often the words used to refer to "the end" are euphemisms or foreign words. The word "to die" is a Norse word borrowing. 
 
 In addition to speaking fluent Fronglish, I also can speak Spanglish. I was raised in a more-or-less bilingual home—my mother is Chilean, my father a New Yorker. As a result, I have an easy time in California, where Spanglish is spoken as commonly as English and Spanish. I can read the New Yorker as well as Revueltas, a Chilean magazine. By contrast, being a Fronglish speaker is not sufficient training to understand French or Norwegian. This is different from being a Spanglish speaker. How do we explain this? 
@@ -48,8 +55,8 @@ But wait, If you go to a taco truck and say, "Can I have three birria tacos and 
 
 This second definition belies a few fascinating notions. 
 
-1. This definition does not account for word borrowings.
-2. For it to work, we must assume that the 2+ speakers have reasonably comparable understandings of the entirety of the code-switched languages. 
+1.  This definition does not account for word borrowings.
+2.  For it to work, we must assume that the 2+ speakers have reasonably comparable understandings of the entirety of the code-switched languages. 
 
 Let's unpack these concepts.
 
@@ -119,6 +126,7 @@ As a result, you have to treat code-switched speech like its own language or dia
 
 ### Additional Reading
 
-* [Indigenous languages of the Americas at Wikipedia](https://en.wikipedia.org/wiki/Indigenous_languages_of_the_Americas)
-* [The Anglo-Saxon Bible](https://www.bible-researcher.com/anglosaxon.html)
-* [The Lord’s Prayer over time](https://www.wtamu.edu/~mjacobsen/lp.htm)
+*   [Indigenous languages of the Americas at Wikipedia](https://en.wikipedia.org/wiki/Indigenous_languages_of_the_Americas)
+*   [The Anglo-Saxon Bible](https://www.bible-researcher.com/anglosaxon.html)
+*   [The Lord’s Prayer over time](https://www.wtamu.edu/~mjacobsen/lp.htm)
+
