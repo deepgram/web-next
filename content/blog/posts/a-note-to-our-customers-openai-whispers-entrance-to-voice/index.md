@@ -1,8 +1,8 @@
 ---
-title: "A Note to our Customers: OpenAI Whisper's Entrance to Voice"
-description: test
+title: "A Note to our Customers: OpenAI Whisper's Entrance into Voice"
+description: "A Note to our Customers: OpenAI Whisper's Entrance into Voice"
 date: 2022-10-10T21:06:02.428Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1664490424/blog/blog-placeholder_nhrr9p.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1665448168/blog/a-note-to-our-customers-openai-whispers-entrance-to-voice/2210-Whispers-Entrance-to-Voice-featured-1200x630_2x_rp7bnz.png
 authors:
   - sam-zegas
 category: product-news
@@ -236,7 +236,7 @@ We know our users need more than just raw transcripts, so we've built rich featu
         <tr>
             <td></td>
             <td>Profanity Filtering</td>
-            <td>✅\*\*</td>
+            <td>✅\\*\\*</td>
             <td>✅</td>
         </tr>
         <tr>
@@ -362,8 +362,8 @@ We know our users need more than just raw transcripts, so we've built rich featu
     </tbody>
 </table>
 
-* Whisper has 38 language models available at WER of 30% or less, as assessed on "easy" audio files. We consider 30% WER to be the outer limit of transcript usability, and consider WER of 15% to be the threshold of a high quality model. We therefore exclude their language models for which OpenAI's own studies indicate a WER of greater than 30%. Whisper's documentation states it achieves "strong ASR results in ~10 languages."
-  \*\* Profanity Filtering is listed as a Whisper feature for English models but our testing of Whisper indicates that the filter has inconsistent performance. We recommend further testing of this feature before adoption in production settings.
+Whisper has 38 language models available at WER of 30% or less, as assessed on "easy" audio files. We consider 30% WER to be the outer limit of transcript usability, and consider WER of 15% to be the threshold of a high quality model. We therefore exclude their language models for which OpenAI's own studies indicate a WER of greater than 30%. Whisper's documentation states it achieves "strong ASR results in ~10 languages."
+\*\* Profanity Filtering is listed as a Whisper feature for English models but our testing of Whisper indicates that the filter has inconsistent performance. We recommend further testing of this feature before adoption in production settings.
 
 ## The Bottom Line
 
