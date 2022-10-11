@@ -10,6 +10,7 @@ category: linguistics
 tags:
   - code-switching
   - english
+  - language
 seo:
   description: What is code-switching, why is it an important concept to
     understand, and how did it make English what it is today? Read on to find
@@ -19,14 +20,7 @@ og:
   description: What is code-switching, why is it an important concept to
     understand, and how did it make English what it is today? Read on to find
     out.
-shorturls:
-  share: https://dpgr.am/9db52f2
-  twitter: https://dpgr.am/2b5e3fb
-  linkedin: https://dpgr.am/c96294f
-  reddit: https://dpgr.am/5b96df7
-  facebook: https://dpgr.am/04a9fb2
 ---
-
 You don't know this, but you don't speak English. You actually speak Fronglish—a mix of Anglo-Saxon, Norse, and Old French. You eat in French: pork, beef, poultry are French words. However, you hunt (and slaughter) in English: boar, cow, goose. Surprisingly, while you are born in English, the end of life comes in Viking. Death is taboo in many cultures, and so often the words used to refer to "the end" are euphemisms or foreign words. The word "to die" is a Norse word borrowing. 
 
 In addition to speaking fluent Fronglish, I also can speak Spanglish. I was raised in a more-or-less bilingual home—my mother is Chilean, my father a New Yorker. As a result, I have an easy time in California, where Spanglish is spoken as commonly as English and Spanish. I can read the New Yorker as well as Revueltas, a Chilean magazine. By contrast, being a Fronglish speaker is not sufficient training to understand French or Norwegian. This is different from being a Spanglish speaker. How do we explain this? 
@@ -55,8 +49,8 @@ But wait, If you go to a taco truck and say, "Can I have three birria tacos and 
 
 This second definition belies a few fascinating notions. 
 
-1.  This definition does not account for word borrowings.
-2.  For it to work, we must assume that the 2+ speakers have reasonably comparable understandings of the entirety of the code-switched languages. 
+1. This definition does not account for word borrowings.
+2. For it to work, we must assume that the 2+ speakers have reasonably comparable understandings of the entirety of the code-switched languages. 
 
 Let's unpack these concepts.
 
@@ -83,7 +77,6 @@ For example, the Anglo-Saxons learned the words beef, pork, and poultry as part 
 In the movie Braveheart, the plucky rebel William Wallace impresses the princess and audiences with his ability to speak French and Latin, a sign that he was educated and a worthy general not just a peasant. Presumably, the historic William Wallace spoke Scotts, some version of Middle English, and, according to Mr. Gibson, Latin and French. At that time, it would be doubtful that the princess would have known much (Middle) English (or Scotts), unless of course her wet-nurse had taught her.
 
 ![](https://lh4.googleusercontent.com/dKyqTEvhiHIO_YNxdkifQb6XeGsIOShDu3k30tSYgy7HFOeJk5tSWaaUoe7wdgP_jyh3OOBFCxmqajCSyFL0dNy97tUxzIOsaH47b567K-EAswj5bmmsuEqI-ohRtJlRmO1VkP0YMTm1txcpJtHgyUhuagjv3Irs8z_QuCvD2XmFYD71ljY7HF25Bg)\
-\
 When William Wallace was alive, London-based nobility would speak French natively and were schooled in Latin. The servant staff would likely have been familiar with French, and the higher the servant’s post, the better their French would be. At some point in the social hierarchy, there were people who spoke good French and good local Anglo-language, too. What language is the right language for any task is a matter of complex, situation-specific social dynamics.
 
 A significant portion of the American workforce was born and raised in a Spanish speaking home. For example, according to the State of California ([pdf](https://www.labormarketinfo.edd.ca.gov/specialreports/CA_Employment_Summary_Table.pdf)), ~38% of the labor force is “Hispanic” (including me). However, a large fraction of these Spanish speakers who live and work in the US immigrated to the US as adults. According to the US government, [in 2018 nearly 11,000,000 Latin Americans (most, but not all Spanish speakers) moved to the US](https://www.migrationpolicy.org/article/mexican-immigrants-united-states-2019?gclid=Cj0KCQjwpeaYBhDXARIsAEzItbE8VTJATsZ4ea8GiggmwUB7uyfVcjQ9mRotb1CgIDajCtEEK7HxfVoaAnTrEALw_wcB) (not all stay). What happens when more than 30% of your labor force speaks Spanish? This is a classic population-level language-contact situation.\
@@ -126,7 +119,6 @@ As a result, you have to treat code-switched speech like its own language or dia
 
 ### Additional Reading
 
-*   [Indigenous languages of the Americas at Wikipedia](https://en.wikipedia.org/wiki/Indigenous_languages_of_the_Americas)
-*   [The Anglo-Saxon Bible](https://www.bible-researcher.com/anglosaxon.html)
-*   [The Lord’s Prayer over time](https://www.wtamu.edu/~mjacobsen/lp.htm)
-
+* [Indigenous languages of the Americas at Wikipedia](https://en.wikipedia.org/wiki/Indigenous_languages_of_the_Americas)
+* [The Anglo-Saxon Bible](https://www.bible-researcher.com/anglosaxon.html)
+* [The Lord’s Prayer over time](https://www.wtamu.edu/~mjacobsen/lp.htm)
