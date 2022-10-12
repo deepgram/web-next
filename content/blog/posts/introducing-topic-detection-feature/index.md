@@ -1,5 +1,5 @@
 ---
-title: Introducing Topic Detection feature
+title: Introducing Topic Detection Feature
 description: Automate workflow, enhance recommendations and search capabilities,
   and organize customers’ conversations by identifying and extracting key topics
   from your audio data using Deepgram’s Topic Detection API.
