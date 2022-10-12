@@ -31,13 +31,13 @@ To give you a better sense of how Whisper and Deepgram accuracies compare on rea
 
 <table>
     <tr>
-        <td></td>
-        <td>Model Size/Tier and Relative Speed</td>
-        <td>English Word Error Rate</td>
-        <td>Multilingual Word Error Rate</td>
+        <th></th>
+        <th>Model Size/Tier and Relative Speed</th>
+        <th>English Word Error Rate</th>
+        <th>Multilingual Word Error Rate</th>
     </tr>
     <tr>
-        <td rowspan="5">OpenAI Whisper</td>
+        <th rowspan="5">OpenAI Whisper</th>
         <td>Tiny</td>
         <td>15.3%</td>
         <td>16.2%</td>
@@ -63,7 +63,7 @@ To give you a better sense of how Whisper and Deepgram accuracies compare on rea
         <td>13.2%</td>
     </tr>
     <tr>
-        <td rowspan="3">Deepgram</td>
+        <th rowspan="3">Deepgram</th>
         <td>Base (82x faster than Large; 2.6x faster than Tiny)</td>
         <td>12.8%</td>
         <td>Unique to each language offering</td>
@@ -94,15 +94,15 @@ There are many variables affecting cost, but here's a realistic sketch of the co
 
 <table>
     <tr>
-        <td></td>
-        <td>OpenAI Whisper</td>
-        <td>Deepgram Enhanced</td>
+        <th></th>
+        <th>OpenAI Whisper</th>
+        <th>Deepgram Enhanced</th>
     </tr>
     <tr>
-        <td>Cost to process 10,000 hours of audio</td>
-        <td>$5,590<br/>
+        <th>Cost to process 10,000 hours of audio</th>
+        <td>$5,590
 Using an NVIDIA A100 GPU hosted by AWS</td>
-        <td>$3,300<br/>
+        <td>$3,300
 Using the Deepgram API</td>
     </tr>
 </table>
@@ -117,17 +117,18 @@ Deepgram offers batch processing for pre-recorded audio as well as real-time pro
 
 <table>
     <tr>
-        <td></td>
-        <td>OpenAI Whisper</td>
-        <td>Deepgram Enhanced</td>
+        <th></th>
+        <th>OpenAI Whisper</th>
+        <th>Deepgram Enhanced</th>
     </tr>
     <tr>
-        <td>1 Hour of Pre-Recorded Speech (Batch Processing)</td>
-        <td>9 minutes (Large Model)</td>
+        <th>1 Hour of Pre-Recorded Speech (Batch Processing)</th>
+        <td>9 minutes 
+        (Large Model)</td>
         <td>8s</td>
     </tr>
     <tr>
-        <td>Latency (Live Streaming)</td>
+        <th>Latency (Live Streaming)</th>
         <td>N/A - not available for live streaming</td>
         <td>Under 300ms</td>
     </tr>
@@ -150,211 +151,177 @@ We know our users need more than just raw transcripts, so we've built rich featu
     </thead>
     <tbody>
         <tr>
-            <td>Software Type</td>
+            <th>Software Type</th>
             <td>Closed or open source</td>
             <td>Open Source</td>
             <td>Closed</td>
         </tr>
         <tr>
-            <td>User Interface</td>
+            <th rowspan="2">User Interface</th>
             <td>Application Programming Interface (API)</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Graphical User Interface (GUI)</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>Transcription</td>
+            <th rowspan="17">Transcription</th>
             <td>Pre-Recorded</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Live Streaming</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Language Support*</td>
             <td>38*</td>
             <td>30</td>
         </tr>
         <tr>
-            <td></td>
             <td>Use Case Models</td>
             <td>1 - General</td>
             <td>7</td>
         </tr>
         <tr>
-            <td></td>
             <td>Model Training</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Word Level Timestamps</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Punctuation</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Numeral Formatting</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Paragraphs</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Utterances</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Find & Replace</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Profanity Filtering</td>
-            <td>✅\\*\\*</td>
+            <td>✅**</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Deep Search</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>✅</td>
-        </tr>
-        <tr>
-            <td></td>
             <td>Keyword Boosting</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Interim Results</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Voice Activity Detection</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Request Tagging</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>Speech Understanding</td>
+            <th rowspan="9">Speech Understanding</th>
             <td>Speaker Diarization</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Language Detection</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Entity Detection</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Redaction</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Summarization</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Topic Detection</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Sentiment Analysis</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Language Translation</td>
             <td>✅</td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Speaker ID</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>Enterprise Support</td>
+            <th rowspan="3">Enterprise Support</th>
             <td>Hosted or Virtual Private Cloud</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>On-Prem Deployment</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Dedicated Customer Support</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td>Partner Integrations</td>
+            <th rowspan="2">Partner Integrations</th>
             <td>UniMRCP</td>
             <td></td>
             <td>✅</td>
         </tr>
         <tr>
-            <td></td>
             <td>Twilio</td>
             <td></td>
             <td>✅</td>
@@ -362,8 +329,9 @@ We know our users need more than just raw transcripts, so we've built rich featu
     </tbody>
 </table>
 
-Whisper has 38 language models available at WER of 30% or less, as assessed on "easy" audio files. We consider 30% WER to be the outer limit of transcript usability, and consider WER of 15% to be the threshold of a high quality model. We therefore exclude their language models for which OpenAI's own studies indicate a WER of greater than 30%. Whisper's documentation states it achieves "strong ASR results in ~10 languages."
-\*\* Profanity Filtering is listed as a Whisper feature for English models but our testing of Whisper indicates that the filter has inconsistent performance. We recommend further testing of this feature before adoption in production settings.
+> &#42; Whisper has 38 language models available at WER of 30% or less, as assessed on "easy" audio files. We consider 30% WER to be the outer limit of transcript usability, and consider WER of 15% to be the threshold of a high quality model. We therefore exclude their language models for which OpenAI's own studies indicate a WER of greater than 30%. Whisper's documentation states it achieves "strong ASR results in ~10 languages."
+
+> &#42;&#42; Profanity Filtering is listed as a Whisper feature for English models but our testing of Whisper indicates that the filter has inconsistent performance. We recommend further testing of this feature before adoption in production settings.
 
 ## The Bottom Line
 
