@@ -17,8 +17,7 @@ shorturls:
   reddit: https://dpgr.am/aff224e
   facebook: https://dpgr.am/bcf89e3
 ---
-
-Today, we are very excited to announce that Deepgram has officially launched the Topic Detection feature as part of our Speech Understanding features. Deepgram’s Topic Detection is based on unsupervised Topic Modeling Technique that enables developers and customers to detect the most important and relevant topics that are referenced in the conversations. 
+Today, we are very excited to announce that Deepgram has officially launched the Topic Detection feature as part of our Speech Understanding features. Deepgram’s Topic Detection is based on unsupervised Topic Modeling Technique that enables developers and customers to detect the most important and relevant topics that are referenced in the conversations. See below for an introduction to the feature, or watch [this short video.](https://youtu.be/DC5UoDl1iqw) 
 
 ## Turn Recorded Audio Into Insights
 
@@ -28,17 +27,17 @@ Topic Detection in ASR and NLU has become one of the must have features. Develop
 
 ## Popular use cases using Topic Detection:
 
-*   Support the Quality Assurance team to analyze conversations based on discussed topics, identify trends and patterns, and improve overall customer experience.
-*   Categorize and tag conversations, meetings, and podcasts based on identified topics to enhance search and recommendation capabilities.
-*   Extract meaningful and actionable insights from conversations and audio data based on discussed topics and recurring themes.
+* Support the Quality Assurance team to analyze conversations based on discussed topics, identify trends and patterns, and improve overall customer experience.
+* Categorize and tag conversations, meetings, and podcasts based on identified topics to enhance search and recommendation capabilities.
+* Extract meaningful and actionable insights from conversations and audio data based on discussed topics and recurring themes.
 
 ## Identify over 350 topics
 
-Deepgram’s Topic Detection  feature identifies patterns and generates key topics along with the output text, confidence score for each topic, and word positions to identify segments of speech. Deepgram’s Topic Detection is based on Topic Modeling which is an unsupervised machine learning technique to cluster generated text based on the detected topics. It supports over 350 topics. Topic Extraction can be enabled using detect\_topics=true  and is supported for English language and pre-recorded audio and is available for both our on-prem and hosted customers.
+Deepgram’s Topic Detection  feature identifies patterns and generates key topics along with the output text, confidence score for each topic, and word positions to identify segments of speech. Deepgram’s Topic Detection is based on Topic Modeling which is an unsupervised machine learning technique to cluster generated text based on the detected topics. It supports over 350 topics. Topic Extraction can be enabled using detect_topics=true  and is supported for English language and pre-recorded audio and is available for both our on-prem and hosted customers.
 
-To implement Topic Detection from audio recordings, all you need to do is add detect\_topics=true in your API call.
+To implement Topic Detection from audio recordings, all you need to do is add detect_topics=true in your API call.
 
-<CodeGroup tabs={['curl', 'python', 'node']} default="python">
+<CodeGroup tabs={\['curl', 'python', 'node']} default="python">
     <CodeBlock tab="curl">
         <Code lang="shell" code="curl">
 curl \
@@ -81,12 +80,15 @@ async def main():
 
   print(json.dumps(response, indent=4))
 
-  # Write only the transcript to the console
-  #print(response["results"]["channels"][0]["alternatives"][0]["transcript"])
+# Write only the transcript to the console
+
+\#print(response\["results"]\[0]\[0])
 
 try:
-  # If running in a Jupyter notebook, Jupyter is already running an event loop, so run main with this line instead:
-  #await main()
+
+# If running in a Jupyter notebook, Jupyter is already running an event loop, so run main with this line instead:
+
+\#await main()
   asyncio.run(main())
 except Exception as e:
   exception_type, exception_object, exception_traceback = sys.exc_info()
@@ -121,8 +123,11 @@ deepgram.transcription
   .then((response) => {
     console.dir(response, { depth: null })
 
-    // Write only the transcript to the console
-    //console.dir(response.results.channels[0].alternatives[0].transcript, { depth: null });
+```
+// Write only the transcript to the console
+//console.dir(response.results.channels[0].alternatives[0].transcript, { depth: null });
+```
+
   })
   .catch((err) => {
     console.log(err)
