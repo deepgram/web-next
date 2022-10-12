@@ -44,7 +44,7 @@ Deepgram’s AI speech platform is revolutionizing the speech-to-text (STT) mark
 
 Press Contact
 
-<a href="mailto:deepgram@inkhouse.com">deepgram@inkhouse.com</a>
+[deepgram @ inkhouse.com](mailto:deepgram@inkhouse.com)
 
 **About Recall.ai**
 
