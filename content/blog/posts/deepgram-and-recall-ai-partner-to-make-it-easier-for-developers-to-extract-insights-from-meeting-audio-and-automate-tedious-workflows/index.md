@@ -9,7 +9,7 @@ authors:
   - katie-byrne
 category: product-news
 tags:
-  - recall-ai
+  - meetings
 shorturls:
   share: https://dpgr.am/e89f348
   twitter: https://dpgr.am/a2f0e18
@@ -44,7 +44,7 @@ Deepgram’s AI speech platform is revolutionizing the speech-to-text (STT) mark
 
 Press Contact
 
-[deepgram @ inkhouse.com](mailto:deepgram@inkhouse.com)
+<deepgram@inkhouse.com> 
 
 **About Recall.ai**
 
