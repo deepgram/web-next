@@ -9,7 +9,7 @@ authors:
   - katie-byrne
 category: product-news
 tags:
-  - meetings
+  - recall-ai
 shorturls:
   share: https://dpgr.am/e89f348
   twitter: https://dpgr.am/a2f0e18
