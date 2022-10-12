@@ -10,7 +10,14 @@ authors:
 category: product-news
 tags:
   - nlu
+shorturls:
+  share: https://dpgr.am/8f90c13
+  twitter: https://dpgr.am/d02eedf
+  linkedin: https://dpgr.am/0dfcd0a
+  reddit: https://dpgr.am/aff224e
+  facebook: https://dpgr.am/bcf89e3
 ---
+
 Today, we are very excited to announce that Deepgram has officially launched the Topic Detection feature as part of our Speech Understanding features. Deepgram’s Topic Detection is based on unsupervised Topic Modeling Technique that enables developers and customers to detect the most important and relevant topics that are referenced in the conversations. 
 
 ## **Turn Recorded Audio Into Insights**
@@ -21,29 +28,27 @@ Topic Detection in ASR and NLU has become one of the must have features. Develop
 
 ## Popular use cases using Topic Detection:
 
-* Support the Quality Assurance team to analyze conversations based on discussed topics, identify trends and patterns, and improve overall customer experience.
-* Categorize and tag conversations, meetings, and podcasts based on identified topics to enhance search and recommendation capabilities.
-* Extract meaningful and actionable insights from conversations and audio data based on discussed topics and recurring themes.
+*   Support the Quality Assurance team to analyze conversations based on discussed topics, identify trends and patterns, and improve overall customer experience.
+*   Categorize and tag conversations, meetings, and podcasts based on identified topics to enhance search and recommendation capabilities.
+*   Extract meaningful and actionable insights from conversations and audio data based on discussed topics and recurring themes.
 
 ## Identify over 350 topics
 
-Deepgram’s Topic Detection  feature identifies patterns and generates key topics along with the output text, confidence score for each topic, and word positions to identify segments of speech. Deepgram’s Topic Detection is based on Topic Modeling which is an unsupervised machine learning technique to cluster generated text based on the detected topics. It supports over 350 topics. Topic Extraction can be enabled using detect_topics=true  and is supported for English language and pre-recorded audio and is available for both our on-prem and hosted customers.
+Deepgram’s Topic Detection  feature identifies patterns and generates key topics along with the output text, confidence score for each topic, and word positions to identify segments of speech. Deepgram’s Topic Detection is based on Topic Modeling which is an unsupervised machine learning technique to cluster generated text based on the detected topics. It supports over 350 topics. Topic Extraction can be enabled using detect\_topics=true  and is supported for English language and pre-recorded audio and is available for both our on-prem and hosted customers.
 
-To implement Topic Detection from audio recordings, all you need to do is add detect_topics=true in your API call.
+To implement Topic Detection from audio recordings, all you need to do is add detect\_topics=true in your API call.
 
-```
-curl \
+    curl \
 
-\--request POST \
+    \--request POST \
 
-\--url 'https://api.deepgram.com/v1/listen?detect_topics=true&punctuate=true&tier=enhanced' \
+    \--url 'https://api.deepgram.com/v1/listen?detect_topics=true&punctuate=true&tier=enhanced' \
 
-\--header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+    \--header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
 
-\--header 'content-type: audio/mp3' \
+    \--header 'content-type: audio/mp3' \
 
-\--data-binary ‘@podcast.mp3'
-```
+    \--data-binary ‘@podcast.mp3'
 
 Alternatively, you can use one of our SDKs to implement Topic Detection:
 
@@ -133,25 +138,24 @@ except Exception as e:
 
 When the file is finished processing, you’ll receive a sample JSON response that has the following basic structure:
 
-```
-"topics": [
-                           {
-                               "topics": [
-                                   {
-                                       "topic": "renewable energy",
-                                       "confidence": 0.80515814
-                                   },
-                                   {
-                                       "topic": "climate change",
-                                       "confidence": 0.51437885
-                                   }
-                               ],
-                               "text": "Even Greenpeace underestimated the rise of solar. When one of the world's largest environmental advocacy groups released an optimistic industry analysis called the energy revolution in twenty ten. It was far more ambitious than any government predictions, and it still got it wrong. Greenpeace estimated that by twenty twenty, the world would have three hundred and thirty five thousand megawatts of installed solar photovoltaic capacity…...",
-                               "start_word": 0,
-                               "end_word": 135
-                           },
-```
+    "topics": [
+                               {
+                                   "topics": [
+                                       {
+                                           "topic": "renewable energy",
+                                           "confidence": 0.80515814
+                                       },
+                                       {
+                                           "topic": "climate change",
+                                           "confidence": 0.51437885
+                                       }
+                                   ],
+                                   "text": "Even Greenpeace underestimated the rise of solar. When one of the world's largest environmental advocacy groups released an optimistic industry analysis called the energy revolution in twenty ten. It was far more ambitious than any government predictions, and it still got it wrong. Greenpeace estimated that by twenty twenty, the world would have three hundred and thirty five thousand megawatts of installed solar photovoltaic capacity…...",
+                                   "start_word": 0,
+                                   "end_word": 135
+                               },
 
 Developers can take the outputs from the API that performs Topic Identification to build downstream workflows, generate tags based on topics, power analytics tools, build search and recommendation capabilities, or integrate with other applications. 
 
 To learn more about our API, please see the [Topic Detection page](https://developers.deepgram.com/documentation/features/topic-detection/) in our documentation. We welcome your feedback, please share it with us at [Product Feedback](https://deepgram.hellonext.co/b/feedback).
+
