@@ -4,7 +4,7 @@ description: Automate workflow, enhance recommendations and search capabilities,
   and organize customers’ conversations by identifying and extracting key topics
   from your audio data using Deepgram’s Topic Detection API.
 date: 2022-10-11T22:06:32.479Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1663779409/2209-ntroducing-automatic-language-detection-capabilities-thumb-554x220_1_yqwofm.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1665610954/blog/Introducing%20Topic%20Detection%20Feature/2210-Topic-Detection-feature-featured-1200x630_2x_j0qroc.png
 authors:
   - pankaj-trivedi
 category: product-news
@@ -15,7 +15,7 @@ Today, we are very excited to announce that Deepgram has officially launched the
 
 ## **Turn Recorded Audio Into Insights**
 
-Having not enough data isn't a significant problem anymore. Infact over [2.5 quintillion bytes](https://seedscientific.com/how-much-data-is-created-every-day/) of data get created every day. However, one of the biggest challenges customers face today is finding insights, organizing, tagging, and leveraging the data relevant to brands, prospects, and customers to deliver a fantastic experience to their end users. 
+Having not enough data isn't a significant problem anymore. In fact over [2.5 quintillion bytes](https://seedscientific.com/how-much-data-is-created-every-day/) of data get created every day. However, one of the biggest challenges customers face today is finding insights, organizing, tagging, and leveraging the data relevant to brands, prospects, and customers to deliver a fantastic experience to their end users. 
 
 Topic Detection in ASR and NLU has become one of the must have features. Developers require advanced solutions to perform a deeper analysis of their audio data based on detected topics and subjects to optimize resources, automate workflow, extract insights, improve search capabilities and enhance end users' experience.
 
@@ -45,6 +45,92 @@ curl \
 \--data-binary ‘@podcast.mp3'
 ```
 
+Alternatively, you can use one of our SDKs to implement Topic Detection:
+
+**J﻿S SDK**
+
+```
+const fs = require('fs')
+const { Deepgram } = require('@deepgram/sdk')
+
+// Your Deepgram API Key
+const deepgramApiKey = 'YOUR_DEEPGRAM_API_KEY'
+
+const file = 'YOUR_FILE_LOCATION'
+const mimetype = 'YOUR_FILE_MIME_TYPE'
+const deepgram = new Deepgram(deepgramApiKey)
+
+const audio = fs.readFileSync(file)
+
+const source = {
+    buffer: audio,
+    mimetype: mimetype,
+  }
+}
+
+deepgram.transcription
+  .preRecorded(source, {
+    detect_topics: true,
+  })
+  .then((response) => {
+    console.dir(response, { depth: null })
+
+    // Write only the transcript to the console
+    //console.dir(response.results.channels[0].alternatives[0].transcript, { depth: null });
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+
+```
+
+**P﻿ython SDK**
+
+```
+from deepgram import Deepgram
+import asyncio, json
+
+DEEPGRAM_API_KEY = 'YOUR_DEEPGRAM_API_KEY'
+
+FILE = 'YOUR_FILE_LOCATION'
+MIMETYPE = 'YOUR_FILE_MIME_TYPE'
+
+async def main():
+
+  deepgram = Deepgram(DEEPGRAM_API_KEY)
+
+  audio = open(FILE, 'rb')
+
+  source = {
+    'buffer': audio,
+    'mimetype': MIMETYPE
+  }
+
+  response = await asyncio.create_task(
+    deepgram.transcription.prerecorded(
+      source,
+      {
+        'detect_topics': True
+      }
+    )
+  )
+
+  print(json.dumps(response, indent=4))
+
+  # Write only the transcript to the console
+  #print(response["results"]["channels"][0]["alternatives"][0]["transcript"])
+
+try:
+  # If running in a Jupyter notebook, Jupyter is already running an event loop, so run main with this line instead:
+  #await main()
+  asyncio.run(main())
+except Exception as e:
+  exception_type, exception_object, exception_traceback = sys.exc_info()
+  line_number = exception_traceback.tb_lineno
+  print(f'line {line_number}: {exception_type} - {e}')
+
+```
+
 When the file is finished processing, you’ll receive a sample JSON response that has the following basic structure:
 
 ```
@@ -65,8 +151,6 @@ When the file is finished processing, you’ll receive a sample JSON response th
                                "end_word": 135
                            },
 ```
-
- 
 
 Developers can take the outputs from the API that performs Topic Identification to build downstream workflows, generate tags based on topics, power analytics tools, build search and recommendation capabilities, or integrate with other applications. 
 
