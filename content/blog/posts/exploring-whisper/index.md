@@ -1,6 +1,7 @@
 ---
-title: Exploring Whisper
-description: test
+title: Exploring OpenAI Whisper Speech Recognition
+description: In Deepgram's latest blog, we will explore some of the options in
+  OpenAI Whisper’s inference and see how they impact results. Read more here!
 date: 2022-10-13T20:59:18.175Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1665415885/blog/exploring-whisper/2210-Exploring_Whisper-featured-1200x630_2x_nut4uw.png
 authors:
