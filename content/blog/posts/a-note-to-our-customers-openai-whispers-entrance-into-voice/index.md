@@ -90,23 +90,6 @@ OpenAI Whisper is not offered as a service. They only provide example code that 
 
 There are five different versions of the OpenAI model that trade quality vs speed. The best performing version has 32 layers and 1.5B parameters. This is a big model. It is not fast. It runs slower than real time on a typical Google Cloud GPU and costs ~$2/hr to process, even if running flat out with 100% utilization. 
 
-There are many variables affecting cost, but here's a realistic sketch of the costs you can expect from Whisper and Deepgram.
-
-<table>
-    <tr>
-        <th></th>
-        <th>OpenAI Whisper</th>
-        <th>Deepgram Enhanced</th>
-    </tr>
-    <tr>
-        <th>Cost to process 10,000 hours of audio</th>
-        <td>$5,590
-Using an NVIDIA A100 GPU hosted by AWS</td>
-        <td>$3,300
-Using the Deepgram API</td>
-    </tr>
-</table>
-
 Beyond hosting, there are people costs associated with managing in-house speech recognition technology like Whisper. Maintaining speech recognition in-house typically demands that dedicated engineering and research teams integrate the model and regularly optimize for accuracy. Foregoing these investments can severely impact the user experience of your product or the accuracy of a downstream model. As a result, a Whisper deployment will come with $150-250k of additional cost per technical employee added to the team.
 
 ## Speed and Latency
