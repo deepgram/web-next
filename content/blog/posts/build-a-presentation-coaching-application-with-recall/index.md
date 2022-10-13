@@ -36,7 +36,7 @@ DEEPGRAM_API_KEY=your-key-here
 
 Create a `package.json` file with `npm init -y` and then install our dependencies:
 
-```
+```shell
 npm install dotenv express hbs axios
 ```
 
@@ -46,7 +46,7 @@ Create an `index.js` file and open it in your code editor.
 
 Import your dependencies:
 
-```js
+```javascript
 import 'dotenv/config'
 import axios from 'axios'
 import express from 'express'
@@ -54,7 +54,7 @@ import express from 'express'
 
 Set up your express application:
 
-```js
+```javascript
 const app = express()
 app.set('view engine', 'hbs')
 app.use(express.urlencoded({ extended: false }))
@@ -73,7 +73,7 @@ Create a route handler to load the initial page. Firstly, create a `views` direc
 
 Inside of `index.js`, render the view:
 
-```js
+```javascript
 app.get('/', (req, res) => res.render('index'))
 ```
 
@@ -83,7 +83,7 @@ Start your server with `node index.js`, visit [localhost:3000](http://localhost:
 
 [Recall's API Reference](https://recallai.readme.io/) shows all of the available endpoints to manage bots - your application will use four of them. To make your code more readable, create a reusable `recall()` helper method at the very bottom of your `index.js` file:
 
-```js
+```javascript
 async function recall(method, path, data) {
   try {
     const payload = {
@@ -104,7 +104,7 @@ async function recall(method, path, data) {
 
 Now, for example, endpoints can be accessed like so:
 
-```js
+```javascript
 const bots = await recall('get', '/bot')
 const newBot = await recall('post', '/bot', { meeting_url: '...' })
 ```
@@ -130,7 +130,7 @@ Providing a bot name is optional, but your application will allow users to speci
 
 Add the following to `index.js` underneath the existing route handler for the homepage:
 
-```js
+```javascript
 let bots = []
 app.post('/join', async (req, res) => {
     try {
@@ -173,7 +173,7 @@ Currently, the only way to make the bot leave the call is to end it for everyone
 
 In `index.js` create a new route handler:
 
-```js
+```javascript
 app.post('/leave', async (req, res) => {
   try {
     const { meeting_url } = req.body
@@ -205,7 +205,7 @@ Create a new `data.hbs` file in the `views` directory:
 
 In `index.js` add a new route handler:
 
-```js
+```javascript
 app.get('/:botId', async (req, res) => {
   try {
     // Get bot data
@@ -231,14 +231,14 @@ app.get('/:botId', async (req, res) => {
 
 A full timeline for the call including who spoke and when is made available as part of the `bot` object. Extract just usernames and de-duplicate the list by adding the following:
 
-```js
+```javascript
 const { timeline } = bot.speaker_timeline
 let usernames = [...new Set(timeline.map(turn => { username: turn.users[0].username }))]
 ```
 
 Update the `res.render()` method to the following:
 
-```js
+```javascript
 res.render('data', { ...bot, usernames })
 ```
 
@@ -261,7 +261,7 @@ Finally, add a list of who spoke to the bottom of `data.hbs`:
 
 Below where `usernames` is defined, add the following:
 
-```js
+```javascript
 for(let i=0; i<usernames.length; i++) {
   let userTurns = timeline.filter(turn => turn.users[0].username == usernames[i])
   usernames[i] = {
@@ -286,7 +286,7 @@ Now each `username` in the `usernames` array also has a `turns` property, which 
 
 Recall is a Deepgram customer and provides our accurate AI-powered transcription within their product. The transcript is already available in our application in the `turns` variable. Add the following below the for loop in `index.js`:
 
-```js
+```javascript
 let transcript = []
 for(let i=0; i<turns.length; i++) {
   // Get all words for this turn
@@ -300,7 +300,7 @@ for(let i=0; i<turns.length; i++) {
 
 Add the transcript to the rendered data:
 
-```js
+```javascript
 res.render('data', { ...bot, usernames, transcript })
 ```
 
@@ -319,7 +319,7 @@ Finally, in `data.hbs`, add the following to the bottom:
 
 Each word in the transcript is accompanied by a word's start and end time. Using this data, each speaker's 'talking time' can be calculated. Firstly, `turns` is added to `usernames[i]`, add a new `speakTime` value:
 
-```js
+```javascript
 usernames[i] = {
   username: usernames[i],
   turns: userTurns.length,
@@ -329,7 +329,7 @@ usernames[i] = {
 
 Calculate the `speakTime` just after you add transcripts with `transcripts.push()`, and add it to the speaker's entry in the `username` array:
 
-```js
+```javascript
 const speakTime = +(turnWords[turnWords.length-1].end_timestamp - turnWords[0].start_timestamp).toFixed(2)
 const user = usernames.findIndex(u => u.username == turns[i].speaker)
 usernames[user].speakTime += speakTime
