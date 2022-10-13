@@ -13,30 +13,29 @@ import { useStoryblokApi } from "@storyblok/astro";
 
 const sbApi = useStoryblokApi();
 
+// 4138 is the story ID for the "Featured Posts" story
+const { data: featured } = await sbApi.get("cdn/stories/4138");
+const featuredData = featured.story.content;
+const { data: featuredPost } = await sbApi.get(`cdn/stories/${featuredData.Featured.id}`, {
+	find_by: "uuid",
+});
+const { data: homepagePosts } = await sbApi.get("cdn/stories", {
+	by_uuids: featuredData.Homepage.join(","),
+	sort_by: "content.date:desc",
+});
 const { data: allPosts } = await sbApi.get("cdn/stories", {
 	by_slugs: "blog-posts/*",
+	per_page: 8,
+	sort_by: "content.date:desc",
 });
+// const sortedPosts = allPosts.stories.sort((a, b) => {
+// 	const aDate = new Date(b.content.first_published_at);
+// 	const bDate = new Date(a.content.first_published_at);
+// 	return aDate.getTime() - bDate.getTime();
+// });
 
-const sortedPosts = allPosts.stories.sort((a, b) => {
-	const aDate = new Date(b.content.first_published_at);
-	const bDate = new Date(a.content.first_published_at);
-	return aDate.getTime() - bDate.getTime();
-});
-
-const { data: featured } = await sbApi.get("cdn/stories", {
-	by_slugs: "featured-posts",
-});
-const featuredData = featured.stories[0].content;
-const featuredPosts = allPosts.stories.filter((post) => {
-	return post.uuid === featuredData.Featured.id;
-});
-const featuredPost = featuredPosts[0];
-const homepagePosts = allPosts.stories.filter((post) => {
-	return featuredData.Homepage.some((id) => id === post.uuid);
-});
-
-const otherPosts = sortedPosts.filter((post) => {
-	return ![featuredPost, ...homepagePosts].some((f) => {
+const otherPosts = allPosts.stories.filter((post) => {
+	return ![featuredPost, ...homepagePosts.stories].some((f) => {
 		return f.uuid === post.uuid;
 	});
 });
@@ -72,7 +71,7 @@ const schema = {
 
 	<ContrastSection contrast="cloud" background="white" class="bg-sound-wave-cloud-dark" bottomDivider="eclipse-divider" bottomOverlay>
 		<PrimarySection class="pt-[7rem] md:pt-[7.33203125rem] lg:pt-[7.6640625rem] xl:pt-[8.328125rem]">
-			<Hero title="Deepgram Blog ⚡️" featured={featuredPost} homepage={homepagePosts} latest={latestPosts} />
+			<Hero title="Deepgram Blog ⚡️" featured={featuredPost.story} homepage={homepagePosts.stories} latest={latestPosts} />
 		</PrimarySection>
 	</ContrastSection>
 	<PrimarySection class="mt-48 xl:mt-64">

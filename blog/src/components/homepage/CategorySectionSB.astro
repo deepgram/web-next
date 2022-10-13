@@ -8,6 +8,8 @@ const sbApi = useStoryblokApi();
 const { category } = Astro.props;
 const { data: allPosts } = await sbApi.get("cdn/stories", {
 	by_slugs: "blog-posts/*",
+	sort_by: "published_at:desc",
+	per_page: 6,
 	filter_query: {
 		category: {
 			in: category.uuid,

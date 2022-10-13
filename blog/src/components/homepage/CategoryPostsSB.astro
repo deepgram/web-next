@@ -4,4 +4,4 @@ import BlogCard from "../../shared/components/cards/BlogCardSB.astro";
 const { posts } = Astro.props;
 ---
 
-{posts && posts.slice(0, 6).map((post) => <BlogCard post={post} />)}
+{posts && posts.map((post) => <BlogCard post={post} />)}
