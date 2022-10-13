@@ -1,6 +1,7 @@
 ---
 title: How to Run OpenAI Whisper in Google Colab
-description: test
+description: In Deepgram's newest blog, we cover how a preconfigured environment
+  like Google Colab can support new tools like OpenAI Whisper. Learn more here!
 date: 2022-10-11T21:00:38.699Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1665154754/blog/how-to-run-openai-whisper-in-google-colab/2210-OpenAI-Whisper-in-Google-Colab-featured-1200x630_2x_fjnqcv.png
 authors:
@@ -28,3 +29,5 @@ Google Colab provides a great preconfigured environment for trying out new tools
 * And finally... quantitatively evaluate Whisper's performance by computing the Word Error Rate (WER) for the transcription
 
 We think the files we chose are fun, but if you have files that you want to test Whisper on, it should be easy to upload them and drop them in!
+
+[Try the Colab](https://colab.research.google.com/github/deepgram-devs/try-whisper-in-google-collab/blob/main/try_whisper_in_three_easy_steps.ipynb)
