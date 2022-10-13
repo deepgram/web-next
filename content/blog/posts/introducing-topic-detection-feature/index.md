@@ -27,17 +27,17 @@ Topic Detection in ASR and NLU has become one of the must-have features. Develop
 
 ## Popular Use Cases Using Topic Detection
 
-*   Support the Quality Assurance team to analyze conversations based on discussed topics, identify trends and patterns, and improve overall customer experience.
-*   Categorize and tag conversations, meetings, and podcasts based on identified topics to enhance search and recommendation capabilities.
-*   Extract meaningful and actionable insights from conversations and audio data based on discussed topics and recurring themes.
+* Support the Quality Assurance team to analyze conversations based on discussed topics, identify trends and patterns, and improve overall customer experience.
+* Categorize and tag conversations, meetings, and podcasts based on identified topics to enhance search and recommendation capabilities.
+* Extract meaningful and actionable insights from conversations and audio data based on discussed topics and recurring themes.
 
 ## Identify over 350 topics
 
-Deepgram's Topic Detection  feature identifies patterns and generates key topics along with the output text, confidence score for each topic, and word positions to identify segments of speech. Deepgram's Topic Detection is based on Topic Modeling which is an unsupervised machine learning technique to cluster generated text based on the detected topics. It supports over 350 topics. Topic Extraction can be enabled using detect\_topics=true  and is supported for English language and pre-recorded audio and is available for both our on-prem and hosted customers.
+Deepgram's Topic Detection  feature identifies patterns and generates key topics along with the output text, confidence score for each topic, and word positions to identify segments of speech. Deepgram's Topic Detection is based on Topic Modeling which is an unsupervised machine learning technique to cluster generated text based on the detected topics. It supports over 350 topics. Topic Extraction can be enabled using detect_topics=true  and is supported for English language and pre-recorded audio and is available for both our on-prem and hosted customers.
 
 ## Implement Topic Detection with Deepgram
 
-To implement Topic Detection from audio recordings, all you need to do is add detect\_topics=true in your API call.
+To implement Topic Detection from audio recordings, all you need to do is add detect_topics=true in your API call.
 
 ### With cURL
 
@@ -84,7 +84,6 @@ deepgram.transcription
   .catch((err) => {
     console.log(err)
   })
-
 ```
 
 ### With Python
@@ -131,7 +130,6 @@ except Exception as e:
   exception_type, exception_object, exception_traceback = sys.exc_info()
   line_number = exception_traceback.tb_lineno
   print(f'line {line_number}: {exception_type} - {e}')
-
 ```
 
 ## Topic Detection Results
@@ -160,4 +158,4 @@ When the file is finished processing, you'll receive a sample JSON response that
 
 Developers can take the outputs from the API that performs Topic Identification to build downstream workflows, generate tags based on topics, power analytics tools, build search and recommendation capabilities, or integrate with other applications. 
 
-To learn more about our API, please see the [Topic Detection page](https://developers.deepgram.com/documentation/features/topic-detection/) in our documentation. We welcome your feedback, please share it with us at [Product Feedback](https://deepgram.hellonext.co/b/feedback).
+To learn more about our API, please see the [Topic Detection page](https://developers.deepgram.com/documentation/features/detect-topics/) in our documentation. We welcome your feedback, please share it with us at [Product Feedback](https://deepgram.hellonext.co/b/feedback).
