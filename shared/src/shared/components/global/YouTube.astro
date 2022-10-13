@@ -1,5 +1,5 @@
 ---
-const { id } = Astro.props;
+const { blok } = Astro.props;
 ---
 
 <div class="youtube-container w-full my-4">
@@ -7,7 +7,7 @@ const { id } = Astro.props;
 		height="100%"
 		width="100%"
 		class="youtube aspect-video"
-		src={`https://www.youtube.com/embed/${id}`}
+		src={`https://www.youtube.com/embed/${blok.id}`}
 		frameborder="0"
 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 		allowfullscreen></iframe>

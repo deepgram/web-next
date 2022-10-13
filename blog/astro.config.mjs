@@ -39,6 +39,8 @@ export default defineConfig({
 				Iframe: "components/storyblok/Iframe",
 				whitepaperLink: "shared/components/global/WhitepaperPromoSB",
 				Panel: "shared/components/global/Panel",
+				YouTube: "shared/components/global/YouTube",
+				Alert: "shared/components/global/Alert",
 			},
 		}),
 	],
