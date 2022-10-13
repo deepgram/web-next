@@ -38,6 +38,7 @@ export default defineConfig({
 				RichTextSection: "components//storyblok/RichText",
 				Iframe: "components/storyblok/Iframe",
 				whitepaperLink: "shared/components/global/WhitepaperPromoSB",
+				Panel: "shared/components/global/Panel",
 			},
 		}),
 	],
