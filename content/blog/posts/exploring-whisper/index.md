@@ -10,7 +10,14 @@ category: ai-and-engineering
 tags:
   - whisper
   - machine-learning
+shorturls:
+  share: https://dpgr.am/81a7829
+  twitter: https://dpgr.am/cc15f31
+  linkedin: https://dpgr.am/2468dad
+  reddit: https://dpgr.am/8e86cec
+  facebook: https://dpgr.am/f98594a
 ---
+
 OpenAI recently released a new open source ASR model named Whisper and a repo full of tools that make it easy to try it out. In this blog, we will explore some of the options in Whisper’s inference and see how they impact results.
 
 When experimenting with Whisper, you have a few options. You can run their command line tool, which will set a bunch of parameters for you, but you can also play around with those parameters and change what kind of results you get.
@@ -26,11 +33,11 @@ model = whisper.load_model("medium.en", device="cuda")
 
 Whisper is available as multilingual models, but we will focus on the english only versions here. The options are:
 
-- `tiny.en`
-- `base.en`
-- `small.en`
-- `medium.en`
-- `large` (the large model is only available in the multi-language form)
+*   `tiny.en`
+*   `base.en`
+*   `small.en`
+*   `medium.en`
+*   `large` (the large model is only available in the multi-language form)
 
 Whisper is an encoder-decoder transformer model that takes in audio features and generates text. The models’ parameter sizes range from 39 M for tiny and up to 1550 M for large.
 
@@ -62,12 +69,12 @@ In the whisper code, they set their ratio threshold to be `2.4`. A sequence that
 
 **Average log probability:** after taking the log softmax of the network's output logits, the average log probability of the tokens chosen by the decoding is used. This can be thought of as a confidence measure of the model's predictions. The whisper authors use `-1.0` as their threshold.
 
-By default, the whisper cli tool runs inference and decoding up to 6 times with the following decoding strategies. For each strategy, if the results pass the compression and log probability heuristics, the predicted tokens are used. If the heuristics are not met, the segment is re-inference and re-decoded with the next strategy. 
+By default, the whisper cli tool runs inference and decoding up to 6 times with the following decoding strategies. For each strategy, if the results pass the compression and log probability heuristics, the predicted tokens are used. If the heuristics are not met, the segment is re-inference and re-decoded with the next strategy.
 
 The decoding strategies are:
 
-1. Beam search with 5 beams using log probability for the score function
-2. Greedy decoding with best of 5 sampling. The following temperatures are used for successive attempts: (0.0, 0.2, 0.4, 0.6, 0.8, 1.0)
+1.  Beam search with 5 beams using log probability for the score function
+2.  Greedy decoding with best of 5 sampling. The following temperatures are used for successive attempts: (0.0, 0.2, 0.4, 0.6, 0.8, 1.0)
 
 The authors quantify the effects of these strategies in [Table 7](https://cdn.openai.com/papers/whisper.pdf) of their paper. They have a varied impact across datasets, but overall the effects for any single intervention are not large.
 
@@ -89,7 +96,7 @@ print(transcription["text"])
 ' Hello there. General Kenobi!'
 ```
 
-Next, we try removing the beam size strategy and dropping the best_of value for greedy decoding down to 1. Here we can see that now the model is outputting "ominious music" before the actual speech. This suggests the model was trained on some form of closed captioning.
+Next, we try removing the beam size strategy and dropping the best\_of value for greedy decoding down to 1. Here we can see that now the model is outputting "ominious music" before the actual speech. This suggests the model was trained on some form of closed captioning.
 
 ```python
 beam_size=None
@@ -105,7 +112,7 @@ print(transcription['text'])
 'ominous music hello there General Kenobi!'
 ```
 
-Finally, we try increasing the best_of value for greedy decoding, but reducing the temperature values tried.
+Finally, we try increasing the best\_of value for greedy decoding, but reducing the temperature values tried.
 
 ```python
 beam_size=None
@@ -121,7 +128,7 @@ print(transcription["text"])
 ' Thanks for watching!'
 ```
 
-There we can see that with only very low temperature values, and a best_of set to 3, we get a remnant from the weak supervision from internet transcripts. There is randomness in this process, so repeating those experiments will different results each time.
+There we can see that with only very low temperature values, and a best\_of set to 3, we get a remnant from the weak supervision from internet transcripts. There is randomness in this process, so repeating those experiments will different results each time.
 
 These examples help explain why the authors recommend attempting multiple decodings and checking the heuristics as a way of improving performance. Trying to hone in on what decoding strategy works best for your data can simplify the inference process for running Whisper and make the current code run faster.
 
@@ -172,7 +179,7 @@ For the base model, the probability for the non speech token was `0.641`, which 
 
 If we run the same experiment for more of the models, we can see how they handle the non-speech differently.
 
-| Model     | no_speech probability | Predicted text |
+| Model     | no\_speech probability | Predicted text |
 |-----------|-----------------------|----------------|
 | base.en   | 0.64                  |''
 | small.en | 0.467                 |' you'          |
@@ -202,3 +209,4 @@ print(transcription["text"])
 The compression ratio for that prediction string is actually only `1.91`, which is less than their threshold of `2.4`. It's worth noting that if you don't use their full decoding scheme and start encountering a lot of repetitious predictions in audio that the model is uncertain about, you might want to drop the compression ratio threshold a little lower.
 
 Hopefully this blog helped you explore the many options in the Whisper repo and find a configuration that works best for your tasks!
+
