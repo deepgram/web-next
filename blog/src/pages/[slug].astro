@@ -353,25 +353,20 @@ const schema = [
 	}
 
 	.post-prose > :global(table) {
-		@apply mb-4 block border-collapse overflow-auto whitespace-nowrap;
+		@apply mb-4 block min-w-full border-collapse overflow-auto whitespace-nowrap;
 	}
-
+	
 	.post-prose > :global(table) + :global(p small) {
 		@apply -mt-2 block text-center text-sm font-bold;
 	}
-
-	.post-prose > :global(td),
-	.post-prose > :global(th) {
-		@apply border-casper table-auto  border;
+	
+	.post-prose > :global(table td),
+	.post-prose > :global(table th) {
+		@apply border-casper table-auto border whitespace-pre-wrap px-6 py-2 align-top;
 	}
-
-	.post-prose > :global(th) {
-		@apply bg-mist;
-	}
-
-	.post-prose > :global(td),
-	.post-prose > :global(th) {
-		@apply px-6 py-2;
+	
+	.post-prose > :global(table th) {
+		@apply bg-mist font-bold align-middle;
 	}
 
 	.post-prose > :global(.promo-container) {
