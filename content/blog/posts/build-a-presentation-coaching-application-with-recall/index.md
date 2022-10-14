@@ -10,18 +10,25 @@ category: tutorial
 tags:
   - partner
   - javascript
+shorturls:
+  share: https://dpgr.am/45503ab
+  twitter: https://dpgr.am/c900012
+  linkedin: https://dpgr.am/f9bf8ce
+  reddit: https://dpgr.am/d96ca5d
+  facebook: https://dpgr.am/b528b52
 ---
+
 [Recall](https://www.recall.ai) provides a developer API to get real-time meeting data from a number of different platforms. It does this by sending Recall bots into meetings to observe what is happening and then provide data on-demand or in real-time.  As well as transcripts, they provide metadata including a participant list and linked calendar invite.
 
 In this tutorial, you will build a virtual presentation coaching application. The application will allow you to send a Recall bot into a Zoom call, remove them, and get insights once the call is over. One of the great things about Recall is their support of other platforms like Google Meet, Microsoft Teams, and WebEx with no additional code.
 
 For this project, we'll complete the following steps:
 
-1. A﻿dd a bot to a Zoom call
-2. G﻿et data about speakers in the call
-3. C﻿alculate speaker turn counts (to see if you took up more turns than others)
-4. C﻿reate a speaker-separated transcript
-5. C﻿alculate talk-time per speaker
+1.  A﻿dd a bot to a Zoom call
+2.  G﻿et data about speakers in the call
+3.  C﻿alculate speaker turn counts (to see if you took up more turns than others)
+4.  C﻿reate a speaker-separated transcript
+5.  C﻿alculate talk-time per speaker
 
 ## Before You Start
 
@@ -29,10 +36,8 @@ Make sure you have [Node.js](https://nodejs.org/en/) installed. You will need a 
 
 Create a new directory for this project and open it in a code editor. Create a `.env` file and populate it with your keys:
 
-```
-RECALL_API_KEY=your-key-here
-DEEPGRAM_API_KEY=your-key-here
-```
+    RECALL_API_KEY=your-key-here
+    DEEPGRAM_API_KEY=your-key-here
 
 Create a `package.json` file with `npm init -y` and then install our dependencies:
 
@@ -348,3 +353,4 @@ Finally, update `data.hbs` to contain this new data just below where each speake
 This application only scratches the surface of the analysis you can perform with data returned by Recall and Deepgram. You may choose to [detect non-inclusive language](https://developers.deepgram.com/blog/2022/09/uninclusive-language-retext/), summarize what has been said, and more. Recall provides a developer-friendly way to avoid writing 'glue' into various conferencing platforms, so if you want to use Google Meet, Microsoft Teams, WebEx, or others, there is no more code to write. Fab!
 
 If you have any questions, please don't hesitate to get in touch. We love to help!
+
