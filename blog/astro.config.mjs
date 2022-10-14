@@ -37,6 +37,7 @@ export default defineConfig({
 				Author: "shared/components/cards/Author",
 				RichTextSection: "components//storyblok/RichText",
 				Iframe: "components/storyblok/Iframe",
+				Image: "components/storyblok/Image",
 				whitepaperLink: "shared/components/global/WhitepaperPromoSB",
 				Panel: "shared/components/global/Panel",
 				YouTube: "shared/components/global/YouTube",
