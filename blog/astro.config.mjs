@@ -42,6 +42,7 @@ export default defineConfig({
 				Panel: "shared/components/global/Panel",
 				YouTube: "shared/components/global/YouTube",
 				Alert: "shared/components/global/Alert",
+				CodeEmbed: "shared/components/global/CodeEmbed",
 			},
 		}),
 	],
