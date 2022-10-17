@@ -101,6 +101,8 @@ module.exports = {
 				offBlack: "rgba(5, 10, 15, 1)",
 				//black
 
+				highlight: "rgba(253,255,0, 1)",
+
 				http: {
 					get: "#2B2BFA",
 					options: "#2B2BFA",
