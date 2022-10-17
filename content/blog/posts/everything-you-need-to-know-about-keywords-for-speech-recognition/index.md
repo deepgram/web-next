@@ -10,7 +10,14 @@ authors:
 category: best-practice
 tags:
   - Keywords
+shorturls:
+  share: https://dpgr.am/b1d2e02
+  twitter: https://dpgr.am/265ac49
+  linkedin: https://dpgr.am/bfad845
+  reddit: https://dpgr.am/7a4f07c
+  facebook: https://dpgr.am/62a6ff4
 ---
+
 Just like humans, AI learns through experience. In absence of training your model to all of the possible audio scenarios and special vocabulary it may encounter, Keywords are a way of increasing accuracy without having to give your model the “experience”—a shortcut, if you will.
 
 Speech recognition such as Google, AWS and others apply different techniques to increasing accuracy through keywords. Here’s a brief overview of what you need to know about Keywords and when you should consider using them.
@@ -25,9 +32,7 @@ Deepgram’s deep learning models are trained on real-world audio and have exten
 
 ### **Example with and without keyword boosting:**
 
-```
-keywords=snuffleupagus:2.2
-```
+    keywords=snuffleupagus:2.2
 
 **\*Truth\***
 
@@ -43,21 +48,19 @@ and then big bird said to snuffleupagus why aren’t you eating that banana
 
 Here’s how to make a request with keyword boosting using Deepgram’s speech-to-text API.
 
-```
-curl \
+    curl \
 
-\--request POST \
+    \--request POST \
 
-\--header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+    \--header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
 
-\--header 'Content-Type: audio/wav' \
+    \--header 'Content-Type: audio/wav' \
 
-\--data-binary @youraudio.wav \
+    \--data-binary @youraudio.wav \
 
-\--url 'https://api.deepgram.com/v1/listen?keywords=KEYWORD:INTENSIFIER'
-```
+    \--url 'https://api.deepgram.com/v1/listen?keywords=KEYWORD:INTENSIFIER'
 
-For more information about keywords, you can refer to our [developer documentation](https://developers.deepgram.com/documentation/features/keywords/). 
+For more information about keywords, you can refer to our [developer documentation](https://developers.deepgram.com/documentation/features/keywords/).
 
 ## Why is Keyword Boosting Used?
 
@@ -75,10 +78,9 @@ If custom model training isn’t an option but better accuracy is desired, anoth
 
 ## Where Should I Use Find and Replace Versus Keywords?
 
-Keyword boosting is designed to increase the chances that a certain word will be transcribed. [Find and replace ](<https://developers.deepgram.com/documentation/features/replace/>)is designed for cases where when a certain word is transcribed, it should be replaced with something different. One example of where find and replace should be used is if the name "Aaron" appears in the transcript but should be spelled "Erin" instead.
-
-
+Keyword boosting is designed to increase the chances that a certain word will be transcribed. [Find and replace ](https://developers.deepgram.com/documentation/features/replace/)is designed for cases where when a certain word is transcribed, it should be replaced with something different. One example of where find and replace should be used is if the name "Aaron" appears in the transcript but should be spelled "Erin" instead.
 
 ## Wrapping Up
 
 If you’d like to give keywords a try in your project, you can [sign up for Console](https://console.deepgram.com/signup) and get $150 in free credit to try it out. Still have questions? Check out our [developer documentation](https://developers.deepgram.com/), or [reach out to Sales with your questions](https://deepgram.com/contact-us/).
+
