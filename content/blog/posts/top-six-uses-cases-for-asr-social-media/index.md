@@ -1,5 +1,5 @@
 ---
-title: Top Six Uses Cases for ASR Social Media
+title: Top Six Uses Cases for Automatic Speech Recognition (ASR) in Social Media
 description: The social media industry is full of use cases for ASR and NLU—here
   are the top six, and how these solutions drive business value.
 date: 2022-10-17T22:55:19.866Z
