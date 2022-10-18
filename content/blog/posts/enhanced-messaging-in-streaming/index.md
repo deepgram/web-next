@@ -9,7 +9,14 @@ authors:
 category: product-news
 tags:
   - streaming
+shorturls:
+  share: https://dpgr.am/2f0143f
+  twitter: https://dpgr.am/8f2ba53
+  linkedin: https://dpgr.am/7a8ef1b
+  reddit: https://dpgr.am/cc4e407
+  facebook: https://dpgr.am/ff26ee9
 ---
+
 We’re excited to announce an update to our streaming API for enhanced usability.
 
 Working with websockets to send audio in real-time can be tricky. Today, we’re releasing the first step in our plan to make our streaming API easier to use.
@@ -20,19 +27,17 @@ Gracefully closing your stream is the best way to ensure you get all your transc
 
 Here’s an example of sending a CloseStream message in Javascript:
 
-````
-```
-socket.send(JSON.stringify({
-    "type": "CloseStream"
-}))
-```
-And an example in Python:
-```
-await ws.send(json.dumps({
-    "type": "CloseStream"
-}))
-``` 
-````
+    ```
+    socket.send(JSON.stringify({
+        "type": "CloseStream"
+    }))
+    ```
+    And an example in Python:
+    ```
+    await ws.send(json.dumps({
+        "type": "CloseStream"
+    }))
+    ``` 
 
 Previously, streaming connections were closed by sending an empty byte—for example, sending \`Uint8Array(0)\` in Javascript, or \`b''\` in Python. This method of closing connections is now deprecated, and we will remove it in a future release. An empty byte doesn’t inherently translate to closing a connection and some websocket libraries don’t support sending it. Sending a CloseStream message is a clearer and more universal method to accomplish this.
 
@@ -40,4 +45,5 @@ We recommend customers using our API move to using the CloseStream method to avo
 
 This message is the first of many. We’ll be releasing additional JSON messages in the coming months that will unlock powerful new features in our real-time API. Stay tuned!
 
-To learn more about Streaming, please refer to our Streaming [Documentation](<https://developers.deepgram.com/documentation/getting-started/streaming/>). **We welcome your feedback, please share it with us [here](https://deepgram.hellonext.co/b/feedback).**
+To learn more about Streaming, please refer to our Streaming [Documentation](https://developers.deepgram.com/documentation/getting-started/streaming/). **We welcome your feedback, please share it with us [here](https://deepgram.hellonext.co/b/feedback).**
+
