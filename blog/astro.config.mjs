@@ -43,6 +43,7 @@ export default defineConfig({
 				YouTube: "shared/components/global/YouTube",
 				Alert: "shared/components/global/Alert",
 				CodeEmbed: "shared/components/global/CodeEmbed",
+				Table: "shared/components/global/Table",
 			},
 		}),
 	],

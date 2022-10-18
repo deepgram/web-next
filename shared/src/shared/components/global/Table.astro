@@ -1,0 +1,20 @@
+---
+const { blok } = Astro.props;
+---
+
+<table>
+	<thead>
+		<tr>
+			{blok.table.thead.map((th) => <th>{th.value}</th>)}
+		</tr>
+	</thead>
+	<tbody>
+		{blok.table.tbody.map((tr) => (
+			<tr>
+				{tr.body.map((td) => (
+					<th>{td.value}</th>
+				))}
+			</tr>
+		))}
+	</tbody>
+</table>
