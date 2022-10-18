@@ -3,7 +3,7 @@ title: Enhanced Messaging in Streaming
 description: We’re excited to announce an update to our streaming API for
   enhanced usability.
 date: 2022-10-18T22:09:38.278Z
-cover: https://res.cloudinary.com/deepgram/image/upload/v1664376933/2209-Introducing-Auto-Generated-Summaries-for-Audio-Content-thumb-554x220_acfu0t.png
+cover: https://res.cloudinary.com/deepgram/image/upload/v1666120286/blog/Enhanced%20Messaging%20in%20Streaming/2210-close-stream-update-featured-1200x630_2x_e9k8gi.png
 authors:
   - shir-goldberg
 category: product-news
