@@ -18,17 +18,16 @@ shorturls:
   reddit: https://dpgr.am/857ac88
   facebook: https://dpgr.am/f393811
 ---
-
 Build voice intelligence applications using our latest Summarization API, such as podcast summaries, auto-generated meeting notes, and sales call summaries, enhancing the overall end-user experience. 
 
 Today, we are very excited to announce that Deepgram has launched the latest Summarization feature as part of our Speech Understanding Features. It uses deep learning techniques and abstractive summarization methods to generate meaningful and relevant summaries and insights from the audio data.
 
 ## What Developers Can do Using Summarization?
 
-*   Enable agents and sales representatives to generate meaningful call summaries automatically and reduce manual effort.
-*   Help listeners identify interesting conversations through auto-generated relevant podcast previews.
-*   Enable sales coaches and leaders to navigate through a large number of calls to identify important conversations through auto generated meeting summaries to dive deep into for coaching and monitoring purposes.
-*   Make it easier for customers to extract actionable insights from conversations and key points discussed and identify calls of interest through AI generated meeting summaries.
+* Enable agents and sales representatives to generate meaningful call summaries automatically and reduce manual effort.
+* Help listeners identify interesting conversations through auto-generated relevant podcast previews.
+* Enable sales coaches and leaders to navigate through a large number of calls to identify important conversations through auto generated meeting summaries to dive deep into for coaching and monitoring purposes.
+* Make it easier for customers to extract actionable insights from conversations and key points discussed and identify calls of interest through AI generated meeting summaries.
 
 Summarization is one of the most challenging problems in the natural language processing and natural language generation space. It attempts to solve the problem of consuming a large amount of information by creating a meaningful, short, and relevant summary of the input text. 
 
@@ -50,12 +49,14 @@ Summarization feature is supported for English language and pre-recorded audio a
 
 To get started with Summarization, all you need to do is add `summarize=true` in your API call.
 
-    curl \
-     --request POST \
-     --url 'https://api.deepgram.com/v1/listen?summarize=true&punctuate=true&tier=enhanced' \
-     --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
-     --header 'content-type: audio/mp3' \
-     --data-binary ‘@podcast.mp3'
+```shell
+curl \
+ --request POST \
+ --url 'https://api.deepgram.com/v1/listen?summarize=true&punctuate=true&tier=enhanced' \
+ --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+ --header 'content-type: audio/mp3' \
+ --data-binary ‘@podcast.mp3'
+```
 
 When the file is finished processing (often after only a few seconds), you’ll receive a sample JSON response that has the following basic structure:
 
@@ -71,4 +72,3 @@ When the file is finished processing (often after only a few seconds), you’ll 
 The outputs from the API can then be used to build downstream workflows, create meeting or call notes in pdf format, power analytics tools, or integrate with other applications. 
 
 To learn more about our API, please see the Summarization page in our documentation. We welcome your feedback, please share it with us at [Product Feedback](https://deepgram.hellonext.co/b/feedback).
-
