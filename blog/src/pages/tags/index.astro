@@ -14,8 +14,7 @@ import JsonLD from "../../shared/components/meta/JsonLD.astro";
 import { useStoryblokApi } from "@storyblok/astro";
 const sbApi = useStoryblokApi();
 
-const { data } = await sbApi.get("cdn/tags");
-const allBlogTags = data.tags;
+const allBlogTags = await sbApi.getAll("cdn/tags");
 const schema = {
 	"@context": "https://schema.org",
 	"@type": "BreadcrumbList",

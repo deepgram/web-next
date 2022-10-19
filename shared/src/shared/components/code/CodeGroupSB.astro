@@ -18,7 +18,7 @@ import CodeBlok from "./CodeBlockSB.astro";
 		<p class="text-sm tracking-wide flex items-center" style="padding-bottom: 0">{blok.title}</p>
 
 		{blok.code_blocks && blok.code_blocks.length > 1 && (
-			<select x-on:change="change">
+			<select x-on:change="change" class="font-medium">
 				{blok.code_blocks.map((cb, index) => {
 					return <option value={index}>{cb.tab_title}</option>;
 				})}

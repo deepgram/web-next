@@ -27,7 +27,6 @@ export async function getStaticPaths() {
 	const allPosts = await sbApi.getAll("cdn/stories", {
 		by_slugs: "blog-posts/*",
 	});
-	console.log("allPosts", allPosts.length);
 	const sortedPosts = allPosts.sort((a, b) => {
 		const aDate = new Date(b.content.date);
 		const bDate = new Date(a.content.date);
