@@ -36,7 +36,9 @@ export async function getStaticPaths() {
 
 	return sortedPosts.map((post) => {
 		const slug = post.slug;
-		console.log("slug", slug);
+		// uncomment this for debugging purposes in GH actions
+		// will give better insight into which post is failing
+		// console.log("slug", slug);
 		return {
 			params: {
 				slug,
