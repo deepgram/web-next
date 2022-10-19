@@ -44,6 +44,7 @@ export default defineConfig({
 				Alert: "shared/components/global/Alert",
 				CodeEmbed: "shared/components/global/CodeEmbed",
 				Table: "shared/components/global/Table",
+				CodeGroup: "shared/components/code/CodeGroupSB",
 			},
 		}),
 	],

@@ -1,0 +1,54 @@
+---
+const { blok } = Astro.props;
+import CodeBlok from "./CodeBlockSB.astro";
+---
+
+<div
+	class="code-group"
+	x-data={`{ lang: 0, 
+  change(e) {
+    console.log('lang before', this.lang)
+    console.log('e', e)
+    this.lang = e.target.value
+    console.log('lang after', this.lang)
+  } 
+}`}
+>
+	<header>
+		<p class="text-sm tracking-wide flex items-center" style="padding-bottom: 0">{blok.title}</p>
+
+		{blok.code_blocks && blok.code_blocks.length > 1 && (
+			<select x-on:change="change">
+				{blok.code_blocks.map((cb, index) => {
+					return <option value={index}>{cb.tab_title}</option>;
+				})}
+			</select>
+		)}
+	</header>
+
+	{blok.code_blocks &&
+		blok.code_blocks.length > 0 &&
+		blok.code_blocks.map((cb, index) => {
+			return <CodeBlok blok={cb} index={index} />;
+		})}
+</div>
+
+<style scoped>
+	.code-group {
+		@apply w-full;
+	}
+
+	header {
+		@apply flex justify-between;
+		@apply px-3;
+		@apply h-8;
+		@apply rounded-t-sm;
+		@apply bg-steel;
+		@apply font-inter text-sm font-bold uppercase text-white;
+	}
+
+	select {
+		@apply bg-steel rounded-none border-none outline-none;
+		@apply mr-4;
+	}
+</style>

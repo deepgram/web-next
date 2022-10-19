@@ -1,0 +1,15 @@
+---
+const { blok, index } = Astro.props;
+import Code from "astro/components/Code.astro";
+let lang = blok.code.content[0].attrs.class.replace("language-", "");
+---
+
+<div x-show={`lang == ${index}`} class={`code-block`} x-bind:class={`{'block':lang === ${index}}`}>
+	<Code code={blok.code.content[0].content[0].text} lang={lang} />
+</div>
+
+<style>
+	.code-block :global(.astro-code) {
+		@apply border-ink rounded-t-none rounded-b-sm;
+	}
+</style>
