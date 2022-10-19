@@ -1,5 +1,6 @@
 ---
 import BlogCard from "../../shared/components/cards/BlogCardSB.astro";
+import { log } from "console";
 import { useStoryblokApi } from "@storyblok/astro";
 
 const sbApi = useStoryblokApi();
@@ -9,7 +10,7 @@ const { data: categoryPosts } = await sbApi.get("cdn/stories", {
 	by_slugs: "blog-posts/*",
 	filter_query: {
 		category: {
-			in: post.category,
+			in: post.content.category,
 		},
 	},
 });
