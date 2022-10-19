@@ -4,7 +4,7 @@ description: "A Note to our Customers: OpenAI Whisper's Entrance into Voice"
 date: 2022-10-14T20:32:06.850Z
 cover: https://res.cloudinary.com/deepgram/image/upload/v1665448168/blog/a-note-to-our-customers-openai-whispers-entrance-to-voice/2210-Whispers-Entrance-to-Voice-featured-1200x630_2x_rp7bnz.png
 authors:
-  - sam-zegas
+  - scott-stephenson
 category: product-news
 tags:
   - whisper
