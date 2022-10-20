@@ -58,15 +58,15 @@ function getHeadingsSB(post) {
 	const richTextSections = post.content.body.filter((section) => {
 		return section.component === "RichTextSection";
 	});
-	const [headings] = richTextSections.map((section) => {
+	const headings = richTextSections.map((section) => {
 		return section.content.content.filter((richText) => {
 			if (richText.type === "heading") {
+				// console.log("richText", richText);
 				return richText.content[0].text;
 			}
 		});
 	});
-
-	return headings;
+	return headings.flat();
 }
 const sbApi = useStoryblokApi();
 
