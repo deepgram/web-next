@@ -43,8 +43,10 @@
     "@astrojs/sitemap": "^1.0.0",
     "@storyblok/astro": "^1.1.0",
     "axios": "^0.27.2",
+    "clone-deep": "^4.0.1",
     "netlify-cli": "^10.17.3",
     "preact-render-to-string": "^5.2.5",
+    "slugify": "^1.6.5",
     "vue": "^3.2.33"
   }
 }

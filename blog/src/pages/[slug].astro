@@ -21,6 +21,7 @@ import InlineIcon from "../shared/components/general/InlineIcon.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
 import { useStoryblokApi, renderRichText, RichTextSchema } from "@storyblok/astro";
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import slugify from "slugify";
 
 export async function getStaticPaths() {
 	const sbApi = useStoryblokApi();
@@ -50,10 +51,7 @@ export async function getStaticPaths() {
 }
 
 function snakeCase(heading) {
-	return heading
-		.toLowerCase()
-		.replace(/[^a-z0-9]/g, "-")
-		.replace(/-+/g, "-");
+	return slugify(heading, { lower: true });
 }
 
 function getHeadingsSB(post) {
@@ -185,8 +183,11 @@ const schema = [
 	},
 ];
 ---
+
 <link href="../../prism.css" rel="stylesheet" />
-<script src="../../prism.js"></script>
+<script src="../../prism.js">
+
+</script>
 <Layout>
 	<JsonLD slot="json:ld" {schema} />
 	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />

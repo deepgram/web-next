@@ -1,8 +1,10 @@
 ---
 import { renderRichText } from "@storyblok/astro";
-
+import cloneDeep from "clone-deep";
+import schema from "./richTextSchema";
+const clonedSchema = cloneDeep(schema);
 const { blok } = Astro.props;
-const renderedRichText = renderRichText(blok.content);
+const renderedRichText = renderRichText(blok.content, { schema: clonedSchema });
 // saving these comments incase we start using the inline rendering
 // const renderedRichText = renderRichText(post.content.body, {
 // 	resolver: (component, blok) => {
