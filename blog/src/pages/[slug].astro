@@ -293,6 +293,7 @@ const schema = [
 	.post-prose :global(img),
 	.post-prose :global(p img) {
 		@apply mx-auto object-cover;
+		@apply mb-4;
 	}
 
 	.post-prose :global(small) {
@@ -400,7 +401,15 @@ const schema = [
 		@apply border-casper table-auto  border;
 	}
 
-	.post-prose :global(th) {
+	.post-prose :global(thead > tr > th) {
+		@apply font-bold;
+	}
+
+	.post-prose :global(tbody > tr > th) {
+		@apply font-normal;
+	}
+
+	.post-prose :global(tr) {
 		@apply bg-mist;
 	}
 
