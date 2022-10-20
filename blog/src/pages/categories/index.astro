@@ -13,10 +13,9 @@ import JsonLD from "../../shared/components/meta/JsonLD.astro";
 import { useStoryblokApi } from "@storyblok/astro";
 const sbApi = useStoryblokApi();
 
-const { data } = await sbApi.get("cdn/stories", {
+const categories = await sbApi.getAll("cdn/stories", {
 	by_slugs: "categories/*",
 });
-const categories = data.stories;
 
 // build json schema object
 const schema = {

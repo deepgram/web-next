@@ -18,10 +18,10 @@ import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
 const sbApi = useStoryblokApi();
 
-const { data } = await sbApi.get("cdn/stories", {
+const authors = await sbApi.getAll("cdn/stories", {
 	by_slugs: "authors/*",
 });
-const authors = data.stories;
+
 const team = authors.filter((a) => a.content.team === "team");
 const alumni = authors.filter((a) => a.content.team === "alum");
 const guests = authors.filter((a) => a.content.team === "guest");
