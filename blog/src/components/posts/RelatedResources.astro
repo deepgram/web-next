@@ -6,22 +6,18 @@ import { useStoryblokApi } from "@storyblok/astro";
 const sbApi = useStoryblokApi();
 
 const { post } = Astro.props;
-const { data: categoryPosts } = await sbApi.get("cdn/stories", {
+const { data: relatedPosts } = await sbApi.get("cdn/stories", {
 	by_slugs: "blog-posts/*",
+	per_page: 4,
+	sort_by: "content.date:desc",
 	filter_query: {
 		category: {
 			in: post.content.category,
 		},
 	},
 });
-const sortedPosts = categoryPosts.stories.sort((a, b) => {
-	const aDate = new Date(b.content.date);
-	const bDate = new Date(a.content.date);
-	return aDate.getTime() - bDate.getTime();
-});
-const relatedPosts = sortedPosts.slice(0, 4);
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid-flow-row-dense justify-items-center gap-4 lg:gap-6 text-left mb-10">
-	{relatedPosts.map((p) => <BlogCard post={p} />)}
+	{relatedPosts.stories.map((p) => <BlogCard post={p} />)}
 </div>
