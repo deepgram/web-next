@@ -14,20 +14,20 @@ import { useStoryblokApi } from "@storyblok/astro";
 
 export async function getStaticPaths({ paginate }) {
 	const sbApi = useStoryblokApi();
-	const { data: allPosts } = await sbApi.get("cdn/stories", {
+	const allPosts = await sbApi.getAll("cdn/stories", {
 		by_slugs: "blog-posts/*",
 	});
-	const { data: authors } = await sbApi.get("cdn/stories", {
+	const authors = await sbApi.getAll("cdn/stories", {
 		by_slugs: "authors/*",
 	});
 
-	const sortedPosts = allPosts.stories.sort((a, b) => {
+	const sortedPosts = allPosts.sort((a, b) => {
 		const aDate = new Date(b.content.date);
 		const bDate = new Date(a.content.date);
 		return aDate.getTime() - bDate.getTime();
 	});
 
-	return authors.stories.map((author) => {
+	return authors.map((author) => {
 		const posts = sortedPosts.filter((post) => {
 			if (post.content.authors) {
 				return post.content.authors.includes(author.uuid);
