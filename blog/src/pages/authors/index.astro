@@ -20,6 +20,7 @@ const sbApi = useStoryblokApi();
 
 const authors = await sbApi.getAll("cdn/stories", {
 	by_slugs: "authors/*",
+	sort_by: "content.title:asc",
 });
 
 const team = authors.filter((a) => a.content.team === "team");
