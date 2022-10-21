@@ -1,21 +1,23 @@
 ---
 import Link from "../general/Link.astro";
+import { useStoryblokApi } from "@storyblok/astro";
+
+const sbApi = useStoryblokApi();
 
 const { tags, link } = Astro.props;
+const tagsArray = tags ? tags.slice(0, 3) : [];
 ---
 
-<ul class="pt-3 flex text-sm space-x-2">
-	{
-		tags &&
-			tags.map((tag) => (
-				<li class="bg-steel px-1 text-white">
-					{link && (
-						<Link href={`/tags/${tag}`} class="text-white">
-							#{tag}
-						</Link>
-					)}
-					{!link && <>#{tag}</>}
-				</li>
-			))
-	}
+<ul class="pt-3 flex text-sm font-medium space-x-2">
+	{tags &&
+		tagsArray.map((tag) => (
+			<li class="bg-steel px-1 text-white">
+				{link && (
+					<Link href={`/tags/${tag}`} class="text-white">
+						#{tag}
+					</Link>
+				)}
+				{!link && <>#{tag}</>}
+			</li>
+		))}
 </ul>

@@ -3,16 +3,19 @@ import PrimarySection from "../../shared/components/layout/PrimarySection.astro"
 import Layout from "../../layouts/Default.astro";
 import HasAside from "../../shared/components/layout/HasAside.astro";
 import CategoryList from "../../shared/components/nav/CategoryList.astro";
-import CategorySection from "../../components/homepage/CategorySection.astro";
+import CategorySection from "../../components/homepage/CategorySectionSB.astro";
 import Title from "../../shared/components/meta/Title.astro";
 import Description from "../../shared/components/meta/Description.astro";
 import Meta from "../../shared/components/meta/Meta.astro";
 import Backlink from "../../components/nav/Backlink.astro";
 import Link from "../../shared/components/general/Link.astro";
 import JsonLD from "../../shared/components/meta/JsonLD.astro";
-import { getSluggedJson } from "../../shared/util";
+import { useStoryblokApi } from "@storyblok/astro";
+const sbApi = useStoryblokApi();
 
-const categories = await getSluggedJson("blog/category");
+const categories = await sbApi.getAll("cdn/stories", {
+	by_slugs: "categories/*",
+});
 
 // build json schema object
 const schema = {

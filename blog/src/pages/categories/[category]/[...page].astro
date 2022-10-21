@@ -1,26 +1,33 @@
 ---
 import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../../layouts/Default.astro";
-import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+import GeneralPostsPage from "../../../components/posts/GeneralPostsPageSB.astro";
 import Title from "../../../shared/components/meta/Title.astro";
 import Description from "../../../shared/components/meta/Description.astro";
 import Meta from "../../../shared/components/meta/Meta.astro";
 import JsonLD from "../../../shared/components/meta/JsonLD.astro";
-import { getSluggedJson } from "../../../shared/util";
+import { useStoryblokApi } from "@storyblok/astro";
 
 export async function getStaticPaths({ paginate }) {
-	const categories = await getSluggedJson("blog/category");
-	const allPosts = await Astro.glob("../../../content/blog/posts/**/index.md");
+	const sbApi = useStoryblokApi();
+
+	const categories = await sbApi.getAll("cdn/stories", {
+		by_slugs: "categories/*",
+	});
+
+	const allPosts = await sbApi.getAll("cdn/stories", {
+		by_slugs: "blog-posts/*",
+	});
 
 	const sortedPosts = allPosts.sort((a, b) => {
-		const aDate = new Date(b.frontmatter.date);
-		const bDate = new Date(a.frontmatter.date);
+		const aDate = new Date(b.content.date);
+		const bDate = new Date(a.content.date);
 		return aDate.getTime() - bDate.getTime();
 	});
 
 	return categories.map((category) => {
 		const posts = sortedPosts.filter((post) => {
-			return post.frontmatter.category === category.slug;
+			return post.content.category === category.uuid;
 		});
 
 		return paginate(posts, {

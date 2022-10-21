@@ -1,34 +1,36 @@
 ---
 import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../../layouts/Default.astro";
-import GeneralPostsPage from "../../../components/posts/GeneralPostsPage.astro";
+import GeneralPostsPage from "../../../components/posts/GeneralPostsPageSB.astro";
 import JsonLD from "../../../shared/components/meta/JsonLD.astro";
+import { useStoryblokApi } from "@storyblok/astro";
 
 export async function getStaticPaths({ paginate }) {
-	const allPosts = await Astro.glob("../../../content/blog/posts/**/*.md");
+	const sbApi = useStoryblokApi();
+
+	const allBlogTags = await sbApi.getAll("cdn/tags");
+
+	const allPosts = await sbApi.getAll("cdn/stories", {
+		by_slugs: "blog-posts/*",
+	});
 	const sortedPosts = allPosts.sort((a, b) => {
-		const aDate = new Date(b.frontmatter.date);
-		const bDate = new Date(a.frontmatter.date);
+		const aDate = new Date(b.content.date);
+		const bDate = new Date(a.content.date);
 		return aDate.getTime() - bDate.getTime();
 	});
 
-	function getTags() {
-		const tagsArray = [];
-		sortedPosts.map((post) => {
-			tagsArray.push(...post.frontmatter.tags);
+	return allBlogTags.map((tag) => {
+		const filteredPosts = sortedPosts.filter((post) => {
+			if (post.tag_list) {
+				return post.tag_list.includes(tag.name);
+			}
+
+			return false;
 		});
-		const noDuplicateTags = [...new Set(tagsArray)];
-		return noDuplicateTags;
-	}
-
-	const tags = getTags();
-
-	return tags.map((tag) => {
-		const filteredPosts = sortedPosts.filter((post) => post.frontmatter.tags.includes(tag));
 		return paginate(filteredPosts, {
-			params: { tag },
+			params: { tag: tag.name },
 			pageSize: 12,
-			props: { tag },
+			props: { tag: tag.name },
 		});
 	});
 }

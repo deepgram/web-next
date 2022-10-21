@@ -1,9 +1,9 @@
 ---
+import render from "preact-render-to-string";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Layout from "../layouts/Default.astro";
 import HasGutters from "../shared/components/layout/HasGutters.astro";
 import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
-
 import PostImage from "../components/posts/PostImage.astro";
 import PostMeta from "../components/posts/PostMeta.astro";
 import PostHeading from "../components/posts/PostHeading.astro";
@@ -19,19 +19,26 @@ import MetaLink from "../shared/components/meta/Link.astro";
 import Backlink from "../components/nav/Backlink.astro";
 import InlineIcon from "../shared/components/general/InlineIcon.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
-import { getSluggedJson } from "../shared/util";
+import { useStoryblokApi, renderRichText, RichTextSchema } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import slugify from "slugify";
 
 export async function getStaticPaths() {
-	const allPosts = await Astro.glob("/src/content/blog/posts/**/*.md");
+	const sbApi = useStoryblokApi();
+	const allPosts = await sbApi.getAll("cdn/stories", {
+		by_slugs: "blog-posts/*",
+	});
 	const sortedPosts = allPosts.sort((a, b) => {
-		const aDate = new Date(b.frontmatter.date);
-		const bDate = new Date(a.frontmatter.date);
+		const aDate = new Date(b.content.date);
+		const bDate = new Date(a.content.date);
 		return aDate.getTime() - bDate.getTime();
 	});
 
 	return sortedPosts.map((post) => {
-		const slug = post.frontmatter.slug || post.file.split("/")[post.file.split("/").length - 2];
-
+		const slug = post.slug;
+		// uncomment this for debugging purposes in GH actions
+		// will give better insight into which post is failing
+		// console.log("slug", slug);
 		return {
 			params: {
 				slug,
@@ -43,42 +50,58 @@ export async function getStaticPaths() {
 	});
 }
 
+function snakeCase(heading) {
+	return slugify(heading, { lower: true });
+}
+
+function getHeadingsSB(post) {
+	const richTextSections = post.content.body.filter((section) => {
+		return section.component === "RichTextSection";
+	});
+	const headings = richTextSections.map((section) => {
+		return section.content.content.filter((richText) => {
+			if (richText.type === "heading") {
+				// console.log("richText", richText);
+				return richText.content[0].text;
+			}
+		});
+	});
+	return headings.flat();
+}
+const sbApi = useStoryblokApi();
+
 const { post } = Astro.props;
 const { slug } = Astro.params;
 
-const headings = await post.getHeadings();
+const headings = await getHeadingsSB(post);
+const postAuthors = post.content.authors;
+const { data: authorsWithContent } = await sbApi.get("cdn/stories", {
+	by_uuids: postAuthors.toString(),
+});
 
-const allAuthors = await getSluggedJson("blog/authors");
-const postAuthors = allAuthors.filter((a) => post.frontmatter.authors.includes(a.slug));
-
-const allCategories = await getSluggedJson("blog/category");
-const postCategory = allCategories.find((c) => post.frontmatter.category === c.slug);
-
+const { data: categoryData } = await sbApi.get(`cdn/stories/${post.content.category}`, {
+	find_by: "uuid",
+});
+const postCategory = categoryData.story;
 const seo = {
-	title: post.frontmatter.seo && post.frontmatter.seo.title ? post.frontmatter.seo.title : post.frontmatter.title,
-	description: post.frontmatter.seo && post.frontmatter.seo.description ? post.frontmatter.seo.description : post.frontmatter.description,
-	url: post.frontmatter.seo && post.frontmatter.seo.canonical ? post.frontmatter.seo.canonical : Astro.url,
+	title: post.content.seo_title ? post.content.seo_title : post.content.title,
+	description: post.content.seo_description ? post.content.seo_description : post.content.description,
+	url: post.content.seo && post.content.seo.canonical ? post.content.seo.canonical : Astro.url,
 };
 
 const og = {
-	title: post.frontmatter.og && post.frontmatter.og.title ? post.frontmatter.og.title : seo.title,
-	description: post.frontmatter.og && post.frontmatter.og.description ? post.frontmatter.og.description : seo.description,
-	image: post.frontmatter.og && post.frontmatter.og.image ? post.frontmatter.og.image : post.frontmatter.cover,
+	title: seo.title,
+	description: seo.description,
+	image: post.content.og && post.content.og.filename !== "" ? post.content.og.filename : post.content.cover_image.filename,
 };
-
-// resize-og-image-to-fit
-if (og && og.image) {
-	const version = og.image.match(/(.*)\/image\/upload\/(?<version>v[0-9]+)\/(.*)\.(.*)/).groups.version;
-	og.image = og.image.replace(version, "c_fit,h_627,w_1200");
-}
 
 // build short URLs
 const shorturls = {
-	share: post.frontmatter.shorturls && post.frontmatter.shorturls.share ? post.frontmatter.shorturls.share : Astro.url,
-	twitter: post.frontmatter.shorturls && post.frontmatter.shorturls.twitter ? post.frontmatter.shorturls.twitter : Astro.url,
-	linkedin: post.frontmatter.shorturls && post.frontmatter.shorturls.linkedin ? post.frontmatter.shorturls.linkedin : Astro.url,
-	reddit: post.frontmatter.shorturls && post.frontmatter.shorturls.reddit ? post.frontmatter.shorturls.reddit : Astro.url,
-	facebook: post.frontmatter.shorturls && post.frontmatter.shorturls.facebook ? post.frontmatter.shorturls.facebook : Astro.url,
+	share: post.content.shorturls && post.content.shorturls.share ? post.content.shorturls.share : Astro.url,
+	twitter: post.content.shorturls && post.content.shorturls.twitter ? post.content.shorturls.twitter : Astro.url,
+	linkedin: post.content.shorturls && post.content.shorturls.linkedin ? post.content.shorturls.linkedin : Astro.url,
+	reddit: post.content.shorturls && post.content.shorturls.reddit ? post.content.shorturls.reddit : Astro.url,
+	facebook: post.content.shorturls && post.content.shorturls.facebook ? post.content.shorturls.facebook : Astro.url,
 	fullUrl: Astro.url,
 };
 
@@ -91,9 +114,9 @@ const schema = [
 		url: seo.url,
 		headline: seo.title,
 		alternativeHeadline: og.title,
-		dateCreated: post.frontmatter.date,
-		datePublished: post.frontmatter.date,
-		dateModified: post.frontmatter.date,
+		dateCreated: post.created_at,
+		datePublished: post.first_published_at,
+		dateModified: post.published_at,
 		inLanguage: "en-US",
 		isFamilyFriendly: "true",
 		copyrightYear: new Date().getFullYear(),
@@ -102,7 +125,7 @@ const schema = [
 			"@type": "Place",
 			name: "San Francisco, California, 94110, USA",
 		},
-		author: postAuthors.map((a) => ({
+		author: authorsWithContent.stories.map((a) => ({
 			"@type": "Person",
 			image: a.picture ? a.picture : null,
 			name: a.title,
@@ -121,18 +144,20 @@ const schema = [
 			},
 		},
 		mainEntityOfPage: "True",
-		keywords: post.frontmatter.tags,
+		keywords: post.tag_list,
 		genre: ["Speech Recognition", "Automatic Speech Recognition", "Speech-to-Text", "API"],
-		articleSection: postCategory.title,
+		articleSection: postCategory.content.title,
 	},
-	...postAuthors.map((a) => ({
-		"@context": "https://schema.org",
-		"@type": "Person",
-		image: a.picture ? a.picture : null,
-		name: a.title,
-		jobTitle: a.team ? (a.jobtitle ? a.jobtitle : "Deepgram Team") : a.alumni ? "Deepgram Alumni" : "Guest Author",
-		url: `${Astro.url.origin}/authors/${a.slug}`,
-	})),
+	...authorsWithContent.stories.map((a) => {
+		return {
+			"@context": "https://schema.org",
+			"@type": "Person",
+			image: a.content.picture.filename ? a.content.picture.filename : null,
+			name: a.content.title,
+			jobTitle: a.content.team === "team" ? "Deepgram Team" : a.content.team === "alum" ? "Deepgram Alumni" : "Guest Author",
+			url: `${Astro.url.origin}/authors/${a.slug}`,
+		};
+	}),
 	{
 		"@context": "https://schema.org",
 		"@type": "BreadcrumbList",
@@ -159,9 +184,12 @@ const schema = [
 ];
 ---
 
+<link href="../../prism.css" rel="stylesheet" />
+<script src="../../prism.js">
+
+</script>
 <Layout>
 	<JsonLD slot="json:ld" {schema} />
-
 	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />
 	<Description slot="head:description" name="description" content={seo.description} />
 	<MetaLink slot="head:canonical" rel="canonical" href={seo.url} />
@@ -174,10 +202,10 @@ const schema = [
 	<Meta slot="og:image:height" property="og:image:height" content="762" />
 	<Meta slot="og:image:alt" property="og:image:alt" content={`Deepgram Blog - A post titled: ${og.title}`} />
 
-	<Meta slot="head" property="article:published_time" content={post.frontmatter.date} />
-	{postAuthors && postAuthors.map((author) => <Meta slot="head" property="article:author" content={author.title} />)}
-	<Meta slot="head" property="article:section" content={postCategory.title} />
-	{post.frontmatter.tags && post.frontmatter.tags.map((tag) => <Meta slot="head" property="article:tag" content={tag} />)}
+	<Meta slot="head" property="article:published_time" content={post.first_published_at} />
+	{authorsWithContent && authorsWithContent.stories.map((author) => <Meta slot="head" property="article:author" content={author.title} />)}
+	<Meta slot="head" property="article:section" content={postCategory.content.title} />
+	{post.tag_list && post.tag_list.map((tag) => <Meta slot="head" property="article:tag" content={tag} />)}
 
 	<article>
 		<ContrastSection contrast="mist" background="white" bottomDivider="eclipse-divider" bottomOverlay>
@@ -189,7 +217,7 @@ const schema = [
 				<HasGutters>
 					<header class="flex flex-col">
 						<PostHeading post={post} />
-						<PostMeta post={post} />
+						<PostMeta post={post} authors={authorsWithContent.stories} category={postCategory} />
 						<PostImage post={post} />
 					</header>
 				</HasGutters>
@@ -198,11 +226,11 @@ const schema = [
 		<PrimarySection class="mt-32 xl:mt-56">
 			<HasGutters>
 				<div class="post">
-					<div class="post-prose">
-						<post.Content />
+					<div class="post-prose markdown-body">
+						{post.content.body.map((section) => <StoryblokComponent blok={section} />)}
 					</div>
 					<h4>More with these tags:</h4>
-					<TagsList tags={post.frontmatter.tags} link />
+					<TagsList tags={post.tag_list} link />
 
 					<Feedback />
 				</div>
@@ -211,9 +239,7 @@ const schema = [
 					<h5 class="pb-5"><InlineIcon icon="share">Share</InlineIcon></h5>
 					<div class="flex gap-2 text-2xl">
 						<Link
-							href={`mailto:?body=Check%20out%20this%20awesome%20post%20on%20Deepgram!%0A%0A${encodeURIComponent(post.frontmatter.title)}%0A%0A${encodeURIComponent(
-								shorturls.share
-							)}`}
+							href={`mailto:?body=Check%20out%20this%20awesome%20post%20on%20Deepgram!%0A%0A${encodeURIComponent(post.content.title)}%0A%0A${encodeURIComponent(shorturls.share)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="email" class="w-[1em] fill-darkIris" />
@@ -225,7 +251,7 @@ const schema = [
 							><Icon icon="twitter" class="w-[1em] fill-darkIris" />
 						</Link>
 						<Link
-							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shorturls.fullUrl)}&title=${encodeURIComponent(post.frontmatter.title)}`}
+							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shorturls.fullUrl)}&title=${encodeURIComponent(post.content.title)}`}
 							target="_blank"
 							rel="noopener noreferrer"
 							><Icon icon="linkedin" class="w-[1em] fill-darkIris" />
@@ -235,15 +261,16 @@ const schema = [
 						</Link>
 					</div>
 
-					{headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">In this blog post</h5>}
+					{headings && headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">In this blog post</h5>}
 					<ul class="hidden xl:block">
-						{headings.length > 0 &&
+						{headings &&
+							headings.length > 0 &&
 							headings
-								.filter((heading) => heading.depth <= 2)
+								.filter((heading) => heading.attrs.level <= 2)
 								.map((heading) => (
 									<li class="pb-4">
-										<Link class="text-black" href={`#${heading.slug}`}>
-											{heading.text}
+										<Link class="text-black" href={`#${snakeCase(heading.content[0].text)}`}>
+											{heading.content[0].text}
 										</Link>
 									</li>
 								))}
@@ -252,7 +279,7 @@ const schema = [
 			</HasGutters>
 			<div class="mt-20">
 				<h3 class="mb-10 text-center">Related Resources</h3>
-				<RelatedResources post={post} />
+				<RelatedResources post={post} category={postCategory} />
 			</div>
 		</PrimarySection>
 	</article>
@@ -263,117 +290,141 @@ const schema = [
 		@apply md:mx-20 lg:mx-32;
 	}
 
-	.post-prose > :global(img),
-	.post-prose > :global(p img) {
+	.post-prose :global(img),
+	.post-prose :global(p img) {
 		@apply mx-auto object-cover;
+		@apply mb-4;
 	}
 
-	.post-prose > :global(small) {
+	.post-prose :global(small) {
 		@apply text-sm;
 	}
 
-	.post-prose > :global(h1),
-	.post-prose > :global(h2),
-	.post-prose > :global(h3),
-	.post-prose > :global(h4),
+	.post-prose :global(h1),
+	.post-prose :global(h2),
+	.post-prose :global(h3),
+	.post-prose :global(h4),
 	.post :global(h4),
-	.post-prose > :global(h5),
-	.post-prose > :global(h6) {
+	.post-prose :global(h5),
+	.post-prose :global(h6) {
 		@apply pt-6 pb-2;
 	}
 
-	.post-prose > :global(p) {
+	.post-prose :global(p) {
 		@apply pb-4 leading-loose lg:leading-normal;
 	}
 
-	.post-prose > :global(* a) {
+	.post-prose :global(* a) {
 		@apply text-darkIris;
 	}
 
-	.post-prose > :global(pre.astro-code) {
+	.post-prose :global(pre) {
 		@apply m-0 mb-14;
+		color: #f5f5f5;
+		background-color: #0d1117;
+		overflow-x: auto;
+		max-height: 24rem;
+		overflow: scroll;
+		padding: 1.75rem 2.5rem;
+		margin: 0;
+		margin-bottom: 1.5rem;
 	}
 
-	.post-prose > :global(p:not(pre.astro-code) code) {
+	.post-prose :global(p:not(pre.astro-code) code) {
 		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];
 	}
 
-	.post-prose > :global(ol) {
+	.post-prose :global(ol) {
 		@apply m-0 mb-5 pl-8;
 	}
 
-	.post-prose > :global(ul:not(.contains-task-list)) {
+	.post-prose :global(ul:not(.contains-task-list)) {
 		@apply m-0 mb-5 pl-6;
 	}
 
-	.post-prose > :global(ol) {
+	.post-prose :global(ol) {
 		counter-reset: li;
 	}
 
-	.post-prose > :global(ol li) {
+	.post-prose :global(ol li) {
 		@apply relative;
 	}
 
-	.post-prose > :global(ol li),
-	.post-prose > :global(ul:not(.contains-task-list) li),
-	.post-prose > :global(ul li.task-list-item) {
+	.post-prose :global(ol li),
+	.post-prose :global(ul:not(.contains-task-list) li),
+	.post-prose :global(ul li.task-list-item) {
 		@apply py-1;
 	}
 
-	.post-prose > :global(ol li::before) {
+	.post-prose :global(ol li::before) {
 		content: counter(li);
 		counter-increment: li;
 		@apply absolute -left-8 h-6 w-6 rounded-full border border-black text-center text-black;
 	}
 
-	.post-prose > :global(ul:not(.contains-task-list)) {
+	.post-prose :global(ul:not(.contains-task-list)) {
 		@apply list-disc;
 	}
 
-	.post-prose > :global(ul:not(.contains-task-list) li::marker) {
+	.post-prose :global(ul:not(.contains-task-list) li::marker) {
 		@apply text-casper;
 	}
 
-	.post-prose > :global(ul:not(.contains-task-list) li) {
+	.post-prose :global(ul:not(.contains-task-list) li) {
 		@apply pl-1 text-black;
 	}
 
-	.post-prose > :global(li.task-list-item input) {
+	.post-prose :global(li.task-list-item input) {
 		@apply appearance-none accent-pink-500;
 	}
 
-	.post-prose > :global(li.task-list-item input:checked::before) {
+	.post-prose :global(li.task-list-item input:checked::before) {
 		content: "✔";
 		@apply text-meadow text-lg;
 	}
 
-	.post-prose > :global(li.task-list-item input:not(:checked)::before) {
+	.post-prose :global(li.task-list-item input:not(:checked)::before) {
 		content: "✖";
 		@apply text-coral text-lg;
 	}
 
-	.post-prose > :global(table) {
-		@apply mb-4 block min-w-full border-collapse overflow-auto whitespace-nowrap;
-	}
-	
-	.post-prose > :global(table) + :global(p small) {
-		@apply -mt-2 block text-center text-sm font-bold;
-	}
-	
-	.post-prose > :global(table td),
-	.post-prose > :global(table th) {
-		@apply border-casper table-auto border whitespace-pre-wrap px-6 py-2 align-top;
-	}
-	
-	.post-prose > :global(table th) {
-		@apply bg-mist font-bold align-middle;
+	.post-prose :global(table) {
+		@apply w-screen;
+		@apply -mx-0 md:-mx-24 lg:-mx-32;
+		@apply mb-4 block border-collapse overflow-auto whitespace-nowrap;
 	}
 
-	.post-prose > :global(.promo-container) {
+	.post-prose :global(table) + :global(p small) {
+		@apply -mt-2 block text-center text-sm font-bold;
+	}
+
+	.post-prose :global(td),
+	.post-prose :global(th) {
+		@apply border-casper table-auto  border;
+	}
+
+	.post-prose :global(thead > tr > th) {
+		@apply font-bold;
+	}
+
+	.post-prose :global(tbody > tr > th) {
+		@apply font-normal;
+	}
+
+	.post-prose :global(tr) {
+		@apply bg-mist;
+	}
+
+	.post-prose :global(td),
+	.post-prose :global(th) {
+		@apply px-6 py-2;
+	}
+
+	.post-prose :global(.promo-container) {
 		@apply md:-mx-20 lg:-mx-32;
 	}
 
-	.post-prose > :global(iframe) {
+	.post-prose :global(iframe) {
 		margin-top: 1rem;
 		margin-bottom: 1.5rem;
 	}

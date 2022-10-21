@@ -1,0 +1,26 @@
+---
+import { renderRichText } from "@storyblok/astro";
+import cloneDeep from "clone-deep";
+import schema from "./richTextSchema";
+const clonedSchema = cloneDeep(schema);
+const { blok } = Astro.props;
+const renderedRichText = renderRichText(blok.content, { schema: clonedSchema });
+// saving these comments incase we start using the inline rendering
+// const renderedRichText = renderRichText(post.content.body, {
+// 	resolver: (component, blok) => {
+// 		switch (component) {
+// 			case "Image":
+// 				// return `<img src=${blok.src} alt=${blok.alt} style='${blok.style + "margin-bottom: 20px;"}' />`;
+// 				return render(Image({ blok }));
+// 			case "Iframe":
+// 				return render(Iframe({ blok }));
+// 			case "Whitepaper":
+// 				return render(Whitepaper({ blok }));
+// 			default:
+// 				return null;
+// 		}
+// 	},
+// });
+---
+
+<div set:html={renderedRichText}></div>

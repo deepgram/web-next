@@ -2,12 +2,12 @@
 import { storyblokEditable } from "@storyblok/astro";
 
 // import GenericCard from "./GenericCard.astro";
-// import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 
 const { class: classes, blok } = Astro.props;
 ---
 
-<a class={`block text-black ${classes ? classes : ""}`} href={`/authors/${blok.slug}`} {...storyblokEditable(blok)}>
+<a class={classes ? classes : ""} href={`/authors/${blok.slug}`} {...storyblokEditable(blok)}>
 	<div class="flex">
 		<div class="shrink-0 w-[6rem] md:w-[8rem]">
 			<img class="h-[6rem] md:h-[8rem] w-[6rem] md:w-[8rem] object-cover rounded-full" src={blok.content.picture.filename} alt={`Author image for ${blok.content.title}`} />

@@ -1,0 +1,35 @@
+---
+import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
+import LinkCardListTitle from "../../shared/components/titles/LinkCardListTitle.astro";
+import CategoryPosts from "./CategoryPostsSB.astro";
+import { useStoryblokApi } from "@storyblok/astro";
+const sbApi = useStoryblokApi();
+
+const { category } = Astro.props;
+const { data: allPosts } = await sbApi.get("cdn/stories", {
+	by_slugs: "blog-posts/*",
+	sort_by: "content.date:desc",
+	per_page: 6,
+	filter_query: {
+		category: {
+			in: category.uuid,
+		},
+	},
+});
+const posts = allPosts.stories.sort((a, b) => {
+	const aDate = new Date(b.content.date);
+	const bDate = new Date(a.content.date);
+	return aDate.getTime() - bDate.getTime();
+});
+---
+
+{posts.length > 0 && (
+	<>
+		<BlogCardList class="mb-32">
+			<LinkCardListTitle slot="title" href={`/categories/${category.slug}`} title={category.content.plural} linkClass="draw-underline nudge-icon nudge-icon--right text-iris">
+				<h3>{category.content.title}</h3>
+			</LinkCardListTitle>
+			<CategoryPosts posts={posts} />
+		</BlogCardList>
+	</>
+)}

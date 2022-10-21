@@ -2,4 +2,4 @@
 const { post } = Astro.props;
 ---
 
-<img class="shadow-dg" src={post.frontmatter.cover} alt={post.frontmatter.title} />
+<img class="shadow-dg" src={post.content.cover_image.filename} alt={post.content.title} />

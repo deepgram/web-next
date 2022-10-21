@@ -1,6 +1,5 @@
 ---
-const { author: authorSlug, class: classes } = Astro.props;
-const author = await import(`../../../content/blog/authors/${authorSlug}.json`);
+const { author, class: classes } = Astro.props;
 ---
 
-<img src={author.picture} class={classes} alt={`Author photo for ${author.title}`} title={author.title} />
+<img src={author.content.picture.filename} class={classes} alt={`Author photo for ${author.content.title}`} title={author.content.title} />
