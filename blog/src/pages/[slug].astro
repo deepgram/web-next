@@ -23,6 +23,7 @@ import { useStoryblokApi, renderRichText, RichTextSchema } from "@storyblok/astr
 import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import slugify from "slugify";
 
+import "../assets/styles/prism.css";
 export async function getStaticPaths() {
 	const sbApi = useStoryblokApi();
 	const allPosts = await sbApi.getAll("cdn/stories", {
@@ -184,11 +185,12 @@ const schema = [
 ];
 ---
 
-<link href="../../prism.css" rel="stylesheet" />
-<script src="../../prism.js">
-
-</script>
 <Layout>
+	<!-- <link href="../../prism.css" rel="stylesheet" /> -->
+	<script src="../prism.js">
+
+	</script>
+	<script src="../storyblokBridge.js"></script>
 	<JsonLD slot="json:ld" {schema} />
 	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />
 	<Description slot="head:description" name="description" content={seo.description} />
