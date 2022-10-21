@@ -28,11 +28,6 @@ const { data: allPosts } = await sbApi.get("cdn/stories", {
 	per_page: 8,
 	sort_by: "content.date:desc",
 });
-// const sortedPosts = allPosts.stories.sort((a, b) => {
-// 	const aDate = new Date(b.content.first_published_at);
-// 	const bDate = new Date(a.content.first_published_at);
-// 	return aDate.getTime() - bDate.getTime();
-// });
 
 const otherPosts = allPosts.stories.filter((post) => {
 	return ![featuredPost, ...homepagePosts.stories].some((f) => {
