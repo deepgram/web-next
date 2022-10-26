@@ -42,4 +42,6 @@ await ws.send(json.dumps({
 
 To enable numeral formatting, specify `numerals: true`; to disable it, specify `numerals: false`. As many configuration messages can be sent as desired during the stream.
 
-Currently, numerals is the only feature that can be turned on and off mid-stream, but we're excited to continue adding greater flexibility to our real-time API. Stay tuned for more soon!
+Currently, numerals is the only feature that can be turned on and off mid-stream, but we're excited to continue adding greater flexibility to our real-time API. Stay tuned for more soon.
+
+*Hi, I'm Shir! I'm the product manager for Deepgram's real-time transcription API. If you have any feedback about this change, or anything else in our product, I'd love to chat. Drop me an email: [shir.goldberg@deepgram.com](mailto:shir.goldberg@deepgram.com).*
