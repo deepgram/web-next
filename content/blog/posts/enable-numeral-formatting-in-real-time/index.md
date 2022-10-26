@@ -14,7 +14,7 @@ Here at Deepgram, we’re making our real-time streaming API as dynamic as our c
 
 In addition to enabling [numeral formatting](https://developers.deepgram.com/documentation/features/numerals/) at the start of a stream via query parameter, numeral formatting can now be turned on and off at any point in an audio stream by sending a JSON `Configure` message.
 
-Want to give this a try? Here’s a script that transcribes audio from your microphone using DG. If you say “turn numerals on” or “turn numerals off”, numeral formatting will be enabled or disabled. Try saying a string of numbers to see the difference.
+Want to give this a try? Here’s [a script](https://github.com/deepgram/numerals-on-off) that transcribes audio from your microphone using DG. If you say “turn numerals on” or “turn numerals off”, numeral formatting will be enabled or disabled. Try saying a string of numbers to see the difference.
 
 ![]()
 
