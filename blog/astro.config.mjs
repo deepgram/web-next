@@ -6,6 +6,8 @@ import vue from "@astrojs/vue";
 import vitePreact from "@preact/preset-vite";
 import preact from "@astrojs/preact";
 import storyblok from "@storyblok/astro";
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 // https://astro.build/config
 export default defineConfig({
