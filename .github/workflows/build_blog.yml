@@ -24,7 +24,6 @@ jobs:
       STAGING_DOMAIN: sweet-pie-c52a63-blog.netlify.app
       BUILD_PATH: ./blog
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
       IS_PRODUCTION: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       IS_STAGING: ${{ github.ref != 'refs/heads/main' && github.event_name == 'pull_request' }}
       DEPLOY_PREFIX: blog
@@ -80,6 +79,31 @@ jobs:
           ./node_modules/.bin/ntl build
       - name: Deploy ${{ env.DEPLOY_PREFIX }} site to Netlify
         uses: nwtgck/actions-netlify@v1.2
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
+        with:
+          publish-dir: ${{ env.BUILD_PATH }}/dist
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: ${{ env.DEPLOY_MESSAGE }}
+          enable-pull-request-comment: false                  # default: true
+          enable-commit-comment: true                         # default: true
+          overwrites-pull-request-comment: false              # default: true
+          production-deploy: ${{ env.IS_PRODUCTION }}
+          functions-dir: ${{ env.BUILD_PATH }}/functions
+          alias: ${{ env.BUILD_ALIAS }}
+          github-deployment-environment: ${{ env.ENVIRONMENT_NAME }}
+          github-deployment-description: ${{ env.ENVIRONMENT_DESC }}
+        timeout-minutes: 5
+      - name: Build ${{ env.DEPLOY_PREFIX }} preview site
+        run: |
+          cd ${{ env.BUILD_PATH }}
+          echo "IS_PREVIEW=true" >> $GITHUB_ENV
+          ./node_modules/.bin/ntl build
+      - name: Deploy ${{ env.DEPLOY_PREFIX }} preview site to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG_PREVIEW }}
         with:
           publish-dir: ${{ env.BUILD_PATH }}/dist
           production-branch: main

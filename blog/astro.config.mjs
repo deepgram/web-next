@@ -28,7 +28,7 @@ export default defineConfig({
 				cache: { clear: "auto", type: "memory" },
 				region: "us",
 			},
-			bridge: true,
+			bridge: process.env.IS_PREVIEW || false,
 			components: {
 				// page: "storyblok/Page",
 				// feature: "storyblok/Feature",
