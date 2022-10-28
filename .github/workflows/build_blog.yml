@@ -98,8 +98,9 @@ jobs:
       - name: Build ${{ env.DEPLOY_PREFIX }} preview site
         run: |
           cd ${{ env.BUILD_PATH }}
-          echo "IS_PREVIEW=true" >> $GITHUB_ENV
           ./node_modules/.bin/ntl build
+        env:
+          IS_PREVIEW: true
       - name: Deploy ${{ env.DEPLOY_PREFIX }} preview site to Netlify
         uses: nwtgck/actions-netlify@v1.2
         env:
