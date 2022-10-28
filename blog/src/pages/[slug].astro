@@ -357,6 +357,10 @@ const schema = [
 		@apply py-1;
 	}
 
+	.post-prose :global(ol li::marker) {
+  	color: transparent;
+	}
+
 	.post-prose :global(ol li::before) {
 		content: counter(li);
 		counter-increment: li;
