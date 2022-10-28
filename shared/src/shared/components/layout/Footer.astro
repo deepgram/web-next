@@ -43,42 +43,42 @@ const formUuid = await getUuid();
 		<AmplifyQuote class="bg-black text-white" type="standard" title="Ready to see Deepgram in Action?" subtitle="Get your API key and unlock $150 in free credit." />
 	</PrimarySection>
 	<PrimarySection>
-		<div class="grid grid-cols-1 w-full sm:w-2/3 lg:w-full lg:grid-cols-5 xl:grid-cols-6 gap-10 items-end pb-14">
+		<div class="grid grid-cols-1 w-full sm:w-2/3 lg:w-full lg:grid-cols-5 xl:grid-cols-6 gap-10 items-end py-14">
 			<div class="lg:col-start-1 lg:col-end-3 flex flex-col space-y-6">
 				<Svg name="deepgram-long" class="text-dgRed w-56 stroke-0" />
 				<p>Every Voice. Heard and understood.</p>
 				<ul class="grid grid-cols-4 sm:grid-cols-8 lg:place-items-center md:place-items-start gap-6 md:gap-12">
 					<li>
 						<Link href="https://www.twitch.tv/deepgramdevs" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"
-							><Icon icon="twitch" class="fill-current w-10" />
+							><Icon icon="twitch" class="fill-current w-10 h-7" />
 						</Link>
 					</li>
 					<li>
-						<Link href="http://github.com/deepgram" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"><Icon icon="github" class="fill-current w-10" /></Link>
+						<Link href="http://github.com/deepgram" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"><Icon icon="github" class="fill-current w-10 h-7" /></Link>
 					</li>
 					<li>
 						<Link href="http://twitter.com/DeepgramAI" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"
-							><Icon icon="twitter" class="fill-current w-10" />
+							><Icon icon="twitter" class="fill-current w-10 h-7" />
 						</Link>
 					</li>
 					<li>
 						<Link href="http://www.linkedin.com/company/deepgram" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"
-							><Icon icon="linkedin" class="fill-current w-10" />
+							><Icon icon="linkedin" class="fill-current w-10 h-7" />
 						</Link>
 					</li>
 					<li>
 						<Link href="http://www.youtube.com/channel/UCZD2IkWTzZvajgiy9CjNfxA" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"
-							><Icon icon="youtube" class="fill-current w-10" />
+							><Icon icon="youtube" class="fill-current w-10 h-7" />
 						</Link>
 					</li>
 					<li>
 						<Link href="http://www.facebook.com/deepgram/" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"
-							><Icon icon="facebook" class="fill-current w-10" />
+							><Icon icon="facebook" class="fill-current w-10 h-7" />
 						</Link>
 					</li>
 					<li>
 						<Link href="http://dribbble.com/deepgram" rel="noopener noreferrer nofollow" target="_blank" class="text-storm"
-							><Icon icon="dribbble" class="fill-current w-10" />
+							><Icon icon="dribbble" class="fill-current w-10 h-7" />
 						</Link>
 					</li>
 				</ul>
@@ -88,17 +88,18 @@ const formUuid = await getUuid();
 				<form name="newsletter" method="POST" @submit.prevent="newsletterSignup">
 					<input class="hidden" aria-label="Don't fill this in if you're a human." name="bot-field" />
 					<div class="flex flex-col space-y-4">
-						<div class="input-group flex-row items-baseline space-x-1">
-							<label for={`terms-${formUuid}`}><input id={`terms-${formUuid}`} type="checkbox" x-model="privacyAgree" /> I’m good with the</label>
+						<div class="input-group flex-row items-center space-x-1">
+							<label class="flex items-center" for={`terms-${formUuid}`}>
+								<input class="mr-1" id={`terms-${formUuid}`} type="checkbox" x-model="privacyAgree" /> I’m good with the</label>
 							<Link href="https://www.iubenda.com/privacy-policy/88905781" target="_blank" class="text-lightIris">Privacy Policy</Link>
 						</div>
 
-						<div class="form--inline">
+						<div class="form--inline flex">
 							<div class="input-group">
 								<input type="text" name="email" id={`email-${formUuid}`} x-model="email" placeholder="you@work-email.com" />
 								<input type="hidden" name="hook" value="blj5az4" />
 							</div>
-							<Button type="submit" :disabled="!privacyAgree" value="test" class="button button--secondary">Submit</Button>
+							<Button type="submit" :disabled="!privacyAgree" value="test" class="button button--secondary button--small">Submit</Button>
 						</div>
 					</div>
 				</form>

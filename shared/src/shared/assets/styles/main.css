@@ -59,7 +59,7 @@ html {
 		@apply lg:text-h1-large-d text-h1-large-m;
 	}
 
-	h1 small {
+	h1.small {
 		@apply lg:text-h1-small-d text-h1-small-m;
 	}
 
