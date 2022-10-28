@@ -27,7 +27,7 @@ import "../assets/styles/prism.css";
 export async function getStaticPaths() {
 	const sbApi = useStoryblokApi();
 	const allPosts = await sbApi.getAll("cdn/stories", {
-		"version": "draft",
+		version: "draft",
 		by_slugs: "blog-posts/*",
 	});
 	const sortedPosts = allPosts.sort((a, b) => {
@@ -78,12 +78,12 @@ const { slug } = Astro.params;
 const headings = await getHeadingsSB(post);
 const postAuthors = post.content.authors;
 const { data: authorsWithContent } = await sbApi.get("cdn/stories", {
-	"version": "draft",
+	version: "draft",
 	by_uuids: postAuthors.toString(),
 });
 
 const { data: categoryData } = await sbApi.get(`cdn/stories/${post.content.category}`, {
-	"version": "draft",
+	version: "draft",
 	find_by: "uuid",
 });
 const postCategory = categoryData.story;
