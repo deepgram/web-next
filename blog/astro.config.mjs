@@ -25,12 +25,12 @@ export default defineConfig({
 		preact(),
 		storyblok({
 			// accessToken: "DQ5PVW2Hi8ZeawcnLc3nvQtt",
-			accessToken: "dxzwOWtkKol6qnfd54RFewtt",
+			accessToken: "DQ5PVW2Hi8ZeawcnLc3nvQtt",
 			apiOptions: {
 				cache: { clear: "auto", type: "memory" },
 				region: "us",
 			},
-			bridge: process.env.IS_PREVIEW || false,
+			bridge: true,
 			components: {
 				// page: "storyblok/Page",
 				// feature: "storyblok/Feature",
