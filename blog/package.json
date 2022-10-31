@@ -27,6 +27,7 @@
     "lint": "cd .. && ./node_modules/.bin/prettier --check ./blog"
   },
   "devDependencies": {
+    "@astrojs/netlify": "^1.2.0",
     "@astrojs/preact": "^1.0.2",
     "@astrojs/tailwind": "^0.2.1",
     "@astrojs/vue": "^0.1.5",
