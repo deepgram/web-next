@@ -75,7 +75,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				</nav>
 				<div class="flex space-x-[1rem] items-center xl:ml-12 pr-4">
 					<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
-					<Link href={CONSOLE_DOMAIN} class="button button--small button--main-nav text-white">Log In</Link>
+					<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--main-nav text-white">Log In</Link>
 					<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem]">Contact Us</Link>
 					<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[7rem]">Sign Up</Link>
 				</div>
@@ -141,7 +141,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				</div>
 			</div>
 			<div class="bg-black grid grid-cols-2 grid-rows-2 gap-4 p-6 shadow-menu">
-				<Link href={CONSOLE_DOMAIN} class="button button--small button--secondary button--block">Log In</Link>
+				<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--secondary button--block">Log In</Link>
 				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--small button--tertiary button--block">Sign Up</Link>
 				<Link href={`${WWW_DOMAIN}/contact-us`} class="col-span-2 button button--small button--primary button--block">Contact Us</Link>
 			</div>
