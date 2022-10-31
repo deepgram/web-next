@@ -7,13 +7,14 @@ import vitePreact from "@preact/preset-vite";
 import preact from "@astrojs/preact";
 import storyblok from "@storyblok/astro";
 import * as dotenv from 'dotenv';
-import netlify from "@astrojs/netlify/edge-functions";
+import netlify from "@astrojs/netlify/functions";
 dotenv.config();
 
 
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
+	adapter: netlify(),
   site: process.env.URL,
   integrations: [sitemap(), globals(), tailwind({
     // Disable injecting a basic `base.css` import on every page.
@@ -60,5 +61,4 @@ export default defineConfig({
     // Adds support for legacy Markdown features
     astroFlavoredMarkdown: true
   },
-  adapter: netlify()
 });
