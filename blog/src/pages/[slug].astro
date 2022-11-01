@@ -24,88 +24,75 @@ import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import slugify from "slugify";
 
 import "../assets/styles/prism.css";
-export async function getStaticPaths() {
-	const sbApi = useStoryblokApi();
-	const allPosts = await sbApi.getAll("cdn/stories", {
+
+const sbApi = useStoryblokApi();
+const allPosts = await sbApi.getAll("cdn/stories", {
 		version: "draft",
 		by_slugs: "blog-posts/*",
 	});
-	const sortedPosts = allPosts.sort((a, b) => {
-		const aDate = new Date(b.content.date);
-		const bDate = new Date(a.content.date);
+const sortedPosts = allPosts.sort((a, b) => {
+	const aDate = new Date(b.content.date);
+	const bDate = new Date(a.content.date);
 		return aDate.getTime() - bDate.getTime();
-	});
+});
+const pages = sortedPosts.reduce((a, v) => ({ ...a, [v.slug]: v}), {}) 
+const { slug } = Astro.params;
+const post = pages[slug]
 
-	return sortedPosts.map((post) => {
-		const slug = post.slug;
-		// uncomment this for debugging purposes in GH actions
-		// will give better insight into which post is failing
-		// console.log("slug", slug);
-		return {
-			params: {
-				slug,
-			},
-			props: {
-				post,
-			},
-		};
-	});
-}
+if (!slug) return Astro.redirect("/404");
 
 function snakeCase(heading) {
 	return slugify(heading, { lower: true });
 }
 
 function getHeadingsSB(post) {
-	const richTextSections = post.content.body.filter((section) => {
-		return section.component === "RichTextSection";
+	
+const richTextSections = post && post.content && post.content.body.filter((section) => {
+	return section.component === "RichTextSection";
 	});
-	const headings = richTextSections.map((section) => {
-		return section.content.content.filter((richText) => {
-			if (richText.type === "heading") {
-				// console.log("richText", richText);
-				return richText.content[0].text;
+const headings = richTextSections && richTextSections.map((section) => {
+	return section && section.content && section.content.content.filter((richText) => 	{
+		if (richText && richText.type === "heading") {
+			// console.log("richText", richText);
+			return richText && richText.content && richText.content[0].text;
 			}
 		});
 	});
-	return headings.flat();
+	return headings && headings.flat();
 }
-const sbApi = useStoryblokApi();
-
-const { post } = Astro.props;
-const { slug } = Astro.params;
 
 const headings = await getHeadingsSB(post);
-const postAuthors = post.content.authors;
+const postAuthors = post && post.content && post.content.authors;
 const { data: authorsWithContent } = await sbApi.get("cdn/stories", {
 	version: "draft",
-	by_uuids: postAuthors.toString(),
+	by_uuids: postAuthors && postAuthors.toString(),
 });
 
-const { data: categoryData } = await sbApi.get(`cdn/stories/${post.content.category}`, {
-	version: "draft",
-	find_by: "uuid",
-});
-const postCategory = categoryData.story;
+// const { data: categoryData } = await sbApi.get(`cdn/stories/${post && post.content && post.category}`, {
+// 	version: "draft",
+// 	find_by: "uuid",
+// });
+
+// const postCategory = categoryData && categoryData.story;
 const seo = {
-	title: post.content.seo_title ? post.content.seo_title : post.content.title,
-	description: post.content.seo_description ? post.content.seo_description : post.content.description,
-	url: post.content.seo && post.content.seo.canonical ? post.content.seo.canonical : Astro.url,
+	title: post && post.content && post.content.seo_title ? post && post.content && post.content.seo_title : post && post.content && post.content.title,
+	description: post && post.content && post.content.seo_description ? post && post.content && post.content.seo_description : post && post.content && post.content.description,
+	url: post && post.content && post.content.seo && post.content.seo.canonical ? post && post.content && post.content.seo.canonical : Astro.url,
 };
 
 const og = {
-	title: seo.title,
-	description: seo.description,
-	image: post.content.og && post.content.og.filename !== "" ? post.content.og.filename : post.content.cover_image.filename,
+	title: seo && seo.title,
+	description: seo && seo.description,
+	image: (post && post.content && post.content.og) && (post && post.content && post.content.og.filename) !== "" ? post && post.content && post.content.og.filename : post && post.content && post.content.cover_image.filename,
 };
 
 // build short URLs
 const shorturls = {
-	share: post.content.shorturls && post.content.shorturls.share ? post.content.shorturls.share : Astro.url,
-	twitter: post.content.shorturls && post.content.shorturls.twitter ? post.content.shorturls.twitter : Astro.url,
-	linkedin: post.content.shorturls && post.content.shorturls.linkedin ? post.content.shorturls.linkedin : Astro.url,
-	reddit: post.content.shorturls && post.content.shorturls.reddit ? post.content.shorturls.reddit : Astro.url,
-	facebook: post.content.shorturls && post.content.shorturls.facebook ? post.content.shorturls.facebook : Astro.url,
+	share: (post && post.content && post.content.shorturls) && (post && post.content && post.content.shorturls.share) ? post && post.content && post.content.shorturls.share : Astro.url,
+	twitter: (post && post.content && post.content.shorturls) && post && post.content && post.content.shorturls.twitter ? post && post.content && post.content.shorturls.twitter : Astro.url,
+	linkedin: (post && post.content && post.content.shorturls) && post && post.content && post.content.shorturls.linkedin ? post && post.content && post.content.shorturls.linkedin : Astro.url,
+	reddit: (post && post.content && post.content.shorturls) && post && post.content && post.content.shorturls.reddit ? post && post.content && post.content.shorturls.reddit : Astro.url,
+	facebook: (post && post.content && post.content.shorturls) && post && post.content && post.content.shorturls.facebook ? post && post.content && post.content.shorturls.facebook : Astro.url,
 	fullUrl: Astro.url,
 };
 
@@ -150,7 +137,7 @@ const schema = [
 		mainEntityOfPage: "True",
 		keywords: post.tag_list,
 		genre: ["Speech Recognition", "Automatic Speech Recognition", "Speech-to-Text", "API"],
-		articleSection: postCategory.content.title,
+		// articleSection: postCategory.content.title,
 	},
 	...authorsWithContent.stories.map((a) => {
 		return {
@@ -186,6 +173,7 @@ const schema = [
 		],
 	},
 ];
+
 ---
 
 <Layout>
@@ -208,7 +196,7 @@ const schema = [
 
 	<Meta slot="head" property="article:published_time" content={post.first_published_at} />
 	{authorsWithContent && authorsWithContent.stories.map((author) => <Meta slot="head" property="article:author" content={author.title} />)}
-	<Meta slot="head" property="article:section" content={postCategory.content.title} />
+	<!-- <Meta slot="head" property="article:section" content={postCategory.content.title} /> -->
 	{post.tag_list && post.tag_list.map((tag) => <Meta slot="head" property="article:tag" content={tag} />)}
 
 	<article>
@@ -221,7 +209,7 @@ const schema = [
 				<HasGutters>
 					<header class="flex flex-col">
 						<PostHeading post={post} />
-						<PostMeta post={post} authors={authorsWithContent.stories} category={postCategory} />
+						<!-- <PostMeta post={post} authors={authorsWithContent.stories} category={postCategory} /> -->
 						<PostImage post={post} />
 					</header>
 				</HasGutters>
@@ -283,7 +271,7 @@ const schema = [
 			</HasGutters>
 			<div class="mt-20">
 				<h3 class="mb-10 text-center">Related Resources</h3>
-				<RelatedResources post={post} category={postCategory} />
+				<!-- <RelatedResources post={post} category={postCategory} /> -->
 			</div>
 		</PrimarySection>
 	</article>
