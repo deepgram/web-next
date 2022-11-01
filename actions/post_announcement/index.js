@@ -29,7 +29,7 @@ const processPost = async (filename) => {
 	}
 
 	const socials = shortUrls.map((s) => `${s.label}: ${s.shortUrl}\n`).join("");
-	const message = `A new blog post has been published.\nPost URL: ${postUrl}\n\nShort urls were generated for this post to use in socials & cross-posting.\n\n${socials}Cross-posted link UTMs:  ?utm_source={medium|devto|hashnode|etc}&utm_campaign=blog&utm_content=${slug}\n\n/cc @dgsocial`;
+	const message = `A new blog post has been published.\nPost URL: ${postUrl}\n\nShort urls were generated for this post to use in socials & cross-posting.\n\n${socials}Cross-posted link UTMs:  ?utm_source={medium|devto|hashnode|etc}&utm_campaign=blog&utm_content=${slug}\n\n/cc @dgsocials`;
 
 	await sendToSlack(message);
 };
