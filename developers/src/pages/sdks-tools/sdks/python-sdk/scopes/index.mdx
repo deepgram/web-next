@@ -1,0 +1,65 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Scopes
+description: Official Python SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, python]
+seo:
+  metaTitle: Scopes - Python SDK
+  metaDescription: Official Python SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, python, speech-to-text
+---
+
+The `deepgram.scopes` object provides access to the scopes endpoints of the
+Deepgram API. Each request is project based and will require a `project_id`.
+
+## List Member Scopes
+
+You can retrieve all scopes of a member on a given project using the `scopes.get_scope` function.
+
+### List Member Scopes Parameters
+
+| Parameter  | Type   | Description                                                              |
+| ---------- | ------ | ------------------------------------------------------------------------ |
+| project_id | String | A unique identifier for the project you wish to see the member scopes of |
+| member_id  | String | A unique identifier for the member you wish to see member scopes of      |
+
+### List Member Scopes Example Request
+
+```python
+response = await deepgram.scopes.get_scope(PROJECT_ID, MEMBER_ID)
+```
+
+### List Member Scopes Response
+
+```ts
+{
+  scopes: string[]
+}
+```
+
+## Update Member Scope
+
+You can update the scope of a member on a given project using the `scopes.update_scope` function.
+
+### Update Member Scope Parameters
+
+| Parameter  | Type   | Description                                                                 |
+| ---------- | ------ | --------------------------------------------------------------------------- |
+| project_id | String | A unique identifier for the project you wish to update the member scopes of |
+| member_id  | String | A unique identifier for the member you wish to update member scopes of      |
+| scopes     | String | The scope you wish to update the member to                                  |
+
+### Update Member Scope Example Request
+
+```python
+response = await deepgram.scopes.update_scope(PROJECT_ID, MEMBER_ID, 'member')
+```
+
+### Update Member Scope Response
+
+```ts
+{
+	message: string;
+}
+```

@@ -1,0 +1,49 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Usage
+description: Official .NET SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, dotnet, csharp]
+seo:
+  metaTitle: Usage - .NET SDK
+  metaDescription: Official .NET SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, dotnet, csharp, speech-to-text
+---
+
+The `DeepgramClient` class provides access to the usage endpoints of the
+Deepgram API via the `Usage` property. Each request is project based and will
+require a Deepgram project id.
+
+## List all Requests by Project
+
+Retrieves all transcription requests for a project based on the provided
+options.
+
+```csharp
+var response = await deepgram.Usage.ListAllRequestsAsync("DEEPGRAM_PROJECT_ID");
+```
+
+## Get Specific Request
+
+Retrieves a specific transcription request for a project based on the provided
+project id and request id.
+
+```csharp
+var response = await deepgram.Usage.GetUsageRequestAsync("DEEPGRAM_PROJECT_ID", "REQUEST_ID");
+```
+
+## Get Summarized Usage
+
+Retrieves aggregated usage data for a project based on the provided options.
+
+```csharp
+var response = await deepgram.Usage.GetUsageSummaryAsync("DEEPGRAM_PROJECT_ID");
+```
+
+## Get Fields
+
+Retrieves features used by the provided project id based on the provided options.
+
+```csharp
+var response = await deepgram.Usage.GetUsageFieldsAsync("DEEPGRAM_PROJECT_ID");
+```

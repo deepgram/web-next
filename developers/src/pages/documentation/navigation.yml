@@ -1,0 +1,98 @@
+- name: Getting Started
+  to: /documentation/getting-started/
+  children:
+    - name: Getting Started with Pre-recorded Audio
+      to: /documentation/getting-started/prerecorded/
+    - name: Getting Started with Live Streaming Audio
+      to: /documentation/getting-started/streaming/
+    - name: Authenticating
+      to: /documentation/getting-started/authentication/
+    - name: Managing Projects
+      to: /documentation/getting-started/projects/
+    - name: Using Multiple Projects
+      to: /documentation/getting-started/multiple-projects/
+    - name: Working with Roles
+      to: /documentation/getting-started/roles/
+    - name: Supported Audio Formats
+      to: /documentation/getting-started/audio-formats/
+    - name: Deployment Options
+      to: /documentation/getting-started/deployment-options/
+- name: Features
+  to: /documentation/features/
+  children:
+    - name: Tier
+      to: /documentation/features/tier/
+    - name: Model
+      to: /documentation/features/model/
+    - name: Version
+      to: /documentation/features/version/
+    - name: Language
+      to: /documentation/features/language/
+    - name: Punctuation
+      to: /documentation/features/punctuate/
+    - name: Profanity Filter
+      to: /documentation/features/profanity-filter/
+    - name: Redaction
+      to: /documentation/features/redact/
+    - name: Diarization
+      to: /documentation/features/diarize/
+    - name: Named Entity Recognition (NER)
+      to: /documentation/features/named-entity-recognition/
+    - name: Multichannel
+      to: /documentation/features/multichannel/
+    - name: Numerals
+      to: /documentation/features/numerals/
+    - name: Search
+      to: /documentation/features/search/
+    - name: Find and Replace
+      to: /documentation/features/replace/
+    - name: Callback
+      to: /documentation/features/callback/
+    - name: Keywords
+      to: /documentation/features/keywords/
+    - name: Paragraphs
+      to: /documentation/features/paragraphs/
+    - name: Utterances
+      to: /documentation/features/utterances/
+    - name: Utterance Split
+      to: /documentation/features/utterance-split/
+    - name: Interim Results
+      to: /documentation/features/interim-results/
+    - name: Endpointing
+      to: /documentation/features/endpointing/
+    - name: Voice Activity Detection (VAD)
+      to: /documentation/features/voice-activity-detection/
+    - name: Encoding
+      to: /documentation/features/encoding/
+    - name: Channels
+      to: /documentation/features/channels/
+    - name: Sample Rate
+      to: /documentation/features/sample-rate/
+    - name: Tagging
+      to: /documentation/features/tag/
+- name: Guides
+  to: /documentation/guides/
+  children:
+    - name: Migrating from Google Speech-to-Text to Deepgram
+      to: /documentation/guides/migration-google-stt/
+    - name: Transcribing Pre-recorded Audio
+      to: /documentation/guides/transcription/
+    - name: Understanding When to Use the Keywords and Search Features
+      to: /documentation/guides/keywords-vs-search/
+    - name: Determining Your Audio Format for Live Streaming Audio
+      to: /documentation/guides/determine-audio-format/
+    - name: Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio
+      to: /documentation/guides/understand-endpointing-interim-results/
+    - name: Measuring Streaming Latency
+      to: /documentation/guides/measure-latency/
+- name: Security
+  to: /documentation/security/
+  children:
+    - name: Security Policy
+      to: /documentation/security/security-policy/
+    - name: Data Privacy Compliance
+      to: /documentation/security/data-privacy/
+    - name: Information Security & Privacy Statement
+      to: /documentation/security/statement/
+- name: Glossary
+  to: /documentation/glossary/

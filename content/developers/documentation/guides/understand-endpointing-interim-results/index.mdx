@@ -1,0 +1,175 @@
+---
+title: Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio
+description: Learn how to use endpointing and interim results when transcribing live streaming audio with Deepgram.
+type: "transcription"
+order: 4
+seo:
+  metaTitle: Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio
+  metaDescription: Learn how to use endpointing and interim results when transcribing live streaming audio with Deepgram.
+  keywords: endpoint, endpointing, interim results, is_final, speech_final, vad_turnoff, streaming, live streaming, real-time
+---
+
+When using Deepgram to transcribe live streaming audio, two of the features you can use include [endpointing](/documentation/features/endpointing/) and [interim results](/documentation/features/interim-results/). Both of these features monitor incoming live streaming audio and can indicate the end of a type of processing, but they are used in very different ways:
+
+| Endpointing | Interim Results |
+|-------------|-----------------|
+| Identifies deviations in the natural flow of speech and returns a finalized response at these places | Provides preliminary results during live streaming, then sends a definitive transcript of the portion of audio that has been processed so far |
+| Turned on by default  | Turned off by default |
+| Returns `speech_final: true` parameter when Deepgram identifies a deviation in the natural flow of speech and the response contains the finalized transcript | Returns `is_final: true` parameter when Deepgram has finished processing audio for a time range and the response contains the finalized transcript for that time range |
+| Can be controlled by adjusting the `vad_turnoff` parameter | Dictated by Deepgram's internal algorithm |
+
+## Using Endpointing (`speech_final`)
+
+Just like a human listener who evaluates pauses within a conversation to detect when it is appropriate to respond to another speaker, Deepgram's [Endpointing](/documentation/features/endpointing/) feature looks for any deviation in the natural flow of speech and returns a finalized response. These responses can then be used as input for a downstream natural language processor (NLP) to indicate that a partial utterance may be ready for processing. Because speakers may pause for varying amounts of time, the system that processes Deepgram responses should be prepared to handle incomplete thoughts as well as a speaker suddenly resuming a thought.
+
+When Deepgram identifies that an endpoint has been reached, the response is marked as `speech_final: true`. The only purpose of the `speech_final` marker is to tell you where an endpoint has been found, which indicates that a significantly long pause has been detected.
+
+As an example, consider a speaker responding "yes" on a live call. Although Deepgram's default algorithm automatically sends final results every few seconds, you might want your system to react to the "yes" immediately. In this case, Endpointing would be useful because it would prompt Deepgram to detect the pause after "yes" and quickly send back a finalized result (marked with `speech_final: true`).
+
+
+<Alert type="warning">
+
+Endpointing is not intended to return complete utterances or to be a reliable indicator of a complete thought or sentence. It is intended to hint to low-latency NLP engines that intermediate processing may be useful. For utterance segmentation, you'll need to implement a simple timing heuristic appropriate to your domain. To learn more, see [Best Practices for Utterance Segmentation](#best-practices-for-utterance-segmentation).
+
+</Alert>
+
+### Controlling Endpointing
+
+By default, Deepgram identifies an endpoint after 10 milliseconds (ms) of silence. You can adjust this length of time with the [Voice Activity Detection](/documentation/features/voice-activity-detection/) feature. To do so, send the `vad_turnoff` parameter in the request to the Deepgram API, and set it to the value you would like to use.
+
+<Alert type="info">
+
+For Deepgram-hosted deployments, you can set the `vad_turnoff` parameter to a maximum of 500 ms. If you have an on-premises deployment of Deepgram, you can set a maximum value in your configuration files.
+
+</Alert>
+
+Some examples of use cases for which you might want to adjust `vad_turnoff` include: 
+
+- A virtual agent or chatbot that expects users to speak in short utterances and needs to engage with them as soon as they stop speaking. In this case, you would likely want to choose a low value for `vad_turnoff` or leave it as the default of 10 ms.
+
+- An agent assist provider that needs to give suggestions to a human customer service agent while they are speaking with a customer. In this case, the agent assist provider is working with a population that tends to pause more frequently mid-thought. To account for short pauses in the middle of a thought, they may want to set `vad_turnoff` to a high value, such as 500ms.
+
+## Using Interim Results (`is_final`)
+
+Deepgram’s [Interim Results](/documentation/features/interim-results/) feature provides you with preliminary results while Deepgram is working through live streaming audio and correcting and improving its transcription. When Deepgram eventually reaches a point at which it believes its transcript has reached maximum accuracy, it will send a corrected, finalized transcript for the preliminary results it has received for a span of time.
+
+When a response contains the finalized transcript for a piece of processed audio, it is marked as `is_final: true`. The only purpose of the `is_final` marker is to identify a corrected, finalized transcript for the processed piece of audio; it does not indicate that an endpoint has been found or that an utterance has completed.
+
+The span of time contained within a finalized transcript is determined by the Deepgram algorithm. Because providing preliminary results while working with live streaming audio is an iterative process, each finalized transcript contains only audio processed since a previous finalized transcript (marked as `is_final: true`) was sent. To see this in action, check out the first example in the [Using Endpointing with Interim Results](#using-endpointing-with-interim-results) section.
+
+## Using Endpointing with Interim Results
+
+When using endpointing with interim results, remember:
+
+- When `speech_final` is true, then `is_final` will always also be true.
+- When `is_final` is true, then `speech_final` may or may not be true.
+- You can use `vad_turnoff` to adjust the length of time used by Deepgram to detect whether a speaker has completed an utterance. By default, Deepgram sets this to 10 milliseconds (ms).
+
+Sometimes `speech_final` and `is_final` won't match, as in this example, where a customer is giving their credit card number to a customer service agent:
+
+```json
+1 0.000-1.100 ["is_final": false] ["speech_final": false] yeah so
+2 0.000-2.200 ["is_final": false] ["speech_final": false] yeah so my credit card number
+3 0.000-3.200 ["is_final": false] ["speech_final": false] yeah so my credit card number is two two
+4 0.000-4.300 ["is_final": false] ["speech_final": false] yeah so my credit card number is two two two two three
+5 0.000-3.260 ["is_final": true ] ["speech_final": false] yeah so my credit card number is two two
+6 3.260-5.100 ["is_final": false] ["speech_final": false] two two three three three three
+7 3.260-5.500 ["is_final": true ] ["speech_final": true ] two two three three three three
+8 5.500-6.600 ["is_final": false] ["speech_final": false] four four or four four
+9 5.500-6.860 ["is_final": true ] ["speech_final": true ] four four four four
+10 6.860-7.900 ["is_final": false] ["speech_final": false] five five five five
+11 6.860-8.090 ["is_final": true ] ["speech_final": true ] five five five five
+```
+
+Note that a credit card number normally consists of four utterances with natural pauses between each utterance. However, if you [download the sample audio file](https://developers.deepgram.com/data/audio/credit-card-number.wav), you will hear that this speaker has omitted some of the natural pauses.
+
+In this response, you see that:
+
+- On lines 1 through 4, the transcripts contain `"is_final": false`, indicating that they are interim results. As more data pours into Deepgram, you see the transcripts get longer.
+- On line 5, `is_final` is set to `true`, indicating that this is a finalized transcript for this section of audio; Deepgram believes it has reached optimal accuracy for this section of audio and will not return any additional transcripts covering this span of time. (Note that the length of the processed piece of audio is corrected accordingly.) However, `speech_final` is set to `false`, indicating that Deepgram has not yet identified an endpoint. The speaker has not yet completed their utterance; Deepgram sees that more credit card numbers are coming.
+- On line 6, the transcript contains `"is_final": false` again, indicating that this is an interim result for a new segment of audio that starts where the finalized transcript ended.
+- On line 7, `is_final` is set to `true` again, indicating that Deepgram will not return any additional transcripts for this section of audio. But now `speech_final` is also set to `true` because Deepgram has identified an endpoint--the speaker has completed an utterance, which ends with the first eight digits of the credit card number.
+- On line 8 through 11, the transcripts contain matching `is_final` and `speech_final` values because the size of the pieces of audio being processed by Deepgram's interim results feature happen to match the placement of the speaker's natural pauses, which Deepgram detects as ending an utterance and indicating an endpoint.
+
+We can change these results by adjusting the `vad_turnoff` parameter, which tells Deepgram the length of time after which it should identify an endpoint. In this example, we increase this length of time from Deepgram's default of 10 milliseconds (ms) to 50 ms:
+
+ ```json
+  1 0.000-1.100 ["is_final": false] ["speech_final": false] yeah so
+  2 0.000-2.200 ["is_final": false] ["speech_final": false] yeah so my credit card number
+  3 0.000-3.200 ["is_final": false] ["speech_final": false] yeah so my credit card number is two two
+  4 0.000-4.300 ["is_final": false] ["speech_final": false] yeah so my credit card number is two two two two three
+  5 0.000-3.260 ["is_final": true ] ["speech_final": false] yeah so my credit card number is two two
+  6 3.260-5.100 ["is_final": false] ["speech_final": false] two two three three three three
+  7 3.260-6.100 ["is_final": false] ["speech_final": false] two two three three three three four four
+  8 3.260-6.900 ["is_final": true ] ["speech_final": true ] two two three three three three four four four four
+  9 6.900-8.000 ["is_final": false] ["speech_final": false] five five five five
+ 10 6.900-8.130 ["is_final": true ] ["speech_final": true ] five five five five
+ ```
+
+ In this response, you see that:
+
+- Lines 1 through 6 are the same as in the first example. As more data pours into Deepgram, you see the transcripts get longer, and Deepgram still has not yet identified an endpoint on line 5.
+- On line 7, `is_final` is set to `false` again, indicating that this is an interim result. But now `speech_final` is also set to `false` because Deepgram expects a longer pause to indicate the end of an utterance. Deepgram will not identify an endpoint until it processes a period of silence as long as the new, longer `vad_turnoff` value.
+- On line 8, `is_final` and `speech_final` are both set to `true` because the size of the piece of audio being processed by Deepgram's interim results feature matches the placement of the speaker's longer pause, which Deepgram now detects as ending an utterance and indicating an endpoint.
+- On lines 9 and 10, the transcripts contain matching `is_final` and `speech_final` values because the size of the pieces of audio being processed by Deepgram's interim results feature happen to match the locations of pauses that are lengthy enough for Deepgram to identify them as endpoints.
+
+For illustrative purposes, let's see what happens when we further increase the length of time after which Deepgram should identify an endpoint. In this example, we set the `vad_turnoff` value to 500 ms:
+
+```json
+  1 0.000-1.100 ["is_final": false] ["speech_final": false] yeah so
+  2 0.000-2.200 ["is_final": false] ["speech_final": false] yeah so my credit card number
+  3 0.000-3.200 ["is_final": false] ["speech_final": false] yeah so my credit card number is two two
+  4 0.000-4.300 ["is_final": false] ["speech_final": false] yeah so my credit card number is two two two two three
+  5 0.000-3.260 ["is_final": true ] ["speech_final": false] yeah so my credit card number is two two
+  6 3.260-5.100 ["is_final": false] ["speech_final": false] two two three three three three
+  7 3.260-6.100 ["is_final": false] ["speech_final": false] two two three three three three four four
+  8 3.260-7.100 ["is_final": false] ["speech_final": false] two two three three three three four four four four five
+  9 3.260-8.100 ["is_final": false] ["speech_final": false] two two three three three three four four four four five five five five
+ 10 3.260-7.960 ["is_final": true ] ["speech_final": false] two two three three three three four four four four five five five five
+ 11 7.960-9.000 ["is_final": false] ["speech_final": false] 
+ 12 7.960-9.940 ["is_final": true ] ["speech_final": true ]
+ ```
+
+In this response, you see that:
+
+- Lines 1 through 7 are the same as in the previous example. As more data pours into Deepgram, you see the transcripts get longer, and Deepgram still has not yet identified an endpoint on line 5.
+- On line 8, the length of the piece of audio Deepgram has processed in the interim result increases, and the transcript now includes the word `five` at the end. Both `is_final` and `speech_final` are set to `false`, indicating that this is an interim result and that Deepgram believes that the natural pause between credit card numbers should be longer before it can identify a completed utterance. Deepgram will not identify an endpoint until it processes a period of silence as long as the new, even longer `vad_turnoff` value.
+- On line 9, the length of the piece of audio Deepgram is processing continues to increase, and the remaining digits of the credit card number appear in the transcript. Both `is_final` and `speech_final` are set to `false`, indicating that this is an interim result and that Deepgram believes that the natural pause between credit card numbers still isn't long enough to indicate an endpoint.
+- On line 10, `is_final` is set to `true`, indicating that Deepgram will not return any additional transcripts for the finalized section of audio, and the length of the processed piece of audio is corrected accordingly. However, `speech_final` is set to `false`, indicating that Deepgram still has not identified an endpoint.
+- On lines 11 and 12, the transcripts contain matching `is_final` and `speech_final` values because Deepgram continues to look for a pause that is long enough to match the value set in `vad_turnoff`. When no more audio exists, Deepgram recognizes that the utterance has ended and identifies an endpoint.
+
+### Getting Final Transcripts
+
+<Alert type="warning">
+
+When both endpointing and interim results are enabled, do not use `speech_final: true` to pull a full, final transcript. If a speaker vocalizes a long utterance, Deepgram's algorithm may respond with some finalized transcripts of preliminary results (marked as `is_final: true`) before the end of the utterance (marked as `speech_final: true`) is detected.
+
+In this case, to gather a full transcript, you must concatenate all responses marked `is_final: true` until you reach a response marked `speech_final: true`.
+
+</Alert>
+
+Let's work off of the previous example where a customer is giving their credit card number to a customer service agent:
+
+```json
+1 0.000-1.100 ["is_final": false] ["speech_final": false] yeah so
+2 0.000-2.200 ["is_final": false] ["speech_final": false] yeah so my credit card number
+3 0.000-3.200 ["is_final": false] ["speech_final": false] yeah so my credit card number is two two
+4 0.000-4.300 ["is_final": false] ["speech_final": false] yeah so my credit card number is two two two two three
+5 0.000-3.260 ["is_final": true ] ["speech_final": false] yeah so my credit card number is two two
+6 3.260-5.100 ["is_final": false] ["speech_final": false] two two three three three three
+7 3.260-5.500 ["is_final": true ] ["speech_final": true ] two two three three three three
+```
+
+On line 5, we see that `is_final` is set to `true`, indicating that this is a finalized transcript for the preliminary results in this section of audio. However, `speech_final` is set to `false`, indicating that Deepgram has not yet identified an endpoint. The speaker has not yet completed their utterance; Deepgram sees that more digits of the credit card number are coming. Deepgram's algorithm does not detect a sufficiently long pause to indicate an endpoint until line 7.
+
+To gather a full transcript for this utterance, you would need to concatenate all responses marked `is_final: true` until you reached a response marked `speech_final: true`.
+
+### Best Practices for Utterance Segmentation
+
+Remember that endpointing is not intended to return complete utterances or to be a reliable indicator of a complete thought or sentence. It is intended to hint to low-latency natural language processing (NLP) engines that intermediate processing may be useful.
+
+For utterance segmentation, you'll need to implement a simple timing heuristic appropriate to your domain. Adding this type of timing code allows you to optimize to your particular domain, based on the kinds of pauses you expect in speech (for example, dictation versus two-way conversation) and background noise (for example, augmenting utterance heuristics with a confidence cut to remove background speakers).
+
+If your downstream NLP processing requires complete utterances and cannot tolerate on-the-fly updates to the transcript, then the safest thing to do is to only consider `is_final: true` responses and break at punctuation terminators (if you are also passing `punctuate: true` to Deepgram as a parameter) or after a large enough gap in end-to-start times between adjacent words, whichever comes first. This works well, but can introduce a latency in your processing corresponding to the time you need to wait for `is_final: true`.
+
+If your downstream processing requires complete utterances but you need lower latency, then you can consider all responses, waiting until a punctuation terminator (if you are also passing `punctuate: true` to Deepgram as a parameter), a gap in timings between adjacent words, or until the time between the end of the last word to the end of the utterance exceeds a tolerance, whichever comes first. This reduces latency, but can produce false positives if an updated (interim) transcript that conflicts with this heuristic is returned.

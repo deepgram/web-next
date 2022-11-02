@@ -1,0 +1,76 @@
+---
+title: Tier
+description: Learn about Deepgram's Tier feature, which allows you to associate your API requests with a specific tier.
+tags: [tier, streaming, pre-recorded]
+order: 1
+seo:
+  metaTitle: Tier
+  metaDescription: Learn about Deepgram's Tier feature, which allows you to associate your API requests with a specific tier.
+  keywords: tier, billing, model, enhanced
+---
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+
+Deepgram’s Tier feature allows you to associate your API requests with a specific tier, which indicates the level of model you would like to use in your request.
+
+For self-serve customers, Deepgram provides Enhanced and Base model tiers. Enhanced models are our newest, most powerful ASR models. Enhanced models generally have higher accuracy with better word recognition than our Base models and they handle uncommon words significantly better. Base models are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness. Once you have chosen your tier and model, you can select an available language and a version. To learn more about models, see [Models](/documentation/features/model/). To learn more about pricing, see [Deepgram Pricing & Plans](https://deepgram.com/pricing/).
+
+## Use Cases
+
+Some examples of use cases for tiers include:
+
+- Customers who want to provide clearer instructions to the API concerning which model level they’re expecting.
+- Customers who have multiple methods of interacting with their own customers, such as both a conversational AI and an agent assist provider. A conversational AI that interacts directly with a person may require a higher tier than an agent assist provider that makes suggestions to a customer service representative who is talking to a person.
+- Customers who operate a business-to-business (B2B) model that focuses on selling products and services to other companies. Each of the businesses serviced may require different tiers.
+
+## Enable Feature
+
+To enable tiers, when you call Deepgram’s API, add a `tier` parameter in the query string and set it to the tier you would like to use:
+
+`tier=OPTION`
+
+<Alert type="warning">
+
+Tiers are enabled for on-premises deployments, but are accessed differently than they are for hosted customers. For an on-premises deployment, when you call Deepgram’s API, use the `model` parameter in the query string and append `-enhanced` after the name of the model you would like to use:
+
+`model=OPTION-enhanced`
+
+</Alert>
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace the placeholder `OPTION` with your chosen tier and `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?tier=OPTION'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Tier Options
+
+For self-serve customers, Deepgram provides Enhanced and Base models. To learn more about pricing, see [Deepgram Pricing & Plans](https://deepgram.com/pricing/). To learn about which models are available for which tiers, see [Models](/documentation/features/model/).
+
+- `enhanced`: Allows you to use Enhanced models, which are our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.
+- `base`: Allows you to use Base models, which are built on our signature end-to-end deep learning speech model architecture. They offer a solid combination of accuracy and cost effectiveness.
+
+<Alert type="warning">
+
+When a tier is submitted with a request, you should also submit only a model associated with that tier; submitting a model that is not associated with the submitted tier will result in a parse error.
+
+</Alert>

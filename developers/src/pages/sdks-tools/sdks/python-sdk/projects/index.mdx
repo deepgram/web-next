@@ -1,0 +1,92 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Projects
+description: Official Python SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, python]
+seo:
+  metaTitle: Projects - Python SDK
+  metaDescription: Official Python SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, python, speech-to-text, speech recognition, voice-to-text
+---
+
+The `Deepgram.projects` object provides access to manage projects associated
+with the API key you provided when instantiating the Deepgram client.
+
+## List Projects
+
+Retrieve all projects your API key has access to manage.
+
+### List Project Example Request
+
+```python
+projects = await deepgram.projects.list()
+```
+
+### List Projects Response
+
+```ts
+{
+  projects: [
+    {
+      project_id: String,
+      name: String,
+    },
+  ],
+}
+```
+
+## Get a Project
+
+Retrieves a project based on the provided project id.
+
+### Get a Project Parameters
+
+| Parameter  | Type   | Description                                     |
+| ---------- | ------ | ----------------------------------------------- |
+| project_id | String | A unique identifier for the project to retrieve |
+
+### Get a Project Example Request
+
+```python
+project = await deepgram.projects.get(PROJECT_ID)
+```
+
+### Get a Project Response
+
+```ts
+{
+  project_id: String,
+  name: String,
+}
+```
+
+## Update a Project
+
+Updates a project based on a provided project object.
+
+### Update Project Parameters
+
+| Parameter | Type   | Description                                                                     |
+| --------- | ------ | ------------------------------------------------------------------------------- |
+| project   | Object | Object representing a project. Must contain `project_id` and `name` properties. |
+
+<panel type="info" title="Important Note">
+
+The `project` object must contain `project_id` and `name` properties.
+
+</panel>
+
+### Update a Project Example Request
+
+```python
+updateResponse = await deepgram.projects.update(project)
+```
+
+### Update a Project Response
+
+```ts
+{
+	message: String;
+}
+```

@@ -1,0 +1,48 @@
+{
+  "name": "@deepgram-web/developers",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "yarn": "^1.22.0"
+  },
+  "scripts": {
+    "postinstall": "yarn functions:clean && yarn functions:symlink",
+    "dev": "astro dev --experimental-integrations",
+    "build": "astro build --experimental-integrations",
+    "preview": "astro preview",
+    "predev": "yarn clean && yarn symlink",
+    "prebuild": "yarn clean && yarn copy",
+    "symlink": "yarn content:symlink & yarn shared:symlink",
+    "copy": "yarn content:copy & yarn shared:copy",
+    "clean": "yarn content:clean & yarn shared:clean",
+    "content:symlink": "ln -s ../../content/ ./src/content",
+    "content:copy": "cp -r ../content/ ./src/content/",
+    "content:clean": "rm -rf ./src/content",
+    "shared:symlink": "ln -s ../../shared/src/shared/ ./src/shared",
+    "shared:copy": "cp -r ../shared/src/shared/ ./src/shared/",
+    "shared:clean": "rm -rf ./src/shared",
+    "functions:symlink": "ln -s ../shared/functions/ ./functions",
+    "functions:copy": "cp -r ../shared/functions/ ./functions/",
+    "functions:clean": "rm -rf ./functions",
+    "lint": "cd .. && ./node_modules/.bin/prettier --check ./developers"
+  },
+  "devDependencies": {
+    "@astrojs/preact": "^1.0.2",
+    "@astrojs/tailwind": "^0.2.1",
+    "@astrojs/vue": "^0.1.5",
+    "@docsearch/react": "3",
+    "@preact/preset-vite": "^2.3.0",
+    "@types/node": "^17.0.42",
+    "astro": "^1.5.0",
+    "glob": "^8.0.3",
+    "node-html-parser": "^5.3.3",
+    "preact": "^10.6.5"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.11.5",
+    "@astrojs/rss": "^1.0.0",
+    "@astrojs/sitemap": "^1.0.0",
+    "netlify-cli": "^10.17.3",
+    "vue": "^3.2.33"
+  }
+}

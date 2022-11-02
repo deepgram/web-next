@@ -1,0 +1,12 @@
+---
+layout: ../../../layouts/ApiReference.astro
+label: .NET
+---
+
+```csharp
+var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}");
+var request = new RestRequest(Method.GET);
+request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+request.AddHeader("content-type", "application/json");
+IRestResponse response = client.Execute(request);
+```

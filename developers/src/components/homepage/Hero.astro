@@ -1,0 +1,19 @@
+---
+import Link from "../../shared/components/general/Link.astro";
+
+const { title } = Astro.props;
+---
+
+<h1 class="mb-8">{title}</h1>
+<p>Explore our guides, resources, and references to build with Deepgram.</p>
+
+<div class="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 w-max">
+	<div class="flex flex-col">
+		<Link class="button button--block button--primary" href="/documentation/getting-started/">Quickstart Guides</Link>
+		Get a first transcription in under 5 minutes.
+	</div>
+	<div class="flex flex-col">
+		<Link class="button button--block button--secondary" href="/sdks-tools/">View the SDKs</Link>
+		Access our API using your language of choice.
+	</div>
+</div>

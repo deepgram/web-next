@@ -13,6 +13,10 @@
 			"path": "../blog"
 		},
 		{
+			"name": "developers",
+			"path": "../developers"
+		},
+		{
 			"name": "shared",
 			"path": "../shared"
 		},

@@ -1,0 +1,87 @@
+---
+title: Node SDK
+description: Official Node.js SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, nodejs]
+seo:
+  metaTitle: Deepgram Node.js SDK Documentation
+  metaDescription: Official Node.js SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, nodejs, javascript, speech-to-text
+---
+
+This guide documents all the functionality available in the Deepgram
+Node.js SDK, and explains in detail how the library works. All the official
+Deepgram SDKs are open source. To learn more about this SDK specifically, visit
+the [Node.js SDK](https://github.com/deepgram/node-sdk) repository on GitHub.
+
+## Pre-requisites
+
+Before using the Node.js SDK, you'll need to do a few things.
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to
+[create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is
+free and includes:
+
+- $150 in credit, which gives you access to:
+  - all base models
+  - pre-recorded and streaming functionality
+  - all features
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to
+[create a Deepgram API Key](/documentation/getting-started/authentication/#create-an-api-key).
+Make note of your API Key; you will need it later.
+
+## Installation
+
+You can install the Deepgram Node.js SDK as a dependency in your application
+using NPM or yarn. Here's how:
+
+### With NPM
+
+```bash
+npm install @deepgram/sdk
+```
+
+### With Yarn
+
+```bash
+yarn add @deepgram/sdk
+```
+
+## Initialization
+
+Once the SDK is installed, import the Deepgram object. The method for importing
+will vary based on your use case.
+
+### Node
+
+In Node applications, import the Deepgram object from `@deepgram/sdk`.
+
+```js
+const { Deepgram } = require('@deepgram/sdk')
+```
+
+### Browser
+
+When using the Deepgram SDK in a front-end application, import the Deepgram
+object from `@deepgram/sdk/browser`.
+
+```js
+import { Deepgram } from '@deepgram/sdk/browser';
+```
+
+### Instantiating the Client
+
+With the Deepgram object imported, create a new instance specifying your API
+key so that your application will be authorized to connect to Deepgram.
+
+```js
+const deepgram = new Deepgram(DEEPGRAM_API_KEY)
+```
+
+With the Deepgram client initialized, you can now send requests to the Deepgram
+API to transcribe audio, manage projects & keys, and retrieve usage information.

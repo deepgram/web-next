@@ -320,6 +320,10 @@ html {
 		@apply w-full;
 	}
 
+	.button--content {
+		@apply w-min;
+	}
+
 	.button--main-nav {
 		@apply border-t-4 border-transparent px-0 text-[1rem] font-[500] leading-[1.125rem];
 		@apply after:relative after:top-[1.45rem] after:block after:border-b-4 after:border-transparent;

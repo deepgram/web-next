@@ -1,0 +1,935 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+title: Deploying to Amazon Web Services (RHEL 7)
+description: Learn how to deploy on-premises Deepgram to the cloud on an Amazon Web Services (AWS) instance running Red Hat Enterprise Linux (RHEL) 7.
+order: 6
+seo:
+  metaTitle: Deploying to Amazon Web Services (RHEL 7)
+  metaDescription: Learn how to deploy on-premises Deepgram to the cloud on an Amazon Web Services (AWS) instance running Red Hat Enterprise Linux (RHEL) 7.
+  keywords: on-premises, on-prem, deployment, configuration, configure, set up, setup, base components, base, aws, amazon web services, red hat, enterprise, linux, rhel
+---
+
+Cloud-hosted on-premises (on-prem) deployments are the most common type of deployment performed by customers who want to leverage Deepgram within their own infrastructure. Specific configurations vary, but the Cloud Service Providers that are typically used include Amazon Web Services (AWS), Azure, and Google Cloud Platform (GCP). This guide details steps to set up a deployment to the cloud on an AWS instance running Red Hat Enterprise Linux (RHEL) 7.
+
+Deploying Deepgram on AWS requires some preparation. In this guide, you will learn how to expose and access your application in a secure and stable manner. You will need to perform some of these steps in the AWS Management Console and some in your local terminal.
+
+## Prerequisites
+
+Before you begin, you will need a Deepgram Account Representative. To reach one, [contact us](https://deepgram.com/contact-us/)!
+
+Your Deepgram Account Representative will guide you through the process of setting up:
+
+- a Deepgram product contract
+- a [Deepgram Console account](https://console.deepgram.com/), so we can connect your license to your projects
+- an account on [Docker Hub](https://hub.docker.com/), so you can conveniently get the latest Deepgram software and updates.
+
+Ahead of your planned on-prem deployment, your Deepgram Account Representative will need:
+
+- your Deepgram Console account email address
+- your Deepgram Console Project ID
+- your Docker Hub Account ID
+
+Providing this information will allow Deepgram to supply:
+
+- download links to your customized configuration files, which will include your license ID
+- download links to required models, including at least one pre-trained AI model for testing purposes
+
+In addition, you will need to [make sure you have a valid RHEL subscription with Red Hat](https://access.redhat.com/management/subscriptions).
+
+## Accessing Your Cloud Environment
+
+AWS uses public-key cryptography to secure login information for your instance. In a Linux instance, password authentication is disabled; you use a key pair to log in to your instance securely.
+
+### Create an Amazon EC2 Key Pair
+
+If you don’t already have an Amazon EC2 key pair, you will need to create one in order to access the AWS EC2 Virtual Machine. To learn how, read [Create a key pair using Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair) in Amazon’s documentation.
+
+<Alert type="info">
+
+Keys must be created in each AWS region in which you will deploy Deepgram on-premises.
+
+</Alert>
+
+At the end of this process, your browser should download a `private-key.pem` file for your key pair. Move this file to a secure and memorable location.
+
+### Create an Amazon EC2 Instance
+
+​To begin your on-prem installation, you must create an Amazon EC2 instance.
+
+#### New AWS Launch Experience
+
+<Alert type="info">
+
+If you're not yet using the new AWS launch experience, [skip to instructions for creating an Amazon EC2 Instance using the old AWS launch experience](#old-aws-launch-experience).
+
+</Alert>
+
+If you're using the new AWS launch experience:
+
+1. Navigate to the EC2 Dashboard and confirm that the proper AWS Region is configured, then choose **Launch Instance** and select **Launch Instance** in the dropdown to open the wizard.
+
+2. Under **Name and Tags**, for **Name**, enter "Deepgram On-Premises Base (RHEL 7)".
+
+3. For **Applications and OS Images (Amazon Machine Image)**, enter "Red Hat Enterprise Linux (RHEL) 7 (HVM)" in the search bar, and search.
+
+4. Next to the **Red Hat Enterprise Linux (RHEL) 7 (HVM)** image by **Amazon Web Services** with **Ver 7.7_HVM**, click **Select**. In the modal that appears, confirm the latest version of the image is **Ver 7.7_HVM** or greater, and select **Continue**.
+
+5. For **Instance Type**, in the search bar dropdown, locate and select "g4dn.2xlarge". Ensure it has 8 vCPU and 32GiB memory.
+
+6. For **Key pair (login)**, select the key pair you created in the [Create an Amazon EC2 Key Pair](#create-an-amazon-ec2-key-pair) section of this guide. If you didn't previously create a key pair, select **Create a new key pair** and follow the instructions provided in the modal.
+
+   <Alert type="info">
+
+   Keys must be created in each AWS region in which you will deploy Deepgram on-premises.
+
+   </Alert>
+
+7. For **Network Settings**, select **Create security group** and configure it (or select an existing security group that supports the following rules):
+
+   1. Ensure **Allow SSH traffic from** is selected by default and that its value is **Anywhere**.
+   2. Ensure **Allow HTTP traffic from the internet** is selected by default.
+   3. If you intend to use an SSL proxy in conjunction with Deepgram on-premises, select **Allow HTTPS traffic from the internet**.
+
+8. For **Configure storage**, increase the **gp2** Root Volume value to at least **32** GiB. We recommend more if you intend on deploying multiple models, starting at 100 GiB for a [DGTools](/on-prem/optional-components/dgtools) model training environment.
+
+9. For **Summary**, ensure the **Number of instances** value is at least **1** and confirm that the rest of your instance settings are correct. They should consist of the following values:
+
+   - **Software Image (AMI)**: Red Hat Enterprise Linux (RHEL) 7 (HVM) ami-078a6a18fb73909b2
+   - **Virtual server type (instance type)**: g4dn.2xlarge
+   - **Firewall (security group)**: either **New Security Group** or the name of your selected security group
+   - **Storage (volumes)**: 2 volume(s)
+
+   After you have confirmed these values, select **Launch instance**.
+
+10. Once the instance successfully launches, review its Launch log and other "Next Steps", then select **View all instances**.
+
+11. From the list of instances, select your new **Deepgram On-Premises Base (RHEL 7)**, and make note of or copy its Public IPv4 DNS entry.
+
+#### Old AWS Launch Experience
+
+If you're using the old AWS launch experience:
+
+1. Navigate to the EC2 Dashboard and confirm that the proper AWS Region is configured, then choose **Launch Instance** to open the wizard.
+
+2. For the **Choose an Amazon Machine Image (AMI)** wizard step, choose a basic configuration to serve as a template for your instance:
+
+   1. Search for **Red Hat Enterprise Linux (RHEL) 7 (HVM)**.
+   2. If you want the latest version of the RHEL 7 image, ensure the version is labeled **Ver 7.7_HVM**.
+   3. Ensure the Architecture version is x86_64.
+   4. Choose **Select**.
+
+3. For the **Choose an Instance Type** wizard step, select the hardware configuration of your instance:
+
+   1. Filter by the `g4dn` family type.
+   2. Select the **g4dn.2xlarge** instance.
+   3. Select **Next: Configure Instance Details**.
+
+      <Alert type="warning">
+
+      Avoid selecting **Review and Launch**. If you do so, the wizard will complete the other configuration settings for you and will miss some important settings.
+
+      </Alert>
+
+4. For the **Configure Instance Details** wizard step, review the default instance detail selections, then select **Next: Add Storage**.
+
+5. For the **Add Storage** wizard step, increase the size of the **Root** volume to 32 GB, and then select **Next: Add Tags**.
+
+6. For the **Add Tags** wizard step, select “Add Tag”:
+
+   1. For the key, type `Name`.
+   2. For the value, type `On-Premises Base`.
+   3. Select **Next: Configure Security Group**.
+
+7. For the **Configure Security Group** wizard step, select **Create a new security group**.
+
+   1. For the name, type `On-Premises`.
+   2. For the description, type `On-Premises Base Security Group`.
+   3. Ensure the first rule (of type **SSH**) is listed, and provide the description `SSH for Administration`.
+
+      <Alert type="warning">
+
+      Open SSH to only necessary IP addresses.
+
+      </Alert>
+
+   4. Select **Add Rule**, then select **HTTPS** from the dropdown, and provide the description `HTTPS for Deepgram API`.
+   5. Select **Review and Launch**.
+
+8. For the **Review Instance Launch** wizard step, ensure all of the instance details match what you entered in the previous steps, and then select **Launch**.
+
+9. In the **Select an existing key pair or create a new key pair** modal, ensure that **choose an existing key pair** is selected, then choose the key pair you created in the [Create an Amazon EC2 Key Pair](#create-an-amazon-ec2-key-pair) section. Check the acknowledgement box, and select **Launch Instances**.
+
+10. Once the instance successfully launches, review its details in the EC2 instances list, and make note of its Public IPv4 DNS entry.
+
+### Log in to the AWS EC2 instance
+
+To complete the rest of the installation, including configuring your environment and transferring files between your local computer and your AWS instance, you must connect to the AWS EC2 instance that you launched.
+
+1. Open the terminal application for your computer.
+
+2. Connect to your AWS instance:
+
+   ```bash
+   ssh -i private-key.pem ec2-user@PUBLIC_IPV4_DNS_VALUE
+   ```
+
+   <Alert type="warning">
+
+   Be sure to replace the PUBLIC_IPV4_DNS_VALUE placeholder value with the DNS value for your instance. Also check that the path to your `private-key.pem` file is correct.
+
+   </Alert>
+
+3. If you receive a message that indicates that the authenticity of the host can’t be established, type `yes`, then press the Enter key on your keyboard.
+
+## Configuring Your Cloud Environment
+
+Once you have successfully logged in to your instance, you must remove incompatible kernel drivers and install all of the necessary utilities to run GPU-accelerated containers in Docker.
+
+### Register the Red Hat Subscription Manager
+
+Register the Red Hat `subscription-manager`, which allows you to register, attach, and remove subscriptions using the command line.
+
+1. [Ensure you have a valid RHEL subscription with Red Hat](https://access.redhat.com/management/subscriptions), then register your system in the Red Hat Customer Portal:
+
+   ```bash
+   sudo subscription-manager register
+   ```
+
+2. Automatically attach to the best-match subscription:
+
+   ```bash
+   sudo subscription-manager attach --auto
+   ```
+
+3. Verify the overall status:
+
+   ```
+   sudo subscription-manager status
+   ```
+
+   The output should indicate the status is "Current".
+
+4. Enable necessary Red Hat repositories:
+
+   ```bash
+   sudo subscription-manager repos --enable=rhel-7-server-rpms
+   sudo subscription-manager repos --enable=rhel-7-server-extras-rpms
+   sudo subscription-manager repos --enable rhel-7-server-devtools-rpms
+   sudo subscription-manager repos --enable rhel-7-server-optional-rpms
+   ```
+
+### Update Red Hat’s YUM Package Management Tool
+
+Update the YUM package management tool to RHEL 7.9.
+
+<Alert type="info">
+
+We recommend using the RHEL 7.7 image from the AWS image base because it is more recently updated.
+
+</Alert>
+
+1. Update your AWS instance’s operating system package manager to get information on updated versions of packages or their dependencies:
+
+   ```bash
+   sudo yum update -y
+   ```
+
+2. Verify that the update was successful:
+
+   ```bash
+   cat /etc/redhat-release
+   ```
+
+   You should expect the command to return the following output:
+
+   ```
+   >Red Hat Enterprise Linux Server release 7.9 (Maipo)
+   ```
+
+### Install Developer Toolset and Kernel Packages
+
+Install the Red Hat Enterprise Linux Developer Toolset and DevKernel RPM Packages, which contain the kernel headers and makefiles sufficient to build modules against the kernel package.
+
+<Alert type="warning">
+
+To avoid NVIDIA driver installation (referenced later in this guide) failure, you must follow the steps in this section exactly.
+
+</Alert>
+
+1. Install the necessary development toolset:
+
+   ```bash
+   sudo yum install -y devtoolset-7
+   ```
+
+2. Install the `kernel-devel` package:
+
+   ```bash
+   sudo yum install -y kernel-devel
+   ```
+
+3. Restart your instance, then SSH into it again:
+
+   ```bash
+   sudo shutdown -r now
+   ```
+
+   <Alert type="warning">
+
+   Server restart is required or NVIDIA driver installation (referenced later in this guide) will fail.
+
+   </Alert>
+
+### Install NVIDIA Drivers
+
+Install the latest available NVIDIA drivers for the `g4dn` instance which has the Tesla T4 GPU:
+
+1. Install GNU Wget (`wget`), so you can retrieve the latest NVIDIA driver for your GPU:
+
+   ```bash
+   sudo yum install -y wget
+   ```
+
+2. Identify the latest driver for the GPU you are using and retrieve its download URL:
+
+   1. Go to [NVIDIA Official Drivers](https://www.nvidia.com/download/index.aspx).
+   2. Select the correct product and a corresponding CUDA toolkit 11 or greater.
+   3. Select **Search** and check that the correct driver is displayed, then select **Download**.
+   4. Right-click **Agree & Download**, then copy the link to save the download URL to your clipboard.
+
+3. Download the latest driver for your GPU:
+
+   ```bash
+   # Example: wget https://us.download.nvidia.com/tesla/510.47.03/NVIDIA-Linux-x86_64-510.47.03.run
+   wget LINK_TO_LATEST_NVIDIA_GPU_DRIVER
+   ```
+
+   <Alert type="warning">
+
+   Be sure to replace the LINK_TO_LATEST_NVIDIA_GPU_DRIVER placeholder value with the URL to the latest driver for the GPU you are using.
+
+   </Alert>
+
+4. Change the permissions on the downloaded file to allow your user to execute it:
+
+   ```bash
+   # Example: chmod +x NVIDIA-Linux-x86_64-510.47.03.run
+   chmod +x DOWNLOADED_FILE_NAME
+   ```
+
+5. Decompress and execute the driver file to install it:
+
+   ```bash
+   # Example: sudo ./NVIDIA-Linux-x86_64-510.47.03.run --silent
+   sudo DOWNLOADED_FILE_NAME --silent
+   ```
+
+6. Test that the NVIDIA drivers are installed:
+
+   ```bash
+   nvidia-smi
+   ```
+
+### Install Docker Engine
+
+For ease of use, Deepgram provides its products in Docker containers, so you must make sure that you have installed the latest version of Docker Engine on all hosts.
+
+1. Install required dependencies:
+
+   ```bash
+   sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+   ```
+
+2. Install the Docker Engine. Docker Engine is only widely supported for RHEL via the CentOS distribution.
+
+   <Alert type="info">
+
+   If you have any trouble installing the CentOS packages on RHEL, read [Install Using the Repository](https://docs.docker.com/engine/install/centos/#install-using-the-repository) in Docker’s [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/) documentation.
+
+   </Alert>
+
+   1. Add the Docker CentOS repository:
+
+      ```bash
+      sudo yum-config-manager \
+        --add-repo \
+        https://download.docker.com/linux/centos/docker-ce.repo
+      ```
+
+   2. Install the Docker Engine components:
+
+      ```bash
+      sudo yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+      ```
+
+3. Ensure that your AWS instance user (`ec2-user`) has sufficient permissions to communicate with the Docker daemon service that runs on your host operating system. To learn how to run Docker commands without elevated privileges, read [Manage Docker as a Non-Root User](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) in Docker’s optional [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/) documentation.
+
+4. Manually start Docker:
+
+   ```bash
+   sudo systemctl start docker
+   sudo systemctl --now enable docker.service
+   sudo systemctl --now enable containerd.service
+   ```
+
+5. Test the installation:
+
+   ```bash
+   sudo docker run hello-world
+   ```
+
+6. Enable the use of Docker without `sudo`:
+
+   ```bash
+   sudo usermod -aG docker $USER
+   ```
+
+7. Log out and then log back in to the AWS instance to ensure the `sudo` group membership has been re-evaluated for your current user session.
+
+8. Test the installation without `sudo`:
+
+   ```bash
+   docker run hello-world
+   ```
+
+### Cache Docker Credentials
+
+Once you are satisfied that Docker is installed and configured correctly, cache your credentials locally by logging in to Docker Hub using your Docker credentials. Once your credentials are cached locally, you should not have to log in again (until after you log out (`docker logout`)).
+
+<Alert type="warning">
+
+We recommend that you use an access token when logging in to Docker Hub. Access tokens are used like passwords, but limit administrative access to your account. To learn how to create and use access tokens with Docker, read Docker’s documentation on [Access Tokens](https://docs.docker.com/docker-hub/access-tokens/).
+
+</Alert>
+
+### Install Docker-Compose
+
+Ensure that [Docker Compose](https://docs.docker.com/compose/install/) is installed.
+
+1. Download Docker Compose, and send the output to your `/usr/local/bin` directory:
+
+   ```bash
+   sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   ```
+
+2. Modify the permissions for the bin file to allow your user to execute it:
+
+   ```bash
+   sudo chmod +x /usr/local/bin/docker-compose
+   ```
+
+3. Test the installation:
+
+   ```bash
+   docker-compose --version
+   ```
+
+   You should expect the command output to return version 1.29.2.
+
+### Install the NVIDIA-Docker Runtime
+
+CUDA is NVIDIA's library for interacting with its GPU. CUDA support is made available to Docker containers using [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker), NVIDIA's custom runtime for Docker.
+
+<Alert type="info">
+
+If you run into problems, be sure you are following the steps in the ["Installing on CentOS 7/8" section in NVIDIA's Installation documentation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-on-centos-7-8).
+
+</Alert>
+
+1. Retrieve the NVIDIA runtime GPG key:
+
+   ```bash
+   distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
+   && curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
+   ```
+
+2. Install the NVIDIA Docker runtime:
+
+   ```bash
+   sudo yum install -y nvidia-docker2
+   ```
+
+3. Restart the Docker service:
+
+   ```bash
+   sudo systemctl restart docker
+   ```
+
+4. Download the `nvidia-docker` container image:
+
+   ```bash
+   docker pull nvidia/cuda:11.6.0-base-ubuntu20.04
+   ```
+
+5. Run a test of the NVIDIA Docker runtime:
+
+   ```bash
+   docker run --runtime=nvidia --rm --gpus all nvidia/cuda:11.6.0-base-ubuntu20.04 nvidia-smi
+   ```
+
+## Setting up the Deepgram Engine and API Containers
+
+Now that your environment is set up, you can download and set up your Deepgram products. For ease of use, Deepgram provides its products in Docker containers.
+
+### Get Deepgram Products
+
+1. Download the latest Deepgram Engine image from Docker:
+
+   ```bash
+   docker pull deepgram/onprem-engine:3.28.10
+   ```
+
+2. Download the latest Deepgram API image from Docker:
+
+   ```bash
+   docker pull deepgram/onprem-api:1.60.0
+   ```
+
+3. Download the latest Deepgram License Proxy Server image from Docker:
+
+   ```bash
+   docker pull deepgram/onprem-license-proxy:1.1.0
+   ```
+
+### Import Your Docker Compose, Container Configuration, and Model Files
+
+Before you can run your on-prem deployment, you must configure the base components. To do this, you will need to customize your configuration files and create a directory to house models that have been encrypted for use in your requests.
+
+For your deployment, we provide models and configuration files to you via Amazon S3 buckets, so you can download directly to your AWS RHEL instance. If you don’t have customized configuration files, you can create configuration files using the examples included in [Customize Your Configuration](#customize-your-configuration).
+
+1. Replace the default `docker-compose.yml` file in your root directory with the customized `docker-compose.yml` file provided by Deepgram:
+
+   ```bash
+   wget LINK_TO_YAML_FILE_PROVIDED_BY_DEEPGRAM
+   ```
+
+   <Alert type="warning">
+
+   Be sure to replace the LINK_TO_YAML_FILE_PROVIDED_BY_DEEPGRAM placeholder value with the URL to the `docker-compose.yml` file provided by your Deepgram Account Representative.
+
+   </Alert>
+
+2. To house your configuration files, create a directory named `config`:
+
+   ```bash
+   mkdir config
+   ```
+
+   <Alert type="info">
+
+   You can name this directory whatever you like, as long as you update the `docker-compose.yml` file accordingly.
+
+   </Alert>
+
+3. In your new directory, download each TOML configuration file using the links provided by Deepgram:
+
+   ```bash
+   cd config
+   wget LINK_TO_TOML_CONFIGURATION_FILE_PROVIDED_BY_DEEPGRAM
+   ```
+
+   <Alert type="warning">
+
+   Be sure to replace each LINK_TO_TOML_CONFIGURATION_FILE_PROVIDED_BY_DEEPGRAM placeholder value with the URL to the TOML configuration file provided by your Deepgram Account Representative.
+
+   </Alert>
+
+4. To house models that have been encrypted for use in your requests, create a directory named `models`:
+
+   ```bash
+   mkdir models
+   ```
+
+   <Alert type="info">
+
+   You can name this directory whatever you like, as long as you update the `docker-compose.yml` and `engine.toml` files accordingly.
+
+   </Alert>
+
+5. In your new directory, download each model using the links provided by Deepgram:
+
+   ```bash
+   cd models
+   wget LINK_TO_MODEL_PROVIDED_BY_DEEPGRAM
+   ```
+
+   <Alert type="warning">
+
+   Be sure to replace each LINK_TO_MODEL_PROVIDED_BY_DEEPGRAM placeholder value with the URL to the model provided by your Deepgram Account Representative.
+
+   </Alert>
+
+### Customize Your Configuration
+
+Once your configuration files have been created in your AWS instance, you can update your configuration to customize it for your use case.
+
+#### Configuration Files
+
+<Alert type="warning">
+
+Your Deepgram Account Representative should provide you with download links to customized configuration files. Unless further customized, the example files included in this section are basic and should be used only to spin up a standard proof of concept (POC) deployment or to test your system.
+
+</Alert>
+
+##### `docker-compose.yml`
+
+The Docker-compose configuration file makes it possible to spin up the containers with Docker using a single command. This makes spinning up a standard POC deployment quick and easy.
+
+```toml
+services:
+  # The speech API service.
+
+  api:
+    image: deepgram/onprem-api:1.60.0
+
+    # Here, we expose the API port to the host machine. The container port
+    # (right-hand side) must match the port that the API service is
+    # listening on (found in its configuration file).
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - "license-proxy"
+
+    volumes:
+      # The API configuration file needs to be accessible; this should point to
+      # the file on the host machine.
+      - "/home/ec2-user/api.toml:/api.toml:ro"
+
+    # Invoke the API server, passing it the path (inside the container) to its
+    # configuration file.
+    command: -v serve /api.toml
+
+  # The speech engine service.
+  engine:
+    image: deepgram/onprem-engine:3.28.10
+
+    # Change the default runtime.
+    runtime: nvidia
+
+    depends_on:
+      - "license-proxy"
+
+    # The Engine configuration file and models need to be accessible; these paths
+    # should point to files/directories on the host machine.
+    #
+    # You can combine the configuration file and models into a single volume mount.
+    volumes:
+      # The Engine configuration file needs to be accessible.
+      - "/home/ec2-user/engine.toml:/engine.toml:ro"
+
+      # The models will also need to be available. The in-container paths must
+      # match the paths specified in the Engine configuration file.
+      - "/home/ec2-user/models:/models:ro"
+
+    # Invoke the Engine service, passing it the path (inside the container) to
+    # its configuration file.
+    command: -v serve /engine.toml
+
+  license-proxy:
+    image: deepgram/onprem-license-proxy:1.1.0
+
+    ports:
+      - "8443:8443"
+
+    command: -v serve --license-key "YOUR_DEEPGRAM_ONPREM_LICENSE_KEY" --host 0.0.0.0 --port 8443 --status-port 8089
+```
+
+##### `api.toml`
+
+The API configuration file determines how the API container built from the Docker image will be run. It includes important settings for exposing API endpoints and for enabling features and post-processing plugins for requests.
+
+```toml
+# Keep in mind that all paths are mapped to in-container paths.
+
+# Configure license validation.
+[license]
+  # Your license key.
+  key = "YOUR_DEEPGRAM_ONPREM_LICENSE_KEY"
+  server_url = "https://license-proxy:8443"
+
+# Configure how the API will listen for your requests
+[server]
+  # The base URL (prefix) for requests to the API.
+  base_url = "/v2"
+  # The IP address to listen on. Since this is likely running in a Docker
+  # container, you will probably want to listen on all interfaces.
+  host = "0.0.0.0"
+  # The port to listen on
+  port = 8080
+
+  # How long to wait for a connection to a callback URL (in seconds)
+  callback_conn_timeout = 1
+  # How long to wait for a response to a callback URL (in seconds)
+  callback_timeout = 10
+
+  # How long to wait for a connection to a fetch URL (in seconds)
+  fetch_conn_timeout = 1
+  # How long to wait for a response to a fetch URL (in seconds)
+  fetch_timeout = 60
+
+[features]
+  endpointing_on_by_default = true
+
+# Configure the DNS resolver, overriding the system default.
+# Typically not needed, although we document it here for completeness.
+# [resolver]
+#   # List of nameservers to use to resolver DNS queries.
+#   nameservers = ["127.0.0.11 53 udp"]
+#   # Override the TTL in the DNS response (in seconds).
+#   max_ttl = 10
+
+# Configure the backend pool of speech engines (generically referred to as
+# "drivers" here). There is only one pool type: "standard". The API will
+# load-balance among drivers in the pool; if a driver fails, the next one
+# will be tried.
+#
+# Each driver URL will have its hostname resolved to an IP address. If a domain
+# name resolves to multiple IP addresses, the API will load-balance across each
+# IP address.
+#
+# This behavior is provided for convenience, and in a production environment
+# other tools can be used, such as HAProxy.
+
+# A new Speech Engine ("driver") in the "standard" pool.
+[[driver_pool.standard]]
+  # Host to connect to. Here, we use "tasks.engine", which is the Docker Swarm
+  # method for resolving the IP addresses of all "engine" services. If you are
+  # using Docker Compose, then this should just be "engine" instead of
+  # "tasks.engine". If you rename the "engine" service in the Docker Compose
+  # file, then change it accordingly here. Additionally, the port and prefix
+  # should match those defined in the Engine configuration file.
+  # NOTE: This must be HTTPS.
+  url = "https://engine:8080/v2"
+
+  # How long to wait for a connection to be established (in seconds).
+  conn_timeout = 5
+  # Once a connection is established, how many seconds to wait for a response.
+  timeout = 400
+  # Factor to increase the timeout by for each additional retry (for
+  # exponential backoff).
+  timeout_backoff = 1.2
+
+  # If you fail to get a valid response (timeout or unexpected error), then
+  # how many attempts should be made in total, including the initial attempt?
+  # This is applied *per IP address* that the domain name in the URL resolves
+  # to. If your domain resolves to multiple IPs, then "1" may be sufficient.
+  retries_per_ip = 1
+
+  # Before attempting a retry, sleep for this long (in seconds)
+  retry_sleep = 2
+  # Factor to increase the retry sleep by for each additional retry (for
+  # exponential backoff).
+  retry_backoff = 1.6
+
+  # Maximum response to deserialize from Driver (in bytes)
+  max_response_size = 1073741824
+```
+
+##### `engine.toml`
+
+The Deepgram Engine configuration file determines how the Deepgram Engine container built from the Docker image will be run. It includes important file paths and settings related to models that you will be using.
+
+```toml
+# Keep in mind that all paths are mapped to in-container paths.
+
+# Configure license validation.
+[license]
+  # Your license key
+  key = "YOUR_DEEPGRAM_ONPREM_LICENSE_KEY"
+  server_url = "https://license-proxy:8443"
+
+# Configure the server to listen for requests from the API.
+[server]
+  # The base URL (prefix) for requests from the API.
+  base_url = "/v2"
+  # The IP address to listen on. Since this is likely running in a Docker
+  # container, you will probably want to listen on all interfaces.
+  host = "0.0.0.0"
+  # The port to listen on
+  port = 8080
+
+
+### These settings can be tuned for performance
+# [chunking]
+#   min_duration = 5
+#   max_duration = 7
+[half_precision]
+  on_by_default = ["Tesla T4"]
+# [features]
+#   default_batch_size = 32
+
+# Speech models. You can place these in one or multiple directories.
+[model_manager]
+ search_paths = ["/models"]
+
+# Products Entry
+#[[products]]
+# [products.diarizer]
+#  name = "diarizer"
+
+# Enable ancillary models
+# To enable any of these features, just uncomment out the respective
+# feature section.
+[features]
+# Diarizer v7
+# [[features.diarizer]]
+#  type = "v7"
+#  name = "default"
+#  model_path = "/models/diarizer_model.dg"
+
+#  [features.g2p]
+#   path = "/models/g2p.tar"
+#  [[features.profanity_filter]]
+#   tar_path = "/profanity_filter.tar"
+```
+
+## Starting and Using Your Container
+
+To make sure your Deepgram on-prem deployment is properly configured and running, you will want to start Docker, run the container, and make a sample request to Deepgram.
+
+### Start Docker
+
+Now that you have your configuration files set up and in the correct location to be used by the container, use Docker-Compose to run the container:
+
+```bash
+docker-compose up -d
+```
+
+### Test Your Deepgram Setup with a Sample Request
+
+Test your environment and container setup with a local file:
+
+```bash
+curl -X POST --data-binary @[FILE_PATH] http://localhost:8080/v2/listen
+```
+
+Finally, test that you can view the model that was automatically loaded by Deepgram Engine. To do this, download the American English Harvard Sentences file from the [Open Speech Repository](https://www.voiptroubleshooter.com/open_speech/index.html) and run it through the model:
+
+```bash
+wget https://www.voiptroubleshooter.com/open_speech/american/OSR_us_000_0019_8k.wav
+
+curl -X POST --data-binary @OSR_us_000_0019_8k.wav "http://localhost:8080/v2/listen?model=general-dQw4w9WgXcQ&version=2021-08-18"; echo
+```
+
+## Adding the License Proxy Server
+
+For customers deploying Deepgram’s on-premises solution in production, Deepgram recommends the License Proxy Server, which is a caching proxy that communicates with the Deepgram-hosted license server to ensure uptime and simplify network security.
+
+<Alert type="warning">
+
+If you aren't certain which products your contract includes or if you are interested in adding the License Proxy Server to your on-premises deployment, please consult a Deepgram Account Representative. To reach one, [contact us](https://deepgram.com/contact-us/)!
+
+</Alert>
+
+There are many benefits of using the License Proxy Server:
+
+- For production deployments, the License Proxy Server allows your deployed on-premises services to continue to run even if your deployment loses connectivity to the Deepgram license server.
+
+- If network security requirements dictate that traffic over the web is allowed from only certain hosts, the License Proxy Server can be deployed statically while ASR services scale elastically.
+
+- If your customers will deploy Deepgram software as part of your on-premises solution and their traffic must flow back to your environment, you may deploy the License Proxy Server to relay traffic on to the Deepgram license server.
+
+To see an architecture overview or learn about monitoring the License Proxy Server, see [License Proxy Server](/on-prem/optional-components/license-proxy-server/).
+
+### Installing
+
+Deepgram makes all of its products available through Docker Hub.
+
+1. Log in to your Docker Hub account from one of your servers.
+2. Run the following command:
+
+   ```bash
+   $ docker pull deepgram/onprem-license-proxy
+   ```
+
+### Deploying
+
+Before you can run your on-prem deployment with the License Proxy Server, you must configure the License Proxy Server. To do this, you will need to update your Docker Compose and container configuration files, then restart Docker.
+
+#### Update Your Docker Compose File
+
+Replace the default `docker-compose.yml` file in your root directory with the following:
+
+```toml
+version: "3.7"
+
+services:
+  # The Deepgram API service.
+
+  api:
+    image: deepgram/onprem-api:1.58.0
+    # The API port to the host machine. The container port (right-hand side)
+    # must match the port that the API service is listening on (this can be
+    # found in its configuration file).
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      - "license-proxy"
+
+    volumes:
+      # The API configuration file needs to be accessible; this should point to
+      # the file on the host machine.
+      - "/path/to/api.toml:/api.toml:ro"
+
+    # Invoke the API server, passing it the path (inside the container) to its
+    # configuration file.
+    command: -v serve /api.toml
+
+  # The Deepgram Engine service.
+  engine:
+    image: deepgram/onprem-engine:3.26.7
+
+    # Change the default runtime.
+    runtime: nvidia
+
+    depends_on:
+      - "license-proxy"
+
+    # The Engine configuration file and models need to be accessible; these paths
+    # should point to files/directories on the host machine.
+    #
+    # You can combine the configuration file and models into a single volume mount.
+    volumes:
+      # The Engine configuration file needs to be accessible.
+      - "/path/to/engine.toml:/engine.toml:ro"
+
+      # The models will also need to be available. The in-container paths must
+      # match the paths specified in the Engine configuration file.
+      - "/path/to/models:/models:ro"
+
+    # Invoke the Engine service, passing it the path (inside the container) to
+    # its configuration file.
+    command: -v serve /engine.toml
+
+  license-proxy:
+    image: deepgram/onprem-license-proxy:1.0.0-1
+
+    ports:
+      - "8443:8443"
+      - "8089:8089"
+
+    command: -v serve --license-key "YOUR_ONPREM_LICENSE_KEY" --host 0.0.0.0 --port 8443 --status-port 8089
+```
+
+#### Update Your Container Configuration Files
+
+In your `api.toml` and `engine.toml` files, add a line that specifies the URL to your deployed proxy immediately below your license key configuration:
+
+```toml
+[license]
+key = "YOUR_LICENSE_KEY"
+server_url = "https://license-proxy:8443"
+```
+
+#### Restart Docker
+
+Restart Docker to begin directing licensing requests through the proxy:
+
+```bash
+docker-compose up -d
+```
+
+After restarting, test that an ASR request is processed as expected.

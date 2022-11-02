@@ -1,0 +1,23 @@
+---
+label: Python
+---
+
+```py
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+payload = "{\"url\":\"string\"}"
+
+headers = {
+    'content-type': "application/json",
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>"
+    }
+
+conn.request("POST", "/v1/listen", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```

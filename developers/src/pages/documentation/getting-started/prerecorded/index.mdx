@@ -1,0 +1,394 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: "Getting Started with Pre-recorded Audio"
+description: "A quick introduction to getting transcription data from pre-recorded audio files using a web application, Deepgram's API, and Deepgram SDKs."
+type: quickstart
+language: en
+seo:
+  metaTitle: "Getting Started with Pre-recorded Audio"
+  metaDescription: "A quick introduction to getting transcription data from pre-recorded audio files using a web application, Deepgram's API, and Deepgram SDKs."
+  keywords: "pre-recorded, prerecorded, audio, transcribe, transcription, speech recognition, quick start, quickstart, sdk"
+---
+
+<Alert type="language">
+
+**¿Prefieres español?** Ver [Tutorial del API endpoint para audios pre-grabados](/documentation/getting-started/prerecorded-es/).
+
+</Alert>
+
+In this guide, you'll learn how to automatically transcribe pre-recorded audio files using Deepgram's SDKs, which are supported for use with the [Deepgram API](/api-reference/).
+
+## Before You Begin
+
+Before you run the code, you'll need to do a few things.
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+- $150 in credit, which gives you access to:
+  - all base [models](/documentation/features/model/)
+  - pre-recorded and [live streaming](/documentation/getting-started/streaming/) functionality
+  - all [features](/documentation/features/)
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](https://console.deepgram.com/signup?jump=keys). Make note of your API Key; you will need it later.
+
+### Configure Environment
+
+We provide sample scripts in Python and Node.js and assume you have already configured either a Python or Node development environment. System requirements will vary depending on the programming language you use:
+
+- **Node.js**: node >= 14.14.37
+- **Python**: python >= 3.7
+
+<Alert type="info">
+
+If you get stuck at any point, help is just a click away! [Contact Support](/support/).
+
+</Alert>
+
+## Transcribe Audio
+
+Once you have your API Key, it's time to transcribe audio! The instructions below will guide you through the process of creating a sample application, installing the Deepgram SDK, configuring code with your own Deepgram API Key and pre-recorded audio to transcribe, and finally, building and running the application.
+
+### Choose an Audio File
+
+[Download our sample audio file](https://developers.deepgram.com/data/audio/life-moves-pretty-fast.wav), or record your own using your device’s microphone.
+
+### Install the SDK
+
+Open your terminal, navigate to the location on your drive where you want to create your project, and install the Deepgram SDK.
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Node.js" active>
+
+```bash
+# Initialize a new application
+npm init
+
+# Install the Deepgram Node.js SDK
+# https://github.com/deepgram/node-sdk
+npm install @deepgram/sdk
+```
+
+</CodeBlock>
+
+<CodeBlock label="Python">
+
+```bash
+# Install the Deepgram Python SDK
+# https://github.com/deepgram/python-sdk
+pip install deepgram-sdk
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Write the Code
+
+In your terminal, create a new file in your project's location, and populate it with code.
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Node.js" active>
+
+```js
+// Example filename: index.js
+
+const fs = require("fs");
+const { Deepgram } = require("@deepgram/sdk");
+
+// Your Deepgram API Key
+const deepgramApiKey = "YOUR_DEEPGRAM_API_KEY";
+
+// Location of the file you want to transcribe. Should include filename and extension.
+// Example of a local file: ../../Audio/life-moves-pretty-fast.wav
+// Example of a remote file: https://static.deepgram.com/examples/interview_speech-analytics.wav
+const file = "YOUR_FILE_LOCATION";
+
+// Mimetype for the file you want to transcribe
+// Only necessary if transcribing a local file
+// Example: audio/wav
+const mimetype = "YOUR_FILE_MIME_TYPE";
+
+// Initialize the Deepgram SDK
+const deepgram = new Deepgram(deepgramApiKey);
+
+// Check whether requested file is local or remote, and prepare accordingly
+if (file.startsWith("http")) {
+	// File is remote
+	// Set the source
+	source = {
+		url: file,
+	};
+} else {
+	// File is local
+	// Open the audio file
+	const audio = fs.readFileSync(file);
+
+	// Set the source
+	source = {
+		buffer: audio,
+		mimetype: mimetype,
+	};
+}
+
+// Send the audio to Deepgram and get the response
+deepgram.transcription
+	.preRecorded(source, {
+		punctuate: true,
+	})
+	.then((response) => {
+		// Write the response to the console
+		console.dir(response, { depth: null });
+
+		// Write only the transcript to the console
+		//console.dir(response.results.channels[0].alternatives[0].transcript, { depth: null });
+	})
+	.catch((err) => {
+		console.log(err);
+	});
+```
+
+</CodeBlock>
+
+<CodeBlock label="Python">
+
+```python
+# Example filename: deepgram_test.py
+
+from deepgram import Deepgram
+import asyncio, json
+
+# Your Deepgram API Key
+DEEPGRAM_API_KEY = 'YOUR_DEEPGRAM_API_KEY'
+
+# Location of the file you want to transcribe. Should include filename and extension.
+# Example of a local file: ../../Audio/life-moves-pretty-fast.wav
+# Example of a remote file: https://static.deepgram.com/examples/interview_speech-analytics.wav
+FILE = 'YOUR_FILE_LOCATION'
+
+# Mimetype for the file you want to transcribe
+# Include this line only if transcribing a local file
+# Example: audio/wav
+MIMETYPE = 'YOUR_FILE_MIME_TYPE'
+
+async def main():
+
+  # Initialize the Deepgram SDK
+  deepgram = Deepgram(DEEPGRAM_API_KEY)
+
+  # Check whether requested file is local or remote, and prepare source
+  if FILE.startswith('http'):
+    # file is remote
+    # Set the source
+    source = {
+      'url': FILE
+    }
+  else:
+    # file is local
+    # Open the audio file
+    audio = open(FILE, 'rb')
+
+    # Set the source
+    source = {
+      'buffer': audio,
+      'mimetype': MIMETYPE
+    }
+
+  # Send the audio to Deepgram and get the response
+  response = await asyncio.create_task(
+    deepgram.transcription.prerecorded(
+      source,
+      {
+        'punctuate': True
+      }
+    )
+  )
+
+  # Write the response to the console
+  print(json.dumps(response, indent=4))
+
+  # Write only the transcript to the console
+  #print(response["results"]["channels"][0]["alternatives"][0]["transcript"])
+
+try:
+  # If running in a Jupyter notebook, Jupyter is already running an event loop, so run main with this line instead:
+  #await main()
+  asyncio.run(main())
+except Exception as e:
+  exception_type, exception_object, exception_traceback = sys.exc_info()
+  line_number = exception_traceback.tb_lineno
+  print(f'line {line_number}: {exception_type} - {e}')
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+<Alert type="warning">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY`, `YOUR_FILE_LOCATION`, AND `YOUR_FILE_MIME_TYPE` with your Deepgram API Key, the location of the file you want to transcribe, and the mime type of the file you want to transcribe, respectively.
+
+</Alert>
+
+### Start the application
+
+Run your application from the terminal.
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Node.js" active>
+
+```bash
+# Run your application using the file you created in the previous step
+# Example: node index.js
+node YOUR_PROJECT_NAME.js
+```
+
+</CodeBlock>
+
+<CodeBlock label="Python">
+
+```bash
+# Run your application using the file you created in the previous step
+# Example: python deepgram_test.py
+python YOUR_PROJECT_NAME.py
+```
+
+<Alert type="warning">
+
+Be sure to replace `YOUR_PROJECT_NAME` with the name of the file to which you saved the code in the previous step.
+
+</Alert>
+
+</CodeBlock>
+
+</CodeGroup>
+
+### See results
+
+Your transcripts will appear in your browser's developer console.
+
+<Alert type="warning">
+
+Deepgram does not store transcriptions. Make sure to save output or [return transcriptions to a callback URL for custom processing](/documentation/features/callback/).
+
+</Alert>
+
+## Analyze the Response
+
+When the file is finished processing (often after only a few seconds), you’ll receive a JSON response:
+
+```json
+{
+  "metadata":{
+    "transaction_key":"Ha0aVG...",
+    "request_id":"se24UY...",
+    "sha256":"2d5b81...",
+    "created":"2021-07-08T09:11:38.593Z",
+    "duration":19.0,
+    "channels":1
+  },
+  "results":{
+    "channels":[
+      {
+        "alternatives":[
+          {
+            "transcript":"Yep. I said it before, and I'll say it again. Life moves pretty fast. You don't stop and look around once in a while. You could miss it. Thank.",
+            "confidence":0.9757011,
+            "words":[
+              {
+                "word":"yep",
+                "start":5.66,
+                "end":5.94,
+                "confidence":0.994987,
+                "punctuated_word":"Yep."
+              },
+              {
+                "word":"i",
+                "start":7.2344832,
+                "end":7.434014,
+                "confidence":0.8217165,
+                "punctuated_word":"I"
+              },
+              {
+                "word":"said",
+                "start":7.434014,
+                "end":7.5537324,
+                "confidence":0.979774,
+                "punctuated_word":"said"
+              },
+              ...
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+In this default response, we see:
+
+- `transcript`: the transcript for the audio segment being processed.
+- `confidence`: a floating point value between 0 and 1 that indicates overall transcript reliability. Larger values indicate higher confidence.
+- `words`: an object containing each `word` in the transcript, along with its `start` time and `end` time (in seconds) from the beginning of the audio stream, and a `confidence` value.
+
+  Because we passed the `punctuate: true` option to the `transcription.prerecorded` method, each word object also includes its `punctuated_word` value, which contains the transformed word after punctuation and capitalization are applied.
+
+By default, Deepgram applies its `general` AI model, which is a good, general purpose model for everyday situations.
+
+## What's Next?
+
+Now that you've gotten a transcript for pre-recorded audio, enhance your knowledge by exploring the following areas.
+
+### Customize Transcripts
+
+To customize the transcripts you receive, you can send a variety of parameters to the Deepgram API.
+
+For example, if your audio is in Spanish rather than English, you can pass the `language:` parameter with the `es` option to the `transcription.prerecorded` method in the previous examples:
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Node.js" active>
+
+```js
+deepgram.transcription.preRecorded(source, {
+	punctuate: true,
+	language: es,
+});
+```
+
+</CodeBlock>
+
+<CodeBlock label="Python">
+
+```python
+    response = await asyncio.create_task(
+      deepgram.transcription.prerecorded(
+        source,
+        {
+          'punctuate': True,
+          'language': 'es'
+        }
+      )
+    )
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+To learn more about the languages available with Deepgram, see the [Language](/documentation/features/language/) feature guide. To learn more about the many ways you can customize your results with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+### Explore Use Cases
+
+Time to learn about the different ways you can use Deepgram products to help you meet your business objectives. [Explore Deepgram's use cases](/use-cases/).
+
+### Transcribe Streaming Audio
+
+Now that you know how to transcribe pre-recorded audio, check out how you can use Deepgram to transcribe streaming audio in real time. To learn more, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/).

@@ -1,0 +1,255 @@
+---
+layout: ../../../layouts/UseCases.astro
+title: Transcribe Meetings in Realtime
+tags:
+  - streaming
+  - transcription
+  - nodejs
+cover: ./transcribe-meetings-in-real-time-use-case@2x.png
+description: An example of how Deepgram’s automatic transcripts can be used to automatically create transcripts in a meeting platform.
+seo:
+  metaTitle: Transcribe Meetings in Realtime
+  metaDescription: An example of how Deepgram’s automatic transcripts can be used to automatically create transcripts in a meeting platform.
+  keywords: real-time, realtime, stream, meeting, transcription, voice-to-text, voice to text, speech recognition, video chat, webinar, video
+---
+
+Real-time meeting transcription uses advanced voice technology for speech-to-text capture of what is discussed and decided in a meeting. With Deepgram’s API, you can add captions to live videos or display captions in real-time at conferences and events, and analyze spoken words for live content.
+
+## In This Tutorial
+
+You will learn how to use Deepgram’s API and streaming endpoint to transcribe voice to text in real-time in a small video chat.
+
+- [Before You Begin](#before-you-begin): Set up your Deepgram account and API Key.
+- [Getting Started](#getting-started): Clone the repository and get the application running, or remix it on Glitch.
+- [Code Walk-through](#code-walk-through): Get a deeper understanding of how the application works.
+- [Analyzing Results](#analyzing-results): Learn about resources you might find helpful when analyzing results.
+
+The example provided is written in Node.js, and you can [find the code on GitHub](https://github.com/deepgram-devs/video-chat).
+
+<Alert type="warning">
+
+This is an example application designed for use as a demonstration. We strongly discourage direct use of this code in a production environment.
+
+</Alert>
+
+## Before You Begin
+
+Before you run the code, you'll need to do a few things:
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+- $150 in credit, which gives you access to:
+
+  - all base models
+  - pre-recorded and streaming functionality
+  - all features
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](/documentation/getting-started/authentication/#create-an-api-key). Make note of your API Key; you will need it later.
+
+## Getting started
+
+You can run this application by remixing it on Glitch or by running it on your local computer.
+
+### Remix on Glitch
+
+[Glitch](https://glitch.com/) comes with an online editor, so you'll have all the necessary tools to
+explore your own application instance. Actions taken in Glitch are subject to [Glitch’s Terms of Service and Privacy Policy](https://glitch.com/legal) and are not covered by any Deepgram agreements.
+
+To remix this application on Glitch, go to the following URL:
+
+> https://glitch.com/edit/#!/remix/dg-uc-video-chat?PORT=3000
+
+When accessing this URL in your browser, the project will be forked and deployed.
+
+#### Configure the Settings
+
+Your application will need to know more about you before it can run successfully. Edit the environment variables (`.env`) to reflect the settings you want to use:
+
+- `PORT`: The port on which you want to run the application. We generally set this to port 3000.
+- `DG_KEY`: The API Key you created earlier in this tutorial.
+
+Once these variables are set, the application should run automatically.
+
+### Run on localhost
+
+You can also run this project on your local computer. To do so, you will need to clone the repository,
+configure the settings, install the dependencies, and start the server.
+
+#### Clone the Repository
+
+Either clone or download the [GitHub repository](https://github.com/deepgram-devs/video-chat) to your
+local machine in a new directory:
+
+```bash
+# Clone this repo
+git clone https://github.com/deepgram-devs/video-chat.git
+
+# Move to the created directory
+cd video-chat
+```
+
+#### Configure the Settings
+
+Your application will need to know more about you before it can run. Copy the
+`.env-example` file into a new file named `.env`, and edit the new file to
+reflect the settings you want to use:
+
+- `PORT`: The port on which you want to run the application. You can leave this as port 3000.
+- `DG_KEY`: The API Key you created earlier in this tutorial.
+
+#### Install the Dependencies
+
+In the directory where you downloaded the code, run the following command to
+bring in the dependencies needed for this project:
+
+```bash
+npm install
+```
+
+#### Start the Server
+
+Now that you have configured your application and put the dependencies in place, your application
+is ready to go! Run it with:
+
+```bash
+npm start
+```
+
+By default, the application runs on port 3000, which means you can access it at
+[http://localhost:3000](http://localhost:3000).
+
+## Code Walk-through
+
+The application is an Express app that uses `public/js/video_chat.js` to build a two-way video call using classic WebRTC technology. It uses an intermediate server (`server.js`) to establish a peer-to-peer connection between itself and another client. Your browser records your microphone using the [opus-recorder library](https://github.com/chris-rudmin/opus-recorder), then sends the audio stream to the server. In turn, the server forwards the audio stream to Deepgram’s API, using your Deepgram API Key to authenticate with the [real-time streaming endpoint](/api-reference/#transcription-streaming). When the server receives the transcription back from the Deepgram API, it displays the transcription data in the browser. The key logic that connects to Deepgram and forwards any transcriptions it receives to the client application lives in the `server.js` file.
+
+<Alert type="warning">
+
+You could directly connect the browser to Deepgram API, but this would require you to disclose your Deepgram API Key to the browser. Think twice before choosing this option.
+
+</Alert>
+
+## Negotiating the Peer Connection
+
+To negotiate the peer connection, we call the `createAndSetupPeerConnection` function in `public/js/video_chat.js`. This function works with the `setupWebRTCSignaling` function in `server.js` to set up the peer connection using WebRTC, which is a fully peer-to-peer technology for the real-time exchange of audio, video, and data.
+
+<Panel title="Learn more about WebRTC">
+
+When using WebRTC, for two devices on different networks to locate each other, a form of discovery and media format negotiation must take place. This process is called signaling and involves both devices connecting to a third, mutually agreed-upon server. Through this third signaling server, the two devices can locate one another and exchange negotiation messages to resolve how to connect them over the internet.
+
+To negotiate the connection between them, the peers need to exchange Interactive Connectivity Establishment (ICE) candidates, each of which describes a method that the sending peer is able to use to communicate. Each peer sends candidates in the order they're discovered and keeps sending candidates until it runs out of suggestions, even if media has already started streaming.
+
+The content of the message going through the signaling server is, in effect, a black box. What matters is that when the ICE subsystem instructs you to send signaling data to the other peer, you do so, and that the other peer knows how to receive this information and deliver it to its own ICE subsystem. All you have to do is channel the information back and forth.
+
+</Panel>
+
+```js
+function createAndSetupPeerConnection(peerSocketId, localStream, remoteVideoNode, socket, allPeerConnections) {
+	// Create an RTC peer connection and add the connection to `allPeer Connections`.
+	const peerConnection = new RTCPeerConnection({
+		iceServers: [
+			{
+				urls: ["stun:stun.l.google.com:19302"],
+			},
+		],
+	});
+	allPeerConnections.set(peerSocketId, peerConnection);
+
+	// Add the local stream as outgoing tracks to the peer connection so the
+	// local stream can be sent to the peer.
+	localStream.getTracks().forEach((track) => peerConnection.addTrack(track, localStream));
+
+	// Forward ICE candidates to the peer through the socket. This is required
+	// by the RTC protocol to make both clients agree on what video/audio
+	// format and quality to use.
+	peerConnection.onicecandidate = (event) => {
+		if (event.candidate) {
+			socket.emit("ice-candidate", peerSocketId, event.candidate);
+		}
+	};
+
+	// Bind the incoming tracks to remoteVideoNode.srcObject, so we
+	// can see the peer's stream.
+	peerConnection.ontrack = (event) => {
+		remoteVideoNode.srcObject = event.streams[0];
+	};
+
+	return peerConnection;
+}
+```
+
+```js
+function setupWebRTCSignaling(socket) {
+	// Handle the WebRTC "signaling", which means forwarding the necessary data
+	// to establish a peer-to-peer connection.
+	socket.on("video-offer", (id, message) => {
+		socket.to(id).emit("video-offer", socket.id, message);
+	});
+
+	socket.on("video-answer", (id, message) => {
+		socket.to(id).emit("video-answer", socket.id, message);
+	});
+
+	socket.on("ice-candidate", (id, message) => {
+		socket.to(id).emit("ice-candidate", socket.id, message);
+	});
+}
+```
+
+### Sending Data to the Deepgram API
+
+When your browser sends the audio stream to the server, we call the `setupRealtimeTranscription` function. This function calls the Deepgram API via a `wss` request, which establishes a WebSocket over an encrypted TLS connection. Real-time streaming uses WebSockets, a communications protocol that enables full-duplex communication, which means that you can stream new audio to Deepgram at the same time the latest transcription results are streaming back to you.
+
+When connecting to the Deepgram server, you can configure options by appending query string parameters to the URL. To learn more about available options, read [API Reference: Deepgram API](/api-reference/#transcription-streaming).
+
+```js
+const { Deepgram } = require("@deepgram/sdk");
+function setupRealtimeTranscription(socket, room) {
+	/** The sampleRate must match what the client uses. */
+	const sampleRate = 16000;
+
+	const deepgram = new Deepgram(DG_KEY);
+
+	const dgSocket = deepgram.transcription.live({
+		punctuate: true,
+	});
+
+	/** We must receive the very first audio packet from the client because
+	 * it contains some header data needed for audio decoding.
+	 *
+	 * Thus, we send a message to the client when the socket to Deepgram is ready,
+	 * so the client knows it can start sending audio data.
+	 */
+	dgSocket.addListener("open", () => socket.emit("can-open-mic"));
+
+	/**
+	 * We forward the audio stream from the client's microphone to Deepgram's server.
+	 */
+	socket.on("microphone-stream", (stream) => {
+		if (dgSocket.getReadyState() === WebSocket.OPEN) {
+			dgSocket.send(stream);
+		}
+	});
+
+	/** On Deepgram's server message, we forward the response back to all the
+	 * clients in the room.
+	 */
+	dgSocket.addListener("message", (transcription) => {
+		io.to(room).emit("transcript-result", socket.id, transcription);
+	});
+
+	/** We close the dsSocket when the client disconnects. */
+	socket.on("disconnect", () => {
+		if (dgSocket.getReadyState() === WebSocket.OPEN) {
+			dgSocket.finish();
+		}
+	});
+}
+```
+
+## Analyzing Results
+
+When analyzing results, understand that real-time streaming returns a series of interim transcripts followed by a final transcript. To learn more about real-time streaming, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/). To learn more about interim and final transcripts, see [Interim Results](/documentation/features/interim-results/).

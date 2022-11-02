@@ -1,0 +1,63 @@
+---
+title: Configuration
+description: Official .NET SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, dotnet, csharp]
+seo:
+  metaTitle: Configuration - .NET SDK
+  metaDescription: Official .NET SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, dotnet, csharp, speech-to-text
+---
+
+The Deepgram .NET SDK provides three ways to configure the Deepgram client:
+
+- Via the `DeepgramClient` constructor
+- Via an `appsettings.json` or `settings.json` file
+- Via a Configuration instance
+
+Below are examples of how to do each.
+
+## DeepgramClient Constructor
+
+The `DeepgramClient` constructor allows you to provide a Deepgram API key and
+optional custom API url.
+
+```csharp
+var credentials = new Credentials(YOUR_DEEPGRAM_API_KEY);
+var deepgramClient = new DeepgramClient(credentials);
+```
+
+## Settings Files
+
+If a `Credentials` object is not provided in the `DeepgramClient` constructor, the
+client will look for parameters within an `appsettings.json` or `settings.json`
+file.
+
+```js
+{
+  "appSettings": {
+    "Deepgram.Api.Key": "YOUR_DEEPGRAM_API_KEY",
+    "Deepgram.Api.Uri": "https://api.deepgram.com"
+  }
+}
+```
+
+<Panel type="info" title="Order of Precedence in Settings Files">
+
+In the event multiple configuration files are found, the order of precedence is
+as follows:
+
+- appsettings.json
+- settings.json
+
+</Panel>
+
+## Configuration Instance
+
+If you have an existing `Configuration` instance, you can provide your settings
+to it directly.
+
+```csharp
+Configuration.Instance.Settings["appSettings:Deepgram.Api.Key"] = "YOUR_DEEPGRAM_API_KEY";
+Configuration.Instance.Settings["appSettings:Deepgram.Api.Uri"] = "https://api.deepgram.com";
+```

@@ -1,0 +1,179 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Transcribing Pre-recorded Audio
+description: Learn how to process and transcribe pre-recorded local and remote audio files using Deepgram's API.
+type: "transcription"
+order: 1
+seo:
+  metaTitle: Transcribing Pre-recorded Audio
+  metaDescription: Learn how to process and transcribe pre-recorded local and remote audio files using Deepgram's API.
+  keywords: transcribe, transcription, audio, remote, local, customize, punctuate, model
+---
+
+Deepgram gives you streamlined access to automatic transcription from Deepgram's off-the-shelf and trained speech recognition models. This product is very fast, can understand nearly every audio format available, and is customizable.
+
+In this guide, you'll learn how to automatically transcribe pre-recorded audio from both a local file and a remote file using Deepgram's off-the-shelf general purpose AI model. We will also show you how to use some basic parameters to customize your transcript.
+
+<Alert type="info">
+
+The examples in this guide use cURL rather than Deepgram SDKs. To learn how to transcribe pre-recorded audio with Deepgram using our SDKs, see [Getting Started with Pre-recorded Audio](/documentation/getting-started/prerecorded).
+
+</Alert>
+
+## Before You Begin
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+- $150 in credit, which gives you access to:
+  - all base models
+  - pre-recorded and streaming functionality
+  - all features
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](/documentation/getting-started/authentication/#create-an-api-key). Make note of your API Key; you will need it later.
+
+## Transcribe Audio
+
+Deepgram’s API allows you to process both local files and remote files that are publicly accessible.
+
+<Alert type="info">
+
+If you don’t have an audio file of your own, you can [use our sample WAV file](https://developers.deepgram.com/data/audio/interview_speech-analytics.wav).
+
+</Alert>
+
+Depending on the location of the audio you would like to transcribe, run one of the following sample cURL commands.
+
+<Alert type="info">
+
+For easy-to-read output, we highly recommend that you run these requests through [jq](https://github.com/stedolan/jq/wiki/Installation).
+
+</Alert>
+
+### Transcribe a Local File
+
+To transcribe audio from a file on your computer, run the following in a terminal or your favorite API client.
+
+<Alert type="warning">
+
+Be sure to replace the placeholder `YOUR_DEEPGRAM_API_KEY` with the Deepgram API Key you created earlier in this tutorial.
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Transcribe a Remote File
+
+To transcribe audio from a publicly-accessible remote file (e.g., hosted in AWS S3 or another server), run the following in a terminal or your favorite API client.
+
+<Alert type="warning">
+
+Be sure to replace the placeholder `YOUR_DEEPGRAM_API_KEY` with the Deepgram API Key you created earlier in this tutorial.
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: application/json' \
+  --data '{"url":"https://static.deepgram.com/examples/interview_speech-analytics.wav"}' \
+  --url 'https://api.deepgram.com/v1/listen'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Analyze Response
+
+When the file is finished processing (often after only a few seconds), you’ll receive a JSON response:
+
+```json
+{
+  "metadata": {
+    "transaction_key": "iqIt",
+    "request_id": "m9IBwpEGuLOd5fDVUcwRoojQeVDIc4wU",
+    "sha256": "6b198da276e1108a87e15674ba5e68f4893f85aa584ea96c2b0b5fe32e756bd9",
+    "created": "2020-05-01T18:19:17.153Z",
+    "duration": 2705.3577,
+    "channels": 1
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "hey natalie just joined",
+            "confidence": 0.87023026,
+            "words": [
+              {
+                "word": "hey",
+                "start": 35.61904,
+                "end": 35.77853,
+                "confidence": 0.54808563
+              },
+              {
+                "word": "natalie",
+                "start": 35.77853,
+                "end": 36.27853,
+                "confidence": 0.41259128
+              },
+              ...
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+In this default response, we see:
+
+- `transcript`: the transcript for the audio segment being processed.
+- `confidence`: a floating point value between 0 and 1 that indicates overall transcript reliability. Larger values indicate higher confidence.
+- `words`: an object containing each `word` in the transcript, along with its `start` time and `end` time (in seconds) from the beginning of the audio stream, and a `confidence` value.
+
+By default, Deepgram applies its `general` AI model, which is a good, general purpose model for everyday situations.
+
+## Customize Transcripts
+
+To customize transcripts, you can add a variety of parameters to the query string.
+
+For example, if you would like to use the `phonecall` AI model rather than the `general` AI model, you can add `?model=phonecall` to the URL in the previous examples:
+
+```bash
+"https://api.deepgram.com/v1/listen?model=phonecall"
+```
+
+Similarly, if you'd like to get a transcript with punctuation and capitalization, you can add `?punctuate=true` to the URL in the previous examples:
+
+```bash
+"https://api.deepgram.com/v1/listen?punctuate=true"
+```
+
+To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).

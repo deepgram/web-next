@@ -1,0 +1,27 @@
+---
+layout: ../../../layouts/ApiReference.astro
+label: response
+---
+
+```json
+{
+	"api_keys": [
+		{
+			"member": {
+				"member_id": "uuid",
+				"email": "string",
+				"first_name": "string",
+				"last_name": "string"
+			},
+			"api_key": {
+				"api_key_id": "uuid",
+				"comment": "string",
+				"scopes": ["string"],
+				"tags": ["string"],
+				"created": "YYYY-MM-DDThh:mm:ss.sTZD",
+				"expiration_date": "YYYY-MM-DDThh:mm:ss.sTZD"
+			}
+		}
+	]
+}
+```

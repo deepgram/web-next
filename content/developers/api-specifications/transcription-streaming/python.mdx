@@ -1,0 +1,96 @@
+---
+label: Python
+---
+
+```py
+import base64
+import json
+import websockets
+import asyncio
+
+def connect(key):
+    """ Connect to the websocket endpoint.
+    """
+    return websockets.connect(
+        ## Connect to the secure websocket endpoint.
+        'wss://api.deepgram.com/v1/listen',
+        extra_headers = {
+            'Authorization': 'Token {}'.format(key)
+        }
+    )
+
+async def run(key, inbox, outbox):
+    """ Streams data to/from the service.
+
+        We will use `key` to authenticate.
+        We will read audio data from the `outbox` queue and send it to the server.
+        When we receive responses from the server, we will put the latest transcript in the `inbox` queue.
+    """
+
+    ## Connect to the streaming endpoint.
+    async with connect(key) as ws:
+
+        ## This example function will upload data.
+        async def sender(ws):
+            while True:
+                audio = await outbox.get()
+                if audio is None:
+                    break
+
+                await ws.send(audio)
+
+            ## Close the connection cleanly.
+            await ws.send(b'')
+
+        ## This example function will handle responses.
+        async def receiver(ws):
+            async for msg in ws:
+                ## Deserialize the JSON message.
+                msg = json.loads(msg)
+
+                ## Get the transcript and put in the queue.
+                if 'alternatives' in msg:
+                    transcript = msg['alternatives'][0]['transcript']
+                    print('Metadata received:', msg)
+                    await inbox.put(transcript)
+                elif 'channel' in msg and msg['is_final']:
+                    transcript = msg['channel']['alternatives'][0]['transcript']
+                    print('Metadata received:', msg)
+                    await inbox.put(transcript)
+                else:
+                    print('Metadata received:', msg)
+
+        await asyncio.wait([
+            asyncio.ensure_future(sender(ws)),
+            asyncio.ensure_future(receiver(ws))
+        ])
+
+if __name__ == '__main__':
+    ## Create the queues.
+    inbox = asyncio.Queue()
+    outbox = asyncio.Queue()
+
+    ## send raw audio from your machine
+
+    with open('file.wav', 'rb') as f:
+        while True:
+            piece = f.read(4096)
+            if piece == b'':
+                break
+            outbox.put_nowait(piece)
+
+    outbox.put_nowait(None)
+
+    ## Run the event loop, replacing credentials with your Deepgram API key.
+    asyncio.get_event_loop().run_until_complete(run('YOUR_DEEPGRAM_API_KEY', inbox, outbox))
+
+    ## Print out the results
+    print('All done. Replaying all the transcript messages...')
+    while True:
+        try:
+            msg = inbox.get_nowait()
+        except asyncio.QueueEmpty:
+            break
+
+        print('  Received transcript:', msg)
+```

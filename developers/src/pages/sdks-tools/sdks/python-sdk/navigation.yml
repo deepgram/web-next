@@ -1,0 +1,21 @@
+- name: Python SDK
+  to: /sdks-tools/sdks/python-sdk/
+  children:
+  - name: Pre-recorded Transcription
+    to: /sdks-tools/sdks/python-sdk/pre-recorded-transcription/
+  - name: Streaming Transcription
+    to: /sdks-tools/sdks/python-sdk/streaming-transcription/
+  - name: Projects
+    to:  /sdks-tools/sdks/python-sdk/projects/
+  - name: Keys
+    to:  /sdks-tools/sdks/python-sdk/keys/
+  - name: Usage
+    to:  /sdks-tools/sdks/python-sdk/usage/
+  - name: Billing
+    to: /sdks-tools/sdks/python-sdk/billing/
+  - name: Members
+    to: /sdks-tools/sdks/python-sdk/members/
+  - name: Scopes
+    to: /sdks-tools/sdks/python-sdk/scopes/
+  - name: Invitations
+    to: /sdks-tools/sdks/python-sdk/invitations/

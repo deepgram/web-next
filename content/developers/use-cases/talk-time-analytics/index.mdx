@@ -1,0 +1,217 @@
+---
+title: Calculate Talk Time Analytics
+tags:
+  - prerecorded
+  - transcription
+  - nodejs
+cover: ./calculate-talk-time-analytics-use-case@2x.png
+description: An example of how Deepgram can be used to separate speakers and calculate talk time for to build analytics into your product.
+seo:
+  metaTitle: Calculate Talk Time Analytics
+  metaDescription: Use Deepgram to analyze talk time metrics of phone calls, meetings, and more.
+  keywords: speech-analytics, sales, support, analytics, voice-to-text, sales-assist, speech recognition, video chat, webinar, video
+---
+
+Analyzing the talk time of participants in a classroom, meeting, or phone
+call can help you improve participant engagement, sales presentations,
+and support response. Using Deepgram's Transcription API with diarization,
+you can gather the data you need to make informed decisions about your
+organization's interactions.
+
+## Before You Begin
+
+The example provided is written in Node.js, and you can [find the code
+on GitHub](https://github.com/deepgram-devs/talk-time-analytics).
+
+Before you run the code, you'll need to do a few things:
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+- $150 in credit, which gives you access to:
+
+  - all base models
+  - pre-recorded and streaming functionality
+  - all features
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](/documentation/getting-started/authentication/#create-an-api-key). Make note of your API Key; you will need it later.
+
+## Getting Started
+
+You can run this application by remixing it on Glitch or by running it on your local computer.
+
+### Remix on Glitch
+
+[Glitch](https://glitch.com/) comes with an online editor, so you'll have all the necessary tools to explore your own application instance. Actions taken in Glitch are subject to [Glitch’s Terms of Service and Privacy Policy](https://glitch.com/legal) and are not covered by any Deepgram agreements.
+
+To remix this application on Glitch, go to the following URL:
+
+> <https://glitch.com/edit/#!/remix/dg-uc-talk-time-analytics?PORT=3000>
+
+When accessing this URL in your browser, the project will be forked and deployed.
+
+#### Configure the Settings
+
+Your application will need to know more about you before it can run successfully. Edit the environment variables (`.env`) to reflect the settings you want to use:
+
+- `PORT`: The port on which you want to run the application. We generally set this to port 3000.
+- `DG_KEY`: The API Key you created earlier in this tutorial.
+
+Once these variables are set, the application should run automatically.
+
+### Run on localhost
+
+You can also run this project on your local computer. To do so, you will need to clone the repository,
+configure the settings, install the dependencies, and start the server.
+
+#### Clone the Repository
+
+Either clone or download the
+[GitHub repository](https://github.com/deepgram-devs/talk-time-analytics) to your
+local machine in a new directory:
+
+```bash
+# Clone this repo
+git clone https://github.com/deepgram-devs/talk-time-analytics.git
+
+# Move to the created directory
+cd talk-time-analytics
+```
+
+#### Configure the Settings
+
+Your application will need to know more about you before it can run. Copy the
+`.env-example` file into a new file named `.env`, and edit the new file to
+reflect the settings you want to use:
+
+- `PORT`: The port on which you want to run the application. You can leave this as port 3000.
+- `DG_KEY`: The API Key you created earlier in this tutorial.
+
+#### Install the Dependencies
+
+In the directory where you downloaded the code, run the following command to
+bring in the dependencies needed for this project:
+
+```bash
+npm install
+```
+
+#### Start the Server
+
+Now that you have configured your application and put the dependencies in place, your application
+is ready to go! Run it with:
+
+```bash
+npm start
+```
+
+By default, the application runs on port 3000, which means you can access it at
+[http://localhost:3000](http://localhost:3000).
+
+## Code Walk-through
+
+The application is an Express app that uses Chart.js to create a pie
+chart that displays calculated talk time. The key logic that calculates
+talk time lives in the `server.js` file.
+
+### Sending Data to the Deepgram API
+
+When a user uploads a file, we call the `requestDeepgramAPI` function. This
+function calls the Deepgram API via an `https` request. The key parameter on this
+request is `diarize=true`. This parameter tells the Deepgram API to recognize
+speaker changes. When activated, the Deepgram API will assign a zero-based
+speaker index to each word in the transcript.
+
+```javascript
+function requestDeepgramAPI({ res, filename, fileUrl, contentType, payload }) {
+  try {
+    const deepgram = new Deepgram(DG_KEY)
+    let audioObj
+
+    if (typeof payload === 'string') {
+      audioObj = { url: fileUrl }
+    } else {
+      audioObj = { buffer: payload, mimetype: contentType }
+    }
+
+    const transcription = await deepgram.transcription.preRecorded(audioObj, {
+      punctuate: true,
+      diarize: true,
+    })
+
+    const speakers = computeSpeakingTime(transcription)
+    res.render('analytics.ejs', {
+      speakers,
+      filename,
+      fileUrl,
+    })
+  } catch (err) {
+    error(res, err)
+  }
+}
+```
+
+### Calculating Talk Time
+
+Once the response is returned from the Deepgram API, we pass the transcript
+data to the `computeSpeakingTime` function. In that function, we create a
+new `Map<number, number>` named `timePerSpeaker`.
+
+The Deepgram API specifies the start, end, and duration of each word it
+identifies. That information, paired with the indexed speaker returned
+by the diarization feature of the API, allows us to iterate through each
+word calculating the full length of time that speaker spoke.
+
+```javascript
+function computeSpeakingTime(transcript) {
+  const words = transcript.results.channels[0].alternatives[0].words
+
+  if (words.length === 0) {
+    return []
+  }
+
+  // `timePerSpeaker` tracks speaker time. Keys
+  // are speaker ID; values are speaking time.
+  const timePerSpeaker = new Map()
+  let wordAtLastSpeakerChange = words.shift()
+  for (const word of words) {
+    // If the speaker changes at this word
+    if (wordAtLastSpeakerChange.speaker !== word.speaker) {
+      addSpeakingTime(
+        wordAtLastSpeakerChange.speaker,
+        word.end - wordAtLastSpeakerChange.start,
+        timePerSpeaker
+      )
+      wordAtLastSpeakerChange = word
+    }
+  }
+
+  const lastWord = words[words.length - 1]
+  addSpeakingTime(
+    wordAtLastSpeakerChange.speaker,
+    lastWord.end - wordAtLastSpeakerChange.start,
+    timePerSpeaker
+  )
+
+  return (
+    // Convert the Map into an array
+    [...timePerSpeaker.entries()]
+      // Sort by speaker ID (keys of the Map)
+      .sort((entryA, entryB) => entryA[0] - entryB[0])
+      // Only keep the speaking times (the values of the Map)
+      .map((entry) => entry[1])
+  )
+}
+
+function addSpeakingTime(speaker, duration, timePerSpeaker) {
+  const currentSpeakerDuration = timePerSpeaker.get(speaker) || 0
+  timePerSpeaker.set(speaker, currentSpeakerDuration + duration)
+}
+```
+
+## Further Reading
+
+- [Diarization](/api-reference/#diarize-pr) in the Deepgram API reference

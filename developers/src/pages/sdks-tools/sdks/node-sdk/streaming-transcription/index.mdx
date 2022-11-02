@@ -1,0 +1,146 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Streaming Transcription
+description: Official Node.js SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, nodejs]
+seo:
+  metaTitle: Streaming Transcription - Node.js SDK
+  metaDescription: Official Node.js SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, nodejs, javascript, speech-to-text
+---
+
+The `transcription.live` function encapsulates a websocket connection to the
+Deepgram API and returns a Node.js
+[event emitter](https://nodejs.dev/learn/the-nodejs-event-emitter). Events
+received from the Deepgram API are emitted for consumption by your application.
+
+## Parameters
+
+Additional options can be provided for streaming transcriptions. They are
+provided as an object of the `transcription.live` function. Each of these
+parameters map to a feature in the Deepgram API. Reference the
+[features documentation](/documentation/features/) to learn what features may
+be appropriate for your request.
+
+| Option                                                           | Type     |
+| ---------------------------------------------------------------- | -------- |
+| [model](/documentation/features/model/)                          | string   |
+| [tier](/documentation/features/tier)                             | string   |
+| [replace](/documentation/features/replace/)                      | string   |
+| [version](/documentation/features/version/)                      | string   |
+| [language](/documentation/features/language/)                    | string   |
+| [punctuate](/documentation/features/punctuate/)                  | boolean  |
+| [profanity_filter](/documentation/features/profanity-filter/)    | boolean  |
+| [redact](/documentation/features/redact/)                        | [string] |
+| [diarize](/documentation/features/diarize/)                      | boolean  |
+| [multichannel](/documentation/features/multichannel/)            | boolean  |
+| alternatives                                                     | number   |
+| [numerals](/documentation/features/numerals/)                    | boolean  |
+| [search](/documentation/features/search/)                        | [string] |
+| [callback](/documentation/features/callback/)                    | string   |
+| [keywords](/documentation/features/keywords/)                    | [string] |
+| [interim_results](/documentation/features/interim-results/)      | boolean  |
+| [endpointing](/documentation/features/endpointing/)              | boolean  |
+| [vad_turnoff](/documentation/features/voice-activity-detection/) | number   |
+| [encoding](/documentation/features/encoding/)                    | string   |
+| [channels](/documentation/features/utterance-split/)             | number   |
+| [sample_rate](/documentation/features/sample-rate/)              | number   |
+
+## Initiating a Connection
+
+The `transcription.live` function will return a Node.js
+[event emitter](https://nodejs.dev/learn/the-nodejs-event-emitter) that your
+application can subscribe to events on.
+
+```js
+const deepgramLive = deepgram.transcription.live({
+	punctuate: true,
+	// additional options
+});
+```
+
+## Events
+
+The following events are fired by the live transcription object:
+
+| Event                | Description                                           | Data                                                                              |
+| -------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `open`               | The websocket connection to Deepgram has been opened. | The DG live transcription object                                                  |
+| `close`              | The websocket connection to Deepgram has been closed. | WebSocket.CloseEvent                                                              |
+| `error`              | An error occurred with the websocket connection       | Error object                                                                      |
+| `transcriptReceived` | Deepgram has responded with a transcription           | [Transcription response](/api-reference/#transcription-streaming-response-schema) |
+
+### Listening to Events
+
+Use the `addListener` function to listen for events fired on the
+object returned from the `transcription.live` function.
+
+```js
+deepgramLive.addListener("transcriptReceived", (transcription) => {
+	console.log(transcription.data);
+});
+```
+
+## Functions
+
+The object returned by the `transcription.live` function provides several
+functions to make using the Deepgram API easier. They are `send`,
+`getReadyState`, and `finish`.
+
+### Sending Data
+
+The `send` function sends raw audio data to the Deepgram API.
+
+```js
+deepgramLive.send(AUDIO_STREAM_DATA);
+```
+
+### Get Ready State
+
+The `getReadyState` function returns the ready state of the websocket connection
+to Deepgram.
+
+```js
+const websocketReadyState = deepgramLive.getReadyState();
+```
+
+### Closing the Connection
+
+The `finish` function closes the Websocket connection to Deepgram.
+
+```js
+deepgramLive.finish();
+```
+
+### Browser
+
+Using the browser compatible SDK is slightly different. You still make the call to `.live()` and pass in the options you want applied to the transcription, but some of the events are different. We are abstracting the [native WebSocket API](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket).
+
+```js
+import { Deepgram } from "@deepgram/sdk/browser";
+const deepgram = new Deepgram("YOUR_API_KEY");
+navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
+	const mediaRecorder = new MediaRecorder(stream, {
+		mimeType: "audio/webm",
+	});
+	const deepgramSocket = deepgram.transcription.live({
+		punctuate: true,
+	});
+	deepgramSocket.addEventListener("open", () => {
+		mediaRecorder.addEventListener("dataavailable", async (event) => {
+			if (event.data.size > 0 && deepgramSocket.readyState == 1) {
+				deepgramSocket.send(event.data);
+			}
+		});
+		mediaRecorder.start(1000);
+	});
+	deepgramSocket.addEventListener("message", (message) => {
+		const received = JSON.parse(message.data);
+		const transcript = received.channel.alternatives[0].transcript;
+		if (transcript && received.is_final) {
+			console.log(transcript);
+		}
+	});
+});
+```

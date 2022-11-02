@@ -1,0 +1,183 @@
+---
+title: Transcribe Recorded Calls with Twilio
+tags:
+  - prerecorded
+  - transcription
+  - python
+cover: ./transcribe-recorded-calls-with-twilio-use-case@2x.png
+description: An example of how Deepgram can be used to automatically transcribe any call conducted over Twilio.
+seo:
+  metaTitle: Transcribe Recorded Calls with Twilio
+  metaDescription: Use Deepgram to transcribe recorded calls from Twilio Voice.
+  keywords: transcription, twilio, transcribe, voice, voice-to-text, speech recognition, webinar
+---
+
+The wealth of knowledge in the conversations that happen during your sales and
+support calls can be left untapped without automatic transcription. Using
+Deepgram's Transcription API, you can gather the data you need to make informed
+decisions about your organization's interactions.
+
+## In This Tutorial
+
+You will see how to use the Deepgram API to calculate talk-time analytics for a
+pre-recorded audio conversation:
+
+- [Before You Begin](#before-you-begin): Set up your Deepgram account and API Key.
+- [Getting Started](#getting-started): Clone the repository and get the application running, or remix it on Glitch.
+- [Code Walk-through](#code-walk-through): Get a deeper understanding of how the application works.
+- [Further Reading](#further-reading): Learn about other resources you might find helpful.
+
+The example provided is written in Node.js, and you can [find the code
+on GitHub](https://github.com/deepgram-devs/video-chat).
+
+## Before You Begin
+
+Before you run the code, you'll need to do a few things:
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup). Signup is free and includes:
+
+- $150 in credit, which gives you access to:
+
+  - all base models
+  - pre-recorded and streaming functionality
+  - all features
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](https://console.deepgram.com/signup?jump=keys). Make note of your API Key; you will need it later.
+
+### Gather Twilio Credentials
+
+This application uses Twilio Voice to start a phone call that will be recorded
+and transcribed. Before you can use Twilio products, you'll need to
+[sign up for a Twilio account](https://twilio.com).
+
+To use the sample application, you'll need a Twilio Account SID
+and Twilio Auth Token. These can both be found within your Twilio account
+dashboard.
+
+## Getting Started
+
+You can run this application by remixing it on Glitch or by running it on
+your local computer.
+
+### Remix on Glitch
+
+[Glitch](https://glitch.com/) comes with an online editor, so you'll have all the necessary tools to
+explore your own application instance. Actions taken in Glitch are subject to [Glitch’s Terms of Service and Privacy Policy](https://glitch.com/legal) and are not covered by any Deepgram agreements.
+
+To remix this application on Glitch, go to the following URL:
+
+> <https://glitch.com/edit/#!/remix/dg-uc-recorded-call-transcription>
+
+When accessing this URL in your browser, the project will be forked and deployed.
+
+#### Configure the Settings
+
+Your application will need to know more about you before it can run successfully. Edit the environment variables (`.env`) to reflect the settings you want to use:
+
+- `YOUR_TWILIO_ACCOUNT_SID`: The Account SID from your Twilio Account Dashboard.
+- `YOUR_TWILIO_AUTH_TOKEN`: The Auth Token from your Twilio Account Dashboard.
+- `DG_KEY`: The API Key you created earlier in this tutorial.
+
+Once these variables are set, the application should run automatically.
+
+### Run on localhost
+
+You can also run this project on your local computer. To do so, you will need
+to clone the repository, configure the settings, install the dependencies, and
+start the server.
+
+#### Clone the Repository
+
+Either clone or download the
+[GitHub repository](https://github.com/deepgram-devs/recorded-call-transcription)
+to your local machine in a new directory:
+
+```bash
+# Clone this repo
+git clone https://github.com/deepgram-devs/recorded-call-transcription.git
+
+# Move to the created directory
+cd recorded-call-transcription
+```
+
+#### Configure the Settings
+
+Your application will need to know more about you before it can run. Copy the
+`.env-example` file into a new file named `.env`, and edit the new file to
+reflect the settings you want to use:
+
+- `DG_KEY`: The API Key you created earlier in this tutorial.
+- `YOUR_TWILIO_ACCOUNT_SID`: The Account SID from your Twilio Account Dashboard.
+- `YOUR_TWILIO_AUTH_TOKEN`: The Auth Token from your Twilio Account Dashboard.
+
+#### Create a Virtual Environment (optional)
+
+Create a virtual Python environment to run the server in isolation and prevent version collisions with other projects. (You can skip this part if you don't mind installing things system-wide.)
+
+```bash
+# Create the virtual environment
+# (Must be run only once.)
+python3 -m venv dg-twilio-ve
+
+# Activate the virtual environment
+# (Must be run every time you open a new terminal.)
+source dg-twilio-ve/bin/activate
+# Your prompt should start with `(dg-twilio-ve)`.
+
+# python3 and pip3 will now run in this virtual environment.
+# If you want to deactivate this environment, type `deactivate`.
+```
+
+#### Install the Dependencies
+
+In the directory where you downloaded the code, run the following command to
+bring in the dependencies needed for this project:
+
+```bash
+pip3 install -r requirements.txt
+```
+
+#### Start the Server
+
+Now that you have configured your application and put the dependencies in place, your application
+is ready to go! Run it with:
+
+```bash
+FLASK_APP=server.py FLASK_ENV=development flask run
+```
+
+## Code Walk-through
+
+The application uses Flask to serve a website that generates a phone call to
+a phone number you provide. Once the call has concluded, a recording is sent
+to the Deepgram API for transcription. Once the transcription has been
+returned, the website displays the results.
+
+### Sending Recordings to the Deepgram API
+
+When a call ends, the application calls the `/transcribe/` endpoint, passing a
+URL that was provided by Twilio to the call's recording. The server then
+sends that URL to Deepgram to transcribe. Once the transcription is complete,
+the application returns it to the front-end as a JSON object.
+
+```python
+@app.route('/transcribe/', methods=['POST'])
+def transcribe() -> dict:
+    body = json.loads(request.data)
+    print("got request in transcribe:", body)
+    print('sending recording to deepgram')
+    # Submit the recording to Deepgram
+    deepgram_req = requests.post(
+        'https://api.deepgram.com/v1/listen?punctuate=true',
+        headers={'Authorization': 'token ' + DEEPGRAM_API_KEY,
+                 "content-type": "application/json"},
+        json={"url": body["audio_url"]}
+    )
+    print('done processing request, sending deepgram response back to client',
+          deepgram_req.text)
+    return json.loads(deepgram_req.text)
+```

@@ -8,7 +8,8 @@
   "workspaces": [
     "@deepgram-web/www",
     "@deepgram-web/blog",
-    "@deepgram-web/shared"
+    "@deepgram-web/shared",
+    "@deepgram-web/developers"
   ],
   "scripts": {
     "lint": "prettier --check .",
