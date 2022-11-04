@@ -11,17 +11,19 @@ import MobileNavMenuItem from "../../../shared/src/shared/components/nav/MobileN
 import Svg from "../../../shared/src/shared/components/general/Svg.astro";
 
 const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
+const pathname = Astro.url.pathname
 ---
 
 <header x-data="{ menu: null }" class="sticky top-0 z-10">
 	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none;" x-show="menu !== null" x-on:click="menu = null"></div>
   
 	<nav class="absolute inset-x-0 bg-almostBlack/80 text-white bg-blur">
-    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center pt-1">
       <div class="mr-[2.875rem]">
         <Link href={WWW_DOMAIN} class="flex">
           <span class="sr-only">Deepgram</span>
-          <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" />
+          <img class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
+          <!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" /> -->
         </Link>
       </div>
       <div class="hidden xl:flex space-x-[1rem] items-center xl:ml-12 pr-4">
@@ -37,16 +39,24 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
     </div>
 		<div class="max-w-screen-2xl mx-auto px-6 lg:px-10 flex justify-between items-center xl:justify-start">
 			<div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
-				<nav class="flex space-x-[2.1875rem]" x-on:click.outside="menu = null">
+				<nav class="flex space-x-[2.1875rem] pt-4" x-on:click.outside="menu = null">
 					<!-- NavLinks -->
-          <Link primary class="flex items-center text-white" href={`${DOCS_DOMAIN}`}>Home</Link>
-					<Link primary class="flex items-center text-white" href={`${DOCS_DOMAIN}/documentation`}>Documentation</Link>
-          <Link primary class="flex items-center text-white" href={`${DOCS_DOMAIN}/api-reference`}>Api Reference</Link>
-          <Link primary class="flex items-center text-white" href={`${DOCS_DOMAIN}/on-prem`}>On-Prem Deployment</Link>
-          <Link primary class="flex items-center text-white" href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link>
-          <Link primary class="flex items-center text-white" href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs & Tools</Link>
-          <Link primary class="flex items-center text-white" href={`${DOCS_DOMAIN}/changelog`}>Changelog</Link>
-          <Link primary class="flex items-center text-white" href={`${BLOG_DOMAIN}/categories/tutorial`}>Blog Tutorials</Link>
+          <Link primary class={
+            `flex items-center hover:text-white font-bold leading-5 ${pathname.endsWith('') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}`}>Home</Link>
+					<Link primary class={
+            `flex items-center hover:text-white font-bold leading-5 ${pathname.endsWith('documentation') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/documentation`}>Documentation</Link>
+          <Link primary class={
+            `flex items-center hover:text-white font-bold leading-5 ${pathname.endsWith('api-reference') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/api-reference`}>Api Reference</Link>
+          <Link primary class={
+            `flex items-center hover:text-white font-bold leading-5 ${pathname.endsWith('on-prem') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/on-prem`}>On-Prem Deployment</Link>
+          <Link primary class={
+            `flex items-center hover:text-white font-bold leading-5 ${pathname.endsWith('sdks-tools') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link>
+          <Link primary class={
+            `flex items-center hover:text-white font-bold leading-5 ${pathname.endsWith('sdks-tools') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs & Tools</Link>
+          <Link primary class={
+            `flex items-center hover:text-white font-bold leading-5 ${pathname.endsWith('changelog') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/changelog`}>Changelog</Link>
+          <Link primary icon="arrow-top-right-on-square" iconSuffix class={
+            `flex items-center hover:text-white font-bold text-cloud`} href={`${BLOG_DOMAIN}/categories/tutorial`}>Blog Tutorials&nbsp;</Link>
 					
 				</nav>
 			</div>
@@ -71,21 +81,29 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 			<div class="grow flex flex-col justify-between overflow-y-scroll">
 				<div class="bg-darkCharcoal">
 					<nav class="grid font-bold">
-            <Link primary class="group w-full flex items-center py-4 px-6 lg:px-10 text-white" href={`${DOCS_DOMAIN}`}>Home</Link>
+            <Link primary class={
+              `group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold leading-5 ${pathname.endsWith('') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}`} href={`${DOCS_DOMAIN}`}>Home</Link>
             <div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
-            <Link primary class="group w-full flex items-center py-4 px-6 lg:px-10 text-white" href={`${DOCS_DOMAIN}/documentation`}>Documentation</Link>
+            <Link primary class={
+              `group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold leading-5 ${pathname.endsWith('documentation') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/documentation`}>Documentation</Link>
             <div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
-            <Link primary class="group w-full flex items-center py-4 px-6 lg:px-10 text-white" href={`${DOCS_DOMAIN}/api-reference`}>Api Reference</Link>
+            <Link primary class={
+              `group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold leading-5 ${pathname.endsWith('api-reference') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/api-reference`}>Api Reference</Link>
             <div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
-            <Link primary class="group w-full flex items-center py-4 px-6 lg:px-10 text-white" href={`${DOCS_DOMAIN}/on-prem`}>On-Prem Deployment</Link>
+            <Link primary class={
+              `group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold leading-5 ${pathname.endsWith('on-prem') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/on-prem`}>On-Prem Deployment</Link>
             <div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
-            <Link primary class="group w-full flex items-center py-4 px-6 lg:px-10 text-white" href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link>
+            <Link primary class={
+              `group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold leading-5 ${pathname.endsWith('use-cases') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link>
             <div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
-            <Link primary class="group w-full flex items-center py-4 px-6 lg:px-10 text-white" href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs & Tools</Link>
+            <Link primary class={
+              `group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold leading-5 ${pathname.endsWith('sdks-tools') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs & Tools</Link>
             <div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
-            <Link primary class="group w-full flex items-center py-4 px-6 lg:px-10 text-white" href={`${DOCS_DOMAIN}/changelog`}>Changelog</Link>
+            <Link primary class={
+              `group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold leading-5 ${pathname.endsWith('changelog') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${DOCS_DOMAIN}/changelog`}>Changelog</Link>
             <div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
-            <Link primary class="group w-full flex items-center py-4 px-6 lg:px-10 text-white" href={`${BLOG_DOMAIN}/categories/tutorial`}>Blog Tutorials</Link>
+            <Link primary class={
+              `group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold leading-5 ${pathname.endsWith('tutorial') ? "text-white underline decoration-lightIris underline-offset-4 decoration-4" : "text-cloud"}`} href={`${BLOG_DOMAIN}/categories/tutorial`}>Blog Tutorials</Link>
             <div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 					</nav>
 				</div>
