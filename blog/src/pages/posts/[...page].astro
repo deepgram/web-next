@@ -11,9 +11,10 @@ import { useStoryblokApi } from "@storyblok/astro";
 export async function getStaticPaths({ paginate }) {
 	const sbApi = useStoryblokApi();
 
-	const { data: allPosts } = await sbApi.get("cdn/stories", {
+	const allPosts = await sbApi.getAll("cdn/stories", {
 		by_slugs: "blog-posts/*",
 	});
+
 	const sortedPosts = allPosts.stories.sort((a, b) => {
 		const aDate = new Date(b.content.date);
 		const bDate = new Date(a.content.date);
