@@ -8,6 +8,7 @@ seo:
   metaDescription: Learn how to migrate from Google's Speech-to-Text to Deepgram. For developers or practitioners who are using Google Speech-to-Text and are considering or actively moving to Deepgram.
   keywords: migrate, google, speech-to-text, stt, speech, text, migration, migrate
 ---
+import Panel from '../../../../shared/components/global/Panel.astro'; 
 
 Moving audio transcription and classification from one environment to another can be a challenging task, even for experienced teams. This guide will give you an overview of the process of migrating your transcription processes from Google Speech-to-Text (STT) to Deepgram to help you make the transition as quickly and efficiently as possible.
 
@@ -38,7 +39,7 @@ Once you’ve selected your model, Deepgram provides many features and capabilit
 | Profanity filter                   | Yes                                                                                                                                               | Yes                           |
 | Numeral formatting                 | Yes                                                                                                                                               | Yes                           |
 | Audio inputs                       | Raw audio/ binary data                                                                                                                            | Language Dependent            |
-| SDK                                | Yes<br><strong>Certified</strong><ul><li>Node.js</li><li>.NET</li><li>Python</li></ul><strong>Community</strong><ul><li>Deno</li><li>Go</li></ul> | Yes                           |
+| SDK                                | Yes<br/><strong>Certified</strong><ul><li>Node.js</li><li>.NET</li><li>Python</li></ul><strong>Community</strong><ul><li>Deno</li><li>Go</li></ul> | Yes                           |
 | Web Sockets                        | Yes                                                                                                                                               | No                            |
 | Data logging                       | Yes                                                                                                                                               | Yes                           |
 
@@ -413,7 +414,7 @@ We provide sample scripts in Python and Node.js and assume you have already conf
 
 | Pre-recorded                                                                                                                 | Live Streaming                                                                                                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <strong>Node.js</strong><br><ul><li>node >= 14.14.37</li></ul><br><strong>Python</strong><br><ul><li>python >= 3.7</li></ul> | <strong>Node.js</strong><br><ul><li>node >= 14.14.37</li><li>cross-fetch >= 3.1.5</li></ul><br><strong>Python</strong><br><ul><li>python >= 3.7</li><li>aiohttp >= 3.8.1</li></ul> |
+| <strong>Node.js</strong><br/><ul><li>node >= 14.14.37</li></ul><br/><strong>Python</strong><br/><ul><li>python >= 3.7</li></ul> | <strong>Node.js</strong><br/><ul><li>node >= 14.14.37</li><li>cross-fetch >= 3.1.5</li></ul><br/><strong>Python</strong><br/><ul><li>python >= 3.7</li><li>aiohttp >= 3.8.1</li></ul> |
 
 ### Get Transcripts and Customize Response
 

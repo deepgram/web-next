@@ -9,6 +9,7 @@ seo:
   metaDescription: Official .NET SDK for Deepgram's automated speech recognition APIs.
   keywords: sdk, dotnet, csharp, speech-to-text
 ---
+import Panel from '../../../../../shared/components/global/Panel.astro'; 
 
 The `DeepgramClient` has a `Transcription.Prerecorded` property that allows you
 to request transcripts for pre-recorded audio. To request a transcript for a
@@ -45,12 +46,12 @@ using (FileStream stream = File.OpenRead("PATH_TO_FILE"))
 The SDK provides a few helper functions for converting pre-recorded
 transcriptions into common caption formats, like WebVTT and SRT.
 
-<panel type="info" title="Utterances are Required for Helper Functions">
+<Panel type="info" title="Utterances are Required for Helper Functions">
 
 In order to use the helper functions, the `Utterances` feature must be used when
 transcribing the audio.
 
-</panel>
+</Panel>
 
 ### Converting to WebVTT
 
