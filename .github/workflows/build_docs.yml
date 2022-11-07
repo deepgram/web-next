@@ -15,7 +15,7 @@ on:
     
 jobs:
   blog:
-    name: Build Blog
+    name: Build Docs
     runs-on: ubuntu-latest
     env:
       PRODUCTION_DOMAIN: comfy-crisp-docs.netlify.app
