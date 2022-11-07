@@ -4,16 +4,16 @@ import Link from "../../shared/components/general/Link.astro";
 const { title } = Astro.props;
 ---
 
-<h1 class="mb-8">{title}</h1>
-<p>Explore our guides, resources, and references to build with Deepgram.</p>
+<h1 class="mt-20 mb-6">{title}</h1>
+<p class="mb-10">Explore our guides, resources, and references to build with Deepgram.</p>
 
-<div class="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 w-max">
-	<div class="flex flex-col">
+<div class="grid grid-rows-2 md:grid-rows-1 md:grid-cols-2 mb-10">
+	<div class="flex flex-col items-center px-2">
 		<Link class="button button--block button--primary" href="/documentation/getting-started/">Quickstart Guides</Link>
-		Get a first transcription in under 5 minutes.
+		<p class="text-casper text-center p-2 w-full md:w-8/12">Get a first transcription in under 5 minutes.</p>
 	</div>
-	<div class="flex flex-col">
+	<div class="flex flex-col items-center px-2">
 		<Link class="button button--block button--secondary" href="/sdks-tools/">View the SDKs</Link>
-		Access our API using your language of choice.
+		<p class="text-casper text-center p-2 w-full md:w-8/12">Access our API using your language of choice.</p>
 	</div>
 </div>
