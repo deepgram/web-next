@@ -15,13 +15,13 @@ import Alert from '../../../../../shared/components/global/Alert.astro';
 Hotpepper provides administrators with tools that allow them to manage datasets, including adding datasets, activating and deactivating datasets, prioritizing datasets, and packaging labeled data. To access these tools, navigate to **Dashboard > Admin > Datasets**.
 
 <div class="screenshot">
-  <img src="/hotpepper-cholula-manage-datasets.png" alt="Hotpepper Administrator Dataset View" />
+	<Image src={import('./hotpepper-cholula-manage-datasets.png')} alt="Hotpepper Administrator Dataset View"/>
 </div>
 
 <div class="annotated">
 
 ## Reviewing Progress
-  <img src="/general-label-1.png" alt="Annotation 1" />
+	<Image src={import('./general-label-1.png')} alt="Annotation 1"/>
 </div>
 
 Hotpepper allows administrators to track progress for dataset processing, including:
@@ -36,7 +36,7 @@ Hotpepper allows administrators to track progress for dataset processing, includ
 <div class="annotated">
 
 ## Showing/Hiding Datasets
-<img src="/general-label-2.png" alt="Annotation 2"/>
+	<Image src={import('./general-label-2.png')} alt="Annotation 2"/>
 </div>
 
 Administrators can control which audio files show in the labeling level queues by activating and deactivating datasets. These actions are not permanent and may be changed at any time.
@@ -60,7 +60,7 @@ To hide a dataset:
 <div class="annotated">
 
 ## Prioritizing Datasets
-<img src="/general-label-2.png" alt="Annotation 2"/>
+	<Image src={import('./general-label-2.png')} alt="Annotation 2"/>
 </div>
 
 Administrators can control the order in which files are assigned to users for labeling by prioritizing datasets. Files from datasets marked as higher priority are assigned to users before files from datasets marked as lower priority.
@@ -76,7 +76,7 @@ To prioritize a dataset:
 <div class="annotated">
 
 ## Packaging Labeled Data
-<img src="/general-label-2.png" alt="Annotation 2" />
+	<Image src={import('./general-label-2.png')} alt="Annotation 2"/>
 </div>
 
 Once all audio files in a dataset have been labeled, administrators can package the data so it can be used to train a custom model using Deepgram’s DG Tools.
@@ -107,7 +107,7 @@ If the package directory has been configured, you can package the dataset:
 <div class="annotated">
 
 ## Adding Datasets
-<img src="/general-label-3.png" alt="Annotation 3"/>
+	<Image src={import('./general-label-3.png')} alt="Annotation 3"/>
 </div>
 
 Before a new dataset can be added to the Hotpepper database, the audio files must be collected and placed in a subdirectory on the underlying file system. Once the audio files are in place, the dataset can be added to the database through Hotpepper.

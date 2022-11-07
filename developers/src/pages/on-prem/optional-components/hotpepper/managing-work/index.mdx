@@ -14,13 +14,13 @@ import Alert from '../../../../../shared/components/global/Alert.astro';
 When users log into Hotpepper, they are presented with the Hotpepper user dashboard.
 
 <div class="screenshot">
-  <img src="/hotpepper-cholula-user-dashboard.png" alt="Hotpepper User Dashboard" />
+	<Image src={import('./hotpepper-cholula-user-dashboard.png.png')} alt="Hotpepper Administrator Dashboard"/>
 </div>
 
 <div class="annotated">
 
 ## Selecting Files
-<img src="/general-label-1.png" alt="Annotation 1" />
+	<Image src={import('./general-label-1.png')} alt=""/>
 </div>
 
 Deepgram best practices require that all audio files be reviewed by four independent users. Hotpepper implements the idea of independent reviewers through the concept of levels, each of which represents a queue of unlabeled files that require different levels of effort. To learn more about Deepgram’s suggested ordering of operations, visit [Hotpepper User Guide: Understanding the Workflow](/on-prem/optional-components/hotpepper/understanding-workflow/).
@@ -44,7 +44,7 @@ Once you have finished labeling a file and marked it as done, the file is added 
 <div class="annotated">
 
 ## Reviewing Progress
-<img src="/general-label-2.png" alt="Annotation 2" />
+	<Image src={import('./general-label-2.png')} alt=""/>
 </div>
 
 Hotpepper allows users to track their progress at each labeling level.
