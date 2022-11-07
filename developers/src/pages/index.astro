@@ -3,7 +3,9 @@ import ContrastSection from "../shared/components/decoration/ContrastSection.ast
 import Hero from "../components/homepage/Hero.astro";
 import Layout from "../layouts/Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
-import HasAside from "../shared/components/layout/HasAside.astro";
+import HomeExploreSDKs from "../components/homepage/HomeExploreSDKs.astro";
+import HomeCommunitySDKs from "../components/homepage/HomeCommunitySDKs.astro"
+import Featured from "../components/homepage/Featured.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
 
 // build json schema object
@@ -34,7 +36,13 @@ const schema = {
 			<Hero title="Deepgram Docs" />
 		</PrimarySection>
 	</ContrastSection>
-	<PrimarySection class="mt-48 xl:mt-64">
-		<HasAside>aside</HasAside>
+
+	<PrimarySection class="p-10">
+		<!-- <HasAside>aside</HasAside> -->
+		<Featured title="Use Cases"/>
+	</PrimarySection>
+	<PrimarySection class="flex p-10 max-w-screen-xl mx-auto px-6 lg:px-10 gap-16">
+		<HomeExploreSDKs/>
+		<HomeCommunitySDKs/>
 	</PrimarySection>
 </Layout>
