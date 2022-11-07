@@ -10,6 +10,9 @@ const pathname = Astro.url.pathname
 <div class="hidden lg:block lg:sticky lg:top-20 mb-20">
 	<h3 class="pb-8">Categories</h3>
 	<ul>
+		<li class="h-16">
+			<Link href="/posts" class="button button--secondary button--small" iconSuffix icon="arrow-right">View All</Link>
+		</li>
 		{
 			categories &&
 				categories.map((category) => {
@@ -25,9 +28,6 @@ const pathname = Astro.url.pathname
 				})
 		}
 	</ul>
-	<div class="mt-6">
-		<Link href="/posts" class="button button--secondary button--small" iconSuffix icon="arrow-right">View All</Link>
-	</div>
 </div>
 <!-- mobile -->
 <div x-data="{ open: false }" class="block bg-rock lg:hidden mb-10">
