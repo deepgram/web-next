@@ -9,6 +9,7 @@ seo:
   metaDescription: Official Node.js SDK for Deepgram's automated speech recognition APIs.
   keywords: sdk, nodejs, javascript, speech-to-text
 ---
+import Panel from '../../../../../shared/components/global/Panel.astro'; 
 
 The `Deepgram.projects` object provides access to manage projects associated
 with the API key you provided when instantiating the Deepgram client.
@@ -71,11 +72,11 @@ Updates a project based on a provided project object.
 | --------- | ------ | ------------------------------------------------------------------------------- |
 | project   | Object | Object representing a project. Must contain `project_id` and `name` properties. |
 
-<panel type="info" title="Important Note">
+<Panel type="info" title="Important Note">
 
 The `project` object must contain `project_id` and `name` properties.
 
-</panel>
+</Panel>
 
 ### Update a Project Example Request
 

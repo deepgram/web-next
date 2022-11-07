@@ -39,6 +39,7 @@
     "preact": "^10.6.5"
   },
   "dependencies": {
+    "@astrojs/image": "^0.11.1",
     "@astrojs/mdx": "^0.11.5",
     "@astrojs/rss": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",

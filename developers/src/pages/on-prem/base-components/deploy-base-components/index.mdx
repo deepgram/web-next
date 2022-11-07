@@ -8,6 +8,7 @@ seo:
   metaDescription: Learn how to configure your environment for on-premises deployments of Deepgram products.
   keywords: on-premises, on-prem, deployment, configuration, configure, base components, base
 ---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
 
 Cloud-hosted on-premises (on-prem) deployments are the most common type of deployment performed by customers who want to leverage Deepgram within their own infrastructure. Specific configurations vary, but the Cloud Service Providers that are typically used include Amazon Web Services (AWS), Azure, and Google Cloud Platform (GCP).
 
@@ -107,20 +108,14 @@ At the end of this process, your browser should download a `private-key.pem` fil
 7. For the **Configure Security Group** wizard step, select **Create a new security group**.
 
    <ol type="a">
-<li>For the name, type <code>On-Premises</code>.</li>
-<li>For the description, type <code>On-Premises Base Security Group</code>.</li>
-<li>Ensure the first rule (of type <strong>SSH</strong>) is listed, and provide the description <code>SSH for Administration</code>.
-
-   <Alert type="warning">
-
-   Open SSH to only necessary IP addresses.
-
-    </Alert>
-
-   </li>
-<li>Select <strong>Add Rule</strong>, then select <strong>HTTPS</strong> from the dropdown, and provide the description <code>HTTPS for Deepgram API</code>.</li>
-<li>Select <strong>Review and Launch</strong>.</li>
-</ol>
+		<li>For the description, type <code>On-Premises Base Security Group</code>.</li>
+		<li>Ensure the first rule (of type <strong>SSH</strong>) is listed, and provide the description <code>SSH for Administration</code>.</li>
+		<Alert type="warning">
+   			Open SSH to only necessary IP addresses.
+    	</Alert>
+		<li>Select <strong>Add Rule</strong>, then select <strong>HTTPS</strong> from the dropdown, and provide the description <code>HTTPS for Deepgram API</code>.</li>
+		<li>Select <strong>Review and Launch</strong>.</li>
+	</ol>
 
 8. For the **Review Instance Launch** wizard step, ensure all of the instance details match what you entered in the previous steps, and then select **Launch**.
 

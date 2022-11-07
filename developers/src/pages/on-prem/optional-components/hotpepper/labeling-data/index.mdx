@@ -9,17 +9,20 @@ seo:
   metaDescription: Learn how to label data using Hotpepper, Deepgram's on-premises data labeling tool.
   keywords: hotpepper, data label, transcription, transcribe, audio
 ---
+import { Image } from '@astrojs/image/components';
+
 After a user selects a level, the system takes them to the labeling view for the assigned file. In the labeling view, users can listen to audio and either transcribe what they hear or edit an existing transcript.
 
 <div class="screenshot">
-  <img src="/hotpepper-cholula-label-data.png" alt="Hotpepper Labeling View" />
+	<Image src={import('./hotpepper-cholula-label-data.png')} alt="Hotpepper Labeling View" />
 </div>
 
 <div class="annotated">
 
 ## Using the Audio Player
-<img src="/labeling-data-1.png" />
-<img src="/labeling-data-2.png" />
+
+<Image src={import('./labeling-data-1.png')} alt=""/>
+<Image src={import('./labeling-data-2.png')} alt=""/>
 </div>
 
 The labeling view provides an audio player with controls that allow users to play, pause, and jump to different times in the assigned audio file.
@@ -41,8 +44,8 @@ When using the audio player, users can control the following audio settings:
 <div class="annotated">
 
 ## Transcribing Data
-<img src="/labeling-data-3.png" />
-<img src="/labeling-data-4.png" />
+<Image src={import('./labeling-data-3.png')} alt=""/>
+<Image src={import('./labeling-data-4.png')} alt=""/>
 </div>
 
 The majority of the labeling view consists of a textarea that contains the transcription of the assigned file where users can add and edit text.
@@ -64,8 +67,8 @@ To see a list of available macros, visit `https://<YOUR_HOTPEPPER_URL>/instructi
 <div class="annotated">
 
 ## Managing File & Dataset Details
-<img src="/labeling-data-5.png" />
-<img src="/labeling-data-6.png" />
+<Image src={import('./labeling-data-5.png')} alt=""/>
+<Image src={import('./labeling-data-6.png')} alt=""/>
 </div>
 
 While transcribing or editing a file, various file details are available to the user:
@@ -85,8 +88,8 @@ In addition, users may add notes about the file or dataset. For example, users m
 <div class="annotated">
 
 ## Handling Files
-<img src="/labeling-data-7.png" />
-<img src="/labeling-data-8.png" />
+<Image src={import('./labeling-data-7.png')} alt=""/>
+<Image src={import('./labeling-data-8.png')} alt=""/>
 </div>
 
 When labeling data, users can perform the following operations on the assigned file:

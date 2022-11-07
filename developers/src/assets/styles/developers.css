@@ -1,0 +1,71 @@
+.alert {
+		@apply flex flex-row flex-wrap items-center align-middle;
+		@apply text-sm text-black;
+		@apply my-4;
+	}
+
+	.info {
+		@apply border-cloud rounded-sm border;
+		@apply bg-mist;
+	}
+	.warning {
+		@apply border-sunflower/20 rounded-sm border;
+		@apply bg-sunflower/20;
+	}
+	.language {
+		@apply border-cloud rounded-sm border;
+		@apply bg-mist;
+		@apply m-2.5;
+	}
+
+	.heading {
+		@apply flex flex-row flex-wrap items-start sm:items-center;
+		@apply my-4 ml-4;
+	}
+	.icon {
+		@apply border-0;
+	}
+	.icon > * {
+		@apply m-2.5 mr-0;
+		@apply border-0;
+	}
+
+	.icon > .info {
+		background: url("../../shared/assets/images/info.svg");
+		@apply bg-no-repeat;
+		@apply h-6 w-6;
+	}
+
+	.icon > .warning {
+		background: url("../../shared/assets/images/warning.svg");
+		@apply bg-no-repeat;
+		@apply h-6 w-6;
+	}
+	.icon > .language {
+		background: url("../../shared/assets/images/language.svg");
+		@apply bg-no-repeat;
+		@apply h-6 w-6;
+
+		@apply text-white;
+	}
+
+	.text {
+		@apply m-4;
+		@apply w-4/6 sm:w-5/6;
+	}
+
+	.text :global(ul > li) {
+		@apply list-disc;
+	}
+
+	.text :global(ol > li) {
+		@apply list-decimal;
+	}
+
+	.text :global(li) {
+		@apply ml-10 pb-1;
+	}
+
+	.text :global(p) {
+		@apply pb-0;
+	}

@@ -9,6 +9,7 @@ seo:
   metaDescription: Official Node.js SDK for Deepgram's automated speech recognition APIs.
   keywords: sdk, nodejs, javascript, speech-to-text
 ---
+import Panel from '../../../../../shared/components/global/Panel.astro'; 
 
 The Deepgram client has a `transcription` property that allows you to request
 transcripts for pre-recorded audio. To request a transcript for a pre-recorded
@@ -33,12 +34,12 @@ const audioSource = { url: URL_OF_FILE };
 
 ### Sending a Buffer
 
-<panel type="warning" title="Node only">
+<Panel type="warning" title="Node only">
 
 The SDK only supports sending Buffers from Node. The in-browser version of the
 SDK only provides the capability to send URL sources.
 
-</panel>
+</Panel>
 
 Import the `fs` Node library to access your file system. Then use its
 `readFile` function providing the path to your file. That function will return
@@ -56,12 +57,12 @@ fs.readFile("/path/to/file", function (err, buffer) {
 
 ### Sending a ReadStream
 
-<panel type="warning" title="Node only">
+<Panel type="warning" title="Node only">
 
 The SDK only supports sending Buffers from Node. The in-browser version of the
 SDK only provides the capability to send URL sources.
 
-</panel>
+</Panel>
 
 Import the `fs` Node library to access your file system. Then use its
 `createReadStream` function providing the path to your file. The ReadStream
@@ -124,12 +125,12 @@ const response = await deepgram.transcription.preRecorded(audioSource, {
 The SDK provides a few helper functions for converting pre-recorded
 transcriptions into common caption formats, like WebVTT and SRT.
 
-<panel type="info" title="Utterances are Required for Helper Functions">
+<Panel type="info" title="Utterances are Required for Helper Functions">
 
 In order to use the helper functions, the `utterances` feature must be used when
 transcribing the audio.
 
-</panel>
+</Panel>
 
 ### Converting to WebVTT
 
