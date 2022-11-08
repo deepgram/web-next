@@ -5,8 +5,10 @@ import GenericBlogCard from "./GenericBlogCard.astro";
 
 const { class: classes, post } = Astro.props;
 let { title } = post.frontmatter;
-const { title: originalTitle, tags, authors, cover } = post.frontmatter;
-
+let { title: originalTitle, tags, authors, cover } = post.frontmatter;
+if (cover.indexOf('cloudinary') > -1) {
+	cover = cover.replace('upload/', 'upload/q_50/');
+}
 title = title.length > 60 ? `${title.substring(0, 57)}...` : title;
 ---
 
