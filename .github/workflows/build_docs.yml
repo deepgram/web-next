@@ -14,7 +14,7 @@ on:
     - 'shared/**'
     
 jobs:
-  blog:
+  docs:
     name: Build Docs
     runs-on: ubuntu-latest
     env:
@@ -22,7 +22,7 @@ jobs:
       STAGING_DOMAIN: comfy-crisp-docs.netlify.app
       BUILD_PATH: ./developers
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_DOCS }}
       IS_PRODUCTION: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       IS_STAGING: ${{ github.ref != 'refs/heads/main' && github.event_name == 'pull_request' }}
       DEPLOY_PREFIX: docs
