@@ -10,7 +10,6 @@ import image from '@astrojs/image';
 export default defineConfig({
 	site: process.env.URL,
 	integrations: [
-		image(),
 		sitemap(),
 		tailwind({
 			// Disable injecting a basic `base.css` import on every page.
@@ -21,8 +20,10 @@ export default defineConfig({
 		vue(),
 		preact(),
 		mdx(),
+		image(),
 	],
 	vite: {
+		ssr: { noExternal: ["node-html-parser"] },
 		plugins: [vitePreact()],
 		resolve: {
 			// required for dev to read contents of symlinked directory

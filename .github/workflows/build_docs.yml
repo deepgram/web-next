@@ -14,15 +14,15 @@ on:
     - 'shared/**'
     
 jobs:
-  blog:
-    name: Build Blog
+  docs:
+    name: Build Docs
     runs-on: ubuntu-latest
     env:
       PRODUCTION_DOMAIN: comfy-crisp-docs.netlify.app
       STAGING_DOMAIN: comfy-crisp-docs.netlify.app
       BUILD_PATH: ./developers
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_BLOG }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_DOCS }}
       IS_PRODUCTION: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       IS_STAGING: ${{ github.ref != 'refs/heads/main' && github.event_name == 'pull_request' }}
       DEPLOY_PREFIX: docs
@@ -59,7 +59,7 @@ jobs:
           echo "CONSOLE_DOMAIN=https://console.deepgram.com" >> $GITHUB_ENV
           echo "STATUS_DOMAIN=https://status.deepgram.com" >> $GITHUB_ENV
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -80,7 +80,7 @@ jobs:
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: ${{ env.BUILD_PATH }}/dist
-          production-branch: main
+          production-branch: lo/developer-kickoff
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: ${{ env.DEPLOY_MESSAGE }}
           enable-pull-request-comment: false                  # default: true
