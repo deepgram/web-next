@@ -3,9 +3,11 @@ import ContrastSection from "../shared/components/decoration/ContrastSection.ast
 import Hero from "../components/homepage/Hero.astro";
 import Layout from "../layouts/Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import Featured from "../components/homepage/Featured.astro";
 import HomeExploreSDKs from "../components/homepage/HomeExploreSDKs.astro";
 import HomeCommunitySDKs from "../components/homepage/HomeCommunitySDKs.astro"
-import Featured from "../components/homepage/Featured.astro";
+import Community from "../components/homepage/Community.astro";
+
 import JsonLD from "../shared/components/meta/JsonLD.astro";
 
 // build json schema object
@@ -41,8 +43,11 @@ const schema = {
 		<!-- <HasAside>aside</HasAside> -->
 		<Featured title="Use Cases"/>
 	</PrimarySection>
-	<PrimarySection class="flex p-10 max-w-screen-xl mx-auto px-6 lg:px-10 gap-16">
+	<PrimarySection class="flex flex-col md:flex-row p-10 max-w-screen-xl mx-auto px-10 gap-16">
 		<HomeExploreSDKs/>
 		<HomeCommunitySDKs/>
+	</PrimarySection>
+	<PrimarySection class="flex p-10 max-w-screen-xl mx-auto px-10 gap-16">
+		<Community/>
 	</PrimarySection>
 </Layout>
