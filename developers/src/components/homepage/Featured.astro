@@ -5,8 +5,6 @@ import BlogCard from "../../shared/components/cards/BlogCard.astro";
 const { title, class: classes, } = Astro.props;
 
 const useCases = await Astro.glob("../../content/developers/use-cases/**/index.mdx");
-
-console.log(Astro.props.class)
 ---
 
 <div class="max-w-screen-xl mx-auto px-6 lg:px-10">
