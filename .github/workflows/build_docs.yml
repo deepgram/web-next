@@ -80,7 +80,7 @@ jobs:
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: ${{ env.BUILD_PATH }}/dist
-          production-branch: main
+          production-branch: lo/developer-kickoff
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: ${{ env.DEPLOY_MESSAGE }}
           enable-pull-request-comment: false                  # default: true
