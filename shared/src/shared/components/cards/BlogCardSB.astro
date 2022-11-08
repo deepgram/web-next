@@ -7,6 +7,9 @@ const { class: classes, post } = Astro.props;
 let { tag_list } = post;
 
 const { title: originalTitle, authors, cover_image } = post.content;
+if (cover_image.filename.indexOf('cloudinary') > -1) {
+	cover_image.filename = cover_image.filename.replace('upload/', 'upload/q_50/w_auto/c_scale/');
+}
 let title = originalTitle.length > 60 ? `${originalTitle.substring(0, 57)}...` : originalTitle;
 ---
 
