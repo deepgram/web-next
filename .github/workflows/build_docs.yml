@@ -59,7 +59,7 @@ jobs:
           echo "CONSOLE_DOMAIN=https://console.deepgram.com" >> $GITHUB_ENV
           echo "STATUS_DOMAIN=https://status.deepgram.com" >> $GITHUB_ENV
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
