@@ -5,7 +5,7 @@ import GenericBlogCard from "./GenericBlogCard.astro";
 
 const { class: classes, post } = Astro.props;
 let { title } = post.frontmatter;
-const { title: originalTitle, tags, authors, cover } = post.frontmatter;
+let { title: originalTitle, tags, authors, cover } = post.frontmatter;
 
 title = title.length > 60 ? `${title.substring(0, 57)}...` : title;
 ---
