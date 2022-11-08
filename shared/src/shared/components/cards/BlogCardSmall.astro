@@ -5,7 +5,17 @@ import GenericBlogCard from "./GenericBlogCard.astro";
 const { class: classes, post } = Astro.props;
 let { title } = post.content;
 const { title: originalTitle, authors, cover_image } = post.content;
-
+if (cover_image.filename.indexOf('cloudinary') > -1) {
+	if(cover_image.filename.indexOf('w_') === -1) {
+		cover_image.filename = cover_image.filename.replace('upload/', 'upload/w_auto/');
+	} 
+	if (cover_image.filename.indexOf('q_') === -1) {
+		cover_image.filename = cover_image.filename.replace('upload/', 'upload/q_50/');
+	}
+	if(cover_image.filename.indexOf('c_') === -1) {
+		cover_image.filename = cover_image.filename.replace('upload/', 'upload/c_scale/');
+	}
+}
 title = title.length > 50 ? `${title.substring(0, 47)}...` : title;
 ---
 
