@@ -2,6 +2,14 @@
 import { storyblokEditable } from "@storyblok/astro";
 
 const { class: classes, blok, slug } = Astro.props;
+if (blok.picture.filename.indexOf('cloudinary') > -1) {
+	if(blok.picture.filename.indexOf('w_') === -1) {
+		blok.picture.filename = blok.picture.filename.replace('upload/', 'upload/w_200/');
+	} 
+	if(blok.picture.filename.indexOf('c_') === -1) {
+		blok.picture.filename = blok.picture.filename.replace('upload/', 'upload/c_crop/');
+	}
+}
 ---
 
 <a class={`block text-black ${classes ? classes : ""}`} href={`/authors/${slug}`} {...storyblokEditable(blok)}>
