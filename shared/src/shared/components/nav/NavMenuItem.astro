@@ -2,10 +2,10 @@
 import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 
-const { href, icon } = Astro.props;
+const { href, icon, class: classes } = Astro.props;
 ---
 
-<Link href={href} icon={icon} class="container draw-underline decoration-lightIris flex text-cloud items-center gap-2 big-icon">
+<Link href={href} icon={icon} class:list={["fill-cloud container draw-underline decoration-lightIris flex text-white items-center gap-2 big-icon", classes]}>
 	<span><slot /></span>
 	<Icon icon="arrow-right" class="inner w-[1em] h-[1em] fill-lightIris" />
 </Link>
@@ -17,6 +17,10 @@ const { href, icon } = Astro.props;
 	}
 	.container .inner {
 		@apply transition-[margin] ease-in-out duration-300;
+	}
+
+	:global(.github > svg) {
+		@apply text-cloud;
 	}
 
 	.draw-underline span {

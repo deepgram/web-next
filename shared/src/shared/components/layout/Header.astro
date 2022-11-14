@@ -62,16 +62,26 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 						</div>
 					</NavMenu>
 					<!-- Solutions -->
-					<NavMenu name="Solutions" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
+					<NavMenu name="Solutions" gridClass="lg:grid-cols-1 min-w-[19.375rem]">
 						<NavMenuItem href={`${WWW_DOMAIN}/built-with-deepgram`} icon="sparkles">Built with Deepgram</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/solutions/contact-centers`} icon="head-headphones">Contact Centers</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/solutions/speech-analytics`} icon="mag-glass-soundwave">Speech Analytics</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/solutions/voicebots`} icon="robot-head">Conversational AI</NavMenuItem>
 					</NavMenu>
+					<!-- Compare -->
+					<NavMenu name="Compare" gridClass="lg:grid-cols-1 min-w-[23.375rem]">
+						<NavMenuItem href={`${WWW_DOMAIN}/asr-comparison/`} icon="sparkles">ASR Comparison Tool</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-google-stt-alternatives/`} icon="robot-head">Compare to Google STT</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-amazon-transcribe-api-alternatives/`} icon="robot-head">Compare to AWS Transcribe</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-microsoft-azure-stt-alternatives/`} icon="robot-head">Compare to Microsoft STT</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}compare-nuance-dragon-speech-recognition-alternatives/`} icon="robot-head">Compare to Nuance Dragon</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-assembly-ai-speech-to-text-api-alternatives/`} icon="robot-head">Compare to Assembly AI</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-speechmatics-speech-to-text-api-alternatives/`} icon="robot-head">Compare to Speechmatics</NavMenuItem>
+					</NavMenu>
 					<!-- Pricing -->
 					<NavItem href={`${WWW_DOMAIN}/pricing`} class="text-white">Pricing</NavItem>
 					<!-- Docs -->
-					<NavMenu name="Docs">
+					<NavMenu name="Docs" gridClass="lg:grid-cols-2 min-w-[36.375rem]">
 						<NavMenuItem href={DOCS_DOMAIN} icon="file">Documentation</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/on-prem/`} icon="server-icon">On-Prem Deployment</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/guides/`} icon="book">Guides</NavMenuItem>
@@ -80,16 +90,17 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 						<NavMenuItem href={STATUS_DOMAIN} icon="heartbeat">Status</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/sdks-tools/`} icon="box">SDKs + Tools</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/changelog`} icon="rotating-gear">Changelog</NavMenuItem>
+						<NavMenuItem href={`https://github.com/orgs/deepgram/discussions`} class="github" icon="github">Community Forum</NavMenuItem>
 					</NavMenu>
 					<!-- Blog -->
 					<NavItem href={BLOG_DOMAIN} class="text-white">Blog</NavItem>
 					<!-- About -->
-					<NavMenu name="About" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
+					<!-- <NavMenu name="About" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
 						<NavMenuItem href={`${WWW_DOMAIN}/about`} icon="deepgram-d">About Us</NavMenuItem>
 						<NavMenuItem href="https://github.com/orgs/deepgram/discussions" icon="github">Community Forum</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/company/newsroom`} icon="newspaper">Newsroom</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/company/careers`} icon="open-door">Careers</NavMenuItem>
-					</NavMenu>
+					</NavMenu> -->
 				</nav>
 				<div class="flex space-x-[1rem] items-center xl:ml-12 pr-4">
 					<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />

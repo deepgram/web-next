@@ -15,13 +15,13 @@ const { name, gridClass, primary } = Astro.props;
 		>{name}
 	</Button>
 
-	<div class="absolute flex -ml-20 mt-[1.2rem] h-80" style="display: none;" x-show="menu === name">
+	<div class="absolute flex -ml-20 mt-[1.2rem] min-h-80" style="display: none;" x-show="menu === name">
 		{primary && (
 			<div class="bg-darkCharcoal min-w-[44.75rem] pt-4 sm:p-8">
 				<slot name="primary" />
 			</div>
 		)}
-		<div class={`bg-ink min-w-[60.5] grid pl-12 py-10 gap-4 ${gridClass ? gridClass : "lg:grid-cols-2 min-w-[35.6875rem]"}`}>
+		<div class={`bg-ink grid px-10 py-8 gap-8 ${gridClass ? gridClass : "lg:grid-cols-2"}`}>
 			<slot />
 		</div>
 	</div>
