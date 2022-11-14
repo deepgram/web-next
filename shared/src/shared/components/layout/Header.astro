@@ -13,6 +13,7 @@ import NavMenu from "../nav/NavMenu.astro";
 import NavMenuItem from "../nav/NavMenuItem.astro";
 import NavMenuPrimaryItem from "../nav/NavMenuPrimaryItem.astro";
 import Svg from "../general/Svg.astro";
+import Icon from "../general/Icon.astro"
 
 const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
 ---
@@ -35,13 +36,30 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				<nav class="flex space-x-[2.1875rem]" x-on:click.outside="menu = null">
 					<!-- Product -->
 					<NavMenu name="Product" primary gridClass="lg:grid-cols-1 min-w-[18.25rem]">
-						<NavMenuPrimaryItem slot="primary" href={`${WWW_DOMAIN}/product-new`} description="Meet the Deepgram speech‑to‑text API"
-							>View Product <span slot="emoji">&nbsp✨</span>
+						<NavMenuPrimaryItem icon="arrow-right" slot="primary" href={`${WWW_DOMAIN}/product-overview`} description="Deepgram AI Speech Platform"
+							><span class="text-white flex">Product Overview</span>
+
+							<a href={`${WWW_DOMAIN}/product/transcription`} slot="item-one" class="container flex flex-col draw-underline text-lightIris decoration-lightIris font-medium text-xl gap-2 big-icon">
+								<div class="flex">
+									<Icon icon="bullseye" class="w-[1em] h-[1em] mr-2 mt-1" />
+									<span class="flex items-center text-white text-xl font-normal">Transcription </span> <Icon icon="arrow-right" class="inner w-[1em] ml-[.5em] fill-lightIris" />
+								</div>
+								<p class="text-casper text-base font-normal">Automatically transcribe real-time or pre-recorded audio and video into text with AI, plus formatting features for better readability.</p>
+							</a>
+							<a href={`${WWW_DOMAIN}/product/understanding`} slot="item-two" class="container flex flex-col draw-underline text-lightIris decoration-lightIris font-medium text-xl gap-2 big-icon">
+								<div class="flex">
+									<Icon icon="chart" class="w-[1em] h-[1em] mr-2 mt-1" />
+									<span class="flex items-center text-white text-xl font-normal">Understanding </span> <Icon icon="arrow-right" class="inner w-[1em] ml-[.5em]  fill-lightIris" />
+								</div>
+								<p class="text-casper text-base font-normal">Natural Language Understanding (NLU)  for true voice intelligence. Get features like summarization, sentiment analysis, language detection, and more.</p>
+							</a>
 						</NavMenuPrimaryItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/product/model-overview`} icon="model">Model Overview</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/product/languages`} icon="globe">Languages</NavMenuItem>
-						<NavMenuItem href={`${CONSOLE_DOMAIN}/signup?jump=keys`} icon="code">Free API Key</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/why-deepgram`} icon="question">Why Deepgram</NavMenuItem>
+						<div class="h-[216px] grid gap-y-6">
+							<NavMenuItem class="draw-underline decoration-lightIris" href={`${WWW_DOMAIN}/product/model-overview`} icon="model">Model Overview</NavMenuItem>
+							<NavMenuItem href={`${WWW_DOMAIN}/product/languages`} icon="globe">Languages</NavMenuItem>
+							<NavMenuItem href={`${WWW_DOMAIN}/why-deepgram`} icon="question">Why Deepgram</NavMenuItem>
+							<NavMenuItem href={`${CONSOLE_DOMAIN}/signup?jump=keys`} icon="code">Free API Key</NavMenuItem>
+						</div>
 					</NavMenu>
 					<!-- Solutions -->
 					<NavMenu name="Solutions" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
@@ -149,3 +167,14 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 	</nav>
 	<DocSearch client:only="preact" />
 </header>
+
+<style>
+	.container:hover .inner {
+		@apply transition-[margin] ease-in-out duration-300;
+		@apply ml-4;
+	}
+	.container .inner {
+		@apply transition-[margin] ease-in-out duration-300;
+	}
+
+</style>
