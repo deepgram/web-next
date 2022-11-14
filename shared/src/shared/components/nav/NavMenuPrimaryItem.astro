@@ -6,10 +6,24 @@ import Link from "../general/Link.astro";
 const { href, description, icon } = Astro.props;
 ---
 
-<h4 class="text-white max-w-[21.125rem] mb-[2.3125rem]">{description}</h4>
-<div class="flex">
-	<Link href={href} icon={icon} class=" underline underline-offset-4 flex text-white font-medium items-center gap-2 big-icon">
+<h4 class="text-stone max-w-[21.125rem] mb-5">{description}</h4>
+<div class="flex flex-col">
+	<Link href={href} icon={icon} iconSuffix class="draw-underline nudge-icon nudge-icon--right flex text-lightIris decoration-lightIris font-normal text-xl items-center gap-2 big-icon">
+		<Icon icon="brain-circuit" class="w-[1em] h-[1em]" />
 		<slot />
 	</Link>
 	<slot name="emoji" />
+	<div class="flex gap-10 border-t-2 border-stone mt-7 pt-6">
+		<slot name="item-one" />
+		<slot name="item-two" />
+	</div>
 </div>
+
+<style>
+	:global(.draw-underline span:after) {
+		@apply text-lightIris;
+	}
+	
+
+	
+</style>
