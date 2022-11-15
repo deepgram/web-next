@@ -23,7 +23,6 @@ export default defineConfig({
 		image(),
 	],
 	vite: {
-		ssr: { noExternal: ["node-html-parser"] },
 		plugins: [vitePreact()],
 		resolve: {
 			// required for dev to read contents of symlinked directory
