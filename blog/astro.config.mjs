@@ -22,7 +22,6 @@ export default defineConfig({
 		vue(),
 		preact(),
 		storyblok({
-			// accessToken: "DQ5PVW2Hi8ZeawcnLc3nvQtt",
 			accessToken: "dxzwOWtkKol6qnfd54RFewtt",
 			apiOptions: {
 				cache: { clear: "auto", type: "memory" },
@@ -30,10 +29,6 @@ export default defineConfig({
 			},
 			bridge: true,
 			components: {
-				// page: "storyblok/Page",
-				// feature: "storyblok/Feature",
-				// grid: "storyblok/Grid",
-				// teaser: "storyblok/Teaser",
 				Author: "shared/components/cards/Author",
 				RichTextSection: "components//storyblok/RichText",
 				Iframe: "components/storyblok/Iframe",
@@ -54,9 +49,5 @@ export default defineConfig({
 			// required for dev to read contents of symlinked directory
 			preserveSymlinks: true,
 		},
-	},
-	legacy: {
-		// Adds support for legacy Markdown features
-		astroFlavoredMarkdown: true,
-	},
+	}
 });

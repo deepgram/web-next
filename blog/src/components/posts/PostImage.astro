@@ -1,9 +1,18 @@
 ---
 const { post } = Astro.props;
 let image = post.content.cover_image.filename;
+const ext = image.split('.').pop()
+let webp = undefined
 if (image.indexOf('cloudinary') > -1) {
-	image = image.replace('upload/', 'upload/q_65/w_auto/c_scale/');
+	image = image.replace('upload/', 'upload/q_65,w_auto,c_scale/');
+	webp = image.replace(`.${ext}`,'.webp');
 }
 ---
 
-<img class="shadow-dg" src={post.content.cover_image.filename} alt={post.content.title} />
+<picture class="shadow-dg">
+  {webp &&
+  	<source srcset={webp} type="image/webp">
+  }
+  <source srcset={image} type={`image/${ext}`}> 
+  <img src={image} alt={post.content.title} />
+</picture>
