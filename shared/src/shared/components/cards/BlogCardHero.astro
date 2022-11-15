@@ -1,26 +1,19 @@
 ---
 import TagsList from "../lists/TagsList.astro";
 import Authors from "../strings/Authors.astro";
+import ImageSrcSet from "../images/ImageSrcSet.astro";
 import GenericBlogCard from "./GenericBlogCard.astro";
 
 const { class: classes, post } = Astro.props;
 let { title } = post.content;
 const { title: originalTitle, tags, authors, cover_image } = post.content;
-if (cover_image.filename.indexOf('cloudinary') > -1) {
-	if(cover_image.filename.indexOf('w_') === -1) {
-		cover_image.filename = cover_image.filename.replace('upload/', 'upload/w_auto/');
-	} 
-	if(cover_image.filename.indexOf('c_') === -1) {
-		cover_image.filename = cover_image.filename.replace('upload/', 'upload/c_scale/');
-	}
-}
+
 title = title.length > 60 ? `${title.substring(0, 57)}...` : title;
 ---
 
 <GenericBlogCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={post}>
 	<div class="overflow-hidden flex h-[50%] md:h-2/3 lg:h-[50%] place-content-center">
-		<img class="object-cover w-full" src={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
-
+		<ImageSrcSet class="object-cover w-full" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
 	<div class="px-4 pb-4 flex flex-col h-[50%] md:h-1/3 lg:h-[50%] justify-between text-black">
 		<div class="h-full flex flex-col justify-evenly">

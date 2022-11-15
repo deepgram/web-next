@@ -1,13 +1,6 @@
 ---
+import ImageSrcSet from "./ImageSrcSet.astro"
 const { author, class: classes } = Astro.props;
-if (author.content.picture.filename.indexOf('cloudinary') > -1) {
-	if(author.content.picture.filename.indexOf('w_') === -1) {
-		author.content.picture.filename = author.content.picture.filename.replace('upload/', 'upload/w_56/');
-	} 
-	if(author.content.picture.filename.indexOf('c_') === -1) {
-		author.content.picture.filename = author.content.picture.filename.replace('upload/', 'upload/c_crop/');
-	}
-}
 ---
 
-<img src={author.content.picture.filename} class={classes} alt={`Author photo for ${author.content.title}`} title={author.content.title} />
+<ImageSrcSet filename={author.content.picture.filename} class={classes} alt={`Author photo for ${author.content.title}`} title={author.content.title} />
