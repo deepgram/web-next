@@ -1,0 +1,20 @@
+---
+import GenericDocsCard from "./GenericDocsCard.astro";
+
+const { class: classes, post } = Astro.props;
+---
+
+<GenericDocsCard class={`w-full flex flex-col border border-darkCharcoal ${classes ? classes : ""}`} post={post}>
+  <header>
+    {post.frontmatter.cover ?
+       <img src={post.frontmatter.cover} class="flex items-center justify-center w-full m-0 border-b border-darkCharcoal" />
+      :
+      null
+    }
+  </header>
+  <main class="flex flex-col p-6">
+    <h3 class="mb-4">{post.frontmatter.title}</h3>
+    <p>{post.frontmatter.description}</p>
+  </main>
+  
+</GenericDocsCard>

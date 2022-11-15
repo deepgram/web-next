@@ -1,6 +1,6 @@
 ---
 import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
-import BlogCard from "../../shared/components/cards/BlogCard.astro";
+import DocsCard from "../../shared/components/cards/DocsCard.astro";
 
 const { title, class: classes, } = Astro.props;
 
@@ -10,8 +10,8 @@ const useCases = await Astro.glob("../../content/developers/use-cases/**/index.m
 <div class="max-w-screen-xl mx-auto px-6 lg:px-10">
   <h2 class="mb-6">{ title }</h2>
   <BlogCardList>
-    <BlogCard post={useCases[0]} />
-    <BlogCard post={useCases[1]} />
-    <BlogCard class="hidden xl:block" post={useCases[2]} />
+    <DocsCard post={useCases[0]} />
+    <DocsCard post={useCases[1]} />
+    <DocsCard class="hidden xl:block" post={useCases[2]} />
   </BlogCardList>
 </div>

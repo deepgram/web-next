@@ -1,25 +1,24 @@
 ---
 import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
-import GenericBlogCard from "../../shared/components/cards/GenericBlogCard.astro";
+import DocsCard from "../../shared/components/cards/DocsCard.astro";
 
 const { title, class: classes, } = Astro.props;
 
 const preRecorded = await Astro.glob("../../content/developers/documentation/getting-started/prerecorded-es/index.mdx");
 const streaming = await Astro.glob("../../content/developers/documentation/getting-started/streaming-es/index.mdx");
-console.log(preRecorded[0].frontmatter)
 ---
 
 <div class="max-w-screen-xl mx-auto px-6 lg:px-10">
   
   <h2 class="text-stone mt-6 mb-3">ESPAÑOL</h2>
   <BlogCardList>
-    <GenericBlogCard class={`w-full p-10 flex flex-col ${classes ? classes : ""}`} post={preRecorded[0]}>
+    <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={preRecorded[0]}>
       <h3 class="mb-4">{preRecorded[0].frontmatter.title}</h3>
       <p>{preRecorded[0].frontmatter.description}</p>
-    </GenericBlogCard>
-    <GenericBlogCard class={`w-full p-10 flex flex-col ${classes ? classes : ""}`} post={streaming[0]}>
+    </DocsCard>
+    <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={streaming[0]}>
       <h3 class="mb-4">{streaming[0].frontmatter.title}</h3>
       <p>{streaming[0].frontmatter.description}</p>
-    </GenericBlogCard>
+    </DocsCard>
   </BlogCardList>
 </div>

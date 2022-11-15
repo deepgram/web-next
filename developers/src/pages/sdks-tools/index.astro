@@ -1,9 +1,11 @@
 ---
 import Layout from "../../layouts/Default.astro"
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
-
+import SDKs from "../../components/sdks-tools/SDKs.astro"
 ---
 <Layout>
-  <PrimarySection class="flex flex-col items-center pt-[7rem] md:pt-[7.33203125rem] lg:pt-[7.6640625rem] xl:pt-[8.328125rem]">
+  <PrimarySection class="max-w-screen-xl mx-auto px-6 lg:px-10 pt-[7rem] md:pt-[7.33203125rem] lg:pt-[7.6640625rem] xl:pt-[8.328125rem]">
+    <h1>Deepgram SDKs & Tools</h1>
+    <SDKs/>
   </PrimarySection>
 </Layout>
