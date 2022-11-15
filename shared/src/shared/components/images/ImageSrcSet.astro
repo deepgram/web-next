@@ -19,9 +19,6 @@ if (image.indexOf('cloudinary') > -1) {
         const url = image.replace('upload/', `upload/w_${src},c_scale/`)
         return `${url} ${src}w`
         }).join(', ')
-        
-    firstWebP = image.replace('upload/', `upload/w_${srcs[0]},c_scale/`).replace(`.${ext}`,'.webp')
-    firstOrig = image.replace('upload/', `upload/w_${srcs[0]},c_scale/`)
 }
 if (image.indexOf('storyblok.com') > -1) {
     image = `${image}/m/`;
@@ -30,10 +27,10 @@ if (image.indexOf('storyblok.com') > -1) {
 ---
 <picture class={classes} loading="auto">
     {webp &&
-        <source src={firstWebP} srcset={webp} type="image/webp" sizes="33.3vw">
+        <source srcset={webp} type="image/webp" sizes="33.3vw">
     }
     {orig &&
-        <source src={firstOrig} srcset={orig} type={`image/${ext}`} sizes="33.3vw">
+        <source srcset={orig} type={`image/${ext}`} sizes="33.3vw">
     }
-    <img class={classes} src={image} alt={alt} />
+    <img loading="auto" class={classes} src={image} alt={alt} />
 </picture>

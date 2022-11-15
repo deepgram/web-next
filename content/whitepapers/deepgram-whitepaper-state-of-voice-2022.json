@@ -2,6 +2,6 @@
   "title": "State of Voice 2022",
   "script": "hbspt.forms.create({ region: 'na1', portalId: '6890003', formId: '291baa32-0d71-4ba2-b5a6-a47fc062a206' });",
   "theme": "black",
-  "image": "/red-green-orb-voice-report-image@2x.png",
+  "image": "https://a-us.storyblok.com/f/1001320/644x496/b36d69087b/red-green-orb-voice-report-image-2x.png/m/",
   "date": "2022-04-21"
 }
