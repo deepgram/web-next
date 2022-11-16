@@ -7,8 +7,6 @@ const ext = image.split('.').pop()
 
 let webp = undefined
 let orig = undefined
-let firstWebP = undefined
-let firstOrig = undefined
 if (image.indexOf('cloudinary') > -1) {
     webp = srcs.map(src => {
         const url = image.replace('upload/', `upload/w_${src},c_scale/`).replace(`.${ext}`,'.webp')
