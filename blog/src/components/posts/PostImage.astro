@@ -1,9 +1,7 @@
 ---
+import ImageSrcSet from "../../shared/components/images/ImageSrcSet.astro"
+
 const { post } = Astro.props;
-let image = post.content.cover_image.filename;
-if (image.indexOf('cloudinary') > -1) {
-	image = image.replace('upload/', 'upload/q_65/w_auto/c_scale/');
-}
 ---
 
-<img class="shadow-dg" src={post.content.cover_image.filename} alt={post.content.title} />
+<ImageSrcSet class="shadow-dg w-full" filename={post.content.cover_image.filename} alt={post.content.title} />
