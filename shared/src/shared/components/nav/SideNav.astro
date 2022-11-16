@@ -1,0 +1,32 @@
+---
+const { navStructure, navTitle } = Astro.props;
+import SideNavList from "./SideNavList.astro";
+---
+
+<nav
+	class="side-nav bg-cloud30 p-4"
+	x-data="{
+    childrenShow: [],
+		expandList(nav) {
+      this.childrenShow.push(nav.to)
+    },
+    collapseList(nav) {
+      const index = this.childrenShow.findIndex((item) => {
+        return item === nav.to
+      })
+      this.childrenShow.splice(index, 1)
+    },
+    isExpanded(nav) {
+      return this.childrenShow.includes(nav.to)
+    },
+		}"
+>
+	<h5>{navTitle}</h5>
+	<SideNavList x-show="isExpanded(nav)" isExpanded={isExpanded} navStructure={navStructure} />
+</nav>
+
+<style is:global>
+	.side-nav ul {
+		@apply ml-4;
+	}
+</style>
