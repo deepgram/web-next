@@ -1,0 +1,35 @@
+---
+import Icon from "../general/Icon.astro";
+import Link from "../general/Link.astro";
+const pathname = Astro.url.pathname;
+const { navStructure, isExpanded } = Astro.props;
+console.log("isExpanded", isExpanded);
+---
+
+<ul>
+	{
+		navStructure.map((nav) => {
+			return (
+				<li>
+					<div class="navlink-container">
+						{nav.children && !isExpanded(nav) && (
+							<span x-on:click="expandList(nav)" class="expand-nav">
+								+
+							</span>
+						)}
+						{nav.children && isExpanded(nav) && (
+							<span x-on:click="collapseList(nav)" class="expand-nav">
+								-
+							</span>
+						)}
+
+						<Link href={nav.to} class={`hover:text-iris leading-5 ${pathname.endsWith(nav.to) ? "text-storm" : "text-darkCharcoal"} ${nav.children ? "font-semibold" : ""}`}>
+							{nav.name}
+						</Link>
+						{nav.children && <Astro.self navStructure={nav.children} />}
+					</div>
+				</li>
+			);
+		})
+	}
+</ul>
