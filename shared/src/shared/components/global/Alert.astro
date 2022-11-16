@@ -4,7 +4,6 @@ const { blok } = Astro.props;
 const { type = "info", fill = "fill-black" } = blok;
 import { renderRichText } from "@storyblok/astro";
 const renderedRichText = renderRichText(blok.inner_html);
-console.log(blok)
 ---
 
 <div class={`alert ${type}`}>
