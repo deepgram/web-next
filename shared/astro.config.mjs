@@ -37,6 +37,7 @@ export default defineConfig({
 				CodeEmbed: "shared/components/global/CodeEmbed",
 				Table: "shared/components/global/Table",
 				CodeGroup: "shared/components/code/CodeGroupSB",
+				GitHubDiscussions: "shared/components/global/GitHubDiscussions",
 			},
 		}),
 	],
