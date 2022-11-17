@@ -15,7 +15,7 @@ const pathname = Astro.url.pathname;
 			<SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} />
 
 			<slot name="page-header" />
-			<PrimarySection class="flex flex-col items-center">
+			<PrimarySection class="py-10">
 				<slot />
 			</PrimarySection>
 		</HasAside>

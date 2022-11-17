@@ -1,0 +1,60 @@
+---
+import titleCase from "ap-style-title-case";
+const url = Astro.url;
+
+const paths = url.pathname.substring(1).split("/");
+
+const crumbs = [];
+let href = "";
+paths.forEach((path, index) => {
+	if (path.length > 0) {
+		href = `${href}/${path}`;
+		let title = titleCase(path.replace(/-/g, " ")).replace("Sdks Tools", "SDKs & Tools").replace("Sdk", "SDK").replace("Dotnet", ".NET").replace("Api", "API");
+
+		crumbs.push({
+			href: href,
+			title: title,
+		});
+	}
+});
+console.log("crumbs", crumbs);
+---
+
+<summary class="breadcrumb">
+	<ol vocab="http://schema.org/" typeof="BreadcrumbList">
+		{
+			crumbs.map((crumbs, index) => {
+				return (
+					<li property="itemListElement" typeof="ListItem">
+						<a property="item" typeof="WebPage" href={crumbs.href}>
+							<span property="name">{crumbs.title}</span>
+						</a>
+					</li>
+				);
+			})
+		}
+	</ol>
+</summary>
+
+<style>
+	ol {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		@apply flex;
+	}
+	ol > li:not(:last-child)::after {
+		content: " » ";
+		@apply inline text-sm text-gray-500 px-1;
+	}
+	ol > li a {
+		@apply text-sm font-bold;
+	}
+	ol > li:last-child a {
+		@apply text-sm font-bold text-steel;
+	}
+
+	summary.breadcrumb {
+		list-style: none;
+	}
+</style>

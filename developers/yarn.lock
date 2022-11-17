@@ -2395,6 +2395,11 @@ anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
+ap-style-title-case@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/ap-style-title-case/-/ap-style-title-case-1.1.2.tgz#4339cc9adf99b85f21757b58f6e4e54ab12a7acc"
+  integrity sha512-8k5jYIf7b+glU3f16eEw5RLdyhXjVWkLYy7XDYSw77a4CUUfGge5c9M/2Obbft5AhZD3RTkCbf3/LAVguLFMfQ==
+
 "aproba@^1.0.3 || ^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/aproba/-/aproba-2.0.0.tgz#52520b8ae5b569215b354efc0caa3fe1e45a8adc"
