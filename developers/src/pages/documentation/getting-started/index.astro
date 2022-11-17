@@ -1,0 +1,58 @@
+---
+import BlogCardList from "../../../shared/components/lists/BlogCardList.astro";
+import DocsCard from "../../../shared/components/cards/DocsCard.astro";
+import Layout from "../../../layouts/Documentation.astro";
+
+const guides = await Astro.glob("./**/index.mdx");
+
+const quickStartsEngilsh = guides.filter((guide) => {
+	return guide.frontmatter.type === "quickstart" && guide.frontmatter.language === "en";
+});
+
+const quickStartsSpanish = guides.filter((guide) => {
+	return guide.frontmatter.type === "quickstart" && guide.frontmatter.language === "es";
+});
+
+const coreConcepts = guides.filter((guide) => {
+	return guide.frontmatter.type === "core-concept";
+});
+---
+
+<Layout>
+	<article>
+		<h1>Getting Started</h1>
+		<h2>Quickstarts</h2>
+		<BlogCardList>
+			<h2 slot="title" class="text-stone uppercase">English</h2>
+			{quickStartsEngilsh.map((guide) => <DocsCard class={`w-full flex flex-col`} post={guide} />)}
+		</BlogCardList>
+		<BlogCardList>
+			<h2 slot="title" class="text-stone uppercase">Spanish</h2>
+			{quickStartsSpanish.map((guide) => <DocsCard class={`w-full flex flex-col`} post={guide} />)}
+		</BlogCardList>
+		<BlogCardList>
+			<h2 slot="title" class="text-stone uppercase">Core Concepts</h2>
+			{coreConcepts.map((guide) => <DocsCard class={`w-full flex flex-col`} post={guide} />)}
+		</BlogCardList>
+	</article>
+</Layout>
+
+<style>
+	h1 {
+		color: #111827;
+		font-weight: 700;
+		font-size: 2.25em;
+		margin-top: 1.5rem;
+		margin-bottom: 0.75rem;
+		line-height: 1.1111111;
+		font-family: Favorit;
+	}
+	h2 {
+		@apply mb-5 mt-10;
+		color: #111827;
+		font-weight: 700;
+		font-size: 1.5em;
+		line-height: 1.3333333;
+		font-family: Favorit;
+	}
+</style>
