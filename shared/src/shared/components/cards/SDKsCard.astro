@@ -1,23 +1,25 @@
 ---
 import GenericDocsCard from "./GenericDocsCard.astro";
 
-const { class: classes, post } = Astro.props;
+const { class: classes, doc } = Astro.props;
 ---
 
-<GenericDocsCard class={`w-full flex flex-col border border-cloud
-  ${classes ? classes : ""}`} post={post}>
+<GenericDocsCard class={`w-full flex flex-col p-4 border border-cloud
+  ${classes ? classes : ""}`} doc={doc}>
   {
-    post.dgCertified ?
-    <img src="../../shared/assets/images/dg-certified.svg" />
-    <p>CERTIFIED</p>
+    doc.dgCertified ?
+    <div class="self-end font-bold flex items-center">
+      <img class="inline mr-1" src="/images/dg-certified.svg" />
+      <p class="inline text-stone font-bold m-0">CERTIFIED</p>
+    </div>
     :
-    <div class="community">
-      <p>COMMUNITY</p>
+    <div class="self-end font-bold">
+      <p class="text-stone font-bold">COMMUNITY</p>
     </div>
   }
-  <main class="flex flex-col p-6">
-    <h3 class="mb-4">{post.title}</h3>
-    <p>{post.description}</p>
+  <main class="flex flex-col">
+    <h3 class="mb-4">{doc.title}</h3>
+    <p>{doc.description}</p>
   </main>
   
 </GenericDocsCard>

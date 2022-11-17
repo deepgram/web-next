@@ -10,8 +10,8 @@ const useCases = await Astro.glob("../../content/developers/use-cases/**/index.m
 <div class="max-w-screen-xl mx-auto px-6 lg:px-10">
   <h2 class="mb-6">{ title }</h2>
   <BlogCardList>
-    <DocsCard post={useCases[0]} />
-    <DocsCard post={useCases[1]} />
-    <DocsCard class="hidden xl:block" post={useCases[2]} />
+    <DocsCard doc={useCases[0]} />
+    <DocsCard doc={useCases[1]} />
+    <DocsCard class="hidden xl:block" doc={useCases[2]} />
   </BlogCardList>
 </div>

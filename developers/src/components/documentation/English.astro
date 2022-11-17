@@ -12,7 +12,7 @@ const streaming = await Astro.glob("../../content/developers/documentation/getti
   
   <h2 class="text-stone mt-6 mb-3">ENGLISH</h2>
   <BlogCardList>
-    <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={preRecorded[0]}/>
-    <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={streaming[0]}/>
+    <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} doc={preRecorded[0]}/>
+    <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} doc={streaming[0]}/>
   </BlogCardList>
 </div>

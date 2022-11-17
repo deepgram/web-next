@@ -4,7 +4,6 @@ import SDKsCard from "../../shared/components/cards/SDKsCard.astro";
 import ToolsCard from "../../shared/components/cards/ToolsCard.astro";
 
 const tools = await Astro.glob("../../pages/sdks-tools/tools/**/*.mdx")
-const { title, class: classes, } = Astro.props;
 
 const sdks = [
       {
@@ -52,10 +51,18 @@ const sdks = [
     ]
 ---
 
-<div class="max-w-screen-xl mx-auto mt-6">
+<div class="max-w-screen-xl mx-auto">
+  
+  <h2 class="text-stone mt-6 mb-3">SDKS</h2>
   <BlogCardList>
     {sdks.map(doc=>{
       return <SDKsCard doc={doc}/>
+    })}
+  </BlogCardList>
+  <h2 class="text-stone mt-6 mb-3">TOOLS</h2>
+  <BlogCardList>
+    {tools.map(doc=>{
+      return <ToolsCard doc={doc}/>
     })}
   </BlogCardList>
 </div>
