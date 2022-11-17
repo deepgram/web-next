@@ -3,6 +3,7 @@ import Default from "./Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
 import SideNav from "../shared/components/nav/SideNav";
+import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
 
 import nav from "../pages/documentation/navigation.json";
 import "../assets/styles/developers.css";
@@ -14,8 +15,9 @@ const pathname = Astro.url.pathname;
 		<HasAside>
 			<SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} />
 
-			<slot name="page-header" />
 			<PrimarySection class="py-10">
+				<BreadCrumb />
+				<slot name="page-header" />
 				<slot />
 			</PrimarySection>
 		</HasAside>

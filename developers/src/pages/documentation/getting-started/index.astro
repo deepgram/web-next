@@ -2,7 +2,6 @@
 import BlogCardList from "../../../shared/components/lists/BlogCardList.astro";
 import DocsCard from "../../../shared/components/cards/DocsCard.astro";
 import Layout from "../../../layouts/Documentation.astro";
-import BreadCrumb from "../../../shared/components/nav/BreadCrumb.astro";
 
 const guides = await Astro.glob("./**/index.mdx");
 
@@ -20,7 +19,6 @@ const coreConcepts = guides.filter((guide) => {
 ---
 
 <Layout>
-	<BreadCrumb />
 	<article>
 		<h1>Getting Started</h1>
 		<h2>Quickstarts</h2>
