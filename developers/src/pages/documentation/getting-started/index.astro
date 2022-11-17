@@ -24,15 +24,15 @@ const coreConcepts = guides.filter((guide) => {
 		<h2>Quickstarts</h2>
 		<BlogCardList>
 			<h2 slot="title" class="text-stone uppercase">English</h2>
-			{quickStartsEngilsh.map((guide) => <DocsCard class={`w-full flex flex-col`} post={guide} />)}
+			{quickStartsEngilsh.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</BlogCardList>
 		<BlogCardList>
 			<h2 slot="title" class="text-stone uppercase">Spanish</h2>
-			{quickStartsSpanish.map((guide) => <DocsCard class={`w-full flex flex-col`} post={guide} />)}
+			{quickStartsSpanish.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</BlogCardList>
 		<BlogCardList>
 			<h2 slot="title" class="text-stone uppercase">Core Concepts</h2>
-			{coreConcepts.map((guide) => <DocsCard class={`w-full flex flex-col`} post={guide} />)}
+			{coreConcepts.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</BlogCardList>
 	</article>
 </Layout>
