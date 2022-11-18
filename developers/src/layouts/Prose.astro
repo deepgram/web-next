@@ -1,24 +1,19 @@
-<article class="post-prose">
+---
+const { class: classes } = Astro.props
+---
+
+<article class:list={['post-prose', classes]}>
   <slot/>
 </article>
 
 <style>
 
-	main {
-			@apply max-w-full;
-      @apply md:max-w-4xl;
-      @apply lg:max-w-5xl;
-      @apply xl:max-w-6xl;
-      @apply 2xl:max-w-7xl;
+	article {
+	padding: 1.5rem;
+	@apply max-w-full;
+	@apply md:max-w-4xl;
 	}
 
-	article {
-		/* max-width: calc(100% - 16rem); */
-		padding: 1.5rem;
-	}
-	.use-case {
-		@apply md:mx-20 lg:mx-32;
-	}
 	.post-prose > :global(h1) {
 		@apply text-4xl;
 	}

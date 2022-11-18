@@ -5,12 +5,13 @@ import Prose from "./Prose.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
 import SideNav from "../shared/components/nav/SideNav";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
-
+import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 import nodeNav from "../pages/sdks-tools/sdks/node-sdk/navigation.json";
 import pythonNav from "../pages/sdks-tools/sdks/python-sdk/navigation.json";
 import dotNetNav from "../pages/sdks-tools/sdks/dotnet-sdk/navigation.json";
 import "../assets/styles/developers.css";
 const pathname = Astro.url.pathname;
+const { headings } = Astro.props
 
 let sdk;
 const dotnet = 'dotnet-sdk';
@@ -39,26 +40,16 @@ if(a.includes(dotnet)){
 				<SideNav slot="aside" navStructure={dotNetNav} navTitle="Documentation" pathname={pathname} />
 				: null
 			}
-
 			<PrimarySection class="py-10">
 				<BreadCrumb />
-				<Prose><slot /></Prose>
+				<div class="flex">
+					<Prose class="max-w-full lg:max-w-2xl">
+							<slot />
+					</Prose>
+					<TableOfContents headings={headings} docsType={'SDK'} />
+				</div>
 			</PrimarySection>
 		</HasAside>
 	</PrimarySection>
 </Default>
 
-<style is:global>
-	/* .side-nav ul {
-		@apply ml-4;
-	}
-
-	.side-nav ul li.active > .navlink-container a {
-		@apply text-darkCharcoal;
-		@apply font-bold;
-		@apply border-l-4 border-meadow;
-	}
-	.side-nav ul li ul li.active > .navlink-container a {
-		@apply border-r-4 border-meadow border-l-0 w-full;
-	} */
-</style>

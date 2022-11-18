@@ -5,10 +5,11 @@ import Prose from "./Prose.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
 import SideNav from "../shared/components/nav/SideNav.jsx";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
-
+import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 import nav from "../pages/documentation/navigation.json";
 import "../assets/styles/developers.css";
 const pathname = Astro.url.pathname;
+const { headings } = Astro.props
 ---
 
 <Default>
@@ -18,7 +19,12 @@ const pathname = Astro.url.pathname;
 
 			<PrimarySection class="py-10">
 				<BreadCrumb />
-				<Prose><slot /></Prose>				
+				<div class="flex">
+					<Prose class="max-w-full lg:max-w-2xl">
+							<slot />
+					</Prose>
+					<TableOfContents headings={headings} docsType={'GUIDE'} />
+				</div>		
 			</PrimarySection>
 		</HasAside>
 	</PrimarySection>

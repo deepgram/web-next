@@ -2,13 +2,22 @@
 import Default from "./Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Prose from "./Prose.astro";
+import TableOfContents from "../shared/components/nav/TableOfContents.astro";
+import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
+const { headings } = Astro.props
 ---
 
 <Default>
-	<PrimarySection>
-		<Prose>
-				<slot />
-		</Prose>
+	<PrimarySection class="max-w-screen-xl mb-[5rem] mx-auto px-6 lg:px-10 pt-[5rem] xl:pt-[6rem]">
+		<BreadCrumb/>
+		<div class="flex">
+			<Prose>
+					<slot />
+			</Prose>
+			<TableOfContents headings={headings} docsType={'USE CASE'} />
+		</div>
 	</PrimarySection>
+	
+
 </Default>
 

@@ -1,0 +1,30 @@
+---
+import Link from "../general/Link.astro";
+const { headings, docsType }= Astro.props
+---
+<nav>
+{headings && headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">IN THIS {docsType}</h5>}
+	<ul class="hidden xl:block">
+		{headings && headings.length > 0 &&
+			headings
+				.filter((heading) => heading.depth >= 2 && heading.depth <= 3)
+				.map((heading) => (
+					
+						{
+							heading.depth === 3 
+							?
+							<li class="pl-4 pb-4 border-l-2 border-stone">
+							<Link class="text-steel" href={`#${heading.slug}`}>{heading.text}
+							</Link> 
+							</li>
+							:
+							<li class="pb-4">
+							<Link class="text-steel" href={`#${heading.slug}`}>{heading.text}
+							</Link>
+							</li>
+						}
+							
+				
+				))}
+	</ul>
+</nav>
