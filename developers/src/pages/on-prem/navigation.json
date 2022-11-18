@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Base Components",
+    "to": "/on-prem/base-components/",
+    "children": [
+      {
+        "name": "Introduction",
+        "to": "/on-prem/base-components/introduction/"
+      },
+      {
+        "name": "Designing Your Architecture",
+        "to": "/on-prem/base-components/design-architecture/"
+      },
+      {
+        "name": "Configuring Your Environment",
+        "to": "/on-prem/base-components/configure-environment/"
+      },
+      {
+        "name": "Licensing",
+        "to": "/on-prem/base-components/license/"
+      },
+      {
+        "name": "Deploying Base Components",
+        "to": "/on-prem/base-components/deploy-base-components/"
+      },
+      {
+        "name": "Deploying to Amazon Web Services (RHEL 7)",
+        "to": "/on-prem/base-components/deploy-aws-rhel-7/"
+      },
+      {
+        "name": "Maintaining Base Components",
+        "to": "/on-prem/base-components/maintain-base-components/"
+      },
+      {
+        "name": "Frequently Asked Questions",
+        "to": "/on-prem/base-components/frequently-asked-questions/"
+      }
+    ]
+  },
+  {
+    "name": "Optional Components",
+    "to": "/on-prem/optional-components/",
+    "children": [
+      {
+        "name": "Introduction",
+        "to": "/on-prem/optional-components/introduction/"
+      },
+      {
+        "name": "License Proxy Server",
+        "to": "/on-prem/optional-components/license-proxy-server/"
+      },
+      {
+        "name": "DGTools",
+        "to": "/on-prem/optional-components/dgtools/"
+      },
+      {
+        "name": "UniMRCP Plugin",
+        "to": "/on-prem/optional-components/unimrcp/"
+      }
+    ]
+  }
+]
