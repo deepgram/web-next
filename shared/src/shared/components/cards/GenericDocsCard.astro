@@ -2,19 +2,21 @@
 import GenericCard from "./GenericCard.astro";
 
 const { class: classes, doc } = Astro.props;
-
+const url = doc.url
 const slug = doc.slug ? doc.slug || doc.frontmatter.slug || doc.file.split("/")[doc.file.split("/").length - 2] : null
+const path = doc.path
 
 function getPath(){
-  if(doc.path){
-    return doc.path
+  if(path){
+    return path
+  } else if (url) {
+    return url
   } else if (slug) {
     return slug
   } else {
     return doc.linkHref
   }
 }
-
 ---
 
 <GenericCard class={`generic-docs-card w-full sm:w-5/6 md:w-full ${classes ? classes : ""}`} href={getPath()}>

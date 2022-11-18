@@ -5,9 +5,7 @@ import ToolsCard from "../../shared/components/cards/ToolsCard.astro";
 const tools = await Astro.glob("../../pages/sdks-tools/tools/**/*.mdx")
 ---
 
-<div class="max-w-screen-xl mx-auto">
-  
-  <h2 class="text-stone mt-6 mb-3">Tools & Integrations</h2>
+<div class="max-w-screen-xl mx-auto mt-6">
   <BlogCardList>
     {tools.map(doc=>{
       return <ToolsCard doc={doc}/>

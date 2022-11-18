@@ -10,11 +10,13 @@ import pythonNav from "../pages/sdks-tools/sdks/python-sdk/navigation.json";
 import dotNetNav from "../pages/sdks-tools/sdks/dotnet-sdk/navigation.json";
 import "../assets/styles/developers.css";
 const pathname = Astro.url.pathname;
+
 let sdk;
 const dotnet = 'dotnet-sdk';
 const python = 'python-sdk'
 const node = 'node-sdk'
 const a = pathname.split('/')
+
 if(a.includes(dotnet)){
 	sdk = 'dotnet'
 } else if (a.includes(python)){

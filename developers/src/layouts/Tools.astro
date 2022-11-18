@@ -1,0 +1,30 @@
+---
+import Default from "./Default.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
+
+import "../assets/styles/developers.css";
+---
+
+<Default>
+	<PrimarySection class="max-w-full md:max-w-[56rem] lg:max-w-[64rem] xl:max-w-[72rem] 2xl:max-w-[80rem]">
+		<BreadCrumb />
+      <slot name="page-header" />
+      <slot />
+	</PrimarySection>
+</Default>
+
+<style is:global>
+	.side-nav ul {
+		@apply ml-4;
+	}
+
+	.side-nav ul li.active > .navlink-container a {
+		@apply text-darkCharcoal;
+		@apply font-bold;
+		@apply border-l-4 border-meadow;
+	}
+	.side-nav ul li ul li.active > .navlink-container a {
+		@apply border-r-4 border-meadow border-l-0 w-full;
+	}
+</style>
