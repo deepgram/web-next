@@ -15,7 +15,7 @@ const pathname = Astro.url.pathname;
 ---
 
 <header class="sticky top-0 z-10">
-	<div class="absolute w-full h-screen bg-black/75 text-white hidden" x-show="menu !== null" x-on:click="menu = null"></div>
+	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none" x-show="menu !== null" x-on:click="menu = null"></div>
 
 	<nav class="bg-almostBlack/80 text-white bg-blur px-4 pt-6">
 		<div class="grid grid-cols-7 px-4">
