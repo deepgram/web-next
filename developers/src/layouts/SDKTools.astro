@@ -41,8 +41,14 @@ if(a.includes(dotnet)){
 
 			<PrimarySection class="py-10">
 				<BreadCrumb />
-				<slot name="page-header" />
-				<slot />
+				<main>
+					
+					<article class="sdk-tools post-prose">
+						<slot name="page-header" />
+						<slot />
+					</article>
+				</main>
+				
 			</PrimarySection>
 		</HasAside>
 	</PrimarySection>
@@ -60,5 +66,163 @@ if(a.includes(dotnet)){
 	}
 	.side-nav ul li ul li.active > .navlink-container a {
 		@apply border-r-4 border-meadow border-l-0 w-full;
+	}
+
+	main {
+			@apply max-w-full;
+      @apply md:max-w-4xl;
+      @apply lg:max-w-5xl;
+      @apply xl:max-w-6xl;
+      @apply 2xl:max-w-7xl;
+	}
+
+	article {
+		/* max-width: calc(100% - 16rem); */
+		padding: 1.5rem;
+	}
+	.sdk-tools {
+		/* @apply md:mx-20 lg:mx-32; */
+	}
+	.post-prose > h1 {
+		@apply text-4xl;
+	}
+	.post-prose > h2 {
+		@apply text-2xl;
+	}
+  .post-prose > h3 {
+		@apply text-xl;
+	}
+	.post-prose > img,
+	.post-prose > p img {
+		@apply mx-auto object-cover;
+	}
+
+	.post-prose > small {
+		@apply text-sm;
+	}
+
+	.post-prose > h1, h2, h3,h4, h5, h6 {
+		@apply pt-4 pb-2;
+	}
+
+	.post-prose > p {
+		@apply pb-4 leading-loose lg:leading-normal;
+	}
+
+	.post-prose > * a {
+		@apply text-darkIris;
+	}
+
+	.post-prose > pre.astro-code {
+		@apply m-0 mb-2;
+	}
+
+	.post-prose > p:not(pre.astro-code) code {
+		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];
+	}
+
+	.post-prose > ol {
+		@apply m-0 mb-5 pl-8;
+	}
+
+	.post-prose > ul:not(.contains-task-list) {
+		@apply m-0 mb-0 pl-6;
+	}
+
+	.post-prose > ol {
+		counter-reset: li;
+	}
+
+	.post-prose > ol li {
+		@apply relative;
+	}
+
+	.post-prose > ol li,
+	.post-prose > ul:not(.contains-task-list) li,
+	.post-prose > ul li.task-list-item {
+		@apply py-1;
+	}
+
+	.post-prose > ol li::before {
+		content: counter(li);
+		counter-increment: li;
+		@apply absolute -left-8 h-6 w-6 rounded-full border border-black text-center text-black;
+	}
+
+	.post-prose > ul:not(.contains-task-list) {
+		@apply list-disc;
+	}
+
+	.post-prose > ul:not(.contains-task-list) li::marker {
+		@apply text-casper;
+	}
+
+	.post-prose > ul:not(.contains-task-list) li {
+		@apply pl-1 text-black;
+	}
+
+	.post-prose > li.task-list-item input {
+		@apply appearance-none accent-pink-500;
+	}
+
+	.post-prose > li.task-list-item input:checked::before {
+		content: "✔";
+		@apply text-meadow text-lg;
+	}
+
+	.post-prose > li.task-list-item input:not(:checked)::before {
+		content: "✖";
+		@apply text-coral text-lg;
+	}
+
+	.post-prose > table {
+		@apply mb-4 block min-w-full border-collapse overflow-auto whitespace-nowrap;
+	}
+	
+	.post-prose > table + :global(p small) {
+		@apply -mt-2 block text-center text-sm font-bold;
+	}
+	
+	.post-prose > table td,
+	.post-prose > table th {
+		@apply border-casper table-auto border whitespace-pre-wrap px-6 py-2 align-top;
+	}
+	
+	.post-prose > table th {
+		@apply bg-mist font-bold align-middle;
+	}
+
+	.post-prose > .promo-container {
+		@apply md:-mx-20 lg:-mx-32;
+	}
+
+	.post-prose > iframe {
+		margin-top: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.post-prose > blockquote {
+		box-sizing: border-box;
+		display: block;
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+		@apply pl-[2.8125rem] font-[500];
+		position: relative;
+		width: 100%;
+	}
+
+	.post-prose > blockquote p {
+		padding-bottom: 0rem;
+		@apply text-steel;
+		font-weight: 500;
+	}
+
+	.post-prose > blockquote:before {
+		@apply bg-coral absolute;
+		bottom: 0.3125rem;
+		content: "";
+		left: 1.5625rem;
+		top: 0.3125rem;
+		width: 0.125rem;
 	}
 </style>
