@@ -1,7 +1,7 @@
 @import url(../fonts/inter.css);
 @import url(../fonts/favorit.css);
 @import url(../fonts/fira.css);
-
+@import '@fontsource/fira-code/index.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -41,9 +41,9 @@ html {
 		@apply font-inter;
 	}
 
-	code {
+	/* code {
 		@apply font-firaCode;
-	}
+	} */
 
 	h1,
 	h2,

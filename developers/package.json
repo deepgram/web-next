@@ -43,6 +43,7 @@
     "@astrojs/mdx": "^0.11.5",
     "@astrojs/rss": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
+    "@fontsource/fira-code": "^4.5.12",
     "ap-style-title-case": "^1.1.2",
     "netlify-cli": "^10.17.3",
     "vue": "^3.2.33"
