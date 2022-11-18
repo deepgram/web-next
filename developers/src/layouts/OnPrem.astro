@@ -1,6 +1,7 @@
 ---
 import Default from "./Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import Prose from "./Prose.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
 import SideNav from "../shared/components/nav/SideNav.jsx";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
@@ -17,8 +18,7 @@ const pathname = Astro.url.pathname;
 
 			<PrimarySection class="py-10">
 				<BreadCrumb />
-				<slot name="page-header" />
-				<slot />
+				<Prose><slot /></Prose>
 			</PrimarySection>
 		</HasAside>
 	</PrimarySection>
