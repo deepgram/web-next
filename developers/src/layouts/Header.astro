@@ -17,9 +17,9 @@ const pathname = Astro.url.pathname;
 <header x-data="{ menu: null }" class="sticky top-0 z-10">
 	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none" x-show="menu !== null" x-on:click="menu = null"></div>
 
-	<nav class="w-full bg-almostBlack/90 text-white bg-blur sm:px-4 sm:pt-6 absolute">
+	<nav class="w-full bg-almostBlack/90 text-white bg-blur sm:px-4 sm:pt-2 absolute">
 		<div class="flex justify-between xl:grid grid-cols-7 px-4">
-			<div class="logo col-span-2 mt-4 mb-4 h-6 w-auto stroke-transparent text-left">
+			<div class="logo col-span-2 mt-4 mb-4 w-auto stroke-transparent text-left">
 				<Link href={WWW_DOMAIN} class="max-h-full">
 					<span class="sr-only">Deepgram</span>
 					<img class="h-full" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
@@ -90,11 +90,12 @@ const pathname = Astro.url.pathname;
 		<!-- Mobile Nav -->
 		<div class="fixed flex flex-col h-screen inset-0 xl:hidden bg-black" style="display: none;" x-show="menu === 'Mobile'">
 			<div class="relative inset-x-0 bg-almostBlack text-white">
-				<div class="max-w-screen-2xl mx-auto px-6 flex justify-between items-center xl:justify-start">
+				<div class="max-w-screen-2xl mx-auto px-8 pt-2 flex justify-between items-center xl:justify-start">
 					<div class="mr-[2.875rem]">
 						<Link href={WWW_DOMAIN} class="flex">
 							<span class="sr-only">Deepgram</span>
-							<Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] w-auto text-dgRed" />
+							<img class="h-full" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
+							<!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] w-auto text-dgRed" /> -->
 						</Link>
 					</div>
 					<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
