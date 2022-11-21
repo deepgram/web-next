@@ -14,11 +14,11 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 const pathname = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-10">
+<header x-data="{ menu: null }" class="sticky top-0 z-10">
 	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none" x-show="menu !== null" x-on:click="menu = null"></div>
 
-	<nav class="bg-almostBlack/90 text-white bg-blur px-4 pt-6">
-		<div class="grid grid-cols-7 px-4">
+	<nav class="w-full bg-almostBlack/90 text-white bg-blur sm:px-4 sm:pt-6 absolute">
+		<div class="flex justify-between xl:grid grid-cols-7 px-4">
 			<div class="logo col-span-2 mt-4 mb-4 h-6 w-auto stroke-transparent text-left">
 				<Link href={WWW_DOMAIN} class="max-h-full">
 					<span class="sr-only">Deepgram</span>
