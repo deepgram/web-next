@@ -29,27 +29,36 @@ if(a.includes(dotnet)){
 ---
 
 <Default>
-	<PrimarySection class="max-w-full md:max-w-[56rem] lg:max-w-[64rem] xl:max-w-[72rem] 2xl:max-w-[80rem]">
-		<HasAside>
-			{
-				sdk === 'node' ?
-				<SideNav slot="aside" navStructure={nodeNav} navTitle="Documentation" pathname={pathname} />
-				: sdk === 'python' ?
-				<SideNav slot="aside" navStructure={pythonNav} navTitle="Documentation" pathname={pathname} />
-				: sdk === 'dotnet' ?
-				<SideNav slot="aside" navStructure={dotNetNav} navTitle="Documentation" pathname={pathname} />
-				: null
-			}
-			<PrimarySection class="py-10">
-				<BreadCrumb />
-				<div class="flex">
-					<Prose class="max-w-full lg:max-w-2xl">
-							<slot />
-					</Prose>
-					<TableOfContents headings={headings} docsType={'SDK'} />
-				</div>
-			</PrimarySection>
-		</HasAside>
+	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] px-0">
+		<!-- Aside -->
+		<div class="relative flex">
+			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+			<div class="col-span-1">
+				{
+					sdk === 'node' ?
+						<SideNav  navStructure={nodeNav} navTitle="SDK Documentation" pathname={pathname} />
+					: sdk === 'python' ?
+						<SideNav navStructure={pythonNav} navTitle="SDK Documentation" pathname={pathname} />
+					: sdk === 'dotnet' ?
+						<SideNav navStructure={dotNetNav} navTitle="SDK Documentation" pathname={pathname} />
+					: null
+				}
+			</div>
+			<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full ml-8">
+				<PrimarySection class="py-10">
+					<BreadCrumb />
+					<div class="flex">
+						<Prose class="max-w-full lg:max-w-2xl">
+								<slot />
+						</Prose>
+						<div class="col-span-0">
+							<TableOfContents headings={headings} docsType={'SDK'} />
+						</div>
+					</div>
+				</PrimarySection>
+			</div>
+			</div>
+		</div>
 	</PrimarySection>
 </Default>
 

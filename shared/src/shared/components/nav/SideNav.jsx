@@ -18,7 +18,7 @@ export default function SideNav({ children, navStructure, navTitle, pathname }) 
 	// }
 	return (
 		<>
-			<nav class="side-nav bg-cloud30 p-8 h-full">
+			<nav class="side-nav hidden md:block bg-cloud30 p-8 h-full">
 				<h5 class="border-b border-b-cloud pb-2 text-base">{navTitle}</h5>
 				<SideNavList navStructure={navStructure} pathname={pathname}/>				
 			</nav>

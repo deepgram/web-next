@@ -1,5 +1,5 @@
 ---
-import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
+import DocsCardList from "../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../shared/components/cards/DocsCard.astro";
 
 const { title, class: classes, } = Astro.props;
@@ -8,11 +8,11 @@ const preRecorded = await Astro.glob("../../content/developers/documentation/get
 const streaming = await Astro.glob("../../content/developers/documentation/getting-started/streaming/index.mdx");
 ---
 
-<div class="max-w-screen-xl mx-auto px-6 lg:px-10">
+<div class="max-w-screen-xl mx-auto">
   
   <h2 class="text-stone mt-6 mb-3">ENGLISH</h2>
-  <BlogCardList>
+  <DocsCardList>
     <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} doc={preRecorded[0]}/>
     <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} doc={streaming[0]}/>
-  </BlogCardList>
+  </DocsCardList>
 </div>

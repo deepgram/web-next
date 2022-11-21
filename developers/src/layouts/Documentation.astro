@@ -13,19 +13,26 @@ const { headings } = Astro.props
 ---
 
 <Default>
-	<PrimarySection class="max-w-full md:max-w-[56rem] lg:max-w-[64rem] xl:max-w-[72rem] 2xl:max-w-[80rem]">
-		<HasAside>
-			<SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} />
-
-			<PrimarySection class="py-10">
-				<BreadCrumb />
-				<div class="flex">
-					<Prose class="max-w-full lg:max-w-2xl">
-							<slot />
-					</Prose>
-					<TableOfContents headings={headings} docsType={'GUIDE'} />
-				</div>		
-			</PrimarySection>
+	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] px-0">
+		<HasAside gridClass="flex">
+			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+				<div class="col-span-1">
+					<SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} />
+				</div>
+				<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full ml-8">
+					<PrimarySection class="py-10">
+						<BreadCrumb />
+						<div class="flex">
+							<Prose class="max-w-full lg:max-w-2xl">
+								<slot />
+							</Prose>
+							<div class="col-span-0">
+								<TableOfContents headings={headings} docsType={'GUIDE'} />
+							</div>
+						</div>		
+					</PrimarySection>
+				</div>
+			</div>
 		</HasAside>
 	</PrimarySection>
 </Default>
