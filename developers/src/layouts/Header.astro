@@ -26,11 +26,11 @@ const pathname = Astro.url.pathname;
 					<!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" /> -->
 				</Link>
 			</div>
-			<div class="hidden xl:flex space-x-[1rem] items-center xl:ml-12 pr-4">
+			<div class="hidden xl:flex space-x-[1rem] items-center xl:ml-12 pr-4 col-start-5 col-span-3">
 				<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 				<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--main-nav text-white">Log In</Link>
-				<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem]">Contact Us</Link>
-				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[7rem]">Sign Up</Link>
+				<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem] flex-1">Contact Us</Link>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[7rem] flex-1">Sign Up</Link>
 			</div>
 			<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
 				<Button class="button button--mini sm:button--small button--secondary" x-on:click="menu = 'Mobile'" aria-label="Mobile Menu">Menu</Button>
