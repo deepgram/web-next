@@ -12,7 +12,7 @@ const pathname = Astro.url.pathname;
 ---
 
 <Default>
-	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] px-0">
+	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 				<SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} />

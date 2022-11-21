@@ -1,6 +1,7 @@
 ---
+const { padding } = Astro.props
 ---
 
-<section class={`${Astro.props.class} max-w-screen-2xl mx-auto px-6`}>
+<section class={`${Astro.props.class} max-w-screen-2xl mx-auto ${padding ? padding : 'px-6'}`}>
 	<slot />
 </section>
