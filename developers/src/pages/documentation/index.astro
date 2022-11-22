@@ -15,7 +15,7 @@ const pathname = Astro.url.pathname;
 	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] pt-[3rem] sm:pt-[5rem] xl:pt-[7rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-				<SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} />
+				<SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} client:load />
 				<div class="col-span-3 sm:col-span-2 w-11/12 lg:w-full xl:w-11/12 mx-auto sm:ml-8">
 					<PrimarySection class="py-10">
 						<BreadCrumb />
