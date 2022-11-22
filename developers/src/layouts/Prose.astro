@@ -1,17 +1,17 @@
 ---
-const { class: classes } = Astro.props
+const { class: classes } = Astro.props;
 ---
 
-<article class:list={['post-prose', classes]}>
-  <slot/>
+<article class:list={["post-prose", classes]}>
+	<slot />
 </article>
 
 <style>
-
 	article {
-	padding: 1.5rem;
-	@apply max-w-full;
-	@apply md:max-w-4xl;
+		/* padding: 1.5rem; */
+		@apply sm:p-6;
+		@apply max-w-full;
+		@apply md:max-w-4xl;
 	}
 
 	.post-prose > :global(h1) {
@@ -115,16 +115,16 @@ const { class: classes } = Astro.props
 	.post-prose > :global(table) {
 		@apply mb-4 block min-w-full border-collapse overflow-auto whitespace-nowrap;
 	}
-	
+
 	.post-prose > :global(table) + :global(p small) {
 		@apply -mt-2 block text-center text-sm font-bold;
 	}
-	
+
 	.post-prose > :global(table td),
 	.post-prose > :global(table th) {
 		@apply border-casper table-auto border whitespace-pre-wrap px-6 py-2 align-top;
 	}
-	
+
 	.post-prose > :global(table th) {
 		@apply bg-mist font-bold align-middle;
 	}

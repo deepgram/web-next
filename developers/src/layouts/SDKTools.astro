@@ -11,54 +11,53 @@ import pythonNav from "../pages/sdks-tools/sdks/python-sdk/navigation.json";
 import dotNetNav from "../pages/sdks-tools/sdks/dotnet-sdk/navigation.json";
 import "../assets/styles/developers.css";
 const pathname = Astro.url.pathname;
-const { headings } = Astro.props
+const { headings } = Astro.props;
 
 let sdk;
-const dotnet = 'dotnet-sdk';
-const python = 'python-sdk'
-const node = 'node-sdk'
-const a = pathname.split('/')
+const dotnet = "dotnet-sdk";
+const python = "python-sdk";
+const node = "node-sdk";
+const a = pathname.split("/");
 
-if(a.includes(dotnet)){
-	sdk = 'dotnet'
-} else if (a.includes(python)){
-	sdk = 'python'
-} else if (a.includes(node)){
-	sdk = 'node'
+if (a.includes(dotnet)) {
+	sdk = "dotnet";
+} else if (a.includes(python)) {
+	sdk = "python";
+} else if (a.includes(node)) {
+	sdk = "node";
 }
 ---
 
 <Default>
-	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] pt-[5rem] xl:pt-[7rem]" padding="px-0">
+	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] pt-[3rem] sm:pt-[5rem] xl:pt-[7rem]" padding="px-0">
 		<!-- Aside -->
 		<div class="relative flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-			<div class="col-span-1">
-				{
-					sdk === 'node' ?
-						<SideNav  navStructure={nodeNav} navTitle="SDK Documentation" pathname={pathname} />
-					: sdk === 'python' ?
-						<SideNav navStructure={pythonNav} navTitle="SDK Documentation" pathname={pathname} />
-					: sdk === 'dotnet' ?
-						<SideNav navStructure={dotNetNav} navTitle="SDK Documentation" pathname={pathname} />
-					: null
-				}
-			</div>
-			<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full ml-8">
-				<PrimarySection class="py-10">
-					<BreadCrumb />
-					<div class="flex">
-						<Prose class="max-w-full lg:max-w-2xl">
+				<div class="col-span-1">
+					{
+						sdk === "node" ? (
+							<SideNav navStructure={nodeNav} navTitle="SDK Documentation" pathname={pathname} />
+						) : sdk === "python" ? (
+							<SideNav navStructure={pythonNav} navTitle="SDK Documentation" pathname={pathname} />
+						) : sdk === "dotnet" ? (
+							<SideNav navStructure={dotNetNav} navTitle="SDK Documentation" pathname={pathname} />
+						) : null
+					}
+				</div>
+				<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full mx-auto sm:ml-8">
+					<PrimarySection class="py-10">
+						<BreadCrumb />
+						<div class="flex">
+							<Prose class="max-w-full lg:max-w-2xl">
 								<slot />
-						</Prose>
-						<div class="col-span-0">
-							<TableOfContents headings={headings} docsType={'SDK'} />
+							</Prose>
+							<div class="col-span-0">
+								<TableOfContents headings={headings} docsType={"SDK"} />
+							</div>
 						</div>
-					</div>
-				</PrimarySection>
-			</div>
+					</PrimarySection>
+				</div>
 			</div>
 		</div>
 	</PrimarySection>
 </Default>
-

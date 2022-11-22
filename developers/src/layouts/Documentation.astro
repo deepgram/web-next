@@ -9,27 +9,27 @@ import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 import nav from "../pages/documentation/navigation.json";
 import "../assets/styles/developers.css";
 const pathname = Astro.url.pathname;
-const { headings } = Astro.props
+const { headings } = Astro.props;
 ---
 
 <Default>
-	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] pt-[5rem] xl:pt-[7rem]" padding="px-0">
+	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] pt-[3rem] sm:pt-[5rem] xl:pt-[7rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 				<div class="col-span-1">
 					<SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} />
 				</div>
-				<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full ml-8">
-					<PrimarySection class="py-10">
+				<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full mx-auto sm:ml-8">
+					<PrimarySection class="py-10" padding="px-0">
 						<BreadCrumb />
 						<div class="flex">
 							<Prose class="max-w-full lg:max-w-2xl">
 								<slot />
 							</Prose>
 							<div class="col-span-0">
-								<TableOfContents headings={headings} docsType={'GUIDE'} />
+								<TableOfContents headings={headings} docsType={"GUIDE"} />
 							</div>
-						</div>		
+						</div>
 					</PrimarySection>
 				</div>
 			</div>
