@@ -69,7 +69,7 @@
 	.text :global(p) {
 		@apply pb-0;
 	}
-
+	
 	.side-nav {
 		@apply h-full col-span-2 md:col-span-1 fixed w-full z-10 overflow-y-scroll md:relative md:block bg-mist md:bg-cloud30 p-8 h-full;
 	}
@@ -99,7 +99,8 @@
 	.side-nav ul li ul li.active > .navlink-container > a {
 		@apply border-r-4 border-meadow border-l-0 w-full;
 	}
-
-	table {
-		@apply w-screen;
+@screen lg {
+	#toggle-nav + .toggle-nav-label + .side-nav {
+		@apply block;
 	}
+}
