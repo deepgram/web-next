@@ -3,30 +3,9 @@ const { navStructure, navTitle } = Astro.props;
 import SideNavList from "./SideNavList.astro";
 ---
 
-<nav
-	class="side-nav bg-cloud30 p-4"
-	x-data="{
-    childrenShow: [],
-		expandList(nav) {
-      this.childrenShow.push(nav.to)
-    },
-    collapseList(nav) {
-      const index = this.childrenShow.findIndex((item) => {
-        return item === nav.to
-      })
-      this.childrenShow.splice(index, 1)
-    },
-    isExpanded(nav) {
-      return this.childrenShow.includes(nav.to)
-    },
-		}"
->
+<input type="checkbox" id="toggle-nav" class="hidden" />
+<label for="toggle-nav" class="toggle-nav-label absolute z-[11] top-3"> </label>
+<nav class="side-nav bg-cloud30 p-4">
 	<h5>{navTitle}</h5>
-	<SideNavList x-show="isExpanded(nav)" isExpanded={isExpanded} navStructure={navStructure} />
+	<SideNavList navStructure={navStructure} />
 </nav>
-
-<style is:global>
-	.side-nav ul {
-		@apply ml-4;
-	}
-</style>

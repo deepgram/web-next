@@ -3,19 +3,21 @@ import Layout from "../../layouts/Documentation.astro";
 import Default from "../../layouts/Default.astro";
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import HasAside from "../../shared/components/layout/HasAside.astro";
-import SideNav from "../../shared/components/nav/SideNav";
+// import SideNav from "../../shared/components/nav/SideNav";
+import SideNav from "../../shared/components/nav/SideNav.astro";
 import BreadCrumb from "../../shared/components/nav/BreadCrumb.astro";
 import English from "../../components/documentation/English.astro";
 import Spanish from "../../components/documentation/Spanish.astro";
 import nav from "../../pages/documentation/navigation.json";
-const pathname = Astro.url.pathname;
+// const pathname = Astro.url.pathname;
 ---
 
 <Default>
-	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] pt-[3rem] sm:pt-[5rem] xl:pt-[7rem]" padding="px-0">
+	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem] pt-[71px] sm:pt-[5rem] xl:pt-[7rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-				<SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} client:load />
+				<!-- <SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} client:load /> -->
+				<SideNav slot="aside" navStructure={nav} navTitle="Documentation" />
 				<div class="col-span-3 sm:col-span-2 w-11/12 lg:w-full xl:w-11/12 mx-auto sm:ml-8">
 					<PrimarySection class="py-10">
 						<BreadCrumb />

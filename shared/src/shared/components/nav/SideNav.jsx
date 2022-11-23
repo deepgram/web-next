@@ -1,15 +1,18 @@
 import { h, Fragment } from 'preact';
-import { useState } from 'preact/hooks';
+import { useState, useEffect } from 'preact/hooks';
 import SideNavList from "./SideNavList";
 export default function SideNav({ children, navStructure, navTitle, pathname }) {
-	const [childrenShow, setChildrenShow] = useState([]);
+	const [childrenShow, setChildrenShow] = useState([pathname]);
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+	
 	function toggleNav() {
 		setMobileNavOpen(!mobileNavOpen);
 	}
 	function expandList(nav) {
 		setChildrenShow(oldArray => {
 			const newArr = [...oldArray, nav.to]
+			console.log
 			return newArr;
 		});
 	}
@@ -18,7 +21,22 @@ export default function SideNav({ children, navStructure, navTitle, pathname }) 
 		setChildrenShow(newArray);
 	}
 	function isExpanded(nav) {
-		return childrenShow.includes(nav.to);
+		console.log('isExpanded', nav, childrenShow)
+		childrenShow.forEach(item => {
+			if (item.includes(nav.to)) {
+				return true;
+
+			} else {
+				return childrenShow.includes(nav.to);
+
+			}
+		})
+
+		// childrenShow.map(item => {
+		// 	if(nav.to.includes(item)) {
+		// 		return true;
+		// 	}
+		// })
 	}
 	return (
 		<>

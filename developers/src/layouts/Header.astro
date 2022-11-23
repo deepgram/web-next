@@ -14,7 +14,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 const pathname = Astro.url.pathname;
 ---
 
-<header x-data="{ menu: null }" class="sticky top-0 z-10">
+<header x-data="{ menu: null }" class="sticky top-0 z-20">
 	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none" x-show="menu !== null" x-on:click="menu = null"></div>
 
 	<nav class="w-full bg-almostBlack/90 text-white bg-blur py-4 sm:py-0 sm:px-4 sm:pt-2 absolute">

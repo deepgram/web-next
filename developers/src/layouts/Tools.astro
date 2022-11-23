@@ -7,7 +7,7 @@ import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 
 import "../assets/styles/developers.css";
 
-const { headings } = Astro.props
+const { headings } = Astro.props;
 ---
 
 <Default>
@@ -15,14 +15,14 @@ const { headings } = Astro.props
 		<BreadCrumb />
 		<div class="flex">
 			<Prose>
-					<slot />
+				<slot />
 			</Prose>
-			<TableOfContents headings={headings} docsType={'TOOL'} />
+			<TableOfContents headings={headings} docsType={"TOOL"} />
 		</div>
 	</PrimarySection>
 </Default>
 
-<style is:global>
+<!-- <style is:global>
 	.side-nav ul {
 		@apply ml-4;
 	}
@@ -35,4 +35,4 @@ const { headings } = Astro.props
 	.side-nav ul li ul li.active > .navlink-container a {
 		@apply border-r-4 border-meadow border-l-0 w-full;
 	}
-</style>
+</style> -->
