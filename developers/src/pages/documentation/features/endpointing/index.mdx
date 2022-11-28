@@ -11,6 +11,8 @@ seo:
 ---
 import Alert from '../../../../shared/components/global/Alert.astro'; 
 
+# {frontmatter.title}
+
 <div class="badge">STREAMING</div>
 
 Deepgram’s Endpointing feature monitors incoming streaming audio and detects when a user has finished speaking or paused for a significant amount of time, indicating the completion of an idea. When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes its results for the processed time range and returns the transcript with a `speech_final` parameter set to `true`.

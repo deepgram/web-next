@@ -12,6 +12,8 @@ import Alert from '../../../../shared/components/global/Alert.astro';
 import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
 import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
 
+# {frontmatter.title}
+
 In general terms, real-time streaming latency is the time delay between when a transfer of data begins and when a system begins processing it.
 
 In mathematical terms, it is the difference between the audio cursor (the number of seconds of audio you have currently submitted; we’ll call this X) and the latest transcript cursor (`start` + `duration`; we’ll call this Y). Latency is X-Y.

@@ -14,6 +14,8 @@ import CodeBlock from '../../../../shared/components/code/CodeBlock.astro';
 import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
 import Panel from '../../../../shared/components/global/Panel.astro'; 
 
+# {frontmatter.title}
+
 <div class="badge">STREAMING</div>
 
 Deepgram’s Interim Results feature monitors streaming audio and provides interim transcripts, which are preliminary results provided during the real-time streaming process. Periodically during this process, Deepgram will identify a point at which its transcript has reached maximum accuracy and send a definitive, or final, transcript of all audio up to that point. It will then continue to process audio.
