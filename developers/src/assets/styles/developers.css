@@ -71,7 +71,7 @@
 	}
 	
 	.side-nav {
-		@apply h-full col-span-2 md:col-span-1 fixed w-full z-10 overflow-y-scroll md:relative md:block bg-mist md:bg-cloud30 p-8 h-full;
+		@apply h-full col-span-2 md:col-span-1 fixed w-full z-10 md:relative md:block bg-mist md:bg-cloud30 p-8 h-full;
 	}
 
 	#toggle-nav + .toggle-nav-label::after {
@@ -88,7 +88,7 @@
 		@apply block;
 	}
 	.side-nav ul {
-		@apply ml-4 font-inter h-full;
+		@apply ml-4 font-inter h-auto;
 	}
 
 	.side-nav ul li.active > .navlink-container > a {
@@ -103,4 +103,14 @@
 	#toggle-nav + .toggle-nav-label + .side-nav {
 		@apply block;
 	}
+}
+
+div.badge {
+	    color: #4f6278;
+    border-width: 1px;
+    border-color: #66788d;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 0 0.5rem;
+    margin: 1rem 0;
 }
