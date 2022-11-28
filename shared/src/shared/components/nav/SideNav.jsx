@@ -21,7 +21,6 @@ export default function SideNav({ children, navStructure, navTitle, pathname }) 
 		setChildrenShow(newArray);
 	}
 	function isExpanded(nav) {
-		console.log('isExpanded', nav, childrenShow)
 		childrenShow.forEach(item => {
 			if (item.includes(nav.to)) {
 				return true;
