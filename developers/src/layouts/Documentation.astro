@@ -25,10 +25,10 @@ const { headings } = Astro.props;
 					<PrimarySection class="py-10" padding="px-0">
 						<BreadCrumb />
 						<div class="flex">
-							<Prose class="max-w-full lg:max-w-2xl xl:max-w-full">
+							<Prose class="max-w-full lg:max-w-2xl">
 								<slot />
 							</Prose>
-							<div class="col-span-0">
+							<div class="col-span-0 ml-8">
 								<TableOfContents headings={headings} docsType={"GUIDE"} />
 							</div>
 						</div>

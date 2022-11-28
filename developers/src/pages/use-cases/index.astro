@@ -9,16 +9,16 @@ const speechAnalytics = await Astro.glob("./speech-analytics/**/*.mdx");
 const { class: classes, } = Astro.props;
 ---
 <Layout>
-  <PrimarySection class="max-w-screen-xl mb-[5rem] mx-auto px-6 lg:px-10 pt-[8rem] xl:pt-[10rem]">
+  <PrimarySection class="max-w-screen-xl mb-[5rem] mx-auto px-6 lg:px-10 pt-[3rem]">
     <BreadCrumb/>
     <h1>Use Cases</h1>
-    <h2 class="text-stone mt-6 mb-3">TRANSCRIPTION</h2>
+    <h2 class="text-stone mt-10 mb-3">TRANSCRIPTION</h2>
     <BlogCardList>
       {transcription.map(doc=>{
          return <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} doc={doc}/>
       })}
     </BlogCardList>
-    <h2 class="text-stone mt-6 mb-3">SPEECH ANALYTICS</h2>
+    <h2 class="text-stone mt-10 mb-3">SPEECH ANALYTICS</h2>
     <BlogCardList>
       {speechAnalytics.map(doc=>{
          return <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} doc={doc}/>
