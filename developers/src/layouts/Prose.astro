@@ -8,8 +8,6 @@ const { class: classes } = Astro.props;
 
 <style>
 	article {
-		/* padding: 1.5rem; */
-		@apply sm:p-6;
 		@apply max-w-full;
 		@apply md:max-w-4xl;
 		width: 100%;
@@ -24,9 +22,13 @@ const { class: classes } = Astro.props;
 	.post-prose > :global(h3) {
 		@apply text-xl;
 	}
-	.post-prose > :global(img),
-	.post-prose > :global(p img) {
-		@apply mx-auto object-cover;
+	.post-prose > :global(h4) {
+		@apply text-base;
+	}
+	.post-prose :global(img),
+	.post-prose :global(p img) {
+		@apply object-cover;
+		@apply my-8;
 	}
 
 	.post-prose > :global(small) {
@@ -40,11 +42,17 @@ const { class: classes } = Astro.props;
 	.post :global(h4),
 	.post-prose > :global(h5),
 	.post-prose > :global(h6) {
-		@apply pt-4 pb-2;
+		margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+	}
+
+	.post-prose :global(p:first-of-type) {
+		@apply pt-5;
 	}
 
 	.post-prose > :global(p) {
-		@apply p-4 leading-loose lg:leading-normal;
+		@apply pb-4 leading-loose lg:leading-normal;
+		line-height: 1.75;
 	}
 
 	.post-prose > :global(* a) {
@@ -52,22 +60,29 @@ const { class: classes } = Astro.props;
 	}
 
 	.post-prose > :global(pre.astro-code) {
-		@apply m-0 mb-2 ml-4;
+		@apply mt-6 mb-8;
+		@apply py-4 px-5;
 		@apply rounded;
 		@apply overflow-auto;
 	}
 
 	.post-prose > :global(p:not(pre.astro-code) code) {
 		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];
+		@apply text-black;
 	}
 
 	.post-prose > :global(ol) {
 		@apply m-0 mb-5 pl-8;
 	}
 
-	.post-prose > :global(ul:not(.contains-task-list)) {
-		@apply m-0 mb-0 pl-6;
+	.post-prose > :global(ul > li > p:first-of-type),
+	.post-prose > :global(ol > li > p:first-of-type) {
+		@apply pt-0;
 	}
+
+	/* .post-prose > :global(ul:not(.contains-task-list)) {
+		@apply m-0 mb-0;
+	} */
 
 	.post-prose > :global(ol) {
 		counter-reset: li;
@@ -80,13 +95,18 @@ const { class: classes } = Astro.props;
 	.post-prose > :global(ol li),
 	.post-prose > :global(ul:not(.contains-task-list) li),
 	.post-prose > :global(ul li.task-list-item) {
-		@apply py-1;
+		@apply pb-4;
+	}
+
+	.post-prose :global(ol > li > p > code),
+	.post-prose :global(ul > li > p > code) {
+		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];
 	}
 
 	.post-prose > :global(ol li::before) {
-		content: counter(li);
+		content: counter(list-item,var(--list-counter-style,decimal))".";
 		counter-increment: li;
-		@apply absolute -left-8 h-6 w-6 rounded-full border border-black text-center text-black;
+		@apply absolute -left-8 h-6 w-6;
 	}
 
 	.post-prose > :global(ul:not(.contains-task-list)) {
@@ -116,21 +136,35 @@ const { class: classes } = Astro.props;
 		@apply text-coral text-lg;
 	}
 
-	.post-prose > :global(table) {
-		@apply mb-4 block min-w-full border-collapse overflow-auto whitespace-nowrap;
+	.post-prose :global(table) {
+		@apply my-8;
+		@apply text-sm;
+		line-height: 1.7142857;
 	}
 
-	.post-prose > :global(table) + :global(p small) {
-		@apply -mt-2 block text-center text-sm font-bold;
+	.post-prose :global(table > thead) {
+		border-bottom-color: #d1d5db;
+    border-bottom-width: 1px;
 	}
 
-	.post-prose > :global(table td),
-	.post-prose > :global(table th) {
-		@apply border-casper table-auto border whitespace-pre-wrap px-6 py-2 align-top;
+	.post-prose :global(table > thead > tr > th) {
+		text-align: left;
 	}
 
-	.post-prose > :global(table th) {
-		@apply bg-mist font-bold align-middle;
+	.post-prose :global(table > thead > tr > th) {
+		padding: 1px 8px 8px 0; 
+	}
+
+	.post-prose :global(table > tbody > tr) {
+		border-bottom-width: 1px;
+    border-bottom-color: #e5e7eb;
+	}
+	.post-prose :global(table > tbody > tr > td) {
+		@apply pr-2 py-2; 
+	}
+
+	.post-prose :global(table > tbody > tr > td > code) {
+		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];
 	}
 
 	.post-prose > :global(.promo-container) {
@@ -169,9 +203,15 @@ const { class: classes } = Astro.props;
 
 	.post-prose :global(.badge) {
 		@apply border-steel border rounded;
-		@apply px-2;
+		@apply px-2 my-4;
 		@apply w-fit;
 		@apply text-steel;
+	}
 
+	.post-prose :global(.screenshot img) {
+		background-color: #fff;
+    border: 1px solid #000;
+    padding: 0;
+    max-width: 90%;
 	}
 </style>

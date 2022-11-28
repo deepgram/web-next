@@ -81,7 +81,7 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 		@apply ml-10 pb-1;
 	}
 
-	.text :global(p) {
-		@apply pb-0;
+	.text :global(p:first-of-type) {
+		@apply pt-0;
 	}
 </style>
