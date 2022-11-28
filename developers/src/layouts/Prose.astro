@@ -98,6 +98,8 @@ const { class: classes } = Astro.props;
 		@apply pb-4;
 	}
 
+	.post-prose :global(ol > li > code),
+	.post-prose :global(ul > li > code),
 	.post-prose :global(ol > li > p > code),
 	.post-prose :global(ul > li > p > code) {
 		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];

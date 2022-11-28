@@ -80,4 +80,8 @@ const { type = "info", title = "Information", fill = "fill-black" } = Astro.prop
 	.text :global(p) {
 		@apply py-0;
 	}
+
+	.text :global(p:first-of-type) {
+		@apply pt-0;
+	}
 </style>

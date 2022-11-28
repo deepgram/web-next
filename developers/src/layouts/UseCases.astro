@@ -8,13 +8,15 @@ const { headings } = Astro.props
 ---
 
 <Default>
-	<PrimarySection class="max-w-screen-xl mb-[5rem] mx-auto px-6 lg:px-10 pt-[8rem] xl:pt-[10rem]">
+	<PrimarySection class="max-w-screen-xl mb-[5rem] mx-auto px-6 lg:px-10 pt-[3rem]">
 		<BreadCrumb/>
 		<div class="flex">
 			<Prose>
 					<slot />
 			</Prose>
-			<TableOfContents headings={headings} docsType={'USE CASE'} />
+			<div class="ml-8">
+				<TableOfContents headings={headings} docsType={'USE CASE'} />
+			</div>
 		</div>
 	</PrimarySection>
 	

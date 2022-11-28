@@ -22,7 +22,9 @@ const { headings } = Astro.props;
 					<Prose class="max-w-full lg:max-w-2xl">
 						<slot />
 					</Prose>
-					<TableOfContents headings={headings} docsType={"GUIDE"} />
+					<div class="ml-8">
+						<TableOfContents headings={headings} docsType={"GUIDE"} />
+					</div>
 				</div>
 			</PrimarySection>
 		</HasAside>

@@ -16,7 +16,7 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 	.alert {
 		@apply flex flex-row flex-wrap items-center align-middle;
 		@apply text-sm text-black;
-		@apply my-4;
+		@apply my-4 py-2;
 	}
 
 	.info {
@@ -78,9 +78,12 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 	}
 
 	.text :global(li) {
-		@apply ml-10 pb-1;
+		@apply ml-10 pb-4;
 	}
 
+	.text :global(li:first-of-type) {
+		@apply pt-4;
+	}
 	.text :global(p:first-of-type) {
 		@apply pt-0;
 	}
