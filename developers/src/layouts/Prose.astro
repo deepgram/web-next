@@ -44,15 +44,17 @@ const { class: classes } = Astro.props;
 	}
 
 	.post-prose > :global(p) {
-		@apply pb-4 leading-loose lg:leading-normal;
+		@apply p-4 leading-loose lg:leading-normal;
 	}
 
 	.post-prose > :global(* a) {
-		@apply text-darkIris;
+		@apply text-darkIris font-semibold;
 	}
 
 	.post-prose > :global(pre.astro-code) {
-		@apply m-0 mb-2;
+		@apply m-0 mb-2 ml-4;
+		@apply rounded;
+		@apply overflow-auto;
 	}
 
 	.post-prose > :global(p:not(pre.astro-code) code) {
@@ -89,6 +91,7 @@ const { class: classes } = Astro.props;
 
 	.post-prose > :global(ul:not(.contains-task-list)) {
 		@apply list-disc;
+		@apply ml-6;
 	}
 
 	.post-prose > :global(ul:not(.contains-task-list) li::marker) {
@@ -162,5 +165,13 @@ const { class: classes } = Astro.props;
 		left: 1.5625rem;
 		top: 0.3125rem;
 		width: 0.125rem;
+	}
+
+	.post-prose :global(.badge) {
+		@apply border-steel border rounded;
+		@apply px-2;
+		@apply w-fit;
+		@apply text-steel;
+
 	}
 </style>

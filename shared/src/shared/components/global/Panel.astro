@@ -5,7 +5,9 @@ const { type = "info", title = "Information", fill = "fill-black" } = Astro.prop
 
 <div class={`panel ${type}`}>
 	<div class="heading">
-		<Icon class={`icon h-6 w-6 ${type === "info" ? "fill-casper" : type === "warning" ? "fill-sunflower" : fill}`} icon={type} />
+		<div class="p-2">
+			<Icon class={`icon h-6 w-6 ${type === "info" ? "fill-casper" : type === "warning" ? "fill-sunflower" : fill}`} icon={type} />
+		</div>
 		<div class="title">
 			{title}
 		</div>
@@ -26,8 +28,9 @@ const { type = "info", title = "Information", fill = "fill-black" } = Astro.prop
 	.heading {
 		@apply border-casper border-b;
 		@apply w-full;
-		@apply flex flex-row flex-wrap items-center;
-		@apply my-4 ml-4;
+		@apply flex flex-row flex-wrap;
+		@apply ml-0 my-0;
+		/* @apply ml-4; */
 	}
 	.icon {
 		@apply flex flex-col flex-wrap align-middle;
@@ -50,7 +53,7 @@ const { type = "info", title = "Information", fill = "fill-black" } = Astro.prop
 	}
 
 	.text {
-		@apply ml-3.5 mr-1 w-full py-2;
+		@apply ml-3.5 mr-1 w-full py-1;
 		@apply w-11/12;
 	}
 
