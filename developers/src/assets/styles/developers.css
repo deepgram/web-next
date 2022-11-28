@@ -99,7 +99,7 @@
 	.side-nav ul li ul li.active > .navlink-container > a {
 		@apply border-r-4 border-meadow border-l-0 w-full;
 	}
-@screen lg {
+@screen md {
 	#toggle-nav + .toggle-nav-label + .side-nav {
 		@apply block;
 	}
