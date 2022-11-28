@@ -24,12 +24,12 @@ const { headings } = Astro.props;
 				<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full mx-auto sm:ml-8">
 					<PrimarySection class="py-10" padding="px-0">
 						<BreadCrumb />
-						<div class="flex">
-							<Prose class="max-w-full lg:max-w-2xl">
+						<div class="grid grid-cols-12 flex relative">
+							<Prose class="max-w-full lg:max-w-2xl xl:max-w-full col-span-12 lg:col-span-10">
 								<slot />
 							</Prose>
-							<div class="col-span-0 ml-8">
-								<TableOfContents headings={headings} docsType={"GUIDE"} />
+							<div class="col-span-2 relative">
+								<TableOfContents headings={headings} docsType={"GUIDE"} classes="sticky top-32" />
 							</div>
 						</div>
 					</PrimarySection>
