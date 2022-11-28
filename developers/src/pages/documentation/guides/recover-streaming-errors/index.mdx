@@ -10,6 +10,8 @@ seo:
   keywords: streaming, live streaming, real-time, connection, error, timeout, recover
 ---
 
+# {frontmatter.title}
+
 Deepgram's API allows you to live stream audio for real-time transcription. Our live streaming service can be used with WebSocket streams. The longer a WebSocket stream persists, the more chances there are for transient network or service issues to cause a break in the connection. We recommend that you be prepared to gracefully recover from streaming errors, especially if you plan to live-stream audio for long periods of time (for example, if you are getting live transcription of a day-long virtual conference).
 
 Implementing solutions that correctly handle disrupted connections can be challenging. In this guide, we recommend some solutions to the most common issues developers face when implementing real-time transcription with long-running live audio streams.

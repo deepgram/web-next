@@ -11,6 +11,8 @@ seo:
 ---
 import Alert from '../../../../shared/components/global/Alert.astro'; 
 
+# {frontmatter.title}
+
 Before you start streaming audio to Deepgram, it’s important that you understand whether your audio is containerized or raw, so you can correctly form your API request.
 
 The difference between containerized and raw audio relates to how much information about the audio is included within the data. In a containerized audio stream, a series of bits is passed along with a header that specifies information about the audio. In a raw audio stream, the series of bits is passed with no further information. Containerized audio generally includes enough additional information to allow Deepgram to decode it automatically, while Deepgram needs you to manually provide information about the characteristics of raw audio.
