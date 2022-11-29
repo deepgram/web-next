@@ -1,0 +1,109 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Members
+description: Members for the Deepgram API
+order: 6
+---
+
+Members are users who have been given access to a specified Deepgram Project. Members are assigned Scopes, which determine what they can do in their assigned Project. Members can be assigned to multiple Projects and have different Scopes for each Project.
+
+<div>
+<div slot="left">
+
+### Get Members
+
+Retrieves account objects for all of the accounts in the specified project.
+
+Required account scope(s): `project:read`. Required project scope(s): `project:read`, `members:read`, `admins:read`, `owners:read`.
+
+#### Path Parameters
+
+project_id: uuid
+Unique identifier of the project for which you want to get members.
+
+#### Responses
+
+Status Description
+200 Success Members found.
+
+#### Response Schema
+
+members: array
+
+Array of Members.
+
+member_id: uuid
+
+Unique identifier of member.
+
+first_name: string
+
+First name of member. Optional.
+
+last_name: string
+
+Last name of member. Optional.
+
+scopes: array
+
+Project scopes associated with member.
+
+email: string
+
+Email address of member.
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Remove Member
+
+Removes the specified account from the specified project. API keys created by this member for the specified project will also be deleted.
+
+If the account being removed has scope `member`, then the requesting account must have scope `members:write:kick`. If the account being removed has scope admin, then the requesting account must have scope `admins:write:kick`. If the account being removed has scope `owner`, then the requesting account must have scope owners:write:kick. The account being removed must not be the sole account with the scope owner.
+
+Required account scope(s): `project:write`. Required project scopes(s): `members:write:kick` or `admins:write:kick` or `owners:write:kick`.
+
+#### Path Parameters
+
+project_id: uuid
+Unique identifier of the project that contains the account you want to remove.
+
+member_id: uuid
+Unique identifier of the account that you want to remove.
+
+#### Responses
+
+Status Description
+200 Success Account removed.
+
+#### Response Schema
+
+members: array
+
+Array of Members.
+
+member_id: uuid
+
+Unique identifier of member.
+
+first_name: string
+
+First name of member. Optional.
+
+last_name: string
+
+Last name of member. Optional.
+
+scopes: array
+
+Project scopes associated with member.
+
+email: string
+
+Email address of member.
+
+</div>
+</div>

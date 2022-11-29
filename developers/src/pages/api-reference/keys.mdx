@@ -1,0 +1,272 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Keys
+description: Keys for the Deepgram API
+order: 5
+---
+
+Keys are associated with Deepgram Projects. They enable you to use the Deepgram API, identify the Project calling the API, and associate usage information with Projects. Keys are assigned Scopes, which determine which actions they can be used to perform in the associated Project. For each Project, you can create multiple Keys and assign different Scopes for each Key.
+
+<div>
+<div slot="left">
+
+### Get Keys
+
+Retrieves keys for the specified project. If the authenticated account has access to the `members:read`, `admins:read`, and `owners:read` project scopes, it will list all keys for the project. Otherwise, it will only list keys that belong to the authenticated account.
+
+Required account/project scope(s): `keys:read`. Optional project scope(s): `members:read`, `admins:read`, `owners:read`.
+
+#### Path Parameters
+
+project_id: uuid
+Unique identifier of the project for which you want to get keys.
+
+#### Responses
+
+Status Description
+200 Success Keys found.
+
+#### Response Schema
+
+api_keys: array
+
+Array of associated Member and API Key objects.
+
+member: object
+
+Member object.
+
+member_id: uuid
+
+Unique identifier of member.
+
+email: string
+
+Email address of member.
+
+first_name: string
+
+First name of member. If no first name exists, this item will not be returned.
+
+last_name: string
+
+Last name of member. If no last name exists, this item will not be returned.
+
+api_key object
+
+API Key object.
+
+api_key_id: uuid
+
+Unique identifier of API Key.
+
+comment: string
+
+Comments associated with API Key.
+
+scopes: array
+
+Array of scopes associated with API Key.
+
+tags: array
+
+Array of tags associated with API Key. If no tags exist, this item will not be returned.
+
+created: string
+
+Date and time when API Key was created.
+
+expiration_date: string
+
+Date and time when API Key will expire. If no expiration date exists, this item will not be returned.
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Get Key
+
+Retrieves basic information about the specified key. If the authenticated account has access to the `members:read`, `admins:read`, and `owners:read` project scopes, it will retrieve the information for any key in the project. Otherwise, it will retrieve the information for only one of the keys that belong to the authenticated account.
+
+Required account/project scope(s): `keys:read`. Optional project scope(s): `members:read`, `admins:read`, `owners:read`.
+
+#### Path Parameters
+
+project_id: uuid
+Unique identifier of the project for which you want to retrieve information.
+
+key_id: uuid
+Unique identifier of the key that you want to retrieve.
+
+#### Responses
+
+Status Description
+200 Success Key found.
+404 Not Found A key with the specified key ID in the specified project was not found.
+
+#### Response Schema
+
+member: object
+
+Member object.
+
+member_id: uuid
+
+Unique identifier of member.
+
+email: string
+
+Email address of member.
+
+first_name: string
+
+First name of member. If no first name exists, this item will not be returned.
+
+last_name: string
+
+Last name of member. If no last name exists, this item will not be returned.
+
+api_key object
+
+API Key object.
+
+api_key_id: uuid
+
+Unique identifier of API Key.
+
+comment: string
+
+Comments associated with API Key.
+
+scopes: array
+
+Array of scopes associated with API Key.
+
+tags: array
+
+Array of tags associated with API Key. If no tags exist, this item will not be returned.
+
+created: string
+
+Date and time when API Key was created.
+
+expiration_date: string
+
+Date and time when API Key will expire. If no expiration date exists, this item will not be returned.
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Create Key
+
+Creates a new key in the specified project. You must create your first API Key using the Deepgram Console.
+
+Required account/project scope(s): `keys:write`.
+
+#### Path Parameters
+
+project_id: uuid
+Unique identifier of the project for which you want to create a key. Required.
+
+#### Request Body Schema
+
+comment: string
+Comments associated with the key you would like to create. Must be between 1 and 128 characters long, not including whitespace. Required.
+
+tags: array
+Tags associated with the key you would like to create. Optional.
+
+scopes: array
+Scopes for the key you would like to create. Required.
+
+Scopes cannot be empty.
+
+The requested account scopes for the new key cannot exceed the scopes of the authenticated account making the request.
+
+The requested project scopes for the new key cannot exceed the scopes of the authenticated account making the request.
+
+expiration_date: datetime
+Date on which the key you would like to create should expire. Optional.
+
+If no time zone is specified, defaults to Coordinated Universal Time (UTC).
+
+For each key, you may specify either an expiration_date or a time_to_live_in_seconds, but not both.
+
+time_to_live_in_seconds: number
+Length of time (in seconds) during which the key you would like to create will remain valid. Optional.
+
+For each key, you may specify either an expiration_date or a time_to_live_in_seconds, but not both.
+
+#### Responses
+
+Status Description
+201 Success Key created.
+
+#### Response Schema
+
+api_key_id: uuid
+
+Unique identifier of the API Key.
+
+key: string
+
+Value of the API Key. This is the only chance to read the Key value; it cannot be recovered later.
+
+comment: string
+
+Comments associated with the API Key.
+
+scopes: array
+
+Project scopes associated with the API Key.
+
+tags: array
+
+Tags associated with the API Key. If no tags exist, this item will not be returned.
+
+created: string
+
+Date and time when the API Key was created.
+
+expiration_date: string
+
+Date and time when the API Key expires. If no expiration date exists, this item will not be returned.
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Delete Key
+
+Deletes the specified key in the specified project. If the authenticated account has access to the `members:write`, `admins:write`, and `owners:write` project scopes, it will delete any key in the project. Otherwise, it will delete only keys belonging to the authenticated account.
+
+Required account/project scope(s): `keys:write`. Optional project scope(s): `members:write`, `admins:write`, `owners:write`.
+
+#### Path Parameters
+
+project_id: uuid
+Unique identifier of the project that contains the key that you want to delete.
+
+key_id: uuid
+Unique identifier of the key that you want to delete.
+
+#### Responses
+
+Status Description
+200 Success Key deleted.
+
+#### Response Schema
+
+message: string
+
+Message returned. Should read "Successfully deleted the API key!"
+
+</div>
+</div>

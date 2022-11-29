@@ -1,0 +1,878 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Transcription
+description: Transcription for the Deepgram API
+order: 3
+---
+
+High-speed transcription of either pre-recorded or streaming audio. This feature is very fast, can understand nearly every audio format available, and is customizable. You can customize your transcript using various query parameters and apply general purpose and custom-trained AI models.
+
+Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
+
+<div>
+<div slot="left">
+
+### Transcribe Pre-recorded Audio
+
+Transcribes the specified audio file.
+
+Deepgram does not store transcriptions. Make sure to save output or [return transcriptions to a callback URL for custom processing](/documentation/features/callback/).
+
+#### Query Parameters
+
+Query Parameters
+tier:
+string
+Level of model you would like to use in your request. Options include:
+
+enhanced:
+Applies our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.
+base: (Default)
+Applies our Base models, which are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness.
+To learn more, see Features: Tier.
+
+model:
+string
+AI model used to process submitted audio. Options include:
+
+general: (Default)
+Optimized for everyday audio processing.
+TIERS: enhanced, base
+meeting:
+Optimized for conference room settings, which include multiple speakers with a single microphone.
+TIERS: enhanced beta, base
+phonecall:
+Optimized for low-bandwidth audio phone calls.
+TIERS: enhanced beta, base
+voicemail:
+Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.
+TIERS: base
+finance:
+Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.
+TIERS: enhanced beta, base
+conversationalai:
+Optimized to allow artificial intelligence technologies, such as chatbots, to interact with people in a human-like way.
+TIERS: base
+video:
+Optimized for audio sourced from videos.
+TIERS: base
+<custom_id>:
+To use a custom model associated with your account, include its custom_id.
+TIERS: enhanced, base (depending on which tier the custom model was trained on)
+To learn more, see Features: Model.
+
+version:
+string
+Version of the model to use.
+
+Default: latest
+
+Possible values: latest OR <version_id>
+
+To learn more, see Features: Version.
+
+language:
+string
+BCP-47 language tag that hints at the primary spoken language. Language support is optimized for the following language/model combinations:
+
+Chinese
+
+zh-CN: China (Simplified Mandarin) beta
+MODELS: general
+zh-TW: Taiwan (Traditional Mandarin) beta
+MODELS: general
+Dutch
+
+nl: beta
+MODELS: general (enhanced, base)
+English
+
+en: English (Default)
+MODELS: general (enhanced, base), meeting (enhanced beta, base), phonecall (enhanced beta, base), voicemail, finance (enhanced beta, base), conversationalai, video
+en-AU: Australia
+MODELS: general
+en-IN: India
+MODELS: general
+en-NZ: New Zealand
+MODELS: general
+en-GB: United Kingdom
+MODELS: general
+en-US: United States
+MODELS: general (enhanced, base), meeting (enhanced beta, base), phonecall (enhanced beta, base), voicemail, finance, conversationalai, video
+Flemish
+
+nl: beta
+MODELS: general (enhanced, base)
+French
+
+fr:
+MODELS: general (enhanced beta, base)
+fr-CA: Canada
+MODELS: general
+German
+
+de:
+MODELS: general (enhanced beta, base)
+Hindi
+
+hi:
+MODELS: general
+hi-Latn: Roman Script beta
+MODELS: general
+Indonesian
+
+id: beta
+MODELS: general
+Italian
+
+it: beta
+MODELS: general (enhanced, base)
+Japanese
+
+ja: beta
+MODELS: general (enhanced, base)
+Korean
+
+ko: beta
+MODELS: general (enhanced, base)
+Norwegian
+
+no: beta
+MODELS: general (enhanced, base)
+Polish
+
+pl: beta
+MODELS: general (enhanced, base)
+Portuguese
+
+pt:
+MODELS: enhanced beta, general
+pt-BR: Brazil
+MODELS: enhanced beta, general
+pt-PT: Portugal
+MODELS: enhanced beta, general
+Russian
+
+ru:
+MODELS: general
+Spanish
+
+es:
+MODELS: general (enhanced beta, base)
+es-419: Latin America
+MODELS: general (enhanced beta, base)
+Swedish
+
+sv: beta
+MODELS: general
+Turkish
+
+tr:
+MODELS: general
+Ukrainian
+
+uk: beta
+MODELS: general
+To learn more, see Features: Language.
+
+detect_language:
+boolean
+Indicates whether to detect the language of the provided audio. To learn more, see Features: Language Detection.
+
+punctuate:
+boolean
+Indicates whether to add punctuation and capitalization to the transcript. To learn more, see Features: Punctuation.
+
+profanity_filter:
+boolean
+Indicates whether to remove profanity from the transcript. To learn more, see Features: Profanity Filter.
+
+redact:
+any
+Indicates whether to redact sensitive information, replacing redacted content with asterisks (\*). Options include:
+
+pci:
+Redacts sensitive credit card information, including credit card number, expiration date, and CVV.
+numbers: (or true)
+Aggressively redacts strings of numerals.
+ssn: beta
+Redacts social security numbers.
+Can send multiple instances in query string (for example, redact=pci&redact=numbers). When sending multiple values, redaction occurs in the order you specify. For instance, in this example, sensitive credit card information would be redacted first, then strings of numbers.
+
+To learn more, see Features: Redaction.
+
+diarize:
+boolean
+Indicates whether to recognize speaker changes. When set to true, each word in the transcript will be assigned a speaker number starting at 0.
+
+To use the legacy diarization feature, add a diarize_version parameter set to 2021-07-14.0. For example, diarize_version=2021-07-14.0.
+
+To learn more, see Features: Diarization.
+
+diarize_version:
+string
+Indicates the version of the diarization feature to use. To use the legacy diarization feature, set the parameter value to 2021-07-14.0.
+
+Only used when the diarization feature is enabled (diarize=true is passed to the API).
+
+To learn more, see Features: Diarization.
+
+ner:
+boolean
+Indicates whether to recognize alphanumeric strings. When set to true, whitespace will be removed between characters identified as part of an alphanumeric string. To learn more, see Features: Named-Entity Recognition (NER).
+
+multichannel:
+boolean
+Indicates whether to transcribe each audio channel independently. When set to true, you will receive one transcript for each channel, which means you can apply a different model to each channel using the model parameter (e.g., set model to general:phonecall, which applies the general model to channel 0 and the phonecall model to channel 1).
+
+To learn more, see Features: Multichannel.
+
+alternatives:
+integer
+Maximum number of transcript alternatives to return. Just like a human listener, Deepgram can provide multiple possible interpretations of what it hears.
+
+Default: 1
+
+numerals:
+boolean
+Indicates whether to convert numbers from written format (e.g., one) to numerical format (e.g., 1).
+
+Deepgram can format numbers up to 999,999.
+
+Converted numbers do not include punctuation. For example, 999,999 would be transcribed as 999999.
+
+To learn more, see Features: Numerals.
+
+search:
+any
+Terms or phrases to search for in the submitted audio. Deepgram searches for acoustic patterns in audio rather than text patterns in transcripts because we have noticed that acoustic pattern matching is more performant.
+
+Can include up to 25 search terms per request.
+Can send multiple instances in query string (for example, search=speech&search=Friday).
+To learn more, see Features: Search.
+
+replace:
+string
+Terms or phrases to search for in the submitted audio and replace.
+
+URL-encode any terms or phrases that include spaces, punctuation, or other special characters.
+Can send multiple instances in query string (for example, replace=this:that&replace=thisalso:thatalso).
+Replacing a term or phrase with nothing (replace=this) will remove the term or phrase from the audio transcript.
+To learn more, see Features: Replace.
+
+callback:
+string
+Callback URL to provide if you would like your submitted audio to be processed asynchronously. When passed, Deepgram will immediately respond with a request_id. When it has finished analyzing the audio, it will send a POST request to the provided URL with an appropriate HTTP status code.
+
+Notes:
+
+You may embed basic authentication credentials in the callback URL.
+Only ports 80, 443, 8080, and 8443 can be used for callbacks
+To learn more, see Features: Callback.
+
+keywords:
+any
+Keywords to which the model should pay particular attention to boosting or suppressing to help it understand context. Just like a human listener, Deepgram can better understand mumbled, distorted, or otherwise hard-to-decipher speech when it knows the context of the conversation.
+
+Notes:
+
+Can include up to 200 keywords per request.
+Can send multiple instances in query string (for example, keywords=medicine&keywords=prescription).
+Can request multi-word keywords in a percent-encoded query string (for example, keywords=miracle%20medicine). When Deepgram listens for your supplied keywords, it separates them into individual words, then boosts or suppresses them individually.
+Can append a positive or negative intensifier to either boost or suppress the recognition of particular words. Positive and negative values can be decimals.
+Follow best practices for keyword boosting.
+Support for out-of-vocabulary (OOV) keyword boosting when processing streaming audio is currently in beta; to fall back to previous keyword behavior, append the query parameter keyword_boost=legacy to your API request.
+To learn more, see Features: Keywords.
+
+paragraphs:
+boolean
+Indicates whether Deepgram will split audio into paragraphs to improve transcript readability. When paragraphs is set to true, you must also set either punctuate, diarize, or multichannel to true.
+
+To learn more, see Features: Paragraphs.
+
+summarize:
+boolean
+Indicates whether Deepgram will provide summaries for sections of content. When summarize is set to true, punctuate will be set to true by default.
+
+To learn more, see Features: Summarize.
+
+detect_topics:
+boolean
+Indicates whether Deepgram will identify and extract key topics for sections of content. When detect_topics is set to true, punctuate will be set to true by default.
+
+To learn more, see Features: Topic Detection.
+
+utterances:
+boolean
+Indicates whether Deepgram will segment speech into meaningful semantic units, which allows the model to interact more naturally and effectively with speakers' spontaneous speech patterns. For example, when humans speak to each other conversationally, they often pause mid-sentence to reformulate their thoughts, or stop and restart a badly-worded sentence. When utterances is set to true, these utterances are identified and returned in the transcript results.
+
+By default, when utterances is enabled, it starts a new utterance after 0.8 s of silence. You can customize the length of time used to determine where to split utterances by submitting the utt_split parameter.
+
+To learn more, see Features: Utterances.
+
+utt_split:
+number
+Length of time in seconds of silence between words that Deepgram will use when determining where to split utterances. Used when utterances is enabled.
+
+Default: 0.8
+
+To learn more, see Features: Utterance Split.
+
+tag:
+string
+Tag to associate with the request. Your request will automatically be associated with any tags you add to the API Key used to run the request. Tags associated with requests appear in usage reports.
+
+To learn more, see Features: Tag.
+
+#### Request Body Schema
+
+Request body when submitting pre-recorded audio. Accepts either:
+
+raw binary audio data. In this case, include a Content-Type header set to the audio MIME type.
+JSON object with a single field from which the audio can be retrieved. In this case, include a Content-Type header set to application/json.
+url:
+string
+URL of audio file to transcribe.
+
+#### Responses
+
+Status Description
+200 Success Audio submitted for transcription.
+
+#### Response Schema
+
+metadata: object
+
+JSON-formatted ListenMetadata object.
+
+request_id: uuid
+
+Unique identifier of the submitted audio and derived data returned.
+
+transaction_key: string
+
+Blob of text that helps Deepgram engineers debug any problems you encounter. If you need help getting an API call to work correctly, send this key to us so that we can use it as a starting point when investigating any issues.
+
+sha256: string
+
+SHA-256 hash of the submitted audio data.
+
+created: string
+
+ISO-8601 timestamp that indicates when the audio was submitted.
+
+duration: number
+
+Duration in seconds of the submitted audio.
+
+channels: integer
+
+Number of channels detected in the submitted audio.
+
+results: object
+
+JSON-formatted ListenResults object.
+
+channels: array
+
+Array of JSON-formatted ChannelResult objects.
+
+search: array
+
+Array of JSON-formatted SearchResults.
+
+query: string
+
+Term for which Deepgram is searching.
+
+hits: array
+
+Array of JSON-formatted Hit objects.
+
+confidence: number
+
+Value between 0 and 1 that indicates the model's relative confidence in this hit.
+
+start: number
+
+Offset in seconds from the start of the audio to where the hit occurs.
+
+end: number
+
+Offset in seconds from the start of the audio to where the hit ends.
+
+snippet: string
+
+Transcript that corresponds to the time between start and end.
+
+alternatives: array
+
+Array of JSON-formatted ResultAlternative objects. This array will have length n, where n matches the value of the alternatives parameter passed in the request body.
+
+transcript: string
+
+Single-string transcript containing what the model hears in this channel of audio.
+
+confidence: number
+
+Value between 0 and 1 indicating the model's relative confidence in this transcript.
+
+words: array
+
+Array of JSON-formatted Word objects.
+
+word: string
+
+Distinct word heard by the model.
+
+start: number
+
+Offset in seconds from the start of the audio to where the spoken word starts.
+
+end: number
+
+Offset in seconds from the start of the audio to where the spoken word ends.
+
+confidence: number
+
+Value between 0 and 1 indicating the model's relative confidence in this word.
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Transcribe Live Streaming Audio
+
+Deepgram provides its customers with real-time, streaming transcription via its streaming endpoints. These endpoints are high-performance, full-duplex services running over the tried-and-true WebSocket protocol, which makes integration with customer pipelines simple due to the wide array of client libraries available.
+
+To use this endpoint, connect to `wss://api.deepgram.com/v1/listen`. TLS encryption will protect your connection and data. We support a minimum of TLS 1.2.
+
+All audio data is sent to the streaming endpoint as binary-type WebSocket messages containing payloads that are the raw audio data. Because the protocol is full-duplex, you can stream in real-time and still receive transcription responses while uploading data.
+
+When you are finished, send a JSON message to the server: `{ 'type': 'CloseStream' }`. The server will interpret it as a shutdown command, which means it will finish processing whatever data is still has cached, send the response to the client, send a summary metadata object, and then terminate the WebSocket connection.
+
+To learn more about working with real-time streaming data and results, see [Get Started with Streaming Audio](https://developers.deepgram.com/documentation/getting-started/streaming/).
+
+Deepgram does not store transcriptions. Make sure to save output or [return transcriptions to a callback URL for custom processing](/documentation/features/callback/).
+
+#### Query Parameters
+
+Query Parameters
+tier:
+string
+Level of model you would like to use in your request. Options include:
+
+enhanced:
+Applies our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.
+base: (Default)
+Applies our Base models, which are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness.
+To learn more, see Features: Tier.
+
+model:
+string
+AI model used to process submitted audio. Options include:
+
+general: (Default)
+Optimized for everyday audio processing.
+TIERS: enhanced, base
+meeting:
+Optimized for conference room settings, which include multiple speakers with a single microphone.
+TIERS: enhanced beta, base
+phonecall:
+Optimized for low-bandwidth audio phone calls.
+TIERS: enhanced beta, base
+voicemail:
+Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.
+TIERS: base
+finance:
+Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.
+TIERS: enhanced beta, base
+conversationalai:
+Optimized to allow artificial intelligence technologies, such as chatbots, to interact with people in a human-like way.
+TIERS: base
+video:
+Optimized for audio sourced from videos.
+TIERS: base
+<custom_id>:
+To use a custom model associated with your account, include its custom_id.
+TIERS: enhanced, base (depending on which tier the custom model was trained on)
+To learn more, see Features: Model.
+
+version:
+string
+Version of the model to use.
+
+Default: latest
+
+Possible values: latest OR <version_id>
+
+To learn more, see Features: Version.
+
+language:
+string
+BCP-47 language tag that hints at the primary spoken language. Language support is optimized for the following language/model combinations:
+
+Chinese
+
+zh-CN: China (Simplified Mandarin) beta
+MODELS: general
+zh-TW: Taiwan (Traditional Mandarin) beta
+MODELS: general
+Dutch
+
+nl: beta
+MODELS: general (enhanced, base)
+English
+
+en: English (Default)
+MODELS:general (enhanced, base), meeting (enhanced beta, base), phonecall (enhanced beta, base), voicemail, finance (enhanced beta, base), conversationalai, video
+en-AU: Australia
+MODELS: general
+en-IN: India
+MODELS: general
+en-NZ: New Zealand
+MODELS: general
+en-GB: United Kingdom
+MODELS: general
+en-US: United States
+MODELS: general (enhanced, base), meeting (enhanced beta, base), phonecall (enhanced beta, base), voicemail, finance (enhanced beta, base), conversationalai, video
+Flemish
+
+nl: beta
+MODELS: general (enhanced, base)
+French
+
+fr:
+MODELS: general (enhanced beta, base)
+fr-CA: Canada
+MODELS: general
+German
+
+de:
+MODELS: general (enhanced beta, base)
+Hindi
+
+hi:
+MODELS: general
+hi-Latn: Roman Script beta
+MODELS: general
+Indonesian
+
+id: beta
+MODELS: general
+Italian
+
+it: beta
+MODELS: general (enhanced, base)
+Japanese
+
+ja: beta
+MODELS: general (enhanced, base)
+Korean
+
+ko: beta
+MODELS: general (enhanced, base)
+Norwegian
+
+no: beta
+MODELS: general (enhanced, base)
+Polish
+
+pl: beta
+MODELS: general (enhanced, base)
+Portuguese
+
+pt:
+MODELS: enhanced beta, general
+pt-BR: Brazil
+MODELS: enhanced beta, general
+pt-PT: Portugal
+MODELS: enhanced beta, general
+Russian
+
+ru:
+MODELS: general
+Spanish
+
+es:
+MODELS: general (enhanced beta, base)
+es-419: Latin America
+MODELS: general (enhanced beta, base)
+Swedish
+
+sv: beta
+MODELS: general
+Turkish
+
+tr:
+MODELS: general
+Ukrainian
+
+uk: beta
+MODELS: general
+To learn more, see Features: Language.
+
+punctuate:
+boolean
+Indicates whether to add punctuation and capitalization to the transcript. To learn more, see Features: Punctuation.
+
+profanity_filter:
+boolean
+Indicates whether to remove profanity from the transcript. To learn more, see Features: Profanity Filter.
+
+redact:
+any
+Indicates whether to redact sensitive information, replacing redacted content with asterisks (\*). Options include:
+
+pci:
+
+Redacts sensitive credit card information, including credit card number, expiration date, and CVV.
+
+numbers: (or true)
+
+Aggressively redacts strings of numerals.
+
+ssn: beta
+
+Redacts social security numbers.
+
+Can send multiple instances in query string (for example, redact=pci&redact=numbers). When sending multiple values, redaction occurs in the order you specify. For instance, in this example, sensitive credit card information would be redacted first, then strings of numbers.
+
+To learn more, see Features: Redaction.
+
+diarize:
+boolean
+Indicates whether to recognize speaker changes. When set to true, each word in the transcript will be assigned a speaker number starting at 0.
+
+To use the legacy diarization feature, add a diarize_version parameter set to 2021-07-14.0. For example, diarize_version=2021-07-14.0.
+
+To learn more, see Features: Diarization.
+
+diarize_version:
+string
+Indicates the version of the diarization feature to use. To use the legacy diarizer, set the parameter value to 2021-07-14.0.
+
+Only used when the diarization feature is enabled (diarize=true is passed to the API).
+
+To learn more, see Features: Diarization.
+
+ner:
+boolean
+Indicates whether to recognize alphanumeric strings. When set to true, whitespace will be removed between characters identified as part of an alphanumeric string. To learn more, see Features: Named-Entity Recognition (NER).
+
+multichannel:
+boolean
+Indicates whether to transcribe each audio channel independently. When set to true, you will receive one transcript for each channel, which means you can apply a different model to each channel using the model parameter (e.g., set model to general:phonecall, which applies the general model to channel 0 and the phonecall model to channel 1).
+
+To learn more, see Features: Multichannel.
+
+alternatives:
+integer
+Maximum number of transcript alternatives to return. Just like a human listener, Deepgram can provide multiple possible interpretations of what it hears.
+
+Default: 1
+
+numerals:
+boolean
+Indicates whether to convert numbers from written format (e.g., one) to numerical format (e.g., 1).
+
+Deepgram can format numbers up to 999,999.
+
+Converted numbers do not include punctuation. For example, 999,999 would be transcribed as 999999.
+
+To learn more, see Features: Numerals.
+
+search:
+any
+Terms or phrases to search for in the submitted audio. Deepgram searches for acoustic patterns in audio rather than text patterns in transcripts because we have noticed that acoustic pattern matching is more performant.
+
+Can include up to 25 search terms per request.
+Can send multiple instances in query string (for example, search=speech&search=Friday).
+To learn more, see Features: Search.
+
+replace:
+string
+Terms or phrases to search for in the submitted audio and replace.
+
+URL-encode any terms or phrases that include spaces, punctuation, or other special characters.
+Can send multiple instances in query string (for example, replace=this:that&replace=thisalso:thatalso).
+Replacing a term or phrase with nothing (replace=this) will remove the term or phrase from the audio transcript.
+To learn more, see Features: Replace.
+
+callback:
+string
+Callback URL to provide if you would like your submitted audio to be processed asynchronously. When passed, Deepgram will immediately respond with a request_id. When it has finished analyzing the audio, it will send a POST request to the provided URL with an appropriate HTTP status code.
+
+Notes:
+
+You may embed basic authentication credentials in the callback URL.
+Only ports 80, 443, 8080, and 8443 can be used for callbacks
+For streaming audio, callback can be used to redirect streaming responses to a different server:
+
+If the callback URL begins with http:// or https://, then POST requests are sent to the callback server for each streaming response.
+If the callback URL begins with ws:// or wss://, then a WebSocket connection is established with the callback server and WebSocket text messages are sent containing the streaming responses.
+If a WebSocket callback connection is disconnected at any point, the entire real-time transcription stream is killed; this maintains the strong guarantee of a one-to-one relationship between incoming real-time connections and outgoing WebSocket callback connections.
+To learn more, see Features: Callback.
+
+keywords:
+any
+Keywords to which the model should pay particular attention to boosting or suppressing to help it understand context. Just like a human listener, Deepgram can better understand mumbled, distorted, or otherwise hard-to-decipher speech when it knows the context of the conversation.
+
+Notes:
+
+Can include up to 200 keywords per request.
+Can send multiple instances in query string (for example, keywords=medicine&keywords=prescription).
+Can request multi-word keywords in a percent-encoded query string (for example, keywords=miracle%20medicine). When Deepgram listens for your supplied keywords, it separates them into individual words, then boosts or suppresses them individually.
+Can append a positive or negative intensifier to either boost or suppress the recognition of particular words. Positive and negative values can be decimals.
+Follow best practices for keyword boosting.
+Support for out-of-vocabulary (OOV) keyword boosting when processing streaming audio is currently in beta; to fall back to previous keyword behavior, append the query parameter keyword_boost=legacy to your API request.
+To learn more, see Features: Keywords.
+
+interim_results:
+boolean
+Indicates whether the streaming endpoint should send you updates to its transcription as more audio becomes available. When set to true, the streaming endpoint returns regular updates, which means transcription results will likely change for a period of time. By default, this flag is set to false.
+
+When the flag is set to false, latency increases (usually by several seconds) because the server needs to stabilize the transcription before returning the final results for each piece of incoming audio. If you want the lowest-latency streaming available, then set interim_results to true and handle the corrected transcripts as they are returned.
+
+To learn more, see Features: Interim Results.
+
+endpointing:
+boolean
+Indicates whether Deepgram will detect whether a speaker has finished speaking (or paused for a significant period of time, indicating the completion of an idea). When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes the result for the processed time range and returns the transcript with a speech_final parameter set to true.
+
+For example, if you are working with a 15-second audio clip, but someone is speaking for only the first 3 seconds, endpointing allows you to get a finalized result after the first 3 seconds.
+
+By default, endpointing is enabled and finalizes a transcript after a short period of silence.
+
+Default: true
+
+To learn more, see Features: Endpointing.
+
+encoding:
+string
+Expected encoding of the submitted streaming audio. If this parameter is set, sample_rate must also be specified.
+
+Required when raw, headerless audio packets are sent to the streaming service. For containerized audio, pre-recorded audio, or audio submitted to the standard /listen endpoint, Deepgram will automatically detect the audio encoding and this parameter should not be used.
+
+Options include:
+
+linear16: 16-bit, little endian, signed PCM WAV data
+flac: FLAC-encoded data
+mulaw: mu-law encoded WAV data
+amr-nb: adaptive multi-rate narrowband codec
+amr-wb: adaptive multi-rate wideband codec
+opus: Ogg Opus
+speex: Ogg Speex
+To learn more, see Features: Encoding.
+
+channels:
+integer
+Number of independent audio channels contained in submitted streaming audio. Only read when a value is provided for encoding.
+
+Default: 1
+
+To learn more, see Features: Channels.
+
+sample_rate:
+integer
+Sample rate of submitted streaming audio. Required (and only read) when a value is provided for encoding.
+
+To learn more, see Features: Sample Rate.
+
+tag:
+string
+Tag to associate with the request. Your request will automatically be associated with any tags you add to the API Key used to run the request. Tags associated with requests appear in usage reports.
+
+To learn more, see Features: Tag.
+
+#### Responses
+
+Status Description
+201 Success Audio submitted for transcription.
+
+#### Response Schema
+
+channel_index: array
+
+Information about the active channel in the form [channel_index, total_number_of_channels].
+
+duration: number
+
+Duration in seconds.
+
+start: number
+
+Offset in seconds.
+
+is_final: boolean
+
+Indicates that Deepgram has identified a point at which its transcript has reached maximum accuracy and is sending a definitive transcript of all audio up to that point. To learn more, see Features: Interim Results.
+
+speech_final: boolean
+
+Indicates that Deepgram has detected an endpoint and immediately finalized its results for the processed time range. To learn more, see Features: Endpointing.
+
+channel: object
+
+alternatives: array
+
+Array of JSON-formatted ResultAlternative objects. This array will have length n, where n matches the value of the alternatives parameter passed in the request body.
+
+transcript: string
+
+Single-string transcript containing what the model hears in this channel of audio.
+
+confidence: number
+
+Value between 0 and 1 indicating the model's relative confidence in this transcript.
+
+words: array
+
+Array of JSON-formatted Word objects.
+
+word: string
+
+Distinct word heard by the model.
+
+start: number
+
+Offset in seconds from the start of the audio to where the spoken word starts.
+
+end: number
+
+Offset in seconds from the start of the audio to where the spoken word ends.
+
+confidence: number
+
+Value between 0 and 1 indicating the model's relative confidence in this word.
+
+metadata: object
+
+request_id: uuid
+
+Unique identifier of the submitted audio and derived data returned.
+
+#### Error Handling
+
+To gracefully close a streaming connection, send the following JSON string:
+
+`{ 'type': 'CloseStream' }`
+
+This tells Deepgram that no more audio will be sent. Deepgram will close the connection once all audio has finished processing.
+
+#### Error Handling
+
+If Deepgram encounters an error during real-time streaming, we will return a WebSocket Close frame (WebSocket Protocol specification, section 5.5.1]).
+
+The body of the Close frame will indicate the reason for closing using one of the specification’s pre-defined status codes followed by a UTF-8-encoded payload that represents the reason for the error. Current codes and payloads in use include:
+
+Code Payload Description
+1008 DATA-0000 The payload cannot be decoded as audio. Either the encoding is incorrectly specified, the payload is not audio data, or the audio is in a format unsupported by Deepgram.
+1011 NET-0000 The service has not transmitted a Text frame to the client within the timeout window. This may indicate an issue internally in Deepgram's systems or could be due to Deepgram not receiving enough audio data to transcribe a frame.
+1011 NET-0001 The service has not received a Binary frame from the client within the timeout window. This may indicate an internal issue in Deepgram's systems, the client's systems, or the network connecting them.
+After sending a Close message, the endpoint considers the WebSocket connection closed and will close the underlying TCP connection.
+
+</div>
+</div>

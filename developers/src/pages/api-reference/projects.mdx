@@ -1,0 +1,137 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Projects
+description: Projects for the Deepgram API
+order: 4
+---
+
+High-speed transcription of either pre-recorded or streaming audio. This feature is very fast, can understand nearly every audio format available, and is customizable. You can customize your transcript using various query parameters and apply general purpose and custom-trained AI models.
+
+Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
+
+<div>
+<div slot="left">
+
+### Get Projects
+
+Retrieves basic information about the specified project.
+
+Required account/project scope(s): `project:read`.
+
+#### Responses
+
+Status Description
+
+200 Success Projects found.
+
+#### Response Schema
+
+projects: array
+
+Array of project objects.
+
+project_id: uuid
+
+Unique identifier of the project.
+
+name: string
+
+Name of the project.
+
+company: string
+
+Name of the company associated with the project. Optional.
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Get Project
+
+#### Query Parameters
+
+project_id: uuid
+Unique identifier of the project for which you want to retrieve information.
+
+#### Responses
+
+Status Description
+200 Success Project found.
+404 Not Found A project with the specified ID was not found.
+
+#### Response Schema
+
+project_id: uuid
+
+Unique identifier of the project.
+
+name: string
+
+Name of the project.
+
+company: string
+
+Name of the company associated with the project. Optional.
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Update Project
+
+Updates the specified project.
+
+Required account scope(s): `project:write`. Required project scope(s): `project:write:settings`.
+
+#### Path Parameters
+
+project_id: uuid
+Unique identifier of the project that you want to update.
+
+#### Request Body Schema
+
+name: string
+Name of the project. Optional.
+
+company: string
+Name of the company associated with the project. Optional.
+
+#### Responses
+
+Status Description
+200 Success Project updated.
+
+#### Response Schema
+
+message: string
+
+Success message.
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Delete Project
+
+Deletes the specified project.
+
+Required account scope(s): `project:write`. Required project scope(s): `project:write:destroy`.
+
+#### Path Parameters
+
+project_id: uuid
+Unique identifier of the project that you want to delete.
+
+#### Responses
+
+Status Description
+200 Success Project deleted.
+
+</div>
+</div>

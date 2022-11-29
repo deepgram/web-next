@@ -1,0 +1,20 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Scopes
+description: Scopes for the Deepgram API
+order: 7
+---
+
+Scopes are permissions required to perform actions in a specified Deepgram Project. Scopes can be associated with Keys or Users. When associated with a Key, Scopes determine the actions that the Key can be used to perform in the Key's associated Project. When associated with a Member, Scopes determine what the user can do in their assigned Project. For more information, see [Working with Roles](/documentation/getting-started/roles/).
+
+<div>
+<div slot="left">
+
+#### Get Member Scopes
+
+Lists the specified project scopes assigned to the specified member. If the authenticated account has access to the `members:read:scopes`, `admins:read:scopes`, and `owners:read:scopes` project scopes, it will retrieve project scopes for any member of the specified project. Otherwise, it will retrieve project scopes for only the authenticated account.
+
+Required account scope(s): `account:read`, `project:read`. Required project scope(s): `project:read`. Optional project scope(s): `members:read:scopes`, `admins:read:scopes`, `owners:read:scopes`.
+
+</div>
+</div>

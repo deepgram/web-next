@@ -37,9 +37,7 @@
   "paths": {
     "/listen": {
       "post": {
-        "tags": [
-          "Transcription"
-        ],
+        "tags": ["Transcription"],
         "summary": "Transcribe pre-recorded audio",
         "operationId": "transcribeAudio",
         "description": "Transcribes the specified audio file.",
@@ -51,13 +49,7 @@
             "schema": {
               "type": "string",
               "default": "general",
-              "enum": [
-                "general",
-                "phonecall",
-                "meeting",
-                "conversationalai",
-                "<custom-id>"
-              ]
+              "enum": ["general", "phonecall", "meeting", "conversationalai", "<custom-id>"]
             },
             "examples": {
               "Use a standard model": {
@@ -86,21 +78,7 @@
               "type": "string",
               "nullable": true,
               "default": "en-US",
-              "enum": [
-                "en-GB",
-                "en-IN",
-                "en-NZ",
-                "en-US",
-                "es",
-                "fr",
-                "hi",
-                "ko",
-                "pt",
-                "pt-BR",
-                "ru",
-                "tr",
-                "null"
-              ]
+              "enum": ["en-GB", "en-IN", "en-NZ", "en-US", "es", "fr", "hi", "ko", "pt", "pt-BR", "ru", "tr", "null"]
             },
             "examples": {
               "Use a single language": {
@@ -160,13 +138,7 @@
               ],
               "nullable": true,
               "default": null,
-              "enum": [
-                "pci",
-                "numbers",
-                "ssn",
-                "true",
-                "null"
-              ]
+              "enum": ["pci", "numbers", "ssn", "true", "null"]
             },
             "examples": {
               "Redact all credit card information": {
@@ -362,9 +334,7 @@
                     "description": "Location of audio file to transcribe.\n"
                   }
                 },
-                "required": [
-                  "url"
-                ]
+                "required": ["url"]
               },
               "examples": {
                 "Submit online file": {
@@ -533,9 +503,7 @@
     },
     "/listen/stream": {
       "post": {
-        "tags": [
-          "Transcription"
-        ],
+        "tags": ["Transcription"],
         "summary": "Transcribe streaming audio",
         "operationId": "transcribeStreamingAudio",
         "x-codeSamples": [
@@ -557,13 +525,7 @@
             "schema": {
               "type": "string",
               "default": "general",
-              "enum": [
-                "general",
-                "phonecall",
-                "meeting",
-                "conversationalai",
-                "<custom-id>"
-              ]
+              "enum": ["general", "phonecall", "meeting", "conversationalai", "<custom-id>"]
             },
             "examples": {
               "Use a standard model": {
@@ -592,21 +554,7 @@
               "type": "string",
               "nullable": true,
               "default": "en-US",
-              "enum": [
-                "en-GB",
-                "en-IN",
-                "en-NZ",
-                "en-US",
-                "es",
-                "fr",
-                "hi",
-                "ko",
-                "pt",
-                "pt-BR",
-                "ru",
-                "tr",
-                "null"
-              ]
+              "enum": ["en-GB", "en-IN", "en-NZ", "en-US", "es", "fr", "hi", "ko", "pt", "pt-BR", "ru", "tr", "null"]
             },
             "examples": {
               "Use a single language": {
@@ -666,13 +614,7 @@
               ],
               "nullable": true,
               "default": null,
-              "enum": [
-                "pci",
-                "numbers",
-                "ssn",
-                "true",
-                "null"
-              ]
+              "enum": ["pci", "numbers", "ssn", "true", "null"]
             },
             "examples": {
               "Redact all credit card information": {
@@ -881,15 +823,7 @@
               "type": "string",
               "nullable": true,
               "default": null,
-              "enum": [
-                "amr-nb",
-                "amr-wb",
-                "flac",
-                "linear16",
-                "mulaw",
-                "opus",
-                "speex"
-              ]
+              "enum": ["amr-nb", "amr-wb", "flac", "linear16", "mulaw", "opus", "speex"]
             },
             "example": "encoding=flac"
           },
@@ -1009,9 +943,7 @@
     },
     "/keys": {
       "post": {
-        "tags": [
-          "API Keys"
-        ],
+        "tags": ["API Keys"],
         "summary": "Create a new key",
         "operationId": "createAPIKey",
         "description": "Don't want to reuse your username and password in your requests? Don't want to share credentials within your team?\nWant to have separate credentials for your staging and production systems? No problem: generate all the API keys you\nneed and use them just as you would your username and password.\n\n<Note>\nThis is the only opportunity to retrieve your API secret, so be sure to record it someplace safe.\n</Note>\n",
@@ -1059,9 +991,7 @@
         }
       },
       "get": {
-        "tags": [
-          "API Keys"
-        ],
+        "tags": ["API Keys"],
         "summary": "Get all keys",
         "operationId": "getAPIKeys",
         "description": "Returns the list of keys associated with your account.\n",
@@ -1098,9 +1028,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "API Keys"
-        ],
+        "tags": ["API Keys"],
         "summary": "Delete a key",
         "operationId": "deleteAPIKeys",
         "description": "Deletes the specified key.\n",
@@ -1150,13 +1078,7 @@
         "schema": {
           "type": "string",
           "default": "general",
-          "enum": [
-            "general",
-            "phonecall",
-            "meeting",
-            "conversationalai",
-            "<custom-id>"
-          ]
+          "enum": ["general", "phonecall", "meeting", "conversationalai", "<custom-id>"]
         },
         "examples": {
           "Use a standard model": {
@@ -1185,21 +1107,7 @@
           "type": "string",
           "nullable": true,
           "default": "en-US",
-          "enum": [
-            "en-GB",
-            "en-IN",
-            "en-NZ",
-            "en-US",
-            "es",
-            "fr",
-            "hi",
-            "ko",
-            "pt",
-            "pt-BR",
-            "ru",
-            "tr",
-            "null"
-          ]
+          "enum": ["en-GB", "en-IN", "en-NZ", "en-US", "es", "fr", "hi", "ko", "pt", "pt-BR", "ru", "tr", "null"]
         },
         "examples": {
           "Use a single language": {
@@ -1259,13 +1167,7 @@
           ],
           "nullable": true,
           "default": null,
-          "enum": [
-            "pci",
-            "numbers",
-            "ssn",
-            "true",
-            "null"
-          ]
+          "enum": ["pci", "numbers", "ssn", "true", "null"]
         },
         "examples": {
           "Redact all credit card information": {
@@ -1501,15 +1403,7 @@
           "type": "string",
           "nullable": true,
           "default": null,
-          "enum": [
-            "amr-nb",
-            "amr-wb",
-            "flac",
-            "linear16",
-            "mulaw",
-            "opus",
-            "speex"
-          ]
+          "enum": ["amr-nb", "amr-wb", "flac", "linear16", "mulaw", "opus", "speex"]
         },
         "example": "encoding=flac"
       },
@@ -2172,9 +2066,7 @@
                   "description": "Location of audio file to transcribe.\n"
                 }
               },
-              "required": [
-                "url"
-              ]
+              "required": ["url"]
             },
             "examples": {
               "Submit online file": {
