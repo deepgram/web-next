@@ -17,27 +17,28 @@ const pathname = Astro.url.pathname;
 <header x-data="{ menu: null }" class="sticky top-0 z-20">
 	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none" x-show="menu !== null" x-on:click="menu = null"></div>
 
-	<nav class="w-full bg-almostBlack/90 text-white bg-blur py-4 sm:py-0 sm:px-4 sm:pt-2">
-		<div class="flex justify-between items-end sm:items-center xl:grid grid-cols-7 px-4">
+	<nav class="w-full bg-almostBlack/90 text-white bg-blur py-0 sm:px-4">
+		<div class="flex justify-between items-center xl:grid grid-cols-3 px-4">
 			<div class="logo col-span-2 sm:mt-4 sm:mb-4 w-auto stroke-transparent text-left">
 				<Link href={WWW_DOMAIN} class="max-h-full">
 					<span class="sr-only">Deepgram</span>
-					<img class="h-full" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
+					<img class="h-[24px]" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
 					<!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" /> -->
 				</Link>
 			</div>
-			<div class="hidden xl:flex space-x-[1rem] items-center xl:ml-12 pr-4 col-start-5 col-span-3">
+			<div class="hidden xl:flex space-x-[1rem] items-center pr-4 col-start-5 lg:col-start-6 col-span-3">
 				<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 				<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--main-nav text-white">Log In</Link>
 				<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem] flex-1">Contact Us</Link>
 				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[7rem] flex-1">Sign Up</Link>
 			</div>
 			<div class="flex items-center space-x-5 xl:ml-12 xl:pb-1 xl:hidden">
+				<Button id="docsearch-button-tablet" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 				<Button class="button button--mini sm:button--small button--secondary" x-on:click="menu = 'Mobile'" aria-label="Mobile Menu">Menu</Button>
 				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--mini sm:button--small button--primary">Sign Up</Link>
 			</div>
 		</div>
-		<div class="max-w-screen-2xl mx-auto px-4 flex justify-between items-center xl:justify-start">
+		<div class="w-full mx-auto px-4 flex justify-between items-center xl:justify-start">
 			<div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
 				<nav class="flex space-x-[2.1875rem] pt-4" x-on:click.outside="menu = null">
 					<!-- NavLinks -->
