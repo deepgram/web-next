@@ -4,7 +4,7 @@ const { headings, docsType, classes } = Astro.props;
 const links = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 2);
 ---
 
-<nav class={`${classes} sticky top-20`}>
+<nav class={`${classes ? classes : ""} sticky top-28`}>
 	{headings && headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">CONTENT</h5>}
 	<ul class="hidden xl:block overflow-y-scroll">
 		{
@@ -33,7 +33,6 @@ const links = headings.filter((heading) => heading.depth >= 2 && heading.depth <
 			let id = g.id;
 			if (scrollPos >= top) {
 				document.querySelector(".active").classList.remove("active");
-				let elem = document.getElementById(`#${id}`);
 				document.getElementById(`scroll-${id}`).classList.add("active");
 			}
 		});

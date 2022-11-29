@@ -20,19 +20,19 @@ const { headings } = Astro.props;
 					<SideNav slot="aside" navStructure={nav} navTitle="On-Premises Deployments" />
 				</div>
 				<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full mx-auto sm:ml-8">
-			<PrimarySection class="py-10">
-				<BreadCrumb />
-				<div class="flex">
-					<Prose class="max-w-full lg:max-w-2xl">
-						<slot />
-					</Prose>
-					<div class="ml-8">
-						<TableOfContents headings={headings} docsType={"GUIDE"} classes="sticky top-40" />
-					</div>
+					<PrimarySection class="py-10">
+						<BreadCrumb />
+						<div class="grid grid-cols-12">
+							<Prose class="max-w-full lg:max-w-2xl col-span-12 xl:col-span-9">
+								<slot />
+							</Prose>
+							<div class="col-span-0 xl:col-span-3 ml-8">
+								<TableOfContents headings={headings} docsType={"GUIDE"} classes="sticky top-40" />
+							</div>
+						</div>
+					</PrimarySection>
 				</div>
-			</PrimarySection>
-		</div>
-	</div>
+			</div>
 		</HasAside>
 	</PrimarySection>
 </Default>
