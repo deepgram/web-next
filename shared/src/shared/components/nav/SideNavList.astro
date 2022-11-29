@@ -15,7 +15,7 @@ const { navStructure, class: className } = Astro.props;
 						{nav.children && <input id={`expand-${nav.to}`} class="toggle " type="checkbox" checked={pathname.includes(navToTrimmed)} />
   <label for={`expand-${nav.to}`} class="lbl-toggle "></label>}
 
-						<Link href={nav.to} class={`list-link hover:text-iris text-sm my-2 pl-1 py-1 pr-3 text-darkCharcoal inline-flex leading-5 ${pathname.endsWith(nav.to) ? "font-semibold" : "text-darkCharcoal"} ${nav.children ? "font-semibold" : ""} ${pathname.endsWith(nav.to) && nav.children ? "border-l-4 border-meadow" : "" }`}>
+						<Link href={nav.to} class={`list-link hover:text-iris text-sm my-2 pl-1 py-1 pr-3 text-darkCharcoal inline-flex leading-5 ${pathname.endsWith(nav.to) ? "font-semibold" : "text-darkCharcoal"}  ${pathname.endsWith(nav.to) && nav.children ? "border-l-4 border-meadow" : "" }`}>
 							{nav.name}
 						</Link>
 						
