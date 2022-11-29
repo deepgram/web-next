@@ -1,17 +1,24 @@
 ---
 import Layout from "../../../layouts/OnPrem.astro";
-import BlogCardList from "../../../shared/components/lists/BlogCardList.astro";
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../../shared/components/cards/DocsCard.astro";
 
 const baseComponents = await Astro.glob("./**/index.mdx");
 ---
 
 <Layout>
-	<article>
-		<h1>Base Components</h1>
-		<BlogCardList>
-			{baseComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
-		</BlogCardList>
+	<article class="-mr-0 lg:-mr-12">
+		<h1 class="mb-10">Base Components</h1>
+		<div class="hidden lg:flex">
+			<DocsCardList gridClass="threeColumn">
+				{baseComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			</DocsCardList>
+		</div>
+		<div class="lg:hidden flex">
+			<DocsCardList>
+				{baseComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			</DocsCardList>
+		</div>
 	</article>
 </Layout>
 
@@ -32,5 +39,9 @@ const baseComponents = await Astro.glob("./**/index.mdx");
 		font-size: 1.5em;
 		line-height: 1.3333333;
 		font-family: Favorit;
+	}
+
+	p {
+		font-weight: 400;
 	}
 </style>
