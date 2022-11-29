@@ -1,7 +1,38 @@
 ---
 import Default from "./Default.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import Prose from "./Prose.astro";
+import HasAside from "../shared/components/layout/HasAside.astro";
+import SideNav from "../shared/components/nav/SideNav.astro";
+import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
+import TableOfContents from "../components/documentation/GlossaryTOC.astro";
+import nav from "../pages/documentation/navigation.json";
+import "../assets/styles/developers.css";
+const { headings } = Astro.props;
 ---
 
 <Default>
-	<slot />
+	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
+		<HasAside gridClass="flex">
+			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+				<div class="col-span-1 hidden md:block">
+					<!-- <SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} client:load /> -->
+					<SideNav slot="aside" navStructure={nav} navTitle="Documentation	" />
+				</div>
+				<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full mx-auto sm:ml-8">
+					<PrimarySection class="py-10" padding="px-0">
+						<BreadCrumb />
+						<div class="flex">
+							<Prose class="max-w-full lg:max-w-2xl">
+								<slot />
+							</Prose>
+							<div class="col-span-0 ml-8">
+								<TableOfContents headings={headings} />
+							</div>
+						</div>
+					</PrimarySection>
+				</div>
+			</div>
+		</HasAside>
+	</PrimarySection>
 </Default>

@@ -1,3 +1,7 @@
+html {
+	scroll-padding-top: 120px;
+}
+
 .alert {
 		@apply flex flex-row flex-wrap items-center align-middle;
 		@apply text-sm text-black;

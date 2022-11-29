@@ -1,0 +1,204 @@
+---
+// import BlogCardList from "../../../shared/components/lists/BlogCardList.astro";
+// import DocsCard from "../../../shared/components/cards/DocsCard.astro";
+import Layout from "../../../layouts/Glossary.astro";
+const toc = [
+	{
+		id: "A",
+		depth: 2,
+		text: "A",
+	},
+	{
+		id: "B",
+		depth: 2,
+		text: "B",
+	},
+	{
+		id: "C",
+		depth: 2,
+		text: "C",
+	},
+	{
+		id: "D",
+		depth: 2,
+		text: "D",
+	},
+	{
+		id: "E",
+		depth: 2,
+		text: "E",
+	},
+	{
+		id: "F",
+		depth: 2,
+		text: "F",
+	},
+	{
+		id: "G",
+		depth: 2,
+		text: "G",
+	},
+	{
+		id: "H",
+		depth: 2,
+		text: "H",
+	},
+	{
+		id: "I",
+		depth: 2,
+		text: "I",
+	},
+	{
+		id: "J",
+		depth: 2,
+		text: "J",
+	},
+	{
+		id: "K",
+		depth: 2,
+		text: "K",
+	},
+	{
+		id: "L",
+		depth: 2,
+		text: "L",
+	},
+	{
+		id: "M",
+		depth: 2,
+		text: "M",
+	},
+	{
+		id: "N",
+		depth: 2,
+		text: "N",
+	},
+	{
+		id: "O",
+		depth: 2,
+		text: "O",
+	},
+	{
+		id: "P",
+		depth: 2,
+		text: "P",
+	},
+	{
+		id: "Q",
+		depth: 2,
+		text: "Q",
+	},
+	{
+		id: "R",
+		depth: 2,
+		text: "R",
+	},
+	{
+		id: "S",
+		depth: 2,
+		text: "S",
+	},
+	{
+		id: "T",
+		depth: 2,
+		text: "T",
+	},
+	{
+		id: "U",
+		depth: 2,
+		text: "U",
+	},
+	{
+		id: "V",
+		depth: 2,
+		text: "V",
+	},
+	{
+		id: "W",
+		depth: 2,
+		text: "W",
+	},
+	{
+		id: "X",
+		depth: 2,
+		text: "X",
+	},
+	{
+		id: "Y",
+		depth: 2,
+		text: "Y",
+	},
+	{
+		id: "Z",
+		depth: 2,
+		text: "Z",
+	},
+];
+let terms = await Astro.glob("./**.mdx");
+terms = terms.sort((a, b) => {
+	return a.frontmatter.title.localeCompare(b.frontmatter.title);
+});
+const lettersUsed = [...new Set(terms.map((m) => m.frontmatter.title[0].toUpperCase()))].sort();
+const headings = toc.map((h) => {
+	if (lettersUsed.includes(h.text)) {
+		h.used = true;
+	}
+});
+const termGroups = lettersUsed.map((letter) => {
+	return {
+		letter,
+		terms: terms.filter((term) => term.frontmatter.title.startsWith(letter)),
+	};
+});
+---
+
+<Layout headings={toc}>
+	<h1>Glossary</h1>
+	<p>
+		We've put together a glossary to help familiarize you with specialized Deepgram terminology. If you have a suggestion for a term to include, submit it through our feedback
+		form.
+	</p>
+	{
+		termGroups.map((group, i) => (
+			<div class="glossary-group">
+				<hr />
+				<div id={group.letter} class="letter">
+					{group.letter}
+				</div>
+				{group.terms.map((term) => (
+					<div>
+						<h3>{term.frontmatter.title}</h3>
+						<p>{term.frontmatter.description}</p>
+					</div>
+				))}
+			</div>
+		))
+	}
+</Layout>
+
+<style>
+	.letter {
+		visibility: hidden;
+		height: 0;
+	}
+	hr {
+		border-color: #e5e7eb;
+		border-top-width: 1px;
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+	h3 {
+		color: #111827;
+		font-weight: 700;
+		font-size: 1.25em;
+		margin-top: 1.5rem;
+		margin-bottom: 0.75rem;
+		line-height: 1.6;
+		text-transform: uppercase;
+	}
+	.glossary-group h3 + p:first-of-type {
+		margin-top: 0;
+		padding-top: 0;
+		margin-bottom: 1.25em;
+	}
+</style>
