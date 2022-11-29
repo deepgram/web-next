@@ -7,18 +7,18 @@ const { headings, docsType, classes }= Astro.props
 	<ul class="hidden xl:block">
 		{headings && headings.length > 0 &&
 			headings
-				.filter((heading) => heading.depth >= 2 && heading.depth <= 2)
+				.filter((heading) => heading.depth >= 2 && heading.depth <= 3)
 				.map((heading) => (
 					
 						{
 							heading.depth === 3 
 							?
-							<li class="pl-4 pb-4 border-l-2 border-stone">
+							<li class="text-xs pl-4 pr-8 pb-4 border-l border-r border-stone">
 							<Link class="text-steel" href={`#${heading.slug}`}>{heading.text}
 							</Link> 
 							</li>
 							:
-							<li class="pb-4">
+							<li class="text-xs pb-4 border-stone border-r">
 							<Link class="text-steel" href={`#${heading.slug}`}>{heading.text}
 							</Link>
 							</li>
