@@ -18,12 +18,12 @@ const hasHeadings = 	headings && headings.filter((heading) => heading.depth >= 2
 						{
 							heading.depth === 3 
 							?
-							<li id={`scroll-${heading.slug}`} class="text-xs pl-4 pr-8 py-2 border-l border-r border-stone">
+							<li id={`scroll-${heading.slug}`} class="text-sm pl-4 pr-8 py-2 border-l border-r border-stone">
 							<Link class="text-steel w-6" href={`#${heading.slug}`}>{heading.text}
 							</Link> 
 							</li>
 							:
-							<li id={`scroll-${heading.slug}`} class="text-xs py-2 pr-8 border-stone border-r">
+							<li id={`scroll-${heading.slug}`} class="text-sm py-2 pr-8 border-stone border-r">
 							<Link class="text-steel w-6" href={`#${heading.slug}`}>{heading.text}
 							</Link>
 							</li>
