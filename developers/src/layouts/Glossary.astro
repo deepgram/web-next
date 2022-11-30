@@ -5,7 +5,7 @@ import Prose from "./Prose.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
 import SideNav from "../shared/components/nav/SideNav.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
-import TableOfContents from "../components/documentation/GlossaryTOC.astro";
+import GlossaryTOC from "../components/documentation/GlossaryTOC.astro";
 import nav from "../pages/documentation/navigation.json";
 import "../assets/styles/developers.css";
 const { headings } = Astro.props;
@@ -27,7 +27,7 @@ const { headings } = Astro.props;
 								<slot />
 							</Prose>
 							<div class="col-span-0 lg:col-span-3 ml-8">
-								<TableOfContents headings={headings} />
+								<GlossaryTOC headings={headings} />
 							</div>
 						</div>
 					</PrimarySection>

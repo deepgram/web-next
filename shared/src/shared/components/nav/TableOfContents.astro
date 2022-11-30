@@ -32,7 +32,7 @@ const { headings, docsType, classes } = Astro.props;
 	</ul>
 </nav>
 
-<script>
+<script is:inline>
 	let scrollPos = 0;
 	function handleScroll() {
 		scrollPos = window.pageYOffset + 80;
@@ -43,7 +43,9 @@ const { headings, docsType, classes } = Astro.props;
 
 			let id = g.id;
 			if (scrollPos >= top) {
-				document.querySelector(".active").classList.remove("active");
+				if(document.querySelector(".active")) {
+					document.querySelector(".active").classList.remove("active");
+				}
 				document.getElementById(`scroll-${id}`).classList.add("active");
 			}
 		});
