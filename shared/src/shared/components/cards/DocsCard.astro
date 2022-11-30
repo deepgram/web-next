@@ -12,15 +12,22 @@ const { class: classes, doc } = Astro.props;
       null
     }
   </header>
-  <main class="flex flex-col p-4">
+  <main class="docs-card flex flex-col p-4">
     <h3 class="mb-4">{doc.frontmatter.title}</h3>
-    <p>{doc.frontmatter.description}</p>
+    <p class="p-0">{doc.frontmatter.description}</p>
   </main>
   
 </GenericDocsCard>
 
-<style is:global>
-  h3, p {
-    @apply text-darkCharcoal;
-  }
+<style>
+
+:global(h3, p) {
+  @apply text-darkCharcoal;
+  @apply font-normal;
+	}
+
+:global(.docs-card > p:first-of-type){
+  @apply pt-0 !important;
+}
+
 </style>
