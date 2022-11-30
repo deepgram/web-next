@@ -32,10 +32,10 @@ const links = headings.filter((heading) => heading.depth >= 2 && heading.depth <
 
 			let id = g.id;
 			if (scrollPos >= top) {
-				if (document.querySelector(".active")) {
-					document.querySelector(".active").classList.remove("active");
+				if (document.querySelector(".toc-active")) {
+					document.querySelector(".toc-active").classList.remove("toc-active");
 				}
-				document.getElementById(`scroll-${id}`).classList.add("active");
+				document.getElementById(`scroll-${id}`).classList.add("toc-active");
 			}
 		});
 	}
@@ -44,7 +44,7 @@ const links = headings.filter((heading) => heading.depth >= 2 && heading.depth <
 </script>
 
 <style>
-	li.active {
+	li.toc-active {
 		@apply border-l-4 border-grass;
 	}
 </style>
