@@ -1,0 +1,179 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: "Troubleshooting Connection Errors When Live Streaming Audio"
+description: Learn how to debug common real-time, live streaming transcription errors.
+type: "transcription"
+order: 13
+seo:
+  metaTitle: "Troubleshooting Connection Errors When Live Streaming Audio"
+  metaDescription: Learn how to debug common real-time, live streaming transcription errors.
+  keywords: streaming, live streaming, real-time, connection, error, timeout, recover
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+Successfully integrating different systems can be complex, especially when handling real-time audio. When you begin to work with Deepgram’s live streaming API, you may encounter some errors. If you do, don't worry--we’re here to help!
+
+<Alert type="info">
+
+Our [streaming test suite](https://github.com/deepgram/streaming-test-suite) provides sample code to help you get started. Before you begin to build your own integration, we recommend running our test suite code at least once to ensure that you can successfully stream sample audio to Deepgram.
+
+</Alert>
+
+## WebSocket Connections
+
+WebSocket is a protocol that makes it possible to open a two-way interactive communication session between a user's browser and a server. When a WebSocket connection is established, you can send messages to a server and receive event-driven responses from the server without having to poll the server for a reply. WebSocket can be useful when you want to work with any real-time updated or continuous streams of data that are being transmitted over the network.
+
+### Establishing a WebSocket Connection
+
+To initiate a WebSocket connection, the client sends an HTTP handshake request to the server asking the server to upgrade the connection to a WebSocket connection. This request may contain configuration options passed as URL query parameters. If operating on the server side, the request may also contain additional headers that can be used for authentication or other purposes. (For security reasons, browser-based WebSocket libraries restrict access to sending and receiving headers.)
+
+<Alert type="info">
+
+Most WebSocket libraries abstract the handshake process. A developer only needs to call `websockets.connect` (or the library’s equivalent), and the library handles the rest of the implementation of the HTTP upgrade.
+
+</Alert>
+
+If the server thinks the HTTP request and any provided configuration options or credentials are valid, it responds with an HTTP `101` code, indicating that the connection is accepted and that the server plans to switch the connection to the WebSocket protocol. After the HTTP `101` response is sent, the client can start to send and receive data from the WebSocket as usual.
+
+If something in the HTTP request doesn’t seem right, the server rejects the request and does not complete the upgrade from HTTP to WebSocket. If the server cannot upgrade an HTTP request to a WebSocket connection, you will receive an error in the form of an HTTP `4xx` or `5xx` response.
+
+### Closing the WebSocket Connection
+ 
+A successfully opened WebSocket connection will stay alive until it is eventually closed by either the client or the server. When this occurs, a WebSocket Close frame (WebSocket Protocol specification, [section 5.5.1](https://tools.ietf.org/html/rfc6455#section-5.5.1)) will be returned. The body of the Close frame will indicate the reason for closing using one of the specification’s [pre-defined status codes](https://tools.ietf.org/html/rfc6455#section-7.4.1) followed by a UTF-8-encoded payload that represents the reason for the error. After sending a Close message, the endpoint considers the WebSocket connection closed and will close the underlying TCP connection.
+
+## Debugging Websocket Errors
+
+Websocket errors that you may experience fall into two major categories:
+
+- Failure to connect to Deepgram
+- Abrupt closure of the WebSocket connection after it has been established
+
+### Failure to Connect to Deepgram
+
+If you’re unable to connect to Deepgram, then during the upgrade process, the Deepgram API provides custom HTTP headers that contain debugging information:
+
+- Regardless of the success or failure of the WebSocket upgrade, all requests include the `dg-request-id` HTTP header, which contains the request ID.
+- Requests that do not successfully upgrade to a WebSocket connection also include the `dg-error` HTTP header, which contains a detailed error message concerning why the connection could not be upgraded. This error message is also sent back in the body of the HTTP response.
+
+#### Accessing WebSocket Headers
+
+The level of access you have to the custom HTTP headers returned by the Deepgram API depends on the WebSocket library you are using. For example, for security reasons, browser-based WebSocket libraries like the JavaScript WebSocket library only allow access to HTTP header information for successful WebSocket connections.
+
+##### Code Samples
+
+<Alert type="warning">
+
+In the following code samples, be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. (You can generate one using [the Deepgram Console](http://console.deepgram.com/signup?jump=keys)). Otherwise, the code will fail with an `Invalid credentials` error.
+
+</Alert>
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Python">
+
+```py
+import websockets
+import json
+import asyncio
+
+async def main():
+    try:
+        async with websockets.connect('wss://api.deepgram.com/v1/listen',
+        # Remember to replace the YOUR_DEEPGRAM_API_KEY placeholder with your Deepgram API Key
+        extra_headers = { 'Authorization': f'token YOUR_DEEPGRAM_API_KEY' }) as ws:
+            # If the request is successful, print the request ID from the HTTP header
+            print('🟢 Successfully opened connection')
+            print(f'Request ID: {ws.response_headers["dg-request-id"]}')
+            await ws.send(json.dumps({
+                'type': 'CloseStream'
+            }))
+    except websockets.exceptions.InvalidStatusCode as e:
+        # If the request fails, print both the error message and the request ID from the HTTP headers
+        print(f'🔴 ERROR: Could not connect to Deepgram! {e.headers.get("dg-error")}')
+        print(f'🔴 Please contact Deepgram Support with request ID {e.headers.get("dg-request-id")}')
+
+asyncio.run(main())
+```
+
+</CodeBlock>
+
+<CodeBlock label="Node.js" active>
+
+```js
+const WebSocket = require('ws');
+const ws = new WebSocket('wss://api.deepgram.com/v1/listen', {
+    headers: {
+      // Remember to replace the YOUR_DEEPGRAM_API_KEY placeholder with your Deepgram API Key
+      Authorization: 'Token YOUR_DEEPGRAM_API_KEY'',
+    },
+});
+// For security reasons, browser-based WebSocket libraries only allow access to HTTP header information for successful WebSocket connections
+// If the request is successful, return the HTTP header that contains the request ID
+ws.on('upgrade', function message(data) {
+    console.log(data.headers['dg-request-id']);
+});
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Abrupt WebSocket Closures
+
+If Deepgram encounters an error during real-time streaming, the Deepgram API returns a WebSocket Close frame ([WebSocket Protocol specification, section 5.5.1](https://www.rfc-editor.org/rfc/rfc6455#section-5.5.1)). The body of the Close frame indicates the reason for closing using one of the specification’s pre-defined status codes followed by a UTF-8-encoded payload that represents the reason for the error. Current codes and payloads in use include:
+
+| Code   | Payload     | Description |
+| ------ | ----------- | ----------- |
+| `1008` | `DATA-0000` | The payload cannot be decoded as audio. The payload either is not audio data or is a codec unsupported by Deepgram. |
+| `1011` | `NET-0000`  | The service has not transmitted a Text frame to the client within the timeout window. This may indicate an internal issue with Deepgram's systems, or Deepgram may have not received enough audio data to transcribe a frame. |
+| `1011` | `NET-0001`  | The service has not received a Binary frame from the client within the timeout window. This may indicate an internal issue with Deepgram's systems, the client's systems, or the network connecting them. |
+
+After sending the Close message, our endpoint considers the WebSocket connection closed and will close the underlying TCP connection.
+
+#### Troubleshooting `1008` - `DATA-0000` WebSocket Errors
+
+If you’re receiving a `1008` code with a `DATA-0000` payload, Deepgram can’t decode the audio data you’re sending.
+
+Often, this error is caused because the data you intend to send to Deepgram is not being sent. To troubleshoot:
+
+1. Start by closely inspecting the data being sent to Deepgram. One way to do this is by writing the audio data to a file to make sure it contains the expected audio and can be played back.
+
+2. If the audio data is valid, check whether the audio being sent is raw or containerized. If the audio is raw, frequently this error occurs because the encoding and sample rate parameters have not been set explicitly or have been set incorrectly, either of which will cause Deepgram to be unable to decode the audio. To learn more, see our guide on [determining your audio format](/documentation/guides/determine-audio-format/).
+
+#### Troubleshooting `1011` - `NET-0000` WebSocket Errors
+
+If you’re receiving a `1011` code with a `NET-0000` payload, Deepgram wasn’t able to generate a transcript for the audio data you’re sending before the system timed out. To troubleshoot:
+
+1. [Check the status of Deepgram's systems](https://status.deepgram.com/) to confirm that Deepgram is operational.
+
+2. If all Deepgram systems are green, [contact Support](mailto:developers@deepgram.com). When [contacting support](mailto:developers@deepgram.com), be sure to include:
+
+- the error received
+- the request ID
+- a sample of your audio
+- any related code you’re able to share.
+
+#### Troubleshooting `1011` - `NET-0001` WebSocket Errors
+
+If you’re receiving a `1011` code with a `NET-0001` payload, Deepgram didn’t receive any audio from you before the system timed out.
+
+As with the `1008` code, often this error is caused because the data you intend to send to Deepgram is not being sent. In some cases, if there is a period of time before your system begins to send audio, you may need to send silent audio to Deepgram to keep the connection open.
+
+Other reasons for this error include potential network issues. To troubleshoot, test your network by making a cURL request to Deepgram using a Deepgram-hosted audio file. To learn how to do this, you can follow along with our guide on [generating transcripts from the terminal](/documentation/guides/save-transcripts-from-terminal/). If you’re unable to get a transcript using this method, something in your network may be preventing you from connecting to Deepgram.
+
+Another way to check that audio is successfully leaving your network is to capture a sample of your network traffic using a packet sniffer and network analysis tool like [Wireshark](https://www.wireshark.org/).
+
+## Providing Feedback
+
+If you would like to provide general feedback about our products, please start a new [GitHub Discussion](https://github.com/orgs/deepgram/discussions/categories/feedback).
+
+## Related Guides
+
+Some related guides that may be of interest include:
+
+- [Determining Your Audio Format for Live Streaming Audio](/documentation/guides/determine-audio-format/)
+- [Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio](/documentation/guides/understand-endpointing-interim-results/)
+- [Recovering from Connection Errors and Timeouts When Live Streaming Audio](/documentation/guides/recover-streaming-errors/)
+- [Measuring Latency](/documentation/guides/measure-latency/)

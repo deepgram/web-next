@@ -1,12 +1,12 @@
 ---
 layout: ../../../../layouts/Documentation.astro
 title: Endpointing
-description: Learn about Deepgram's Voice Activity Detection (VAD) feature, which detects pauses in submitted audio. Used when the Endpointing feature is enabled for streaming audio.
+description: Learn about Deepgram's Endpointing feature, which returns transcripts when pauses in speech are detected.
 tags: [endpointing, streaming]
 order: 19
 seo:
   metaTitle: Endpointing
-  metaDescription: Learn about Deepgram's Voice Activity Detection (VAD) feature, which detects pauses in submitted audio. Used when the Endpointing feature is enabled for streaming audio.
+  metaDescription: Learn about Deepgram's Endpointing feature, which returns transcripts when pauses in speech are detected.
   keywords: speech recognition, streaming, vad, voice activity detection, endpointing, pause, speech_final
 ---
 import Alert from '../../../../shared/components/global/Alert.astro'; 
@@ -15,9 +15,7 @@ import Alert from '../../../../shared/components/global/Alert.astro';
 
 <div class="badge">STREAMING</div>
 
-Deepgram’s Endpointing feature monitors incoming streaming audio and detects when a user has finished speaking or paused for a significant amount of time, indicating the completion of an idea. When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes its results for the processed time range and returns the transcript with a `speech_final` parameter set to `true`.
-
-Endpointing relies on the [Voice Activity Detection (VAD)](/documentation/features/voice-activity-detection/) feature, which monitors the incoming audio and triggers when a sufficiently long pause is detected. You can customize the length of time used to detect whether a speaker has finished speaking by submitting the `vad_turnoff` parameter when Endpointing is enabled. By default, Deepgram uses 10 milliseconds.
+Deepgram’s Endpointing feature monitors incoming streaming audio and detects sufficiently long pauses that are likely to represent an endpoint in speech. When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes its results for the processed time range and returns the transcript with a `speech_final` parameter set to `true`.
 
 <Alert type="info">
 
@@ -29,7 +27,7 @@ Endpointing can be used with Deepgram's [Interim Results](/documentation/feature
 
 Some examples of use cases for Endpointing include:
 
-- Determining whether a speaker has finished speaking.
+- Returning finalized transcripts as soon as possible when a break in speech is detected.
 
 ## Enable Feature
 

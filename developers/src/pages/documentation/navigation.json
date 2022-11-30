@@ -58,6 +58,10 @@
         "to": "/documentation/features/language/"
       },
       {
+        "name": "Language Detection",
+        "to": "/documentation/features/detect-language/"
+      },
+      {
         "name": "Punctuation",
         "to": "/documentation/features/punctuate/"
       },
@@ -106,6 +110,14 @@
         "to": "/documentation/features/paragraphs/"
       },
       {
+        "name": "Summarization",
+        "to": "/documentation/features/summarize/"
+      },
+      {
+        "name": "Topic Detection",
+        "to": "/documentation/features/detect-topics/"
+      },
+      {
         "name": "Utterances",
         "to": "/documentation/features/utterances/"
       },
@@ -120,10 +132,6 @@
       {
         "name": "Endpointing",
         "to": "/documentation/features/endpointing/"
-      },
-      {
-        "name": "Voice Activity Detection (VAD)",
-        "to": "/documentation/features/voice-activity-detection/"
       },
       {
         "name": "Encoding",
@@ -148,12 +156,36 @@
     "to": "/documentation/guides/",
     "children": [
       {
+        "name": "Migrating from AWS Transcribe to Deepgram",
+        "to": "/documentation/guides/migration-aws-transcribe/"
+      },
+      {
         "name": "Migrating from Google Speech-to-Text to Deepgram",
         "to": "/documentation/guides/migration-google-stt/"
       },
       {
         "name": "Transcribing Pre-recorded Audio",
         "to": "/documentation/guides/transcription/"
+      },
+      {
+        "name": "Generating and Saving Transcripts From the Terminal",
+        "to": "/documentation/guides/save-transcripts-from-terminal/"
+      },
+      {
+        "name": "Using Callbacks to return Transcripts to Your Server",
+        "to": "/documentation/guides/use-callback/"
+      },
+      {
+        "name": "Automatically Generating WebVTT and SRT Captions",
+        "to": "/documentation/guides/generate-captions/"
+      },
+      {
+        "name": "Automatically Transcribing and Summarizing Phone Calls",
+        "to": "/documentation/guides/phone-call-summaries/"
+      },
+      {
+        "name": "Understanding when to use the Multichannel and Diarization Features",
+        "to": "/documentation/guides/multichannel-vs-diarization/"
       },
       {
         "name": "Understanding When to Use the Keywords and Search Features",
@@ -166,6 +198,14 @@
       {
         "name": "Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio",
         "to": "/documentation/guides/understand-endpointing-interim-results/"
+      },
+      {
+        "name": "Recovering from Connection Errors and Timeouts When Live Streaming Audio",
+        "to": "/documentation/guides/recover-streaming-errors/"
+      },
+      {
+        "name": "Troubleshooting Connection Errors When Live Streaming Audio",
+        "to": "/documentation/guides/troubleshoot-streaming/"
       },
       {
         "name": "Measuring Streaming Latency",

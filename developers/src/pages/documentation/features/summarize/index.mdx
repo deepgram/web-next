@@ -1,0 +1,134 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Summarization
+description: Learn about Deepgram's Summarization feature, which summarizes sections of content in submitted audio.
+tags: [summarization, pre-recorded]
+order: 18
+seo:
+  metaTitle: Summarization
+  metaDescription: Learn about Deepgram's Summarization feature, which summarizes sections of content in submitted audio.
+  keywords: summarization, summarize, summary
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+<div class="badge">PRE-RECORDED</div>
+
+Deepgram’s Summarization feature summarizes sections of content in submitted audio and returns these summaries in the JSON response.
+When Summarization is enabled, the [Punctuation](/documentation/features/punctuate/) feature will be enabled by default.
+
+## Use Cases
+
+Some examples of uses for Summarization include:
+
+- Customers who want to reduce manual effort by automatically generating call notes and meeting summaries.
+- Customers who need to navigate through a large number of calls and analyze important conversations through generated summaries.
+- Podcast listeners who want to identify interesting conversations through auto-generated, meaningful podcast previews.
+
+## Enable Feature
+
+To enable Summarization, when you call Deepgram’s API, add a `summarize` parameter set to `true` in the query string:
+
+<Alert type="warning">
+
+When Summarization is enabled, [Punctuation](/documentation/features/punctuate/) will also be enabled by default.
+
+</Alert>
+
+`summarize=true&punctuate=true`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+
+<Alert type="info">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?summarize=true&punctuate=true'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Analyze Response
+
+
+When the file is finished processing (often after only a few seconds), you’ll receive a JSON response that has the following basic structure:
+
+```json
+{
+  "metadata": {
+    "transaction_key": "string",
+    "request_id": "string",
+    "sha256": "string",
+    "created": "string",
+    "duration": 0,
+    "channels": 0
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives":[],
+      }
+    ]
+  }
+}
+```
+
+Let's look more closely at the `alternatives` object:
+
+```json
+"alternatives":[
+  {
+    "transcript": "This episode is brought to you by levels. Very excited about...",
+    "confidence": 0.99107355,
+    "words": [],
+    "summaries": [
+      {
+        "summary": "This episode is brought to you by levels. With levels you can see how different foods affect your health with real time feedback. The levels app interprets your glucose data and provides a simple score after you eat a meal.",
+        "start_word": 0,
+        "end_word": 623
+      },
+      {
+        "summary": "Dr. Ferris is joined by Dr. K, a professor of laboratory medicine and pathology at the University of Washington School of Medicine. Matt K is the founding director of the healthy aging and longevity research Institute.",
+        "start_word": 623,
+        "end_word": 1227
+      },
+      ...
+    ]
+  }
+]
+```
+
+In this response, we see that each alternative contains:
+
+- `transcript`: Transcript for the audio being processed.
+- `confidence`: Floating point value between 0 and 1 that indicates overall transcript reliability. Larger values indicate higher confidence.
+- `words`: Object containing each word in the transcript, along with its start time and end time (in seconds) from the beginning of the audio stream, and a confidence value.
+- `summaries`: Object containing the information about summaries for the audio being processed.
+
+And we see that each `summaries` object contains:
+
+- `summary`: Summary of the audio section being summarized.
+- `start_word`: Index of the first word in the section of audio being summarized.
+- `end_word`: Index of the last word in the section of audio being summarized.
+
+<Alert type="info">
+
+By default, Deepgram applies its Base-tier, general AI model, which is a good, general-purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+</Alert>
