@@ -8,6 +8,10 @@ import DocsCardList from "../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../shared/components/cards/DocsCard.astro";
 const baseComponents = await Astro.glob("./base-components/**/index.mdx");
 import nav from "../../pages/on-prem/navigation.json";
+
+const orderedComponents = baseComponents.sort((a,b)=>{
+	return a.frontmatter.order - b.frontmatter.order
+})
 ---
 
 <Default>
@@ -22,7 +26,7 @@ import nav from "../../pages/on-prem/navigation.json";
 							<h1 slot="page-header">On-Premises Deployments</h1>
 							<h2 class="text-stone mt-6 mb-10">BASE COMPONENTS</h2>
 							<DocsCardList>
-								{baseComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+								{orderedComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 							</DocsCardList>
 						</div>
 					</PrimarySection>

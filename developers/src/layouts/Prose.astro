@@ -67,8 +67,19 @@ const { class: classes } = Astro.props;
 	}
 
 	.post-prose > :global(p:not(pre.astro-code) code) {
-		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];
+		@apply bg-casper/30 py-[0.0625rem] px-[0.25rem];
 		@apply text-black;
+		@apply font-semibold;
+		font-size: 0.875em;
+	}
+	.post-prose > :global(ol > li > code),
+	.post-prose > :global(ul > li > code),
+	.post-prose > :global(ol > li > p > code)
+	.post-prose > :global(ul > li > p > code) {
+		@apply bg-casper/30 py-[0.0625rem] px-[0.25rem] !important;
+		@apply text-black;
+		@apply font-semibold;
+		font-size: 0.875em;
 	}
 
 	.post-prose > :global(ol) {

@@ -4,13 +4,17 @@ import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../../shared/components/cards/DocsCard.astro";
 
 const optionalComponents = await Astro.glob("./**/index.mdx");
+
+const orderedComponents = optionalComponents.sort((a,b)=>{
+	return a.frontmatter.order - b.frontmatter.order
+})
 ---
 
 <Layout>
 	<article>
 		<h1 class="mb-10">Optional Components</h1>
 		<DocsCardList>
-			{optionalComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			{orderedComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</DocsCardList>
 	</article>
 </Layout>

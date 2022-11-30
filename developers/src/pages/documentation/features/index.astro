@@ -9,7 +9,7 @@ const guides = await Astro.glob("./**/index.mdx");
 <Layout>
 	<article>
 		<h1>Features</h1>
-		<div class="overflow-x-auto">
+		<div class="overflow-x-auto -mr-0 xl:-mr-64">
 			<table border="2">
 				<thead>
 					<tr>
@@ -309,12 +309,14 @@ const guides = await Astro.glob("./**/index.mdx");
 	table code {
 		@apply font-semibold;
 		font-size: 0.875em;
+		@apply bg-white !important;
 	}
 
 	tbody tr {
 		@apply border-b border-gray-200;
 	}
 	tbody td {
-		@apply p-2 align-top;
+		@apply align-top;
 	}
+	
 </style>
