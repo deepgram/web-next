@@ -98,7 +98,6 @@ paths:
         - "$ref": "#/components/parameters/keywords"
         - "$ref": "#/components/parameters/interim_results"
         - "$ref": "#/components/parameters/endpointing"
-        - "$ref": "#/components/parameters/vad_turnoff"
         - "$ref": "#/components/parameters/encoding"
         - "$ref": "#/components/parameters/channels"
         - "$ref": "#/components/parameters/sample_rate"
@@ -554,8 +553,7 @@ components:
         For example, if you are working with a 15-second audio clip, but someone is speaking for only the first 3 seconds,
         endpointing allows you to get a finalized result after the first 3 seconds.
 
-        By default, endpointing is enabled and finalizes a transcript after 10 ms of silence. You can customize the length
-        of time used to detect whether a speaker has finished speaking by submitting the `vad_turnoff` parameter.
+        By default, endpointing is enabled and finalizes a transcript after a short period of silence.
       schema:
         type: boolean
         default: true
@@ -563,18 +561,7 @@ components:
         "Detect endpoints":
           value: "endpointing=true"
         "Do not detect endpoints":
-          value: "endpointing=false"
-    vad_turnoff:
-      name: vad_turnoff
-      in: query
-      description: |
-        Length of time in milliseconds of silence that voice activation detection (VAD) will use to detect that a speaker has
-        finished speaking. Used when endpointing is enabled. Defaults to 10 ms. Deepgram customers may configure a value
-        between 10 ms and 500 ms; on-premise customers may remove this restriction.
-      schema:
-        type: integer
-        default: 10
-      example: "vad_turnoff=30"
+          value: "endpointing=false"    
     encoding:
       name: encoding
       in: query
