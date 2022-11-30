@@ -7,18 +7,11 @@ const optionalComponents = await Astro.glob("./**/index.mdx");
 ---
 
 <Layout>
-	<article class="-mr-0 lg:-mr-12">
+	<article>
 		<h1 class="mb-10">Optional Components</h1>
-		<div class="hidden lg:flex">
-			<DocsCardList gridClass="threeColumn">
-				{optionalComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
-			</DocsCardList>
-		</div>
-		<div class="lg:hidden flex">
-			<DocsCardList>
-				{optionalComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
-			</DocsCardList>
-		</div>
+		<DocsCardList>
+			{optionalComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+		</DocsCardList>
 	</article>
 </Layout>
 

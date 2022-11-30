@@ -1,7 +1,6 @@
 ---
 import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
 import SDKsCard from "../../shared/components/cards/SDKsCard.astro";
-import ToolsCard from "../../shared/components/cards/ToolsCard.astro";
 
 const tools = await Astro.glob("../../pages/sdks-tools/tools/**/*.mdx");
 const { title, class: classes } = Astro.props;

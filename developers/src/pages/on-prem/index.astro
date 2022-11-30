@@ -16,21 +16,14 @@ import nav from "../../pages/on-prem/navigation.json";
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 				<SideNav slot="aside" navStructure={nav} navTitle="On-Premise Deployments" />
 				<div class="col-span-3 sm:col-span-2 w-11/12 lg:w-full xl:w-11/12 mx-auto sm:ml-8">
-					<PrimarySection class="py-10 -mr-0 lg:-mr-64">
+					<PrimarySection class="py-10">
 						<BreadCrumb />
 						<div class="max-w-screen-xl mx-auto">
 							<h1 slot="page-header">On-Premises Deployments</h1>
 							<h2 class="text-stone mt-6 mb-10">BASE COMPONENTS</h2>
-							<div class="hidden lg:flex">
-								<DocsCardList gridClass="threeColumn">
-									{baseComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
-								</DocsCardList>
-							</div>
-							<div class="lg:hidden flex">
-								<DocsCardList>
-									{baseComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
-								</DocsCardList>
-							</div>
+							<DocsCardList>
+								{baseComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+							</DocsCardList>
 						</div>
 					</PrimarySection>
 				</div>

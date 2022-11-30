@@ -1,5 +1,5 @@
 ---
-import BlogCardList from "../../../shared/components/lists/BlogCardList.astro";
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../../shared/components/cards/DocsCard.astro";
 import Layout from "../../../layouts/Documentation.astro";
 
@@ -261,9 +261,9 @@ const guides = await Astro.glob("./**/index.mdx");
 		</div>
 
 		<h2>Guides</h2>
-		<BlogCardList>
+		<DocsCardList>
 			{guides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
-		</BlogCardList>
+		</DocsCardList>
 	</article>
 </Layout>
 

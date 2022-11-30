@@ -1,5 +1,5 @@
 ---
-import BlogCardList from "../../../shared/components/lists/BlogCardList.astro";
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../../shared/components/cards/DocsCard.astro";
 import Layout from "../../../layouts/Documentation.astro";
 
@@ -21,18 +21,18 @@ const migrationGuides = guides.filter((guide) => {
 <Layout>
 	<article>
 		<h1>Deepgram Guides</h1>
-		<BlogCardList>
+		<DocsCardList>
 			<h2 slot="title" class="text-stone uppercase">Migration</h2>
 			{migrationGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
-		</BlogCardList>
-		<BlogCardList>
+		</DocsCardList>
+		<DocsCardList>
 			<h2 slot="title" class="text-stone uppercase">Transcription</h2>
 			{transcriptionGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
-		</BlogCardList>
-		<BlogCardList>
+		</DocsCardList>
+		<DocsCardList>
 			<h2 slot="title" class="text-stone uppercase">Measuring Performance</h2>
 			{performanceGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
-		</BlogCardList>
+		</DocsCardList>
 	</article>
 </Layout>
 

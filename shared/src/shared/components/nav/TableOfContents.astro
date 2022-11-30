@@ -1,10 +1,11 @@
 ---
 import Link from "../general/Link.astro";
 const { headings, docsType, classes } = Astro.props;
+const hasHeadings = 	headings && headings.filter((heading) => heading.depth >= 2)
 ---
 
 <nav class={classes}>
-	{headings && headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">IN THIS {docsType}</h5>}
+	{headings && headings.length > 0 && <h5 class={`${hasHeadings.length > 0 ? 'hidden pt-8 pb-5 xl:block' : 'hidden'} `}>IN THIS {docsType}</h5>}
 	<ul class="hidden xl:block">
 		{
 			headings &&

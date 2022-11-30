@@ -12,7 +12,7 @@ const streaming = await Astro.glob("../../pages/documentation/getting-started/st
   
   <h2 class="text-stone mt-6 mb-10">ENGLISH</h2>
   <DocsCardList>
-    <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} doc={preRecorded[0]}/>
-    <DocsCard class={`w-full flex flex-col ${classes ? classes : ""}`} doc={streaming[0]}/>
+      {preRecorded.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+      {streaming.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
   </DocsCardList>
 </div>
