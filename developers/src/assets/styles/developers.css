@@ -110,7 +110,7 @@ html {
 }
 
 div.badge {
-	    color: #4f6278;
+	  color: #4f6278;
     border-width: 1px;
     border-color: #66788d;
     border-radius: 4px;
@@ -121,10 +121,18 @@ div.badge {
 
 .autolink-svg {
 	@apply text-black;
+	@apply absolute opacity-0 -ml-8 -mt-1 w-8 h-6 bg-no-repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	display:flex;
+	display: flex;
 	align-items: center;
+}
+
+h2:hover .autolink-svg,
+h3:hover .autolink-svg,
+h4:hover .autolink-svg,
+h5:hover .autolink-svg {
+  @apply opacity-100;
 }
 
