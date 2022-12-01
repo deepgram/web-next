@@ -35,7 +35,7 @@ Measuring non-transcription legacy is a complicated process that relies heavily 
 
 For security purposes, Deepgram blocks pings; instead, for a more realistic measurement, you can measure the time it takes to connect to Deepgram's servers:
 
-<CodeGroup title="shell">
+<CodeGroup title="shell" default="shell" tabs={["shell"]}>
 
 <CodeBlock label="shell" active>
 
@@ -76,7 +76,7 @@ Transcription Latency = Total Latency - Non-Transcription Latency
 
 Let’s look at an example. [Download our latency Python example script](https://developers.deepgram.com/data/scripts/streaming/latency.py), prepare an audio file (or [use our sample WAV file](https://developers.deepgram.com/data/audio/interview_speech-analytics.wav)), and run the example code. (If you're measuring latency for an on-premise Deepgram installation, you'll need to edit the API endpoint on line 43 to point to your installation's URL.)
 
-<CodeGroup title="shell">
+<CodeGroup title="shell" default="shell" tabs={["shell"]}>
 
 <CodeBlock label="shell" active>
 

@@ -52,7 +52,7 @@ Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [
 
 <CodeBlock label="curl" active>
 
-```curl
+```bash
 curl \
   --request POST \
   --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
@@ -193,7 +193,7 @@ Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [
 
 <CodeBlock label="curl" active>
 
-```curl
+```bash
 curl \
   --request POST \
   --url 'https://api.deepgram.com/v1/listen?diarize=true&punctuate=true&utterances=true' \
@@ -209,7 +209,7 @@ curl \
 
 When the file is finished processing, you’ll receive the following response:
 
-```text
+```
 [Speaker:0] Hello, and thank you for calling premier phone service. Please be aware that this call may be recorded for quality and training purposes.
 [Speaker:0] My name is Beth, and I will be assisting you today. How are you doing?
 [Speaker:1] Not too bad. How are you today?

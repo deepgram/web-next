@@ -4,6 +4,7 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Prose from "./Prose.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
 import SideNav from "../shared/components/nav/SideNav.astro";
+import Feedback from "../shared/components/forms/Feedback.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
 import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 import nodeNav from "../pages/sdks-tools/sdks/node-sdk/navigation.json";
@@ -54,7 +55,8 @@ if (a.includes(dotnet)) {
 							<div class="col-span-0 xl:col-span-3 ml-8">
 								<TableOfContents headings={headings} docsType={"SDK"} classes="sticky top-40" />
 							</div>
-						</div>
+						</div> 
+						<Feedback />
 					</PrimarySection>
 				</div>
 			</div>

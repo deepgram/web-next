@@ -5,6 +5,7 @@ import Prose from "./Prose.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
 import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 
+import Feedback from "../shared/components/forms/Feedback.astro";
 import "../assets/styles/developers.css";
 
 const { headings } = Astro.props;
@@ -21,6 +22,7 @@ const { headings } = Astro.props;
 				<TableOfContents headings={headings} docsType={"TOOL"} classes="sticky top-40" />
 			</div>
 		</div>
+		<Feedback />
 	</PrimarySection>
 </Default>
 

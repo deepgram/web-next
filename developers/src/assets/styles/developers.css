@@ -80,13 +80,34 @@ html {
 
 	#toggle-nav + .toggle-nav-label::after {
 		@apply md:hidden h-auto w-auto p-3 rounded-r-md bg-cloud z-20 left-0;
-		content: "nav";
+		content: ">";
+		/* content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" version='1.1' fill="none" height="100" width="100" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>");  */
+		/* url("data:image/svg+xml;charset=UTF-8, <svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='100' width='100'><circle cx='50' cy='50' r='40' stroke='black' stroke-width='3' fill='red' /></svg>"); */
+			/* <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M15 19l-7-7 7-7"
+      />
+    </svg> */
 	}
 	#toggle-nav + .toggle-nav-label + .side-nav {
 		@apply hidden;
 	}
 	#toggle-nav:checked + .toggle-nav-label {
 		@apply right-0;
+	}
+	#toggle-nav:checked + .toggle-nav-label::after {
+		content: "<";
+		/* content: url("data:image/svg+xml;charset=UTF-8, <svg xmlns="http://www.w3.org/2000/svg" version='1.1' fill="none" height="100" width="100" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>");  */
+		@apply rounded-l-md rounded-r-none;
 	}
 	#toggle-nav:checked + .toggle-nav-label + .side-nav {
 		@apply block;

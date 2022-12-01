@@ -94,11 +94,11 @@ Be sure to configure the code snippet by replacing the placeholder `YOUR_DEEPGRA
 
 </Alert>
 
-<CodeGroup title="curl">
+<CodeGroup title="curl" default="curl" tabs={["curl"]}>
 
-<CodeBlock label="curl" active>
+<CodeBlock tab="curl" active>
 
-```curl
+```bash
 curl \
   --request POST \
   --url 'https://api.deepgram.com/v1/listen' \
@@ -123,11 +123,11 @@ Be sure to configure the code snippet by replacing the placeholder parameters wi
 
 </Alert>
 
-<CodeGroup title="curl">
+<CodeGroup title="curl" default="curl" tabs={["curl"]}>
 
 <CodeBlock label="curl" active>
 
-```curl
+```bash
 curl \
   --request POST \
   --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
