@@ -45,9 +45,9 @@ To receive incoming transcripts on your server, you need to create an webhook co
 
 Since webhooks send a `POST` request to your application, your webhook consumer will need to create a `POST` route handler in your application. So the webhook consumer receiving transcripts on your server might look something like this:
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js"]}>
 
-<CodeBlock label="node" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 // Require, initialize, and configure Express
@@ -91,11 +91,11 @@ Be sure to replace the placeholder `YOUR_DEEPGRAM_API_KEY` with your Deepgram AP
 
 </Alert>
 
-<CodeGroup title="curl">
+<CodeGroup title="curl"  default="curl" tabs={["curl"]}>
 
-<CodeBlock label="curl" active>
+<CodeBlock tab="curl" active>
 
-```curl
+```bash
 curl \
   --request POST \
   --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \

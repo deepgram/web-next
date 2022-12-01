@@ -60,7 +60,7 @@ Web Video Text Track (WebVTT) files generally consist of a sequence of text segm
 
 An example WebVTT file:
 
-```text
+```plaintext
 WEBVTT
 
 1
@@ -130,9 +130,9 @@ Locate a hosted audio file that you would like to caption and make note of its U
 
 Open your terminal, navigate to the location on your drive where you want to create your project, and install the Deepgram SDK.
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```bash
 # Initialize a new application
@@ -155,9 +155,9 @@ In your terminal, create a new `index.js` file in your project's location, open 
 
 Initialize your dependencies:
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 const fs = require('fs')
@@ -179,9 +179,9 @@ Be sure to replace `YOUR_DEEPGRAM_API_KEY`with your Deepgram API Key.
 
 To receive timestamps of phrases to include in your caption files, ask Deepgram to include [utterances](/documentation/features/utterances/) (a chain of words or, more simply, a phrase):
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 deepgram.transcription
@@ -215,9 +215,9 @@ Open a writable stream, so you will be able to insert text directly into your fi
 
 Inside the `.then()` block, add:
 
-<CodeGroup title="Example">
+<CodeGroup title="Example"  default="Node.js" tabs={["Node.js"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 // WebVTT Filename
@@ -235,9 +235,9 @@ const stream = fs.createWriteStream('output.srt', { flags: 'a' })
 
 The WebVTT and SRT formats are very similar, and each requires a block of text per utterance.
 
-<CodeGroup title="WebVTT Example">
+<CodeGroup title="WebVTT Example" default="Node.js" tabs={["Node.js", "Node.js with SDK"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 stream.write('WEBVTT\n\n')
@@ -251,7 +251,7 @@ for (let i = 0; i < response.results.utterances.length; i++) {
 
 </CodeBlock>
 
-<CodeBlock label="Node.js with SDK" active>
+<CodeBlock tab="Node.js with SDK" active>
 
 ```js
 stream.write(response.toWebVTT())
@@ -263,9 +263,9 @@ stream.write(response.toWebVTT())
 
 Deepgram provides seconds back as a number (`15.4` means 15.4 seconds), but both formats require times as `HH:MM:SS.milliseconds` and getting the end of a `Date().toISOString()` will achieve this for us.
 
-<CodeGroup title="SRT Example">
+<CodeGroup title="SRT Example" default="Node.js" tabs={["Node.js", "Node.js with SDK"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 for (let i = 0; i < response.results.utterances.length; i++) {
@@ -284,7 +284,7 @@ for (let i = 0; i < response.results.utterances.length; i++) {
 
 </CodeBlock>
 
-<CodeBlock label="Node.js with SDK" active>
+<CodeBlock tab="Node.js with SDK" active>
 
 ```js
 stream.write(response.toSRT())

@@ -65,9 +65,9 @@ Once you have your API Key, it's time to transcribe audio! The instructions belo
 
 Open your terminal, navigate to the location on your drive where you want to create your project, and install the Deepgram SDK.
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock active tab="Node.js">
 
 ```bash
 # Initialize a new application
@@ -80,7 +80,7 @@ npm install @deepgram/sdk
 
 </CodeBlock>
 
-<CodeBlock label="Python">
+<CodeBlock tab="Python">
 
 ```bash
 # Install the Deepgram Python SDK
@@ -96,9 +96,9 @@ pip install deepgram-sdk
 
 In your terminal, create a new file in your project's location, and populate it with code.
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 // Example filename: index.js
@@ -160,7 +160,7 @@ deepgram.transcription
 
 </CodeBlock>
 
-<CodeBlock label="Python">
+<CodeBlock tab="Python">
 
 ```python
 # Example filename: deepgram_test.py
@@ -244,9 +244,9 @@ Be sure to replace `YOUR_DEEPGRAM_API_KEY`, `YOUR_FILE_LOCATION`, AND `YOUR_FILE
 
 Run your application from the terminal.
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```bash
 # Run your application using the file you created in the previous step
@@ -256,7 +256,7 @@ node YOUR_PROJECT_NAME.js
 
 </CodeBlock>
 
-<CodeBlock label="Python">
+<CodeBlock tab="Python">
 
 ```bash
 # Run your application using the file you created in the previous step
@@ -357,9 +357,9 @@ To customize the transcripts you receive, you can send a variety of parameters t
 
 For example, if your audio is in Spanish rather than English, you can pass the `language:` parameter with the `es` option to the `transcription.prerecorded` method in the previous examples:
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 deepgram.transcription.preRecorded(source, {
@@ -370,7 +370,7 @@ deepgram.transcription.preRecorded(source, {
 
 </CodeBlock>
 
-<CodeBlock label="Python">
+<CodeBlock tab="Python">
 
 ```python
     response = await asyncio.create_task(

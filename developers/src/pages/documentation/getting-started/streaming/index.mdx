@@ -62,9 +62,9 @@ Once you have your API Key, it's time to transcribe audio! The instructions belo
 
 Open your terminal, navigate to the location on your drive where you want to create your project, and install the Deepgram SDK:
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
-<CodeBlock label="Python">
+<CodeBlock tab="Python">
 
 ```bash
 # Install the Deepgram Python SDK
@@ -74,7 +74,7 @@ pip install deepgram-sdk
 
 </CodeBlock>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```bash
 # Initialize a new application
@@ -93,9 +93,9 @@ npm install @deepgram/sdk
 
 Add necessary external dependencies to your project.
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
-<CodeBlock label="Python">
+<CodeBlock tab="Python">
 
 ```bash
 # Install aiohttp: HTTP client/server for asyncio that allows you to write asynchronous clients and servers, and supports WebSockets.
@@ -104,7 +104,7 @@ pip install aiohttp
 
 </CodeBlock>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```bash
 # Install cross-fetch: Platform-agnostic Fetch API with typescript support, a simple interface, and optional polyfill.
@@ -119,9 +119,9 @@ npm install cross-fetch
 
 In your terminal, create a new file in your project's location, and populate it with code.
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
-<CodeBlock label="Python">
+<CodeBlock tab="Python">
 
 ```python
  # Example filename: deepgram_test.py
@@ -183,7 +183,7 @@ asyncio.run(main())
 
 </CodeBlock>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 // Example filename: index.js
@@ -254,9 +254,9 @@ Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key.
 
 Run the application from the terminal.
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
-<CodeBlock label="Python">
+<CodeBlock tab="Python">
 
 ```bash
 # Run your application using the file you created in the previous step
@@ -266,7 +266,7 @@ python YOUR_PROJECT_NAME.py
 
 </CodeBlock>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```bash
 # Run your application using the file you created in the previous step
@@ -314,9 +314,9 @@ To customize the transcripts you receive, you can send a variety of parameters t
 
 For example, if your audio is in Spanish rather than UK English, you can pass the `language:` parameter with the `es` option to the `transcription.live` method in the previous examples.
 
-<CodeGroup title="Example">
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
-<CodeBlock label="Python">
+<CodeBlock tab="Python">
 
 ```python
 deepgramLive = await deepgram.transcription.live({
@@ -328,7 +328,7 @@ deepgramLive = await deepgram.transcription.live({
 
 </CodeBlock>
 
-<CodeBlock label="Node.js" active>
+<CodeBlock tab="Node.js" active>
 
 ```js
 const deepgramLive = deepgram.transcription.live({
