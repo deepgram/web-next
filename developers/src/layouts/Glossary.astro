@@ -3,6 +3,7 @@ import Default from "./Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Prose from "./Prose.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
+import Feedback from "../shared/components/forms/Feedback.astro";
 import SideNav from "../shared/components/nav/SideNav.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
 import GlossaryTOC from "../components/documentation/GlossaryTOC.astro";
@@ -30,6 +31,7 @@ const { headings } = Astro.props;
 								<GlossaryTOC headings={headings} />
 							</div>
 						</div>
+						<Feedback />
 					</PrimarySection>
 				</div>
 			</div>

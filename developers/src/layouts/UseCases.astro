@@ -3,6 +3,7 @@ import Default from "./Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Prose from "./Prose.astro";
 import TableOfContents from "../shared/components/nav/TableOfContents.astro";
+import Feedback from "../shared/components/forms/Feedback.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
 const { headings } = Astro.props;
 ---
@@ -18,5 +19,6 @@ const { headings } = Astro.props;
 				<TableOfContents headings={headings} docsType={"USE CASE"} classes="sticky top-40" />
 			</div>
 		</div>
+		<Feedback />
 	</PrimarySection>
 </Default>
