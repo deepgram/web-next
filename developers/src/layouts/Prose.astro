@@ -168,6 +168,11 @@ const { class: classes } = Astro.props;
 		padding: 1px 8px 8px 0; 
 	}
 
+	.post-prose :global(table > tbody > tr > td > strong),
+	.post-prose :global(table > thead > tr > th > strong) {
+		font-weight: 600;
+	}
+
 	.post-prose :global(table > tbody > tr) {
 		border-bottom-width: 1px;
     border-bottom-color: #e5e7eb;
