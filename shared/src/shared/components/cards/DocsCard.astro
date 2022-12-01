@@ -21,12 +21,12 @@ const { class: classes, doc } = Astro.props;
 
 <style>
 
-:global(h3, p) {
+h3, p {
   @apply text-darkCharcoal;
   @apply font-normal;
-	}
+}
 
-:global(.docs-card > p:first-of-type){
+.docs-card > p:first-of-type {
   @apply pt-0 !important;
 }
 
