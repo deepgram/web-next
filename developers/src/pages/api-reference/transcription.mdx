@@ -4,7 +4,7 @@ title: Transcription
 description: Transcription for the Deepgram API
 order: 3
 ---
-
+# {frontmatter.title}
 High-speed transcription of either pre-recorded or streaming audio. This feature is very fast, can understand nearly every audio format available, and is customizable. You can customize your transcript using various query parameters and apply general purpose and custom-trained AI models.
 
 Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
@@ -23,9 +23,9 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="tier-pr">
-			<strong>tier:</strong>
-		</div>{" "}
-		string
+			<p><strong>tier:</strong> string</p>
+		</div>
+		
 	</header>
 	<main>
 		<p>Level of model you would like to use in your request. Options include:</p>
@@ -53,9 +53,9 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="model-pr">
-			<strong>model:</strong>
-		</div>{" "}
-		string
+			<p><strong>model:</strong> string</p>
+		</div>
+		
 	</header>
 	<main>
 		<p>AI model used to process submitted audio. Options include:</p>
@@ -127,9 +127,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="version-pr" class="notranslate">
-			<strong>version:</strong>
-		</div>{" "}
-		string
+			<strong>version:</strong> string
+		</div>
+		{/* {" "}
+		string */}
 	</header>
 	<main>
 		<p>Version of the model to use.</p>
@@ -152,9 +153,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="language-pr">
-			<strong>language:</strong>
-		</div>{" "}
-		string
+			<strong>language:</strong> string
+		</div>
+		{/* {" "}
+		string */}
 	</header>
 	<main>
 		<p>
@@ -408,9 +410,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="punctuate-pr">
-			<strong>punctuate:</strong>
-		</div>{" "}
-		boolean
+			<strong>punctuate:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
 	</header>
 	<main>
 		<p>
@@ -423,9 +426,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="profanity-pr">
-			<strong>profanity_filter:</strong>
-		</div>{" "}
-		boolean
+			<strong>profanity_filter:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
 	</header>
 	<main>
 		<p>
@@ -438,9 +442,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="redact-pr">
-			<strong>redact:</strong>
-		</div>{" "}
-		any
+			<strong>redact:</strong> any
+		</div>
+		{/* {" "}
+		any */}
 	</header>
 	<main>
 		<p>Indicates whether to redact sensitive information, replacing redacted content with asterisks (*). Options include:</p>
@@ -475,9 +480,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="diarize-pr">
-			<strong>diarize:</strong>
-		</div>{" "}
-		boolean
+			<strong>diarize:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
 	</header>
 	<main>
 		<p>
@@ -498,9 +504,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="diarize-version-pr">
-			<strong>diarize_version:</strong>
-		</div>{" "}
-		string
+			<strong>diarize_version:</strong> string
+		</div>
+		{/* {" "}
+		string */}
 	</header>
 	<main>
 		<p>
@@ -519,9 +526,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="ner-pr">
-			<strong>ner:</strong>
-		</div>{" "}
-		boolean
+			<strong>ner:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
 	</header>
 	<main>
 		<p>
@@ -535,9 +543,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="multichannel-pr">
-			<strong>multichannel:</strong>
-		</div>{" "}
-		boolean
+			<strong>multichannel:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
 	</header>
 	<main>
 		<p>
@@ -558,9 +567,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="alternatives-pr">
-			<strong>alternatives:</strong>
-		</div>{" "}
-		integer
+			<strong>alternatives:</strong> integer
+		</div>
+		{/* {" "}
+		integer */}
 	</header>
 	<main>
 		<p>Maximum number of transcript alternatives to return. Just like a human listener, Deepgram can provide multiple possible interpretations of what it hears. </p>
@@ -573,9 +583,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="numerals-pr">
-			<strong>numerals:</strong>
-		</div>{" "}
-		boolean
+			<strong>numerals:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
 	</header>
 	<main>
 		<p>Indicates whether to convert numbers from written format (e.g., one) to numerical format (e.g., 1).</p>
@@ -594,9 +605,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="search-pr">
-			<strong>search:</strong>
-		</div>{" "}
-		any
+			<strong>search:</strong> any
+		</div>
+		{/* {" "}
+		any */}
 	</header>
 	<main>
 		<p>
@@ -622,9 +634,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="replace-pr">
-			<strong>replace:</strong>
-		</div>{" "}
-		string
+			<strong>replace:</strong> string
+		</div>
+		{/* {" "}
+		string */}
 	</header>
 	<main>
 		<p>Terms or phrases to search for in the submitted audio and replace. </p>
@@ -650,9 +663,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="callback-pr">
-			<strong>callback:</strong>
-		</div>{" "}
-		string
+			<strong>callback:</strong> string
+		</div>
+		{/* {" "}
+		string */}
 	</header>
 	<main>
 		<p>
@@ -676,9 +690,11 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="keywords-pr">
-			<strong>keywords:</strong>
-		</div>{" "}
-		any
+			<strong>keywords:</strong> any
+		</div>
+		{/* {" "}
+		any */}
+
 	</header>
 	<main>
 		<p>
@@ -718,9 +734,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="paragraphs-pr">
-			<strong>paragraphs:</strong>
-		</div>{" "}
-		boolean
+			<strong>paragraphs:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
 	</header>
 	<main>
 		<p>
@@ -737,9 +754,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="utterances-pr">
-			<strong>utterances:</strong>
-		</div>{" "}
-		boolean
+			<strong>utterances:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
 	</header>
 	<main>
 		<p>
@@ -764,9 +782,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="uttsplit-pr">
-			<strong>utt_split:</strong>
-		</div>{" "}
-		number
+			<strong>utt_split:</strong> number
+		</div>
+		{/* {" "}
+		number */}
 	</header>
 	<main>
 		<p>Length of time in seconds of silence between words that Deepgram will use when determining where to split&nbsp;utterances. Used when utterances is enabled.</p>
@@ -783,9 +802,10 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="tag-pr">
-			<strong>tag:</strong>
-		</div>{" "}
-		string
+			<strong>tag:</strong> string
+		</div>
+		{/* {" "}
+		string */}
 	</header>
 	<main>
 		<p>

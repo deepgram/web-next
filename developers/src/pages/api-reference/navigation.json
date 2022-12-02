@@ -1,0 +1,55 @@
+[
+	{
+		"to": "authentication",
+		"depth": 2,
+		"text": "Authentication",
+		"section": "authentication"
+	},
+	{
+		"to": "transcription",
+		"depth": 2,
+		"text": "Transcription",
+		"section": "transcription"
+	},	
+	{
+		"to": "projects",
+		"depth": 2,
+		"text": "Projects",
+		"section": "projects"
+	},	
+	{
+		"to": "keys",
+		"depth": 2,
+		"text": "Keys",
+		"section": "keys"
+	},
+	{
+		"to": "members",
+		"depth": 2,
+		"text": "Members",
+		"section": "members"
+	},
+	{
+		"to": "scopes",
+		"depth": 2,
+		"text": "Scopes",
+		"section": "scopes"
+	},
+	{
+		"to": "invitations",
+		"depth": 2,
+		"text": "Invitations"
+	},
+	{
+		"to": "usage",
+		"depth": 2,
+		"text": "Usage",
+		"section": "usage"
+	},
+	{
+		"to": "billing",
+		"depth": 2,
+		"text": "Billing",
+		"section": "billing"
+	}
+]
