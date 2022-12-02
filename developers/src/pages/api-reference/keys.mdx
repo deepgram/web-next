@@ -4,6 +4,7 @@ title: Keys
 description: Keys for the Deepgram API
 order: 5
 ---
+
 # {frontmatter.title}
 Keys are associated with Deepgram Projects. They enable you to use the Deepgram API, identify the Project calling the API, and associate usage information with Projects. Keys are assigned Scopes, which determine which actions they can be used to perform in the associated Project. For each Project, you can create multiple Keys and assign different Scopes for each Key.
 
@@ -266,10 +267,8 @@ Required account/project scope(s): `keys:write`.
   <main>
           <p>Scopes for the key you would like to create. Required.</p>
           <p>Scopes cannot be empty.</p>
-          <p>The requested account scopes for the new key cannot exceed the scopes of the authenticated account
-            making the request.</p>
-          <p>The requested project scopes for the new key cannot exceed the scopes of the authenticated account
-            making the request.</p>
+          <p>The requested account scopes for the new key cannot exceed the scopes of the authenticated account making the request.</p>
+          <p>The requested project scopes for the new key cannot exceed the scopes of the authenticated account making the request.</p>
   </main>
 </div>
 
@@ -320,13 +319,11 @@ Required account/project scope(s): `keys:write`.
   </li>
   <li>
     <p class="notranslate"><strong>key:</strong> string</p>
-          <p>Value of the API Key. This is the only chance to read the Key value; it cannot be recovered later.
-          </p>
+          <p>Value of the API Key. This is the only chance to read the Key value; it cannot be recovered later.</p>
   </li>
   <li>
     <p class="notranslate"><strong>comment:</strong> string</p>
           <p>Comments associated with the API Key.</p>
-  </li>
   </li>
   <li>
     <p class="notranslate"><strong>scopes:</strong> array</p>
@@ -339,6 +336,7 @@ Required account/project scope(s): `keys:write`.
   <li>
     <p class="notranslate"><strong>created:</strong> string</p>
           <p>Date and time when the API Key was created.</p>
+	</li>
   <li>
     <p class="notranslate"><strong>expiration_date:</strong> string</p>
           <p>Date and time when the API Key expires. If no expiration date exists, this item will not be returned.</p>
@@ -398,8 +396,7 @@ Required account/project scope(s): `keys:write`. Optional project scope(s): `mem
 <ul class="response">
   <li>
     <p class="notranslate"><strong>message:</strong> string</p>
-          <p>Message returned. Should read "Successfully deleted the API key!"
-          </p>
+          <p>Message returned. Should read "Successfully deleted the API key!"</p>
   </li>
 </ul>
 

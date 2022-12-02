@@ -13,16 +13,16 @@ const { class: classes } = Astro.props;
 		width: 100%;
 	}
 
-	.post-prose > :global(h1) {
+	.post-prose :global(h1) {
 		@apply text-4xl;
 	}
-	.post-prose > :global(h2) {
+	.post-prose :global(h2) {
 		@apply text-2xl;
 	}
-	.post-prose > :global(h3) {
+	.post-prose :global(h3) {
 		@apply text-xl;
 	}
-	.post-prose > :global(h4) {
+	.post-prose :global(h4) {
 		@apply text-base;
 	}
 	.post-prose :global(img),
@@ -35,13 +35,13 @@ const { class: classes } = Astro.props;
 		@apply text-sm;
 	}
 
-	.post-prose > :global(h1),
-	.post-prose > :global(h2),
-	.post-prose > :global(h3),
-	.post-prose > :global(h4),
+	.post-prose :global(h1),
+	.post-prose :global(h2),
+	.post-prose :global(h3),
+	.post-prose :global(h4),
 	.post :global(h4),
-	.post-prose > :global(h5),
-	.post-prose > :global(h6) {
+	.post-prose :global(h5),
+	.post-prose :global(h6) {
 		margin-top: 1.5rem;
     margin-bottom: 0.75rem;
 	}
@@ -50,23 +50,23 @@ const { class: classes } = Astro.props;
 		@apply pt-5;
 	}
 
-	.post-prose > :global(p) {
+	.post-prose :global(p) {
 		@apply pb-4 leading-loose lg:leading-normal;
 		line-height: 1.75;
 	}
 
-	.post-prose > :global(* a) {
+	.post-prose :global(* a) {
 		@apply text-darkIris font-semibold;
 	}
 
-	.post-prose > :global(pre.astro-code) {
+	.post-prose :global(pre.astro-code) {
 		@apply mt-6 mb-8;
 		@apply py-4 px-5;
 		@apply rounded;
 		@apply overflow-auto;
 	}
 
-	.post-prose > :global(p:not(pre.astro-code) code) {
+	.post-prose :global(p:not(pre.astro-code) code) {
 		@apply bg-casper/30 py-[0.0625rem] px-[0.25rem];
 		@apply text-black;
 		@apply font-semibold;
