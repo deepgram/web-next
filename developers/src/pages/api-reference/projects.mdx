@@ -20,27 +20,43 @@ Required account/project scope(s): `project:read`.
 
 #### Responses
 
-Status Description
-
-200 Success Projects found.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Projects found.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-projects: array
-
-Array of project objects.
-
-project_id: uuid
-
-Unique identifier of the project.
-
-name: string
-
-Name of the project.
-
-company: string
-
-Name of the company associated with the project. Optional.
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>projects:</strong> array</p>
+          <p>Array of project objects.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>project_id:</strong> uuid</p>
+              <p>Unique identifier of the project.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>name:</strong> string</p>
+              <p>Name of the project.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>company:</strong> string</p>
+              <p>Name of the company associated with the project. Optional.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 </div>
 </div>
@@ -52,28 +68,52 @@ Name of the company associated with the project. Optional.
 
 #### Query Parameters
 
-project_id: uuid
-Unique identifier of the project for which you want to retrieve information.
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project for which you want to retrieve information.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-200 Success Project found.
-404 Not Found A project with the specified ID was not found.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Project found.</td>
+    </tr>
+    <tr>
+      <td>404 Not Found</td>
+      <td>A project with the specified ID was not found.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-project_id: uuid
-
-Unique identifier of the project.
-
-name: string
-
-Name of the project.
-
-company: string
-
-Name of the company associated with the project. Optional.
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>project_id:</strong> uuid</p>
+          <p>Unique identifier of the project.</p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>name:</strong> string</p>
+          <p>Name of the project.</p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>company:</strong> string</p>
+          <p>Name of the company associated with the project. Optional.</p>
+  </li>
+</ul>
 
 </div>
 </div>
@@ -89,27 +129,60 @@ Required account scope(s): `project:write`. Required project scope(s): `project:
 
 #### Path Parameters
 
-project_id: uuid
-Unique identifier of the project that you want to update.
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project that you want to update.</p>
+  </main>
+</div>
 
 #### Request Body Schema
 
-name: string
-Name of the project. Optional.
+<div class="feature">
+  <header class="notranslate">
+    <strong>name:</strong> string
+  </header>
+  <main>
+          <p>Name of the project. Optional.</p>
+  </main>
+</div>
 
-company: string
-Name of the company associated with the project. Optional.
+<div class="feature">
+  <header class="notranslate">
+    <strong>company:</strong> string
+  </header>
+  <main>
+          <p>Name of the company associated with the project. Optional.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-200 Success Project updated.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Project updated.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-message: string
-
-Success message.
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>message:</strong> string</p>
+          <p>Success message.</p>
+  </li>
+</ul>
 
 </div>
 </div>
@@ -125,13 +198,31 @@ Required account scope(s): `project:write`. Required project scope(s): `project:
 
 #### Path Parameters
 
-project_id: uuid
-Unique identifier of the project that you want to delete.
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project that you want to delete.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-200 Success Project deleted.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Project deleted.</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 </div>

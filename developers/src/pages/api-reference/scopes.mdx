@@ -10,11 +10,131 @@ Scopes are permissions required to perform actions in a specified Deepgram Proje
 <div>
 <div slot="left">
 
-#### Get Member Scopes
+### Get Member Scopes
 
 Lists the specified project scopes assigned to the specified member. If the authenticated account has access to the `members:read:scopes`, `admins:read:scopes`, and `owners:read:scopes` project scopes, it will retrieve project scopes for any member of the specified project. Otherwise, it will retrieve project scopes for only the authenticated account.
 
 Required account scope(s): `account:read`, `project:read`. Required project scope(s): `project:read`. Optional project scope(s): `members:read:scopes`, `admins:read:scopes`, `owners:read:scopes`.
+
+#### Path Parameters
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+    <p>Identifier of the project that contains the member for whom you want to get scopes.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <strong>member_id:</strong> uuid
+  </header>
+  <main>
+    <p>Unique identifier of the member for whom you want to get scopes.</p>
+  </main>
+</div>
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Scopes found.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Response Schema
+
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>scopes:</strong> array</p>
+          <p>Array of scopes associated with the member.</p>
+  </li>
+</ul>
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Update Scope
+
+Updates the specified project scopes assigned to the specified member.
+
+If the specified member has the scope `member` or the scope being added is `member`, the requesting account must have the scope `members:write:scopes`. If the specified member has the scope `admin` or the scope being added is `admin`, the requesting account must have the scope `admins:write:scopes`. If the specified member has the scope `owner` or the scope being added is `owner`, the requesting account must have the scope `owners:write:scopes`.
+
+If the scope being added is `member`, `admin`, or `owner`, it will replace the existing `member`, `admin`, or `owner` scope of the specified member unless the specified member is the only member with the `owner` scope. In this case, the request will fail.
+
+If the scope being added is not `member`, `admin`, or `owner`, then the requesting account must also have the scope that it is trying to add to the specified member. For example, if the requesting account tries to add the `project:write:settings` project scope to a specified member, but the requesting account itself does not have the scope `project:write:settings`, then the request will fail.
+
+Required account scope(s): `project:write`. Optional project scope(s): See the description.
+
+#### Path Parameters
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project that contains the specified member and scope that you want to update.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <strong>member_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the member for whom you want to update the scope.</p>
+  </main>
+</div>
+
+#### Request Body Schema
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>scope:</strong> string
+  </header>
+  <main>
+          <p>Scope for the specified member and project.</p>
+  </main>
+</div>
+
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Scope updated.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Response Schema
+
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>message:</strong> string</p>
+          <p>Success message.</p>
+  </li>
+</ul>
 
 </div>
 </div>

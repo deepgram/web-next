@@ -1,0 +1,161 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Billing
+description: Billing for the Deepgram API
+order: 10
+---
+
+Deepgram tracks individual transactions and transaction summaries for Deepgram services.
+
+<div>
+<div slot="left">
+
+### Get All Balances
+
+Generates a list of outstanding balances for the specified project. To see balances, the authenticated account must be a project `owner` or `administrator`.
+
+#### Path Parameters
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+    <p>Unique identifier of the project for which you want to retrieve outstanding balances.</p>
+  </main>
+</div>
+
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 success</td>
+      <td><span>Balances found.</span></td>
+    </tr>
+  </tbody>
+</table>
+
+#### Response Schema
+
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>balances:</strong> array</p>
+    <p>Array of balance objects.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>balance_id:</strong> uuid</p>
+        <p>Unique identifier of the balance.</p>
+      </li>
+      <li>
+        <p class="notranslate">
+          <strong>amount:</strong> number
+        </p>
+          <p>Amount of the balance.</p>
+      </li>
+      <li>
+        <p class="notranslate">
+          <strong>units:</strong> string
+        </p>
+          <p>Units of the balance. May use <code>usd</code> or <code>hour</code>, depending on the project
+                  billing
+                  settings.</p>
+      </li>
+      <li>
+        <p class="notranslate">
+          <strong>purchase:</strong> string
+        </p>
+          <p>Unique identifier of the purchase order associated with the balance.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+</div>
+
+<div>
+<div slot="left">
+
+### Get Balance
+
+Retrieves details about the specified balance. To see balances, the authenticated account must be a project `owner` or `administrator`.
+
+#### Path Parameters
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> string
+  </header>
+  <main>
+    <p>Unique identifier of the project for which you want to retrieve the specified balance.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <strong>balance_id:</strong> uuid
+  </header>
+  <main>
+    <p>Unique identifier of the balance that you want to retrieve.</p>
+  </main>
+</div>
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Balance found.</td>
+    </tr>
+    <tr>
+      <td>404 Not Found</td>
+      <td>A balance with the specified balance ID in the specified project was not found.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Response Schema
+
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>balance_id:</strong> uuid</p>
+    <p>Unique identifier of the balance.</p>
+  </li>
+  <li>
+    <p class="notranslate">
+      <strong>amount:</strong> number
+    </p>
+      <p>Amount of the balance.</p>
+  </li>
+  <li>
+    <p class="notranslate">
+      <strong>units:</strong> string
+    </p>
+      <p>Units of the balance. May use <code>usd</code> or <code>hour</code>, depending on the project
+              billing
+              settings.</p>
+  </li>
+  <li>
+    <p class="notranslate">
+      <strong>purchase:</strong> string
+    </p>
+      <p>Unique identifier of the purchase order associated with the balance.</p>
+  </li>
+</ul>
+
+</div>
+</div>

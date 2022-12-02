@@ -1,0 +1,57 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Invitations
+description: Invitations for the Deepgram API
+order: 8
+---
+
+To add a Member to a Deepgram Project, you can use the Deepgram Console or the Deepgram API to send an Invitation. When sending an Invitation, you provide an email address for the Member, and Deepgram generates an invitation link and emails it to them.
+
+<div>
+<div slot="left">
+
+### Leave Project
+
+Removes the authenticated account from the specified project. Will also delete API Keys created by the account for the specified project. If the authenticated account is the only account on the project with the scope `owner`, the call will fail.
+
+Required account scope(s): `project:write`.
+
+#### Path Parameters
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project from which you want to remove the authenticated account.</p>
+  </main>
+</div>
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Account removed from project.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Response Schema
+
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>message:</strong> string</p>
+          <p>Success message.</p>
+  </li>
+</ul>
+
+</div>
+</div>

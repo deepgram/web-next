@@ -20,422 +20,675 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 #### Query Parameters
 
-Query Parameters
-tier:
-string
-Level of model you would like to use in your request. Options include:
-
-enhanced:
-Applies our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.
-base: (Default)
-Applies our Base models, which are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness.
-To learn more, see Features: Tier.
-
-model:
-string
-AI model used to process submitted audio. Options include:
-
-general: (Default)
-Optimized for everyday audio processing.
-TIERS: enhanced, base
-meeting:
-Optimized for conference room settings, which include multiple speakers with a single microphone.
-TIERS: enhanced beta, base
-phonecall:
-Optimized for low-bandwidth audio phone calls.
-TIERS: enhanced beta, base
-voicemail:
-Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.
-TIERS: base
-finance:
-Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.
-TIERS: enhanced beta, base
-conversationalai:
-Optimized to allow artificial intelligence technologies, such as chatbots, to interact with people in a human-like way.
-TIERS: base
-video:
-Optimized for audio sourced from videos.
-TIERS: base
-<custom_id>:
-To use a custom model associated with your account, include its custom_id.
-TIERS: enhanced, base (depending on which tier the custom model was trained on)
-To learn more, see Features: Model.
-
-version:
-string
-Version of the model to use.
-
-Default: latest
-
-Possible values: latest OR <version_id>
-
-To learn more, see Features: Version.
-
-language:
-string
-BCP-47 language tag that hints at the primary spoken language. Language support is optimized for the following language/model combinations:
-
-Chinese
-
-zh-CN: China (Simplified Mandarin) beta
-MODELS: general
-zh-TW: Taiwan (Traditional Mandarin) beta
-MODELS: general
-Dutch
-
-nl: beta
-MODELS: general (enhanced, base)
-English
-
-en: English (Default)
-MODELS: general (enhanced, base), meeting (enhanced beta, base), phonecall (enhanced beta, base), voicemail, finance (enhanced beta, base), conversationalai, video
-en-AU: Australia
-MODELS: general
-en-IN: India
-MODELS: general
-en-NZ: New Zealand
-MODELS: general
-en-GB: United Kingdom
-MODELS: general
-en-US: United States
-MODELS: general (enhanced, base), meeting (enhanced beta, base), phonecall (enhanced beta, base), voicemail, finance, conversationalai, video
-Flemish
-
-nl: beta
-MODELS: general (enhanced, base)
-French
-
-fr:
-MODELS: general (enhanced beta, base)
-fr-CA: Canada
-MODELS: general
-German
-
-de:
-MODELS: general (enhanced beta, base)
-Hindi
-
-hi:
-MODELS: general
-hi-Latn: Roman Script beta
-MODELS: general
-Indonesian
-
-id: beta
-MODELS: general
-Italian
+<div class="feature">
+  <header class="notranslate">
+    <div id="tier-pr"><strong>tier:</strong></div> string
+  </header>
+  <main>
+    <p>Level of model you would like to use in your request. Options include:</p>
+    <ul>
+      <li class="notranslate"><strong>enhanced:</strong><br/>
+          Applies our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.</li>
+      <li class="notranslate"><strong>base:</strong> (Default)<br/>
+          Applies our Base models, which are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness.</li>
+    </ul>
+    <p>To learn more, see
+          <a href="/documentation/features/tier/">Features: Tier</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="model-pr"><strong>model:</strong></div> string
+  </header>
+  <main>
+    <p>AI model used to process submitted audio. Options include:</p>
+    <ul>
+      <li class="notranslate"><strong>general:</strong> (Default)<br/>
+          Optimized for everyday audio processing.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced, base</li>
+      <li class="notranslate"><strong>meeting:</strong><br/>
+          Optimized for conference room settings, which include multiple speakers with a
+            single microphone.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base</li>
+      <li class="notranslate"><strong>phonecall:</strong><br/>
+          Optimized for low-bandwidth audio phone calls.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base</li>
+      <li class="notranslate"><strong>voicemail:</strong><br/>
+          Optimized for low-bandwidth audio clips with a single speaker. Derived from the
+          <code>phonecall</code> model.<br/>
+          <strong class="hint notranslate">TIERS:</strong> base</li>
+      <li class="notranslate"><strong>finance:</strong><br/>
+          Optimized for multiple speakers with varying audio quality, such as might be found
+          on a typical earnings call. Vocabulary is heavily finance oriented.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base</li>
+      <li class="notranslate"><strong>conversationalai:</strong><br/>
+          Optimized to allow artificial intelligence technologies, such as chatbots, to interact
+          with people in a human-like way.<br/>
+          <strong class="hint notranslate">TIERS:</strong> base</li>
+      <li class="notranslate"><strong>video:</strong><br />
+          Optimized for audio sourced from videos.<br/>
+          <strong class="hint notranslate">TIERS:</strong> base</li>
+      <li class="notranslate"><strong>&lt;custom_id&gt;:</strong><br/>
+          To use a custom model associated with your account, include its <code>custom_id</code>.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced, base (depending on which tier the custom model was trained on)</li>
+    </ul></p>
+    <p>To learn more, see
+        <a href="/documentation/features/model/">Features: Model</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="version-pr"  class="notranslate"><strong>version:</strong></div> string
+  </header>
+  <main>
+    <p>Version of the model to use.</p>
+    <p class="notranslate"><strong>Default:</strong> latest</p>
+    <p><strong>Possible values:</strong> <span class="notranslate"><code>latest</code> OR <code>&lt;version_id&gt;</code></span></p>
+    <p>To learn more, see
+        <a href="/documentation/features/version/">Features: Version</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="language-pr" ><strong>language:</strong></div> string
+  </header>
+  <main>
+    <p><a href="https://tools.ietf.org/html/bcp47">BCP-47</a> language tag that hints at the primary spoken
+          language. Language support is optimized for the following language/model combinations:</p>
+    <p><strong>Chinese</strong></p>
+    <ul>
+      <li><strong>zh-CN:</strong> China (Simplified Mandarin) <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+      <li><strong>zh-TW:</strong> Taiwan (Traditional Mandarin) <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Dutch</strong></p>
+    <ul>
+      <li><strong>nl:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+          </li>
+    </ul>
+    <p><strong>English</strong></p>
+    <ul>
+      <li><strong>en:</strong> English (Default)<br/>
+          <strong class="hint notranslate">MODELS:</strong> general (enhanced, base), meeting (enhanced <em>beta</em>, base), phonecall (enhanced <em>beta</em>, base), voicemail, finance (enhanced <em>beta</em>, base), conversationalai, video
+          </li>
+      <li><strong>en-AU:</strong> Australia<br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+      <li><strong>en-IN:</strong> India<br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+      <li><strong>en-NZ:</strong> New Zealand<br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+      <li><strong>en-GB:</strong> United Kingdom<br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+      <li><strong>en-US:</strong> United States<br/>
+          <strong class="hint notranslate">MODELS:</strong> general (enhanced, base), meeting (enhanced <em>beta</em>, base), phonecall (enhanced <em>beta</em>, base), voicemail, finance, conversationalai, video
+          </li>
+    </ul>
+    <p><strong>Flemish</strong></p>
+    <ul>
+      <li><strong>nl:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+          </li>
+    </ul>
+    <p><strong>French</strong></p>
+    <ul class="notranslate">
+      <li><strong>fr:</strong><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+      <li><strong>fr-CA:</strong> Canada<br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>German</strong></p>
+    <ul class="notranslate">
+      <li><strong>de:</strong><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Hindi</strong></p>
+    <ul class="notranslate">
+      <li><strong>hi:</strong><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+      <li><strong>hi-Latn:</strong> Roman Script <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Indonesian</strong></p>
+    <ul>
+      <li><strong>id:</strong> <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Italian</strong></p>
+    <ul>
+      <li><strong>it:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Japanese</strong></p>
+    <ul>
+      <li><strong>ja:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Korean</strong></p>
+    <ul class="notranslate">
+      <li><strong>ko:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Polish</strong></p>
+    <ul class="notranslate">
+      <li><strong>pl:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Portuguese</strong></p>
+    <ul>
+      <li><strong>pt:</strong><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+      <li><strong>pt-BR:</strong> Brazil<br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+      <li><strong>pt-PT:</strong> Portugal<br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Russian</strong></p>
+    <ul>
+      <li><strong>ru:</strong><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Spanish</strong></p>
+    <ul>
+      <li><strong>es:</strong><br/>
+          <strong class="hint notranslate">MODELS:</strong> general (enhanced <em>beta</em>, base)
+          </li>
+      <li><strong>es-419:</strong> Latin America<br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Swedish</strong></p>
+    <ul>
+      <li><strong>sv:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Turkish</strong></p>
+    <ul>
+      <li><strong>tr:</strong><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Ukrainian</strong></p>
+    <ul>
+      <li class="notranslate"><strong>uk:</strong> <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p>To learn more, see
+        <a href="/documentation/features/language/">Features: Language</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="punctuate-pr"><strong>punctuate:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to add punctuation and capitalization to the transcript. To learn more, see
+          <a href="/documentation/features/punctuate/">Features: Punctuation</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="profanity-pr"><strong>profanity_filter:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to remove profanity from the transcript. To learn more, see
+          <a href="/documentation/features/profanity-filter/">Features: Profanity Filter</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="redact-pr"><strong>redact:</strong></div> any
+  </header>
+  <main>
+    <p>Indicates whether to redact sensitive information, replacing redacted content with asterisks (*). Options include:</p>
+    <ul>
+      <li class="notranslate"><strong>pci:</strong><br/>
+          Redacts sensitive credit card information, including credit card number, expiration date, and CVV.</li>
+      <li class="notranslate"><strong>numbers:</strong> (or <strong>true</strong>)<br/>
+          Aggressively redacts strings of numerals.</li>
+      <li class="notranslate"><strong>ssn:</strong> <em>beta</em><br/>
+          Redacts social security numbers.</li>
+    </ul>
+    <p>Can send multiple instances in query string (for example,
+          <code>redact=pci&amp;redact=numbers</code>). When sending multiple values, redaction occurs in the
+          order you specify. For instance, in this example, sensitive credit card information would be redacted
+          first, then strings
+          of numbers.
+        </p>
+    <p> To learn more, see <a href="/documentation/features/redact/">Features: Redaction</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="diarize-pr"><strong>diarize:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to recognize speaker changes. When set to
+          <code>true</code>, each word in the transcript will be assigned a speaker number starting at 0. 
+    </p>      
+    <p class="info">To use the legacy diarization feature, add a <code>diarize_version</code> parameter set to <code>2021-07-14.0</code>. For example,
+          <code>diarize_version=2021-07-14.0</code>.
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/diarize/">Features: Diarization</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="diarize-version-pr"><strong>diarize_version:</strong></div> string
+  </header>
+  <main>
+    <p>Indicates the version of the diarization feature to use. To use the legacy diarization feature, set the parameter value to <code>2021-07-14.0</code>.
+    </p>      
+    <p class="info">Only used when the diarization feature is enabled (<code>diarize=true</code> is passed to the API).
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/diarize/">Features: Diarization</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="ner-pr"><strong>ner:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to recognize alphanumeric strings. When set to
+          <code>true</code>, whitespace will be removed between characters identified as part of an alphanumeric
+          string. To learn more, see
+          <a href="/documentation/features/named-entity-recognition/">Features: Named-Entity Recognition (NER)</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="multichannel-pr"><strong>multichannel:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to transcribe each audio channel independently. When set to
+          <code>true</code>, you will receive one transcript for each channel, which means you can apply a
+          different model to each channel using the model parameter (e.g., set
+          <code>model</code> to
+          <code>general:phonecall</code>, which applies the
+          <code>general</code> model to channel 0 and the
+          <code>phonecall</code> model to channel 1).</p>
+    <p>To learn more, see
+      <a href="/documentation/features/multichannel/">Features: Multichannel</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="alternatives-pr"><strong>alternatives:</strong></div> integer
+  </header>
+  <main>
+    <p>Maximum number of transcript alternatives to return. Just like a human listener, Deepgram can provide
+          multiple possible interpretations of what it hears. </p>
+    <p class="notranslate"><strong>Default:</strong> 1</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="numerals-pr"><strong>numerals:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to convert numbers from written format (e.g., one) to numerical format (e.g., 1).</p>
+    <p>Deepgram can format numbers up to 999,999.</p>
+    <p class="info">Converted numbers do not include punctuation. For example, 999,999 would be transcribed as
+          <code>999999</code>.
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/numerals/">Features: Numerals</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="search-pr"><strong>search:</strong></div> any
+  </header>
+  <main>
+    <p>Terms or phrases to search for in the submitted audio. Deepgram searches for acoustic patterns in
+          audio rather than text patterns in transcripts because we have noticed that acoustic pattern matching
+          is more performant.</p>
+    <p class="info">
+      <ul>
+          <li>Can include up to 25 search terms per request.</li>
+          <li>Can send multiple instances in query string (for example,
+            <code>search=speech&amp;search=Friday</code>).
+          </li>
+      </ul>
+    </p>
+    <p>To learn more, see
+      <a href="/documentation/features/search/">Features: Search</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="replace-pr"><strong>replace:</strong></div> string
+  </header>
+  <main>
+    <p>Terms or phrases to search for in the submitted audio and replace. </p>
+    <p class="info">
+      <ul>
+          <li>URL-encode any terms or phrases that include spaces, punctuation, or other special characters.</li>
+          <li>Can send multiple instances in query string (for example,
+            <code>replace=this:that&amp;replace=thisalso:thatalso</code>).
+          </li>
+          <li>Replacing a term or phrase with nothing (<code>replace=this</code>) will remove the term or phrase from the audio transcript.</li>
+      </ul>
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/replace/">Features: Replace</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="callback-pr"><strong>callback:</strong></div> string
+  </header>
+  <main>
+    <p>Callback URL to provide if you would like your submitted audio to be processed asynchronously. When
+          passed, Deepgram will immediately respond with a
+          <code>request_id</code>. When it has finished analyzing the audio, it will send a POST request to the
+          provided URL with an appropriate HTTP status code.</p>
+    <p class="info">
+      Notes:
+      <ul>
+        <li>You may embed basic authentication credentials in the callback URL.</li>
+        <li>Only ports 80, 443, 8080, and 8443 can be used for callbacks</li>
+      </ul>
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/callback/">Features: Callback</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="keywords-pr"><strong>keywords:</strong></div> any
+  </header>
+  <main>
+      <p>Keywords to which the model should pay particular attention to boosting or suppressing to help it
+          understand context. Just like a human listener, Deepgram can better understand mumbled, distorted, or
+          otherwise hard-to-decipher
+          speech when it knows the context of the conversation.</p>
+    <p class="info">
+      Notes:
+      <ul>
+        <li>Can include up to 200 keywords per request.</li>
+        <li>Can send multiple instances in query string (for example,
+          <code>keywords=medicine&amp;keywords=prescription</code>).
+        </li>
+        <li>Can request multi-word keywords in a percent-encoded query string (for example,
+          <code>keywords=miracle%20medicine</code>). When Deepgram listens for your supplied keywords, it
+          separates them into individual words, then boosts or suppresses them individually.
+        </li>
+        <li>Can append a positive or negative intensifier to either boost or suppress the recognition of
+          particular words. Positive and negative values can be decimals.</li>
+        <li>
+          <a href="/documentation/features/keywords/#best-practices">Follow best practices for keyword boosting</a>.
+        </li>
+        <li>Support for out-of-vocabulary (OOV) keyword boosting when processing streaming audio is
+          currently in
+          <em>beta</em>; to fall back to previous keyword behavior, append the query parameter
+          <code>keyword_boost=legacy</code> to your API request.
+        </li>
+      </ul>
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/keywords/">Features: Keywords</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="paragraphs-pr"><strong>paragraphs:</strong></div> boolean
+  </header>
+  <main>
+      <p>Indicates whether Deepgram will split audio into paragraphs to improve transcript readability. When 
+      <code>paragraphs</code> is set to <code>true</code>, you must also set either <code>punctuate</code>, <code>diarize</code>, or <code>multichannel</code> to <code>true</code>.</p>
+    <p>To learn more, see
+          <a href="/documentation/features/paragraphs/">Features: Paragraphs</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="utterances-pr"><strong>utterances:</strong></div> boolean
+  </header>
+  <main>
+      <p>Indicates whether Deepgram will segment speech into meaningful semantic units, which allows the model
+          to interact more naturally and effectively with speakers' spontaneous speech patterns. For example,
+          when humans speak
+          to each other conversationally, they often pause mid-sentence to reformulate their thoughts, or stop
+          and restart a badly-worded sentence. When
+          <code>utterances</code> is set to
+          <code>true</code>, these utterances are identified and returned in the transcript results.</p>
+      <p>By default, when utterances is enabled, it starts a new utterance after 0.8 s of silence. You can
+          customize the length of time used to determine where to split utterances by submitting the
+          <code>utt_split</code> parameter.
+        </p>
+    <p>To learn more, see
+          <a href="/documentation/features/utterances/">Features: Utterances</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="uttsplit-pr"><strong>utt_split:</strong></div> number
+  </header>
+  <main>
+      <p>Length of time in seconds of silence between words that Deepgram will use when determining where to
+          split&nbsp;utterances. Used when utterances is enabled.</p>
+    <p class="notranslate"><strong>Default:</strong> 0.8</p>
+    <p>To learn more, see
+          <a href="/documentation/features/utterance-split/">Features: Utterance Split</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="tag-pr"><strong>tag:</strong></div> string
+  </header>
+  <main>
+    <p>Tag to associate with the request. Your request will automatically be associated with any tags you add to the API Key used to run the request. Tags associated with requests appear in <a href="#usage">usage reports</a>.</p>
+    <p>To learn more, see
+          <a href="/documentation/features/tag/">Features: Tag</a>.</p>
+  </main>
+</div>
 
-it: beta
-MODELS: general (enhanced, base)
-Japanese
-
-ja: beta
-MODELS: general (enhanced, base)
-Korean
-
-ko: beta
-MODELS: general (enhanced, base)
-Norwegian
-
-no: beta
-MODELS: general (enhanced, base)
-Polish
-
-pl: beta
-MODELS: general (enhanced, base)
-Portuguese
-
-pt:
-MODELS: enhanced beta, general
-pt-BR: Brazil
-MODELS: enhanced beta, general
-pt-PT: Portugal
-MODELS: enhanced beta, general
-Russian
-
-ru:
-MODELS: general
-Spanish
-
-es:
-MODELS: general (enhanced beta, base)
-es-419: Latin America
-MODELS: general (enhanced beta, base)
-Swedish
-
-sv: beta
-MODELS: general
-Turkish
-
-tr:
-MODELS: general
-Ukrainian
-
-uk: beta
-MODELS: general
-To learn more, see Features: Language.
-
-detect_language:
-boolean
-Indicates whether to detect the language of the provided audio. To learn more, see Features: Language Detection.
-
-punctuate:
-boolean
-Indicates whether to add punctuation and capitalization to the transcript. To learn more, see Features: Punctuation.
-
-profanity_filter:
-boolean
-Indicates whether to remove profanity from the transcript. To learn more, see Features: Profanity Filter.
-
-redact:
-any
-Indicates whether to redact sensitive information, replacing redacted content with asterisks (\*). Options include:
-
-pci:
-Redacts sensitive credit card information, including credit card number, expiration date, and CVV.
-numbers: (or true)
-Aggressively redacts strings of numerals.
-ssn: beta
-Redacts social security numbers.
-Can send multiple instances in query string (for example, redact=pci&redact=numbers). When sending multiple values, redaction occurs in the order you specify. For instance, in this example, sensitive credit card information would be redacted first, then strings of numbers.
-
-To learn more, see Features: Redaction.
-
-diarize:
-boolean
-Indicates whether to recognize speaker changes. When set to true, each word in the transcript will be assigned a speaker number starting at 0.
-
-To use the legacy diarization feature, add a diarize_version parameter set to 2021-07-14.0. For example, diarize_version=2021-07-14.0.
-
-To learn more, see Features: Diarization.
-
-diarize_version:
-string
-Indicates the version of the diarization feature to use. To use the legacy diarization feature, set the parameter value to 2021-07-14.0.
-
-Only used when the diarization feature is enabled (diarize=true is passed to the API).
-
-To learn more, see Features: Diarization.
-
-ner:
-boolean
-Indicates whether to recognize alphanumeric strings. When set to true, whitespace will be removed between characters identified as part of an alphanumeric string. To learn more, see Features: Named-Entity Recognition (NER).
-
-multichannel:
-boolean
-Indicates whether to transcribe each audio channel independently. When set to true, you will receive one transcript for each channel, which means you can apply a different model to each channel using the model parameter (e.g., set model to general:phonecall, which applies the general model to channel 0 and the phonecall model to channel 1).
-
-To learn more, see Features: Multichannel.
-
-alternatives:
-integer
-Maximum number of transcript alternatives to return. Just like a human listener, Deepgram can provide multiple possible interpretations of what it hears.
-
-Default: 1
-
-numerals:
-boolean
-Indicates whether to convert numbers from written format (e.g., one) to numerical format (e.g., 1).
-
-Deepgram can format numbers up to 999,999.
-
-Converted numbers do not include punctuation. For example, 999,999 would be transcribed as 999999.
-
-To learn more, see Features: Numerals.
-
-search:
-any
-Terms or phrases to search for in the submitted audio. Deepgram searches for acoustic patterns in audio rather than text patterns in transcripts because we have noticed that acoustic pattern matching is more performant.
-
-Can include up to 25 search terms per request.
-Can send multiple instances in query string (for example, search=speech&search=Friday).
-To learn more, see Features: Search.
-
-replace:
-string
-Terms or phrases to search for in the submitted audio and replace.
-
-URL-encode any terms or phrases that include spaces, punctuation, or other special characters.
-Can send multiple instances in query string (for example, replace=this:that&replace=thisalso:thatalso).
-Replacing a term or phrase with nothing (replace=this) will remove the term or phrase from the audio transcript.
-To learn more, see Features: Replace.
-
-callback:
-string
-Callback URL to provide if you would like your submitted audio to be processed asynchronously. When passed, Deepgram will immediately respond with a request_id. When it has finished analyzing the audio, it will send a POST request to the provided URL with an appropriate HTTP status code.
-
-Notes:
-
-You may embed basic authentication credentials in the callback URL.
-Only ports 80, 443, 8080, and 8443 can be used for callbacks
-To learn more, see Features: Callback.
-
-keywords:
-any
-Keywords to which the model should pay particular attention to boosting or suppressing to help it understand context. Just like a human listener, Deepgram can better understand mumbled, distorted, or otherwise hard-to-decipher speech when it knows the context of the conversation.
-
-Notes:
-
-Can include up to 200 keywords per request.
-Can send multiple instances in query string (for example, keywords=medicine&keywords=prescription).
-Can request multi-word keywords in a percent-encoded query string (for example, keywords=miracle%20medicine). When Deepgram listens for your supplied keywords, it separates them into individual words, then boosts or suppresses them individually.
-Can append a positive or negative intensifier to either boost or suppress the recognition of particular words. Positive and negative values can be decimals.
-Follow best practices for keyword boosting.
-Support for out-of-vocabulary (OOV) keyword boosting when processing streaming audio is currently in beta; to fall back to previous keyword behavior, append the query parameter keyword_boost=legacy to your API request.
-To learn more, see Features: Keywords.
-
-paragraphs:
-boolean
-Indicates whether Deepgram will split audio into paragraphs to improve transcript readability. When paragraphs is set to true, you must also set either punctuate, diarize, or multichannel to true.
-
-To learn more, see Features: Paragraphs.
-
-summarize:
-boolean
-Indicates whether Deepgram will provide summaries for sections of content. When summarize is set to true, punctuate will be set to true by default.
-
-To learn more, see Features: Summarize.
-
-detect_topics:
-boolean
-Indicates whether Deepgram will identify and extract key topics for sections of content. When detect_topics is set to true, punctuate will be set to true by default.
-
-To learn more, see Features: Topic Detection.
-
-utterances:
-boolean
-Indicates whether Deepgram will segment speech into meaningful semantic units, which allows the model to interact more naturally and effectively with speakers' spontaneous speech patterns. For example, when humans speak to each other conversationally, they often pause mid-sentence to reformulate their thoughts, or stop and restart a badly-worded sentence. When utterances is set to true, these utterances are identified and returned in the transcript results.
-
-By default, when utterances is enabled, it starts a new utterance after 0.8 s of silence. You can customize the length of time used to determine where to split utterances by submitting the utt_split parameter.
-
-To learn more, see Features: Utterances.
-
-utt_split:
-number
-Length of time in seconds of silence between words that Deepgram will use when determining where to split utterances. Used when utterances is enabled.
-
-Default: 0.8
-
-To learn more, see Features: Utterance Split.
-
-tag:
-string
-Tag to associate with the request. Your request will automatically be associated with any tags you add to the API Key used to run the request. Tags associated with requests appear in usage reports.
-
-To learn more, see Features: Tag.
 
 #### Request Body Schema
 
 Request body when submitting pre-recorded audio. Accepts either:
 
-raw binary audio data. In this case, include a Content-Type header set to the audio MIME type.
-JSON object with a single field from which the audio can be retrieved. In this case, include a Content-Type header set to application/json.
-url:
-string
-URL of audio file to transcribe.
+<ul>
+  <li>raw binary audio data. In this case, include a <code>Content-Type</code> header set to the audio <a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#Audio_and_video_types">MIME
+      type</a>.</li>
+  <li>JSON object with a single field from which the audio can be retrieved. In this case, include a
+    <code>Content-Type</code> header set to <code>application/json</code>.
+  </li>
+</ul>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="url-pr"><strong>url:</strong></div> string
+  </header>
+  <main>
+          <p>URL of audio file to transcribe.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-200 Success Audio submitted for transcription.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Audio submitted for transcription.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-metadata: object
-
-JSON-formatted ListenMetadata object.
-
-request_id: uuid
-
-Unique identifier of the submitted audio and derived data returned.
-
-transaction_key: string
-
-Blob of text that helps Deepgram engineers debug any problems you encounter. If you need help getting an API call to work correctly, send this key to us so that we can use it as a starting point when investigating any issues.
-
-sha256: string
-
-SHA-256 hash of the submitted audio data.
-
-created: string
-
-ISO-8601 timestamp that indicates when the audio was submitted.
-
-duration: number
-
-Duration in seconds of the submitted audio.
-
-channels: integer
-
-Number of channels detected in the submitted audio.
-
-results: object
-
-JSON-formatted ListenResults object.
-
-channels: array
-
-Array of JSON-formatted ChannelResult objects.
-
-search: array
-
-Array of JSON-formatted SearchResults.
-
-query: string
-
-Term for which Deepgram is searching.
-
-hits: array
-
-Array of JSON-formatted Hit objects.
-
-confidence: number
-
-Value between 0 and 1 that indicates the model's relative confidence in this hit.
-
-start: number
-
-Offset in seconds from the start of the audio to where the hit occurs.
-
-end: number
-
-Offset in seconds from the start of the audio to where the hit ends.
-
-snippet: string
-
-Transcript that corresponds to the time between start and end.
-
-alternatives: array
-
-Array of JSON-formatted ResultAlternative objects. This array will have length n, where n matches the value of the alternatives parameter passed in the request body.
-
-transcript: string
-
-Single-string transcript containing what the model hears in this channel of audio.
-
-confidence: number
-
-Value between 0 and 1 indicating the model's relative confidence in this transcript.
-
-words: array
-
-Array of JSON-formatted Word objects.
-
-word: string
-
-Distinct word heard by the model.
-
-start: number
-
-Offset in seconds from the start of the audio to where the spoken word starts.
-
-end: number
-
-Offset in seconds from the start of the audio to where the spoken word ends.
-
-confidence: number
-
-Value between 0 and 1 indicating the model's relative confidence in this word.
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>metadata:</strong> object</p>
+        <p>JSON-formatted ListenMetadata object.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>request_id:</strong> uuid</p>
+        <p>Unique identifier of the submitted audio and derived data returned.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>transaction_key:</strong> string</p>
+        <p>Blob of text that helps Deepgram engineers debug any problems you encounter. If you need help getting an
+          API call to work correctly, send this key to us so that we can use it as a starting point when
+          investigating any issues.
+        </p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>sha256:</strong> string</p>
+        <p>SHA-256 hash of the submitted audio data.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>created:</strong> string</p>
+        <p>ISO-8601 timestamp that indicates when the audio was submitted.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>duration:</strong> number</p>
+        <p>Duration in seconds of the submitted audio.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>channels:</strong> integer</p>
+          <p>Number of channels detected in the submitted audio.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p class="notranslate"><strong>results:</strong> object</p>
+          <p>JSON-formatted ListenResults object.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>channels:</strong> array</p>
+        <p>Array of JSON-formatted ChannelResult objects.</p>
+        <ul class="response">
+          <li>
+            <p class="notranslate"><strong>search:</strong> array</p>
+            <p>Array of JSON-formatted <code>SearchResults</code>.</p>
+            <ul class="response">
+              <li>
+                <p class="notranslate"><strong>query:</strong> string</p>
+                <p>Term for which Deepgram is searching.</p>
+              </li>
+              <li>
+                <p class="notranslate"><strong>hits:</strong> array</p>
+                <p>Array of JSON-formatted Hit objects.</p>
+                <ul class="response">
+                  <li>
+                    <p class="notranslate"><strong>confidence:</strong> number</p>
+                    <p>Value between 0 and 1 that indicates the model's relative confidence in this hit.</p>
+                  </li>
+                  <li>
+                    <p class="notranslate"><strong>start:</strong> number</p>
+                    <p>Offset in seconds from the start of the audio to where the hit occurs.</p>
+                  </li>
+                  <li>
+                    <p class="notranslate"><strong>end:</strong> number</p>
+                    <p>Offset in seconds from the start of the audio to where the hit ends.</p>
+                  </li>
+                  <li>
+                    <p class="notranslate"><strong>snippet:</strong> string</p>
+                    <p>Transcript that corresponds to the time between start and end.</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p class="notranslate"><strong>alternatives:</strong> array</p>
+            <p>Array of JSON-formatted <code>ResultAlternative</code> objects. This array will have length <em>n</em>,
+              where <em>n</em> matches the value of the <code>alternatives</code> parameter passed in the request
+              body.
+            </p>
+            <ul class="response">
+              <li>
+                <p class="notranslate"><strong>transcript:</strong> string</p>
+                <p>Single-string transcript containing what the model hears in this channel of audio.</p>
+              </li>
+              <li>
+                <p class="notranslate"><strong>confidence:</strong> number</p>
+                <p>Value between 0 and 1 indicating the model's relative confidence in this transcript.</p>
+              </li>
+              <li>
+                <p class="notranslate"><strong>words:</strong> array</p>
+                <p>Array of JSON-formatted Word objects.</p>
+                <ul class="response">
+                  <li>
+                    <p class="notranslate"><strong>word:</strong> string</p>
+                    <p>Distinct word heard by the model.</p>
+                  </li>
+                  <li>
+                    <p class="notranslate"><strong>start:</strong> number</p>
+                      <p>Offset in seconds from the start of the audio to where the spoken word starts.</p>
+                  </li>
+                  <li>
+                    <p class="notranslate"><strong>end:</strong> number</p>
+                    <p>Offset in seconds from the start of the audio to where the spoken word ends.</p>
+                  </li>
+                  <li>
+                    <p class="notranslate"><strong>confidence:</strong> number</p>
+                    <p>Value between 0 and 1 indicating the model's relative confidence in this word.</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 </div>
 </div>
@@ -459,400 +712,703 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 #### Query Parameters
 
-Query Parameters
-tier:
-string
-Level of model you would like to use in your request. Options include:
-
-enhanced:
-Applies our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.
-base: (Default)
-Applies our Base models, which are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness.
-To learn more, see Features: Tier.
-
-model:
-string
-AI model used to process submitted audio. Options include:
-
-general: (Default)
-Optimized for everyday audio processing.
-TIERS: enhanced, base
-meeting:
-Optimized for conference room settings, which include multiple speakers with a single microphone.
-TIERS: enhanced beta, base
-phonecall:
-Optimized for low-bandwidth audio phone calls.
-TIERS: enhanced beta, base
-voicemail:
-Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.
-TIERS: base
-finance:
-Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.
-TIERS: enhanced beta, base
-conversationalai:
-Optimized to allow artificial intelligence technologies, such as chatbots, to interact with people in a human-like way.
-TIERS: base
-video:
-Optimized for audio sourced from videos.
-TIERS: base
-<custom_id>:
-To use a custom model associated with your account, include its custom_id.
-TIERS: enhanced, base (depending on which tier the custom model was trained on)
-To learn more, see Features: Model.
-
-version:
-string
-Version of the model to use.
-
-Default: latest
-
-Possible values: latest OR <version_id>
-
-To learn more, see Features: Version.
-
-language:
-string
-BCP-47 language tag that hints at the primary spoken language. Language support is optimized for the following language/model combinations:
-
-Chinese
-
-zh-CN: China (Simplified Mandarin) beta
-MODELS: general
-zh-TW: Taiwan (Traditional Mandarin) beta
-MODELS: general
-Dutch
-
-nl: beta
-MODELS: general (enhanced, base)
-English
-
-en: English (Default)
-MODELS:general (enhanced, base), meeting (enhanced beta, base), phonecall (enhanced beta, base), voicemail, finance (enhanced beta, base), conversationalai, video
-en-AU: Australia
-MODELS: general
-en-IN: India
-MODELS: general
-en-NZ: New Zealand
-MODELS: general
-en-GB: United Kingdom
-MODELS: general
-en-US: United States
-MODELS: general (enhanced, base), meeting (enhanced beta, base), phonecall (enhanced beta, base), voicemail, finance (enhanced beta, base), conversationalai, video
-Flemish
-
-nl: beta
-MODELS: general (enhanced, base)
-French
-
-fr:
-MODELS: general (enhanced beta, base)
-fr-CA: Canada
-MODELS: general
-German
-
-de:
-MODELS: general (enhanced beta, base)
-Hindi
-
-hi:
-MODELS: general
-hi-Latn: Roman Script beta
-MODELS: general
-Indonesian
-
-id: beta
-MODELS: general
-Italian
-
-it: beta
-MODELS: general (enhanced, base)
-Japanese
-
-ja: beta
-MODELS: general (enhanced, base)
-Korean
-
-ko: beta
-MODELS: general (enhanced, base)
-Norwegian
-
-no: beta
-MODELS: general (enhanced, base)
-Polish
-
-pl: beta
-MODELS: general (enhanced, base)
-Portuguese
-
-pt:
-MODELS: enhanced beta, general
-pt-BR: Brazil
-MODELS: enhanced beta, general
-pt-PT: Portugal
-MODELS: enhanced beta, general
-Russian
-
-ru:
-MODELS: general
-Spanish
-
-es:
-MODELS: general (enhanced beta, base)
-es-419: Latin America
-MODELS: general (enhanced beta, base)
-Swedish
-
-sv: beta
-MODELS: general
-Turkish
-
-tr:
-MODELS: general
-Ukrainian
-
-uk: beta
-MODELS: general
-To learn more, see Features: Language.
-
-punctuate:
-boolean
-Indicates whether to add punctuation and capitalization to the transcript. To learn more, see Features: Punctuation.
-
-profanity_filter:
-boolean
-Indicates whether to remove profanity from the transcript. To learn more, see Features: Profanity Filter.
-
-redact:
-any
-Indicates whether to redact sensitive information, replacing redacted content with asterisks (\*). Options include:
-
-pci:
-
-Redacts sensitive credit card information, including credit card number, expiration date, and CVV.
-
-numbers: (or true)
-
-Aggressively redacts strings of numerals.
-
-ssn: beta
-
-Redacts social security numbers.
-
-Can send multiple instances in query string (for example, redact=pci&redact=numbers). When sending multiple values, redaction occurs in the order you specify. For instance, in this example, sensitive credit card information would be redacted first, then strings of numbers.
-
-To learn more, see Features: Redaction.
-
-diarize:
-boolean
-Indicates whether to recognize speaker changes. When set to true, each word in the transcript will be assigned a speaker number starting at 0.
-
-To use the legacy diarization feature, add a diarize_version parameter set to 2021-07-14.0. For example, diarize_version=2021-07-14.0.
-
-To learn more, see Features: Diarization.
-
-diarize_version:
-string
-Indicates the version of the diarization feature to use. To use the legacy diarizer, set the parameter value to 2021-07-14.0.
-
-Only used when the diarization feature is enabled (diarize=true is passed to the API).
-
-To learn more, see Features: Diarization.
-
-ner:
-boolean
-Indicates whether to recognize alphanumeric strings. When set to true, whitespace will be removed between characters identified as part of an alphanumeric string. To learn more, see Features: Named-Entity Recognition (NER).
-
-multichannel:
-boolean
-Indicates whether to transcribe each audio channel independently. When set to true, you will receive one transcript for each channel, which means you can apply a different model to each channel using the model parameter (e.g., set model to general:phonecall, which applies the general model to channel 0 and the phonecall model to channel 1).
-
-To learn more, see Features: Multichannel.
-
-alternatives:
-integer
-Maximum number of transcript alternatives to return. Just like a human listener, Deepgram can provide multiple possible interpretations of what it hears.
-
-Default: 1
-
-numerals:
-boolean
-Indicates whether to convert numbers from written format (e.g., one) to numerical format (e.g., 1).
-
-Deepgram can format numbers up to 999,999.
-
-Converted numbers do not include punctuation. For example, 999,999 would be transcribed as 999999.
-
-To learn more, see Features: Numerals.
-
-search:
-any
-Terms or phrases to search for in the submitted audio. Deepgram searches for acoustic patterns in audio rather than text patterns in transcripts because we have noticed that acoustic pattern matching is more performant.
-
-Can include up to 25 search terms per request.
-Can send multiple instances in query string (for example, search=speech&search=Friday).
-To learn more, see Features: Search.
-
-replace:
-string
-Terms or phrases to search for in the submitted audio and replace.
-
-URL-encode any terms or phrases that include spaces, punctuation, or other special characters.
-Can send multiple instances in query string (for example, replace=this:that&replace=thisalso:thatalso).
-Replacing a term or phrase with nothing (replace=this) will remove the term or phrase from the audio transcript.
-To learn more, see Features: Replace.
-
-callback:
-string
-Callback URL to provide if you would like your submitted audio to be processed asynchronously. When passed, Deepgram will immediately respond with a request_id. When it has finished analyzing the audio, it will send a POST request to the provided URL with an appropriate HTTP status code.
-
-Notes:
-
-You may embed basic authentication credentials in the callback URL.
-Only ports 80, 443, 8080, and 8443 can be used for callbacks
-For streaming audio, callback can be used to redirect streaming responses to a different server:
-
-If the callback URL begins with http:// or https://, then POST requests are sent to the callback server for each streaming response.
-If the callback URL begins with ws:// or wss://, then a WebSocket connection is established with the callback server and WebSocket text messages are sent containing the streaming responses.
-If a WebSocket callback connection is disconnected at any point, the entire real-time transcription stream is killed; this maintains the strong guarantee of a one-to-one relationship between incoming real-time connections and outgoing WebSocket callback connections.
-To learn more, see Features: Callback.
-
-keywords:
-any
-Keywords to which the model should pay particular attention to boosting or suppressing to help it understand context. Just like a human listener, Deepgram can better understand mumbled, distorted, or otherwise hard-to-decipher speech when it knows the context of the conversation.
-
-Notes:
-
-Can include up to 200 keywords per request.
-Can send multiple instances in query string (for example, keywords=medicine&keywords=prescription).
-Can request multi-word keywords in a percent-encoded query string (for example, keywords=miracle%20medicine). When Deepgram listens for your supplied keywords, it separates them into individual words, then boosts or suppresses them individually.
-Can append a positive or negative intensifier to either boost or suppress the recognition of particular words. Positive and negative values can be decimals.
-Follow best practices for keyword boosting.
-Support for out-of-vocabulary (OOV) keyword boosting when processing streaming audio is currently in beta; to fall back to previous keyword behavior, append the query parameter keyword_boost=legacy to your API request.
-To learn more, see Features: Keywords.
-
-interim_results:
-boolean
-Indicates whether the streaming endpoint should send you updates to its transcription as more audio becomes available. When set to true, the streaming endpoint returns regular updates, which means transcription results will likely change for a period of time. By default, this flag is set to false.
-
-When the flag is set to false, latency increases (usually by several seconds) because the server needs to stabilize the transcription before returning the final results for each piece of incoming audio. If you want the lowest-latency streaming available, then set interim_results to true and handle the corrected transcripts as they are returned.
-
-To learn more, see Features: Interim Results.
-
-endpointing:
-boolean
-Indicates whether Deepgram will detect whether a speaker has finished speaking (or paused for a significant period of time, indicating the completion of an idea). When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes the result for the processed time range and returns the transcript with a speech_final parameter set to true.
-
-For example, if you are working with a 15-second audio clip, but someone is speaking for only the first 3 seconds, endpointing allows you to get a finalized result after the first 3 seconds.
-
-By default, endpointing is enabled and finalizes a transcript after a short period of silence.
-
-Default: true
-
-To learn more, see Features: Endpointing.
-
-encoding:
-string
-Expected encoding of the submitted streaming audio. If this parameter is set, sample_rate must also be specified.
-
-Required when raw, headerless audio packets are sent to the streaming service. For containerized audio, pre-recorded audio, or audio submitted to the standard /listen endpoint, Deepgram will automatically detect the audio encoding and this parameter should not be used.
-
-Options include:
-
-linear16: 16-bit, little endian, signed PCM WAV data
-flac: FLAC-encoded data
-mulaw: mu-law encoded WAV data
-amr-nb: adaptive multi-rate narrowband codec
-amr-wb: adaptive multi-rate wideband codec
-opus: Ogg Opus
-speex: Ogg Speex
-To learn more, see Features: Encoding.
-
-channels:
-integer
-Number of independent audio channels contained in submitted streaming audio. Only read when a value is provided for encoding.
-
-Default: 1
-
-To learn more, see Features: Channels.
-
-sample_rate:
-integer
-Sample rate of submitted streaming audio. Required (and only read) when a value is provided for encoding.
-
-To learn more, see Features: Sample Rate.
-
-tag:
-string
-Tag to associate with the request. Your request will automatically be associated with any tags you add to the API Key used to run the request. Tags associated with requests appear in usage reports.
-
-To learn more, see Features: Tag.
+<div class="feature">
+  <header class="notranslate">
+    <div id="tier-str"><strong>tier:</strong></div> string
+  </header>
+  <main>
+    <p>Level of model you would like to use in your request. Options include:</p>
+    <ul>
+      <li class="notranslate"><strong>enhanced:</strong><br/>
+          Applies our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.</li>
+      <li class="notranslate"><strong>base:</strong> (Default)<br/>
+          Applies our Base models, which are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness.</li>
+    </ul>
+    <p>To learn more, see
+          <a href="/documentation/features/tier/">Features: Tier</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="model-str"><strong>model:</strong></div> string
+  </header>
+  <main>
+    <p>AI model used to process submitted audio. Options include:</p>
+    <ul>
+      <li class="notranslate"><strong>general:</strong> (Default)<br/>
+          Optimized for everyday audio processing.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced, base</li>
+      <li class="notranslate"><strong>meeting:</strong><br/>
+          Optimized for conference room settings, which include multiple speakers with a
+            single microphone.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base</li>
+      <li class="notranslate"><strong>phonecall:</strong><br/>
+          Optimized for low-bandwidth audio phone calls.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base</li>
+      <li class="notranslate"><strong>voicemail:</strong><br/>
+          Optimized for low-bandwidth audio clips with a single speaker. Derived from the
+          <code>phonecall</code> model.<br/>
+          <strong class="hint notranslate">TIERS:</strong> base</li>
+      <li class="notranslate"><strong>finance:</strong><br/>
+          Optimized for multiple speakers with varying audio quality, such as might be found
+          on a typical earnings call. Vocabulary is heavily finance oriented.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base</li>
+      <li class="notranslate"><strong>conversationalai:</strong><br/>
+          Optimized to allow artificial intelligence technologies, such as chatbots, to interact
+          with people in a human-like way.<br/>
+          <strong class="hint notranslate">TIERS:</strong> base</li>
+      <li class="notranslate"><strong>video:</strong><br />
+          Optimized for audio sourced from videos.<br/>
+          <strong class="hint notranslate">TIERS:</strong> base</li>
+      <li class="notranslate"><strong>&lt;custom_id&gt;:</strong><br/>
+          To use a custom model associated with your account, include its <code>custom_id</code>.<br/>
+          <strong class="hint notranslate">TIERS:</strong> enhanced, base (depending on which tier the custom model was trained on)</li>
+    </ul></p>
+    <p>To learn more, see
+        <a href="/documentation/features/model/">Features: Model</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="version-str"><strong>version:</strong></div> string
+  </header>
+  <main>
+    <p>Version of the model to use.</p>
+    <p class="notranslate"><strong>Default:</strong> latest</p>
+    <p><strong>Possible values:</strong> <span class="notranslate"><code>latest</code> OR <code>&lt;version_id&gt;</code></span></p>
+    <p>To learn more, see
+        <a href="/documentation/features/version/">Features: Version</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="language-str"><strong>language:</strong></div> string
+  </header>
+  <main>
+    <p><a href="https://tools.ietf.org/html/bcp47">BCP-47</a> language tag that hints at the primary spoken
+          language. Language support is optimized for the following language/model combinations:</p>
+    <p><strong>Chinese</strong></p>
+    <ul>
+      <li class="notranslate"><strong>zh-CN:</strong> China (Simplified Mandarin) <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+      <li class="notranslate"><strong>zh-TW:</strong> Taiwan (Traditional Mandarin) <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Dutch</strong></p>
+    <ul>
+      <li class="notranslate"><strong>nl:</strong> <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general (enhanced, base)
+          </li>
+    </ul>
+    <p><strong>English</strong></p>
+    <ul>
+      <li class="notranslate"><strong>en:</strong> English (Default)<br/>
+          <strong class="hint">MODELS:</strong>general (enhanced, base), meeting (enhanced <em>beta</em>, base), phonecall (enhanced <em>beta</em>, base), voicemail, finance (enhanced <em>beta</em>, base), conversationalai, video
+          </li>
+      <li class="notranslate"><strong>en-AU:</strong> Australia<br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+      <li class="notranslate"><strong>en-IN:</strong> India<br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+      <li class="notranslate"><strong>en-NZ:</strong> New Zealand<br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+      <li class="notranslate"><strong>en-GB:</strong> United Kingdom<br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+      <li class="notranslate"><strong>en-US:</strong> United States<br/>
+          <strong class="hint">MODELS:</strong> general (enhanced, base), meeting (enhanced <em>beta</em>, base), phonecall (enhanced <em>beta</em>, base), voicemail, finance (enhanced <em>beta</em>, base), conversationalai, video
+          </li>
+    </ul>
+    <p><strong>Flemish</strong></p>
+    <ul>
+      <li><strong>nl:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+          </li>
+    </ul>
+    <p><strong>French</strong></p>
+    <ul>
+      <li class="notranslate"><strong>fr:</strong><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+      <li class="notranslate"><strong>fr-CA:</strong> Canada<br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>German</strong></p>
+    <ul>
+      <li class="notranslate"><strong>de:</strong><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Hindi</strong></p>
+    <ul>
+      <li class="notranslate"><strong>hi:</strong><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+      <li><strong>hi-Latn:</strong> Roman Script <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Indonesian</strong></p>
+    <ul>
+      <li class="notranslate"><strong>id:</strong> <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Italian</strong></p>
+    <ul>
+      <li class="notranslate"><strong>it:</strong> <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Japanese</strong></p>
+    <ul>
+      <li class="notranslate"><strong>ja:</strong> <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Korean</strong></p>
+    <ul>
+      <li class="notranslate"><strong>ko:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Polish</strong></p>
+    <ul>
+      <li class="notranslate"><strong>pl:</strong> <em>beta</em><br/>
+          <strong class="hint notranslate">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Portuguese</strong></p>
+    <ul>
+      <li class="notranslate"><strong>pt:</strong><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+      <li class="notranslate"><strong>pt-BR:</strong> Brazil<br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+      <li class="notranslate"><strong>pt-PT:</strong> Portugal<br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Russian</strong></p>
+    <ul>
+      <li class="notranslate"><strong>ru:</strong><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Spanish</strong></p>
+    <ul>
+      <li class="notranslate"><strong>es:</strong><br/>
+          <strong class="hint">MODELS:</strong> general (enhanced <em>beta</em>, base)
+          </li>
+      <li class="notranslate"><strong>es-419:</strong> Latin America<br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Swedish</strong></p>
+    <ul>
+      <li class="notranslate"><strong>sv:</strong> <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Turkish</strong></p>
+    <ul>
+      <li class="notranslate"><strong>tr:</strong><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p><strong>Ukrainian</strong></p>
+    <ul>
+      <li class="notranslate"><strong>uk:</strong> <em>beta</em><br/>
+          <strong class="hint">MODELS:</strong> general
+          </li>
+    </ul>
+    <p>To learn more, see
+        <a href="/documentation/features/language/">Features: Language</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="punctuate-str"><strong>punctuate:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to add punctuation and capitalization to the transcript. To learn more, see
+          <a href="/documentation/features/punctuate/">Features: Punctuation</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="profanity-str"><strong>profanity_filter:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to remove profanity from the transcript. To learn more, see
+          <a href="/documentation/features/profanity-filter/">Features: Profanity Filter</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="redact-str"><strong>redact:</strong></div> any
+  </header>
+  <main>
+    <p>Indicates whether to redact sensitive information, replacing redacted content with asterisks (*). Options include:</p>
+    <ul>
+      <li><p class="notranslate"><strong>pci:</strong><br/></p>
+          <p>Redacts sensitive credit card information, including credit card number, expiration date, and CVV.</p></li>
+      <li><p class="notranslate"><strong>numbers:</strong> (or <strong>true</strong>)<br/></p>
+          <p>Aggressively redacts strings of numerals.</p></li>
+      <li><p class="notranslate"><strong>ssn:</strong> <em>beta</em><br/></p>
+          <p>Redacts social security numbers.</p></li>
+    </ul>
+    <p>Can send multiple instances in query string (for example,
+          <code>redact=pci&amp;redact=numbers</code>). When sending multiple values, redaction occurs in the
+          order you specify. For instance, in this example, sensitive credit card information would be redacted
+          first, then strings
+          of numbers.
+        </p>
+    <p> To learn more, see <a href="/documentation/features/redact/">Features: Redaction</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="diarize-str"><strong>diarize:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to recognize speaker changes. When set to
+          <code>true</code>, each word in the transcript will be assigned a speaker number starting at 0. 
+    </p>      
+    <p class="info">To use the legacy diarization feature, add a <code>diarize_version</code> parameter set to <code>2021-07-14.0</code>. For example,
+          <code>diarize_version=2021-07-14.0</code>.
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/diarize/">Features: Diarization</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="diarize-version-str"><strong>diarize_version:</strong></div> string
+  </header>
+  <main>
+    <p>Indicates the version of the diarization feature to use. To use the legacy diarizer, set the parameter value to <code>2021-07-14.0</code>.
+    </p>      
+    <p class="info">Only used when the diarization feature is enabled (<code>diarize=true</code> is passed to the API).
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/diarize/">Features: Diarization</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="ner-str"><strong>ner:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to recognize alphanumeric strings. When set to
+          <code>true</code>, whitespace will be removed between characters identified as part of an alphanumeric
+          string. To learn more, see
+          <a href="/documentation/features/named-entity-recognition/">Features: Named-Entity Recognition (NER)</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="multichannel-str"><strong>multichannel:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to transcribe each audio channel independently. When set to
+          <code>true</code>, you will receive one transcript for each channel, which means you can apply a
+          different model to each channel using the model parameter (e.g., set
+          <code>model</code> to
+          <code>general:phonecall</code>, which applies the
+          <code>general</code> model to channel 0 and the
+          <code>phonecall</code> model to channel 1).</p>
+    <p>To learn more, see
+      <a href="/documentation/features/multichannel/">Features: Multichannel</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="alternatives-str"><strong>alternatives:</strong></div> integer
+  </header>
+  <main>
+    <p>Maximum number of transcript alternatives to return. Just like a human listener, Deepgram can provide
+          multiple possible interpretations of what it hears. </p>
+    <p class="notranslate"><strong>Default:</strong> 1</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="numerals-str"><strong>numerals:</strong></div> boolean
+  </header>
+  <main>
+    <p>Indicates whether to convert numbers from written format (e.g., one) to numerical format (e.g., 1).</p>
+    <p>Deepgram can format numbers up to 999,999.</p>
+    <p class="info">Converted numbers do not include punctuation. For example, 999,999 would be transcribed as
+          <code>999999</code>.
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/numerals/">Features: Numerals</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="search-str"><strong>search:</strong></div> any
+  </header>
+  <main>
+    <p>Terms or phrases to search for in the submitted audio. Deepgram searches for acoustic patterns in
+          audio rather than text patterns in transcripts because we have noticed that acoustic pattern matching
+          is more performant.</p>
+    <p class="info">
+      <ul>
+          <li>Can include up to 25 search terms per request.</li>
+          <li>Can send multiple instances in query string (for example,
+            <code>search=speech&amp;search=Friday</code>).
+          </li>
+      </ul>
+    </p>
+    <p>To learn more, see
+      <a href="/documentation/features/search/">Features: Search</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="replace-str"><strong>replace:</strong></div> string
+  </header>
+  <main>
+    <p>Terms or phrases to search for in the submitted audio and replace. </p>
+    <p class="info">
+      <ul>
+          <li>URL-encode any terms or phrases that include spaces, punctuation, or other special characters.</li>
+          <li>Can send multiple instances in query string (for example,
+            <code>replace=this:that&amp;replace=thisalso:thatalso</code>).
+          </li>
+          <li>Replacing a term or phrase with nothing (<code>replace=this</code>) will remove the term or phrase from the audio transcript.</li>
+      </ul>
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/replace/">Features: Replace</a>.</p>
+  </main>
+  </div>
+
+  <div class="feature">
+  <header class="notranslate">
+    <div id="callback-str"><strong>callback:</strong></div> string
+  </header>
+  <main>
+    <p>Callback URL to provide if you would like your submitted audio to be processed asynchronously. When
+          passed, Deepgram will immediately respond with a
+          <code>request_id</code>. When it has finished analyzing the audio, it will send a POST request to the
+          provided URL with an appropriate HTTP status code.</p>
+    <p class="info">
+      Notes:
+      <ul>
+        <li>You may embed basic authentication credentials in the callback URL.</li>
+        <li>Only ports 80, 443, 8080, and 8443 can be used for callbacks</li>
+      </ul>
+    </p>
+    <p>For streaming audio,
+      <code>callback</code> can be used to redirect streaming responses to a different server:</p>
+    <ul>
+      <li>If the callback URL begins with
+        <code>http://</code> or
+        <code>https://</code>, then POST requests are sent to the callback server for each streaming
+        response.
+      </li>
+      <li>If the callback URL begins with
+        <code>ws://</code> or
+        <code>wss://</code>, then a WebSocket connection is established with the callback server and
+        WebSocket text messages are sent containing the streaming responses.
+      </li>
+      <li>If a WebSocket callback connection is disconnected at any point, the entire real-time
+        transcription stream is killed; this maintains the strong guarantee of a one-to-one relationship
+        between incoming real-time connections
+        and outgoing WebSocket callback connections.</li>
+    </ul>
+    <p>To learn more, see
+        <a href="/documentation/features/callback/">Features: Callback</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="keywords-str"><strong>keywords:</strong></div> any
+  </header>
+  <main>
+      <p>Keywords to which the model should pay particular attention to boosting or suppressing to help it
+          understand context. Just like a human listener, Deepgram can better understand mumbled, distorted, or
+          otherwise hard-to-decipher
+          speech when it knows the context of the conversation.</p>
+    <p class="info">
+      Notes:
+      <ul>
+        <li>Can include up to 200 keywords per request.</li>
+        <li>Can send multiple instances in query string (for example,
+          <code>keywords=medicine&amp;keywords=prescription</code>).
+        </li>
+        <li>Can request multi-word keywords in a percent-encoded query string (for example,
+          <code>keywords=miracle%20medicine</code>). When Deepgram listens for your supplied keywords, it
+          separates them into individual words, then boosts or suppresses them individually.
+        </li>
+        <li>Can append a positive or negative intensifier to either boost or suppress the recognition of
+          particular words. Positive and negative values can be decimals.</li>
+        <li>
+          <a href="/documentation/features/keywords/#best-practices">Follow best practices for keyword boosting</a>.
+        </li>
+        <li>Support for out-of-vocabulary (OOV) keyword boosting when processing streaming audio is
+          currently in
+          <em>beta</em>; to fall back to previous keyword behavior, append the query parameter
+          <code>keyword_boost=legacy</code> to your API request.
+        </li>
+      </ul>
+    </p>
+    <p>To learn more, see
+          <a href="/documentation/features/keywords/">Features: Keywords</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="interim-results-str"><strong>interim_results:</strong></div> boolean
+  </header>
+  <main>
+      <p>Indicates whether the streaming endpoint should send you updates to its transcription as more audio
+        becomes
+        available. When set to <code>true</code>, the streaming endpoint returns regular updates, which means transcription
+        results
+        will
+        likely change for a period of time. By default, this flag is set to <code>false</code>.
+      </p>
+      <p class="info">When the flag is set to <code>false</code>, latency increases (usually by several seconds) because the
+              server needs to stabilize
+              the transcription before returning the final results for each piece of incoming audio. If you want
+              the
+              lowest-latency
+              streaming available, then set <code>interim_results</code> to <code>true</code> and handle the
+              corrected transcripts as they are returned.</p>
+    <p>To learn more, see
+          <a href="/documentation/features/interim-results/">Features: Interim Results</a>.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <div id="endpointing-str"><strong>endpointing:</strong></div> boolean
+  </header>
+  <main>
+      <p>Indicates whether Deepgram will detect whether a speaker has finished speaking (or paused for a
+            significant period of
+            time, indicating the completion of an idea). When Deepgram detects an endpoint, it assumes that no
+            additional data
+            will improve its prediction, so it immediately finalizes the result for the processed time range and
+            returns the
+            transcript with a <code>speech_final</code> parameter set to <code>true</code>.</p>
+          <p>For example, if you are working with a 15-second audio clip, but someone is speaking for only the
+            first
+            3 seconds,
+            endpointing allows you to get a finalized result after the first 3 seconds.</p>
+          <p>By default, endpointing is enabled and finalizes a transcript after 10 ms of silence. You can
+            customize
+            the length
+            of time used to detect whether a speaker has finished speaking by submitting the
+            <code>vad_turnoff</code> parameter.
+          </p>
+    <p class="notranslate"><strong>Default:</strong> true</p>
+    <p>To learn more, see
+          <a href="/documentation/features/endpointing/">Features: Endpointing</a>.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <div id="vad-turnoff-str"><strong>vad_turnoff:</strong></div> integer
+  </header>
+  <main>
+          <p>Length of time in milliseconds of silence that voice activation detection (VAD) will use to detect
+            that
+            a speaker has
+            finished speaking. Used when endpointing is enabled. Defaults to 10 ms. Deepgram customers may
+            configure
+            a value
+            between 10 ms and 5000 ms; on-premise customers may remove this restriction.
+          </p>
+    <p class="notranslate"><strong>Default:</strong> 10</p>
+    <p>To learn more, see
+          <a href="/documentation/features/voice-activity-detection/">Features: Voice Activity Detection (VAD)</a>.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <div id="encoding-str"><strong>encoding:</strong></div> string
+  </header>
+  <main>
+    <p>Expected encoding of the submitted streaming audio.</p>
+    <p>Options include:</p>
+    <ul>
+      <li><code>linear16</code>: 16-bit, little endian, signed PCM WAV data</li>
+      <li><code>flac</code>: FLAC-encoded data</li>
+      <li><code>mulaw</code>: mu-law encoded WAV data</li>
+      <li><code>amr-nb</code>: adaptive multi-rate narrowband codec (sample rate must be 8000)</li>
+      <li><code>amr-wb</code>: adaptive multi-rate wideband codec (sample rate must be 16000)</li>
+      <li><code>opus</code>: Ogg Opus</li>
+      <li><code>speex</code>: Ogg Speex</li>
+    </ul>
+      <p class="info">Only required when raw, headerless audio packets are sent to the streaming service. For
+        pre-recorded audio or audio submitted to the standard <code>/listen</code> endpoint, we support over
+        40 popular codecs and do not require this parameter.</p>
+      <p>To learn more, see
+        <a href="/documentation/features/encoding/">Features: Encoding</a>.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <div id="channels-str"><strong>channels:</strong></div> integer
+  </header>
+  <main>
+        <p>Number of independent audio channels contained in submitted streaming audio. Only read when a value
+            is
+            provided for <code>encoding</code>.</p>
+        <p class="notranslate"><strong>Default:</strong> 1</p>
+    <p>To learn more, see
+        <a href="/documentation/features/channels/">Features: Channels</a>.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <div id="samplerate-str"><strong>sample_rate:</strong></div> integer
+  </header>
+  <main>
+          <p>Sample rate of submitted streaming audio. Required (and only read) when a value is provided for
+            <code>encoding</code>.
+          </p>
+    <p>To learn more, see
+        <a href="/documentation/features/sample-rate/">Features: Sample Rate</a>.</p>
+  </main>
+</div>
+
+<div class="feature">
+  <header class="notranslate">
+    <div id="tag-str"><strong>tag:</strong></div> string
+  </header>
+  <main>
+    <p>Tag to associate with the request. Your request will automatically be associated with any tags you add to the API Key used to run the request. Tags associated with requests appear in <a href="#usage">usage reports</a>.</p>
+    <p>To learn more, see
+          <a href="/documentation/features/tag/">Features: Tag</a>.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-201 Success Audio submitted for transcription.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>201 Success</td>
+      <td>Audio submitted for transcription.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-channel_index: array
-
-Information about the active channel in the form [channel_index, total_number_of_channels].
-
-duration: number
-
-Duration in seconds.
-
-start: number
-
-Offset in seconds.
-
-is_final: boolean
-
-Indicates that Deepgram has identified a point at which its transcript has reached maximum accuracy and is sending a definitive transcript of all audio up to that point. To learn more, see Features: Interim Results.
-
-speech_final: boolean
-
-Indicates that Deepgram has detected an endpoint and immediately finalized its results for the processed time range. To learn more, see Features: Endpointing.
-
-channel: object
-
-alternatives: array
-
-Array of JSON-formatted ResultAlternative objects. This array will have length n, where n matches the value of the alternatives parameter passed in the request body.
-
-transcript: string
-
-Single-string transcript containing what the model hears in this channel of audio.
-
-confidence: number
-
-Value between 0 and 1 indicating the model's relative confidence in this transcript.
-
-words: array
-
-Array of JSON-formatted Word objects.
-
-word: string
-
-Distinct word heard by the model.
-
-start: number
-
-Offset in seconds from the start of the audio to where the spoken word starts.
-
-end: number
-
-Offset in seconds from the start of the audio to where the spoken word ends.
-
-confidence: number
-
-Value between 0 and 1 indicating the model's relative confidence in this word.
-
-metadata: object
-
-request_id: uuid
-
-Unique identifier of the submitted audio and derived data returned.
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>channel_index:</strong> array</p>
+        <p>Information about the active channel in the form
+          <code>[channel_index, total_number_of_channels]</code>.
+        </p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>duration:</strong> number</p>
+        <p>Duration in seconds.</p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>start:</strong> number</p>
+        <p>Offset in seconds.</p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>is_final:</strong> boolean</p>
+        <p>Indicates that Deepgram has identified a point at which its transcript has reached maximum accuracy
+          and is sending a definitive transcript of all audio up to that point. To learn more, see <a
+            href="/documentation/features/interim-results/">Features: Interim Results</a>.</p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>speech_final:</strong> boolean</p>
+        <p>Indicates that Deepgram has detected an endpoint and immediately finalized its results for the
+          processed time range. To learn more, see <NuxtLink to="/documentation/features/endpointing/">Features: Endpointing</NuxtLink>.</p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>channel:</strong> object</p>
+    <ul>
+      <li>
+        <p class="notranslate"><strong>alternatives:</strong> array</p>
+        <p>Array of JSON-formatted <code>ResultAlternative</code> objects. This array will have length
+          <em>n</em>,
+          where <em>n</em> matches the value of the <code>alternatives</code> parameter passed in the request
+          body.</p>
+          <ul>
+            <li>
+              <p class="notranslate"><strong>transcript:</strong> string</p>
+              <p>Single-string transcript containing what the model hears in this channel of audio.</p>
+            </li>
+            <li>
+              <p class="notranslate"><strong>confidence:</strong> number</p>
+              <p>Value between 0 and 1 indicating the model's relative confidence in this transcript.</p>
+            </li>
+            <li>
+              <p class="notranslate"><strong>words:</strong> array</p>
+              <p>Array of JSON-formatted Word objects.</p>
+              <ul class="response">
+                    <li>
+                      <p class="notranslate"><strong>word:</strong> string</p>
+                      <p>Distinct word heard by the model.</p>
+                    </li>
+                    <li>
+                      <p class="notranslate"><strong>start:</strong> number</p>
+                      <p>Offset in seconds from the start of the audio to where the spoken word starts.</p>
+                    </li>
+                    <li>
+                      <p class="notranslate"><strong>end:</strong> number</p>
+                      <p>Offset in seconds from the start of the audio to where the spoken word ends.</p>
+                    </li>
+                    <li>
+                      <p class="notranslate"><strong>confidence:</strong> number</p>
+                      <p>Value between 0 and 1 indicating the model's relative confidence in this word.</p>
+                    </li>
+                  </ul>
+            </li>
+          </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p class="notranslate"><strong>metadata:</strong> object</p>
+    <ul>
+      <li>
+        <p class="notranslate"><strong>request_id:</strong> uuid</p>
+        <p>Unique identifier of the submitted audio and derived data returned.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 #### Error Handling
 
@@ -868,10 +1424,35 @@ If Deepgram encounters an error during real-time streaming, we will return a Web
 
 The body of the Close frame will indicate the reason for closing using one of the specification’s pre-defined status codes followed by a UTF-8-encoded payload that represents the reason for the error. Current codes and payloads in use include:
 
-Code Payload Description
-1008 DATA-0000 The payload cannot be decoded as audio. Either the encoding is incorrectly specified, the payload is not audio data, or the audio is in a format unsupported by Deepgram.
-1011 NET-0000 The service has not transmitted a Text frame to the client within the timeout window. This may indicate an issue internally in Deepgram's systems or could be due to Deepgram not receiving enough audio data to transcribe a frame.
-1011 NET-0001 The service has not received a Binary frame from the client within the timeout window. This may indicate an internal issue in Deepgram's systems, the client's systems, or the network connecting them.
+<table>
+  <thead>
+    <tr class="notranslate">
+      <td>Code</td>
+      <td>Payload</td>
+      <td>Description</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1002</td>
+      <td>DATA-0000</td>
+      <td>The payload cannot be decoded as audio. It is either not audio data or is a codec unsupported by Deepgram.</td>
+    </tr>
+    <tr>
+      <td>1011</td>
+      <td>NET-0000</td>
+      <td>The service has not transmitted a Text frame to the client within the timeout window. This may indicate an issue
+      internally in Deepgram's systems or could be due to Deepgram not receiving enough audio data to transcribe a frame.</td>
+    </tr>
+    <tr>
+      <td>1011</td>
+      <td>NET-0001</td>
+      <td>The service has not received a Binary frame from the client within the timeout window. This may indicate an internal
+      issue in Deepgram's systems, the client's systems, or the network connecting them.</td>
+    </tr>
+  </tbody>
+</table>
+
 After sending a Close message, the endpoint considers the WebSocket connection closed and will close the underlying TCP connection.
 
 </div>

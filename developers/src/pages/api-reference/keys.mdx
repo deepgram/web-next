@@ -18,67 +18,94 @@ Required account/project scope(s): `keys:read`. Optional project scope(s): `memb
 
 #### Path Parameters
 
-project_id: uuid
-Unique identifier of the project for which you want to get keys.
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project for which you want to get keys.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-200 Success Keys found.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Keys found.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-api_keys: array
-
-Array of associated Member and API Key objects.
-
-member: object
-
-Member object.
-
-member_id: uuid
-
-Unique identifier of member.
-
-email: string
-
-Email address of member.
-
-first_name: string
-
-First name of member. If no first name exists, this item will not be returned.
-
-last_name: string
-
-Last name of member. If no last name exists, this item will not be returned.
-
-api_key object
-
-API Key object.
-
-api_key_id: uuid
-
-Unique identifier of API Key.
-
-comment: string
-
-Comments associated with API Key.
-
-scopes: array
-
-Array of scopes associated with API Key.
-
-tags: array
-
-Array of tags associated with API Key. If no tags exist, this item will not be returned.
-
-created: string
-
-Date and time when API Key was created.
-
-expiration_date: string
-
-Date and time when API Key will expire. If no expiration date exists, this item will not be returned.
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>api_keys:</strong> array</p>
+    <p>Array of associated Member and API Key objects.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>member:</strong> object</p>
+        <p>Member object.</p>
+        <ul class="response">
+          <li>
+            <p class="notranslate"><strong>member_id:</strong> uuid</p>
+            <p>Unique identifier of member.</p>
+          </li>
+          <li>
+            <p class="notranslate"><strong>email:</strong> string</p>
+            <p>Email address of member.</p>
+          </li>
+          <li>
+            <p class="notranslate"><strong>first_name:</strong> string</p>
+            <p>First name of member. If no first name exists, this item will not be returned.</p>
+          </li>
+          <li>
+            <p class="notranslate"><strong>last_name:</strong> string</p>
+            <p>Last name of member. If no last name exists, this item will not be returned.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p class="notranslate"><strong>api_key</strong> object</p>
+        <p>API Key object.</p>
+        <ul class="response">
+          <li>
+            <p class="notranslate"><strong>api_key_id:</strong> uuid</p>
+            <p>Unique identifier of API Key.</p>
+          </li>
+          <li>
+            <p class="notranslate"><strong>comment:</strong> string</p>
+            <p>Comments associated with API Key.</p>
+          </li>
+          <li>
+            <p class="notranslate"><strong>scopes:</strong> array</p>
+            <p>Array of scopes associated with API Key.</p>
+          </li>
+          <li>
+            <p class="notranslate"><strong>tags:</strong> array</p>
+            <p>Array of tags associated with API Key. If no tags exist, this item will not be returned.</p>
+          </li>
+          <li>
+            <p class="notranslate"><strong>created:</strong> string</p>
+            <p>Date and time when API Key was created.</p>
+          </li>
+          <li>
+            <p class="notranslate"><strong>expiration_date:</strong> string</p>
+            <p>Date and time when API Key will expire. If no expiration date exists, this item will not be returned.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 </div>
 </div>
@@ -94,67 +121,100 @@ Required account/project scope(s): `keys:read`. Optional project scope(s): `memb
 
 #### Path Parameters
 
-project_id: uuid
-Unique identifier of the project for which you want to retrieve information.
-
-key_id: uuid
-Unique identifier of the key that you want to retrieve.
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project for which you want to retrieve information.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <strong>key_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the key that you want to retrieve.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-200 Success Key found.
-404 Not Found A key with the specified key ID in the specified project was not found.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Key found.</td>
+    </tr>
+    <tr>
+      <td>404 Not Found</td>
+      <td>A key with the specified key ID in the specified project was not found.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-member: object
-
-Member object.
-
-member_id: uuid
-
-Unique identifier of member.
-
-email: string
-
-Email address of member.
-
-first_name: string
-
-First name of member. If no first name exists, this item will not be returned.
-
-last_name: string
-
-Last name of member. If no last name exists, this item will not be returned.
-
-api_key object
-
-API Key object.
-
-api_key_id: uuid
-
-Unique identifier of API Key.
-
-comment: string
-
-Comments associated with API Key.
-
-scopes: array
-
-Array of scopes associated with API Key.
-
-tags: array
-
-Array of tags associated with API Key. If no tags exist, this item will not be returned.
-
-created: string
-
-Date and time when API Key was created.
-
-expiration_date: string
-
-Date and time when API Key will expire. If no expiration date exists, this item will not be returned.
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>member:</strong> object</p>
+    <p>Member object.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>member_id:</strong> uuid</p>
+        <p>Unique identifier of member.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>email:</strong> string</p>
+        <p>Email address of member.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>first_name:</strong> string</p>
+        <p>First name of member. If no first name exists, this item will not be returned.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>last_name:</strong> string</p>
+        <p>Last name of member. If no last name exists, this item will not be returned.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p class="notranslate"><strong>api_key</strong> object</p>
+    <p>API Key object.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>api_key_id:</strong> uuid</p>
+        <p>Unique identifier of API Key.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>comment:</strong> string</p>
+        <p>Comments associated with API Key.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>scopes:</strong> array</p>
+        <p>Array of scopes associated with API Key.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>tags:</strong> array</p>
+        <p>Array of tags associated with API Key. If no tags exist, this item will not be returned.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>created:</strong> string</p>
+        <p>Date and time when API Key was created.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>expiration_date:</strong> string</p>
+        <p>Date and time when API Key will expire. If no expiration date exists, this item will not be returned.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 </div>
 </div>
@@ -170,72 +230,120 @@ Required account/project scope(s): `keys:write`.
 
 #### Path Parameters
 
-project_id: uuid
-Unique identifier of the project for which you want to create a key. Required.
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project for which you want to create a key. Required.</p>
+  </main>
+</div>
 
 #### Request Body Schema
 
-comment: string
-Comments associated with the key you would like to create. Must be between 1 and 128 characters long, not including whitespace. Required.
+<div class="feature">
+  <header class="notranslate">
+    <strong>comment:</strong> string
+  </header>
+  <main>
+          <p>Comments associated with the key you would like to create. Must be between 1 and 128 characters
+            long, not including whitespace. Required.</p>
+  </main>
+</div>
 
-tags: array
-Tags associated with the key you would like to create. Optional.
+<div class="feature">
+  <header class="notranslate">
+    <strong>tags:</strong> array
+  </header>
+  <main>
+          <p>Tags associated with the key you would like to create. Optional.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <strong>scopes:</strong> array
+  </header>
+  <main>
+          <p>Scopes for the key you would like to create. Required.</p>
+          <p>Scopes cannot be empty.</p>
+          <p>The requested account scopes for the new key cannot exceed the scopes of the authenticated account
+            making the request.</p>
+          <p>The requested project scopes for the new key cannot exceed the scopes of the authenticated account
+            making the request.</p>
+  </main>
+</div>
 
-scopes: array
-Scopes for the key you would like to create. Required.
+<div class="feature">
+  <header class="notranslate">
+    <strong>expiration_date:</strong> datetime
+  </header>
+  <main>
+          <p>Date on which the key you would like to create should expire. Optional.</p>
+          <p>If no time zone is specified, defaults to Coordinated Universal Time (UTC).</p>
+          <p>For each key, you may specify either an <code>expiration_date</code> or a <code>time_to_live_in_seconds</code>, but not both.</p>
+  </main>
+</div>
 
-Scopes cannot be empty.
-
-The requested account scopes for the new key cannot exceed the scopes of the authenticated account making the request.
-
-The requested project scopes for the new key cannot exceed the scopes of the authenticated account making the request.
-
-expiration_date: datetime
-Date on which the key you would like to create should expire. Optional.
-
-If no time zone is specified, defaults to Coordinated Universal Time (UTC).
-
-For each key, you may specify either an expiration_date or a time_to_live_in_seconds, but not both.
-
-time_to_live_in_seconds: number
-Length of time (in seconds) during which the key you would like to create will remain valid. Optional.
-
-For each key, you may specify either an expiration_date or a time_to_live_in_seconds, but not both.
+<div class="feature">
+  <header class="notranslate">
+    <strong>time_to_live_in_seconds:</strong> number
+  </header>
+  <main>
+          <p>Length of time (in seconds) during which the key you would like to create will remain valid. Optional.</p>
+          <p>For each key, you may specify either an <code>expiration_date</code> or a <code>time_to_live_in_seconds</code>, but not both.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-201 Success Key created.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>201 Success</td>
+      <td>Key created.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-api_key_id: uuid
-
-Unique identifier of the API Key.
-
-key: string
-
-Value of the API Key. This is the only chance to read the Key value; it cannot be recovered later.
-
-comment: string
-
-Comments associated with the API Key.
-
-scopes: array
-
-Project scopes associated with the API Key.
-
-tags: array
-
-Tags associated with the API Key. If no tags exist, this item will not be returned.
-
-created: string
-
-Date and time when the API Key was created.
-
-expiration_date: string
-
-Date and time when the API Key expires. If no expiration date exists, this item will not be returned.
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>api_key_id:</strong> uuid</p>
+          <p>Unique identifier of the API Key.</p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>key:</strong> string</p>
+          <p>Value of the API Key. This is the only chance to read the Key value; it cannot be recovered later.
+          </p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>comment:</strong> string</p>
+          <p>Comments associated with the API Key.</p>
+  </li>
+  </li>
+  <li>
+    <p class="notranslate"><strong>scopes:</strong> array</p>
+          <p>Project scopes associated with the API Key.</p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>tags:</strong> array</p>
+          <p>Tags associated with the API Key. If no tags exist, this item will not be returned.</p>
+  </li>
+  <li>
+    <p class="notranslate"><strong>created:</strong> string</p>
+          <p>Date and time when the API Key was created.</p>
+  <li>
+    <p class="notranslate"><strong>expiration_date:</strong> string</p>
+          <p>Date and time when the API Key expires. If no expiration date exists, this item will not be returned.</p>
+  </li>
+</ul>
 
 </div>
 </div>
@@ -251,22 +359,49 @@ Required account/project scope(s): `keys:write`. Optional project scope(s): `mem
 
 #### Path Parameters
 
-project_id: uuid
-Unique identifier of the project that contains the key that you want to delete.
-
-key_id: uuid
-Unique identifier of the key that you want to delete.
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project that contains the key that you want to delete.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <strong>key_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the key that you want to delete.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-200 Success Key deleted.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Key deleted.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-message: string
-
-Message returned. Should read "Successfully deleted the API key!"
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>message:</strong> string</p>
+          <p>Message returned. Should read "Successfully deleted the API key!"
+          </p>
+  </li>
+</ul>
 
 </div>
 </div>

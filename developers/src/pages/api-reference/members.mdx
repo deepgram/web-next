@@ -18,39 +18,62 @@ Required account scope(s): `project:read`. Required project scope(s): `project:r
 
 #### Path Parameters
 
-project_id: uuid
-Unique identifier of the project for which you want to get members.
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project for which you want to get members.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-200 Success Members found.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Members found.</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Response Schema
 
-members: array
-
-Array of Members.
-
-member_id: uuid
-
-Unique identifier of member.
-
-first_name: string
-
-First name of member. Optional.
-
-last_name: string
-
-Last name of member. Optional.
-
-scopes: array
-
-Project scopes associated with member.
-
-email: string
-
-Email address of member.
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>members:</strong> array</p>
+          <p>Array of Members.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>member_id:</strong> uuid</p>
+          <p>Unique identifier of member.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>first_name:</strong> string</p>
+          <p>First name of member. Optional.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>last_name:</strong> string</p>
+          <p>Last name of member. Optional.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>scopes:</strong> array</p>
+          <p>Project scopes associated with member.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>email:</strong> string</p>
+          <p>Email address of member.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 </div>
 </div>
@@ -68,42 +91,39 @@ Required account scope(s): `project:write`. Required project scopes(s): `members
 
 #### Path Parameters
 
-project_id: uuid
-Unique identifier of the project that contains the account you want to remove.
-
-member_id: uuid
-Unique identifier of the account that you want to remove.
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project that contains the account you want to remove.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <strong>member_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the account that you want to remove.</p>
+  </main>
+</div>
 
 #### Responses
 
-Status Description
-200 Success Account removed.
-
-#### Response Schema
-
-members: array
-
-Array of Members.
-
-member_id: uuid
-
-Unique identifier of member.
-
-first_name: string
-
-First name of member. Optional.
-
-last_name: string
-
-Last name of member. Optional.
-
-scopes: array
-
-Project scopes associated with member.
-
-email: string
-
-Email address of member.
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Account removed.</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 </div>
