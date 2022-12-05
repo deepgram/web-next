@@ -18,29 +18,29 @@ Moving audio transcription and classification from one environment to another ca
 
 During the migration process, you will need to perform the following tasks:
 
-| Before Migration                                                                                                                                                                                                                                                                                                                           | During Migration                                                                                                                                           | After Migration                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Before Migration | During Migration | After Migration |
+|------------------|------------------|-----------------|
 | <ul><li>Identify any upstream dependencies on your transcriptions</li><li>Find representative samples of your audio for testing</li><li>Get familiar with Deepgram’s API and understand differences from Google</li><li>Create an API key</li><li>Test your audio</li><li>Create a migration plan</li><li>Create a rollback plan</li></ul> | <ul><li>Configure your response parsing to conform to Deepgram's JSON response</li><li>Swap over traffic to Deepgram API</li><li>Monitor systems</li></ul> | <ul><li>Testing</li><li>Tune downstream processes to Deepgram output</li></ul> |
 
 ## Differences
 
-Once you’ve selected your model, Deepgram provides many features and capabilities to help you transcribe and classify your audio. However, some capabilities and concepts are implemented differently from Google STT. Areas of difference are marked with an asterisk:
+Once you’ve selected your [model](/documentation/features/model/), Deepgram provides many features and capabilities to help you transcribe and classify your audio. However, some capabilities and concepts are implemented differently from Google STT.
 
-| Features and Capabilities          | Deepgram                                                                                                                                          | Google STT                    |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| Base model                         | Yes                                                                                                                                               | Yes                           |
-| Enhanced model                     | Yes - Phone Call and General                                                                                                                      | Yes - Phone Call and Video    |
-| Batch processing (1hr of audio)\*  | 20 seconds                                                                                                                                        | 1443 seconds                  |
-| Streaming processing lag           | 300 - 800 ms                                                                                                                                      | 800 - 2000 ms                 |
-| Search\*                           | Yes (keywords and audio)                                                                                                                          | Yes (keywords)                |
-| Diarization (separate per speaker) | Up to 16                                                                                                                                          | Up to 6                       |
-| Noise reduction                    | Yes                                                                                                                                               | Yes                           |
-| Custom vocabulary\*                | Yes - Keyword Boosting, Model Training                                                                                                            | Yes - speech/model adaptation |
-| Redaction                          | Yes                                                                                                                                               | Yes                           |
-| Punctuation                        | Yes                                                                                                                                               | Yes                           |
-| Profanity filter                   | Yes                                                                                                                                               | Yes                           |
-| Numeral formatting                 | Yes                                                                                                                                               | Yes                           |
-| Audio inputs                       | Raw audio/ binary data                                                                                                                            | Language Dependent            |
+| Features and Capabilities | Deepgram | Google STT |
+|---------------------------|----------|------------|
+| Base model                | Yes      | Yes        |
+| Enhanced model            | Yes - Phone Call and General | Yes - Phone Call and Video |
+| Batch processing (1 hour of audio) | 20 seconds | 1443 seconds |
+| Streaming processing lag | 300 - 800 milliseconds | 800 - 2000 milliseconds |
+| Search | Yes (keywords and audio) | Yes (keywords) |
+| Diarization (separate per speaker) | Up to 16 | Up to 6 |
+| Noise reduction | Yes | Yes |
+| Custom vocabulary | Yes - Keyword Boosting, Model Training | Yes - speech/model adaptation |
+| Redaction | Yes | Yes |
+| Punctuation | Yes | Yes |
+| Profanity filter | Yes | Yes |
+| Numeral formatting | Yes | Yes |
+| Audio inputs | Raw audio/ binary data | Language Dependent |
 | SDK                                | Yes<br/><strong>Certified</strong><ul><li>Node.js</li><li>.NET</li><li>Python</li></ul><strong>Community</strong><ul><li>Deno</li><li>Go</li></ul> | Yes                           |
 | Web Sockets                        | Yes                                                                                                                                               | No                            |
 | Data logging                       | Yes                                                                                                                                               | Yes                           |

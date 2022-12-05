@@ -14,10 +14,10 @@ import Panel from '../../../../../shared/components/global/Panel.astro';
 # {frontmatter.title}
 
 The `CreateLiveTranscriptionClient` method encapsulates a websocket connection
-to the Deepgram API and returns a class that emits events received from the'
+to the Deepgram API and returns a class that emits events received from the
 Deepgram API for consumption by your application.
 
-<Panel type="info" title="LiveTranscriptionClient lifecycle">
+<Panel type="info" title="LiveTranscriptionClient Lifecycle">
 
 The `LiveTranscriptionClient` is Disposable so it should always be created in a
 'using' to ensure it is disposed of properly.
@@ -186,7 +186,7 @@ deepgramLive.FinishAsync()
 
 The `StopConnectionAsync` method closes the Websocket connection to Deepgram.
 
-<Panel type="warning" title="You may want FinishAsync instead.">
+<Panel type="warning" title="You May Want FinishAsync Instead.">
 
 In most instances, the `FinishAsync` method should be used to end a streaming
 session. Otherwise, the final transcript will not be received. Using the `FinishAsync`

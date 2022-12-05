@@ -36,7 +36,7 @@ const audioSource = { url: URL_OF_FILE };
 
 ### Sending a Buffer
 
-<Panel type="warning" title="Node only">
+<Panel type="warning" title="Node Only">
 
 The SDK only supports sending Buffers from Node. The in-browser version of the
 SDK only provides the capability to send URL sources.
@@ -59,7 +59,7 @@ fs.readFile("/path/to/file", function (err, buffer) {
 
 ### Sending a ReadStream
 
-<Panel type="warning" title="Node only">
+<Panel type="warning" title="Node Only">
 
 The SDK only supports sending Buffers from Node. The in-browser version of the
 SDK only provides the capability to send URL sources.
@@ -89,25 +89,6 @@ transcriptions. They are provided as an object as the second parameter of the
 feature in the Deepgram API. Reference the
 [features documentation](/documentation/features/) to learn what features may
 be appropriate for your request.
-
-| Option                                                        | Type     |
-| ------------------------------------------------------------- | -------- |
-| [model](/documentation/features/model/)                       | string   |
-| [tier](/documentation/features/tier)                          | string   |
-| [replace](/documentation/features/replace/)                   | string   |
-| [version](/documentation/features/version/)                   | string   |
-| [language](/documentation/features/language/)                 | string   |
-| [punctuate](/documentation/features/punctuate/)               | boolean  |
-| [profanity_filter](/documentation/features/profanity-filter/) | boolean  |
-| [redact](/documentation/features/redact/)                     | [string] |
-| [diarize](/documentation/features/diarize/)                   | boolean  |
-| [multichannel](/documentation/features/multichannel/)         | boolean  |
-| alternatives                                                  | number   |
-| [numerals](/documentation/features/numerals/)                 | boolean  |
-| [callback](/documentation/features/callback/)                 | string   |
-| [keywords](/documentation/features/keywords/)                 | [string] |
-| [utterances](/documentation/features/utterances/)             | boolean  |
-| [utt_split](/documentation/features/utterance-split/)         | number   |
 
 ## Pre-recorded Transcription Example Request
 

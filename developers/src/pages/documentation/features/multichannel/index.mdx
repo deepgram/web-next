@@ -20,6 +20,8 @@ import CodeGroup from '../../../../shared/components/code/CodeGroup.astro';
 
 Deepgram’s Multichannel feature recognizes multiple audio channels and transcribes each channel independently. When set to `true`, you will receive one transcript for each channel.
 
+To learn more about multichannel audio and to learn when to use Deepgram's Multichannel or Diarization feature, see [Understanding when to Use the Multichannel and Diarization Features](/documentation/guides/multichannel-vs-diarization/).
+
 <Alert type="info">
 
 When processing pre-recorded audio, you can apply a different model to each channel using the `model` parameter. For example, set `model=general:phonecall`, which applies the `general` model to channel 0 and the `phonecall` model to channel 1 (`multichannel=true&model=general:phonecall`).

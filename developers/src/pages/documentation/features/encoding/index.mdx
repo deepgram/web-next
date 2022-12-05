@@ -14,7 +14,9 @@ seo:
 
 <div class="badge">STREAMING</div>
 
-Deepgram’s Encoding feature allows you to you to specify the expected encoding of your submitted audio. This feature is only required when raw, headerless audio packets are sent to the streaming service.
+Deepgram’s Encoding feature allows you to you to specify the expected encoding of your submitted audio. This feature is required when raw, headerless audio packets are sent to the streaming service. If containerized audio packets are sent to the streaming service, this feature should not be used.
+
+If using the Encoding feature, the [Sample Rate](/documentation/features/sample-rate/) feature is also required.
 
 ## Use Cases
 
@@ -33,9 +35,11 @@ Deepgram supports the following audio coding algorithms:
 - `linear16`: 16-bit, little endian, signed PCM WAV data
 - `flac`: [FLAC](/documentation/glossary/#F)-encoded data
 - `mulaw`: [mu-law](/documentation/glossary/#M) encoded WAV data
-- `amr-nb`: [Adaptive Multi-rate (AMR)](/documentation/glossary/#A) narrowband codec. When using this option, you must also specify `sample_rate=8000` (`encoding=amr-nb&sample_rate=8000`).
-- `amr-wb`: [Adaptive Multi-rate (AMR)](/documentation/glossary/#A) wideband codec. When using this option, you must also specify `sample_rate=16000` (`encoding=amr-wb&sample_rate=16000`).
+- `amr-nb`: [Adaptive Multi-rate (AMR)](/documentation/glossary/#A) narrowband codec
+- `amr-wb`: [Adaptive Multi-rate (AMR)](/documentation/glossary/#A) wideband codec
 - `opus`: [Ogg Opus](/documentation/glossary/#O)
 - `speex`: [Speex](/documentation/glossary/#S)
 
 For an example of audio streaming, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/).
+
+For help determining your audio format and sample rate, see [Determining Your Audio Format for Live Streaming Audio](/documentation/guides/determine-audio-format/).
