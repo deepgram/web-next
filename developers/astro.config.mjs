@@ -8,6 +8,7 @@ import mdx from "@astrojs/mdx";
 import image from '@astrojs/image';
 import { s } from 'hastscript';
 import autolinkHeadings from 'rehype-autolink-headings'
+import { remarkReadingTime } from './src/utils/remark-reading-time.mjs';
 
 export default defineConfig({
 	site: process.env.URL,
@@ -22,6 +23,7 @@ export default defineConfig({
 		vue(),
 		preact(),
 		mdx({
+			remarkPlugins: [remarkReadingTime],
 			rehypePlugins: [
 				[
 					autolinkHeadings,
