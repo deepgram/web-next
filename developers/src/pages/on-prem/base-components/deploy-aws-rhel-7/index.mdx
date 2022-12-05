@@ -479,13 +479,13 @@ Now that your environment is set up, you can download and set up your Deepgram p
 1. Download the latest Deepgram Engine image from Docker:
 
    ```bash
-   docker pull deepgram/onprem-engine:3.28.10
+   docker pull deepgram/onprem-engine:3.37.2
    ```
 
 2. Download the latest Deepgram API image from Docker:
 
    ```bash
-   docker pull deepgram/onprem-api:1.60.0
+   docker pull deepgram/onprem-api:1.70.0
    ```
 
 3. Download the latest Deepgram License Proxy Server image from Docker:
@@ -583,7 +583,7 @@ services:
   # The speech API service.
 
   api:
-    image: deepgram/onprem-api:1.60.0
+    image: deepgram/onprem-api:1.70.0
 
     # Here, we expose the API port to the host machine. The container port
     # (right-hand side) must match the port that the API service is
@@ -605,7 +605,7 @@ services:
 
   # The speech engine service.
   engine:
-    image: deepgram/onprem-engine:3.28.10
+    image: deepgram/onprem-engine:3.37.2
 
     # Change the default runtime.
     runtime: nvidia
@@ -861,7 +861,7 @@ services:
   # The Deepgram API service.
 
   api:
-    image: deepgram/onprem-api:1.58.0
+    image: deepgram/onprem-api:1.70.0
     # The API port to the host machine. The container port (right-hand side)
     # must match the port that the API service is listening on (this can be
     # found in its configuration file).
@@ -883,7 +883,7 @@ services:
 
   # The Deepgram Engine service.
   engine:
-    image: deepgram/onprem-engine:3.26.7
+    image: deepgram/onprem-engine:3.37.2
 
     # Change the default runtime.
     runtime: nvidia

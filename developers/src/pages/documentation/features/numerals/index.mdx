@@ -70,6 +70,21 @@ curl \
 
 </CodeGroup>
 
+### Toggling Numerals during a real-time stream
+
+In addition to the query string parameter, if you're sending real-time streaming data, you can turn Numerals on or off at any point during the stream. To do so, send the following JSON message to the websocket:
+
+```json
+{
+  "type": "Configure",
+  "features": {
+    "numerals": true (or false)
+  }
+}
+```
+
+Numerals can be turned on and off multiple times during a stream if desired.
+
 ## Results
 
 Once applied, results will appear in the transcript.

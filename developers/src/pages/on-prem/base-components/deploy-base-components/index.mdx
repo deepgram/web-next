@@ -110,6 +110,7 @@ At the end of this process, your browser should download a `private-key.pem` fil
 7. For the **Configure Security Group** wizard step, select **Create a new security group**.
 
    <ol type="a">
+      <li>For the name, type <code>On-Premises</code>.</li>
 		<li>For the description, type <code>On-Premises Base Security Group</code>.</li>
 		<li>Ensure the first rule (of type <strong>SSH</strong>) is listed, and provide the description <code>SSH for Administration</code>.</li>
 		<Alert type="warning">
@@ -348,13 +349,13 @@ CUDA is NVIDIA's library for interacting with its GPU. CUDA support is made avai
 
    ```bash
    docker pull nvidia/cuda:11.6.0-base-ubuntu20.04
-   ```
+    ```
 
 6. Run a test of the NVIDIA Docker runtime:
 
    ```bash
    docker run --runtime=nvidia --rm --gpus all nvidia/cuda:11.6.0-base-ubuntu20.04 nvidia-smi
-   ```
+    ```
 
 ### Setting up the Deepgram Engine and API Containers
 
@@ -365,14 +366,14 @@ Now that your environment is set up, you can download and set up your Deepgram p
 1. Download the latest Deepgram Engine image from Docker:
 
    ```bash
-   docker pull deepgram/onprem-engine:3.26.7
-   ```
+   docker pull deepgram/onprem-engine:3.37.2
+    ```
 
 2. Download the latest Deepgram API image from Docker:
 
    ```bash
-   docker pull deepgram/onprem-api:1.58.0
-   ```
+   docker pull deepgram/onprem-api:1.70.0
+    ```
 
 #### Import Your Docker Compose, Container Configuration, and Model Files
 
@@ -465,7 +466,7 @@ services:
 
   # The Deepgram API service.
   api:
-    image: deepgram/onprem-api:1.58.0
+    image: deepgram/onprem-api:1.70.0
 
     # The API port to the host machine. The container port (right-hand side)
     # must match the port that the API service is listening on (this can be
@@ -484,7 +485,7 @@ services:
 
   # The Deepgram Engine service.
   engine:
-    image: deepgram/onprem-engine:3.26.7
+    image: deepgram/onprem-engine:3.37.2
 
     # Change the default runtime.
     runtime: nvidia
@@ -715,7 +716,7 @@ services:
 
   # The Deepgram API service.
   api:
-    image: deepgram/onprem-api:1.58.0
+    image: deepgram/onprem-api:1.70.0
 
     # The API port to the host machine. The container port (right-hand side)
     # must match the port that the API service is listening on (this can be
@@ -737,7 +738,7 @@ services:
 
   # The Deepgram Engine service.
   engine:
-    image: deepgram/onprem-engine:3.26.7
+    image: deepgram/onprem-engine:3.37.2
 
     # Change the default runtime.
     runtime: nvidia
@@ -762,7 +763,7 @@ services:
     command: -v serve /engine.toml
 
   license-proxy:
-    image: deepgram/onprem-license-proxy:1.0.0-1
+    image: deepgram/onprem-license-proxy:1.2.1
 
     ports:
       - "8443:8443"

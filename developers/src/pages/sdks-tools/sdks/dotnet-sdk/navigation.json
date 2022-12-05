@@ -17,19 +17,19 @@
       },
       {
         "name": "Streaming Transcription",
-        "to": "/sdks-tools/sdks/node-sdk/streaming-transcription/"
+        "to": "/sdks-tools/sdks/dotnet-sdk/streaming-transcription/"
       },
       {
         "name": "Projects",
-        "to": "/sdks-tools/sdks/node-sdk/projects/"
+        "to": "/sdks-tools/sdks/dotnet-sdk/projects/"
       },
       {
         "name": "Keys",
-        "to": "/sdks-tools/sdks/node-sdk/keys/"
+        "to": "/sdks-tools/sdks/dotnet-sdk/keys/"
       },
       {
         "name": "Usage",
-        "to": "/sdks-tools/sdks/node-sdk/usage/"
+        "to": "/sdks-tools/sdks/dotnet-sdk/usage/"
       }
     ]
   }

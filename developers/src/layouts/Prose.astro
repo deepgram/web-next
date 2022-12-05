@@ -178,7 +178,11 @@ const { class: classes } = Astro.props;
     border-bottom-color: #e5e7eb;
 	}
 	.post-prose :global(table > tbody > tr > td) {
-		@apply pr-2 py-2; 
+		@apply pr-2 py-2;
+		vertical-align: baseline; 
+	}
+	.post-prose :global(table > tbody > tr > td > ul > li) {
+		@apply py-1;
 	}
 
 	.post-prose :global(table > tbody > tr > td > code) {
