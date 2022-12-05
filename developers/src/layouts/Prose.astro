@@ -116,10 +116,11 @@ const { class: classes } = Astro.props;
 		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];
 	}
 
-	.post-prose > :global(ol li::before) {
-		content: counter(list-item,var(--list-counter-style,decimal))".";
-		counter-increment: li;
-		@apply absolute -left-8 h-6 w-6;
+	.post-prose > :global(ol) {
+		/* content: counter(list-item,var(--list-counter-style,decimal))"."; */
+		list-style: decimal;
+		/* counter-increment: li;
+		@apply absolute -left-8 h-6 w-6; */
 	}
 
 	.post-prose :global(ul:not(.contains-task-list)) {

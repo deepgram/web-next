@@ -38,3 +38,10 @@ const { headings } = Astro.props;
 		</HasAside>
 	</PrimarySection>
 </Default>
+
+<style>
+	.post-prose > :global(ol > li ol) {
+		list-style: lower-alpha;
+		@apply pl-8;
+	}
+</style>
