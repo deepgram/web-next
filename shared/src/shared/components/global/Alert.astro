@@ -5,7 +5,7 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 
 <div class={`alert ${type}`}>
 	<div class="heading">
-		<Icon class={`icon h-6 w-6 ${type === "info" || type === "language" ? "fill-casper" : type === "warning" ? "fill-sunflower" : fill}`} icon={type} />
+		<Icon class={`icon h-6 w-6 ${type}`} icon={type} />
 	</div>
 	<div class="text w-5/6">
 		<slot />
@@ -28,8 +28,8 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 		@apply bg-sunflower/20;
 	}
 	.language {
-		@apply border-cloud rounded-sm border;
-		@apply bg-mist;
+		@apply border-casper rounded-sm border;
+		@apply bg-casper;
 		@apply m-2.5;
 	}
 
@@ -38,30 +38,28 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 		@apply my-4 ml-4;
 	}
 	.icon {
-		@apply border-0;
+		@apply border-0 fill-black;
 	}
 	.icon > * {
 		@apply m-2.5 mr-0;
 		@apply border-0;
 	}
 
-	.icon > .info {
-		background: url("../../../shared/assets/images/info.svg");
+	.icon.info {
 		@apply bg-no-repeat;
 		@apply h-6 w-6;
+		@apply fill-casper;
 	}
 
-	.icon > .warning {
-		background: url("../../../shared/assets/images/warning.svg");
+	.icon.warning {
 		@apply bg-no-repeat;
 		@apply h-6 w-6;
+		@apply fill-sunflower;
 	}
-	.icon > .language {
-		background: url("../../../shared/assets/images/language.svg");
+	.icon.language {
 		@apply bg-no-repeat;
-		@apply h-6 w-6;
-
-		@apply text-white;
+		@apply h-6 w-6;		
+		@apply fill-black;
 	}
 
 	.text {
@@ -85,6 +83,6 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 		@apply pt-4;
 	}
 	.text :global(p:first-of-type) {
-		@apply pt-0;
+		@apply pt-0 pb-0;
 	}
 </style>
