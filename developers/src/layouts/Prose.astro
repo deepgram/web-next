@@ -122,12 +122,12 @@ const { class: classes } = Astro.props;
 		@apply absolute -left-8 h-6 w-6;
 	}
 
-	.post-prose > :global(ul:not(.contains-task-list)) {
+	.post-prose :global(ul:not(.contains-task-list)) {
 		@apply list-disc;
 		@apply ml-6;
 	}
 
-	.post-prose > :global(ul:not(.contains-task-list) li::marker) {
+	.post-prose :global(ul:not(.contains-task-list) li::marker) {
 		@apply text-casper;
 	}
 
