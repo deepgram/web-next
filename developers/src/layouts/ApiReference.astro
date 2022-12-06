@@ -10,6 +10,7 @@ import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 import nav from "../pages/api-reference/navigation.json";
 import "../assets/styles/developers.css";
 const { headings } = Astro.props;
+const pathname = Astro.url.pathname;
 ---
 
 <Default>
@@ -23,9 +24,12 @@ const { headings } = Astro.props;
 							<Prose class="max-w-full col-span-12 xl:col-span-9">
 								<slot />
 							</Prose>
-							<div class="col-span-0 xl:col-span-3 ml-8">
+							{(pathname === "/api-reference") ? null
+							: <div class="col-span-0 xl:col-span-3 ml-8">
 								<TableOfContents headings={headings} docsType={"GUIDE"} classes="sticky top-40" />
 							</div>
+							}
+						
 						</div>
 						<div class="max-w-full lg:max-w-xl 2xl:max-w-2xl mt-28 border-grass border-t-2"></div>
 						<Feedback />
