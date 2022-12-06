@@ -1,7 +1,6 @@
 ---
 import Default from "./Default.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
-import Prose from "./Prose.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
 import Feedback from "../shared/components/forms/Feedback.astro";
 import SideNav from "../shared/components/nav/SideNav.astro";
@@ -21,12 +20,12 @@ const { headings } = Astro.props;
 					<PrimarySection class="py-10" padding="px-0">
 						<BreadCrumb />
 						<div class="grid grid-cols-12">
-							<Prose class="max-w-full lg:max-w-2xl col-span-12 xl:col-span-9">
+							<div class="max-w-full lg:max-w-2xl col-span-12 xl:col-span-9">
 								<slot />
-							</Prose>
-							<div class="col-span-0 xl:col-span-3 ml-8">
-								<TableOfContents headings={headings} docsType={"GUIDE"} classes="sticky top-40" />
 							</div>
+							<!-- <div class="col-span-0 xl:col-span-3 ml-8">
+								<TableOfContents headings={headings} docsType={"GUIDE"} classes="sticky top-40" />
+							</div> -->
 						</div>
 						<div class="max-w-full lg:max-w-xl 2xl:max-w-2xl mt-28 border-grass border-t-2"></div>
 						<Feedback />
@@ -36,3 +35,30 @@ const { headings } = Astro.props;
 		</HasAside>
 	</PrimarySection>
 </Default>
+
+<style>
+  h1 {
+		color: #111827;
+		font-weight: 700;
+		font-size: 2.25em;
+		margin-top: 1.5rem;
+		margin-bottom: 2.50rem;
+		line-height: 1.1111111;
+		font-family: Favorit;
+	}
+	h2 {
+		@apply mb-5 mt-10;
+		color: #111827;
+		font-weight: 700;
+		font-size: 1.5em;
+		line-height: 1.3333333;
+		font-family: Favorit;
+	}
+
+	:global(h3) {
+		@apply mt-0;
+		@apply mb-2;
+	}
+
+  
+</style>

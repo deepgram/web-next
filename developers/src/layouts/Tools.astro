@@ -22,21 +22,7 @@ const { headings } = Astro.props;
 				<TableOfContents headings={headings} docsType={"TOOL"} classes="sticky top-40" />
 			</div>
 		</div>
+		<div class="max-w-full lg:max-w-xl 2xl:max-w-2xl mt-28 border-grass border-t-2"></div>
 		<Feedback />
 	</PrimarySection>
 </Default>
-
-<!-- <style is:global>
-	.side-nav ul {
-		@apply ml-4;
-	}
-
-	.side-nav ul li.active > .navlink-container a {
-		@apply text-darkCharcoal;
-		@apply font-bold;
-		@apply border-l-4 border-meadow;
-	}
-	.side-nav ul li ul li.active > .navlink-container a {
-		@apply border-r-4 border-meadow border-l-0 w-full;
-	}
-</style> -->

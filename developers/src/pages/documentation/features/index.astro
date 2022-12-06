@@ -1,7 +1,7 @@
 ---
 import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../../shared/components/cards/DocsCard.astro";
-import Layout from "../../../layouts/Documentation.astro";
+import Layout from "../../../layouts/General.astro";
 
 const guides = await Astro.glob("./**/index.mdx");
 ---
@@ -273,7 +273,7 @@ const guides = await Astro.glob("./**/index.mdx");
 		font-weight: 700;
 		font-size: 2.25em;
 		margin-top: 1.5rem;
-		margin-bottom: 0.75rem;
+		margin-bottom: 2.5rem;
 		line-height: 1.1111111;
 		font-family: Favorit;
 	}
@@ -284,6 +284,11 @@ const guides = await Astro.glob("./**/index.mdx");
 		font-size: 1.5em;
 		line-height: 1.3333333;
 		font-family: Favorit;
+	}
+
+	:global(h3) {
+		@apply mt-0;
+		@apply mb-2;
 	}
 
 	table * {
@@ -317,6 +322,11 @@ const guides = await Astro.glob("./**/index.mdx");
 	}
 	tbody td {
 		@apply align-top;
+		vertical-align: top;
+    padding-top: 0.5714286em;
+    padding-right: 0.5714286em;
+    padding-bottom: 0.5714286em;
+    padding-left: 0.5714286em
 	}
 	
 </style>

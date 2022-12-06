@@ -1,14 +1,14 @@
 ---
 import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../../shared/components/cards/DocsCard.astro";
-import Layout from "../../../layouts/Documentation.astro";
+import Layout from "../../../layouts/General.astro";
 
 const security = await Astro.glob("./**/index.mdx");
 ---
 
 <Layout>
 	<article>
-		<h1 class="mb-10">Security</h1>
+		<h1>Security</h1>
 		<DocsCardList>
 			{security.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</DocsCardList>
@@ -21,7 +21,7 @@ const security = await Astro.glob("./**/index.mdx");
 		font-weight: 700;
 		font-size: 2.25em;
 		margin-top: 1.5rem;
-		margin-bottom: 0.75rem;
+		margin-bottom: 2.50rem !important;
 		line-height: 1.1111111;
 		font-family: Favorit;
 	}
@@ -32,5 +32,10 @@ const security = await Astro.glob("./**/index.mdx");
 		font-size: 1.5em;
 		line-height: 1.3333333;
 		font-family: Favorit;
+	}
+
+	:global(h3) {
+		@apply mt-0 !important;
+		@apply mb-2 !important;
 	}
 </style>

@@ -1,7 +1,7 @@
 ---
 import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../../shared/components/cards/DocsCard.astro";
-import Layout from "../../../layouts/Documentation.astro";
+import Layout from "../../../layouts/General.astro";
 
 const guides = await Astro.glob("./**/index.mdx");
 
@@ -54,5 +54,10 @@ const coreConcepts = guides.filter((guide) => {
 		font-size: 1.5em;
 		line-height: 1.3333333;
 		font-family: Favorit;
+	}
+
+	:global(h3) {
+		@apply mt-0 !important;
+		@apply mb-2 !important;
 	}
 </style>

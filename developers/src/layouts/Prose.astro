@@ -30,6 +30,15 @@ const { class: classes } = Astro.props;
 		@apply object-cover;
 		@apply my-8;
 	}
+	.post-prose :global(h2 > code)
+	.post-prose :global(h3 > code),
+	.post-prose :global(h4 > code) {
+		@apply bg-casper/30;
+		@apply text-black;
+		@apply font-semibold;
+		font-size: 0.875em;
+	}
+
 
 	.post-prose > :global(small) {
 		@apply text-sm;
