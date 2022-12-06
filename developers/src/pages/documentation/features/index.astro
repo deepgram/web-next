@@ -4,6 +4,9 @@ import DocsCard from "../../../shared/components/cards/DocsCard.astro";
 import Layout from "../../../layouts/General.astro";
 
 const guides = await Astro.glob("./**/index.mdx");
+const sortedGuides = guides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order
+});
 ---
 
 <Layout>
@@ -262,7 +265,7 @@ const guides = await Astro.glob("./**/index.mdx");
 
 		<h2>Guides</h2>
 		<DocsCardList>
-			{guides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			{sortedGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</DocsCardList>
 	</article>
 </Layout>

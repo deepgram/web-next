@@ -8,13 +8,22 @@ const guides = await Astro.glob("./**/index.mdx");
 const performanceGuides = guides.filter((guide) => {
 	return guide.frontmatter.type === "performance";
 });
+const sortedPerformanceGuides = performanceGuides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order
+});
 
 const transcriptionGuides = guides.filter((guide) => {
 	return guide.frontmatter.type === "transcription";
 });
+const sortedTranscriptionGuides = transcriptionGuides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order
+});
 
 const migrationGuides = guides.filter((guide) => {
 	return guide.frontmatter.type === "migration";
+});
+const sortedMigrationGuides = migrationGuides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order
 });
 ---
 
@@ -23,15 +32,15 @@ const migrationGuides = guides.filter((guide) => {
 		<h1>Deepgram Guides</h1>
 		<DocsCardList>
 			<h2 slot="title" class="text-stone uppercase">Migration</h2>
-			{migrationGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			{sortedMigrationGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</DocsCardList>
 		<DocsCardList>
 			<h2 slot="title" class="text-stone uppercase">Transcription</h2>
-			{transcriptionGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			{sortedTranscriptionGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</DocsCardList>
 		<DocsCardList>
 			<h2 slot="title" class="text-stone uppercase">Measuring Performance</h2>
-			{performanceGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			{sortedPerformanceGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</DocsCardList>
 	</article>
 </Layout>
