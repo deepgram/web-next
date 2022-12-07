@@ -117,16 +117,16 @@ Required account/project scope(s): `keys:read`. Optional project scope(s): `memb
 
 	<CodeGroup title="endpoint">
 
-```curl
+```bash
 GET /projects/{project_id}/keys
 ```
 
   </CodeGroup>
 
-  <CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+  <CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
-```curl
+```bash
 # cURL
 
 curl --request GET \
@@ -308,6 +308,7 @@ puts response.read_body
 	</CodeGroup>
 
 </div>
+</ColumnsForCode>
 
 </ColumnsForCode>
 
@@ -424,17 +425,17 @@ Required account/project scope(s): `keys:read`. Optional project scope(s): `memb
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
 
-```curl
+```bash
 GET /projects/{project_id}/keys/{key_id}
 ```
 
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
-```curl
+```bash
 # cURL
 
 curl --request GET \
@@ -611,6 +612,7 @@ puts response.read_body
 	</CodeGroup>
 
 </div>
+</ColumnsForCode>
 
 </ColumnsForCode>
 
@@ -744,17 +746,17 @@ Required account/project scope(s): `keys:write`.
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
 
-```curl
+```bash
 POST /projects/{project_id}/keys
 ```
 
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
-```curl
+```bash
 # cURL
 
 curl --request POST \
@@ -931,6 +933,7 @@ puts response.read_body
 	</CodeGroup>
 
 </div>
+</ColumnsForCode>
 
 </ColumnsForCode>
 
@@ -995,17 +998,17 @@ Required account/project scope(s): `keys:write`. Optional project scope(s): `mem
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
 
-```curl
+```bash
 DELETE /projects/{project_id}/keys/{key_id}
 ```
 
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
-```curl
+```bash
 # cURL
 
 curl --request DELETE \

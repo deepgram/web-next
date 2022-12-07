@@ -820,7 +820,7 @@ Request body when submitting pre-recorded audio. Accepts either:
 
 <CodeGroup title="endpoint">
 <CodeBlock active>
-```curl
+```bash
 POST /listen
 ```
 </CodeBlock>
@@ -829,7 +829,7 @@ POST /listen
 <CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
 <CodeBlock tab="curl" active>
 
-```curl
+```bash
 curl --request POST \
   --url 'https://api.deepgram.com/v1/listen' \
   --header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
@@ -1066,7 +1066,7 @@ After sending a Close message, the endpoint considers the WebSocket connection c
 
 <CodeGroup title="endpoint">
 <CodeBlock active>
-```curl
+```bash
 WSS /listen
 ```
 </CodeBlock>
@@ -1075,7 +1075,7 @@ WSS /listen
 <CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
 <CodeBlock tab="curl" active>
 
-```curl
+```bash
 # cURL is not possible because cURL can't establish the full-duplex
 # connection that WebSockets operates on
 ```

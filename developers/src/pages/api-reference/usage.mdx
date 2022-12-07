@@ -4,259 +4,442 @@ title: Usage
 description: Usage for the Deepgram API
 order: 9
 ---
+import ColumnsForCode from '../../components/layout/ColumnsForCode.astro';
+import CodeGroup from '../../shared/components/code/CodeGroup.astro';
+import CodeBlock from '../../shared/components/code/CodeBlock.astro';
+
 # {frontmatter.title}
 Deepgram tracks requests made to Deepgram services and associates usage information with Projects.
 
-<div>
-<div slot="left">
+<ColumnsForCode>
+	<div slot="left">
 
-### Get All Requests
+	### Get All Requests
 
-Generates a list of requests sent to the Deepgram API for the specified project over a given time range. Uses pagination to limit the number of results returned.
+	Generates a list of requests sent to the Deepgram API for the specified project over a given time range. Uses pagination to limit the number of results returned.
 
-#### Path Parameters
+	#### Path Parameters
 
-<div class="feature">
-  <header class="notranslate">
-    <strong>project_id:</strong> uuid
-  </header>
-  <main>
-          <p>Unique identifier of the project for which you want to retrieve requests.</p>
-  </main>
-</div>
+	<div class="feature">
+		<header class="notranslate">
+			<strong>project_id:</strong> uuid
+		</header>
+		<main>
+						<p>Unique identifier of the project for which you want to retrieve requests.</p>
+		</main>
+	</div>
 
-#### Query Parameters
+	#### Query Parameters
 
-<div class="feature">
-  <header class="notranslate">
-    <strong>start:</strong> string
-  </header>
-  <main>
-    <p>Start date of the requested date range. Format is YYYY-MM-DD. Defaults to the time of your first
-          request.</p>
-        <p>If no time zone is specified, defaults to Coordinated Universal Time (UTC).</p>
-  </main>
-</div>
-<div class="feature">
-  <header class="notranslate">
-    <strong>end:</strong> string
-  </header>
-  <main>
-    <p>End date of the requested date range. Format is YYYY-MM-DD. Defaults to the current time.</p>
-    <p>If no time zone is specified, defaults to Coordinated Universal Time (UTC).</p>
-  </main>
-</div>
-<div class="feature">
-  <header class="notranslate">
-    <strong>limit:</strong> integer
-  </header>
-  <main>
-          <p>Number of results to return per page.</p>
-          <p class="notranslate"><strong>Default:</strong> 10</p>
-  </main>
-</div>
-<div class="feature">
-  <header class="notranslate">
-    <strong>status:</strong> string
-  </header>
-  <main>
-        <p>Status of requests to return. Enables you to filter requests depending on whether they have succeeded or failed. If not specified, returns requests with all statuses.</p>
-        <p class="notranslate"><strong>Default:</strong> null</p>
-        <p><strong>Possible values:</strong> <code>null</code>, <code>succeeded</code> OR <code>failed</code></p>
-  </main>
-</div>
+	<div class="feature">
+		<header class="notranslate">
+			<strong>start:</strong> string
+		</header>
+		<main>
+			<p>Start date of the requested date range. Format is YYYY-MM-DD. Defaults to the time of your first
+						request.</p>
+					<p>If no time zone is specified, defaults to Coordinated Universal Time (UTC).</p>
+		</main>
+	</div>
+	<div class="feature">
+		<header class="notranslate">
+			<strong>end:</strong> string
+		</header>
+		<main>
+			<p>End date of the requested date range. Format is YYYY-MM-DD. Defaults to the current time.</p>
+			<p>If no time zone is specified, defaults to Coordinated Universal Time (UTC).</p>
+		</main>
+	</div>
+	<div class="feature">
+		<header class="notranslate">
+			<strong>limit:</strong> integer
+		</header>
+		<main>
+						<p>Number of results to return per page.</p>
+						<p class="notranslate"><strong>Default:</strong> 10</p>
+		</main>
+	</div>
+	<div class="feature">
+		<header class="notranslate">
+			<strong>status:</strong> string
+		</header>
+		<main>
+					<p>Status of requests to return. Enables you to filter requests depending on whether they have succeeded or failed. If not specified, returns requests with all statuses.</p>
+					<p class="notranslate"><strong>Default:</strong> null</p>
+					<p><strong>Possible values:</strong> <code>null</code>, <code>succeeded</code> OR <code>failed</code></p>
+		</main>
+	</div>
 
-#### Responses
+	#### Responses
 
-<table>
-  <thead>
-    <tr>
-      <th>Status</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>200 Success</td>
-      <td>
-        <p>Requests found.</p>
-        <p>Requests will be returned in descending order based on creation time (newest first).</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+	<table>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>200 Success</td>
+				<td>
+					<p>Requests found.</p>
+					<p>Requests will be returned in descending order based on creation time (newest first).</p>
+				</td>
+			</tr>
+		</tbody>
+	</table>
 
-#### Response Schema
+	#### Response Schema
 
-<ul class="response">
-  <li>
-    <p class="notranslate"><strong>page:</strong> integer</p>
-          <p>Page number that should be returned. Used for pagination.</p>
-  </li>
-  <li>
-    <p class="notranslate"><strong>limit:</strong> integer</p>
-          <p>Number of results to return per page. Used for pagination.</p>
-  </li>
-  <li>
-    <p class="notranslate"><strong>requests:</strong> array</p>
-    <ul class="response">
-      <li>
-        <p class="notranslate"><strong>request_id:</strong> uuid</p>
-        <p>Unique identifier of request.</p>
-      </li>
-      <li>
-        <p class="notranslate"><strong>created:</strong> string</p>
-        <p>Date/time when request was created.</p>
-      </li>
-      <li>
-        <p class="notranslate"><strong>path:</strong> string</p>
-        <p>Path of endpoint to which request was submitted.</p>
-      </li>
-      <li>
-        <p class="notranslate"><strong>api_key_id:</strong> uuid</p>
-        <p>Unique identifier of the API Key with which the request was submitted.</p>
-      </li>
-      <li>
-        <p class="notranslate"><strong>response:</strong> object</p>
-        <p>Response generated by the request. If a response has not yet been generated, this object will be
-        empty.</p>
-        <ul class="response">
-          <li>
-            <p class="notranslate"><strong>details:</strong> object</p>
-            <p>If the request failed, then this object will be replaced by an
-            optional <code>message</code> field that may contain an error message.</p>
-            <ul class="response">
-              <li>
-                <p class="notranslate"><strong>usd:</strong> number</p>
-                <p>Cost of the request in USD, if project is non-contract and the requesting account has appropriate
-                permissions.</p>
-              </li>
-              <li>
-                <p class="notranslate"><strong>duration:</strong> number</p>
-                <p>Length of time (in hours) of audio processed in the request.</p>
-              </li>
-              <li>
-                <p class="notranslate"><strong>total_audio:</strong> number</p>
-                <p>Number of audio files processed in the request.</p>
-              </li>
-              <li>
-                <p class="notranslate"><strong>channels:</strong> integer</p>
-                <p>Number of channels in the audio associated with the request.</p>
-              </li>
-              <li>
-                <p class="notranslate"><strong>streams:</strong> integer</p>
-                <p>Number of audio streams associated with the request.</p>
-              </li>
-              <li>
-                <p class="notranslate"><strong>models:</strong> array</p>
-                <p>Array of models applied when running the request.</p>
-              </li>
-              <li>
-                <p class="notranslate"><strong>method:</strong> string</p>
-                <p>Processing method used when running the request.</p>
-              </li>
-              <li>
-                <p class="notranslate"><strong>tags:</strong> array</p>
-                <p>Array of tags applied when running the request.</p>
-              </li>
-              <li>
-                <p class="notranslate"><strong>features:</strong> array</p>
-                <p>Array of features used when running the request.</p>
-              </li>
-              <li>
-                <p class="notranslate"><strong>config:</strong> object</p>
-                <p>Configuration used when running the request.</p>
-                <ul class="response">
-                  <li>
-                    <p class="notranslate"><strong>alternatives:</strong> integer</p>
-                    <p>Requested maximum number of transcript alternatives to return. If no alternative value was submitted, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>diarize:</strong> boolean</p>
-                    <p>Indicates whether diarization was requested. If not requested, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>keywords:</strong> array</p>
-                    <p>Array of keywords associated with the request. If no keywords were submitted, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>language:</strong> string</p>
-                    <p>Language associated with the request. If no languages were submitted, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>model:</strong> string</p>
-                    <p>Model associated with the request. If no models were submitted, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>multichannel:</strong> boolean</p>
-                    <p>Indicates whether multichannel processing was requested. If not requested, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>ner:</strong> boolean</p>
-                    <p>Indicates whether named-entity recognition (NER) was requested. If not requested, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>numerals:</strong> boolean</p>
-                    <p>Indicates whether numeral conversion was requested. If not requested, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>profanity_filter:</strong> boolean</p>
-                    <p>Indicates whether filtering profanity was requested. If not requested, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>punctuate:</strong> boolean</p>
-                    <p>Indicates whether punctuation was requested. If not requested, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>redact:</strong> array</p>
-                    <p>Indicates whether redaction was requested. If not requested, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>search:</strong> array</p>
-                    <p>Array of seach terms associated with the request. If no search terms were submitted, this item will not be returned.</p>
-                  </li>
-                  <li>
-                    <p class="notranslate"><strong>utterances:</strong> boolean</p>
-                    <p>Indicates whether utterance segmentation was requested. If not requested, this item will not be returned.</p>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <p class="notranslate"><strong>code:</strong> integer</p>
-          </li>
-          <li>
-            <p class="notranslate"><strong>completed:</strong> string</p>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <p class="notranslate"><strong>callback:</strong> object</p>
-        <p>Only exists if a callback was included in the request. If a callback was
-        included in the request, but the request has not completed yet, then this object will
-        exist, but it will be empty. The <code>attempts</code> item will exist only while the request has not 
-        completed. The <code>completed</code> item will exist only after the request completes.</p>
-        <ul class="response">
-          <li>
-            <p class="notranslate"><strong>attempts:</strong> integer</p>
-          </li>
-          <li>
-            <p class="notranslate"><strong>code:</strong> integer</p>
-          </li>
-          <li>
-            <p class="notranslate"><strong>completed:</strong> string</p>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
+	<ul class="response">
+		<li>
+			<p class="notranslate"><strong>page:</strong> integer</p>
+						<p>Page number that should be returned. Used for pagination.</p>
+		</li>
+		<li>
+			<p class="notranslate"><strong>limit:</strong> integer</p>
+						<p>Number of results to return per page. Used for pagination.</p>
+		</li>
+		<li>
+			<p class="notranslate"><strong>requests:</strong> array</p>
+			<ul class="response">
+				<li>
+					<p class="notranslate"><strong>request_id:</strong> uuid</p>
+					<p>Unique identifier of request.</p>
+				</li>
+				<li>
+					<p class="notranslate"><strong>created:</strong> string</p>
+					<p>Date/time when request was created.</p>
+				</li>
+				<li>
+					<p class="notranslate"><strong>path:</strong> string</p>
+					<p>Path of endpoint to which request was submitted.</p>
+				</li>
+				<li>
+					<p class="notranslate"><strong>api_key_id:</strong> uuid</p>
+					<p>Unique identifier of the API Key with which the request was submitted.</p>
+				</li>
+				<li>
+					<p class="notranslate"><strong>response:</strong> object</p>
+					<p>Response generated by the request. If a response has not yet been generated, this object will be
+					empty.</p>
+					<ul class="response">
+						<li>
+							<p class="notranslate"><strong>details:</strong> object</p>
+							<p>If the request failed, then this object will be replaced by an
+							optional <code>message</code> field that may contain an error message.</p>
+							<ul class="response">
+								<li>
+									<p class="notranslate"><strong>usd:</strong> number</p>
+									<p>Cost of the request in USD, if project is non-contract and the requesting account has appropriate
+									permissions.</p>
+								</li>
+								<li>
+									<p class="notranslate"><strong>duration:</strong> number</p>
+									<p>Length of time (in hours) of audio processed in the request.</p>
+								</li>
+								<li>
+									<p class="notranslate"><strong>total_audio:</strong> number</p>
+									<p>Number of audio files processed in the request.</p>
+								</li>
+								<li>
+									<p class="notranslate"><strong>channels:</strong> integer</p>
+									<p>Number of channels in the audio associated with the request.</p>
+								</li>
+								<li>
+									<p class="notranslate"><strong>streams:</strong> integer</p>
+									<p>Number of audio streams associated with the request.</p>
+								</li>
+								<li>
+									<p class="notranslate"><strong>models:</strong> array</p>
+									<p>Array of models applied when running the request.</p>
+								</li>
+								<li>
+									<p class="notranslate"><strong>method:</strong> string</p>
+									<p>Processing method used when running the request.</p>
+								</li>
+								<li>
+									<p class="notranslate"><strong>tags:</strong> array</p>
+									<p>Array of tags applied when running the request.</p>
+								</li>
+								<li>
+									<p class="notranslate"><strong>features:</strong> array</p>
+									<p>Array of features used when running the request.</p>
+								</li>
+								<li>
+									<p class="notranslate"><strong>config:</strong> object</p>
+									<p>Configuration used when running the request.</p>
+									<ul class="response">
+										<li>
+											<p class="notranslate"><strong>alternatives:</strong> integer</p>
+											<p>Requested maximum number of transcript alternatives to return. If no alternative value was submitted, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>diarize:</strong> boolean</p>
+											<p>Indicates whether diarization was requested. If not requested, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>keywords:</strong> array</p>
+											<p>Array of keywords associated with the request. If no keywords were submitted, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>language:</strong> string</p>
+											<p>Language associated with the request. If no languages were submitted, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>model:</strong> string</p>
+											<p>Model associated with the request. If no models were submitted, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>multichannel:</strong> boolean</p>
+											<p>Indicates whether multichannel processing was requested. If not requested, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>ner:</strong> boolean</p>
+											<p>Indicates whether named-entity recognition (NER) was requested. If not requested, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>numerals:</strong> boolean</p>
+											<p>Indicates whether numeral conversion was requested. If not requested, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>profanity_filter:</strong> boolean</p>
+											<p>Indicates whether filtering profanity was requested. If not requested, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>punctuate:</strong> boolean</p>
+											<p>Indicates whether punctuation was requested. If not requested, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>redact:</strong> array</p>
+											<p>Indicates whether redaction was requested. If not requested, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>search:</strong> array</p>
+											<p>Array of seach terms associated with the request. If no search terms were submitted, this item will not be returned.</p>
+										</li>
+										<li>
+											<p class="notranslate"><strong>utterances:</strong> boolean</p>
+											<p>Indicates whether utterance segmentation was requested. If not requested, this item will not be returned.</p>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<p class="notranslate"><strong>code:</strong> integer</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>completed:</strong> string</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p class="notranslate"><strong>callback:</strong> object</p>
+					<p>Only exists if a callback was included in the request. If a callback was
+					included in the request, but the request has not completed yet, then this object will
+					exist, but it will be empty. The <code>attempts</code> item will exist only while the request has not 
+					completed. The <code>completed</code> item will exist only after the request completes.</p>
+					<ul class="response">
+						<li>
+							<p class="notranslate"><strong>attempts:</strong> integer</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>code:</strong> integer</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>completed:</strong> string</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
 
-</div>
-</div>
+	</div>
 
-<div>
+	<div slot="right">
+		<CodeGroup title="Get All Requests" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
+
+			<CodeBlock tab="curl" active>
+				```bash
+				curl --request GET \
+					--url 'https://api.deepgram.com/v1/projects/{project_id}/requests' \
+					--header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+					--header 'content-type: application/json'
+				```
+			</CodeBlock>
+			<CodeBlock tab="Node.js">
+				```js
+				const http = require("https");
+
+				const options = {
+					method: "GET",
+					hostname: "api.deepgram.com",
+					port: null,
+					path: "/v1/projects/{project_id}/requests",
+					headers: {
+						Authorization: "Token <YOUR_DEEPGRAM_API_KEY>",
+						"content-type": "application/json",
+					},
+				};
+
+				const req = http.request(options, function (res) {
+					const chunks = [];
+
+					res.on("data", function (chunk) {
+						chunks.push(chunk);
+					});
+
+					res.on("end", function () {
+						const body = Buffer.concat(chunks);
+						console.log(body.toString());
+					});
+				});
+
+				req.end();
+				```
+			</CodeBlock>
+			<CodeBlock tab="Python">
+				```py
+				import http.client
+
+				conn = http.client.HTTPSConnection("api.deepgram.com")
+
+				headers = {
+						'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+						'content-type': "application/json"
+						}
+
+				conn.request("GET", "/v1/projects/{project_id}/requests", headers=headers)
+
+				res = conn.getresponse()
+				data = res.read()
+
+				print(data.decode("utf-8"))
+				```
+			</CodeBlock>
+			<CodeBlock tab=".NET">
+				```csharp
+				var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/requests");
+				var request = new RestRequest(Method.GET);
+				request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+				request.AddHeader("content-type", "application/json");
+				IRestResponse response = client.Execute(request);
+				```
+			</CodeBlock>
+			<CodeBlock tab="Ruby">
+				```ruby
+				require 'uri'
+				require 'net/http'
+				require 'openssl'
+
+				url = URI("https://api.deepgram.com/v1/projects/{project_id}/requests")
+
+				http = Net::HTTP.new(url.host, url.port)
+				http.use_ssl = true
+				http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+				request = Net::HTTP::Get.new(url)
+				request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+				request["content-type"] = 'application/json'
+
+				response = http.request(request)
+				puts response.read_body
+				```
+			</CodeBlock>
+			<CodeBlock tab="PHP">
+				```php
+				<?php
+
+				$curl = curl_init();
+
+				curl_setopt_array($curl, [
+					CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/requests",
+					CURLOPT_RETURNTRANSFER => true,
+					CURLOPT_ENCODING => "",
+					CURLOPT_MAXREDIRS => 10,
+					CURLOPT_TIMEOUT => 30,
+					CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+					CURLOPT_CUSTOMREQUEST => "GET",
+					CURLOPT_HTTPHEADER => [
+						"Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+						"content-type: application/json"
+					],
+				]);
+
+				$response = curl_exec($curl);
+				$err = curl_error($curl);
+
+				curl_close($curl);
+
+				if ($err) {
+					echo "cURL Error #:" . $err;
+				} else {
+					echo $response;
+				}
+				```
+			</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup title="Response" default="json" tabs={["json"]}>
+			<CodeBlock tab="json">
+				```json
+				{
+					"page": 0,
+					"limit": 0,
+					"requests": [
+						{
+							"request_id": "uuid",
+							"created": "YYYY-MM-DDThh:mm:ss.sTZD",
+							"path": "string",
+							"api_key_id": "uuid",
+							"response": {
+								"details": {
+									"usd": 0,
+									"duration": 0,
+									"total_audio": 0,
+									"channels": 0,
+									"streams": 0,
+									"models": ["string"],
+									"method": "string",
+									"tags": ["string"],
+									"features": ["string"],
+									"config": {
+										"alternatives": 0,
+										"diarize": true,
+										"keywords": ["string"],
+										"language": "string",
+										"model": "string",
+										"multichannel": true,
+										"ner": true,
+										"numerals": true,
+										"profanity_filter": false,
+										"punctuate": true,
+										"redact": ["string"],
+										"search": ["string"],
+										"utterances": true
+									}
+								},
+								"code": 0,
+								"completed": "YYYY-MM-DDThh:mm:ss.sTZD"
+							},
+							"callback": {
+								"attempts": 0,
+								"code": 0,
+								"completed": "YYYY-MM-DDThh:mm:ss.sTZD"
+							}
+						}
+					]
+				}
+				```
+			</CodeBlock>
+		</CodeGroup>
+	</div>
+</ColumnsForCode>
+
+<ColumnsForCode>
 <div slot="left">
 
 ### Get Request
@@ -458,9 +641,182 @@ Retrieves the details of the specified request sent to the Deepgram API for the 
 
 
 </div>
-</div>
+<div slot="right">
+	<CodeGroup title="Get Request" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
-<div>
+	<CodeBlock tab="curl" active>
+		```bash
+		curl --request GET \
+			--url 'https://api.deepgram.com/v1/projects/{project_id}/requests/{request_id}' \
+			--header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+			--header 'content-type: application/json'
+		```
+	</CodeBlock>
+	<CodeBlock tab="Node.js">
+		```js
+		const http = require("https");
+
+		const options = {
+			method: "GET",
+			hostname: "api.deepgram.com",
+			port: null,
+			path: "/v1/projects/{project_id}/requests/{request_id}",
+			headers: {
+				Authorization: "Token <YOUR_DEEPGRAM_API_KEY>",
+				"content-type": "application/json",
+			},
+		};
+
+		const req = http.request(options, function (res) {
+			const chunks = [];
+
+			res.on("data", function (chunk) {
+				chunks.push(chunk);
+			});
+
+			res.on("end", function () {
+				const body = Buffer.concat(chunks);
+				console.log(body.toString());
+			});
+		});
+
+		req.end();
+		```
+	</CodeBlock>
+	<CodeBlock tab="Python">
+		```py
+		import http.client
+
+		conn = http.client.HTTPSConnection("api.deepgram.com")
+
+		headers = {
+				'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+				'content-type': "application/json"
+				}
+
+		conn.request("GET", "/v1/projects/{project_id}/requests/{request_id}", headers=headers)
+
+		res = conn.getresponse()
+		data = res.read()
+
+		print(data.decode("utf-8"))
+		```
+	</CodeBlock>
+	<CodeBlock tab=".NET">
+		```csharp
+		var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/requests/{request_id}");
+		var request = new RestRequest(Method.GET);
+		request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+		request.AddHeader("content-type", "application/json");
+		IRestResponse response = client.Execute(request);
+		```
+	</CodeBlock>
+	<CodeBlock tab="Ruby">
+		```ruby
+		require 'uri'
+		require 'net/http'
+		require 'openssl'
+
+		url = URI("https://api.deepgram.com/v1/projects/{project_id}/requests/{request_id}")
+
+		http = Net::HTTP.new(url.host, url.port)
+		http.use_ssl = true
+		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+		request = Net::HTTP::Get.new(url)
+		request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+		request["content-type"] = 'application/json'
+
+		response = http.request(request)
+		puts response.read_body
+		```
+	</CodeBlock>
+	<CodeBlock tab="PHP">
+		```php
+		<?php
+
+		$curl = curl_init();
+
+		curl_setopt_array($curl, [
+			CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/requests/{request_id}",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "GET",
+			CURLOPT_HTTPHEADER => [
+				"Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+				"content-type: application/json"
+			],
+		]);
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+			echo "cURL Error #:" . $err;
+		} else {
+			echo $response;
+		}
+		```
+	</CodeBlock>
+</CodeGroup>
+
+<CodeGroup title="Response" default="json" tabs={["json"]}>
+	<CodeBlock tab="json">
+		```json
+		{
+			"request_id": "uuid",
+			"created": "YYYY-MM-DDThh:mm:ss.sTZD",
+			"path": "string",
+			"api_key_id": "uuid",
+			"response": {
+				"details": {
+					"usd": 0,
+					"duration": 0,
+					"total_audio": 0,
+					"channels": 0,
+					"streams": 0,
+					"models": ["string"],
+					"method": "string",
+					"tags": ["string"],
+					"features": ["string"],
+					"config": {
+						"alternatives": 0,
+						"callback": "string",
+						"diarize": true,
+						"keywords": ["string"],
+						"language": "string",
+						"model": "string",
+						"multichannel": true,
+						"ner": true,
+						"numerals": true,
+						"profanity_filter": true,
+						"punctuate": true,
+						"redact": ["string"],
+						"search": ["string"],
+						"utterances": true
+					}
+				},
+				"code": 0,
+				"completed": "YYYY-MM-DDThh:mm:ss.sTZD"
+			},
+			"callback": {
+				"attempts": 0,
+				"code": 0,
+				"completed": "YYYY-MM-DDThh:mm:ss.sTZD"
+			}
+		}
+		```
+	</CodeBlock>
+</CodeGroup>
+</div>
+</ColumnsForCode>
+
+<ColumnsForCode>
 <div slot="left">
 
 ### Summarize Usage
@@ -726,9 +1082,147 @@ Retrieves a summary of usage statistics. You can specify a date range.
 </ul>
 
 </div>
-</div>
+	<div slot="right">
+		<CodeGroup title="Summarize Usage" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
-<div>
+			<CodeBlock tab="curl" active>
+				```bash
+				curl --request GET \
+					--url 'https://api.deepgram.com/v1/projects/{project_id}/usage' \
+					--header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+					--header 'content-type: application/json'
+				```
+			</CodeBlock>
+			<CodeBlock tab="Node.js">
+				```js
+				const http = require("https");
+
+				const options = {
+					method: "GET",
+					hostname: "api.deepgram.com",
+					port: null,
+					path: "/v1/projects/{project_id}/usage",
+					headers: {
+						Authorization: "Token <YOUR_DEEPGRAM_API_KEY>",
+						"content-type": "application/json",
+					},
+				};
+
+				const req = http.request(options, function (res) {
+					const chunks = [];
+
+					res.on("data", function (chunk) {
+						chunks.push(chunk);
+					});
+
+					res.on("end", function () {
+						const body = Buffer.concat(chunks);
+						console.log(body.toString());
+					});
+				});
+
+				req.end();
+				```
+			</CodeBlock>
+			<CodeBlock tab="Python">
+				```py
+				var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/usage");
+				var request = new RestRequest(Method.GET);
+				request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+				request.AddHeader("content-type", "application/json");
+				IRestResponse response = client.Execute(request);
+				```
+			</CodeBlock>
+			<CodeBlock tab=".NET">
+				```csharp
+				var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/usage");
+				var request = new RestRequest(Method.GET);
+				request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+				request.AddHeader("content-type", "application/json");
+				IRestResponse response = client.Execute(request);
+				```
+			</CodeBlock>
+			<CodeBlock tab="Ruby">
+				```ruby
+				require 'uri'
+				require 'net/http'
+				require 'openssl'
+
+				url = URI("https://api.deepgram.com/v1/projects/{project_id}/usage")
+
+				http = Net::HTTP.new(url.host, url.port)
+				http.use_ssl = true
+				http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+				request = Net::HTTP::Get.new(url)
+				request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+				request["content-type"] = 'application/json'
+
+				response = http.request(request)
+				puts response.read_body
+				```
+			</CodeBlock>
+			<CodeBlock tab="PHP">
+				```php
+				<?php
+
+				$curl = curl_init();
+
+				curl_setopt_array($curl, [
+					CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/usage",
+					CURLOPT_RETURNTRANSFER => true,
+					CURLOPT_ENCODING => "",
+					CURLOPT_MAXREDIRS => 10,
+					CURLOPT_TIMEOUT => 30,
+					CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+					CURLOPT_CUSTOMREQUEST => "GET",
+					CURLOPT_HTTPHEADER => [
+						"Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+						"content-type: application/json"
+					],
+				]);
+
+				$response = curl_exec($curl);
+				$err = curl_error($curl);
+
+				curl_close($curl);
+
+				if ($err) {
+					echo "cURL Error #:" . $err;
+				} else {
+					echo $response;
+				}
+				```
+			</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup title="Response" default="json" tabs={["json"]}>
+			<CodeBlock tab="json">
+				```json
+				{
+					"start": "YYYY-MM-DDThh:mm:ss.sTZD",
+					"end": "YYYY-MM-DDThh:mm:ss.sTZD",
+					"resolution": {
+						"units": "string",
+						"amount": 0
+					},
+					"results": [
+						{
+							"start": "YYYY-MM-DDThh:mm:ss.sTZD",
+							"end": "YYYY-MM-DDThh:mm:ss.sTZD",
+							"hours": 0,
+							"total_hours": 0,
+							"requests": 0
+						}
+					]
+				}
+				```
+			</CodeBlock>
+		</CodeGroup>
+	</div>
+</ColumnsForCode>
+
+<ColumnsForCode>
 <div slot="left">
 
 ### Get Fields
@@ -815,4 +1309,149 @@ Lists the features, models, tags, languages, and processing method used for requ
   </li>
 </ul>
 </div>
+<div slot="right">
+	<CodeGroup title="Get Fields" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
+
+	<CodeBlock tab="curl" active>
+		```bash
+		curl --request GET \
+			--url 'https://api.deepgram.com/v1/projects/{project_id}/usage/fields' \
+			--header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+			--header 'content-type: application/json'
+		```
+	</CodeBlock>
+	<CodeBlock tab="Node.js">
+		```js
+		const http = require("https");
+
+		const options = {
+			method: "GET",
+			hostname: "api.deepgram.com",
+			port: null,
+			path: "/v1/projects/{project_id}/usage/fields",
+			headers: {
+				Authorization: "Token <YOUR_DEEPGRAM_API_KEY>",
+				"content-type": "application/json",
+			},
+		};
+
+		const req = http.request(options, function (res) {
+			const chunks = [];
+
+			res.on("data", function (chunk) {
+				chunks.push(chunk);
+			});
+
+			res.on("end", function () {
+				const body = Buffer.concat(chunks);
+				console.log(body.toString());
+			});
+		});
+
+		req.end();
+		```
+	</CodeBlock>
+	<CodeBlock tab="Python">
+		```py
+		import http.client
+
+		conn = http.client.HTTPSConnection("api.deepgram.com")
+
+		headers = {
+				'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+				'content-type': "application/json"
+				}
+
+		conn.request("GET", "/v1/projects/{project_id}/usage/fields", headers=headers)
+
+		res = conn.getresponse()
+		data = res.read()
+
+		print(data.decode("utf-8"))
+		```
+	</CodeBlock>
+	<CodeBlock tab=".NET">
+		```csharp
+		var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/usage/fields");
+		var request = new RestRequest(Method.GET);
+		request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+		request.AddHeader("content-type", "application/json");
+		IRestResponse response = client.Execute(request);
+		```
+	</CodeBlock>
+	<CodeBlock tab="Ruby">
+		```ruby
+		require 'uri'
+		require 'net/http'
+		require 'openssl'
+
+		url = URI("https://api.deepgram.com/v1/projects/{project_id}/usage/fields")
+
+		http = Net::HTTP.new(url.host, url.port)
+		http.use_ssl = true
+		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+		request = Net::HTTP::Get.new(url)
+		request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+		request["content-type"] = 'application/json'
+
+		response = http.request(request)
+		puts response.read_body
+		```
+	</CodeBlock>
+	<CodeBlock tab="PHP">
+		```php
+		<?php
+
+		$curl = curl_init();
+
+		curl_setopt_array($curl, [
+			CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/usage/fields",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "GET",
+			CURLOPT_HTTPHEADER => [
+				"Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+				"content-type: application/json"
+			],
+		]);
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+			echo "cURL Error #:" . $err;
+		} else {
+			echo $response;
+		}
+		```
+	</CodeBlock>
+</CodeGroup>
+
+<CodeGroup title="Response" default="json" tabs={["json"]}>
+	<CodeBlock tab="json">
+		```json
+		{
+			"tags": ["string"],
+			"models": [
+				{
+					"name": "string",
+					"language": "string",
+					"version": "string",
+					"model_id": "string"
+				}
+			],
+			"processing_methods": ["string"],
+			"languages": ["string"],
+			"features": ["string"]
+		}
+		```
+	</CodeBlock>
+</CodeGroup>
 </div>
+</ColumnsForCode>

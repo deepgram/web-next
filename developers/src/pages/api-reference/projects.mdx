@@ -69,7 +69,7 @@ Required account/project scope(s): `project:read`.
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
 
-			```curl
+			```bash
       GET /projects
 			```
 
@@ -79,7 +79,7 @@ Required account/project scope(s): `project:read`.
 		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
 		<CodeBlock tab="curl" active>
 
-```curl
+```bash
 # cURL
 
 curl --request GET \
@@ -309,7 +309,7 @@ puts response.read_body
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
 
-```curl
+```bash
 GET /projects/{project_id}
 ```
 
@@ -319,7 +319,7 @@ GET /projects/{project_id}
 		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
 		<CodeBlock tab="curl" active>
 
-```curl
+```bash
 # cURL
 
 curl --request GET \
@@ -558,7 +558,7 @@ Required account scope(s): `project:write`. Required project scope(s): `project:
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
 
-```curl
+```bash
 PATCH /projects/{project_id}
 ```
 
@@ -568,7 +568,7 @@ PATCH /projects/{project_id}
 		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
 		<CodeBlock tab="curl" active>
 
-```curl
+```bash
 # cURL
 
 curl --request PATCH \
@@ -784,7 +784,7 @@ Required account scope(s): `project:write`. Required project scope(s): `project:
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
 
-```curl
+```bash
 DELETE /projects/{project_id}
 ```
 
@@ -794,7 +794,7 @@ DELETE /projects/{project_id}
 		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
 		<CodeBlock tab="curl" active>
 
-```curl
+```bash
 # cURL
 
 curl --request DELETE \
