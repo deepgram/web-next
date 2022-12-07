@@ -8,6 +8,13 @@ module.exports = {
 			maxWidth: {
 				"screen-2xl": "96rem",
 			},
+			gridTemplateColumns: {
+				// Simple 16 column grid
+				'18': 'repeat(18, minmax(0, 1fr))',
+			},
+			gridColumn: {
+        'span-15': 'span 15 / span 15',
+      },
 			fontSize: {
 				"body-smallest": ["0.875rem", "1.125rem"],
 				body: ["1.125rem", "1.75rem"],

@@ -12,7 +12,7 @@ import CodeBlock from '../../shared/components/code/CodeBlock.astro';
 Keys are associated with Deepgram Projects. They enable you to use the Deepgram API, identify the Project calling the API, and associate usage information with Projects. Keys are assigned Scopes, which determine which actions they can be used to perform in the associated Project. For each Project, you can create multiple Keys and assign different Scopes for each Key.
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Get Keys
 
@@ -113,7 +113,7 @@ Required account/project scope(s): `keys:read`. Optional project scope(s): `memb
 
 </div>
 
-<div slot="right">
+<div slot="right" class="right">
 
 	<CodeGroup title="endpoint">
 
@@ -123,7 +123,7 @@ GET /projects/{project_id}/keys
 
   </CodeGroup>
 
-  <CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+  <CodeGroup title="Get Keys" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
 ```bash
@@ -137,7 +137,7 @@ curl --request GET \
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="python">
+		<CodeBlock tab="Python">
 
 ```python
 # python
@@ -161,7 +161,7 @@ print(data.decode("utf-8"))
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="dotnet">
+		<CodeBlock tab=".NET">
 
 ```c
 // .NET
@@ -174,7 +174,7 @@ var keys = await deepgram.Keys.ListKeysAsync("DEEPGRAM_PROJECT_ID");
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="node">
+		<CodeBlock tab="Node.js">
 
 ```js
 // Node.js
@@ -210,7 +210,7 @@ req.end()
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="php">
+		<CodeBlock tab="PHP">
 
 ```php
 # PHP
@@ -247,7 +247,7 @@ if ($err) {
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="ruby">
+		<CodeBlock tab="Ruby">
 
 ```ruby
 # Ruby
@@ -310,10 +310,9 @@ puts response.read_body
 </div>
 </ColumnsForCode>
 
-</ColumnsForCode>
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Get Key
 
@@ -420,7 +419,7 @@ Required account/project scope(s): `keys:read`. Optional project scope(s): `memb
 
 </div>
 
-<div slot="right">
+<div slot="right" class="right">
 
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
@@ -432,7 +431,7 @@ GET /projects/{project_id}/keys/{key_id}
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+		<CodeGroup title="Get Key" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
 ```bash
@@ -445,7 +444,7 @@ curl --request GET \
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="python">
+		<CodeBlock tab="Python">
 
 ```python
 # python
@@ -469,7 +468,7 @@ print(data.decode("utf-8"))
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="dotnet">
+		<CodeBlock tab=".NET">
 
 ```c
 // .NET
@@ -482,7 +481,7 @@ var key = await deepgram.Keys.GetKeyAsync("DEEPGRAM_PROJECT_ID", "KEY_ID");
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="node">
+		<CodeBlock tab="Node.js">
 
 ```js
 // Node.js
@@ -518,7 +517,7 @@ req.end()
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="php">
+		<CodeBlock tab="PHP">
 
 ```php
 # PHP
@@ -555,7 +554,7 @@ if ($err) {
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="ruby">
+		<CodeBlock tab="Ruby">
 
 ```ruby
 # Ruby
@@ -614,10 +613,9 @@ puts response.read_body
 </div>
 </ColumnsForCode>
 
-</ColumnsForCode>
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Create Key
 
@@ -741,7 +739,7 @@ Required account/project scope(s): `keys:write`.
 
 </div>
 
-<div slot="right">
+<div slot="right" class="right">
 
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
@@ -753,7 +751,7 @@ POST /projects/{project_id}/keys
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+		<CodeGroup title="Create Key" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
 ```bash
@@ -768,7 +766,7 @@ curl --request POST \
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="python">
+		<CodeBlock tab="Python">
 
 ```python
 # python
@@ -794,7 +792,7 @@ print(data.decode("utf-8"))
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="dotnet">
+		<CodeBlock tab=".NET">
 
 ```c
 // .NET
@@ -807,7 +805,7 @@ var key = await deepgram.Keys.CreateKeyAsync("DEEPGRAM_PROJECT_ID", "COMMENT", n
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="node">
+		<CodeBlock tab="Node.js">
 
 ```js
 // Node.js 
@@ -844,7 +842,7 @@ req.end()
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="php">
+		<CodeBlock tab="PHP">
 
 ```php
 # PHP
@@ -882,7 +880,7 @@ if ($err) {
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="ruby">
+		<CodeBlock tab="Ruby">
 
 ```ruby
 # Ruby
@@ -935,10 +933,9 @@ puts response.read_body
 </div>
 </ColumnsForCode>
 
-</ColumnsForCode>
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Delete Key
 
@@ -993,7 +990,7 @@ Required account/project scope(s): `keys:write`. Optional project scope(s): `mem
 
 </div>
 
-<div slot="right">
+<div slot="right" class="right">
 
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
@@ -1005,7 +1002,7 @@ DELETE /projects/{project_id}/keys/{key_id}
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+		<CodeGroup title="Delete Key" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
 ```bash
@@ -1019,7 +1016,7 @@ curl --request DELETE \
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="python">
+		<CodeBlock tab="Python">
 
 ```python
 # python
@@ -1043,7 +1040,7 @@ print(data.decode("utf-8"))
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="dotnet">
+		<CodeBlock tab=".NET">
 
 ```c
 // .NET
@@ -1056,7 +1053,7 @@ var response = await deepgram.Keys.DeleteKeyAsync("DEEPGRAM_PROJECT_ID", "KEY_ID
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="node">
+		<CodeBlock tab="Node.js">
 
 ```js
 // Node.js
@@ -1092,7 +1089,7 @@ req.end()
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="php">
+		<CodeBlock tab="PHP">
 
 ```php
 # PHP
@@ -1129,7 +1126,7 @@ if ($err) {
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="ruby">
+		<CodeBlock tab="Ruby">
 
 ```ruby
 # Ruby

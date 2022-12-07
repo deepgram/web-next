@@ -14,7 +14,7 @@ High-speed transcription of either pre-recorded or streaming audio. This feature
 Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Transcribe Pre-recorded Audio
 
@@ -816,7 +816,7 @@ Request body when submitting pre-recorded audio. Accepts either:
 #### Response Schema
 
 </div>
-<div slot="right">
+<div slot="right" class="right">
 
 <CodeGroup title="endpoint">
 <CodeBlock active>
@@ -826,7 +826,7 @@ POST /listen
 </CodeBlock>
 </CodeGroup>
 
-<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+<CodeGroup title="Transcribe Pre-recorded" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 <CodeBlock tab="curl" active>
 
 ```bash
@@ -838,7 +838,7 @@ curl --request POST \
 ```
 
 </CodeBlock>
-<CodeBlock tab="python">
+<CodeBlock tab="Python">
 
 ```python
 import http.client
@@ -859,7 +859,7 @@ data = res.read()
 ```
 
 </CodeBlock>
-<CodeBlock tab="dotnet">
+<CodeBlock tab=".NET">
 
 ```c
 using Deepgram;
@@ -870,7 +870,7 @@ var response = await deepgram.Transcription.Prerecorded.GetTranscriptionAsync(
 ```
 
 </CodeBlock>
-<CodeBlock tab="node">
+<CodeBlock tab="Node.js">
 
 ```js
 const http = require('https')
@@ -904,7 +904,7 @@ req.end()
 ```
 
 </CodeBlock>
-<CodeBlock tab="php">
+<CodeBlock tab="PHP">
 
 ```php
 <?php
@@ -939,7 +939,7 @@ if ($err) {
 ```
 
 </CodeBlock>
-<CodeBlock tab="ruby">
+<CodeBlock tab="Ruby">
 
 ```ruby
 require 'uri'
@@ -1023,7 +1023,7 @@ puts response.read_body
 </ColumnsForCode>
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Transcribe Live Streaming Audio
 
@@ -1062,7 +1062,7 @@ The body of the Close frame will indicate the reason for closing using one of th
 After sending a Close message, the endpoint considers the WebSocket connection closed and will close the underlying TCP connection.
 
 </div>
-<div slot="right">
+<div slot="right" class="right">
 
 <CodeGroup title="endpoint">
 <CodeBlock active>
@@ -1072,8 +1072,8 @@ WSS /listen
 </CodeBlock>
 </CodeGroup>
 
-<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="Node.js">
-<CodeBlock tab="curl" active>
+<CodeGroup title="Live Streaming" tabs={[ "Node.js", "curl", "Python",".NET", "Ruby", "PHP"]} default="Node.js">
+<CodeBlock tab="curl">
 
 ```bash
 # cURL is not possible because cURL can't establish the full-duplex
@@ -1081,7 +1081,7 @@ WSS /listen
 ```
 
 </CodeBlock>
-<CodeBlock tab="python">
+<CodeBlock tab="Python">
 
 ```python
 import base64
@@ -1179,14 +1179,14 @@ if __name__ == '__main__':
 ```
 
 </CodeBlock>
-<CodeBlock tab="dotnet">
+<CodeBlock tab=".NET">
 
 ```c
 // .NET code snippet coming soon
 ```
 
 </CodeBlock>
-<CodeBlock tab="node">
+<CodeBlock tab="Node.js" active>
 
 ```js
 // Connect to the streaming endpoint.
@@ -1246,14 +1246,14 @@ establishConnection()
 ```
 
 </CodeBlock>
-<CodeBlock tab="php">
+<CodeBlock tab="PHP">
 
 ```php
 # PHP code snippet coming soon
 ```
 
 </CodeBlock>
-<CodeBlock tab="ruby">
+<CodeBlock tab="Ruby">
 
 ```ruby
 # Ruby code snippet coming soon

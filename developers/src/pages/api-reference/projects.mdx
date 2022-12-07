@@ -14,7 +14,7 @@ High-speed transcription of either pre-recorded or streaming audio. This feature
 Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Get Projects
 
@@ -64,7 +64,7 @@ Required account/project scope(s): `project:read`.
 
 </div>
 
-<div slot="right">
+<div slot="right" class="right">
 
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
@@ -76,7 +76,7 @@ Required account/project scope(s): `project:read`.
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+		<CodeGroup title="Get Projects" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
 ```bash
@@ -89,7 +89,7 @@ curl --request GET \
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="python">
+		<CodeBlock tab="Python">
 
 ```python
 # python
@@ -112,7 +112,7 @@ print(data.decode("utf-8"))
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="dotnet">
+		<CodeBlock tab=".NET">
 
 ```c
 // .NET
@@ -126,7 +126,7 @@ IRestResponse response = client.Execute(request);
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="node">
+		<CodeBlock tab="Node.js">
 
 ```js
 // Node.js
@@ -162,7 +162,7 @@ req.end()
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="php">
+		<CodeBlock tab="PHP">
 
 ```php
 # PHP
@@ -199,7 +199,7 @@ if ($err) {
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="ruby">
+		<CodeBlock tab="Ruby">
 
 ```ruby
 # Ruby
@@ -249,7 +249,7 @@ puts response.read_body
 </ColumnsForCode>
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Get Project
 
@@ -304,7 +304,7 @@ puts response.read_body
 
 </div>
 
-<div slot="right">
+<div slot="right" class="right">
 
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
@@ -316,7 +316,7 @@ GET /projects/{project_id}
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+		<CodeGroup title="Get Project" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
 ```bash
@@ -329,7 +329,7 @@ curl --request GET \
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="python">
+		<CodeBlock tab="Python">
 
 ```python
 # python
@@ -353,7 +353,7 @@ print(data.decode("utf-8"))
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="dotnet">
+		<CodeBlock tab=".NET">
 
 ```c
 // .NET
@@ -367,7 +367,7 @@ IRestResponse response = client.Execute(request);
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="node">
+		<CodeBlock tab="Node.js">
 
 ```js
 // Node.js
@@ -403,7 +403,7 @@ req.end()
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="php">
+		<CodeBlock tab="PHP">
 
 ```php
 # PHP
@@ -440,7 +440,7 @@ if ($err) {
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="ruby">
+		<CodeBlock tab="Ruby">
 
 ```ruby
 # Ruby
@@ -486,7 +486,7 @@ puts response.read_body
 </ColumnsForCode>
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Update Project
 
@@ -553,7 +553,7 @@ Required account scope(s): `project:write`. Required project scope(s): `project:
 
 </div>
 
-<div slot="right">
+<div slot="right" class="right">
 
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
@@ -565,7 +565,7 @@ PATCH /projects/{project_id}
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+		<CodeGroup title="Update Project" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
 ```bash
@@ -580,7 +580,7 @@ curl --request PATCH \
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="python">
+		<CodeBlock tab="Python">
 
 ```python
 # python
@@ -606,7 +606,7 @@ print(data.decode("utf-8"))
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="dotnet">
+		<CodeBlock tab=".NET">
 
 ```c
 // .NET
@@ -621,7 +621,7 @@ IRestResponse response = client.Execute(request);
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="node">
+		<CodeBlock tab="Node.js">
 
 ```js
 // Node.js
@@ -658,7 +658,7 @@ req.end()
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="php">
+		<CodeBlock tab="PHP">
 
 ```php
 # PHP
@@ -696,7 +696,7 @@ if ($err) {
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="ruby">
+		<CodeBlock tab="Ruby">
 
 ```ruby
 # Ruby
@@ -741,7 +741,7 @@ puts response.read_body
 </ColumnsForCode>
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Delete Project
 
@@ -779,7 +779,7 @@ Required account scope(s): `project:write`. Required project scope(s): `project:
 
 </div>
 
-<div slot="right">
+<div slot="right" class="right">
 
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
@@ -791,7 +791,7 @@ DELETE /projects/{project_id}
 		</CodeBlock>
 		</CodeGroup>
 
-		<CodeGroup tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+		<CodeGroup title="Delete Project" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
 		<CodeBlock tab="curl" active>
 
 ```bash
@@ -805,7 +805,7 @@ curl --request DELETE \
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="python">
+		<CodeBlock tab="Python">
 
 ```python
 # python
@@ -829,7 +829,7 @@ print(data.decode("utf-8"))
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="dotnet">
+		<CodeBlock tab=".NET">
 
 ```c
 // .NET
@@ -843,7 +843,7 @@ IRestResponse response = client.Execute(request);
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="node">
+		<CodeBlock tab="Node.js">
 
 ```js
 // Node.js
@@ -879,7 +879,7 @@ req.end()
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="php">
+		<CodeBlock tab="PHP">
 
 ```php
 # PHP
@@ -916,7 +916,7 @@ if ($err) {
 ```
 
 		</CodeBlock>
-		<CodeBlock tab="ruby">
+		<CodeBlock tab="Ruby">
 
 ```ruby
 # Ruby

@@ -12,7 +12,7 @@ import CodeBlock from '../../shared/components/code/CodeBlock.astro';
 Deepgram tracks individual transactions and transaction summaries for Deepgram services.
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Get All Balances
 
@@ -83,10 +83,10 @@ Generates a list of outstanding balances for the specified project. To see balan
 </ul>
 
 </div>
-<div slot="right">
+<div slot="right" class="right">
 	<CodeGroup title="endpoint">
 		<CodeBlock active>
-		```bash
+		```vim
 		GET /projects/{project_id}/balances
 		```
 		</CodeBlock>
@@ -234,7 +234,7 @@ Generates a list of outstanding balances for the specified project. To see balan
 </ColumnsForCode>
 
 <ColumnsForCode>
-<div slot="left">
+<div slot="left" class="left">
 
 ### Get Balance
 
@@ -310,7 +310,7 @@ Retrieves details about the specified balance. To see balances, the authenticate
 </ul>
 
 </div>
-<div slot="right">
+<div slot="right" class="right">
 <CodeGroup title="endpoint">
 	<CodeBlock active>
 	```vim
