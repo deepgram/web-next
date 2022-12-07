@@ -10,17 +10,77 @@
 		"depth": 2,
 		"text": "Transcription",
 		"section": "transcription"
-	},	
+	},
+	{
+		"to": "transcription#transcribe-pre-recorded-audio",
+		"depth": 3,
+		"text": "Transcribe Pre-recorded Audio",
+		"section": "transcription"
+	},
+	{
+		"to": "transcription#transcribe-live-streaming-audio",
+		"depth": 3,
+		"text": "Transcribe Streaming Audio",
+		"section": "transcription"
+	},
 	{
 		"to": "projects",
 		"depth": 2,
 		"text": "Projects",
 		"section": "projects"
-	},	
+	},
+	{
+		"to": "projects#get-projects",
+		"depth": 3,
+		"text": "Get Projects",
+		"section": "projects"
+	},
+	{
+		"to": "projects#get-project",
+		"depth": 3,
+		"text": "Get Project",
+		"section": "projects"
+	},
+	{
+		"to": "projects#update-project",
+		"depth": 3,
+		"text": "Update Project",
+		"section": "projects"
+	},
+	{
+		"to": "projects#delete-project",
+		"depth": 3,
+		"text": "Delete Project",
+		"section": "projects"
+	},
 	{
 		"to": "keys",
 		"depth": 2,
 		"text": "Keys",
+		"section": "keys"
+	},
+	{
+		"to": "keys#get-keys",
+		"depth": 3,
+		"text": "Get Keys",
+		"section": "keys"
+	},
+	{
+		"to": "keys#get-key",
+		"depth": 3,
+		"text": "Get Key",
+		"section": "keys"
+	},
+	{
+		"to": "keys#create-key",
+		"depth": 3,
+		"text": "Create Key",
+		"section": "keys"
+	},
+	{
+		"to": "keys#delete-key",
+		"depth": 3,
+		"text": "Delete Key",
 		"section": "keys"
 	},
 	{
@@ -30,9 +90,33 @@
 		"section": "members"
 	},
 	{
+		"to": "members#get-members",
+		"depth": 3,
+		"text": "Get Members",
+		"section": "members"
+	},
+	{
+		"to": "members#remove-member",
+		"depth": 3,
+		"text": "Remove Member",
+		"section": "members"
+	},
+	{
 		"to": "scopes",
 		"depth": 2,
 		"text": "Scopes",
+		"section": "scopes"
+	},
+	{
+		"to": "scopes#get-member-scopes",
+		"depth": 3,
+		"text": "Get Member Scopes",
+		"section": "scopes"
+	},
+	{
+		"to": "scopes#update-scope",
+		"depth": 3,
+		"text": "Update Scope",
 		"section": "scopes"
 	},
 	{
@@ -41,15 +125,57 @@
 		"text": "Invitations"
 	},
 	{
+		"to": "invitations#leave-project",
+		"depth": 3,
+		"text": "Leave Project",
+		"section": "invitations"
+	},
+	{
 		"to": "usage",
 		"depth": 2,
 		"text": "Usage",
 		"section": "usage"
 	},
 	{
+		"to": "usage#get-all-requests",
+		"depth": 3,
+		"text": "Get All Requests",
+		"section": "usage"
+	},
+	{
+		"to": "usage#get-request",
+		"depth": 3,
+		"text": "Get Request",
+		"section": "usage"
+	},
+	{
+		"to": "usage#summarize-usage",
+		"depth": 3,
+		"text": "Summarize Usage",
+		"section": "usage"
+	},
+	{
+		"to": "usage#get-fields",
+		"depth": 3,
+		"text": "Get Fields",
+		"section": "usage"
+	},
+	{
 		"to": "billing",
 		"depth": 2,
 		"text": "Billing",
+		"section": "billing"
+	},
+	{
+		"to": "billing#get-all-balances",
+		"depth": 3,
+		"text": "Get All Balances",
+		"section": "billing"
+	},
+	{
+		"to": "billing#get-balance",
+		"depth": 3,
+		"text": "Get Balance",
 		"section": "billing"
 	}
 ]
