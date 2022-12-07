@@ -4,12 +4,16 @@ title: Transcription
 description: Transcription for the Deepgram API
 order: 3
 ---
+import ColumnsForCode from '../../components/layout/ColumnsForCode.astro';
+import CodeGroup from '../../shared/components/code/CodeGroup.astro';
+import CodeBlock from '../../shared/components/code/CodeBlock.astro';
+
 # {frontmatter.title}
 High-speed transcription of either pre-recorded or streaming audio. This feature is very fast, can understand nearly every audio format available, and is customizable. You can customize your transcript using various query parameters and apply general purpose and custom-trained AI models.
 
 Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
 
-<div>
+<ColumnsForCode>
 <div slot="left">
 
 ### Transcribe Pre-recorded Audio
@@ -812,9 +816,213 @@ Request body when submitting pre-recorded audio. Accepts either:
 #### Response Schema
 
 </div>
-</div>
+<div slot="right">
 
-<div>
+<CodeGroup title="endpoint">
+<CodeBlock active>
+```curl
+POST /listen
+```
+</CodeBlock>
+</CodeGroup>
+
+<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+<CodeBlock tab="curl" active>
+
+```curl
+curl --request POST \
+  --url 'https://api.deepgram.com/v1/listen' \
+  --header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+  --header 'content-type: application/json' \
+  --data '{"url":"string"}'
+```
+
+</CodeBlock>
+<CodeBlock tab="python">
+
+```python
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+payload = "{\"url\":\"string\"}"
+
+headers = {
+    'content-type': "application/json",
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>"
+    }
+
+conn.request("POST", "/v1/listen", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+```
+
+</CodeBlock>
+<CodeBlock tab="dotnet">
+
+```c
+using Deepgram;
+
+var deepgram = new DeepgramClient(new Credentials("YOUR_DEEPGRAM_API_KEY"));
+var response = await deepgram.Transcription.Prerecorded.GetTranscriptionAsync(
+    new UrlSource("URL_TO_FILE"));
+```
+
+</CodeBlock>
+<CodeBlock tab="node">
+
+```js
+const http = require('https')
+
+const options = {
+  method: 'POST',
+  hostname: 'api.deepgram.com',
+  port: null,
+  path: '/v1/listen',
+  headers: {
+    'content-type': 'application/json',
+    Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
+  },
+}
+
+const req = http.request(options, function (res) {
+  const chunks = []
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks)
+    console.log(body.toString())
+  })
+})
+
+req.write(JSON.stringify({ url: 'string' }))
+req.end()
+```
+
+</CodeBlock>
+<CodeBlock tab="php">
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.deepgram.com/v1/listen",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\"url\":\"string\"}",
+  CURLOPT_HTTPHEADER => [
+    "Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    "content-type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
+
+</CodeBlock>
+<CodeBlock tab="ruby">
+
+```ruby
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.deepgram.com/v1/listen")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Post.new(url)
+request["content-type"] = 'application/json'
+request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+request.body = "{\"url\":\"string\"}"
+
+response = http.request(request)
+puts response.read_body
+```
+
+</CodeBlock>
+</CodeGroup>
+
+<CodeGroup title="response">
+<CodeBlock active>
+
+```json
+{
+  "metadata": {
+    "transaction_key": "string",
+    "request_id": "uuid",
+    "sha256": "string",
+    "created": "string",
+    "duration": 0,
+    "channels": 0,
+    "models": [
+      "string"
+    ],
+  },
+  "results": {
+    "channels": [
+      {
+        "search": [
+          {
+            "query": "string",
+            "hits": [
+              {
+                "confidence": 0,
+                "start": 0,
+                "end": 0,
+                "snippet": "string"
+              }
+            ]
+          }
+        ],
+        "alternatives": [
+          {
+            "transcript": "string",
+            "confidence": 0,
+            "words": [
+              {
+                "word": "string",
+                "start": 0,
+                "end": 0,
+                "confidence": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+</CodeBlock>
+</CodeGroup>
+
+</div>
+</ColumnsForCode>
+
+<ColumnsForCode>
 <div slot="left">
 
 ### Transcribe Live Streaming Audio
@@ -854,4 +1062,260 @@ The body of the Close frame will indicate the reason for closing using one of th
 After sending a Close message, the endpoint considers the WebSocket connection closed and will close the underlying TCP connection.
 
 </div>
+<div slot="right">
+
+<CodeGroup title="endpoint">
+<CodeBlock active>
+```curl
+WSS /listen
+```
+</CodeBlock>
+</CodeGroup>
+
+<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+<CodeBlock tab="curl" active>
+
+```curl
+# cURL is not possible because cURL can't establish the full-duplex
+# connection that WebSockets operates on
+```
+
+</CodeBlock>
+<CodeBlock tab="python">
+
+```python
+import base64
+import json
+import websockets
+import asyncio
+
+def connect(key):
+    """ Connect to the websocket endpoint.
+    """
+    return websockets.connect(
+        ## Connect to the secure websocket endpoint.
+        'wss://api.deepgram.com/v1/listen',
+        extra_headers = {
+            'Authorization': 'Token {}'.format(key)
+        }
+    )
+
+async def run(key, inbox, outbox):
+    """ Streams data to/from the service.
+
+        We will use `key` to authenticate.
+        We will read audio data from the `outbox` queue and send it to the server.
+        When we receive responses from the server, we will put the latest transcript in the `inbox` queue.
+    """
+
+    ## Connect to the streaming endpoint.
+    async with connect(key) as ws:
+
+        ## This example function will upload data.
+        async def sender(ws):
+            while True:
+                audio = await outbox.get()
+                if audio is None:
+                    break
+
+                await ws.send(audio)
+
+            ## Close the connection cleanly.
+            await ws.send(json.dumps({
+                "type": "CloseStream"
+            }))
+
+        ## This example function will handle responses.
+        async def receiver(ws):
+            async for msg in ws:
+                ## Deserialize the JSON message.
+                msg = json.loads(msg)
+
+                ## Get the transcript and put in the queue.
+                if 'alternatives' in msg:
+                    transcript = msg['alternatives'][0]['transcript']
+                    print('Metadata received:', msg)
+                    await inbox.put(transcript)
+                elif 'channel' in msg and msg['is_final']:
+                    transcript = msg['channel']['alternatives'][0]['transcript']
+                    print('Metadata received:', msg)
+                    await inbox.put(transcript)
+                else:
+                    print('Metadata received:', msg)
+
+        await asyncio.wait([
+            asyncio.ensure_future(sender(ws)),
+            asyncio.ensure_future(receiver(ws))
+        ])
+
+if __name__ == '__main__':
+    ## Create the queues.
+    inbox = asyncio.Queue()
+    outbox = asyncio.Queue()
+
+    ## send raw audio from your machine
+
+    with open('file.wav', 'rb') as f:
+        while True:
+            piece = f.read(4096)
+            if piece == b'':
+                break
+            outbox.put_nowait(piece)
+
+    outbox.put_nowait(None)
+
+    ## Run the event loop, replacing credentials with your Deepgram API key.
+    asyncio.get_event_loop().run_until_complete(run('YOUR_DEEPGRAM_API_KEY', inbox, outbox))
+
+    ## Print out the results
+    print('All done. Replaying all the transcript messages...')
+    while True:
+        try:
+            msg = inbox.get_nowait()
+        except asyncio.QueueEmpty:
+            break
+
+        print('  Received transcript:', msg)
+```
+
+</CodeBlock>
+<CodeBlock tab="dotnet">
+
+```c
+// .NET code snippet coming soon
+```
+
+</CodeBlock>
+<CodeBlock tab="node">
+
+```js
+// Connect to the streaming endpoint.
+var establishConnection = function () {
+  console.log('Establishing connection.')
+
+  // Configure the websocket connection.
+  // This requires ws installed using 'npm i ws'.
+  const WebSocket = require('ws')
+  socket = new WebSocket('wss://api.deepgram.com/v1/listen', {
+    // Replace with your Deepgram project's API Key.
+    headers: {
+      Authorization: 'Token YOUR_DEEPGRAM_API_KEY',
+    },
+  })
+  socket.onopen = (m) => {
+    console.log('Socket opened!')
+
+    // Grab an audio file.
+    var fs = require('fs')
+    var contents = fs.readFileSync('/path/to/audio/file.wav')
+
+    // Send the audio to the Deepgram API all at once (works if audio is relatively short).
+    // socket.send(contents);
+
+    // Send the audio to the Deepgram API in chunks of 1000 bytes.
+    chunk_size = 1000
+    for (i = 0; i < contents.length; i += chunk_size) {
+      slice = contents.slice(i, i + chunk_size)
+      socket.send(slice)
+    }
+
+    // Send the message to close the connection.
+    socket.send(JSON.stringify({                                                   
+      "type": "CloseStream"
+    }))
+  }
+  socket.onclose = (m) => {
+    console.log('Socket closed.')
+  }
+
+  socket.onmessage = (m) => {
+    m = JSON.parse(m.data)
+    // Log the received message.
+    console.log(m)
+
+    // Log just the words from the received message.
+    if (m.hasOwnProperty('channel')) {
+      let words = m.channel.alternatives[0].words
+      console.log(words)
+    }
+  }
+}
+
+var socket = null
+establishConnection()
+```
+
+</CodeBlock>
+<CodeBlock tab="php">
+
+```php
+# PHP code snippet coming soon
+```
+
+</CodeBlock>
+<CodeBlock tab="ruby">
+
+```ruby
+# Ruby code snippet coming soon
+```
+
+</CodeBlock>
+</CodeGroup>
+
+<CodeGroup title="response">
+<CodeBlock active>
+
+```json
+{
+  "metadata": {
+    "transaction_key": "string",
+    "request_id": "uuid",
+    "sha256": "string",
+    "created": "string",
+    "duration": 0,
+    "channels": 0,
+    "models": [
+      "string"
+    ],
+  },
+  "results": {
+    "channels": [
+      {
+        "search": [
+          {
+            "query": "string",
+            "hits": [
+              {
+                "confidence": 0,
+                "start": 0,
+                "end": 0,
+                "snippet": "string"
+              }
+            ]
+          }
+        ],
+        "alternatives": [
+          {
+            "transcript": "string",
+            "confidence": 0,
+            "words": [
+              {
+                "word": "string",
+                "start": 0,
+                "end": 0,
+                "confidence": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+</CodeBlock>
+</CodeGroup>
+
 </div>
+</ColumnsForCode>

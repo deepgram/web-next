@@ -4,12 +4,16 @@ title: Projects
 description: Projects for the Deepgram API
 order: 4
 ---
+import ColumnsForCode from '../../components/layout/ColumnsForCode.astro';
+import CodeGroup from '../../shared/components/code/CodeGroup.astro';
+import CodeBlock from '../../shared/components/code/CodeBlock.astro';
+
 # {frontmatter.title}
 High-speed transcription of either pre-recorded or streaming audio. This feature is very fast, can understand nearly every audio format available, and is customizable. You can customize your transcript using various query parameters and apply general purpose and custom-trained AI models.
 
 Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
 
-<div>
+<ColumnsForCode>
 <div slot="left">
 
 ### Get Projects
@@ -59,9 +63,192 @@ Required account/project scope(s): `project:read`.
 </ul>
 
 </div>
+
+<div slot="right">
+
+	<CodeGroup title="endpoint">
+		<CodeBlock active>
+
+			```curl
+      GET /projects
+			```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+		<CodeBlock tab="curl" active>
+
+```curl
+# cURL
+
+curl --request GET \
+  --url https://api.deepgram.com/v1/projects \
+  --header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+  --header 'content-type: application/json'
+```
+
+		</CodeBlock>
+		<CodeBlock tab="python">
+
+```python
+# python
+
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+headers = {
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+    'content-type': "application/json"
+    }
+
+conn.request("GET", "/v1/projects", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+
+		</CodeBlock>
+		<CodeBlock tab="dotnet">
+
+```c
+// .NET
+
+var client = new RestClient("https://api.deepgram.com/v1/projects");
+var request = new RestRequest(Method.GET);
+request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+request.AddHeader("content-type", "application/json");
+IRestResponse response = client.Execute(request);
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="node">
+
+```js
+// Node.js
+
+const http = require('https')
+
+const options = {
+  method: 'GET',
+  hostname: 'api.deepgram.com',
+  port: null,
+  path: '/v1/projects',
+  headers: {
+    Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
+    'content-type': 'application/json',
+  },
+}
+
+const req = http.request(options, function (res) {
+  const chunks = []
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks)
+    console.log(body.toString())
+  })
+})
+
+req.end()
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="php">
+
+```php
+# PHP
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.deepgram.com/v1/projects",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => [
+    "Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    "content-type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="ruby">
+
+```ruby
+# Ruby
+
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.deepgram.com/v1/projects")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Get.new(url)
+request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+request["content-type"] = 'application/json'
+
+response = http.request(request)
+puts response.read_body
+
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup title="response">
+		<CodeBlock active>
+
+```json
+{
+  "projects": [
+    {
+      "project_id": "uuid",
+      "name": "string",
+      "company": "string"
+    }
+  ]
+}
+```
+
+		</CodeBlock>
+	</CodeGroup>
+
 </div>
 
-<div>
+</ColumnsForCode>
+
+<ColumnsForCode>
 <div slot="left">
 
 ### Get Project
@@ -116,9 +303,189 @@ Required account/project scope(s): `project:read`.
 </ul>
 
 </div>
+
+<div slot="right">
+
+	<CodeGroup title="endpoint">
+		<CodeBlock active>
+
+```curl
+GET /projects/{project_id}
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+		<CodeBlock tab="curl" active>
+
+```curl
+# cURL
+
+curl --request GET \
+  --url 'https://api.deepgram.com/v1/projects/{project_id}' \
+  --header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+  --header 'content-type: application/json'
+```
+
+		</CodeBlock>
+		<CodeBlock tab="python">
+
+```python
+# python
+
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+headers = {
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+    'content-type': "application/json"
+    }
+
+conn.request("GET", "/v1/projects/{project_id}", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="dotnet">
+
+```c
+// .NET
+
+var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}");
+var request = new RestRequest(Method.GET);
+request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+request.AddHeader("content-type", "application/json");
+IRestResponse response = client.Execute(request);
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="node">
+
+```js
+// Node.js
+
+const http = require('https')
+
+const options = {
+  method: 'GET',
+  hostname: 'api.deepgram.com',
+  port: null,
+  path: '/v1/projects/{project_id}',
+  headers: {
+    Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
+    'content-type': 'application/json',
+  },
+}
+
+const req = http.request(options, function (res) {
+  const chunks = []
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks)
+    console.log(body.toString())
+  })
+})
+
+req.end()
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="php">
+
+```php
+# PHP
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => [
+    "Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    "content-type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="ruby">
+
+```ruby
+# Ruby
+
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.deepgram.com/v1/projects/{project_id}")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Get.new(url)
+request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+request["content-type"] = 'application/json'
+
+response = http.request(request)
+puts response.read_body
+
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup title="response">
+		<CodeBlock active>
+
+```json
+{
+  "project_id": "uuid",
+  "name": "string",
+  "company": "string"
+}
+```
+
+		</CodeBlock>
+	</CodeGroup>
+
 </div>
 
-<div>
+</ColumnsForCode>
+
+<ColumnsForCode>
 <div slot="left">
 
 ### Update Project
@@ -185,9 +552,195 @@ Required account scope(s): `project:write`. Required project scope(s): `project:
 </ul>
 
 </div>
+
+<div slot="right">
+
+	<CodeGroup title="endpoint">
+		<CodeBlock active>
+
+```curl
+PATCH /projects/{project_id}
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+		<CodeBlock tab="curl" active>
+
+```curl
+# cURL
+
+curl --request PATCH \
+  --url 'https://api.deepgram.com/v1/projects/{project_id}' \
+  --header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+  --header 'content-type: application/json' \
+  --data '{"name":"string","company":"string"}'
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="python">
+
+```python
+# python
+
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+payload = "{\"name\":\"string\",\"company\":\"string\"}"
+
+headers = {
+    'content-type': "application/json",
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>"
+    }
+
+conn.request("PATCH", "/v1/projects/{project_id}", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="dotnet">
+
+```c
+// .NET
+
+var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}");
+var request = new RestRequest(Method.PATCH);
+request.AddHeader("content-type", "application/json");
+request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+request.AddParameter("application/json", "{\"name\":\"string\",\"company\":\"string\"}", ParameterType.RequestBody);
+IRestResponse response = client.Execute(request);
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="node">
+
+```js
+// Node.js
+
+const http = require('https')
+
+const options = {
+  method: 'PATCH',
+  hostname: 'api.deepgram.com',
+  port: null,
+  path: '/v1/projects/{project_id}',
+  headers: {
+    'content-type': 'application/json',
+    Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
+  },
+}
+
+const req = http.request(options, function (res) {
+  const chunks = []
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks)
+    console.log(body.toString())
+  })
+})
+
+req.write(JSON.stringify({ name: 'string', company: 'string' }))
+req.end()
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="php">
+
+```php
+# PHP
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "PATCH",
+  CURLOPT_POSTFIELDS => "{\"name\":\"string\",\"company\":\"string\"}",
+  CURLOPT_HTTPHEADER => [
+    "Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    "content-type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="ruby">
+
+```ruby
+# Ruby
+
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.deepgram.com/v1/projects/{project_id}")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Patch.new(url)
+request["content-type"] = 'application/json'
+request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+request.body = "{\"name\":\"string\",\"company\":\"string\"}"
+
+response = http.request(request)
+puts response.read_body
+
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup title="response">
+		<CodeBlock active>
+
+```json
+{
+  "message": "string"
+}
+```
+
+		</CodeBlock>
+	</CodeGroup>
+
 </div>
 
-<div>
+</ColumnsForCode>
+
+<ColumnsForCode>
 <div slot="left">
 
 ### Delete Project
@@ -225,4 +778,171 @@ Required account scope(s): `project:write`. Required project scope(s): `project:
 </table>
 
 </div>
+
+<div slot="right">
+
+	<CodeGroup title="endpoint">
+		<CodeBlock active>
+
+```curl
+DELETE /projects/{project_id}
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup tabs={["curl", "python", "dotnet", "node", "php", "ruby"]} default="curl">
+		<CodeBlock tab="curl" active>
+
+```curl
+# cURL
+
+curl --request DELETE \
+  --url 'https://api.deepgram.com/v1/projects/{project_id}' \
+  --header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+  --header 'content-type: application/json'
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="python">
+
+```python
+# python
+
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+headers = {
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+    'content-type': "application/json"
+    }
+
+conn.request("DELETE", "/v1/projects/{project_id}", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="dotnet">
+
+```c
+// .NET
+
+var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}");
+var request = new RestRequest(Method.DELETE);
+request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+request.AddHeader("content-type", "application/json");
+IRestResponse response = client.Execute(request);
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="node">
+
+```js
+// Node.js
+
+const http = require('https')
+
+const options = {
+  method: 'DELETE',
+  hostname: 'api.deepgram.com',
+  port: null,
+  path: '/v1/projects/{project_id}',
+  headers: {
+    Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
+    'content-type': 'application/json',
+  },
+}
+
+const req = http.request(options, function (res) {
+  const chunks = []
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks)
+    console.log(body.toString())
+  })
+})
+
+req.end()
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="php">
+
+```php
+# PHP
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "DELETE",
+  CURLOPT_HTTPHEADER => [
+    "Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    "content-type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="ruby">
+
+```ruby
+# Ruby
+
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.deepgram.com/v1/projects/{project_id}")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Delete.new(url)
+request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+request["content-type"] = 'application/json'
+
+response = http.request(request)
+puts response.read_body
+
+```
+
+		</CodeBlock>
+  </CodeGroup>
+
 </div>
+
+</ColumnsForCode>

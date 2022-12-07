@@ -14,69 +14,61 @@ const pathname = Astro.url.pathname;
 ---
 
 <Default>
-	<section class="max-w-screen-2xl mr-auto px-0 api-ref">
-			<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9">
-					<SideNavApiRef slot="aside" navStructure={nav} navTitle="API Reference" />
-				<div class="col-span-2 md:col-span-3 lg:col-span-7 pl-4 pr-8 sm:ml-8">
-					<PrimarySection class="py-10" padding="px-0">
-						<BreadCrumb />
-						<div class="grid grid-cols-12">
-							<Prose class="max-w-full col-span-12 xl:col-span-9">
-								<slot />
-							</Prose>
-							{(pathname === "/api-reference") ? null
-							: <div class="col-span-0 xl:col-span-3 ml-8">
-								<TableOfContents headings={headings} docsType={"GUIDE"} classes="sticky top-40" />
-							</div>
-							}
-						
-						</div>
-						<div class="max-w-full lg:max-w-xl 2xl:max-w-2xl mt-28 border-grass border-t-2"></div>
-						<Feedback />
-					</PrimarySection>
-				</div>
+	<section class="max-w-full mr-auto px-0 api-ref">
+		<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9">
+			<SideNavApiRef slot="aside" navStructure={nav} navTitle="API Reference" />
+			<div class="col-span-2 md:col-span-3 lg:col-span-7 pl-4 pr-8 sm:ml-8">
+				<PrimarySection class="py-10" padding="px-0">
+					<BreadCrumb />
+					<Prose class="max-w-full col-span-12 xl:col-span-9">
+						<slot />
+					</Prose>
+					<div class="max-w-full lg:max-w-xl 2xl:max-w-2xl mt-28 border-grass border-t-2"></div>
+					<Feedback />
+				</PrimarySection>
 			</div>
-		</section>
+		</div>
+	</section>
 </Default>
 
 <style>
 	.api-ref :global(.feature) {
-		@apply p-2 hover:bg-cloud30 border-b-2 border-cloud;
+		@apply hover:bg-cloud30 border-cloud border-b-2 p-2;
 	}
 	.api-ref :global(.feature header) {
 		@apply px-4;
-    border-left-width: 4px;
-    --tw-border-opacity: 1;
-    border-color: rgba(170,184,205,var(--tw-border-opacity));
+		border-left-width: 4px;
+		--tw-border-opacity: 1;
+		border-color: rgba(170, 184, 205, var(--tw-border-opacity));
 	}
 	.api-ref :global(.feature .hint) {
-		color: rgba(79,98,120)
+		color: rgba(79, 98, 120);
 	}
 	.api-ref :global(.feature .info) {
-		    border-radius: 0.125rem;
-    border-width: 1px;
-    border-style: dotted;
-    --tw-border-opacity: 1;
-    border-color: rgba(79,98,120,var(--tw-border-opacity));
-    background-color: rgba(215,223,235,.3);
-    padding: 0.5rem;
+		border-radius: 0.125rem;
+		border-width: 1px;
+		border-style: dotted;
+		--tw-border-opacity: 1;
+		border-color: rgba(79, 98, 120, var(--tw-border-opacity));
+		background-color: rgba(215, 223, 235, 0.3);
+		padding: 0.5rem;
 		@apply py-5;
 	}
 	.api-ref :global(.feature .info li) {
 		@apply my-3;
 	}
 	.api-ref :global(.feature li) {
-		@apply relative pl-7 mb-4;
+		@apply relative mb-4 pl-7;
 	}
 	.api-ref :global(.feature li::before) {
 		content: "";
-    position: absolute;
-    background-color: #d1d5db;
-    border-radius: 50%;
-    width: 0.375em;
-    height: 0.375em;
-    top: calc(0.875em - 0.1875em);
-    left: 0.25em;
+		position: absolute;
+		background-color: #d1d5db;
+		border-radius: 50%;
+		width: 0.375em;
+		height: 0.375em;
+		top: calc(0.875em - 0.1875em);
+		left: 0.25em;
 	}
 
 	.api-ref :global(.feature li p) {

@@ -5,7 +5,6 @@ const { tabs, title, default: defaultLang, ...rest } = Astro.props;
 <div class="code-group" x-data={`{ lang: '${defaultLang}' }`} {...rest}>
 	<header>
 		<span class="text-sm tracking-wide">{title}</span>
-
 		{
 			tabs && tabs.length > 1 && (
 				<select x-on:change="lang = $el.value">
@@ -26,7 +25,7 @@ const { tabs, title, default: defaultLang, ...rest } = Astro.props;
 	}
 
 	header {
-		@apply flex justify-between items-center;
+		@apply flex items-center justify-between;
 		@apply px-3;
 		@apply h-8;
 		@apply rounded-t-sm;
