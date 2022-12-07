@@ -67,6 +67,13 @@ Required account scope(s): `account:read`, `project:read`. Required project scop
 
 </div>
 <div slot="right">
+	<CodeGroup title="endpoint">
+	<CodeBlock active>
+	```vim
+	GET /projects/{project_id}/members/{member_id}/scopes
+	```
+	</CodeBlock>
+</CodeGroup>
 	<CodeGroup title="Get Member Scopes" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
 	<CodeBlock tab="curl" active>
@@ -276,6 +283,13 @@ Required account scope(s): `project:write`. Optional project scope(s): See the d
 
 </div>
 <div slot="right">
+	<CodeGroup title="endpoint">
+	<CodeBlock active>
+	```vim
+	PUT /projects/{project_id}/members/{member_id}/scopes
+	```
+	</CodeBlock>
+</CodeGroup>
 	<CodeGroup title="Update Scope" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
 	<CodeBlock tab="curl" active>

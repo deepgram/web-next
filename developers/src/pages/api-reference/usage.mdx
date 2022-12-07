@@ -260,6 +260,13 @@ Deepgram tracks requests made to Deepgram services and associates usage informat
 	</div>
 
 	<div slot="right">
+<CodeGroup title="endpoint">
+	<CodeBlock active>
+	```vim
+	GET /projects/{project_id}/requests
+	```
+	</CodeBlock>
+</CodeGroup>
 		<CodeGroup title="Get All Requests" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
 			<CodeBlock tab="curl" active>
@@ -642,6 +649,13 @@ Retrieves the details of the specified request sent to the Deepgram API for the 
 
 </div>
 <div slot="right">
+<CodeGroup title="endpoint">
+	<CodeBlock active>
+	```vim
+	GET /projects/{project_id}/requests/{request_id}
+	```
+	</CodeBlock>
+</CodeGroup>
 	<CodeGroup title="Get Request" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
 	<CodeBlock tab="curl" active>
@@ -1083,6 +1097,13 @@ Retrieves a summary of usage statistics. You can specify a date range.
 
 </div>
 	<div slot="right">
+<CodeGroup title="endpoint">
+	<CodeBlock active>
+	```vim
+	GET /projects/{project_id}/usage
+	```
+	</CodeBlock>
+</CodeGroup>
 		<CodeGroup title="Summarize Usage" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
 			<CodeBlock tab="curl" active>
@@ -1310,6 +1331,13 @@ Lists the features, models, tags, languages, and processing method used for requ
 </ul>
 </div>
 <div slot="right">
+	<CodeGroup title="endpoint">
+	<CodeBlock active>
+	```vim
+	GET /projects/{project_id}/usage/fields
+	```
+	</CodeBlock>
+</CodeGroup>
 	<CodeGroup title="Get Fields" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
 	<CodeBlock tab="curl" active>
