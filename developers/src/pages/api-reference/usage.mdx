@@ -184,6 +184,10 @@ Deepgram tracks requests made to Deepgram services and associates usage informat
 											<p>Array of keywords associated with the request. If no keywords were submitted, this item will not be returned.</p>
 										</li>
 										<li>
+											<p class="notranslate"><strong>topics:</strong> array</p>
+											<p>Array of topics associated with the request. If no topics were identified, this item will not be returned.</p>
+										</li>
+										<li>
 											<p class="notranslate"><strong>language:</strong> string</p>
 											<p>Language associated with the request. If no languages were submitted, this item will not be returned.</p>
 										</li>
@@ -574,6 +578,10 @@ Retrieves the details of the specified request sent to the Deepgram API for the 
                 <p class="notranslate"><strong>keywords:</strong> array</p>
                 <p>Array of keywords associated with the request. If no keywords were submitted, this item will not be returned.</p>
               </li>
+							<li>
+                <p class="notranslate"><strong>topics:</strong> array</p>
+                <p>Array of topics associated with the request. If no topics were identified, this item will not be returned.</p>
+              </li>
               <li>
                 <p class="notranslate"><strong>language:</strong> string</p>
                 <p>Language associated with the request. If no languages were submitted, this item will not be returned.</p>
@@ -898,9 +906,9 @@ Retrieves a summary of usage statistics. You can specify a date range.
             (e.g., method=sync&amp;method=streaming).</p>
           <p>Possible values include:</p>
           <ul>
-            <li><code>sync</code></li>
-            <li><code>async</code></li>
-            <li><code>streaming</code></li>
+            <li><p><code>sync</code></p></li>
+            <li><p><code>async</code></p></li>
+            <li><p><code>streaming</code></p></li>
           </ul>
         <p><strong>Possible values:</strong> <span class="notranslate"><code>sync</code>, <code>async</code> OR <code>streaming</code></span></p>
   </main>
@@ -977,6 +985,14 @@ Retrieves a summary of usage statistics. You can specify a date range.
   </header>
   <main>
           <p>Limits results to requests that include the <code>keywords</code> feature.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <strong>detect_topics:</strong> boolean
+  </header>
+  <main>
+          <p>Limits results to requests that include the <code>detect_topics</code> feature.</p>
   </main>
 </div>
 <div class="feature">
@@ -1326,7 +1342,7 @@ Lists the features, models, tags, languages, and processing method used for requ
     <p class="notranslate"><strong>features:</strong> array</p>
     <p>Array of included features.</p>
     <p><strong>Possible values:</strong> <span class="notranslate"><code>multichannel</code>, <code>interim_results</code>, <code>punctuate</code>, <code>ner</code>, <code>utterances</code>,
-        <code>replace</code>, <code>profanity_filter</code>, <code>keywords</code>, <code>diarize</code>, <code>search</code>, <code>redact</code>, <code>alternatives</code> OR <code>numerals</code></span></p>
+        <code>replace</code>, <code>profanity_filter</code>, <code>keywords</code>, <code>detect_topics</code>, <code>diarize</code>, <code>search</code>, <code>redact</code>, <code>alternatives</code> OR <code>numerals</code></span></p>
   </li>
 </ul>
 </div>
