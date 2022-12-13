@@ -9,7 +9,9 @@ import CodeGroup from '../../shared/components/code/CodeGroup.astro';
 import CodeBlock from '../../shared/components/code/CodeBlock.astro';
 
 # {frontmatter.title}
+<div class="grid lg:grid-cols-2 gap-6">
 Members are users who have been given access to a specified Deepgram Project. Members are assigned Scopes, which determine what they can do in their assigned Project. Members can be assigned to multiple Projects and have different Scopes for each Project.
+</div>
 
 <ColumnsForCode>
 <div slot="left" class="left">

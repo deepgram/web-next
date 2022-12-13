@@ -9,7 +9,9 @@ import CodeGroup from '../../shared/components/code/CodeGroup.astro';
 import CodeBlock from '../../shared/components/code/CodeBlock.astro';
 
 # {frontmatter.title}
+<div class="grid lg:grid-cols-2 gap-6">
 Scopes are permissions required to perform actions in a specified Deepgram Project. Scopes can be associated with Keys or Users. When associated with a Key, Scopes determine the actions that the Key can be used to perform in the Key's associated Project. When associated with a Member, Scopes determine what the user can do in their assigned Project. For more information, see [Working with Roles](/documentation/getting-started/roles/).
+</div>
 
 <ColumnsForCode>
 <div slot="left" class="left">

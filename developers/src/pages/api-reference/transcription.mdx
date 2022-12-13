@@ -9,9 +9,13 @@ import CodeGroup from '../../shared/components/code/CodeGroup.astro';
 import CodeBlock from '../../shared/components/code/CodeBlock.astro';
 
 # {frontmatter.title}
+<div class="grid lg:grid-cols-2 gap-6">
 High-speed transcription of either pre-recorded or streaming audio. This feature is very fast, can understand nearly every audio format available, and is customizable. You can customize your transcript using various query parameters and apply general purpose and custom-trained AI models.
+</div>
 
+<div class="grid lg:grid-cols-2 gap-6">
 Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
+</div>
 
 <ColumnsForCode>
 <div slot="left" class="left">
@@ -180,6 +184,16 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 				<strong>zh-TW:</strong> Taiwan (Traditional Mandarin) <em>beta</em>
 				
 				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Danish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>da:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
 			</li>
 		</ul>
 		<p>
@@ -407,6 +421,22 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 		<p>
 			To learn more, see
 			<a href="/documentation/features/language/">Features: Language</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="detect_language-pr">
+			<strong>detect_language:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to detect the language of the provided audio. To learn more, see
+			<a href="/documentation/features/detect-language/">Features: Language Detection</a>.
 		</p>
 	</main>
 </div>
@@ -809,22 +839,20 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="endpointing-pr">
-			<strong>endpointing:</strong> boolean
+		<div id="utt_split-pr">
+			<strong>utt_split:</strong> number
 		</div>
 		{/* {" "}
 		number */}
 	</header>
 	<main>
-		<p>Indicates whether Deepgram will detect whether a speaker has finished speaking (or paused for a significant period of time, indicating the completion of an idea). When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes the result for the processed time range and returns the transcript with a <code>speech_final</code> parameter set to <code>true</code>.</p>
-		<p>For example, if you are working with a 15-second audio clip, but someone is speaking for only the first 3 seconds, endpointing allows you to get a finalized result after the first 3 seconds.</p>
-		<p>By default, endpointing is enabled and finalizes a transcript after a short period of silence.</p>
+		<p>Length of time in seconds of silence between words that Deepgram will use when determining where to split utterances. Used when utterances is enabled.</p>
 		<p class="notranslate">
-			<strong>Default:</strong> true
+			<strong>Default:</strong> 0.8
 		</p>
 		<p>
 			To learn more, see
-			<a href="/documentation/features/endpointing/">Features: Endpointing</a>.
+			<a href="/documentation/features/utterance-split/">Features: Utterance Split</a>.
 		</p>
 	</main>
 </div>
@@ -887,8 +915,8 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 #### Response Schema
 
-<ul class="response">
-  <li>
+<ul>
+  <li class="response-object">
     <p class="notranslate"><strong>metadata:</strong> object</p>
           <p>JSON-formatted <code>ListenMetadata</code> object.</p>
     <ul class="response">
@@ -919,7 +947,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 			
     </ul>
   </li>
-	<li>
+	<li class="response-object">
     <p class="notranslate"><strong>results:</strong> object</p>
           <p>JSON-formatted ListenResults object.</p>
     <ul class="response">
@@ -928,12 +956,12 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
               <p>Array of JSON-formatted ChannelResult objects.</p>
       </li>
 			<ul>
-			<ul>
+			<ul class="response">
       	<li>
         	<p class="notranslate"><strong>search:</strong> array</p>
           <p>Array of JSON-formatted <code>SearchResults</code>.</p>
       	</li>
-				<ul>
+				<ul class="response">
 					<li>
 						<p class="notranslate"><strong>query:</strong> string</p>
 									<p>Term for which Deepgram is searching.</p>
@@ -942,7 +970,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 						<p class="notranslate"><strong>hits:</strong> array</p>
 									<p>Array of JSON-formatted Hit objects.</p>
 					</li>
-					<ul>
+					<ul class="response">
 						<li>
 							<p class="notranslate"><strong>confidence:</strong> number</p>
 										<p>Value between 0 and 1 that indicates the model's relative confidence in this hit.</p>
@@ -965,7 +993,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
         	<p class="notranslate"><strong>alternatives:</strong> array</p>
           <p>Array of JSON-formatted <code>ResultAlternative </code>objects. This array will have length n, where n matches the value of the <code>alternatives</code> parameter passed in the request body.</p>
       	</li>
-				<ul>
+				<ul class="response">
 					<li>
 						<p class="notranslate"><strong>transcript:</strong> string</p>
 									<p>Single-string transcript containing what the model hears in this channel of audio.</p>
@@ -978,7 +1006,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 						<p class="notranslate"><strong>words:</strong> array</p>
 									<p>Array of JSON-formatted Word objects.</p>
 					</li>
-					<ul>
+					<ul class="response">
 						<li>
 							<p class="notranslate"><strong>word:</strong> string</p>
 										<p>Distinct word heard by the model.</p>
@@ -2017,15 +2045,16 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 				<p>Required when raw, headerless audio packets are sent to the streaming service. For containerized audio, pre-recorded audio, or audio submitted to the standard <code>/listen</code> endpoint, Deepgram will automatically detect the audio encoding and this parameter should not be used.</p>
 			</li>
 		</ul>
+		<p></p>
 		<p>Options include:</p>
 		<ul>
-			<li><p><code>linear16</code>16-bit, little endian, signed PCM WAV data</p></li>
-			<li><p><code>flac</code>FLAC-encoded data</p></li>
-			<li><p><code>mulaw</code>mu-law encoded WAV data</p></li>
-			<li><p><code>amr-nb</code>adaptive multi-rate narrowband codec</p></li>
-			<li><p><code>amr-wb</code>adaptive multi-rate wideband codec</p></li>
-			<li><p><code>opus</code>Ogg Opus</p></li>
-			<li><p><code>speex</code>Ogg Speex</p></li>
+			<li><p><code>linear16</code> 16-bit, little endian, signed PCM WAV data</p></li>
+			<li><p><code>flac</code> FLAC-encoded data</p></li>
+			<li><p><code>mulaw</code> mu-law encoded WAV data</p></li>
+			<li><p><code>amr-nb</code> adaptive multi-rate narrowband codec</p></li>
+			<li><p><code>amr-wb</code> adaptive multi-rate wideband codec</p></li>
+			<li><p><code>opus</code> Ogg Opus</p></li>
+			<li><p><code>speex</code> Ogg Speex</p></li>
 		</ul>
 		<p>
 			To learn more, see
@@ -2154,7 +2183,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 						<p class="notranslate"><strong>words:</strong> array</p>
 									<p>Array of JSON-formatted Word objects.</p>
 					</li>
-					<ul>
+					<ul class="response">
 						<li>
 							<p class="notranslate"><strong>word:</strong> string</p>
 										<p>Distinct word heard by the model.</p>
@@ -2176,9 +2205,9 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 	</li>
 	<li>
     <p class="notranslate"><strong>metadata:</strong> object</p>
-		<ul>
-			<li><p class="notranslate"><strong>request_id:</strong> uuid</p></li>
-			<p class="notranslate">Unique identifier of the submitted audio and derived data returned.</p>
+		<ul class="response">
+			<li><p class="notranslate"><strong>request_id:</strong> uuid</p>
+			<p class="notranslate">Unique identifier of the submitted audio and derived data returned.</p></li>
 		</ul>
 	</li>
 </ul>

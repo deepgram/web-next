@@ -9,7 +9,9 @@ import CodeGroup from '../../shared/components/code/CodeGroup.astro';
 import CodeBlock from '../../shared/components/code/CodeBlock.astro';
 
 # {frontmatter.title}
+<div class="grid lg:grid-cols-2 gap-6">
 Keys are associated with Deepgram Projects. They enable you to use the Deepgram API, identify the Project calling the API, and associate usage information with Projects. Keys are assigned Scopes, which determine which actions they can be used to perform in the associated Project. For each Project, you can create multiple Keys and assign different Scopes for each Key.
+</div>
 
 <ColumnsForCode>
 <div slot="left" class="left">

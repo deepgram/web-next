@@ -9,9 +9,13 @@ import CodeGroup from '../../shared/components/code/CodeGroup.astro';
 import CodeBlock from '../../shared/components/code/CodeBlock.astro';
 
 # {frontmatter.title}
+<div class="grid lg:grid-cols-2 gap-6">
 High-speed transcription of either pre-recorded or streaming audio. This feature is very fast, can understand nearly every audio format available, and is customizable. You can customize your transcript using various query parameters and apply general purpose and custom-trained AI models.
+</div>
 
+<div class="grid lg:grid-cols-2 gap-6">
 Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
+</div>
 
 <ColumnsForCode>
 <div slot="left" class="left">

@@ -58,7 +58,7 @@ const pathname = Astro.url.pathname;
 		@apply my-3;
 	}
 	.api-ref :global(.feature li) {
-		@apply relative mb-4 pl-7;
+		@apply relative mb-4 pl-8;
 	}
 	.api-ref :global(.feature li::before) {
 		content: "";
@@ -71,6 +71,10 @@ const pathname = Astro.url.pathname;
 		left: 0.25em;
 	}
 
+	.api-ref :global(ul:not(.contains-task-list) li::marker) {
+		color:transparent;
+	}
+
 	.api-ref :global(.feature li p) {
 		@apply py-0;
 	}
@@ -78,4 +82,61 @@ const pathname = Astro.url.pathname;
 		@apply font-semibold;
 		color: #111827;
 	}
+
+	.api-ref :global(.feature .info) {
+		@apply p-6;
+		list-style-type: disc;
+	}
+
+	.api-ref :global(table) {
+		width: 100%;
+    table-layout: auto;
+    text-align: left;
+    margin-bottom: 2em;
+    font-size: .875em;
+    line-height: 1.7142857;
+	}
+
+	.api-ref :global(.response) {
+		border-width: 1px;
+		--tw-border-opacity: 1;
+		border-color: rgba(215,223,235,var(--tw-border-opacity));
+	}
+
+.api-ref :global(.response > li) {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	border-top-width: 1px;
+	--tw-border-opacity: 1;
+	border-color: rgba(215,223,235,var(--tw-border-opacity));
+	list-style-type: none;
+}
+
+.api-ref :global(.response > li:first-of-type) {
+	border-top-width: 0;
+}
+.api-ref :global(.response-object:hover),
+.api-ref :global(.response > li:hover) {
+	background-color: rgba(215,223,235,.3);
+}
+
+.api-ref :global(ul.response > ul) {
+	margin:1rem;
+}
+
+.api-ref :global(ul:not(.contains-task-list)){
+		margin-left: 0rem;
+		/* list-style-type: none; */
+}
+
+.api-ref :global(.response-object) {
+		padding-left: 0.5rem;
+    padding-right: 0.5rem;
+		padding-bottom:0.5rem;
+		margin-bottom: 0.5rem;
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgba(215,223,235,var(--tw-border-opacity));
+}
+
 </style>

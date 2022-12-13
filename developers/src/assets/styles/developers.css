@@ -75,7 +75,7 @@ html {
 	}
 	
 	.side-nav {
-		@apply h-full col-span-2 md:col-span-1 fixed w-full z-10 md:relative md:block bg-mist md:bg-cloud30 p-8 h-full;
+		@apply h-full col-span-2 md:col-span-1 fixed w-full z-10 md:relative md:block bg-mist md:bg-cloud30 p-8;
 	}
 
 	#toggle-nav + .toggle-nav-label::after {
