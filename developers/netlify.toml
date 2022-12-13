@@ -25,3 +25,15 @@
   to = "/.netlify/functions/short-url?path=:splat"
   status = 301
   force = true
+
+	[[redirects]]
+  from = "/getting-started/what-is-deepgram"
+  to = "/documentation/why-deepgram/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/events/"
+  to = "https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/"
+  status = 301
+  force = true
