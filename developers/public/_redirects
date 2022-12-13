@@ -1,0 +1,11 @@
+# redirects sourced from https://docs.google.com/spreadsheets/d/1uaIyk0gX7vdCnW6Oq817H9O1rP7UWnZmK4Y9__M6EFc/edit#gid=1478820656
+
+/dev-to-hackathon-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/kcdc-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/lbt-hackathon	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/pypdata-global-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/pydata-nyc-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/qcon-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/scipy-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+
+https://enterprise-docs.deepgram.com/* https://developers.deepgram.com/
