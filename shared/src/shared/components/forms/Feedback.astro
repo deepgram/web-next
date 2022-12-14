@@ -63,7 +63,7 @@ const url = Astro.url;
 	<h4 x-show="!thanks">Share your feedback</h4>
 	<div x-show="error" x-text="error"></div>
 	<div>
-		<p x-show="!thanks" class="feedback-question">Was this article useful or interesting to you?</p>
+		<p x-show="!thanks" class="feedback-question text-cloud">Was this article useful or interesting to you?</p>
 		<div x-show="!thanks" class="thumbs flex items-center justify-start">
 			<form id={`thumbsup-form-${formUuid}`} :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating" @submit.prevent="ratePage">
 				<input id={`thumbsup-${formUuid}`} type="submit" aria-hidden="true" class="hidden" />

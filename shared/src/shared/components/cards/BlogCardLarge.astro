@@ -15,7 +15,7 @@ title = title.length > 80 ? `${title.substring(0, 77)}...` : title;
 	<div class="overflow-hidden flex h-3/5 md:h-2/3 lg:h-3/5 place-content-center">
 		<ImageSrcSet class="object-cover w-full h-full" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
-	<div class="px-4 pb-4 flex flex-col h-2/5 md:h-1/3 lg:h-2/5 justify-between text-black">
+	<div class="px-4 pb-4 flex flex-col h-2/5 md:h-1/3 lg:h-2/5 justify-between text-white">
 		<div class="h-full flex flex-col justify-evenly">
 			<TagsList tags={tags} />
 			<h2 title={originalTitle} class="lg:text-h2-d md:text-h2-m text-h4-m py-2">{title}</h2>

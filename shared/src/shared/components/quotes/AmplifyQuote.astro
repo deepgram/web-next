@@ -22,7 +22,7 @@ const { theme, type, title, subtitle, class: classes } = Astro.props;
 			<div>
 				<Link
 					href="https://console.deepgram.com/signup"
-					class={`${theme === "light" ? "text-darkIris" : "text-lightIris"} text-xl sm:text-4xl font-bold leading-10 font-favorit underline`}
+					class={`${theme === "light" ? "text-lightIris" : "text-lightIris"} text-xl sm:text-4xl font-bold leading-10 font-favorit underline`}
 					>Start Free
 				</Link><span class="text-xl sm:text-4xl">💰</span>
 			</div>
@@ -30,7 +30,7 @@ const { theme, type, title, subtitle, class: classes } = Astro.props;
 			{
 				type === "standard" ? (
 					<p class="ml-0 mt-0 flex flex-col sm:mt-2 sm:flex-row xl:mt-0 xl:ml-7">
-						Got questions? <Link class={`${theme === "light" ? "text-darkIris" : "text-lightIris"} ml-0 underline sm:ml-1`}>Talk to an expert.</Link>
+						Got questions? <Link class={`${theme === "light" ? "text-lightIris" : "text-lightIris"} ml-0 underline sm:ml-1`}>Talk to an expert.</Link>
 					</p>
 				) : null
 			}

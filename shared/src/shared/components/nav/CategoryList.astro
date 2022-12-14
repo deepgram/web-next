@@ -20,7 +20,7 @@ const pathname = Astro.url.pathname
 					return (
 						<li class="pb-4">
 							<Link href={path} class={
-            `hover:text-iris font-semibold leading-5 ${pathname.endsWith(path) ? "text-storm" : "text-darkCharcoal"}`}>
+            `hover:text-lightIris font-semibold leading-5 ${pathname.endsWith(path) ? "text-mist" : "text-white"}`}>
             {category.title}
         </Link>
 						</li>
@@ -55,6 +55,6 @@ const pathname = Astro.url.pathname
 
 <style>
 	.active {
-		@apply text-storm;
+		@apply text-mist;
 	}
 </style>

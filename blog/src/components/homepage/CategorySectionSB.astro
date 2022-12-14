@@ -26,7 +26,7 @@ const posts = allPosts.stories.sort((a, b) => {
 {posts.length > 0 && (
 	<>
 		<BlogCardList class="mb-32">
-			<LinkCardListTitle slot="title" href={`/categories/${category.slug}`} title={category.content.plural} linkClass="draw-underline nudge-icon nudge-icon--right text-iris">
+			<LinkCardListTitle slot="title" href={`/categories/${category.slug}`} title={category.content.plural} linkClass="draw-underline nudge-icon nudge-icon--right text-lightIris">
 				<h3>{category.content.title}</h3>
 			</LinkCardListTitle>
 			<CategoryPosts posts={posts} />
