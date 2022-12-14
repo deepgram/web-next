@@ -66,4 +66,19 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 		@apply m-4;
 		@apply w-4/6 sm:w-5/6;
 	}
+	.text ul > li {
+		@apply list-disc;
+	}
+
+	.text ol > li {
+		@apply list-decimal;
+	}
+
+	.text li {
+		@apply ml-10 pb-1;
+	}
+
+	.text p {
+		@apply pb-0;
+	}
 </style>

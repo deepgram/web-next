@@ -259,21 +259,7 @@ h1 {
 	@apply w-4/6 sm:w-5/6;
 }
 
-.text ul > li {
-	@apply list-disc;
-}
 
-.text ol > li {
-	@apply list-decimal;
-}
-
-.text li {
-	@apply ml-10 pb-1;
-}
-
-.text p {
-	@apply pb-0;
-}
 
 .side-nav {
 	@apply h-full col-span-2 md:col-span-1 fixed w-full z-10 md:relative md:block bg-mist md:bg-cloud30 p-8;
