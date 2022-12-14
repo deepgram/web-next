@@ -66,19 +66,22 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 		@apply m-4;
 		@apply w-4/6 sm:w-5/6;
 	}
-	.text ul > li {
+	.text :global(ul > li) {
 		@apply list-disc;
 	}
 
-	.text ol > li {
+	.text :global(ol > li) {
 		@apply list-decimal;
 	}
 
-	.text li {
-		@apply ml-10 pb-1;
+	.text :global(li) {
+		@apply ml-10 pb-4;
 	}
 
-	.text p {
-		@apply pb-0;
+	.text :global(li:first-of-type) {
+		@apply pt-4;
+	}
+	.text :global(p:first-of-type) {
+		@apply pt-0 pb-0;
 	}
 </style>
