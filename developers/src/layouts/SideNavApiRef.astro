@@ -1,6 +1,7 @@
 ---
 import Link from "../shared/components/general/Link.astro";
-const { pathname } = Astro.url;
+let { pathname } = Astro.url;
+pathname = pathname.slice(0, -1);
 const { navStructure, navTitle } = Astro.props;
 ---
 
