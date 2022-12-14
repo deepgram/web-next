@@ -17,7 +17,7 @@ const pathname = Astro.url.pathname;
 	<section class="max-w-full mr-auto px-0 api-ref">
 		<div class="grid grid-cols-2 md:grid-cols-8 lg:grid-cols-18">
 			<SideNavApiRef slot="aside" navStructure={nav} navTitle="API Reference" />
-			<div class="col-span-2 md:col-span-7 lg:col-span-15 pl-4 pr-8 sm:ml-8">
+			<div class="col-span-2 md:col-span-6 lg:col-span-15 pl-4 pr-8 sm:ml-8">
 				<PrimarySection class="py-10" padding="px-0">
 					<BreadCrumb />
 					<Prose class="max-w-full col-span-12">
@@ -72,7 +72,7 @@ const pathname = Astro.url.pathname;
 	}
 
 	.api-ref :global(ul:not(.contains-task-list) li::marker) {
-		color:transparent;
+		color: transparent;
 	}
 
 	.api-ref :global(.feature li p) {
@@ -90,53 +90,52 @@ const pathname = Astro.url.pathname;
 
 	.api-ref :global(table) {
 		width: 100%;
-    table-layout: auto;
-    text-align: left;
-    margin-bottom: 2em;
-    font-size: .875em;
-    line-height: 1.7142857;
+		table-layout: auto;
+		text-align: left;
+		margin-bottom: 2em;
+		font-size: 0.875em;
+		line-height: 1.7142857;
 	}
 
 	.api-ref :global(.response) {
 		border-width: 1px;
 		--tw-border-opacity: 1;
-		border-color: rgba(215,223,235,var(--tw-border-opacity));
+		border-color: rgba(215, 223, 235, var(--tw-border-opacity));
 	}
 
-.api-ref :global(.response > li) {
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
-	border-top-width: 1px;
-	--tw-border-opacity: 1;
-	border-color: rgba(215,223,235,var(--tw-border-opacity));
-	list-style-type: none;
-}
+	.api-ref :global(.response > li) {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		border-top-width: 1px;
+		--tw-border-opacity: 1;
+		border-color: rgba(215, 223, 235, var(--tw-border-opacity));
+		list-style-type: none;
+	}
 
-.api-ref :global(.response > li:first-of-type) {
-	border-top-width: 0;
-}
-.api-ref :global(.response-object:hover),
-.api-ref :global(.response > li:hover) {
-	background-color: rgba(215,223,235,.3);
-}
+	.api-ref :global(.response > li:first-of-type) {
+		border-top-width: 0;
+	}
+	.api-ref :global(.response-object:hover),
+	.api-ref :global(.response > li:hover) {
+		background-color: rgba(215, 223, 235, 0.3);
+	}
 
-.api-ref :global(ul.response > ul) {
-	margin:1rem;
-}
+	.api-ref :global(ul.response > ul) {
+		margin: 1rem;
+	}
 
-.api-ref :global(ul:not(.contains-task-list)){
+	.api-ref :global(ul:not(.contains-task-list)) {
 		margin-left: 0rem;
 		/* list-style-type: none; */
-}
+	}
 
-.api-ref :global(.response-object) {
+	.api-ref :global(.response-object) {
 		padding-left: 0.5rem;
-    padding-right: 0.5rem;
-		padding-bottom:0.5rem;
+		padding-right: 0.5rem;
+		padding-bottom: 0.5rem;
 		margin-bottom: 0.5rem;
-    border-bottom-width: 1px;
-    --tw-border-opacity: 1;
-    border-color: rgba(215,223,235,var(--tw-border-opacity));
-}
-
+		border-bottom-width: 1px;
+		--tw-border-opacity: 1;
+		border-color: rgba(215, 223, 235, var(--tw-border-opacity));
+	}
 </style>

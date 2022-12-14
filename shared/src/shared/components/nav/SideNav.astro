@@ -9,3 +9,9 @@ import SideNavList from "./SideNavList.astro";
 	<h5 class="border-b border-b-cloud pb-2 text-base">{navTitle}</h5>
 	<SideNavList navStructure={navStructure} />
 </nav>
+
+<style>
+	.side-nav {
+		@apply h-full col-span-2 md:col-span-1 fixed w-full z-10 md:relative md:block bg-mist md:bg-cloud30 p-8;
+	}
+</style>
