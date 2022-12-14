@@ -408,3 +408,22 @@ h5 code,
 h6 code {
 	@apply mx-2;
 }
+
+.text ul > li {
+		@apply list-disc;
+	}
+
+	.text ol > li {
+		@apply list-decimal;
+	}
+
+	.text li {
+		@apply ml-10 pb-4;
+	}
+
+	.text li:first-of-type {
+		@apply pt-4;
+	}
+	.text p:first-of-type {
+		@apply pt-0 pb-0;
+	}
