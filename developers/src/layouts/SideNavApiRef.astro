@@ -4,12 +4,12 @@ const { pathname } = Astro.url;
 const { navStructure, navTitle } = Astro.props;
 ---
 
-<div class="sticky top-20">
-	<input type="checkbox" id="toggle-nav" class="hidden" />
-	<label for="toggle-nav" class="toggle-nav-label absolute z-[11] top-3"></label>
-	<nav class="side-nav col-span-2 md:col-span-1 lg:col-span-3 bg-cloud30 p-4">
+<input type="checkbox" id="toggle-nav" class="hidden" />
+<label for="toggle-nav" class="toggle-nav-label fixed z-[11] top-20"></label>
+<nav class="side-nav bg-cloud30 p-4">
+		<div class="sticky top-32">
 		<h5 class="border-b border-b-cloud pb-2 text-base">{navTitle}</h5>
-		<ul class="ml-0">
+		<ul>
 			{
 				navStructure.map((nav) => {
 					return (
@@ -46,5 +46,17 @@ const { navStructure, navTitle } = Astro.props;
 				})
 			}
 		</ul>
+		</div>
 	</nav>
-</div>
+
+<style>
+	.side-nav {
+		@apply col-span-2 md:col-span-1 lg:col-span-3;
+	}
+	.side-nav ul {
+		@apply ml-0;
+	}
+	#toggle-nav + .toggle-nav-label + .side-nav {
+    @apply fixed top-10 md:sticky md:top-20;
+}
+</style>
