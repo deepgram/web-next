@@ -295,7 +295,7 @@ const schema = [
 	.post-prose :global(img),
 	.post-prose :global(p img) {
 		@apply mx-auto object-cover;
-		@apply mb-4;
+		@apply mt-12 mb-10;
 	}
 
 	.post-prose :global(small) {
@@ -315,10 +315,17 @@ const schema = [
 	.post-prose :global(p) {
 		@apply text-cloud;
 		@apply pb-4 leading-loose lg:leading-normal;
+		@apply font-light;
 	}
 
 	.post-prose :global(* a) {
 		@apply text-lightIris;
+		@apply underline;
+		@apply font-medium;
+	}
+
+	.post-prose :global(b, strong) {
+		@apply font-semibold;
 	}
 
 	.post-prose :global(pre) {
@@ -405,16 +412,27 @@ const schema = [
 	}
 
 	.post-prose :global(table) {
-		@apply mb-4 block border-collapse overflow-auto;
+		@apply mb-6 block border-collapse overflow-auto;
+		@apply text-cloud;
 	}
 
 	.post-prose :global(table) + :global(p small) {
 		@apply -mt-2 block text-center text-sm font-bold;
 	}
 
+	.post-prose :global(table > thead tr > th) {
+		@apply bg-rock;
+		@apply font-semibold;
+	}
+
+	.post-prose :global(table > tbody) {
+		@apply bg-darkCharcoal;
+		@apply font-light;
+	}
+
 	.post-prose :global(td),
 	.post-prose :global(th) {
-		@apply border-casper table-auto  border;
+		@apply border-steel table-auto  border;
 	}
 
 	.post-prose :global(thead > tr > th) {
@@ -426,7 +444,7 @@ const schema = [
 	}
 
 	.post-prose :global(tr) {
-		@apply bg-mist;
+		@apply bg-darkCharcoal;
 	}
 
 	.post-prose :global(td),
@@ -454,9 +472,9 @@ const schema = [
 	}
 
 	.post-prose :global(blockquote p) {
-		padding-bottom: 0rem;
-		@apply text-cloud;
-		font-weight: 500;
+		padding-bottom: 1rem;
+		@apply text-mist;
+		font-weight: 400;
 	}
 
 	.post-prose :global(blockquote:before) {

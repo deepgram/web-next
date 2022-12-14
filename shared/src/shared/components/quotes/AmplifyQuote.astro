@@ -15,7 +15,7 @@ const { theme, type, title, subtitle, class: classes } = Astro.props;
 	<div class="flex flex-col justify-center pl-2 sm:pl-9">
 		<LeftDecoration icon="four-point-star" class={`w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 mb-6 sm:mb-10 md:mb-20 lg:mb-30 xl:mb-40 ${theme === "light" ? "fill-black" : "fill-white"}`} />
 
-		{type === "standard" ? <h2>tl;dr</h2> : null}
+		<!-- {type === "standard" ? <h2>tl;dr</h2> : null} -->
 		<h1>{title}</h1>
 		{type === "standard" ? <p class="text-base leading-6 sm:text-lg ">{subtitle}</p> : null}
 		<div class="flex flex-col xl:flex-row mt-2 sm:mt-6 md:mt-10 items-start xl:items-end">
