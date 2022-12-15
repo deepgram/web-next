@@ -144,10 +144,6 @@ h1 {
 		@apply ml-6;
 	}
 
-	.post-prose ul:not(.contains-task-list) li::marker {
-		@apply text-casper;
-	}
-
 	.post-prose > ul:not(.contains-task-list) li {
 		@apply pl-1 text-black;
 	}
