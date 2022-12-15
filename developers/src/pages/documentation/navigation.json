@@ -204,7 +204,7 @@
 				"to": "/documentation/guides/recover-streaming-errors/"
 			},
 			{
-				"name": "Troubleshooting Connection Errors When Live Streaming Audio",
+				"name": "Troubleshooting WebSocket DATA and NET Errors When Live Streaming Audio",
 				"to": "/documentation/guides/troubleshoot-streaming/"
 			},
 			{
