@@ -554,18 +554,18 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="ner-pr">
-			<strong>ner:</strong> boolean
+		<div id="smart-format-pr">
+			<strong>smart_format:</strong> boolean
 		</div>
 		{/* {" "}
 		boolean */}
 	</header>
 	<main>
-		<p>
-			Indicates whether to recognize alphanumeric strings. When set to
-			<code>true</code>, whitespace will be removed between characters identified as part of an alphanumeric string. To learn more, see
-			<a href="/documentation/features/named-entity-recognition/">Features: Named-Entity Recognition (NER)</a>.
-		</p>
+		<p>Indicates whether to apply formatting to transcript output. When set to
+			<code>true</code>, additional formatting will be applied to transcripts to improve readability.</p>
+<p class="notranslate"><strong>Default:</strong> <code>false</code></p>
+<p>To learn more, see
+			<a href="/documentation/features/smart-format/">Features: Smart Format</a>.</p>
 	</main>
 </div>
 
@@ -1259,7 +1259,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="tier-pr">
+		<div id="tier-str">
 			<p><strong>tier:</strong> string</p>
 		</div>
 		
@@ -1289,7 +1289,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="model-pr">
+		<div id="model-str">
 			<p><strong>model:</strong> string</p>
 		</div>
 		
@@ -1363,7 +1363,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="version-pr" class="notranslate">
+		<div id="version-str" class="notranslate">
 			<strong>version:</strong> string
 		</div>
 		{/* {" "}
@@ -1389,7 +1389,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="language-pr">
+		<div id="language-str">
 			<strong>language:</strong> string
 		</div>
 		{/* {" "}
@@ -1676,7 +1676,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="punctuate-pr">
+		<div id="punctuate-str">
 			<strong>punctuate:</strong> boolean
 		</div>
 		{/* {" "}
@@ -1692,7 +1692,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="profanity-pr">
+		<div id="profanity-str">
 			<strong>profanity_filter:</strong> boolean
 		</div>
 		{/* {" "}
@@ -1708,7 +1708,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="redact-pr">
+		<div id="redact-str">
 			<strong>redact:</strong> any
 		</div>
 		{/* {" "}
@@ -1746,7 +1746,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="diarize-pr">
+		<div id="diarize-str">
 			<strong>diarize:</strong> boolean
 		</div>
 		{/* {" "}
@@ -1767,7 +1767,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="diarize-version-pr">
+		<div id="diarize-version-str">
 			<strong>diarize_version:</strong> string
 		</div>
 		{/* {" "}
@@ -1787,24 +1787,25 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="ner-pr">
-			<strong>ner:</strong> boolean
+		<div id="smart-format-str">
+			<strong>smart_format:</strong> boolean
 		</div>
 		{/* {" "}
 		boolean */}
 	</header>
 	<main>
-		<p>
-			Indicates whether to recognize alphanumeric strings. When set to
-			<code>true</code>, whitespace will be removed between characters identified as part of an alphanumeric string. To learn more, see
-			<a href="/documentation/features/named-entity-recognition/">Features: Named-Entity Recognition (NER)</a>.
-		</p>
+		<p>Indicates whether to apply formatting to transcript output. When set to
+		<code>true</code>, additional formatting will be applied to transcripts to improve readability.</p>
+<p class="notranslate"><strong>Default:</strong> <code>false</code></p>
+<p>To learn more, see
+		<a href="/documentation/features/smart-format/">Features: Smart Format</a>.</p>
+		
 	</main>
 </div>
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="multichannel-pr">
+		<div id="multichannel-str">
 			<strong>multichannel:</strong> boolean
 		</div>
 		{/* {" "}
@@ -1828,7 +1829,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="alternatives-pr">
+		<div id="alternatives-str">
 			<strong>alternatives:</strong> integer
 		</div>
 		{/* {" "}
@@ -1844,7 +1845,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="numerals-pr">
+		<div id="numerals-str">
 			<strong>numerals:</strong> boolean
 		</div>
 		{/* {" "}
@@ -1863,7 +1864,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="search-pr">
+		<div id="search-str">
 			<strong>search:</strong> any
 		</div>
 		{/* {" "}
@@ -1890,7 +1891,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="replace-pr">
+		<div id="replace-str">
 			<strong>replace:</strong> string
 		</div>
 		{/* {" "}
@@ -1917,7 +1918,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="callback-pr">
+		<div id="callback-str">
 			<strong>callback:</strong> string
 		</div>
 		{/* {" "}
@@ -1942,7 +1943,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="keywords-pr">
+		<div id="keywords-str">
 			<strong>keywords:</strong> any
 		</div>
 		{/* {" "}
@@ -1984,7 +1985,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="interim_results-pr">
+		<div id="interim_results-str">
 			<strong>interim_results:</strong> boolean
 		</div>
 		{/* {" "}
@@ -2008,7 +2009,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="endpointing-pr">
+		<div id="endpointing-str">
 			<strong>endpointing:</strong> boolean
 		</div>
 		{/* {" "}
@@ -2030,7 +2031,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="encoding-pr">
+		<div id="encoding-str">
 			<strong>encoding:</strong> string
 		</div>
 		{/* {" "}
@@ -2065,7 +2066,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="channels-pr">
+		<div id="channels-str">
 			<strong>channels:</strong> integer
 		</div>
 		{/* {" "}
@@ -2087,7 +2088,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="sample_rate-pr">
+		<div id="sample_rate-str">
 			<strong>sample_rate:</strong> integer
 		</div>
 		{/* {" "}
@@ -2106,7 +2107,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
-		<div id="tag-pr">
+		<div id="tag-str">
 			<strong>tag:</strong> string
 		</div>
 		{/* {" "}

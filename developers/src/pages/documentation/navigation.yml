@@ -36,8 +36,8 @@
       to: /documentation/features/redact/
     - name: Diarization
       to: /documentation/features/diarize/
-    - name: Named Entity Recognition (NER)
-      to: /documentation/features/named-entity-recognition/
+    - name: Smart Format
+      to: /documentation/features/smart-format/
     - name: Multichannel
       to: /documentation/features/multichannel/
     - name: Numerals

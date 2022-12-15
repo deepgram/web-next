@@ -5,7 +5,7 @@ import Layout from "../../../layouts/General.astro";
 
 const guides = await Astro.glob("./**/index.mdx");
 const sortedGuides = guides.sort((a, b) => {
-	return a.frontmatter.order - b.frontmatter.order
+	return a.frontmatter.order - b.frontmatter.order;
 });
 ---
 
@@ -157,7 +157,7 @@ const sortedGuides = guides.sort((a, b) => {
 					</tr>
 					<tr>
 						<th colspan="3">
-							<a href="/documentation/features/named-entity-recognition/">Named Entity Recognition (NER)</a><a href="/documentation/features/named-entity-recognition/"> </a>
+							<a href="/documentation/features/smart-format/">Smart Format</a><a href="/documentation/features/smart-format/"> </a>
 						</th>
 						<td>Yes</td>
 						<td>Yes</td>
@@ -326,10 +326,9 @@ const sortedGuides = guides.sort((a, b) => {
 	tbody td {
 		@apply align-top;
 		vertical-align: top;
-    padding-top: 0.5714286em;
-    padding-right: 0.5714286em;
-    padding-bottom: 0.5714286em;
-    padding-left: 0.5714286em
+		padding-top: 0.5714286em;
+		padding-right: 0.5714286em;
+		padding-bottom: 0.5714286em;
+		padding-left: 0.5714286em;
 	}
-	
 </style>
