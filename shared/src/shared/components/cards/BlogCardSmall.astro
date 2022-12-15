@@ -11,13 +11,13 @@ title = title.length > 50 ? `${title.substring(0, 47)}...` : title;
 ---
 
 <GenericBlogCard class={`w-full flex justify-between ${classes ? classes : ""}`} post={post}>
-	<div class="flex grow flex-col h-full justify-between text-white pl-2 pt-0 xl:pt-2 pb-4">
+	<div class="flex grow flex-col justify-between text-white pl-2 pb-4">
 		<div class="max-h-18 overflow-hidden pt-2">
-			<h5 title={originalTitle}>{title}</h5>
+			<h5 class="text-base" title={originalTitle}>{title}</h5>
 		</div>
 		<Authors authors={authors} />
 	</div>
 	<div class="shrink-0 w-[6rem] lg:w-[7rem] p-[0.5rem] flex justify-end place-items-start">
-		<ImageSrcSet class="h-[5rem] lg:h-[6rem] object-cover" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
+		<ImageSrcSet class="h-[5rem] object-cover" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
 </GenericBlogCard>
