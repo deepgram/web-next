@@ -7,6 +7,7 @@ import AmplifyQuote from "../quotes/AmplifyQuote.astro";
 import Button from "../general/Button.astro";
 import { getUuid } from "../../util";
 
+const { class: classes, ...rest } = Astro.props;
 const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
 
 const formUuid = await getUuid();
@@ -37,7 +38,7 @@ const formUuid = await getUuid();
       })
     },
 }"
-	class="text-white text-base bg-black pt-40 mt-40"
+	class={`text-white text-base bg-black pt-40 ${classes ? classes : null}`}
 >
 	<PrimarySection>
 		<AmplifyQuote class="bg-black text-white" type="standard" title="Ready to see Deepgram in Action?" subtitle="Get your API key and unlock up to 12,000 minutes in free credit. No card required." />

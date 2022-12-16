@@ -1,0 +1,112 @@
+---
+title: Redaction
+description: Learn about Deepgram's Redaction feature, which redacts sensitive information, replacing redacted content with asterisks.
+tags: [redaction, streaming, pre-recorded]
+order: 6
+seo:
+  metaTitle: Redaction
+  metaDescription: Learn about Deepgram's Redaction feature, which redacts sensitive information, replacing redacted content with asterisks.
+  keywords: redact, redaction, sensitive information, sensitive data, private data, private information, data privacy, remove, hide
+---
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+
+Deepgram’s Redaction feature redacts sensitive information, replacing redacted content with asterisks (\*). For example, if you chose to redact social security numbers, "My social security number is five five five two two one one one one" would appear in your transcript as "My social security number is \*".
+
+<Alert type="warning">
+
+This feature is available for English only ([all available regions](/documentation/features/language/#enable-feature)).
+
+</Alert>
+
+## Use Cases
+
+Some examples of use cases for redaction include:
+
+* Customers who handle sensitive customer information, including social security numbers or credit card information, and need to ensure this data isn’t stored for security and compliance purposes.
+
+## Enable Feature
+
+To enable redaction, when you call Deepgram’s API, add a `redact` parameter in the query string and set it to the type of information you would like to redact:
+
+`redact=OPTION`
+
+Possible options include:
+
+* `pci`: Redacts sensitive credit card information, including credit card number, expiration date, and CVV
+* `numbers` (or `true)`: Aggressively redacts strings of numerals
+* `ssn` *beta*: Redacts social security numbers
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace the placeholder `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?redact=OPTION'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Results
+
+Once applied, results will appear in the transcript.
+
+`redact=pci`
+
+| Truth | Before redact | After redact |
+|-------|---------------|--------------|
+| my credit card number is four four four four nine nine nine nine three three three three two two two two with an expiration date of one twenty three and the cvv code is one one one i live at one two three main street dallas texas seven five two zero one my phone number is five five five two one two nine three three three my date of birth is july twelfth nineteen seventy six | my credit card number is four four four four nine nine nine nine three three three three two two two two with an expiration date of one twenty three and the cvv code is one one one i live at one two three main street dallas texas seven five two zero one my phone number is five five five two one two nine three three three my date of birth is july twelfth nineteen seventy six | my credit card number is \* with an expiration date of \* and the cvv code is \* i live at \* main street dallas texas \* my phone number is five five five two one two nine three three three my date of birth is july twelfth nineteen seventy six |
+
+  <br /><br />
+
+`redact=numbers`
+
+| Truth | Before redact | After redact |
+|-------|---------------|--------------|
+| my credit card number is four four four four nine nine nine nine three three three three two two two two with an expiration date of one twenty three and the cvv code is one one one i live at one two three main street dallas texas seven five two zero one my phone number is five five five two one two nine three three three my date of birth is july twelfth nineteen seventy six | my credit card number is four four four four nine nine nine nine three three three three two two two two with an expiration date of one twenty three and the cvv code is one one one i live at one two three main street dallas texas seven five two zero one my phone number is five five five two one two nine three three three my date of birth is july twelfth nineteen seventy six | my credit card number is \* with an expiration date of \* and the cvv code is \* i live at \* street dallas texas \* my phone number is \* my date of birth is july twelfth \* |
+
+  <br /><br />
+
+`redact=ssn`
+
+| Truth | Before redact | After redact |
+|-------|---------------|--------------|
+| my credit card number is five five five five one one one one two two two two three four three four it expires july two thousand seven the code is three three three my phone number is five five five two one two three four three four i was born on seven twelve seventy six my social security number is three three three two two four four four four and i live at one two three four main street dallas texas seven five o two one | my credit card number is five five five five one one one one two two two two three four three four it expires july two thousand seven the code is three three three my phone number is five five five two one two three four three four i was born on seven twelve seventy six my social security number is three three three two two four four four four and i live at one two three four main street dallas texas seven five o two one | my credit card number is five five five five one one one one two two two two three four three four it expires july two thousand seven the code is three three three my phone number is five five five two one two three four three four i was born on seven twelve seventy six my social security number is * and i live at one two three four main street dallas texas seven five o two one |
+
+<br /><br />
+
+You can send multiple values in the query string:
+
+`redact=pci&redact=numbers`
+
+<Alert type="info">
+ 	
+When you send multiple values, redaction runs in the order you specify. For instance, in this example, Deepgram will redact all sensitive credit card information first, then all strings of numerals.
+
+</Alert>
+
+| Truth | Before redact | After redact |
+|-------|---------------|--------------|
+| my credit card number is four four four four nine nine nine nine three three three three two two two two with an expiration date of one twenty three and the cvv code is one one one i live at one two three main street dallas texas seven five two zero one my phone number is five five five two one two nine three three three my date of birth is july twelfth nineteen seventy nine | my credit card number is four four four four nine nine nine nine three three three three two two two two with an expiration date of one twenty three and the cvv code is one one one i live at one two three main street dallas texas seven five two zero one my phone number is five five five two one two nine three three three my date of birth is july twelfth nineteen seventy nine | my credit card number is \* with an expiration date of \* and the cvv code is \* i live at \* street dallas texas \* my phone number is \* \* my date of birth is july twelfth \* |
+
+<Alert type="info">
+
+By default, Deepgram applies its general AI [model](/api-reference/#model-pr), which is a good, general purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+</Alert>

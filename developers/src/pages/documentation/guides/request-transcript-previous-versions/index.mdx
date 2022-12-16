@@ -1,0 +1,68 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Requesting Transcription with Previous Versions
+description: Learn about model versioning and how to use past version numbers when transcribing audio with Deepgram.
+seo:
+  metaTitle: Requesting Transcription with Previous Versions
+  metaDescription: Learn about model versioning and how to use past version numbers when transcribing audio with Deepgram.
+  keywords: version, versioning, model, language, use case, streaming, live streaming, real-time
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+
+# {frontmatter.title}
+
+Deepgram releases language and use case models at various times throughout the year. If you want to revert to an earlier model, you can pass the `version` parameter in your request to the Deepgram API.
+
+## Recently Updated Language Versions
+
+Deepgram has recently released the following versions.
+
+<Alert type="info">
+
+Not all languages have recent updates. To learn about all the languages that Deepgram offers, see [Features: Language](/documentation/features/language/).
+
+</Alert>
+
+### March 2022
+
+| Current Version (Default)                                                         | Previous Version                                                                  | Language      | Code        | Use-Case Model |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------- | ----------- | -------------- |
+| **Release date**: 2022-03-17.0<br/>**UUID**: e66d44f0-c397-4ff1-9e65-794fb53131c4 | **Release date**: 2022-01-19.0<br/>**UUID**: 7839421d-5aa3-4471-9aa4-da73ea413965 | **Spanish**   | `es`        | `general`      |
+| **Release date**: 2022-03-14.0<br/>**UUID**: 1ebf0ea2-45b9-4945-9615-cfd247467a45 | -                                                                                 | **Ukrainian** | `uk` _beta_ | `general`      |
+| **Release date**: 2022-03-09.0<br/>**UUID**: ed0e5f81-1ab0-46ef-8882-d0773def9a55 | **Release date**: 2020-04-02.0<br/>**UUID**: 99257d3b-549e-415b-a2dd-be48e17a63b9 | **Russian**   | `ru`        | `general`      |
+
+### February 2022
+
+| Current Version (Default)                                                         | Previous Version                                                                  | Language                    | Code        | Use-Case Model |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------- | ----------- | -------------- |
+| **Release date**: 2022-02-23.0<br/>**UUID**: 3878a290-5e5f-4a32-894b-c30bc7906937 | -                                                                                 | **Indonesian**              | `id` _beta_ | `general`      |
+| **Release date**: 2022-02-07.0<br/>**UUID**: d126e519-bf7f-48b1-b53f-2fd987059597 | **Release date**: 2021-11-17.0<br/>**UUID**: 89f1a2ff-22ea-4593-9947-c42ceda1b3bf | **Dutch**                   | `nl` _beta_ | `general`      |
+| **Release date**: 2022-02-03.1<br/>**UUID**: 0874c3fe-06f1-474d-b5d7-f454d4cff5b5 | -                                                                                 | **Spanish - Latin America** | `es-419`    | `general`      |
+
+### January 2022
+
+| Current Version (Default)                                                         | Previous Version | Language    | Code        | Use-Case Model |
+| --------------------------------------------------------------------------------- | ---------------- | ----------- | ----------- | -------------- |
+| **Release date**: 2022-01-31.0<br/>**UUID**: 04f251d7-0e48-4032-9516-7e0cbd57d9df | -                | **Swedish** | `sv` _beta_ | `general`      |
+
+### December 2021
+
+| Current Version (Default)                                                         | Previous Version | Language     | Code        | Use-Case Model |
+| --------------------------------------------------------------------------------- | ---------------- | ------------ | ----------- | -------------- |
+| **Release date**: 2021-12-31.0<br/>**UUID**: d55ec373-cbf3-437a-8f91-7f9c49fa554b | -                | **Italian**  | `it` _beta_ | `general`      |
+| **Release date**: 2021-12-09.1<br/>**UUID**: a4526dbd-79f9-4882-a724-55b0fbf2676f | -                | **Japanese** | `ja` _beta_ | `general`      |
+
+### November 2021
+
+| Current Version (Default)                                                         | Previous Version                                                                  | Language             | Code           | Use-Case Model |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------- | -------------- | -------------- |
+| **Release date**: 2021-11-05.0<br/>**UUID**: 3b4f6ecc-3955-434b-b48d-fc639abddc7c | **Release date**: 2020-10-05.0<br/>**UUID**: e9637336-3865-4a9a-9d91-5aee938a11fa | **Korean**           | `ko` _beta_    | `general`      |
+| **Release date**: 2021-11-02.0<br/>**UUID**: 215cb9fc-1db6-4965-ae0c-3324d8dd06d7 | -                                                                                 | **Chinese - China**  | `zh-CN` _beta_ | `general`      |
+| **Release date**: 2021-11-02.0<br/>**UUID**: e8a713e4-d1a8-4b54-914e-698cb115d54d | -                                                                                 | **Chinese - Taiwan** | `zh-TW` _beta_ | `general`      |
+
+### October 2021
+
+| Current Version (Default)                                                         | Previous Version                                                                  | Language            | Code    | Use-Case Model |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------- | ------- | -------------- |
+| **Release date**: 2021-10-27.0<br/>**UUID**: 27ba04c3-d824-47df-a091-1e1975705500 | -                                                                                 | **French - Canada** | `fr-CA` | `general`      |
+| **Release date**: 2021-10-13.0<br/>**UUID**: 5300a301-6d64-4365-929d-a704565e90a5 | **Release date**: 2020-12-14.0<br/>**UUID**: a58cec0f-3556-48d5-908e-d406d5656597 | **French**          | `fr`    | `general`      |

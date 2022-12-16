@@ -1,0 +1,20 @@
+---
+import Layout from "../../../layouts/Default.astro"
+import PrimarySection from "../../../shared/components/layout/PrimarySection.astro";
+import SDKs from "../../../components/sdks-tools/SDKs.astro"
+import BreadCrumb from "../../../shared/components/nav/BreadCrumb.astro";
+---
+<Layout>
+  <PrimarySection class="max-w-screen-xl mb-[5rem] mx-auto px-6 lg:px-10 pt-[3rem]">
+    <BreadCrumb/>
+    <h1>Software Development Kits</h1>
+    <SDKs/>
+  </PrimarySection>
+</Layout>
+
+<style>
+   :global(h1) {
+    @apply text-4xl;
+    @apply mt-6;
+   }
+</style>

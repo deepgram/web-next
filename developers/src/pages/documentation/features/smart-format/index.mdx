@@ -1,0 +1,130 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Smart Format
+description: Learn about Deepgram's Smart Format feature, which formats transcripts to improve readability.
+tags: [smart-format, streaming, pre-recorded]
+order: 10
+seo:
+  metaTitle: Smart Format
+  metaDescription: Learn about Deepgram's Smart Format feature, which formats transcripts to improve readability.
+  keywords: smart-format, streaming, pre-recorded
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+# {frontmatter.title}
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+<div class="badge">BETA</div>
+
+Deepgram's Smart Format feature improves readability by applying additional formatting to transcripts. When Smart Format is enabled, the following features will be applied: 
+
+* [Punctuation](/documentation/features/punctuate/)
+* [Numerals](/documentation/features/numerals/)
+* [Paragraphs](/documentation/features/paragraphs/) (for batch transcripts only)
+* Dates
+* Times
+* Alphanumerics
+
+<Alert type="warning">
+
+This feature is available for English only ([all available regions](/documentation/features/language/#enable-feature)).
+
+</Alert>
+
+## Use Cases
+
+Examples of use cases for Smart Format include:
+
+- Customers who want to improve transcript readability.
+
+## Enable Feature
+
+To enable Smart Formatting, when you call Deepgram's API, add a `smart_format` parameter in the querystring and set it to `true`:
+
+`smart_format=true`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```bash
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?smart_format=true'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Results
+
+Once applied, results will appear in the transcript.
+
+| Truth | Before Smart Format | After Smart Format |
+|-------|------------------|-----------------|
+| i'm recording this at eight thirty seven pm on wednesday it's november second twenty twenty two i just ate thirty three grams of pasta and then drank fifty fifty milliliters of water at three hundred main street then i walked down to one two three southeast main street to get my package with tracking number one z five seven a two b | i'm recording this at eight thirty seven pm on wednesday it's november second twenty twenty two i just ate thirty three grams of pasta and then drank fifty fifty milliliters of water at three hundred main street then i walked down to one two three southeast main street to get my package with tracking number one z five seven a two b | I'm recording this at 08:37PM on Wednesday, it's 11/02/2022. I just ate 33 grams of pasta, and then drank 55 milliliters of water at 300 Main Street.\n\nThen I walked down to 123 southeast Main Street to get my package with tracking number 1Z57A2B. |
+
+## Additional Formatters
+
+These formatters are not included in Smart Formatting but may be enabled individually.
+
+### Measurements
+
+If Measurements is enabled, spoken measurements will be converted to their corresponding abbreviations.
+
+To enable Measurements, when you call Deepgram's API, add `measurements=true` to your request.
+
+The following units wil be converted to their abbreviations.
+
+| Unit | Abbreviation |
+|---|---|
+| milligram(s) | mg |
+| centigram(s) | cg |
+| gram(s) | g |
+| kilogram(s) | kg |
+| milliliter(s) | ml |
+| centiliter(s) | cl |
+| liter(s) | l |
+| kiloliter(s) | kl |
+| millimeter(s) | mm |
+| centimeter(s) | cm |
+| meter(s) | m |
+| kilometer(s) | km |
+
+### Dictation
+
+If Dictation is enabled, spoken dictation commands will be converted to their corresponding punctuation marks.
+
+To enable Dictation, when you call Deepgram's API, add `dictation=true` to your request.
+
+The following commands wil be converted.
+
+| Command | Converted Text |
+|---|---|
+| period | . |
+| comma | , |
+| colon | : |
+| question mark | ? |
+| exclamation mark | ! |
+| new paragraph | `<\n>`|
+
+<Alert type="info">
+
+By default, Deepgram applies its Base tier, general AI [model](/documentation/features/model/), which is a good, general-purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+</Alert>

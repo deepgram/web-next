@@ -1,0 +1,653 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Find and Replace
+description: Learn about Deepgram's Find and Replace feature, which searches for terms or phrases in submitted audio and replaces them.
+tags: [find, replace, streaming, pre-recorded]
+order: 13
+seo:
+  metaTitle: Find and Replace
+  metaDescription: Learn about Deepgram's Find and Replace feature, which searches for terms or phrases in submitted audio and replaces them.
+  keywords: find, replace, phrases, terms
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+# {frontmatter.title}
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+
+Deepgram’s Find and Replace feature searches for terms or phrases and replaces them in the response JSON object.
+
+## Use Cases
+
+Examples of use cases for Find and Replace include:
+
+- Audio that includes terminology that is sufficiently technical to not be transcribed accurately, but which needs to be found and corrected in the transcript.
+- Audio that includes names that could be spelled in multiple ways. For example, the name "Aaron" appears in the transcript, but should be spelled "Erin" instead.
+
+## Enable Feature
+
+To enable Find and Replace, when you call Deepgram’s API, add a `replace` parameter in the querystring and set it to your chosen term or phrase, then add a colon (:) followed by the term or phrase with which the chosen term should be replaced:
+
+`replace=TERM_OR_PHRASE_TO_FIND:REPLACEMENT_TERM_OR_PHRASE`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```bash
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?replace=TERM_OR_PHRASE_TO_FIND:REPLACEMENT_TERM_OR_PHRASE'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Replace a Single Term
+
+To replace a single term, send one instance of the `replace` parameter in the query string when calling the API:
+
+`replace=this:that`
+
+### Replace Multiple Terms
+
+You can replace multiple terms individually:
+
+`replace=this:that&replace=thisalso:thatalso`
+
+### Replace a Phrase
+
+You can replace a phrase. URL-encode the phrase when submitting it.
+
+`replace=this%20too:that%20too`
+
+### Remove a Term or Phrase
+
+You can remove a term or phrase by not submitting a replacement.
+
+`replace=this`
+
+## Analyze Response
+
+For this example, we use a WAV audio file that contains an interview about speech analytics. If you would like to follow along, you can [download it](https://developers.deepgram.com/data/audio/interview_speech-analytics.wav).
+
+We want to replace the term "kpis" in this audio file with the full term "Key Performance Indicators".
+
+In our terminal, we run the following cURL command:
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```bash
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'content-type: application/json' \
+  --data '{"url":"https://developers.deepgram.com/data/audio/interview_speech-analytics.wav"}' \
+  --url 'https://api.deepgram.com/v1/listen?replace=kpis:Key%20Performance%20Indicators'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+<Alert type="info">
+
+If you're following along, be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+When the file is finished processing (often after only a few seconds), you’ll receive a JSON response that has the following basic structure:
+
+```json
+{
+	"metadata": {
+		"transaction_key": "string",
+		"request_id": "string",
+		"sha256": "string",
+		"created": "string",
+		"duration": 0,
+		"channels": 0,
+		"models": []
+	},
+	"results": {
+		"channels": [
+			{
+				"alternatives": []
+			}
+		]
+	}
+}
+```
+
+Let's look more closely at the `alternatives` object:
+
+```json
+...
+"alternatives":
+    [
+      {
+        "transcript":"another big problem in the speech analytics space when customers first bring the software on is that they they are blown away by the fact that an engine can monitor hundreds of Key Performance Indicators right",
+        "confidence":0.99245644,
+        "words":
+          [
+            {
+              "word":"another",
+              "start":0.33959904,
+              "end":0.839599,
+              "confidence":0.99965405
+            },
+            {
+              "word":"big",
+              "start":0.89893866,
+              "end":1.3989387,
+              "confidence":0.99916697
+            },
+            {
+              "word":"problem",
+              "start":1.6580424,
+              "end":2.1580424,
+              "confidence":0.9985348
+            },
+            {
+              "word":"in",
+              "start":2.257335,
+              "end":2.4171462,
+              "confidence":0.9991048
+            },
+            {
+              "word":"the",
+              "start":2.4171462,
+              "end":2.6568632,
+              "confidence":0.7732974
+            },
+            {
+              "word":"speech",
+              "start":2.6568632,
+              "end":3.0963442,
+              "confidence":0.9999671
+            },
+            {
+              "word":"analytics",
+              "start":3.0963442,
+              "end":3.4559197,
+              "confidence":0.9301551
+            },
+            {
+              "word":"space",
+              "start":3.4559197,
+              "end":3.7755425,
+              "confidence":0.998417
+            },
+            {
+              "word":"when",
+              "start":4.614552,
+              "end":4.9341745,
+              "confidence":0.9781695
+            },
+            {
+              "word":"customers",
+              "start":4.9341745,
+              "end":5.4341745,
+              "confidence":0.99125457
+            },
+            {
+              "word":"first",
+              "start":5.4535613,
+              "end":5.6932783,
+              "confidence":0.9362344
+            },
+            {
+              "word":"bring",
+              "start":5.6932783,
+              "end":5.8930426,
+              "confidence":0.9869359
+            },
+            {
+               "word":"the",
+               "start":5.8930426,
+               "end":6.0928063,
+               "confidence":0.9850672
+            },
+            {
+               "word":"software",
+               "start":6.0928063,
+               "end":6.5722404,
+               "confidence":0.99158734
+            },
+            {
+               "word":"on",
+               "start":6.5722404,
+               "end":6.8119574,
+               "confidence":0.9957004
+            },
+            {
+               "word":"is",
+               "start":7.091627,
+               "end":7.331344,
+               "confidence":0.9934282
+            },
+            {
+               "word":"that",
+               "start":7.331344,
+               "end":7.6509666,
+               "confidence":0.9913304
+            },
+            {
+               "word":"they",
+               "start":7.6509666,
+               "end":8.150967,
+               "confidence":0.9693284
+            },
+            {
+               "word":"they",
+               "start":8.824085,
+               "end":9.302795,
+               "confidence":0.9940725
+            },
+            {
+               "word":"are",
+               "start":9.302795,
+               "end":9.802795,
+               "confidence":0.9953484
+            },
+            {
+               "word":"blown",
+               "start":10.100645,
+               "end":10.379892,
+               "confidence":0.9988128
+            },
+            {
+               "word":"away",
+               "start":10.379892,
+               "end":10.699032,
+               "confidence":0.898896
+            },
+            {
+               "word":"by",
+               "start":10.699032,
+               "end":10.858602,
+               "confidence":0.99826294
+            },
+            {
+               "word":"the",
+               "start":10.858602,
+               "end":11.058064,
+               "confidence":0.99838316
+            },
+            {
+               "word":"fact",
+               "start":11.058064,
+               "end":11.337312,
+               "confidence":0.99995697
+            },
+            {
+               "word":"that",
+               "start":11.337312,
+               "end":11.456989,
+               "confidence":0.99638426
+            },
+            {
+               "word":"an",
+               "start":11.456989,
+               "end":11.776129,
+               "confidence":0.9941023
+            },
+            {
+               "word":"engine",
+               "start":11.776129,
+               "end":12.276129,
+               "confidence":0.99695647
+            },
+            {
+               "word":"can",
+               "start":12.494193,
+               "end":12.733548,
+               "confidence":0.99943656
+            },
+            {
+               "word":"monitor",
+               "start":12.733548,
+               "end":13.233548,
+               "confidence":0.998642
+            },
+            {
+               "word":"hundreds",
+               "start":13.331935,
+               "end":13.831935,
+               "confidence":0.9976326
+            },
+            {
+               "word":"of",
+               "start":13.970215,
+               "end":14.129785,
+               "confidence":0.9963245
+            },
+            {
+               "word":"Key",
+               "start":14.20957,
+               "end":14.355842,
+               "confidence":0.99620026
+            },
+            {
+               "word":"Performance",
+               "start":14.355842,
+               "end":14.502113,
+               "confidence":0.99620026
+            },
+            {
+               "word":"Indicators",
+               "start":14.502114,
+               "end":14.648386,
+               "confidence":0.99620026
+            },
+            {
+               "word":"right",
+               "start":15.446236,
+               "end":15.526021,
+               "confidence":0.9939831
+            },
+        ...
+    ]
+  }
+]
+```
+
+In this response, we see that each alternative contains:
+
+- `transcript`: Transcript for the audio being processed.
+- `confidence`: Floating point value between 0 and 1 that indicates overall transcript reliability. Larger values indicate higher confidence.
+- `words`: Object containing each word in the transcript, along with its start time and end time (in seconds) from the beginning of the audio stream, and a confidence value.
+
+And we see that each word object contains:
+
+- `word`: Word in transcript.
+- `start`: Number of seconds into the audio stream that the word starts.
+- `end`: Number of seconds into the audio stream that the word ends.
+- `confidence`: Floating point value between 0 and 1 that indicates overall word reliability. Larger values indicate higher confidence.
+
+Compare this to the transcription of the original audio file:
+
+```json
+...
+"alternatives": [
+  {
+    "transcript":"another big problem in the speech analytics space when customers first bring the software on is that they they are blown away by the fact that an engine can monitor hundreds of kpis right",
+    "confidence":0.9921875,
+    "words": [
+      {
+        "word":"another",
+        "start":0.33959904,
+        "end":0.839599,
+        "confidence":0.9995117
+      },
+      {
+         "word":"big",
+         "start":0.89893866,
+         "end":1.3989387,
+         "confidence":0.9995117
+      },
+      {
+         "word":"problem",
+         "start":1.6580424,
+         "end":2.1580424,
+         "confidence":0.99853516
+      },
+      {
+        "word":"in",
+        "start":2.257335,
+        "end":2.4171462,
+        "confidence":0.99902344
+      },
+      {
+        "word":"the",
+        "start":2.4171462,
+        "end":2.6568632,
+        "confidence":0.8017578
+      },
+      {
+        "word":"speech",
+        "start":2.6568632,
+        "end":3.0963442,
+        "confidence":1.0
+      },
+      {
+        "word":"analytics",
+        "start":3.0963442,
+        "end":3.4559197,
+        "confidence":0.9248047
+      },
+      {
+        "word":"space",
+        "start":3.4559197,
+        "end":3.7755425,
+        "confidence":0.99853516
+      },
+      {
+        "word":"when",
+        "start":4.614552,
+        "end":4.9341745,
+        "confidence":0.98291016
+      },
+      {
+        "word":"customers",
+        "start":4.9341745,
+        "end":5.4341745,
+        "confidence":0.9926758
+      },
+      {
+        "word":"first",
+        "start":5.4535613,
+        "end":5.6932783,
+        "confidence":0.9326172
+      },
+      {
+        "word":"bring",
+        "start":5.6932783,
+        "end":5.8930426,
+        "confidence":0.9848633
+      },
+      {
+        "word":"the",
+        "start":5.8930426,
+        "end":6.0928063,
+        "confidence":0.984375
+      },
+      {
+        "word":"software",
+        "start":6.0928063,
+        "end":6.5722404,
+        "confidence":0.9926758
+      },
+      {
+        "word":"on",
+        "start":6.5722404,
+        "end":7.0722404,
+        "confidence":0.9946289
+      },
+      {
+        "word":"is",
+        "start":7.091627,
+        "end":7.331344,
+        "confidence":0.9916992
+      },
+      {
+        "word":"that",
+        "start":7.331344,
+        "end":7.6509666,
+        "confidence":0.9916992
+      },
+      {
+        "word":"they",
+        "start":7.6509666,
+        "end":8.150967,
+        "confidence":0.9633789
+      },
+      {
+        "word":"they",
+        "start":8.824085,
+        "end":9.302795,
+        "confidence":0.9941406
+      },
+      {
+        "word":"are",
+        "start":9.302795,
+        "end":9.802795,
+        "confidence":0.99560547
+      },
+      {
+        "word":"blown",
+        "start":10.100645,
+        "end":10.379892,
+        "confidence":0.99902344
+      },
+      {
+        "word":"away",
+        "start":10.379892,
+        "end":10.699032,
+        "confidence":0.9560547
+      },
+      {
+        "word":"by",
+        "start":10.699032,
+        "end":10.858602,
+        "confidence":0.99853516
+      },
+      {
+        "word":"the",
+        "start":10.858602,
+        "end":11.058064,
+        "confidence":0.99853516
+      },
+      {
+        "word":"fact",
+        "start":11.058064,
+        "end":11.337312,
+        "confidence":1.0
+      },
+      {
+        "word":"that",
+        "start":11.337312,
+        "end":11.456989,
+        "confidence":0.9970703
+      },
+      {
+        "word":"an",
+        "start":11.456989,
+        "end":11.776129,
+        "confidence":0.99365234
+      },
+      {
+        "word":"engine",
+        "start":11.776129,
+        "end":12.276129,
+        "confidence":0.9970703
+      },
+      {
+        "word":"can",
+        "start":12.494193,
+        "end":12.733548,
+        "confidence":0.9995117
+      },
+      {
+        "word":"monitor",
+        "start":12.733548,
+        "end":13.233548,
+        "confidence":0.99853516
+      },
+      {
+        "word":"hundreds",
+        "start":13.331935,
+        "end":13.831935,
+        "confidence":0.9975586
+      },
+      {
+        "word":"of",
+        "start":13.970215,
+        "end":14.129785,
+        "confidence":0.99609375
+      },
+      {
+        "word":"kpis",
+        "start":14.20957,
+        "end":14.70957,
+        "confidence":0.9946289
+      },
+      {
+        "word":"right",
+        "start":15.446236,
+        "end":15.526021,
+        "confidence":0.9946289
+      },
+      ...
+    ]
+  }
+]
+```
+
+In this response, notice that the audio contains an occurrence of the word "kpis". In the previous `transcript`, however, this has been replaced with "Key Performance Indicators".
+
+Now, let's compare the `word` objects. The original word to be replaced was:
+
+```json
+...
+{
+  "word":"kpis",
+  "start":14.20957,
+  "end":14.70957,
+  "confidence":0.9946289
+},
+...
+```
+
+And it was replaced with:
+
+```json
+...
+{
+  "word":"Key",
+  "start":14.20957,
+  "end":14.355842,
+  "confidence":0.99620026
+},
+{
+  "word":"Performance",
+  "start":14.355842,
+  "end":14.502113,
+  "confidence":0.99620026
+},
+{
+  "word":"Indicators",
+  "start":14.502114,
+  "end":14.648386,
+  "confidence":0.99620026
+},
+...
+```
+
+In this part of the response, notice:
+
+- the replacement word `Key` retains the same `start` value as the original word `kpis`.
+- the replacement words have different `end` vales than the original word `kpis`. This is because we replaced one word with three words, so the total time was divided roughly evenly between the words. If we were replacing one word with one word, the start and end times would be the same.
+
+<Alert type="info">
+
+By default, Deepgram applies its general AI [model](/api-reference/#model-pr), which is a good, general purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+</Alert>

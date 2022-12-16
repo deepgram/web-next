@@ -1,0 +1,52 @@
+---
+import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
+import Hero from "../components/homepage/Hero.astro";
+import Layout from "../layouts/Default.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import Featured from "../components/homepage/Featured.astro";
+import HomeExploreSDKs from "../components/homepage/HomeExploreSDKs.astro";
+import HomeCommunitySDKs from "../components/homepage/HomeCommunitySDKs.astro";
+import Community from "../components/homepage/Community.astro";
+
+import JsonLD from "../shared/components/meta/JsonLD.astro";
+
+// build json schema object
+const schema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	itemListElement: [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Deepgram Home",
+			item: "https://deepgram.com",
+		},
+		{
+			"@type": "ListItem",
+			position: 2,
+			name: "Docs",
+		},
+	],
+};
+---
+
+<Layout>
+	<JsonLD slot="json:ld" {schema} />
+
+	<ContrastSection contrast="black" background="white" class="text-white text-center xl:pt-20 pt-8" bottomDivider="eclipse-divider">
+		<PrimarySection class="flex flex-col items-center">
+			<Hero title="Deepgram Docs" />
+		</PrimarySection>
+	</ContrastSection>
+
+	<PrimarySection class="p-10">
+		<Featured title="Use Cases" />
+	</PrimarySection>
+	<PrimarySection class="flex flex-col md:flex-row p-10 max-w-screen-xl mx-auto px-10 gap-16">
+		<HomeExploreSDKs />
+		<HomeCommunitySDKs />
+	</PrimarySection>
+	<section class="flex mx-auto gap-16">
+		<Community />
+	</section>
+</Layout>

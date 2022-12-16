@@ -1,0 +1,144 @@
+---
+import Default from "./Default.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import Prose from "./Prose.astro";
+import HasAside from "../shared/components/layout/HasAside.astro";
+import Feedback from "../shared/components/forms/Feedback.astro";
+import SideNavApiRef from "./SideNavApiRef.astro";
+import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
+import TableOfContents from "../shared/components/nav/TableOfContents.astro";
+import nav from "../pages/api-reference/navigation.json";
+import "../assets/styles/developers.css";
+const { headings } = Astro.props;
+const pathname = Astro.url.pathname;
+---
+
+<Default>
+	<section class="max-w-full mr-auto px-0 api-ref">
+		<div class="grid grid-cols-2 md:grid-cols-8 lg:grid-cols-18">
+			<SideNavApiRef slot="aside" navStructure={nav} navTitle="API Reference" />
+			<div class="col-span-2 md:col-span-6 lg:col-span-15 pl-4 pr-8 sm:ml-8">
+				<PrimarySection class="py-10" padding="px-0">
+					<BreadCrumb />
+					<Prose class="max-w-full col-span-12">
+						<slot />
+					</Prose>
+					<div class="max-w-full lg:max-w-xl 2xl:max-w-2xl mt-28 border-grass border-t-2"></div>
+					<Feedback />
+				</PrimarySection>
+			</div>
+		</div>
+	</section>
+</Default>
+
+<style>
+	.api-ref :global(.feature) {
+		@apply hover:bg-cloud30 border-cloud border-b-2 p-2;
+	}
+	.api-ref :global(.feature header) {
+		@apply px-4;
+		border-left-width: 4px;
+		--tw-border-opacity: 1;
+		border-color: rgba(170, 184, 205, var(--tw-border-opacity));
+	}
+	.api-ref :global(.feature ul) {
+		overflow-x: scroll;
+	}
+	.api-ref :global(.feature .hint) {
+		color: rgba(79, 98, 120);
+	}
+	.api-ref :global(.feature .info) {
+		border-radius: 0.125rem;
+		border-width: 1px;
+		border-style: dotted;
+		--tw-border-opacity: 1;
+		border-color: rgba(79, 98, 120, var(--tw-border-opacity));
+		background-color: rgba(215, 223, 235, 0.3);
+		padding: 0.5rem;
+		@apply py-5;
+	}
+	.api-ref :global(.feature .info li) {
+		@apply my-3;
+	}
+	.api-ref :global(.feature li) {
+		@apply relative mb-4 pl-8;
+	}
+	.api-ref :global(.feature li::before) {
+		content: "";
+		position: absolute;
+		background-color: #d1d5db;
+		border-radius: 50%;
+		width: 0.375em;
+		height: 0.375em;
+		top: calc(0.875em - 0.1875em);
+		left: 0.25em;
+	}
+
+	.api-ref :global(ul:not(.contains-task-list) li::marker) {
+		color: transparent;
+	}
+
+	.api-ref :global(.feature li p) {
+		@apply py-0;
+	}
+	.api-ref :global(.feature li strong) {
+		@apply font-semibold;
+		color: #111827;
+	}
+
+	.api-ref :global(.feature .info) {
+		@apply p-6;
+		list-style-type: disc;
+	}
+
+	.api-ref :global(table) {
+		width: 100%;
+		table-layout: auto;
+		text-align: left;
+		margin-bottom: 2em;
+		font-size: 0.875em;
+		line-height: 1.7142857;
+	}
+
+	.api-ref :global(.response) {
+		border-width: 1px;
+		--tw-border-opacity: 1;
+		border-color: rgba(215, 223, 235, var(--tw-border-opacity));
+	}
+
+	.api-ref :global(.response > li) {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		border-top-width: 1px;
+		--tw-border-opacity: 1;
+		border-color: rgba(215, 223, 235, var(--tw-border-opacity));
+		list-style-type: none;
+	}
+
+	.api-ref :global(.response > li:first-of-type) {
+		border-top-width: 0;
+	}
+	.api-ref :global(.response-object:hover),
+	.api-ref :global(.response > li:hover) {
+		background-color: rgba(215, 223, 235, 0.3);
+	}
+
+	.api-ref :global(ul.response > ul) {
+		margin: 1rem;
+	}
+
+	.api-ref :global(ul:not(.contains-task-list)) {
+		margin-left: 0rem;
+		/* list-style-type: none; */
+	}
+
+	.api-ref :global(.response-object) {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+		padding-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
+		border-bottom-width: 1px;
+		--tw-border-opacity: 1;
+		border-color: rgba(215, 223, 235, var(--tw-border-opacity));
+	}
+</style>

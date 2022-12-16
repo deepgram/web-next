@@ -1,0 +1,189 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Managing Projects
+description: "Learn about Deepgram Projects, which organize all of your Deepgram resources and consist of a set of users, a set of API Keys, and billing and monitoring settings."
+order: 3
+type: core-concept
+seo:
+  metaTitle: Managing Projects
+  metaDescription: Learn about Deepgram Projects, which organize all of your Deepgram resources and consist of a set of users, a set of API Keys, and billing and monitoring settings.
+  keywords: "deepgram, api, project, key, secret, settings"
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+
+# {frontmatter.title}
+
+## Overview
+
+Your Deepgram account is structured into projects. Each project consists of a set of users, a set of API keys, and billing and monitoring for Deepgram Services.
+
+Projects in Deepgram are completely distinct environments with no connection to one another. Projects have unique access to Deepgram models, features, and services. To learn about scenarios in which it would be best to set up multiple projects, see [Using Multiple Projects](/documentation/getting-started/multiple-projects/).
+
+<Alert type="info">
+
+When you sign up, we automatically create a Project for you. Any promotional credit you have earned is attached to this first project. If you would like to transfer your promotional balance to a new project, [contact Support](/support/).
+
+</Alert>
+
+You can manage your Projects using either the [Deepgram Console](https://console.deepgram.com) or the [Deepgram API](/api-reference/#projects).
+
+## When to Create New Projects
+
+In many cases, the first project that comes with your Deepgram account will be sufficient for your needs. However, there are a couple scenarios where creating a separate project makes sense. Here are a couple of examples:
+
+- Creating one project for personal use and another for business use.
+- Using one project with one team and another project with a different team.
+
+## Manage your Project
+
+## Rename a Project
+
+To change a project's name:
+
+1. Log in to the [Deepgram Console](https://console.deepgram.com).
+
+2. From the **Projects** dropdown on the top-left, select the Project that you want to rename.
+
+3. Select **Settings**.
+
+4. Enter a new **Project Name** for your project, and select **Update**.
+
+The selected Project has been renamed.
+
+## Manage Team Members
+
+After you have created a Project, you can invite Team Members who you can let create transcripts for your Project, monitor Project balances and usage, or even manage other Team Members and create API Keys. You control what actions a Team Member can perform by assigning them a Role.
+
+### Invite a Team Member
+
+When you invite a Team Member, you assign them a Role, which determines which actions they can perform in the associated Project. Deepgram uses a tiered system of access control to provide granular access to its endpoints. To learn more about roles, see [Working with Roles](/documentation/getting-started/roles/). You can change the role for a user at any time.
+
+To invite a Team Member to your Project:
+
+1. Log in to the [Deepgram Console](https://console.deepgram.com).
+
+2. From the **Projects** dropdown on the top-left, select the Project to which you want to invite a Team Member.
+
+3. Select **Settings**.
+
+4. Select the **Team Members** view.
+
+5. Select **Invite New Member**.
+
+6. Enter the following settings, and select **Send Invites**:
+
+| Name                  | Description                                                                                                                                                                                                                       |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Email Address(es)** | Email address(es) to which you want to send invitations for the selected Project.                                                                                                                                                 |
+| **Role**              | Role to assign to the Team Member. The Team Member may perform only the actions allowed by the permissions associated with this role. To learn more about roles, see [Working with Roles](/documentation/getting-started/roles/). |
+
+Deepgram has sent your invitations via email. To access your Project, the Team Members must accept the invitation using the email address to which it was originally sent.
+
+### Resend Invitation to a Team Member
+
+When you invite a user to your Project, Deepgram sends them an invitation via email. To access your Project, they must accept the invitation. If they don't receive the invitation, you can resend it.
+
+To resend an invitation:
+
+1. Log in to the [Deepgram Console](https://console.deepgram.com).
+
+2. From the **Projects** dropdown on the top-left, select the Project with which the Team Member is associated.
+
+3. Select **Settings**.
+
+4. Select the **Team Members** view.
+
+5. Locate the user to whom you want to resend an invitation. Users with unaccepted invitations will have only their email address populated.
+
+6. Select **Resend Invitation**.
+
+The user's invitation has been resent via email.
+
+### Change a Team Member Role
+
+To change the role for a Team Member:
+
+1. Log in to the [Deepgram Console](https://console.deepgram.com).
+
+2. From the **Projects** dropdown on the top-left, select the Project with which the Team Member is associated.
+
+3. Select **Settings**.
+
+4. Select the **Team Members** view.
+
+5. Locate the Team Member who you want to edit, and select their role from the **Role** column.
+
+6. Select a new role.
+
+The Team Member's role in your Project has been updated.
+
+### Remove a Team Member
+
+To remove a Team Member:
+
+1. Log in to the [Deepgram Console](https://console.deepgram.com).
+
+2. From the **Projects** dropdown on the top-left, select the Project with which the Team Member is associated.
+
+3. Select **Settings**.
+
+4. Select the **Team Members** view.
+
+5. Locate the Team Member to remove, and select the associated trash can icon.
+
+The Team Member has been removed from your Project.
+
+## Manage API Keys
+
+Deepgram's API uses API Keys to authenticate requests. You can view and manage your API Keys in the [Deepgram Console](https://console.deepgram.com) or through the [Deepgram API](/api-reference/).
+
+Your API keys grant many privileges, so be sure to keep them secure. Do not share your secret API keys in publicly accessible areas such as GitHub or client-side code.
+
+For best results, use different API Keys for testing and production. To help filter usage, you can also use different API Keys for different consumers or teams at your organization.
+
+### Create an API Key
+
+When you create an API Key, you assign it a Role, which determines which actions it can be used to perform in the associated Project. Deepgram uses a tiered system of access control to provide granular access to its endpoints. To learn more about roles, see [Working with Roles](/documentation/getting-started/roles/).
+
+To learn more about creating API Keys and see examples of how to use them with our API, see [Authenticating](/documentation/getting-started/authentication).
+
+### Delete an API Key
+
+1. Log in to the [Deepgram Console](https://console.deepgram.com).
+
+2. From the **Projects** dropdown on the top-left, select the Project in which you want to delete an API Key.
+
+3. Select **Settings**.
+
+4. Select the **API Keys** view.
+
+5. Locate the API Key to delete, and select the associated trash can icon.
+
+The API Key has been removed from your Project.
+
+## Manage Billing
+
+Projects are assigned credits, which determine how many transactions can be performed for the associated Project.
+
+In certain cases, credits may expire:
+
+- Credits associated with an enterprise contract expire at the end of the contract period.
+- Deepgram free promotional credits expire one year from signup.
+
+Credits purchased by individuals using a credit card do not expire.
+
+If you would like to transfer your credit balance to another project, [contact Support](/support/). When credits are transferred, any associated expiration date also transfers.
+
+### Serving Multiple Clients Under a Single Project
+
+Many users of Deepgram are businesses serving other businesses. You can use a single Deepgram project to serve each of your customers and even tag their respective usage.
+
+Deepgram allows you to tag your API Keys and/or individual requests. You can then rely on those tags to filter usage and bill your customers accordingly.
+
+For example, say Fruit Company has customers Apple, Banana, and Pear. Fruit Company can have a single Deepgram project, but create 3 API Keys:
+
+1. Production Key (`tag=apple`)
+2. Production Key (`tag=banana`)
+3. Production Key (`tag=pear`)
+
+At the end of the month, Fruit Company can rely on those tags to correctly bill Apple, Banana, and Pear for their respective usage.

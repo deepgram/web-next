@@ -1,0 +1,115 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Language
+description: Learn about Deepgram's Language feature, which allows you to supply a BCP-47 language tag that hints at the primary spoken language of submitted audio.
+tags: [language, streaming, pre-recorded]
+order: 3
+seo:
+  metaTitle: Language
+  metaDescription: Learn about Deepgram's Language feature, which allows you to supply a BCP-47 language tag that hints at the primary spoken language of submitted audio.
+  keywords: language, translate, translation, dialect, region, BCP-47, accent
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+# {frontmatter.title}
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+
+Deepgram’s Language feature allows you to supply a [BCP-47](https://tools.ietf.org/html/bcp47) language tag that hints at the primary spoken language of submitted audio. Deepgram defaults to US English (`en-US`).
+
+## Use Cases
+
+Some examples of use cases for Language include:
+
+- Customers with employees who live in regions with specific dialects or accents.
+- Customers who need to ensure a specific language in their dataset is recognized.
+
+## Enable Feature
+
+To enable Language, when you call Deepgram’s API, add a `language` parameter in the query string and set it to the language you would like to recognize:
+
+`language=OPTION`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace the placeholder `OPTION` with your chosen language and `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```bash
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?language=OPTION'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Language Options
+
+Language support is optimized for the following language/model combinations:
+
+| Language                                     | Code             | Model(s)          | Tier(s) |
+| -------------------------------------------- | ---------------- | ----------------- | ------- |
+| **Chinese**                                  | `zh` *beta*      | `general`         | `base`  |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;China           | `zh-CN` *beta*   | `general`         | `base`  |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taiwan          | `zh-TW` *beta*   | `general`         | `base`  |
+| **Danish**                                   | `da` *beta*      | `general`         | `enhanced`, `base`  |
+| **Dutch**                                    | `nl` *beta*      | `general`         | `enhanced`, `base`  |
+| **English**                                  | `en`             | `general`<br/>`meeting`<br/>`phonecall`<br/>`voicemail`<br/>`finance`<br/>`conversationalai`<br/>`video`  | `enhanced`, `base`<br/>`enhanced` *beta*, `base`<br/>`enhanced` *beta*, `base`<br/>`base`<br/>`enhanced` *beta*,`base`<br/>`base`<br/>`base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Australia       | `en-AU`          | `general`         | `base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;United Kingdom  | `en-GB`          | `general`         | `base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;India           | `en-IN`          | `general`         | `base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New Zealand     | `en-NZ`          | `general`         | `base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;United States   | `en-US`          | `general`<br/>`meeting`<br/>`phonecall`<br/>`voicemail`<br/>`finance`<br/>`conversationalai`<br/>`video`  | `enhanced`, `base`<br/>`enhanced` *beta*, `base`<br/>`enhanced` *beta*, `base`<br/>`base`<br/>`enhanced` *beta*, `base`<br/>`base`<br/>`base` |
+| **Flemish**                                  | `nl` *beta*      | `general`         | `enhanced`, `base` |
+| **French**                                   | `fr`             | `general`         | `enhanced` *beta*, `base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Canada          | `fr-CA`          | `general`         | `base` |
+| **German**                                   | `de`             | `general`         | `enhanced` *beta*, `base` |
+| **Hindi**                                    | `hi`             | `general`         | `enhanced` *beta*, `base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Roman Script    | `hi-Latn` *beta* | `general`         | `base` |
+| **Indonesian**                               | `id` *beta*      | `general`         | `base` |
+| **Italian**                                  | `it` *beta*      | `general`         | `enhanced`, `base` |
+| **Japanese**                                 | `ja` *beta*      | `general`         | `enhanced`, `base` |
+| **Korean**                                   | `ko` *beta*      | `general`         | `enhanced`, `base` |
+| **Norwegian**                                | `no` *beta*      | `general`         | `enhanced`, `base` |
+| **Polish**                                   | `pl` *beta*      | `general`         | `enhanced`, `base` |
+| **Portuguese**                               | `pt`             | `general`         | `enhanced` *beta*, `base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Brazil          | `pt-BR`          | `general`         | `enhanced` *beta*, `base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Portugal        | `pt-PT`          | `general`         | `enhanced` *beta*, `base` |
+| **Russian**                                  | `ru`             | `general`         | `base` |
+| **Spanish**                                  | `es`             | `general`         | `enhanced` *beta*, `base` |
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Latin America   | `es-419`         | `general`         | `enhanced` *beta*, `base` |
+| **Swedish**                                  | `sv` *beta*      | `general`         | `enhanced`, `base` |
+| **Tamil**                                    | `ta` *beta*      | `general`         | `enhanced` |
+| **Turkish**                                  | `tr`             | `general`         | `base` |
+| **Ukrainian**                                | `uk` *beta*      | `general`         | `base` |
+
+## Results
+
+Once applied, results will appear in the transcript.
+
+`language=fr`
+
+| Transcript                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sur votre personnage un drogué ça passe par plein de phases la défense la descente le manque la honte la colère la dépression quand on se rend les tics du visage la mâchoire les larmes le c'était quoi le plus difficile à jouer si tu le fais que si quelqu'un devrait et pas spécifique non plus un détail mais le fait que c'est c'est un homme vivant et même même indépendant des drogues ou la c'est leur vie c'est leur famille |
+
+<Alert type="info">
+
+By default, Deepgram applies its Base tier general AI [model](/api-reference/#model-pr), which is a good, general-purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+</Alert>

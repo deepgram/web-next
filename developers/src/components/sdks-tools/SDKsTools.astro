@@ -1,0 +1,72 @@
+---
+import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
+import SDKsCard from "../../shared/components/cards/SDKsCard.astro";
+import ToolsCard from "../../shared/components/cards/ToolsCard.astro";
+
+const tools = await Astro.glob("../../pages/sdks-tools/tools/**/*.mdx");
+const sdks = [
+	{
+		dgCertified: true,
+		path: "/sdks-tools/sdks/node-sdk",
+		title: "Node.js SDK",
+		slug: "node-sdk",
+		description: "Official Node.js SDK for Deepgram's automated speech recognition APIs.",
+		linkHref: "https://github.com/deepgram/node-sdk",
+	},
+	{
+		dgCertified: true,
+		path: "/sdks-tools/sdks/python-sdk",
+		title: "Python SDK",
+		slug: "python-sdk",
+		description: "Official Python SDK for Deepgram's automated speech recognition APIs.",
+		linkHref: "https://github.com/deepgram/python-sdk",
+	},
+	{
+		dgCertified: true,
+		path: "/sdks-tools/sdks/dotnet-sdk",
+		title: ".NET SDK",
+		slug: "dotnet-sdk",
+		description: "Official .NET SDK for Deepgram's automated speech recognition APIs.",
+		linkHref: "https://github.com/deepgram-devs/deepgram-dotnet-sdk",
+	},
+	{
+		dgCertified: false,
+		title: "Deno SDK",
+		slug: "",
+		description: "Deno SDK for Deepgram's automated speech recognition APIs.",
+		linkHref: "https://github.com/deepgram-devs/deno-sdk",
+	},
+	{
+		dgCertified: false,
+		title: "Go SDK",
+		slug: "",
+		description: "Go SDK for Deepgram's automated speech recognition APIs.",
+		linkHref: "https://pkg.go.dev/github.com/deepgram-devs/go-sdk",
+	},
+];
+---
+
+<div class="max-w-screen-xl mx-auto">
+	<h2 class="text-stone mt-6 mb-3">SDKS</h2>
+	<BlogCardList>
+		{
+			sdks.map((doc) => {
+				return <SDKsCard doc={doc} />;
+			})
+		}
+	</BlogCardList>
+	<h2 class="text-stone mt-6 mb-3">TOOLS</h2>
+	<BlogCardList>
+		{
+			tools.map((doc) => {
+				return <ToolsCard doc={doc} />;
+			})
+		}
+	</BlogCardList>
+</div>
+
+<style>
+	:global(h2) {
+		@apply text-2xl;
+	}
+</style>

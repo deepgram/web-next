@@ -1,5 +1,4 @@
 ---
-import render from "preact-render-to-string";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Layout from "../layouts/Default.astro";
 import HasGutters from "../shared/components/layout/HasGutters.astro";
@@ -52,6 +51,7 @@ export async function getStaticPaths() {
 }
 
 function snakeCase(heading) {
+	// console.log(`|${heading}|`);
 	return slugify(heading, { lower: true });
 }
 
@@ -62,7 +62,6 @@ function getHeadingsSB(post) {
 	const headings = richTextSections.map((section) => {
 		return section.content.content.filter((richText) => {
 			if (richText.type === "heading") {
-				// console.log("richText", richText);
 				return richText.content[0].text;
 			}
 		});
@@ -382,7 +381,7 @@ const schema = [
 	}
 
 	.post-prose :global(ol li::marker) {
-  	color: transparent;
+		color: transparent;
 	}
 
 	.post-prose :global(ol li::before) {

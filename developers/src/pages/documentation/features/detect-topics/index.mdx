@@ -1,0 +1,163 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Topic Detection
+description: Learn about Deepgram's Topic Detection feature, which identifies and extracts key topics from content in submitted audio.
+tags: [topic-detection, pre-recorded]
+order: 19
+seo:
+  metaTitle: Topic Detection
+  metaDescription: Learn about Deepgram's Topic Detection feature, which identifies and extracts key topics from content in submitted audio.
+  keywords: topic detection, detect, topic
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+<div class="badge">PRE-RECORDED</div>
+
+# {frontmatter.title}
+
+Deepgram’s Topic Detection feature identifies and extracts key topics from content in submitted audio and returns these topics in the JSON response. When Topic Detection is enabled, the [Punctuation](/documentation/features/punctuate/) feature will be enabled by default.
+
+## Use Cases
+
+Some examples of uses for Topic Detection include:
+
+- Customers who want to help their Quality Assurance team analyze conversations to identify trends and patterns based on discussed topics.
+- Customers who need to extract meaningful and actionable insights from conversations and audio data based on discussed topics.
+- Customers who want to enhance search capabilities by tagging conversations based on identified topics.
+
+## Enable Feature
+
+To enable Topic Detection, when you call Deepgram’s API, add a `detect_topics` parameter set to `true` in the query string:
+
+<Alert type="warning">
+
+When Topic Detection is enabled, [Punctuation](/documentation/features/punctuate/) will also be enabled by default.
+
+</Alert>
+
+`detect_topics=true&punctuate=true`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+
+<Alert type="info">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```bash
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?detect_topics=true&punctuate=true'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Analyze Response
+
+When the file is finished processing (often after only a few seconds), you’ll receive a JSON response that has the following basic structure:
+
+```json
+{
+  "metadata": {
+    "transaction_key": "string",
+    "request_id": "string",
+    "sha256": "string",
+    "created": "string",
+    "duration": 0,
+    "channels": 0
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives":[],
+      }
+    ]
+  }
+```
+
+Let's look more closely at the `alternatives` object:
+
+```json
+{
+  "alternatives":[
+    {
+      "transcript":"...That work in the afternoon, that dip that you feel. For instance, it's just one example and weight management. And we all respond differently sometimes a little bit sometimes vastly differently even to the same foods. So one type of carbohydrate that my body might process well, let's say it's fruit or rice or sweet potato, your body might not. The levels app interprets your glucose data and provides a simple score after you eat a meal. You can see how different foods affect you and then develop a personalized diet that's right. For you and your goals. Seeing this data in real time at least for me and for so many others, who used levels is a really powerful behavioral change mechanism. And many of the guests on the podcast have talked about this...",
+      "confidence":0.99121094,
+      "words":[...],
+      "topics":[
+        ...
+        {
+          "text":"That work in the afternoon, that dip that you feel. For instance, it's just one example and weight management. And we all respond differently sometimes a little bit sometimes vastly differently even to the same foods. So one type of carbohydrate that my body might process well, let's say it's fruit or rice or sweet potato, your body might not. The levels app interprets your glucose data and provides a simple score after you eat a meal. You can see how different foods affect you and then develop a personalized diet that's right. For you and your goals. Seeing this data in real time at least for me and for so many others, who used levels is a really powerful behavioral change mechanism. And many of the guests on the podcast have talked about this.",
+          "start_word":27240,
+          "end_word":27375,
+          "topics":[
+            {
+              "topic":"diet","confidence":0.9869026
+            },
+            {
+              "topic":"nutrition","confidence":0.97236645
+            },
+            {
+              "topic":"obesity","confidence":0.4745059
+            }
+          ]
+        },
+        ...
+      ]
+    }
+  ]
+}
+```
+
+In this response, we see that each alternative contains:
+
+- `transcript`: Transcript for the audio being processed.
+- `confidence`: Floating point value between 0 and 1 that indicates overall transcript reliability. Larger values indicate higher confidence.
+- `words`: Object containing each word in the transcript, along with its start time and end time (in seconds) from the beginning of the audio stream, and a confidence value.
+- `topics`: Object containing the information about topics for the audio being processed.
+
+And we see that each `topics` object contains:
+
+- `text`: Transcript of the audio section being inspected for topics.
+- `start_word`: Location of the first character of the first word in the section of audio being inspected for topics.
+- `end_word`: Location of the first character of the last word in the section of audio being inspected for topics.
+- `topics`: Object containing key topic of the section of audio being inspected for topics, along with a confidence value. For a list of topics we support, see [Identifiable Topics](#identifiable-topics/).
+
+<Alert type="info">
+
+By default, Deepgram applies its Base-tier, general AI model, which is a good, general-purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+</Alert>
+
+## Identifiable Topics
+
+Topics that our API can identify include:
+
+- academia (for example, archaelogy, economics, engineering, philosophy)
+- education (for example, criminality, drugs, farming, pollution)
+- religion (for example, Buddhism, Christianity, God, ideologies)
+- regions (for example, Asia, Australia, Middle East, South America)
+- countries (for example, Canada, India, Japan, United Kingdom)
+- recreation (for example, camping, fashion, home improvement, photography)
+- media (for example, blogging, film, news, radio)
+- companies (for example, Apple, Deepgram, Instagram, Twitter)
+- disease (for example, coronavirus, COVID-19)
+- people (for example, death, gender, parenting, sexuality)
+- business (for example, banking, inflation, marketing, taxes)
+- computers (for example, cryptocurrency, deep learning, networking, software development)
+- transportation (for example, aerospace, boats, space, trains)
+- politics (for example, democracy, military, security, voting)
+- nature (for example, birds, forests, summer, wildlife)

@@ -1,0 +1,37 @@
+---
+robots: noindex, nofollow
+title: Best Practices
+description: Learn about best practices for labeling data and using Hotpepper, Deepgram's on-premises data labeling tool.
+order: 9
+show: false
+seo:
+  metaTitle: "Hotpepper User Guide: Best Practices"
+  metaDescription: Learn about best practices for labeling data and using Hotpepper, Deepgram's on-premises data labeling tool.
+  keywords: on-premises, hotpepper, data label, labeling, labelling, transcription, transcribe, audio, best practices
+---
+
+To create a solid foundation for highly-accurate models, Deepgram suggests closely observing the following best practices. Doing so guarantees that new training data is consistent with data on which Deepgram’s off-the-shelf models were trained.
+
+## Practice long-form labeling
+
+All labeling should be long-form, which means audio files should be labeled in their entirety. Partially-labeled files are unacceptable.
+
+## Use multiple reviewers
+
+All audio files should be reviewed (and labeled, if necessary) by at least four different, independent users. No user should be permitted to review the same file twice.
+
+Hotpepper builds this best practice into its design, so to see a file all the way through the review process, four different users must be registered in the system.
+
+## Follow a style guide
+
+All labeling should be scrutinized to ensure it adheres to a carefully constructed style guide. You can see Deepgram’s recommended style guide at: `https://<YOUR_HOTPEPPER_URL>/instructions`.
+
+## Back up your data
+
+Data loss can occur at any time and for various reasons. Good backups keep downtime to a minimum by saving time wasted on both recovery and recreating finished work.
+
+To avoid losing all transcripts produced by Hotpepper, back up both your dataset directories and the Hotpepper database. Hotpepper uses a SQLite database, so you only need to copy the configured database file to a secure location.
+
+## Give yourself enough time
+
+Make sure you aren’t in a rush when transcribing. To ensure that the quality of work is sufficient, you need to allow enough time to complete the task. For a seasoned transcriptionist, a quality transcription usually takes 5-6x as long as the duration of the original audio file. Many transcriptionists may take as long as 8x.

@@ -1,0 +1,314 @@
+---
+title: DGTools
+description: Learn about Deepgram's DGTools, which allows customers with on-premises solutions to train their own custom models.
+order: 5
+seo:
+  metaTitle: DGTools
+  metaDescription: Learn about Deepgram's DGTools, which allows customers with on-premises solutions to train their own custom models.
+  keywords: on-premises, on-prem, deployment, optional components, optional, dgtools, train, custom model
+---
+
+For customers with Deepgram’s on-premises solution who want to train their own custom models, DGTools offers a path forward. Users of DGTools can take a general domain model and train it with production-representative data, or trainable data, to produce a targeted domain model.
+
+The quality of your trainable data matters. Errors in transcription will lead to suboptimal outcomes.
+
+## Use Cases
+
+- Reducing word error rate (WER) by teaching an uncommon word to a general domain model, producing a targeted domain model.
+- Reducing WER by improving targeted domain model confidence with additional trainable data.
+
+## Deploying DGTools
+
+### Before You Begin
+
+#### Prepare Your Linux Environment
+
+This guide is written assuming you are running Ubuntu 20.04 LTS and the environment has been prepared to run Deepgram on-premises. If you are unfamiliar with the on-prem cloud environment requirements, please review [Deploying Base Components](/on-prem/base-components/deploy-base-components/#configuring-your-cloud-environment) before proceeding with this guide.
+
+#### Log in to Docker
+
+##### Docker Hub
+
+DGTools is provided as a Docker container image stored at the Docker Hub repository `deepgram/onprem-dgtools`. You will need to be logged into Docker in the installation environment with the same Docker Hub account used to access the Deepgram on-premises base component repositories `deepgram/onprem-api` and `deepgram/onprem-engine`.
+
+##### Docker As a Non-Root User
+
+DGTools must be run via Docker as a non-root user. For instructions, please read [Post-installation Steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/).
+
+#### Prepare the NVIDIA Runtime
+
+DGTools requires CUDA 11 and an NVIDIA GPU to work.
+
+#### Set Up Deepgram On-premises
+
+If you intend to run DGTools in the same environment as your Deepgram on-premises installation, you must stop Deepgram API and Deepgram Engine before you start DGTools.
+
+You will need your Deepgram on-premises license key to use DGTools. It can be found in your `api.toml` or `engine.toml` file and looks like this:
+
+```
+key = "01234567-89ab-cdef-0123-456789abcdef"
+```
+
+### Installing
+
+#### Create the `dgtools` directory for the license file and training data
+
+Create the `dgtools` directory and its `dgdatasets` subdirectory in your home directory `$HOME`. This directory will serve as the installation location of the DGTools license file as well as any user-provided data sets that will be used for model training.
+
+```bash
+mkdir -p $HOME/dgtools/dgdatasets
+```
+
+Create the `DGTOOLS_RESOURCE_DIR` environment variable, which points to the new `dgtools` directory. This statement will also add the `DGTOOLS_RESOURCE_DIR` environment variable to your `.bashrc` file.
+
+```bash
+export DGTOOLS_RESOURCE_DIR=$HOME/dgtools; \
+echo "export DGTOOLS_RESOURCE_DIR=\$HOME/dgtools" >> $HOME/.bashrc
+```
+
+You should make this directory findable within your path by adding `DGTOOLS_RESOURCE_DIR` to your path and adding it to your `.bashrc` file.
+
+```bash
+export PATH=$DGTOOLS_RESOURCE_DIR:$PATH; \
+echo "export PATH=\$DGTOOLS_RESOURCE_DIR:\$PATH" >> $HOME/.bashrc
+```
+
+#### Create the `dgtools` script
+
+Use the following command to create the `dgtools` script in the `dgtools` directory:
+
+```bash
+cat > $DGTOOLS_RESOURCE_DIR/dgtools <<'EOF'
+set -e
+DGTOOLS_IMAGE=${DGTOOLS_IMAGE:-"deepgram/onprem-dgtools:2.1.1"}
+docker pull $DGTOOLS_IMAGE
+docker run \
+-t \
+-i \
+--gpus all \
+--volume $DGTOOLS_RESOURCE_DIR:/dgtraining \
+--volume $HOME:$HOME \
+--user $(id -u):$(id -g) \
+--rm $DGTOOLS_IMAGE \
+"$(pwd)" "$@"
+EOF
+```
+
+Make the script executable:
+
+```bash
+chmod +x $DGTOOLS_RESOURCE_DIR/dgtools
+```
+
+#### Create the `dgtools.toml` license file
+
+Use the following command to create the `dgtools.toml` license file in the `dgtools` directory:
+
+```bash
+echo -e "[license]\n\nkey = \"REPLACE_WITH_YOUR_KEY\"\nserver_url = \"https://license.deepgram.com\"" > $DGTOOLS_RESOURCE_DIR/dgtools.toml
+```
+
+Copy any data sets to be used for model training into the new `dgtools/dgdatasets` subdirectory:
+
+```bash
+cp [DATASET_DIRECTORY] $DGTOOLS_RESOURCE_DIR/dgdatasets/.
+```
+
+### Testing the Installation
+
+Download the Docker container image for DGTools and test the installation:
+
+```bash
+dgtools version
+```
+
+The output should look similar to:
+
+```
+2.1.1: Pulling from deepgram/onprem-dgtools
+Digest: sha256:2c859629e7dab6aa8291b3672c72237590c1081da072f8a3d42dce7792221783
+Status: Image is up to date for deepgram/onprem-dgtools:2.1.1
+docker.io/deepgram/onprem-dgtools:2.1.1
+Copyright © 2022 Deepgram, Inc.
+DGTools v2.1.1
+```
+
+## Using DGTools
+
+### If you are migrating from `dgtoolsbeta`
+
+1. Delete the old alignment data in any data set subdirectory by deleting the `resource_properties` folder. 
+
+2. Delete the old feature sets in the `$DGTOOLS_RESOURCE_DIR` location by deleting the `.features_cache` hidden directory.
+
+3. Delete the old training splits metadata (which files are trained with, which files are validated with) in the `$DGTOOLS_RESOURCE_DIR/.train_meta` location by deleting the `datasetsplits.meta_jm` hidden directory.
+
+### DGTools `autotrain` subcommand
+
+The primary subcommand for `dgtools` is `dgtools autotrain`. It allows a user to custom-train an initial model provided by Deepgram. Additionally, users can rename models and “top-off” a model with additional training data.
+
+#### Model Tiers
+
+DGTools supports customizing Deepgram's Base and Enhanced model tiers.
+
+#### Training Data
+
+`dgtools/dgdatasets` is where DGTools will search for training data. You can copy new data sets into subdirectories within `dgtools/dgdatasets`, and DGTools will automatically find them the next time it’s run. Data sets must contain audio files and associated labeled audio transcript text files. A given audio file and its associated labeled audio transcript must share the same file name with different file extensions. Data sets must be self-contained within their own subdirectory (for example, `$DGTOOLS_RESOURCE_DIR/dgdatasets/example_data_set`).
+
+#### Supported Languages
+
+DGTools supports training models for a variety of languages in the open beta. Although the default language is `en` and thus the `dgdatasets` for English can exist as a subdirectory of `$DGTOOLS_RESOURCE_DIR`, DGTools will automatically detect the language type for a given model and search `$DGTOOLS_RESOURCE_DIR` for a subdirectory which matches that language code and which itself contains a subdirectory named `dgdatsets` (for example, `$DGTOOLS_RESOURCE_DIR/es/dgdatasets/example_data_set`).
+
+#### Terminal sessions and `tmux`
+
+We recommend running DGTools inside a `tmux` session to ensure that it is not interrupted during training.
+
+You can list the current tmux sessions with the `tmux ls` command. 
+
+You can reattach to a tmux session with the `tmux attach -t SESSION_ID` command, where SESSION_ID matches your session ID from the current sessions list.
+
+#### Using `autotrain` from scratch
+
+To use DGTools to train an initial model, provide the path location of that model file to the `dgtools autotrain` subcommand. DGTools `autotrain` takes the path to the initial model to train as its only required parameter. If the model supports training, DGTools will train the model with the data sets from the `dgdatasets` directory and produce a *.last.dg file (for example, `general.last.dg`).
+
+```bash
+dgtools autotrain ./general.dg
+```
+
+In the output for the command, there is a a sample countdown which indicates how many samples are remaining in the training process. If a model does not support training, the command will return an error indicating that the model is not trainable. Please [contact Deepgram support](/support/) for assistance if your model does not support training.
+
+#### Topping-off a model with `autotrain --top-off`
+
+If you are just adding additional training data to `dgdatsets/` and want to re-run `autotrain`, you can "top-off" the model using the `--top-off` flag to skip adding new vocabulary words and speed up the operation.
+
+```bash
+dgtools autotrain ./general.last.dg --top-off
+```
+
+#### Revisiting `dgdatasets/` with `--revisit-count N`
+
+If you want to adjust the amount of times a given sample within `dgdatasets` is re-visited during `autotrain`, you can set the `--revisit-count N`, where N is the number of times a sample should be revisited. By default, `dgtools autotrain` revisits samples 20 times, whereas `dgtools autotrain --top-off` revisits samples 10 times.
+
+```bash
+dgtools autotrain ./general.last.dg --top-off --revisit-count 100
+```
+<Alert type="warning">
+  
+The default --revisit-count values for autotrain and topping-off were chosen to find a balance with training and the risk of “over-fitting” a model. A model is considered to be “over-fit” when training starts to negatively impact its validation accuracy. Validation accuracy is a useful measure for determining when a model’s training is “complete” and is something which DGTools uses to create model checkpoints.
+
+</Alert>
+
+#### Continuous checkpointing
+
+DGTools creates “checkpoint” models as it trains. DGTools does this by tracking the validation accuracy of the intermediate models it produces while training, and then preserving the best two copies as a *.best.VALIDATION_ACCURACY.dg file (for example, `general.best.842.dg`) where VALIDATION_ACCURACY is represented as the number 842 and can be read as a percentage "84.2%".
+
+DGTools also preserves the last two checkpoint models in addition to the two best checkpoint models. A model is only saved as a checkpoint model if it is neither of the best models.
+
+#### Marking `dgdatasets/` data samples for inclusion in training or validation
+
+In a given data set subdirectory within `dgdatasets`, two different files may exist:
+
+- `keep_train.lst` may contain a source identifier (for example, a filename without the path or file extension) of files to attempt to include in the training list.
+- `keep_validate.lst` may contain a source identifier (for example, a filename without the path or file extension) of files to attempt to include in the validation list.
+
+Comments (`#`) in either file will be ignored.
+
+In the event of conflict where a source identifier is in either the training or validation lists for previous model training iterations, a warning will be printed to the screen and the new inclusion designation will be ignored. This designation will persist in DGTools unless the steps described in the “If you are a migrating from `dgtoolsbeta`" section of this guide are followed.
+
+#### Specifying data set subdirectories with `--dataset-locations`
+
+The `--dataset-locations` argument can be used to specify a data set subdirectory or to provide a file containing a list of data set subdirectories. For example, if you know that within your `dgdatasets` directory you have subdirectories `A`, `B`, and `C` , you can tell DGTools to use only the `A` subdirectory with the following command:
+
+```bash
+dgtools autotrain example-model.dg --dataset-locations /dgtraining:A
+```
+
+If your data sets are organized into subdirectories by language code (like `en`), then reference the language code as part of the `--dataset-locations` path:
+
+```bash
+dgtools autotrain example-model.dg --dataset-locations /dgtraining/en:A
+```
+
+Alternatively, you could create a file named `datasets.lst` in your $DGTOOLS_RESOURCE_DIR (mounted within the Docker container as `/dgtraining`) and reference multiple data set subdirectories in that file. For example, if you wanted to use only the `A` and `C` data sets, you could add the following to `datasets.lst`:
+
+```bash
+# Include only A and C
+/dgtraining:A
+/dgtraining:C
+```
+and then pass that file to DGTools with the following command:
+
+```bash
+dgtools autotrain example-model.dg --dataset-locations /dgtraining/datasets.lst
+```
+
+### DGTools `makedeployable` subcommand
+
+#### Providing `makedeployable` an output model name and tags
+
+To output a model with a specific filename, use the flag `--name` and `--tags` to provide the name and any tags for the model’s metadata information. You can specify an arbitrary number of *String* tags for the model via the `--tags` flag. If you do not use these flags, the default name will be derived from the model's metadata (as opposed to updating the new model's metadata with the name you supplied). The `.last` model file should generally be used as the deployable file, but as a best practice we recommend evaluating either of the `.best` model files for deployment in addition to the `.last` model file.
+
+```bash
+$ dgtools makedeployable general.last.dg --name deployed_model --tags 1
+Initializing the environment...
+Complete.
+Created deployed_model_en__1_deployable.dg.
+
+$ ls
+initial.dg general.last.dg deployed_model_en__1_deployable.dg
+```
+
+### Other DGTools subcommands
+
+In addition to `autotrain`, these subcommands are useful for determining how to use DGTools, listing the supported training languages, retrieving and printing a model file’s metadata information, and printing the DGTools version information.
+
+#### `help`
+
+The `help` subcommand can be used to print out the built-in help information for DGTools:
+
+```bash
+$ dgtools help
+Usage:
+dgtools [SUBCOMMAND] [OPTIONS]
+Valid subcommands are: autotrain, makedeployable, modelinfo, listlang, help, version. For help on individual subcommands, type the '--help' option after the subcommand.
+See https://developers.deepgram.com/on-prem/optional-components/dgtools/ for more information.
+```
+
+#### `listlang`
+
+The `listlang` subcommand can be used to report the supported training languages:
+
+```bash
+$ dgtools listlang
+Currently supported languages: en, es, nl, ko.
+```
+
+#### `modelinfo`
+
+The `modelinfo` subcommand can be used to retrieve and print a given model’s metadata information, including whether or not the model is trainable and whether or not the model is deployable:
+
+```bash
+$ dgtools modelinfo ./deployed_model_en__1_deployable.dg
+Model is trainable and deployable.
+Name: deployed_model
+UUID: a965179c-a8c3-457d-bc67-32b66f579656
+Version: 2021-08-18
+Tags: topped-off, example
+Languages: en
+```
+
+#### `version`
+
+The `version` subcommand can be used to print the current DGTools version information:
+
+```bash
+$ dgtools version
+Copyright © 2022 Deepgram, Inc.
+DGTools v2.1.1
+```
+
+You can also use the following docker command to output the DGTools container image information:
+
+```bash
+docker image inspect deepgram/onprem-dgtools:2.1.1
+```
