@@ -39,7 +39,7 @@ html {
 @layer base {
 	body {
 		@apply font-inter;
-		@apply bg-darkCharcoal;
+		/* @apply bg-darkCharcoal; */
 	}
 
 	/* code {
@@ -54,7 +54,6 @@ html {
 	h6 {
 		@apply font-favorit;
 		@apply font-bold;
-		@apply text-white;
 	}
 
 	h1 {
@@ -86,7 +85,7 @@ html {
 	}
 
 	a {
-		@apply text-lightIris;
+		@apply text-darkIris;
 	}
 }
 

@@ -1,3 +1,21 @@
+
+body {
+	@apply bg-darkCharcoal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply text-white;
+}
+
+a {
+	@apply text-lightIris;
+}
+
 .bg-sound-wave-cloud-dark {
 	background-image: url("/sound-wave@2x.svg");
 	background-size: 50rem;
