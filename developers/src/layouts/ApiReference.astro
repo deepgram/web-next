@@ -41,9 +41,11 @@ const pathname = Astro.url.pathname;
 		--tw-border-opacity: 1;
 		border-color: rgba(170, 184, 205, var(--tw-border-opacity));
 	}
+
 	.api-ref :global(.feature ul) {
-		overflow-x: scroll;
+		overflow-wrap: break-word;
 	}
+	
 	.api-ref :global(.feature .hint) {
 		color: rgba(79, 98, 120);
 	}
