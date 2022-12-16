@@ -3,12 +3,12 @@ name: "Docs: CI/CD"
 on:
   workflow_dispatch:
   push:
-    branches: [main, lo/developer-kickoff]
+    branches: [main]
     paths: 
     - 'developers/**'
     - 'shared/**'
   pull_request:
-    branches: [main, lo/developer-kickoff]
+    branches: [main]
     paths: 
     - 'developers/**'
     - 'shared/**'
