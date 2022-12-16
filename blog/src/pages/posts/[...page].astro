@@ -1,19 +1,26 @@
 ---
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import Layout from "../../layouts/Default.astro";
-import GeneralPostsPage from "../../components/posts/GeneralPostsPage.astro";
+import GeneralPostsPage from "../../components/posts/GeneralPostsPageSB.astro";
 import Title from "../../shared/components/meta/Title.astro";
 import Description from "../../shared/components/meta/Description.astro";
 import Meta from "../../shared/components/meta/Meta.astro";
 import JsonLD from "../../shared/components/meta/JsonLD.astro";
+import { useStoryblokApi } from "@storyblok/astro";
 
 export async function getStaticPaths({ paginate }) {
-	const allPosts = await Astro.glob("../../content/blog/posts/**/index.md");
+	const sbApi = useStoryblokApi();
+
+	const allPosts = await sbApi.getAll("cdn/stories", {
+		by_slugs: "blog-posts/*",
+	});
+	
 	const sortedPosts = allPosts.sort((a, b) => {
-		const aDate = new Date(b.frontmatter.date);
-		const bDate = new Date(a.frontmatter.date);
+		const aDate = new Date(b.content.date);
+		const bDate = new Date(a.content.date);
 		return aDate.getTime() - bDate.getTime();
 	});
+	
 	return paginate(sortedPosts, {
 		pageSize: 12,
 	});

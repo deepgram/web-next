@@ -8,52 +8,44 @@ const { author } = Astro.props;
 
 <div class="author-hero mb-20">
 	<div class="flex-1 author-info">
-		<h1 class="name">{author.title}</h1>
-		<h2 class="title">{author.jobtitle}</h2>
+		<h1 class="name">{author.content.title}</h1>
+		<h2 class="title">{author.content.jobtitle}</h2>
 		<ul class="socials">
-			{
-				author.twitter && (
-					<li>
-						<Link href={`https://twitter.com/${author.twitter}`} target="_blank" rel="nofollow">
-							<Icon icon="twitter" />
-						</Link>
-					</li>
-				)
-			}
+			{author.content.twitter && (
+				<li>
+					<Link href={`https://twitter.com/${author.content.twitter}`} target="_blank" rel="nofollow">
+						<Icon icon="twitter" />
+					</Link>
+				</li>
+			)}
 
-			{
-				author.linkedin && (
-					<li>
-						<Link href={author.linkedin} target="_blank" rel="nofollow">
-							<Icon icon="linkedin" />
-						</Link>
-					</li>
-				)
-			}
-			{
-				author.github && (
-					<li>
-						<Link href={author.github} target="_blank" rel="nofollow">
-							<Icon icon="github" />
-						</Link>
-					</li>
-				)
-			}
-			{
-				author.twitch && (
-					<li>
-						<Link href={author.twitch} target="_blank" rel="nofollow">
-							<Icon icon="twitch" />
-						</Link>
-					</li>
-				)
-			}
+			{author.content.linkedin && (
+				<li>
+					<Link href={author.content.linkedin} target="_blank" rel="nofollow">
+						<Icon icon="linkedin" />
+					</Link>
+				</li>
+			)}
+			{author.content.github && (
+				<li>
+					<Link href={author.content.github} target="_blank" rel="nofollow">
+						<Icon icon="github" />
+					</Link>
+				</li>
+			)}
+			{author.content.twitch && (
+				<li>
+					<Link href={author.content.twitch} target="_blank" rel="nofollow">
+						<Icon icon="twitch" />
+					</Link>
+				</li>
+			)}
 		</ul>
-		<p class="bio">{author.bio}</p>
+		<p class="bio">{author.content.bio}</p>
 	</div>
 	<div class="picture-section">
 		<Svg class="fingerprint" name="fingerprint" />
-		<img class="picture" src={author.picture} alt={author.title} />
+		<img class="picture" src={author.content.picture.filename} alt={author.content.title} />
 	</div>
 </div>
 

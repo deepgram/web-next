@@ -1,10 +1,11 @@
 ---
 import Authors from "../strings/Authors.astro";
 import GenericBlogCard from "./GenericBlogCard.astro";
+import ImageSrcSet from "../images/ImageSrcSet.astro";
 
 const { class: classes, post } = Astro.props;
-let { title } = post.frontmatter;
-const { title: originalTitle, authors, cover } = post.frontmatter;
+let { title } = post.content;
+const { title: originalTitle, authors, cover_image } = post.content;
 
 title = title.length > 50 ? `${title.substring(0, 47)}...` : title;
 ---
@@ -16,7 +17,7 @@ title = title.length > 50 ? `${title.substring(0, 47)}...` : title;
 		</div>
 		<Authors authors={authors} />
 	</div>
-	<div class="shrink-0 w-[6rem] lg:w-[7rem] p-[0.5rem] flex justify-end items-center">
-		<img class="h-[5rem] lg:h-[6rem] object-cover" src={cover} alt={`Blog title image for the blog post: ${originalTitle}`} />
+	<div class="shrink-0 w-[6rem] lg:w-[7rem] p-[0.5rem] flex justify-end place-items-start">
+		<ImageSrcSet class="h-[5rem] lg:h-[6rem] object-cover" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
 </GenericBlogCard>

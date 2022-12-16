@@ -1,0 +1,25 @@
+---
+import { storyblokEditable } from "@storyblok/astro";
+
+const { class: classes, blok, slug } = Astro.props;
+if (blok.picture.filename.indexOf('cloudinary') > -1) {
+	if(blok.picture.filename.indexOf('w_') === -1) {
+		blok.picture.filename = blok.picture.filename.replace('upload/', 'upload/w_200/');
+	} 
+	if(blok.picture.filename.indexOf('c_') === -1) {
+		blok.picture.filename = blok.picture.filename.replace('upload/', 'upload/c_crop/');
+	}
+}
+---
+
+<a class={`block text-black ${classes ? classes : ""}`} href={`/authors/${slug}`} {...storyblokEditable(blok)}>
+	<div class="flex">
+		<div class="shrink-0 w-[6rem] md:w-[8rem]">
+			<img class="h-[6rem] md:h-[8rem] w-[6rem] md:w-[8rem] object-cover rounded-full" src={blok.picture.filename} alt={`Author image for ${blok.title}`} />
+		</div>
+		<div class="flex flex-col ml-4 pt-2 md:pt-8">
+			<h4>{blok.title}</h4>
+			<h5 class="text-storm">{blok.jobtitle}</h5>
+		</div>
+	</div>
+</a>

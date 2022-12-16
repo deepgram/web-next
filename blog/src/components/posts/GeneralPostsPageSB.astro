@@ -1,0 +1,21 @@
+---
+import HasAside from "../../shared/components/layout/HasAside.astro";
+import CategoryList from "../../shared/components/nav/CategoryList.astro";
+import BlogCardList from "../../shared/components/lists/BlogCardList.astro";
+import BlogCard from "../../shared/components/cards/BlogCardSB.astro";
+import Pagination from "../nav/Pagination.astro";
+import Backlink from "../nav/Backlink.astro";
+
+const { posts, page, slug, link, path, linkText, subtitle } = Astro.props;
+---
+
+<Backlink href={link} class="mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-iris">{linkText}</Backlink>
+<h1 class="mb-8">Deepgram Blog ⚡️</h1>
+<h2 class="mb-8">{subtitle}</h2>
+<HasAside>
+	<CategoryList slot="aside" />
+	<BlogCardList>
+		{posts.map((post, index) => <BlogCard post={post} />)}
+	</BlogCardList>
+	<Pagination page={page} path={path} slug={slug} />
+</HasAside>

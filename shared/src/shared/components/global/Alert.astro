@@ -1,6 +1,9 @@
 ---
 import Icon from "../general/Icon.astro";
-const { type = "info", fill = "fill-black" } = Astro.props;
+const { blok } = Astro.props;
+const { type = "info", fill = "fill-black" } = blok;
+import { renderRichText } from "@storyblok/astro";
+const renderedRichText = renderRichText(blok.inner_html);
 ---
 
 <div class={`alert ${type}`}>
@@ -8,7 +11,9 @@ const { type = "info", fill = "fill-black" } = Astro.props;
 		<Icon class={`icon h-6 w-6 ${type}`} icon={type} />
 	</div>
 	<div class="text w-5/6">
-		<slot />
+		<slot>
+			<div set:html={renderedRichText}></div>
+		</slot>
 	</div>
 </div>
 

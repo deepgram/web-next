@@ -1,0 +1,7 @@
+---
+import BlogCard from "../../shared/components/cards/BlogCardSB.astro";
+
+const { posts } = Astro.props;
+---
+
+{posts && posts.map((post) => <BlogCard post={post} />)}

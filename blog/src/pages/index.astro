@@ -1,44 +1,45 @@
 ---
-import settings from "../content/blog/settings.json";
-
 import ContrastSection from "../shared/components/decoration/ContrastSection.astro";
 import Layout from "../layouts/Default.astro";
 import Hero from "../components/homepage/Hero.astro";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
 import CategoryList from "../shared/components/nav/CategoryList.astro";
-import CategorySection from "../components/homepage/CategorySection.astro";
+import CategorySection from "../components/homepage/CategorySectionSB.astro";
 import Link from "../shared/components/general/Link.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
-import { getSluggedJson } from "../shared/util";
 import WhitepaperPromo from "../shared/components/global/WhitepaperPromo.astro";
+import { useStoryblokApi } from "@storyblok/astro";
 
-const allPosts = await Astro.glob("../content/blog/posts/**/index.md");
+const sbApi = useStoryblokApi();
 
-const sortedPosts = allPosts.sort((a, b) => {
-	const aDate = new Date(b.frontmatter.date);
-	const bDate = new Date(a.frontmatter.date);
-	return aDate.getTime() - bDate.getTime();
+// 4138 is the story ID for the "Featured Posts" story
+const { data: featured } = await sbApi.get("cdn/stories/4138");
+const featuredData = featured.story.content;
+const { data: featuredPost } = await sbApi.get(`cdn/stories/${featuredData.Featured.id}`, {
+	find_by: "uuid",
+});
+const { data: homepagePosts } = await sbApi.get("cdn/stories", {
+	by_uuids: featuredData.Homepage.join(","),
+	sort_by: "content.date:desc",
+});
+const { data: allPosts } = await sbApi.get("cdn/stories", {
+	by_slugs: "blog-posts/*",
+	per_page: 8,
+	sort_by: "content.date:desc",
 });
 
-const featuredPost = allPosts.find((post) => {
-	return post.file.includes(`/${settings.featured_post}.md`);
-});
-
-const homepagePosts = allPosts.filter((post) => {
-	return settings.homepage_posts.find((slug) => {
-		return post.file.includes(`/${slug}.md`);
-	});
-});
-
-const otherPosts = sortedPosts.filter((post) => {
-	return ![featuredPost, ...homepagePosts].some((f) => {
-		return f.file === post.file;
+const otherPosts = allPosts.stories.filter((post) => {
+	return ![featuredPost, ...homepagePosts.stories].some((f) => {
+		return f.uuid === post.uuid;
 	});
 });
 
 const latestPosts = otherPosts.splice(0, 2);
-const categories = await getSluggedJson("blog/category");
+const { data } = await sbApi.get("cdn/stories", {
+	by_slugs: "categories/*",
+});
+const categories = data.stories;
 
 // build json schema object
 const schema = {
@@ -65,25 +66,23 @@ const schema = {
 
 	<ContrastSection contrast="cloud" background="white" class="bg-sound-wave-cloud-dark" bottomDivider="eclipse-divider" bottomOverlay>
 		<PrimarySection class="pt-[7rem] md:pt-[7.33203125rem] lg:pt-[7.6640625rem] xl:pt-[8.328125rem]">
-			<Hero title="Deepgram Blog ⚡️" featured={featuredPost} homepage={homepagePosts} latest={latestPosts} />
+			<Hero title="Deepgram Blog ⚡️" featured={featuredPost.story} homepage={homepagePosts.stories} latest={latestPosts} />
 		</PrimarySection>
 	</ContrastSection>
 	<PrimarySection class="mt-48 xl:mt-64">
 		<HasAside>
 			<CategoryList slot="aside" />
-			{
-				categories &&
-					categories.map((category, index) => (
-						<>
-							<CategorySection category={category} />
-							{index === 0 && (
-								<div class="mb-32">
-									<WhitepaperPromo whitepaper="latest" />
-								</div>
-							)}
-						</>
-					))
-			}
+			{categories &&
+				categories.map((category, index) => (
+					<>
+						<CategorySection category={category} />
+						{index === 0 && (
+							<div class="mb-32">
+								<WhitepaperPromo whitepaper="latest" />
+							</div>
+						)}
+					</>
+				))}
 			<center class="-mt-10 mb-20">
 				<Link href="/posts" icon="arrow-right" iconSuffix class="button button--secondary button--small">View All</Link>
 			</center>
