@@ -1,0 +1,9 @@
+{
+  "name": "@deepgram-web-functions/slack-bot-discussions",
+  "version": "0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^1.6.0"
+  }
+}
