@@ -1,0 +1,494 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: "Migrating from Amazon Web Services (AWS) Transcribe to Deepgram"
+description: Learn how to migrate from Amazon Web Services (AWS) Transcribe to Deepgram. For developers or practitioners who are using AWS Transcribe and are considering or actively moving to Deepgram.
+type: "migration"
+order: 1
+seo:
+  metaTitle: "Migrating from Amazon Web Services (AWS) Transcribe to Deepgram"
+  metaDescription: Learn how to migrate from Amazon Web Services (AWS) Transcribe to Deepgram. For developers or practitioners who are using AWS Transcribe and are considering or actively moving to Deepgram.
+  keywords: migrate, amazon, aws, transcribe, speech, text, migration, migrate
+---
+import Panel from '../../../../shared/components/global/Panel.astro';
+
+# {frontmatter.title}
+
+Moving audio transcription and classification from one environment to another can be a challenging task, even for experienced teams. This guide will give you an overview of the process of migrating your transcription processes from Amazon Web Services (AWS) Transcribe to Deepgram to help you make the transition as quickly and efficiently as possible.
+
+## Migration Process
+
+During the migration process, you will need to perform the following tasks:
+
+| Before Migration | During Migration | After Migration |
+|------------------|------------------|-----------------|
+| <ul><li>Identify any upstream dependencies on your transcriptions</li><li>Find representative samples of your audio for testing</li><li>Get familiar with Deepgram’s API and understand differences from Amazon</li><li>Create an API key</li><li>Test your audio</li><li>Create a migration plan</li><li>Create a rollback plan</li></ul> | <ul><li>Configure your response parsing to conform to Deepgram's JSON response</li><li>Swap over traffic to Deepgram API</li><li>Monitor systems</li></ul> | <ul><li>Testing</li><li>Tune downstream processes to Deepgram output</li></ul> |
+
+
+## Differences
+
+Once you’ve selected your [model](/documentation/features/model/) tier, Deepgram provides many features and capabilities to help you transcribe and classify your audio. However, some capabilities and concepts are implemented differently from Amazon Transcribe.
+
+| Features and Capabilities | Deepgram | Amazon Transcribe |
+|---------------------------|----------|-------------------|
+| Base model | Yes | Yes |
+| Use Case or Domain-specific models | 8 | 2 |
+| Trained model             | Yes | Yes |
+| Batch processing (1 hour of audio) | 20 seconds | 5 minutes |
+| Streaming processing lag  | 300-800 ms | 1000-5000 ms, or 1-5 s |
+| Maximum number of channels | No limit | 2 |
+| Search | Yes | Yes (part of Post Call Analytics bundle) |
+| Diarization (separate per speaker) | Up to 16 | Up to 5 |
+| Noise reduction | Yes | Yes |
+| Custom vocabulary | Yes - Keyword Boosting, trained model | Yes - custom vocabulary, custom language model |
+| Redaction | Yes | Yes |
+| Punctuation | Yes | Yes |
+| Profanity filter | Yes | Yes |
+| Numeral formatting | Yes | Yes |
+| Audio inputs | Supports over 100 file types. Some of these include:<br/><ul><li>MP3</li><li>MP4</li><li>MP2</li><li>AAC</li><li>WAV</li><li>FLAC</li><li>PCM</li><li>M4A</li><li>Ogg</li><li>Opus</li><li>WebM</li></ul> | <strong>Batch</strong><ul><li>AMR</li><li>FLAC</li><li>MP3</li><li>MP4</li><li>Ogg</li><li>WebM</li><li>WAV</li></ul><strong>Streaming</strong><ul><li>FLAC</li><li>Opus-encoded audio in an Ogg container</li><li>PCM signed 16-bit little-endian audio (note that this does not include WAV)</li></ul> |
+| [SDK](/sdks-tools/) | Yes<br/><strong>Certified</strong><ul><li>Node.js</li><li>.NET</li><li>Python</li></ul><strong>Community</strong><ul><li>Deno</li><li>Go</li></ul> | Yes<br/><strong>Certified</strong><ul><li>.NET</li><li>Go</li><li>Java</li><li>JavaScript</li><li>PHP</li><li>Python</li><li>Ruby</li></ul> |
+| Web Sockets | Yes | Yes |
+| Data logging | Yes | Yes |
+
+### Detailed Description of Differences
+
+Working with the Deepgram API is quick and easy, and speech-to-text vendors have many overlapping features. However, key differences in terminology and how features are deployed exist.
+
+#### General
+
+Both Deepgram and Amazon provide you with the following values by default:
+
+- Words
+- Timing
+- Confidence
+
+Additionally, Amazon provides the following values by default: 
+
+- Type
+
+##### Deepgram Default JSON Response
+
+**Interim Result**
+
+```json
+{
+   "channel":{
+      "alternatives":[
+         {
+            "confidence":0.99121094,
+            "transcript":"section one of az",
+            "words":[
+               {
+                  "confidence":0.9980469,
+                  "end":1.2935,
+                  "start":0.81589997,
+                  "word":"section"
+               },
+               {
+                  "confidence":0.9897461,
+                  "end":1.6517,
+                  "start":1.2935,
+                  "word":"one"
+               },
+               {
+                  "confidence":0.99121094,
+                  "end":1.8507,
+                  "start":1.6517,
+                  "word":"of"
+               },
+               {
+                  "confidence":0.5073242,
+                  "end":1.9999375,
+                  "start":1.8507,
+                  "word":"az"
+               }
+            ]
+         }
+      ]
+   },
+   "channel_index":[
+      0,
+      1
+   ],
+   "duration":1.9999375,
+   "is_final":false,
+   "metadata":{
+      "model_uuid":"4899aa60-f723-4517-9815-2042acc12a82",
+      "request_id":"fbbe3da5-4a23-4fd3-a4eb-95f2fe8672f5"
+   },
+   "speech_final":false,
+   "start":0.0
+}
+ ```
+
+**Final Result**
+
+```json
+{
+   "channel":{
+      "alternatives":[
+         {
+            "confidence":0.9941406,
+            "transcript":"section one of az fable a new translation",
+            "words":[
+               {
+                  "confidence":0.9975586,
+                  "end":1.2970455,
+                  "start":0.81813633,
+                  "word":"section"
+               },
+               {
+                  MORE WORDS...
+               },
+               {
+                  "confidence":0.99853516,
+                  "end":4.2314997,
+                  "start":3.7315,
+                  "word":"translation"
+               }
+            ]
+         }
+      ]
+   },
+   "channel_index":[
+      0,
+      1
+   ],
+   "duration":4.4,
+   "is_final":true,
+   "metadata":{
+      "model_uuid":"4899aa60-f723-4517-9815-2042acc12a82",
+      "request_id":"fbbe3da5-4a23-4fd3-a4eb-95f2fe8672f5"
+   },
+   "speech_final":false,
+   "start":0.0
+}
+```
+
+#### Use Case or Domain-specific Models
+
+Deepgram and Amazon provide speech recognition models that are pre-trained or tuned to identify the words and phrases unique to a specific use case or domain. Deepgram creates our speech recognition models through transfer learning from our highly-performant general models. It is important to test multiple models to see which one meets the accuracy, performance, and scalability needs for your use case. 
+
+Deepgram has eight off-the-shelf speech recognition models for:
+
+- General 
+- Phone calls
+- Meetings
+- Voicemail
+- Conversational AI
+- Earnings Calls
+- Video
+- Open Source 
+
+Amazon provides three options for speech recognition including:
+
+- General
+- Medical
+- Call Analytics
+
+#### Search
+
+Deepgram provides users with the ability to search for specific moments in audio. Deepgram search is based on the acoustic sounds of keywords, whereas other vendors provide search based on the transcribed keyword text. (For example, Amazon Transcribe transcription search capabilities are packaged with their Call Analytics bundle, which searches transcriptions on a time range, sentiment, entities, and words; this search is done on the transcribed text.) Deepgram's method allows you to accurately identify whether a phrase was uttered in submitted audio by letting Deepgram "hear" whether the phrase was uttered rather than by trying to look for sufficiently close matches in the text transcript. Many customers have found search using acoustics to be more accurate for their use cases because even in cases where the transcript is not correct, Deepgram will still match on the audio. 
+
+Deepgram’s Search feature uses a query that allows you to pass in a word or phrase to find and then returns results in the response JSON object. In the JSON response, we return information including the start time and end time of when that phrase was possibly uttered and a confidence rating for each match. So, in the response, you will see the query (the word or phrase you searched for), and then hits (an array of objects that give you the confidence, start, end, and snippet of each possible match to your search). You can include up to 25 search terms per request.
+
+##### Sample code 
+
+You can search for multiple terms individually: `search=epistemology&search=warwick`
+
+You can search for a phrase. URL-encode the phrase when submitting it: `search=social%20epistemology`
+
+As an example, we used a WAV audio file that contains the first 20 seconds of a college lecture on epistemology. The term "epistemology" in this audio file is sufficiently technical that our model will not transcribe it accurately, but our phonetic search will still be able to find it.
+
+**Input**
+
+`search=epistemology`
+
+**Response**
+
+```json
+"search":[
+  {
+    "query":"epistemology",
+    "hits":[
+      {"confidence":0.9348958,"start":10.725,"end":11.485,"snippet":"is a"},
+      {"confidence":0.9348958,"start":13.965,"end":14.764999,"snippet":"epi"},
+      {"confidence":0.9204282,"start":4.0074897,"end":4.805,"snippet":"social epi"},
+      {"confidence":0.27662036,"start":8.792552,"end":10.365,"snippet":"us today is"},
+      {"confidence":0.1319444,"start":17.205,"end":18.115,"snippet":"nature of knowledge"},
+      {"confidence":0.0885417,"start":15.285,"end":16.085,"snippet":"branch philosophy"},
+      {"confidence":0.045138836,"start":5.1240044,"end":5.722137,"snippet":"university of"},
+      {"confidence":0.045138836,"start":5.6025105,"end":7.4367843,"snippet":"warwick and"},
+      {"confidence":0.0,"start":1.0168257,"end":1.9339627,"snippet":"hello this is steve"},
+      {"confidence":0.0,"start":7.277282,"end":8.27417,"snippet":"and the question"}
+    ]
+  }
+]
+```
+
+Amazon Transcribe customers need to upgrade to Post Call Analytics (PCA) to have access to search capabilities. PCA currently supports the following search features:
+
+- Search on call attributes such as time range, sentiment, or entities
+- Search transcriptions
+
+#### Custom Vocabulary
+
+Both Deepgram and Amazon provide users the ability to improve the accuracy of specific keywords or vocabulary. Deepgram has two methods to perform this: our Keyword Boosting feature and model training. Amazon also has two methods for improving accuracy through custom vocabulary and creating a custom language model using their tools.
+
+##### Deepgram Keyword Boosting
+
+Deepgram's Keywords feature uses a query to give Deepgram more information so that it can better transcribe the audio submitted in the request. Keywords are words that can be sent along with the audio, that Deepgram trains itself to watch more closely for, so we can transcribe them more accurately. 
+
+Key points to consider:
+
+- You can send up to 200 keywords per API request
+- When listing keywords, you do not need to provide any "sounds like" spelling hints.
+- Pro tip: If you want a keyword capitalized in your transcript, capitalize it in the `keywords` parameter.
+
+##### Deepgram AI Model Training
+
+Speech Recognition technology can face challenges when transcribing certain terms, particularly jargon, names, or very uncommon words. If you know about context-unique words ahead of time, you can send them with the request as keywords, and Deepgram will do a better job of transcribing them. However, if you have more than 200 unique keywords or phrases that Deepgram general or Use-Case-specific models do not identify accurately enough with Keyword Boosting, you have the option of upgrading to a trained AI model. In a matter of weeks, Deepgram can train a model using sample audio and ground truth transcripts to learn your language, accents, dialects, and terminology.
+
+Key points to consider:
+
+- Deepgram trains models based on human-transcribed transcripts and the associated audio to achieve maximum accuracy.  
+- If you have only audio without transcribed text, we have an expert human transcription team that can transcribe the audio to create an excellent model training dataset.
+
+##### Amazon Custom Vocabularies
+
+Developers can use Amazon Transcribe custom vocabularies to improve transcription accuracy for one or more specific words. These are generally domain-specific terms, such as brand names and acronyms, proper nouns, and words that Amazon Transcribe isn't rendering correctly.
+
+Key points to consider:
+
+- You can have up to 100 vocabularies per AWS account.
+- You can create custom vocabularies in table or list format:
+   - **Table format**: You must first upload your custom vocabulary file into an Amazon S3 bucket, then include the Amazon S3 URI of your vocabulary file in your request.
+   - **List format**: If using the AWS Management Console, you must save your custom vocabulary file locally, then include the path to your custom vocabulary file in your request; if using the command line (AWS CLI or AWS SDK), you must include your list as comma-separated words within your request.
+
+##### Amazon Custom Language Models
+
+Amazon provides the option to use your own custom language model. These custom language models learn the context associated with a given word to more accurately transcribe that word. For customers with access to the data and with training and tuning programming expertise, this could be a viable option.
+
+Key considerations:
+
+- You must have separate sets of data on hand--one for training and one for tuning.
+   - You can supply Amazon Transcribe with up to 2 GB of text data to train your model; this is referred to as training data. 
+   - Optionally, when you have no (or few) in-domain transcripts, you can provide Amazon Transcribe with up to 200 MB of text data to tune your model; this is referred to as tuning data.
+- Your data must meet Amazon language, encoding, special character, and file size requirements, or your model training will fail.
+   - Data must be in the same language as the model you want to create. For example, if you want to create a custom language model that transcribes audio in US English (en-US), all your text data must be in US English.
+   - Data must be in plain text format with UTF-8 encoding.
+   - Data must not contain any special characters or formatting, such as HTML tags.
+   - Data must be a maximum combined total of 2 GB in size for training data and 200 MB for tuning data.
+
+##### What to Expect in the JSON Response
+
+Both Deepgram and Amazon will provide you with the following values:
+
+- `transcript`
+- `start_time` (duration)
+- `end_time` (duration)
+- `word` (string)
+- `confidence` (float)
+
+In addition, by default, Amazon will provide:
+
+- Type (pronunciation or punctuation)
+ 
+<Panel type="info" title="Pro Tip">
+
+Avoid transferring over a list of keywords that has been used with a previous vendor.
+
+Every system is different. Whereas Keyword Boosting may have been necessary with another vendor, Deepgram's system may already perform well without the aid of keywords. Additional boosting may negatively affect results. Start without any keywords, add them as you see fit, and cautiously increase boosts using decimal values until you find the best fit for your data. To learn more about Keyword Boosting, see our [Keyword Boosting](/documentation/features/keywords/) feature documentation.
+
+</Panel>
+ 
+#### Batch Transcription
+
+Both Deepgram and Amazon provide pre-recorded, or batch, transcriptions. In addition to the limit differences for audio length and processing scale (listed below), Deepgram does not require you to store your audio in an Amazon S3 bucket. You can transcribe audio files from your preferred storage location--your laptop, VPC, or third-party cloud.   
+
+Amazon maintains the following limits for batch processing:
+
+- Maximum audio length of 4 hours
+- Maximum audio file size of 500 MB (call analytics)-2 GB
+- Number of concurrent batch transcriptions of 100-250, depending on model
+
+Deepgram maintains the following limits for batch processing:
+
+- No limits to audio length
+- Maximum audio file size of 2 GB per file
+- Can scale to thousands of concurrent batch transcriptions
+
+##### What to Expect in the JSON Response
+
+Both Deepgram and Amazon will provide you with the following values:
+
+- `transcript`
+- `start_time` (duration)
+- `end_time` (duration)
+- `word` (string)
+- `confidence` (float)
+
+##### Sample Code
+
+Deepgram supports both transcription of files on your local machine and transcription of files stored remotely.
+
+**Deepgram**
+
+```py
+from deepgram import Deepgram
+import asyncio, json
+
+DEEPGRAM_API_KEY = 'YOUR_API_KEY'
+PATH_TO_FILE = 'some/file.wav'
+
+async def main():
+    # Initializes the Deepgram SDK
+    deepgram = Deepgram(DEEPGRAM_API_KEY)
+    # Open the audio file
+    with open(PATH_TO_FILE, 'rb') as audio:
+        # ...or replace mimetype as appropriate
+        source = {'buffer': audio, 'mimetype': 'audio/wav'}
+        response = await deepgram.transcription.prerecorded(source, {'punctuate': True})
+        print(json.dumps(response, indent=4))
+
+asyncio.run(main())
+```
+
+To see more, [visit Deepgram's Python SDK GitHub repo](https://github.com/deepgram/python-sdk).
+
+**Amazon**
+
+```py
+import time
+import boto3
+
+def transcribe_file(job_name, file_uri, transcribe_client):
+    transcribe_client.start_transcription_job(
+        TranscriptionJobName = job_name,
+        Media = {
+            'MediaFileUri': file_uri
+        },
+        MediaFormat = 'flac',
+        LanguageCode = 'en-US'
+    )
+
+    max_tries = 60
+    while max_tries > 0:
+        max_tries -= 1
+        job = transcribe_client.get_transcription_job(TranscriptionJobName = job_name)
+        job_status = job['TranscriptionJob']['TranscriptionJobStatus']
+        if job_status in ['COMPLETED', 'FAILED']:
+            print(f"Job {job_name} is {job_status}.")
+            if job_status == 'COMPLETED':
+                print(
+                    f"Download the transcript from\n"
+                    f"\t{job['TranscriptionJob']['Transcript']['TranscriptFileUri']}.")
+            break
+        else:
+            print(f"Waiting for {job_name}. Current status is {job_status}.")
+        time.sleep(10)
+
+
+def main():
+    transcribe_client = boto3.client('transcribe', region_name = 'us-west-2')
+    file_uri = 's3://DOC-EXAMPLE-BUCKET/my-input-files/my-media-file.flac'
+    transcribe_file('Example-job', file_uri, transcribe_client)
+
+
+if __name__ == '__main__':
+    main()
+```
+
+To see more, [visit Amazon Transcribe's Developer Guide](https://docs.amazonaws.cn/en_us/transcribe/latest/dg/transcribe-dg.pdf).
+
+#### Live Streaming
+
+Both Deepgram and Amazon provide streaming transcription. Deepgram streaming transcription has a number of advantages including lower latency, higher accuracy, and overall ease of use.
+
+When using Deepgram to transcribe live streaming audio, two of the features you can use to further understand your audio include [Endpointing](/documentation/features/endpointing/) and [Interim Results](/documentation/features/interim-results/). Both of these features monitor incoming live streaming audio and can indicate the end of a type of processing, but they are used in very different ways:
+
+- Deepgram live streaming looks for any deviation in the natural flow of speech and returns a finalized response at these places. To learn more about this feature, see [Endpointing](/documentation/features/endpointing/).
+- Deepgram live streaming can also return a series of interim transcripts followed by a final transcript. To learn more, see [Interim Results](/documentation/features/interim-results/).
+- If your downstream natural language processing (NLP) requires complete utterances, review our [Best Practices for Utterance Segmentation](/documentation/guides/understand-endpointing-interim-results/#best-practices-for-utterance-segmentation). 
+
+| Endpointing | Interim Results|
+|-------------|----------------|
+| Identifies deviations in the natural flow of speech and returns a finalized response at these places | Provides preliminary results during live streaming, then sends a definitive transcript of the portion of audio that has been processed so far |
+| Turned on by default | Turned off by default |
+| Returns `speech_final: true` parameter when Deepgram identifies a deviation in the natural flow of speech and the response contains the finalized transcript| Returns `is_final: true` parameter when Deepgram has finished processing audio for a time range and the response contains the finalized transcript for that time range |
+
+##### Amazon Transcribe
+
+Amazon Transcribe can perform real-time streaming through the AWS SDKs, HTTP/2, WebSockets, and the AWS Management Console. Amazon supports FLAC, OPUS-encoded audio in an Ogg container, and PCM (16-bit little-endian, audio format, no WAV). If using HTTP/2 or WebSockets, Amazon requires a format called event stream encoding. Amazon streaming is [supported in only 12 languages](https://docs.aws.amazon.com/transcribe/latest/dg/supported-languages.html), and Amazon notes that its real-time streaming speed "may have accuracy limitations in some cases."
+
+Amazon real-time streaming automatically provides partial results, passing along a results field called `IsPartial`. If `IsPartial` is set to `true`, then the transcripted segment is not complete. If `IsPartial` is set to `false`, then the transcripted segment is final. Deepgram has a similar interim results field called `is_final`. With Deepgram, if `is_final` is set to `false`, then the results may be improved. If `is_final` is set to `true`, then the transcript is final.
+
+If you require lower latency, Amazon requires you to enable Partial Results Stabilization, which can continually change the text until the segment is final. This feature adds a field called `Stable` to the results. If `Stable` is set to `true`, then the text will not change. If `Stable` is set to `false`, then the text may change as the segment is transcribed. Turning on Partial Results Stabilization also affects accuracy, depending on the level of stability required. Higher stability transcribes faster but with lower accuracy.
+
+##### What to Expect in the JSON Response
+
+By default, both Deepgram and Amazon will provide you with the following values:
+
+- `transcript`
+- `start_time` (duration)
+- `end_time` (duration)
+- `word` (string)
+- `confidence` (float)
+
+Additionally, Amazon and Deepgram provide the following:
+
+| Deepgram | Amazon |
+|----------|--------|
+| <ul><li>punctuate</li><li>interim_results</li><li>language</li><li>is_final</li><li>speech_final</li></ul> | <ul><li>Type</li><li>Stable</li><li>VocabularyFilterMatch</li><li>IsPartial</li><li>ResultID</li></ul> |
+
+## Get Started
+
+Now that you know what to expect, let's get started migrating.
+
+### Before You Begin
+
+Before you can begin migrating, you'll need to do a few things.
+
+#### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+- $150 in credit, which gives you access to:
+  - all Base and Enhanced tier [models](/documentation/features/model/)
+  - [pre-recorded](/documentation/getting-started/prerecorded/) and [live streaming](/documentation/getting-started/streaming/) functionality
+  - all [features](/documentation/features/)
+  
+#### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](https://console.deepgram.com/signup?jump=keys). Make note of your API Key; you will need it later.
+
+#### Configure Environment
+
+We provide sample scripts in Python and Node.js and assume you have already configured either a Python or Node development environment. System requirements will vary depending on the programming language you use:
+
+| Pre-recorded | Live Streaming |
+|--------------|----------------|
+| <strong>Node.js</strong><br/><ul><li>node >= 14.14.37</li></ul><br/><strong>Python</strong><br/><ul><li>python >= 3.7</li></ul> | <strong>Node.js</strong><br/><ul><li>node >= 14.14.37</li><li>cross-fetch >= 3.1.5</li></ul><br/><strong>Python</strong><br/><ul><li>python >= 3.7</li><li>aiohttp >= 3.8.1</li></ul>
+
+### Get Transcripts and Customize Response
+
+To get transcripts and customize your response, you can use our SDKs and code samples for:
+- [Pre-recorded (Batch)](/documentation/getting-started/prerecorded/)
+- [Streaming](/documentation/getting-started/streaming/)
+
+## Migration Best Practices
+
+Each API service has different limitations to ensure performance. Known differences between Deepgram and Amazon Transcribe are detailed below, along with information about how our customers address these differences during the migration process.  
+
+| AWS Capability | Deepgram Recommendations |
+|----------------------|-----------------|
+| Job queueing | Job queueing is not required for Deepgram. Due to our architecture built for scalability, we can run as many streams as required for your application. Please speak with us about your requirements. |
+| Language identification | Not currently available. |
+| Custom vocabulary filters | Deepgram’s [Find and Replace](/documentation/features/replace/) feature matches this Amazon feature; we can find words that need to be replaced with other words. |
+| Interruption | Not currently analyzed |
+| Loudness | Not currently analyzed |
+| Non-talk time | We provide timestamps for the talk time, so non-talk time can easily be calculated. |
+| Talk speed | Not currently analyzed |
+
+## Conclusion
+
+Deepgram uses a data-centric approach to creating AI speech recognition models. Our data-centric approach allows us to create highly accurate and extremely low latency models that are based on a customer's real-world audio for a fraction of the cost of others. To learn more about Deepgram, [visit our website](https://deepgram.com/) and [check out our documentation](/documentation/). If you're a customer and still have questions, our customer success team is standing by to assist you with your migration: [Contact Us](https://deepgram.com/contact-us). 

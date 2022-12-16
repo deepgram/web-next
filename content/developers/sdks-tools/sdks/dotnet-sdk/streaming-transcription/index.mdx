@@ -1,0 +1,196 @@
+---
+title: Streaming Transcription
+description: Official .NET SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, dotnet, csharp]
+seo:
+  metaTitle: Streaming Transcription - .NET SDK
+  metaDescription: Official .NET SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, dotnet, csharp, speech-to-text
+---
+
+The `CreateLiveTranscriptionClient` method encapsulates a websocket connection
+to the Deepgram API and returns a class that emits events received from the'
+Deepgram API for consumption by your application.
+
+<Panel type="info" title="LiveTranscriptionClient lifecycle">
+
+The `LiveTranscriptionClient` is Disposable so it should always be created in a
+'using' to ensure it is disposed of properly.
+
+</Panel>
+
+## Initiating a Connection
+
+The `StartConnectionAsync` method initiates a connection with the Deepgram API via websocket. You
+may pass in options for the transcription as well.
+
+```csharp
+using (var deepgramLive = deepgram.CreateLiveTranscriptionClient())
+{
+  var options = new LiveTranscriptionOptions()
+  {
+    Punctuate = true,
+    Diarize = true,
+    Encoding = Deepgram.Common.AudioEncoding.Linear16
+  };
+  await deepgramLive.StartConnectionAsync(options);
+}
+
+```
+
+## Events
+
+The following events are fired by the `LiveTranscriptionClient`:
+
+| Event                | Description                                           | Data                                                                              |
+| -------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `ConnectionOpened`   | The websocket connection to Deepgram has been opened. | The DG live transcription object                                                  |
+| `ConnectionClosed`   | The websocket connection to Deepgram has been closed. | WebSocket.CloseEvent                                                              |
+| `ConnectionError`    | An error occurred with the websocket connection       | Error object                                                                      |
+| `TranscriptReceived` | Deepgram has responded with a transcription           | [Transcription response](/api-reference/#transcription-streaming-response-schema) |
+
+### ConnectionOpened
+
+Fires when the WebSocket connection to Deepgram has been opened. Ensure you
+begin sending your audio data once the connection to Deepgram has been
+established.
+
+<Panel type="info" title="Note">
+
+The example below demonstrates sending a pre-recorded audio to simulate a
+real-time stream of audio. In a real application, this type of audio is better
+handled using the pre-recorded transcription.
+
+</Panel>
+
+```csharp
+using (var deepgramLive = deepgram.CreateLiveTranscriptionClient())
+{
+    deepgramLive.ConnectionOpened += HandleConnectionOpened;
+
+    // Connection opened so start sending audio.
+    void HandleConnectionOpened(object? sender, ConnectionOpenEventArgs e)
+    {
+        byte[] buffer;
+
+        using (FileStream fs = File.OpenRead("C:\\Users\\Michael\\Desktop\\Bueller.wav"))
+        {
+            buffer = new byte[fs.Length];
+            fs.Read(buffer, 0, (int)fs.Length);
+        }
+
+        var chunks = buffer.Chunk(1000);
+
+        foreach (var chunk in chunks)
+        {
+            deepgramLive.SendData(chunk);
+            Task.Delay(50).Wait();
+        }
+
+        deepgramLive.FinishAsync();
+    }
+}
+```
+
+### ConnectionClosed
+
+Fires when the WebSocket connection is closed.
+
+```csharp
+using (var deepgramLive = deepgram.CreateLiveTranscriptionClient())
+{
+    deepgramLive.ConnectionClosed += HandleConnectionClosed;
+
+    void HandleConnectionClosed(object? sender, ConnectionClosedEventArgs e)
+    {
+        Console.Write("Connection Closed");
+    }
+}
+```
+
+### ConnectionError
+
+Fires on any error in the connection, sending or receiving.
+
+```csharp
+using (var deepgramLive = deepgram.CreateLiveTranscriptionClient())
+{
+    deepgramLive.ConnectionError += HandleConnectionError;
+
+    void HandleConnectionError(object? sender, ConnectionErrorEventArgs e)
+    {
+        Console.WriteLine(e.Exception.Message);
+    }
+}
+```
+
+### TranscriptReceived
+
+Fires when a transcript is received from the Deepgram API.
+
+```csharp
+using (var deepgramLive = deepgram.CreateLiveTranscriptionClient())
+{
+    deepgramLive.TranscriptReceived += HandleTranscriptReceived;
+
+    void HandleTranscriptReceived(object? sender, TranscriptReceivedEventArgs e)
+    {
+        if (e.Transcript.IsFinal &&
+            e.Transcript.Channel.Alternatives.First().Transcript.Length > 0) {
+            var transcript = e.Transcript;
+            Console.WriteLine($"{transcript.Channel.Alternatives.First().Transcript}");
+        }
+    }
+}
+```
+
+## Functions
+
+The object returned by the `transcription.live` function provides several
+functions to make using the Deepgram API easier. They are `send`,
+`getReadyState`, and `finish`.
+
+### Sending Data
+
+The `SendData` method sends raw audio data to the Deepgram API.
+
+```csharp
+deepgramLive.SendData(AUDIO_STREAM_DATA);
+```
+
+### Get Websocket State
+
+The `State` method returns the ready state of the websocket connection
+to Deepgram.
+
+```csharp
+var websocketReadyState = deepgramLive.State();
+```
+
+### Finish Transcribing
+
+The `FinishAsync` method sends a signal to the Deepgram API that you have finished
+streaming audio and it should conclude its transcription efforts. Upon sending
+the final transcript back it will close the websocket connection.
+
+```csharp
+deepgramLive.FinishAsync()
+```
+
+### Closing the Connection
+
+The `StopConnectionAsync` method closes the Websocket connection to Deepgram.
+
+<Panel type="warning" title="You may want FinishAsync instead.">
+
+In most instances, the `FinishAsync` method should be used to end a streaming
+session. Otherwise, the final transcript will not be received. Using the `FinishAsync`
+method will also cause the connection to close.
+
+</Panel>
+
+> 
+```csharp
+deepgramLive.StopConnectionAsync()
+```

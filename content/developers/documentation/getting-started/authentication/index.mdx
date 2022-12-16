@@ -1,0 +1,141 @@
+---
+title: Authenticating
+description: "Learn how to authenticate with Deepgram's API."
+type: core-concept
+seo:
+  metaTitle: Authenticating
+  metaDescription: Learn how to authenticate with Deepgram's API.
+  keywords: 'deepgram, api, key, secret, authentication, authenticate, authenticating'
+---
+
+Deepgram's API uses API Keys to authenticate requests. You can view and manage your API Keys in the [Deepgram Console](https://console.deepgram.com) or through the [Deepgram API](/api-reference/).
+
+Your API keys grant many privileges, so be sure to keep them secure. Do not share your secret API keys in publicly accessible areas such as GitHub or client-side code.
+
+For best results, use different API Keys for testing and production. To help filter usage, you can also use different API Keys for different consumers or teams at your organization.
+
+## Before You Begin
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+$150 in credit, which gives you access to:
+  - all base models
+  - pre-recorded and streaming functionality
+  - all features
+
+## Create an API Key
+
+API Keys are associated with Deepgram [Projects](/documentation/getting-started/projects/), which organize all of your Deepgram resources and consist of a set of users, a set of API Keys, and billing and monitoring settings.
+
+When you create an API Key, you assign it a Role, which determines which actions it can be used to perform in the associated Project. Deepgram uses a tiered system of access control to provide granular access to its endpoints. To learn more about roles, see [Working with Roles](/documentation/getting-started/roles/).
+
+<Alert type="warning">
+
+When you sign up, we automatically create a Project for you. Any promotional credit you have earned is attached to this first project. If you would like to transfer your promotional balance to a new project, [contact Support](/support/).
+
+</Alert>
+
+### Use the Deepgram Console
+
+You must create your first API Key using the [Deepgram Console](https://console.deepgram.com/signup?jump=keys). Thereafter, you can continue to add additional API Keys using the console, or you can [create additional API Keys using the Deepgram API](#use-the-deepgram-api).
+
+1. Log in to the [Deepgram Console](https://console.deepgram.com).
+
+2. Locate the **Projects** dropdown on the top-left, select the project to which you want to add an API Key.
+
+3. Select **Settings**.
+
+4. Select the **API Keys** view.
+
+5. Select **Create a New API Key**.
+
+6. Enter settings, and select **Create Key**:
+
+    | Name | Description |
+    | ---- | ----------- |
+    | **Friendly Name (Comment)** | Name or comment to help you identify and differentiate between your keys. |
+    | **Permissions** | Role to assign to the API Key. The API Key may perform only the actions allowed by the permissions associated with this role. To learn more about roles, see [Working with Roles](/documentation/getting-started/roles/). |
+    | **Expiration** | Expiration date to assign to the API Key. You can enter a specific date, select a duration of time to keep the key valid, or set the key to never expire. | 
+    | **Tag** | Labels to associate with the API Key. Any requests sent using the key will also be tagged with the associated labels. Once set, tags cannot be changed. To learn more about managing multiple projects using tags, see [Using Multiple Projects](/documentation/getting-started/multiple-projects/).
+
+7. Copy the **key** and save it somewhere safe, then select **Got it**. For security reasons, we won't be able to show you the key again.
+
+### Use the Deepgram API
+
+You must create your first API Key using the [Deepgram Console](https://console.deepgram.com). Thereafter, you can create additional API Keys using the Deepgram Console or [Deepgram API](/api-reference/#keys-create). 
+
+## Send a Request with the API Key
+
+Once you have created an API Key, you can use it as credentials to call Deepgram's API.
+
+Send requests to the API with an `Authorization` header that references your project's API Key:
+
+```bash
+Authorization: Token YOUR_DEEPGRAM_API_KEY
+```
+
+All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests made without authentication will also fail.
+
+### Transcribe a Remote File
+
+To transcribe audio from a publicly-accessible remote file (for example, hosted in AWS S3 or another server), you would run the following in a terminal or your favorite API client:
+
+<Alert type="info">
+
+Be sure to configure the code snippet by replacing the placeholder `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key.
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --url 'https://api.deepgram.com/v1/listen' \
+  --header 'content-type: application/json' \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --data '{"url":"https://static.deepgram.com/examples/interview_speech-analytics.wav"}'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+To transcribe from a local file
+
+### Transcribe a Local File
+
+To transcribe audio from a file on your computer, run the following in a terminal or your favorite API client:
+
+<Alert type="info">
+
+Be sure to configure the code snippet by replacing the placeholder parameters with custom values.
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @YOUR_AUDIO_WAV \
+  --url 'https://api.deepgram.com/v1/listen'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Troubleshoot
+
+To create additional API Keys, be sure that the API Key you are using to authenticate your request has been assigned either the `administrator` role or the following permissions: `keys:read`, `keys:write`.
+
+Make sure you are sending API requests over HTTPS. Calls made over plain HTTP will fail. API requests made without authentication will also fail.

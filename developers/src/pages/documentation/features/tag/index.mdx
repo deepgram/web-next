@@ -1,0 +1,109 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Tagging
+description: Learn about Deepgram's Tagging feature, which allows you to label your requests for the purpose of identification during usage reporting.
+tags: [tagging, streaming, pre-recorded]
+order: 24
+seo:
+  metaTitle: Tagging
+  metaDescription: Learn about Deepgram's Tagging feature, which allows you to label your requests for the purpose of identification during usage reporting.
+  keywords: tag, usage, report, identify
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+# {frontmatter.title}
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+
+Deepgram’s Tagging feature allows you to label your API requests for the purpose of identification during usage reporting. You can also apply tags to API Keys; if you do, any tags applied to the API Key running the API request will also be applied to the request itself.
+
+## Use Cases
+
+Some examples of use cases for Tagging include:
+
+- Customers who have multiple, related business projects and need to track separate usage.
+- Customers who have projects managed by different business teams or under different cost centers.
+- Customers who operate a business-to-business (B2B) model that focuses on selling products and services to other companies. Rather than creating separate projects to track usage data, you can create a separate API Key for each company and tag it with the their information. Any requests run using the API Key will also be tagged with that company's information.
+
+## Enable Feature
+
+To enable Tagging, when you call Deepgram’s API, add a `tag` parameter in the query string and set it to the tag you would like to recognize:
+
+`tag=VALUE`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace the placeholder `VALUE` with your tag and `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```bash
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?tag=VALUE'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+<Alert type="warning">
+
+Make sure you are certain about what you want your tag to be. Once you have set a tag, you cannot update it.
+
+</Alert>
+
+### Apply a Single Tag
+
+To apply just one tag, send one instance of the `tag` parameter in the query string when calling the API:
+
+`tag=marketing`
+
+If your tag includes spaces or special characters, be sure to URL encode your tag:
+
+`tag=marketing%20team` or `tag=marketing+team`
+
+### Apply Multiple Tags
+
+To apply multiple tags, submit the `tag` parameter multiple times in your API request:
+
+`tag=marketing&tag=legal`
+
+## Filter Requests by Tag
+
+Once applied, you can identify tags associated with API requests returned by the [Get All Requests](/api-reference/#usage-all), [Get Request](/api-reference/#usage-get), and [Get Fields](/api-reference/#usage-fields) endpoints.
+
+You can also directly query requests by tag at the [Summarize Usage](/api-reference/#usage-summary) endpoint.
+
+<Alert type="info">
+
+Be sure to replace the placeholder `PROJECT_ID` with your Deepgram Console Project ID, `VALUE` with your tag, and `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```bash
+curl \
+  --request GET \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'content-type: application/json'
+  --url 'https://api.deepgram.com/v1/projects/PROJECT_ID/usage?tag=VALUE'
+```
+
+</CodeBlock>
+
+</CodeGroup>

@@ -1,0 +1,191 @@
+---
+import "@docsearch/css/dist/style.css";
+import "../shared/components/search/DocSearch.css";
+
+import Button from "../shared/components/general/Button.astro";
+import DocSearch from "../shared/components/search/DocSearch";
+import Link from "../shared/components/general/Link.astro";
+import MobileNavItem from "../shared/components/nav/MobileNavItem.astro";
+import MobileNavMenu from "../shared/components/nav/MobileNavMenu.astro";
+import MobileNavMenuItem from "../shared/components/nav/MobileNavMenuItem.astro";
+import Svg from "../shared/components/general/Svg.astro";
+
+const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
+const pathname = Astro.url.pathname;
+---
+
+<header x-data="{ menu: null }" class="sticky top-0 z-20">
+	<div class="absolute w-full h-screen bg-black/75 text-white" style="display: none" x-show="menu !== null" x-on:click="menu = null"></div>
+
+	<nav class="w-full bg-almostBlack/90 text-white bg-blur py-0 sm:px-4">
+		<div class="flex justify-between items-center xl:grid grid-cols-3 px-4">
+			<div class="logo col-span-2 sm:mt-4 sm:mb-4 w-auto stroke-transparent text-left">
+				<Link href={WWW_DOMAIN} class="max-h-full">
+					<span class="sr-only">Deepgram</span>
+					<img class="h-[24px]" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
+					<!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" /> -->
+				</Link>
+			</div>
+			<div class="hidden xl:flex space-x-[1rem] items-center pr-4 col-start-5 lg:col-start-6 col-span-3">
+				<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
+				<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--main-nav text-white">Log In</Link>
+				<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem] flex-1">Contact Us</Link>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[7rem] flex-1">Sign Up</Link>
+			</div>
+			<div class="flex items-center space-x-5 xl:ml-12 xl:pb-1 xl:hidden">
+				<Button id="docsearch-button-tablet" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
+				<Button class="button button--mini sm:button--small button--secondary" x-on:click="menu = 'Mobile'" aria-label="Mobile Menu">Menu</Button>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--mini sm:button--small button--primary">Sign Up</Link>
+			</div>
+		</div>
+		<div class="w-full mx-auto px-4 flex justify-between items-center xl:justify-start">
+			<div class="hidden xl:flex-1 xl:flex xl:items-center xl:justify-between">
+				<nav class="flex space-x-[2.1875rem] pt-4" x-on:click.outside="menu = null">
+					<!-- NavLinks -->
+					<Link
+						primary
+						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.length === 1 ? "text-white border-lightIris" : "text-cloud"}`}
+						href={`${DOCS_DOMAIN}`}>Home</Link
+					>
+					<Link
+						primary
+						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${
+							pathname.endsWith("documentation") ? "text-white border-lightIris" : "text-cloud"
+						}`}
+						href={`${DOCS_DOMAIN}/documentation`}>Documentation</Link
+					>
+					<Link
+						primary
+						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${
+							pathname.endsWith("api-reference") ? "text-white border-lightIris" : "text-cloud"
+						}`}
+						href={`${DOCS_DOMAIN}/api-reference`}>API Reference</Link
+					>
+					<Link
+						primary
+						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("on-prem") ? "text-white border-lightIris" : "text-cloud"}`}
+						href={`${DOCS_DOMAIN}/on-prem`}>On-Prem Deployment</Link
+					>
+					<Link
+						primary
+						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("use-cases") ? "text-white border-lightIris" : "text-cloud"}`}
+						href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link
+					>
+					<Link
+						primary
+						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("sdks-tools") ? "text-white border-lightIris" : "text-cloud"}`}
+						href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs & Tools</Link
+					>
+					<Link
+						primary
+						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("changelog") ? "text-white border-lightIris" : "text-cloud"}`}
+						href={`${WWW_DOMAIN}/changelog`}>Changelog</Link
+					>
+					<Link primary icon="arrow-top-right-on-square" iconSuffix iconStroke class={`flex items-center hover:text-white font-bold text-cloud`} href={`${BLOG_DOMAIN}/categories/tutorial`}
+						>Blog Tutorials&nbsp;</Link
+					>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Mobile Nav -->
+		<div class="fixed flex flex-col h-screen inset-0 xl:hidden bg-black" style="display: none;" x-show="menu === 'Mobile'">
+			<div class="relative inset-x-0 bg-almostBlack text-white">
+				<div class="max-w-screen-2xl sm:px-8 sm:pt-2 mx-auto px-4 flex justify-between items-center xl:justify-start">
+					<div class="mr-[2.875rem]">
+						<Link href={WWW_DOMAIN} class="flex">
+							<span class="sr-only">Deepgram</span>
+							<img class="h-full" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
+							<!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] w-auto text-dgRed" /> -->
+						</Link>
+					</div>
+					<div class="flex items-center space-x-5 xl:ml-12 pb-1 xl:hidden">
+						<Button id="docsearch-button-mobile" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
+						<Button icon="xmark-large" class="button big-icon button--main-nav" x-on:click="menu = null" aria-label="Close Menu" />
+					</div>
+				</div>
+			</div>
+			<div class="grow flex flex-col justify-between overflow-y-scroll">
+				<div class="bg-darkCharcoal">
+					<nav class="grid font-bold">
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  ${pathname.endsWith("") ? "text-white border-lightIris" : "text-cloud"}`}
+							href={`${DOCS_DOMAIN}`}
+							href={`${DOCS_DOMAIN}`}>Home</Link
+						>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
+								pathname.endsWith("documentation") ? "text-white border-lightIris" : "text-cloud"
+							}`}
+							href={`${DOCS_DOMAIN}/documentation`}>Documentation</Link
+						>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
+								pathname.endsWith("api-reference") ? "text-white border-lightIris" : "text-cloud"
+							}`}
+							href={`${DOCS_DOMAIN}/api-reference`}>API Reference</Link
+						>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
+								pathname.endsWith("on-prem") ? "text-white border-lightIris" : "text-cloud"
+							}`}
+							href={`${DOCS_DOMAIN}/on-prem`}>On-Prem Deployment</Link
+						>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
+								pathname.endsWith("use-cases") ? "text-white border-lightIris" : "text-cloud"
+							}`}
+							href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link
+						>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
+								pathname.endsWith("sdks-tools") ? "text-white border-lightIris" : "text-cloud"
+							}`}
+							href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs & Tools</Link
+						>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
+								pathname.endsWith("changelog") ? "text-white border-lightIris" : "text-cloud"
+							}`}
+							href={`${WWW_DOMAIN}/changelog`}>Changelog</Link
+						>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
+								pathname.endsWith("tutorial") ? "text-white border-lightIris" : "text-cloud"
+							}`}
+							href={`${BLOG_DOMAIN}/categories/tutorial`}>Blog Tutorials</Link
+						>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+					</nav>
+				</div>
+			</div>
+			<div class="bg-black grid grid-cols-2 grid-rows-2 gap-4 p-6 shadow-menu">
+				<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--secondary button--block">Log In</Link>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--small button--tertiary button--block">Sign Up</Link>
+				<Link href={`${WWW_DOMAIN}/contact-us`} class="col-span-2 button button--small button--primary button--block">Contact Us</Link>
+			</div>
+		</div>
+	</nav>
+	<DocSearch client:only="preact" />
+</header>
+
+<style is:global>
+	header nav a {
+		@apply text-sm;
+	}
+</style>

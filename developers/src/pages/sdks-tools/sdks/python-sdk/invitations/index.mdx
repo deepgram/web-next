@@ -1,0 +1,125 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Invitations
+description: Official Python SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, python]
+seo:
+  metaTitle: Invitations - Python SDK
+  metaDescription: Official Python SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, python, speech-to-text
+---
+
+# {frontmatter.title}
+
+The `deepgram.invitations` object provides access to the invites endpoints of the
+Deepgram API. Each request is project based and will require a `project_id`.
+
+## List Project Invitations
+
+You can retrieve all active invitations on a given project using the `invitations.list_invitations` function.
+
+### List Project Invitations Parameters
+
+| Parameter  | Type   | Description                                                            |
+| ---------- | ------ | ---------------------------------------------------------------------- |
+| project_id | String | A unique identifier for the project you wish to see the invitations of |
+
+### List Project Invitations Example Request
+
+```python
+response = await deepgram.invitations.list_invitations(PROJECT_ID)
+```
+
+### List Project Invitations Response
+
+```ts
+{
+	members: [
+		{
+			email: string,
+			scope: string,
+		},
+	];
+}
+```
+
+## Send Project Invitation
+
+You can send an invitation to a given email address to join a given project using the `invitations.send_invitation` function.
+
+### Send Project Invitation Parameters
+
+| Parameter  | Type   | Description                                                                                                                            |
+| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| project_id | String | A unique identifier for the project you wish to send an invitation from                                                                |
+| option     | Object | An object containing the email address of the person you wish to send an invite to, and the scope you want them to have in the project |
+
+### Send Project Invitation Example Request
+
+```python
+response = await deepgram.invitations.send_invitation(PROJECT_ID, {
+  email: 'example@email.com',
+  scope: 'member',
+})
+```
+
+### Send Project Invitation Response
+
+```ts
+{
+	message: string;
+}
+```
+
+## Leave Project
+
+Removes the authenticated account from the specified project.
+
+### Leave Project Parameters
+
+| Parameter  | Type   | Description                                           |
+| ---------- | ------ | ----------------------------------------------------- |
+| project_id | String | A unique identifier for the project you wish to leave |
+
+### Leave Project Example Request
+
+```python
+response = await deepgram.invitations.leave_project(PROJECT_ID)
+```
+
+### Leave Project Response
+
+```ts
+{
+	message: string;
+}
+```
+
+## Remove Invitation from Project
+
+Removes the invitation of the specified email from the specified project.
+
+### Remove Invitation from Project Parameters
+
+| Parameter  | Type   | Description                                                            |
+| ---------- | ------ | ---------------------------------------------------------------------- |
+| project_id | String | A unique identifier for the project you wish to remove the invite from |
+| email      | String | The email address of the invitee                                       |
+
+### Remove Invitation from Project Example Request
+
+```python
+response = await deepgram.invitations.remove_invitation(
+  PROJECT_ID,
+  'example@email.com'
+)
+```
+
+### Remove Invitation from Project Response
+
+```ts
+{
+	message: string;
+}
+```

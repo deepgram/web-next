@@ -1,0 +1,142 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Pre-recorded Transcription
+description: Official Node.js SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, nodejs]
+seo:
+  metaTitle: Pre-recorded Transcription - Node.js SDK
+  metaDescription: Official Node.js SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, nodejs, javascript, speech-to-text
+---
+import Panel from '../../../../../shared/components/global/Panel.astro'; 
+
+# {frontmatter.title}
+
+The Deepgram client has a `transcription` property that allows you to request
+transcripts for pre-recorded audio. To request a transcript for a pre-recorded
+particular audio file, you'll use the `transcription.preRecorded` function.
+
+## Pre-recorded Transcription Parameters
+
+| Parameter | Type                       | Description                                |
+| --------- | -------------------------- | ------------------------------------------ |
+| source    | Buffer, Object, ReadStream | Provides the source of audio to transcribe |
+| options   | Object                     | Parameters to filter requests. See below.  |
+
+You can pass a Buffer, ReadStream, or URL
+to a file to transcribe. Here's how to construct each:
+
+### Sending a URL
+
+```js
+// Sending the URL to a file
+const audioSource = { url: URL_OF_FILE };
+```
+
+### Sending a Buffer
+
+<Panel type="warning" title="Node Only">
+
+The SDK only supports sending Buffers from Node. The in-browser version of the
+SDK only provides the capability to send URL sources.
+
+</Panel>
+
+Import the `fs` Node library to access your file system. Then use its
+`readFile` function providing the path to your file. That function will return
+a buffer that can then be passed in to the Deepgram client. You will also need
+to provide the MIMETYPE of the file.
+
+```js
+const fs = require("fs");
+
+// Sending a Buffer of the file
+fs.readFile("/path/to/file", function (err, buffer) {
+	const audioSource = { buffer: buffer, mimetype: MIMETYPE_OF_FILE };
+});
+```
+
+### Sending a ReadStream
+
+<Panel type="warning" title="Node Only">
+
+The SDK only supports sending Buffers from Node. The in-browser version of the
+SDK only provides the capability to send URL sources.
+
+</Panel>
+
+Import the `fs` Node library to access your file system. Then use its
+`createReadStream` function providing the path to your file. The ReadStream
+it creates can then be passed in to the Deepgram client. You will also need
+to provide the MIMETYPE of the file.
+
+```js
+const fs = require("fs");
+
+// Sending a ReadStream
+const audioSource = {
+	stream: fs.createReadStream("/path/to/file"),
+	mimetype: MIMETYPE_OF_FILE,
+};
+```
+
+### Pre-recorded Transcription Options
+
+Additional transcription options can be provided for pre-recorded
+transcriptions. They are provided as an object as the second parameter of the
+`transcription.preRecorded` function. Each of these parameters map to a
+feature in the Deepgram API. Reference the
+[features documentation](/documentation/features/) to learn what features may
+be appropriate for your request.
+
+## Pre-recorded Transcription Example Request
+
+With the source you chose above, call the `transcription.preRecorded` function
+and provide any [additional options](#pre-recorded-transcription-options) as
+an object.
+
+```js
+const response = await deepgram.transcription.preRecorded(audioSource, {
+	punctuate: true,
+	// other options are available
+});
+```
+
+## Helper Functions
+
+The SDK provides a few helper functions for converting pre-recorded
+transcriptions into common caption formats, like WebVTT and SRT.
+
+<Panel type="info" title="Utterances are Required for Helper Functions">
+
+In order to use the helper functions, the `utterances` feature must be used when
+transcribing the audio.
+
+</Panel>
+
+### Converting to WebVTT
+
+Each pre-recorded transcription object provides a `toWebVTT` function to convert
+the transcript to the WebVTT format.
+
+```js
+const response = await deepgram.transcription.preRecorded(audioSource, {
+	punctuate: true,
+	utterances: true,
+});
+const webvttTranscript = response.toWebVTT();
+```
+
+### Converting to SRT
+
+Each pre-recorded transcription object provides a `toSRT` function to convert
+the transcript to the SRT format.
+
+```js
+const response = await deepgram.transcription.preRecorded(audioSource, {
+	punctuate: true,
+	utterances: true,
+});
+const srtTranscript = response.toSRT();
+```

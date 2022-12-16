@@ -1,0 +1,334 @@
+---
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
+import DocsCard from "../../../shared/components/cards/DocsCard.astro";
+import Layout from "../../../layouts/General.astro";
+
+const guides = await Astro.glob("./**/index.mdx");
+const sortedGuides = guides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+---
+
+<Layout>
+	<article>
+		<h1>Features</h1>
+		<div class="overflow-x-auto -mr-0 xl:-mr-64">
+			<table border="2">
+				<thead>
+					<tr>
+						<th scope="col" colspan="3">Feature</th>
+						<th scope="col">Pre-recorded?</th>
+						<th scope="col">Streaming?</th>
+						<th scope="col">Language(s)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/tier/">Tier</a><a href="/documentation/features/tier/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">Depends on Model</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<td rowspan="13"> <a href="/documentation/features/model/">Model</a><a href="/documentation/features/model/"> </a></td>
+					</tr>
+					<tr>
+						<td><code>general</code></td>
+						<td>Enhanced</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code>, <code>es</code></td>
+					</tr>
+					<tr>
+						<td><code>general</code></td>
+						<td>Base</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<td><code>phonecall</code></td>
+						<td>Enhanced <em>beta</em></td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code></td>
+					</tr>
+					<tr>
+						<td><code>phonecall</code></td>
+						<td>Base</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>
+							<code>en</code>, <code>en-US</code>, <code>en-IN</code>,
+							<code>en-GB</code>
+						</td>
+					</tr>
+					<tr>
+						<td><code>voicemail</code></td>
+						<td>Base</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code></td>
+					</tr>
+					<tr>
+						<td><code>meeting</code></td>
+						<td>Enhanced <em>beta</em></td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code></td>
+					</tr>
+					<tr>
+						<td><code>meeting</code></td>
+						<td>Base</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code></td>
+					</tr>
+					<tr>
+						<td><code>finance</code></td>
+						<td>Enhanced</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code></td>
+					</tr>
+					<tr>
+						<td><code>finance</code></td>
+						<td>Base</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code></td>
+					</tr>
+					<tr>
+						<td><code>conversationalai</code></td>
+						<td>Base</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code></td>
+					</tr>
+					<tr>
+						<td><code>video</code></td>
+						<td>Base</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code></td>
+					</tr>
+					<tr>
+						<td>Custom models</td>
+						<td>Enhanced & Base</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Available in the language they are built in.</td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/version/">Version</a><a href="/documentation/features/version/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/detect-language/">Language Detection</a><a href="/documentation/features/detect-language/"> </a></th>
+						<td>Yes</td>
+						<td>No</td>
+						<td> <a href="/documentation/features/language/">All not in beta</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/punctuate/">Punctuation</a><a href="/documentation/features/punctuate/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/profanity-filter/">Profanity Filter</a><a href="/documentation/features/profanity-filter/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/redact/">Redaction</a><a href="/documentation/features/redact/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/diarize/">Diarization</a><a href="/documentation/features/diarize/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3">
+							<a href="/documentation/features/smart-format/">Smart Format</a><a href="/documentation/features/smart-format/"> </a>
+						</th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/multichannel/">Multichannel</a><a href="/documentation/features/multichannel/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3">Alternatives</th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/numerals/">Numerals</a><a href="/documentation/features/numerals/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/search/">Search</a><a href="/documentation/features/search/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/replace/">Find and Replace</a><a href="/documentation/features/replace/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/callback/">Callback</a><a href="/documentation/features/callback/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/keywords/">Keywords</a><a href="/documentation/features/keywords/"> </a></th>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/paragraphs/">Paragraphs</a><a href="/documentation/features/paragraphs/"> </a></th>
+						<td>Yes</td>
+						<td>No</td>
+						<td> <a href="/documentation/features/language/">All in which words are delimited by spaces</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/summarize/">Summarization</a><a href="/documentation/features/summarize/"> </a></th>
+						<td>Yes</td>
+						<td>No</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/detect-topics/">Topic Detection</a><a href="/documentation/features/detect-topics/"> </a></th>
+						<td>Yes</td>
+						<td>No</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/utterances/">Utterances</a><a href="/documentation/features/utterances/"> </a></th>
+						<td>Yes</td>
+						<td>No</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/interim-results/">Interim Results</a><a href="/documentation/features/interim-results/"> </a></th>
+						<td>No</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/endpointing/">Endpointing</a><a href="/documentation/features/endpointing/"> </a></th>
+						<td>No</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/encoding/">Encoding</a><a href="/documentation/features/encoding/"> </a></th>
+						<td>No</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/channels/">Channels</a><a href="/documentation/features/channels/"> </a></th>
+						<td>No</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<th colspan="3"> <a href="/documentation/features/sample-rate/">Sample Rate</a><a href="/documentation/features/sample-rate/"> </a></th>
+						<td>No</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h2>Guides</h2>
+		<DocsCardList>
+			{sortedGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+		</DocsCardList>
+	</article>
+</Layout>
+
+<style>
+	h1 {
+		color: #111827;
+		font-weight: 700;
+		font-size: 2.25em;
+		margin-top: 1.5rem;
+		margin-bottom: 2.5rem;
+		line-height: 1.1111111;
+		font-family: Favorit;
+	}
+	h2 {
+		@apply mb-5 mt-10;
+		color: #111827;
+		font-weight: 700;
+		font-size: 1.5em;
+		line-height: 1.3333333;
+		font-family: Favorit;
+	}
+
+	:global(h3) {
+		@apply mt-0;
+		@apply mb-2;
+	}
+
+	table * {
+		@apply text-left text-sm;
+	}
+
+	table thead {
+		color: #111827;
+		font-weight: 600;
+		border-bottom-width: 1px;
+		border-bottom-color: #d1d5db;
+	}
+	th {
+		vertical-align: bottom;
+		padding-right: 0.5714286em;
+		padding-bottom: 0.5714286em;
+	}
+
+	table a {
+		@apply font-bold;
+	}
+
+	table code {
+		@apply font-semibold;
+		font-size: 0.875em;
+		@apply bg-white !important;
+	}
+
+	tbody tr {
+		@apply border-b border-gray-200;
+	}
+	tbody td {
+		@apply align-top;
+		vertical-align: top;
+		padding-top: 0.5714286em;
+		padding-right: 0.5714286em;
+		padding-bottom: 0.5714286em;
+		padding-left: 0.5714286em;
+	}
+</style>

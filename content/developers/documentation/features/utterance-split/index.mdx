@@ -1,0 +1,58 @@
+---
+title: Utterance Split
+description: Learn about Deepgram's Utterance Split feature, which detects pauses between words in submitted audio. Used when the Utterances feature is enabled for pre-recorded audio.
+tags: [utterances, pre-recorded]
+order: 17
+seo:
+  metaTitle: Utterance Split
+  metaDescription: Learn about Deepgram's Utterance Split feature, which detects pauses between words in submitted audio. Used when the Utterances feature is enabled for pre-recorded audio.
+  keywords: speech recognition, pre-recorded, batch, utterance split, utterances, pause
+---
+
+<div class="badge">PRE-RECORDED</div>
+
+Deepgram’s Utterance Split feature monitors incoming audio and detects when a sufficiently long pause is detected between words. By default, the length of time Deepgram uses for Utterance Split is 0.8 seconds, but you can configure this value using the `utt_split` parameter.
+
+Utterance Split is used when the [Utterances](/documentation/features/utterances/) feature is enabled for pre-recorded audio.
+
+## Use Cases
+
+Some examples of use cases for Utterance Split include:
+
+* Audio with speakers who pause longer while speaking than the average speaker.
+* Audio with speakers who speak with shorter pauses than the average speaker.
+
+## Enable Feature
+
+To enable Utterance Split, when you call Deepgram’s API, add an `utt_split` parameter in the query string and set it to the length of time (in seconds) of silence between words after which Deepgram will decide that a new utterance should begin. The default values is 0.8 s.
+
+`utt_split=LENGTH-OF-TIME-IN-SECONDS`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client:
+
+<Alert type="info">
+
+Be sure to replace the placeholder `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?utt_split=20&utterances=true'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Results
+
+To learn about the results, see [Utterances](/documentation/features/utterances/#analyze-response).

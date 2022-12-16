@@ -1,0 +1,17 @@
+---
+const { class: classes } = Astro.props;
+---
+
+<article class:list={["post-prose", classes]}>
+	<slot />
+</article>
+
+<style>
+	article {
+		@apply max-w-full;
+		@apply md:max-w-4xl;
+		width: 100%;
+	}
+
+	
+</style>

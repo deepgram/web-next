@@ -1,0 +1,154 @@
+---
+title: Integrate Deepgram with Zoom
+description: Learn how to use Deepgram for automatic speech recognition when using Zoom Video Conferencing.
+tags: [zoom, python]
+seo:
+  metaTitle: Integrate with Zoom
+  metaDescription: Learn how to use Deepgram for automatic speech recognition when using Zoom Video Conferencing.
+  keywords: zoom, stream, video conferencing
+---
+import { Image } from '@astrojs/image/components';
+
+<div class="badge">BETA</div>
+
+[Zoom](https://zoom.us/) is a widely-used cloud-based video communications tool that lets you host virtual one-on-one or team meetings, webinars, and live chats and provides audio, video, screen-sharing, and other collaboration features. Zoom offers enhanced [RTMP](/documentation/glossary/#R) support, which allows you to extract the audio from your content and stream it to Deepgram to get real-time automatic speech recognition for all of your Zoom calls.
+
+## Solution
+
+To help you integrate between Zoom and Deepgram, we provide an example streaming Python script (`stream.py`) that offers an accessible solution off of which you can build.
+
+In this guide, the audio from a Zoom conference call will be streamed to a local server. We will fork the stream to our Python script, which will send the audio to Deepgram, then receive and print transcriptions to the screen. In a real implementation, you will likely want to modify the script to provide a callback URL to which transcriptions can be sent.
+
+### Before You Begin
+
+#### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+$150 in credit, which gives you access to:
+  - all base models
+  - pre-recorded and streaming functionality
+  - all features
+
+#### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](/documentation/getting-started/authentication/#create-an-api-key). Make note of your API Key; you will need it later.
+
+#### Create a Zoom Pro Account
+
+Before you can use Zoom’s live streaming, you'll need to [create a Zoom Pro account](https://zoom.us/signup) and [enable livestreaming for meetings and webinars](https://support.zoom.us/hc/en-us/articles/115001777826-Live-streaming-meetings-or-webinars-using-a-custom-service). Make sure to allow streaming to a **Custom Live Streaming Service**.
+
+#### Configure Host
+
+To use this solution, you will need to either set up a publicly-available hosted environment with a service like [Amazon Web Services](https://aws.amazon.com) or expose a local server to the world with [ngrok](https://ngrok.com/).
+
+In this guide, we use the [RTMP-HLS Docker image](https://hub.docker.com/r/alqutami/rtmp-hls), which creates a video streaming server that supports Real-Time Messaging Protocol (RTMP), HTTP Live Streaming (HLS), and Dynamic Adaptive Streaming over HTTP (DASH) streams. This host uses RTMP proper, which works on top of Transmission Control Protocol (TCP) and uses port 1935 by default. Make sure your firewall exposes this port. Also, if you're running `ngrok`, make sure you're running it over TCP.
+
+#### Install Environment Dependencies
+
+Because Zoom supports [RTMP](/documentation/glossary/#R) streaming, in our hosted environment, we use [RTMPDump](https://rtmpdump.mplayerhq.hu/), a toolkit for RTMP streams.
+
+#### Configure Environment
+
+We provide sample scripts in Python format and assume you have already configured a Python (3.6 or greater) development environment.
+
+#### Install Development Dependencies
+
+Real-time streaming uses [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API), a communications protocol that enables full-duplex communication, which means that you can stream new audio to Deepgram at the same time the latest transcription results are streaming back to you. Using WebSockets is further eased by the wide variety of third-party client libraries that have been written to support a range of languages and production environments.
+
+For Python, we use [websockets](https://pypi.org/project/websockets/).
+Additional dependencies for Python include [scipy](https://pypi.org/project/scipy/) (a scientific library we will use to handle WAV files), [streamlink](https://pypi.org/project/streamlink/) (a command-line utility that extracts streams from various services and pipes them into a chosen video player), and [requests](https://pypi.org/project/requests/) (a simple HTTP library).
+
+### Start the RTMP Server
+
+We recommend running the RTMP server in a Docker container. For this guide, we pulled the [RTMP-HLS Docker image](https://hub.docker.com/r/alqutami/rtmp-hls), which creates a video streaming server that supports RTMP, HLS, and DASH streams. This host runs on port 1935, so make sure your firewall exposes this port.
+
+```bash
+docker run -d -p 1935:1935 -p 8080:8080 alqutami/rtmp-hls
+```
+
+### Download and Configure the Streaming Script
+
+Next, [download our example streaming script (`stream.py`)](https://developers.deepgram.com/data/scripts/integrate-zoom/stream.py) and configure it.
+
+#### Configure Deepgram Authentication
+
+Prior to running the script, you must replace the authentication with your Deepgram username and password.
+
+On line 17 of `stream.py`, replace `YOUR_DEEPGRAM_API_KEY` with the API Key you created earlier in this tutorial:
+
+```python
+17        'Authorization': 'Token YOUR_DEEPGRAM_API_KEY'
+```
+
+### Set Up Your Zoom Conference Call
+
+Next, you will need to start your Zoom meeting and configure your Zoom live-streaming service:
+
+1. Start your Zoom meeting and join the meeting with computer audio.
+
+<div class="screenshot">
+<Image src={import('./integrate-zoom_join-computer-audio.png')} alt="Join Zoom with Computer Audio"/>
+</div>
+
+2. Select **More…** and then **Live on Custom Live Streaming Service**.
+
+<div class="screenshot">
+<Image src={import('./integrate-zoom_more-livestream.png')} alt="Zoom More menu"/>
+</div>
+
+3. Configure streaming, and select **Go Live!**.
+
+   <div class="screenshot">
+    <Image src={import('./integrate-zoom_configure-livestream.png')} alt="Configure Zoom Livestreaming"/>
+   </div>
+
+   | Field                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+   | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | **Streaming URL**           | URL or IP address to which you would like to send audio, plus `/live`. Zoom will stream media to this URL, so that other apps can subscribe to the stream. In this example, this is the URL of the RTMP server we started in the first step.                                                                                                                                                                                                                                                                                         |
+   | **Streaming key**           | Unique identifier for your meeting instance. You can supply any unique ID. Make note of the value you enter because you will need it again later.                                                                                                                                                                                                                                                                                                                                                                                    |
+   | **Live streaming page URL** | URL to a front-end where users can view the live stream. In this example, we intend to use our `stream.py` script to display results in the terminal on the same machine that hosts the RTMP server indicated in the Streaming URL, so we won't have a live streaming page. In this case, we will enter a fake URL in this field because it is required by Zoom). If you modified our example streaming script to use a callback URL, then this page would likely process and display the transcripts provided to that callback URL. |
+
+### Send Streaming Results to Deepgram
+
+In this example, to fork audio to Deepgram using our example script (`stream.py`), we use [RTMPDump](https://rtmpdump.mplayerhq.hu/). To see how we do this, [download the sample shell script (`stream_rtmp.sh`)](https://developers.deepgram.com/data/scripts/integrate-zoom/stream_rtmp.sh) and configure it.
+
+#### Configure the Zoom Streaming Key
+
+Because you could be streaming multiple instances of Zoom at the same time, the script needs to know from which Zoom instance it should get results.
+
+Let's look at the sample shell script more closely. It contains one line:
+
+```bash
+rtmpdump -r "rtmp://0.0.0.0:1935/live/"$1 --live -o - | python3 stream.py
+```
+
+Here, `rtmpdump` makes a connection to a specific stream on the specified RTMP server and directs the media content of the stream to our example streaming script (`stream.py`) for display in your terminal. Parameters include:
+
+| Parameter | Description                                                                                                                                                                                                                                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| −r url    | URL of the server and media content. Should be in the form `rtmp[t][e]://hostname[:port][/app[/playpath]]`. In this example, this is the local IP of the RTMP server we are running. When you run the script, you will pass in the **Streaming key** you configured in Zoom, which will replace the `$1` variable. |
+| −v        | Specifies that the media is a live stream. You may not resume or seek in live streams.                                                                                                                                                                                                                             |
+| −o output | Specifies the output file name. In this case, the output is piped to our example streaming script (`stream.py`) for live display.                                                                                                                                                                                  |
+
+#### Run the Script
+
+To run the script, from the command line, use the following command:
+
+```bash
+source stream_rtmp.sh keyname
+```
+
+Replace `keyname` with the **Streaming key** you entered in Zoom.
+
+### See Results
+
+After a brief delay, you should see results of the audio transcription of your livestreaming Zoom call start to appear on your screen.
+
+<Alert type="info">
+  
+Speed of returned results depends on both Deepgram and Zoom availability, and the setup of your hosting environment.
+
+</Alert>
+
+When analyzing results, red text represents interim transcripts, while green text represents final transcripts. To learn more about interim and final transcripts, see [Interim Results](/documentation/features/interim-results/).

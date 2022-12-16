@@ -1,0 +1,204 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Invitations
+description: Invitations for the Deepgram API
+order: 8
+---
+import ColumnsForCode from '../../components/layout/ColumnsForCode.astro';
+import CodeGroup from '../../shared/components/code/CodeGroup.astro';
+import CodeBlock from '../../shared/components/code/CodeBlock.astro';
+
+# {frontmatter.title}
+<div class="grid lg:grid-cols-2 gap-6">
+To add a Member to a Deepgram Project, you can use the Deepgram Console or the Deepgram API to send an Invitation. When sending an Invitation, you provide an email address for the Member, and Deepgram generates an invitation link and emails it to them.
+</div>
+
+<ColumnsForCode>
+<div slot="left" class="left">
+
+### Leave Project
+
+Removes the authenticated account from the specified project. Will also delete API Keys created by the account for the specified project. If the authenticated account is the only account on the project with the scope `owner`, the call will fail.
+
+Required account scope(s): `project:write`.
+
+#### Path Parameters
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project from which you want to remove the authenticated account.</p>
+  </main>
+</div>
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Account removed from project.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Response Schema
+
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>message:</strong> string</p>
+          <p>Success message.</p>
+  </li>
+</ul>
+
+</div>
+<div slot="right" class="right">
+	<CodeGroup title="endpoint">
+	<CodeBlock active>
+	```vim
+	DELETE /projects/{project_id}/leave
+	```
+	</CodeBlock>
+</CodeGroup>
+	<CodeGroup title="Leave Project" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
+
+	<CodeBlock tab="curl" active>
+		```bash
+		curl --request DELETE \
+			--url 'https://api.deepgram.com/v1/projects/{project_id}/leave' \
+			--header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+			--header 'content-type: application/json'
+		```
+	</CodeBlock>
+	<CodeBlock tab="Node.js">
+		```js
+		const http = require("https");
+
+		const options = {
+			method: "DELETE",
+			hostname: "api.deepgram.com",
+			port: null,
+			path: "/v1/projects/{project_id}/leave",
+			headers: {
+				Authorization: "Token <YOUR_DEEPGRAM_API_KEY>",
+				"content-type": "application/json",
+			},
+		};
+
+		const req = http.request(options, function (res) {
+			const chunks = [];
+
+			res.on("data", function (chunk) {
+				chunks.push(chunk);
+			});
+
+			res.on("end", function () {
+				const body = Buffer.concat(chunks);
+				console.log(body.toString());
+			});
+		});
+
+		req.end();
+		```
+	</CodeBlock>
+	<CodeBlock tab="Python">
+		```py
+		import http.client
+
+		conn = http.client.HTTPSConnection("api.deepgram.com")
+
+		headers = {
+				'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+				'content-type': "application/json"
+				}
+
+		conn.request("DELETE", "/v1/projects/{project_id}/leave", headers=headers)
+
+		res = conn.getresponse()
+		data = res.read()
+
+		print(data.decode("utf-8"))
+		```
+	</CodeBlock>
+	<CodeBlock tab=".NET">
+		```csharp
+		var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/leave");
+		var request = new RestRequest(Method.DELETE);
+		request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+		request.AddHeader("content-type", "application/json");
+		IRestResponse response = client.Execute(request);
+		```
+	</CodeBlock>
+	<CodeBlock tab="Ruby">
+		```ruby
+		require 'uri'
+		require 'net/http'
+		require 'openssl'
+
+		url = URI("https://api.deepgram.com/v1/projects/{project_id}/leave")
+
+		http = Net::HTTP.new(url.host, url.port)
+		http.use_ssl = true
+		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+		request = Net::HTTP::Delete.new(url)
+		request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+		request["content-type"] = 'application/json'
+
+		response = http.request(request)
+		puts response.read_body
+		```
+	</CodeBlock>
+	<CodeBlock tab="PHP">
+		```php
+		<?php
+
+		$curl = curl_init();
+
+		curl_setopt_array($curl, [
+			CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/leave",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "DELETE",
+			CURLOPT_HTTPHEADER => [
+				"Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+				"content-type: application/json"
+			],
+		]);
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+			echo "cURL Error #:" . $err;
+		} else {
+			echo $response;
+		}
+		```
+	</CodeBlock>
+</CodeGroup>
+
+<CodeGroup title="Response" default="json" tabs={["json"]}>
+	<CodeBlock tab="json">
+		```json
+		{
+			"message": "string"
+		}
+		```
+	</CodeBlock>
+</CodeGroup>
+</div>
+</ColumnsForCode>

@@ -1,0 +1,106 @@
+---
+title: Model
+description: Learn about Deepgram's Model feature, which allows you to supply a model to use to process submitted audio.
+tags: [model, streaming, pre-recorded]
+order: 2
+seo:
+  metaTitle: Model
+  metaDescription: Learn about Deepgram's Model feature, which allows you to supply a model to use to process submitted audio.
+  keywords: model, speech-recognition, process, custom
+---
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+
+Deepgram’s Model feature allows you to supply a model to use when processing submitted audio.
+
+Each model belongs to a tier. For self-serve customers, Deepgram provides Enhanced and Base model tiers. Enhanced models are our newest, most powerful ASR models. Enhanced models generally have higher accuracy with better word recognition than our Base models and they handle uncommon words significantly better. Base models are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness. To learn more about tiers, see [Tier](/documentation/features/tier/).
+
+Once you have chosen your tier and model, you can select an available language and a version. To learn more about languages, see [Language](/documentation/features/language/). To learn more about versions, see [Version](/documentation/features/version/). 
+
+By default, Deepgram applies its Base tier general AI model, which is a good, general-purpose model for everyday situations.
+
+## Use Cases
+
+Some examples of use cases for Model include:
+
+- Customers with audio data with traits that match a specific Deepgram-provided use-case model.
+- Customers with specialized audio data who want to apply a custom trained model that has been optimized to provide the best results for their particular data.
+
+## Enable Feature
+
+To enable Model, when you call Deepgram’s API, add a `model` parameter in the query string and set it to the model you would like to use:
+
+`model=OPTION`
+
+<Alert type="info">
+  
+By default, Deepgram applies its Base tier. If you would like to use a different tier, for a hosted deployment, add a `tier` parameter in the query string as well:
+
+`tier=enhanced&model=OPTION`
+  
+For an on-premises deployment, use the `model` parameter in the query string and append `-enhanced` after the name of the model you would like to use:
+
+`model=OPTION-enhanced`
+
+</Alert>
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace the placeholder `OPTION` with your chosen model and `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com)
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?model=OPTION'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Model Options
+
+For self-serve customers, Deepgram provides Enhanced and Base model tiers. To learn more about pricing, see [Deepgram Pricing & Plans](https://deepgram.com/pricing/).
+
+#### Enhanced
+
+Enhanced models are our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.
+
+- `general`: Optimized for everyday audio processing. Generally, more accurate than any region-specific Base model for the language for which it is enabled. If you aren't sure which model to select, start here.
+- `meeting` *beta*: Optimized for conference room settings, which include multiple speakers with a single microphone.
+- `phonecall` *beta*: Optimized for low-bandwidth audio phone calls.
+- `finance` *beta*: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.
+
+#### Base
+
+Base models are built on our signature end-to-end deep learning speech model architecture. They offer a solid combination of accuracy and cost effectiveness.
+
+- `general`: (Default) Optimized for everyday audio processing.
+- `meeting`: Optimized for conference room settings, which include multiple speakers with a single microphone.
+- `phonecall`: Optimized for low-bandwidth audio phone calls.
+- `voicemail`: Optimized for low-bandwidth audio clips with a single speaker. Derived from the phonecall model.
+- `finance`: Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.
+- `conversationalai`: Optimized to allow artificial intelligence technologies, such as chatbots, to interact with people in a human-like way.
+- `video`: Optimized for audio sourced from videos.
+
+<Alert type="warning">
+
+Not all models are supported for all languages. For a list of languages and their supported models, see [Language](/documentation/features/language/).
+
+</Alert>
+
+#### Custom
+
+You may also use a custom, trained model associated with your account by including its `custom_id`.

@@ -1,0 +1,352 @@
+---
+title: 'Getting Started with Live Streaming Audio'
+description: "A quick introduction to getting transcription data from live streaming audio in real time using a web application, Deepgram's API, and Deepgram SDKs."
+type: quickstart
+language: en
+seo:
+  metaTitle: 'Getting Started with Live Streaming Audio'
+  metaDescription: "A quick introduction to getting transcription data from live streaming audio in real time using a web application, Deepgram's API, and Deepgram SDKs."
+  keywords:
+    'streaming, real-time, realtime, audio, transcribe, transcription, speech recognition,
+    quick start, quickstart, sdk'
+---
+
+<Alert type="language">
+
+**¿Prefieres español?** Ver [Tutorial para transcribir audio en vivo](/documentation/getting-started/streaming-es/).
+
+</Alert>
+
+In this guide, you'll learn how to automatically transcribe live streaming audio in real time using Deepgram's SDKs, which are supported for use with the [Deepgram API](/api-reference/).
+
+## Before You Begin
+
+Before you run the code, you'll need to do a few things.
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+- $150 in credit, which gives you access to:
+  - all base [models](/documentation/features/model/)
+  - [pre-recorded](/documentation/getting-started/prerecorded/) and live streaming functionality
+  - all [features](/documentation/features/)
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](https://console.deepgram.com/signup?jump=keys). Make note of your API Key; you will need it later.
+
+### Configure Environment
+
+We provide sample scripts in Python and Node.js and assume you have already configured either a Python or Node development environment. System requirements will vary depending on the programming language you use:
+
+- **Node.js**: node >= 14.14.37, cross-fetch >= 3.1.5
+- **Python**: python >= 3.7, aiohttp >= 3.8.1
+
+<Alert type="info">
+
+If you get stuck at any point, help is just a click away! [Contact Support](/support/).
+
+</Alert>
+
+## Transcribe Audio
+
+Once you have your API Key, it's time to transcribe audio! The instructions below will guide you through the process of creating a sample application, installing the Deepgram SDK, configuring code with your own Deepgram API Key and streaming audio to transcribe, and finally, building and running the application.
+
+### Install the SDK
+
+Open your terminal, navigate to the location on your drive where you want to create your project, and install the Deepgram SDK:
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Python">
+
+```bash
+# Install the Deepgram Python SDK
+# https://github.com/deepgram/python-sdk
+pip install deepgram-sdk
+```
+
+</CodeBlock>
+
+<CodeBlock label="Node.js" active>
+
+```bash
+# Initialize a new application
+npm init
+
+# Install the Deepgram Node.js SDK
+# https://github.com/deepgram/node-sdk
+npm install @deepgram/sdk
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Add Dependencies
+
+Add necessary external dependencies to your project.
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Python">
+
+```bash
+# Install aiohttp: HTTP client/server for asyncio that allows you to write asynchronous clients and servers, and supports WebSockets.
+pip install aiohttp
+```
+
+</CodeBlock>
+
+<CodeBlock label="Node.js" active>
+
+```bash
+# Install cross-fetch: Platform-agnostic Fetch API with typescript support, a simple interface, and optional polyfill.
+npm install cross-fetch
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Write the Code
+
+In your terminal, create a new file in your project's location, and populate it with code.
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Python">
+
+```python
+ # Example filename: deepgram_test.py
+
+from deepgram import Deepgram
+import asyncio
+import aiohttp
+
+# Your Deepgram API Key
+DEEPGRAM_API_KEY = 'YOUR_DEEPGRAM_API_KEY'
+
+# URL for the realtime streaming audio you would like to transcribe
+# The URL for the sample resource changes depending on whether the user is outside or inside the UK
+# Outside the UK
+URL = 'http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw_online_nonuk'
+# Inside the UK
+# URL = 'http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourfm'
+
+async def main():
+  # Initialize the Deepgram SDK
+  deepgram = Deepgram(DEEPGRAM_API_KEY)
+
+  # Create a websocket connection to Deepgram
+  # In this example, punctuation is turned on, interim results are turned off, and language is set to UK English.
+  try:
+    deepgramLive = await deepgram.transcription.live({
+      'punctuate': True,
+      'interim_results': False,
+      'language': 'en-GB'
+    })
+  except Exception as e:
+    print(f'Could not open socket: {e}')
+    return
+
+  # Listen for the connection to close
+  deepgramLive.registerHandler(deepgramLive.event.CLOSE, lambda c: print(f'Connection closed with code {c}.'))
+
+  # Listen for any transcripts received from Deepgram and write them to the console
+  deepgramLive.registerHandler(deepgramLive.event.TRANSCRIPT_RECEIVED, print)
+
+  # Listen for the connection to open and send streaming audio from the URL to Deepgram
+  async with aiohttp.ClientSession() as session:
+    async with session.get(URL) as audio:
+      while True:
+        data = await audio.content.readany()
+        deepgramLive.send(data)
+
+        # If no data is being sent from the live stream, then break out of the loop.
+        if not data:
+            break
+
+  # Indicate that we've finished sending data by sending the customary zero-byte message to the Deepgram streaming endpoint, and wait until we get back the final summary metadata object
+  await deepgramLive.finish()
+
+# If running in a Jupyter notebook, Jupyter is already running an event loop, so run main with this line instead:
+#await main()
+asyncio.run(main())
+```
+
+</CodeBlock>
+
+<CodeBlock label="Node.js" active>
+
+```js
+// Example filename: index.js
+
+const { Deepgram } = require('@deepgram/sdk')
+const fetch = require('cross-fetch')
+
+// Your Deepgram API Key
+const deepgramApiKey = 'YOUR_DEEPGRAM_API_KEY'
+
+// URL for the audio you would like to stream
+// URL for the example resource will change depending on whether user is outside or inside the UK
+// Outside the UK
+const url = 'http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourlw_online_nonuk'
+// Inside the UK
+// const url = 'http://stream.live.vc.bbcmedia.co.uk/bbc_radio_fourfm';
+
+// Initialize the Deepgram SDK
+const deepgram = new Deepgram(deepgramApiKey)
+
+// Create a websocket connection to Deepgram
+// In this example, punctuation is turned on, interim results are turned off, and language is set to UK English.
+const deepgramLive = deepgram.transcription.live({
+  punctuate: true,
+  interim_results: false,
+  language: 'en-GB',
+})
+
+// Listen for the connection to open and send streaming audio from the URL to Deepgram
+fetch(url)
+  .then((r) => r.body)
+  .then((res) => {
+    res.on('readable', () => {
+      if (deepgramLive.getReadyState() == 1) {
+        deepgramLive.send(res.read())
+      }
+    })
+  })
+
+// Listen for the connection to close
+deepgramLive.addListener('close', () => {
+  console.log('Connection closed.')
+})
+
+// Listen for any transcripts received from Deepgram and write them to the console
+deepgramLive.addListener('transcriptReceived', (message) => {
+  const data = JSON.parse(message)
+
+  // Write the entire response to the console
+  console.dir(data.channel, { depth: null })
+
+  // Write only the transcript to the console
+  //console.dir(data.channel.alternatives[0].transcript, { depth: null });
+})
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+<Alert type="warning">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key.
+
+</Alert>
+
+### Start the Application
+
+Run the application from the terminal.
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Python">
+
+```bash
+# Run your application using the file you created in the previous step
+# Example: python deepgram_test.py
+python YOUR_PROJECT_NAME.py
+```
+
+</CodeBlock>
+
+<CodeBlock label="Node.js" active>
+
+```bash
+# Run your application using the file you created in the previous step
+# Example: node index.js
+node YOUR_PROJECT_NAME.js
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+<Alert type="warning">
+
+Be sure to replace `YOUR_PROJECT_NAME` with the name of the file to which you saved the code in the previous step.
+
+</Alert>
+
+### See Results
+
+Your transcripts will appear in your browser's developer console.
+
+<Alert type="warning">
+
+Deepgram does not store transcriptions. Make sure to save output or [return transcriptions to a callback URL for custom processing](/documentation/features/callback/).
+
+</Alert>
+
+By default, Deepgram live streaming looks for any deviation in the natural flow of speech and returns a finalized response at these places. To learn more about this feature, see [Endpointing](/documentation/features/endpointing/).
+
+Deepgram live streaming can also return a series of interim transcripts followed by a final transcript. To learn more, see [Interim Results](/documentation/features/interim-results/).
+
+<Alert type="info">
+
+Endpointing can be used with Deepgram's [Interim Results](/documentation/features/interim-results/) feature. To compare and contrast these features, and to explore best practices for using them together, see [Using Endpointing and Interim Results with Live Streaming Audio](/documentation/guides/understand-endpointing-interim-results/).
+
+</Alert>
+
+## What's Next?
+
+Now that you've gotten transcripts for streaming audio, enhance your knowledge by exploring the following areas.
+
+### Customize Transcripts
+
+To customize the transcripts you receive, you can send a variety of parameters to the Deepgram API.
+
+For example, if your audio is in Spanish rather than UK English, you can pass the `language:` parameter with the `es` option to the `transcription.live` method in the previous examples.
+
+<CodeGroup title="Example">
+
+<CodeBlock label="Python">
+
+```python
+deepgramLive = await deepgram.transcription.live({
+  'punctuate': True,
+  'interim_results': False,
+  'language': 'es'
+})
+```
+
+</CodeBlock>
+
+<CodeBlock label="Node.js" active>
+
+```js
+const deepgramLive = deepgram.transcription.live({
+  punctuate: true,
+  interim_results: false,
+  language: 'es',
+})
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+To learn more about the languages available with Deepgram, see the [Language](/documentation/features/language/) feature guide. To learn more about the many ways you can customize your results with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+### Add Your Audio
+
+Ready to connect Deepgram to your own audio source? Start by reviewing [how to determine your audio format](/documentation/guides/determine-audio-format/) and format your API request accordingly.
+
+### Explore Use Cases
+
+Time to learn about the different ways you can use Deepgram products to help you meet your business objectives. [Explore Deepgram's use cases](/use-cases/).
+
+### Transcribe Pre-recorded Audio
+
+Now that you know how to transcribe streaming audio, check out how you can use Deepgram to transcribe pre-recorded audio. To learn more, see [Getting Started with Pre-recorded Audio](/documentation/getting-started/prerecorded/).

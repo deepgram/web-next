@@ -41,9 +41,9 @@ html {
 		@apply font-inter;
 	}
 
-	code {
+	/* code {
 		@apply font-firaCode;
-	}
+	} */
 
 	h1,
 	h2,
@@ -318,6 +318,10 @@ html {
 
 	.button--block {
 		@apply w-full;
+	}
+
+	.button--content {
+		@apply w-min;
 	}
 
 	.button--main-nav {

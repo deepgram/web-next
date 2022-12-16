@@ -1,0 +1,234 @@
+---
+title: Search
+description: Learn about Deepgram's Search feature, which searches for terms or phrases in submitted audio.
+tags: [search, streaming, pre-recorded]
+order: 12
+seo:
+  metaTitle: Search
+  metaDescription: Learn about Deepgram's Search feature, which searches for terms or phrases in submitted audio.
+  keywords: search, phrases, terms
+---
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+
+Deepgram’s Search feature searches for terms or phrases by matching acoustic patterns in audio (which we have found is more accurate than matching for text patterns in transcripts) and returns results in the response JSON object. This allows you to accurately identify whether a phrase was uttered in submitted audio by letting Deepgram "hear" whether the phrase was uttered rather than by trying to look for sufficiently close matches in the text transcript.
+
+<Alert type="info">
+
+Because the search feature is looking for phonetic matches, it works best on longer, multisyllabic terms, or even on short to medium-length phrases.
+
+</Alert>
+
+## Use Cases
+
+Examples of use cases for Search include:
+
+* Audio that includes terminology that is sufficiently technical to not be transcribed accurately, but which needs to be found in the transcript.
+* Customers who need to ensure agent compliance.
+
+## Enable Feature
+
+To enable Search, when you call Deepgram’s API, add a `search` parameter in the querystring and set it to your chosen search term or phrase:
+
+`search=TERM_OR_PHRASE`
+
+<Alert type="info">
+
+You can include up to 25 search terms per request.
+
+</Alert>
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?search=TERM_OR_PHRASE'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Search for a Term
+
+To search for a single term, send one instance of the `search` parameter in the query string when calling the API:
+
+`search=epistemology`
+
+### Search for Multiple Terms
+
+You can search for multiple terms individually:
+
+`search=epistemology&search=warwick`
+
+### Search for a Phrase
+
+You can search for a phrase. URL-encode the phrase when submitting it.
+
+`search=social%20epistemology`
+
+## Analyze Response
+
+For this example, we use a WAV audio file that contains the first 20 seconds of a college lecture on epistemology. If you would like to follow along, you can [download it](https://developers.deepgram.com/data/audio/epistemology.wav).
+
+The term "epistemology" in this audio file is sufficiently technical that our model will not transcribe it accurately, but our phonetic search will still be able to find it.
+
+In our terminal, we run the following cURL command:
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @epistemology.wav \
+  --url 'https://api.deepgram.com/v1/listen?search=epistemology'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+<Alert type="info">
+
+If you're following along, be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+When the file is finished processing (often after only a few seconds), you’ll receive a JSON response that has the following basic structure:
+
+```json
+{
+  "metadata": {
+    "transaction_key": "string",
+    "request_id": "string",
+    "sha256": "string",
+    "created": "string",
+    "duration": 0,
+    "channels": 0
+  },
+  "results": {
+    "channels": [
+      {
+        "search":[],
+        "alternatives":[]
+      }
+    ]
+  }
+}
+```
+
+Let's look more closely at the `alternatives` object:
+
+```json
+...
+"alternatives":[
+  {
+    "transcript": "hello this is steve fuller i'm a professor of social epi at the university of warwick and the question before us today is what is a and why is it important epi is the branch philosophy that is concerned with the nature of knowledge",
+    "confidence": 0.9773828,
+    "words":[
+      {"word":"hello","start":1.2560788,"end":1.3358299,"confidence":0.9822957},
+      {"word":"this","start":1.4554564,"end":1.6149585,"confidence":0.9968176},
+      {"word":"is","start":1.6149585,"end":1.6947095,"confidence":0.99250376},
+      {"word":"steve","start":1.8542116,"end":2.0137136,"confidence":0.9731628},
+      {"word":"fuller","start":2.0934646,"end":2.571971,"confidence":0.96580666},
+      {"word":"i'm","start":2.7713485,"end":3.0504773,"confidence":0.9305737},
+      {"word":"a","start":3.0504773,"end":3.1701038,"confidence":0.7231769},
+      {"word":"professor","start":3.3694813,"end":3.6087344,"confidence":0.99558073},
+      {"word":"of","start":3.6087344,"end":3.6884854,"confidence":0.788455},
+      {"word":"social","start":3.7682364,"end":4.0872407,"confidence":0.95528334},
+      {"word":"epi","start":4.1669917,"end":4.6669917,"confidence":0.94882053},
+      {"word":"at","start":4.9246264,"end":5.0043774,"confidence":0.99730706},
+      {"word":"the","start":5.0043774,"end":5.0841284,"confidence":0.9836394},
+      {"word":"university","start":5.323382,"end":5.5227594,"confidence":0.99867153},
+      {"word":"of","start":5.5227594,"end":5.6025105,"confidence":0.9036443},
+      {"word":"warwick","start":5.7620125,"end":6.2620125,"confidence":0.8316657},
+      {"word":"and","start":7.3171577,"end":7.8171577,"confidence":0.99326575},
+      {"word":"the","start":7.955166,"end":8.154544,"confidence":0.9907726},
+      {"word":"question","start":8.154544,"end":8.654544,"confidence":0.9949497},
+      {"word":"before","start":8.672925,"end":8.792552,"confidence":0.99731004},
+      {"word":"us","start":8.792552,"end":9.151431,"confidence":0.5369464},
+      {"word":"today","start":9.151431,"end":9.625,"confidence":0.99585694},
+      {"word":"is","start":9.925,"end":10.405,"confidence":0.97232133},
+      {"word":"what","start":10.405,"end":10.525,"confidence":0.9970382},
+      {"word":"is","start":10.525,"end":10.765,"confidence":0.9955153},
+      {"word":"a","start":10.765,"end":11.265,"confidence":0.9966672},
+      {"word":"and","start":11.764999,"end":12.005,"confidence":0.995635},
+      {"word":"why","start":12.005,"end":12.165,"confidence":0.9973214},
+      {"word":"is","start":12.165,"end":12.285,"confidence":0.9952969},
+      {"word":"it","start":12.285,"end":12.645,"confidence":0.9958613},
+      {"word":"important","start":12.645,"end":13.145,"confidence":0.99294335},
+        ...
+    ]
+  }
+]
+```
+
+In this response, we see that each alternative contains:
+
+* `transcript`: Transcript for the audio being processed.
+* `confidence`: Floating point value between 0 and 1 that indicates overall transcript reliability. Larger values indicate higher confidence.
+* `words`: Object containing each word in the transcript, along with its start time and end time (in seconds) from the beginning of the audio stream, and a confidence value.
+
+The audio file contains multiple occurences of the word "epistemology". Notice that the content of `transcript` indicates that the model, being unfamiliar with the term, has guessed that the first occurrence is `epi`. Later, picking up on the initial sound of the word, it has guessed that the second occurrence is `a`. Later still, for the third occurrence, the model has guessed `epi` again.
+
+Now, let's take a look at the `search` object:
+
+```json
+...
+"search":[
+  {
+    "query":"epistemology",
+    "hits":[
+      {"confidence":0.9348958,"start":10.725,"end":11.485,"snippet":"is a"},
+      {"confidence":0.9348958,"start":13.965,"end":14.764999,"snippet":"epi"},
+      {"confidence":0.9204282,"start":4.0074897,"end":4.805,"snippet":"social epi"},
+      {"confidence":0.27662036,"start":8.792552,"end":10.365,"snippet":"us today is"},
+      {"confidence":0.1319444,"start":17.205,"end":18.115,"snippet":"nature of knowledge"},
+      {"confidence":0.0885417,"start":15.285,"end":16.085,"snippet":"branch philosophy"},
+      {"confidence":0.045138836,"start":5.1240044,"end":5.722137,"snippet":"university of"},
+      {"confidence":0.045138836,"start":5.6025105,"end":7.4367843,"snippet":"warwick and"},
+      {"confidence":0.0,"start":1.0168257,"end":1.9339627,"snippet":"hello this is steve"},
+      {"confidence":0.0,"start":7.277282,"end":8.27417,"snippet":"and the question"}
+    ]
+  }
+]
+...
+```
+
+In this response, we see that each `search` contains:
+
+* `query`: Word that has been requested.
+* `hits`: Object containing each time the search term was found in the transcript, along with its start time and end time (in seconds) from the beginning of the audio stream, and a confidence value.
+
+In this part of the response, notice:
+
+* we have received multiple hits for the word. The first three have high confidence--all above 90%--and all three do correspond to the times that the professor uses the word in the audio.
+* the results contain the `start` and `end` times for each place in the audio where the model heard the word.
+* after the first three hits, there's a steep decline in the model's confidence that it heard the requested word, and none of these hits do in fact correspond to the requested word.
+
+Even though the model did not transcribe the word `epistemology` accurately, we can still find it in the search results.
+
+<Alert type="info">
+
+By default, Deepgram applies its general AI [model](/api-reference/#model-pr), which is a good, general purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+</Alert>

@@ -1,0 +1,23 @@
+---
+label: Python
+---
+
+```py
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+payload = "{\"scope\":\"string\"}"
+
+headers = {
+    'content-type': "application/json",
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>"
+    }
+
+conn.request("PUT", "/v1/projects/{project_id}/members/{member_id}/scopes", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```

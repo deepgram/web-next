@@ -1,0 +1,45 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Encoding
+description: Learn about Deepgram's Encoding feature, which allows you to specify the expected encoding of your submitted audio.
+tags: [encoding, streaming, raw-audio]
+order: 21
+seo:
+  metaTitle: Encoding
+  metaDescription: Learn about Deepgram's Encoding feature, which allows you to specify the expected encoding of your submitted audio.
+  keywords: encoding, raw data
+---
+
+# {frontmatter.title}
+
+<div class="badge">STREAMING</div>
+
+Deepgram’s Encoding feature allows you to you to specify the expected encoding of your submitted audio. This feature is required when raw, headerless audio packets are sent to the streaming service. If containerized audio packets are sent to the streaming service, this feature should not be used.
+
+If using the Encoding feature, the [Sample Rate](/documentation/features/sample-rate/) feature is also required.
+
+## Use Cases
+
+Some examples of use cases for Encoding include:
+
+- Customers who need to stream raw audio data.
+
+## Enable Feature
+
+To enable Encoding, when you call Deepgram’s API, add an `encoding` parameter in the query string and set it to the audio coding algorithm of your submitted audio:
+
+`encoding=OPTION`
+
+Deepgram supports the following audio coding algorithms:
+
+- `linear16`: 16-bit, little endian, signed PCM WAV data
+- `flac`: [FLAC](/documentation/glossary/#F)-encoded data
+- `mulaw`: [mu-law](/documentation/glossary/#M) encoded WAV data
+- `amr-nb`: [Adaptive Multi-rate (AMR)](/documentation/glossary/#A) narrowband codec
+- `amr-wb`: [Adaptive Multi-rate (AMR)](/documentation/glossary/#A) wideband codec
+- `opus`: [Ogg Opus](/documentation/glossary/#O)
+- `speex`: [Speex](/documentation/glossary/#S)
+
+For an example of audio streaming, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/).
+
+For help determining your audio format and sample rate, see [Determining Your Audio Format for Live Streaming Audio](/documentation/guides/determine-audio-format/).

@@ -1,0 +1,2518 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Transcription
+description: Transcription for the Deepgram API
+order: 3
+---
+import ColumnsForCode from '../../components/layout/ColumnsForCode.astro';
+import CodeGroup from '../../shared/components/code/CodeGroup.astro';
+import CodeBlock from '../../shared/components/code/CodeBlock.astro';
+
+# {frontmatter.title}
+<div class="grid lg:grid-cols-2 gap-6">
+High-speed transcription of either pre-recorded or streaming audio. This feature is very fast, can understand nearly every audio format available, and is customizable. You can customize your transcript using various query parameters and apply general purpose and custom-trained AI models.
+</div>
+
+<div class="grid lg:grid-cols-2 gap-6">
+Deepgram supports over 100 different audio formats and encodings. For example, some of the most common audio formats and encodings we support include MP3, MP4, MP2, AAC, WAV, FLAC, PCM, M4A, Ogg, Opus, and WebM. However, because audio format is largely unconstrained, we always recommend to ensure compatibility by testing small sets of audio when first operating with new audio sources.
+</div>
+
+<ColumnsForCode>
+<div slot="left" class="left">
+
+### Transcribe Pre-recorded Audio
+
+Transcribes the specified audio file.
+
+Deepgram does not store transcriptions. Make sure to save output or [return transcriptions to a callback URL for custom processing](/documentation/features/callback/).
+
+#### Query Parameters
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="tier-pr">
+			<p><strong>tier:</strong> string</p>
+		</div>
+		
+	</header>
+	<main>
+		<p>Level of model you would like to use in your request. Options include:</p>
+		<ul>
+			<li class="notranslate feature-item">
+				<strong>enhanced:</strong>
+				
+				Applies our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words
+				significantly better.
+			</li>
+			<li class="notranslate feature-item">
+				<strong>base:</strong> (Default)
+				
+				Applies our Base models, which are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost
+				effectiveness.
+			</li>
+		</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/tier/">Features: Tier</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="model-pr">
+			<p><strong>model:</strong> string</p>
+		</div>
+		
+	</header>
+	<main>
+		<p>AI model used to process submitted audio. Options include:</p>
+		<ul>
+			<li class="notranslate feature-item">
+				<strong>general:</strong> (Default)
+				
+				Optimized for everyday audio processing.
+				
+				<strong class="hint notranslate">TIERS:</strong> enhanced, base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>meeting:</strong>
+				
+				Optimized for conference room settings, which include multiple speakers with a single microphone.
+				
+				<strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>phonecall:</strong>
+				
+				Optimized for low-bandwidth audio phone calls.
+				
+				<strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>voicemail:</strong>
+				
+				Optimized for low-bandwidth audio clips with a single speaker. Derived from the
+				<code>phonecall</code> model.
+				
+				<strong class="hint notranslate">TIERS:</strong> base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>finance:</strong>
+				
+				Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.
+				
+				<strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>conversationalai:</strong>
+				
+				Optimized to allow artificial intelligence technologies, such as chatbots, to interact with people in a human-like way.
+				
+				<strong class="hint notranslate">TIERS:</strong> base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>video:</strong>
+				
+				Optimized for audio sourced from videos.
+				
+				<strong class="hint notranslate">TIERS:</strong> base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>&lt;custom_id&gt;:</strong>
+				
+				To use a custom model associated with your account, include its <code>custom_id</code>.
+				<strong class="hint notranslate">TIERS:</strong> enhanced, base (depending on which tier the custom model was trained on)
+			</li>
+		</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/model/">Features: Model</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="version-pr" class="notranslate">
+			<strong>version:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>Version of the model to use.</p>
+		<p class="notranslate">
+			<strong>Default:</strong> latest
+		</p>
+		<p>
+			<strong>Possible values:</strong>{" "}
+			<span class="notranslate">
+				<code>latest</code> OR <code>&lt;version_id&gt;</code>
+			</span>
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/version/">Features: Version</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="language-pr">
+			<strong>language:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			<a href="https://tools.ietf.org/html/bcp47">BCP-47</a> language tag that hints at the primary spoken language. Language support is optimized for the following language/model
+			combinations:
+		</p>
+		<p>
+			<strong>Chinese</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>zh-CN:</strong> China (Simplified Mandarin) <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>zh-TW:</strong> Taiwan (Traditional Mandarin) <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Danish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>da:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+			</li>
+		</ul>
+		<p>
+			<strong>Dutch</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>nl:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+			</li>
+		</ul>
+		<p>
+			<strong>English</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>en:</strong> English (Default)
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base), meeting (enhanced <em>beta</em>, base), phonecall (enhanced <em>beta</em>, base), voicemail,
+				finance (enhanced <em>beta</em>, base), conversationalai, video
+			</li>
+			<li>
+				<strong>en-AU:</strong> Australia
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>en-IN:</strong> India
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>en-NZ:</strong> New Zealand
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>en-GB:</strong> United Kingdom
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>en-US:</strong> United States
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base), meeting (enhanced <em>beta</em>, base), phonecall (enhanced <em>beta</em>, base), voicemail,
+				finance, conversationalai, video
+			</li>
+		</ul>
+		<p>
+			<strong>Flemish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>nl:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+			</li>
+		</ul>
+		<p>
+			<strong>French</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>fr:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>fr-CA:</strong> Canada
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>German</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>de:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Hindi</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>hi:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>hi-Latn:</strong> Roman Script <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Indonesian</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>id:</strong> <em>beta</em>
+				
+				<strong class="hint">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Italian</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>it:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Japanese</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>ja:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Korean</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>ko:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Polish</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>pl:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Portuguese</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>pt:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>pt-BR:</strong> Brazil
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>pt-PT:</strong> Portugal
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Russian</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>ru:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Spanish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>es:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced <em>beta</em>, base)
+			</li>
+			<li>
+				<strong>es-419:</strong> Latin America
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Swedish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>sv:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Turkish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>tr:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Ukrainian</strong>
+		</p>
+		<ul>
+			<li class="notranslate feature-item">
+				<strong>uk:</strong> <em>beta</em>
+				
+				<strong class="hint">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/language/">Features: Language</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="detect_language-pr">
+			<strong>detect_language:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to detect the language of the provided audio. To learn more, see
+			<a href="/documentation/features/detect-language/">Features: Language Detection</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="punctuate-pr">
+			<strong>punctuate:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to add punctuation and capitalization to the transcript. To learn more, see
+			<a href="/documentation/features/punctuate/">Features: Punctuation</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="profanity-pr">
+			<strong>profanity_filter:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to remove profanity from the transcript. To learn more, see
+			<a href="/documentation/features/profanity-filter/">Features: Profanity Filter</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="redact-pr">
+			<strong>redact:</strong> any
+		</div>
+		{/* {" "}
+		any */}
+	</header>
+	<main>
+		<p>Indicates whether to redact sensitive information, replacing redacted content with asterisks (*). Options include:</p>
+		<ul>
+			<li class="notranslate feature-item">
+				<strong>pci:</strong>
+				
+				Redacts sensitive credit card information, including credit card number, expiration date, and CVV.
+			</li>
+			<li class="notranslate feature-item">
+				<strong>numbers:</strong> (or <strong>true</strong>)
+				Aggressively redacts strings of numerals.
+			</li>
+			<li class="notranslate feature-item">
+				<strong>ssn:</strong> <em>beta</em>
+				
+				Redacts social security numbers.
+			</li>
+		</ul>
+		<p>
+			Can send multiple instances in query string (for example,
+			<code>redact=pci&amp;redact=numbers</code>). When sending multiple values, redaction occurs in the order you specify. For instance, in this example, sensitive credit card information
+			would be redacted first, then strings of numbers.
+		</p>
+		<p>
+			{" "}
+			To learn more, see <a href="/documentation/features/redact/">Features: Redaction</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="diarize-pr">
+			<strong>diarize:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to recognize speaker changes. When set to
+			<code>true</code>, each word in the transcript will be assigned a speaker number starting at 0.
+		</p>
+		<p class="info">To use the legacy diarization feature, add a <code>diarize_version</code> parameter set to <code>2021-07-14.0</code>. For example, <code>diarize_version=2021-07-14.0</code>.</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/diarize/">Features: Diarization</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="diarize-version-pr">
+			<strong>diarize_version:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Indicates the version of the diarization feature to use. To use the legacy diarization feature, set the parameter value to <code>2021-07-14.0</code>.
+		</p>
+		<p class="info">Only used when the diarization feature is enabled (<code>diarize=true</code> is passed to the API).</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/diarize/">Features: Diarization</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="smart-format-pr">
+			<strong>smart_format:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>Indicates whether to apply formatting to transcript output. When set to
+			<code>true</code>, additional formatting will be applied to transcripts to improve readability.</p>
+<p class="notranslate"><strong>Default:</strong> <code>false</code></p>
+<p>To learn more, see
+			<a href="/documentation/features/smart-format/">Features: Smart Format</a>.</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="multichannel-pr">
+			<strong>multichannel:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to transcribe each audio channel independently. When set to
+			<code>true</code>, you will receive one transcript for each channel, which means you can apply a different model to each channel using the model parameter (e.g., set
+			<code>model</code> to
+			<code>general:phonecall</code>, which applies the
+			<code>general</code> model to channel 0 and the
+			<code>phonecall</code> model to channel 1).
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/multichannel/">Features: Multichannel</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="alternatives-pr">
+			<strong>alternatives:</strong> integer
+		</div>
+		{/* {" "}
+		integer */}
+	</header>
+	<main>
+		<p>Maximum number of transcript alternatives to return. Just like a human listener, Deepgram can provide multiple possible interpretations of what it hears. </p>
+		<p class="notranslate">
+			<strong>Default:</strong> 1
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="numerals-pr">
+			<strong>numerals:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>Indicates whether to convert numbers from written format (e.g., one) to numerical format (e.g., 1).</p>
+		<p>Deepgram can format numbers up to 999,999.</p>
+		<p class="info">Converted numbers do not include punctuation. For example, 999,999 would be transcribed as <code>999999</code>.</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/numerals/">Features: Numerals</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="search-pr">
+			<strong>search:</strong> any
+		</div>
+		{/* {" "}
+		any */}
+	</header>
+	<main>
+		<p>
+			Terms or phrases to search for in the submitted audio. Deepgram searches for acoustic patterns in audio rather than text patterns in transcripts because we have noticed that
+			acoustic pattern matching is more performant.
+		</p>
+			<ul class="info">
+				<li>Can include up to 25 search terms per request.</li>
+				<li>
+					Can send multiple instances in query string (for example,
+					<code>search=speech&amp;search=Friday</code>).
+				</li>
+			</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/search/">Features: Search</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="replace-pr">
+			<strong>replace:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>Terms or phrases to search for in the submitted audio and replace. </p>
+			<ul class="info">
+				<li>URL-encode any terms or phrases that include spaces, punctuation, or other special characters.</li>
+				<li>
+					Can send multiple instances in query string (for example,
+					<code>replace=this:that&amp;replace=thisalso:thatalso</code>).
+				</li>
+				<li>
+					Replacing a term or phrase with nothing (<code>replace=this</code>) will remove the term or phrase from the audio transcript.
+				</li>
+			</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/replace/">Features: Replace</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="callback-pr">
+			<strong>callback:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Callback URL to provide if you would like your submitted audio to be processed asynchronously. When passed, Deepgram will immediately respond with a<code>request_id</code>.
+			When it has finished analyzing the audio, it will send a POST request to the provided URL with an appropriate HTTP status code.
+		</p>
+			Notes:
+			<ul class="info">
+				<li>You may embed basic authentication credentials in the callback URL.</li>
+				<li>Only ports 80, 443, 8080, and 8443 can be used for callbacks</li>
+			</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/callback/">Features: Callback</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="keywords-pr">
+			<strong>keywords:</strong> any
+		</div>
+		{/* {" "}
+		any */}
+
+	</header>
+	<main>
+		<p>
+			Keywords to which the model should pay particular attention to boosting or suppressing to help it understand context. Just like a human listener, Deepgram can better
+			understand mumbled, distorted, or otherwise hard-to-decipher speech when it knows the context of the conversation.
+		</p>
+			Notes:
+			<ul class="info">
+				<li>Can include up to 200 keywords per request.</li>
+				<li>
+					Can send multiple instances in query string (for example,
+					<code>keywords=medicine&amp;keywords=prescription</code>).
+				</li>
+				<li>
+					Can request multi-word keywords in a percent-encoded query string (for example,
+					<code>keywords=miracle%20medicine</code>). When Deepgram listens for your supplied keywords, it separates them into individual words, then boosts or suppresses them individually.
+				</li>
+				<li>Can append a positive or negative intensifier to either boost or suppress the recognition of particular words. Positive and negative values can be decimals.</li>
+				<li>
+					<a href="/documentation/features/keywords/#best-practices">Follow best practices for keyword boosting</a>.
+				</li>
+				<li>
+					Support for out-of-vocabulary (OOV) keyword boosting when processing streaming audio is currently in
+					<em>beta</em>; to fall back to previous keyword behavior, append the query parameter
+					<code>keyword_boost=legacy</code> to your API request.
+				</li>
+			</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/keywords/">Features: Keywords</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="paragraphs-pr">
+			<strong>paragraphs:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether Deepgram will split audio into paragraphs to improve transcript readability. When
+			<code>paragraphs</code> is set to <code>true</code>, you must also set either <code>punctuate</code>, <code>diarize</code>, or <code>multichannel</code> to <code>true</code>.
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/paragraphs/">Features: Paragraphs</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="summarize-pr">
+			<strong>summarize:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether Deepgram will provide summaries for sections of content. When
+			<code>summarize</code> is set to <code>true</code>, <code>punctuate</code> will be set to <code>true</code> by default.
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/summarize/">Features: Summarize</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="detect_topics-pr">
+			<strong>detect_topics:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether Deepgram will identify and extract key topics for sections of content. When
+			<code>detect_topics</code> is set to <code>true</code>, <code>punctuate</code> will be set to <code>true</code> by default.
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/detect-topics/">Features: Topic Detection</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="utterances-pr">
+			<strong>utterances:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether Deepgram will segment speech into meaningful semantic units, which allows the model to interact more naturally and effectively with speakers' spontaneous
+			speech patterns. For example, when humans speak to each other conversationally, they often pause mid-sentence to reformulate their thoughts, or stop and restart a
+			badly-worded sentence. When
+			<code>utterances</code> is set to
+			<code>true</code>, these utterances are identified and returned in the transcript results.
+		</p>
+		<p>
+			By default, when utterances is enabled, it starts a new utterance after 0.8 s of silence. You can customize the length of time used to determine where to split utterances by
+			submitting the
+			<code>utt_split</code> parameter.
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/utterances/">Features: Utterances</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="utt_split-pr">
+			<strong>utt_split:</strong> number
+		</div>
+		{/* {" "}
+		number */}
+	</header>
+	<main>
+		<p>Length of time in seconds of silence between words that Deepgram will use when determining where to split utterances. Used when utterances is enabled.</p>
+		<p class="notranslate">
+			<strong>Default:</strong> 0.8
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/utterance-split/">Features: Utterance Split</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="tag-pr">
+			<strong>tag:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Tag to associate with the request. Your request will automatically be associated with any tags you add to the API Key used to run the request. Tags associated with requests
+			appear in <a href="#usage">usage reports</a>.
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/tag/">Features: Tag</a>.
+		</p>
+	</main>
+</div>
+
+#### Request Body Schema
+<p>Request body when submitting pre-recorded audio. Accepts either:</p>
+<ul>
+	<li>
+		<p>raw binary audio data. In this case, include a <code>Content-Type</code> header set to the audio 
+		<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#audio_and_video_types">MIME type</a>.</p>
+	</li>
+	<li><p>JSON object with a single field from which the audio can be retrieved. In this case, include a <code>Content-Type</code> header set to <code>application/json</code>.</p></li>
+</ul>
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>url:</strong> string
+  </header>
+  <main>
+          <p>URL of audio file to transcribe.</p>
+  </main>
+</div>
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Audio submitted for transcription.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Response Schema
+
+<ul>
+  <li class="response-object">
+    <p class="notranslate"><strong>metadata:</strong> object</p>
+          <p>JSON-formatted <code>ListenMetadata</code> object.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>request_id:</strong> uuid</p>
+              <p>Unique identifier of the submitted audio and derived data returned.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>transaction_key:</strong> string</p>
+              <p>Blob of text that helps Deepgram engineers debug any problems you encounter. If you need help getting an API call to work correctly, send this key to us so that we can use it as a starting point when investigating any issues.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>sha256:</strong> string</p>
+              <p>SHA-256 hash of the submitted audio data.</p>
+      </li>
+			<li>
+        <p class="notranslate"><strong>created:</strong> string</p>
+              <p>ISO-8601 timestamp that indicates when the audio was submitted.</p>
+      </li>
+			<li>
+        <p class="notranslate"><strong>duration:</strong> number</p>
+              <p>Duration in seconds of the submitted audio.</p>
+      </li>
+			<li>
+        <p class="notranslate"><strong>channels:</strong> integer</p>
+              <p>Number of channels detected in the submitted audio.</p>
+      </li>
+			
+    </ul>
+  </li>
+	<li class="response-object">
+    <p class="notranslate"><strong>results:</strong> object</p>
+          <p>JSON-formatted ListenResults object.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>channels:</strong> array</p>
+              <p>Array of JSON-formatted ChannelResult objects.</p>
+      </li>
+			<ul>
+			<ul class="response">
+      	<li>
+        	<p class="notranslate"><strong>search:</strong> array</p>
+          <p>Array of JSON-formatted <code>SearchResults</code>.</p>
+      	</li>
+				<ul class="response">
+					<li>
+						<p class="notranslate"><strong>query:</strong> string</p>
+									<p>Term for which Deepgram is searching.</p>
+					</li>
+					<li>
+						<p class="notranslate"><strong>hits:</strong> array</p>
+									<p>Array of JSON-formatted Hit objects.</p>
+					</li>
+					<ul class="response">
+						<li>
+							<p class="notranslate"><strong>confidence:</strong> number</p>
+										<p>Value between 0 and 1 that indicates the model's relative confidence in this hit.</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>start:</strong> number</p>
+										<p>Number of channels detected in the submitted audio.</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>end:</strong> number</p>
+										<p>Offset in seconds from the start of the audio to where the hit ends.</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>snippet:</strong> number</p>
+										<p>Transcript that corresponds to the time between start and end.</p>
+						</li>
+					</ul>
+				</ul>
+				<li>
+        	<p class="notranslate"><strong>alternatives:</strong> array</p>
+          <p>Array of JSON-formatted <code>ResultAlternative </code>objects. This array will have length n, where n matches the value of the <code>alternatives</code> parameter passed in the request body.</p>
+      	</li>
+				<ul class="response">
+					<li>
+						<p class="notranslate"><strong>transcript:</strong> string</p>
+									<p>Single-string transcript containing what the model hears in this channel of audio.</p>
+					</li>
+					<li>
+						<p class="notranslate"><strong>confidence:</strong> number</p>
+									<p>Value between 0 and 1 indicating the model's relative confidence in this transcript.</p>
+					</li>
+					<li>
+						<p class="notranslate"><strong>words:</strong> array</p>
+									<p>Array of JSON-formatted Word objects.</p>
+					</li>
+					<ul class="response">
+						<li>
+							<p class="notranslate"><strong>word:</strong> string</p>
+										<p>Distinct word heard by the model.</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>start:</strong> number</p>
+										<p>Offset in seconds from the start of the audio to where the spoken word starts.</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>end:</strong> number</p>
+										<p>Offset in seconds from the start of the audio to where the spoken word ends.</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>confidence:</strong> number</p>
+								<p>Value between 0 and 1 indicating the model's relative confidence in this word.</p>
+						</li>
+					</ul>
+				</ul>
+			</ul>
+			</ul>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<div slot="right" class="right">
+
+<CodeGroup title="endpoint">
+<CodeBlock active>
+```vim
+POST /listen
+```
+</CodeBlock>
+</CodeGroup>
+
+<CodeGroup title="Transcribe Pre-recorded" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+<CodeBlock tab="curl" active>
+
+```bash
+curl --request POST \
+  --url 'https://api.deepgram.com/v1/listen' \
+  --header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+  --header 'content-type: application/json' \
+  --data '{"url":"string"}'
+```
+
+</CodeBlock>
+<CodeBlock tab="Python">
+
+```python
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+payload = "{\"url\":\"string\"}"
+
+headers = {
+    'content-type': "application/json",
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>"
+    }
+
+conn.request("POST", "/v1/listen", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+```
+
+</CodeBlock>
+<CodeBlock tab=".NET">
+
+```c
+using Deepgram;
+
+var deepgram = new DeepgramClient(new Credentials("YOUR_DEEPGRAM_API_KEY"));
+var response = await deepgram.Transcription.Prerecorded.GetTranscriptionAsync(
+    new UrlSource("URL_TO_FILE"));
+```
+
+</CodeBlock>
+<CodeBlock tab="Node.js">
+
+```js
+const http = require('https')
+
+const options = {
+  method: 'POST',
+  hostname: 'api.deepgram.com',
+  port: null,
+  path: '/v1/listen',
+  headers: {
+    'content-type': 'application/json',
+    Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
+  },
+}
+
+const req = http.request(options, function (res) {
+  const chunks = []
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks)
+    console.log(body.toString())
+  })
+})
+
+req.write(JSON.stringify({ url: 'string' }))
+req.end()
+```
+
+</CodeBlock>
+<CodeBlock tab="PHP">
+
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.deepgram.com/v1/listen",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\"url\":\"string\"}",
+  CURLOPT_HTTPHEADER => [
+    "Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    "content-type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
+
+</CodeBlock>
+<CodeBlock tab="Ruby">
+
+```ruby
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.deepgram.com/v1/listen")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Post.new(url)
+request["content-type"] = 'application/json'
+request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+request.body = "{\"url\":\"string\"}"
+
+response = http.request(request)
+puts response.read_body
+```
+
+</CodeBlock>
+</CodeGroup>
+
+<CodeGroup title="response">
+<CodeBlock active>
+
+```json
+{
+  "metadata": {
+    "transaction_key": "string",
+    "request_id": "uuid",
+    "sha256": "string",
+    "created": "string",
+    "duration": 0,
+    "channels": 0,
+    "models": [
+      "string"
+    ],
+  },
+  "results": {
+    "channels": [
+      {
+        "search": [
+          {
+            "query": "string",
+            "hits": [
+              {
+                "confidence": 0,
+                "start": 0,
+                "end": 0,
+                "snippet": "string"
+              }
+            ]
+          }
+        ],
+        "alternatives": [
+          {
+            "transcript": "string",
+            "confidence": 0,
+            "words": [
+              {
+                "word": "string",
+                "start": 0,
+                "end": 0,
+                "confidence": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+</CodeBlock>
+</CodeGroup>
+
+</div>
+</ColumnsForCode>
+
+<ColumnsForCode>
+<div slot="left" class="left">
+
+### Transcribe Live Streaming Audio
+
+Deepgram provides its customers with real-time, streaming transcription via its streaming endpoints. These endpoints are high-performance, full-duplex services running over the tried-and-true WebSocket protocol, which makes integration with customer pipelines simple due to the wide array of client libraries available.
+
+To use this endpoint, connect to `wss://api.deepgram.com/v1/listen`. TLS encryption will protect your connection and data. We support a minimum of TLS 1.2.
+
+All audio data is sent to the streaming endpoint as binary-type WebSocket messages containing payloads that are the raw audio data. Because the protocol is full-duplex, you can stream in real-time and still receive transcription responses while uploading data.
+
+When you are finished, send a JSON message to the server: `{ 'type': 'CloseStream' }`. The server will interpret it as a shutdown command, which means it will finish processing whatever data is still has cached, send the response to the client, send a summary metadata object, and then terminate the WebSocket connection.
+
+To learn more about working with real-time streaming data and results, see [Get Started with Streaming Audio](https://developers.deepgram.com/documentation/getting-started/streaming/).
+
+Deepgram does not store transcriptions. Make sure to save output or [return transcriptions to a callback URL for custom processing](/documentation/features/callback/).
+
+#### Query Parameters
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="tier-str">
+			<p><strong>tier:</strong> string</p>
+		</div>
+		
+	</header>
+	<main>
+		<p>Level of model you would like to use in your request. Options include:</p>
+		<ul>
+			<li class="notranslate feature-item">
+				<strong>enhanced:</strong>
+				
+				Applies our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words
+				significantly better.
+			</li>
+			<li class="notranslate feature-item">
+				<strong>base:</strong> (Default)
+				
+				Applies our Base models, which are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost
+				effectiveness.
+			</li>
+		</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/tier/">Features: Tier</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="model-str">
+			<p><strong>model:</strong> string</p>
+		</div>
+		
+	</header>
+	<main>
+		<p>AI model used to process submitted audio. Options include:</p>
+		<ul>
+			<li class="notranslate feature-item">
+				<strong>general:</strong> (Default)
+				
+				Optimized for everyday audio processing.
+				
+				<strong class="hint notranslate">TIERS:</strong> enhanced, base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>meeting:</strong>
+				
+				Optimized for conference room settings, which include multiple speakers with a single microphone.
+				
+				<strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>phonecall:</strong>
+				
+				Optimized for low-bandwidth audio phone calls.
+				
+				<strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>voicemail:</strong>
+				
+				Optimized for low-bandwidth audio clips with a single speaker. Derived from the
+				<code>phonecall</code> model.
+				
+				<strong class="hint notranslate">TIERS:</strong> base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>finance:</strong>
+				
+				Optimized for multiple speakers with varying audio quality, such as might be found on a typical earnings call. Vocabulary is heavily finance oriented.
+				
+				<strong class="hint notranslate">TIERS:</strong> enhanced <em>beta</em>, base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>conversationalai:</strong>
+				
+				Optimized to allow artificial intelligence technologies, such as chatbots, to interact with people in a human-like way.
+				
+				<strong class="hint notranslate">TIERS:</strong> base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>video:</strong>
+				
+				Optimized for audio sourced from videos.
+				
+				<strong class="hint notranslate">TIERS:</strong> base
+			</li>
+			<li class="notranslate feature-item">
+				<strong>&lt;custom_id&gt;:</strong>
+				
+				To use a custom model associated with your account, include its <code>custom_id</code>.
+				<strong class="hint notranslate">TIERS:</strong> enhanced, base (depending on which tier the custom model was trained on)
+			</li>
+		</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/model/">Features: Model</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="version-str" class="notranslate">
+			<strong>version:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>Version of the model to use.</p>
+		<p class="notranslate">
+			<strong>Default:</strong> latest
+		</p>
+		<p>
+			<strong>Possible values:</strong>{" "}
+			<span class="notranslate">
+				<code>latest</code> OR <code>&lt;version_id&gt;</code>
+			</span>
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/version/">Features: Version</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="language-str">
+			<strong>language:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			<a href="https://tools.ietf.org/html/bcp47">BCP-47</a> language tag that hints at the primary spoken language. Language support is optimized for the following language/model
+			combinations:
+		</p>
+		<p>
+			<strong>Chinese</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>zh-CN:</strong> China (Simplified Mandarin) <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>zh-TW:</strong> Taiwan (Traditional Mandarin) <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Danish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>da:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+			</li>
+		</ul>
+		<p>
+			<strong>Dutch</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>nl:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+			</li>
+		</ul>
+		<p>
+			<strong>English</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>en:</strong> English (Default)
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base), meeting (enhanced <em>beta</em>, base), phonecall (enhanced <em>beta</em>, base), voicemail,
+				finance (enhanced <em>beta</em>, base), conversationalai, video
+			</li>
+			<li>
+				<strong>en-AU:</strong> Australia
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>en-IN:</strong> India
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>en-NZ:</strong> New Zealand
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>en-GB:</strong> United Kingdom
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>en-US:</strong> United States
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base), meeting (enhanced <em>beta</em>, base), phonecall (enhanced <em>beta</em>, base), voicemail,
+				finance, conversationalai, video
+			</li>
+		</ul>
+		<p>
+			<strong>Flemish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>nl:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+			</li>
+		</ul>
+		<p>
+			<strong>French</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>fr:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>fr-CA:</strong> Canada
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>German</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>de:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Hindi</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>hi:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>hi-Latn:</strong> Roman Script <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Indonesian</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>id:</strong> <em>beta</em>
+				
+				<strong class="hint">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Italian</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>it:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Japanese</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>ja:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Korean</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>ko:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Norwegian</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>no:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced, base)
+			</li>
+		</ul>
+		<p>
+			<strong>Polish</strong>
+		</p>
+		<ul class="notranslate">
+			<li>
+				<strong>pl:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Portuguese</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>pt:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>pt-BR:</strong> Brazil
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+			<li>
+				<strong>pt-PT:</strong> Portugal
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Russian</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>ru:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Spanish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>es:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced <em>beta</em>, base)
+			</li>
+			<li>
+				<strong>es-419:</strong> Latin America
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Swedish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>sv:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Tamil</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>ta:</strong> <em>beta</em>
+				
+				<strong class="hint notranslate">MODELS:</strong> general (enhanced)
+			</li>
+		</ul>
+		<p>
+			<strong>Turkish</strong>
+		</p>
+		<ul>
+			<li>
+				<strong>tr:</strong>
+				
+				<strong class="hint notranslate">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			<strong>Ukrainian</strong>
+		</p>
+		<ul>
+			<li class="notranslate feature-item">
+				<strong>uk:</strong> <em>beta</em>
+				
+				<strong class="hint">MODELS:</strong> general
+			</li>
+		</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/language/">Features: Language</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="punctuate-str">
+			<strong>punctuate:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to add punctuation and capitalization to the transcript. To learn more, see
+			<a href="/documentation/features/punctuate/">Features: Punctuation</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="profanity-str">
+			<strong>profanity_filter:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to remove profanity from the transcript. To learn more, see
+			<a href="/documentation/features/profanity-filter/">Features: Profanity Filter</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="redact-str">
+			<strong>redact:</strong> any
+		</div>
+		{/* {" "}
+		any */}
+	</header>
+	<main>
+		<p>Indicates whether to redact sensitive information, replacing redacted content with asterisks (*). Options include:</p>
+		<ul>
+			<li class="notranslate feature-item">
+				<strong>pci:</strong>
+				
+				Redacts sensitive credit card information, including credit card number, expiration date, and CVV.
+			</li>
+			<li class="notranslate feature-item">
+				<strong>numbers:</strong> (or <strong>true</strong>)
+				Aggressively redacts strings of numerals.
+			</li>
+			<li class="notranslate feature-item">
+				<strong>ssn:</strong> <em>beta</em>
+				
+				Redacts social security numbers.
+			</li>
+		</ul>
+		<p>
+			Can send multiple instances in query string (for example,
+			<code>redact=pci&amp;redact=numbers</code>). When sending multiple values, redaction occurs in the order you specify. For instance, in this example, sensitive credit card information
+			would be redacted first, then strings of numbers.
+		</p>
+		<p>
+			{" "}
+			To learn more, see <a href="/documentation/features/redact/">Features: Redaction</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="diarize-str">
+			<strong>diarize:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to recognize speaker changes. When set to
+			<code>true</code>, each word in the transcript will be assigned a speaker number starting at 0.
+		</p>
+		<p class="info">To use the legacy diarization feature, add a <code>diarize_version</code> parameter set to <code>2021-07-14.0</code>. For example, <code>diarize_version=2021-07-14.0</code>.</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/diarize/">Features: Diarization</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="diarize-version-str">
+			<strong>diarize_version:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Indicates the version of the diarization feature to use. To use the legacy diarization feature, set the parameter value to <code>2021-07-14.0</code>.
+		</p>
+		<p class="info">Only used when the diarization feature is enabled (<code>diarize=true</code> is passed to the API).</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/diarize/">Features: Diarization</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="smart-format-str">
+			<strong>smart_format:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>Indicates whether to apply formatting to transcript output. When set to
+		<code>true</code>, additional formatting will be applied to transcripts to improve readability.</p>
+<p class="notranslate"><strong>Default:</strong> <code>false</code></p>
+<p>To learn more, see
+		<a href="/documentation/features/smart-format/">Features: Smart Format</a>.</p>
+		
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="multichannel-str">
+			<strong>multichannel:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether to transcribe each audio channel independently. When set to
+			<code>true</code>, you will receive one transcript for each channel, which means you can apply a different model to each channel using the model parameter (e.g., set
+			<code>model</code> to
+			<code>general:phonecall</code>, which applies the
+			<code>general</code> model to channel 0 and the
+			<code>phonecall</code> model to channel 1).
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/multichannel/">Features: Multichannel</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="alternatives-str">
+			<strong>alternatives:</strong> integer
+		</div>
+		{/* {" "}
+		integer */}
+	</header>
+	<main>
+		<p>Maximum number of transcript alternatives to return. Just like a human listener, Deepgram can provide multiple possible interpretations of what it hears. </p>
+		<p class="notranslate">
+			<strong>Default:</strong> 1
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="numerals-str">
+			<strong>numerals:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>Indicates whether to convert numbers from written format (e.g., one) to numerical format (e.g., 1).</p>
+		<p>Deepgram can format numbers up to 999,999.</p>
+		<p class="info">Converted numbers do not include punctuation. For example, 999,999 would be transcribed as <code>999999</code>.</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/numerals/">Features: Numerals</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="search-str">
+			<strong>search:</strong> any
+		</div>
+		{/* {" "}
+		any */}
+	</header>
+	<main>
+		<p>
+			Terms or phrases to search for in the submitted audio. Deepgram searches for acoustic patterns in audio rather than text patterns in transcripts because we have noticed that
+			acoustic pattern matching is more performant.
+		</p>
+			<ul class="info">
+				<li>Can include up to 25 search terms per request.</li>
+				<li>
+					Can send multiple instances in query string (for example,
+					<code>search=speech&amp;search=Friday</code>).
+				</li>
+			</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/search/">Features: Search</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="replace-str">
+			<strong>replace:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>Terms or phrases to search for in the submitted audio and replace. </p>
+			<ul class="info">
+				<li>URL-encode any terms or phrases that include spaces, punctuation, or other special characters.</li>
+				<li>
+					Can send multiple instances in query string (for example,
+					<code>replace=this:that&amp;replace=thisalso:thatalso</code>).
+				</li>
+				<li>
+					Replacing a term or phrase with nothing (<code>replace=this</code>) will remove the term or phrase from the audio transcript.
+				</li>
+			</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/replace/">Features: Replace</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="callback-str">
+			<strong>callback:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Callback URL to provide if you would like your submitted audio to be processed asynchronously. When passed, Deepgram will immediately respond with a<code>request_id</code>.
+			When it has finished analyzing the audio, it will send a POST request to the provided URL with an appropriate HTTP status code.
+		</p>
+			Notes:
+			<ul class="info">
+				<li>You may embed basic authentication credentials in the callback URL.</li>
+				<li>Only ports 80, 443, 8080, and 8443 can be used for callbacks</li>
+			</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/callback/">Features: Callback</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="keywords-str">
+			<strong>keywords:</strong> any
+		</div>
+		{/* {" "}
+		any */}
+
+	</header>
+	<main>
+		<p>
+			Keywords to which the model should pay particular attention to boosting or suppressing to help it understand context. Just like a human listener, Deepgram can better
+			understand mumbled, distorted, or otherwise hard-to-decipher speech when it knows the context of the conversation.
+		</p>
+			Notes:
+			<ul class="info">
+				<li>Can include up to 200 keywords per request.</li>
+				<li>
+					Can send multiple instances in query string (for example,
+					<code>keywords=medicine&amp;keywords=prescription</code>).
+				</li>
+				<li>
+					Can request multi-word keywords in a percent-encoded query string (for example,
+					<code>keywords=miracle%20medicine</code>). When Deepgram listens for your supplied keywords, it separates them into individual words, then boosts or suppresses them individually.
+				</li>
+				<li>Can append a positive or negative intensifier to either boost or suppress the recognition of particular words. Positive and negative values can be decimals.</li>
+				<li>
+					<a href="/documentation/features/keywords/#best-practices">Follow best practices for keyword boosting</a>.
+				</li>
+				<li>
+					Support for out-of-vocabulary (OOV) keyword boosting when processing streaming audio is currently in
+					<em>beta</em>; to fall back to previous keyword behavior, append the query parameter
+					<code>keyword_boost=legacy</code> to your API request.
+				</li>
+			</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/keywords/">Features: Keywords</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="interim_results-str">
+			<strong>interim_results:</strong> boolean
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Indicates whether the streaming endpoint should send you updates to its transcription as more audio becomes available. When set to <code>true</code>, the streaming endpoint returns regular updates, which means transcription results will likely change for a period of time. By default, this flag is set to <code>false</code>.
+		</p>
+		<ul class="info">
+				<li>
+					<p>When the flag is set to false, latency increases (usually by several seconds) because the server needs to stabilize the transcription before returning the final results for each piece of incoming audio. If you want the lowest-latency streaming available, then set <code>interim_results</code> to <code>true</code> and handle the corrected transcripts as they are returned.</p>
+				</li>
+			</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/interim-results/">Features: Interim Results</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="endpointing-str">
+			<strong>endpointing:</strong> boolean
+		</div>
+		{/* {" "}
+		number */}
+	</header>
+	<main>
+		<p>Indicates whether Deepgram will detect whether a speaker has finished speaking (or paused for a significant period of time, indicating the completion of an idea). When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes the result for the processed time range and returns the transcript with a <code>speech_final</code> parameter set to <code>true</code>.</p>
+		<p>For example, if you are working with a 15-second audio clip, but someone is speaking for only the first 3 seconds, endpointing allows you to get a finalized result after the first 3 seconds.</p>
+		<p>By default, endpointing is enabled and finalizes a transcript after a short period of silence.</p>
+		<p class="notranslate">
+			<strong>Default:</strong> true
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/endpointing/">Features: Endpointing</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="encoding-str">
+			<strong>encoding:</strong> string
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Expected encoding of the submitted streaming audio. If this parameter is set, <code>sample_rate</code> must also be specified.
+		</p>
+		<ul class="info">
+			<li>
+				<p>Required when raw, headerless audio packets are sent to the streaming service. For containerized audio, pre-recorded audio, or audio submitted to the standard <code>/listen</code> endpoint, Deepgram will automatically detect the audio encoding and this parameter should not be used.</p>
+			</li>
+		</ul>
+		<p></p>
+		<p>Options include:</p>
+		<ul>
+			<li><p><code>linear16</code> 16-bit, little endian, signed PCM WAV data</p></li>
+			<li><p><code>flac</code> FLAC-encoded data</p></li>
+			<li><p><code>mulaw</code> mu-law encoded WAV data</p></li>
+			<li><p><code>amr-nb</code> adaptive multi-rate narrowband codec</p></li>
+			<li><p><code>amr-wb</code> adaptive multi-rate wideband codec</p></li>
+			<li><p><code>opus</code> Ogg Opus</p></li>
+			<li><p><code>speex</code> Ogg Speex</p></li>
+		</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/encoding/">Features: Encoding</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="channels-str">
+			<strong>channels:</strong> integer
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Number of independent audio channels contained in submitted streaming audio. Only read when a value is provided for <code>encoding</code>.
+		</p>
+		<p class="notranslate">
+			<strong>Default:</strong> 1
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/channels/">Features: Channels</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="sample_rate-str">
+			<strong>sample_rate:</strong> integer
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Sample rate of submitted streaming audio. Required (and only read) when a value is provided for <code>encoding</code>.
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/sample-rate/">Features: Sample Rate</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="tag-str">
+			<strong>tag:</strong> string
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Tag to associate with the request. Your request will automatically be associated with any tags you add to the API Key used to run the request. Tags associated with requests
+			appear in <a href="#usage">usage reports</a>.
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/tag/">Features: Tag</a>.
+		</p>
+	</main>
+</div>
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Audio submitted for transcription.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Response Schema
+
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>channel_index:</strong> array</p>
+          <p>Information about the active channel in the form <code>[channel_index, total_number_of_channels].</code></p>
+	</li>
+	<li>
+    <p class="notranslate"><strong>duration:</strong> number</p>
+    <p>Duration in seconds.</p>
+	</li>
+	<li>
+    <p class="notranslate"><strong>start:</strong> number</p>
+    <p>Offset in seconds.</p>
+	</li>
+	<li>
+    <p class="notranslate"><strong>is_final:</strong> boolean</p>
+    <p>Indicates that Deepgram has identified a point at which its transcript has reached maximum accuracy and is sending a definitive transcript of all audio up to that point. To learn more, see <a href="/documentation/features/interim-results/">Features: Interim Results.</a></p>
+	</li>
+	<li>
+    <p class="notranslate"><strong>speech_final:</strong> boolean</p>
+    <p>Indicates that Deepgram has detected an endpoint and immediately finalized its results for the processed time range. To learn more, see <a href="/documentation/features/endpointing/">Features: Endpointing.</a></p>
+	</li>
+	<li>
+		<p class="notranslate"><strong>channel:</strong> object</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>alternatives:</strong> array</p>
+              <p>Array of JSON-formatted <code>ResultAlternative</code> objects. This array will have length n, where n matches the value of the <code>alternatives</code> parameter passed in the request body.</p>
+      </li>
+			<li>
+        <p class="notranslate"><strong>transcript:</strong> string</p>
+        <p>Single-string transcript containing what the model hears in this channel of audio.</p>
+      </li>
+			<li>
+        <p class="notranslate"><strong>confidence:</strong> number</p>
+        <p>Value between 0 and 1 indicating the model's relative confidence in this transcript.</p>
+      </li>
+      <li>
+						<p class="notranslate"><strong>words:</strong> array</p>
+									<p>Array of JSON-formatted Word objects.</p>
+					</li>
+					<ul class="response">
+						<li>
+							<p class="notranslate"><strong>word:</strong> string</p>
+										<p>Distinct word heard by the model.</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>start:</strong> number</p>
+										<p>Offset in seconds from the start of the audio to where the spoken word starts.</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>end:</strong> number</p>
+										<p>Offset in seconds from the start of the audio to where the spoken word ends.</p>
+						</li>
+						<li>
+							<p class="notranslate"><strong>confidence:</strong> number</p>
+								<p>Value between 0 and 1 indicating the model's relative confidence in this word.</p>
+						</li>
+					</ul>
+    </ul>
+	</li>
+	<li>
+    <p class="notranslate"><strong>metadata:</strong> object</p>
+		<ul class="response">
+			<li><p class="notranslate"><strong>request_id:</strong> uuid</p>
+			<p class="notranslate">Unique identifier of the submitted audio and derived data returned.</p></li>
+		</ul>
+	</li>
+</ul>
+
+#### Error Handling
+
+To gracefully close a streaming connection, send the following JSON string:
+
+`{ 'type': 'CloseStream' }`
+
+This tells Deepgram that no more audio will be sent. Deepgram will close the connection once all audio has finished processing.
+
+#### Error Handling
+
+If Deepgram encounters an error during real-time streaming, we will return a WebSocket Close frame (WebSocket Protocol specification, section 5.5.1]).
+
+The body of the Close frame will indicate the reason for closing using one of the specification’s pre-defined status codes followed by a UTF-8-encoded payload that represents the reason for the error. Current codes and payloads in use include:
+
+<table>
+	<thead>
+		<tr>
+			<th>Code</th> 
+			<th>Payload</th> 
+			<th>Description</th>
+		</tr>
+	</thead> 
+	<tbody>
+		<tr>
+			<td>1008</td> 
+			<td>DATA-0000</td> 
+			<td>The payload cannot be decoded as audio. Either the encoding is incorrectly specified, the payload is not audio data, or the audio is in a format unsupported by Deepgram.</td>
+		</tr> 
+		<tr>
+			<td>1011</td> 
+			<td>NET-0000</td> 
+			<td>The service has not transmitted a Text frame to the client within the timeout window. This may indicate an issue internally in Deepgram's systems or could be due to Deepgram not receiving enough audio data to transcribe a frame.</td>
+		</tr> 
+		<tr>
+			<td>1011</td>
+			<td>NET-0001</td>
+			<td>The service has not received a Binary frame from the client within the timeout window. This may indicate an internal issue in Deepgram's systems, the client's systems, or the network connecting them.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>To learn about debugging WebSocket errors, see <a href="/documentation/guides/troubleshoot-streaming/">Troubleshooting WebSocket DATA and NET Errors When Live Streaming Audio</a>.</p>
+
+After sending a Close message, the endpoint considers the WebSocket connection closed and will close the underlying TCP connection.
+
+</div>
+<div slot="right" class="right">
+
+<CodeGroup title="endpoint">
+<CodeBlock active>
+```vim
+WSS /listen
+```
+</CodeBlock>
+</CodeGroup>
+
+<CodeGroup title="Live Streaming" tabs={[ "Node.js", "curl", "Python",".NET", "Ruby", "PHP"]} default="Node.js">
+<CodeBlock tab="curl">
+
+```bash
+# cURL is not possible because cURL can't establish the full-duplex
+# connection that WebSockets operates on
+```
+
+</CodeBlock>
+<CodeBlock tab="Python">
+
+```python
+import base64
+import json
+import websockets
+import asyncio
+
+def connect(key):
+    """ Connect to the websocket endpoint.
+    """
+    return websockets.connect(
+        ## Connect to the secure websocket endpoint.
+        'wss://api.deepgram.com/v1/listen',
+        extra_headers = {
+            'Authorization': 'Token {}'.format(key)
+        }
+    )
+
+async def run(key, inbox, outbox):
+    """ Streams data to/from the service.
+
+        We will use `key` to authenticate.
+        We will read audio data from the `outbox` queue and send it to the server.
+        When we receive responses from the server, we will put the latest transcript in the `inbox` queue.
+    """
+
+    ## Connect to the streaming endpoint.
+    async with connect(key) as ws:
+
+        ## This example function will upload data.
+        async def sender(ws):
+            while True:
+                audio = await outbox.get()
+                if audio is None:
+                    break
+
+                await ws.send(audio)
+
+            ## Close the connection cleanly.
+            await ws.send(json.dumps({
+                "type": "CloseStream"
+            }))
+
+        ## This example function will handle responses.
+        async def receiver(ws):
+            async for msg in ws:
+                ## Deserialize the JSON message.
+                msg = json.loads(msg)
+
+                ## Get the transcript and put in the queue.
+                if 'alternatives' in msg:
+                    transcript = msg['alternatives'][0]['transcript']
+                    print('Metadata received:', msg)
+                    await inbox.put(transcript)
+                elif 'channel' in msg and msg['is_final']:
+                    transcript = msg['channel']['alternatives'][0]['transcript']
+                    print('Metadata received:', msg)
+                    await inbox.put(transcript)
+                else:
+                    print('Metadata received:', msg)
+
+        await asyncio.wait([
+            asyncio.ensure_future(sender(ws)),
+            asyncio.ensure_future(receiver(ws))
+        ])
+
+if __name__ == '__main__':
+    ## Create the queues.
+    inbox = asyncio.Queue()
+    outbox = asyncio.Queue()
+
+    ## send raw audio from your machine
+
+    with open('file.wav', 'rb') as f:
+        while True:
+            piece = f.read(4096)
+            if piece == b'':
+                break
+            outbox.put_nowait(piece)
+
+    outbox.put_nowait(None)
+
+    ## Run the event loop, replacing credentials with your Deepgram API key.
+    asyncio.get_event_loop().run_until_complete(run('YOUR_DEEPGRAM_API_KEY', inbox, outbox))
+
+    ## Print out the results
+    print('All done. Replaying all the transcript messages...')
+    while True:
+        try:
+            msg = inbox.get_nowait()
+        except asyncio.QueueEmpty:
+            break
+
+        print('  Received transcript:', msg)
+```
+
+</CodeBlock>
+<CodeBlock tab=".NET">
+
+```c
+// .NET code snippet coming soon
+```
+
+</CodeBlock>
+<CodeBlock tab="Node.js" active>
+
+```js
+// Connect to the streaming endpoint.
+var establishConnection = function () {
+  console.log('Establishing connection.')
+
+  // Configure the websocket connection.
+  // This requires ws installed using 'npm i ws'.
+  const WebSocket = require('ws')
+  socket = new WebSocket('wss://api.deepgram.com/v1/listen', {
+    // Replace with your Deepgram project's API Key.
+    headers: {
+      Authorization: 'Token YOUR_DEEPGRAM_API_KEY',
+    },
+  })
+  socket.onopen = (m) => {
+    console.log('Socket opened!')
+
+    // Grab an audio file.
+    var fs = require('fs')
+    var contents = fs.readFileSync('/path/to/audio/file.wav')
+
+    // Send the audio to the Deepgram API all at once (works if audio is relatively short).
+    // socket.send(contents);
+
+    // Send the audio to the Deepgram API in chunks of 1000 bytes.
+    chunk_size = 1000
+    for (i = 0; i < contents.length; i += chunk_size) {
+      slice = contents.slice(i, i + chunk_size)
+      socket.send(slice)
+    }
+
+    // Send the message to close the connection.
+    socket.send(JSON.stringify({                                                   
+      "type": "CloseStream"
+    }))
+  }
+  socket.onclose = (m) => {
+    console.log('Socket closed.')
+  }
+
+  socket.onmessage = (m) => {
+    m = JSON.parse(m.data)
+    // Log the received message.
+    console.log(m)
+
+    // Log just the words from the received message.
+    if (m.hasOwnProperty('channel')) {
+      let words = m.channel.alternatives[0].words
+      console.log(words)
+    }
+  }
+}
+
+var socket = null
+establishConnection()
+```
+
+</CodeBlock>
+<CodeBlock tab="PHP">
+
+```php
+# PHP code snippet coming soon
+```
+
+</CodeBlock>
+<CodeBlock tab="Ruby">
+
+```ruby
+# Ruby code snippet coming soon
+```
+
+</CodeBlock>
+</CodeGroup>
+
+<CodeGroup title="response">
+<CodeBlock active>
+
+```json
+{
+  "metadata": {
+    "transaction_key": "string",
+    "request_id": "uuid",
+    "sha256": "string",
+    "created": "string",
+    "duration": 0,
+    "channels": 0,
+    "models": [
+      "string"
+    ],
+  },
+  "results": {
+    "channels": [
+      {
+        "search": [
+          {
+            "query": "string",
+            "hits": [
+              {
+                "confidence": 0,
+                "start": 0,
+                "end": 0,
+                "snippet": "string"
+              }
+            ]
+          }
+        ],
+        "alternatives": [
+          {
+            "transcript": "string",
+            "confidence": 0,
+            "words": [
+              {
+                "word": "string",
+                "start": 0,
+                "end": 0,
+                "confidence": 0
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+</CodeBlock>
+</CodeGroup>
+
+</div>
+</ColumnsForCode>

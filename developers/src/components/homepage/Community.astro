@@ -1,0 +1,82 @@
+---
+import Link from "../../shared/components/general/Link.astro";
+---
+
+<div class="mid">
+	<div class="community">
+		<h4>#DeepgramCommunity</h4>
+		<h3>DG ❤️ Devs</h3>
+		<p>
+			We’ve launched our community space! If you have questions or comments, want to learn together, share what you’re working on, have the support of the Community, or want to
+			check out the fun we have happening, head over to our new space.
+		</p>
+		<Link icon="arrow-right" class="text-lightIris underline" iconSuffix href="https://github.com/orgs/deepgram/discussions">Community Discussion Forum</Link>
+	</div>
+	<div class="community-image">
+		<img class="image" src="/images/community-logo-image.svg" />
+	</div>
+</div>
+
+<style>
+	.mid {
+		@apply bg-offBlack;
+		@apply m-auto;
+		@apply text-white;
+		@apply max-w-full;
+		@apply md:max-w-4xl;
+		@apply lg:max-w-5xl;
+		@apply xl:max-w-6xl;
+		@apply 2xl:max-w-7xl;
+		@apply grid grid-cols-1 items-center;
+		@apply md:grid-cols-2;
+	}
+
+	.community {
+		height: -webkit-fill-available;
+		@apply bg-offBlack text-white;
+		@apply px-20 md:pl-72 md:pr-20 py-12;
+		@apply flex flex-col gap-6;
+		@apply -mx-10 md:-ml-72;
+	}
+
+	.community p {
+		@apply text-white;
+	}
+
+	h3 {
+		@apply text-white font-favorit font-bold;
+		@apply text-2xl;
+	}
+
+	h4 {
+		@apply uppercase text-casper font-favorit font-bold;
+		@apply text-xl;
+	}
+
+	.community-image {
+		@apply flex-col justify-center;
+		@apply pr-0 xl:pr-40;
+		@apply md:flex items-center;
+		@apply hidden md:flex;
+		width: 50vw;
+		height: -webkit-fill-available;
+		background-image: linear-gradient(
+			180deg,
+			hsl(249deg 77% 45%) 0%,
+			hsl(246deg 84% 41%) 0%,
+			hsl(242deg 95% 37%) 0%,
+			hsl(240deg 100% 34%) 1%,
+			hsl(240deg 100% 33%) 3%,
+			hsl(240deg 100% 31%) 7%,
+			hsl(240deg 100% 29%) 12%,
+			hsl(240deg 100% 28%) 21%,
+			hsl(240deg 100% 26%) 35%,
+			hsl(0deg 0% 0%) 76%
+		);
+	}
+
+	.image {
+		height: 80%;
+		@apply pt-0 xl:py-4 px-8 lg:px-0;
+	}
+</style>

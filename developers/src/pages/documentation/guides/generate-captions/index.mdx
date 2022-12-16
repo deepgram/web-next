@@ -1,0 +1,305 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Automatically Generating WebVTT and SRT Captions
+description: Learn how to create ready-to-upload caption files for the web and broadcast.
+type: "transcription"
+order: 6
+seo:
+  metaTitle: Automatically Generating WebVTT and SRT Captions
+  metaDescription: Learn how to create ready-to-upload caption files for the web and broadcast.
+  keywords: tutorial, accessibility, webvtt, srt, caption, captioning
+---
+import Alert from '../../../../shared/components/global/Alert.astro';
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+
+# {frontmatter.title}
+
+One use for the Deepgram API includes providing captions for audio and video, which is critical for accessibility. In this guide, you'll learn how to automatically generate WebVTT and SRT captions for an audio file. We will provide two sets of code samples--one without using the Deepgram SDK so you can see the technique, and one using Deepgram's SDKs to make it even easier.
+
+<Alert type="info">
+
+If you'd like to learn more about inclusive design and accessibility, we recommend checking out [Microsoft's Inclusive Toolkit](https://www.microsoft.com/design/inclusive/).
+
+</Alert>
+
+## Before You Begin
+
+Before you run the code, you'll need to do a few things.
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+- $150 in credit, which gives you access to:
+  - all base [models](/documentation/features/model/)
+  - pre-recorded and [live streaming](/documentation/getting-started/streaming/) functionality
+  - all [features](/documentation/features/)
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](https://console.deepgram.com/signup?jump=keys). Make note of your API Key; you will need it later.
+
+### Configure the Environment
+
+We assume you have already configured a Node.js development environment on your machine. [Download Node.js](https://nodejs.org/en/).
+
+<Alert type="info">
+
+If you get stuck at any point, help is just a click away! [Contact Support](/support/).
+
+</Alert>
+
+## Getting Familiar with Captioning Formats
+
+In this tutorial, we are going to work with two common and similar caption formats: WebVTT and SRT. Both formats contain only subtitle information, which must be added to video for a final product. When the caption files are loaded into a compatible video platform, captions will be displayed in the foreground of media, as per the information contained in that file.
+
+### WebVTT Files
+
+Web Video Text Track (WebVTT) files generally consist of a sequence of text segments associated with a time-interval, called a cue. It is mainly used to mark up external text track resources in connection with the HTML `<track>` element. WebVTT files provide captions or subtitles for video content, and also text video descriptions [MAUR], chapters for content navigation, and more generally any form of metadata that is time-aligned with audio or video content. To learn more, visit W3C's [WebVTT: The Web Video Text Tracks Format](https://www.w3.org/TR/webvtt1/).
+
+An example WebVTT file:
+
+```
+WEBVTT
+
+1
+00:00:00.219 --> 00:00:03.512
+- yeah, as much as it's worth celebrating
+
+2
+00:00:04.569 --> 00:00:06.226
+- the first space walk
+
+3
+00:00:06.564 --> 00:00:07.942
+- with an all female team
+
+4
+00:00:08.615 --> 00:00:09.795
+- I think many of us
+
+5
+00:00:10.135 --> 00:00:13.355
+- are looking forward to it just being normal.
+```
+
+### SRT Files
+
+SubRip Text (SRT) files also generally consist of a sequence of text segments associated with a time-interval. To learn more, visit the open source [Matroska multimedia container format website](https://www.matroska.org/technical/subtitles.html#srt-subtitles).
+
+An example SRT file:
+
+```
+1
+00:00:00,219 --> 00:00:03,512
+yeah, as much as it's worth celebrating
+
+2
+00:00:04,569 --> 00:00:06,226
+the first space walk
+
+3
+00:00:06,564 --> 00:00:07,942
+with an all female team
+
+4
+00:00:08,615 --> 00:00:09,795
+I think many of us
+
+5
+00:00:10,135 --> 00:00:13,355
+are looking forward to it just being normal.
+```
+
+<Alert type="info">
+
+Note that both WebVTT and SRT are similar in their basic forms--the difference is that the millisecond separator is `.` in WebVTT and `,` in SRT.
+
+</Alert>
+
+## Transcribing Captions
+
+Now that you understand the basics of the WebVTT and SRT captioning formats, you can start transcribing your captions.
+
+### Choose an Audio File
+
+Locate a hosted audio file that you would like to caption and make note of its URL. If you can't find one, you can use `<https://static.deepgram.com/examples/deep-learning-podcast-clip.wav>`.
+
+### Install the SDK
+
+Open your terminal, navigate to the location on your drive where you want to create your project, and install the Deepgram SDK.
+
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js"]}>
+
+<CodeBlock tab="Node.js" active>
+
+```bash
+# Initialize a new application
+npm init -y
+
+# Install the Deepgram Node.js SDK
+# https://github.com/deepgram/node-sdk
+npm install @deepgram/sdk
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Write the Code
+
+In your terminal, create a new `index.js` file in your project's location, open it in your code editor, and populate it with code.
+
+#### Set Up Dependencies
+
+Initialize your dependencies:
+
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js"]}>
+
+<CodeBlock tab="Node.js" active>
+
+```js
+const fs = require('fs')
+const { Deepgram } = require('@deepgram/sdk')
+const deepgram = new Deepgram('YOUR_API_KEY')
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+<Alert type="warning">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY`with your Deepgram API Key.
+
+</Alert>
+
+#### Get the Transcript
+
+To receive timestamps of phrases to include in your caption files, ask Deepgram to include [utterances](/documentation/features/utterances/) (a chain of words or, more simply, a phrase):
+
+<CodeGroup title="Example" default="Node.js" tabs={["Node.js"]}>
+
+<CodeBlock tab="Node.js" active>
+
+```js
+deepgram.transcription
+  .preRecorded(
+    {
+      url: 'YOUR_FILE_LOCATION',
+    },
+    { punctuate: true, utterances: true }
+  )
+  .then((response) => {
+    //  Following code here
+  })
+  .catch((error) => {
+    console.log({ error })
+  })
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+<Alert type="warning">
+
+Be sure to replace `YOUR_FILE_LOCATION`with the URL of the file you would like to caption.
+
+</Alert>
+
+#### Create a Write Stream
+
+Open a writable stream, so you will be able to insert text directly into your file. When you open your stream, you should pass in the `a` flag, so that any time you write data to the stream, it will be appended to the end.
+
+Inside the `.then()` block, add:
+
+<CodeGroup title="Example"  default="Node.js" tabs={["Node.js"]}>
+
+<CodeBlock tab="Node.js" active>
+
+```js
+// WebVTT Filename
+const stream = fs.createWriteStream('output.vtt', { flags: 'a' })
+
+// SRT Filename
+const stream = fs.createWriteStream('output.srt', { flags: 'a' })
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+#### Write the Captions
+
+The WebVTT and SRT formats are very similar, and each requires a block of text per utterance.
+
+<CodeGroup title="WebVTT Example" default="Node.js" tabs={["Node.js", "Node.js with SDK"]}>
+
+<CodeBlock tab="Node.js" active>
+
+```js
+stream.write('WEBVTT\n\n')
+for (let i = 0; i < response.results.utterances.length; i++) {
+  const utterance = response.results.utterances[i]
+  const start = new Date(utterance.start * 1000).toISOString().substr(11, 12)
+  const end = new Date(utterance.end * 1000).toISOString().substr(11, 12)
+  stream.write(`${i + 1}\n${start} --> ${end}\n- ${utterance.transcript}\n\n`)
+}
+```
+
+</CodeBlock>
+
+<CodeBlock tab="Node.js with SDK" active>
+
+```js
+stream.write(response.toWebVTT())
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+Deepgram provides seconds back as a number (`15.4` means 15.4 seconds), but both formats require times as `HH:MM:SS.milliseconds` and getting the end of a `Date().toISOString()` will achieve this for us.
+
+<CodeGroup title="SRT Example" default="Node.js" tabs={["Node.js", "Node.js with SDK"]}>
+
+<CodeBlock tab="Node.js" active>
+
+```js
+for (let i = 0; i < response.results.utterances.length; i++) {
+  const utterance = response.results.utterances[i]
+  const start = new Date(utterance.start * 1000)
+    .toISOString()
+    .substr(11, 12)
+    .replace('.', ',')
+  const end = new Date(utterance.end * 1000)
+    .toISOString()
+    .substr(11, 12)
+    .replace('.', ',')
+  stream.write(`${i + 1}\n${start} --> ${end}\n${utterance.transcript}\n\n`)
+}
+```
+
+</CodeBlock>
+
+<CodeBlock tab="Node.js with SDK" active>
+
+```js
+stream.write(response.toSRT())
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+<Alert type="info">
+
+The differences between the non-SDK WebVTT and SRT code include:
+
+- The WebVTT code has a `WEBVTT` line at the top, whereas the SRT code does not.
+- The millisecond separator is `.` for WebVTT whereas it is `,` for SRT.
+- In the WebVTT file, there is a `-` before the utterance, whereas in the SRT code, there is not.
+
+</Alert>

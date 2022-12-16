@@ -1,0 +1,27 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Channels
+description: Learn about Deepgram's Channels feature, which allows you to specify the number of independent audio channels your submitted audio contains. Used when the Encoding feature is also being used to submit streaming raw audio.
+tags: [channels, encoding, streaming, raw-audio]
+order: 22
+seo:
+  metaTitle: Channels
+  metaDescription: Learn about Deepgram's Channels feature, which allows you to specify the number of independent audio channels your submitted audio contains. Used when the Encoding feature is also being used to submit streaming raw audio.
+  keywords: channels, encoding, raw audio, streaming
+---
+
+# {frontmatter.title}
+
+<div class="badge">STREAMING</div>
+
+Deepgram’s Channels feature allows you to specify the number of independent audio channels your submitted audio contains. The default value is `1`.
+
+The Channels feature is used when the [Encoding](/documentation/features/encoding/) feature is also being used to submit streaming raw audio. It is not read at any other time.
+
+## Enable Feature
+
+To enable Channels, when you call Deepgram’s API, add a `channels` parameter in the query string and set it to the number of channels in your submitted audio.
+
+`channels=NUMBER_OF_CHANNELS`
+
+For an example of audio streaming, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/).

@@ -41,6 +41,7 @@ export default defineConfig({
 		}),
 	],
 	vite: {
+		ssr: { noExternal: ["node-html-parser"] },
 		plugins: [vitePreact()],
 		resolve: {
 			preserveSymlinks: true, // required for dev to read contents of symlinked directory

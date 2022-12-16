@@ -1,0 +1,59 @@
+---
+import Icon from "../general/Icon.astro";
+import Link from "../general/Link.astro";
+let pathname = Astro.url.pathname;
+const { navStructure, class: className } = Astro.props;
+---
+
+<ul class={`${className} pl-4`}>
+	{
+		navStructure.map((nav) => {
+			const navToTrimmed = nav.to.slice(0, -1);
+			return (
+				<li class={pathname.includes(nav.to) ? "active" : ""}>
+					<div class="navlink-container ">
+						{nav.children && <input id={`expand-${nav.to}`} class="toggle " type="checkbox" checked={pathname.includes(navToTrimmed)} />
+  <label for={`expand-${nav.to}`} class="lbl-toggle "></label>}
+
+						<Link href={nav.to} class={`list-link hover:text-iris text-sm my-2 pl-1 py-1 pr-3 text-darkCharcoal inline-flex leading-5 ${pathname.endsWith(nav.to) ? "font-semibold" : "text-darkCharcoal"}  ${pathname.endsWith(nav.to) && nav.children ? "border-l-4 border-meadow" : "" }`}>
+							{nav.name}
+						</Link>
+						
+						{nav.children && <div class="child-list"><Astro.self class={nav.children ? "border-l border-cloud" : ""} navStructure={nav.children} /></div>}
+					</div>
+				</li>
+			);
+		})
+	}
+</ul>
+
+<style>
+input.toggle[type="checkbox"] {
+  display: none;
+}
+.toggle + .lbl-toggle::before {
+	content: "+";
+	width: 11px;
+	display: inline-block;
+}
+.lbl-toggle::before {
+	@apply cursor-pointer;
+}
+.toggle:checked + .lbl-toggle::before {
+	content: "-";
+	width: 11px;
+	display: inline-block;
+}
+.child-list {
+	height: auto;
+	-webkit-transition: height 1.25s linear;
+  -moz-transition: height 1.25s linear;
+  -o-transition: height 1.25s linear;
+	transition: height 1.25s linear;
+	overflow-x: hidden;
+}
+.toggle:not(:checked) + .lbl-toggle + .list-link + .child-list {
+	height: 0;
+	overflow-x: hidden;
+}
+</style>

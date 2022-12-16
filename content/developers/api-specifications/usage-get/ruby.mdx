@@ -1,0 +1,22 @@
+---
+label: Ruby
+---
+
+```ruby
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.deepgram.com/v1/projects/{project_id}/requests/{request_id}")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Get.new(url)
+request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+request["content-type"] = 'application/json'
+
+response = http.request(request)
+puts response.read_body
+```

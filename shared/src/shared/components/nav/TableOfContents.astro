@@ -1,0 +1,71 @@
+---
+import Link from "../general/Link.astro";
+const { headings, docsType, classes } = Astro.props;
+const hasHeadings = 	headings && headings.filter((heading) => heading.depth >= 2)
+---
+
+<nav class={classes}>
+	{headings && headings.length > 0 && <h5 class={`${hasHeadings.length > 0 ? 'hidden pt-8 pb-5 xl:block' : 'hidden'} `}>IN THIS {docsType}</h5>}
+	<ul class="hidden xl:block">
+		{
+			headings &&
+				headings.length > 0 &&
+				headings
+					.filter((heading) => heading.depth >= 2 && heading.depth <= 3)
+					.map((heading) => (
+						
+						
+						{
+							heading.depth === 3 
+							?
+							<li id={`scroll-${heading.slug}`} class="text-sm pl-4 pr-8 py-2 border-l border-r border-stone">
+							<Link class="text-steel w-6" href={`#${heading.slug}`}>{heading.text}
+							</Link> 
+							</li>
+							:
+							<li id={`scroll-${heading.slug}`} class="text-sm py-2 pr-8 border-stone border-r">
+							<Link class="text-steel w-6" href={`#${heading.slug}`}>{heading.text}
+							</Link>
+							</li>
+						}
+					))
+		}
+	</ul>
+</nav>
+
+<script is:inline>
+	let scrollPos = 0;
+	function handleScroll() {
+		scrollPos = window.pageYOffset + 80;
+		const groups = document.querySelectorAll("h2, h3");
+		groups.forEach((g) => {
+			let group = g;
+			let top = group.offsetTop;
+
+			let id = g.id;
+			if (scrollPos >= top) {
+				if(document.querySelector(".toc-active")) {
+					document.querySelector(".toc-active").classList.remove("toc-active");
+				}
+				document.getElementById(`scroll-${id}`).classList.add("toc-active");
+			}
+		});
+	}
+
+	window.addEventListener("scroll", handleScroll);
+</script>
+
+<style>
+	li.toc-active {
+		@apply border-r-4 border-grass font-bold;
+	}
+</style>
+
+<!-- // {
+						// 	heading.depth === 3
+						// 	?
+						// 	<li class="text-xs pl-4 pr-8 py-2 border-r border-stone">
+						// 	<Link class="text-steel" href={`#${heading.slug}`}>{heading.text}
+						// 	</Link>
+						// 	</li>
+						// 	: -->

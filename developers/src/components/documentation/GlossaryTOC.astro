@@ -1,0 +1,50 @@
+---
+import Link from "../../shared/components/general/Link.astro";
+const { headings, docsType, classes } = Astro.props;
+const links = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 2);
+---
+
+<nav class={`${classes ? classes : ""} sticky top-28`}>
+	{headings && headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">CONTENT</h5>}
+	<ul class="hidden xl:block overflow-y-scroll">
+		{
+			headings &&
+				headings.length > 0 &&
+				links.map((heading) => (
+					<li id={`scroll-${heading.text}`} class="pl-4 py-2 border-l border-stone">
+						<Link class={` ${heading.used ? "text-steel" : "text-cloud cursor-default"}`} href={`#${heading.id}`}>
+							{heading.text}
+						</Link>
+					</li>
+				))
+		}
+	</ul>
+</nav>
+
+<script is:inline>
+	let scrollPos = 0;
+	function handleScroll() {
+		scrollPos = window.pageYOffset + 80;
+		const groups = document.querySelectorAll(".letter");
+		groups.forEach((g) => {
+			let group = g;
+			let top = group.offsetTop;
+
+			let id = g.id;
+			if (scrollPos >= top) {
+				if (document.querySelector(".toc-active")) {
+					document.querySelector(".toc-active").classList.remove("toc-active");
+				}
+				document.getElementById(`scroll-${id}`).classList.add("toc-active");
+			}
+		});
+	}
+
+	window.addEventListener("scroll", handleScroll);
+</script>
+
+<style>
+	li.toc-active {
+		@apply border-l-4 border-grass font-semibold;
+	}
+</style>
