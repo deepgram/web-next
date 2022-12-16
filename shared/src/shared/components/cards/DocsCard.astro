@@ -8,13 +8,17 @@ const { class: classes, doc } = Astro.props;
 		{doc.frontmatter.cover ? <img src={doc.frontmatter.cover} class="flex items-center justify-center w-full m-0 border-b border-darkCharcoal" /> : null}
 	</header>
 	<main class="docs-card flex flex-col p-4">
-		<h3 class="mb-4">{doc.frontmatter.title}</h3>
+		<h3 class="text-base mb-2">{doc.frontmatter.title}</h3>
 		<p class="p-0">{doc.frontmatter.description}</p>
 	</main>
 	<footer><div class="readingTime">{doc.frontmatter.minutesRead}</div></footer>
 </GenericDocsCard>
 
 <style>
+
+	h3 {
+		@apply text-base mb-2 !important;
+	}
 	h3,
 	p {
 		@apply text-darkCharcoal;

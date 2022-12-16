@@ -64,12 +64,12 @@ const url = Astro.url;
 	<h4 x-show="!thanks">Share your feedback</h4>
 	<div x-show="error" x-text="error"></div>
 	<div>
-		<p x-show="!thanks" class="feedback-question">Was this article useful or interesting to you?</p>
+		<p x-show="!thanks" class="feedback-question text-[#9d9b9b]">Was this article useful or interesting to you?</p>
 		<div x-show="!thanks" class="thumbs flex items-center justify-start">
 			<form id={`thumbsup-form-${formUuid}`} :class="thumb === 'up' ? 'active' : ''" class="inline thumb up" name="rating" @submit.prevent="ratePage">
 				<input id={`thumbsup-${formUuid}`} type="submit" aria-hidden="true" class="hidden" />
 				<label for={`thumbsup-${formUuid}`} class="text-3xl">
-					<Svg name="thumbsup" class="my-4 h-8 w-auto" />
+					<Svg name="thumbsup" class="my-4 h-8 w-auto fill-[#9d9b9b]" />
 				</label>
 
 				<label for={`thumbsup-honeypot-${formUuid}`} class="hidden"
@@ -82,7 +82,7 @@ const url = Astro.url;
 			<form id={`thumbsdown-form-${formUuid}`} :class="thumb === 'down' ? 'active' : ''" class="thumb inline down" name="rating" @submit.prevent="ratePage">
 				<input id={`thumbsdown-${formUuid}`} type="submit" aria-hidden="true" class="hidden" />
 				<label for={`thumbsdown-${formUuid}`} class="text-3xl">
-					<Svg name="thumbsdown" class="mt-4 h-8 w-auto" />
+					<Svg name="thumbsdown" class="mt-4 h-8 w-auto fill-[#9d9b9b]" />
 				</label>
 
 				<label for={`thumbsdown-honeypot-${formUuid}`} class="hidden"
@@ -143,7 +143,7 @@ const url = Astro.url;
 	}
 
 	form svg {
-		@apply fill-darkCharcoal;
+		@apply fill-cloud;
 		cursor: pointer;
 	}
 

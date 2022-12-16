@@ -15,14 +15,14 @@ const { theme, type, title, subtitle, class: classes } = Astro.props;
 	<div class="flex flex-col justify-center pl-2 sm:pl-9">
 		<LeftDecoration icon="four-point-star" class={`w-4 sm:w-5 md:w-6 lg:w-7 xl:w-8 mb-6 sm:mb-10 md:mb-20 lg:mb-30 xl:mb-40 ${theme === "light" ? "fill-black" : "fill-white"}`} />
 
-		{type === "standard" ? <h2>tl;dr</h2> : null}
+		<!-- {type === "standard" ? <h2>tl;dr</h2> : null} -->
 		<h1>{title}</h1>
 		{type === "standard" ? <p class="text-base leading-6 sm:text-lg ">{subtitle}</p> : null}
 		<div class="flex flex-col xl:flex-row mt-2 sm:mt-6 md:mt-10 items-start xl:items-end">
 			<div>
 				<Link
 					href="https://console.deepgram.com/signup"
-					class={`${theme === "light" ? "text-darkIris" : "text-lightIris"} text-xl sm:text-4xl font-bold leading-10 font-favorit underline`}
+					class={`${theme === "light" ? "text-lightIris" : "text-lightIris"} text-xl sm:text-4xl font-bold leading-10 font-favorit underline`}
 					>Start Free
 				</Link><span class="text-xl sm:text-4xl">💰</span>
 			</div>
@@ -30,7 +30,7 @@ const { theme, type, title, subtitle, class: classes } = Astro.props;
 			{
 				type === "standard" ? (
 					<p class="ml-0 mt-0 flex flex-col sm:mt-2 sm:flex-row xl:mt-0 xl:ml-7">
-						Got questions? <Link class={`${theme === "light" ? "text-darkIris" : "text-lightIris"} ml-0 underline sm:ml-1`}>Talk to an expert.</Link>
+						Got questions? <Link class={`${theme === "light" ? "text-lightIris" : "text-lightIris"} ml-0 underline sm:ml-1`}>Talk to an expert.</Link>
 					</p>
 				) : null
 			}
