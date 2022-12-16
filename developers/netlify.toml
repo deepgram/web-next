@@ -21,12 +21,6 @@
   status = 200
 
 [[redirects]]
-  from = "https://dpgr.am/*"
-  to = "/.netlify/functions/short-url?path=:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/getting-started/what-is-deepgram"
   to = "/documentation/why-deepgram/"
   status = 301

@@ -18,8 +18,8 @@ jobs:
     name: Build Docs
     runs-on: ubuntu-latest
     env:
-      PRODUCTION_DOMAIN: developers.deepgram.com
-      STAGING_DOMAIN: romantic-gates-9c0b5e.netlify.app
+      PRODUCTION_DOMAIN: comfy-crisp-docs.netlify.app
+      STAGING_DOMAIN: comfy-crisp-docs.netlify.app
       BUILD_PATH: ./developers
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_DOCS }}
@@ -80,7 +80,7 @@ jobs:
         uses: nwtgck/actions-netlify@v1.2
         with:
           publish-dir: ${{ env.BUILD_PATH }}/dist
-          production-branch: lo/developer-kickoff
+          production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: ${{ env.DEPLOY_MESSAGE }}
           enable-pull-request-comment: false                  # default: true
