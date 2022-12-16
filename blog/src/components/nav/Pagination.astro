@@ -26,7 +26,7 @@ pageStatuses[pageStatuses.length - 1].isDisabled = false;
 <nav class="flex w-full flex-col items-center my-28">
 	<ul class="flex items-center justify-center">
 		<li>
-			<Link icon="chevron-left" class="stroke-2 text-storm" iconSuffix iconStroke href={page.url.prev === undefined ? null : `${page.url.prev}`} />
+			<Link icon="chevron-left" class="stroke-2 text-cloud" fillCurrent href={page.url.prev === undefined ? null : `${page.url.prev}`} />
 		</li>
 		{
 			pageStatuses.map((pageStatus, index) =>
@@ -50,7 +50,7 @@ pageStatuses[pageStatuses.length - 1].isDisabled = false;
 			)
 		}
 		<li>
-			<Link icon="chevron-right" class="stroke-2 text-storm" iconStroke href={page.url.next === undefined ? null : `${page.url.next}`} />
+			<Link icon="chevron-right" class="stroke-2 text-cloud" fillCurrent href={page.url.next === undefined ? null : `${page.url.next}`} />
 		</li>
 	</ul>
 </nav>
@@ -62,6 +62,6 @@ pageStatuses[pageStatuses.length - 1].isDisabled = false;
 
 	.page {
 		@apply inline-flex flex-nowrap items-center;
-		@apply text-storm text-sm;
+		@apply text-cloud text-sm;
 	}
 </style>

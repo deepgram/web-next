@@ -12,7 +12,7 @@ const authorArray = data.stories;
 ---
 
 {authorArray && (
-	<ul class:list={["inline list-none p-0 text-xs font-bold uppercase", classes]}>
+	<ul class:list={["inline list-none p-0 text-xs font-bold uppercase text-cloud", classes]}>
 		{authorArray.map((author, index, array) => (
 			<li class="inline-block p-0">
 				<AuthorName author={author} />
