@@ -260,8 +260,8 @@ html {
 	}
 
 	.bg-blur {
-		-webkit-backdrop-filter: blur(0.625rem);
-		backdrop-filter: blur(0.625rem);
+		-webkit-backdrop-filter: blur(30%);
+		backdrop-filter: blur(30%);
 	}
 
 	.shadow-menu {
