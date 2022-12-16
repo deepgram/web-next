@@ -2,12 +2,12 @@ name: "Docs: CI/CD"
 
 on:
   push:
-    branches: [main]
+    branches: [main, lo/developer-kickoff]
     paths: 
     - 'developers/**'
     - 'shared/**'
   pull_request:
-    branches: [main]
+    branches: [main, lo/developer-kickoff]
     paths: 
     - 'developers/**'
     - 'shared/**'
