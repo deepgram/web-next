@@ -4,14 +4,14 @@ title: Billing
 description: Billing for the Deepgram API
 order: 10
 ---
-import ColumnsForCode from '../../components/layout/ColumnsForCode.astro';
-import CodeGroup from '../../shared/components/code/CodeGroup.astro';
-import CodeBlock from '../../shared/components/code/CodeBlock.astro';
+
+import ColumnsForCode from "../../components/layout/ColumnsForCode.astro";
+import CodeGroup from "../../shared/components/code/CodeGroup.astro";
+import CodeBlock from "../../shared/components/code/CodeBlock.astro";
 
 # {frontmatter.title}
-<div class="grid lg:grid-cols-2 gap-6">
-Deepgram tracks individual transactions and transaction summaries for Deepgram services.
-</div>
+
+<div class="grid gap-6 lg:grid-cols-2">Deepgram tracks individual transactions and transaction summaries for Deepgram services.</div>
 
 <ColumnsForCode>
 <div slot="left" class="left">
@@ -23,65 +23,70 @@ Generates a list of outstanding balances for the specified project. To see balan
 #### Path Parameters
 
 <div class="feature">
-  <header class="notranslate">
-    <strong>project_id:</strong> uuid
-  </header>
-  <main>
-    <p>Unique identifier of the project for which you want to retrieve outstanding balances.</p>
-  </main>
+	<header class="notranslate">
+		<strong>project_id:</strong> uuid
+	</header>
+	<main>
+		<p>Unique identifier of the project for which you want to retrieve outstanding balances.</p>
+	</main>
 </div>
-
 
 #### Responses
 
 <table>
-  <thead>
-    <tr>
-      <th>Status</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>200 success</td>
-      <td><span>Balances found.</span></td>
-    </tr>
-  </tbody>
+	<thead>
+		<tr>
+			<th>Status</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>200 success</td>
+			<td>
+				<span>Balances found.</span>
+			</td>
+		</tr>
+	</tbody>
 </table>
 
 #### Response Schema
 
 <ul class="response">
-  <li>
-    <p class="notranslate"><strong>balances:</strong> array</p>
-    <p>Array of balance objects.</p>
-    <ul class="response">
-      <li>
-        <p class="notranslate"><strong>balance_id:</strong> uuid</p>
-        <p>Unique identifier of the balance.</p>
-      </li>
-      <li>
-        <p class="notranslate">
-          <strong>amount:</strong> number
-        </p>
-          <p>Amount of the balance.</p>
-      </li>
-      <li>
-        <p class="notranslate">
-          <strong>units:</strong> string
-        </p>
-          <p>Units of the balance. May use <code>usd</code> or <code>hour</code>, depending on the project
-                  billing
-                  settings.</p>
-      </li>
-      <li>
-        <p class="notranslate">
-          <strong>purchase:</strong> string
-        </p>
-          <p>Unique identifier of the purchase order associated with the balance.</p>
-      </li>
-    </ul>
-  </li>
+	<li>
+		<p class="notranslate">
+			<strong>balances:</strong> array
+		</p>
+		<p>Array of balance objects.</p>
+		<ul class="response">
+			<li>
+				<p class="notranslate">
+					<strong>balance_id:</strong> uuid
+				</p>
+				<p>Unique identifier of the balance.</p>
+			</li>
+			<li>
+				<p class="notranslate">
+					<strong>amount:</strong> number
+				</p>
+				<p>Amount of the balance.</p>
+			</li>
+			<li>
+				<p class="notranslate">
+					<strong>units:</strong> string
+				</p>
+				<p>
+					Units of the balance. May use <code>usd</code> or <code>hour</code>, depending on the project billing settings.
+				</p>
+			</li>
+			<li>
+				<p class="notranslate">
+					<strong>purchase:</strong> string
+				</p>
+				<p>Unique identifier of the purchase order associated with the balance.</p>
+			</li>
+		</ul>
+	</li>
 </ul>
 
 </div>
@@ -95,125 +100,126 @@ Generates a list of outstanding balances for the specified project. To see balan
 	</CodeGroup>
 	<CodeGroup title="Get All Balances" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
-	<CodeBlock tab="curl" active>
-		```bash
-			curl --request GET \
-			--url 'https://api.deepgram.com/v1/projects/{project_id}/balances' \
-			--header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
-			--header 'content-type: application/json'
-		```
-	</CodeBlock>
-	<CodeBlock tab="Node.js">
-		```js
-		const http = require('https')
+    <CodeBlock tab="curl" active>
+    	```bash
+    		curl --request GET \
+    		--url 'https://api.deepgram.com/v1/projects/{project_id}/balances' \
+    		--header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+    		--header 'content-type: application/json'
+    	```
+    </CodeBlock>
+    <CodeBlock tab="Node.js">
+    	```js
+    	const http = require('https')
 
-		const options = {
-			method: 'GET',
-			hostname: 'api.deepgram.com',
-			port: null,
-			path: '/v1/projects/{project_id}/balances',
-			headers: {
-				Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
-				'content-type': 'application/json',
-			},
-		}
+    	const options = {
+    		method: 'GET',
+    		hostname: 'api.deepgram.com',
+    		port: null,
+    		path: '/v1/projects/{project_id}/balances',
+    		headers: {
+    			Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
+    			'content-type': 'application/json',
+    		},
+    	}
 
-		const req = http.request(options, function (res) {
-			const chunks = []
+    	const req = http.request(options, function (res) {
+    		const chunks = []
 
-			res.on('data', function (chunk) {
-				chunks.push(chunk)
-			})
+    		res.on('data', function (chunk) {
+    			chunks.push(chunk)
+    		})
 
-			res.on('end', function () {
-				const body = Buffer.concat(chunks)
-				console.log(body.toString())
-			})
-		})
+    		res.on('end', function () {
+    			const body = Buffer.concat(chunks)
+    			console.log(body.toString())
+    		})
+    	})
 
-		req.end()
-		```
-	</CodeBlock>
-	<CodeBlock tab="Python">
-		```py
-		import http.client
+    	req.end()
+    	```
+    </CodeBlock>
+    <CodeBlock tab="Python">
+    	```py
+    	import http.client
 
-		conn = http.client.HTTPSConnection("api.deepgram.com")
+    	conn = http.client.HTTPSConnection("api.deepgram.com")
 
-		headers = {
-				'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
-				'content-type': "application/json"
-				}
+    	headers = {
+    			'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+    			'content-type': "application/json"
+    			}
 
-		conn.request("GET", "/v1/projects/{project_id}/balances", headers=headers)
+    	conn.request("GET", "/v1/projects/{project_id}/balances", headers=headers)
 
-		res = conn.getresponse()
-		data = res.read()
+    	res = conn.getresponse()
+    	data = res.read()
 
-		print(data.decode("utf-8"))
-		```
-	</CodeBlock>
-	<CodeBlock tab=".NET">
-		```csharp
-		var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/balances");
-		var request = new RestRequest(Method.GET);
-		request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
-		request.AddHeader("content-type", "application/json");
-		IRestResponse response = client.Execute(request);
-		```
-	</CodeBlock>
-	<CodeBlock tab="Ruby">
-		```ruby
-		require 'uri'
-		require 'net/http'
-		require 'openssl'
+    	print(data.decode("utf-8"))
+    	```
+    </CodeBlock>
+    <CodeBlock tab=".NET">
+    	```csharp
+    	var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/balances");
+    	var request = new RestRequest(Method.GET);
+    	request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+    	request.AddHeader("content-type", "application/json");
+    	IRestResponse response = client.Execute(request);
+    	```
+    </CodeBlock>
+    <CodeBlock tab="Ruby">
+    	```ruby
+    	require 'uri'
+    	require 'net/http'
+    	require 'openssl'
 
-		url = URI("https://api.deepgram.com/v1/projects/{project_id}/balances")
+    	url = URI("https://api.deepgram.com/v1/projects/{project_id}/balances")
 
-		http = Net::HTTP.new(url.host, url.port)
-		http.use_ssl = true
-		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    	http = Net::HTTP.new(url.host, url.port)
+    	http.use_ssl = true
+    	http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-		request = Net::HTTP::Get.new(url)
-		request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
-		request["content-type"] = 'application/json'
+    	request = Net::HTTP::Get.new(url)
+    	request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+    	request["content-type"] = 'application/json'
 
-		response = http.request(request)
-		puts response.read_body
-		```
-	</CodeBlock>
-	<CodeBlock tab="PHP">
-		```php
-		<?php
+    	response = http.request(request)
+    	puts response.read_body
+    	```
+    </CodeBlock>
+    <CodeBlock tab="PHP">
+    	```php
+    	<?php
 
-		$curl = curl_init();
+    	$curl = curl_init();
 
-		curl_setopt_array($curl, [
-			CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/balances",
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_ENCODING => "",
-			CURLOPT_MAXREDIRS => 10,
-			CURLOPT_TIMEOUT => 30,
-			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-			CURLOPT_CUSTOMREQUEST => "GET",
-			CURLOPT_HTTPHEADER => [
-				"Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
-				"content-type: application/json"
-			],
-		]);
+    	curl_setopt_array($curl, [
+    		CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/balances",
+    		CURLOPT_RETURNTRANSFER => true,
+    		CURLOPT_ENCODING => "",
+    		CURLOPT_MAXREDIRS => 10,
+    		CURLOPT_TIMEOUT => 30,
+    		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    		CURLOPT_CUSTOMREQUEST => "GET",
+    		CURLOPT_HTTPHEADER => [
+    			"Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    			"content-type: application/json"
+    		],
+    	]);
 
-		$response = curl_exec($curl);
-		$err = curl_error($curl);
+    	$response = curl_exec($curl);
+    	$err = curl_error($curl);
 
-		curl_close($curl);
+    	curl_close($curl);
 
-		if ($err) {
-			echo "cURL Error #:" . $err;
-		} else {
-			echo $response;
-		}
-		```
-	</CodeBlock>
+    	if ($err) {
+    		echo "cURL Error #:" . $err;
+    	} else {
+    		echo $response;
+    	}
+    	```
+    </CodeBlock>
+
 </CodeGroup>
 
 <CodeGroup title="Response" default="json" tabs={["json"]}>
@@ -245,70 +251,72 @@ Retrieves details about the specified balance. To see balances, the authenticate
 #### Path Parameters
 
 <div class="feature">
-  <header class="notranslate">
-    <strong>project_id:</strong> string
-  </header>
-  <main>
-    <p>Unique identifier of the project for which you want to retrieve the specified balance.</p>
-  </main>
+	<header class="notranslate">
+		<strong>project_id:</strong> string
+	</header>
+	<main>
+		<p>Unique identifier of the project for which you want to retrieve the specified balance.</p>
+	</main>
 </div>
 <div class="feature">
-  <header class="notranslate">
-    <strong>balance_id:</strong> uuid
-  </header>
-  <main>
-    <p>Unique identifier of the balance that you want to retrieve.</p>
-  </main>
+	<header class="notranslate">
+		<strong>balance_id:</strong> uuid
+	</header>
+	<main>
+		<p>Unique identifier of the balance that you want to retrieve.</p>
+	</main>
 </div>
 
 #### Responses
 
 <table>
-  <thead>
-    <tr>
-      <th>Status</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>200 Success</td>
-      <td>Balance found.</td>
-    </tr>
-    <tr>
-      <td>404 Not Found</td>
-      <td>A balance with the specified balance ID in the specified project was not found.</td>
-    </tr>
-  </tbody>
+	<thead>
+		<tr>
+			<th>Status</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>200 Success</td>
+			<td>Balance found.</td>
+		</tr>
+		<tr>
+			<td>404 Not Found</td>
+			<td>A balance with the specified balance ID in the specified project was not found.</td>
+		</tr>
+	</tbody>
 </table>
 
 #### Response Schema
 
 <ul class="response">
-  <li>
-    <p class="notranslate"><strong>balance_id:</strong> uuid</p>
-    <p>Unique identifier of the balance.</p>
-  </li>
-  <li>
-    <p class="notranslate">
-      <strong>amount:</strong> number
-    </p>
-      <p>Amount of the balance.</p>
-  </li>
-  <li>
-    <p class="notranslate">
-      <strong>units:</strong> string
-    </p>
-      <p>Units of the balance. May use <code>usd</code> or <code>hour</code>, depending on the project
-              billing
-              settings.</p>
-  </li>
-  <li>
-    <p class="notranslate">
-      <strong>purchase:</strong> string
-    </p>
-      <p>Unique identifier of the purchase order associated with the balance.</p>
-  </li>
+	<li>
+		<p class="notranslate">
+			<strong>balance_id:</strong> uuid
+		</p>
+		<p>Unique identifier of the balance.</p>
+	</li>
+	<li>
+		<p class="notranslate">
+			<strong>amount:</strong> number
+		</p>
+		<p>Amount of the balance.</p>
+	</li>
+	<li>
+		<p class="notranslate">
+			<strong>units:</strong> string
+		</p>
+		<p>
+			Units of the balance. May use <code>usd</code> or <code>hour</code>, depending on the project billing settings.
+		</p>
+	</li>
+	<li>
+		<p class="notranslate">
+			<strong>purchase:</strong> string
+		</p>
+		<p>Unique identifier of the purchase order associated with the balance.</p>
+	</li>
 </ul>
 
 </div>
@@ -322,125 +330,126 @@ Retrieves details about the specified balance. To see balances, the authenticate
 </CodeGroup>
 <CodeGroup title="Get Balance" default="curl" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]}>
 
-	<CodeBlock tab="curl" active>
-		```bash
-		curl --request GET \
-			--url 'https://api.deepgram.com/v1/projects/{project_id}/balances/{balance_id}' \
-			--header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
-			--header 'content-type: application/json'
-		```
-	</CodeBlock>
-	<CodeBlock tab="Node.js">
-		```js
-		const http = require("https");
+    <CodeBlock tab="curl" active>
+    	```bash
+    	curl --request GET \
+    		--url 'https://api.deepgram.com/v1/projects/{project_id}/balances/{balance_id}' \
+    		--header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+    		--header 'content-type: application/json'
+    	```
+    </CodeBlock>
+    <CodeBlock tab="Node.js">
+    	```js
+    	const http = require("https");
 
-		const options = {
-			method: "GET",
-			hostname: "api.deepgram.com",
-			port: null,
-			path: "/v1/projects/{project_id}/balances/{balance_id}",
-			headers: {
-				Authorization: "Token <YOUR_DEEPGRAM_API_KEY>",
-				"content-type": "application/json",
-			},
-		};
+    	const options = {
+    		method: "GET",
+    		hostname: "api.deepgram.com",
+    		port: null,
+    		path: "/v1/projects/{project_id}/balances/{balance_id}",
+    		headers: {
+    			Authorization: "Token <YOUR_DEEPGRAM_API_KEY>",
+    			"content-type": "application/json",
+    		},
+    	};
 
-		const req = http.request(options, function (res) {
-			const chunks = [];
+    	const req = http.request(options, function (res) {
+    		const chunks = [];
 
-			res.on("data", function (chunk) {
-				chunks.push(chunk);
-			});
+    		res.on("data", function (chunk) {
+    			chunks.push(chunk);
+    		});
 
-			res.on("end", function () {
-				const body = Buffer.concat(chunks);
-				console.log(body.toString());
-			});
-		});
+    		res.on("end", function () {
+    			const body = Buffer.concat(chunks);
+    			console.log(body.toString());
+    		});
+    	});
 
-		req.end();
-		```
-	</CodeBlock>
-	<CodeBlock tab="Python">
-		```py
-		import http.client
+    	req.end();
+    	```
+    </CodeBlock>
+    <CodeBlock tab="Python">
+    	```py
+    	import http.client
 
-		conn = http.client.HTTPSConnection("api.deepgram.com")
+    	conn = http.client.HTTPSConnection("api.deepgram.com")
 
-		headers = {
-				'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
-				'content-type': "application/json"
-				}
+    	headers = {
+    			'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+    			'content-type': "application/json"
+    			}
 
-		conn.request("GET", "/v1/projects/{project_id}/balances/{balance_id}", headers=headers)
+    	conn.request("GET", "/v1/projects/{project_id}/balances/{balance_id}", headers=headers)
 
-		res = conn.getresponse()
-		data = res.read()
+    	res = conn.getresponse()
+    	data = res.read()
 
-		print(data.decode("utf-8"))
-		```
-	</CodeBlock>
-	<CodeBlock tab=".NET">
-		```csharp
-		var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/balances/{balance_id}");
-		var request = new RestRequest(Method.GET);
-		request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
-		request.AddHeader("content-type", "application/json");
-		IRestResponse response = client.Execute(request);
-		```
-	</CodeBlock>
-	<CodeBlock tab="Ruby">
-		```ruby
-		require 'uri'
-		require 'net/http'
-		require 'openssl'
+    	print(data.decode("utf-8"))
+    	```
+    </CodeBlock>
+    <CodeBlock tab=".NET">
+    	```csharp
+    	var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/balances/{balance_id}");
+    	var request = new RestRequest(Method.GET);
+    	request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+    	request.AddHeader("content-type", "application/json");
+    	IRestResponse response = client.Execute(request);
+    	```
+    </CodeBlock>
+    <CodeBlock tab="Ruby">
+    	```ruby
+    	require 'uri'
+    	require 'net/http'
+    	require 'openssl'
 
-		url = URI("https://api.deepgram.com/v1/projects/{project_id}/balances/{balance_id}")
+    	url = URI("https://api.deepgram.com/v1/projects/{project_id}/balances/{balance_id}")
 
-		http = Net::HTTP.new(url.host, url.port)
-		http.use_ssl = true
-		http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    	http = Net::HTTP.new(url.host, url.port)
+    	http.use_ssl = true
+    	http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-		request = Net::HTTP::Get.new(url)
-		request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
-		request["content-type"] = 'application/json'
+    	request = Net::HTTP::Get.new(url)
+    	request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+    	request["content-type"] = 'application/json'
 
-		response = http.request(request)
-		puts response.read_body
-		```
-	</CodeBlock>
-	<CodeBlock tab="PHP">
-		```php
-		<?php
+    	response = http.request(request)
+    	puts response.read_body
+    	```
+    </CodeBlock>
+    <CodeBlock tab="PHP">
+    	```php
+    	<?php
 
-		$curl = curl_init();
+    	$curl = curl_init();
 
-		curl_setopt_array($curl, [
-			CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/balances/{balance_id}",
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_ENCODING => "",
-			CURLOPT_MAXREDIRS => 10,
-			CURLOPT_TIMEOUT => 30,
-			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-			CURLOPT_CUSTOMREQUEST => "GET",
-			CURLOPT_HTTPHEADER => [
-				"Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
-				"content-type: application/json"
-			],
-		]);
+    	curl_setopt_array($curl, [
+    		CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/balances/{balance_id}",
+    		CURLOPT_RETURNTRANSFER => true,
+    		CURLOPT_ENCODING => "",
+    		CURLOPT_MAXREDIRS => 10,
+    		CURLOPT_TIMEOUT => 30,
+    		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    		CURLOPT_CUSTOMREQUEST => "GET",
+    		CURLOPT_HTTPHEADER => [
+    			"Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    			"content-type: application/json"
+    		],
+    	]);
 
-		$response = curl_exec($curl);
-		$err = curl_error($curl);
+    	$response = curl_exec($curl);
+    	$err = curl_error($curl);
 
-		curl_close($curl);
+    	curl_close($curl);
 
-		if ($err) {
-			echo "cURL Error #:" . $err;
-		} else {
-			echo $response;
-		}
-		```
-	</CodeBlock>
+    	if ($err) {
+    		echo "cURL Error #:" . $err;
+    	} else {
+    		echo $response;
+    	}
+    	```
+    </CodeBlock>
+
 </CodeGroup>
 
 <CodeGroup title="Response" default="json" tabs={["json"]}>
