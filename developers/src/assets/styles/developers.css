@@ -144,6 +144,10 @@ h1 {
 		@apply ml-6;
 	}
 
+	.post-prose ul ul {
+		@apply mt-3;
+	}
+
 	.post-prose > ul:not(.contains-task-list) li {
 		@apply pl-1 text-black;
 	}
