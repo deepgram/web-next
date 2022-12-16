@@ -23,10 +23,6 @@ import Link from "../../shared/components/general/Link.astro";
 		@apply m-auto;
 		@apply text-white;
 		@apply max-w-full;
-		@apply md:max-w-4xl;
-		@apply lg:max-w-5xl;
-		@apply xl:max-w-6xl;
-		@apply 2xl:max-w-7xl;
 		@apply grid grid-cols-1 items-center;
 		@apply md:grid-cols-2;
 	}
@@ -34,9 +30,9 @@ import Link from "../../shared/components/general/Link.astro";
 	.community {
 		height: -webkit-fill-available;
 		@apply bg-offBlack text-white;
-		@apply px-20 md:pl-72 md:pr-20 py-12;
+		@apply px-20 md:pr-20 py-12;
 		@apply flex flex-col gap-6;
-		@apply -mx-10 md:-ml-72;
+		/* @apply -mx-10 md:-ml-72; */
 	}
 
 	.community p {

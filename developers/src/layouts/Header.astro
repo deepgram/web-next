@@ -30,12 +30,12 @@ const pathname = Astro.url.pathname;
 				<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 				<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--main-nav text-white">Log In</Link>
 				<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem] flex-1">Contact Us</Link>
-				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[7rem] flex-1">Sign Up</Link>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[8rem] flex-1">Free API Key</Link>
 			</div>
 			<div class="flex items-center space-x-5 xl:ml-12 xl:pb-1 xl:hidden">
 				<Button id="docsearch-button-tablet" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
 				<Button class="button button--mini sm:button--small button--secondary" x-on:click="menu = 'Mobile'" aria-label="Mobile Menu">Menu</Button>
-				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--mini sm:button--small button--primary">Sign Up</Link>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--mini sm:button--small button--primary">Free API Key</Link>
 			</div>
 		</div>
 		<div class="w-full mx-auto px-4 flex justify-between items-center xl:justify-start">
@@ -81,8 +81,13 @@ const pathname = Astro.url.pathname;
 						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("changelog") ? "text-white border-lightIris" : "text-cloud"}`}
 						href={`${WWW_DOMAIN}/changelog`}>Changelog</Link
 					>
-					<Link primary icon="arrow-top-right-on-square" iconSuffix iconStroke class={`flex items-center hover:text-white font-bold text-cloud`} href={`${BLOG_DOMAIN}/categories/tutorial`}
-						>Blog Tutorials&nbsp;</Link
+					<Link
+						primary
+						icon="arrow-top-right-on-square"
+						iconSuffix
+						iconStroke
+						class={`flex items-center hover:text-white font-bold text-cloud`}
+						href={`${BLOG_DOMAIN}/categories/tutorial`}>Blog Tutorials&nbsp;</Link
 					>
 				</nav>
 			</div>
@@ -176,7 +181,7 @@ const pathname = Astro.url.pathname;
 			</div>
 			<div class="bg-black grid grid-cols-2 grid-rows-2 gap-4 p-6 shadow-menu">
 				<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--secondary button--block">Log In</Link>
-				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--small button--tertiary button--block">Sign Up</Link>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--small button--tertiary button--block">Free API Key</Link>
 				<Link href={`${WWW_DOMAIN}/contact-us`} class="col-span-2 button button--small button--primary button--block">Contact Us</Link>
 			</div>
 		</div>
