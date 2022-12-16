@@ -1,9 +1,12 @@
 ---
 import Icon from "../general/Icon.astro";
 import { renderRichText } from "@storyblok/astro";
-const { blok } = Astro.props;
-const { type = "info", title = "Information", fill = "fill-black" } = blok;
-const renderedRichText = renderRichText(blok.inner_html);
+const { blok = { type: "info", fill: "fill-black", title: "Information" } } = Astro.props;
+const { type, title, fill } = blok;
+let renderedRichText;
+if (blok.inner_html) {
+	renderedRichText = renderRichText(blok.inner_html);
+}
 ---
 
 <div class={`panel ${type}`}>
@@ -18,7 +21,7 @@ const renderedRichText = renderRichText(blok.inner_html);
 
 	<div class="text">
 		<slot>
-			<div set:html={renderedRichText}></div>
+			<div set:html={renderedRichText} />
 		</slot>
 	</div>
 </div>
