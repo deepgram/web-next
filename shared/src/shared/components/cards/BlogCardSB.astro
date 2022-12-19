@@ -14,11 +14,11 @@ let title = originalTitle.length > 60 ? `${originalTitle.substring(0, 57)}...` :
 
 <GenericBlogCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={post}>
 	<div class="overflow-hidden flex h-[55%] place-content-center">
-		<ImageSrcSet class="object-cover w-full aspect-[1.6/1]" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
+		<ImageSrcSet class="object-cover h-full w-full aspect-[1.6/1]" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
 	<div class="px-4 pb-3 flex flex-col h-[45%] justify-between text-white">
 		<div class="h-full flex flex-col justify-evenly">
-			<TagsList tags={tag_list} />
+			<!-- <TagsList tags={tag_list} /> -->
 			<h4 title={originalTitle} class="lg:text-h4-d md:text-h2-m text-h4-m">{title}</h4>
 		</div>
 
