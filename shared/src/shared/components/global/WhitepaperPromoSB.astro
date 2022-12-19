@@ -54,7 +54,11 @@ const wp = data.story.content;
 	}
 
 	:global(.hbspt-form .hs-form-field) {
-		@apply mt-4;
+		@apply mt-8 sm:mt-4;
+	}
+
+	:global(.hbspt-form .hs-error-msgs) {
+		@apply hidden;
 	}
 
 	:global(.hbspt-form form fieldset) {
@@ -68,7 +72,7 @@ const wp = data.story.content;
 	:global(.hbspt-form input[type="submit"]),
 	:global(.hbspt-form input[type="button"]),
 	:global(.hbspt-form button) {
-		@apply mt-4;
+		@apply mt-8 sm:mt-4;
 		@apply bg-meadow text-darkCharcoal;
 		@apply mb-0 min-h-[3.375rem] grow-0 px-[1.5rem] pb-[1.1rem] pt-[1.15rem] text-center text-[1rem] font-[700] leading-[1rem];
 		@apply w-full;
