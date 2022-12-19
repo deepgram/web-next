@@ -42,6 +42,7 @@
     "@astrojs/rss": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
     "@storyblok/astro": "^1.1.0",
+    "ap-style-title-case": "^2.0.0",
     "axios": "^0.27.2",
     "clone-deep": "^4.0.1",
     "netlify-cli": "^12.4.0",

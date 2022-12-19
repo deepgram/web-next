@@ -91,6 +91,7 @@ module.exports = {
 				//white
 				mist: "rgba(247, 249, 252, 1)",
 				cloud: "rgba(215, 223, 235, 1)",
+				cloud30: "rgba(215, 223, 235, .3)",
 				casper: "rgba(170, 184, 205, 1)",
 				stone: "rgba(117, 138, 162, 1)",
 				storm: "rgba(102, 120, 141, 1)",
