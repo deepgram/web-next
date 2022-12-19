@@ -4,6 +4,6 @@ const { class: classes, post } = Astro.props;
 const slug = post.slug;
 ---
 
-<GenericCard class={`min-w-[10rem] bg-steel/50 bg-blur ${classes ? classes : ""}`} href={`/${slug}`}>
+<GenericCard class={`min-w-[10rem] bg-steel/50 backdrop-blur ${classes ? classes : ""}`} href={`/${slug}`}>
 	<slot />
 </GenericCard>
