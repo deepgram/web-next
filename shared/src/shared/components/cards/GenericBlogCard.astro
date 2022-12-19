@@ -4,6 +4,12 @@ const { class: classes, post } = Astro.props;
 const slug = post.slug;
 ---
 
-<GenericCard class={`min-w-[10rem] bg-steel/50 backdrop-blur ${classes ? classes : ""}`} href={`/${slug}`}>
+<GenericCard class={`transparent-blur min-w-[10rem] bg-steel/50 ${classes ? classes : ""}`} href={`/${slug}`}>
 	<slot />
 </GenericCard>
+
+<style>
+	.transparent-blur {
+		backdrop-filter: blur(10px);
+	}
+</style>
