@@ -1,20 +1,23 @@
 ---
-import Layout from "../../layouts/Default.astro"
+import Layout from "../../layouts/Default.astro";
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
-import SDKsTools from "../../components/sdks-tools/SDKsTools.astro"
+import Title from "../../shared/components/meta/Title.astro";
+import SDKsTools from "../../components/sdks-tools/SDKsTools.astro";
 import BreadCrumb from "../../shared/components/nav/BreadCrumb.astro";
 ---
+
 <Layout>
-  <PrimarySection class="max-w-screen-xl mb-[5rem] mx-auto px-6 lg:px-10 pt-[3rem]">
-    <BreadCrumb/>
-    <h1>Deepgram SDKs & Tools</h1>
-    <SDKsTools/>
-  </PrimarySection>
+	<Title slot="head:title" title="SDKs and Tools - Deepgram Docs" />
+	<PrimarySection class="max-w-screen-xl mb-[5rem] mx-auto px-6 lg:px-10 pt-[3rem]">
+		<BreadCrumb />
+		<h1>Deepgram SDKs & Tools</h1>
+		<SDKsTools />
+	</PrimarySection>
 </Layout>
 
 <style>
-   :global(h1) {
-    @apply text-4xl;
-    @apply mt-6;
-   }
+	:global(h1) {
+		@apply text-4xl;
+		@apply mt-6;
+	}
 </style>
