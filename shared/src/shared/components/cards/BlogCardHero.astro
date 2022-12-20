@@ -12,8 +12,8 @@ title = title.length > 60 ? `${title.substring(0, 57)}...` : title;
 ---
 
 <GenericBlogCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={post}>
-	<div class="overflow-hidden flex h-full md:h-2/3 lg:h-[50%] place-content-center">
-		<ImageSrcSet class="object-cover w-full h-full" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
+	<div class="overflow-hidden flex h-auto md:h-2/3 lg:h-[50%] place-content-center">
+		<ImageSrcSet class="object-cover w-full h-auto" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
 	<div class="px-4 py-4 flex flex-col h-[50%] md:h-1/3 lg:h-[50%] justify-between text-white">
 		<div class="h-full flex flex-col">
