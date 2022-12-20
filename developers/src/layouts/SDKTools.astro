@@ -6,6 +6,7 @@ import HasAside from "../shared/components/layout/HasAside.astro";
 import SideNav from "../shared/components/nav/SideNav.astro";
 import Feedback from "../shared/components/forms/Feedback.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
+import Title from "../shared/components/meta/Title.astro";
 import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 import nodeNav from "../pages/sdks-tools/sdks/node-sdk/navigation.json";
 import pythonNav from "../pages/sdks-tools/sdks/python-sdk/navigation.json";
@@ -30,6 +31,7 @@ if (a.includes(dotnet)) {
 ---
 
 <Default>
+	<Title slot="head:title" title="SDKs and Tools - Deepgram Docs" />
 	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
 		<!-- Aside -->
 		<div class="relative flex">
@@ -56,7 +58,7 @@ if (a.includes(dotnet)) {
 								<TableOfContents headings={headings} docsType={"SDK"} classes="sticky top-40" />
 							</div>
 						</div>
-						<div class="max-w-full lg:max-w-xl 2xl:max-w-2xl mt-28 border-grass border-t-2"></div> 
+						<div class="max-w-full lg:max-w-xl 2xl:max-w-2xl mt-28 border-grass border-t-2"></div>
 						<Feedback />
 					</PrimarySection>
 				</div>

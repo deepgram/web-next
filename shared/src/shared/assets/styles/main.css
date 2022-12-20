@@ -53,7 +53,6 @@ html {
 	h5,
 	h6 {
 		@apply font-favorit;
-		@apply font-bold;
 	}
 
 	h1 {

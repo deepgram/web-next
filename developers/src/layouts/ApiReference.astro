@@ -4,6 +4,7 @@ import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Prose from "./Prose.astro";
 import HasAside from "../shared/components/layout/HasAside.astro";
 import Feedback from "../shared/components/forms/Feedback.astro";
+import Title from "../shared/components/meta/Title.astro";
 import SideNavApiRef from "./SideNavApiRef.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
 import TableOfContents from "../shared/components/nav/TableOfContents.astro";
@@ -14,6 +15,7 @@ const pathname = Astro.url.pathname;
 ---
 
 <Default>
+	<Title slot="head:title" title="API Reference - Deepgram Docs" />
 	<section class="max-w-full mr-auto px-0 api-ref">
 		<div class="grid grid-cols-2 md:grid-cols-8 lg:grid-cols-18">
 			<SideNavApiRef slot="aside" navStructure={nav} navTitle="API Reference" />
@@ -45,7 +47,7 @@ const pathname = Astro.url.pathname;
 	.api-ref :global(.feature ul) {
 		overflow-wrap: break-word;
 	}
-	
+
 	.api-ref :global(.feature .hint) {
 		color: rgba(79, 98, 120);
 	}
