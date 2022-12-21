@@ -118,6 +118,10 @@
 				"to": "/documentation/features/detect-topics/"
 			},
 			{
+				"name": "Entity Detection",
+				"to": "/documentation/features/detect-entities/"
+			},
+			{
 				"name": "Utterances",
 				"to": "/documentation/features/utterances/"
 			},
