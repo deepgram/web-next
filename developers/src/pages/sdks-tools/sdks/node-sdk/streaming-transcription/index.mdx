@@ -64,7 +64,7 @@ deepgramLive.addListener("transcriptReceived", (transcription) => {
 
 The object returned by the `transcription.live` function provides several
 functions to make using the Deepgram API easier. They are `send`,
-`getReadyState`, and `finish`.
+`getReadyState`, `toggleNumerals`, and `finish`.
 
 ### Sending Data
 
@@ -81,6 +81,28 @@ to Deepgram.
 
 ```js
 const websocketReadyState = deepgramLive.getReadyState();
+```
+
+### Toggle Numerals
+
+The `toggleNumerals` function toggles the `numerals` feature on and off. The function takes in a boolean value to determine whether or not to enable the feature.
+
+```js
+deepgramLive.toggleNumerals(true); // enable numerals
+deepgramLive.toggleNumerals(false); // disable numerals
+```
+
+This function is a shorthand way of sending the following data to the websocket connection:
+
+```js
+deepgramLive.send(
+	JSON.stringify({
+		type: "Configure",
+		processors: {
+			numerals: true, // or false
+		},
+	})
+);
 ```
 
 ### Closing the Connection
