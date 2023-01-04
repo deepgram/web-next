@@ -13,7 +13,7 @@ const { data } = await sbApi.get(`cdn/stories/${blok.whitepaper.id}`, {
 const wp = data.story.content;
 ---
 
-<AbstractPromo strapline="White Paper" backgroundImage={wp.image.filename} theme={wp.theme} title={wp.title}>
+<AbstractPromo strapline={wp.strapline ? wp.strapline : null} backgroundImage={wp.image.filename} theme={wp.theme} title={wp.title}>
 	<script set:html={wp.script}>
 
 	</script>
