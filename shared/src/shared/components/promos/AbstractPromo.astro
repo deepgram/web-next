@@ -33,7 +33,7 @@ const rawHTMLString = "&nbsp;";
 
 <script define:vars={{strapline}}>
 	if(strapline === "Newsletter"){
-		document.querySelector("h6").remove()
+		document.querySelector(".promo-container h6").remove()
 	}
 	
 </script>
@@ -56,7 +56,7 @@ const rawHTMLString = "&nbsp;";
 
 	header h2 {
 		@apply sm:text-h2-d text-h2-m;
-		@apply pt-[2rem];
+		
 	}
 
 	header h6 {
@@ -67,6 +67,10 @@ const rawHTMLString = "&nbsp;";
 	.theme--white {
 		@apply bg-white;
 		@apply min-h-[0] md:min-h-[14rem];
+	}
+
+	.theme--white header h2 {
+		@apply pt-[2rem];
 	}
 	
 
