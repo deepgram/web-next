@@ -31,6 +31,13 @@ const rawHTMLString = "&nbsp;";
 	</div>
 </div>
 
+<script define:vars={{strapline}}>
+	if(strapline === "Newsletter"){
+		document.querySelector("h6").remove()
+	}
+	
+</script>
+
 <style scoped>
 	.promo-container {
 		@apply my-20;
@@ -49,6 +56,7 @@ const rawHTMLString = "&nbsp;";
 
 	header h2 {
 		@apply sm:text-h2-d text-h2-m;
+		@apply pt-[2rem];
 	}
 
 	header h6 {
@@ -58,7 +66,9 @@ const rawHTMLString = "&nbsp;";
 	/* White Theme Styles */
 	.theme--white {
 		@apply bg-white;
+		@apply min-h-[0] md:min-h-[14rem];
 	}
+	
 
 	.theme--white h6 {
 		@apply text-fireEngine;
@@ -68,6 +78,24 @@ const rawHTMLString = "&nbsp;";
 	.theme--white :global(h4.date),
 	.theme--white :global(p) {
 		@apply text-black;
+	}
+
+	.theme--white :global(.hbspt-form .hs_email) {
+		/* @apply w-3/6; */
+	}
+
+	.theme--white :global(.hbspt-form .hs-button) {
+		@apply w-[261.26px];
+	}
+
+	.theme--white :global(.hbspt-form .hs_email) {
+		@apply text-rock;
+	}
+
+	.theme--white :global(.hbspt-form .hs_email input ) {
+		@apply bg-cloud;
+		@apply w-[261.26px];
+		@apply mr-6;
 	}
 
 	/* Black Theme Styles */
