@@ -41,11 +41,14 @@ exports.handler = async function (event) {
 		};
 	}
 
-	const { action } = body;
+	const { action, text } = body;
 
 	if (actions.find((a) => a === action)) {
 		await axios.post(url, {
 			event_type: "publish_blog",
+			client_payload: {
+				text
+			}
 		},
 			{
 				headers: {

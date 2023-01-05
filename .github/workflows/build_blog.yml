@@ -1,5 +1,5 @@
 name: "Blog: CI/CD"
-
+run-name: ${{ github.event.client_payload.text }}
 on:
   repository_dispatch:
     types: [publish_blog]
