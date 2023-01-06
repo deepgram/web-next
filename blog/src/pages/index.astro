@@ -8,7 +8,7 @@ import CategoryList from "../shared/components/nav/CategoryList.astro";
 import CategorySection from "../components/homepage/CategorySectionSB.astro";
 import Link from "../shared/components/general/Link.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
-import WhitepaperPromo from "../shared/components/global/WhitepaperPromo.astro";
+import WhitepaperPromo from "../shared/components/global/WhitepaperPromoSB.astro";
 import { useStoryblokApi } from "@storyblok/astro";
 
 const sbApi = useStoryblokApi();
@@ -72,17 +72,19 @@ const schema = {
 	<PrimarySection class="mt-48 xl:mt-64">
 		<HasAside>
 			<CategoryList slot="aside" />
-			{categories &&
-				categories.map((category, index) => (
-					<>
-						<CategorySection category={category} />
-						{index === 0 && (
-							<div class="mb-32">
-								<WhitepaperPromo whitepaper="latest" />
-							</div>
-						)}
-					</>
-				))}
+			{
+				categories &&
+					categories.map((category, index) => (
+						<>
+							<CategorySection category={category} />
+							{index === 0 && (
+								<div class="mb-32">
+									<WhitepaperPromo blok={{ whitepaper: { id: "7727d114-4347-4fe8-88a7-642961b5aa33" } }} />
+								</div>
+							)}
+						</>
+					))
+			}
 			<center class="-mt-10 mb-20">
 				<Link href="/posts" icon="arrow-right" iconSuffix class="button button--secondary button--small">View All</Link>
 			</center>
