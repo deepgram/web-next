@@ -23,7 +23,7 @@ const orderedComponents = baseComponents.sort((a,b)=>{
 					<PrimarySection class="py-10">
 						<BreadCrumb />
 						<div class="max-w-screen-xl mx-auto">
-							<h1 slot="page-header">On-Premises Deployments</h1>
+							<h1 class="w-max" slot="page-header">On-Premises Deployments</h1>
 							<h2 class="text-stone mt-6 mb-10">BASE COMPONENTS</h2>
 							<DocsCardList>
 								{orderedComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
@@ -37,15 +37,6 @@ const orderedComponents = baseComponents.sort((a,b)=>{
 </Default>
 
 <style is:global>
-	h1 {
-		color: #111827;
-		font-weight: 700;
-		font-size: 2.25em;
-		margin-top: 1.5rem;
-		margin-bottom: 0.75rem;
-		line-height: 1.1111111;
-		font-family: Favorit;
-	}
 	h2 {
 		@apply mb-5 mt-10;
 		color: #111827;
