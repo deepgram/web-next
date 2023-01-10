@@ -103,6 +103,9 @@ module.exports = {
 				offBlack: "rgba(5, 10, 15, 1)",
 				//black
 
+				postProsePre: "#f5f5f5",
+				postProsePreBg: "#1e2c3c",
+
 				highlight: "rgba(253,255,0, 1)",
 
 				http: {

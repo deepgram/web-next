@@ -2,7 +2,7 @@ html {
 	scroll-padding-top: 120px;
 }
 h1 {
-		color: #111827;
+		@apply text-darkCharcoal;
 		font-weight: 700;
 		font-size: 2.25em;
 		margin-top: 1.5rem;
@@ -11,8 +11,7 @@ h1 {
 		font-family: Favorit;
 	}
 	h2 {
-		@apply mb-5 mt-10;
-		color: #111827;
+		@apply mb-5 mt-10 text-darkCharcoal;
 		font-weight: 700;
 		font-size: 1.5em;
 		line-height: 1.3333333;
@@ -173,7 +172,7 @@ h1 {
 	}
 
 	.post-prose table > thead {
-		border-bottom-color: #d1d5db;
+		@apply border-b-bullet;
     border-bottom-width: 1px;
 	}
 
@@ -192,7 +191,7 @@ h1 {
 
 	.post-prose table > tbody > tr {
 		border-bottom-width: 1px;
-    border-bottom-color: #e5e7eb;
+		@apply border-b-cloud;
 	}
 	.post-prose table > tbody > tr > td {
 		@apply pr-2 py-2;
@@ -241,17 +240,16 @@ h1 {
 	}
 
 	.post-prose .badge {
-		@apply border-steel border rounded;
+		@apply border-storm border rounded;
 		@apply px-2 my-4;
 		@apply w-fit;
 		@apply text-steel;
 	}
 
 	.post-prose .screenshot img {
-		background-color: #fff;
-    border: 1px solid #000;
-    padding: 0;
-    max-width: 90%;
+		@apply bg-white border border-solid border-black;
+		padding: 0;
+		max-width: 90%;
 	}
 
 .text {
@@ -316,9 +314,8 @@ h1 {
 }
 
 div.badge {
-	color: #4f6278;
+	@apply text-steel border-storm;
 	border-width: 1px;
-	border-color: #66788d;
 	border-radius: 4px;
 	display: inline-block;
 	padding: 0 0.5rem;

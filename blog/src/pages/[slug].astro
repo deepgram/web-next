@@ -186,9 +186,7 @@ const schema = [
 
 <Layout>
 	<!-- <link href="../../prism.css" rel="stylesheet" /> -->
-	<script src="../prism.js">
-
-	</script>
+	<script src="../prism.js"></script>
 	<JsonLD slot="json:ld" {schema} />
 	<Title slot="head:title" title={`${seo.title} - Deepgram Blog ⚡️`} />
 	<Description slot="head:description" name="description" content={seo.description} />
@@ -229,7 +227,11 @@ const schema = [
 					<div class="post-prose markdown-body">
 						{post.content.body.map((section) => <StoryblokComponent blok={section} />)}
 					</div>
-					<p class="italic text-cloud">If you have any feedback about this post, or anything else around Deepgram, we'd love to hear from you. Please let us know in our <a href="https://github.com/orgs/deepgram/discussions/categories/feedback">GitHub discussions</a>.</p>
+					<p class="italic text-cloud">
+						If you have any feedback about this post, or anything else around Deepgram, we'd love to hear from you. Please let us know in our <a
+							href="https://github.com/orgs/deepgram/discussions/categories/feedback">GitHub discussions</a
+						>.
+					</p>
 					<h4>More with these tags:</h4>
 					<TagsList tags={post.tag_list} link />
 
@@ -264,17 +266,19 @@ const schema = [
 
 					{headings && headings.length > 0 && <h5 class="hidden pt-8 pb-5 xl:block">In this blog post</h5>}
 					<ul class="hidden xl:block">
-						{headings &&
-							headings.length > 0 &&
-							headings
-								.filter((heading) => heading.attrs.level <= 2)
-								.map((heading) => (
-									<li class="pb-4">
-										<Link class="text-cloud" href={`#${snakeCase(heading.content[0].text)}`}>
-											{heading.content[0].text}
-										</Link>
-									</li>
-								))}
+						{
+							headings &&
+								headings.length > 0 &&
+								headings
+									.filter((heading) => heading.attrs.level <= 2)
+									.map((heading) => (
+										<li class="pb-4">
+											<Link class="text-cloud" href={`#${snakeCase(heading.content[0].text)}`}>
+												{heading.content[0].text}
+											</Link>
+										</li>
+									))
+						}
 					</ul>
 				</div>
 			</HasGutters>
@@ -328,9 +332,7 @@ const schema = [
 	}
 
 	.post-prose :global(pre) {
-		@apply m-0 mb-14;
-		color: #f5f5f5;
-		background-color: #1E2C3C;
+		@apply m-0 mb-14 text-postProsePre bg-postProsePreBg;
 		overflow-x: auto;
 		max-height: 24rem;
 		overflow: auto;

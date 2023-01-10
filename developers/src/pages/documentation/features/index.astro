@@ -272,7 +272,7 @@ const sortedGuides = guides.sort((a, b) => {
 
 <style>
 	h1 {
-		color: #111827;
+		@apply text-darkCharcoal;
 		font-weight: 700;
 		font-size: 2.25em;
 		margin-top: 1.5rem;
@@ -281,8 +281,7 @@ const sortedGuides = guides.sort((a, b) => {
 		font-family: Favorit;
 	}
 	h2 {
-		@apply mb-5 mt-10;
-		color: #111827;
+		@apply mb-5 mt-10 text-darkCharcoal;
 		font-weight: 700;
 		font-size: 1.5em;
 		line-height: 1.3333333;
@@ -299,10 +298,9 @@ const sortedGuides = guides.sort((a, b) => {
 	}
 
 	table thead {
-		color: #111827;
+		@apply text-darkCharcoal border-b-bullet;
 		font-weight: 600;
 		border-bottom-width: 1px;
-		border-bottom-color: #d1d5db;
 	}
 	th {
 		vertical-align: bottom;

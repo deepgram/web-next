@@ -70,7 +70,7 @@ const pathname = Astro.url.pathname;
 	.api-ref :global(.feature li::before) {
 		content: "";
 		position: absolute;
-		background-color: #d1d5db;
+		@apply bg-bullet;
 		border-radius: 50%;
 		width: 0.375em;
 		height: 0.375em;
@@ -86,8 +86,7 @@ const pathname = Astro.url.pathname;
 		@apply py-0;
 	}
 	.api-ref :global(.feature li strong) {
-		@apply font-semibold;
-		color: #111827;
+		@apply font-semibold text-darkCharcoal;
 	}
 
 	.api-ref :global(.feature .info) {
