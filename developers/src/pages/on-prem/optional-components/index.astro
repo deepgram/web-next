@@ -20,19 +20,13 @@ const orderedComponents = optionalComponents.sort((a,b)=>{
 </Layout>
 
 <style is:global>
+	/* Overrides prose styles */
 	.post-prose h1 {
 		@apply mb-10;
 	}
-	h2 {
-		@apply mb-5 mt-10;
-		color: #111827;
-		font-weight: 700;
-		font-size: 1.5em;
-		line-height: 1.3333333;
-		font-family: Favorit;
-	}
 
-	p {
-		font-weight: 400;
+	.post-prose h3 {
+		@apply mt-0;
+		@apply text-base;
 	}
 </style>
