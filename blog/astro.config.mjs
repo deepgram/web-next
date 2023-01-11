@@ -35,7 +35,7 @@ export default defineConfig({
 				// grid: "storyblok/Grid",
 				// teaser: "storyblok/Teaser",
 				Author: "shared/components/cards/Author",
-				RichTextSection: "components//storyblok/RichText",
+				RichTextSection: "components/storyblok/RichText",
 				Iframe: "components/storyblok/Iframe",
 				Image: "components/storyblok/Image",
 				whitepaperLink: "shared/components/global/WhitepaperPromoSB",
