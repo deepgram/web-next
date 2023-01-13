@@ -1,0 +1,37 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Sample Rate
+description: Learn about Deepgram's Sample Rate feature, which allows you to specify the sample rate of your submitted audio. Required when the Encoding feature is also being used to submit streaming raw audio.
+tags: [sample rate, encoding, streaming, raw-audio]
+order: 23
+seo:
+  metaTitle: Sample Rate
+  metaDescription: Learn about Deepgram's Sample Rate feature, which allows you to specify the sample rate of your submitted audio. Required when the Encoding feature is also being used to submit streaming raw audio.
+  keywords: sample rate, encoding, raw audio, streaming
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+
+# {frontmatter.title}
+
+<div class="badge">STREAMING</div>
+
+Deepgram’s Sample Rate feature allows you to specify the sample rate of your submitted audio.
+
+The Sample Rate feature is required when the [Encoding](/documentation/features/encoding/) feature is being used to submit streaming raw audio. It is not read at any other time.
+
+## Enable Feature
+
+To enable Sample Rate, when you call Deepgram’s API, add a `sample_rate` parameter in the query string and set it to the sample rate of your submitted audio.
+
+`sample_rate=SAMPLE_RATE_VALUE`
+
+<Alert type="warning">
+
+When submitting audio encoded with the [Adaptive Multi-rate (AMR)](/documentation/glossary/#A) codec, you must submit specific Sample Rate values:
+
+- `amr-nb`: AMR narrowband codec. When using this option, you must specify `sample_rate=8000` (`encoding=amr-nb&sample_rate=8000`).
+- `amr-wb`: AMR wideband codec. When using this option, you must also specify `sample_rate=16000` (`encoding=amr-wb&sample_rate=16000`).
+
+</Alert>
+
+For an example of audio streaming, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/).

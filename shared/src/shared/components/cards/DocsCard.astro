@@ -1,0 +1,31 @@
+---
+import GenericDocsCard from "./GenericDocsCard.astro";
+const { class: classes, doc } = Astro.props;
+---
+
+<GenericDocsCard class={`w-full flex flex-col border border-darkCharcoal ${classes ? classes : ""}`} doc={doc}>
+	<header>
+		{doc.frontmatter.cover ? <img src={doc.frontmatter.cover} class="flex items-center justify-center w-full m-0 border-b border-darkCharcoal" /> : null}
+	</header>
+	<main class="docs-card flex flex-col p-4">
+		<h3 class="text-base mb-2">{doc.frontmatter.title}</h3>
+		<p class="p-0">{doc.frontmatter.description}</p>
+	</main>
+	<footer><div class="readingTime">{doc.frontmatter.minutesRead}</div></footer>
+</GenericDocsCard>
+
+<style>
+	h3,
+	p {
+		@apply text-darkCharcoal;
+		@apply font-normal;
+		line-height: 28px;
+	}
+
+	.docs-card > p:first-of-type {
+		@apply pt-0 !important;
+	}
+	footer {
+		@apply flex flex-row justify-between mt-auto px-4 py-2 text-sm text-stone;
+	}
+</style>

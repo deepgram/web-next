@@ -1,0 +1,84 @@
+---
+title: Endpointing
+description: Learn about Deepgram's Voice Activity Detection (VAD) feature, which detects pauses in submitted audio. Used when the Endpointing feature is enabled for streaming audio.
+tags: [endpointing, streaming]
+order: 19
+seo:
+  metaTitle: Endpointing
+  metaDescription: Learn about Deepgram's Voice Activity Detection (VAD) feature, which detects pauses in submitted audio. Used when the Endpointing feature is enabled for streaming audio.
+  keywords: speech recognition, streaming, vad, voice activity detection, endpointing, pause, speech_final
+---
+
+<div class="badge">STREAMING</div>
+
+Deepgram’s Endpointing feature monitors incoming streaming audio and detects when a user has finished speaking or paused for a significant amount of time, indicating the completion of an idea. When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes its results for the processed time range and returns the transcript with a `speech_final` parameter set to `true`.
+
+Endpointing relies on the [Voice Activity Detection (VAD)](/documentation/features/voice-activity-detection/) feature, which monitors the incoming audio and triggers when a sufficiently long pause is detected. You can customize the length of time used to detect whether a speaker has finished speaking by submitting the `vad_turnoff` parameter when Endpointing is enabled. By default, Deepgram uses 10 milliseconds.
+
+<Alert type="info">
+
+Endpointing can be used with Deepgram's [Interim Results](/documentation/features/interim-results/) feature. To compare and contrast these features, and to explore best practices for using them together, see [Using Endpointing and Interim Results with Live Streaming Audio](/documentation/guides/understand-endpointing-interim-results/).
+
+</Alert>
+
+## Use Cases
+
+Some examples of use cases for Endpointing include:
+
+* Determining whether a speaker has finished speaking.
+
+## Enable Feature
+
+To enable endpointing, when you call Deepgram’s API, add an `endpointing` parameter set to `true` in the query string:
+
+`endpointing=true`
+
+For an example of audio streaming, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/).
+
+## Results
+
+When enabled, the transcript for each received streaming response shows a key called `speech_final`.
+
+```json
+{
+  "channel_index":[
+    0,
+    1
+  ],
+  "duration":1.039875,
+  "start":0.0,
+  "is_final":false,
+  "speech_final":false,
+  "channel":{
+    "alternatives":[
+      {
+        "transcript":"another big",
+        "confidence":0.9600255,
+        "words":[
+          {
+            "word":"another",
+            "start":0.2971154,
+            "end":0.7971154,
+            "confidence":0.9588303
+          },
+          {
+            "word":"big",
+            "start":0.85173076,
+            "end":1.039875,
+            "confidence":0.9600255
+          }
+        ]
+      }
+    ]
+  }
+}
+...
+```
+
+When `speech_final` is set to `true`, Deepgram has detected an endpoint and immediately finalized its results for the processed time range.
+
+<Alert type="info">
+
+By default, Deepgram applies its general AI [model](/api-reference/#model-str), which is a good, general purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+</Alert>

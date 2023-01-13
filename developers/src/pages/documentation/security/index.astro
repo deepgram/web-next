@@ -1,0 +1,27 @@
+---
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
+import DocsCard from "../../../shared/components/cards/DocsCard.astro";
+import Layout from "../../../layouts/General.astro";
+
+const security = await Astro.glob("./**/index.mdx");
+const sortedSecurity = security.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order
+});
+---
+
+<Layout>
+	<article>
+		<h1>Security</h1>
+		<DocsCardList>
+			{sortedSecurity.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+		</DocsCardList>
+	</article>
+</Layout>
+
+<style>
+
+	:global(h3) {
+		@apply mt-0 !important;
+		@apply mb-2 !important;
+	}
+</style>

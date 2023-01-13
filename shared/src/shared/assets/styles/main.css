@@ -39,11 +39,12 @@ html {
 @layer base {
 	body {
 		@apply font-inter;
+		/* @apply bg-darkCharcoal; */
 	}
 
-	code {
+	/* code {
 		@apply font-firaCode;
-	}
+	} */
 
 	h1,
 	h2,
@@ -52,14 +53,13 @@ html {
 	h5,
 	h6 {
 		@apply font-favorit;
-		@apply font-bold;
 	}
 
 	h1 {
 		@apply lg:text-h1-large-d text-h1-large-m;
 	}
 
-	h1 small {
+	h1.small {
 		@apply lg:text-h1-small-d text-h1-small-m;
 	}
 
@@ -258,8 +258,8 @@ html {
 	}
 
 	.bg-blur {
-		-webkit-backdrop-filter: blur(0.625rem);
-		backdrop-filter: blur(0.625rem);
+		-webkit-backdrop-filter: blur(30%);
+		backdrop-filter: blur(30%);
 	}
 
 	.shadow-menu {
@@ -318,6 +318,10 @@ html {
 
 	.button--block {
 		@apply w-full;
+	}
+
+	.button--content {
+		@apply w-min;
 	}
 
 	.button--main-nav {

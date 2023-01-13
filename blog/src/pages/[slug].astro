@@ -1,5 +1,4 @@
 ---
-import render from "preact-render-to-string";
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
 import Layout from "../layouts/Default.astro";
 import HasGutters from "../shared/components/layout/HasGutters.astro";
@@ -42,6 +41,7 @@ const post = pages[slug]
 if (!slug) return Astro.redirect("/404");
 
 function snakeCase(heading) {
+	// console.log(`|${heading}|`);
 	return slugify(heading, { lower: true });
 }
 
@@ -50,11 +50,18 @@ function getHeadingsSB(post) {
 const richTextSections = post && post.content && post.content.body.filter((section) => {
 	return section.component === "RichTextSection";
 	});
+<<<<<<< HEAD
 const headings = richTextSections && richTextSections.map((section) => {
 	return section && section.content && section.content.content.filter((richText) => 	{
 		if (richText && richText.type === "heading") {
 			// console.log("richText", richText);
 			return richText && richText.content && richText.content[0].text;
+=======
+	const headings = richTextSections.map((section) => {
+		return section.content.content.filter((richText) => {
+			if (richText.type === "heading") {
+				return richText.content[0].text;
+>>>>>>> 6c701c1b66b8dbeebd4a377be8838fdbb1d6aa4c
 			}
 		});
 	});
@@ -200,7 +207,7 @@ const schema = [
 	{post.tag_list && post.tag_list.map((tag) => <Meta slot="head" property="article:tag" content={tag} />)}
 
 	<article>
-		<ContrastSection contrast="mist" background="white" bottomDivider="eclipse-divider" bottomOverlay>
+		<ContrastSection contrast="black" background="darkCharcoal" bottomDivider="eclipse-divider" bottomOverlay>
 			<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
 				<Backlink linkClass="inline-block nudge-icon nudge-icon--left draw-underline underline-right" href="/posts" class="mb-6 md:mb-8 lg:mb-10 xl:mb-12"
 					><span>All posts</span>
@@ -221,6 +228,7 @@ const schema = [
 					<div class="post-prose markdown-body">
 						{post.content.body.map((section) => <StoryblokComponent blok={section} />)}
 					</div>
+					<p class="italic text-cloud">If you have any feedback about this post, or anything else around Deepgram, we'd love to hear from you. Please let us know in our <a href="https://github.com/orgs/deepgram/discussions/categories/feedback">GitHub discussions</a>.</p>
 					<h4>More with these tags:</h4>
 					<TagsList tags={post.tag_list} link />
 
@@ -234,22 +242,22 @@ const schema = [
 							href={`mailto:?body=Check%20out%20this%20awesome%20post%20on%20Deepgram!%0A%0A${encodeURIComponent(post.content.title)}%0A%0A${encodeURIComponent(shorturls.share)}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							><Icon icon="email" class="w-[1em] fill-darkIris" />
+							><Icon icon="email" class="w-[1em] fill-lightIris" />
 						</Link>
 						<Link
 							href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20awesome%20post%20on%20Deepgram%20%40deepgramai%20%20${encodeURIComponent(shorturls.twitter)}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							><Icon icon="twitter" class="w-[1em] fill-darkIris" />
+							><Icon icon="twitter" class="w-[1em] fill-lightIris" />
 						</Link>
 						<Link
 							href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shorturls.fullUrl)}&title=${encodeURIComponent(post.content.title)}`}
 							target="_blank"
 							rel="noopener noreferrer"
-							><Icon icon="linkedin" class="w-[1em] fill-darkIris" />
+							><Icon icon="linkedin" class="w-[1em] fill-lightIris" />
 						</Link>
 						<Link href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shorturls.facebook)}`} target="_blank" rel="noopener noreferrer"
-							><Icon icon="facebook" class="w-[1em] fill-darkIris" />
+							><Icon icon="facebook" class="w-[1em] fill-lightIris" />
 						</Link>
 					</div>
 
@@ -261,7 +269,7 @@ const schema = [
 								.filter((heading) => heading.attrs.level <= 2)
 								.map((heading) => (
 									<li class="pb-4">
-										<Link class="text-black" href={`#${snakeCase(heading.content[0].text)}`}>
+										<Link class="text-cloud" href={`#${snakeCase(heading.content[0].text)}`}>
 											{heading.content[0].text}
 										</Link>
 									</li>
@@ -285,7 +293,7 @@ const schema = [
 	.post-prose :global(img),
 	.post-prose :global(p img) {
 		@apply mx-auto object-cover;
-		@apply mb-4;
+		@apply mt-12 mb-10;
 	}
 
 	.post-prose :global(small) {
@@ -303,27 +311,50 @@ const schema = [
 	}
 
 	.post-prose :global(p) {
+		@apply text-cloud;
 		@apply pb-4 leading-loose lg:leading-normal;
+		@apply font-light;
 	}
 
 	.post-prose :global(* a) {
-		@apply text-darkIris;
+		@apply text-lightIris;
+		@apply underline;
+		@apply font-medium;
+	}
+
+	.post-prose :global(b, strong) {
+		@apply font-semibold;
 	}
 
 	.post-prose :global(pre) {
 		@apply m-0 mb-14;
 		color: #f5f5f5;
-		background-color: #0d1117;
+		background-color: #1E2C3C;
 		overflow-x: auto;
 		max-height: 24rem;
-		overflow: scroll;
+		overflow: auto;
 		padding: 1.75rem 2.5rem;
 		margin: 0;
 		margin-bottom: 1.5rem;
 	}
 
+	.post-prose :global(pre::-webkit-scrollbar-corner),
+	.post-prose :global(pre::-webkit-scrollbar) {
+		@apply bg-rock;
+	}
+
+	.post-prose :global(pre::-webkit-scrollbar-thumb) {
+		@apply bg-steel;
+	}
+
 	.post-prose :global(p:not(pre.astro-code) code) {
-		@apply bg-casper/50 py-[0.0625rem] px-[0.25rem];
+		@apply py-[0.0625rem] px-[0.25rem];
+	}
+
+	.post-prose :global(code) {
+		@apply bg-rock;
+		@apply text-cloud;
+		@apply font-bold;
 	}
 
 	.post-prose :global(ol) {
@@ -348,10 +379,14 @@ const schema = [
 		@apply py-1;
 	}
 
+	.post-prose :global(ol li::marker) {
+		color: transparent;
+	}
+
 	.post-prose :global(ol li::before) {
 		content: counter(li);
 		counter-increment: li;
-		@apply absolute -left-8 h-6 w-6 rounded-full border border-black text-center text-black;
+		@apply absolute -left-8 h-6 w-6 rounded-full border border-cloud text-center text-cloud;
 	}
 
 	.post-prose :global(ul:not(.contains-task-list)) {
@@ -359,11 +394,11 @@ const schema = [
 	}
 
 	.post-prose :global(ul:not(.contains-task-list) li::marker) {
-		@apply text-casper;
+		@apply text-cloud;
 	}
 
 	.post-prose :global(ul:not(.contains-task-list) li) {
-		@apply pl-1 text-black;
+		@apply pl-1 text-cloud;
 	}
 
 	.post-prose :global(li.task-list-item input) {
@@ -381,16 +416,27 @@ const schema = [
 	}
 
 	.post-prose :global(table) {
-		@apply mb-4 block border-collapse overflow-auto;
+		@apply mb-6 block border-collapse overflow-auto;
+		@apply text-cloud;
 	}
 
 	.post-prose :global(table) + :global(p small) {
 		@apply -mt-2 block text-center text-sm font-bold;
 	}
 
+	.post-prose :global(table > thead tr > th) {
+		@apply bg-rock;
+		@apply font-semibold;
+	}
+
+	.post-prose :global(table > tbody) {
+		@apply bg-darkCharcoal;
+		@apply font-light;
+	}
+
 	.post-prose :global(td),
 	.post-prose :global(th) {
-		@apply border-casper table-auto  border;
+		@apply border-steel table-auto  border;
 	}
 
 	.post-prose :global(thead > tr > th) {
@@ -402,7 +448,7 @@ const schema = [
 	}
 
 	.post-prose :global(tr) {
-		@apply bg-mist;
+		@apply bg-darkCharcoal;
 	}
 
 	.post-prose :global(td),
@@ -430,9 +476,9 @@ const schema = [
 	}
 
 	.post-prose :global(blockquote p) {
-		padding-bottom: 0rem;
-		@apply text-steel;
-		font-weight: 500;
+		padding-bottom: 1rem;
+		@apply text-mist;
+		font-weight: 400;
 	}
 
 	.post-prose :global(blockquote:before) {

@@ -1,6 +1,7 @@
 ---
 import TagsList from "../lists/TagsList.astro";
 import Authors from "../strings/Authors.astro";
+import ImageSrcSet from "../images/ImageSrcSet.astro";
 import GenericBlogCard from "./GenericBlogCard.astro";
 
 const { class: classes, post } = Astro.props;
@@ -12,13 +13,13 @@ title = title.length > 80 ? `${title.substring(0, 77)}...` : title;
 
 <GenericBlogCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={post}>
 	<div class="overflow-hidden flex h-3/5 md:h-2/3 lg:h-3/5 place-content-center">
-		<img class="object-cover w-full" src={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
+		<ImageSrcSet class="object-cover w-full h-auto" filename={cover_image.filename} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
-	<div class="px-4 pb-4 flex flex-col h-2/5 md:h-1/3 lg:h-2/5 justify-between text-black">
-		<div class="h-full flex flex-col justify-evenly">
-			<TagsList tags={tags} />
+	<div class="px-4 py-4 flex flex-col h-2/5 md:h-1/3 lg:h-2/5 justify-between text-white">
+		<div class="h-full flex flex-col justify-start">
+			<!-- <TagsList tags={tags} /> -->
 			<h2 title={originalTitle} class="lg:text-h2-d md:text-h2-m text-h4-m py-2">{title}</h2>
-			<p class="hidden lg:block">{description}</p>
+			<p class="hidden lg:block text-cloud mt-2">{description}</p>
 		</div>
 
 		<Authors authors={authors} />

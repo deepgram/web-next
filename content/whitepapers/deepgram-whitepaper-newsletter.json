@@ -1,0 +1,8 @@
+{
+  "title": "Get Deepgram news and product updates.",
+  "script": "hbspt.forms.create({ region: 'na1', portalId: '6890003', formId: '780aa41c-d856-4c2a-86a6-d00efbd2d3b2' });",
+  "theme": "white",
+  "image": "https://a-us.storyblok.com/f/1001320/x/9cbe61dfcc/arrows-email-signup-image.svg/m/",
+  "date": "2023-01-23",
+  "strapline": "Newsletter"
+}

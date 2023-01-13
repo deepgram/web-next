@@ -1,0 +1,97 @@
+---
+title: Callback
+description: Learn about Deepgram's Callback feature, which allows you to have your submitted audio processed asynchronously.
+tags: [callback, streaming, pre-recorded]
+order: 14
+seo:
+  metaTitle: Callback
+  metaDescription: Learn about Deepgram's Callback feature, which allows you to have your submitted audio processed asynchronously.
+  keywords: callback, asynchronous, redirect audio
+---
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+
+Deepgram’s Callback feature allows you to supply a callback URL to which transcriptions can be returned. When passed, Deepgram will immediately respond with a `request_id` before processing your audio asynchronously.
+
+## Use Cases
+
+Some examples of use cases for Callback include:
+
+- Customers with large amounts of audio that may be slow to process.
+- Customers who don't require immediate results.
+
+## Enable Feature
+
+To enable Callback, when you call Deepgram’s API, add a `callback` parameter in the query string and set it to the URL to which you would like transcriptions sent:
+
+`callback=URL`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace the placeholder `URL` with your chosen callback URL and `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?callback=URL'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## URL Structure
+
+An example URL is `https://example.com/callback`.
+
+Your callback URLs may reference the following protocols:
+
+- For pre-recorded audio: `http` or `https`
+- For streaming audio, `http`, `https`, `ws`, or `wss:`
+
+<Alert type="warning">
+
+If a WebSocket callback connection is disconnected at any point, the entire real-time transcription stream is killed; this maintains the strong guarantee of a one-to-one relationship between incoming real-time connections and outgoing WebSocket callback connections.
+
+</Alert>
+
+<Alert type="info">
+
+You may embed basic authentication credentials in the callback URL.
+
+Only ports 80, 443, 8080, and 8443 may be used for callbacks.
+
+</Alert>
+
+## Results
+
+Depending on the type of submitted audio, the response will vary.
+
+### Pre-recorded Audio
+
+ When Deepgram has finished analyzing the audio, it will send a `POST` request to the provided callback URL with an appropriate HTTP status code.
+
+### Streaming Audio
+
+As Deepgram analyzes the audio, the way in which it sends requests back to the provided callback URL varies:
+
+- If your callback URL begins with `http://` or `https://`, then Deepgram will send `POST` requests to the callback server for each streaming response.
+- If your callback URL begins with `ws://` or `wss://`, then Deepgram will establish a WebSocket connection with the callback server and send WebSocket text messages that contain the streaming responses.
+
+<Alert type="warning">
+
+If a WebSocket callback connection is disconnected at any point, the entire real-time transcription stream is killed; this maintains the strong guarantee of a one-to-one relationship between incoming real-time connections and outgoing WebSocket callback connections.
+
+</Alert>

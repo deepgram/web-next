@@ -2,21 +2,22 @@
 import TagsList from "../lists/TagsList.astro";
 import Authors from "../strings/Authors.astro";
 import GenericBlogCard from "./GenericBlogCard.astro";
+import ImageSrcSet from "../images/ImageSrcSet.astro";
 
 const { class: classes, post } = Astro.props;
 let { title } = post.frontmatter;
-const { title: originalTitle, tags, authors, cover } = post.frontmatter;
+let { title: originalTitle, tags, authors, cover } = post.frontmatter;
 
 title = title.length > 60 ? `${title.substring(0, 57)}...` : title;
 ---
 
 <GenericBlogCard class={`w-full flex flex-col ${classes ? classes : ""}`} post={post}>
 	<div class="overflow-hidden flex h-[55%] place-content-center">
-		<img class="object-cover w-full aspect-[1.6/1]" src={cover} alt={`Blog title image for the blog post: ${originalTitle}`} />
+		<ImageSrcSet class="object-cover w-full aspect-[1.6/1] h-full" filename={cover} alt={`Blog title image for the blog post: ${originalTitle}`} />
 	</div>
-	<div class="px-4 pb-3 flex flex-col h-[45%] justify-between text-black">
+	<div class="px-4 pb-3 flex flex-col h-[45%] justify-between text-white">
 		<div class="h-full flex flex-col justify-evenly">
-			<TagsList tags={tags} />
+			<!-- <TagsList tags={tags} /> -->
 			<h4 title={originalTitle} class="lg:text-h4-d md:text-h2-m text-h4-m">{title}</h4>
 		</div>
 

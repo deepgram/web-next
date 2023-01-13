@@ -1,0 +1,245 @@
+---
+title: Interim Results
+description: Learn about Deepgram's Interim Results feature, which provides preliminary results for streaming audio to solve the need for immediate results combined with high levels of accuracy.
+tags: [interim-results, streaming]
+order: 18
+seo:
+  metaTitle: Interim Results
+  metaDescription: Learn about Deepgram's Interim Results feature, which provides preliminary results for streaming audio to solve the need for immediate results combined with high levels of accuracy.
+  keywords: speech recognition, streaming, interim transcript, final transcript, interim results
+---
+
+<div class="badge">STREAMING</div>
+
+Deepgram’s Interim Results feature monitors streaming audio and provides interim transcripts, which are preliminary results provided during the real-time streaming process. Periodically during this process, Deepgram will identify a point at which its transcript has reached maximum accuracy and send a definitive, or final, transcript of all audio up to that point. It will then continue to process audio.
+
+When working with real-time streaming audio, streams flow from your capture source (for example, microphone, browser, or telephony system) to Deepgram's servers in irregular pieces. Maybe the collected audio ends abruptly&mdash;perhaps even mid-word&mdash;which means that Deepgram’s predictions, particularly for words near the tip of the audio stream, are more likely to be wrong. Though predictions are less accurate at this point, when Interim Results is enabled, Deepgram guesses about the words being spoken and sends these guesses to you as interim transcripts. As more audio enters the server, Deepgram then corrects and improves its transcriptions, increasing its accuracy, until it reaches the end of the stream, at which point it sends one last, cumulative transcript.
+
+<Alert type="info">
+
+Interim Results can be used with Deepgram's [Endpointing](/documentation/features/endpointing/) feature. To compare and contrast these features, and to explore best practices for using them together, see [Using Endpointing and Interim Results with Live Streaming Audio](/documentation/guides/understand-endpointing-interim-results/).
+
+</Alert>
+
+## Use Cases
+
+Some examples of use cases for Interim Results includes:
+
+* Customers who need immediate results with a high level accuracy.
+
+## Enable Feature
+
+To enable Interim Results, when you call Deepgram’s API, add an `interim_results` parameter set to `true` in the query string:
+
+`interim_results=true`
+
+For an example of audio streaming, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/).
+
+## Analyze Interim Transcripts
+
+Let’s look at some interim transcripts and analyze their content.
+
+Our first interim result has the following content:
+
+```json
+{
+  "channel_index":[
+    0,
+    1
+  ],
+  "duration":1.039875,
+  "start":0.0,
+  "is_final":false,
+  "channel":{
+    "alternatives":[
+      {
+        "transcript":"another big",
+        "confidence":0.9600255,
+        "words":[
+          {
+            "word":"another",
+            "start":0.2971154,
+            "end":0.7971154,
+            "confidence":0.9588303
+          },
+          {
+            "word":"big",
+            "start":0.85173076,
+            "end":1.039875,
+            "confidence":0.9600255
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+In this response, we see that:
+
+* `start` (the number of seconds into the audio stream) is `0.0`, indicating that this is the very beginning of the real-time stream.
+* `start` + `duration` (the entire length of this response) is `1.039875` seconds, and the word "big" ends at `1.039875` seconds (which matches the `duration` value), indicating that the stream cuts off the word.
+* `confidence` for the word "big" is approximately 96%, indicating that even though the word is cut off, Deepgram is still pretty certain that its prediction is correct.
+* `is_final` is `false`, indicating that Deepgram will continue waiting to see if more data will improve its predictions.
+
+The next interim response has the following content:
+
+```json
+{
+  "channel_index": [
+    0, 
+    1
+  ],
+  "duration": 2.039875,
+  "start": 0.0,
+  "is_final": false,
+  "channel": {
+    "alternatives": [
+      {
+        "transcript": "another big problem",
+        "confidence": 0.9939844,
+        "words": [
+          {
+            "word": "another",
+            "start": 0.29852942,
+            "end": 0.7985294,
+            "confidence": 0.9939844
+          },
+          {
+            "word": "big",
+            "start": 0.8557843,
+            "end": 1.3557843,
+            "confidence": 0.98220366
+          }
+          {
+            "word": "problem",
+            "start": 1.5722549,
+            "end": 2.039875,
+            "confidence": 0.9953441
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+In this response, we see that:
+
+* `start` (the number of seconds into the audio stream) is 0, indicating that this is the very beginning of the real-time stream.
+* `start` + `duration` (the entire length of this response) is `2.039875` seconds, and the word "problem" ends at `2.039875` seconds (which matches the `duration` value), indicating that the stream cuts off the word.
+* `confidence` for the word "big" has improved to almost 98%.
+* the `end` timestamp for "big" now indicates that the word has not been cut off.
+* `confidence` for the word "problem" is almost 100%, so can likely be trusted.
+* `is_final` is `false`, indicating that Deepgram will continue waiting to see if more data will improve its predictions.
+
+## Analyze Final Transcripts
+
+When Deepgram is satisfied that it has produced the best possible transcript of all audio up to a certain point, it sends a final transcript in which the `is_final` value is set to `true`.
+
+<Alert type="warning">
+
+`"is_final": true` does not mean that the entire audio stream is done being processed, nor does it mean that the speaker has finished speaking, so avoid using it for endpointing or utterance estimation. It only means that the processed time range (from `start` to `start` + `duration`) will not be returned in future messages.
+
+</Alert>
+
+<Alert type="info">
+
+If you want to review a transcript, consider confidences or timings, or make any downstream changes, do it when `"is_final": true`; the next message will continue from where the current message ended.
+
+</Alert>
+
+Let’s look at an example. [Download our final Python example script](https://developers.deepgram.com/data/scripts/streaming/show-final.py) and run the example code:
+
+<CodeGroup title="shell">
+
+<CodeBlock label="shell" active>
+
+```sh
+python3 show-final.py -k 'YOUR_DEEPGRAM_API_KEY' /PATH/TO/AUDIO.wav
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+When run, the script prints out the transcript for each response it receives and shows the `is_final` status for each message:
+
+```json
+Channels = 2, Sample Rate = 48000 Hz, Sample width = 2 bytes, Size = 18540124 bytes
+  1 0.000-1.100 ["is_final": false] another big
+  2 0.000-2.100 ["is_final": false] another big problem
+  3 0.000-3.100 ["is_final": false] another big problem in the speech analyst
+  4 0.000-4.100 ["is_final": false] another big problem in the speech analytics space
+  5 0.000-5.100 ["is_final": false] another big problem in the speech analytics space when custom
+  6 0.000-6.100 ["is_final": false] another big problem in the speech analytics space when customers first bring the
+  7 0.000-7.100 ["is_final": false] another big problem in the speech analytics space when customers first bring the software were on
+  8 0.000-8.100 ["is_final": false] another big problem in the speech analytics space when customers first bring the software were on is that they
+  9 0.000-9.100 ["is_final": false] another big problem in the speech analytics space when customers first bring the software on is that they they
+ 10 0.000-8.490 ["is_final": true ] another big problem in the speech analytics space when customers first bring the software were on is that they
+ 11 8.490-10.100 ["is_final": false] they are
+ 12 8.490-11.100 ["is_final": false] they are blown away by the
+ ...
+```
+
+In this response, we see that:
+
+* On lines 1 through 9, the transcripts contain `"is_final": false`, indicating that they are interim transcripts. As more data pours into Deepgram, you see the transcripts get longer.
+* Between lines 3 and 4, Deepgram corrects its prediction of the word "analyst," turning it into "analytics." This is why interim results exist: to give Deepgram an opportunity to correct transcripts, particularly words that haven't fully been spoken yet.
+* Between lines 5 and 6, Deepgram corrects its prediction of the word "custom", turning it into "customer".
+* On line 10, `is_final` is set to `true`, indicating that Deepgram will not return any additional transcripts covering that span of time (from `0.000` to `8.490` seconds) because it believes it has reached optimal accuracy for this section of the transcript.
+* On line 9, the transcript covers a span of time from `0.000` to `9.100` seconds, which is longer than the completed transcript issued on line 10. If you listen to this moment in the example audio, you will hear the speaker repeat the word "they". After processing the repeated word, Deepgram decided it had reached optimal accuracy for the first section of the transcript, and split the transcript between the repeated words. Notice one "they" stayed with the first section (line 10), but the other "they" moved into the next section (line 11), which starts at `8.490` seconds.
+
+<Panel title="Tips for working with transcripts">
+
+When handling real-time streaming results, the most accurate transcripts are available in the final transcripts, but the final transcripts may split the message. Some tips:
+
+* If you need the best transcript possible and can tolerate some delay, rely on final transcripts; they are most accurate and aren’t likely to change.
+* If you need the fastest transcript possible, ignore final transcripts; instead, track timings and confidences to determine whether to keep waiting before committing to the current interim transcript. This usually works well because most content does not change between consecutive interim transcripts.
+
+</Panel>
+
+## Identify Completed Audio Processing
+
+To identify whether the audio stream is completely processed, send an empty binary WebSocket message to the Deepgram server and then continue to process server responses until the server gracefully closes the connection.
+
+## Frequently Asked Questions
+
+### How do I measure latency with interim results?
+
+In general terms, real-time streaming latency is the time delay between when a transfer of data begins and when a system begins processing it. In mathematical terms, it is the difference between the audio cursor (the number of seconds of audio you have currently submitted; we’ll call this X) and the latest transcript cursor (`start` + `duration`; we’ll call this Y). Latency is X-Y.
+
+However, remember that to give you best accuracy, final transcripts may end early (see lines 9 and 10 in the example above), which means you’ve already received more data than what is reflected in the final transcript. Remember that final transcripts are meant for conservative pipelines that require the highest confidence levels, whereas the latest interim transcript has the lowest latency; always ignore final transcripts when calculating latency.
+
+To learn more, see [Measuring Streaming Latency](/documentation/guides/measure-latency/).
+
+### How do I measure word error rates (WER) with interim results?
+
+To calculate [WER](https://blog.deepgram.com/what-is-word-error-rate/), concatenate all final transcripts and compare to your base transcript. Because final transcripts are the most accurate, they should be preferred over interim transcripts, which prioritize speed over accuracy. And because a single final transcript does not guarantee that the audio stream is complete, you will need to be certain you have collected *all* final transcripts before performing your calculation.
+
+Let’s look at an example. [Download our WER Python example script](https://developers.deepgram.com/data/scripts/streaming/concat-final.py), prepare an audio file (or [use our sample WAV file](https://developers.deepgram.com/data/audio/interview_speech-analytics.wav)), and run the example code:
+
+<CodeGroup title="shell">
+
+<CodeBlock label="shell" active>
+
+```sh
+python3 concat-final.py -k 'YOUR_DEEPGRAM_API_KEY' /PATH/TO/audio.wav
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+When run, the script concatenates the final transcripts returned by Deepgram and prints the result:
+
+```json
+Channels = 2, Sample Rate = 48000 Hz, Sample width = 2 bytes, Size = 18540124 bytes
+another big problem in the speech analytics space when customers first bring the software where is that they they are blown away...
+```
+
+You can compare this result with your base transcript to calculate WER.
+
+### How do I turn off interim results?
+
+By default, interim results is turned off. If you have turned it on, remove `interim_results=true` from your query parameters when you call Deepgram's real-time streaming endpoint.

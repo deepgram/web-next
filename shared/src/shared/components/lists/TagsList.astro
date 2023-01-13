@@ -8,12 +8,12 @@ const { tags, link } = Astro.props;
 const tagsArray = tags ? tags.slice(0, 3) : [];
 ---
 
-<ul class="pt-3 flex text-sm font-medium space-x-2">
+<ul class="pt-3 flex text-sm space-x-2">
 	{tags &&
 		tagsArray.map((tag) => (
-			<li class="bg-steel px-1 text-white">
+			<li class="bg-steel px-1 text-mist">
 				{link && (
-					<Link href={`/tags/${tag}`} class="text-white">
+					<Link href={`/tags/${tag}`} class="text-cloud">
 						#{tag}
 					</Link>
 				)}

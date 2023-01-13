@@ -1,0 +1,17 @@
+- name: .NET SDK
+  to: /sdks-tools/sdks/dotnet-sdk/
+  children:
+  - name: Configuration
+    to: /sdks-tools/sdks/dotnet-sdk/configuration/
+  - name: Logging
+    to: /sdks-tools/sdks/dotnet-sdk/logging/
+  - name: Pre-recorded Transcription
+    to: /sdks-tools/sdks/dotnet-sdk/pre-recorded-transcription/
+  - name: Streaming Transcription
+    to: /sdks-tools/sdks/dotnet-sdk/streaming-transcription/
+  - name: Projects
+    to:  /sdks-tools/sdks/dotnet-sdk/projects/
+  - name: Keys
+    to:  /sdks-tools/sdks/dotnet-sdk/keys/
+  - name: Usage
+    to:  /sdks-tools/sdks/dotnet-sdk/usage/

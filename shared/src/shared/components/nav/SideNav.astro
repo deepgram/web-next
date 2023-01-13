@@ -1,0 +1,17 @@
+---
+const { navStructure, navTitle } = Astro.props;
+import SideNavList from "./SideNavList.astro";
+---
+
+<input type="checkbox" id="toggle-nav" class="hidden" />
+<label for="toggle-nav" class="toggle-nav-label fixed z-[11] top-20"> </label>
+<nav class="side-nav bg-cloud/30 p-4">
+	<h5 class="border-b border-b-cloud pb-2 text-base">{navTitle}</h5>
+	<SideNavList navStructure={navStructure} />
+</nav>
+
+<style>
+	.side-nav {
+		@apply h-full col-span-2 md:col-span-1 fixed w-full z-10 md:relative md:block bg-mist md:bg-cloud/30 p-8;
+	}
+</style>

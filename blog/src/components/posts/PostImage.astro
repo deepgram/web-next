@@ -1,5 +1,7 @@
 ---
+import ImageSrcSet from "../../shared/components/images/ImageSrcSet.astro"
+
 const { post } = Astro.props;
 ---
 
-<img class="shadow-dg" src={post.content.cover_image.filename} alt={post.content.title} />
+<ImageSrcSet class="shadow-dg w-full rounded-[1.34px]" filename={post.content.cover_image.filename} alt={post.content.title} />

@@ -1,0 +1,131 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Keywords
+description: Learn about Deepgram's Keyword feature, which allows you to boost or suppress Out-of-vocabulary (OOV) keywords in submitted audio.
+tags: [keywords, streaming, pre-recorded, beta]
+order: 15
+seo:
+  metaTitle: Keywords
+  metaDescription: Learn about the keyword boosting feature available in Deepgram's API and understand how to use it to boost or suppress Out-of-vocabulary (OOV) keywords.
+  keywords: keyword, boost, suppress, OOV, out-of-vocabulary, in-vocabulary, transcript, model, train
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+# {frontmatter.title}
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">STREAMING</div>
+<div class="badge">BETA</div>
+
+<Alert type="warning">
+
+Training a custom model is always the most effective and accurate way to recognize keywords and context in your transcripts. Keyword boosting can help a model recognize words it has yet to be trained on or hasn’t encountered frequently, but can also lead to false positives if not used cautiously and in moderation.
+
+Support for out-of-vocabulary (OOV) keyword boosting when processing streaming audio is currently in _beta_; to fall back to previous keyword behavior append the query parameter `keyword_boost=legacy` to your API request.
+
+</Alert>
+
+Just like a human listener, Deepgram can better understand mumbled, distorted, or otherwise hard-to-decipher speech when it knows the context of the conversation. When using Deepgram’s API to transcribe audio, you can specify keywords to which the model should pay particular attention to help it understand context; this is known as keyword boosting. Similarly, you can suppress keywords.
+
+## In-vocabulary & Out-of-vocabulary Keywords
+
+Traditional keyword boosting works on in-vocabulary words, which means the model you are applying has been trained on the words, so the words already exist in the model’s vocabulary.
+
+Out-of-vocabulary (OOV) keyword boosting works when you know that a specific word is important, but don’t have a custom model that has been trained to include that word. While training a custom model is always the most effective way to achieve accuracy in your transcripts, OOV keyword boosting can help your model recognize words it has yet to be trained on or hasn’t encountered frequently. Proper names, product names, industry-specific terms, and addresses are great candidates for keyword boosting.
+
+## Use Cases
+
+Some examples of use cases for keyword boosting include:
+
+- Customers who are between training cycles with their custom model, but want to improve on product names or specific vocabulary. For example, their sales team wants to demo their product to a prospect and getting the prospect's product names right will add a "wow" factor.
+- Customers plan to transcribe a last-minute meeting over an emerging trend and want to correctly identify participant names and trending terminology.
+
+## Enable Feature
+
+To enable Keywords, when you call Deepgram’s API, add a `keywords` parameter in the query string and set it to your chosen keyword and intensifier:
+
+`keywords=KEYWORD:INTENSIFIER`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace the placeholder `KEYWORD` with your chosen keyword, the `INTENSIFIER` with your chosen intensifier, and `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```bash
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?keywords=KEYWORD:INTENSIFIER'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Intensifiers
+
+Intensifiers are exponential factors by which the attached keyword can be boosted or suppressed. The default intensifier is one (1). An intensifier of two (2) equates to two boosts multiplied in a row, whereas zero (0) is equivalent to not specifying a `keywords` parameter at all. The intensifier value can be a decimal.
+
+## Boost a Keyword
+
+To use keyword boosting, send one or more instances of the `keywords` parameter in the query string when calling the API and append a positive intensifier, which will boost the recognition of the specified word:
+
+`keywords=snuffleupagus:2.2`
+
+| Truth                                                                       | Before boosting                                                     | After boosting                                                              |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| and then big bird said to _snuffleupagus_ why aren’t you eating that banana | and then big bird said to _sniff_ why aren’t you eating that banana | and then big bird said to _snuffleupagus_ why aren’t you eating that banana |
+
+## Boost Multiple Keywords
+
+You can boost multiple keywords individually:
+
+`keywords=systrom&keywords=krieger`
+
+| Truth                                                                                                      | Before boosting                                                                                     | After boosting                                                                                             |
+| ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| instagram is a photo and video sharing social networking service founded by kevin systrom and mike krieger | instagram is a photo and video sharing social networking service founded by kevin system and mike k | instagram is a photo and video sharing social networking service founded by kevin systrom and mike krieger |
+
+## Suppress a Keyword
+
+To use keyword suppression, send one or more instances of the `keywords` parameter in the query string and append a negative intensifier, which will suppress the recognition of the specified word:
+
+`keywords=kansas:-10`
+
+| Truth                                               | Before suppression                                  | After suppression                            |
+| --------------------------------------------------- | --------------------------------------------------- | -------------------------------------------- |
+| i was born in nineteen twenty one in wichita kansas | i was born in nineteen twenty one in wichita kansas | i was born in nineteen twenty one in wichita |
+
+## Best Practices
+
+### Send only individual keywords you want to see better represented in transcripts
+
+For keyword boosting to work best:
+
+- Send uncommon keywords. Avoid sending common words like "and" or "the".
+- Send keywords once. Avoid sending the same word multiple times.
+- Send individual keywords rather than phrases. Send only the principal uncommon words within phrases of interest.
+- Send actual words. Avoid sending strings of numbers or alphanumerics.
+
+### Be moderate when choosing intensifiers
+
+Remember that intensifiers are exponential factors and that intensifier values can include decimals. Although there is no maximum or minimum value, start with small increments and adjust as necessary.
+
+### Spell proper nouns as you’d like them to appear in your transcript
+
+The technology powering the OOV keywords feature uses the same logic found in our search, so you don’t need to provide any “sounds like” spelling hints. If you want your OOV keyword to be spelled a certain way in your transcript, spell it that way in the `keywords` parameter. If you want it capitalized in your transcript, capitalize it in the `keywords` parameter.
+
+### Avoid transferring over a list of keywords that has been used with a previous vendor
+
+Every system is different. Whereas keyword boosting may have been necessary with another vendor, Deepgram's system may already perform well without the aid of keywords. Additional boosting may negatively affect results. Start without any keywords, add them as you see fit, and cautiously increase boosts using decimal values until you find the best fit for your data.

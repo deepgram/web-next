@@ -1,0 +1,53 @@
+---
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
+import DocsCard from "../../../shared/components/cards/DocsCard.astro";
+import Layout from "../../../layouts/General.astro";
+
+const guides = await Astro.glob("./**/index.mdx");
+
+const performanceGuides = guides.filter((guide) => {
+	return guide.frontmatter.type === "performance";
+});
+const sortedPerformanceGuides = performanceGuides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order
+});
+
+const transcriptionGuides = guides.filter((guide) => {
+	return guide.frontmatter.type === "transcription";
+});
+const sortedTranscriptionGuides = transcriptionGuides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order
+});
+
+const migrationGuides = guides.filter((guide) => {
+	return guide.frontmatter.type === "migration";
+});
+const sortedMigrationGuides = migrationGuides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order
+});
+---
+
+<Layout>
+	<article>
+		<h1>Deepgram Guides</h1>
+		<DocsCardList>
+			<h2 slot="title" class="text-stone uppercase">Migration</h2>
+			{sortedMigrationGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+		</DocsCardList>
+		<DocsCardList>
+			<h2 slot="title" class="text-stone uppercase">Transcription</h2>
+			{sortedTranscriptionGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+		</DocsCardList>
+		<DocsCardList>
+			<h2 slot="title" class="text-stone uppercase">Measuring Performance</h2>
+			{sortedPerformanceGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+		</DocsCardList>
+	</article>
+</Layout>
+
+<style>
+	:global(h3) {
+		@apply mt-0 !important;
+		@apply mb-2 !important;
+	}
+</style>

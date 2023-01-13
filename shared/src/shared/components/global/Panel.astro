@@ -1,14 +1,19 @@
 ---
 import Icon from "../general/Icon.astro";
 import { renderRichText } from "@storyblok/astro";
-const { blok } = Astro.props;
-const { type = "info", title = "Information", fill = "fill-black" } = blok;
-const renderedRichText = renderRichText(blok.inner_html);
+const { blok = { type: "info", fill: "fill-black", title: "Information" } } = Astro.props;
+const { type, title, fill } = blok;
+let renderedRichText;
+if (blok.inner_html) {
+	renderedRichText = renderRichText(blok.inner_html);
+}
 ---
 
 <div class={`panel ${type}`}>
 	<div class="heading">
-		<Icon class={`icon h-6 w-6 ${type === "info" ? "fill-casper" : type === "warning" ? "fill-sunflower" : fill}`} icon={type} />
+		<div class="p-2">
+			<Icon class={`icon h-6 w-6 ${type === "info" ? "fill-casper" : type === "warning" ? "fill-sunflower" : fill}`} icon={type} />
+		</div>
 		<div class="title">
 			{title}
 		</div>
@@ -16,7 +21,7 @@ const renderedRichText = renderRichText(blok.inner_html);
 
 	<div class="text">
 		<slot>
-			<div set:html={renderedRichText}></div>
+			<div set:html={renderedRichText} />
 		</slot>
 	</div>
 </div>
@@ -24,23 +29,24 @@ const renderedRichText = renderRichText(blok.inner_html);
 <style scoped>
 	.panel {
 		@apply flex flex-row flex-wrap align-middle;
-		@apply text-sm text-black;
+		@apply text-sm text-[#8d8b8b];
 		@apply my-4;
 	}
 
 	.heading {
-		@apply border-casper border-b;
+		@apply border-grass border-b;
 		@apply w-full;
-		@apply flex flex-row flex-wrap items-center;
-		@apply my-4 ml-4;
+		@apply flex flex-row flex-wrap;
+		@apply ml-0 my-0;
+		/* @apply ml-4; */
 	}
 	.icon {
 		@apply flex flex-col flex-wrap align-middle;
 		@apply m-1 border-0;
 	}
 	.info {
-		@apply border-casper/20 rounded-sm border;
-		@apply bg-casper/20;
+		@apply border-grass rounded-sm border-2;
+		/* @apply bg-casper/20; */
 	}
 
 	.warning {
@@ -52,10 +58,11 @@ const renderedRichText = renderRichText(blok.inner_html);
 		@apply flex flex-wrap;
 		@apply m-4;
 		@apply w-4/6 md:w-5/6;
+		@apply font-semibold;
 	}
 
 	.text {
-		@apply ml-3.5 mr-1 w-full py-5;
+		@apply ml-3.5 mr-1 w-full py-1;
 		@apply w-11/12;
 	}
 
@@ -81,5 +88,9 @@ const renderedRichText = renderRichText(blok.inner_html);
 
 	.text :global(p) {
 		@apply py-0;
+	}
+
+	.text :global(p:first-of-type) {
+		@apply pt-0;
 	}
 </style>

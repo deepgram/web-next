@@ -1,5 +1,6 @@
 ---
+import ImageSrcSet from "./ImageSrcSet.astro"
 const { author, class: classes } = Astro.props;
 ---
 
-<img src={author.content.picture.filename} class={classes} alt={`Author photo for ${author.content.title}`} title={author.content.title} />
+<ImageSrcSet filename={author.content.picture.filename} class={classes} alt={`Author photo for ${author.content.title}`} title={author.content.title} />

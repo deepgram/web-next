@@ -1,0 +1,62 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Pre-recorded Transcription
+description: Official Python SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, python]
+seo:
+  metaTitle: Pre-recorded Transcription - Python SDK
+  metaDescription: Official Python SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, python, speech-to-text, speech recognition, voice-to-text
+---
+
+# {frontmatter.title}
+
+The Deepgram client has a `transcription` property that allows you to request
+transcripts for pre-recorded audio. To request a transcript for a pre-recorded
+particular audio file, you'll use the `transcription.prerecorded` function.
+
+## Pre-recorded Transcription Parameters
+
+| Parameter | Type        | Description                                |
+| --------- | ----------- | ------------------------------------------ |
+| source    | Buffer, Url | Provides the source of audio to transcribe |
+| options   | Object      | Parameters to filter requests. See below.  |
+
+You can pass a Buffer or URL to a file to transcribe. Here's how to construct
+each:
+
+### Sending a URL
+
+```py
+source = {'url': URL_TO_AUDIO_FILE}
+```
+
+### Sending a Buffer
+
+Open a file and send the buffer returned. You will also need to provide the
+MIMETYPE of the file.
+
+```py
+with open(PATH_TO_FILE, 'rb') as audio:
+  source = {'buffer': audio, 'mimetype': MIMETYPE_OF_FILE}
+```
+
+### Pre-recorded Transcription Options
+
+Additional transcription options can be provided for pre-recorded
+transcriptions. They are provided as an object as the second parameter of the
+`transcription.prerecorded` function. Each of these parameters map to a
+feature in the Deepgram API. Reference the
+[features documentation](/documentation/features/) to learn what features may
+be appropriate for your request.
+
+## Pre-recorded Transcription Example Request
+
+With the source you chose above, call the `transcription.prerecorded` function
+and provide any [additional options](#pre-recorded-transcription-options) as
+an object.
+
+```py
+response = await dg_client.transcription.prerecorded(source, {'punctuate': True})
+```

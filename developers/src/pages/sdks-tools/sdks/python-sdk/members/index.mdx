@@ -1,0 +1,73 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Members
+description: Official Python SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, python]
+seo:
+  metaTitle: Members - Python SDK
+  metaDescription: Official Python SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, python, speech-to-text
+---
+
+# {frontmatter.title}
+
+The `deepgram.members` object provides access to the members endpoints of the
+Deepgram API. Each request is project based and will require a `project_id`.
+
+## List Project Members
+
+You can retrieve all members on a given project using the `members.list_members` function.
+
+### List Project Members Parameters
+
+| Parameter  | Type   | Description                                                        |
+| ---------- | ------ | ------------------------------------------------------------------ |
+| project_id | String | A unique identifier for the project you wish to see the members of |
+
+### List Project Members Example Request
+
+```python
+response = await deepgram.members.list_members(PROJECT_ID)
+```
+
+### List Project Members Response
+
+```ts
+{
+  members: [
+    {
+      member_id: string,
+      scopes: Array<string>
+      email: string,
+      first_name: string,
+      last_name: string,
+    },
+  ];
+}
+```
+
+## Remove Project Member
+
+You can remove a member from a given project using the `members.remove_member` function.
+
+### Remove Project Member Parameters
+
+| Parameter  | Type   | Description                                                        |
+| ---------- | ------ | ------------------------------------------------------------------ |
+| project_id | String | A unique identifier for the project you wish to see the members of |
+| member_id  | String | A unique identifier for the member you wish to remove              |
+
+### Remove Project Members Example Request
+
+```python
+response = await deepgram.members.remove_member(PROJECT_ID, MEMBER_ID)
+```
+
+### Remove Project Members Response
+
+```ts
+{
+	message: string;
+}
+```

@@ -1,0 +1,18 @@
+---
+import DocsCardList from "../../shared/components/lists/DocsCardList.astro";
+import DocsCard from "../../shared/components/cards/DocsCard.astro";
+
+const { title, class: classes, } = Astro.props;
+
+const preRecorded = await Astro.glob("../../pages/documentation/getting-started/prerecorded/index.mdx");
+const streaming = await Astro.glob("../../pages/documentation/getting-started/streaming/index.mdx");
+---
+
+<div class="max-w-screen-xl mx-auto">
+  
+  <h2 class="text-stone mt-6 mb-10">ENGLISH</h2>
+  <DocsCardList>
+      {preRecorded.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+      {streaming.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+  </DocsCardList>
+</div>

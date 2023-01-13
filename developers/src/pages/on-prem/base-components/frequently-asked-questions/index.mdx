@@ -1,0 +1,54 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+title: Frequently Asked Questions
+description: Learn about frequently asked questions when deploying Deepgram products on premises.
+order: 7
+seo:
+  metaTitle: Frequently Asked Questions
+  metaDescription: Learn about frequently asked questions when deploying Deepgram products on premises.
+  keywords: on-premises, on-prem, deployment, introduction, base components, base, faq, questions
+---
+
+# {frontmatter.title}
+
+Administrators of on-premises (on-prem) deployments of Deepgram products sometimes encounter the following issues.
+
+## Problems installing the NVIDIA drivers
+
+Sometimes loaded kernel modules can interfere with the installation of the NVIDIA drivers. To correct this issue, try unloading `nouveau` drivers:
+
+```bash
+sudo rmmod nouveau
+```
+
+## Failed to find any CUDA devices
+
+1. Ensure that NVIDIA drivers are installed:
+
+   ```bash
+   nvidia-smi
+   ```
+
+   If not, install them before proceeding.
+
+2. Ensure that `nvidia-docker` is installed:
+
+   ```bash
+   docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+   ```
+
+   If not, install it before proceeding.
+
+3. If you have made changes to NVIDIA drivers, restart Docker:
+
+   ```bash
+   sudo systemctl restart docker
+   ```
+
+## Deepgram will not start
+
+Running Deepgram on premises requires a valid license. If you think you have an expired license or invalid license ID, [contact Support](/support/) for help.
+
+## How can I use Deepgram on-prem offline?
+
+If you have been issued an on-prem license file for offline/air-gapped deployments, please contact your Deepgram Account Representative for additional documentation about maintaining your license.

@@ -1,0 +1,63 @@
+---
+import Link from "../shared/components/general/Link.astro";
+let { pathname } = Astro.url;
+pathname = pathname.slice(0, -1);
+const { navStructure, navTitle } = Astro.props;
+---
+
+<input type="checkbox" id="toggle-nav" class="hidden" />
+<label for="toggle-nav" class="toggle-nav-label fixed z-[11] top-20"></label>
+<nav class="side-nav ">
+		<div class="sticky top-32">
+		<h5 class="border-b border-b-cloud pb-2 text-base">{navTitle}</h5>
+		<ul>
+			{
+				navStructure.map((nav) => {
+					return (
+						<li class={pathname.includes(nav.to) ? "active" : ""}>
+							<div class="navlink-container ">
+								{nav.depth === 2 ? (
+									<Link
+										href={nav.to}
+										class={`list-link hover:text-iris text-darkCharcoal my-2 inline-flex py-1 pl-1 pr-3 text-sm leading-5 ${
+											pathname.endsWith(nav.to) ? "font-semibold" : "text-darkCharcoal"
+										}  ${pathname.endsWith(nav.to) && nav.children ? "border-meadow border-l-4" : ""}`}
+									>
+										{nav.text}
+									</Link>
+								) : (
+									<>
+										{pathname !== "/api-reference" && nav.to.startsWith(pathname) ? (
+											<Link
+											href={nav.to}
+											class={`list-link hover:text-iris text-darkCharcoal my-2 inline-flex pl-4 pr-3  text-sm leading-5 ${
+												pathname.endsWith(nav.to) ? "font-semibold" : "text-darkCharcoal"
+											}  ${pathname.endsWith(nav.to) && nav.children ? "border-meadow border-l-4" : ""}`}
+										>
+											{nav.text}
+										</Link>
+										) : (
+											<></>
+										)}
+									</>
+								)}
+							</div>
+						</li>
+					);
+				})
+			}
+		</ul>
+		</div>
+	</nav>
+
+<style>
+	.side-nav {
+		@apply col-span-2 md:col-span-2 lg:col-span-3 h-full fixed w-full z-10 md:relative md:block bg-mist md:bg-cloud/30 p-8;
+	}
+	.side-nav ul {
+		@apply ml-0;
+	}
+	#toggle-nav + .toggle-nav-label + .side-nav {
+    @apply fixed top-10 md:sticky md:top-20;
+}
+</style>

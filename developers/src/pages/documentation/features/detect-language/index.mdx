@@ -1,0 +1,100 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Language Detection
+description: Learn about Deepgram's Language Detection feature, which identifies the dominant language spoken in submitted audio.
+tags: [language detection, pre-recorded]
+order: 5
+seo:
+  metaTitle: Language Detection
+  metaDescription: Learn about Deepgram's Language Detection feature, which identifies the dominant language spoken in submitted audio.
+  keywords: language detection, detect, language
+---
+import Alert from '../../../../shared/components/global/Alert.astro'; 
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+<div class="badge">PRE-RECORDED</div>
+
+# {frontmatter.title}
+
+Deepgram’s Language Detection feature identifies the dominant language spoken in submitted audio, transcribes the audio in the identified language, and returns the detected language code in the JSON response.
+
+Language Detection supports [all generally available languages](/documentation/features/language/). If you are submitting multichannel audio, Language Detection identifies one language per channel.
+
+When Language Detection is enabled, the [Punctuation](/documentation/features/punctuate/) feature will be enabled by default.
+
+## Use Cases
+
+An example of a use case for Language Detection includes:
+
+Customers with input audio files in different languages who need to automatically detect the dominant language in the audio data and transcribe the output in the detected language.
+
+## Enable Feature
+
+To enable Language Detection, when you call Deepgram’s API, add a `detect_language` parameter set to `true` in the query string:
+
+<Alert type="warning">
+
+When Language Detection is enabled, the [Punctuation](/documentation/features/punctuate/) feature will be enabled by default.
+
+</Alert>
+
+`detect_language=true&punctuate=true`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```bash
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?detect_language=true&punctuate=true'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Analyze Response
+
+
+When the file is finished processing (often after only a few seconds), you’ll receive a JSON response that has the following basic structure:
+
+```json
+{
+  "metadata": {
+    "transaction_key": "string",
+    "request_id": "string",
+    "sha256": "string",
+    "created": "string",
+    "duration": 0,
+    "channels": 0
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives":[],
+        "detected_language": "fr"
+      }
+    ]
+  }
+```
+
+In this response, we see that each channel contains:
+
+- `alternatives` object, which contains:
+    - `transcript`: Transcript for the audio being processed.
+    -  `confidence`: Floating point value between 0 and 1 that indicates overall transcript reliability. Larger values indicate higher confidence.
+    - `words`: Object containing each word in the transcript, along with its start time and end time (in seconds) from the beginning of the audio stream, a word confidence value, a speaker identifier, and a speaker confidence value.
+- `detected_language`: [BCP-47](https://tools.ietf.org/html/bcp47) language tag for the dominant language identified in the channel.

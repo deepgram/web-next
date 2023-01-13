@@ -1,0 +1,49 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Projects
+description: Official .NET SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, dotnet, csharp]
+seo:
+  metaTitle: Projects - .NET SDK
+  metaDescription: Official .NET SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, dotnet, csharp, speech-to-text
+---
+
+# {frontmatter.title}
+
+The `DeepgramClient` class provides access to manage projects associated
+with the API key you provided when instantiating the Deepgram client.
+
+## List Projects
+
+Retrieve all projects your API key has access to manage.
+
+```csharp
+var response = await deepgram.Projects.ListProjectsAsync();
+```
+
+## Get a Project
+
+Retrieves a project based on the provided project id.
+
+```csharp
+var response = await deepgram.Projects.GetProjectAsync("PROJECT_ID");
+```
+
+## Update a Project
+
+Updates a project based on a provided project object.
+
+```csharp
+var project = new Deepgram.Projects.Project() { Id = "PROJECT_ID", Name = "PROJECT_NAME" };
+var response = await deepgram.Projects.UpdateProjectAsync(project);
+```
+
+## Delete a Project
+
+Delete a project based on a provided project id.
+
+```csharp
+var response = await deepgram.Projects.DeleteProjectAsync("PROJECT_ID");
+```

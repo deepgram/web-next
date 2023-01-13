@@ -1,0 +1,35 @@
+---
+title: "Voice Activity Detection (VAD)"
+description: Learn about Deepgram's Voice Activity Detection (VAD) feature, which detects pauses in submitted audio. Used when the Endpointing feature is enabled for streaming audio.
+tags: [voice-activity-detection, streaming]
+order: 20
+seo:
+  metaTitle: "Voice Activity Detection (VAD)"
+  metaDescription: Learn about Deepgram's Voice Activity Detection (VAD) feature, which detects pauses in submitted audio. Used when the Endpointing feature is enabled for streaming audio.
+  keywords: speech recognition, streaming, vad, voice activity detection, endpointing, pause
+---
+
+<div class="badge">STREAMING</div>
+
+Deepgram’s Voice Activity Detection (VAD) feature monitors incoming audio and detects when a sufficiently long pause is detected. By default, the length of time Deepgram uses for voice activity detection (VAD) is 10 ms, but you can configure this value using the `vad_turnoff` parameter.
+
+VAD is used when the [Endpointing](/documentation/features/endpointing/) feature is enabled for streaming audio.
+
+## Use Cases
+
+Some examples of use cases for VAD include:
+
+* Audio with speakers who pause longer while speaking than the average speaker.
+* Audio with speakers who speak with shorter pauses than the average speaker.
+
+## Enable Feature
+
+To enable VAD, when you call Deepgram’s API, add a `vad_turnoff` parameter in the query string and set it to the length of time (in milliseconds) of silence after which Deepgram will decide that a speaker has finished speaking. The default values is 10 ms.
+
+`vad_turnoff=LENGTH-OF-TIME-IN-MILLISECONDS`
+
+For an example of audio streaming, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/).
+
+## Results
+
+To learn about the results, see [Endpointing](/documentation/features/endpointing/#results).

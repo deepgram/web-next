@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "preact/hooks";
 export default function Search() {
 	const [isOpen, setIsOpen] = useState(false);
 	const searchButton = useRef(document.getElementById("docsearch-button"));
+	const searchButtonTablet = useRef(document.getElementById("docsearch-button-tablet"));
 	const searchButtonMobile = useRef(document.getElementById("docsearch-button-mobile"));
 	const [initialQuery, setInitialQuery] = useState<string>();
 
@@ -26,6 +27,7 @@ export default function Search() {
 
 	useEffect(() => {
 		searchButton.current?.addEventListener("click", onOpen);
+		searchButtonTablet.current?.addEventListener("click", onOpen);
 		searchButtonMobile.current?.addEventListener("click", onOpen);
 		return () => {
 			searchButton.current?.removeEventListener("click", onOpen);

@@ -1,0 +1,79 @@
+---
+layout: ../../../../layouts/SDKTools.astro
+title: Python SDK
+description: Official Python SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, python]
+seo:
+  metaTitle: Deepgram Python SDK Documentation
+  metaDescription: Official Python SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, python, javascript, speech-to-text
+---
+import Panel from '../../../../shared/components/global/Panel.astro'; 
+
+# {frontmatter.title}
+
+This guide documents all the functionality available in the Deepgram
+Python SDK, and explains in detail how the library works. All the official
+Deepgram SDKs are open source. To learn more about this SDK specifically, visit
+the [Python SDK](https://github.com/deepgram/deepgram-python-sdk) repository on GitHub.
+
+<Panel type="info" title="Important Note">
+
+Currently, the Deepgram Python SDK supports Python 3.7 and higher.
+
+</Panel>
+
+## Pre-requisites
+
+Before using the Python SDK, you'll need to do a few things.
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to
+[create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is
+free and includes:
+
+$150 in credit, which gives you access to:
+  - all base models
+  - pre-recorded and streaming functionality
+  - all features
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to
+[create a Deepgram API Key](/documentation/getting-started/authentication/#create-an-api-key).
+Make note of your API Key; you will need it later.
+
+## Installation
+
+You can install the Deepgram Python SDK as a dependency in your
+application using `pip`. Using a virtual environment is recommended
+when installing packages in Python instead of a global installation.
+You can learn more about how to do that
+in [this article](/blog/2022/02/python-virtual-environments/).
+
+Here's how to install Deepgram with `pip`:
+
+```bash
+pip install deepgram-sdk
+```
+
+Next you should import the Deepgram client in your application code:
+
+```py
+from deepgram import Deepgram
+```
+
+## Initialization
+
+Once the SDK is installed and imported, you'll want to create a single instance
+of the Deepgram client. You should specify your API key here so that your
+application will be authorized to connect to Deepgram.
+
+```py
+dg_client = Deepgram(DEEPGRAM_API_KEY)
+```
+
+With the Deepgram client initialized, you can now send requests to the Deepgram
+API to transcribe audio, manage projects & keys, and retrieve usage information.

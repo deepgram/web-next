@@ -1,0 +1,33 @@
+---
+import Layout from "../../../layouts/OnPrem.astro";
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
+import DocsCard from "../../../shared/components/cards/DocsCard.astro";
+
+const baseComponents = await Astro.glob("./**/index.mdx");
+
+const orderedComponents = baseComponents.sort((a,b)=>{
+	return a.frontmatter.order - b.frontmatter.order
+})
+---
+
+<Layout>
+	<article>
+		<h1>Base Components</h1>
+		<DocsCardList>
+			{orderedComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+		</DocsCardList>
+	</article>
+</Layout>
+
+<style is:global>
+	
+	/* Overrides prose styles */
+	.post-prose h1 {
+		@apply mb-10;
+	}
+
+	.post-prose h3 {
+		@apply mt-0;
+		@apply text-base;
+	}
+</style>

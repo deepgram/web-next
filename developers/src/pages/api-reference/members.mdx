@@ -1,0 +1,491 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Members
+description: Members for the Deepgram API
+order: 6
+---
+import ColumnsForCode from '../../components/layout/ColumnsForCode.astro';
+import CodeGroup from '../../shared/components/code/CodeGroup.astro';
+import CodeBlock from '../../shared/components/code/CodeBlock.astro';
+
+# {frontmatter.title}
+<div class="grid lg:grid-cols-2 gap-6">
+Members are users who have been given access to a specified Deepgram Project. Members are assigned Scopes, which determine what they can do in their assigned Project. Members can be assigned to multiple Projects and have different Scopes for each Project.
+</div>
+
+<ColumnsForCode>
+<div slot="left" class="left">
+
+### Get Members
+
+Retrieves account objects for all of the accounts in the specified project.
+
+Required account scope(s): `project:read`. Required project scope(s): `project:read`, `members:read`, `admins:read`, `owners:read`.
+
+#### Path Parameters
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project for which you want to get members.</p>
+  </main>
+</div>
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Members found.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Response Schema
+
+<ul class="response">
+  <li>
+    <p class="notranslate"><strong>members:</strong> array</p>
+          <p>Array of Members.</p>
+    <ul class="response">
+      <li>
+        <p class="notranslate"><strong>member_id:</strong> uuid</p>
+          <p>Unique identifier of member.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>first_name:</strong> string</p>
+          <p>First name of member. Optional.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>last_name:</strong> string</p>
+          <p>Last name of member. Optional.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>scopes:</strong> array</p>
+          <p>Project scopes associated with member.</p>
+      </li>
+      <li>
+        <p class="notranslate"><strong>email:</strong> string</p>
+          <p>Email address of member.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+
+<div slot="right" class="right">
+
+	<CodeGroup title="endpoint">
+		<CodeBlock active>
+
+```vim
+GET /projects/{project_id}/members
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup title="Get Members" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+		<CodeBlock tab="curl" active>
+
+```bash
+# cURL
+
+curl --request GET \
+  --url 'https://api.deepgram.com/v1/projects/{project_id}/members' \
+  --header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+  --header 'content-type: application/json'
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="Python">
+
+```python
+# python
+
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+headers = {
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+    'content-type': "application/json"
+    }
+
+conn.request("GET", "/v1/projects/{project_id}/members", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab=".NET">
+
+```c
+// .NET
+
+var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/members");
+var request = new RestRequest(Method.GET);
+request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+request.AddHeader("content-type", "application/json");
+IRestResponse response = client.Execute(request);
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="Node.js">
+
+```js
+// Node.js
+
+const http = require('https')
+
+const options = {
+  method: 'GET',
+  hostname: 'api.deepgram.com',
+  port: null,
+  path: '/v1/projects/{project_id}/members',
+  headers: {
+    Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
+    'content-type': 'application/json',
+  },
+}
+
+const req = http.request(options, function (res) {
+  const chunks = []
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks)
+    console.log(body.toString())
+  })
+})
+
+req.end()
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="PHP">
+
+```php
+# PHP
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/members",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => [
+    "Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    "content-type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="Ruby">
+
+```ruby
+# Ruby
+
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.deepgram.com/v1/projects/{project_id}/members")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Get.new(url)
+request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+request["content-type"] = 'application/json'
+
+response = http.request(request)
+puts response.read_body
+
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup title="response">
+		<CodeBlock active>
+
+```json
+{
+  "members": [
+    {
+      "member_id": "uuid",
+      "first_name": "string",
+      "last_name": "string",
+      "scopes": [
+        "string"
+      ],
+      "email": "string"
+    }
+  ]
+}
+```
+
+		</CodeBlock>
+	</CodeGroup>
+
+</div>
+</ColumnsForCode>
+
+
+<ColumnsForCode>
+<div slot="left" class="left">
+
+### Remove Member
+
+Removes the specified account from the specified project. API keys created by this member for the specified project will also be deleted.
+
+If the account being removed has scope `member`, then the requesting account must have scope `members:write:kick`. If the account being removed has scope admin, then the requesting account must have scope `admins:write:kick`. If the account being removed has scope `owner`, then the requesting account must have scope owners:write:kick. The account being removed must not be the sole account with the scope owner.
+
+Required account scope(s): `project:write`. Required project scopes(s): `members:write:kick` or `admins:write:kick` or `owners:write:kick`.
+
+#### Path Parameters
+
+<div class="feature">
+  <header class="notranslate">
+    <strong>project_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the project that contains the account you want to remove.</p>
+  </main>
+</div>
+<div class="feature">
+  <header class="notranslate">
+    <strong>member_id:</strong> uuid
+  </header>
+  <main>
+          <p>Unique identifier of the account that you want to remove.</p>
+  </main>
+</div>
+
+#### Responses
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200 Success</td>
+      <td>Account removed.</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+<div slot="right" class="right">
+
+	<CodeGroup title="endpoint">
+		<CodeBlock active>
+
+```vim
+DELETE /projects/{project_id}/members/{member_id}
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+		<CodeGroup title="Remove Member" tabs={["curl", "Node.js", "Python",".NET", "Ruby", "PHP"]} default="curl">
+		<CodeBlock tab="curl" active>
+
+```bash
+# cURL
+
+curl --request DELETE \
+  --url 'https://api.deepgram.com/v1/projects/{project_id}/members/{member_id}' \
+  --header 'Authorization: Token <YOUR_DEEPGRAM_API_KEY>' \
+  --header 'content-type: application/json'
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="Python">
+
+```python
+# python
+
+import http.client
+
+conn = http.client.HTTPSConnection("api.deepgram.com")
+
+headers = {
+    'Authorization': "Token <YOUR_DEEPGRAM_API_KEY>",
+    'content-type': "application/json"
+    }
+
+conn.request("DELETE", "/v1/projects/{project_id}/members/{member_id}", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab=".NET">
+
+```c
+// .NET
+
+var client = new RestClient("https://api.deepgram.com/v1/projects/{project_id}/members/{member_id}");
+var request = new RestRequest(Method.DELETE);
+request.AddHeader("Authorization", "Token <YOUR_DEEPGRAM_API_KEY>");
+request.AddHeader("content-type", "application/json");
+IRestResponse response = client.Execute(request);
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="Node.js">
+
+```js
+// Node.js
+
+const http = require('https')
+
+const options = {
+  method: 'DELETE',
+  hostname: 'api.deepgram.com',
+  port: null,
+  path: '/v1/projects/{project_id}/members/{member_id}',
+  headers: {
+    Authorization: 'Token <YOUR_DEEPGRAM_API_KEY>',
+    'content-type': 'application/json',
+  },
+}
+
+const req = http.request(options, function (res) {
+  const chunks = []
+
+  res.on('data', function (chunk) {
+    chunks.push(chunk)
+  })
+
+  res.on('end', function () {
+    const body = Buffer.concat(chunks)
+    console.log(body.toString())
+  })
+})
+
+req.end()
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="PHP">
+
+```php
+# PHP
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://api.deepgram.com/v1/projects/{project_id}/members/{member_id}",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "DELETE",
+  CURLOPT_HTTPHEADER => [
+    "Authorization: Token <YOUR_DEEPGRAM_API_KEY>",
+    "content-type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+```
+
+		</CodeBlock>
+		<CodeBlock tab="Ruby">
+
+```ruby
+# Ruby
+
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.deepgram.com/v1/projects/{project_id}/members/{member_id}")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Delete.new(url)
+request["Authorization"] = 'Token <YOUR_DEEPGRAM_API_KEY>'
+request["content-type"] = 'application/json'
+
+response = http.request(request)
+puts response.read_body
+
+```
+
+		</CodeBlock>
+		</CodeGroup>
+
+</div>
+
+</ColumnsForCode>

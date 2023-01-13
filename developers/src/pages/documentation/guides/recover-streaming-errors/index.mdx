@@ -1,0 +1,46 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: "Recovering from Connection Errors and Timeouts When Live Streaming Audio"
+description: Learn how to implement real-time, live streaming transcription solutions for long-running audio streams.
+type: "transcription"
+order: 12
+seo:
+  metaTitle: "Recovering from Connection Errors and Timeouts When Live Streaming Audio"
+  metaDescription: Learn how to implement real-time, live streaming transcription solutions for long-running audio streams.
+  keywords: streaming, live streaming, real-time, connection, error, timeout, recover
+---
+
+# {frontmatter.title}
+
+Deepgram's API allows you to live stream audio for real-time transcription. Our live streaming service can be used with WebSocket streams. The longer a WebSocket stream persists, the more chances there are for transient network or service issues to cause a break in the connection. We recommend that you be prepared to gracefully recover from streaming errors, especially if you plan to live-stream audio for long periods of time (for example, if you are getting live transcription of a day-long virtual conference).
+
+Implementing solutions that correctly handle disrupted connections can be challenging. In this guide, we recommend some solutions to the most common issues developers face when implementing real-time transcription with long-running live audio streams.
+
+## Before You Begin
+
+Before you begin, make sure you:
+
+- have basic familiarity with Deepgram's API, specifically its [Transcribe Streaming Audio endpoint](/api-reference/#transcription-streaming).
+- understand how to make WebSocket requests and receive API responses.
+
+## Main Issues
+
+When you use Deepgram's API for real-time transcription with long-running live audio streams, you should be aware of some challenges you could encounter.
+
+### Disrupted Connections
+
+While Deepgram makes every effort to preserve streams, it's always possible that the connection could be disrupted. This may be due to internal factors or external ones, including bandwidth limitations and network failures.
+
+In these cases, your application must initialize a new WebSocket connection and start a new streaming session. Once the new WebSocket connection is accepted and you receive the message indicating the connection is open, your application can begin streaming audio to it. You must stream audio to the new connection within 10 seconds of opening, or the connection will close due to lack of data.
+
+## Data Loss
+
+If you must reconnect to the Deepgram API for any reason, you could encounter loss of data while you are reconnecting since audio data will still be produced, but will not be transferred to our API during this period.
+
+To avoid losing the produced audio while you are recovering the connection, you should have a strategy in place. We recommend that your application stores the audio data in a buffer until it can re-establish the connection to our API and then sends the data for delayed transcription. Because Deepgram allows audio to be streamed at a maximum of 1.25x realtime, if you send a large buffer of audio, the stream may wind up being significantly delayed.
+
+## Corrupt Timestamps
+
+Deepgram returns transcripts that include timestamps for every transcribed word. Timestamps correspond to the moments when the words are spoken within the audio. Every time you reconnect to our API, you create a new connection, so the timestamps on your audio begin from 00:00:00 again. 
+
+Because of this, when you restart an interrupted streaming session, you'll need to be sure to realign the timestamps to the audio stream. We recommend that your application maintains a starting timestamp to offset all returned timestamps. When you process a timestamp returned from Deepgram, add your maintained starting timestamp to the returned timestamp to ensure that it is offset by the correct amount of time.

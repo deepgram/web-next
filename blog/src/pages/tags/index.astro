@@ -47,7 +47,7 @@ const schema = {
 	<Meta slot="og:title" property="og:title" content="All tags - Deepgram Blog ⚡️" />
 	<Meta slot="og:description" property="og:description" content="All the tags on the Deepgram blog." />
 
-	<ContrastSection contrast="darkCharcoal" class="bg-tag-gradient bg-responsive-svg" background="white" bottomDivider="eclipse-divider">
+	<ContrastSection contrast="black" class="bg-tag-gradient bg-responsive-svg" background="darkCharcoal" bottomDivider="eclipse-divider">
 		<PrimarySection class="pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
 			<Backlink href="/posts" class="mb-6 md:mb-8 lg:mb-10 xl:mb-12 text-lightIris">All posts</Backlink>
 
@@ -60,8 +60,8 @@ const schema = {
 		<ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 lg:grid-cols-4 grid-flow-row-dense">
 			{allBlogTags.map((tag) => (
 				<li class="">
-					<a class="text-darkCharcoal inline-flex items-center text-lg" href={`/tags/${tag.name}`}>
-						<Icon class="h-4 w-4" icon="tag" />
+					<a class="text-cloud inline-flex items-center text-lg" href={`/tags/${tag.name}`}>
+						<Icon class="h-4 w-4 fill-lightIris" icon="tag" />
 						<span class="ml-2">#{tag.name}</span>
 					</a>
 				</li>

@@ -1,0 +1,32 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+title: Licensing
+description: Learn about licensing on-premises deployments of Deepgram products.
+order: 4
+seo:
+  metaTitle: Licensing
+
+  metaDescription: Learn about licensing on-premises deployments of Deepgram products.
+  keywords: on-premises, on-prem, deployment, license, licensing, base components, base
+---
+import Panel from '../../../../shared/components/global/Panel.astro'; 
+
+# {frontmatter.title}
+
+Running on-premises (on-prem) Deepgram requires a valid license. If a valid license is missing, the Deepgram API and Engine containers will fail to start.
+
+## Online Licensing
+
+With online licensing, you receive a license ID that allows Deepgram products to communicate securely with the Deepgram Console in order to verify license terms and report usage.
+
+Licensing connections are established every minute and are short-lived (a second or two). All communication with the Console is to `license.deepgram.com:443` using HTTPS to ensure a secure connection. Please ensure that your firewall is configured appropriately.
+
+<Panel title="Data Security">
+
+To ensure that your audio data never leaves your network, Deepgram maintains entirely separate endpoints for transcription and licensing. In addition, the Console licensing endpoint only accepts licensing data, which guards against accidental transmission. Finally, Deepgram products maintain a separate, isolated connection pool that they use to connect to Console.
+
+To verify this, monitor packet sizes and throughput of data between your network and Deepgram. You'll notice that the licensing traffic is very small (a few kilobytes per minute)&mdash;far too small to accommodate audio data leaving your network.
+
+</Panel>
+
+For customers deploying Deepgram’s on-prem solution in production, we also recommend installing Deepgram’s [License Proxy Server](/on-prem/optional-components/license-proxy-server/), which is a caching proxy for communications with the Deepgram-hosted license server. The License Proxy Server is an optional component that ensures uptime and simplifies network security. To learn more, please consult your Deepgram Account Representative.

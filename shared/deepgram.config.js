@@ -1,5 +1,6 @@
 module.exports = {
 	safelist: [
+		"backdrop-blur",
 		"bg-fireEngine",
 		"bg-cottonCandy",
 		"bg-coral",

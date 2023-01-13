@@ -9,7 +9,6 @@ import Description from "../../../shared/components/meta/Description.astro";
 import Meta from "../../../shared/components/meta/Meta.astro";
 import Backlink from "../../../components/nav/Backlink.astro";
 import JsonLD from "../../../shared/components/meta/JsonLD.astro";
-
 import { useStoryblokApi } from "@storyblok/astro";
 
 export async function getStaticPaths({ paginate }) {
@@ -52,7 +51,14 @@ const { page, author } = Astro.props;
 const name = author.content.title.split(" ");
 const firstName = name.pop();
 const lastName = name.join("");
-
+if (author.content.picture.filename.indexOf('cloudinary') > -1) {
+	if(author.content.picture.filename.indexOf('w_') === -1) {
+		author.content.picture.filename = author.content.picture.filename.replace('upload/', 'upload/w_320/');
+	} 
+	if(author.content.picture.filename.indexOf('c_') === -1) {
+		author.content.picture.filename = author.content.picture.filename.replace('upload/', 'upload/c_crop/');
+	}
+}
 const socials = [];
 
 if (author.content.twitter) {
@@ -155,8 +161,8 @@ const schema = [
 	<Meta slot="head" property="profile:last_name" content={lastName} />
 	{author.content.twitter && <Meta slot="head" property="twitter:creator" content={`@${author.content.twitter}`} />}
 
-	<ContrastSection contrast="darkCharcoal" background="white" bottomDivider="eclipse-divider" class="-mb-32">
-		<PrimarySection class="bg-darkCharcoal pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
+	<ContrastSection contrast="black" background="darkCharcoal" bottomDivider="eclipse-divider" class="-mb-32">
+		<PrimarySection class="bg-black pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
 			<Backlink href="/authors" class="text-lightIris mb-6 md:mb-8 lg:mb-10 xl:mb-12">All authors</Backlink>
 
 			<AuthorHero author={author} />

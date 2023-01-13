@@ -1,0 +1,43 @@
+---
+layout: ../../layouts/ApiReference.astro
+title: Authentication
+description: Authentication for the Deepgram API
+order: 2
+---
+
+## Endpoint
+
+`https://api.deepgram.com/v1`
+
+## Authentication
+
+<div class="grid gap-6 lg:grid-cols-2">
+	<p>Send requests to the API with an `Authorization` header that references your project's API Key:</p>
+</div>
+ 
+<div class="grid lg:grid-cols-2 gap-6">
+`Authorization: Token <YOUR_DEEPGRAM_API_KEY>`
+</div>
+
+<div class="grid gap-6 lg:grid-cols-2">
+	You can [create a Deepgram API Key in the Deepgram Console](/documentation/getting-started/authentication/). You must create your first API Key using the Console.
+</div>
+
+<div class="grid gap-6 lg:grid-cols-2">
+	All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests made without authentication will also fail.
+</div>
+
+<div class="grid gap-6 lg:grid-cols-2">
+	<table>
+		<tbody>
+			<tr>
+				<th>Security Scheme Type</th>
+				<td>API Key</td>
+			</tr>
+			<tr>
+				<th>Header parameter name:</th>
+				<td class="notranslate">Authorization</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

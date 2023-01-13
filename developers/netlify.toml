@@ -1,0 +1,33 @@
+[build]
+  # directory to change to build in
+  base = "developers/"
+
+  # relativate path for the build output (www/dist/)
+  publish = "dist/"
+
+  # build command
+  command = "yarn build"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+[functions]
+  # Directory with serverless functions
+  directory = "functions/"
+
+[[redirects]]
+  from = "/serverless/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/getting-started/what-is-deepgram"
+  to = "/documentation/why-deepgram/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/events/"
+  to = "https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/"
+  status = 301
+  force = true

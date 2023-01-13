@@ -1,0 +1,51 @@
+---
+layout: ../../../../../layouts/SDKTools.astro
+title: Keys
+description: Official .NET SDK for Deepgram's automated speech recognition APIs.
+dgCertified: true
+tags: [sdk, dotnet, csharp]
+seo:
+  metaTitle: Keys -  .NET SDK
+  metaDescription: Official .NET SDK for Deepgram's automated speech recognition APIs.
+  keywords: sdk, dotnet, csharp, speech-to-text
+---
+
+# {frontmatter.title}
+
+The `DeepgramClient` class provides access to manage API keys via the `Keys`
+property. Each request is project based and will require a Deepgram project id.
+
+## List Project API Keys
+
+You can retrieve all keys for a given project using the `ListKeysAsync` method.
+
+```csharp
+var keys = await deepgram.Keys.ListKeysAsync("DEEPGRAM_PROJECT_ID");
+```
+
+## Get Specific API Key
+
+You can retrieve a specific API key for a given project using the `GetKeyAsync`
+method. You will need the API keys unique id.
+
+```csharp
+var response = await deepgram.Keys.GetKeyAsync("DEEPGRAM_PROJECT_ID", "KEY_ID");
+```
+
+## Create API Key
+
+Create a new API key for a project using the `CreateKeyAsync` method
+with a name for the key.
+
+```csharp
+var response = await deepgram.Keys.CreateKeyAsync("DEEPGRAM_PROJECT_ID", "NAME_FOR_KEY", new string[] {"member"});
+```
+
+## Delete API Key
+
+Delete an existing API key using the `DeleteKeyAsync` method with project id and
+key id to delete.
+
+```csharp
+var response = await deepgram.Keys.DeleteKeyAsync("DEEPGRAM_PROJECT_ID", "KEY_ID");
+```

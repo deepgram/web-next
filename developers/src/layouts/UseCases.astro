@@ -1,0 +1,27 @@
+---
+import Default from "./Default.astro";
+import PrimarySection from "../shared/components/layout/PrimarySection.astro";
+import Title from "../shared/components/meta/Title.astro";
+import Prose from "./Prose.astro";
+import TableOfContents from "../shared/components/nav/TableOfContents.astro";
+import Feedback from "../shared/components/forms/Feedback.astro";
+import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
+const { headings } = Astro.props;
+---
+
+<Default>
+	<Title slot="head:title" title="Use Cases - Deepgram Docs" />
+	<PrimarySection class="max-w-screen-xl mb-[5rem] mx-auto px-6 lg:px-10 pt-[3rem]">
+		<BreadCrumb />
+		<div class="grid grid-cols-12">
+			<Prose class="max-w-full lg:max-w-2xl col-span-12 xl:col-span-9">
+				<slot />
+			</Prose>
+			<div class="col-span-0 xl:col-span-3 ml-8">
+				<TableOfContents headings={headings} docsType={"USE CASE"} classes="sticky top-40" />
+			</div>
+		</div>
+		<div class="max-w-full lg:max-w-xl 2xl:max-w-2xl mt-28 border-grass border-t-2"></div>
+		<Feedback />
+	</PrimarySection>
+</Default>

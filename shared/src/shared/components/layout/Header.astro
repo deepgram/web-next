@@ -13,6 +13,7 @@ import NavMenu from "../nav/NavMenu.astro";
 import NavMenuItem from "../nav/NavMenuItem.astro";
 import NavMenuPrimaryItem from "../nav/NavMenuPrimaryItem.astro";
 import Svg from "../general/Svg.astro";
+import Icon from "../general/Icon.astro";
 
 const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
 ---
@@ -35,25 +36,68 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				<nav class="flex space-x-[2.1875rem]" x-on:click.outside="menu = null">
 					<!-- Product -->
 					<NavMenu name="Product" primary gridClass="lg:grid-cols-1 min-w-[18.25rem]">
-						<NavMenuPrimaryItem slot="primary" href={`${WWW_DOMAIN}/product-new`} description="Meet the Deepgram speech‑to‑text API"
-							>View Product <span slot="emoji">&nbsp✨</span>
+						<NavMenuPrimaryItem icon="arrow-right" slot="primary" href={`${WWW_DOMAIN}/product-overview`} description="Deepgram AI Speech Platform"
+							><span class="text-white flex">Product Overview</span>
+
+							<a
+								href={`${WWW_DOMAIN}/product/transcription`}
+								slot="item-one"
+								class="container flex flex-col draw-underline text-lightIris decoration-lightIris font-medium text-xl gap-2 big-icon"
+							>
+								<div class="flex">
+									<Icon icon="bullseye" class="w-[1em] h-[1em] mr-2 mt-1" />
+									<span class="flex items-center text-white text-xl font-normal">Transcription</span>
+									<Icon icon="arrow-right" class="inner w-[1em] ml-[.5em] fill-lightIris" />
+								</div>
+								<p class="text-casper text-base font-normal">
+									Automatically transcribe real-time or pre-recorded audio and video into text with AI, plus formatting features for better readability.
+								</p>
+							</a>
+							<a
+								href={`${WWW_DOMAIN}/product/speech-understanding/`}
+								slot="item-two"
+								class="container flex flex-col draw-underline text-lightIris decoration-lightIris font-medium text-xl gap-2 big-icon"
+							>
+								<div class="flex">
+									<Icon icon="chart" class="w-[1em] h-[1em] mr-2 mt-1" />
+									<span class="flex items-center text-white text-xl font-normal">Understanding</span>
+									<Icon icon="arrow-right" class="inner w-[1em] ml-[.5em] fill-lightIris" />
+								</div>
+								<p class="text-casper text-base font-normal">
+									Natural Language Understanding (NLU) for true voice intelligence. Get features like summarization, sentiment analysis, language detection, and more.
+								</p>
+							</a>
 						</NavMenuPrimaryItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/product/model-overview`} icon="model">Model Overview</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/product/languages`} icon="globe">Languages</NavMenuItem>
-						<NavMenuItem href={`${CONSOLE_DOMAIN}/signup?jump=keys`} icon="code">Free API Key</NavMenuItem>
-						<NavMenuItem href={`${WWW_DOMAIN}/why-deepgram`} icon="question">Why Deepgram</NavMenuItem>
+						<div class="h-[216px] grid gap-y-6">
+							<NavMenuItem class="draw-underline decoration-lightIris" href={`${WWW_DOMAIN}/product/model-overview`} icon="model">Model Overview</NavMenuItem>
+							<NavMenuItem href={`${WWW_DOMAIN}/product/languages`} icon="globe">Languages</NavMenuItem>
+							<NavMenuItem href={`${WWW_DOMAIN}/why-deepgram`} icon="question">Why Deepgram</NavMenuItem>
+							<NavMenuItem href={`${CONSOLE_DOMAIN}/signup?jump=keys`} icon="code">Free API Key</NavMenuItem>
+						</div>
 					</NavMenu>
 					<!-- Solutions -->
-					<NavMenu name="Solutions" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
+					<NavMenu name="Solutions" gridClass="lg:grid-cols-1 min-w-[20.375rem]">
 						<NavMenuItem href={`${WWW_DOMAIN}/built-with-deepgram`} icon="sparkles">Built with Deepgram</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/solutions/contact-centers`} icon="head-headphones">Contact Centers</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/solutions/speech-analytics`} icon="mag-glass-soundwave">Speech Analytics</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/solutions/voicebots`} icon="robot-head">Conversational AI</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/deepgram-for-podcast-transcription`} icon="microphone">Podcast Transcription</NavMenuItem>
+					</NavMenu>
+					<!-- Compare -->
+					<NavMenu name="Compare" gridClass="lg:grid-cols-1 min-w-[26.375rem]">
+						<NavMenuItem href={`${WWW_DOMAIN}/asr-comparison/`} icon="bar-chart">ASR Comparison Tool</NavMenuItem>
+						<NavMenuItem href={`https://offers.deepgram.com/whisper-benchmark-thank-you`} icon="scale">Whisper vs. Deepgram Benchmark</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-google-stt-alternatives/`} icon="scale">Compare to Google STT</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-amazon-transcribe-api-alternatives/`} icon="scale">Compare to AWS Transcribe</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-microsoft-azure-stt-alternatives/`} icon="scale">Compare to Microsoft STT</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}compare-nuance-dragon-speech-recognition-alternatives/`} icon="scale">Compare to Nuance Dragon</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-assembly-ai-speech-to-text-api-alternatives/`} icon="scale">Compare to Assembly AI</NavMenuItem>
+						<NavMenuItem href={`${WWW_DOMAIN}/compare-speechmatics-speech-to-text-api-alternatives/`} icon="scale">Compare to Speechmatics</NavMenuItem>
 					</NavMenu>
 					<!-- Pricing -->
 					<NavItem href={`${WWW_DOMAIN}/pricing`} class="text-white">Pricing</NavItem>
 					<!-- Docs -->
-					<NavMenu name="Docs">
+					<NavMenu name="Docs" gridClass="lg:grid-cols-2 min-w-[36.375rem]">
 						<NavMenuItem href={DOCS_DOMAIN} icon="file">Documentation</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/on-prem/`} icon="server-icon">On-Prem Deployment</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/documentation/guides/`} icon="book">Guides</NavMenuItem>
@@ -62,26 +106,27 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 						<NavMenuItem href={STATUS_DOMAIN} icon="heartbeat">Status</NavMenuItem>
 						<NavMenuItem href={`${DOCS_DOMAIN}/sdks-tools/`} icon="box">SDKs + Tools</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/changelog`} icon="rotating-gear">Changelog</NavMenuItem>
+						<NavMenuItem href={`https://github.com/orgs/deepgram/discussions`} class="github" icon="github">Community Forum</NavMenuItem>
 					</NavMenu>
 					<!-- Blog -->
 					<NavItem href={BLOG_DOMAIN} class="text-white">Blog</NavItem>
 					<!-- About -->
-					<NavMenu name="About" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
+					<!-- <NavMenu name="About" gridClass="lg:grid-cols-1 min-w-[18.25rem]">
 						<NavMenuItem href={`${WWW_DOMAIN}/about`} icon="deepgram-d">About Us</NavMenuItem>
 						<NavMenuItem href="https://github.com/orgs/deepgram/discussions" icon="github">Community Forum</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/company/newsroom`} icon="newspaper">Newsroom</NavMenuItem>
 						<NavMenuItem href={`${WWW_DOMAIN}/company/careers`} icon="open-door">Careers</NavMenuItem>
-					</NavMenu>
+					</NavMenu> -->
 				</nav>
 				<div class="flex space-x-[1rem] items-center xl:ml-12 pr-4">
 					<Button id="docsearch-button" icon="search" class="button big-icon button--main-nav" aria-label="Search" />
-					<Link href={CONSOLE_DOMAIN} class="button button--small button--main-nav text-white">Log In</Link>
+					<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--main-nav text-white">Log In</Link>
 					<Link href={`${WWW_DOMAIN}/contact-us`} class="button button--secondary button--small w-[7rem]">Contact Us</Link>
 					<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--primary button--small w-[7rem]">Sign Up</Link>
 				</div>
 			</div>
 		</div>
-
+		<!-- Mobile -->
 		<div class="fixed flex flex-col h-screen inset-0 xl:hidden bg-black" style="display: none;" x-show="menu === 'Mobile'">
 			<div class="relative inset-x-0 bg-almostBlack text-white">
 				<div class="max-w-screen-2xl mx-auto px-6 flex justify-between items-center xl:justify-start">
@@ -114,6 +159,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 							<MobileNavMenuItem href={`${WWW_DOMAIN}/solutions/contact-centers`} icon="head-headphones">Contact Centers</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${WWW_DOMAIN}/solutions/speech-analytics`} icon="mag-glass-soundwave">Speech Analytics</MobileNavMenuItem>
 							<MobileNavMenuItem href={`${WWW_DOMAIN}/solutions/voicebots`} icon="robot-head">Convo AI</MobileNavMenuItem>
+							<MobileNavMenuItem href={`${WWW_DOMAIN}/deepgram-for-podcast-transcription`} icon="microphone">Podcast Transcription</MobileNavMenuItem>
 						</MobileNavMenu>
 						<!-- Pricing -->
 						<MobileNavItem href={`${WWW_DOMAIN}/pricing`} class="text-white">Pricing</MobileNavItem>
@@ -141,7 +187,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				</div>
 			</div>
 			<div class="bg-black grid grid-cols-2 grid-rows-2 gap-4 p-6 shadow-menu">
-				<Link href={CONSOLE_DOMAIN} class="button button--small button--secondary button--block">Log In</Link>
+				<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--secondary button--block">Log In</Link>
 				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--small button--tertiary button--block">Sign Up</Link>
 				<Link href={`${WWW_DOMAIN}/contact-us`} class="col-span-2 button button--small button--primary button--block">Contact Us</Link>
 			</div>
@@ -149,3 +195,13 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 	</nav>
 	<DocSearch client:only="preact" />
 </header>
+
+<style>
+	.container:hover .inner {
+		@apply transition-[margin] duration-300 ease-in-out;
+		@apply ml-4;
+	}
+	.container .inner {
+		@apply transition-[margin] duration-300 ease-in-out;
+	}
+</style>

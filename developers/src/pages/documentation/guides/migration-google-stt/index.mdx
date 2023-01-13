@@ -1,0 +1,441 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: "Migrating from Google Speech-to-Text (STT) to Deepgram"
+description: Learn how to migrate from Google's Speech-to-Text to Deepgram. For developers or practitioners who are using Google Speech-to-Text and are considering or actively moving to Deepgram.
+type: "migration"
+seo:
+  metaTitle: "Migrating from Google Speech-to-Text (STT) to Deepgram"
+  metaDescription: Learn how to migrate from Google's Speech-to-Text to Deepgram. For developers or practitioners who are using Google Speech-to-Text and are considering or actively moving to Deepgram.
+  keywords: migrate, google, speech-to-text, stt, speech, text, migration, migrate
+---
+import Panel from '../../../../shared/components/global/Panel.astro'; 
+
+# {frontmatter.title}
+
+Moving audio transcription and classification from one environment to another can be a challenging task, even for experienced teams. This guide will give you an overview of the process of migrating your transcription processes from Google Speech-to-Text (STT) to Deepgram to help you make the transition as quickly and efficiently as possible.
+
+## Migration Process
+
+During the migration process, you will need to perform the following tasks:
+
+| Before Migration | During Migration | After Migration |
+|------------------|------------------|-----------------|
+| <ul><li>Identify any upstream dependencies on your transcriptions</li><li>Find representative samples of your audio for testing</li><li>Get familiar with Deepgram’s API and understand differences from Google</li><li>Create an API key</li><li>Test your audio</li><li>Create a migration plan</li><li>Create a rollback plan</li></ul> | <ul><li>Configure your response parsing to conform to Deepgram's JSON response</li><li>Swap over traffic to Deepgram API</li><li>Monitor systems</li></ul> | <ul><li>Testing</li><li>Tune downstream processes to Deepgram output</li></ul> |
+
+## Differences
+
+Once you’ve selected your [model](/documentation/features/model/), Deepgram provides many features and capabilities to help you transcribe and classify your audio. However, some capabilities and concepts are implemented differently from Google STT.
+
+| Features and Capabilities | Deepgram | Google STT |
+|---------------------------|----------|------------|
+| Base model                | Yes      | Yes        |
+| Enhanced model            | Yes - Phone Call and General | Yes - Phone Call and Video |
+| Batch processing (1 hour of audio) | 20 seconds | 1443 seconds |
+| Streaming processing lag | 300 - 800 milliseconds | 800 - 2000 milliseconds |
+| Search | Yes (keywords and audio) | Yes (keywords) |
+| Diarization (separate per speaker) | Up to 16 | Up to 6 |
+| Noise reduction | Yes | Yes |
+| Custom vocabulary | Yes - Keyword Boosting, Model Training | Yes - speech/model adaptation |
+| Redaction | Yes | Yes |
+| Punctuation | Yes | Yes |
+| Profanity filter | Yes | Yes |
+| Numeral formatting | Yes | Yes |
+| Audio inputs | Raw audio/ binary data | Language Dependent |
+| SDK                                | Yes<br/><strong>Certified</strong><ul><li>Node.js</li><li>.NET</li><li>Python</li></ul><strong>Community</strong><ul><li>Deno</li><li>Go</li></ul> | Yes                           |
+| Web Sockets                        | Yes                                                                                                                                               | No                            |
+| Data logging                       | Yes                                                                                                                                               | Yes                           |
+
+### Detailed Description of Differences
+
+Working with the Deepgram API is quick and easy, and speech-to-text vendors have many overlapping features. However, key differences in terminology and how features are deployed exist.
+
+#### General
+
+Both Deepgram and Google provide you with the following values by default:
+
+- Words
+- Timing
+- Confidence
+
+Additionally, Google provides the following values by default:
+
+- `alternatives`
+- `channel_tag`
+- `language_code`
+
+##### Deepgram Default JSON Response
+
+**Interim Result**
+
+```json
+{
+	"channel": {
+		"alternatives": [
+			{
+				"confidence": 0.99121094,
+				"transcript": "section one of az",
+				"words": [
+					{
+						"confidence": 0.9980469,
+						"end": 1.2935,
+						"start": 0.81589997,
+						"word": "section"
+					},
+					{
+						"confidence": 0.9897461,
+						"end": 1.6517,
+						"start": 1.2935,
+						"word": "one"
+					},
+					{
+						"confidence": 0.99121094,
+						"end": 1.8507,
+						"start": 1.6517,
+						"word": "of"
+					},
+					{
+						"confidence": 0.5073242,
+						"end": 1.9999375,
+						"start": 1.8507,
+						"word": "az"
+					}
+				]
+			}
+		]
+	},
+	"channel_index": [0, 1],
+	"duration": 1.9999375,
+	"is_final": false,
+	"metadata": {
+		"model_uuid": "4899aa60-f723-4517-9815-2042acc12a82",
+		"request_id": "fbbe3da5-4a23-4fd3-a4eb-95f2fe8672f5"
+	},
+	"speech_final": false,
+	"start": 0.0
+}
+```
+
+**Final Result**
+
+```json
+{
+   "channel":{
+      "alternatives":[
+         {
+            "confidence":0.9941406,
+            "transcript":"section one of az fable a new translation",
+            "words":[
+               {
+                  "confidence":0.9975586,
+                  "end":1.2970455,
+                  "start":0.81813633,
+                  "word":"section"
+               },
+               {
+                  MORE WORDS...
+               },
+               {
+                  "confidence":0.99853516,
+                  "end":4.2314997,
+                  "start":3.7315,
+                  "word":"translation"
+               }
+            ]
+         }
+      ]
+   },
+   "channel_index":[
+      0,
+      1
+   ],
+   "duration":4.4,
+   "is_final":true,
+   "metadata":{
+      "model_uuid":"4899aa60-f723-4517-9815-2042acc12a82",
+      "request_id":"fbbe3da5-4a23-4fd3-a4eb-95f2fe8672f5"
+   },
+   "speech_final":false,
+   "start":0.0
+}
+```
+
+#### Search
+
+Deepgram provides users with the ability to search for specific moments in audio. Deepgram search is based on the acoustic sounds of keywords, whereas other vendors provide search based on the transcribed keyword text. (Google, in fact, does not provide out-of-the-box search capabilities for Speech-to-Text.) Deepgram's method allows you to accurately identify whether a phrase was uttered in submitted audio by letting Deepgram "hear" whether the phrase was uttered rather than by trying to look for sufficiently close matches in the text transcript. Many customers have found search using acoustics to be more accurate for their use cases because even in cases where the transcript is not correct, Deepgram will still match on the audio.
+
+Deepgram’s Search feature uses a query that allows you to pass in a word or phrase to find and then returns results in the response JSON object. In the JSON response, we return information including the start time and end time of when that phrase was possibly uttered and a confidence rating for each match. So, in the response, you will see the query (the word or phrase you searched for), and then hits (an array of objects that give you the confidence, start, end, and snippet of each possible match to your search). You can include up to 25 search terms per request.
+
+##### Sample code
+
+You can search for multiple terms individually: `search=epistemology&search=warwick`
+
+You can search for a phrase. URL-encode the phrase when submitting it: `search=social%20epistemology`
+
+As an example, we used a WAV audio file that contains the first 20 seconds of a college lecture on epistemology. The term "epistemology" in this audio file is sufficiently technical that our model will not transcribe it accurately, but our phonetic search will still be able to find it.
+
+**Input**
+
+`search=epistemology`
+
+**Response**
+
+```json
+"search":[
+  {
+    "query":"epistemology",
+    "hits":[
+      {"confidence":0.9348958,"start":10.725,"end":11.485,"snippet":"is a"},
+      {"confidence":0.9348958,"start":13.965,"end":14.764999,"snippet":"epi"},
+      {"confidence":0.9204282,"start":4.0074897,"end":4.805,"snippet":"social epi"},
+      {"confidence":0.27662036,"start":8.792552,"end":10.365,"snippet":"us today is"},
+      {"confidence":0.1319444,"start":17.205,"end":18.115,"snippet":"nature of knowledge"},
+      {"confidence":0.0885417,"start":15.285,"end":16.085,"snippet":"branch philosophy"},
+      {"confidence":0.045138836,"start":5.1240044,"end":5.722137,"snippet":"university of"},
+      {"confidence":0.045138836,"start":5.6025105,"end":7.4367843,"snippet":"warwick and"},
+      {"confidence":0.0,"start":1.0168257,"end":1.9339627,"snippet":"hello this is steve"},
+      {"confidence":0.0,"start":7.277282,"end":8.27417,"snippet":"and the question"}
+    ]
+  }
+]
+```
+
+#### Custom Vocabulary
+
+Both Deepgram and Google provide users the ability to improve the accuracy of specific keywords or vocabulary. Deepgram has two methods to perform this: our Keyword Boosting feature and data-driven AI model training. Google has one primary way to perform this, which they call speech/model adaptation and model adaptation boost.
+
+##### Deepgram Keyword Boosting
+
+Deepgram's Keywords feature uses a query to give Deepgram more information so that it can better transcribe the audio submitted in the request. Keywords are words that can be sent along with the audio, that Deepgram trains itself to watch more closely for, so we can transcribe them more accurately.
+
+##### Deepgram AI Model Training
+
+Speech Recognition technology can face challenges when transcribing certain terms, particularly jargon, names, or very uncommon words. If you know about context-unique words ahead of time, you can send them with the request as keywords, and Deepgram will do a better job of transcribing them. However, if you have more than 200 unique keywords or phrases that Deepgram Base or Enhanced model tiers do not identify accurately enough with Keyword Boosting, you have the option of upgrading to a trained AI model. In a matter of weeks, Deepgram can train a model using sample audio and ground truth transcripts to learn your language, accents, dialects, and terminology.
+
+##### Google Speech Model Adaptation
+
+You can use the model adaptation feature to help Speech-to-Text recognize specific words or phrases more frequently than other options that might otherwise be suggested. For example, suppose that your audio data often includes the word "weather". When Google encounters the word "weather," you want it to transcribe the word as "weather" more often than "whether." In this case, you might use model adaptation to bias Speech-to-Text toward recognizing "weather."
+
+Google Model adaptation is helpful in the following use cases:
+
+- Improving the accuracy of words and phrases that occur frequently in your audio data. For example, you can alert the recognition model to voice commands that are typically spoken by your users.
+- Expanding the vocabulary of words recognized by Google STT. If your audio data often contains words that are rare in general language use (such as proper names or domain-specific words), you can add them using model adaptation.
+- Assigning weighted values to phrase items. You can use Google Model Adaptation boost to assign a weighted value to phrase items in a PhraseSet resource. Google Speech-to-Text refers to this weighted value when selecting a possible transcription for words in your audio data. The higher the value, the higher the likelihood that Speech-to-Text chooses that word or phrase from the possible alternatives.
+
+Google Speech Adaptation also has some drawbacks. To increase the probability that Google STT recognizes a word, Google recommends that you submit key phrases through its SpeechContext object. In addition to submitting keywords and phrases, Google also recommends including Class tokens by language to identify phone numbers, addresses, radio stations, and so on. In situations where model adaptation + boosting + speech context + class tokens are necessary with Google, Deepgram's system may already perform well without the aid of additional requests. If Deepgram does not recognize these words out of the box, you can leverage Keyword Boosting or consider upgrading to a trained AI model. To learn more, contact your Customer Success Manager.
+
+##### What to Expect in the JSON Response
+
+Both Deepgram and Google will provide you with the following values:
+
+- `transcript`
+- `start_time` (duration)
+- `end_time` (duration)
+- `word` (string)
+- `confidence` (float)
+
+In addition, by default, Google will provide:
+
+- `name` (if you have a set of phrases)
+- `value` (single phrase)
+- `phrases`
+- `Boost`
+- `Speaker_tag`
+
+<Panel type="info" title="Pro Tip">
+
+Avoid transferring over a list of keywords that has been used with a previous vendor.
+
+Every system is different. Whereas Keyword Boosting may have been necessary with another vendor, Deepgram's system may already perform well without the aid of keywords. Additional boosting may negatively affect results. Start without any keywords, add them as you see fit, and cautiously increase boosts using decimal values until you find the best fit for your data. To learn more about Keyword Boosting, see our [Keyword Boosting](/documentation/features/keywords/) feature documentation.
+
+</Panel>
+ 
+#### Batch Transcription
+
+Google provides two ways to transcribe pre-recorded audio based on the length of the file, whereas Deepgram provides one way. Deepgram is designed to handle large volumes of call recordings making it simple to transcribe whether they are one minute or multiple hours long.
+
+##### Asynchronous vs. Synchronous
+
+Google synchronous speech recognition returns the recognized text for short audio (less than 60 seconds). To process a speech recognition request for audio longer than 60 seconds, Google recommends customers use Asynchronous Speech Recognition. You can use asynchronous speech recognition with audio of any length up to 480 minutes.
+
+It is also important to note that when transcribing in Google's asynchronous or synchronous mode, your audio must be stored on Google Cloud. Deepgram does not have any restrictions for where your audio files are stored.
+
+##### What to Expect in the JSON Response
+
+Both Deepgram and Google will provide you with the following values:
+
+- `transcript`
+- `start_time` (duration)
+- `end_time` (duration)
+- `word` (string)
+- `confidence` (float)
+
+##### Sample Code
+
+Deepgram supports both transcription of files on your local machine and transcription of files stored remotely.
+
+**Deepgram**
+
+```py
+from deepgram import Deepgram
+import asyncio, json
+
+DEEPGRAM_API_KEY = 'YOUR_API_KEY'
+PATH_TO_FILE = 'some/file.wav'
+
+async def main():
+    # Initializes the Deepgram SDK
+    deepgram = Deepgram(DEEPGRAM_API_KEY)
+    # Open the audio file
+    with open(PATH_TO_FILE, 'rb') as audio:
+        # ...or replace mimetype as appropriate
+        source = {'buffer': audio, 'mimetype': 'audio/wav'}
+        response = await deepgram.transcription.prerecorded(source, {'punctuate': True})
+        print(json.dumps(response, indent=4))
+
+asyncio.run(main())
+```
+
+To see more, [visit Deepgram's Python SDK GitHub repo](https://github.com/deepgram/deepgram-python-sdk).
+
+**Google**
+
+```
+// Imports the Google Cloud client library for Beta API
+/**
+ * TODO(developer): Update client library import to use new
+ * version of API when desired features become available
+ */
+const speech = require('@google-cloud/speech').v1p1beta1;
+
+// Creates a client
+const client = new speech.SpeechClient();
+
+/**
+ * TODO(developer): Uncomment the following lines before running the sample.
+ */
+// const gcsUri = 'gs://my-bucket/audio.raw';
+// const model = 'Model to use, e.g. phone_call, video, default';
+// const encoding = 'Encoding of the audio file, e.g. LINEAR16';
+// const sampleRateHertz = 16000;
+// const languageCode = 'BCP-47 language code, e.g. en-US';
+
+const config = {
+  encoding: encoding,
+  sampleRateHertz: sampleRateHertz,
+  languageCode: languageCode,
+  model: model,
+};
+const audio = {
+  uri: gcsUri,
+};
+
+const request = {
+  config: config,
+  audio: audio,
+};
+
+// Detects speech in the audio file.
+const [response] = await client.recognize(request);
+const transcription = response.results
+  .map(result => result.alternatives[0].transcript)
+  .join('\n');
+console.log('Transcription: ', transcription);
+```
+
+To see more, [visit Google's documentation on transcribing a file in Cloud Storage using a transcription model](https://cloud.google.com/speech-to-text/docs/samples/speech-transcribe-model-selection-gcs).
+
+#### Live Streaming
+
+Both Deepgram and Google provide streaming transcription. Deepgram streaming transcription has a number of advantages including lower latency, higher accuracy, and overall ease of use (for example, no need to close the streams when they are no longer in use).
+
+When using Deepgram to transcribe live streaming audio, two of the features you can use to further understand your audio include [Endpointing](/documentation/features/endpointing/) and [Interim Results](/documentation/features/interim-results/). Both of these features monitor incoming live streaming audio and can indicate the end of a type of processing, but they are used in very different ways:
+
+- Deepgram live streaming looks for any deviation in the natural flow of speech and returns a finalized response at these places. To learn more about this feature, see [Endpointing](/documentation/features/endpointing/).
+- Deepgram live streaming can also return a series of interim transcripts followed by a final transcript. To learn more, see [Interim Results](/documentation/features/interim-results/).
+- If your downstream natural language processing (NLP) requires complete utterances, review our [Best Practices for Utterance Segmentation](/documentation/guides/understand-endpointing-interim-results/#best-practices-for-utterance-segmentation).
+
+| Endpointing                                                                                                                                                  | Interim Results                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Identifies deviations in the natural flow of speech and returns a finalized response at these places                                                         | Provides preliminary results during live streaming, then sends a definitive transcript of the portion of audio that has been processed so far                          |
+| Turned on by default                                                                                                                                         | Turned off by default                                                                                                                                                  |
+| Returns `speech_final: true` parameter when Deepgram identifies a deviation in the natural flow of speech and the response contains the finalized transcript | Returns `is_final: true` parameter when Deepgram has finished processing audio for a time range and the response contains the finalized transcript for that time range |
+
+
+##### Google Speech-to-Text
+
+Google can transcribe streaming audio such as the input from a microphone. There are two ways to do this, through Streaming speech recognition and through Endless streaming. The key differences include:
+
+- There are audio limits for streaming speech recognition requests:
+  - Synchronous Requests: 1 Minute
+  - Asynchronous Requests: 480 Minutes
+  - Streaming Requests: 5 Minutes
+- Streaming speech recognition is available via gRPC only.
+- Audio longer than approximately one minute must use a custom field to reference an audio file in Google Cloud Storage.
+- If you need to stream content for more than five minutes, you need to use endless streaming.
+
+##### What to Expect in the JSON Response
+
+By default, both Deepgram and Google will provide you with the following values:
+
+- `transcript`
+- `start_time` (duration)
+- `end_time` (duration)
+- `word` (string)
+- `confidence` (float)
+
+Additionally, Google and Deepgram provide the following:
+
+| Deepgram                                                             | StreamingRecognitionConfig                                                                                                                                                                                                      | LongRunningRecognize                                                                           |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| <ul><li>punctuate</li><li>interim_results</li><li>language</li></ul> | <ul><li>config</li><li>single_utterance</li><li>interim_results</li><li>alternatives</li><li>is_final</li></ul><ul><li>stability</li><li>result_end_time</li><li>channel_tag</li><li>language_code</li><li>volatility</li></ul> | <ul><li>results</li><li>total_billed_time</li><li>output_config</li><li>output_error</li></ul> |
+
+## Get Started
+
+Now that you know what to expect, let's get started migrating.
+
+### Before You Begin
+
+Before you can begin migrating, you'll need to do a few things.
+
+#### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+- $150 in credit, which gives you access to:
+  - all Base and Enhanced tier [models](/documentation/features/model/)
+  - [pre-recorded](/documentation/getting-started/prerecorded/) and [live streaming](/documentation/getting-started/streaming/) functionality
+  - all [features](/documentation/features/)
+
+#### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](https://console.deepgram.com/signup?jump=keys). Make note of your API Key; you will need it later.
+
+#### Configure Environment
+
+We provide sample scripts in Python and Node.js and assume you have already configured either a Python or Node development environment. System requirements will vary depending on the programming language you use:
+
+| Pre-recorded                                                                                                                 | Live Streaming                                                                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <strong>Node.js</strong><br/><ul><li>node >= 14.14.37</li></ul><br/><strong>Python</strong><br/><ul><li>python >= 3.7</li></ul> | <strong>Node.js</strong><br/><ul><li>node >= 14.14.37</li><li>cross-fetch >= 3.1.5</li></ul><br/><strong>Python</strong><br/><ul><li>python >= 3.7</li><li>aiohttp >= 3.8.1</li></ul> |
+
+### Get Transcripts and Customize Response
+
+To get transcripts and customize your response, you can use our SDKs and code samples for:
+
+- [Pre-recorded (Batch)](/documentation/getting-started/prerecorded/)
+- [Streaming](/documentation/getting-started/streaming/)
+
+## Migration Best Practices
+
+Each API service has different limitations to ensure performance. Known differences between Deepgram and Google STT are detailed below, along with information about how our customers address these differences during the migration process.
+
+| Potential Challenges                     | Recommendations                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Deepgram currently does not support gRPC | Many customers have been successful swapping out parts of gRPC and still taking advantage of gRPC’s benefits. Gson is a popular Java library that can be used for JSON encoding. To learn how to make gRPC work with JSON encoding using Gson, we recommend gRPC.io's blog post: [gRPC + JSON](https://grpc.io/blog/grpc-with-json/).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Utterance segmentation differences       | Consider using Deepgram’s [Endpointing](/documentation/features/endpointing/) feature, [Interim Results](/documentation/features/interim-results/), or [Utterance Segmentation](/documentation/guides/understand-endpointing-interim-results/#best-practices-for-utterance-segmentation). Please note: Endpointing is not intended to return complete utterances or to be a reliable indicator of a complete thought or sentence. It is intended to hint to low-latency natural language processing (NLP) engines that intermediate processing may be useful. Many customers have been successful implementing a simple timing heuristic appropriate to their domain. Adding this type of timing code allows you to optimize to your particular domain, based on the kinds of pauses you expect in speech (for example, dictation versus two-way conversation) and background noise (for example, augmenting utterance heuristics with a confidence cut to remove background speakers). |
+| Lower Keyword Limits                     | If you have used Google Speech-to-Text Speech Adaptation, Model Adaptation, or Model Adaptation Boost features, please note that Deepgram’s Keyword Boosting currently supports up to 200 keywords per request. If you have more than 200 unique keywords or phrases that Deepgram’s Enhanced model tier does not identify out of the box, please consider upgrading to a trained AI model.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Does not offer Alternatives              | <p>By default, Google provides one primary transcription. If you want to evaluate different alternatives, you can adjust the settings to a higher value, after which Google will provide an alternative only if the recognizer determines the alternative to be of sufficient quality.</p><p>In general, Google alternatives are most commonly used in voice command scenarios. Currently, Deepgram does not provide multiple alternatives as the majority of our customers are transcribing long-form, conversational audio, and less call-and-response audio.</p>                                                                                                                                                                                                                                                                                                                                                                                                                     |
+
+## Conclusion
+
+Deepgram uses a data-centric approach to creating AI speech recognition models. Our data-centric approach allows us to create highly accurate and extremely low latency models that are based on a customer's real-world audio for a fraction of the cost of others. To learn more about Deepgram, [visit our website](https://deepgram.com/) and [check out our documentation](https://developers.deepgram.com/documentation/). If you're a customer and still have questions, our customer success team is standing by to assist you with your migration: [Contact Us](https://deepgram.com/contact-us).
