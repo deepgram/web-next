@@ -28,14 +28,14 @@ if (image.indexOf("storyblok.com") > -1) {
 	const width = splitURL[splitURL.indexOf("1001320") + 1].split("x")[0];
 	webp = srcs
 		.map((src, index) => {
-			const url = image.concat(`/m/${width}x0`);
+			const url = image.concat(`/m/${src}x0`);
 			return `${url} ${src}w`;
 		})
 		.join(", ");
 
 	orig = srcs
 		.map((src) => {
-			const url = image.concat(`/m/${width}x0`);
+			const url = image.concat(`/m/${src}x0`);
 			return `${url} ${src}w`;
 		})
 		.join(", ");
