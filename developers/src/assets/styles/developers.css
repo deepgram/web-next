@@ -1,26 +1,28 @@
 html {
 	scroll-padding-top: 120px;
 }
+
 h1 {
-		@apply text-darkCharcoal;
-		font-weight: 700;
-		font-size: 2.25em;
-		margin-top: 1.5rem;
-		margin-bottom: 0.75rem;
-		line-height: 1.1111111;
-		font-family: Favorit;
+	@apply text-darkCharcoal;
+	@apply font-bold;
+	@apply text-4xl;
+	@apply mt-6 mb-10;
+	@apply font-favorit;
 	}
+
 	h2 {
-		@apply mb-5 mt-10 text-darkCharcoal;
-		font-weight: 700;
-		font-size: 1.5em;
-		line-height: 1.3333333;
-		font-family: Favorit;
+		@apply mb-5 mt-10;
+		@apply text-darkCharcoal;
+		@apply font-bold;
+		@apply text-2xl;
+		@apply font-favorit;
 	}
 
 .post-prose h1 {
 		@apply text-4xl;
+		@apply mb-3;
 	}
+	
 	.post-prose h2 {
 		@apply text-2xl;
 	}
