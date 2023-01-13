@@ -50,18 +50,11 @@ function getHeadingsSB(post) {
 const richTextSections = post && post.content && post.content.body.filter((section) => {
 	return section.component === "RichTextSection";
 	});
-<<<<<<< HEAD
-const headings = richTextSections && richTextSections.map((section) => {
-	return section && section.content && section.content.content.filter((richText) => 	{
-		if (richText && richText.type === "heading") {
-			// console.log("richText", richText);
-			return richText && richText.content && richText.content[0].text;
-=======
+
 	const headings = richTextSections.map((section) => {
 		return section.content.content.filter((richText) => {
 			if (richText.type === "heading") {
 				return richText.content[0].text;
->>>>>>> 6c701c1b66b8dbeebd4a377be8838fdbb1d6aa4c
 			}
 		});
 	});
