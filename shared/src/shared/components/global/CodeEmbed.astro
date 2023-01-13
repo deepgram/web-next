@@ -1,9 +1,10 @@
 ---
+import { storyblokEditable } from "@storyblok/astro";
 const { blok } = Astro.props;
 const { height = "500", width = "100%", src, ...rest } = blok;
 ---
 
-<div class="code-embed w-full" {...rest}>
+<div class="code-embed w-full" {...rest} {...storyblokEditable(blok)}>
 	<iframe class="aspect-video" height={height} width={width} src={src} loading="lazy"> </iframe>
 </div>
 

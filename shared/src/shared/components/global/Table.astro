@@ -1,8 +1,9 @@
 ---
+import { storyblokEditable } from "@storyblok/astro";
 const { blok } = Astro.props;
 ---
 
-<table>
+<table {...storyblokEditable(blok)}>
 	<thead>
 		<tr>
 			{blok.table.thead.map((th) => <th>{th.value}</th>)}
