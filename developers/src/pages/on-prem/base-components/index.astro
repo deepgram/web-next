@@ -12,7 +12,7 @@ const orderedComponents = baseComponents.sort((a,b)=>{
 
 <Layout>
 	<article>
-		<h1 class="mb-10">Base Components</h1>
+		<h1>Base Components</h1>
 		<DocsCardList>
 			{orderedComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</DocsCardList>
@@ -20,25 +20,14 @@ const orderedComponents = baseComponents.sort((a,b)=>{
 </Layout>
 
 <style is:global>
-	h1 {
-		color: #111827;
-		font-weight: 700;
-		font-size: 2.25em;
-		margin-top: 1.5rem;
-		margin-bottom: 2.5rem !important;
-		line-height: 1.1111111;
-		font-family: Favorit;
-	}
-	h2 {
-		@apply mb-5 mt-10;
-		color: #111827;
-		font-weight: 700;
-		font-size: 1.5em;
-		line-height: 1.3333333;
-		font-family: Favorit;
+	
+	/* Overrides prose styles */
+	.post-prose h1 {
+		@apply mb-10;
 	}
 
-	p {
-		font-weight: 400;
+	.post-prose h3 {
+		@apply mt-0;
+		@apply text-base;
 	}
 </style>
