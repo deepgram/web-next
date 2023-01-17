@@ -6,13 +6,11 @@ on:
     branches: [main]
     paths: 
     - 'www/**'
-    - 'content/**'
     - 'shared/**'
   pull_request:
     branches: [main]
     paths: 
     - 'www/**'
-    - 'content/**'
     - 'shared/**'
     
 jobs:
