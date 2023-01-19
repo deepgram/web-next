@@ -2078,7 +2078,7 @@ const __vite_glob_0_58$1 = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"
 
 const __vite_glob_0_59$1 = "<svg role=\"img\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><title>YouTube</title><path d=\"M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z\"/></svg>";
 
-const $$Astro$1d = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/Icon.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$1d = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/Icon.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Icon = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1d, $$props, $$slots);
   Astro2.self = $$Icon;
@@ -2354,7 +2354,7 @@ function Z(n, t) {
   return K(n, t, e);
 }
 
-const $$Astro$1c = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/Alert.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$1c = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/Alert.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Alert = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1c, $$props, $$slots);
   Astro2.self = $$Alert;
@@ -2378,7 +2378,7 @@ const $$Alert = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/global/Alert.astro");
 
-const $$Astro$1b = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/CodeEmbed.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$1b = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/CodeEmbed.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$CodeEmbed = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1b, $$props, $$slots);
   Astro2.self = $$CodeEmbed;
@@ -2391,7 +2391,7 @@ const $$CodeEmbed = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/global/CodeEmbed.astro");
 
-const $$Astro$1a = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/Panel.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$1a = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/Panel.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Panel = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1a, $$props, $$slots);
   Astro2.self = $$Panel;
@@ -2421,7 +2421,7 @@ const $$Panel = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/global/Panel.astro");
 
-const $$Astro$19 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/Table.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$19 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/Table.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Table = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$19, $$props, $$slots);
   Astro2.self = $$Table;
@@ -2478,7 +2478,7 @@ var __freeze$3 = Object.freeze;
 var __defProp$3 = Object.defineProperty;
 var __template$3 = (cooked, raw) => __freeze$3(__defProp$3(cooked, "raw", { value: __freeze$3(raw || cooked.slice()) }));
 var _a$3;
-const $$Astro$18 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/promos/AbstractPromo.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$18 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/promos/AbstractPromo.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$AbstractPromo = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$18, $$props, $$slots);
   Astro2.self = $$AbstractPromo;
@@ -2505,7 +2505,7 @@ var __freeze$2 = Object.freeze;
 var __defProp$2 = Object.defineProperty;
 var __template$2 = (cooked, raw) => __freeze$2(__defProp$2(cooked, "raw", { value: __freeze$2(raw || cooked.slice()) }));
 var _a$2;
-const $$Astro$17 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/WhitepaperPromo.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$17 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/WhitepaperPromo.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$WhitepaperPromo = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$17, $$props, $$slots);
   Astro2.self = $$WhitepaperPromo;
@@ -2524,7 +2524,7 @@ const $$WhitepaperPromo = createComponent(async ($$result, $$props, $$slots) => 
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/global/WhitepaperPromo.astro");
 
-const $$Astro$16 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/WhitepaperPromoSB.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$16 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/WhitepaperPromoSB.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$WhitepaperPromoSB = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$16, $$props, $$slots);
   Astro2.self = $$WhitepaperPromoSB;
@@ -2539,7 +2539,7 @@ const $$WhitepaperPromoSB = createComponent(async ($$result, $$props, $$slots) =
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/global/WhitepaperPromoSB.astro");
 
-const $$Astro$15 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/YouTube.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$15 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/global/YouTube.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$YouTube = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$15, $$props, $$slots);
   Astro2.self = $$YouTube;
@@ -2587,7 +2587,7 @@ const __vite_glob_0_13$1 = "<svg width=\"40\" height=\"36\" viewBox=\"0 0 40 36\
 
 const __vite_glob_0_14$1 = "<svg width=\"40\" height=\"36\" viewBox=\"0 0 40 36\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M6.875 13H3.125C1.32812 13 0 14.4062 0 16.125V32.375C0 34.1719 1.32812 35.5 3.125 35.5H6.875C8.59375 35.5 10 34.1719 10 32.375V16.125C10 14.4062 8.59375 13 6.875 13ZM7.5 32.375C7.5 32.7656 7.1875 33 6.875 33H3.125C2.73438 33 2.5 32.7656 2.5 32.375V16.125C2.5 15.8125 2.73438 15.5 3.125 15.5H6.875C7.1875 15.5 7.5 15.8125 7.5 16.125V32.375ZM40 15.3438C40 12.6875 37.8125 10.5 35.1562 10.5H27.1875C28.0469 8.39062 28.5938 6.35938 28.5938 5.26562C28.5938 2.92188 26.7969 0.5 23.75 0.5C20.5469 0.5 19.8438 2.84375 19.1406 4.79688C17.0312 11.4375 12.5 12.4531 12.5 14.25C12.5 15.0312 13.0469 15.5 13.75 15.5C14.0625 15.5 14.375 15.4219 14.6094 15.1875C18.6719 11.0469 19.8438 10.8125 21.5625 5.57812C22.2656 3.39062 22.5 3 23.75 3C25.3906 3 26.0938 4.32812 26.0938 5.26562C26.0938 6.04688 25.3906 8.70312 24.0625 11.2031C23.9062 11.3594 23.9062 11.5938 23.9062 11.75C23.9062 12.5312 24.5312 13 25.1562 13H35.1562C36.4062 13 37.5 14.0938 37.5 15.3438C37.5 16.5156 36.4844 17.5312 35.3125 17.6094C34.6875 17.6875 34.1406 18.2344 34.1406 18.8594C34.1406 19.7969 35.0781 19.875 35.0781 21.2812C35.0781 22.375 34.2969 23.3125 33.2031 23.5469C32.7344 23.625 32.1875 24.0156 32.1875 24.7188C32.1875 25.4219 32.7344 25.5781 32.7344 26.5938C32.7344 29.0156 30.2344 28.3125 30.2344 29.9531C30.2344 30.2656 30.3906 30.3438 30.3906 30.7344C30.3906 31.9844 29.2969 33 28.0469 33H23.6719C17.2656 33 15.2344 28 13.75 28C13.0469 28 12.5 28.625 12.5 29.25C12.4219 30.5781 17.5 35.5 23.6719 35.5H28.0469C30.7031 35.5 32.8906 33.3906 32.8906 30.7344C34.2969 29.875 35.2344 28.3125 35.2344 26.5938C35.2344 26.2031 35.1562 25.8125 35.0781 25.5C36.5625 24.6406 37.5781 23.0781 37.5781 21.2812C37.5781 20.7344 37.5 20.1094 37.2656 19.6406C38.9062 18.8594 40 17.2188 40 15.3438Z\" />\r\n</svg>\r\n";
 
-const $$Astro$14 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/Svg.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$14 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/Svg.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Svg = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$14, $$props, $$slots);
   Astro2.self = $$Svg;
@@ -2613,7 +2613,7 @@ const $$Svg = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead($$result)}<svg${spreadAttributes(svgAttributes)}>${unescapeHTML(innerHTML)}</svg>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/general/Svg.astro");
 
-const $$Astro$13 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/decoration/ContrastSection.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$13 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/decoration/ContrastSection.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$ContrastSection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$13, $$props, $$slots);
   Astro2.self = $$ContrastSection;
@@ -2631,7 +2631,7 @@ const $$ContrastSection = createComponent(async ($$result, $$props, $$slots) => 
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/decoration/ContrastSection.astro");
 
-const $$Astro$12 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/InlineIcon.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$12 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/InlineIcon.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$InlineIcon = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$12, $$props, $$slots);
   Astro2.self = $$InlineIcon;
@@ -2641,7 +2641,7 @@ const $$InlineIcon = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/general/InlineIcon.astro");
 
-const $$Astro$11 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/Button.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$11 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/Button.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Button = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$11, $$props, $$slots);
   Astro2.self = $$Button;
@@ -2651,7 +2651,7 @@ const $$Button = createComponent(async ($$result, $$props, $$slots) => {
 </button>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/general/Button.astro");
 
-const $$Astro$10 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/Link.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$10 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/general/Link.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Link$1 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$10, $$props, $$slots);
   Astro2.self = $$Link$1;
@@ -2661,7 +2661,7 @@ const $$Link$1 = createComponent(async ($$result, $$props, $$slots) => {
 </a>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/general/Link.astro");
 
-const $$Astro$$ = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/MobileNavItem.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$$ = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/MobileNavItem.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$MobileNavItem = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$$, $$props, $$slots);
   Astro2.self = $$MobileNavItem;
@@ -2673,7 +2673,7 @@ const $$MobileNavItem = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/nav/MobileNavItem.astro");
 
-const $$Astro$_ = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/MobileNavMenu.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$_ = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/MobileNavMenu.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$MobileNavMenu = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$_, $$props, $$slots);
   Astro2.self = $$MobileNavMenu;
@@ -2693,7 +2693,7 @@ const $$MobileNavMenu = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/nav/MobileNavMenu.astro");
 
-const $$Astro$Z = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/MobileNavMenuItem.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$Z = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/MobileNavMenuItem.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$MobileNavMenuItem = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$Z, $$props, $$slots);
   Astro2.self = $$MobileNavMenuItem;
@@ -2701,7 +2701,7 @@ const $$MobileNavMenuItem = createComponent(async ($$result, $$props, $$slots) =
   return renderTemplate`${renderComponent($$result, "Link", $$Link$1, { "href": href, "icon": icon, "class": "group w-full flex items-center py-4 px-6 lg:px-10 text-white" }, { "default": () => renderTemplate`${renderSlot($$result, $$slots["default"])}${renderComponent($$result, "Icon", $$Icon, { "icon": "arrow-right", "class": "w-[1em] h-[1em] fill-lightIris" })}` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/nav/MobileNavMenuItem.astro");
 
-const $$Astro$Y = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavItem.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$Y = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavItem.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$NavItem = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$Y, $$props, $$slots);
   Astro2.self = $$NavItem;
@@ -2709,7 +2709,7 @@ const $$NavItem = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Link", $$Link$1, { "class": `button button--small button--main-nav button--nav-underline ${classes}`, ...rest }, { "default": () => renderTemplate`${renderSlot($$result, $$slots["default"])}` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavItem.astro");
 
-const $$Astro$X = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavMenu.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$X = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavMenu.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$NavMenu = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$X, $$props, $$slots);
   Astro2.self = $$NavMenu;
@@ -2730,7 +2730,7 @@ const $$NavMenu = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavMenu.astro");
 
-const $$Astro$W = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavMenuItem.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$W = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavMenuItem.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$NavMenuItem = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$W, $$props, $$slots);
   Astro2.self = $$NavMenuItem;
@@ -2740,7 +2740,7 @@ const $$NavMenuItem = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavMenuItem.astro");
 
-const $$Astro$V = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavMenuPrimaryItem.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$V = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavMenuPrimaryItem.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$NavMenuPrimaryItem = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$V, $$props, $$slots);
   Astro2.self = $$NavMenuPrimaryItem;
@@ -2758,7 +2758,7 @@ const $$NavMenuPrimaryItem = createComponent(async ($$result, $$props, $$slots) 
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/nav/NavMenuPrimaryItem.astro");
 
-const $$Astro$U = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/Header.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$U = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/Header.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Header = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$U, $$props, $$slots);
   Astro2.self = $$Header;
@@ -2871,7 +2871,7 @@ const $$Header = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/layout/Header.astro");
 
-const $$Astro$T = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/PrimarySection.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$T = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/PrimarySection.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$PrimarySection = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$T, $$props, $$slots);
   Astro2.self = $$PrimarySection;
@@ -2881,7 +2881,7 @@ const $$PrimarySection = createComponent(async ($$result, $$props, $$slots) => {
 </section>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/layout/PrimarySection.astro");
 
-const $$Astro$S = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/decoration/LeftDecoration.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$S = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/decoration/LeftDecoration.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$LeftDecoration = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$S, $$props, $$slots);
   Astro2.self = $$LeftDecoration;
@@ -2889,7 +2889,7 @@ const $$LeftDecoration = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Svg", $$Svg, { "name": icon, "class": `ml-[20%] mr-auto ${classes ? classes : ""}` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/decoration/LeftDecoration.astro");
 
-const $$Astro$R = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/decoration/RightDecoration.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$R = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/decoration/RightDecoration.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$RightDecoration = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$R, $$props, $$slots);
   Astro2.self = $$RightDecoration;
@@ -2897,7 +2897,7 @@ const $$RightDecoration = createComponent(async ($$result, $$props, $$slots) => 
   return renderTemplate`${renderComponent($$result, "Svg", $$Svg, { "name": icon, "class": `mr-[5%] ml-auto ${classes ? classes : ""}` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/decoration/RightDecoration.astro");
 
-const $$Astro$Q = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/quotes/AmplifyQuote.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$Q = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/quotes/AmplifyQuote.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$AmplifyQuote = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$Q, $$props, $$slots);
   Astro2.self = $$AmplifyQuote;
@@ -2929,7 +2929,7 @@ const $$AmplifyQuote = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/quotes/AmplifyQuote.astro");
 
-const $$Astro$P = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/Footer.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$P = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/Footer.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$P, $$props, $$slots);
   Astro2.self = $$Footer;
@@ -3074,7 +3074,7 @@ const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/layout/Footer.astro");
 
-const $$Astro$O = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Title.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$O = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Title.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Title = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$O, $$props, $$slots);
   Astro2.self = $$Title;
@@ -3083,7 +3083,7 @@ const $$Title = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Title.astro");
 
-const $$Astro$N = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Meta.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$N = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Meta.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Meta = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$N, $$props, $$slots);
   Astro2.self = $$Meta;
@@ -3092,7 +3092,7 @@ const $$Meta = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Meta.astro");
 
-const $$Astro$M = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Description.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$M = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Description.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Description = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$M, $$props, $$slots);
   Astro2.self = $$Description;
@@ -3104,7 +3104,7 @@ var __freeze$1 = Object.freeze;
 var __defProp$1 = Object.defineProperty;
 var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(raw || cooked.slice()) }));
 var _a$1;
-const $$Astro$L = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/ScriptSrc.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$L = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/ScriptSrc.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$ScriptSrc = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$L, $$props, $$slots);
   Astro2.self = $$ScriptSrc;
@@ -3112,7 +3112,7 @@ const $$ScriptSrc = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate(_a$1 || (_a$1 = __template$1(['<script type="text/javascript"', "", ">\n	// nothing\n<\/script>\n"])), addAttribute(src, "src"), spreadAttributes(rest));
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/meta/ScriptSrc.astro");
 
-const $$Astro$K = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Link.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$K = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/Link.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Link = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$K, $$props, $$slots);
   Astro2.self = $$Link;
@@ -3198,7 +3198,7 @@ var __freeze = Object.freeze;
 var __defProp = Object.defineProperty;
 var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
 var _a;
-const $$Astro$J = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/JsonLD.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$J = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/meta/JsonLD.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$JsonLD = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$J, $$props, $$slots);
   Astro2.self = $$JsonLD;
@@ -3238,7 +3238,7 @@ const $$JsonLD = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate(_a || (_a = __template(['<script type="application/ld+json">', "<\/script>\n"])), unescapeHTML(JSON.stringify(siteSchema)));
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/meta/JsonLD.astro");
 
-const $$Astro$I = createAstro("/Users/sandrarodgers/web-next/blog/src/layouts/Default.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$I = createAstro("/Users/sandrarodgers/web-next/blog/src/layouts/Default.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Default = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$I, $$props, $$slots);
   Astro2.self = $$Default;
@@ -3333,7 +3333,7 @@ const $$Default = createComponent(async ($$result, $$props, $$slots) => {
 	</body></html>`;
 }, "/Users/sandrarodgers/web-next/blog/src/layouts/Default.astro");
 
-const $$Astro$H = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/strings/AuthorName.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$H = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/strings/AuthorName.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$AuthorName = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$H, $$props, $$slots);
   Astro2.self = $$AuthorName;
@@ -3342,7 +3342,7 @@ const $$AuthorName = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/strings/AuthorName.astro");
 
-const $$Astro$G = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/strings/Authors.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$G = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/strings/Authors.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Authors = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$G, $$props, $$slots);
   Astro2.self = $$Authors;
@@ -3361,7 +3361,7 @@ const $$Authors = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/strings/Authors.astro");
 
-const $$Astro$F = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/images/ImageSrcSet.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$F = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/images/ImageSrcSet.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$ImageSrcSet = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$F, $$props, $$slots);
   Astro2.self = $$ImageSrcSet;
@@ -3400,7 +3400,7 @@ const $$ImageSrcSet = createComponent(async ($$result, $$props, $$slots) => {
 </picture>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/images/ImageSrcSet.astro");
 
-const $$Astro$E = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/GenericCard.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$E = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/GenericCard.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$GenericCard = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$E, $$props, $$slots);
   Astro2.self = $$GenericCard;
@@ -3408,7 +3408,7 @@ const $$GenericCard = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Link", $$Link$1, { "href": href, "class": `block ${classes ? classes : ""}`, ...rest }, { "default": () => renderTemplate`${renderSlot($$result, $$slots["default"])}` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/cards/GenericCard.astro");
 
-const $$Astro$D = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/GenericBlogCard.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$D = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/GenericBlogCard.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$GenericBlogCard = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$D, $$props, $$slots);
   Astro2.self = $$GenericBlogCard;
@@ -3419,7 +3419,7 @@ const $$GenericBlogCard = createComponent(async ($$result, $$props, $$slots) => 
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/cards/GenericBlogCard.astro");
 
-const $$Astro$C = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardLarge.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$C = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardLarge.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$BlogCardLarge = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$C, $$props, $$slots);
   Astro2.self = $$BlogCardLarge;
@@ -3440,7 +3440,7 @@ const $$BlogCardLarge = createComponent(async ($$result, $$props, $$slots) => {
 	</div>` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardLarge.astro");
 
-const $$Astro$B = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardSmall.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$B = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardSmall.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$BlogCardSmall = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$B, $$props, $$slots);
   Astro2.self = $$BlogCardSmall;
@@ -3458,7 +3458,7 @@ const $$BlogCardSmall = createComponent(async ($$result, $$props, $$slots) => {
 	</div>` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardSmall.astro");
 
-const $$Astro$A = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardHero.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$A = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardHero.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$BlogCardHero = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$A, $$props, $$slots);
   Astro2.self = $$BlogCardHero;
@@ -3478,7 +3478,7 @@ const $$BlogCardHero = createComponent(async ($$result, $$props, $$slots) => {
 	</div>` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardHero.astro");
 
-const $$Astro$z = createAstro("/Users/sandrarodgers/web-next/blog/src/components/homepage/Hero.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$z = createAstro("/Users/sandrarodgers/web-next/blog/src/components/homepage/Hero.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Hero$2 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$z, $$props, $$slots);
   Astro2.self = $$Hero$2;
@@ -3506,7 +3506,7 @@ const $$Hero$2 = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/homepage/Hero.astro");
 
-const $$Astro$y = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/HasAside.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$y = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/HasAside.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$HasAside = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$y, $$props, $$slots);
   Astro2.self = $$HasAside;
@@ -3517,7 +3517,7 @@ const $$HasAside = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/layout/HasAside.astro");
 
-const $$Astro$x = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/CategoryList.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$x = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/nav/CategoryList.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$CategoryList = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$x, $$props, $$slots);
   Astro2.self = $$CategoryList;
@@ -3552,7 +3552,7 @@ const $$CategoryList = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/nav/CategoryList.astro");
 
-const $$Astro$w = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/lists/BlogCardList.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$w = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/lists/BlogCardList.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$BlogCardList = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$w, $$props, $$slots);
   Astro2.self = $$BlogCardList;
@@ -3567,7 +3567,7 @@ const $$BlogCardList = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/lists/BlogCardList.astro");
 
-const $$Astro$v = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/titles/LinkCardListTitle.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$v = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/titles/LinkCardListTitle.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$LinkCardListTitle = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$v, $$props, $$slots);
   Astro2.self = $$LinkCardListTitle;
@@ -3578,7 +3578,7 @@ const $$LinkCardListTitle = createComponent(async ($$result, $$props, $$slots) =
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/titles/LinkCardListTitle.astro");
 
-const $$Astro$u = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardSB.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$u = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardSB.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$BlogCardSB = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$u, $$props, $$slots);
   Astro2.self = $$BlogCardSB;
@@ -3597,7 +3597,7 @@ const $$BlogCardSB = createComponent(async ($$result, $$props, $$slots) => {
 	</div>` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/cards/BlogCardSB.astro");
 
-const $$Astro$t = createAstro("/Users/sandrarodgers/web-next/blog/src/components/homepage/CategoryPostsSB.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$t = createAstro("/Users/sandrarodgers/web-next/blog/src/components/homepage/CategoryPostsSB.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$CategoryPostsSB = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$t, $$props, $$slots);
   Astro2.self = $$CategoryPostsSB;
@@ -3606,7 +3606,7 @@ const $$CategoryPostsSB = createComponent(async ($$result, $$props, $$slots) => 
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/components/homepage/CategoryPostsSB.astro");
 
-const $$Astro$s = createAstro("/Users/sandrarodgers/web-next/blog/src/components/homepage/CategorySectionSB.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$s = createAstro("/Users/sandrarodgers/web-next/blog/src/components/homepage/CategorySectionSB.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$CategorySectionSB = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$s, $$props, $$slots);
   Astro2.self = $$CategorySectionSB;
@@ -3630,7 +3630,7 @@ const $$CategorySectionSB = createComponent(async ($$result, $$props, $$slots) =
   return renderTemplate`${posts.length > 0 && renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": () => renderTemplate`${renderComponent($$result, "BlogCardList", $$BlogCardList, { "class": "mb-32" }, { "default": () => renderTemplate`${renderComponent($$result, "CategoryPosts", $$CategoryPostsSB, { "posts": posts })}`, "title": () => renderTemplate`${renderComponent($$result, "LinkCardListTitle", $$LinkCardListTitle, { "slot": "title", "href": `/categories/${category.slug}`, "title": category.content.plural, "linkClass": "draw-underline nudge-icon nudge-icon--right text-lightIris" }, { "default": () => renderTemplate`${maybeRenderHead($$result)}<h3>${category.content.title}</h3>` })}` })}` })}`}`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/homepage/CategorySectionSB.astro");
 
-const $$Astro$r = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/index.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$r = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/index.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Index$3 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$r, $$props, $$slots);
   Astro2.self = $$Index$3;
@@ -3693,7 +3693,7 @@ const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$8
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$q = createAstro("/Users/sandrarodgers/web-next/blog/src/components/nav/Backlink.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$q = createAstro("/Users/sandrarodgers/web-next/blog/src/components/nav/Backlink.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Backlink = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$q, $$props, $$slots);
   Astro2.self = $$Backlink;
@@ -3701,7 +3701,7 @@ const $$Backlink = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "Link", $$Link$1, { "href": href, "class:list": ["text-[1.125rem] font-[600] leading-[1.5rem] inline-block nudge-icon nudge-icon--left", linkClass, classes], "icon": "arrow-left" }, { "default": () => renderTemplate`${renderSlot($$result, $$slots["default"])}` })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/nav/Backlink.astro");
 
-const $$Astro$p = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/categories/index.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$p = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/categories/index.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Index$2 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$p, $$props, $$slots);
   Astro2.self = $$Index$2;
@@ -3747,7 +3747,7 @@ const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$7
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$o = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/categories/[category]/[...page].astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$o = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/categories/[category]/[...page].astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$$3 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$o, $$props, $$slots);
   Astro2.self = $$$3;
@@ -3764,7 +3764,7 @@ const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$6
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$n = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/lists/AuthorCardList.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$n = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/lists/AuthorCardList.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$AuthorCardList = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$n, $$props, $$slots);
   Astro2.self = $$AuthorCardList;
@@ -3779,7 +3779,7 @@ const $$AuthorCardList = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/lists/AuthorCardList.astro");
 
-const $$Astro$m = createAstro("/Users/sandrarodgers/web-next/blog/src/components/authors/Hero.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$m = createAstro("/Users/sandrarodgers/web-next/blog/src/components/authors/Hero.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Hero$1 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$m, $$props, $$slots);
   Astro2.self = $$Hero$1;
@@ -3794,7 +3794,7 @@ const $$Hero$1 = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/authors/Hero.astro");
 
-const $$Astro$l = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/titles/NoLinkCardListTitle.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$l = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/titles/NoLinkCardListTitle.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$NoLinkCardListTitle = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$l, $$props, $$slots);
   Astro2.self = $$NoLinkCardListTitle;
@@ -3804,7 +3804,7 @@ const $$NoLinkCardListTitle = createComponent(async ($$result, $$props, $$slots)
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/titles/NoLinkCardListTitle.astro");
 
-const $$Astro$k = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/Author.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$k = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/cards/Author.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Author = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$k, $$props, $$slots);
   Astro2.self = $$Author;
@@ -3977,7 +3977,7 @@ const schema = {
   }
 };
 
-const $$Astro$j = createAstro("/Users/sandrarodgers/web-next/blog/src/components/storyblok/RichText.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$j = createAstro("/Users/sandrarodgers/web-next/blog/src/components/storyblok/RichText.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$RichText = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$j, $$props, $$slots);
   Astro2.self = $$RichText;
@@ -3989,7 +3989,7 @@ const $$RichText = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/storyblok/RichText.astro");
 
-const $$Astro$i = createAstro("/Users/sandrarodgers/web-next/blog/src/components/storyblok/Iframe.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$i = createAstro("/Users/sandrarodgers/web-next/blog/src/components/storyblok/Iframe.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Iframe = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$i, $$props, $$slots);
   Astro2.self = $$Iframe;
@@ -3997,7 +3997,7 @@ const $$Iframe = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead($$result)}<iframe${spreadAttributes(Q(blok))}${spreadAttributes(blok)}></iframe>`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/storyblok/Iframe.astro");
 
-const $$Astro$h = createAstro("/Users/sandrarodgers/web-next/blog/src/components/storyblok/Image.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$h = createAstro("/Users/sandrarodgers/web-next/blog/src/components/storyblok/Image.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Image = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$h, $$props, $$slots);
   Astro2.self = $$Image;
@@ -6140,7 +6140,7 @@ function getHighlighter(opts) {
 	return highlighter;
 }
 
-const $$Astro$g = createAstro("/Users/sandrarodgers/web-next/blog/node_modules/astro/components/Code.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$g = createAstro("/Users/sandrarodgers/web-next/blog/node_modules/astro/components/Code.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Code = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$g, $$props, $$slots);
   Astro2.self = $$Code;
@@ -6170,7 +6170,7 @@ const $$Code = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/node_modules/astro/components/Code.astro");
 
-const $$Astro$f = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/code/CodeBlockSB.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$f = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/code/CodeBlockSB.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$CodeBlockSB = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
   Astro2.self = $$CodeBlockSB;
@@ -6183,7 +6183,7 @@ const $$CodeBlockSB = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/code/CodeBlockSB.astro");
 
-const $$Astro$e = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/code/CodeGroupSB.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$e = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/code/CodeGroupSB.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$CodeGroupSB = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
   Astro2.self = $$CodeGroupSB;
@@ -6216,7 +6216,7 @@ const $$CodeGroupSB = createComponent(async ($$result, $$props, $$slots) => {
 
 const components = {Author: $$Author,RichTextSection: $$RichText,Iframe: $$Iframe,Image: $$Image,whitepaperLink: $$WhitepaperPromoSB,Panel: $$Panel,YouTube: $$YouTube,Alert: $$Alert,CodeEmbed: $$CodeEmbed,Table: $$Table,CodeGroup: $$CodeGroupSB};
 
-const $$Astro$d = createAstro("/Users/sandrarodgers/web-next/blog/node_modules/@storyblok/astro/StoryblokComponent.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$d = createAstro("/Users/sandrarodgers/web-next/blog/node_modules/@storyblok/astro/StoryblokComponent.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$StoryblokComponent = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
   Astro2.self = $$StoryblokComponent;
@@ -6225,7 +6225,7 @@ const $$StoryblokComponent = createComponent(async ($$result, $$props, $$slots) 
   return renderTemplate`${renderComponent($$result, "Component", Component, { "blok": blok, ...props })}`;
 }, "/Users/sandrarodgers/web-next/blog/node_modules/@storyblok/astro/StoryblokComponent.astro");
 
-const $$Astro$c = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/authors/index.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$c = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/authors/index.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Index$1 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$Index$1;
@@ -6273,7 +6273,7 @@ const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$5
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$b = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/authors/[author]/[...page].astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$b = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/authors/[author]/[...page].astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$$2 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$$2;
@@ -6303,7 +6303,7 @@ const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 
 						// Deferred
 						async function load$4k() {
-							return (await import('./chunks/index.08f91a6a.mjs'));
+							return (await import('./chunks/index.c86a40db.mjs'));
 						}
 						function Content$4k(...args) {
 							return load$4k().then((m) => m.default(...args));
@@ -6343,7 +6343,7 @@ const __vite_glob_0_0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4j() {
-							return (await import('./chunks/index.48a0a942.mjs'));
+							return (await import('./chunks/index.50e0f458.mjs'));
 						}
 						function Content$4j(...args) {
 							return load$4j().then((m) => m.default(...args));
@@ -6383,7 +6383,7 @@ const __vite_glob_0_1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4i() {
-							return (await import('./chunks/index.eae9209d.mjs'));
+							return (await import('./chunks/index.689f52c2.mjs'));
 						}
 						function Content$4i(...args) {
 							return load$4i().then((m) => m.default(...args));
@@ -6423,7 +6423,7 @@ const __vite_glob_0_2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4h() {
-							return (await import('./chunks/index.6e6f4a87.mjs'));
+							return (await import('./chunks/index.ce57c991.mjs'));
 						}
 						function Content$4h(...args) {
 							return load$4h().then((m) => m.default(...args));
@@ -6463,7 +6463,7 @@ const __vite_glob_0_3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4g() {
-							return (await import('./chunks/index.5917e9e0.mjs'));
+							return (await import('./chunks/index.4cde1717.mjs'));
 						}
 						function Content$4g(...args) {
 							return load$4g().then((m) => m.default(...args));
@@ -6503,7 +6503,7 @@ const __vite_glob_0_4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4f() {
-							return (await import('./chunks/index.6ca18c3e.mjs'));
+							return (await import('./chunks/index.45c86c75.mjs'));
 						}
 						function Content$4f(...args) {
 							return load$4f().then((m) => m.default(...args));
@@ -6543,7 +6543,7 @@ const __vite_glob_0_5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4e() {
-							return (await import('./chunks/index.93cf8df0.mjs'));
+							return (await import('./chunks/index.4b2687a9.mjs'));
 						}
 						function Content$4e(...args) {
 							return load$4e().then((m) => m.default(...args));
@@ -6583,7 +6583,7 @@ const __vite_glob_0_6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4d() {
-							return (await import('./chunks/index.65b3666b.mjs'));
+							return (await import('./chunks/index.aa382d42.mjs'));
 						}
 						function Content$4d(...args) {
 							return load$4d().then((m) => m.default(...args));
@@ -6623,7 +6623,7 @@ const __vite_glob_0_7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4c() {
-							return (await import('./chunks/index.ed9da340.mjs'));
+							return (await import('./chunks/index.11b75c22.mjs'));
 						}
 						function Content$4c(...args) {
 							return load$4c().then((m) => m.default(...args));
@@ -6663,7 +6663,7 @@ const __vite_glob_0_8 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4b() {
-							return (await import('./chunks/index.e1708e7e.mjs'));
+							return (await import('./chunks/index.b39d680c.mjs'));
 						}
 						function Content$4b(...args) {
 							return load$4b().then((m) => m.default(...args));
@@ -6703,7 +6703,7 @@ const __vite_glob_0_9 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePro
 
 						// Deferred
 						async function load$4a() {
-							return (await import('./chunks/index.d38a1889.mjs'));
+							return (await import('./chunks/index.69e82170.mjs'));
 						}
 						function Content$4a(...args) {
 							return load$4a().then((m) => m.default(...args));
@@ -6743,7 +6743,7 @@ const __vite_glob_0_10 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$49() {
-							return (await import('./chunks/index.c6df3fbb.mjs'));
+							return (await import('./chunks/index.1f294100.mjs'));
 						}
 						function Content$49(...args) {
 							return load$49().then((m) => m.default(...args));
@@ -6783,7 +6783,7 @@ const __vite_glob_0_11 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$48() {
-							return (await import('./chunks/index.fd7436f6.mjs'));
+							return (await import('./chunks/index.1406ce55.mjs'));
 						}
 						function Content$48(...args) {
 							return load$48().then((m) => m.default(...args));
@@ -6823,7 +6823,7 @@ const __vite_glob_0_12 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$47() {
-							return (await import('./chunks/index.f678512a.mjs'));
+							return (await import('./chunks/index.4071b7ef.mjs'));
 						}
 						function Content$47(...args) {
 							return load$47().then((m) => m.default(...args));
@@ -6863,7 +6863,7 @@ const __vite_glob_0_13 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$46() {
-							return (await import('./chunks/index.eb652246.mjs'));
+							return (await import('./chunks/index.17510e63.mjs'));
 						}
 						function Content$46(...args) {
 							return load$46().then((m) => m.default(...args));
@@ -6903,7 +6903,7 @@ const __vite_glob_0_14 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$45() {
-							return (await import('./chunks/index.4099af18.mjs'));
+							return (await import('./chunks/index.76632516.mjs'));
 						}
 						function Content$45(...args) {
 							return load$45().then((m) => m.default(...args));
@@ -6943,7 +6943,7 @@ const __vite_glob_0_15 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$44() {
-							return (await import('./chunks/index.0b2381dd.mjs'));
+							return (await import('./chunks/index.53e20a8b.mjs'));
 						}
 						function Content$44(...args) {
 							return load$44().then((m) => m.default(...args));
@@ -6983,7 +6983,7 @@ const __vite_glob_0_16 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$43() {
-							return (await import('./chunks/index.5583747f.mjs'));
+							return (await import('./chunks/index.314365e1.mjs'));
 						}
 						function Content$43(...args) {
 							return load$43().then((m) => m.default(...args));
@@ -7023,7 +7023,7 @@ const __vite_glob_0_17 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$42() {
-							return (await import('./chunks/index.8f43d698.mjs'));
+							return (await import('./chunks/index.f332f228.mjs'));
 						}
 						function Content$42(...args) {
 							return load$42().then((m) => m.default(...args));
@@ -7063,7 +7063,7 @@ const __vite_glob_0_18 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$41() {
-							return (await import('./chunks/index.5a90cc57.mjs'));
+							return (await import('./chunks/index.f36ae2f5.mjs'));
 						}
 						function Content$41(...args) {
 							return load$41().then((m) => m.default(...args));
@@ -7103,7 +7103,7 @@ const __vite_glob_0_19 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$40() {
-							return (await import('./chunks/index.edb207a1.mjs'));
+							return (await import('./chunks/index.4ecb0a40.mjs'));
 						}
 						function Content$40(...args) {
 							return load$40().then((m) => m.default(...args));
@@ -7143,7 +7143,7 @@ const __vite_glob_0_20 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3$() {
-							return (await import('./chunks/index.f0aa54ba.mjs'));
+							return (await import('./chunks/index.aba9703a.mjs'));
 						}
 						function Content$3$(...args) {
 							return load$3$().then((m) => m.default(...args));
@@ -7183,7 +7183,7 @@ const __vite_glob_0_21 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3_() {
-							return (await import('./chunks/index.7ddf921a.mjs'));
+							return (await import('./chunks/index.fa83f162.mjs'));
 						}
 						function Content$3_(...args) {
 							return load$3_().then((m) => m.default(...args));
@@ -7223,7 +7223,7 @@ const __vite_glob_0_22 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3Z() {
-							return (await import('./chunks/index.fb3893ae.mjs'));
+							return (await import('./chunks/index.d1eddb1e.mjs'));
 						}
 						function Content$3Z(...args) {
 							return load$3Z().then((m) => m.default(...args));
@@ -7263,7 +7263,7 @@ const __vite_glob_0_23 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3Y() {
-							return (await import('./chunks/index.df1de17b.mjs'));
+							return (await import('./chunks/index.d16722f4.mjs'));
 						}
 						function Content$3Y(...args) {
 							return load$3Y().then((m) => m.default(...args));
@@ -7303,7 +7303,7 @@ const __vite_glob_0_24 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3X() {
-							return (await import('./chunks/index.2f5c1e69.mjs'));
+							return (await import('./chunks/index.6bc70b66.mjs'));
 						}
 						function Content$3X(...args) {
 							return load$3X().then((m) => m.default(...args));
@@ -7343,7 +7343,7 @@ const __vite_glob_0_25 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3W() {
-							return (await import('./chunks/index.df94590b.mjs'));
+							return (await import('./chunks/index.2929a394.mjs'));
 						}
 						function Content$3W(...args) {
 							return load$3W().then((m) => m.default(...args));
@@ -7383,7 +7383,7 @@ const __vite_glob_0_26 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3V() {
-							return (await import('./chunks/index.da72c680.mjs'));
+							return (await import('./chunks/index.19ee9179.mjs'));
 						}
 						function Content$3V(...args) {
 							return load$3V().then((m) => m.default(...args));
@@ -7423,7 +7423,7 @@ const __vite_glob_0_27 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3U() {
-							return (await import('./chunks/index.06c1c21f.mjs'));
+							return (await import('./chunks/index.a5d92b47.mjs'));
 						}
 						function Content$3U(...args) {
 							return load$3U().then((m) => m.default(...args));
@@ -7463,7 +7463,7 @@ const __vite_glob_0_28 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3T() {
-							return (await import('./chunks/index.736eeebf.mjs'));
+							return (await import('./chunks/index.ec9de123.mjs'));
 						}
 						function Content$3T(...args) {
 							return load$3T().then((m) => m.default(...args));
@@ -7503,7 +7503,7 @@ const __vite_glob_0_29 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3S() {
-							return (await import('./chunks/index.e8b992d5.mjs'));
+							return (await import('./chunks/index.34a0a0bc.mjs'));
 						}
 						function Content$3S(...args) {
 							return load$3S().then((m) => m.default(...args));
@@ -7543,7 +7543,7 @@ const __vite_glob_0_30 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3R() {
-							return (await import('./chunks/index.8376292d.mjs'));
+							return (await import('./chunks/index.d7b25326.mjs'));
 						}
 						function Content$3R(...args) {
 							return load$3R().then((m) => m.default(...args));
@@ -7583,7 +7583,7 @@ const __vite_glob_0_31 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3Q() {
-							return (await import('./chunks/index.e12a51a1.mjs'));
+							return (await import('./chunks/index.5c5525a6.mjs'));
 						}
 						function Content$3Q(...args) {
 							return load$3Q().then((m) => m.default(...args));
@@ -7623,7 +7623,7 @@ const __vite_glob_0_32 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3P() {
-							return (await import('./chunks/index.71868ce2.mjs'));
+							return (await import('./chunks/index.034feb15.mjs'));
 						}
 						function Content$3P(...args) {
 							return load$3P().then((m) => m.default(...args));
@@ -7663,7 +7663,7 @@ const __vite_glob_0_33 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3O() {
-							return (await import('./chunks/index.22f5d2f1.mjs'));
+							return (await import('./chunks/index.6e73440f.mjs'));
 						}
 						function Content$3O(...args) {
 							return load$3O().then((m) => m.default(...args));
@@ -7703,7 +7703,7 @@ const __vite_glob_0_34 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3N() {
-							return (await import('./chunks/index.5eef1925.mjs'));
+							return (await import('./chunks/index.01cd3595.mjs'));
 						}
 						function Content$3N(...args) {
 							return load$3N().then((m) => m.default(...args));
@@ -7743,7 +7743,7 @@ const __vite_glob_0_35 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3M() {
-							return (await import('./chunks/index.04dca39f.mjs'));
+							return (await import('./chunks/index.4424ccec.mjs'));
 						}
 						function Content$3M(...args) {
 							return load$3M().then((m) => m.default(...args));
@@ -7783,7 +7783,7 @@ const __vite_glob_0_36 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3L() {
-							return (await import('./chunks/index.c5fe2d8f.mjs'));
+							return (await import('./chunks/index.a5f85808.mjs'));
 						}
 						function Content$3L(...args) {
 							return load$3L().then((m) => m.default(...args));
@@ -7823,7 +7823,7 @@ const __vite_glob_0_37 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3K() {
-							return (await import('./chunks/index.32b23cbc.mjs'));
+							return (await import('./chunks/index.bc07c446.mjs'));
 						}
 						function Content$3K(...args) {
 							return load$3K().then((m) => m.default(...args));
@@ -7863,7 +7863,7 @@ const __vite_glob_0_38 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3J() {
-							return (await import('./chunks/index.b2a9cce4.mjs'));
+							return (await import('./chunks/index.03b62d21.mjs'));
 						}
 						function Content$3J(...args) {
 							return load$3J().then((m) => m.default(...args));
@@ -7903,7 +7903,7 @@ const __vite_glob_0_39 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3I() {
-							return (await import('./chunks/index.37ecd620.mjs'));
+							return (await import('./chunks/index.56b71fc6.mjs'));
 						}
 						function Content$3I(...args) {
 							return load$3I().then((m) => m.default(...args));
@@ -7943,7 +7943,7 @@ const __vite_glob_0_40 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3H() {
-							return (await import('./chunks/index.217bf97f.mjs'));
+							return (await import('./chunks/index.fec4d9df.mjs'));
 						}
 						function Content$3H(...args) {
 							return load$3H().then((m) => m.default(...args));
@@ -7983,7 +7983,7 @@ const __vite_glob_0_41 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3G() {
-							return (await import('./chunks/index.d8c5fd30.mjs'));
+							return (await import('./chunks/index.b2c555ce.mjs'));
 						}
 						function Content$3G(...args) {
 							return load$3G().then((m) => m.default(...args));
@@ -8023,7 +8023,7 @@ const __vite_glob_0_42 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3F() {
-							return (await import('./chunks/index.1a0e68ad.mjs'));
+							return (await import('./chunks/index.90abf19e.mjs'));
 						}
 						function Content$3F(...args) {
 							return load$3F().then((m) => m.default(...args));
@@ -8063,7 +8063,7 @@ const __vite_glob_0_43 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3E() {
-							return (await import('./chunks/index.a3a976c1.mjs'));
+							return (await import('./chunks/index.d6112490.mjs'));
 						}
 						function Content$3E(...args) {
 							return load$3E().then((m) => m.default(...args));
@@ -8103,7 +8103,7 @@ const __vite_glob_0_44 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3D() {
-							return (await import('./chunks/index.14f35a10.mjs'));
+							return (await import('./chunks/index.8853d18f.mjs'));
 						}
 						function Content$3D(...args) {
 							return load$3D().then((m) => m.default(...args));
@@ -8143,7 +8143,7 @@ const __vite_glob_0_45 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3C() {
-							return (await import('./chunks/index.c7a47de0.mjs'));
+							return (await import('./chunks/index.1457f372.mjs'));
 						}
 						function Content$3C(...args) {
 							return load$3C().then((m) => m.default(...args));
@@ -8183,7 +8183,7 @@ const __vite_glob_0_46 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3B() {
-							return (await import('./chunks/index.73934199.mjs'));
+							return (await import('./chunks/index.cc4a9fd2.mjs'));
 						}
 						function Content$3B(...args) {
 							return load$3B().then((m) => m.default(...args));
@@ -8223,7 +8223,7 @@ const __vite_glob_0_47 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3A() {
-							return (await import('./chunks/index.ce876037.mjs'));
+							return (await import('./chunks/index.1655e132.mjs'));
 						}
 						function Content$3A(...args) {
 							return load$3A().then((m) => m.default(...args));
@@ -8263,7 +8263,7 @@ const __vite_glob_0_48 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3z() {
-							return (await import('./chunks/index.1f03c8d9.mjs'));
+							return (await import('./chunks/index.eab19a07.mjs'));
 						}
 						function Content$3z(...args) {
 							return load$3z().then((m) => m.default(...args));
@@ -8303,7 +8303,7 @@ const __vite_glob_0_49 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3y() {
-							return (await import('./chunks/index.8fe6fb36.mjs'));
+							return (await import('./chunks/index.7c414b4c.mjs'));
 						}
 						function Content$3y(...args) {
 							return load$3y().then((m) => m.default(...args));
@@ -8343,7 +8343,7 @@ const __vite_glob_0_50 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3x() {
-							return (await import('./chunks/index.fdc8169a.mjs'));
+							return (await import('./chunks/index.c8ef01f2.mjs'));
 						}
 						function Content$3x(...args) {
 							return load$3x().then((m) => m.default(...args));
@@ -8383,7 +8383,7 @@ const __vite_glob_0_51 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3w() {
-							return (await import('./chunks/index.4c783760.mjs'));
+							return (await import('./chunks/index.e835e785.mjs'));
 						}
 						function Content$3w(...args) {
 							return load$3w().then((m) => m.default(...args));
@@ -8423,7 +8423,7 @@ const __vite_glob_0_52 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3v() {
-							return (await import('./chunks/index.a5ab2e97.mjs'));
+							return (await import('./chunks/index.2fea293b.mjs'));
 						}
 						function Content$3v(...args) {
 							return load$3v().then((m) => m.default(...args));
@@ -8463,7 +8463,7 @@ const __vite_glob_0_53 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3u() {
-							return (await import('./chunks/index.2d7100de.mjs'));
+							return (await import('./chunks/index.03da2971.mjs'));
 						}
 						function Content$3u(...args) {
 							return load$3u().then((m) => m.default(...args));
@@ -8503,7 +8503,7 @@ const __vite_glob_0_54 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3t() {
-							return (await import('./chunks/index.bb262493.mjs'));
+							return (await import('./chunks/index.62dbc739.mjs'));
 						}
 						function Content$3t(...args) {
 							return load$3t().then((m) => m.default(...args));
@@ -8543,7 +8543,7 @@ const __vite_glob_0_55 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3s() {
-							return (await import('./chunks/index.0bc55272.mjs'));
+							return (await import('./chunks/index.e4308c7b.mjs'));
 						}
 						function Content$3s(...args) {
 							return load$3s().then((m) => m.default(...args));
@@ -8583,7 +8583,7 @@ const __vite_glob_0_56 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3r() {
-							return (await import('./chunks/index.fd6ae62d.mjs'));
+							return (await import('./chunks/index.aeb1e08f.mjs'));
 						}
 						function Content$3r(...args) {
 							return load$3r().then((m) => m.default(...args));
@@ -8623,7 +8623,7 @@ const __vite_glob_0_57 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3q() {
-							return (await import('./chunks/index.7ccac9c1.mjs'));
+							return (await import('./chunks/index.b809e367.mjs'));
 						}
 						function Content$3q(...args) {
 							return load$3q().then((m) => m.default(...args));
@@ -8663,7 +8663,7 @@ const __vite_glob_0_58 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3p() {
-							return (await import('./chunks/index.9fcfe8f4.mjs'));
+							return (await import('./chunks/index.29d7383c.mjs'));
 						}
 						function Content$3p(...args) {
 							return load$3p().then((m) => m.default(...args));
@@ -8703,7 +8703,7 @@ const __vite_glob_0_59 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3o() {
-							return (await import('./chunks/index.8febdd7d.mjs'));
+							return (await import('./chunks/index.e7fe848a.mjs'));
 						}
 						function Content$3o(...args) {
 							return load$3o().then((m) => m.default(...args));
@@ -8743,7 +8743,7 @@ const __vite_glob_0_60 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3n() {
-							return (await import('./chunks/index.d9aefb9f.mjs'));
+							return (await import('./chunks/index.7d0bf10c.mjs'));
 						}
 						function Content$3n(...args) {
 							return load$3n().then((m) => m.default(...args));
@@ -8783,7 +8783,7 @@ const __vite_glob_0_61 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3m() {
-							return (await import('./chunks/index.4c5a8b8a.mjs'));
+							return (await import('./chunks/index.ac240d4f.mjs'));
 						}
 						function Content$3m(...args) {
 							return load$3m().then((m) => m.default(...args));
@@ -8823,7 +8823,7 @@ const __vite_glob_0_62 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3l() {
-							return (await import('./chunks/index.82f183e8.mjs'));
+							return (await import('./chunks/index.41e06fda.mjs'));
 						}
 						function Content$3l(...args) {
 							return load$3l().then((m) => m.default(...args));
@@ -8863,7 +8863,7 @@ const __vite_glob_0_63 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3k() {
-							return (await import('./chunks/index.a6618154.mjs'));
+							return (await import('./chunks/index.ec9bd161.mjs'));
 						}
 						function Content$3k(...args) {
 							return load$3k().then((m) => m.default(...args));
@@ -8903,7 +8903,7 @@ const __vite_glob_0_64 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3j() {
-							return (await import('./chunks/index.5d48776f.mjs'));
+							return (await import('./chunks/index.68ada925.mjs'));
 						}
 						function Content$3j(...args) {
 							return load$3j().then((m) => m.default(...args));
@@ -8943,7 +8943,7 @@ const __vite_glob_0_65 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3i() {
-							return (await import('./chunks/index.4cd53a7c.mjs'));
+							return (await import('./chunks/index.44da5464.mjs'));
 						}
 						function Content$3i(...args) {
 							return load$3i().then((m) => m.default(...args));
@@ -8983,7 +8983,7 @@ const __vite_glob_0_66 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3h() {
-							return (await import('./chunks/index.da5ff7bc.mjs'));
+							return (await import('./chunks/index.4468bfe5.mjs'));
 						}
 						function Content$3h(...args) {
 							return load$3h().then((m) => m.default(...args));
@@ -9023,7 +9023,7 @@ const __vite_glob_0_67 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3g() {
-							return (await import('./chunks/index.a9f21ee2.mjs'));
+							return (await import('./chunks/index.7c039973.mjs'));
 						}
 						function Content$3g(...args) {
 							return load$3g().then((m) => m.default(...args));
@@ -9063,7 +9063,7 @@ const __vite_glob_0_68 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3f() {
-							return (await import('./chunks/index.093b0719.mjs'));
+							return (await import('./chunks/index.1f05f678.mjs'));
 						}
 						function Content$3f(...args) {
 							return load$3f().then((m) => m.default(...args));
@@ -9103,7 +9103,7 @@ const __vite_glob_0_69 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3e() {
-							return (await import('./chunks/index.98c987d9.mjs'));
+							return (await import('./chunks/index.6e120e66.mjs'));
 						}
 						function Content$3e(...args) {
 							return load$3e().then((m) => m.default(...args));
@@ -9143,7 +9143,7 @@ const __vite_glob_0_70 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3d() {
-							return (await import('./chunks/index.4abd3af8.mjs'));
+							return (await import('./chunks/index.acf44351.mjs'));
 						}
 						function Content$3d(...args) {
 							return load$3d().then((m) => m.default(...args));
@@ -9183,7 +9183,7 @@ const __vite_glob_0_71 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3c() {
-							return (await import('./chunks/index.bb6806af.mjs'));
+							return (await import('./chunks/index.1b13bd06.mjs'));
 						}
 						function Content$3c(...args) {
 							return load$3c().then((m) => m.default(...args));
@@ -9223,7 +9223,7 @@ const __vite_glob_0_72 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3b() {
-							return (await import('./chunks/index.4355c419.mjs'));
+							return (await import('./chunks/index.60be0778.mjs'));
 						}
 						function Content$3b(...args) {
 							return load$3b().then((m) => m.default(...args));
@@ -9263,7 +9263,7 @@ const __vite_glob_0_73 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$3a() {
-							return (await import('./chunks/index.c7058bdc.mjs'));
+							return (await import('./chunks/index.1614a45a.mjs'));
 						}
 						function Content$3a(...args) {
 							return load$3a().then((m) => m.default(...args));
@@ -9303,7 +9303,7 @@ const __vite_glob_0_74 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$39() {
-							return (await import('./chunks/index.ac81bf28.mjs'));
+							return (await import('./chunks/index.1a5e6243.mjs'));
 						}
 						function Content$39(...args) {
 							return load$39().then((m) => m.default(...args));
@@ -9343,7 +9343,7 @@ const __vite_glob_0_75 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$38() {
-							return (await import('./chunks/index.2c3622f8.mjs'));
+							return (await import('./chunks/index.01539474.mjs'));
 						}
 						function Content$38(...args) {
 							return load$38().then((m) => m.default(...args));
@@ -9383,7 +9383,7 @@ const __vite_glob_0_76 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$37() {
-							return (await import('./chunks/index.93b8c316.mjs'));
+							return (await import('./chunks/index.0541c08c.mjs'));
 						}
 						function Content$37(...args) {
 							return load$37().then((m) => m.default(...args));
@@ -9423,7 +9423,7 @@ const __vite_glob_0_77 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$36() {
-							return (await import('./chunks/index.6d37e48e.mjs'));
+							return (await import('./chunks/index.a7df673e.mjs'));
 						}
 						function Content$36(...args) {
 							return load$36().then((m) => m.default(...args));
@@ -9463,7 +9463,7 @@ const __vite_glob_0_78 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$35() {
-							return (await import('./chunks/index.8fc0cf19.mjs'));
+							return (await import('./chunks/index.95f142e4.mjs'));
 						}
 						function Content$35(...args) {
 							return load$35().then((m) => m.default(...args));
@@ -9503,7 +9503,7 @@ const __vite_glob_0_79 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$34() {
-							return (await import('./chunks/index.8187f32f.mjs'));
+							return (await import('./chunks/index.ef8577a3.mjs'));
 						}
 						function Content$34(...args) {
 							return load$34().then((m) => m.default(...args));
@@ -9543,7 +9543,7 @@ const __vite_glob_0_80 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$33() {
-							return (await import('./chunks/index.e315ed3f.mjs'));
+							return (await import('./chunks/index.bc8973d0.mjs'));
 						}
 						function Content$33(...args) {
 							return load$33().then((m) => m.default(...args));
@@ -9583,7 +9583,7 @@ const __vite_glob_0_81 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$32() {
-							return (await import('./chunks/index.30b9eca5.mjs'));
+							return (await import('./chunks/index.286cf6ec.mjs'));
 						}
 						function Content$32(...args) {
 							return load$32().then((m) => m.default(...args));
@@ -9623,7 +9623,7 @@ const __vite_glob_0_82 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$31() {
-							return (await import('./chunks/index.48dbe08a.mjs'));
+							return (await import('./chunks/index.2add21ba.mjs'));
 						}
 						function Content$31(...args) {
 							return load$31().then((m) => m.default(...args));
@@ -9663,7 +9663,7 @@ const __vite_glob_0_83 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$30() {
-							return (await import('./chunks/index.d8571eb1.mjs'));
+							return (await import('./chunks/index.2af56d94.mjs'));
 						}
 						function Content$30(...args) {
 							return load$30().then((m) => m.default(...args));
@@ -9703,7 +9703,7 @@ const __vite_glob_0_84 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2$() {
-							return (await import('./chunks/index.6e7289fc.mjs'));
+							return (await import('./chunks/index.b775bedb.mjs'));
 						}
 						function Content$2$(...args) {
 							return load$2$().then((m) => m.default(...args));
@@ -9743,7 +9743,7 @@ const __vite_glob_0_85 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2_() {
-							return (await import('./chunks/index.d9179731.mjs'));
+							return (await import('./chunks/index.5ee3cca3.mjs'));
 						}
 						function Content$2_(...args) {
 							return load$2_().then((m) => m.default(...args));
@@ -9783,7 +9783,7 @@ const __vite_glob_0_86 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2Z() {
-							return (await import('./chunks/index.0805f99b.mjs'));
+							return (await import('./chunks/index.201add76.mjs'));
 						}
 						function Content$2Z(...args) {
 							return load$2Z().then((m) => m.default(...args));
@@ -9823,7 +9823,7 @@ const __vite_glob_0_87 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2Y() {
-							return (await import('./chunks/index.098bdfb9.mjs'));
+							return (await import('./chunks/index.b33016a5.mjs'));
 						}
 						function Content$2Y(...args) {
 							return load$2Y().then((m) => m.default(...args));
@@ -9863,7 +9863,7 @@ const __vite_glob_0_88 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2X() {
-							return (await import('./chunks/index.d6fdcc1e.mjs'));
+							return (await import('./chunks/index.a3a1dcfc.mjs'));
 						}
 						function Content$2X(...args) {
 							return load$2X().then((m) => m.default(...args));
@@ -9903,7 +9903,7 @@ const __vite_glob_0_89 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2W() {
-							return (await import('./chunks/index.aa1e29d3.mjs'));
+							return (await import('./chunks/index.5880ae07.mjs'));
 						}
 						function Content$2W(...args) {
 							return load$2W().then((m) => m.default(...args));
@@ -9943,7 +9943,7 @@ const __vite_glob_0_90 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2V() {
-							return (await import('./chunks/index.01484d63.mjs'));
+							return (await import('./chunks/index.45884454.mjs'));
 						}
 						function Content$2V(...args) {
 							return load$2V().then((m) => m.default(...args));
@@ -9983,7 +9983,7 @@ const __vite_glob_0_91 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2U() {
-							return (await import('./chunks/index.cb85ddd1.mjs'));
+							return (await import('./chunks/index.839d867c.mjs'));
 						}
 						function Content$2U(...args) {
 							return load$2U().then((m) => m.default(...args));
@@ -10023,7 +10023,7 @@ const __vite_glob_0_92 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2T() {
-							return (await import('./chunks/index.8b044b0a.mjs'));
+							return (await import('./chunks/index.19a80249.mjs'));
 						}
 						function Content$2T(...args) {
 							return load$2T().then((m) => m.default(...args));
@@ -10063,7 +10063,7 @@ const __vite_glob_0_93 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2S() {
-							return (await import('./chunks/index.6cd76b93.mjs'));
+							return (await import('./chunks/index.356a8062.mjs'));
 						}
 						function Content$2S(...args) {
 							return load$2S().then((m) => m.default(...args));
@@ -10103,7 +10103,7 @@ const __vite_glob_0_94 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2R() {
-							return (await import('./chunks/index.dada8c33.mjs'));
+							return (await import('./chunks/index.78c32351.mjs'));
 						}
 						function Content$2R(...args) {
 							return load$2R().then((m) => m.default(...args));
@@ -10143,7 +10143,7 @@ const __vite_glob_0_95 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2Q() {
-							return (await import('./chunks/index.840c8264.mjs'));
+							return (await import('./chunks/index.79fdc702.mjs'));
 						}
 						function Content$2Q(...args) {
 							return load$2Q().then((m) => m.default(...args));
@@ -10183,7 +10183,7 @@ const __vite_glob_0_96 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2P() {
-							return (await import('./chunks/index.c87a121d.mjs'));
+							return (await import('./chunks/index.de97218a.mjs'));
 						}
 						function Content$2P(...args) {
 							return load$2P().then((m) => m.default(...args));
@@ -10223,7 +10223,7 @@ const __vite_glob_0_97 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2O() {
-							return (await import('./chunks/index.881762f1.mjs'));
+							return (await import('./chunks/index.a8746824.mjs'));
 						}
 						function Content$2O(...args) {
 							return load$2O().then((m) => m.default(...args));
@@ -10263,7 +10263,7 @@ const __vite_glob_0_98 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2N() {
-							return (await import('./chunks/index.82c88fd0.mjs'));
+							return (await import('./chunks/index.373c50f1.mjs'));
 						}
 						function Content$2N(...args) {
 							return load$2N().then((m) => m.default(...args));
@@ -10303,7 +10303,7 @@ const __vite_glob_0_99 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePr
 
 						// Deferred
 						async function load$2M() {
-							return (await import('./chunks/index.fa9b8d86.mjs'));
+							return (await import('./chunks/index.0f197a6e.mjs'));
 						}
 						function Content$2M(...args) {
 							return load$2M().then((m) => m.default(...args));
@@ -10343,7 +10343,7 @@ const __vite_glob_0_100 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2L() {
-							return (await import('./chunks/index.4593d40b.mjs'));
+							return (await import('./chunks/index.338b55a8.mjs'));
 						}
 						function Content$2L(...args) {
 							return load$2L().then((m) => m.default(...args));
@@ -10383,7 +10383,7 @@ const __vite_glob_0_101 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2K() {
-							return (await import('./chunks/index.bf4ac2df.mjs'));
+							return (await import('./chunks/index.4cd09e47.mjs'));
 						}
 						function Content$2K(...args) {
 							return load$2K().then((m) => m.default(...args));
@@ -10423,7 +10423,7 @@ const __vite_glob_0_102 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2J() {
-							return (await import('./chunks/index.5cac7ab9.mjs'));
+							return (await import('./chunks/index.95884e4b.mjs'));
 						}
 						function Content$2J(...args) {
 							return load$2J().then((m) => m.default(...args));
@@ -10463,7 +10463,7 @@ const __vite_glob_0_103 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2I() {
-							return (await import('./chunks/index.3c8954e4.mjs'));
+							return (await import('./chunks/index.c184b9ce.mjs'));
 						}
 						function Content$2I(...args) {
 							return load$2I().then((m) => m.default(...args));
@@ -10503,7 +10503,7 @@ const __vite_glob_0_104 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2H() {
-							return (await import('./chunks/index.68027fdc.mjs'));
+							return (await import('./chunks/index.16fd1e82.mjs'));
 						}
 						function Content$2H(...args) {
 							return load$2H().then((m) => m.default(...args));
@@ -10543,7 +10543,7 @@ const __vite_glob_0_105 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2G() {
-							return (await import('./chunks/index.13081bd1.mjs'));
+							return (await import('./chunks/index.eae272aa.mjs'));
 						}
 						function Content$2G(...args) {
 							return load$2G().then((m) => m.default(...args));
@@ -10583,7 +10583,7 @@ const __vite_glob_0_106 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2F() {
-							return (await import('./chunks/index.2b287163.mjs'));
+							return (await import('./chunks/index.371b4048.mjs'));
 						}
 						function Content$2F(...args) {
 							return load$2F().then((m) => m.default(...args));
@@ -10623,7 +10623,7 @@ const __vite_glob_0_107 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2E() {
-							return (await import('./chunks/index.299185cf.mjs'));
+							return (await import('./chunks/index.b2cd916c.mjs'));
 						}
 						function Content$2E(...args) {
 							return load$2E().then((m) => m.default(...args));
@@ -10663,7 +10663,7 @@ const __vite_glob_0_108 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2D() {
-							return (await import('./chunks/index.1bfd3541.mjs'));
+							return (await import('./chunks/index.0e842153.mjs'));
 						}
 						function Content$2D(...args) {
 							return load$2D().then((m) => m.default(...args));
@@ -10703,7 +10703,7 @@ const __vite_glob_0_109 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2C() {
-							return (await import('./chunks/index.c8445038.mjs'));
+							return (await import('./chunks/index.bed30006.mjs'));
 						}
 						function Content$2C(...args) {
 							return load$2C().then((m) => m.default(...args));
@@ -10743,7 +10743,7 @@ const __vite_glob_0_110 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2B() {
-							return (await import('./chunks/index.677be1f7.mjs'));
+							return (await import('./chunks/index.5670c674.mjs'));
 						}
 						function Content$2B(...args) {
 							return load$2B().then((m) => m.default(...args));
@@ -10783,7 +10783,7 @@ const __vite_glob_0_111 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2A() {
-							return (await import('./chunks/index.b8a38fb6.mjs'));
+							return (await import('./chunks/index.008bd474.mjs'));
 						}
 						function Content$2A(...args) {
 							return load$2A().then((m) => m.default(...args));
@@ -10823,7 +10823,7 @@ const __vite_glob_0_112 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2z() {
-							return (await import('./chunks/index.dc870f71.mjs'));
+							return (await import('./chunks/index.55395c6f.mjs'));
 						}
 						function Content$2z(...args) {
 							return load$2z().then((m) => m.default(...args));
@@ -10863,7 +10863,7 @@ const __vite_glob_0_113 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2y() {
-							return (await import('./chunks/index.aeeafc09.mjs'));
+							return (await import('./chunks/index.4fec0b25.mjs'));
 						}
 						function Content$2y(...args) {
 							return load$2y().then((m) => m.default(...args));
@@ -10903,7 +10903,7 @@ const __vite_glob_0_114 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2x() {
-							return (await import('./chunks/index.01173b7b.mjs'));
+							return (await import('./chunks/index.8eaad75a.mjs'));
 						}
 						function Content$2x(...args) {
 							return load$2x().then((m) => m.default(...args));
@@ -10943,7 +10943,7 @@ const __vite_glob_0_115 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2w() {
-							return (await import('./chunks/index.f1c14d64.mjs'));
+							return (await import('./chunks/index.67346d1e.mjs'));
 						}
 						function Content$2w(...args) {
 							return load$2w().then((m) => m.default(...args));
@@ -10983,7 +10983,7 @@ const __vite_glob_0_116 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2v() {
-							return (await import('./chunks/index.cbf2802b.mjs'));
+							return (await import('./chunks/index.201ea0c1.mjs'));
 						}
 						function Content$2v(...args) {
 							return load$2v().then((m) => m.default(...args));
@@ -11023,7 +11023,7 @@ const __vite_glob_0_117 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2u() {
-							return (await import('./chunks/index.3d8357ad.mjs'));
+							return (await import('./chunks/index.0a977814.mjs'));
 						}
 						function Content$2u(...args) {
 							return load$2u().then((m) => m.default(...args));
@@ -11063,7 +11063,7 @@ const __vite_glob_0_118 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2t() {
-							return (await import('./chunks/index.c7ee7b60.mjs'));
+							return (await import('./chunks/index.4a0d2d94.mjs'));
 						}
 						function Content$2t(...args) {
 							return load$2t().then((m) => m.default(...args));
@@ -11103,7 +11103,7 @@ const __vite_glob_0_119 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2s() {
-							return (await import('./chunks/index.85f0e30b.mjs'));
+							return (await import('./chunks/index.4b4674c4.mjs'));
 						}
 						function Content$2s(...args) {
 							return load$2s().then((m) => m.default(...args));
@@ -11143,7 +11143,7 @@ const __vite_glob_0_120 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2r() {
-							return (await import('./chunks/index.4cf062d1.mjs'));
+							return (await import('./chunks/index.0dc83b1b.mjs'));
 						}
 						function Content$2r(...args) {
 							return load$2r().then((m) => m.default(...args));
@@ -11183,7 +11183,7 @@ const __vite_glob_0_121 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2q() {
-							return (await import('./chunks/index.70f6826c.mjs'));
+							return (await import('./chunks/index.f9e4509a.mjs'));
 						}
 						function Content$2q(...args) {
 							return load$2q().then((m) => m.default(...args));
@@ -11223,7 +11223,7 @@ const __vite_glob_0_122 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2p() {
-							return (await import('./chunks/index.4e51aba6.mjs'));
+							return (await import('./chunks/index.bdb7b7d9.mjs'));
 						}
 						function Content$2p(...args) {
 							return load$2p().then((m) => m.default(...args));
@@ -11263,7 +11263,7 @@ const __vite_glob_0_123 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2o() {
-							return (await import('./chunks/index.2aabed91.mjs'));
+							return (await import('./chunks/index.c76fad95.mjs'));
 						}
 						function Content$2o(...args) {
 							return load$2o().then((m) => m.default(...args));
@@ -11303,7 +11303,7 @@ const __vite_glob_0_124 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2n() {
-							return (await import('./chunks/index.df7805e2.mjs'));
+							return (await import('./chunks/index.2c19e82f.mjs'));
 						}
 						function Content$2n(...args) {
 							return load$2n().then((m) => m.default(...args));
@@ -11343,7 +11343,7 @@ const __vite_glob_0_125 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2m() {
-							return (await import('./chunks/index.5751e8f1.mjs'));
+							return (await import('./chunks/index.629522a2.mjs'));
 						}
 						function Content$2m(...args) {
 							return load$2m().then((m) => m.default(...args));
@@ -11383,7 +11383,7 @@ const __vite_glob_0_126 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2l() {
-							return (await import('./chunks/index.a276efd0.mjs'));
+							return (await import('./chunks/index.1a22d128.mjs'));
 						}
 						function Content$2l(...args) {
 							return load$2l().then((m) => m.default(...args));
@@ -11423,7 +11423,7 @@ const __vite_glob_0_127 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2k() {
-							return (await import('./chunks/index.e7f848e3.mjs'));
+							return (await import('./chunks/index.b5467d2b.mjs'));
 						}
 						function Content$2k(...args) {
 							return load$2k().then((m) => m.default(...args));
@@ -11463,7 +11463,7 @@ const __vite_glob_0_128 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2j() {
-							return (await import('./chunks/index.5d5e2051.mjs'));
+							return (await import('./chunks/index.64fb5c4a.mjs'));
 						}
 						function Content$2j(...args) {
 							return load$2j().then((m) => m.default(...args));
@@ -11503,7 +11503,7 @@ const __vite_glob_0_129 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2i() {
-							return (await import('./chunks/index.1c18860b.mjs'));
+							return (await import('./chunks/index.0a085101.mjs'));
 						}
 						function Content$2i(...args) {
 							return load$2i().then((m) => m.default(...args));
@@ -11543,7 +11543,7 @@ const __vite_glob_0_130 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2h() {
-							return (await import('./chunks/index.e2072458.mjs'));
+							return (await import('./chunks/index.e7c1eedf.mjs'));
 						}
 						function Content$2h(...args) {
 							return load$2h().then((m) => m.default(...args));
@@ -11583,7 +11583,7 @@ const __vite_glob_0_131 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2g() {
-							return (await import('./chunks/index.71b1a8e7.mjs'));
+							return (await import('./chunks/index.21215499.mjs'));
 						}
 						function Content$2g(...args) {
 							return load$2g().then((m) => m.default(...args));
@@ -11623,7 +11623,7 @@ const __vite_glob_0_132 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2f() {
-							return (await import('./chunks/index.a738d402.mjs'));
+							return (await import('./chunks/index.1dc8e0ea.mjs'));
 						}
 						function Content$2f(...args) {
 							return load$2f().then((m) => m.default(...args));
@@ -11663,7 +11663,7 @@ const __vite_glob_0_133 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2e() {
-							return (await import('./chunks/index.aadb3562.mjs'));
+							return (await import('./chunks/index.29682f7b.mjs'));
 						}
 						function Content$2e(...args) {
 							return load$2e().then((m) => m.default(...args));
@@ -11703,7 +11703,7 @@ const __vite_glob_0_134 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2d() {
-							return (await import('./chunks/index.3e34574d.mjs'));
+							return (await import('./chunks/index.a2066234.mjs'));
 						}
 						function Content$2d(...args) {
 							return load$2d().then((m) => m.default(...args));
@@ -11743,7 +11743,7 @@ const __vite_glob_0_135 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2c() {
-							return (await import('./chunks/index.2bf929cb.mjs'));
+							return (await import('./chunks/index.7e4c34c1.mjs'));
 						}
 						function Content$2c(...args) {
 							return load$2c().then((m) => m.default(...args));
@@ -11783,7 +11783,7 @@ const __vite_glob_0_136 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2b() {
-							return (await import('./chunks/index.6b91afed.mjs'));
+							return (await import('./chunks/index.a8865bf8.mjs'));
 						}
 						function Content$2b(...args) {
 							return load$2b().then((m) => m.default(...args));
@@ -11823,7 +11823,7 @@ const __vite_glob_0_137 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2a() {
-							return (await import('./chunks/index.4f5c3e14.mjs'));
+							return (await import('./chunks/index.ac7f924a.mjs'));
 						}
 						function Content$2a(...args) {
 							return load$2a().then((m) => m.default(...args));
@@ -11863,7 +11863,7 @@ const __vite_glob_0_138 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$29() {
-							return (await import('./chunks/index.dcfe5a7b.mjs'));
+							return (await import('./chunks/index.3f3f6868.mjs'));
 						}
 						function Content$29(...args) {
 							return load$29().then((m) => m.default(...args));
@@ -11903,7 +11903,7 @@ const __vite_glob_0_139 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$28() {
-							return (await import('./chunks/index.0e07b657.mjs'));
+							return (await import('./chunks/index.f20e56de.mjs'));
 						}
 						function Content$28(...args) {
 							return load$28().then((m) => m.default(...args));
@@ -11943,7 +11943,7 @@ const __vite_glob_0_140 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$27() {
-							return (await import('./chunks/index.854bb71b.mjs'));
+							return (await import('./chunks/index.607acd88.mjs'));
 						}
 						function Content$27(...args) {
 							return load$27().then((m) => m.default(...args));
@@ -11983,7 +11983,7 @@ const __vite_glob_0_141 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$26() {
-							return (await import('./chunks/index.e8396e3d.mjs'));
+							return (await import('./chunks/index.1595df8b.mjs'));
 						}
 						function Content$26(...args) {
 							return load$26().then((m) => m.default(...args));
@@ -12023,7 +12023,7 @@ const __vite_glob_0_142 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$25() {
-							return (await import('./chunks/index.22486899.mjs'));
+							return (await import('./chunks/index.8aa42480.mjs'));
 						}
 						function Content$25(...args) {
 							return load$25().then((m) => m.default(...args));
@@ -12063,7 +12063,7 @@ const __vite_glob_0_143 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$24() {
-							return (await import('./chunks/index.d13fc04f.mjs'));
+							return (await import('./chunks/index.30de2384.mjs'));
 						}
 						function Content$24(...args) {
 							return load$24().then((m) => m.default(...args));
@@ -12103,7 +12103,7 @@ const __vite_glob_0_144 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$23() {
-							return (await import('./chunks/index.df0f06c6.mjs'));
+							return (await import('./chunks/index.7004d7f7.mjs'));
 						}
 						function Content$23(...args) {
 							return load$23().then((m) => m.default(...args));
@@ -12143,7 +12143,7 @@ const __vite_glob_0_145 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$22() {
-							return (await import('./chunks/index.369fdb64.mjs'));
+							return (await import('./chunks/index.165dbd57.mjs'));
 						}
 						function Content$22(...args) {
 							return load$22().then((m) => m.default(...args));
@@ -12183,7 +12183,7 @@ const __vite_glob_0_146 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$21() {
-							return (await import('./chunks/index.86518d49.mjs'));
+							return (await import('./chunks/index.e84d830d.mjs'));
 						}
 						function Content$21(...args) {
 							return load$21().then((m) => m.default(...args));
@@ -12223,7 +12223,7 @@ const __vite_glob_0_147 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$20() {
-							return (await import('./chunks/index.df2079f5.mjs'));
+							return (await import('./chunks/index.f6c60a16.mjs'));
 						}
 						function Content$20(...args) {
 							return load$20().then((m) => m.default(...args));
@@ -12263,7 +12263,7 @@ const __vite_glob_0_148 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1$() {
-							return (await import('./chunks/index.09cd7cd6.mjs'));
+							return (await import('./chunks/index.d31ec5eb.mjs'));
 						}
 						function Content$1$(...args) {
 							return load$1$().then((m) => m.default(...args));
@@ -12303,7 +12303,7 @@ const __vite_glob_0_149 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1_() {
-							return (await import('./chunks/index.4a6de964.mjs'));
+							return (await import('./chunks/index.bbba44de.mjs'));
 						}
 						function Content$1_(...args) {
 							return load$1_().then((m) => m.default(...args));
@@ -12343,7 +12343,7 @@ const __vite_glob_0_150 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1Z() {
-							return (await import('./chunks/index.bf2b767a.mjs'));
+							return (await import('./chunks/index.ca05dc5a.mjs'));
 						}
 						function Content$1Z(...args) {
 							return load$1Z().then((m) => m.default(...args));
@@ -12383,7 +12383,7 @@ const __vite_glob_0_151 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1Y() {
-							return (await import('./chunks/index.83828056.mjs'));
+							return (await import('./chunks/index.3e09aa58.mjs'));
 						}
 						function Content$1Y(...args) {
 							return load$1Y().then((m) => m.default(...args));
@@ -12423,7 +12423,7 @@ const __vite_glob_0_152 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1X() {
-							return (await import('./chunks/index.d6ceeeaf.mjs'));
+							return (await import('./chunks/index.1be45c96.mjs'));
 						}
 						function Content$1X(...args) {
 							return load$1X().then((m) => m.default(...args));
@@ -12463,7 +12463,7 @@ const __vite_glob_0_153 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1W() {
-							return (await import('./chunks/index.f4e824ca.mjs'));
+							return (await import('./chunks/index.f09dfed8.mjs'));
 						}
 						function Content$1W(...args) {
 							return load$1W().then((m) => m.default(...args));
@@ -12503,7 +12503,7 @@ const __vite_glob_0_154 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1V() {
-							return (await import('./chunks/index.fd5a9db2.mjs'));
+							return (await import('./chunks/index.60f09034.mjs'));
 						}
 						function Content$1V(...args) {
 							return load$1V().then((m) => m.default(...args));
@@ -12543,7 +12543,7 @@ const __vite_glob_0_155 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1U() {
-							return (await import('./chunks/index.b2768400.mjs'));
+							return (await import('./chunks/index.1f1b4d4d.mjs'));
 						}
 						function Content$1U(...args) {
 							return load$1U().then((m) => m.default(...args));
@@ -12583,7 +12583,7 @@ const __vite_glob_0_156 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1T() {
-							return (await import('./chunks/index.4d968d8c.mjs'));
+							return (await import('./chunks/index.97f368ea.mjs'));
 						}
 						function Content$1T(...args) {
 							return load$1T().then((m) => m.default(...args));
@@ -12623,7 +12623,7 @@ const __vite_glob_0_157 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1S() {
-							return (await import('./chunks/index.d934edb5.mjs'));
+							return (await import('./chunks/index.b84cb6f0.mjs'));
 						}
 						function Content$1S(...args) {
 							return load$1S().then((m) => m.default(...args));
@@ -12663,7 +12663,7 @@ const __vite_glob_0_158 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1R() {
-							return (await import('./chunks/index.572526d6.mjs'));
+							return (await import('./chunks/index.893a7bef.mjs'));
 						}
 						function Content$1R(...args) {
 							return load$1R().then((m) => m.default(...args));
@@ -12703,7 +12703,7 @@ const __vite_glob_0_159 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1Q() {
-							return (await import('./chunks/index.346d4346.mjs'));
+							return (await import('./chunks/index.18247d93.mjs'));
 						}
 						function Content$1Q(...args) {
 							return load$1Q().then((m) => m.default(...args));
@@ -12743,7 +12743,7 @@ const __vite_glob_0_160 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1P() {
-							return (await import('./chunks/index.19535fe8.mjs'));
+							return (await import('./chunks/index.98e4a532.mjs'));
 						}
 						function Content$1P(...args) {
 							return load$1P().then((m) => m.default(...args));
@@ -12783,7 +12783,7 @@ const __vite_glob_0_161 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1O() {
-							return (await import('./chunks/index.8e5c822b.mjs'));
+							return (await import('./chunks/index.e27096a5.mjs'));
 						}
 						function Content$1O(...args) {
 							return load$1O().then((m) => m.default(...args));
@@ -12823,7 +12823,7 @@ const __vite_glob_0_162 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1N() {
-							return (await import('./chunks/index.74dcc53e.mjs'));
+							return (await import('./chunks/index.cb28b452.mjs'));
 						}
 						function Content$1N(...args) {
 							return load$1N().then((m) => m.default(...args));
@@ -12863,7 +12863,7 @@ const __vite_glob_0_163 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1M() {
-							return (await import('./chunks/index.94cf19ad.mjs'));
+							return (await import('./chunks/index.4a2498dc.mjs'));
 						}
 						function Content$1M(...args) {
 							return load$1M().then((m) => m.default(...args));
@@ -12903,7 +12903,7 @@ const __vite_glob_0_164 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1L() {
-							return (await import('./chunks/index.c43646aa.mjs'));
+							return (await import('./chunks/index.4e2e4065.mjs'));
 						}
 						function Content$1L(...args) {
 							return load$1L().then((m) => m.default(...args));
@@ -12943,7 +12943,7 @@ const __vite_glob_0_165 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1K() {
-							return (await import('./chunks/index.1f5c93a1.mjs'));
+							return (await import('./chunks/index.a8536c20.mjs'));
 						}
 						function Content$1K(...args) {
 							return load$1K().then((m) => m.default(...args));
@@ -12983,7 +12983,7 @@ const __vite_glob_0_166 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1J() {
-							return (await import('./chunks/index.6b87af69.mjs'));
+							return (await import('./chunks/index.4d1e4a50.mjs'));
 						}
 						function Content$1J(...args) {
 							return load$1J().then((m) => m.default(...args));
@@ -13023,7 +13023,7 @@ const __vite_glob_0_167 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1I() {
-							return (await import('./chunks/index.659cb250.mjs'));
+							return (await import('./chunks/index.69a3d3f1.mjs'));
 						}
 						function Content$1I(...args) {
 							return load$1I().then((m) => m.default(...args));
@@ -13063,7 +13063,7 @@ const __vite_glob_0_168 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1H() {
-							return (await import('./chunks/index.499cbfe3.mjs'));
+							return (await import('./chunks/index.79aa62ef.mjs'));
 						}
 						function Content$1H(...args) {
 							return load$1H().then((m) => m.default(...args));
@@ -13103,7 +13103,7 @@ const __vite_glob_0_169 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1G() {
-							return (await import('./chunks/index.21aed04e.mjs'));
+							return (await import('./chunks/index.b2ec1970.mjs'));
 						}
 						function Content$1G(...args) {
 							return load$1G().then((m) => m.default(...args));
@@ -13143,7 +13143,7 @@ const __vite_glob_0_170 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1F() {
-							return (await import('./chunks/index.07bc5a7f.mjs'));
+							return (await import('./chunks/index.75d34c76.mjs'));
 						}
 						function Content$1F(...args) {
 							return load$1F().then((m) => m.default(...args));
@@ -13183,7 +13183,7 @@ const __vite_glob_0_171 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1E() {
-							return (await import('./chunks/index.c068e227.mjs'));
+							return (await import('./chunks/index.c5bc6e31.mjs'));
 						}
 						function Content$1E(...args) {
 							return load$1E().then((m) => m.default(...args));
@@ -13223,7 +13223,7 @@ const __vite_glob_0_172 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1D() {
-							return (await import('./chunks/index.a1375470.mjs'));
+							return (await import('./chunks/index.991592d7.mjs'));
 						}
 						function Content$1D(...args) {
 							return load$1D().then((m) => m.default(...args));
@@ -13263,7 +13263,7 @@ const __vite_glob_0_173 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1C() {
-							return (await import('./chunks/index.5cb2c7d5.mjs'));
+							return (await import('./chunks/index.828d4eb9.mjs'));
 						}
 						function Content$1C(...args) {
 							return load$1C().then((m) => m.default(...args));
@@ -13303,7 +13303,7 @@ const __vite_glob_0_174 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1B() {
-							return (await import('./chunks/index.bc4ef372.mjs'));
+							return (await import('./chunks/index.5cf5e52d.mjs'));
 						}
 						function Content$1B(...args) {
 							return load$1B().then((m) => m.default(...args));
@@ -13343,7 +13343,7 @@ const __vite_glob_0_175 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1A() {
-							return (await import('./chunks/index.1d53d1eb.mjs'));
+							return (await import('./chunks/index.04509f7e.mjs'));
 						}
 						function Content$1A(...args) {
 							return load$1A().then((m) => m.default(...args));
@@ -13383,7 +13383,7 @@ const __vite_glob_0_176 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1z() {
-							return (await import('./chunks/index.43dc8ee7.mjs'));
+							return (await import('./chunks/index.779826d0.mjs'));
 						}
 						function Content$1z(...args) {
 							return load$1z().then((m) => m.default(...args));
@@ -13423,7 +13423,7 @@ const __vite_glob_0_177 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1y() {
-							return (await import('./chunks/index.fb860588.mjs'));
+							return (await import('./chunks/index.3b55af0e.mjs'));
 						}
 						function Content$1y(...args) {
 							return load$1y().then((m) => m.default(...args));
@@ -13463,7 +13463,7 @@ const __vite_glob_0_178 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1x() {
-							return (await import('./chunks/index.cd3e9da3.mjs'));
+							return (await import('./chunks/index.fabe415a.mjs'));
 						}
 						function Content$1x(...args) {
 							return load$1x().then((m) => m.default(...args));
@@ -13503,7 +13503,7 @@ const __vite_glob_0_179 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1w() {
-							return (await import('./chunks/index.54b72fb6.mjs'));
+							return (await import('./chunks/index.bd342777.mjs'));
 						}
 						function Content$1w(...args) {
 							return load$1w().then((m) => m.default(...args));
@@ -13543,7 +13543,7 @@ const __vite_glob_0_180 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1v() {
-							return (await import('./chunks/index.333c015a.mjs'));
+							return (await import('./chunks/index.630e7c97.mjs'));
 						}
 						function Content$1v(...args) {
 							return load$1v().then((m) => m.default(...args));
@@ -13583,7 +13583,7 @@ const __vite_glob_0_181 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1u() {
-							return (await import('./chunks/index.e0836fa4.mjs'));
+							return (await import('./chunks/index.71f76b5f.mjs'));
 						}
 						function Content$1u(...args) {
 							return load$1u().then((m) => m.default(...args));
@@ -13623,7 +13623,7 @@ const __vite_glob_0_182 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1t() {
-							return (await import('./chunks/index.3d56c0d9.mjs'));
+							return (await import('./chunks/index.5d0aa636.mjs'));
 						}
 						function Content$1t(...args) {
 							return load$1t().then((m) => m.default(...args));
@@ -13663,7 +13663,7 @@ const __vite_glob_0_183 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1s() {
-							return (await import('./chunks/index.9cb945f6.mjs'));
+							return (await import('./chunks/index.193120ec.mjs'));
 						}
 						function Content$1s(...args) {
 							return load$1s().then((m) => m.default(...args));
@@ -13703,7 +13703,7 @@ const __vite_glob_0_184 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1r() {
-							return (await import('./chunks/index.bb9513a0.mjs'));
+							return (await import('./chunks/index.3ddec82c.mjs'));
 						}
 						function Content$1r(...args) {
 							return load$1r().then((m) => m.default(...args));
@@ -13743,7 +13743,7 @@ const __vite_glob_0_185 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1q() {
-							return (await import('./chunks/index.bd88110b.mjs'));
+							return (await import('./chunks/index.0d1a059d.mjs'));
 						}
 						function Content$1q(...args) {
 							return load$1q().then((m) => m.default(...args));
@@ -13783,7 +13783,7 @@ const __vite_glob_0_186 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1p() {
-							return (await import('./chunks/index.50305ee0.mjs'));
+							return (await import('./chunks/index.2903b9fd.mjs'));
 						}
 						function Content$1p(...args) {
 							return load$1p().then((m) => m.default(...args));
@@ -13823,7 +13823,7 @@ const __vite_glob_0_187 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1o() {
-							return (await import('./chunks/index.cb2433f6.mjs'));
+							return (await import('./chunks/index.9e52c801.mjs'));
 						}
 						function Content$1o(...args) {
 							return load$1o().then((m) => m.default(...args));
@@ -13863,7 +13863,7 @@ const __vite_glob_0_188 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1n() {
-							return (await import('./chunks/index.08ae3cb3.mjs'));
+							return (await import('./chunks/index.6233c6e2.mjs'));
 						}
 						function Content$1n(...args) {
 							return load$1n().then((m) => m.default(...args));
@@ -13903,7 +13903,7 @@ const __vite_glob_0_189 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1m() {
-							return (await import('./chunks/index.1fbb6371.mjs'));
+							return (await import('./chunks/index.7283f5b4.mjs'));
 						}
 						function Content$1m(...args) {
 							return load$1m().then((m) => m.default(...args));
@@ -13943,7 +13943,7 @@ const __vite_glob_0_190 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1l() {
-							return (await import('./chunks/index.f04b70ff.mjs'));
+							return (await import('./chunks/index.5ada0d90.mjs'));
 						}
 						function Content$1l(...args) {
 							return load$1l().then((m) => m.default(...args));
@@ -13983,7 +13983,7 @@ const __vite_glob_0_191 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1k() {
-							return (await import('./chunks/index.915af7bb.mjs'));
+							return (await import('./chunks/index.b341faa8.mjs'));
 						}
 						function Content$1k(...args) {
 							return load$1k().then((m) => m.default(...args));
@@ -14023,7 +14023,7 @@ const __vite_glob_0_192 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1j() {
-							return (await import('./chunks/index.5d36b37c.mjs'));
+							return (await import('./chunks/index.31c3b448.mjs'));
 						}
 						function Content$1j(...args) {
 							return load$1j().then((m) => m.default(...args));
@@ -14063,7 +14063,7 @@ const __vite_glob_0_193 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1i() {
-							return (await import('./chunks/index.d71a784f.mjs'));
+							return (await import('./chunks/index.827c41ec.mjs'));
 						}
 						function Content$1i(...args) {
 							return load$1i().then((m) => m.default(...args));
@@ -14103,7 +14103,7 @@ const __vite_glob_0_194 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1h() {
-							return (await import('./chunks/index.9b22d05c.mjs'));
+							return (await import('./chunks/index.41060442.mjs'));
 						}
 						function Content$1h(...args) {
 							return load$1h().then((m) => m.default(...args));
@@ -14143,7 +14143,7 @@ const __vite_glob_0_195 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1g() {
-							return (await import('./chunks/index.e955f951.mjs'));
+							return (await import('./chunks/index.253dd354.mjs'));
 						}
 						function Content$1g(...args) {
 							return load$1g().then((m) => m.default(...args));
@@ -14183,7 +14183,7 @@ const __vite_glob_0_196 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1f() {
-							return (await import('./chunks/index.b7a2d5d5.mjs'));
+							return (await import('./chunks/index.7cadae68.mjs'));
 						}
 						function Content$1f(...args) {
 							return load$1f().then((m) => m.default(...args));
@@ -14223,7 +14223,7 @@ const __vite_glob_0_197 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1e() {
-							return (await import('./chunks/index.b027fd88.mjs'));
+							return (await import('./chunks/index.533babae.mjs'));
 						}
 						function Content$1e(...args) {
 							return load$1e().then((m) => m.default(...args));
@@ -14263,7 +14263,7 @@ const __vite_glob_0_198 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1d() {
-							return (await import('./chunks/index.7ad3d93e.mjs'));
+							return (await import('./chunks/index.cbb521b9.mjs'));
 						}
 						function Content$1d(...args) {
 							return load$1d().then((m) => m.default(...args));
@@ -14303,7 +14303,7 @@ const __vite_glob_0_199 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1c() {
-							return (await import('./chunks/index.ab7bcd73.mjs'));
+							return (await import('./chunks/index.75661711.mjs'));
 						}
 						function Content$1c(...args) {
 							return load$1c().then((m) => m.default(...args));
@@ -14343,7 +14343,7 @@ const __vite_glob_0_200 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1b() {
-							return (await import('./chunks/index.0a534776.mjs'));
+							return (await import('./chunks/index.84538623.mjs'));
 						}
 						function Content$1b(...args) {
 							return load$1b().then((m) => m.default(...args));
@@ -14383,7 +14383,7 @@ const __vite_glob_0_201 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1a() {
-							return (await import('./chunks/index.fcb53205.mjs'));
+							return (await import('./chunks/index.b09ad7ae.mjs'));
 						}
 						function Content$1a(...args) {
 							return load$1a().then((m) => m.default(...args));
@@ -14423,7 +14423,7 @@ const __vite_glob_0_202 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$19() {
-							return (await import('./chunks/index.43bb1ad1.mjs'));
+							return (await import('./chunks/index.86bfe2a3.mjs'));
 						}
 						function Content$19(...args) {
 							return load$19().then((m) => m.default(...args));
@@ -14463,7 +14463,7 @@ const __vite_glob_0_203 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$18() {
-							return (await import('./chunks/index.41a5d419.mjs'));
+							return (await import('./chunks/index.c44f4a32.mjs'));
 						}
 						function Content$18(...args) {
 							return load$18().then((m) => m.default(...args));
@@ -14503,7 +14503,7 @@ const __vite_glob_0_204 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$17() {
-							return (await import('./chunks/index.37c78235.mjs'));
+							return (await import('./chunks/index.5109b673.mjs'));
 						}
 						function Content$17(...args) {
 							return load$17().then((m) => m.default(...args));
@@ -14543,7 +14543,7 @@ const __vite_glob_0_205 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$16() {
-							return (await import('./chunks/index.92f8e438.mjs'));
+							return (await import('./chunks/index.2f0db912.mjs'));
 						}
 						function Content$16(...args) {
 							return load$16().then((m) => m.default(...args));
@@ -14583,7 +14583,7 @@ const __vite_glob_0_206 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$15() {
-							return (await import('./chunks/index.7ec06f66.mjs'));
+							return (await import('./chunks/index.f6336f06.mjs'));
 						}
 						function Content$15(...args) {
 							return load$15().then((m) => m.default(...args));
@@ -14623,7 +14623,7 @@ const __vite_glob_0_207 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$14() {
-							return (await import('./chunks/index.99f9480d.mjs'));
+							return (await import('./chunks/index.00b9fa0d.mjs'));
 						}
 						function Content$14(...args) {
 							return load$14().then((m) => m.default(...args));
@@ -14663,7 +14663,7 @@ const __vite_glob_0_208 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$13() {
-							return (await import('./chunks/index.2d814912.mjs'));
+							return (await import('./chunks/index.df20b1f6.mjs'));
 						}
 						function Content$13(...args) {
 							return load$13().then((m) => m.default(...args));
@@ -14703,7 +14703,7 @@ const __vite_glob_0_209 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$12() {
-							return (await import('./chunks/index.a758ea93.mjs'));
+							return (await import('./chunks/index.3c85d16b.mjs'));
 						}
 						function Content$12(...args) {
 							return load$12().then((m) => m.default(...args));
@@ -14743,7 +14743,7 @@ const __vite_glob_0_210 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$11() {
-							return (await import('./chunks/index.3aa9f03a.mjs'));
+							return (await import('./chunks/index.ce26bb9e.mjs'));
 						}
 						function Content$11(...args) {
 							return load$11().then((m) => m.default(...args));
@@ -14783,7 +14783,7 @@ const __vite_glob_0_211 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$10() {
-							return (await import('./chunks/index.b527d324.mjs'));
+							return (await import('./chunks/index.6cef4c11.mjs'));
 						}
 						function Content$10(...args) {
 							return load$10().then((m) => m.default(...args));
@@ -14823,7 +14823,7 @@ const __vite_glob_0_212 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$$() {
-							return (await import('./chunks/index.3425b903.mjs'));
+							return (await import('./chunks/index.c3da1842.mjs'));
 						}
 						function Content$$(...args) {
 							return load$$().then((m) => m.default(...args));
@@ -14863,7 +14863,7 @@ const __vite_glob_0_213 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$_() {
-							return (await import('./chunks/index.47fd8eb7.mjs'));
+							return (await import('./chunks/index.c4b842c0.mjs'));
 						}
 						function Content$_(...args) {
 							return load$_().then((m) => m.default(...args));
@@ -14903,7 +14903,7 @@ const __vite_glob_0_214 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$Z() {
-							return (await import('./chunks/index.dd5a1925.mjs'));
+							return (await import('./chunks/index.9135463a.mjs'));
 						}
 						function Content$Z(...args) {
 							return load$Z().then((m) => m.default(...args));
@@ -14943,7 +14943,7 @@ const __vite_glob_0_215 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$Y() {
-							return (await import('./chunks/index.5b4cc1bf.mjs'));
+							return (await import('./chunks/index.cc748340.mjs'));
 						}
 						function Content$Y(...args) {
 							return load$Y().then((m) => m.default(...args));
@@ -14983,7 +14983,7 @@ const __vite_glob_0_216 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$X() {
-							return (await import('./chunks/index.f3376ab6.mjs'));
+							return (await import('./chunks/index.a77aa1a2.mjs'));
 						}
 						function Content$X(...args) {
 							return load$X().then((m) => m.default(...args));
@@ -15023,7 +15023,7 @@ const __vite_glob_0_217 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$W() {
-							return (await import('./chunks/index.985765e2.mjs'));
+							return (await import('./chunks/index.9033d22b.mjs'));
 						}
 						function Content$W(...args) {
 							return load$W().then((m) => m.default(...args));
@@ -15063,7 +15063,7 @@ const __vite_glob_0_218 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$V() {
-							return (await import('./chunks/index.2b824119.mjs'));
+							return (await import('./chunks/index.90376256.mjs'));
 						}
 						function Content$V(...args) {
 							return load$V().then((m) => m.default(...args));
@@ -15103,7 +15103,7 @@ const __vite_glob_0_219 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$U() {
-							return (await import('./chunks/index.253cb502.mjs'));
+							return (await import('./chunks/index.3f47d912.mjs'));
 						}
 						function Content$U(...args) {
 							return load$U().then((m) => m.default(...args));
@@ -15143,7 +15143,7 @@ const __vite_glob_0_220 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$T() {
-							return (await import('./chunks/index.4d298b50.mjs'));
+							return (await import('./chunks/index.08fd1853.mjs'));
 						}
 						function Content$T(...args) {
 							return load$T().then((m) => m.default(...args));
@@ -15183,7 +15183,7 @@ const __vite_glob_0_221 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$S() {
-							return (await import('./chunks/index.379d6257.mjs'));
+							return (await import('./chunks/index.ebd1b954.mjs'));
 						}
 						function Content$S(...args) {
 							return load$S().then((m) => m.default(...args));
@@ -15223,7 +15223,7 @@ const __vite_glob_0_222 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$R() {
-							return (await import('./chunks/index.3a51e735.mjs'));
+							return (await import('./chunks/index.e76e9302.mjs'));
 						}
 						function Content$R(...args) {
 							return load$R().then((m) => m.default(...args));
@@ -15263,7 +15263,7 @@ const __vite_glob_0_223 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$Q() {
-							return (await import('./chunks/index.3e42cda0.mjs'));
+							return (await import('./chunks/index.5e0669dd.mjs'));
 						}
 						function Content$Q(...args) {
 							return load$Q().then((m) => m.default(...args));
@@ -15303,7 +15303,7 @@ const __vite_glob_0_224 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$P() {
-							return (await import('./chunks/index.8232df96.mjs'));
+							return (await import('./chunks/index.74f93bc4.mjs'));
 						}
 						function Content$P(...args) {
 							return load$P().then((m) => m.default(...args));
@@ -15343,7 +15343,7 @@ const __vite_glob_0_225 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$O() {
-							return (await import('./chunks/index.2f95469a.mjs'));
+							return (await import('./chunks/index.61564a68.mjs'));
 						}
 						function Content$O(...args) {
 							return load$O().then((m) => m.default(...args));
@@ -15383,7 +15383,7 @@ const __vite_glob_0_226 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$N() {
-							return (await import('./chunks/index.4fa71a65.mjs'));
+							return (await import('./chunks/index.b4e2c74c.mjs'));
 						}
 						function Content$N(...args) {
 							return load$N().then((m) => m.default(...args));
@@ -15423,7 +15423,7 @@ const __vite_glob_0_227 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$M() {
-							return (await import('./chunks/index.87d5bf32.mjs'));
+							return (await import('./chunks/index.e4df5d6c.mjs'));
 						}
 						function Content$M(...args) {
 							return load$M().then((m) => m.default(...args));
@@ -15463,7 +15463,7 @@ const __vite_glob_0_228 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$L() {
-							return (await import('./chunks/index.4a0704fd.mjs'));
+							return (await import('./chunks/index.b378a854.mjs'));
 						}
 						function Content$L(...args) {
 							return load$L().then((m) => m.default(...args));
@@ -15503,7 +15503,7 @@ const __vite_glob_0_229 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$K() {
-							return (await import('./chunks/index.1e0a9bb1.mjs'));
+							return (await import('./chunks/index.3c5becf4.mjs'));
 						}
 						function Content$K(...args) {
 							return load$K().then((m) => m.default(...args));
@@ -15543,7 +15543,7 @@ const __vite_glob_0_230 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$J() {
-							return (await import('./chunks/index.249c21a5.mjs'));
+							return (await import('./chunks/index.bc861102.mjs'));
 						}
 						function Content$J(...args) {
 							return load$J().then((m) => m.default(...args));
@@ -15583,7 +15583,7 @@ const __vite_glob_0_231 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$I() {
-							return (await import('./chunks/index.e68a46f6.mjs'));
+							return (await import('./chunks/index.2e33947e.mjs'));
 						}
 						function Content$I(...args) {
 							return load$I().then((m) => m.default(...args));
@@ -15623,7 +15623,7 @@ const __vite_glob_0_232 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$H() {
-							return (await import('./chunks/index.57436852.mjs'));
+							return (await import('./chunks/index.ef9b62ab.mjs'));
 						}
 						function Content$H(...args) {
 							return load$H().then((m) => m.default(...args));
@@ -15663,7 +15663,7 @@ const __vite_glob_0_233 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$G() {
-							return (await import('./chunks/index.79525600.mjs'));
+							return (await import('./chunks/index.403c451b.mjs'));
 						}
 						function Content$G(...args) {
 							return load$G().then((m) => m.default(...args));
@@ -15703,7 +15703,7 @@ const __vite_glob_0_234 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$F() {
-							return (await import('./chunks/index.68d7eb95.mjs'));
+							return (await import('./chunks/index.4ada0acb.mjs'));
 						}
 						function Content$F(...args) {
 							return load$F().then((m) => m.default(...args));
@@ -15743,7 +15743,7 @@ const __vite_glob_0_235 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$E() {
-							return (await import('./chunks/index.6ec7a2aa.mjs'));
+							return (await import('./chunks/index.70c04f09.mjs'));
 						}
 						function Content$E(...args) {
 							return load$E().then((m) => m.default(...args));
@@ -15783,7 +15783,7 @@ const __vite_glob_0_236 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$D() {
-							return (await import('./chunks/index.12aab77f.mjs'));
+							return (await import('./chunks/index.4b3e3bc0.mjs'));
 						}
 						function Content$D(...args) {
 							return load$D().then((m) => m.default(...args));
@@ -15823,7 +15823,7 @@ const __vite_glob_0_237 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$C() {
-							return (await import('./chunks/index.77c3a82e.mjs'));
+							return (await import('./chunks/index.05a66e1c.mjs'));
 						}
 						function Content$C(...args) {
 							return load$C().then((m) => m.default(...args));
@@ -15863,7 +15863,7 @@ const __vite_glob_0_238 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$B() {
-							return (await import('./chunks/index.247950ec.mjs'));
+							return (await import('./chunks/index.0e7f8604.mjs'));
 						}
 						function Content$B(...args) {
 							return load$B().then((m) => m.default(...args));
@@ -15903,7 +15903,7 @@ const __vite_glob_0_239 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$A() {
-							return (await import('./chunks/index.0059ab92.mjs'));
+							return (await import('./chunks/index.f11ee9ec.mjs'));
 						}
 						function Content$A(...args) {
 							return load$A().then((m) => m.default(...args));
@@ -15943,7 +15943,7 @@ const __vite_glob_0_240 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$z() {
-							return (await import('./chunks/index.bd6e0947.mjs'));
+							return (await import('./chunks/index.07ded5b1.mjs'));
 						}
 						function Content$z(...args) {
 							return load$z().then((m) => m.default(...args));
@@ -15983,7 +15983,7 @@ const __vite_glob_0_241 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$y() {
-							return (await import('./chunks/index.9ce47fe7.mjs'));
+							return (await import('./chunks/index.772b1f71.mjs'));
 						}
 						function Content$y(...args) {
 							return load$y().then((m) => m.default(...args));
@@ -16023,7 +16023,7 @@ const __vite_glob_0_242 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$x() {
-							return (await import('./chunks/index.f73d20d7.mjs'));
+							return (await import('./chunks/index.090c51ab.mjs'));
 						}
 						function Content$x(...args) {
 							return load$x().then((m) => m.default(...args));
@@ -16063,7 +16063,7 @@ const __vite_glob_0_243 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$w() {
-							return (await import('./chunks/index.de351e0b.mjs'));
+							return (await import('./chunks/index.242aac29.mjs'));
 						}
 						function Content$w(...args) {
 							return load$w().then((m) => m.default(...args));
@@ -16103,7 +16103,7 @@ const __vite_glob_0_244 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$v() {
-							return (await import('./chunks/index.5c2ae943.mjs'));
+							return (await import('./chunks/index.178b4bbc.mjs'));
 						}
 						function Content$v(...args) {
 							return load$v().then((m) => m.default(...args));
@@ -16143,7 +16143,7 @@ const __vite_glob_0_245 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$u() {
-							return (await import('./chunks/index.acafdf4e.mjs'));
+							return (await import('./chunks/index.799d7539.mjs'));
 						}
 						function Content$u(...args) {
 							return load$u().then((m) => m.default(...args));
@@ -16183,7 +16183,7 @@ const __vite_glob_0_246 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$t() {
-							return (await import('./chunks/index.f859daef.mjs'));
+							return (await import('./chunks/index.6a30b1ba.mjs'));
 						}
 						function Content$t(...args) {
 							return load$t().then((m) => m.default(...args));
@@ -16223,7 +16223,7 @@ const __vite_glob_0_247 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$s() {
-							return (await import('./chunks/index.77cd1da1.mjs'));
+							return (await import('./chunks/index.02bdca08.mjs'));
 						}
 						function Content$s(...args) {
 							return load$s().then((m) => m.default(...args));
@@ -16263,7 +16263,7 @@ const __vite_glob_0_248 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$r() {
-							return (await import('./chunks/index.7d1c2462.mjs'));
+							return (await import('./chunks/index.1b399402.mjs'));
 						}
 						function Content$r(...args) {
 							return load$r().then((m) => m.default(...args));
@@ -16303,7 +16303,7 @@ const __vite_glob_0_249 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$q() {
-							return (await import('./chunks/index.d3f6cc59.mjs'));
+							return (await import('./chunks/index.824d1e3f.mjs'));
 						}
 						function Content$q(...args) {
 							return load$q().then((m) => m.default(...args));
@@ -16343,7 +16343,7 @@ const __vite_glob_0_250 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$p() {
-							return (await import('./chunks/index.79a671f1.mjs'));
+							return (await import('./chunks/index.acb8341c.mjs'));
 						}
 						function Content$p(...args) {
 							return load$p().then((m) => m.default(...args));
@@ -16383,7 +16383,7 @@ const __vite_glob_0_251 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$o() {
-							return (await import('./chunks/index.0ac289a2.mjs'));
+							return (await import('./chunks/index.5d3a8125.mjs'));
 						}
 						function Content$o(...args) {
 							return load$o().then((m) => m.default(...args));
@@ -16423,7 +16423,7 @@ const __vite_glob_0_252 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$n() {
-							return (await import('./chunks/index.f28af087.mjs'));
+							return (await import('./chunks/index.9ea4ce03.mjs'));
 						}
 						function Content$n(...args) {
 							return load$n().then((m) => m.default(...args));
@@ -16463,7 +16463,7 @@ const __vite_glob_0_253 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$m() {
-							return (await import('./chunks/index.ff4f3a2a.mjs'));
+							return (await import('./chunks/index.2820275d.mjs'));
 						}
 						function Content$m(...args) {
 							return load$m().then((m) => m.default(...args));
@@ -16503,7 +16503,7 @@ const __vite_glob_0_254 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$l() {
-							return (await import('./chunks/index.144b0cd3.mjs'));
+							return (await import('./chunks/index.052a0544.mjs'));
 						}
 						function Content$l(...args) {
 							return load$l().then((m) => m.default(...args));
@@ -16543,7 +16543,7 @@ const __vite_glob_0_255 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$k() {
-							return (await import('./chunks/index.d4b158d0.mjs'));
+							return (await import('./chunks/index.d72e3d75.mjs'));
 						}
 						function Content$k(...args) {
 							return load$k().then((m) => m.default(...args));
@@ -16583,7 +16583,7 @@ const __vite_glob_0_256 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$j() {
-							return (await import('./chunks/index.6f1ce5c3.mjs'));
+							return (await import('./chunks/index.770ce6e7.mjs'));
 						}
 						function Content$j(...args) {
 							return load$j().then((m) => m.default(...args));
@@ -16623,7 +16623,7 @@ const __vite_glob_0_257 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$i() {
-							return (await import('./chunks/index.ce22cf55.mjs'));
+							return (await import('./chunks/index.65e29b40.mjs'));
 						}
 						function Content$i(...args) {
 							return load$i().then((m) => m.default(...args));
@@ -16663,7 +16663,7 @@ const __vite_glob_0_258 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$h() {
-							return (await import('./chunks/index.69e31c03.mjs'));
+							return (await import('./chunks/index.39aba412.mjs'));
 						}
 						function Content$h(...args) {
 							return load$h().then((m) => m.default(...args));
@@ -16703,7 +16703,7 @@ const __vite_glob_0_259 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$g() {
-							return (await import('./chunks/index.688cfff4.mjs'));
+							return (await import('./chunks/index.40239671.mjs'));
 						}
 						function Content$g(...args) {
 							return load$g().then((m) => m.default(...args));
@@ -16743,7 +16743,7 @@ const __vite_glob_0_260 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$f() {
-							return (await import('./chunks/index.e00720df.mjs'));
+							return (await import('./chunks/index.28ef35ac.mjs'));
 						}
 						function Content$f(...args) {
 							return load$f().then((m) => m.default(...args));
@@ -16783,7 +16783,7 @@ const __vite_glob_0_261 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$e() {
-							return (await import('./chunks/index.52f83eed.mjs'));
+							return (await import('./chunks/index.ff3627ef.mjs'));
 						}
 						function Content$e(...args) {
 							return load$e().then((m) => m.default(...args));
@@ -16823,7 +16823,7 @@ const __vite_glob_0_262 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$d() {
-							return (await import('./chunks/index.573c534b.mjs'));
+							return (await import('./chunks/index.d7474707.mjs'));
 						}
 						function Content$d(...args) {
 							return load$d().then((m) => m.default(...args));
@@ -16863,7 +16863,7 @@ const __vite_glob_0_263 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$c() {
-							return (await import('./chunks/index.7d364b05.mjs'));
+							return (await import('./chunks/index.ab01dc89.mjs'));
 						}
 						function Content$c(...args) {
 							return load$c().then((m) => m.default(...args));
@@ -16903,7 +16903,7 @@ const __vite_glob_0_264 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$b() {
-							return (await import('./chunks/index.0153985a.mjs'));
+							return (await import('./chunks/index.3348f811.mjs'));
 						}
 						function Content$b(...args) {
 							return load$b().then((m) => m.default(...args));
@@ -16943,7 +16943,7 @@ const __vite_glob_0_265 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$a() {
-							return (await import('./chunks/index.ae19e332.mjs'));
+							return (await import('./chunks/index.6805fc44.mjs'));
 						}
 						function Content$a(...args) {
 							return load$a().then((m) => m.default(...args));
@@ -16983,7 +16983,7 @@ const __vite_glob_0_266 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$9() {
-							return (await import('./chunks/index.af3f2b5b.mjs'));
+							return (await import('./chunks/index.88819dfa.mjs'));
 						}
 						function Content$9(...args) {
 							return load$9().then((m) => m.default(...args));
@@ -17023,7 +17023,7 @@ const __vite_glob_0_267 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$8() {
-							return (await import('./chunks/index.49197110.mjs'));
+							return (await import('./chunks/index.38380b62.mjs'));
 						}
 						function Content$8(...args) {
 							return load$8().then((m) => m.default(...args));
@@ -17063,7 +17063,7 @@ const __vite_glob_0_268 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$7() {
-							return (await import('./chunks/index.685d4333.mjs'));
+							return (await import('./chunks/index.2f16bf0f.mjs'));
 						}
 						function Content$7(...args) {
 							return load$7().then((m) => m.default(...args));
@@ -17103,7 +17103,7 @@ const __vite_glob_0_269 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$6() {
-							return (await import('./chunks/index.45800ce3.mjs'));
+							return (await import('./chunks/index.c696f965.mjs'));
 						}
 						function Content$6(...args) {
 							return load$6().then((m) => m.default(...args));
@@ -17143,7 +17143,7 @@ const __vite_glob_0_270 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$5() {
-							return (await import('./chunks/index.1f423c73.mjs'));
+							return (await import('./chunks/index.a0f97850.mjs'));
 						}
 						function Content$5(...args) {
 							return load$5().then((m) => m.default(...args));
@@ -17183,7 +17183,7 @@ const __vite_glob_0_271 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$4() {
-							return (await import('./chunks/index.f1406507.mjs'));
+							return (await import('./chunks/index.2ead83d5.mjs'));
 						}
 						function Content$4(...args) {
 							return load$4().then((m) => m.default(...args));
@@ -17223,7 +17223,7 @@ const __vite_glob_0_272 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$3() {
-							return (await import('./chunks/index.fced4fbd.mjs'));
+							return (await import('./chunks/index.2c88830d.mjs'));
 						}
 						function Content$3(...args) {
 							return load$3().then((m) => m.default(...args));
@@ -17263,7 +17263,7 @@ const __vite_glob_0_273 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$2() {
-							return (await import('./chunks/index.24f1d4b3.mjs'));
+							return (await import('./chunks/index.f7bbecac.mjs'));
 						}
 						function Content$2(...args) {
 							return load$2().then((m) => m.default(...args));
@@ -17303,7 +17303,7 @@ const __vite_glob_0_274 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load$1() {
-							return (await import('./chunks/index.8303b8f9.mjs'));
+							return (await import('./chunks/index.b9193efa.mjs'));
 						}
 						function Content$1(...args) {
 							return load$1().then((m) => m.default(...args));
@@ -17343,7 +17343,7 @@ const __vite_glob_0_275 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineP
 
 						// Deferred
 						async function load() {
-							return (await import('./chunks/index.a4e8d339.mjs'));
+							return (await import('./chunks/index.a537af9d.mjs'));
 						}
 						function Content(...args) {
 							return load().then((m) => m.default(...args));
@@ -17393,7 +17393,7 @@ async function getPosts() {
 }
 const get = async () => rss({
   title: "Deepgram Blog",
-  site: ({}).URL,
+  site: process.env.URL,
   description: "Deepgram Automatic Speech Recognition helps you build voice applications with better, faster, more economical transcription at scale.",
   items: await getPosts(),
   xmlns: {
@@ -17406,7 +17406,7 @@ const _page5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	get
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$a = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/posts/[...page].astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$a = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/posts/[...page].astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$$1 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
   Astro2.self = $$$1;
@@ -17423,7 +17423,7 @@ const _page6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$3
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$9 = createAstro("/Users/sandrarodgers/web-next/blog/src/components/tags/Hero.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$9 = createAstro("/Users/sandrarodgers/web-next/blog/src/components/tags/Hero.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Hero = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
   Astro2.self = $$Hero;
@@ -17438,7 +17438,7 @@ const $$Hero = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/tags/Hero.astro");
 
-const $$Astro$8 = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/tags/index.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$8 = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/tags/index.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
   Astro2.self = $$Index;
@@ -17487,7 +17487,7 @@ const _page7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$2
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$7 = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/tags/[tag]/[...page].astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$7 = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/tags/[tag]/[...page].astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$ = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
   Astro2.self = $$;
@@ -17504,7 +17504,7 @@ const _page8 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	url: $$url$1
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$Astro$6 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/HasGutters.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$6 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/layout/HasGutters.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$HasGutters = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
   Astro2.self = $$HasGutters;
@@ -17515,7 +17515,7 @@ const $$HasGutters = createComponent(async ($$result, $$props, $$slots) => {
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/layout/HasGutters.astro");
 
-const $$Astro$5 = createAstro("/Users/sandrarodgers/web-next/blog/src/components/posts/PostImage.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$5 = createAstro("/Users/sandrarodgers/web-next/blog/src/components/posts/PostImage.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$PostImage = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
   Astro2.self = $$PostImage;
@@ -17523,7 +17523,7 @@ const $$PostImage = createComponent(async ($$result, $$props, $$slots) => {
   return renderTemplate`${renderComponent($$result, "ImageSrcSet", $$ImageSrcSet, { "class": "shadow-dg w-full rounded-[1.34px]", "filename": post.content.cover_image.filename, "alt": post.content.title })}`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/posts/PostImage.astro");
 
-const $$Astro$4 = createAstro("/Users/sandrarodgers/web-next/blog/src/components/posts/PostHeading.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$4 = createAstro("/Users/sandrarodgers/web-next/blog/src/components/posts/PostHeading.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$PostHeading = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$PostHeading;
@@ -17533,7 +17533,7 @@ const $$PostHeading = createComponent(async ($$result, $$props, $$slots) => {
 </h1>`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/posts/PostHeading.astro");
 
-const $$Astro$3 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/forms/Feedback.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$3 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/forms/Feedback.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$Feedback = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$Feedback;
@@ -17656,7 +17656,7 @@ const $$Feedback = createComponent(async ($$result, $$props, $$slots) => {
 `;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/forms/Feedback.astro");
 
-const $$Astro$2 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/lists/TagsList.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$2 = createAstro("/Users/sandrarodgers/web-next/blog/src/shared/components/lists/TagsList.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$TagsList = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$TagsList;
@@ -17672,7 +17672,7 @@ const $$TagsList = createComponent(async ($$result, $$props, $$slots) => {
 </ul>`;
 }, "/Users/sandrarodgers/web-next/blog/src/shared/components/lists/TagsList.astro");
 
-const $$Astro$1 = createAstro("/Users/sandrarodgers/web-next/blog/src/components/posts/RelatedResources.astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro$1 = createAstro("/Users/sandrarodgers/web-next/blog/src/components/posts/RelatedResources.astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$RelatedResources = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$RelatedResources;
@@ -17693,7 +17693,7 @@ const $$RelatedResources = createComponent(async ($$result, $$props, $$slots) =>
 </div>`;
 }, "/Users/sandrarodgers/web-next/blog/src/components/posts/RelatedResources.astro");
 
-const $$Astro = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/[slug].astro", "", "file:///Users/sandrarodgers/web-next/blog/");
+const $$Astro = createAstro("/Users/sandrarodgers/web-next/blog/src/pages/[slug].astro", "https://blog.deepgram.com/", "file:///Users/sandrarodgers/web-next/blog/");
 const $$slug = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$slug;
@@ -17962,7 +17962,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/index.9c23bf80.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"hoisted.35d832ba.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css","assets/index.9c23bf80.css"],"scripts":[{"type":"external","value":"hoisted.35d832ba.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/categories","type":"page","pattern":"^\\/categories\\/?$","segments":[[{"content":"categories","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/categories/index.astro","pathname":"/categories","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/categories/[category]/[...page]","type":"page","pattern":"^\\/categories\\/([^/]+?)(?:\\/(.*?))?\\/?$","segments":[[{"content":"categories","dynamic":false,"spread":false}],[{"content":"category","dynamic":true,"spread":false}],[{"content":"...page","dynamic":true,"spread":true}]],"params":["category","...page"],"component":"src/pages/categories/[category]/[...page].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css","assets/_slug_.669a2d1d.css","assets/_slug_.99ec8802.css"],"scripts":[{"type":"external","value":"hoisted.35d832ba.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/authors","type":"page","pattern":"^\\/authors\\/?$","segments":[[{"content":"authors","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/authors/index.astro","pathname":"/authors","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/authors/[author]/[...page]","type":"page","pattern":"^\\/authors\\/([^/]+?)(?:\\/(.*?))?\\/?$","segments":[[{"content":"authors","dynamic":false,"spread":false}],[{"content":"author","dynamic":true,"spread":false}],[{"content":"...page","dynamic":true,"spread":true}]],"params":["author","...page"],"component":"src/pages/authors/[author]/[...page].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/rss.xml","type":"endpoint","pattern":"^\\/rss\\.xml$","segments":[[{"content":"rss.xml","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/rss.xml.js","pathname":"/rss.xml","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/posts/[...page]","type":"page","pattern":"^\\/posts(?:\\/(.*?))?\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"...page","dynamic":true,"spread":true}]],"params":["...page"],"component":"src/pages/posts/[...page].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"hoisted.35d832ba.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/tags","type":"page","pattern":"^\\/tags\\/?$","segments":[[{"content":"tags","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/tags/index.astro","pathname":"/tags","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/tags/[tag]/[...page]","type":"page","pattern":"^\\/tags\\/([^/]+?)(?:\\/(.*?))?\\/?$","segments":[[{"content":"tags","dynamic":false,"spread":false}],[{"content":"tag","dynamic":true,"spread":false}],[{"content":"...page","dynamic":true,"spread":true}]],"params":["tag","...page"],"component":"src/pages/tags/[tag]/[...page].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/_slug_.123048a7.css","assets/index.9c23bf80.css","assets/_slug_.c2747b55.css","assets/_slug_.669a2d1d.css","assets/_slug_.99ec8802.css"],"scripts":[{"type":"external","value":"hoisted.d8f274fa.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/[slug]","type":"page","pattern":"^\\/([^/]+?)\\/?$","segments":[[{"content":"slug","dynamic":true,"spread":false}]],"params":["slug"],"component":"src/pages/[slug].astro","_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":true,"isExperimentalContentCollections":false,"contentDir":"file:///Users/sandrarodgers/web-next/blog/src/content/"},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/2021-state-of-automatic-speech-recognition-infographic/index.md":"chunks/index.08f91a6a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/5-ways-understand-voice-of-the-customer-voice-technology/index.md":"chunks/index.48a0a942.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/6-challenges-asr-hindi/index.md":"chunks/index.eae9209d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/a-conversation-with-asian-american-pacific-islander-deepgrammers/index.md":"chunks/index.6e6f4a87.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/a-note-to-our-customers-openai-whispers-entrance-into-voice/index.md":"chunks/index.5917e9e0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/a-voice-destin-ation-project-voice-x-2021/index.md":"chunks/index.6ca18c3e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/accuracy-matters-improving-speech-recognition-through-data-processes-esteban-gorupicz-ceo-atexto-project-voice-x/index.md":"chunks/index.93cf8df0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/adding-subtitles-to-html-video-element/index.md":"chunks/index.65b3666b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-bias-in-machine-learning/index.md":"chunks/index.ed9da340.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-different-types-of-machine-learning/index.md":"chunks/index.e1708e7e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-how-do-you-use-a-neural-network-in-your-business/index.md":"chunks/index.d38a1889.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-how-will-data-influence-the-future-of-machine-learning/index.md":"chunks/index.c6df3fbb.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-what-does-an-ai-tranformation-look-like/index.md":"chunks/index.fd7436f6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-what-does-it-mean-for-a-machine-to-learn/index.md":"chunks/index.f678512a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-what-will-the-ai-utopia-look-like/index.md":"chunks/index.eb652246.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/all-about-transcription-for-real-time-audio-streaming/index.md":"chunks/index.4099af18.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ar-note-taking-airnote/index.md":"chunks/index.0b2381dd.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/asr-important-deaf-hoh-community/index.md":"chunks/index.5583747f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/index.md":"chunks/index.8f43d698.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/autobubble-youtube-speech-bubbles/index.md":"chunks/index.5a90cc57.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/automatic-speech-recognition-education/index.md":"chunks/index.edb207a1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/automatically-transcribe-summarize-and-send-phone-call-summaries/index.md":"chunks/index.f0aa54ba.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/automatically-transcribing-podcast-episodes-with-pipedream-and-python/index.md":"chunks/index.7ddf921a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/bekah-joins-deepgram/index.md":"chunks/index.fb3893ae.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/best-8-deepgram-projects-hack-cambridge/index.md":"chunks/index.df1de17b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/best-python-audio-manipulation-tools/index.md":"chunks/index.2f5c1e69.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/best-speech-recognition-model-business/index.md":"chunks/index.df94590b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/best-speech-to-text-apis/index.md":"chunks/index.da72c680.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/brian-barrow-hello/index.md":"chunks/index.06c1c21f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-livestream-web-application-vue-and-express-setup/index.md":"chunks/index.736eeebf.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/index.md":"chunks/index.e8b992d5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-presentation-coaching-application-with-recall/index.md":"chunks/index.8376292d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-todo-list-with-pinia-and-vue-3/index.md":"chunks/index.e12a51a1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-voice-controlled-to-do-list-app-with-deepgram-and-vue-3/index.md":"chunks/index.71868ce2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-npm-packages/index.md":"chunks/index.22f5d2f1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-with-the-official-deepgram-sdks/index.md":"chunks/index.5eef1925.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/building-404-pages-that-bring-joy/index.md":"chunks/index.04dca39f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/building-a-conversational-ai-flow-with-deepgram/index.md":"chunks/index.c5fe2d8f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/building-the-future-of-voice-scott-stephenson-ceo-deepgram-project-voice-x/index.md":"chunks/index.32b23cbc.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/celebrating-black-history-month-with-a-vision-of-more-inclusive-speech-recognition/index.md":"chunks/index.b2a9cce4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/celebrating-jewish-american-history-month/index.md":"chunks/index.37ecd620.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/censor-profanity-nodejs/index.md":"chunks/index.217bf97f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/chili-pepper/index.md":"chunks/index.d8c5fd30.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/chromium-kiosk-pi/index.md":"chunks/index.1a0e68ad.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/classroom-captioner/index.md":"chunks/index.a3a976c1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/closed-captioning-companies-use-asr/index.md":"chunks/index.14f35a10.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/cloud-to-butt/index.md":"chunks/index.c7a47de0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/coding-website-with-voice/index.md":"chunks/index.73934199.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/comic-books-videos-yack/index.md":"chunks/index.ce876037.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/complete-guide-punctuation-capitalization-speech-to-text/index.md":"chunks/index.1f03c8d9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/contact-center-as-a-service-utilize-solutions/index.md":"chunks/index.8fe6fb36.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/contextual-video-overlay-tomscottplus/index.md":"chunks/index.fdc8169a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/conversational-ai-platforms-utilize-top-asr-tools/index.md":"chunks/index.4c783760.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/conversational-intelligence-podcast-with-scott-stephenson/index.md":"chunks/index.a5ab2e97.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/create-readable-transcripts-for-podcasts/index.md":"chunks/index.2d7100de.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/cross-platform-nuget-dotnet/index.md":"chunks/index.bb262493.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/customer-story-rideshare-smartrhino-deepgram/index.md":"chunks/index.0bc55272.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/customer-story-stanford-moves-education-forward-with-deepgram/index.md":"chunks/index.fd6ae62d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/cześć-we’re-releasing-a-base-polish-beta-speech-to-text-language-model/index.md":"chunks/index.7ccac9c1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/daily-video-live-transcription/index.md":"chunks/index.9fcfe8f4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deep-learning-asr-for-business/index.md":"chunks/index.8febdd7d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deep-learning-speech-recognition/index.md":"chunks/index.d9aefb9f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-and-recall-ai-partner-to-make-it-easier-for-developers-to-extract-insights-from-meeting-audio-and-automate-tedious-workflows/index.md":"chunks/index.4c5a8b8a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-announces-unimrcp-integration-to-power-modern-customer-experience/index.md":"chunks/index.82f183e8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-diversity-inclusion/index.md":"chunks/index.a6618154.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-enables-developers-to-build-the-future-of-voice-with-suite-of-new-features-and-10-million-in-free-speech-recognition/index.md":"chunks/index.5d48776f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-enters-strategic-investment-agreement-with-in-q-tel-2/index.md":"chunks/index.4cd53a7c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-g2-customer-service/index.md":"chunks/index.da5ff7bc.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-g2-review-winter-2022/index.md":"chunks/index.a9f21ee2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-godot-tutorial/index.md":"chunks/index.093b0719.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-hackathon-recap/index.md":"chunks/index.98c987d9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-is-a-founding-member-of-callminers-open-voice-transcription-standard-ovts/index.md":"chunks/index.4abd3af8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-language-speech-models/index.md":"chunks/index.bb6806af.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-named-a-high-performer-for-voice-recognition-software-in-g2-fall-report/index.md":"chunks/index.4355c419.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-pioneers-novel-training-approach-setting-new-standard-for-ai-companies-2/index.md":"chunks/index.c7058bdc.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-projectvoicex-transcription-aicontactcenter-artcoombs/index.md":"chunks/index.ac81bf28.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-reached-soc-2-type-1-certification/index.md":"chunks/index.2c3622f8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-series-a/index.md":"chunks/index.93b8c316.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-stepzen-collaboration/index.md":"chunks/index.6d37e48e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-summit-speaker-lineup-2021/index.md":"chunks/index.8fc0cf19.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-twilio-streaming-rust/index.md":"chunks/index.8187f32f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-twilio-streaming/index.md":"chunks/index.e315ed3f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-unity-tutorial/index.md":"chunks/index.30b9eca5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-versus-amazon-google/index.md":"chunks/index.48dbe08a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-with-vonage/index.md":"chunks/index.d8571eb1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgrams-speech-to-text-api-number-1-for-developers-g2/index.md":"chunks/index.6e7289fc.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/democratizing-speech-analytics-deepgram-callbi/index.md":"chunks/index.d9179731.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/detect-non-inclusive-language-with-retext-and-node-js/index.md":"chunks/index.0805f99b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/detecting-and-reducing-bias-in-speech-recognition/index.md":"chunks/index.098bdfb9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/difference-between-language-dialect/index.md":"chunks/index.d6fdcc1e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-getting-started/index.md":"chunks/index.aa1e29d3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-methods-watch-and-computed/index.md":"chunks/index.01484d63.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-reactivity-api/index.md":"chunks/index.cb85ddd1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-reusability-with-composables/index.md":"chunks/index.8b044b0a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-setup-function/index.md":"chunks/index.6cd76b93.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/do-your-call-transcripts-read-like-mad-libs/index.md":"chunks/index.dada8c33.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/does-unsupervised-learning-create-superior-speech-recognition/index.md":"chunks/index.840c8264.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/downloading-podcast-transcripts-from-terminal/index.md":"chunks/index.c87a121d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/draw-with-your-voice-articulate/index.md":"chunks/index.881762f1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/embracing-the-diversity-of-spanish/index.md":"chunks/index.82c88fd0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/enhance-audio-with-dolby-and-deepgram/index.md":"chunks/index.fa9b8d86.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/enhanced-messaging-in-streaming/index.md":"chunks/index.4593d40b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/everything-you-need-to-know-about-keywords-for-speech-recognition/index.md":"chunks/index.bf4ac2df.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/exploring-whisper/index.md":"chunks/index.5cac7ab9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/fetch-hosted-audio-streams-in-the-browser/index.md":"chunks/index.3c8954e4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ffmpeg-beginners/index.md":"chunks/index.68027fdc.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/flutter-speech-to-text-tutorial/index.md":"chunks/index.13081bd1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/foreign-language-practice-triolingo/index.md":"chunks/index.2b287163.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/freecodecamp-quote-generator-upgrade/index.md":"chunks/index.299185cf.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/generate-webvtt-srt-captions-nodejs/index.md":"chunks/index.1bfd3541.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/generic-asr-will-never-be-accurate-enough-for-conversational-ai/index.md":"chunks/index.c8445038.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-live-transcription-vue/index.md":"chunks/index.677be1f7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-with-apis/index.md":"chunks/index.b8a38fb6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-with-json/index.md":"chunks/index.dc870f71.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-with-mediastream-api/index.md":"chunks/index.aeeafc09.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-with-supabase/index.md":"chunks/index.01173b7b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/google-and-amazon-are-wrong-about-voice/index.md":"chunks/index.f1c14d64.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/guide-deepspeech-speech-to-text/index.md":"chunks/index.cbf2802b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/happy-national-native-american-heritage-month/index.md":"chunks/index.3d8357ad.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/hell-yes-we-have-sdks-apis-and-docs/index.md":"chunks/index.c7ee7b60.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/hello-world/index.md":"chunks/index.85f0e30b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-ai-is-advancing-the-transcription-process/index.md":"chunks/index.4cf062d1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-does-microsofts-purchase-of-nuance-communications-affect-the-market/index.md":"chunks/index.70f6826c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-does-santa-do-it-ai-show/index.md":"chunks/index.4e51aba6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-gender-shows-up-in-language/index.md":"chunks/index.2aabed91.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/index.md":"chunks/index.df7805e2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-is-todays-ai-boom-different-from-those-of-the-past-ai-show/index.md":"chunks/index.5751e8f1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-add-speech-recognition-to-your-react-project/index.md":"chunks/index.a276efd0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-build-an-openai-whisper-api/index.md":"chunks/index.e7f848e3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-get-a-job-in-deep-learning/index.md":"chunks/index.5d5e2051.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-monitor-media-mentions-in-podcasts-with-python/index.md":"chunks/index.1c18860b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-run-openai-whisper-in-command-line/index.md":"chunks/index.e2072458.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-run-openai-whisper-in-google-colab/index.md":"chunks/index.71b1a8e7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/index.md":"chunks/index.a738d402.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-train-baidus-deepspeech-model-with-kur/index.md":"chunks/index.aadb3562.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-use-whisper-openais-speech-recognition-model-in-1-minute/index.md":"chunks/index.3e34574d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-write-vue-3-composables-for-a-third-party-api-integration/index.md":"chunks/index.2bf929cb.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-voice-technology-creates-accessible-world/index.md":"chunks/index.6b91afed.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/identifying-the-best-agent-to-respond-in-your-ivr-system/index.md":"chunks/index.4f5c3e14.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/import-a-docker-container-in-python/index.md":"chunks/index.dcfe5a7b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/improve-ivr-prompts-with-custom-reporting/index.md":"chunks/index.0e07b657.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/introducing-auto-generated-summaries-for-audio-content/index.md":"chunks/index.854bb71b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/introducing-real-time-streaming-and-solutions-for-conversational-ai-sales-and-support-enablement/index.md":"chunks/index.e8396e3d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/introducing-the-new-deepgram-developer-portal/index.md":"chunks/index.22486899.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/introducing-topic-detection-feature/index.md":"chunks/index.d13fc04f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ios-live-transcription/index.md":"chunks/index.df0f06c6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/is-there-an-asr-gender-gap/index.md":"chunks/index.369fdb64.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/just-released-new-version-of-on-premises/index.md":"chunks/index.86518d49.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/keywords-vs-search/index.md":"chunks/index.df2079f5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcribing-radio-feeds-js/index.md":"chunks/index.09cd7cd6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-badge-video/index.md":"chunks/index.4a6de964.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-django/index.md":"chunks/index.bf2b767a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-fastapi/index.md":"chunks/index.83828056.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-flask/index.md":"chunks/index.d6ceeeaf.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-mic-browser/index.md":"chunks/index.f4e824ca.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-quart/index.md":"chunks/index.fd5a9db2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/luke-oliff-joins-deepgram/index.md":"chunks/index.b2768400.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/machine-learning-for-front-end-developers-get-started-with-tensorflow-js/index.md":"chunks/index.4d968d8c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/making-your-audiovisual-content-accessible/index.md":"chunks/index.d934edb5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/meet-kevin-lewis/index.md":"chunks/index.572526d6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/meet-sandra-rodgers/index.md":"chunks/index.346d4346.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/meeting-analysis-platforms-automatic-speech-recognition-solutions/index.md":"chunks/index.19535fe8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/michael-jolley-joins-deepgram/index.md":"chunks/index.8e5c822b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/multichannel-vs-diarization/index.md":"chunks/index.74dcc53e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/natural-language-understanding-nlu-for-audio-requires-a-highly-accurate-and-fast-speech-to-text-foundation/index.md":"chunks/index.94cf19ad.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/new-releases-five-new-languages-and-three-new-use-case-speech-models/index.md":"chunks/index.c43646aa.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/new-spanish-and-turkish-language-models-and-updated-general-models/index.md":"chunks/index.1f5c93a1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/new-tech-lets-journalists-find-damning-soundbites/index.md":"chunks/index.6b87af69.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/nlp-on-the-edge-voice-ai-and-hardware-robert-daigle-and-andi-huels-lenovo-project-voice-x/index.md":"chunks/index.659cb250.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/now-available-deepgram-speech-recognition-for-twilio-programmable-voice-api/index.md":"chunks/index.499cbfe3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/npx-script/index.md":"chunks/index.21aed04e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/nuxt-expand-nested-navigation/index.md":"chunks/index.07bc5a7f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/olá-enhanced-portuguese-beta-speech-to-text-language-model-now-available/index.md":"chunks/index.c068e227.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/open-source-projects-for-hacktoberfest-2022/index.md":"chunks/index.a1375470.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/opening-keynote-bradley-metrock-ceo-project-voice-project-voice-x/index.md":"chunks/index.5cb2c7d5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/opening-keynote-jeff-blankenberg-principal-technical-evangelist-amazon-alexa-project-voice-x/index.md":"chunks/index.bc4ef372.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/optimizing-your-content/index.md":"chunks/index.1d53d1eb.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/p5js-deepgram-game/index.md":"chunks/index.43dc8ee7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/p5js-game-logic/index.md":"chunks/index.fb860588.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/p5js-getting-started/index.md":"chunks/index.cd3e9da3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/podcast-search-engine/index.md":"chunks/index.54b72fb6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/practice-spelling-bees-hero/index.md":"chunks/index.333c015a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/propelled-by-product-customer-and-industry-momentum-deepgram-continues-to-build-the-future-of-speech-recognition/index.md":"chunks/index.e0836fa4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/protecting-api-key/index.md":"chunks/index.3d56c0d9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/pycon-deepgram-usecases/index.md":"chunks/index.9cb945f6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/pycon-python-speech-to-text/index.md":"chunks/index.bb9513a0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-deepgram-roundup/index.md":"chunks/index.bd88110b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-deepgram-twilio/index.md":"chunks/index.50305ee0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-graphing-transcripts/index.md":"chunks/index.cb2433f6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-script-compliance/index.md":"chunks/index.08ae3cb3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-speech-recognition-locally-torchaudio/index.md":"chunks/index.1fbb6371.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-talk-time-analytics/index.md":"chunks/index.f04b70ff.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-virtual-environments/index.md":"chunks/index.915af7bb.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/pytorch-intro-with-torchaudio/index.md":"chunks/index.5d36b37c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/real-time-routing-of-conversational-data-is-table-stakes-for-enterprises/index.md":"chunks/index.d71a784f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/retail-restaurants-and-travel-shilp-agarwal-ceo-blutag-project-voice-x/index.md":"chunks/index.9b22d05c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/saving-transcripts-from-terminal/index.md":"chunks/index.e955f951.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/say-what-you-mean-navigating-critical-conversations-scott-sandland-ceo-cyrano-ai-project-voice-x/index.md":"chunks/index.b7a2d5d5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/scrape-a-website-with-your-voice-using-python/index.md":"chunks/index.b027fd88.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/search-through-sound-finding-phrases-in-audio/index.md":"chunks/index.7ad3d93e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/sending-audio-files-to-expressjs-server/index.md":"chunks/index.ab7bcd73.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/sentiment-analysis-emotion-regulation-difference/index.md":"chunks/index.0a534776.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/should-ai-be-regulated-ai-show-2/index.md":"chunks/index.fcb53205.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/song-search-js/index.md":"chunks/index.43bb1ad1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/sonic-branding-in-the-enterprise-audrey-arbeeny-ceo-audiobrain-project-voice-x/index.md":"chunks/index.41a5d419.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/sparking-the-future-of-conversation-design-braden-ream-ceo-voiceflow-project-voice-x/index.md":"chunks/index.37c78235.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/speech-to-text-content-moderation-companies/index.md":"chunks/index.92f8e438.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/speech-to-text-model-ukrainian/index.md":"chunks/index.7ec06f66.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/state-of-speech-our-new-data-report-reveals-asrs-untapped-potential/index.md":"chunks/index.99f9480d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/state-of-voice-report-2022/index.md":"chunks/index.2d814912.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/supabase-authentication-vue/index.md":"chunks/index.a758ea93.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/supabase-podcast-player-vue/index.md":"chunks/index.3aa9f03a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/technical-writing-a-beginners-guide/index.md":"chunks/index.b527d324.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/technical-writing-a-developers-guide-to-storytelling/index.md":"chunks/index.3425b903.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/technical-writing-accessible-writing-for-developers/index.md":"chunks/index.47fd8eb7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/technical-writing-ethics-for-developers/index.md":"chunks/index.dd5a1925.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/text-cleaning-asr-turkish/index.md":"chunks/index.5b4cc1bf.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-contact-center-of-the-future-with-real-time-ai/index.md":"chunks/index.f3376ab6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-evolution-of-conversational-ai-in-the-car-and-beyond-shyamala-prayaga-sr-software-product-manager-ford-project-voice-x/index.md":"chunks/index.985765e2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-history-of-automatic-speech-recognition/index.md":"chunks/index.2b824119.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-history-of-the-word-hacker-2/index.md":"chunks/index.253cb502.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-importance-of-testing-with-voice-experiences-and-conversational-ai-john-kelvie-ceo-bespoken-project-voice-x/index.md":"chunks/index.4d298b50.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-language-of-lgbtq-inclusion-and-allyship/index.md":"chunks/index.379d6257.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-new-age-of-voice-commerce-mike-zagorsek-coo-soundhound-project-voice-x/index.md":"chunks/index.3a51e735.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-trouble-with-wer/index.md":"chunks/index.3e42cda0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-weak-link-in-your-multichannel-strategy/index.md":"chunks/index.8232df96.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tips-on-choosing-a-call-analytics-development-path/index.md":"chunks/index.2f95469a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tips-on-choosing-a-conversational-ai-development-path/index.md":"chunks/index.4fa71a65.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tips-on-choosing-a-sales-and-support-enablement-development-path/index.md":"chunks/index.87d5bf32.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tonya-sims-joins-deepgram/index.md":"chunks/index.4a0704fd.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/top-3-use-cases-speech-to-text-gaming/index.md":"chunks/index.1e0a9bb1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/top-6-dutch-asr-challenges/index.md":"chunks/index.249c21a5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/top-7-uses-speech-to-text-education/index.md":"chunks/index.e68a46f6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/top-six-uses-cases-for-asr-social-media/index.md":"chunks/index.57436852.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/topic-detection-with-python/index.md":"chunks/index.79525600.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/track-brand-mentions-across-podcast-episodes/index.md":"chunks/index.68d7eb95.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/train-a-deep-learning-speech-recognition-model-to-understand-your-voice/index.md":"chunks/index.6ec7a2aa.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-google-drive-files-pipedream/index.md":"chunks/index.12aab77f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-phone-calls-with-twilio-functions-and-deepgram/index.md":"chunks/index.77c3a82e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-videos-nodejs/index.md":"chunks/index.247950ec.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-youtube-videos-from-terminal/index.md":"chunks/index.0059ab92.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-youtube-videos-nodejs/index.md":"chunks/index.bd6e0947.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribing-browser-tab-audio-chrome-extensions/index.md":"chunks/index.9ce47fe7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcription-netlify-functions/index.md":"chunks/index.f73d20d7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transfer-learning-spanish-portuguese/index.md":"chunks/index.de351e0b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/translation-itranslate/index.md":"chunks/index.5c2ae943.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tune-in-deepgram-summit-11-18-21/index.md":"chunks/index.acafdf4e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/twilio-crm-log-js/index.md":"chunks/index.f859daef.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/understanding-webhooks/index.md":"chunks/index.77cd1da1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/upcoming-january-releases/index.md":"chunks/index.7d1c2462.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/use-openai-whisper-speech-recognition-with-the-deepgram-api/index.md":"chunks/index.d3f6cc59.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-control-browser-stemm/index.md":"chunks/index.79a671f1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-controlled-music-with-python/index.md":"chunks/index.0ac289a2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-in-healthcare-dr-yared-alemu-ceo-tqintelligence-project-voice-x/index.md":"chunks/index.f28af087.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-in-healthcare-henry-oconnell-ceo-canary-speech-project-voice-x/index.md":"chunks/index.ff4f3a2a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-technology-customer-experience/index.md":"chunks/index.144b0cd3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voicebots-will-enhance-your-life-not-destroy-it/index.md":"chunks/index.d4b158d0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/we-raised-25-million/index.md":"chunks/index.6f1ce5c3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-are-the-top-mistakes-in-deep-learning-ai-show/index.md":"chunks/index.ce22cf55.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-does-as-the-crow-flies-mean/index.md":"chunks/index.69e31c03.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-does-it-mean-to-be-under-the-weather/index.md":"chunks/index.688cfff4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-does-thats-the-way-the-cookie-crumbles-mean/index.md":"chunks/index.e00720df.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-does-the-ai-dystopia-look-like-ai-show-2/index.md":"chunks/index.52f83eed.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-asr/index.md":"chunks/index.573c534b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-automatic-speech-recognition-past-present-and-future-ebook/index.md":"chunks/index.7d364b05.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-automl-how-the-technology-paves-the-way-for-the-future-of-asr/index.md":"chunks/index.0153985a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-code-switching-and-how-did-it-make-english/index.md":"chunks/index.ae19e332.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-devrel-a-deepgram-approach/index.md":"chunks/index.af3f2b5b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-speaker-diarization/index.md":"chunks/index.49197110.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-the-most-important-channel-to-engage-your-customers-on/index.md":"chunks/index.685d4333.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-word-error-rate/index.md":"chunks/index.45800ce3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-makes-a-great-conversational-ai-experience/index.md":"chunks/index.1f423c73.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-makes-your-voice-uniquely-yours/index.md":"chunks/index.f1406507.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/whats-the-best-infrastructure-for-machine-learning-ai-show/index.md":"chunks/index.fced4fbd.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/why-does-your-speech-recognition-need-context/index.md":"chunks/index.24f1d4b3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/why-enterprise-audio-requirements-are-more-nuanced-at-real-time-speeds/index.md":"chunks/index.8303b8f9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/why-iot-means-speech-recognition/index.md":"chunks/index.a4e8d339.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/abdul-ajetunmobi.json":"chunks/abdul-ajetunmobi.68e10869.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/adam-sypniewski.json":"chunks/adam-sypniewski.14c0c9ed.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/aimie-ye.json":"chunks/aimie-ye.1fd72cba.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/alexa-de-la-torre.json":"chunks/alexa-de-la-torre.4e76fe25.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/bekah-hawrot-weigel.json":"chunks/bekah-hawrot-weigel.bd727c20.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/brian-barrow.json":"chunks/brian-barrow.dc49539f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/call-tracking-metrics.json":"chunks/call-tracking-metrics.e3e73a8f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/chris-doty.json":"chunks/chris-doty.e1f90cdd.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/claudia-ring.json":"chunks/claudia-ring.df407f56.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/conner-goodrum.json":"chunks/conner-goodrum.61e9354b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/dan-shafer.json":"chunks/dan-shafer.771c71e9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/duygu-altinok.json":"chunks/duygu-altinok.75d19b23.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/ehab-el-ali.json":"chunks/ehab-el-ali.768ce391.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/evan-henry.json":"chunks/evan-henry.1745cf14.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/greg-holmes.json":"chunks/greg-holmes.8bff212d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/julia-strout.json":"chunks/julia-strout.88ea0c94.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/kate-weber.json":"chunks/kate-weber.1ab37f55.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/katie-byrne.json":"chunks/katie-byrne.6ac44433.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/keith-lam.json":"chunks/keith-lam.7b4bdfde.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/kevin-lewis.json":"chunks/kevin-lewis.3d5c6faa.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/luke-oliff.json":"chunks/luke-oliff.dd5920b2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/michael-jolley.json":"chunks/michael-jolley.8a0343c9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/morris-gevirtz.json":"chunks/morris-gevirtz.f5ad9d5a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/natalie-rutgers.json":"chunks/natalie-rutgers.1605de85.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/nicole-ohanian.json":"chunks/nicole-ohanian.fab5aa9d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/nikola-whallon.json":"chunks/nikola-whallon.21c3bac8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/pankaj-trivedi.json":"chunks/pankaj-trivedi.ccc7ba5b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/ralphette-english.json":"chunks/ralphette-english.fbe9b6b2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/richard-stevenson.json":"chunks/richard-stevenson.ba324256.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/ross-oconnell.json":"chunks/ross-oconnell.4d628528.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/sam-zegas.json":"chunks/sam-zegas.ab344f64.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/sandra-rodgers.json":"chunks/sandra-rodgers.daef0bac.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/scott-stephenson.json":"chunks/scott-stephenson.b6eb7d80.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/shadi-baqleh.json":"chunks/shadi-baqleh.f85c9758.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/shae-burnette.json":"chunks/shae-burnette.28001891.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/shir-goldberg.json":"chunks/shir-goldberg.edc6eebe.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/tonya-sims.json":"chunks/tonya-sims.5536ea85.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/yujian-tang.json":"chunks/yujian-tang.2b60b153.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/ai-and-engineering.json":"chunks/ai-and-engineering.7c931afe.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/announcement.json":"chunks/announcement.455318d5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/best-practice.json":"chunks/best-practice.d6f8e90e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/devlife.json":"chunks/devlife.1686061e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/dg-insider.json":"chunks/dg-insider.67491215.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/identity-and-language.json":"chunks/identity-and-language.69202bd7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/linguistics.json":"chunks/linguistics.82cb6b89.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/product-news.json":"chunks/product-news.1c007016.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/project-showcase.json":"chunks/project-showcase.38979593.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/speech-trends.json":"chunks/speech-trends.94e7f9c1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/tutorial.json":"chunks/tutorial.5ecfce05.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/settings.json":"chunks/settings.e952b62e.mjs","/Users/sandrarodgers/web-next/blog/src/content/developers/api-specifications/openapi.json":"chunks/openapi.87ee39ab.mjs","/Users/sandrarodgers/web-next/blog/src/content/whitepapers/deepgram-whitepaper-how-deepgram-works.json":"chunks/deepgram-whitepaper-how-deepgram-works.15f2cbf7.mjs","/Users/sandrarodgers/web-next/blog/src/content/whitepapers/deepgram-whitepaper-make-application-voice-ready.json":"chunks/deepgram-whitepaper-make-application-voice-ready.f6bd3af3.mjs","/Users/sandrarodgers/web-next/blog/src/content/whitepapers/deepgram-whitepaper-newsletter.json":"chunks/deepgram-whitepaper-newsletter.a776801d.mjs","/Users/sandrarodgers/web-next/blog/src/content/whitepapers/deepgram-whitepaper-state-of-voice-2022.json":"chunks/deepgram-whitepaper-state-of-voice-2022.cd03fe6c.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/css-variables.json":"chunks/css-variables.fec89dfe.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/dark-plus.json":"chunks/dark-plus.c64d8286.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/dracula-soft.json":"chunks/dracula-soft.97887887.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/dracula.json":"chunks/dracula.16037935.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/github-dark-dimmed.json":"chunks/github-dark-dimmed.887421d6.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/github-dark.json":"chunks/github-dark.a141d561.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/github-light.json":"chunks/github-light.4ab896e1.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/hc_light.json":"chunks/hc_light.cffab4a5.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/light-plus.json":"chunks/light-plus.82aac543.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-darker.json":"chunks/material-darker.7d15313f.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-default.json":"chunks/material-default.42b48278.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-lighter.json":"chunks/material-lighter.3e844679.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-ocean.json":"chunks/material-ocean.f900a915.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-palenight.json":"chunks/material-palenight.2b604358.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/min-dark.json":"chunks/min-dark.caa582f0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/min-light.json":"chunks/min-light.39619116.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/monokai.json":"chunks/monokai.3f5e5246.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/nord.json":"chunks/nord.c4e6234a.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/one-dark-pro.json":"chunks/one-dark-pro.508ab27a.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/poimandres.json":"chunks/poimandres.9d3a0da2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/rose-pine-dawn.json":"chunks/rose-pine-dawn.a1ac07b2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/rose-pine-moon.json":"chunks/rose-pine-moon.3502176d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/rose-pine.json":"chunks/rose-pine.4260fdab.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/slack-dark.json":"chunks/slack-dark.ca95ebf9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/slack-ochin.json":"chunks/slack-ochin.92b84326.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/solarized-dark.json":"chunks/solarized-dark.8c233c43.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/solarized-light.json":"chunks/solarized-light.c6bb6780.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/vitesse-dark.json":"chunks/vitesse-dark.3f9b485b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/vitesse-light.json":"chunks/vitesse-light.2a8df4bf.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/abap.tmLanguage.json":"chunks/abap.tmLanguage.90f43bd3.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/actionscript-3.tmLanguage.json":"chunks/actionscript-3.tmLanguage.22c45571.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ada.tmLanguage.json":"chunks/ada.tmLanguage.bbada208.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/apache.tmLanguage.json":"chunks/apache.tmLanguage.14bf6d31.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/apex.tmLanguage.json":"chunks/apex.tmLanguage.53e45f77.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/apl.tmLanguage.json":"chunks/apl.tmLanguage.c2079fda.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/applescript.tmLanguage.json":"chunks/applescript.tmLanguage.3fd248fb.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/asm.tmLanguage.json":"chunks/asm.tmLanguage.15765988.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/astro.tmLanguage.json":"chunks/astro.tmLanguage.48a2894d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/awk.tmLanguage.json":"chunks/awk.tmLanguage.2f62c203.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ballerina.tmLanguage.json":"chunks/ballerina.tmLanguage.6024f645.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/bat.tmLanguage.json":"chunks/bat.tmLanguage.cded4316.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/berry.tmLanguage.json":"chunks/berry.tmLanguage.c980beee.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/bibtex.tmLanguage.json":"chunks/bibtex.tmLanguage.fc9af179.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/bicep.tmLanguage.json":"chunks/bicep.tmLanguage.63286f93.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/blade.tmLanguage.json":"chunks/blade.tmLanguage.5ab4f623.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/c.tmLanguage.json":"chunks/c.tmLanguage.cb7fbdd5.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cadence.tmLanguage.json":"chunks/cadence.tmLanguage.582679a9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/clarity.tmLanguage.json":"chunks/clarity.tmLanguage.c2023279.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/clojure.tmLanguage.json":"chunks/clojure.tmLanguage.552833f9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cmake.tmLanguage.json":"chunks/cmake.tmLanguage.837f2f7d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cobol.tmLanguage.json":"chunks/cobol.tmLanguage.1d855399.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/codeql.tmLanguage.json":"chunks/codeql.tmLanguage.ac48a804.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/coffee.tmLanguage.json":"chunks/coffee.tmLanguage.8d9f5e98.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cpp-macro.tmLanguage.json":"chunks/cpp-macro.tmLanguage.56442b58.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cpp.tmLanguage.json":"chunks/cpp.tmLanguage.0d62ebb3.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/crystal.tmLanguage.json":"chunks/crystal.tmLanguage.5dba6dad.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/csharp.tmLanguage.json":"chunks/csharp.tmLanguage.e843df0c.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/css.tmLanguage.json":"chunks/css.tmLanguage.aa42be68.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cue.tmLanguage.json":"chunks/cue.tmLanguage.659a5c98.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/d.tmLanguage.json":"chunks/d.tmLanguage.2f917db0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/dart.tmLanguage.json":"chunks/dart.tmLanguage.eeb4c7f9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/diff.tmLanguage.json":"chunks/diff.tmLanguage.d31ff9b6.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/docker.tmLanguage.json":"chunks/docker.tmLanguage.d111d5ed.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/dream-maker.tmLanguage.json":"chunks/dream-maker.tmLanguage.0ffb65b4.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/elixir.tmLanguage.json":"chunks/elixir.tmLanguage.6d46e86b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/elm.tmLanguage.json":"chunks/elm.tmLanguage.103aa363.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/erb.tmLanguage.json":"chunks/erb.tmLanguage.0fa47828.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/erlang.tmLanguage.json":"chunks/erlang.tmLanguage.cf3fb91b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/fish.tmLanguage.json":"chunks/fish.tmLanguage.f1f0521b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/fsharp.tmLanguage.json":"chunks/fsharp.tmLanguage.680ee921.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/gherkin.tmLanguage.json":"chunks/gherkin.tmLanguage.c3b24f9b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/git-commit.tmLanguage.json":"chunks/git-commit.tmLanguage.14bba07b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/git-rebase.tmLanguage.json":"chunks/git-rebase.tmLanguage.93cbf6c5.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/glsl.tmLanguage.json":"chunks/glsl.tmLanguage.f2313b4d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/gnuplot.tmLanguage.json":"chunks/gnuplot.tmLanguage.b75af28f.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/go.tmLanguage.json":"chunks/go.tmLanguage.c2a5df11.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/graphql.tmLanguage.json":"chunks/graphql.tmLanguage.3f9696f4.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/groovy.tmLanguage.json":"chunks/groovy.tmLanguage.4caa187d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/hack.tmLanguage.json":"chunks/hack.tmLanguage.4b437c29.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/haml.tmLanguage.json":"chunks/haml.tmLanguage.1856c417.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/handlebars.tmLanguage.json":"chunks/handlebars.tmLanguage.2efba05a.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/haskell.tmLanguage.json":"chunks/haskell.tmLanguage.4c61530d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/hcl.tmLanguage.json":"chunks/hcl.tmLanguage.5d6b7314.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/hlsl.tmLanguage.json":"chunks/hlsl.tmLanguage.613dd968.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/html.tmLanguage.json":"chunks/html.tmLanguage.6fb5149b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ini.tmLanguage.json":"chunks/ini.tmLanguage.0cbf1d05.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/java.tmLanguage.json":"chunks/java.tmLanguage.c39bfaf6.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/javascript.tmLanguage.json":"chunks/javascript.tmLanguage.61e966ee.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jinja-html.tmLanguage.json":"chunks/jinja-html.tmLanguage.39b5f211.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jinja.tmLanguage.json":"chunks/jinja.tmLanguage.fa903c4e.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/json.tmLanguage.json":"chunks/json.tmLanguage.74144e27.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jsonc.tmLanguage.json":"chunks/jsonc.tmLanguage.1a3b9109.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jsonnet.tmLanguage.json":"chunks/jsonnet.tmLanguage.8d48996b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jssm.tmLanguage.json":"chunks/jssm.tmLanguage.6c1b9158.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jsx.tmLanguage.json":"chunks/jsx.tmLanguage.583f1a16.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/julia.tmLanguage.json":"chunks/julia.tmLanguage.0a8b94e7.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/kotlin.tmLanguage.json":"chunks/kotlin.tmLanguage.e8a6b7a6.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/latex.tmLanguage.json":"chunks/latex.tmLanguage.ecadecb8.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/less.tmLanguage.json":"chunks/less.tmLanguage.bd7b8d56.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/liquid.tmLanguage.json":"chunks/liquid.tmLanguage.7754d6e3.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/lisp.tmLanguage.json":"chunks/lisp.tmLanguage.5f9b63b2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/logo.tmLanguage.json":"chunks/logo.tmLanguage.b0c8f7e2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/lua.tmLanguage.json":"chunks/lua.tmLanguage.8d5fb6ef.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/make.tmLanguage.json":"chunks/make.tmLanguage.c2039eb5.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/markdown.tmLanguage.json":"chunks/markdown.tmLanguage.a4092da8.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/marko.tmLanguage.json":"chunks/marko.tmLanguage.ba870c0b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/matlab.tmLanguage.json":"chunks/matlab.tmLanguage.59d7a9f2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/mdx.tmLanguage.json":"chunks/mdx.tmLanguage.55107cd9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/mermaid.tmLanguage.json":"chunks/mermaid.tmLanguage.4de46447.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/nginx.tmLanguage.json":"chunks/nginx.tmLanguage.b75b10ef.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/nim.tmLanguage.json":"chunks/nim.tmLanguage.c387f2c9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/nix.tmLanguage.json":"chunks/nix.tmLanguage.59e90ede.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/objective-c.tmLanguage.json":"chunks/objective-c.tmLanguage.20751fe3.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/objective-cpp.tmLanguage.json":"chunks/objective-cpp.tmLanguage.35952028.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ocaml.tmLanguage.json":"chunks/ocaml.tmLanguage.0143759c.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/pascal.tmLanguage.json":"chunks/pascal.tmLanguage.24002509.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/perl.tmLanguage.json":"chunks/perl.tmLanguage.95aaa323.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/php-html.tmLanguage.json":"chunks/php-html.tmLanguage.9bf25695.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/php.tmLanguage.json":"chunks/php.tmLanguage.208cc284.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/plsql.tmLanguage.json":"chunks/plsql.tmLanguage.2f001168.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/postcss.tmLanguage.json":"chunks/postcss.tmLanguage.df844470.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/powershell.tmLanguage.json":"chunks/powershell.tmLanguage.557fecb1.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/prisma.tmLanguage.json":"chunks/prisma.tmLanguage.3d2ecd3f.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/prolog.tmLanguage.json":"chunks/prolog.tmLanguage.6aaa58fd.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/pug.tmLanguage.json":"chunks/pug.tmLanguage.923cd00e.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/puppet.tmLanguage.json":"chunks/puppet.tmLanguage.7c62b6f0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/purescript.tmLanguage.json":"chunks/purescript.tmLanguage.a1fbe8e9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/python.tmLanguage.json":"chunks/python.tmLanguage.255784a7.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/r.tmLanguage.json":"chunks/r.tmLanguage.27744799.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/raku.tmLanguage.json":"chunks/raku.tmLanguage.3eec78ae.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/razor.tmLanguage.json":"chunks/razor.tmLanguage.423995f0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/rel.tmLanguage.json":"chunks/rel.tmLanguage.8d9faf37.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/riscv.tmLanguage.json":"chunks/riscv.tmLanguage.86c81d11.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/rst.tmLanguage.json":"chunks/rst.tmLanguage.3203d5d2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ruby.tmLanguage.json":"chunks/ruby.tmLanguage.5878ff9e.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/rust.tmLanguage.json":"chunks/rust.tmLanguage.ca198b9a.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/sas.tmLanguage.json":"chunks/sas.tmLanguage.96dffcab.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/sass.tmLanguage.json":"chunks/sass.tmLanguage.69993358.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/scala.tmLanguage.json":"chunks/scala.tmLanguage.f0618f94.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/scheme.tmLanguage.json":"chunks/scheme.tmLanguage.43867c45.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/scss.tmLanguage.json":"chunks/scss.tmLanguage.34ac990b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/shaderlab.tmLanguage.json":"chunks/shaderlab.tmLanguage.32cc3af0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/shellscript.tmLanguage.json":"chunks/shellscript.tmLanguage.709c69f9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/smalltalk.tmLanguage.json":"chunks/smalltalk.tmLanguage.bed30313.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/solidity.tmLanguage.json":"chunks/solidity.tmLanguage.f49e6b87.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/sparql.tmLanguage.json":"chunks/sparql.tmLanguage.cca7e4fb.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/sql.tmLanguage.json":"chunks/sql.tmLanguage.53f84ea8.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ssh-config.tmLanguage.json":"chunks/ssh-config.tmLanguage.88607f95.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/stata.tmLanguage.json":"chunks/stata.tmLanguage.7941b321.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/stylus.tmLanguage.json":"chunks/stylus.tmLanguage.aae41083.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/svelte.tmLanguage.json":"chunks/svelte.tmLanguage.51e3e183.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/swift.tmLanguage.json":"chunks/swift.tmLanguage.1758b78f.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/system-verilog.tmLanguage.json":"chunks/system-verilog.tmLanguage.98c0822c.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/tasl.tmLanguage.json":"chunks/tasl.tmLanguage.f048ca02.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/tcl.tmLanguage.json":"chunks/tcl.tmLanguage.331e619d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/tex.tmLanguage.json":"chunks/tex.tmLanguage.378e91de.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/toml.tmLanguage.json":"chunks/toml.tmLanguage.ac48c2b1.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/tsx.tmLanguage.json":"chunks/tsx.tmLanguage.8c2c7b1b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/turtle.tmLanguage.json":"chunks/turtle.tmLanguage.81eec047.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/twig.tmLanguage.json":"chunks/twig.tmLanguage.cdc9b736.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/typescript.tmLanguage.json":"chunks/typescript.tmLanguage.e7dbfd15.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/vb.tmLanguage.json":"chunks/vb.tmLanguage.b376ae92.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/verilog.tmLanguage.json":"chunks/verilog.tmLanguage.6c2eff21.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/vhdl.tmLanguage.json":"chunks/vhdl.tmLanguage.336d9759.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/viml.tmLanguage.json":"chunks/viml.tmLanguage.bf2daa01.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/vue-html.tmLanguage.json":"chunks/vue-html.tmLanguage.3a2e7543.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/vue.tmLanguage.json":"chunks/vue.tmLanguage.c77b2cf0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/wasm.tmLanguage.json":"chunks/wasm.tmLanguage.b7f5d22e.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/wenyan.tmLanguage.json":"chunks/wenyan.tmLanguage.5d7089b7.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/xml.tmLanguage.json":"chunks/xml.tmLanguage.f76daefd.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/xsl.tmLanguage.json":"chunks/xsl.tmLanguage.ab9f8922.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/yaml.tmLanguage.json":"chunks/yaml.tmLanguage.2e704356.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/zenscript.tmLanguage.json":"chunks/zenscript.tmLanguage.7f56cf0d.mjs","/Users/sandrarodgers/web-next/blog/src/shared/components/search/DocSearch":"DocSearch.4e121a59.js","@astrojs/vue/client.js":"client.6892282e.js","@astrojs/preact/client.js":"client.f1d83173.js","/astro/hoisted.js?q=0":"hoisted.d8f274fa.js","/astro/hoisted.js?q=1":"hoisted.35d832ba.js","astro:scripts/page.js":"page.ae46ab13.js","astro:scripts/before-hydration.js":""},"assets":["/assets/Inter-ExtraLight.b6cd094a.woff2","/assets/Inter-Thin.77d96c1c.woff2","/assets/Inter-ThinItalic.d82beee8.woff2","/assets/Inter-ExtraLightItalic.db229bf3.woff2","/assets/Inter-Light.36b86832.woff2","/assets/Inter-Italic.900058df.woff2","/assets/Inter-LightItalic.737ac201.woff2","/assets/Inter-Regular.d612f121.woff2","/assets/Inter-MediumItalic.81600858.woff2","/assets/Inter-SemiBold.15226129.woff2","/assets/Inter-Medium.1b498b95.woff2","/assets/Inter-Bold.c63158ba.woff2","/assets/Inter-SemiBoldItalic.3b6df7d0.woff2","/assets/Inter-ExtraBold.307d9809.woff2","/assets/Inter-Black.fc10113c.woff2","/assets/Inter-BoldItalic.3f211964.woff2","/assets/Inter-ExtraBoldItalic.cf6b1d6c.woff2","/assets/Inter-BlackItalic.bc80081d.woff2","/assets/ABCFavorit-Bold.0be5b4a5.woff2","/assets/Inter-roman.var.17fe38ab.woff2","/assets/Inter-italic.var.d1401419.woff2","/assets/Inter.var.85f08b5f.woff2","/assets/FiraCode-Light.9a0ab96c.ttf","/assets/Inter-Thin.e6bced8e.woff","/assets/Inter-ExtraLight.015dad27.woff","/assets/Inter-ThinItalic.70648e9b.woff","/assets/Inter-Italic.cd1eda97.woff","/assets/Inter-LightItalic.7d291e85.woff","/assets/Inter-ExtraLightItalic.32e53d8a.woff","/assets/Inter-Light.4871aed0.woff","/assets/Inter-SemiBold.653fed7a.woff","/assets/Inter-MediumItalic.205c8989.woff","/assets/Inter-Medium.53deda46.woff","/assets/Inter-Regular.ef1f23c0.woff","/assets/Inter-Bold.3e242080.woff","/assets/Inter-SemiBoldItalic.95e68b6b.woff","/assets/Inter-Black.8b21d5be.woff","/assets/Inter-ExtraBold.f053602c.woff","/assets/Inter-BoldItalic.ace8e094.woff","/assets/Inter-ExtraBoldItalic.6deefddf.woff","/assets/Inter-BlackItalic.87235581.woff","/assets/_slug_.d2c7dc7f.css","/assets/_slug_.c2747b55.css","/assets/_slug_.744289ca.css","/assets/_slug_.669a2d1d.css","/assets/_slug_.123048a7.css","/assets/_slug_.99ec8802.css","/assets/index.9c23bf80.css","/DocSearch.4e121a59.js","/_headers","/_redirects","/asr-comparison-promo-image.png","/asr-comparison-promo-image@2x.png","/build-something-great-with-voice.png","/client.6892282e.js","/client.f1d83173.js","/favicon.ico","/gear-question-how-dg-works-image@2x.png","/hoisted.35d832ba.js","/hoisted.d8f274fa.js","/humans.txt","/logo.svg","/netlify.toml","/page.ae46ab13.js","/quote-marks-make-app-voice-ready-image.svg","/red-green-orb-voice-report-image@2x.png","/robots.txt","/sound-wave-cloud-dark.svg","/sound-wave@2x.svg","/starburst-gradient.svg","/tag-gradient.svg","/chunks/Default.astro_astro_type_script_index_0_lang.0db659d0.js","/chunks/preact.module.b8ec28b5.js","/page.ae46ab13.js"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/index.9c23bf80.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"hoisted.35d832ba.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css","assets/index.9c23bf80.css"],"scripts":[{"type":"external","value":"hoisted.35d832ba.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/categories","type":"page","pattern":"^\\/categories\\/?$","segments":[[{"content":"categories","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/categories/index.astro","pathname":"/categories","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/categories/[category]/[...page]","type":"page","pattern":"^\\/categories\\/([^/]+?)(?:\\/(.*?))?\\/?$","segments":[[{"content":"categories","dynamic":false,"spread":false}],[{"content":"category","dynamic":true,"spread":false}],[{"content":"...page","dynamic":true,"spread":true}]],"params":["category","...page"],"component":"src/pages/categories/[category]/[...page].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css","assets/_slug_.669a2d1d.css","assets/_slug_.99ec8802.css"],"scripts":[{"type":"external","value":"hoisted.35d832ba.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/authors","type":"page","pattern":"^\\/authors\\/?$","segments":[[{"content":"authors","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/authors/index.astro","pathname":"/authors","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/authors/[author]/[...page]","type":"page","pattern":"^\\/authors\\/([^/]+?)(?:\\/(.*?))?\\/?$","segments":[[{"content":"authors","dynamic":false,"spread":false}],[{"content":"author","dynamic":true,"spread":false}],[{"content":"...page","dynamic":true,"spread":true}]],"params":["author","...page"],"component":"src/pages/authors/[author]/[...page].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/rss.xml","type":"endpoint","pattern":"^\\/rss\\.xml$","segments":[[{"content":"rss.xml","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/rss.xml.js","pathname":"/rss.xml","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/posts/[...page]","type":"page","pattern":"^\\/posts(?:\\/(.*?))?\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"...page","dynamic":true,"spread":true}]],"params":["...page"],"component":"src/pages/posts/[...page].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"hoisted.35d832ba.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/tags","type":"page","pattern":"^\\/tags\\/?$","segments":[[{"content":"tags","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/tags/index.astro","pathname":"/tags","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.669a2d1d.css","assets/_slug_.744289ca.css","assets/_slug_.c2747b55.css"],"scripts":[{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/tags/[tag]/[...page]","type":"page","pattern":"^\\/tags\\/([^/]+?)(?:\\/(.*?))?\\/?$","segments":[[{"content":"tags","dynamic":false,"spread":false}],[{"content":"tag","dynamic":true,"spread":false}],[{"content":"...page","dynamic":true,"spread":true}]],"params":["tag","...page"],"component":"src/pages/tags/[tag]/[...page].astro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/_slug_.d2c7dc7f.css","assets/_slug_.744289ca.css","assets/_slug_.123048a7.css","assets/index.9c23bf80.css","assets/_slug_.c2747b55.css","assets/_slug_.669a2d1d.css","assets/_slug_.99ec8802.css"],"scripts":[{"type":"external","value":"hoisted.d8f274fa.js"},{"type":"external","value":"page.ae46ab13.js"}],"routeData":{"route":"/[slug]","type":"page","pattern":"^\\/([^/]+?)\\/?$","segments":[[{"content":"slug","dynamic":true,"spread":false}]],"params":["slug"],"component":"src/pages/[slug].astro","_meta":{"trailingSlash":"ignore"}}}],"site":"https://blog.deepgram.com/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":true,"isExperimentalContentCollections":false,"contentDir":"file:///Users/sandrarodgers/web-next/blog/src/content/"},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/2021-state-of-automatic-speech-recognition-infographic/index.md":"chunks/index.c86a40db.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/5-ways-understand-voice-of-the-customer-voice-technology/index.md":"chunks/index.50e0f458.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/6-challenges-asr-hindi/index.md":"chunks/index.689f52c2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/a-conversation-with-asian-american-pacific-islander-deepgrammers/index.md":"chunks/index.ce57c991.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/a-note-to-our-customers-openai-whispers-entrance-into-voice/index.md":"chunks/index.4cde1717.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/a-voice-destin-ation-project-voice-x-2021/index.md":"chunks/index.45c86c75.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/accuracy-matters-improving-speech-recognition-through-data-processes-esteban-gorupicz-ceo-atexto-project-voice-x/index.md":"chunks/index.4b2687a9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/adding-subtitles-to-html-video-element/index.md":"chunks/index.aa382d42.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-bias-in-machine-learning/index.md":"chunks/index.11b75c22.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-different-types-of-machine-learning/index.md":"chunks/index.b39d680c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-how-do-you-use-a-neural-network-in-your-business/index.md":"chunks/index.69e82170.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-how-will-data-influence-the-future-of-machine-learning/index.md":"chunks/index.1f294100.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-what-does-an-ai-tranformation-look-like/index.md":"chunks/index.1406ce55.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-what-does-it-mean-for-a-machine-to-learn/index.md":"chunks/index.4071b7ef.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ai-show-what-will-the-ai-utopia-look-like/index.md":"chunks/index.17510e63.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/all-about-transcription-for-real-time-audio-streaming/index.md":"chunks/index.76632516.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ar-note-taking-airnote/index.md":"chunks/index.53e20a8b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/asr-important-deaf-hoh-community/index.md":"chunks/index.314365e1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/asynchronous-logic-to-write-a-vue-3-and-deepgram-captions-component/index.md":"chunks/index.f332f228.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/autobubble-youtube-speech-bubbles/index.md":"chunks/index.f36ae2f5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/automatic-speech-recognition-education/index.md":"chunks/index.4ecb0a40.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/automatically-transcribe-summarize-and-send-phone-call-summaries/index.md":"chunks/index.aba9703a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/automatically-transcribing-podcast-episodes-with-pipedream-and-python/index.md":"chunks/index.fa83f162.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/bekah-joins-deepgram/index.md":"chunks/index.d1eddb1e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/best-8-deepgram-projects-hack-cambridge/index.md":"chunks/index.d16722f4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/best-python-audio-manipulation-tools/index.md":"chunks/index.6bc70b66.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/best-speech-recognition-model-business/index.md":"chunks/index.2929a394.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/best-speech-to-text-apis/index.md":"chunks/index.19ee9179.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/brian-barrow-hello/index.md":"chunks/index.a5d92b47.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-livestream-web-application-vue-and-express-setup/index.md":"chunks/index.ec9de123.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-livestream-web-application-with-amazon-ivs-and-deepgram/index.md":"chunks/index.34a0a0bc.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-presentation-coaching-application-with-recall/index.md":"chunks/index.d7b25326.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-todo-list-with-pinia-and-vue-3/index.md":"chunks/index.5c5525a6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-a-voice-controlled-to-do-list-app-with-deepgram-and-vue-3/index.md":"chunks/index.034feb15.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-npm-packages/index.md":"chunks/index.6e73440f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/build-with-the-official-deepgram-sdks/index.md":"chunks/index.01cd3595.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/building-404-pages-that-bring-joy/index.md":"chunks/index.4424ccec.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/building-a-conversational-ai-flow-with-deepgram/index.md":"chunks/index.a5f85808.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/building-the-future-of-voice-scott-stephenson-ceo-deepgram-project-voice-x/index.md":"chunks/index.bc07c446.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/celebrating-black-history-month-with-a-vision-of-more-inclusive-speech-recognition/index.md":"chunks/index.03b62d21.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/celebrating-jewish-american-history-month/index.md":"chunks/index.56b71fc6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/censor-profanity-nodejs/index.md":"chunks/index.fec4d9df.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/chili-pepper/index.md":"chunks/index.b2c555ce.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/chromium-kiosk-pi/index.md":"chunks/index.90abf19e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/classroom-captioner/index.md":"chunks/index.d6112490.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/closed-captioning-companies-use-asr/index.md":"chunks/index.8853d18f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/cloud-to-butt/index.md":"chunks/index.1457f372.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/coding-website-with-voice/index.md":"chunks/index.cc4a9fd2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/comic-books-videos-yack/index.md":"chunks/index.1655e132.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/complete-guide-punctuation-capitalization-speech-to-text/index.md":"chunks/index.eab19a07.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/contact-center-as-a-service-utilize-solutions/index.md":"chunks/index.7c414b4c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/contextual-video-overlay-tomscottplus/index.md":"chunks/index.c8ef01f2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/conversational-ai-platforms-utilize-top-asr-tools/index.md":"chunks/index.e835e785.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/conversational-intelligence-podcast-with-scott-stephenson/index.md":"chunks/index.2fea293b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/create-readable-transcripts-for-podcasts/index.md":"chunks/index.03da2971.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/cross-platform-nuget-dotnet/index.md":"chunks/index.62dbc739.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/customer-story-rideshare-smartrhino-deepgram/index.md":"chunks/index.e4308c7b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/customer-story-stanford-moves-education-forward-with-deepgram/index.md":"chunks/index.aeb1e08f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/cześć-we’re-releasing-a-base-polish-beta-speech-to-text-language-model/index.md":"chunks/index.b809e367.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/daily-video-live-transcription/index.md":"chunks/index.29d7383c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deep-learning-asr-for-business/index.md":"chunks/index.e7fe848a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deep-learning-speech-recognition/index.md":"chunks/index.7d0bf10c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-and-recall-ai-partner-to-make-it-easier-for-developers-to-extract-insights-from-meeting-audio-and-automate-tedious-workflows/index.md":"chunks/index.ac240d4f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-announces-unimrcp-integration-to-power-modern-customer-experience/index.md":"chunks/index.41e06fda.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-diversity-inclusion/index.md":"chunks/index.ec9bd161.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-enables-developers-to-build-the-future-of-voice-with-suite-of-new-features-and-10-million-in-free-speech-recognition/index.md":"chunks/index.68ada925.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-enters-strategic-investment-agreement-with-in-q-tel-2/index.md":"chunks/index.44da5464.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-g2-customer-service/index.md":"chunks/index.4468bfe5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-g2-review-winter-2022/index.md":"chunks/index.7c039973.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-godot-tutorial/index.md":"chunks/index.1f05f678.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-hackathon-recap/index.md":"chunks/index.6e120e66.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-is-a-founding-member-of-callminers-open-voice-transcription-standard-ovts/index.md":"chunks/index.acf44351.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-language-speech-models/index.md":"chunks/index.1b13bd06.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-named-a-high-performer-for-voice-recognition-software-in-g2-fall-report/index.md":"chunks/index.60be0778.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-pioneers-novel-training-approach-setting-new-standard-for-ai-companies-2/index.md":"chunks/index.1614a45a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-projectvoicex-transcription-aicontactcenter-artcoombs/index.md":"chunks/index.1a5e6243.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-reached-soc-2-type-1-certification/index.md":"chunks/index.01539474.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-series-a/index.md":"chunks/index.0541c08c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-stepzen-collaboration/index.md":"chunks/index.a7df673e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-summit-speaker-lineup-2021/index.md":"chunks/index.95f142e4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-twilio-streaming-rust/index.md":"chunks/index.ef8577a3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-twilio-streaming/index.md":"chunks/index.bc8973d0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-unity-tutorial/index.md":"chunks/index.286cf6ec.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-versus-amazon-google/index.md":"chunks/index.2add21ba.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgram-with-vonage/index.md":"chunks/index.2af56d94.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/deepgrams-speech-to-text-api-number-1-for-developers-g2/index.md":"chunks/index.b775bedb.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/democratizing-speech-analytics-deepgram-callbi/index.md":"chunks/index.5ee3cca3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/detect-non-inclusive-language-with-retext-and-node-js/index.md":"chunks/index.201add76.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/detecting-and-reducing-bias-in-speech-recognition/index.md":"chunks/index.b33016a5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/difference-between-language-dialect/index.md":"chunks/index.a3a1dcfc.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-getting-started/index.md":"chunks/index.5880ae07.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-methods-watch-and-computed/index.md":"chunks/index.45884454.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-reactivity-api/index.md":"chunks/index.839d867c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-reusability-with-composables/index.md":"chunks/index.19a80249.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/diving-into-vue-3-setup-function/index.md":"chunks/index.356a8062.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/do-your-call-transcripts-read-like-mad-libs/index.md":"chunks/index.78c32351.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/does-unsupervised-learning-create-superior-speech-recognition/index.md":"chunks/index.79fdc702.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/downloading-podcast-transcripts-from-terminal/index.md":"chunks/index.de97218a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/draw-with-your-voice-articulate/index.md":"chunks/index.a8746824.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/embracing-the-diversity-of-spanish/index.md":"chunks/index.373c50f1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/enhance-audio-with-dolby-and-deepgram/index.md":"chunks/index.0f197a6e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/enhanced-messaging-in-streaming/index.md":"chunks/index.338b55a8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/everything-you-need-to-know-about-keywords-for-speech-recognition/index.md":"chunks/index.4cd09e47.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/exploring-whisper/index.md":"chunks/index.95884e4b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/fetch-hosted-audio-streams-in-the-browser/index.md":"chunks/index.c184b9ce.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ffmpeg-beginners/index.md":"chunks/index.16fd1e82.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/flutter-speech-to-text-tutorial/index.md":"chunks/index.eae272aa.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/foreign-language-practice-triolingo/index.md":"chunks/index.371b4048.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/freecodecamp-quote-generator-upgrade/index.md":"chunks/index.b2cd916c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/generate-webvtt-srt-captions-nodejs/index.md":"chunks/index.0e842153.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/generic-asr-will-never-be-accurate-enough-for-conversational-ai/index.md":"chunks/index.bed30006.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-live-transcription-vue/index.md":"chunks/index.5670c674.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-with-apis/index.md":"chunks/index.008bd474.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-with-json/index.md":"chunks/index.55395c6f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-with-mediastream-api/index.md":"chunks/index.4fec0b25.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/getting-started-with-supabase/index.md":"chunks/index.8eaad75a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/google-and-amazon-are-wrong-about-voice/index.md":"chunks/index.67346d1e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/guide-deepspeech-speech-to-text/index.md":"chunks/index.201ea0c1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/happy-national-native-american-heritage-month/index.md":"chunks/index.0a977814.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/hell-yes-we-have-sdks-apis-and-docs/index.md":"chunks/index.4a0d2d94.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/hello-world/index.md":"chunks/index.4b4674c4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-ai-is-advancing-the-transcription-process/index.md":"chunks/index.0dc83b1b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-does-microsofts-purchase-of-nuance-communications-affect-the-market/index.md":"chunks/index.f9e4509a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-does-santa-do-it-ai-show/index.md":"chunks/index.bdb7b7d9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-gender-shows-up-in-language/index.md":"chunks/index.c76fad95.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-is-machine-learning-or-deep-learning-affecting-science-ai-show/index.md":"chunks/index.2c19e82f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-is-todays-ai-boom-different-from-those-of-the-past-ai-show/index.md":"chunks/index.629522a2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-add-speech-recognition-to-your-react-project/index.md":"chunks/index.1a22d128.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-build-an-openai-whisper-api/index.md":"chunks/index.b5467d2b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-get-a-job-in-deep-learning/index.md":"chunks/index.64fb5c4a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-monitor-media-mentions-in-podcasts-with-python/index.md":"chunks/index.0a085101.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-run-openai-whisper-in-command-line/index.md":"chunks/index.e7c1eedf.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-run-openai-whisper-in-google-colab/index.md":"chunks/index.21215499.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-test-automatic-speech-recognition-asr-providers-for-your-business/index.md":"chunks/index.1dc8e0ea.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-train-baidus-deepspeech-model-with-kur/index.md":"chunks/index.29682f7b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-use-whisper-openais-speech-recognition-model-in-1-minute/index.md":"chunks/index.a2066234.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-to-write-vue-3-composables-for-a-third-party-api-integration/index.md":"chunks/index.7e4c34c1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/how-voice-technology-creates-accessible-world/index.md":"chunks/index.a8865bf8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/identifying-the-best-agent-to-respond-in-your-ivr-system/index.md":"chunks/index.ac7f924a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/import-a-docker-container-in-python/index.md":"chunks/index.3f3f6868.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/improve-ivr-prompts-with-custom-reporting/index.md":"chunks/index.f20e56de.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/introducing-auto-generated-summaries-for-audio-content/index.md":"chunks/index.607acd88.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/introducing-real-time-streaming-and-solutions-for-conversational-ai-sales-and-support-enablement/index.md":"chunks/index.1595df8b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/introducing-the-new-deepgram-developer-portal/index.md":"chunks/index.8aa42480.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/introducing-topic-detection-feature/index.md":"chunks/index.30de2384.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/ios-live-transcription/index.md":"chunks/index.7004d7f7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/is-there-an-asr-gender-gap/index.md":"chunks/index.165dbd57.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/just-released-new-version-of-on-premises/index.md":"chunks/index.e84d830d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/keywords-vs-search/index.md":"chunks/index.f6c60a16.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcribing-radio-feeds-js/index.md":"chunks/index.d31ec5eb.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-badge-video/index.md":"chunks/index.bbba44de.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-django/index.md":"chunks/index.ca05dc5a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-fastapi/index.md":"chunks/index.3e09aa58.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-flask/index.md":"chunks/index.1be45c96.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-mic-browser/index.md":"chunks/index.f09dfed8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/live-transcription-quart/index.md":"chunks/index.60f09034.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/luke-oliff-joins-deepgram/index.md":"chunks/index.1f1b4d4d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/machine-learning-for-front-end-developers-get-started-with-tensorflow-js/index.md":"chunks/index.97f368ea.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/making-your-audiovisual-content-accessible/index.md":"chunks/index.b84cb6f0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/meet-kevin-lewis/index.md":"chunks/index.893a7bef.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/meet-sandra-rodgers/index.md":"chunks/index.18247d93.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/meeting-analysis-platforms-automatic-speech-recognition-solutions/index.md":"chunks/index.98e4a532.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/michael-jolley-joins-deepgram/index.md":"chunks/index.e27096a5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/multichannel-vs-diarization/index.md":"chunks/index.cb28b452.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/natural-language-understanding-nlu-for-audio-requires-a-highly-accurate-and-fast-speech-to-text-foundation/index.md":"chunks/index.4a2498dc.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/new-releases-five-new-languages-and-three-new-use-case-speech-models/index.md":"chunks/index.4e2e4065.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/new-spanish-and-turkish-language-models-and-updated-general-models/index.md":"chunks/index.a8536c20.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/new-tech-lets-journalists-find-damning-soundbites/index.md":"chunks/index.4d1e4a50.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/nlp-on-the-edge-voice-ai-and-hardware-robert-daigle-and-andi-huels-lenovo-project-voice-x/index.md":"chunks/index.69a3d3f1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/now-available-deepgram-speech-recognition-for-twilio-programmable-voice-api/index.md":"chunks/index.79aa62ef.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/npx-script/index.md":"chunks/index.b2ec1970.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/nuxt-expand-nested-navigation/index.md":"chunks/index.75d34c76.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/olá-enhanced-portuguese-beta-speech-to-text-language-model-now-available/index.md":"chunks/index.c5bc6e31.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/open-source-projects-for-hacktoberfest-2022/index.md":"chunks/index.991592d7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/opening-keynote-bradley-metrock-ceo-project-voice-project-voice-x/index.md":"chunks/index.828d4eb9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/opening-keynote-jeff-blankenberg-principal-technical-evangelist-amazon-alexa-project-voice-x/index.md":"chunks/index.5cf5e52d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/optimizing-your-content/index.md":"chunks/index.04509f7e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/p5js-deepgram-game/index.md":"chunks/index.779826d0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/p5js-game-logic/index.md":"chunks/index.3b55af0e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/p5js-getting-started/index.md":"chunks/index.fabe415a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/podcast-search-engine/index.md":"chunks/index.bd342777.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/practice-spelling-bees-hero/index.md":"chunks/index.630e7c97.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/propelled-by-product-customer-and-industry-momentum-deepgram-continues-to-build-the-future-of-speech-recognition/index.md":"chunks/index.71f76b5f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/protecting-api-key/index.md":"chunks/index.5d0aa636.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/pycon-deepgram-usecases/index.md":"chunks/index.193120ec.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/pycon-python-speech-to-text/index.md":"chunks/index.3ddec82c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-deepgram-roundup/index.md":"chunks/index.0d1a059d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-deepgram-twilio/index.md":"chunks/index.2903b9fd.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-graphing-transcripts/index.md":"chunks/index.9e52c801.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-script-compliance/index.md":"chunks/index.6233c6e2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-speech-recognition-locally-torchaudio/index.md":"chunks/index.7283f5b4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-talk-time-analytics/index.md":"chunks/index.5ada0d90.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/python-virtual-environments/index.md":"chunks/index.b341faa8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/pytorch-intro-with-torchaudio/index.md":"chunks/index.31c3b448.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/real-time-routing-of-conversational-data-is-table-stakes-for-enterprises/index.md":"chunks/index.827c41ec.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/retail-restaurants-and-travel-shilp-agarwal-ceo-blutag-project-voice-x/index.md":"chunks/index.41060442.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/saving-transcripts-from-terminal/index.md":"chunks/index.253dd354.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/say-what-you-mean-navigating-critical-conversations-scott-sandland-ceo-cyrano-ai-project-voice-x/index.md":"chunks/index.7cadae68.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/scrape-a-website-with-your-voice-using-python/index.md":"chunks/index.533babae.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/search-through-sound-finding-phrases-in-audio/index.md":"chunks/index.cbb521b9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/sending-audio-files-to-expressjs-server/index.md":"chunks/index.75661711.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/sentiment-analysis-emotion-regulation-difference/index.md":"chunks/index.84538623.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/should-ai-be-regulated-ai-show-2/index.md":"chunks/index.b09ad7ae.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/song-search-js/index.md":"chunks/index.86bfe2a3.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/sonic-branding-in-the-enterprise-audrey-arbeeny-ceo-audiobrain-project-voice-x/index.md":"chunks/index.c44f4a32.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/sparking-the-future-of-conversation-design-braden-ream-ceo-voiceflow-project-voice-x/index.md":"chunks/index.5109b673.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/speech-to-text-content-moderation-companies/index.md":"chunks/index.2f0db912.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/speech-to-text-model-ukrainian/index.md":"chunks/index.f6336f06.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/state-of-speech-our-new-data-report-reveals-asrs-untapped-potential/index.md":"chunks/index.00b9fa0d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/state-of-voice-report-2022/index.md":"chunks/index.df20b1f6.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/supabase-authentication-vue/index.md":"chunks/index.3c85d16b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/supabase-podcast-player-vue/index.md":"chunks/index.ce26bb9e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/technical-writing-a-beginners-guide/index.md":"chunks/index.6cef4c11.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/technical-writing-a-developers-guide-to-storytelling/index.md":"chunks/index.c3da1842.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/technical-writing-accessible-writing-for-developers/index.md":"chunks/index.c4b842c0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/technical-writing-ethics-for-developers/index.md":"chunks/index.9135463a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/text-cleaning-asr-turkish/index.md":"chunks/index.cc748340.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-contact-center-of-the-future-with-real-time-ai/index.md":"chunks/index.a77aa1a2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-evolution-of-conversational-ai-in-the-car-and-beyond-shyamala-prayaga-sr-software-product-manager-ford-project-voice-x/index.md":"chunks/index.9033d22b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-history-of-automatic-speech-recognition/index.md":"chunks/index.90376256.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-history-of-the-word-hacker-2/index.md":"chunks/index.3f47d912.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-importance-of-testing-with-voice-experiences-and-conversational-ai-john-kelvie-ceo-bespoken-project-voice-x/index.md":"chunks/index.08fd1853.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-language-of-lgbtq-inclusion-and-allyship/index.md":"chunks/index.ebd1b954.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-new-age-of-voice-commerce-mike-zagorsek-coo-soundhound-project-voice-x/index.md":"chunks/index.e76e9302.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-trouble-with-wer/index.md":"chunks/index.5e0669dd.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/the-weak-link-in-your-multichannel-strategy/index.md":"chunks/index.74f93bc4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tips-on-choosing-a-call-analytics-development-path/index.md":"chunks/index.61564a68.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tips-on-choosing-a-conversational-ai-development-path/index.md":"chunks/index.b4e2c74c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tips-on-choosing-a-sales-and-support-enablement-development-path/index.md":"chunks/index.e4df5d6c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tonya-sims-joins-deepgram/index.md":"chunks/index.b378a854.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/top-3-use-cases-speech-to-text-gaming/index.md":"chunks/index.3c5becf4.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/top-6-dutch-asr-challenges/index.md":"chunks/index.bc861102.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/top-7-uses-speech-to-text-education/index.md":"chunks/index.2e33947e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/top-six-uses-cases-for-asr-social-media/index.md":"chunks/index.ef9b62ab.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/topic-detection-with-python/index.md":"chunks/index.403c451b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/track-brand-mentions-across-podcast-episodes/index.md":"chunks/index.4ada0acb.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/train-a-deep-learning-speech-recognition-model-to-understand-your-voice/index.md":"chunks/index.70c04f09.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-google-drive-files-pipedream/index.md":"chunks/index.4b3e3bc0.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-phone-calls-with-twilio-functions-and-deepgram/index.md":"chunks/index.05a66e1c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-videos-nodejs/index.md":"chunks/index.0e7f8604.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-youtube-videos-from-terminal/index.md":"chunks/index.f11ee9ec.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribe-youtube-videos-nodejs/index.md":"chunks/index.07ded5b1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcribing-browser-tab-audio-chrome-extensions/index.md":"chunks/index.772b1f71.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transcription-netlify-functions/index.md":"chunks/index.090c51ab.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/transfer-learning-spanish-portuguese/index.md":"chunks/index.242aac29.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/translation-itranslate/index.md":"chunks/index.178b4bbc.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/tune-in-deepgram-summit-11-18-21/index.md":"chunks/index.799d7539.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/twilio-crm-log-js/index.md":"chunks/index.6a30b1ba.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/understanding-webhooks/index.md":"chunks/index.02bdca08.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/upcoming-january-releases/index.md":"chunks/index.1b399402.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/use-openai-whisper-speech-recognition-with-the-deepgram-api/index.md":"chunks/index.824d1e3f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-control-browser-stemm/index.md":"chunks/index.acb8341c.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-controlled-music-with-python/index.md":"chunks/index.5d3a8125.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-in-healthcare-dr-yared-alemu-ceo-tqintelligence-project-voice-x/index.md":"chunks/index.9ea4ce03.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-in-healthcare-henry-oconnell-ceo-canary-speech-project-voice-x/index.md":"chunks/index.2820275d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voice-technology-customer-experience/index.md":"chunks/index.052a0544.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/voicebots-will-enhance-your-life-not-destroy-it/index.md":"chunks/index.d72e3d75.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/we-raised-25-million/index.md":"chunks/index.770ce6e7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-are-the-top-mistakes-in-deep-learning-ai-show/index.md":"chunks/index.65e29b40.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-does-as-the-crow-flies-mean/index.md":"chunks/index.39aba412.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-does-it-mean-to-be-under-the-weather/index.md":"chunks/index.40239671.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-does-thats-the-way-the-cookie-crumbles-mean/index.md":"chunks/index.28ef35ac.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-does-the-ai-dystopia-look-like-ai-show-2/index.md":"chunks/index.ff3627ef.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-asr/index.md":"chunks/index.d7474707.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-automatic-speech-recognition-past-present-and-future-ebook/index.md":"chunks/index.ab01dc89.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-automl-how-the-technology-paves-the-way-for-the-future-of-asr/index.md":"chunks/index.3348f811.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-code-switching-and-how-did-it-make-english/index.md":"chunks/index.6805fc44.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-devrel-a-deepgram-approach/index.md":"chunks/index.88819dfa.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-speaker-diarization/index.md":"chunks/index.38380b62.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-the-most-important-channel-to-engage-your-customers-on/index.md":"chunks/index.2f16bf0f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-is-word-error-rate/index.md":"chunks/index.c696f965.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-makes-a-great-conversational-ai-experience/index.md":"chunks/index.a0f97850.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/what-makes-your-voice-uniquely-yours/index.md":"chunks/index.2ead83d5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/whats-the-best-infrastructure-for-machine-learning-ai-show/index.md":"chunks/index.2c88830d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/why-does-your-speech-recognition-need-context/index.md":"chunks/index.f7bbecac.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/why-enterprise-audio-requirements-are-more-nuanced-at-real-time-speeds/index.md":"chunks/index.b9193efa.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/posts/why-iot-means-speech-recognition/index.md":"chunks/index.a537af9d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/abdul-ajetunmobi.json":"chunks/abdul-ajetunmobi.68e10869.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/adam-sypniewski.json":"chunks/adam-sypniewski.14c0c9ed.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/aimie-ye.json":"chunks/aimie-ye.1fd72cba.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/alexa-de-la-torre.json":"chunks/alexa-de-la-torre.4e76fe25.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/bekah-hawrot-weigel.json":"chunks/bekah-hawrot-weigel.bd727c20.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/brian-barrow.json":"chunks/brian-barrow.dc49539f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/call-tracking-metrics.json":"chunks/call-tracking-metrics.e3e73a8f.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/chris-doty.json":"chunks/chris-doty.e1f90cdd.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/claudia-ring.json":"chunks/claudia-ring.df407f56.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/conner-goodrum.json":"chunks/conner-goodrum.61e9354b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/dan-shafer.json":"chunks/dan-shafer.771c71e9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/duygu-altinok.json":"chunks/duygu-altinok.75d19b23.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/ehab-el-ali.json":"chunks/ehab-el-ali.768ce391.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/evan-henry.json":"chunks/evan-henry.1745cf14.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/greg-holmes.json":"chunks/greg-holmes.8bff212d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/julia-strout.json":"chunks/julia-strout.88ea0c94.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/kate-weber.json":"chunks/kate-weber.1ab37f55.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/katie-byrne.json":"chunks/katie-byrne.6ac44433.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/keith-lam.json":"chunks/keith-lam.7b4bdfde.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/kevin-lewis.json":"chunks/kevin-lewis.3d5c6faa.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/luke-oliff.json":"chunks/luke-oliff.dd5920b2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/michael-jolley.json":"chunks/michael-jolley.8a0343c9.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/morris-gevirtz.json":"chunks/morris-gevirtz.f5ad9d5a.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/natalie-rutgers.json":"chunks/natalie-rutgers.1605de85.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/nicole-ohanian.json":"chunks/nicole-ohanian.fab5aa9d.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/nikola-whallon.json":"chunks/nikola-whallon.21c3bac8.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/pankaj-trivedi.json":"chunks/pankaj-trivedi.ccc7ba5b.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/ralphette-english.json":"chunks/ralphette-english.fbe9b6b2.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/richard-stevenson.json":"chunks/richard-stevenson.ba324256.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/ross-oconnell.json":"chunks/ross-oconnell.4d628528.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/sam-zegas.json":"chunks/sam-zegas.ab344f64.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/sandra-rodgers.json":"chunks/sandra-rodgers.daef0bac.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/scott-stephenson.json":"chunks/scott-stephenson.b6eb7d80.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/shadi-baqleh.json":"chunks/shadi-baqleh.f85c9758.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/shae-burnette.json":"chunks/shae-burnette.28001891.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/shir-goldberg.json":"chunks/shir-goldberg.edc6eebe.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/tonya-sims.json":"chunks/tonya-sims.5536ea85.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/authors/yujian-tang.json":"chunks/yujian-tang.2b60b153.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/ai-and-engineering.json":"chunks/ai-and-engineering.7c931afe.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/announcement.json":"chunks/announcement.455318d5.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/best-practice.json":"chunks/best-practice.d6f8e90e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/devlife.json":"chunks/devlife.1686061e.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/dg-insider.json":"chunks/dg-insider.67491215.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/identity-and-language.json":"chunks/identity-and-language.69202bd7.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/linguistics.json":"chunks/linguistics.82cb6b89.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/product-news.json":"chunks/product-news.1c007016.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/project-showcase.json":"chunks/project-showcase.38979593.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/speech-trends.json":"chunks/speech-trends.94e7f9c1.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/category/tutorial.json":"chunks/tutorial.5ecfce05.mjs","/Users/sandrarodgers/web-next/blog/src/content/blog/settings.json":"chunks/settings.e952b62e.mjs","/Users/sandrarodgers/web-next/blog/src/content/developers/api-specifications/openapi.json":"chunks/openapi.87ee39ab.mjs","/Users/sandrarodgers/web-next/blog/src/content/whitepapers/deepgram-whitepaper-how-deepgram-works.json":"chunks/deepgram-whitepaper-how-deepgram-works.15f2cbf7.mjs","/Users/sandrarodgers/web-next/blog/src/content/whitepapers/deepgram-whitepaper-make-application-voice-ready.json":"chunks/deepgram-whitepaper-make-application-voice-ready.f6bd3af3.mjs","/Users/sandrarodgers/web-next/blog/src/content/whitepapers/deepgram-whitepaper-newsletter.json":"chunks/deepgram-whitepaper-newsletter.a776801d.mjs","/Users/sandrarodgers/web-next/blog/src/content/whitepapers/deepgram-whitepaper-state-of-voice-2022.json":"chunks/deepgram-whitepaper-state-of-voice-2022.cd03fe6c.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/css-variables.json":"chunks/css-variables.fec89dfe.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/dark-plus.json":"chunks/dark-plus.c64d8286.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/dracula-soft.json":"chunks/dracula-soft.97887887.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/dracula.json":"chunks/dracula.16037935.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/github-dark-dimmed.json":"chunks/github-dark-dimmed.887421d6.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/github-dark.json":"chunks/github-dark.a141d561.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/github-light.json":"chunks/github-light.4ab896e1.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/hc_light.json":"chunks/hc_light.cffab4a5.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/light-plus.json":"chunks/light-plus.82aac543.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-darker.json":"chunks/material-darker.7d15313f.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-default.json":"chunks/material-default.42b48278.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-lighter.json":"chunks/material-lighter.3e844679.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-ocean.json":"chunks/material-ocean.f900a915.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/material-palenight.json":"chunks/material-palenight.2b604358.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/min-dark.json":"chunks/min-dark.caa582f0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/min-light.json":"chunks/min-light.39619116.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/monokai.json":"chunks/monokai.3f5e5246.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/nord.json":"chunks/nord.c4e6234a.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/one-dark-pro.json":"chunks/one-dark-pro.508ab27a.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/poimandres.json":"chunks/poimandres.9d3a0da2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/rose-pine-dawn.json":"chunks/rose-pine-dawn.a1ac07b2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/rose-pine-moon.json":"chunks/rose-pine-moon.3502176d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/rose-pine.json":"chunks/rose-pine.4260fdab.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/slack-dark.json":"chunks/slack-dark.ca95ebf9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/slack-ochin.json":"chunks/slack-ochin.92b84326.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/solarized-dark.json":"chunks/solarized-dark.8c233c43.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/solarized-light.json":"chunks/solarized-light.c6bb6780.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/vitesse-dark.json":"chunks/vitesse-dark.3f9b485b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/themes/vitesse-light.json":"chunks/vitesse-light.2a8df4bf.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/abap.tmLanguage.json":"chunks/abap.tmLanguage.90f43bd3.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/actionscript-3.tmLanguage.json":"chunks/actionscript-3.tmLanguage.22c45571.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ada.tmLanguage.json":"chunks/ada.tmLanguage.bbada208.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/apache.tmLanguage.json":"chunks/apache.tmLanguage.14bf6d31.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/apex.tmLanguage.json":"chunks/apex.tmLanguage.53e45f77.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/apl.tmLanguage.json":"chunks/apl.tmLanguage.c2079fda.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/applescript.tmLanguage.json":"chunks/applescript.tmLanguage.3fd248fb.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/asm.tmLanguage.json":"chunks/asm.tmLanguage.15765988.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/astro.tmLanguage.json":"chunks/astro.tmLanguage.48a2894d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/awk.tmLanguage.json":"chunks/awk.tmLanguage.2f62c203.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ballerina.tmLanguage.json":"chunks/ballerina.tmLanguage.6024f645.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/bat.tmLanguage.json":"chunks/bat.tmLanguage.cded4316.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/berry.tmLanguage.json":"chunks/berry.tmLanguage.c980beee.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/bibtex.tmLanguage.json":"chunks/bibtex.tmLanguage.fc9af179.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/bicep.tmLanguage.json":"chunks/bicep.tmLanguage.63286f93.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/blade.tmLanguage.json":"chunks/blade.tmLanguage.5ab4f623.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/c.tmLanguage.json":"chunks/c.tmLanguage.cb7fbdd5.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cadence.tmLanguage.json":"chunks/cadence.tmLanguage.582679a9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/clarity.tmLanguage.json":"chunks/clarity.tmLanguage.c2023279.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/clojure.tmLanguage.json":"chunks/clojure.tmLanguage.552833f9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cmake.tmLanguage.json":"chunks/cmake.tmLanguage.837f2f7d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cobol.tmLanguage.json":"chunks/cobol.tmLanguage.1d855399.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/codeql.tmLanguage.json":"chunks/codeql.tmLanguage.ac48a804.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/coffee.tmLanguage.json":"chunks/coffee.tmLanguage.8d9f5e98.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cpp-macro.tmLanguage.json":"chunks/cpp-macro.tmLanguage.56442b58.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cpp.tmLanguage.json":"chunks/cpp.tmLanguage.0d62ebb3.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/crystal.tmLanguage.json":"chunks/crystal.tmLanguage.5dba6dad.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/csharp.tmLanguage.json":"chunks/csharp.tmLanguage.e843df0c.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/css.tmLanguage.json":"chunks/css.tmLanguage.aa42be68.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/cue.tmLanguage.json":"chunks/cue.tmLanguage.659a5c98.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/d.tmLanguage.json":"chunks/d.tmLanguage.2f917db0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/dart.tmLanguage.json":"chunks/dart.tmLanguage.eeb4c7f9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/diff.tmLanguage.json":"chunks/diff.tmLanguage.d31ff9b6.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/docker.tmLanguage.json":"chunks/docker.tmLanguage.d111d5ed.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/dream-maker.tmLanguage.json":"chunks/dream-maker.tmLanguage.0ffb65b4.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/elixir.tmLanguage.json":"chunks/elixir.tmLanguage.6d46e86b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/elm.tmLanguage.json":"chunks/elm.tmLanguage.103aa363.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/erb.tmLanguage.json":"chunks/erb.tmLanguage.0fa47828.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/erlang.tmLanguage.json":"chunks/erlang.tmLanguage.cf3fb91b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/fish.tmLanguage.json":"chunks/fish.tmLanguage.f1f0521b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/fsharp.tmLanguage.json":"chunks/fsharp.tmLanguage.680ee921.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/gherkin.tmLanguage.json":"chunks/gherkin.tmLanguage.c3b24f9b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/git-commit.tmLanguage.json":"chunks/git-commit.tmLanguage.14bba07b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/git-rebase.tmLanguage.json":"chunks/git-rebase.tmLanguage.93cbf6c5.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/glsl.tmLanguage.json":"chunks/glsl.tmLanguage.f2313b4d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/gnuplot.tmLanguage.json":"chunks/gnuplot.tmLanguage.b75af28f.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/go.tmLanguage.json":"chunks/go.tmLanguage.c2a5df11.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/graphql.tmLanguage.json":"chunks/graphql.tmLanguage.3f9696f4.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/groovy.tmLanguage.json":"chunks/groovy.tmLanguage.4caa187d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/hack.tmLanguage.json":"chunks/hack.tmLanguage.4b437c29.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/haml.tmLanguage.json":"chunks/haml.tmLanguage.1856c417.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/handlebars.tmLanguage.json":"chunks/handlebars.tmLanguage.2efba05a.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/haskell.tmLanguage.json":"chunks/haskell.tmLanguage.4c61530d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/hcl.tmLanguage.json":"chunks/hcl.tmLanguage.5d6b7314.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/hlsl.tmLanguage.json":"chunks/hlsl.tmLanguage.613dd968.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/html.tmLanguage.json":"chunks/html.tmLanguage.6fb5149b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ini.tmLanguage.json":"chunks/ini.tmLanguage.0cbf1d05.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/java.tmLanguage.json":"chunks/java.tmLanguage.c39bfaf6.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/javascript.tmLanguage.json":"chunks/javascript.tmLanguage.61e966ee.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jinja-html.tmLanguage.json":"chunks/jinja-html.tmLanguage.39b5f211.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jinja.tmLanguage.json":"chunks/jinja.tmLanguage.fa903c4e.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/json.tmLanguage.json":"chunks/json.tmLanguage.74144e27.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jsonc.tmLanguage.json":"chunks/jsonc.tmLanguage.1a3b9109.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jsonnet.tmLanguage.json":"chunks/jsonnet.tmLanguage.8d48996b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jssm.tmLanguage.json":"chunks/jssm.tmLanguage.6c1b9158.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/jsx.tmLanguage.json":"chunks/jsx.tmLanguage.583f1a16.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/julia.tmLanguage.json":"chunks/julia.tmLanguage.0a8b94e7.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/kotlin.tmLanguage.json":"chunks/kotlin.tmLanguage.e8a6b7a6.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/latex.tmLanguage.json":"chunks/latex.tmLanguage.ecadecb8.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/less.tmLanguage.json":"chunks/less.tmLanguage.bd7b8d56.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/liquid.tmLanguage.json":"chunks/liquid.tmLanguage.7754d6e3.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/lisp.tmLanguage.json":"chunks/lisp.tmLanguage.5f9b63b2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/logo.tmLanguage.json":"chunks/logo.tmLanguage.b0c8f7e2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/lua.tmLanguage.json":"chunks/lua.tmLanguage.8d5fb6ef.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/make.tmLanguage.json":"chunks/make.tmLanguage.c2039eb5.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/markdown.tmLanguage.json":"chunks/markdown.tmLanguage.a4092da8.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/marko.tmLanguage.json":"chunks/marko.tmLanguage.ba870c0b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/matlab.tmLanguage.json":"chunks/matlab.tmLanguage.59d7a9f2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/mdx.tmLanguage.json":"chunks/mdx.tmLanguage.55107cd9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/mermaid.tmLanguage.json":"chunks/mermaid.tmLanguage.4de46447.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/nginx.tmLanguage.json":"chunks/nginx.tmLanguage.b75b10ef.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/nim.tmLanguage.json":"chunks/nim.tmLanguage.c387f2c9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/nix.tmLanguage.json":"chunks/nix.tmLanguage.59e90ede.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/objective-c.tmLanguage.json":"chunks/objective-c.tmLanguage.20751fe3.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/objective-cpp.tmLanguage.json":"chunks/objective-cpp.tmLanguage.35952028.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ocaml.tmLanguage.json":"chunks/ocaml.tmLanguage.0143759c.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/pascal.tmLanguage.json":"chunks/pascal.tmLanguage.24002509.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/perl.tmLanguage.json":"chunks/perl.tmLanguage.95aaa323.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/php-html.tmLanguage.json":"chunks/php-html.tmLanguage.9bf25695.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/php.tmLanguage.json":"chunks/php.tmLanguage.208cc284.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/plsql.tmLanguage.json":"chunks/plsql.tmLanguage.2f001168.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/postcss.tmLanguage.json":"chunks/postcss.tmLanguage.df844470.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/powershell.tmLanguage.json":"chunks/powershell.tmLanguage.557fecb1.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/prisma.tmLanguage.json":"chunks/prisma.tmLanguage.3d2ecd3f.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/prolog.tmLanguage.json":"chunks/prolog.tmLanguage.6aaa58fd.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/pug.tmLanguage.json":"chunks/pug.tmLanguage.923cd00e.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/puppet.tmLanguage.json":"chunks/puppet.tmLanguage.7c62b6f0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/purescript.tmLanguage.json":"chunks/purescript.tmLanguage.a1fbe8e9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/python.tmLanguage.json":"chunks/python.tmLanguage.255784a7.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/r.tmLanguage.json":"chunks/r.tmLanguage.27744799.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/raku.tmLanguage.json":"chunks/raku.tmLanguage.3eec78ae.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/razor.tmLanguage.json":"chunks/razor.tmLanguage.423995f0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/rel.tmLanguage.json":"chunks/rel.tmLanguage.8d9faf37.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/riscv.tmLanguage.json":"chunks/riscv.tmLanguage.86c81d11.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/rst.tmLanguage.json":"chunks/rst.tmLanguage.3203d5d2.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ruby.tmLanguage.json":"chunks/ruby.tmLanguage.5878ff9e.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/rust.tmLanguage.json":"chunks/rust.tmLanguage.ca198b9a.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/sas.tmLanguage.json":"chunks/sas.tmLanguage.96dffcab.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/sass.tmLanguage.json":"chunks/sass.tmLanguage.69993358.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/scala.tmLanguage.json":"chunks/scala.tmLanguage.f0618f94.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/scheme.tmLanguage.json":"chunks/scheme.tmLanguage.43867c45.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/scss.tmLanguage.json":"chunks/scss.tmLanguage.34ac990b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/shaderlab.tmLanguage.json":"chunks/shaderlab.tmLanguage.32cc3af0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/shellscript.tmLanguage.json":"chunks/shellscript.tmLanguage.709c69f9.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/smalltalk.tmLanguage.json":"chunks/smalltalk.tmLanguage.bed30313.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/solidity.tmLanguage.json":"chunks/solidity.tmLanguage.f49e6b87.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/sparql.tmLanguage.json":"chunks/sparql.tmLanguage.cca7e4fb.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/sql.tmLanguage.json":"chunks/sql.tmLanguage.53f84ea8.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/ssh-config.tmLanguage.json":"chunks/ssh-config.tmLanguage.88607f95.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/stata.tmLanguage.json":"chunks/stata.tmLanguage.7941b321.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/stylus.tmLanguage.json":"chunks/stylus.tmLanguage.aae41083.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/svelte.tmLanguage.json":"chunks/svelte.tmLanguage.51e3e183.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/swift.tmLanguage.json":"chunks/swift.tmLanguage.1758b78f.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/system-verilog.tmLanguage.json":"chunks/system-verilog.tmLanguage.98c0822c.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/tasl.tmLanguage.json":"chunks/tasl.tmLanguage.f048ca02.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/tcl.tmLanguage.json":"chunks/tcl.tmLanguage.331e619d.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/tex.tmLanguage.json":"chunks/tex.tmLanguage.378e91de.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/toml.tmLanguage.json":"chunks/toml.tmLanguage.ac48c2b1.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/tsx.tmLanguage.json":"chunks/tsx.tmLanguage.8c2c7b1b.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/turtle.tmLanguage.json":"chunks/turtle.tmLanguage.81eec047.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/twig.tmLanguage.json":"chunks/twig.tmLanguage.cdc9b736.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/typescript.tmLanguage.json":"chunks/typescript.tmLanguage.e7dbfd15.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/vb.tmLanguage.json":"chunks/vb.tmLanguage.b376ae92.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/verilog.tmLanguage.json":"chunks/verilog.tmLanguage.6c2eff21.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/vhdl.tmLanguage.json":"chunks/vhdl.tmLanguage.336d9759.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/viml.tmLanguage.json":"chunks/viml.tmLanguage.bf2daa01.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/vue-html.tmLanguage.json":"chunks/vue-html.tmLanguage.3a2e7543.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/vue.tmLanguage.json":"chunks/vue.tmLanguage.c77b2cf0.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/wasm.tmLanguage.json":"chunks/wasm.tmLanguage.b7f5d22e.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/wenyan.tmLanguage.json":"chunks/wenyan.tmLanguage.5d7089b7.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/xml.tmLanguage.json":"chunks/xml.tmLanguage.f76daefd.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/xsl.tmLanguage.json":"chunks/xsl.tmLanguage.ab9f8922.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/yaml.tmLanguage.json":"chunks/yaml.tmLanguage.2e704356.mjs","/Users/sandrarodgers/web-next/blog/node_modules/shiki/languages/zenscript.tmLanguage.json":"chunks/zenscript.tmLanguage.7f56cf0d.mjs","/Users/sandrarodgers/web-next/blog/src/shared/components/search/DocSearch":"DocSearch.4e121a59.js","@astrojs/vue/client.js":"client.6892282e.js","@astrojs/preact/client.js":"client.f1d83173.js","/astro/hoisted.js?q=0":"hoisted.d8f274fa.js","/astro/hoisted.js?q=1":"hoisted.35d832ba.js","astro:scripts/page.js":"page.ae46ab13.js","astro:scripts/before-hydration.js":""},"assets":["/assets/Inter-Thin.77d96c1c.woff2","/assets/Inter-ThinItalic.d82beee8.woff2","/assets/Inter-ExtraLightItalic.db229bf3.woff2","/assets/Inter-ExtraLight.b6cd094a.woff2","/assets/Inter-Light.36b86832.woff2","/assets/Inter-LightItalic.737ac201.woff2","/assets/Inter-Italic.900058df.woff2","/assets/Inter-SemiBold.15226129.woff2","/assets/Inter-Regular.d612f121.woff2","/assets/Inter-SemiBoldItalic.3b6df7d0.woff2","/assets/Inter-MediumItalic.81600858.woff2","/assets/Inter-Medium.1b498b95.woff2","/assets/Inter-BoldItalic.3f211964.woff2","/assets/Inter-Bold.c63158ba.woff2","/assets/Inter-ExtraBold.307d9809.woff2","/assets/Inter-ExtraBoldItalic.cf6b1d6c.woff2","/assets/Inter-Black.fc10113c.woff2","/assets/Inter-BlackItalic.bc80081d.woff2","/assets/Inter-roman.var.17fe38ab.woff2","/assets/Inter-italic.var.d1401419.woff2","/assets/ABCFavorit-Bold.0be5b4a5.woff2","/assets/Inter.var.85f08b5f.woff2","/assets/FiraCode-Light.9a0ab96c.ttf","/assets/Inter-Thin.e6bced8e.woff","/assets/Inter-ThinItalic.70648e9b.woff","/assets/Inter-ExtraLightItalic.32e53d8a.woff","/assets/Inter-ExtraLight.015dad27.woff","/assets/Inter-Light.4871aed0.woff","/assets/Inter-SemiBold.653fed7a.woff","/assets/Inter-Italic.cd1eda97.woff","/assets/Inter-LightItalic.7d291e85.woff","/assets/Inter-Regular.ef1f23c0.woff","/assets/Inter-SemiBoldItalic.95e68b6b.woff","/assets/Inter-MediumItalic.205c8989.woff","/assets/Inter-Medium.53deda46.woff","/assets/Inter-BoldItalic.ace8e094.woff","/assets/Inter-Bold.3e242080.woff","/assets/Inter-ExtraBold.f053602c.woff","/assets/Inter-BlackItalic.87235581.woff","/assets/Inter-ExtraBoldItalic.6deefddf.woff","/assets/Inter-Black.8b21d5be.woff","/assets/_slug_.d2c7dc7f.css","/assets/_slug_.c2747b55.css","/assets/_slug_.744289ca.css","/assets/_slug_.669a2d1d.css","/assets/_slug_.123048a7.css","/assets/_slug_.99ec8802.css","/assets/index.9c23bf80.css","/DocSearch.4e121a59.js","/_headers","/_redirects","/asr-comparison-promo-image.png","/asr-comparison-promo-image@2x.png","/build-something-great-with-voice.png","/client.6892282e.js","/client.f1d83173.js","/favicon.ico","/gear-question-how-dg-works-image@2x.png","/hoisted.35d832ba.js","/hoisted.d8f274fa.js","/humans.txt","/logo.svg","/netlify.toml","/page.ae46ab13.js","/quote-marks-make-app-voice-ready-image.svg","/red-green-orb-voice-report-image@2x.png","/robots.txt","/sound-wave-cloud-dark.svg","/sound-wave@2x.svg","/starburst-gradient.svg","/tag-gradient.svg","/chunks/Default.astro_astro_type_script_index_0_lang.0db659d0.js","/chunks/preact.module.b8ec28b5.js","/page.ae46ab13.js"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });

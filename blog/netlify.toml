@@ -3,7 +3,7 @@
   base = "blog/"
 
   # relativate path for the build output (www/dist/)
-  publish = "dist/"
+  publish = ".netlify/functions-internal/entry.mjs"
 
   # build command
   command = "yarn build"
