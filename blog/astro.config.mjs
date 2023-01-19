@@ -6,9 +6,12 @@ import vue from "@astrojs/vue";
 import vitePreact from "@preact/preset-vite";
 import preact from "@astrojs/preact";
 import storyblok from "@storyblok/astro";
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
+	output: "server",
+	adapter: netlify(),
 	site: process.env.URL,
 	integrations: [
 		sitemap(),
@@ -22,8 +25,8 @@ export default defineConfig({
 		vue(),
 		preact(),
 		storyblok({
-			// accessToken: "DQ5PVW2Hi8ZeawcnLc3nvQtt",
-			accessToken: "dxzwOWtkKol6qnfd54RFewtt",
+			accessToken: "DQ5PVW2Hi8ZeawcnLc3nvQtt",
+			// accessToken: "dxzwOWtkKol6qnfd54RFewtt",
 			apiOptions: {
 				cache: { clear: "auto", type: "memory" },
 				region: "us",

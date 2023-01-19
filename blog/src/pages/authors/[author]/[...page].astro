@@ -11,164 +11,165 @@ import Backlink from "../../../components/nav/Backlink.astro";
 import JsonLD from "../../../shared/components/meta/JsonLD.astro";
 import { useStoryblokApi } from "@storyblok/astro";
 
-export async function getStaticPaths({ paginate }) {
-	const sbApi = useStoryblokApi();
-	const allPosts = await sbApi.getAll("cdn/stories", {
-		by_slugs: "blog-posts/*",
-	});
-	const authors = await sbApi.getAll("cdn/stories", {
-		by_slugs: "authors/*",
-	});
+// export async function getStaticPaths({ paginate }) {
+// 	const sbApi = useStoryblokApi();
+// 	const allPosts = await sbApi.getAll("cdn/stories", {
+// 		by_slugs: "blog-posts/*",
+// 	});
+// 	const authors = await sbApi.getAll("cdn/stories", {
+// 		by_slugs: "authors/*",
+// 	});
 
-	const sortedPosts = allPosts.sort((a, b) => {
-		const aDate = new Date(b.content.date);
-		const bDate = new Date(a.content.date);
-		return aDate.getTime() - bDate.getTime();
-	});
+// 	const sortedPosts = allPosts.sort((a, b) => {
+// 		const aDate = new Date(b.content.date);
+// 		const bDate = new Date(a.content.date);
+// 		return aDate.getTime() - bDate.getTime();
+// 	});
 
-	return authors.map((author) => {
-		const posts = sortedPosts.filter((post) => {
-			if (post.content.authors) {
-				return post.content.authors.includes(author.uuid);
-			}
+// 	return authors.map((author) => {
+// 		const posts = sortedPosts.filter((post) => {
+// 			if (post.content.authors) {
+// 				return post.content.authors.includes(author.uuid);
+// 			}
 
-			return false;
-		});
+// 			return false;
+// 		});
 
-		return paginate(posts, {
-			params: {
-				author: author.slug,
-			},
-			pageSize: 20,
-			props: {
-				author,
-			},
-		});
-	});
-}
+// 		return paginate(posts, {
+// 			params: {
+// 				author: author.slug,
+// 			},
+// 			pageSize: 20,
+// 			props: {
+// 				author,
+// 			},
+// 		});
+// 	});
+// }
 
-const { page, author } = Astro.props;
-const name = author.content.title.split(" ");
-const firstName = name.pop();
-const lastName = name.join("");
-if (author.content.picture.filename.indexOf('cloudinary') > -1) {
-	if(author.content.picture.filename.indexOf('w_') === -1) {
-		author.content.picture.filename = author.content.picture.filename.replace('upload/', 'upload/w_320/');
-	} 
-	if(author.content.picture.filename.indexOf('c_') === -1) {
-		author.content.picture.filename = author.content.picture.filename.replace('upload/', 'upload/c_crop/');
-	}
-}
-const socials = [];
+// const { page, author } = Astro.props;
+// const name = author.content.title.split(" ");
+// const firstName = name.pop();
+// const lastName = name.join("");
+// if (author.content.picture.filename.indexOf('cloudinary') > -1) {
+// 	if(author.content.picture.filename.indexOf('w_') === -1) {
+// 		author.content.picture.filename = author.content.picture.filename.replace('upload/', 'upload/w_320/');
+// 	}
+// 	if(author.content.picture.filename.indexOf('c_') === -1) {
+// 		author.content.picture.filename = author.content.picture.filename.replace('upload/', 'upload/c_crop/');
+// 	}
+// }
+// const socials = [];
 
-if (author.content.twitter) {
-	socials.push(`https://twitter.com/${author.content.twitter}`);
-}
+// if (author.content.twitter) {
+// 	socials.push(`https://twitter.com/${author.content.twitter}`);
+// }
 
-if (author.content.linkedin) {
-	socials.push(author.content.linkedin);
-}
+// if (author.content.linkedin) {
+// 	socials.push(author.content.linkedin);
+// }
 
-if (author.content.github) {
-	socials.push(author.content.github);
-}
+// if (author.content.github) {
+// 	socials.push(author.content.github);
+// }
 
-if (author.content.twitch) {
-	socials.push(author.content.twitch);
-}
+// if (author.content.twitch) {
+// 	socials.push(author.content.twitch);
+// }
 
-if (author.content.website) {
-	socials.push(author.content.website);
-}
+// if (author.content.website) {
+// 	socials.push(author.content.website);
+// }
 
-if (author.content.youtube) {
-	socials.push(author.content.youtube);
-}
+// if (author.content.youtube) {
+// 	socials.push(author.content.youtube);
+// }
 
-// build json schema as a string
-const schema = [
-	{
-		"@context": "https://schema.org",
-		"@type": "Person",
-		image: author.content.picture ? author.content.picture : null,
-		name: author.content.title,
-		jobTitle: author.content.team ? (author.content.jobtitle ? author.content.jobtitle : "Deepgram Team") : author.content.alumni ? "Deepgram Alumni" : "Guest Author",
-		url: Astro.url,
-		sameAs: socials,
-	},
-	{
-		"@context": "https://schema.org",
-		"@type": "BreadcrumbList",
-		itemListElement: [
-			{
-				"@type": "ListItem",
-				position: 1,
-				name: "Deepgram Home",
-				item: "https://deepgram.com",
-			},
-			{
-				"@type": "ListItem",
-				position: 2,
-				name: "Blog",
-				item: Astro.url.origin,
-			},
-			{
-				"@type": "ListItem",
-				position: 3,
-				name: "Authors",
-				item: `${Astro.url.origin}/authors`,
-			},
-			{
-				"@type": "ListItem",
-				position: 4,
-				name: author.content.title,
-			},
-		],
-	},
-];
+// // build json schema as a string
+// const schema = [
+// 	{
+// 		"@context": "https://schema.org",
+// 		"@type": "Person",
+// 		image: author.content.picture ? author.content.picture : null,
+// 		name: author.content.title,
+// 		jobTitle: author.content.team ? (author.content.jobtitle ? author.content.jobtitle : "Deepgram Team") : author.content.alumni ? "Deepgram Alumni" : "Guest Author",
+// 		url: Astro.url,
+// 		sameAs: socials,
+// 	},
+// 	{
+// 		"@context": "https://schema.org",
+// 		"@type": "BreadcrumbList",
+// 		itemListElement: [
+// 			{
+// 				"@type": "ListItem",
+// 				position: 1,
+// 				name: "Deepgram Home",
+// 				item: "https://deepgram.com",
+// 			},
+// 			{
+// 				"@type": "ListItem",
+// 				position: 2,
+// 				name: "Blog",
+// 				item: Astro.url.origin,
+// 			},
+// 			{
+// 				"@type": "ListItem",
+// 				position: 3,
+// 				name: "Authors",
+// 				item: `${Astro.url.origin}/authors`,
+// 			},
+// 			{
+// 				"@type": "ListItem",
+// 				position: 4,
+// 				name: author.content.title,
+// 			},
+// 		],
+// 	},
+// ];
+// ---
+
+// <Layout>
+// 	<JsonLD slot="json:ld" {schema} />
+
+// 	<Title slot="head:title" title={`${author.content.title} - ${author.content.jobtitle} - Deepgram Blog ⚡️`} />
+// 	<Description
+// 		slot="head:description"
+// 		name="description"
+// 		content={author.content.bio ? author.content.bio : `${author.content.title} is a ${author.content.jobtitle} writing content for the Deepgram blog.`}
+// 	/>
+// 	<Meta slot="og:title" property="og:title" content={`${author.content.title} - ${author.content.jobtitle} - Deepgram Blog ⚡️`} />
+// 	<Meta
+// 		slot="og:description"
+// 		property="og:description"
+// 		content={author.content.bio ? author.content.bio : `${author.content.title} is a ${author.content.jobtitle} writing content for the Deepgram blog.`}
+// 	/>
+// 	<Meta slot="og:type" property="og:type" content="profile" />
+// 	{author.content.picture.filename && <Meta slot="og:image" property="og:image" content={author.content.picture.filename} />}
+// 	{author.content.picture.filename && (
+// 		<Meta
+// 			slot="og:image:alt"
+// 			property="og:image:alt"
+// 			content={
+// 				author.content.bio
+// 					? `Profile pic for ${author.content.title}. ${author.content.bio}`
+// 					: `Profile pic for ${author.content.title}, a ${author.content.jobtitle} writing content for the Deepgram blog.`
+// 			}
+// 		/>
+// 	)}
+// 	<Meta slot="head" property="profile:username" content={author.slug} />
+// 	<Meta slot="head" property="profile:first_name" content={firstName} />
+// 	<Meta slot="head" property="profile:last_name" content={lastName} />
+// 	{author.content.twitter && <Meta slot="head" property="twitter:creator" content={`@${author.content.twitter}`} />}
+
+// 	<ContrastSection contrast="black" background="darkCharcoal" bottomDivider="eclipse-divider" class="-mb-32">
+// 		<PrimarySection class="bg-black pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
+// 			<Backlink href="/authors" class="text-lightIris mb-6 md:mb-8 lg:mb-10 xl:mb-12">All authors</Backlink>
+
+// 			<AuthorHero author={author} />
+// 		</PrimarySection>
+// 	</ContrastSection>
+// 	<PrimarySection>
+// 		<AuthorPostsPage slug={`authors/${author.slug}`} page={page} posts={page.data} link="/authors" linkText="All authors" subtitle={`All ${author.content.title} posts`} />
+// 	</PrimarySection>
+// </Layout>
 ---
-
-<Layout>
-	<JsonLD slot="json:ld" {schema} />
-
-	<Title slot="head:title" title={`${author.content.title} - ${author.content.jobtitle} - Deepgram Blog ⚡️`} />
-	<Description
-		slot="head:description"
-		name="description"
-		content={author.content.bio ? author.content.bio : `${author.content.title} is a ${author.content.jobtitle} writing content for the Deepgram blog.`}
-	/>
-	<Meta slot="og:title" property="og:title" content={`${author.content.title} - ${author.content.jobtitle} - Deepgram Blog ⚡️`} />
-	<Meta
-		slot="og:description"
-		property="og:description"
-		content={author.content.bio ? author.content.bio : `${author.content.title} is a ${author.content.jobtitle} writing content for the Deepgram blog.`}
-	/>
-	<Meta slot="og:type" property="og:type" content="profile" />
-	{author.content.picture.filename && <Meta slot="og:image" property="og:image" content={author.content.picture.filename} />}
-	{author.content.picture.filename && (
-		<Meta
-			slot="og:image:alt"
-			property="og:image:alt"
-			content={
-				author.content.bio
-					? `Profile pic for ${author.content.title}. ${author.content.bio}`
-					: `Profile pic for ${author.content.title}, a ${author.content.jobtitle} writing content for the Deepgram blog.`
-			}
-		/>
-	)}
-	<Meta slot="head" property="profile:username" content={author.slug} />
-	<Meta slot="head" property="profile:first_name" content={firstName} />
-	<Meta slot="head" property="profile:last_name" content={lastName} />
-	{author.content.twitter && <Meta slot="head" property="twitter:creator" content={`@${author.content.twitter}`} />}
-
-	<ContrastSection contrast="black" background="darkCharcoal" bottomDivider="eclipse-divider" class="-mb-32">
-		<PrimarySection class="bg-black pt-[6.75rem] md:pt-[7.03125rem] lg:pt-[7.3125rem] xl:pt-[7.875rem]">
-			<Backlink href="/authors" class="text-lightIris mb-6 md:mb-8 lg:mb-10 xl:mb-12">All authors</Backlink>
-
-			<AuthorHero author={author} />
-		</PrimarySection>
-	</ContrastSection>
-	<PrimarySection>
-		<AuthorPostsPage slug={`authors/${author.slug}`} page={page} posts={page.data} link="/authors" linkText="All authors" subtitle={`All ${author.content.title} posts`} />
-	</PrimarySection>
-</Layout>

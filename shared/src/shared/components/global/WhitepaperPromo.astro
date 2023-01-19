@@ -1,6 +1,7 @@
 ---
 import { getSluggedJson } from "../../util";
 import AbstractPromo from "../promos/AbstractPromo.astro";
+import { storyblokEditable } from "@storyblok/astro";
 
 interface Props {
 	whitepaper: string;
@@ -28,10 +29,13 @@ if (whitepaperSlug === "latest") {
 }
 
 const { theme, title, image, script } = whitepaper;
+const { blok } = Astro.props;
 ---
 
-<AbstractPromo strapline="White Paper" outsideBlog={outsideBlog} backgroundImage={image} theme={theme} title={title} {...rest}>
-	<script set:html={script}></script>
+<AbstractPromo {...storyblokEditable(blok)} strapline="White Paper" outsideBlog={outsideBlog} backgroundImage={image} theme={theme} title={title} {...rest}>
+	<script set:html={script}>
+
+	</script>
 </AbstractPromo>
 
 <style>

@@ -1,6 +1,7 @@
 ---
 import Icon from "../general/Icon.astro";
 import { renderRichText } from "@storyblok/astro";
+import { storyblokEditable } from "@storyblok/astro";
 const { blok = { type: "info", fill: "fill-black", title: "Information" } } = Astro.props;
 const { type, title, fill } = blok;
 let renderedRichText;
@@ -9,7 +10,7 @@ if (blok.inner_html) {
 }
 ---
 
-<div class={`panel ${type}`}>
+<div class={`panel ${type}`} {...storyblokEditable(blok)}>
 	<div class="heading">
 		<div class="p-2">
 			<Icon class={`icon h-6 w-6 ${type === "info" ? "fill-casper" : type === "warning" ? "fill-sunflower" : fill}`} icon={type} />
@@ -21,7 +22,7 @@ if (blok.inner_html) {
 
 	<div class="text">
 		<slot>
-			<div set:html={renderedRichText} />
+			<div set:html={renderedRichText}></div>
 		</slot>
 	</div>
 </div>
@@ -37,7 +38,7 @@ if (blok.inner_html) {
 		@apply border-grass border-b;
 		@apply w-full;
 		@apply flex flex-row flex-wrap;
-		@apply ml-0 my-0;
+		@apply my-0 ml-0;
 		/* @apply ml-4; */
 	}
 	.icon {

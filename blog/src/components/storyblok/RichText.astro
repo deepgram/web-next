@@ -1,5 +1,6 @@
 ---
 import { renderRichText } from "@storyblok/astro";
+import { storyblokEditable } from "@storyblok/astro";
 import cloneDeep from "clone-deep";
 import schema from "./richTextSchema";
 const clonedSchema = cloneDeep(schema);
@@ -23,4 +24,6 @@ const renderedRichText = renderRichText(blok.content, { schema: clonedSchema });
 // });
 ---
 
-<div set:html={renderedRichText}></div>
+<div {...storyblokEditable(blok)}>
+	<div set:html={renderedRichText}></div>
+</div>

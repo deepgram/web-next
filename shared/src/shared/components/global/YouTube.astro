@@ -1,8 +1,9 @@
 ---
 const { blok } = Astro.props;
+import { storyblokEditable } from "@storyblok/astro";
 ---
 
-<div class="youtube-container w-full my-4">
+<div class="youtube-container w-full my-4" {...storyblokEditable(blok)}>
 	<iframe
 		height="100%"
 		width="100%"
