@@ -8,11 +8,16 @@ import SideNav from "../shared/components/nav/SideNav.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
 import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 import nav from "../pages/documentation/navigation.json";
+import Title from "../shared/components/meta/Title.astro";
+import Meta from "../shared/components/meta/Meta.astro";
 import "../assets/styles/developers.css";
-const { headings } = Astro.props;
+const { headings, frontmatter } = Astro.props;
+const seoTitle = frontmatter.seo && frontmatter.seo.metaTitle ? frontmatter.seo.metaTitle : frontmatter.title;
 ---
 
 <Default>
+	<Title slot="head:title" title={`${seoTitle ? seoTitle + " - " : ""}Documentation, Use Cases, Posts, and Tutorials - Deepgram Docs`} />
+	<Meta slot="og:title" property="og:title" content={`${seoTitle ? seoTitle + " - " : ""}Documentation, Use Cases, Posts, and Tutorials - Deepgram Docs`} />
 	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
