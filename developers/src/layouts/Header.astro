@@ -68,11 +68,6 @@ const pathname = Astro.url.pathname;
 					>
 					<Link
 						primary
-						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("use-cases") ? "text-white border-lightIris" : "text-cloud"}`}
-						href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link
-					>
-					<Link
-						primary
 						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("sdks-tools") ? "text-white border-lightIris" : "text-cloud"}`}
 						href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs & Tools</Link
 					>
@@ -142,14 +137,6 @@ const pathname = Astro.url.pathname;
 								pathname.endsWith("on-prem") ? "text-white border-lightIris" : "text-cloud"
 							}`}
 							href={`${DOCS_DOMAIN}/on-prem`}>On-Prem Deployment</Link
-						>
-						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
-						<Link
-							primary
-							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
-								pathname.endsWith("use-cases") ? "text-white border-lightIris" : "text-cloud"
-							}`}
-							href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link
 						>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 						<Link
