@@ -13,7 +13,7 @@
 
 [functions]
   # Directory with serverless functions
-  directory = "dist/functions/"
+  directory = "functions/"
 
 [[redirects]]
   from = "/serverless/*"
