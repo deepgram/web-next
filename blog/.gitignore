@@ -8,7 +8,7 @@ fly.toml
 .nitro
 .cache
 .output
-
+.netlify/functions-internal
 # dependencies
 node_modules/
 

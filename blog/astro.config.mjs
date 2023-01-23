@@ -10,7 +10,9 @@ import netlify from "@astrojs/netlify/functions";
 
 export default defineConfig({
 	output: "server",
-	adapter: netlify(),
+	adapter: netlify({
+    dist: new URL('./dist/', import.meta.url)
+  }),
 	site: process.env.URL,
 	integrations: [
 		sitemap(),
