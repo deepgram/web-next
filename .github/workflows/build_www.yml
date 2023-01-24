@@ -1,33 +1,33 @@
-name: "WWW: CI/CD"
+name: "WWW2: CI/CD"
 
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths: 
-    - 'www/**'
+    - 'www2/**'
     - 'content/**'
     - 'shared/**'
   pull_request:
     branches: [main]
     paths: 
-    - 'www/**'
+    - 'www2/**'
     - 'content/**'
     - 'shared/**'
     
 jobs:
   www:
-    name: Build WWW
+    name: Build WWW (deprecated)
     runs-on: ubuntu-latest
     env:
       PRODUCTION_DOMAIN: deepgram.com
       STAGING_DOMAIN: nimble-treacle-4f6711-www.netlify.app
-      BUILD_PATH: ./www
+      BUILD_PATH: ./www2
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_WWW }}
       IS_PRODUCTION: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
       IS_STAGING: ${{ github.ref != 'refs/heads/main' && github.event_name == 'pull_request' }}
-      DEPLOY_PREFIX: www
+      DEPLOY_PREFIX: www2
     steps:
       - name: Configure dynamic environment variables for production
         if: ${{ env.IS_PRODUCTION == 'true' }}

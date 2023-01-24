@@ -1,8 +1,8 @@
 [build]
   # directory to change to build in
-  base = "www/"
+  base = "www2/"
 
-  # relativate path for the build output (www/dist/)
+  # relativate path for the build output (www2/dist/)
   publish = "dist/"
 
   # build command
