@@ -14,9 +14,7 @@ const wp = data.story.content;
 ---
 
 <AbstractPromo strapline={wp.strapline ? wp.strapline : null} backgroundImage={wp.image.filename} theme={wp.theme} title={wp.title}>
-	<script set:html={wp.script}>
-
-	</script>
+	<script set:html={wp.script}></script>
 </AbstractPromo>
 
 <style>
