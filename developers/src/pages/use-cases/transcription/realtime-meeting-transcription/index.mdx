@@ -127,7 +127,7 @@ By default, the application runs on port 3000, which means you can access it at
 
 ## Code Walk-through
 
-The application is an Express app that uses `public/js/video_chat.js` to build a two-way video call using classic WebRTC technology. It uses an intermediate server (`server.js`) to establish a peer-to-peer connection between itself and another client. Your browser records your microphone using the [opus-recorder library](https://github.com/chris-rudmin/opus-recorder), then sends the audio stream to the server. In turn, the server forwards the audio stream to Deepgram’s API, using your Deepgram API Key to authenticate with the [real-time streaming endpoint](/api-reference/#transcription-streaming). When the server receives the transcription back from the Deepgram API, it displays the transcription data in the browser. The key logic that connects to Deepgram and forwards any transcriptions it receives to the client application lives in the `server.js` file.
+The application is an Express app that uses `public/js/video_chat.js` to build a two-way video call using classic WebRTC technology. It uses an intermediate server (`server.js`) to establish a peer-to-peer connection between itself and another client. Your browser records your microphone using the [opus-recorder library](https://github.com/chris-rudmin/opus-recorder), then sends the audio stream to the server. In turn, the server forwards the audio stream to Deepgram’s API, using your Deepgram API Key to authenticate with the [real-time streaming endpoint](/api-reference/transcription/#transcribe-live-streaming-audio). When the server receives the transcription back from the Deepgram API, it displays the transcription data in the browser. The key logic that connects to Deepgram and forwards any transcriptions it receives to the client application lives in the `server.js` file.
 
 <Alert type="warning">
 
@@ -206,7 +206,7 @@ function setupWebRTCSignaling(socket) {
 
 When your browser sends the audio stream to the server, we call the `setupRealtimeTranscription` function. This function calls the Deepgram API via a `wss` request, which establishes a WebSocket over an encrypted TLS connection. Real-time streaming uses WebSockets, a communications protocol that enables full-duplex communication, which means that you can stream new audio to Deepgram at the same time the latest transcription results are streaming back to you.
 
-When connecting to the Deepgram server, you can configure options by appending query string parameters to the URL. To learn more about available options, read [API Reference: Deepgram API](/api-reference/#transcription-streaming).
+When connecting to the Deepgram server, you can configure options by appending query string parameters to the URL. To learn more about available options, read [API Reference: Deepgram API](/api-reference/transcription/#transcribe-live-streaming-audio).
 
 ```js
 const { Deepgram } = require("@deepgram/sdk");

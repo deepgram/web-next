@@ -7,13 +7,15 @@ import SideNav from "../shared/components/nav/SideNav.astro";
 import Feedback from "../shared/components/forms/Feedback.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
 import Title from "../shared/components/meta/Title.astro";
+import Meta from "../shared/components/meta/Meta.astro";
 import TableOfContents from "../shared/components/nav/TableOfContents.astro";
 import nodeNav from "../pages/sdks-tools/sdks/node-sdk/navigation.json";
 import pythonNav from "../pages/sdks-tools/sdks/python-sdk/navigation.json";
 import dotNetNav from "../pages/sdks-tools/sdks/dotnet-sdk/navigation.json";
 import "../assets/styles/developers.css";
 const pathname = Astro.url.pathname;
-const { headings } = Astro.props;
+const { headings, frontmatter } = Astro.props;
+const seoTitle = frontmatter.seo && frontmatter.seo.metaTitle ? frontmatter.seo.metaTitle : frontmatter.title;
 
 let sdk;
 const dotnet = "dotnet-sdk";
@@ -31,7 +33,8 @@ if (a.includes(dotnet)) {
 ---
 
 <Default>
-	<Title slot="head:title" title="SDKs and Tools - Deepgram Docs" />
+	<Title slot="head:title" title={`${seoTitle ? seoTitle + " - " : ""}SDKs and Tools - Deepgram Docs`} />
+	<Meta slot="og:title" property="og:title" content={`${seoTitle ? seoTitle + " - " : ""}Documentation, Use Cases, Posts, and Tutorials - Deepgram Docs`} />
 	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
 		<!-- Aside -->
 		<div class="relative flex">
