@@ -52,7 +52,7 @@ https://enterprise-docs.deepgram.com/* https://developers.deepgram.com/
 /guides/use-cases/realtime-meeting-transcription /use-cases/realtime-meeting-transcription/
 /guides/use-cases/talk-time-analytics /use-cases/talk-time-analytics/
 /guides/use-cases/transcribe-twilio-voice-calls /use-cases/transcribe-recorded-calls-with-twilio/
-/guides/streaming/error-handling /api-reference/#error-handling-str
+/guides/streaming/error-handling /api-reference/transcription/#error-handling-1
 /sdks /sdks-tools/
 /security /documentation/security/security-policy/
 /security/data-privacy /documentation/security/data-privacy/
