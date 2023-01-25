@@ -1,6 +1,5 @@
 ---
 import { useStoryblokApi } from "@storyblok/astro";
-// import { getSluggedJson } from "../../util";
 import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 
@@ -17,8 +16,8 @@ data.stories.forEach((element) => {
 const pathname = Astro.url.pathname;
 
 categories.sort((a, b) => {
-	var accumlatorA = a.title;
-	var accumulatorB = b.title;
+	const accumlatorA = a.title;
+	const accumulatorB = b.title;
 	return accumlatorA < accumulatorB ? -1 : accumlatorA > accumulatorB ? 1 : 0;
 });
 ---
