@@ -1,10 +1,26 @@
 ---
-import { getSluggedJson } from "../../util";
+import { useStoryblokApi } from "@storyblok/astro";
+// import { getSluggedJson } from "../../util";
 import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 
-const categories = await getSluggedJson("blog/category");
-const pathname = Astro.url.pathname
+const categories = [];
+const sbApi = useStoryblokApi();
+const { data } = await sbApi.get("cdn/stories", {
+	starts_with: "categories/",
+});
+
+data.stories.forEach((element) => {
+	categories.push({ title: element.name, slug: element.slug });
+});
+
+const pathname = Astro.url.pathname;
+
+categories.sort((a, b) => {
+	var accumlatorA = a.title;
+	var accumulatorB = b.title;
+	return accumlatorA < accumulatorB ? -1 : accumlatorA > accumulatorB ? 1 : 0;
+});
 ---
 
 <div class="hidden lg:block lg:sticky lg:top-20 mb-20">
@@ -13,20 +29,17 @@ const pathname = Astro.url.pathname
 		<li class="h-16">
 			<Link href="/posts" class="button button--secondary button--small" iconSuffix icon="arrow-right">View All</Link>
 		</li>
-		{
-			categories &&
-				categories.map((category) => {
-					const path = `/categories/${category.slug}/`;
-					return (
-						<li class="pb-4">
-							<Link href={path} class={
-            `hover:text-lightIris font-semibold leading-5 ${pathname.endsWith(path) ? "text-casper" : "text-white"}`}>
-            {category.title}
-        </Link>
-						</li>
-					);
-				})
-		}
+		{categories &&
+			categories.map((category) => {
+				const path = `/categories/${category.slug}/`;
+				return (
+					<li class="pb-4">
+						<Link href={path} class={`hover:text-lightIris font-semibold leading-5 ${pathname.endsWith(path) ? "text-casper" : "text-white"}`}>
+							{category.title}
+						</Link>
+					</li>
+				);
+			})}
 	</ul>
 </div>
 <!-- mobile -->
@@ -38,17 +51,15 @@ const pathname = Astro.url.pathname
 
 	<ul class="hidden absolute w-full z-20 bg-rock overflow-y-auto max-h-[36rem]" x-bind:class="{hidden: !open, block: open}">
 		<hr class="sticky top-0 left-[3%] md:left-[2%] w-[97%] mb-4 bg-steel opacity-30" />
-		{
-			categories &&
-				categories.map((category) => {
-					return (
-						<li class="pb-4">
-							<Link class="font-inter pl-4 font-normal text-white" href={`/categories/${category.slug}`}>
-								{category.title}
-							</Link>
-						</li>
-					);
-				})
-		}
+		{categories &&
+			categories.map((category) => {
+				return (
+					<li class="pb-4">
+						<Link class="font-inter pl-4 font-normal text-white" href={`/categories/${category.slug}`}>
+							{category.title}
+						</Link>
+					</li>
+				);
+			})}
 	</ul>
 </div>
