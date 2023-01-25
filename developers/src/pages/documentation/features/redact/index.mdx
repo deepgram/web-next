@@ -71,7 +71,13 @@ curl \
 
 ## Results
 
+Returned results for redaction differ depending on the type of transcript you are requesting.
+
+### Pre-recorded Audio
+
 For pre-recorded audio, redaction replaces redacted content with the type of entity redacted and the number of times that entity has been detected in the transcript. For example, if you choose to redact social security numbers, the phrase "My social security number is five five five two two one one one one and his is six six six two two one three three three" would appear in your transcript as "My social security number is [SSN_1] and his is [SSN_2]". 
+
+### Live Streaming Audio
 
 For streaming audio, redaction replaces redacted content with asterisks (\*). For example, if you choose to redact social security numbers, the phrase "My social security number is five five five two two one one one one" would appear in your transcript as "My social security number is \*".
 
