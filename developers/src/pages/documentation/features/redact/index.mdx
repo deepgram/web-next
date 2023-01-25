@@ -18,7 +18,7 @@ import CodeGroup from '../../../../shared/components/code/CodeGroup.astro';
 <div class="badge">PRE-RECORDED</div>
 <div class="badge">STREAMING</div>
 
-Deepgram’s Redaction feature redacts sensitive information, replacing redacted content with asterisks (\*). For example, if you chose to redact social security numbers, "My social security number is five five five two two one one one one" would appear in your transcript as "My social security number is \*".
+Deepgram’s Redaction feature redacts sensitive information.
 
 <Alert type="warning">
 
@@ -71,7 +71,17 @@ curl \
 
 ## Results
 
-Once applied, results will appear in the transcript.
+Returned results for redaction differ depending on the type of transcript you are requesting.
+
+### Pre-recorded Audio
+
+For pre-recorded audio, redaction replaces redacted content with the type of entity redacted and the number of times that entity has been detected in the transcript. For example, if you choose to redact social security numbers, the phrase "My social security number is five five five two two one one one one and his is six six six two two one three three three" would appear in your transcript as "My social security number is [SSN_1] and his is [SSN_2]". 
+
+### Live Streaming Audio
+
+For streaming audio, redaction replaces redacted content with asterisks (\*). For example, if you choose to redact social security numbers, the phrase "My social security number is five five five two two one one one one" would appear in your transcript as "My social security number is \*".
+
+Sample results are shown below using the streaming redaction syntax (\*).
 
 `redact=pci`
 
