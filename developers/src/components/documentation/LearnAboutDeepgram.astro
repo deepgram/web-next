@@ -1,88 +1,76 @@
 ---
 import Icon from "../../shared/components/general/Icon.astro";
+import Link from "../../shared/components/general/Link.astro";
 ---
+
 <section class="deepgram -mr-0 lg:-mr-52 xl:-mr-80">
-  <h2>Learn about Deepgram</h2>
-  <ul>
-    <li>
-      <h3>Features</h3>
-      <p>
-        Multiple transcription features and an easy process that
-        provides great results, accepting over 40 audio formats.
-      </p>
-      <a href="/documentation/features/"
-        >Features <Icon icon="arrow-right" class="icon"
-      /></a>
-    </li>
-    <li>
-      <h3>SDKs & Tools</h3>
-      <p>
-        Make all your tools work better by integrating industry-leading
-        software and custom apps with Deepgram.
-      </p>
-      <a href="/sdks-tools/">SDKs <Icon icon="arrow-right" class="icon" /></a>
-    </li>
-    <li>
-      <h3>Security Policy</h3>
-      <p>
-        Deepgram is committed to maintaining a company culture that
-        values information security and data privacy.
-      </p>
-      <a href="/documentation/security/security-policy/"
-        >Security <Icon icon="arrow-right" class="icon"
-      /></a>
-    </li>
-  </ul>
+	<h2>Learn about Deepgram</h2>
+	<ul>
+		<li>
+			<h3>Features</h3>
+			<p>Multiple transcription features and an easy process that provides great results, accepting over 40 audio formats.</p>
+			<Link href="/documentation/features/">Features <Icon icon="arrow-right" class="icon" /></Link>
+		</li>
+		<li>
+			<h3>SDKs & Tools</h3>
+			<p>Make all your tools work better by integrating industry-leading software and custom apps with Deepgram.</p>
+			<Link href="/sdks-tools/">SDKs <Icon icon="arrow-right" class="icon" /></Link>
+		</li>
+		<li>
+			<h3>Security Policy</h3>
+			<p>Deepgram is committed to maintaining a company culture that values information security and data privacy.</p>
+			<Link href="/documentation/security/security-policy/">View All <Icon icon="arrow-right" class="icon" /></Link>
+		</li>
+	</ul>
 </section>
 
 <style>
-  
-.deepgram {
-  @apply flex flex-col;
-  @apply py-10 px-14;
-  @apply bg-darkCharcoal;
-  @apply text-white;
-}
+	.deepgram {
+		@apply flex flex-col;
+		@apply py-10 px-14;
+		@apply bg-darkCharcoal;
+		@apply text-white;
+	}
 
-p {
-  @apply text-white;
-  line-height: 1.25rem;
-  @apply mb-0;
-  @apply md:mb-4;
-  @apply text-sm md:text-base;
-}
+	p {
+		@apply text-white;
+		line-height: 1.25rem;
+		@apply mb-0;
+		@apply md:mb-4;
+		@apply text-sm md:text-base;
+	}
 
-.deepgram > h2 {
-  @apply text-4xl text-white uppercase;
-  @apply mb-6 mt-10;
-}
+	.deepgram > h2 {
+		@apply text-4xl uppercase text-white;
+		@apply mb-6 mt-10;
+	}
 
-.deepgram > ul { 
-  @apply my-4;
-  @apply grid gap-8;
-  grid-auto-rows: 1fr;
-  @apply grid-cols-1;
-  @apply sm:grid-cols-2;
-  @apply lg:grid-cols-3;
-  @apply xl:gap-16;
-}
+	.deepgram > ul {
+		@apply my-4;
+		@apply grid gap-8;
+		grid-auto-rows: 1fr;
+		@apply grid-cols-1;
+		@apply sm:grid-cols-2;
+		@apply lg:grid-cols-3;
+		@apply xl:gap-16;
+	}
 
-li {
-  @apply flex flex-col;
-}
-    
-h3 {
-  @apply mt-6 lg:mb-2;
-}
+	li {
+		@apply flex flex-col;
+	}
 
-a {
-  @apply text-white no-underline font-bold;
-  @apply flex items-center;
-  @apply md:mt-auto;
-}
+	h3 {
+		@apply mt-6 lg:mb-2;
+	}
 
-a > .icon {
-  @apply ml-3 w-3;
-  @apply fill-meadow;
-}
+	a {
+		@apply text-lightIris font-bold no-underline;
+		@apply flex items-center;
+		@apply md:mt-auto;
+	}
+
+	a > .icon {
+		@apply ml-3 w-3;
+		@apply fill-meadow;
+	}
 </style>
