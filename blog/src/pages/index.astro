@@ -40,6 +40,11 @@ const { data } = await sbApi.get("cdn/stories", {
 	by_slugs: "categories/*",
 });
 const categories = data.stories;
+categories.sort((a, b) => {
+	const accumlatorA = a.name;
+	const accumulatorB = b.name;
+	return accumlatorA < accumulatorB ? -1 : accumlatorA > accumulatorB ? 1 : 0;
+});
 
 // build json schema object
 const schema = {
@@ -72,19 +77,17 @@ const schema = {
 	<PrimarySection class="mt-48 xl:mt-64">
 		<HasAside>
 			<CategoryList slot="aside" />
-			{
-				categories &&
-					categories.map((category, index) => (
-						<>
-							<CategorySection category={category} />
-							{index === 0 && (
-								<div class="mb-32">
-									<WhitepaperPromo blok={{ whitepaper: { id: "7727d114-4347-4fe8-88a7-642961b5aa33" } }} />
-								</div>
-							)}
-						</>
-					))
-			}
+			{categories &&
+				categories.map((category, index) => (
+					<>
+						<CategorySection category={category} />
+						{index === 0 && (
+							<div class="mb-32">
+								<WhitepaperPromo blok={{ whitepaper: { id: "7727d114-4347-4fe8-88a7-642961b5aa33" } }} />
+							</div>
+						)}
+					</>
+				))}
 			<center class="-mt-10 mb-20">
 				<Link href="/posts" icon="arrow-right" iconSuffix class="button button--secondary button--small">View All</Link>
 			</center>

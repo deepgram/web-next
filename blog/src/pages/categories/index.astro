@@ -16,6 +16,11 @@ const sbApi = useStoryblokApi();
 const categories = await sbApi.getAll("cdn/stories", {
 	by_slugs: "categories/*",
 });
+categories.sort((a, b) => {
+	const accumlatorA = a.name;
+	const accumulatorB = b.name;
+	return accumlatorA < accumulatorB ? -1 : accumlatorA > accumulatorB ? 1 : 0;
+});
 
 // build json schema object
 const schema = {
