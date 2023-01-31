@@ -83,13 +83,13 @@ to Deepgram.
 const websocketReadyState = deepgramLive.getReadyState();
 ```
 
-### Toggle Numerals
+### Toggle Features
 
-The `toggleNumerals` function toggles the `numerals` feature on and off. The function takes in a boolean value to determine whether or not to enable the feature.
+The `configure` function gives the ability to toggle different features. Currently, only the `numerals` feature is supported with plans to add more in the future. The function takes in an object with features to toggle to determine whether or not to enable the feature.
 
 ```js
-deepgramLive.toggleNumerals(true); // enable numerals
-deepgramLive.toggleNumerals(false); // disable numerals
+deepgramLive.configure({numerals: true}); // enable numerals
+deepgramLive.configure({numerals: false}); // disable numerals
 ```
 
 This function is a shorthand way of sending the following data to the websocket connection:
