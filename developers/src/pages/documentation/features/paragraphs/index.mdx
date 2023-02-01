@@ -17,7 +17,7 @@ import CodeGroup from '../../../../shared/components/code/CodeGroup.astro';
 
 <div class="badge">PRE-RECORDED</div>
 
-Deepgram's Paragraphs feature splits audio into paragraphs to improve transcript readability. When Paragraphs is enabled, at least one of the following features must also be enabled: Punctuation, Diarization, Multichannel. When the Diarization feature is enabled and multiple speakers are present, paragraphs breaks are influenced by speaker changes. When the Multichannel feature is enabled, paragraphs breaks are influenced by channel changes.
+Deepgram's Paragraphs feature splits audio into paragraphs to improve transcript readability. When Paragraphs is enabled, Punctuation is automatically enabled, and paragraphs are determined based on the transcript's punctuation. When the Diarization feature is enabled and multiple speakers are present, paragraphs breaks are influenced by speaker changes. When the Multichannel feature is enabled, paragraphs breaks are influenced by channel changes.
 
 ## Use Cases
 
@@ -30,13 +30,12 @@ Examples of use cases for Paragraphs include:
 
 To enable Paragraphs, when you call Deepgram’s API, add a `paragraphs` parameter in the querystring and set it to `true`:
 
-<Alert type="warning">
+<Alert type="info">
 
-When Paragraphs is enabled, at least one of the following features must also be enabled: Punctuation, Diarization, Multichannel. In this example, we have chosen Punctuation.
+When Paragraphs is enabled, Punctuation will automatically be enabled as well.
 
 </Alert>
 
-`paragraphs=true&punctuate=true`
 
 To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
 
@@ -62,12 +61,6 @@ curl \
 </CodeBlock>
 
 </CodeGroup>
-
-<Alert type="info">
-
-When Paragraphs is enabled, either the Punctuation, Diarization, or Multichannel feature must also be enabled.
-
-</Alert>
 
 ## Analyze Response
 
