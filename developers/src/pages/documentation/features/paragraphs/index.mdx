@@ -17,7 +17,7 @@ import CodeGroup from '../../../../shared/components/code/CodeGroup.astro';
 
 <div class="badge">PRE-RECORDED</div>
 
-Deepgram's Paragraphs feature splits audio into paragraphs to improve transcript readability. When Paragraphs is enabled, Punctuation is automatically enabled, and paragraphs are determined based on the transcript's punctuation. When the Diarization feature is enabled and multiple speakers are present, paragraphs breaks are influenced by speaker changes. When the Multichannel feature is enabled, paragraphs breaks are influenced by channel changes.
+Deepgram's Paragraphs feature splits audio into paragraphs to improve transcript readability. When Paragraphs is enabled, Punctuation is enabled by default, and paragraphs are identified based on the transcript's punctuation. When the Diarization feature is enabled and multiple speakers are present, paragraphs breaks are influenced by speaker changes. When the Multichannel feature is enabled, paragraphs breaks are influenced by channel changes.
 
 ## Use Cases
 
@@ -32,7 +32,7 @@ To enable Paragraphs, when you call Deepgram’s API, add a `paragraphs` paramet
 
 <Alert type="info">
 
-When Paragraphs is enabled, Punctuation will automatically be enabled as well.
+When Paragraphs is enabled, the [Punctuation](/documentation/features/punctuate/) feature will be enabled by default.
 
 </Alert>
 
