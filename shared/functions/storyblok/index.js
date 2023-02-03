@@ -45,6 +45,7 @@ exports.handler = async function (event) {
 
   if (actions.find((a) => a === action)) {
     try {
+      console.log("triggering github action")
       await axios.post(url, {
         event_type: "publish_blog",
         client_payload: {
