@@ -45,5 +45,5 @@ if (image.indexOf("storyblok.com") > -1) {
 <picture class={classes}>
 	{webp && <source srcset={webp} type="image/webp" sizes="33.3vw" />}
 	{orig && <source srcset={orig} type={`image/${ext}`} sizes="33.3vw" />}
-	<img loading="lazy" class={classes} src={image} alt={alt} />
+	<img class={classes} src={image} alt={alt} />
 </picture>
