@@ -43,7 +43,7 @@
 		"ap-style-title-case": "^2.0.0",
 		"axios": "^0.27.2",
 		"clone-deep": "^4.0.1",
-		"netlify-cli": "^12.4.0",
+		"netlify-cli": "^12.12.0",
 		"preact-render-to-string": "^5.2.5",
 		"slugify": "^1.6.5",
 		"vue": "^3.2.33"
