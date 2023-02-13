@@ -356,10 +356,11 @@ const schema = [
 
 	.post-prose :global(p:not(pre.astro-code) code) {
 		@apply py-[0.0625rem] px-[0.25rem];
+		@apply bg-rock;
+		@apply font-medium;
 	}
 
 	.post-prose :global(code) {
-		@apply bg-rock;
 		@apply text-cloud;
 		@apply font-bold;
 	}
