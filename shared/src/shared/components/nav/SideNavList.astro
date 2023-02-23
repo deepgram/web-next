@@ -1,25 +1,42 @@
 ---
-import Icon from "../general/Icon.astro";
 import Link from "../general/Link.astro";
 let pathname = Astro.url.pathname;
 const { navStructure, class: className } = Astro.props;
 ---
+<script>
+	const toggles = document.getElementsByClassName('toggle')
+	Array.from(toggles).forEach(element => {
+		element.addEventListener('click', (e)=>{
+			const id = (e.target as HTMLElement).id
+			if ((e.target as HTMLInputElement).checked){
+				location.href = location.origin + id;
+			(e.target as HTMLInputElement).checked = false
+			}
+		})
+	});
+</script>
 
-<ul class={`${className} pl-4`}>
+<ul class={`${className}`}>
 	{
 		navStructure.map((nav) => {
 			const navToTrimmed = nav.to.slice(0, -1);
 			return (
 				<li class={pathname.includes(nav.to) ? "active" : ""}>
 					<div class="navlink-container ">
-						{nav.children && <input id={`expand-${nav.to}`} class="toggle " type="checkbox" checked={pathname.includes(navToTrimmed)} />
-  <label for={`expand-${nav.to}`} class="lbl-toggle "></label>}
+						{nav.children && <input id={`${nav.to}`} class="toggle" type="checkbox" checked={pathname.includes(navToTrimmed)} /><label for={`${nav.to}`} class={!nav.static ? 'lbl-toggle': 'static-header'}></label>}
 
-						<Link href={nav.to} class={`list-link hover:text-iris text-sm my-2 pl-1 py-1 pr-3 text-darkCharcoal inline-flex leading-5 ${pathname.endsWith(nav.to) ? "font-semibold" : "text-darkCharcoal"}  ${pathname.endsWith(nav.to) && nav.children ? "border-l-4 border-meadow" : "" }`}>
-							{nav.name}
-						</Link>
+						{
+							!nav.static ?
+							<Link href={nav.to} class={`list-link hover:text-iris text-sm my-2 pl-1 pr-3 text-darkCharcoal inline-flex leading-5 
+								${pathname.endsWith(nav.to) ? "font-semibold" : "text-darkCharcoal"}  ${pathname.endsWith(nav.to) && nav.children ? "border-l-4 border-meadow" : "" }`}>
+								{nav.name}
+							</Link>
+							: 
+							<h6 class="mt-4 font-bold uppercase text-sm">{nav.name}
+							</h6>
+						}
 						
-						{nav.children && <div class="child-list"><Astro.self class={nav.children ? "border-l border-cloud" : ""} navStructure={nav.children} /></div>}
+						{nav.children && <div class="child-list"><Astro.self  navStructure={nav.children} /></div>}
 					</div>
 				</li>
 			);
