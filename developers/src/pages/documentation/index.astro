@@ -18,7 +18,7 @@ import LearnAboutDeepgram from "../../components/documentation/LearnAboutDeepgra
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 				<!-- <SideNav slot="aside" navStructure={nav} navTitle="Documentation" pathname={pathname} client:load /> -->
-				<SideNav slot="aside" navStructure={nav} navTitle="Documentation" />
+				<SideNav client:load slot="aside" navStructure={nav} navTitle="Documentation" />
 				<div class="col-span-3 sm:col-span-2 w-11/12 lg:w-full xl:w-11/12 mx-auto sm:ml-8">
 					<PrimarySection class="py-10 -mr-0 lg:-mr-12">
 						<BreadCrumb />
@@ -28,11 +28,9 @@ import LearnAboutDeepgram from "../../components/documentation/LearnAboutDeepgra
 							<Spanish />
 						</div>
 					</PrimarySection>
-					<LearnAboutDeepgram/>
+					<LearnAboutDeepgram />
 				</div>
 			</div>
 		</HasAside>
 	</PrimarySection>
 </Default>
-
-

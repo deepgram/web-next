@@ -9,16 +9,16 @@ import DocsCard from "../../shared/components/cards/DocsCard.astro";
 const baseComponents = await Astro.glob("./base-components/**/index.mdx");
 import nav from "../../pages/on-prem/navigation.json";
 
-const orderedComponents = baseComponents.sort((a,b)=>{
-	return a.frontmatter.order - b.frontmatter.order
-})
+const orderedComponents = baseComponents.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
 ---
 
 <Default>
 	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-				<SideNav slot="aside" navStructure={nav} navTitle="On-Premise Deployments" />
+				<SideNav client:load slot="aside" navStructure={nav} navTitle="On-Premise Deployments" />
 				<div class="col-span-3 sm:col-span-2 w-11/12 lg:w-full xl:w-11/12 mx-auto sm:ml-8">
 					<PrimarySection class="py-10">
 						<BreadCrumb />
@@ -26,7 +26,7 @@ const orderedComponents = baseComponents.sort((a,b)=>{
 							<h1 class="w-max" slot="page-header">On-Premises Deployments</h1>
 							<h2 class="text-stone mt-6 mb-10">BASE COMPONENTS</h2>
 							<DocsCardList>
-								{orderedComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+								{orderedComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 							</DocsCardList>
 						</div>
 					</PrimarySection>
