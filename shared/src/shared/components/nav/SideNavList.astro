@@ -15,12 +15,12 @@ const { navStructure, class: className } = Astro.props;
 
 						{
 							!nav.static ?
-							<Link href={nav.to} class={`list-link hover:text-iris text-sm pl-2 py-2 pr-3 text-darkCharcoal inline-flex leading-5 
+							<Link href={nav.to} class={`list-link hover:text-iris text-sm pl-2 py-2 pr-3 my-2 text-darkCharcoal inline-flex leading-5 
 								${pathname.endsWith(nav.to) ? "font-semibold" : "text-darkCharcoal"}  ${pathname.endsWith(nav.to) && nav.children ? "border-l-4 border-meadow" : "" }`}>
 								{nav.name}
 							</Link>
 							: 
-							<h6 class="py-2 font-bold uppercase text-xs">{nav.name}
+							<h6 class="py-2 font-bold uppercase text-[13px]">{nav.name}
 							</h6>
 						}
 						
