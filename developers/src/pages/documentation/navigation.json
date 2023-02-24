@@ -6,7 +6,7 @@
     "children": [
       {
         "name": "Quickstarts",
-        "to": "/documentation/quickstarts/",
+        "to": "",
         "static": true,
         "children": [
           {
@@ -20,8 +20,8 @@
         ]
       },
       {
-        "name": "Core Concepts",
-        "to": "/documentation/core-concepts/",
+        "name": "Fundamentals",
+        "to": "",
         "static": true,
         "children": [
           {
@@ -57,53 +57,31 @@
     "to": "/documentation/features/",
     "children": [
       {
-        "name": "Core Deepgram",
-        "to": "/documentation/foundation/",
+        "name": "Model Preferences",
+        "to": "",
         "static": true,
         "children": [
           {
-            "name": "Tier",
-            "to": "/documentation/features/tier/"
+            "name": "Language",
+            "to": "/documentation/features/language/"
           },
           {
             "name": "Model",
             "to": "/documentation/features/model/"
           },
           {
+            "name": "Tier",
+            "to": "/documentation/features/tier/"
+          },
+          {
             "name": "Version",
             "to": "/documentation/features/version/"
-          },
-          {
-            "name": "Language",
-            "to": "/documentation/features/language/"
-          },
-          {
-            "name": "Language Detection",
-            "to": "/documentation/features/detect-language/"
-          },
-
-          {
-            "name": "Callback",
-            "to": "/documentation/features/callback/"
-          },
-          {
-            "name": "Interim Results",
-            "to": "/documentation/features/interim-results/"
-          },
-          {
-            "name": "Endpointing",
-            "to": "/documentation/features/endpointing/"
-          },
-
-          {
-            "name": "Tagging",
-            "to": "/documentation/features/tag/"
           }
         ]
       },
       {
-        "name": "Working with Audio",
-        "to": "/documentation/work-with-audio/",
+        "name": "Media Input",
+        "to": "",
         "static": true,
         "children": [
           {
@@ -111,12 +89,12 @@
             "to": "/documentation/features/channels/"
           },
           {
-            "name": "Multichannel",
-            "to": "/documentation/features/multichannel/"
-          },
-          {
             "name": "Encoding",
             "to": "/documentation/features/encoding/"
+          },
+          {
+            "name": "Multichannel",
+            "to": "/documentation/features/multichannel/"
           },
           {
             "name": "Sample Rate",
@@ -125,21 +103,40 @@
         ]
       },
       {
-        "name": "Formatting",
-        "to": "/documentation/format/",
+        "name": "Result Processing",
+        "to": "",
         "static": true,
         "children": [
           {
-            "name": "Punctuation",
-            "to": "/documentation/features/punctuate/"
+            "name": "Callback",
+            "to": "/documentation/features/callback/"
           },
           {
-            "name": "Smart Format",
-            "to": "/documentation/features/smart-format/"
+            "name": "Endpointing",
+            "to": "/documentation/features/endpointing/"
           },
+          {
+            "name": "Interim Results",
+            "to": "/documentation/features/interim-results/"
+          },
+          {
+            "name": "Tagging",
+            "to": "/documentation/features/tag/"
+          }
+        ]
+      },
+      {
+        "name": "Formatting",
+        "to": "",
+        "static": true,
+        "children": [
           {
             "name": "Paragraphs",
             "to": "/documentation/features/paragraphs/"
+          },
+          {
+            "name": "Punctuation",
+            "to": "/documentation/features/punctuate/"
           },
           {
             "name": "Utterances",
@@ -148,14 +145,22 @@
           {
             "name": "Utterance Split",
             "to": "/documentation/features/utterance-split/"
+          },
+          {
+            "name": "Smart Format",
+            "to": "/documentation/features/smart-format/"
           }
         ]
       },
       {
-        "name": "Replacing",
-        "to": "/documentation/replace/",
+        "name": "Replacement",
+        "to": "",
         "static": true,
         "children": [
+          {
+            "name": "Numerals",
+            "to": "/documentation/features/numerals/"
+          },
           {
             "name": "Profanity Filter",
             "to": "/documentation/features/profanity-filter/"
@@ -165,25 +170,16 @@
             "to": "/documentation/features/redact/"
           },
           {
-            "name": "Numerals",
-            "to": "/documentation/features/numerals/"
-          },
-          {
             "name": "Find and Replace",
             "to": "/documentation/features/replace/"
           }
         ]
       },
       {
-        "name": "Identifying",
-        "to": "/documentation/identify/",
+        "name": "Identification",
+        "to": "",
         "static": true,
         "children": [
-          {
-            "name": "Diarization",
-            "to": "/documentation/features/diarize/"
-          },
-
           {
             "name": "Search",
             "to": "/documentation/features/search/"
@@ -191,12 +187,20 @@
           {
             "name": "Keywords",
             "to": "/documentation/features/keywords/"
+          },
+          {
+            "name": "Language Detection",
+            "to": "/documentation/features/detect-language/"
+          },
+          {
+            "name": "Diarization",
+            "to": "/documentation/features/diarize/"
           }
         ]
       },
       {
-        "name": "Understanding",
-        "to": "/documentation/infer/",
+        "name": "Inference",
+        "to": "",
         "static": true,
         "children": [
           {
@@ -216,8 +220,23 @@
     "to": "/documentation/guides/",
     "children": [
       {
-        "name": "Migration",
-        "to": "/documentation/migration/",
+        "name": "Troubleshooting",
+        "to": "/documentation/feature-comparisons/",
+        "static": true,
+        "children": [
+          {
+            "name": "Recovering from Connection Errors and Timeouts When Live Streaming Audio",
+            "to": "/documentation/guides/recover-streaming-errors/"
+          },
+          {
+            "name": "Troubleshooting WebSocket DATA and NET Errors When Live Streaming Audio",
+            "to": "/documentation/guides/troubleshoot-streaming/"
+          }
+        ]
+      },
+      {
+        "name": "Migrating",
+        "to": "",
         "static": true,
         "children": [
           {
@@ -231,7 +250,7 @@
         ]
       },
       {
-        "name": "Transcription Tips",
+        "name": "Tips and Tricks",
         "to": "/documentation/transcription-tips/",
         "static": true,
         "children": [
@@ -262,7 +281,7 @@
         ]
       },
       {
-        "name": "Feature Comparisons",
+        "name": "Feature Deep Dives",
         "to": "/documentation/feature-comparisons/",
         "static": true,
         "children": [
@@ -281,21 +300,6 @@
           {
             "name": "Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio",
             "to": "/documentation/guides/understand-endpointing-interim-results/"
-          }
-        ]
-      },
-      {
-        "name": "Troubleshooting",
-        "to": "/documentation/feature-comparisons/",
-        "static": true,
-        "children": [
-          {
-            "name": "Recovering from Connection Errors and Timeouts When Live Streaming Audio",
-            "to": "/documentation/guides/recover-streaming-errors/"
-          },
-          {
-            "name": "Troubleshooting WebSocket DATA and NET Errors When Live Streaming Audio",
-            "to": "/documentation/guides/troubleshoot-streaming/"
           }
         ]
       }

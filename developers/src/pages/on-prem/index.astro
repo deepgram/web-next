@@ -18,7 +18,7 @@ const orderedComponents = baseComponents.sort((a, b) => {
 	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-				<SideNav client:load slot="aside" navStructure={nav} navTitle="On-Premise Deployments" />
+				<SideNav slot="aside" navStructure={nav} navTitle="On-Premise Deployments" />
 				<div class="col-span-3 sm:col-span-2 w-11/12 lg:w-full xl:w-11/12 mx-auto sm:ml-8">
 					<PrimarySection class="py-10">
 						<BreadCrumb />

@@ -21,7 +21,7 @@ const seoTitle = frontmatter.seo && frontmatter.seo.metaTitle ? frontmatter.seo.
 	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-				<SideNav client:load slot="aside" navStructure={nav} navTitle="Documentation" />
+				<SideNav slot="aside" navStructure={nav} navTitle="Documentation" />
 				<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full mx-auto sm:ml-8">
 					<PrimarySection class="py-10" padding="px-0">
 						<BreadCrumb />
