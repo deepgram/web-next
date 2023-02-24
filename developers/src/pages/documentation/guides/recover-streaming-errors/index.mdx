@@ -2,8 +2,8 @@
 layout: ../../../../layouts/Documentation.astro
 title: "Recovering from Connection Errors and Timeouts When Live Streaming Audio"
 description: Learn how to implement real-time, live streaming transcription solutions for long-running audio streams.
-type: "transcription"
-order: 12
+type: "troubleshooting"
+order: 1
 seo:
   metaTitle: "Recovering from Connection Errors and Timeouts When Live Streaming Audio"
   metaDescription: Learn how to implement real-time, live streaming transcription solutions for long-running audio streams.
@@ -41,6 +41,6 @@ To avoid losing the produced audio while you are recovering the connection, you 
 
 ## Corrupt Timestamps
 
-Deepgram returns transcripts that include timestamps for every transcribed word. Timestamps correspond to the moments when the words are spoken within the audio. Every time you reconnect to our API, you create a new connection, so the timestamps on your audio begin from 00:00:00 again. 
+Deepgram returns transcripts that include timestamps for every transcribed word. Timestamps correspond to the moments when the words are spoken within the audio. Every time you reconnect to our API, you create a new connection, so the timestamps on your audio begin from 00:00:00 again.
 
 Because of this, when you restart an interrupted streaming session, you'll need to be sure to realign the timestamps to the audio stream. We recommend that your application maintains a starting timestamp to offset all returned timestamps. When you process a timestamp returned from Deepgram, add your maintained starting timestamp to the returned timestamp to ensure that it is offset by the correct amount of time.

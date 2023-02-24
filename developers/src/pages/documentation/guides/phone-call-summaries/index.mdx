@@ -2,14 +2,15 @@
 layout: ../../../../layouts/Documentation.astro
 title: "Automatically Transcribing and Summarizing Phone Calls"
 description: Learn how to use Twilio Functions and Deepgram's Summarization feature to transcribe and summarize phone calls before providing call participants with a phone call summary via SMS.
-type: "transcription"
-order: 7
+type: "tips"
+order: 5
 seo:
   metaTitle: "Automatically Transcribing and Summarizing Phone Calls"
   metaDescription: Learn how to use Twilio Functions and Deepgram's Summarization feature to transcribe and summarize phone calls before providing call participants with a phone call summary via SMS.
   keywords: transcription, summarization, phone call, summary, summaries, javascript, twilio, SMS
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
 
 # {frontmatter.title}
 
@@ -69,9 +70,9 @@ Inside your new service, add your Deepgram API Key and your agent phone number a
 1. Locate the **Environment Variables** section.
 2. Add the following variables:
 
-   | Variable name  | Variable content | 
-   | -------------- | ---------------- |
-   | `DEEPGRAM_KEY` | Value of your Deepgram API Key generated in your Deepgram Console | 
+   | Variable name       | Variable content                                                                                                                                                              |
+   | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `DEEPGRAM_KEY`      | Value of your Deepgram API Key generated in your Deepgram Console                                                                                                             |
    | `FORWARDING_NUMBER` | Value of your agent phone number in [E.164 formatting](https://support.twilio.com/hc/en-us/articles/223183008-Formatting-International-Phone-Numbers) (example: +14155552671) |
 
 ## Recording and Forwarding Inbound Calls
@@ -83,15 +84,15 @@ Create a Twilio function that receives incoming call data and forwards it to you
 2. Replace the entire file with the following code:
 
    ```js
-   exports.handler = function(context, event, callback) {
-     let twiml = new Twilio.twiml.VoiceResponse()
-     const dial = twiml.dial({
-       record: 'record-from-answer-dual',
-       recordingStatusCallback: '/recordings'
-     })
-     dial.number(process.env.FORWARDING_NUMBER)
-     return callback(null, twiml)
-   }
+   exports.handler = function (context, event, callback) {
+   	let twiml = new Twilio.twiml.VoiceResponse();
+   	const dial = twiml.dial({
+   		record: "record-from-answer-dual",
+   		recordingStatusCallback: "/recordings",
+   	});
+   	dial.number(process.env.FORWARDING_NUMBER);
+   	return callback(null, twiml);
+   };
    ```
 
    <Alert type="info">
@@ -125,18 +126,18 @@ When a call is received, use Deepgram to transcribe it:
 2. Replace the boilerplate code with the following code:
 
    ```js
-   const { Deepgram } = require('@deepgram/sdk')
-   const deepgram = new Deepgram(process.env.DEEPGRAM_KEY)
+   const { Deepgram } = require("@deepgram/sdk");
+   const deepgram = new Deepgram(process.env.DEEPGRAM_KEY);
 
-   exports.handler = async function(context, event, callback) {
-     const { RecordingUrl, CallSid } = event
-     const twilioClient = context.getTwilioClient()
-     const { from: caller, to: twilioNumber } = await twilioClient.calls(CallSid).fetch()
+   exports.handler = async function (context, event, callback) {
+   	const { RecordingUrl, CallSid } = event;
+   	const twilioClient = context.getTwilioClient();
+   	const { from: caller, to: twilioNumber } = await twilioClient.calls(CallSid).fetch();
 
-     // Further code here
+   	// Further code here
 
-     return callback(null, true)
-   }
+   	return callback(null, true);
+   };
    ```
 
    <Alert type="info">
@@ -148,8 +149,8 @@ When a call is received, use Deepgram to transcribe it:
 3. Generate a transcription of the call using Deepgram’s Node.js SDK:
 
    ```js
-   const transcriptionFeatures = { punctuate: true, tier: 'enhanced', summarize: true }
-   const { results } = await deepgram.transcription.preRecorded({ url: RecordingUrl }, transcriptionFeatures)
+   const transcriptionFeatures = { punctuate: true, tier: "enhanced", summarize: true };
+   const { results } = await deepgram.transcription.preRecorded({ url: RecordingUrl }, transcriptionFeatures);
    ```
 
 ### Summarize the Call
@@ -157,7 +158,7 @@ When a call is received, use Deepgram to transcribe it:
 From Deepgram's transcription, isolate the summary:
 
 ```js
-const { summaries } = results.channels[0].alternatives[0]
+const { summaries } = results.channels[0].alternatives[0];
 ```
 
 ## Sending Summary Messages
@@ -166,10 +167,10 @@ Now that you have a summary of the call, you can send it to both the caller and 
 
 ### Format the Summary
 
-Because `summaries` is an array of objects (containing summary text and the time period being summarized), you will need to turn `summaries` into one string that can be sent via SMS: 
+Because `summaries` is an array of objects (containing summary text and the time period being summarized), you will need to turn `summaries` into one string that can be sent via SMS:
 
 ```js
-const summary = summaries.map(s => s.summary).join('\n\n')
+const summary = summaries.map((s) => s.summary).join("\n\n");
 ```
 
 ### Send the Summary via SMS
@@ -179,12 +180,12 @@ Finally, you can send Deepgram's summary via SMS:
 1. Just below the previous `summary` code, add the following:
 
    ```js
-   for(let number of [process.env.FORWARD_NUMBER, caller]) {
-     await twilioClient.messages.create({
-       body: summary,
-       to: number,
-       from: twilioNumber
-     })
+   for (let number of [process.env.FORWARD_NUMBER, caller]) {
+   	await twilioClient.messages.create({
+   		body: summary,
+   		to: number,
+   		from: twilioNumber,
+   	});
    }
    ```
 
@@ -200,38 +201,38 @@ In case you need it for reference, we provide the full sample code used in this 
 
 ```js
 // /inbound
-exports.handler = function(context, event, callback) {
-  let twiml = new Twilio.twiml.VoiceResponse()
-  const dial = twiml.dial({
-    record: 'record-from-answer-dual',
-    recordingStatusCallback: '/transcribe'
-  })
-  dial.number(process.env.FORWARDING_NUMBER)
-  return callback(null, twiml)
-}
+exports.handler = function (context, event, callback) {
+	let twiml = new Twilio.twiml.VoiceResponse();
+	const dial = twiml.dial({
+		record: "record-from-answer-dual",
+		recordingStatusCallback: "/transcribe",
+	});
+	dial.number(process.env.FORWARDING_NUMBER);
+	return callback(null, twiml);
+};
 
 // /transcribe
-const { Deepgram } = require('@deepgram/sdk')
-const deepgram = new Deepgram(process.env.DEEPGRAM_KEY, 'api.beta.deepgram.com')
+const { Deepgram } = require("@deepgram/sdk");
+const deepgram = new Deepgram(process.env.DEEPGRAM_KEY, "api.beta.deepgram.com");
 
-exports.handler = async function(context, event, callback) {
-  const { RecordingUrl, CallSid } = event
-  const twilioClient = context.getTwilioClient()
-  const { from: caller, to: twilioNumber } = await twilioClient.calls(CallSid).fetch()
+exports.handler = async function (context, event, callback) {
+	const { RecordingUrl, CallSid } = event;
+	const twilioClient = context.getTwilioClient();
+	const { from: caller, to: twilioNumber } = await twilioClient.calls(CallSid).fetch();
 
-  const transcriptionFeatures = { punctuate: true, tier: 'enhanced', summarize: true }
-  const { results } = await deepgram.transcription.preRecorded({ url: RecordingUrl }, transcriptionFeatures)
-  const { summaries } = results.channels[0].alternatives[0]
-  const summary = summaries.map(s => s.summary).join('\n\n')
+	const transcriptionFeatures = { punctuate: true, tier: "enhanced", summarize: true };
+	const { results } = await deepgram.transcription.preRecorded({ url: RecordingUrl }, transcriptionFeatures);
+	const { summaries } = results.channels[0].alternatives[0];
+	const summary = summaries.map((s) => s.summary).join("\n\n");
 
-  for(let number of [process.env.FORWARDING_NUMBER, caller]) {
-    await twilioClient.messages.create({
-      body: summary,
-      to: number,
-      from: twilioNumber
-    })
-  }
+	for (let number of [process.env.FORWARDING_NUMBER, caller]) {
+		await twilioClient.messages.create({
+			body: summary,
+			to: number,
+			from: twilioNumber,
+		});
+	}
 
-  return callback(null, true)
-}
+	return callback(null, true);
+};
 ```

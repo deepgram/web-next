@@ -2,14 +2,15 @@
 layout: ../../../../layouts/Documentation.astro
 title: Generating and Saving Transcripts From the Terminal
 description: Learn how to generate and save Deepgram transcripts directly from your terminal.
-type: "transcription"
-order: 4
+type: "tips"
+order: 2
 seo:
   metaTitle: Generating and Saving Transcripts From the Terminal
   metaDescription: Learn how to generate and save Deepgram transcripts directly from your terminal.
   keywords: how to use jq, jq for beginners, variables in curl, how to write bash scripts, save curl output, save terminal output, save file from terminal
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
 
 # {frontmatter.title}
 
@@ -83,7 +84,7 @@ curl https://api.deepgram.com/v1/listen?punctuate=true \
 
 In this example, notice:
 
-- The URL comes immediately after the `curl` command. 
+- The URL comes immediately after the `curl` command.
 - No HTTP method is present. Normally, this would default to a GET request, but because this request has a body, cURL assumes a POST request.
 - `--header` is shortened to `-H`
 - `--data` is shortened to `-d`.

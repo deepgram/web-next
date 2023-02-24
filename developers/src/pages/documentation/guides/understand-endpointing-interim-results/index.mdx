@@ -2,14 +2,15 @@
 layout: ../../../../layouts/Documentation.astro
 title: Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio
 description: Learn how to use endpointing and interim results when transcribing live streaming audio with Deepgram.
-type: "transcription"
-order: 4
+type: "features"
+order: 3
 seo:
   metaTitle: Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio
   metaDescription: Learn how to use endpointing and interim results when transcribing live streaming audio with Deepgram.
   keywords: endpoint, endpointing, interim results, is_final, speech_final, vad_turnoff, streaming, live streaming, real-time
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
 
 # {frontmatter.title}
 
@@ -20,7 +21,6 @@ When using Deepgram to transcribe live streaming audio, two of the features you 
 | Identifies deviations in the natural flow of speech and returns a finalized response at these places                                                         | Provides preliminary results during live streaming, then sends a definitive transcript of the portion of audio that has been processed so far                          |
 | Turned on by default                                                                                                                                         | Turned off by default                                                                                                                                                  |
 | Returns `speech_final: true` parameter when Deepgram identifies a deviation in the natural flow of speech and the response contains the finalized transcript | Returns `is_final: true` parameter when Deepgram has finished processing audio for a time range and the response contains the finalized transcript for that time range |
-
 
 ## Using Endpointing (`speech_final`)
 
