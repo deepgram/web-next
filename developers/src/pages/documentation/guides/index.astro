@@ -50,6 +50,10 @@ const sortedTroubleshootingGuides = troubleshootingGuides.sort((a, b) => {
 			<h2 slot="title" class="text-stone uppercase">Feature Deep Dives</h2>
 			{sortedFeaturesGuides.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 		</DocsCardList>
+		<DocsCardList>
+			<h2 slot="title" class="text-stone uppercase">Troubleshooting</h2>
+			{sortedTroubleshootingGuides.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+		</DocsCardList>
 	</article>
 </Layout>
 

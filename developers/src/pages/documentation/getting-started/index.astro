@@ -24,13 +24,13 @@ const sortedCoreConcepts = coreConcepts.sort((a, b) => {
 <Layout>
 	<article>
 		<h1>Getting Started</h1>
-		<h2>Quickstarts</h2>
+		<h2 class="text-stone uppercase">Quickstarts</h2>
 		<DocsCardList>
-			<h2 slot="title" class="text-stone uppercase">English</h2>
+			<h2 slot="title">English</h2>
 			{quickStartsEnglish.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 		</DocsCardList>
 		<DocsCardList>
-			<h2 slot="title" class="text-stone uppercase">Spanish</h2>
+			<h2 slot="title">Spanish</h2>
 			{quickStartsSpanish.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 		</DocsCardList>
 		<DocsCardList>
