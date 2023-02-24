@@ -2,8 +2,8 @@
 layout: ../../../../layouts/Documentation.astro
 title: Understanding When to Use the Multichannel and Diarization Features
 description: Compare Deepgram's Multichannel and Diarization features to better understand when to use each feature.
-type: "transcription"
-order: 8
+type: "features"
+order: 1
 seo:
   metaTitle: "Understanding When to Use the Multichannel and Diarization Features"
   metaDescription: Compare Deepgram's Multichannel and Diarization features to better understand when to use each feature.
@@ -453,7 +453,6 @@ If your audio has two different people speaking, each on a different audio chann
 ### When using the Multichannel feature, Deepgram returns the same transcript on each channel
 
 Sometimes when you believe an audio file is multichannel and expect Deepgram to return multiple different transcripts, you receive a response that contains separate channels with identical transcripts. In this case, you may have encountered a joint stereo audio file. Sometimes, to save file space when creating or converting an audio file, multichannel audio will undergo a process that mixes the channels into one main channel. Deepgram will still identify that the audio contains two channels, but the returned transcript for each channel will be the same (all speaking parts, regardless of how many speakers the audio contains, will be combined as one transcript):
-
 
 ```json
 "channels": [

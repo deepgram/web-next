@@ -233,6 +233,10 @@
             "to": "/documentation/guides/save-transcripts-from-terminal/"
           },
           {
+            "name": "Determining Your Audio Format for Live Streaming Audio",
+            "to": "/documentation/guides/determine-audio-format/"
+          },
+          {
             "name": "Using Callbacks to return Transcripts to Your Server",
             "to": "/documentation/guides/use-callback/"
           },
@@ -280,10 +284,7 @@
             "name": "Understanding When to Use the Keywords and Search Features",
             "to": "/documentation/guides/keywords-vs-search/"
           },
-          {
-            "name": "Determining Your Audio Format for Live Streaming Audio",
-            "to": "/documentation/guides/determine-audio-format/"
-          },
+
           {
             "name": "Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio",
             "to": "/documentation/guides/understand-endpointing-interim-results/"
