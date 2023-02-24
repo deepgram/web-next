@@ -220,36 +220,6 @@
     "to": "/documentation/guides/",
     "children": [
       {
-        "name": "Troubleshooting",
-        "to": "/documentation/feature-comparisons/",
-        "static": true,
-        "children": [
-          {
-            "name": "Recovering from Connection Errors and Timeouts When Live Streaming Audio",
-            "to": "/documentation/guides/recover-streaming-errors/"
-          },
-          {
-            "name": "Troubleshooting WebSocket DATA and NET Errors When Live Streaming Audio",
-            "to": "/documentation/guides/troubleshoot-streaming/"
-          }
-        ]
-      },
-      {
-        "name": "Migrating",
-        "to": "",
-        "static": true,
-        "children": [
-          {
-            "name": "Migrating from AWS Transcribe to Deepgram",
-            "to": "/documentation/guides/migration-aws-transcribe/"
-          },
-          {
-            "name": "Migrating from Google Speech-to-Text to Deepgram",
-            "to": "/documentation/guides/migration-google-stt/"
-          }
-        ]
-      },
-      {
         "name": "Tips and Tricks",
         "to": "/documentation/transcription-tips/",
         "static": true,
@@ -280,6 +250,23 @@
           }
         ]
       },
+
+      {
+        "name": "Migrating",
+        "to": "",
+        "static": true,
+        "children": [
+          {
+            "name": "Migrating from AWS Transcribe to Deepgram",
+            "to": "/documentation/guides/migration-aws-transcribe/"
+          },
+          {
+            "name": "Migrating from Google Speech-to-Text to Deepgram",
+            "to": "/documentation/guides/migration-google-stt/"
+          }
+        ]
+      },
+
       {
         "name": "Feature Deep Dives",
         "to": "/documentation/feature-comparisons/",
@@ -300,6 +287,21 @@
           {
             "name": "Understanding Endpointing and Interim Results When Transcribing Live Streaming Audio",
             "to": "/documentation/guides/understand-endpointing-interim-results/"
+          }
+        ]
+      },
+      {
+        "name": "Troubleshooting",
+        "to": "/documentation/feature-comparisons/",
+        "static": true,
+        "children": [
+          {
+            "name": "Recovering from Connection Errors and Timeouts When Live Streaming Audio",
+            "to": "/documentation/guides/recover-streaming-errors/"
+          },
+          {
+            "name": "Troubleshooting WebSocket DATA and NET Errors When Live Streaming Audio",
+            "to": "/documentation/guides/troubleshoot-streaming/"
           }
         ]
       }

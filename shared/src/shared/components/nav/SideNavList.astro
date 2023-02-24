@@ -3,18 +3,6 @@ import Link from "../general/Link.astro";
 let pathname = Astro.url.pathname;
 const { navStructure, class: className } = Astro.props;
 ---
-<script>
-	const toggles = document.getElementsByClassName('toggle')
-	Array.from(toggles).forEach(element => {
-		element.addEventListener('click', (e)=>{
-			const id = (e.target as HTMLElement).id
-			if ((e.target as HTMLInputElement).checked){
-				location.href = location.origin + id;
-			(e.target as HTMLInputElement).checked = false
-			}
-		})
-	});
-</script>
 
 <ul class={`${className}`}>
 	{
@@ -27,12 +15,12 @@ const { navStructure, class: className } = Astro.props;
 
 						{
 							!nav.static ?
-							<Link href={nav.to} class={`list-link hover:text-iris text-sm my-2 pl-1 py-1 pr-3 text-darkCharcoal inline-flex leading-5 
+							<Link href={nav.to} class={`list-link hover:text-iris text-sm pl-2 py-2 pr-3 text-darkCharcoal inline-flex leading-5 
 								${pathname.endsWith(nav.to) ? "font-semibold" : "text-darkCharcoal"}  ${pathname.endsWith(nav.to) && nav.children ? "border-l-4 border-meadow" : "" }`}>
 								{nav.name}
 							</Link>
 							: 
-							<h6 class="mt-4 font-bold uppercase text-sm">{nav.name}
+							<h6 class="py-2 font-bold uppercase text-xs">{nav.name}
 							</h6>
 						}
 						
