@@ -1,7 +1,7 @@
 [
   {
     "name": "Required",
-    "to": "/on-prem/base-components/",
+    "to": "/on-prem/required/",
     "children": [
       {
         "name": "Pre-Requisites",
@@ -60,7 +60,7 @@
   },
   {
     "name": "Optional",
-    "to": "/on-prem/optional-components/",
+    "to": "/on-prem/optional/",
     "children": [
       {
         "name": "Pre-Requisites",
