@@ -21,6 +21,7 @@ When using Deepgram to transcribe live streaming audio, two of the features you 
 | Identifies deviations in the natural flow of speech and returns a finalized response at these places                                                         | Provides preliminary results during live streaming, then sends a definitive transcript of the portion of audio that has been processed so far                          |
 | Turned on by default                                                                                                                                         | Turned off by default                                                                                                                                                  |
 | Returns `speech_final: true` parameter when Deepgram identifies a deviation in the natural flow of speech and the response contains the finalized transcript | Returns `is_final: true` parameter when Deepgram has finished processing audio for a time range and the response contains the finalized transcript for that time range |
+| Can be controlled by adjusting the length of silence required for an endpoint to be detected | Dictated by Deepgram's internal algorithm |
 
 ## Using Endpointing (`speech_final`)
 
@@ -29,6 +30,16 @@ Just like a human listener who evaluates pauses within a conversation to detect 
 When Deepgram identifies that an endpoint has been reached, the response is marked as `speech_final: true`. The only purpose of the `speech_final` marker is to tell you where an endpoint has been found, which indicates that a significantly long pause has been detected.
 
 As an example, consider a speaker responding "yes" on a live call. Although Deepgram's default algorithm automatically sends final results every few seconds, you might want your system to react to the "yes" immediately. In this case, Endpointing would be useful because it would prompt Deepgram to detect the pause after "yes" and quickly send back a finalized result (marked with `speech_final: true`).
+
+### Controlling Endpointing
+
+By default, Deepgram identifies an endpoint after 10 milliseconds (ms) of silence. You can adjust this length of time. To do so, send the `endpointing` parameter in the request to the Deepgram API to the value you would like to use.
+
+Some examples of use cases for which you might want to adjust `endpointing` include: 
+
+- A virtual agent or chatbot that expects users to speak in short utterances and needs to engage with them as soon as they stop speaking. In this case, you would likely want to choose a low value for `vad_turnoff` or leave it as the default of 10 ms.
+
+- An agent assist provider that needs to give suggestions to a human customer service agent while they are speaking with a customer. In this case, the agent assist provider is working with a population that tends to pause more frequently mid-thought. To account for short pauses in the middle of a thought, they may want to set `vad_turnoff` to a high value, such as 500ms.
 
 <Alert type="warning">
 
