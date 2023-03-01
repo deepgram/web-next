@@ -1,0 +1,57 @@
+---
+import Layout from "../../../layouts/OnPrem.astro";
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
+import DocsCard from "../../../shared/components/cards/DocsCard.astro";
+
+const optionalComponents = await Astro.glob("./**/index.mdx");
+
+const prereqComponents = optionalComponents.filter((c) => {
+	return c.frontmatter.type === "prereq";
+});
+const sortedprereqComponents = prereqComponents.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+
+const deploymentComponents = optionalComponents.filter((c) => {
+	return c.frontmatter.type === "deployment";
+});
+const sorteddeploymentComponents = deploymentComponents.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+
+const hotpepperComponents = optionalComponents.filter((c) => {
+	return c.frontmatter.type === "hotpepper";
+});
+const sortedhotpepperComponents = hotpepperComponents.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+---
+
+<Layout>
+	<article>
+		<h1>Optional Components</h1>
+		<h2 slot="title" class="text-stone uppercase">Pre-Requisites</h2>
+		<DocsCardList>
+			{sortedprereqComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+		</DocsCardList>
+		<h2 slot="title" class="text-stone uppercase">Deployment</h2>
+		<DocsCardList>
+			{sorteddeploymentComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+		</DocsCardList>
+		<h2 slot="title" class="text-stone uppercase">Hotpepper</h2>
+		<DocsCardList>
+			{sortedhotpepperComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+		</DocsCardList>
+	</article>
+</Layout>
+<style is:global>
+	/* Overrides prose styles */
+	.post-prose h1 {
+		@apply mb-10;
+	}
+
+	.post-prose h3 {
+		@apply mt-0;
+		@apply text-base;
+	}
+</style>

@@ -1,0 +1,77 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+title: Designing Your Architecture
+description: Learn about design decision you should make for on-premises deployments of Deepgram products.
+type: prereq
+order: 2
+seo:
+  metaTitle: Designing Your Architecture
+  metaDescription: Learn about design decision you should make for on-premises deployments of Deepgram products.
+  keywords: on-premises, on-prem, deployment, design, designing, architecture, base components, base
+---
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+
+# {frontmatter.title}
+
+Before you deploy Deepgram, you’ll need to make effective design decisions about the components of your system, their relationships, and the interactions between components. Ideally, your architecture will meet your business needs, optimize both performance and security, and provide a strong technical foundation for future growth.
+
+## Basic Deployment
+
+The typical architecture for a basic on-premises (on-prem) deployment for the Deepgram Engine and the Deepgram API includes:
+
+- A single server hosted on either a:
+  - Virtual Private Cloud (VPC)
+  - Dedicated Cloud (DC)
+  - Bare-metal server (bare metal)
+- A customer-provided proxy (for example, NGINX, HAProxy, Apache) to handle TLS termination
+- A single NVIDIA GPU
+- Deepgram-delivered models and configuration files appropriate for your domain
+
+<Alert type="warning">
+
+Deepgram only supports NVIDIA GPUs. We recommend modern NVIDIA GPUs that are compatible with recent NVIDIA drivers and are accessible by the NVIDIA-Docker runtime.
+
+</Alert>
+
+For inference, which refers to performing speech analysis on trained speech models, we recommend:
+
+- a T4 or better NVIDIA GPU with at least:
+  - 16 GB GPU RAM
+  - 4 CPU cores
+  - 32 GB RAM
+  - 32 GB storage
+
+A system of this sort will typically provide an average of 100x real-time speedup, depending on file length. An Amazon EC2 `g4dn.2xlarge` instance works well as a cost-effective baseline deployment.
+
+Please [contact Support](/support/), so we can work with you to create a customized hardware recommendation.
+
+## Scaling
+
+Once you have successfully implemented the basic Deepgram on-prem deployment and have thoroughly tested your use case, you will likely want to scale up your infrastructure. Scaling up your on-prem infrastructure not only increases the volume and throughput that it can support, but also creates fault tolerance at the Deepgram API and/or the Deepgram Engine with the introduction of node (server) replicas.
+
+<Alert type="warning">
+
+While the Deepgram Engine can take advantage of multiple GPUs and works with the latest high-powered NVIDIA GPUs, an enterprise-scale deployment should be prepared for horizontal scaling, which is the act of adding node (server) replicas to a deployment without adding resources to those nodes.
+
+</Alert>
+
+When scaling Deepgram horizontally, we generally recommend:
+
+- Multiple servers hosted on VPC, DC, or bare metal
+- A customer-provided proxy (for example, NGINX, HAProxy, Apache) to handle TLS and request distribution across API instances
+- A single GPU per machine
+
+For an in-depth look at scaling, please [contact Support](/support/), so we can work with you to create a customized recommendation.
+
+## Scaling Considerations
+
+If you want to increase your capacity to handle ASR requests, you can add more GPUs to your deployment by spinning up additional Deepgram Engine nodes. Factors that can help you decide when to increase capacity vary depending on whether you are performing transcription on pre-recorded audio or live streaming audio.
+
+### Pre-recorded Audio
+
+To determine when to increase your capacity for pre-recorded audio requests, you should first determine the acceptable amount of request latency for your business requirements and customer SLAs. When considering your own requirements, remember that you may be processing files of varying sizes and that, generally, you won't require an immediate response.
+
+### Live Streaming Audio
+
+To determine when to increase your capacity for live streaming audio requests, you will want to make sure that all simultaneous audio streams are able to maintain an average response time of 400ms or less. The more streams you open up for transcription, the higher the request latency will climb, and performance can also be negatively impacted by a variety of other factors, including the features you are using and the size of the chunks of audio you are sending. In this case, we recommend working with a Deepgram Solutions Engineer to analyze your use case, expected throughput, and risk tolerance.

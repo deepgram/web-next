@@ -1,0 +1,51 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+title: Introduction
+description: Learn about on-premises deployments of Deepgram products using AutoML-trained (TM) models.
+type: prereq
+order: 1
+seo:
+  metaTitle: Introduction
+  metaDescription: Learn about on-premises deployments of Deepgram products using AutoML-trained (TM) models.
+  keywords: on-premises, on-prem, deployment, introduction, base components, base
+---
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+
+# {frontmatter.title}
+
+Deepgram supports a variety of deployment methods, including an on-premises (on-prem) offering, which is an isolated service deployed to customer-requisitioned cloud instances or customer data centers. This guide will walk you through the process of setting up Deepgram on-prem in your own environment.
+
+If you're an IT administrator deploying an on-prem instance of Deepgram, read on for high-level guidance on setup, suggested configuration, periodic maintenance, and frequently asked questions. We will describe all requirements and needed assets for the installation, tell you how to configure your environment and set up your server for the installation, show you how to install the actual Deepgram application, identify important files and directories related to the Deepgram installation, and help you plan your server maintenance and security practices.
+
+<Alert type="info">
+
+​​Installing Deepgram on-prem in your own environment is an alternative for Deepgram as a service. Using Deepgram as a service enables you to avoid all hardware, installation, configuration, backup, and maintenance-related costs.
+
+</Alert>
+
+## What is AutoML (TM)
+
+AutoML (TM) is a collection of tools and services which are used to produce trained AI models for the purpose automatic speech recognition (ASR). From an on-prem perspective, there is a solution called AutoML (TM) which enables users to customize Deepgram's ASR models with their own data.
+
+## Required Components
+
+Deepgram provides a variety of components available for on-prem deployment. This guide describes how you create a deployment using Deepgram’s base components. If you are interested in learning about and deploying Deepgram’s optional components on premises, see [Optional Components](/on-prem/optional-components/introduction/).
+
+<Alert type="info">
+
+If you aren't certain which components your contract includes, please consult your Deepgram Account Representative.
+
+</Alert>
+
+### Deepgram API
+
+The Deepgram API interfaces with the Deepgram Engine to expose endpoints for your requests.
+
+### Deepgram Engine
+
+The Deepgram Engine performs the computationally intensive task of speech analytics. It also manages GPU devices and responds to requests from the API layer. Because the Deepgram Engine is decoupled from the Deepgram API, you can scale it independently from the API.
+
+## Support
+
+Detailed troubleshooting and on-demand support require an on-going support contract with Deepgram. To learn more, please [contact us](https://deepgram.com/contact-us/).

@@ -10,19 +10,19 @@
         "children": [
           {
             "name": "Introduction",
-            "to": "/on-prem/base-components/introduction/"
+            "to": "/on-prem/required/introduction/"
           },
           {
             "name": "Designing Your Architecture",
-            "to": "/on-prem/base-components/design-architecture/"
+            "to": "/on-prem/required/design-architecture/"
           },
           {
             "name": "Configuring Your Environment",
-            "to": "/on-prem/base-components/configure-environment/"
+            "to": "/on-prem/required/configure-environment/"
           },
           {
             "name": "Licensing",
-            "to": "/on-prem/base-components/license/"
+            "to": "/on-prem/required/license/"
           }
         ]
       },
@@ -33,15 +33,15 @@
         "children": [
           {
             "name": "Deploying Base Components",
-            "to": "/on-prem/base-components/deploy-base-components/"
+            "to": "/on-prem/required/deploy-base-components/"
           },
           {
             "name": "Deploying to Amazon Web Services (RHEL 7)",
-            "to": "/on-prem/base-components/deploy-aws-rhel-7/"
+            "to": "/on-prem/required/deploy-aws-rhel-7/"
           },
           {
             "name": "Maintaining Base Components",
-            "to": "/on-prem/base-components/maintain-base-components/"
+            "to": "/on-prem/required/maintain-base-components/"
           }
         ]
       },
@@ -52,7 +52,7 @@
         "children": [
           {
             "name": "Frequently Asked Questions",
-            "to": "/on-prem/base-components/frequently-asked-questions/"
+            "to": "/on-prem/required/frequently-asked-questions/"
           }
         ]
       }
@@ -69,7 +69,7 @@
         "children": [
           {
             "name": "Introduction",
-            "to": "/on-prem/optional-components/introduction/"
+            "to": "/on-prem/optional/introduction/"
           }
         ]
       },
@@ -80,15 +80,54 @@
         "children": [
           {
             "name": "License Proxy Server",
-            "to": "/on-prem/optional-components/license-proxy-server/"
+            "to": "/on-prem/optional/license-proxy-server/"
           },
           {
             "name": "DGTools",
-            "to": "/on-prem/optional-components/dgtools/"
+            "to": "/on-prem/optional/dgtools/"
           },
           {
             "name": "UniMRCP Plugin",
-            "to": "/on-prem/optional-components/unimrcp/"
+            "to": "/on-prem/optional/unimrcp/"
+          }
+        ]
+      },
+      {
+        "name": "Hotpepper",
+        "to": "",
+        "static": true,
+        "children": [
+          {
+            "name": "Introduction",
+            "to": "/on-prem/optional/introduction-hotpepper/"
+          },
+          {
+            "name": "Setting Up",
+            "to": "/on-prem/optional/setting-up-hotpepper/"
+          },
+          {
+            "name": "Understanding the Workflow",
+            "to": "/on-prem/optional/understanding-workflow-hotpepper/"
+          },
+          {
+            "name": "Managing Work",
+            "to": "/on-prem/optional/managing-work-hotpepper/"
+          },
+          {
+            "name": "Managing Datasets",
+            "to": "/on-prem/optional/managing-datasets-hotpepper/"
+          },
+          {
+            "name": "Managing Users",
+            "to": "/on-prem/optional/managing-users-hotpepper/"
+          },
+          {
+            "name": "Troubleshooting",
+            "to": "/on-prem/optional/troubleshooting-hotpepper/"
+          },
+          {
+            "name": "Best Practices",
+            "to": "/on-prem/optional/best-practices-hotpepper/"
           }
         ]
       }

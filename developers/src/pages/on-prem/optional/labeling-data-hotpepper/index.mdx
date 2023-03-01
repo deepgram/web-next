@@ -1,0 +1,117 @@
+---
+robots: noindex, nofollow
+title: Labeling Data
+description: Learn how to label data using Hotpepper, Deepgram's on-premises data labeling tool.
+type: hotpepper
+show: false
+order: 5
+seo:
+  metaTitle: "Hotpepper User Guide: Labeling Data"
+  metaDescription: Learn how to label data using Hotpepper, Deepgram's on-premises data labeling tool.
+  keywords: hotpepper, data label, transcription, transcribe, audio
+---
+
+import { Image } from "@astrojs/image/components";
+
+# {frontmatter.title}
+
+After a user selects a level, the system takes them to the labeling view for the assigned file. In the labeling view, users can listen to audio and either transcribe what they hear or edit an existing transcript.
+
+<div class="screenshot">
+	<Image src={import("./hotpepper-cholula-label-data.png")} alt="Hotpepper Labeling View" />
+</div>
+
+<div class="annotated">
+
+## Using the Audio Player
+
+<Image src={import('./labeling-data-1.png')} alt=""/>
+<Image src={import('./labeling-data-2.png')} alt=""/>
+</div>
+
+The labeling view provides an audio player with controls that allow users to play, pause, and jump to different times in the assigned audio file.
+
+### Using Keyboard Shortcuts
+
+To help improve productivity, Hotpepper provides keyboard shortcuts that allow users to manipulate the audio player without using the player controls. For example, pressing `TAB` on the keyboard skips the audio player backwards by two seconds.
+
+To see a list of available shortcuts, visit `https://<YOUR_HOTPEPPER_URL>/instructions#shortcuts`.
+
+### Managing Audio Settings
+
+When using the audio player, users can control the following audio settings:
+
+- **Audio Speed**: Increases or decreases the playback speed of the assigned file.
+- **Audio Gain**: Increases or decreases the volume of the assigned file.
+
+<div class="annotated">
+
+## Transcribing Data
+
+<Image src={import('./labeling-data-3.png')} alt=""/>
+<Image src={import('./labeling-data-4.png')} alt=""/>
+</div>
+
+The majority of the labeling view consists of a textarea that contains the transcription of the assigned file where users can add and edit text.
+
+### Transcribing Automatically
+
+For files assigned at level L1, users may be able to submit the assigned file to an on-premise Deepgram Speech Engine for automatic speech recognition (ASR) and transcription. When ASR is used, the Hotpepper server sends the assigned audio file to the configured Speech API endpoint, parses a transcript from the results, and automatically populates the **Transcript** textarea of the labeling view with the returned transcript.
+
+To enable this feature, Hotpepper must be configured appropriately. When Hotpepper is properly configured for ASR, the **File Details** area of the labeling view will include a **Get ASR** button.
+
+To learn more about configuring ASR for automatic transcription, visit [Hotpepper User Guide: Setting Up](/on-prem/optional-components/hotpepper/setting-up/).
+
+### Using Macros
+
+To help improve productivity, Hotpepper provides built-in macros, which allow users to type string combinations that automatically expand. For example, typing "1" (the numeral 1 with a space after it) expands to "[SPEAKER 1:]", and typing "ty" expands to "thank you".
+
+To see a list of available macros, visit `https://<YOUR_HOTPEPPER_URL>/instructions#macros`.
+
+<div class="annotated">
+
+## Managing File & Dataset Details
+
+<Image src={import('./labeling-data-5.png')} alt=""/>
+<Image src={import('./labeling-data-6.png')} alt=""/>
+</div>
+
+While transcribing or editing a file, various file details are available to the user:
+
+- **Last Saved**: Time at which the current file was last saved.
+- **Filename**: Name of the current file.
+- **Level**: Level of labeling being performed on the current file.
+- **File History**: History of the current file, which can include:
+  - **Action**: Action that occurred. (Typically, this is `update`.)
+  - **User**: User that performed the action.
+  - **Level**: Review level of the file when the action was performed.
+  - **Status**: Status of the file when the action was performed.
+  - **Time**: Timestamp when the action was performed.
+
+In addition, users may add notes about the file or dataset. For example, users may want to add details that may be commonly heard throughout a dataset, such as product names, people’s names, acronyms, or specialized terminology.
+
+<div class="annotated">
+
+## Handling Files
+
+<Image src={import('./labeling-data-7.png')} alt=""/>
+<Image src={import('./labeling-data-8.png')} alt=""/>
+</div>
+
+When labeling data, users can perform the following operations on the assigned file:
+
+### Saving
+
+Users select **Save** to save the current transcript to the server and update **Last Saved** in the **File Details**. Hotpepper also periodically auto-saves transcripts.
+
+### Submitting
+
+Users select **Done** to mark the assigned file as finished and send it to the next level for further labeling. Once the file is submitted, the system returns the user to the dashboard, so they can select another project.
+
+### Abandoning
+
+Users select **Abandon** to opt out of working with a file. Once a user abandons a file, the file will no longer be available to the user at any level.
+
+### Pausing
+
+By default, when a user exits the labeling view, work on the current file is paused. Users can also pause work on a file by clicking the Hotpepper icon or the browser’s back button.

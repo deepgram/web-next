@@ -6,10 +6,15 @@ import BreadCrumb from "../../shared/components/nav/BreadCrumb.astro";
 import SideNav from "../../shared/components/nav/SideNav.astro";
 import DocsCardList from "../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../shared/components/cards/DocsCard.astro";
-const baseComponents = await Astro.glob("./base-components/**/index.mdx");
 import nav from "../../pages/on-prem/navigation.json";
+const required = await Astro.glob("./required/**/index.mdx");
 
-const orderedComponents = baseComponents.sort((a, b) => {
+const optional = await Astro.glob("./optional/**/index.mdx");
+
+const orderedRequired = required.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+const orderedOptional = optional.sort((a, b) => {
 	return a.frontmatter.order - b.frontmatter.order;
 });
 ---
@@ -24,9 +29,13 @@ const orderedComponents = baseComponents.sort((a, b) => {
 						<BreadCrumb />
 						<div class="max-w-screen-xl mx-auto">
 							<h1 class="w-max" slot="page-header">On-Premises Deployments</h1>
-							<h2 class="text-stone mt-6 mb-10">BASE COMPONENTS</h2>
+							<h2 class="text-stone mt-6 mb-10">REQUIRED</h2>
 							<DocsCardList>
-								{orderedComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+								{orderedRequired.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+							</DocsCardList>
+							<h2 class="text-stone mt-6 mb-10">OPTIONAL</h2>
+							<DocsCardList>
+								{orderedOptional.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 							</DocsCardList>
 						</div>
 					</PrimarySection>
