@@ -91,45 +91,6 @@
             "to": "/on-prem/optional/unimrcp/"
           }
         ]
-      },
-      {
-        "name": "Hotpepper",
-        "to": "",
-        "static": true,
-        "children": [
-          {
-            "name": "Introduction",
-            "to": "/on-prem/optional/introduction-hotpepper/"
-          },
-          {
-            "name": "Setting Up",
-            "to": "/on-prem/optional/setting-up-hotpepper/"
-          },
-          {
-            "name": "Understanding the Workflow",
-            "to": "/on-prem/optional/understanding-workflow-hotpepper/"
-          },
-          {
-            "name": "Managing Work",
-            "to": "/on-prem/optional/managing-work-hotpepper/"
-          },
-          {
-            "name": "Managing Datasets",
-            "to": "/on-prem/optional/managing-datasets-hotpepper/"
-          },
-          {
-            "name": "Managing Users",
-            "to": "/on-prem/optional/managing-users-hotpepper/"
-          },
-          {
-            "name": "Troubleshooting",
-            "to": "/on-prem/optional/troubleshooting-hotpepper/"
-          },
-          {
-            "name": "Best Practices",
-            "to": "/on-prem/optional/best-practices-hotpepper/"
-          }
-        ]
       }
     ]
   }
