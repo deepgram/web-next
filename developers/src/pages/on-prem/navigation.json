@@ -32,11 +32,11 @@
         "static": true,
         "children": [
           {
-            "name": "Deploying Required Components",
+            "name": "Deploying Required Components to AWS (Ubuntu 20.04 LTS)",
             "to": "/on-prem/required/deploy-required-components/"
           },
           {
-            "name": "Deploying to Amazon Web Services (RHEL 7)",
+            "name": "Deploying Required Components to AWS (RHEL 7)",
             "to": "/on-prem/required/deploy-aws-rhel-7/"
           },
           {
