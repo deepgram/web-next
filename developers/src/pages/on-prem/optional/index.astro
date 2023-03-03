@@ -12,10 +12,23 @@ const sortedprereqComponents = prereqComponents.sort((a, b) => {
 	return a.frontmatter.order - b.frontmatter.order;
 });
 
-const deploymentComponents = optionalComponents.filter((c) => {
-	return c.frontmatter.type === "deployment";
+const lpsComponents = optionalComponents.filter((c) => {
+	return c.frontmatter.type === "lps";
 });
-const sorteddeploymentComponents = deploymentComponents.sort((a, b) => {
+const sortedlpsComponents = lpsComponents.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+
+const dgtoolsComponents = optionalComponents.filter((c) => {
+	return c.frontmatter.type === "dgtools";
+});
+const sorteddgtoolsComponents = dgtoolsComponents.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+const unimrcpComponents = optionalComponents.filter((c) => {
+	return c.frontmatter.type === "unimrcp";
+});
+const sortedunimrcpComponents = unimrcpComponents.sort((a, b) => {
 	return a.frontmatter.order - b.frontmatter.order;
 });
 
@@ -34,9 +47,13 @@ const sortedhotpepperComponents = hotpepperComponents.sort((a, b) => {
 		<DocsCardList>
 			{sortedprereqComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 		</DocsCardList>
-		<h2 slot="title" class="text-stone uppercase">Deployment</h2>
+		<h2 slot="title" class="text-stone uppercase">License Proxy Server</h2>
 		<DocsCardList>
-			{sorteddeploymentComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+			{sortedlpsComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+		</DocsCardList>
+		<h2 slot="title" class="text-stone uppercase">unimrcp</h2>
+		<DocsCardList>
+			{sortedunimrcpComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 		</DocsCardList>
 		<h2 slot="title" class="text-stone uppercase">Hotpepper</h2>
 		<DocsCardList>
