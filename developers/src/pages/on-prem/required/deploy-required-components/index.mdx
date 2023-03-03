@@ -1,12 +1,12 @@
 ---
 layout: ../../../../layouts/OnPrem.astro
-title: Deploying Base Components
+title: Deploying Required Components
 description: Learn how to configure your environment for on-premises deployments of Deepgram products.
 type: deployment
 seo:
-  metaTitle: Deploying Base Components
+  metaTitle: Deploying Required Components
   metaDescription: Learn how to configure your environment for on-premises deployments of Deepgram products.
-  keywords: on-premises, on-prem, deployment, configuration, configure, base components, base
+  keywords: on-premises, on-prem, deployment, configuration, configure, required components, required
 ---
 
 import Alert from "../../../../shared/components/global/Alert.astro";
@@ -101,7 +101,7 @@ At the end of this process, your browser should download a `private-key.pem` fil
    		For the key, type <code>Name</code>.
    	</li>
    	<li>
-   		For the value, type <code>On-Premises Base</code> .
+   		For the value, type <code>On-Premises</code> .
    	</li>
    	<li>
    		Select <strong>Next: Configure Security Group</strong>.
@@ -115,7 +115,7 @@ At the end of this process, your browser should download a `private-key.pem` fil
    		For the name, type <code>On-Premises</code>.
    	</li>
    	<li>
-   		For the description, type <code>On-Premises Base Security Group</code>.
+   		For the description, type <code>On-Premises Security Group</code>.
    	</li>
    	<li>
    		Ensure the first rule (of type <strong>SSH</strong>) is listed, and provide the description <code>SSH for Administration</code>.
@@ -386,7 +386,7 @@ Now that your environment is set up, you can download and set up your Deepgram p
 
 #### Import Your Docker Compose, Container Configuration, and Model Files
 
-Before you can run your on-prem deployment, you must configure the base components. To do this, you will need to customize your configuration files and create a directory to house models that have been encrypted for use in your requests.
+Before you can run your on-prem deployment, you must configure the required components. To do this, you will need to customize your configuration files and create a directory to house models that have been encrypted for use in your requests.
 
 For your deployment, we provide models and configuration files to you via Amazon S3 buckets, so you can download directly to your AWS Ubuntu instance. If you don’t have customized configuration files, you can create configuration files using the examples included in [Customize Your Configuration](#customize-your-configuration).
 

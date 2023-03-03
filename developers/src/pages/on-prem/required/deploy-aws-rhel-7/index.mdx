@@ -6,7 +6,7 @@ type: deployment
 seo:
   metaTitle: Deploying to Amazon Web Services (RHEL 7)
   metaDescription: Learn how to deploy on-premises Deepgram to the cloud on an Amazon Web Services (AWS) instance running Red Hat Enterprise Linux (RHEL) 7.
-  keywords: on-premises, on-prem, deployment, configuration, configure, set up, setup, base components, base, aws, amazon web services, red hat, enterprise, linux, rhel
+  keywords: on-premises, on-prem, deployment, configuration, configure, set up, setup, required components, required, aws, amazon web services, red hat, enterprise, linux, rhel
 ---
 
 import Alert from "../../../../shared/components/global/Alert.astro";
@@ -72,7 +72,7 @@ If you're using the new AWS launch experience:
 
 1. Navigate to the EC2 Dashboard and confirm that the proper AWS Region is configured, then choose **Launch Instance** and select **Launch Instance** in the dropdown to open the wizard.
 
-2. Under **Name and Tags**, for **Name**, enter "Deepgram On-Premises Base (RHEL 7)".
+2. Under **Name and Tags**, for **Name**, enter "Deepgram On-Premises (RHEL 7)".
 
 3. For **Applications and OS Images (Amazon Machine Image)**, enter "Red Hat Enterprise Linux (RHEL) 7 (HVM)" in the search bar, and search.
 
@@ -107,7 +107,7 @@ If you're using the new AWS launch experience:
 
 10. Once the instance successfully launches, review its Launch log and other "Next Steps", then select **View all instances**.
 
-11. From the list of instances, select your new **Deepgram On-Premises Base (RHEL 7)**, and make note of or copy its Public IPv4 DNS entry.
+11. From the list of instances, select your new **Deepgram On-Premises (RHEL 7)**, and make note of or copy its Public IPv4 DNS entry.
 
 #### Old AWS Launch Experience
 
@@ -141,13 +141,13 @@ If you're using the old AWS launch experience:
 6. For the **Add Tags** wizard step, select “Add Tag”:
 
    1. For the key, type `Name`.
-   2. For the value, type `On-Premises Base`.
+   2. For the value, type `On-Premises`.
    3. Select **Next: Configure Security Group**.
 
 7. For the **Configure Security Group** wizard step, select **Create a new security group**.
 
    1. For the name, type `On-Premises`.
-   2. For the description, type `On-Premises Base Security Group`.
+   2. For the description, type `On-Premises Security Group`.
    3. Ensure the first rule (of type **SSH**) is listed, and provide the description `SSH for Administration`.
 
       <Alert type="warning">
@@ -497,7 +497,7 @@ Now that your environment is set up, you can download and set up your Deepgram p
 
 ### Import Your Docker Compose, Container Configuration, and Model Files
 
-Before you can run your on-prem deployment, you must configure the base components. To do this, you will need to customize your configuration files and create a directory to house models that have been encrypted for use in your requests.
+Before you can run your on-prem deployment, you must configure the required components. To do this, you will need to customize your configuration files and create a directory to house models that have been encrypted for use in your requests.
 
 For your deployment, we provide models and configuration files to you via Amazon S3 buckets, so you can download directly to your AWS RHEL instance. If you don’t have customized configuration files, you can create configuration files using the examples included in [Customize Your Configuration](#customize-your-configuration).
 

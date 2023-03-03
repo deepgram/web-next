@@ -32,16 +32,16 @@
         "static": true,
         "children": [
           {
-            "name": "Deploying Base Components",
-            "to": "/on-prem/required/deploy-base-components/"
+            "name": "Deploying Required Components",
+            "to": "/on-prem/required/deploy-required-components/"
           },
           {
             "name": "Deploying to Amazon Web Services (RHEL 7)",
             "to": "/on-prem/required/deploy-aws-rhel-7/"
           },
           {
-            "name": "Maintaining Base Components",
-            "to": "/on-prem/required/maintain-base-components/"
+            "name": "Maintaining Required Components",
+            "to": "/on-prem/required/maintain-required-components/"
           }
         ]
       },

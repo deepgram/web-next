@@ -68,9 +68,9 @@ https://enterprise-docs.deepgram.com/* https://developers.deepgram.com/
 /on-prem/base-components/design-architecture /on-prem/required/design-architecture/
 /on-prem/base-components/configure-environment /on-prem/required/configure-environment/
 /on-prem/base-components/license /on-prem/required/license/
-/on-prem/base-components/deploy-base-components /on-prem/required/deploy-base-components/
+/on-prem/base-components/deploy-base-components /on-prem/required/deploy-required-components/
 /on-prem/base-components/deploy-aws-rhel-7 /on-prem/required/deploy-aws-rhel-7/
-/on-prem/base-components/maintain-base-components /on-prem/required/maintain-base-components/
+/on-prem/base-components/maintain-base-components /on-prem/required/maintain-required-components/
 /on-prem/base-components/frequently-asked-questions /on-prem/required/frequently-asked-questions/
 /on-prem/optional-components/license-proxy-server /on-prem/optional/license-proxy-server/
 /on-prem/optional-components/dgtools /on-prem/optional/dgtools/
