@@ -51,6 +51,10 @@ const sortedhotpepperComponents = hotpepperComponents.sort((a, b) => {
 		<DocsCardList>
 			{sortedlpsComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 		</DocsCardList>
+		<h2 slot="title" class="text-stone uppercase">DGTools</h2>
+		<DocsCardList>
+			{sorteddgtoolsComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+		</DocsCardList>
 		<h2 slot="title" class="text-stone uppercase">unimrcp</h2>
 		<DocsCardList>
 			{sortedunimrcpComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
