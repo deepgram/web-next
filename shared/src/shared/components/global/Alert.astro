@@ -22,11 +22,13 @@ const host = Astro.url.host;
 
 <!-- This script will update all blog alerts to be dark theme -->
 <script define:vars={{ host }}>
-	const alert = document.querySelector(".alert");
+	setTimeout(() => {
+		const alert = document.querySelector(".alert");
 
-	if (host === "blog.deepgram.com") {
-		alert.classList.add("dark");
-	}
+		if (host === "localhost:3000") {
+			alert.classList.add("dark");
+		}
+	}, 500);
 </script>
 
 <div class={`alert ${blok.type || type}`}>
@@ -45,17 +47,12 @@ const host = Astro.url.host;
 		@apply flex flex-row flex-wrap items-center align-middle;
 		@apply text-ink text-sm;
 		@apply my-4 py-2;
-		@apply border-rock rounded-sm border-2;
+		@apply border-cloud rounded-sm border-2;
 	}
 
 	.alert.dark {
 		@apply text-cloud;
-	}
-
-	.language {
-		@apply border-casper rounded-sm border;
-		/* @apply bg-casper; */
-		@apply m-2.5;
+		@apply border-rock rounded-sm border-2;
 	}
 
 	.heading {
@@ -67,12 +64,12 @@ const host = Astro.url.host;
 	}
 	.icon > * {
 		@apply m-2.5 mr-0;
+		@apply h-6 w-6;
+		@apply bg-no-repeat;
 		@apply border-0;
 	}
 
 	.icon.info {
-		@apply bg-no-repeat;
-		@apply h-6 w-6;
 		@apply fill-blueberry;
 	}
 
@@ -81,14 +78,10 @@ const host = Astro.url.host;
 	}
 
 	.icon.warning {
-		@apply bg-no-repeat;
-		@apply h-6 w-6;
 		@apply fill-gold;
 	}
 
 	.icon.language {
-		@apply bg-no-repeat;
-		@apply h-6 w-6;
 		@apply fill-black;
 	}
 
