@@ -8,6 +8,8 @@ let title;
 if (Astro.props.type) {
 	// If prop comes from Astro mdx, set blok to type prop that comes from the mdx file
 	type = Astro.props.type;
+} else {
+	type = "info";
 }
 
 if (Astro.props.title) {
