@@ -23,10 +23,11 @@ const host = Astro.url.host;
 <!-- This script will update all blog alerts to be dark theme -->
 <script define:vars={{ host }}>
 	setTimeout(() => {
-		const alert = document.querySelector(".alert");
-
-		if (host === "localhost:3000") {
-			alert.classList.add("dark");
+		const alerts = document.getElementsByClassName("alert");
+		if (host === "blog.deepgram.com") {
+			Array.from(alerts).forEach((a) => {
+				a.classList.add("dark");
+			});
 		}
 	}, 500);
 </script>
