@@ -1,17 +1,37 @@
 ---
 import Icon from "../general/Icon.astro";
-const { blok = { type: "info" } } = Astro.props;
-const { type } = blok;
 import { renderRichText } from "@storyblok/astro";
+
+///////////////////////////////////////////
+let type;
+if (Astro.props.type) {
+	// If prop comes from Astro mdx, set blok to type prop that comes from the mdx file
+	type = Astro.props.type;
+}
+// If prop comes from storyblok, set blok to type prop that comes from storyblok
+const { blok = type } = Astro.props;
+
+///////////////////////////////////////////
+
 let renderedRichText;
-if (blok.inner_html) {
+if (blok && blok.inner_html) {
 	renderedRichText = renderRichText(blok.inner_html);
 }
+const host = Astro.url.host;
 ---
 
-<div class={`alert ${type}`}>
+<!-- This script will update all blog alerts to be dark theme -->
+<script define:vars={{ host }}>
+	const alert = document.querySelector(".alert");
+
+	if (host === "blog.deepgram.com") {
+		alert.classList.add("dark");
+	}
+</script>
+
+<div class={`alert ${blok.type || type}`}>
 	<div class="heading">
-		<Icon class={`icon h-6 w-6 ${type}`} icon={type} />
+		<Icon class={`icon h-6 w-6 ${blok.type || type}`} icon={blok.type || type} />
 	</div>
 	<div class="text w-5/6">
 		<slot>
@@ -23,18 +43,15 @@ if (blok.inner_html) {
 <style>
 	.alert {
 		@apply flex flex-row flex-wrap items-center align-middle;
-		@apply text-sm text-[#8d8b8b];
+		@apply text-ink text-sm;
 		@apply my-4 py-2;
+		@apply border-rock rounded-sm border-2;
 	}
 
-	.info {
-		@apply border-grass rounded-sm border-2;
-		/* @apply bg-cloud; */
+	.alert.dark {
+		@apply text-cloud;
 	}
-	.warning {
-		@apply border-sunflower/20 rounded-sm border-2;
-		/* @apply bg-sunflower/20; */
-	}
+
 	.language {
 		@apply border-casper rounded-sm border;
 		/* @apply bg-casper; */
@@ -56,14 +73,19 @@ if (blok.inner_html) {
 	.icon.info {
 		@apply bg-no-repeat;
 		@apply h-6 w-6;
-		@apply fill-casper;
+		@apply fill-blueberry;
+	}
+
+	.alert.info.dark .icon {
+		@apply fill-sky;
 	}
 
 	.icon.warning {
 		@apply bg-no-repeat;
 		@apply h-6 w-6;
-		@apply fill-sunflower;
+		@apply fill-gold;
 	}
+
 	.icon.language {
 		@apply bg-no-repeat;
 		@apply h-6 w-6;
