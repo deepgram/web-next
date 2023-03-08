@@ -1,11 +1,11 @@
 ---
 layout: ../../../../layouts/OnPrem.astro
-title: Deploying Required Components to AWS (RHEL 7)
-description: Learn how to deploy on-premises Deepgram to the cloud on an Amazon Web Services (AWS) instance running Red Hat Enterprise Linux (RHEL) 7.
+title: Deploying Required Components to AWS (RHEL 8)
+description: Learn how to deploy on-premises Deepgram to the cloud on an Amazon Web Services (AWS) instance running Red Hat Enterprise Linux (RHEL) 8.
 type: deployment
 seo:
-  metaTitle: Deploying to Amazon Web Services (RHEL 7)
-  metaDescription: Learn how to deploy on-premises Deepgram to the cloud on an Amazon Web Services (AWS) instance running Red Hat Enterprise Linux (RHEL) 7.
+  metaTitle: Deploying to Amazon Web Services (RHEL 8)
+  metaDescription: Learn how to deploy on-premises Deepgram to the cloud on an Amazon Web Services (AWS) instance running Red Hat Enterprise Linux (RHEL) 8.
   keywords: on-premises, on-prem, deployment, configuration, configure, set up, setup, required components, required, aws, amazon web services, red hat, enterprise, linux, rhel
 ---
 
@@ -13,7 +13,7 @@ import Alert from "../../../../shared/components/global/Alert.astro";
 
 # {frontmatter.title}
 
-Cloud-hosted on-premises (on-prem) deployments are the most common type of deployment performed by customers who want to leverage Deepgram within their own infrastructure. Specific configurations vary, but the Cloud Service Providers that are typically used include Amazon Web Services (AWS), Azure, and Google Cloud Platform (GCP). This guide details steps to set up a deployment to the cloud on an AWS instance running Red Hat Enterprise Linux (RHEL) 7.
+Cloud-hosted on-premises (on-prem) deployments are the most common type of deployment performed by customers who want to leverage Deepgram within their own infrastructure. Specific configurations vary, but the Cloud Service Providers that are typically used include Amazon Web Services (AWS), Azure, and Google Cloud Platform (GCP). This guide details steps to set up a deployment to the cloud on an AWS instance running Red Hat Enterprise Linux (RHEL) 8.
 
 Deploying Deepgram on AWS requires some preparation. In this guide, you will learn how to expose and access your application in a secure and stable manner. You will need to perform some of these steps in the AWS Management Console and some in your local terminal.
 
@@ -72,11 +72,11 @@ If you're using the new AWS launch experience:
 
 1. Navigate to the EC2 Dashboard and confirm that the proper AWS Region is configured, then choose **Launch Instance** and select **Launch Instance** in the dropdown to open the wizard.
 
-2. Under **Name and Tags**, for **Name**, enter "Deepgram On-Premises (RHEL 7)".
+2. Under **Name and Tags**, for **Name**, enter "Deepgram On-Premises (RHEL 8)".
 
-3. For **Applications and OS Images (Amazon Machine Image)**, enter "Red Hat Enterprise Linux (RHEL) 7 (HVM)" in the search bar, and search.
+3. For **Applications and OS Images (Amazon Machine Image)**, enter "Red Hat Enterprise Linux 8" in the search bar, and search.
 
-4. Next to the **Red Hat Enterprise Linux (RHEL) 7 (HVM)** image by **Amazon Web Services** with **Ver 7.7_HVM**, click **Select**. In the modal that appears, confirm the latest version of the image is **Ver 7.7_HVM** or greater, and select **Continue**.
+4. Next to the **Red Hat Enterprise Linux 8** image by **Amazon Web Services** with **Ver Red Hat Enterprise Linux 8.6 (HVM)**, click **Select**. In the modal that appears, confirm the latest version of the image is **Red Hat Enterprise Linux 8.6 (HVM)** or greater, and select **Continue**.
 
 5. For **Instance Type**, in the search bar dropdown, locate and select "g4dn.2xlarge". Ensure it has 8 vCPU and 32GiB memory.
 
@@ -98,7 +98,7 @@ If you're using the new AWS launch experience:
 
 9. For **Summary**, ensure the **Number of instances** value is at least **1** and confirm that the rest of your instance settings are correct. They should consist of the following values:
 
-   - **Software Image (AMI)**: Red Hat Enterprise Linux (RHEL) 7 (HVM) ami-078a6a18fb73909b2
+   - **Software Image (AMI)**: Red Hat Enterprise Linux 8 ami-08970fb2e5767e3b8
    - **Virtual server type (instance type)**: g4dn.2xlarge
    - **Firewall (security group)**: either **New Security Group** or the name of your selected security group
    - **Storage (volumes)**: 2 volume(s)
@@ -107,7 +107,7 @@ If you're using the new AWS launch experience:
 
 10. Once the instance successfully launches, review its Launch log and other "Next Steps", then select **View all instances**.
 
-11. From the list of instances, select your new **Deepgram On-Premises (RHEL 7)**, and make note of or copy its Public IPv4 DNS entry.
+11. From the list of instances, select your new **Deepgram On-Premises (RHEL 8)**, and make note of or copy its Public IPv4 DNS entry.
 
 #### Old AWS Launch Experience
 
@@ -117,8 +117,8 @@ If you're using the old AWS launch experience:
 
 2. For the **Choose an Amazon Machine Image (AMI)** wizard step, choose a basic configuration to serve as a template for your instance:
 
-   1. Search for **Red Hat Enterprise Linux (RHEL) 7 (HVM)**.
-   2. If you want the latest version of the RHEL 7 image, ensure the version is labeled **Ver 7.7_HVM**.
+   1. Search for **Red Hat Enterprise Linux 8**.
+   2. If you want the latest version of the RHEL 8 image, ensure the version is labeled **Ver Red Hat Enterprise Linux 8.6 (HVM)**.
    3. Ensure the Architecture version is x86_64.
    4. Choose **Select**.
 
