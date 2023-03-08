@@ -2,68 +2,57 @@
 import Layout from "../../layouts/Default.astro";
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import BreadCrumb from "../../shared/components/nav/BreadCrumb.astro";
-import Link from "../../shared/components/general/Link.astro";
-const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
 ---
 
 <Layout>
-	<PrimarySection class="max-w-screen-lg mx-auto px-10 my-10">
+	<PrimarySection class="max-w-screen-lg mx-auto px-10 my-10 gap-16">
 		<BreadCrumb />
 		<h1>Support</h1>
 
-		<section class="support grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-16">
-			<div id="support-section" class="col-span-3 mt-8">
-				<h2 class="mt-2">On a free plan?</h2>
-				<div class="flex flex-col">
-					<p>
-						If you are having specific <b>account issues</b> or are <b>seeing fraud</b>, contact the <a href="mailto:support@deepgram.com">support team</a>. For everything else,
-						get help in our
-						<a href="https://github.com/orgs/deepgram/discussions">community forum</a>.
+		<section class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-32">
+			<div id="support-section">
+				<form action="/support/success/" name="support" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+					<input type="hidden" name="form-name" value="support" />
+					<p class="hidden">
+						<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
 					</p>
-					<Link href="https://github.com/orgs/deepgram/discussions" class="button button--primary w-80 mt-10">Visit the Community</Link>
-				</div>
-				<div class="flex flex-col">
-					<h2>On a paid plan?</h2>
-					<p>Paid accounts include private email support for all issues. Contact the support team or seek self-help via our community forum, docs , and guides . Your choice!</p>
-					<Link href={`${DOCS_DOMAIN}/support-form`} class="button button--primary w-80 mt-10">Report an issue</Link>
-				</div>
+					<p>
+						<label
+							>Email <span>*</span>
+							<input required type="email" name="email" placeholder="Your email" class="form-input" />
+						</label>
+					</p>
+					<p>
+						<label
+							>Name
+							<input type="text" name="name" placeholder="Your name" class="form-input" />
+						</label>
+					</p>
+					<p>
+						<label
+							>Message title
+							<input type="text" name="message-title" placeholder="Title of your message" class="form-input" />
+						</label>
+					</p>
+					<p>
+						<label
+							>Your message
+							<textarea name="message" placeholder="Message" class="form-input"></textarea>
+						</label>
+					</p>
+					<p class="flex">
+						<button type="submit">Send</button>
+					</p>
+				</form>
 			</div>
-
-			<div id="email-section" class="col-span-2">
-				<div class="panel">
-					<div class="heading">
-						<h3 class="title">Forums</h3>
-					</div>
-
-					<div class="text">
-						<div>
-							Our community forum is the official way to get help if you’re on a free account , and the wealth of information from Deepgram and our community make them a great
-							resource for paying customers too!
-						</div>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="heading">
-						<h3 class="title">Guides</h3>
-					</div>
-
-					<div class="text">
-						<div>Our guides walk you through step by step how the use most popular features of Deepgram.</div>
-					</div>
-				</div>
-				<div class="panel">
-					<div class="heading">
-						<h3 class="title">Docs</h3>
-					</div>
-
-					<div class="text">
-						<div>Our extensive documentation show you how to use every part of Deepgram.</div>
-					</div>
-				</div>
+			<div id="email-section">
+				<p class="bold">More of the email type of person?</p>
+				<p>We'll be waiting for your email!</p>
+				<a href="mailto:developers@deepgram.com">developers@deepgram.com</a>
 			</div>
 		</section>
 	</PrimarySection>
-	<!-- <div id="feedback-signup">
+	<div id="feedback-signup">
 		<section>
 			<div class="form-container">
 				<h3>WANT TO HELP US GET BETTER?</h3>
@@ -90,10 +79,34 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				<p>You would make the team very happy!</p>
 			</div>
 		</section>
-	</div> -->
+	</div>
 </Layout>
 
 <style>
+	#support-section {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		-moz-column-gap: 9rem;
+		column-gap: 9rem;
+	}
+	#support-section form {
+		@apply max-w-lg;
+	}
+	#support-section form p {
+		@apply my-5;
+	}
+	#support-section form label {
+		@apply font-bold;
+	}
+	#support-section form label span {
+		@apply text-fireEngine;
+	}
+	#support-section form label .form-input {
+		@apply border-casper mt-2 w-full border px-2 py-1 font-normal;
+	}
+	#support-section form button {
+		@apply bg-meadow ml-auto h-14 w-40 font-bold;
+	}
 	#email-section {
 		@apply mt-12 flex flex-col justify-center text-lg md:mt-0;
 	}
@@ -105,29 +118,6 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 	}
 	#email-section a {
 		@apply mt-6 inline font-bold underline;
-	}
-
-	.panel {
-		@apply flex flex-row flex-wrap align-middle;
-		@apply text-ink text-sm;
-		@apply my-4;
-		@apply border-cloud rounded-sm border-2;
-		@apply bg-mist;
-	}
-
-	.heading {
-		@apply border-cloud rounded-sm border-b-2;
-		@apply w-full;
-		@apply flex flex-row flex-wrap;
-		@apply my-0 ml-0;
-		/* @apply ml-4; */
-	}
-
-	.title {
-		@apply flex flex-wrap;
-		@apply m-4;
-		@apply w-4/6 md:w-5/6;
-		@apply font-semibold;
 	}
 	#feedback-signup {
 		@apply bg-darkCharcoal text-cloud;
