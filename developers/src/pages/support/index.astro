@@ -12,7 +12,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 		<h1>Support</h1>
 
 		<section class="support grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-16">
-			<div id="support-section" class="col-span-3 mt-8">
+			<div id="support-section" class="col-span-3 ">
 				<h2 class="mt-6">On a free plan?</h2>
 				<div class="flex flex-col">
 					<p>
@@ -117,6 +117,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 		@apply my-4;
 		@apply border-cloud rounded-sm border-2;
 		@apply bg-mist;
+		@apply shadow-md;
 	}
 
 	.heading {
@@ -124,7 +125,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 		@apply w-full;
 		@apply flex flex-row flex-wrap;
 		@apply my-0 ml-0;
-		/* @apply ml-4; */
+		@apply from-lightIris to-cornflower bg-gradient-to-r;
 	}
 
 	.title {
