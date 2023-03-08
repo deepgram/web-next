@@ -13,7 +13,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 
 		<section class="support grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-16">
 			<div id="support-section" class="col-span-3 mt-8">
-				<h2 class="mt-2">On a free plan?</h2>
+				<h2 class="mt-6">On a free plan?</h2>
 				<div class="flex flex-col">
 					<p>
 						If you are having specific <b>account issues</b> or are <b>seeing fraud</b>, contact the <a href="mailto:support@deepgram.com">support team</a>. For everything else,
@@ -22,9 +22,11 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					</p>
 					<Link href="https://github.com/orgs/deepgram/discussions" class="button button--primary w-80 mt-10">Visit the Community</Link>
 				</div>
-				<div class="flex flex-col">
+				<div class="flex flex-col mt-10">
 					<h2>On a paid plan?</h2>
-					<p>Paid accounts include private email support for all issues. Contact the support team or seek self-help via our community forum, docs , and guides . Your choice!</p>
+					<p>
+						<b>Paid accounts include private email support for all issues.</b> Contact the support team or seek self-help via our community forum, docs, and guides . Your choice!
+					</p>
 					<Link href={`${DOCS_DOMAIN}/support-form`} class="button button--primary w-80 mt-10">Report an issue</Link>
 				</div>
 			</div>
@@ -36,19 +38,20 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					</div>
 
 					<div class="text">
-						<div>
+						<div class="mb-4">
 							Our community forum is the official way to get help if you’re on a free account , and the wealth of information from Deepgram and our community make them a great
 							resource for paying customers too!
 						</div>
+						<Link href="https://github.com/orgs/deepgram/discussions" icon="arrow-right" iconSuffix>View the community forum</Link>
 					</div>
 				</div>
 				<div class="panel">
 					<div class="heading">
 						<h3 class="title">Guides</h3>
 					</div>
-
 					<div class="text">
-						<div>Our guides walk you through step by step how the use most popular features of Deepgram.</div>
+						<div class="mb-4">Our guides walk you through step by step how the use most popular features of Deepgram.</div>
+						<Link href={`${DOCS_DOMAIN}/documentation/guides`} icon="arrow-right" iconSuffix>View all guides</Link>
 					</div>
 				</div>
 				<div class="panel">
@@ -57,7 +60,8 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					</div>
 
 					<div class="text">
-						<div>Our extensive documentation show you how to use every part of Deepgram.</div>
+						<div class="mb-4">Our extensive documentation show you how to use every part of Deepgram.</div>
+						<Link href={`${DOCS_DOMAIN}/documentation`} icon="arrow-right" iconSuffix>Read the docs</Link>
 					</div>
 				</div>
 			</div>
