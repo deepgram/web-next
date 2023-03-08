@@ -189,53 +189,20 @@ To complete the rest of the installation, including configuring your environment
 
 Once you have successfully logged in to your instance, you must remove incompatible kernel drivers and install all of the necessary utilities to run GPU-accelerated containers in Docker.
 
-### Register the Red Hat Subscription Manager
+### Update Red Hat with DNF Package Management Tool
 
-Register the Red Hat `subscription-manager`, which allows you to register, attach, and remove subscriptions using the command line.
-
-1. [Ensure you have a valid RHEL subscription with Red Hat](https://access.redhat.com/management/subscriptions), then register your system in the Red Hat Customer Portal:
-
-   ```bash
-   sudo subscription-manager register
-   ```
-
-2. Automatically attach to the best-match subscription:
-
-   ```bash
-   sudo subscription-manager attach --auto
-   ```
-
-3. Verify the overall status:
-
-   ```
-   sudo subscription-manager status
-   ```
-
-   The output should indicate the status is "Current".
-
-4. Enable necessary Red Hat repositories:
-
-   ```bash
-   sudo subscription-manager repos --enable=rhel-7-server-rpms
-   sudo subscription-manager repos --enable=rhel-7-server-extras-rpms
-   sudo subscription-manager repos --enable rhel-7-server-devtools-rpms
-   sudo subscription-manager repos --enable rhel-7-server-optional-rpms
-   ```
-
-### Update Red Hat’s YUM Package Management Tool
-
-Update the YUM package management tool to RHEL 7.9.
+Update the system to RHEL 8.7.
 
 <Alert type="info">
 
-We recommend using the RHEL 7.7 image from the AWS image base because it is more recently updated.
+We recommend using the RHEL 8.6 image from the AWS image base because it is more recently updated.
 
 </Alert>
 
 1. Update your AWS instance’s operating system package manager to get information on updated versions of packages or their dependencies:
 
    ```bash
-   sudo yum update -y
+   sudo dnf update -y
    ```
 
 2. Verify that the update was successful:
@@ -247,64 +214,84 @@ We recommend using the RHEL 7.7 image from the AWS image base because it is more
    You should expect the command to return the following output:
 
    ```
-   >Red Hat Enterprise Linux Server release 7.9 (Maipo)
+   >Red Hat Enterprise Linux Server release 8.7 (Ootpa)
    ```
 
-### Install Developer Toolset and Kernel Packages
+### Install Podman as the container engine for RHEL 8
 
-Install the Red Hat Enterprise Linux Developer Toolset and DevKernel RPM Packages, which contain the kernel headers and makefiles sufficient to build modules against the kernel package.
+Install Podman which is the RHEL 8 native container engine:
 
-<Alert type="warning">
-
-To avoid NVIDIA driver installation (referenced later in this guide) failure, you must follow the steps in this section exactly.
-
-</Alert>
-
-1. Install the necessary development toolset:
+1. Install Podman
 
    ```bash
-   sudo yum install -y devtoolset-7
+   sudo dnf -y install podman
    ```
 
-2. Install the `kernel-devel` package:
+2. Verify that the Podman installation was sucessful:
 
    ```bash
-   sudo yum install -y kernel-devel
+   podman version 
    ```
 
-3. Restart your instance, then SSH into it again:
+   You should expect the command to return the following output:
+
+   ```
+   >Client:       Podman Engine
+   >Version:      4.2.0
+   >API Version:  4.2.0
+   >Go Version:   go1.18.4
+   >Built:        Fri Jan 13 13:45:32 2023
+   >OS/Arch:      linux/amd64
+   ```
+
+### Install RHEL 8 Kernel Development Tools
+
+Install the Linux kernel development tools for RHEL 8 to support installing the NVIDIA drivers
+
+1. Install the RHEL 8 kernel development tools and associated headers:
 
    ```bash
-   sudo shutdown -r now
+   sudo dnf -y install kernel-devel-`uname -r` kernel-headers-`uname -r`
    ```
 
-   <Alert type="warning">
+2. Install the RHEL 8 Extra Packages for Enterprise Linux (EPEL)
 
-   Server restart is required or NVIDIA driver installation (referenced later in this guide) will fail.
+   ```bash
+   sudo dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+   ```
 
-   </Alert>
+3. Install the Dynamic Kernel Module Support (DKMS) framework
+   ```bash
+   sudo dnf -y install dkms
+   ```
 
 ### Install NVIDIA Drivers
 
 Install the latest available NVIDIA drivers for the `g4dn` instance which has the Tesla T4 GPU:
 
-1. Install GNU Wget (`wget`), so you can retrieve the latest NVIDIA driver for your GPU:
+1. Remove the "nouveau" module so as to avoid conflict with the NVIDIA drivers
 
    ```bash
-   sudo yum install -y wget
+   modprobe -r nouveau
    ```
 
-2. Identify the latest driver for the GPU you are using and retrieve its download URL:
+2. Install GNU Wget (`wget`), so you can retrieve the latest NVIDIA driver for your GPU:
+
+   ```bash
+   sudo dnf -y install wget
+   ```
+
+3. Identify the latest driver for the GPU you are using and retrieve its download URL:
 
    1. Go to [NVIDIA Official Drivers](https://www.nvidia.com/download/index.aspx).
    2. Select the correct product and a corresponding CUDA toolkit 11 or greater.
    3. Select **Search** and check that the correct driver is displayed, then select **Download**.
    4. Right-click **Agree & Download**, then copy the link to save the download URL to your clipboard.
 
-3. Download the latest driver for your GPU:
+4. Download the latest driver for your GPU:
 
    ```bash
-   # Example: wget https://us.download.nvidia.com/tesla/510.47.03/NVIDIA-Linux-x86_64-510.47.03.run
+   # Example: wget https://developer.download.nvidia.com/compute/cuda/12.0.1/local_installers/cuda-repo-rhel8-12-0-local-12.0.1_525.85.12-1.x86_64.rpm
    wget LINK_TO_LATEST_NVIDIA_GPU_DRIVER
    ```
 
@@ -314,91 +301,132 @@ Install the latest available NVIDIA drivers for the `g4dn` instance which has th
 
    </Alert>
 
-4. Change the permissions on the downloaded file to allow your user to execute it:
+5. Add the downloaded driver package to RPM
 
    ```bash
-   # Example: chmod +x NVIDIA-Linux-x86_64-510.47.03.run
-   chmod +x DOWNLOADED_FILE_NAME
+   # Example: sudo rpm -i cuda-repo-rhel8-12-0-local-12.0.1_525.85.12-1.x86_64.rpm
+   sudo rpm -i DOWNLOADED_FILE_NAME
    ```
 
-5. Decompress and execute the driver file to install it:
+6. Clean the DNF cache
 
    ```bash
-   # Example: sudo ./NVIDIA-Linux-x86_64-510.47.03.run --silent
-   sudo DOWNLOADED_FILE_NAME --silent
+   sudo dnf clean all
    ```
 
-6. Test that the NVIDIA drivers are installed:
+7. Install the NVIDIA drivers
+
+   ```bash
+   sudo dnf -y module install nvidia-driver:latest-dkms
+   ```
+
+8. Install the CUDA environment
+
+   ```bash
+   sudo dnf -y install cuda
+   ```
+
+9. Load the NVIDIA kernel module and then load the NVIDIA unified memory kernel module
+
+   ```bash
+   nvidia-modprobe && nvidia-modprobe -u
+   ```
+
+10. Test that the NVIDIA drivers and CUDA environment were successfully installed:
 
    ```bash
    nvidia-smi
    ```
 
-### Install Docker Engine
+### Setting up the NVIDIA Container Toolkit
 
-For ease of use, Deepgram provides its products in Docker containers, so you must make sure that you have installed the latest version of Docker Engine on all hosts.
+<Alert type="info">
 
-1. Install required dependencies:
+This is from the NVIDIA Installation Guide https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#podman
 
-   ```bash
-   sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-   ```
+</Alert>
 
-2. Install the Docker Engine. Docker Engine is only widely supported for RHEL via the CentOS distribution.
+Install the NVIDIA Container Toolkit
 
-   <Alert type="info">
-
-   If you have any trouble installing the CentOS packages on RHEL, read [Install Using the Repository](https://docs.docker.com/engine/install/centos/#install-using-the-repository) in Docker’s [Install Docker Engine on CentOS](https://docs.docker.com/engine/install/centos/) documentation.
-
-   </Alert>
-
-   1. Add the Docker CentOS repository:
-
-      ```bash
-      sudo yum-config-manager \
-        --add-repo \
-        https://download.docker.com/linux/centos/docker-ce.repo
-      ```
-
-   2. Install the Docker Engine components:
-
-      ```bash
-      sudo yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
-      ```
-
-3. Ensure that your AWS instance user (`ec2-user`) has sufficient permissions to communicate with the Docker daemon service that runs on your host operating system. To learn how to run Docker commands without elevated privileges, read [Manage Docker as a Non-Root User](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) in Docker’s optional [Post-installation steps for Linux](https://docs.docker.com/engine/install/linux-postinstall/) documentation.
-
-4. Manually start Docker:
+1. Setup the package repository and GPG key:
 
    ```bash
-   sudo systemctl start docker
-   sudo systemctl --now enable docker.service
-   sudo systemctl --now enable containerd.service
+   distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
+    && curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
    ```
 
-5. Test the installation:
+2. Install the NVIDIA Container Toolkit:
 
    ```bash
-   sudo docker run hello-world
+   sudo dnf clean expire-cache \
+    && sudo dnf install -y nvidia-container-toolkit
    ```
 
-6. Enable the use of Docker without `sudo`:
+3. WGET the RHEL 7 NVIDIA container toolkit
 
    ```bash
-   sudo usermod -aG docker $USER
+   wget https://raw.githubusercontent.com/NVIDIA/dgx-selinux/master/bin/RHEL7/nvidia-container.pp
    ```
 
-7. Log out and then log back in to the AWS instance to ensure the `sudo` group membership has been re-evaluated for your current user session.
-
-8. Test the installation without `sudo`:
+4. Add the NVIDIA container to the SELinux policy modules
 
    ```bash
-   docker run hello-world
+   sudo semodule -i nvidia-container.pp
    ```
 
-### Cache Docker Credentials
+5. List the NVIDIA container kernel modules and restore the security context of those modules
 
-Once you are satisfied that Docker is installed and configured correctly, cache your credentials locally by logging in to Docker Hub using your Docker credentials. Once your credentials are cached locally, you should not have to log in again (until after you log out (`docker logout`)).
+   ```bash
+   nvidia-container-cli -k list | restorecon -v -f -
+   ```
+
+6. Restore the security context of the contents of `/dev` 
+
+   ```bash
+   restorecon -Rv /dev
+   ```
+
+7. Test that the NVIDIA Container Toolkit was successfully installed
+
+   ```bash
+   sudo podman run --user 1000:1000 --security-opt=no-new-privileges --cap-drop=ALL \
+   --security-opt label=type:nvidia_container_t  \
+   docker.io/mirrorgooglecontainers/cuda-vector-add:v0.1
+   ```
+
+### Run podman as non-root
+
+Modify the NVIDIA container runtime to enable running podman as non-root (a.k.a. "rootless")
+
+1. Edit the `/etc/nvidia-container-runtime/config.toml` file
+
+   ```bash
+   sudo vi /etc/nvidia-container-runtime/config.toml
+   ```
+
+2. Modify the file contents to match:
+
+   ```
+   [nvidia-container-cli]
+   #no-cgroups = false
+   no-cgroups = true
+   # ...
+   [nvidia-container-runtime]
+   #debug = "/var/log/nvidia-container-runtime.log"
+   debug = "~/.local/nvidia-container-runtime.log"
+   ```
+
+3. Test rootless podman and the NVIDIA container toolkit/CUDA environment
+
+   ```bash
+   podman run --security-opt=no-new-privileges --cap-drop=ALL --security-opt \
+   label=type:nvidia_container_t --hooks-dir=/usr/share/containers/oci/hooks.d/ \
+   docker.io/nvidia/cuda:10.2-base nvidia-smi
+   ```
+
+### Log in to Docker Hub with Podman 
+
+Once you are satisfied that Podman is installed and configured correctly along with the NVIDIA Container Toolkit and the CUDA environment, cache your credentials locally by logging in to Docker Hub. Once your credentials are cached locally, you should not have to log in again (until after you log out (`podman logout`)).
 
 <Alert type="warning">
 
