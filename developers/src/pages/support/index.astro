@@ -12,8 +12,17 @@ const { DOCS_DOMAIN } = import.meta.env;
 <script>
 	const formButton = document.querySelector("#form-button");
 	const supportForm = document.querySelector(".support-form");
+	const supportButtonSubmit = document.querySelector(".support-button-submit");
+	const successMessage = document.querySelector(".success-message");
+	(supportForm as HTMLFormElement).onsubmit = function (e) {
+		e.preventDefault();
+		successMessage.classList.remove("hidden");
+		supportForm.classList.add("hidden");
+		(supportForm as HTMLFormElement).reset();
+	};
 	formButton.addEventListener("click", () => {
 		supportForm.classList.remove("hidden");
+		successMessage.classList.add("hidden");
 	});
 </script>
 <Layout>
@@ -68,9 +77,13 @@ const { DOCS_DOMAIN } = import.meta.env;
 							</label>
 						</p>
 						<p class="flex justify-center">
-							<button class="button button--primary button--small w-28" type="submit">Send</button>
+							<button class="support-button-submit button button--primary button--small w-28" type="submit">Send</button>
 						</p>
 					</form>
+					<div class="success-message mt-10 hidden border-cloud rounded-sm border-2 shadow-md bg-gradient-to-r from-[#DAFFF2] via-[#E8F1FF] to-[#FFEBEB] px-4">
+						<h2>Got it!</h2>
+						<p class="mb-5">Thanks for the submission. We'll be in touch soon. Be sure to check your email.</p>
+					</div>
 				</div>
 			</div>
 
