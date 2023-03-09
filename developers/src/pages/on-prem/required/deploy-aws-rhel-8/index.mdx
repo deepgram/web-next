@@ -434,71 +434,6 @@ We recommend that you use an access token when logging in to Docker Hub. Access 
 
 </Alert>
 
-### Install Docker-Compose
-
-Ensure that [Docker Compose](https://docs.docker.com/compose/install/) is installed.
-
-1. Download Docker Compose, and send the output to your `/usr/local/bin` directory:
-
-   ```bash
-   sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-   ```
-
-2. Modify the permissions for the bin file to allow your user to execute it:
-
-   ```bash
-   sudo chmod +x /usr/local/bin/docker-compose
-   ```
-
-3. Test the installation:
-
-   ```bash
-   docker-compose --version
-   ```
-
-   You should expect the command output to return version 1.29.2.
-
-### Install the NVIDIA-Docker Runtime
-
-CUDA is NVIDIA's library for interacting with its GPU. CUDA support is made available to Docker containers using [`nvidia-docker`](https://github.com/NVIDIA/nvidia-docker), NVIDIA's custom runtime for Docker.
-
-<Alert type="info">
-
-If you run into problems, be sure you are following the steps in the ["Installing on CentOS 7/8" section in NVIDIA's Installation documentation](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-on-centos-7-8).
-
-</Alert>
-
-1. Retrieve the NVIDIA runtime GPG key:
-
-   ```bash
-   distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
-   && curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.repo | sudo tee /etc/yum.repos.d/nvidia-container-toolkit.repo
-   ```
-
-2. Install the NVIDIA Docker runtime:
-
-   ```bash
-   sudo yum install -y nvidia-docker2
-   ```
-
-3. Restart the Docker service:
-
-   ```bash
-   sudo systemctl restart docker
-   ```
-
-4. Download the `nvidia-docker` container image:
-
-   ```bash
-   docker pull nvidia/cuda:11.6.0-base-ubuntu20.04
-   ```
-
-5. Run a test of the NVIDIA Docker runtime:
-
-   ```bash
-   docker run --runtime=nvidia --rm --gpus all nvidia/cuda:11.6.0-base-ubuntu20.04 nvidia-smi
-   ```
-
 ## Setting up the Deepgram Engine and API Containers
 
 Now that your environment is set up, you can download and set up your Deepgram products. For ease of use, Deepgram provides its products in Docker containers.
@@ -508,40 +443,28 @@ Now that your environment is set up, you can download and set up your Deepgram p
 1. Download the latest Deepgram Engine image from Docker:
 
    ```bash
-   docker pull deepgram/onprem-engine:3.37.2
+   podman pull docker.io/deepgram/onprem-engine:3.43.4
    ```
 
 2. Download the latest Deepgram API image from Docker:
 
    ```bash
-   docker pull deepgram/onprem-api:1.70.0
+   podman pull docker.io/deepgram/onprem-api:1.83.0
    ```
 
 3. Download the latest Deepgram License Proxy Server image from Docker:
 
    ```bash
-   docker pull deepgram/onprem-license-proxy:1.1.0
+   podman pull docker.io/deepgram/onprem-license-proxy:1.3.0
    ```
 
-### Import Your Docker Compose, Container Configuration, and Model Files
+### Import Your Container Configuration and Model Files
 
-Before you can run your on-prem deployment, you must configure the required components. To do this, you will need to customize your configuration files and create a directory to house models that have been encrypted for use in your requests.
+Before you can run your on-prem deployment, you must configure the required components. To do this, you will need to create a directory for and customize your configuration files, as well as create a directory to house models that have been encrypted for use in your requests.
 
 For your deployment, we provide models and configuration files to you via Amazon S3 buckets, so you can download directly to your AWS RHEL instance. If you don’t have customized configuration files, you can create configuration files using the examples included in [Customize Your Configuration](#customize-your-configuration).
 
-1. Replace the default `docker-compose.yml` file in your root directory with the customized `docker-compose.yml` file provided by Deepgram:
-
-   ```bash
-   wget LINK_TO_YAML_FILE_PROVIDED_BY_DEEPGRAM
-   ```
-
-   <Alert type="warning">
-
-   Be sure to replace the LINK_TO_YAML_FILE_PROVIDED_BY_DEEPGRAM placeholder value with the URL to the `docker-compose.yml` file provided by your Deepgram Account Representative.
-
-   </Alert>
-
-2. To house your configuration files, create a directory named `config`:
+1. To house your configuration files, create a directory named `config`:
 
    ```bash
    mkdir config
@@ -549,11 +472,11 @@ For your deployment, we provide models and configuration files to you via Amazon
 
    <Alert type="info">
 
-   You can name this directory whatever you like, as long as you update the `docker-compose.yml` file accordingly.
+   You can name this directory whatever you like, as long as you update the `podman` commands accordingly.
 
    </Alert>
 
-3. In your new directory, download each TOML configuration file using the links provided by Deepgram:
+2. In your new directory, download each TOML configuration file using the links provided by Deepgram:
 
    ```bash
    cd config
@@ -566,7 +489,7 @@ For your deployment, we provide models and configuration files to you via Amazon
 
    </Alert>
 
-4. To house models that have been encrypted for use in your requests, create a directory named `models`:
+3. To house models that have been encrypted for use in your requests, create a directory named `models`:
 
    ```bash
    mkdir models
@@ -574,7 +497,7 @@ For your deployment, we provide models and configuration files to you via Amazon
 
    <Alert type="info">
 
-   You can name this directory whatever you like, as long as you update the `docker-compose.yml` and `engine.toml` files accordingly.
+   You can name this directory whatever you like, as long as you update the `podman` command and `engine.toml` file accordingly.
 
    </Alert>
 
@@ -603,87 +526,24 @@ Your Deepgram Account Representative should provide you with download links to c
 
 </Alert>
 
-##### `docker-compose.yml`
-
-The Docker-compose configuration file makes it possible to spin up the containers with Docker using a single command. This makes spinning up a standard POC deployment quick and easy.
-
-```toml
-services:
-  # The speech API service.
-
-  api:
-    image: deepgram/onprem-api:1.70.0
-
-    # Here, we expose the API port to the host machine. The container port
-    # (right-hand side) must match the port that the API service is
-    # listening on (found in its configuration file).
-    ports:
-      - "8080:8080"
-
-    depends_on:
-      - "license-proxy"
-
-    volumes:
-      # The API configuration file needs to be accessible; this should point to
-      # the file on the host machine.
-      - "/home/ec2-user/api.toml:/api.toml:ro"
-
-    # Invoke the API server, passing it the path (inside the container) to its
-    # configuration file.
-    command: -v serve /api.toml
-
-  # The speech engine service.
-  engine:
-    image: deepgram/onprem-engine:3.37.2
-
-    # Change the default runtime.
-    runtime: nvidia
-
-    depends_on:
-      - "license-proxy"
-
-    # The Engine configuration file and models need to be accessible; these paths
-    # should point to files/directories on the host machine.
-    #
-    # You can combine the configuration file and models into a single volume mount.
-    volumes:
-      # The Engine configuration file needs to be accessible.
-      - "/home/ec2-user/engine.toml:/engine.toml:ro"
-
-      # The models will also need to be available. The in-container paths must
-      # match the paths specified in the Engine configuration file.
-      - "/home/ec2-user/models:/models:ro"
-
-    # Invoke the Engine service, passing it the path (inside the container) to
-    # its configuration file.
-    command: -v serve /engine.toml
-
-  license-proxy:
-    image: deepgram/onprem-license-proxy:1.1.0
-
-    ports:
-      - "8443:8443"
-
-    command: -v serve --license-key "YOUR_DEEPGRAM_ONPREM_LICENSE_KEY" --host 0.0.0.0 --port 8443 --status-port 8089
-```
-
 ##### `api.toml`
 
 The API configuration file determines how the API container built from the Docker image will be run. It includes important settings for exposing API endpoints and for enabling features and post-processing plugins for requests.
 
 ```toml
-# Keep in mind that all paths are mapped to in-container paths.
+# Keep in mind that all paths are in-container paths, and do not need to exist
+# on the host machine.
 
 # Configure license validation.
 [license]
   # Your license key.
-  key = "YOUR_DEEPGRAM_ONPREM_LICENSE_KEY"
+  key = "LICENSE_KEY"
   server_url = "https://license-proxy:8443"
 
 # Configure how the API will listen for your requests
 [server]
   # The base URL (prefix) for requests to the API.
-  base_url = "/v2"
+  base_url = "/v1"
   # The IP address to listen on. Since this is likely running in a Docker
   # container, you will probably want to listen on all interfaces.
   host = "0.0.0.0"
@@ -703,6 +563,12 @@ The API configuration file determines how the API container built from the Docke
 [features]
   endpointing_on_by_default = true
 
+  # Enable topic detection by setting this to true, set to false to disable
+  topic_detection = true # or false
+
+  # Enable summarization by setting this to true, set to false to disable
+  summarization = true # or false
+
 # Configure the DNS resolver, overriding the system default.
 # Typically not needed, although we document it here for completeness.
 # [resolver]
@@ -712,9 +578,8 @@ The API configuration file determines how the API container built from the Docke
 #   max_ttl = 10
 
 # Configure the backend pool of speech engines (generically referred to as
-# "drivers" here). There is only one pool type: "standard". The API will
-# load-balance among drivers in the pool; if a driver fails, the next one
-# will be tried.
+# "drivers" here). The API will load-balance among drivers in the standard
+# pool; if one standard driver fails, the next one will be tried.
 #
 # Each driver URL will have its hostname resolved to an IP address. If a domain
 # name resolves to multiple IP addresses, the API will load-balance across each
@@ -753,9 +618,10 @@ The API configuration file determines how the API container built from the Docke
   # Factor to increase the retry sleep by for each additional retry (for
   # exponential backoff).
   retry_backoff = 1.6
-
-  # Maximum response to deserialize from Driver (in bytes)
   max_response_size = 1073741824
+
+# Additional speech engines ("drivers") can be defined here, they too should
+# be in the standard pool using [[driver_pool.standard]]
 ```
 
 ##### `engine.toml`
@@ -763,69 +629,94 @@ The API configuration file determines how the API container built from the Docke
 The Deepgram Engine configuration file determines how the Deepgram Engine container built from the Docker image will be run. It includes important file paths and settings related to models that you will be using.
 
 ```toml
-# Keep in mind that all paths are mapped to in-container paths.
+# Keep in mind that all paths are in-container paths and do not need to exist
+# on the host machine.
 
 # Configure license validation.
 [license]
   # Your license key
-  key = "YOUR_DEEPGRAM_ONPREM_LICENSE_KEY"
+  key = "LICENSE_KEY"
   server_url = "https://license-proxy:8443"
 
 # Configure the server to listen for requests from the API.
 [server]
-  # The base URL (prefix) for requests from the API.
-  base_url = "/v2"
   # The IP address to listen on. Since this is likely running in a Docker
   # container, you will probably want to listen on all interfaces.
   host = "0.0.0.0"
   # The port to listen on
   port = 8080
 
-
-### These settings can be tuned for performance
-# [chunking]
-#   min_duration = 5
-#   max_duration = 7
-[half_precision]
-  on_by_default = ["Tesla T4"]
-# [features]
-#   default_batch_size = 32
-
 # Speech models. You can place these in one or multiple directories.
 [model_manager]
  search_paths = ["/models"]
 
-# Products Entry
-#[[products]]
-# [products.diarizer]
-#  name = "diarizer"
-
-# Enable ancillary models
-# To enable any of these features, just uncomment out the respective
+# Enable ancillary features
+# To disable any of these features, just remove to comment out the respective
 # feature section.
 [features]
-# Diarizer v7
-# [[features.diarizer]]
-#  type = "v7"
-#  name = "default"
-#  model_path = "/models/diarizer_model.dg"
+ # Enable Language Detection by setting this to true, set to false to disable
+ language_detection = true # or false
 
-#  [features.g2p]
-#   path = "/models/g2p.tar"
-#  [[features.profanity_filter]]
-#   tar_path = "/profanity_filter.tar"
+# Size of audio chunks to send in seconds. Min/max default to 7/10s,
+# which is ideal for batch requests. If streaming, we generally
+# recommend 0.5-3s chunks for lowest latency
+# [chunking]
+#  [chunking.streaming]
+#   min_duration = 0.5
+#   max_duration = 3.0
+#
+# Engine will automatically enable half precision operations if your GPU supports
+# them. You can explicitly enable or disable this behavior with the state parameter
+# which supports enabled, disabled, and auto (the default).
+[half_precision]
+   state = "enabled" # or "disabled" or "auto"
 ```
 
 ## Starting and Using Your Container
 
-To make sure your Deepgram on-prem deployment is properly configured and running, you will want to start Docker, run the container, and make a sample request to Deepgram.
+To make sure your Deepgram on-prem deployment is properly configured and running, you will want to start the containers with Podman, and make a sample request to Deepgram.
 
-### Start Docker
+### Start Podman
 
-Now that you have your configuration files set up and in the correct location to be used by the container, use Docker-Compose to run the container:
+Now that you have your configuration files set up and in the correct location to be used by the container, use Podman to run the containers:
+
+1. Navigate to your home directory where you created `./config` and `./models`
 
 ```bash
-docker-compose up -d
+cd ~
+```
+
+2. Start License Proxy
+
+<Alert type="info">
+Be sure to replace the LICENSE_KEY placeholder in this command with your Deepgram provided license key.
+</Alert>
+
+```bash
+podman run --rm -d --name license-proxy --network=host \
+  docker.io/deepgram/onprem-license-proxy:1.3.0 -v serve \
+  --license-key "LICENSE_KEY" --host 0.0.0.0 --port 8443 --status-port 8089 \
+  && podman container logs license-proxy
+```
+
+3. Start Engine
+
+```bash
+podman run --security-opt=no-new-privileges --cap-drop=ALL --security-opt \
+  label=type:nvidia_container_t --hooks-dir=/usr/share/containers/oci/hooks.d/ \
+  --rm -d --name engine --network=host \
+  -v ./config:/config:z -v ./models:/models:z \
+  docker.io/deepgram/onprem-engine:3.43.4 -v serve /config/engine.toml \
+  && podman container logs engine 
+```
+
+4. Start API
+
+```bash
+podman run --rm -d --name api --network=host -v ./config:/config:Z \
+  -v ./models:/models:Z docker.io/deepgram/onprem-api:1.83.0 \
+  -v serve /config/api.toml \
+  && podman container logs api
 ```
 
 ### Test Your Deepgram Setup with a Sample Request
