@@ -34,7 +34,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				</div>
 			</div>
 
-			<div id="email-section" class="col-span-2">
+			<div id="email-section" class="col-span-2 order-first md:order-none">
 				<div class="panel">
 					<div class="heading relative">
 						<h3 class="title">Forums</h3>
@@ -73,7 +73,7 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 			</div>
 		</section>
 	</PrimarySection>
-	<!-- <div id="feedback-signup">
+	<div id="feedback-signup">
 		<section>
 			<div class="form-container">
 				<h3>WANT TO HELP US GET BETTER?</h3>
@@ -100,12 +100,12 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 				<p>You would make the team very happy!</p>
 			</div>
 		</section>
-	</div> -->
+	</div>
 </Layout>
 
 <style>
 	#email-section {
-		@apply mt-12 flex flex-col justify-center text-lg md:mt-0;
+		@apply flex flex-col justify-center text-lg;
 	}
 	#email-section .bold {
 		@apply font-bold;
