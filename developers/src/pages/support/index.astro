@@ -3,6 +3,9 @@ import Layout from "../../layouts/Default.astro";
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import BreadCrumb from "../../shared/components/nav/BreadCrumb.astro";
 import Link from "../../shared/components/general/Link.astro";
+import alf from "../../shared/assets/images/alf-maintenance.svg";
+import noodle from "../../shared/assets/images/noodle.svg";
+import codey from "../../shared/assets/images/codey.svg";
 const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
 ---
 
@@ -20,21 +23,22 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 						get help in our
 						<a href="https://github.com/orgs/deepgram/discussions">community forum</a>.
 					</p>
-					<Link href="https://github.com/orgs/deepgram/discussions" class="button button--primary w-80 mt-10">Visit the Community</Link>
+					<Link href="https://github.com/orgs/deepgram/discussions" class="button button--primary button--small w-56 mt-10" target="_blank">Visit the Community</Link>
 				</div>
 				<div class="flex flex-col mt-10">
 					<h2>On a paid plan?</h2>
 					<p>
-						<b>Paid accounts include private email support for all issues.</b> Contact the support team or seek self-help via our community forum, docs, and guides . Your choice!
+						<b>Paid accounts include private email support for all issues.</b> Contact the support team or seek self-help via our community forum, docs, and guides. Your choice!
 					</p>
-					<Link href={`${DOCS_DOMAIN}/support-form`} class="button button--primary w-80 mt-10">Report an issue</Link>
+					<Link href={`${DOCS_DOMAIN}/support-form`} class="button button--primary button--small w-56 mt-10">Report an issue</Link>
 				</div>
 			</div>
 
 			<div id="email-section" class="col-span-2">
 				<div class="panel">
-					<div class="heading">
+					<div class="heading relative">
 						<h3 class="title">Forums</h3>
+						<img class="h-[74px] absolute -top-4 right-4" src={alf} alt="DG Docs logo" />
 					</div>
 
 					<div class="text">
@@ -46,8 +50,9 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					</div>
 				</div>
 				<div class="panel">
-					<div class="heading">
+					<div class="heading relative">
 						<h3 class="title">Guides</h3>
+						<img class="h-[74px] absolute -top-4 right-4" src={codey} alt="DG Docs logo" />
 					</div>
 					<div class="text">
 						<div class="mb-4">Our guides walk you through step by step how the use most popular features of Deepgram.</div>
@@ -55,8 +60,9 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 					</div>
 				</div>
 				<div class="panel">
-					<div class="heading">
+					<div class="heading relative">
 						<h3 class="title">Docs</h3>
+						<img class="h-[74px] absolute -top-4 right-4" src={noodle} alt="DG Docs logo" />
 					</div>
 
 					<div class="text">
@@ -125,7 +131,8 @@ const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = 
 		@apply w-full;
 		@apply flex flex-row flex-wrap;
 		@apply my-0 ml-0;
-		@apply from-lightIris to-cornflower bg-gradient-to-r;
+		@apply bg-gradient-to-r from-[#DAFFF2] via-[#E8F1FF] to-[#FFEBEB];
+		/* @apply from-lightIris to-cornflower bg-gradient-to-r; */
 	}
 
 	.title {
