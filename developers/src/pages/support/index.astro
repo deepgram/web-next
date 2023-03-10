@@ -12,18 +12,32 @@ const { DOCS_DOMAIN } = import.meta.env;
 <script>
 	const formButton = document.querySelector("#form-button");
 	const supportForm = document.querySelector(".support-form");
-	const supportButtonSubmit = document.querySelector(".support-button-submit");
 	const successMessage = document.querySelector(".success-message");
-	(supportForm as HTMLFormElement).onsubmit = function (e) {
-		e.preventDefault();
-		successMessage.classList.remove("hidden");
-		supportForm.classList.add("hidden");
-		(supportForm as HTMLFormElement).reset();
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		const myForm = event.target;
+		const formData = new FormData(myForm);
+
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: new URLSearchParams(formData).toString(),
+		})
+			.then(() => {
+				console.log("Form successfully submitted");
+				successMessage.classList.remove("hidden");
+				supportForm.classList.add("hidden");
+				(supportForm as HTMLFormElement).reset();
+			})
+			.catch((error) => alert(error));
 	};
+
 	formButton.addEventListener("click", () => {
 		supportForm.classList.remove("hidden");
 		successMessage.classList.add("hidden");
 	});
+	supportForm.addEventListener("submit", handleSubmit);
 </script>
 <Layout>
 	<PrimarySection class="max-w-screen-lg mx-auto px-10 my-10">
@@ -47,7 +61,7 @@ const { DOCS_DOMAIN } = import.meta.env;
 						<b>Paid accounts include private email support for all issues.</b> Contact the support team or seek self-help via our community forum, docs, and guides. Your choice!
 					</p>
 					<button id="form-button" class="button button--primary button--small w-56 mt-10">Report an Issue</button>
-					<form autocomplete="off" class="support-form mt-16 hidden" action="/support/success/" name="support" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+					<form autocomplete="off" class="support-form mt-16 hidden" name="support" method="POST" data-netlify="true" netlify-honeypot="bot-field">
 						<input type="hidden" name="form-name" value="support" />
 						<p class="hidden">
 							<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -139,7 +153,7 @@ const { DOCS_DOMAIN } = import.meta.env;
 						Show our appreciation by letting you choose if you want to receive a <strong>gift card</strong> or a bunch of <strong>swag</strong>.
 					</li>
 				</ul>
-				<form action="/support/success/" name="feedback-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="help-us">
+				<form name="feedback-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="help-us">
 					<input type="hidden" name="form-name" value="feedback-signup" />
 					<input class="hidden" name="bot-field" />
 					<input type="hidden" name="page" :value="$route.path" />
