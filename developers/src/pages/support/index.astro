@@ -12,18 +12,32 @@ const { DOCS_DOMAIN } = import.meta.env;
 <script>
 	const formButton = document.querySelector("#form-button");
 	const supportForm = document.querySelector(".support-form");
-	const supportButtonSubmit = document.querySelector(".support-button-submit");
 	const successMessage = document.querySelector(".success-message");
-	(supportForm as HTMLFormElement).onsubmit = function (e) {
-		e.preventDefault();
-		successMessage.classList.remove("hidden");
-		supportForm.classList.add("hidden");
-		(supportForm as HTMLFormElement).reset();
+	const handleSubmit = (event) => {
+		event.preventDefault();
+
+		const myForm = event.target;
+		const formData = new FormData(myForm);
+
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: new URLSearchParams(formData).toString(),
+		})
+			.then(() => {
+				console.log("Form successfully submitted");
+				successMessage.classList.remove("hidden");
+				supportForm.classList.add("hidden");
+				(supportForm as HTMLFormElement).reset();
+			})
+			.catch((error) => alert(error));
 	};
+
 	formButton.addEventListener("click", () => {
 		supportForm.classList.remove("hidden");
 		successMessage.classList.add("hidden");
 	});
+	supportForm.addEventListener("submit", handleSubmit);
 </script>
 <Layout>
 	<PrimarySection class="max-w-screen-lg mx-auto px-10 my-10">
