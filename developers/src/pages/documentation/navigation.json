@@ -236,6 +236,10 @@
             "to": "/documentation/guides/determine-audio-format/"
           },
           {
+            "name": "Get Started With the Streaming Test Suite",
+            "to": "/documentation/guides/streaming-test-suite/"
+          },
+          {
             "name": "Using Callbacks to return Transcripts to Your Server",
             "to": "/documentation/guides/use-callback/"
           },
