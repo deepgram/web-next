@@ -79,7 +79,7 @@
       to: /documentation/guides/transcription/
     - name: Understanding When to Use the Keywords and Search Features
       to: /documentation/guides/keywords-vs-search/
-    - name: Get Started With the Streaming Test Suite
+    - name: Getting Started With the Streaming Test Suite
       to: /documentation/guides/streaming-test-suite/
     - name: Determining Your Audio Format for Live Streaming Audio
       to: /documentation/guides/determine-audio-format/
