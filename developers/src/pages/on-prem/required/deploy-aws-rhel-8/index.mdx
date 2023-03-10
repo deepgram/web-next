@@ -693,30 +693,45 @@ Be sure to replace the LICENSE_KEY placeholder in this command with your Deepgra
 </Alert>
 
 ```bash
-podman run --rm -d --name license-proxy --network=host \
+podman run --rm -d --name deepgram-onprem-license-proxy --network=host \
   docker.io/deepgram/onprem-license-proxy:1.3.0 -v serve \
-  --license-key "LICENSE_KEY" --host 0.0.0.0 --port 8443 --status-port 8089 \
-  && podman container logs license-proxy
+  --license-key "LICENSE_KEY" --host 0.0.0.0 --port 8443 --status-port 8089
 ```
 
-3. Start Engine
+3. Verify that License Proxy started properly
+
+```bash
+podman container logs deepgram-onprem-license-proxy
+```
+
+4. Start Engine
 
 ```bash
 podman run --security-opt=no-new-privileges --cap-drop=ALL --security-opt \
   label=type:nvidia_container_t --hooks-dir=/usr/share/containers/oci/hooks.d/ \
-  --rm -d --name engine --network=host \
+  --rm -d --name deepgram-onprem-engine --network=host \
   -v ./config:/config:z -v ./models:/models:z \
-  docker.io/deepgram/onprem-engine:3.43.4 -v serve /config/engine.toml \
-  && podman container logs engine 
+  docker.io/deepgram/onprem-engine:3.43.4 -v serve /config/engine.toml
 ```
 
-4. Start API
+5. Verify that Engine started properly
 
 ```bash
-podman run --rm -d --name api --network=host -v ./config:/config:Z \
-  -v ./models:/models:Z docker.io/deepgram/onprem-api:1.83.0 \
-  -v serve /config/api.toml \
-  && podman container logs api
+podman container logs deepgram-onprem-engine 
+```
+
+6. Start API
+
+```bash
+podman run --rm -d --name deepgram-onprem-api --network=host -v ./config:/config:z \
+  docker.io/deepgram/onprem-api:1.83.0 \
+  -v serve /config/api.toml
+```  
+
+7. Verify that API started properly
+
+```bash
+podman container logs deepgram-onprem-api
 ```
 
 ### Test Your Deepgram Setup with a Sample Request
@@ -724,7 +739,7 @@ podman run --rm -d --name api --network=host -v ./config:/config:Z \
 Test your environment and container setup with a local file:
 
 ```bash
-curl -X POST --data-binary @[FILE_PATH] http://localhost:8080/v2/listen
+curl -X POST -T FILE_PATH http://localhost:8080/v2/listen
 ```
 
 Finally, test that you can view the model that was automatically loaded by Deepgram Engine. To do this, download the American English Harvard Sentences file from the [Open Speech Repository](https://www.voiptroubleshooter.com/open_speech/index.html) and run it through the model:
