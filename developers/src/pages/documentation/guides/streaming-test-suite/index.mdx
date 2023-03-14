@@ -16,7 +16,9 @@ import Alert from "../../../../shared/components/global/Alert.astro";
 
 If you're looking to get started with Deepgram's audio streaming capabilities, our streaming test suite is the perfect place to begin. The test suite provides sample code that allows you to easily stream basic audio to Deepgram, ensuring that you have the necessary foundation to build custom integrations.
 
-Before diving into building your own integration, we highly recommend running through the steps in our test suite at least once to ensure that you can stream sample audio to Deepgram successfully. This will help you avoid many potential issues and streamline the integration process for sending your own audio to our system.
+Once you've tested out the basics of streaming audio to Deepgram, you'll move on to using an included mock server for testing. This allows you to focus on getting your audio and client code right. Once you're confident that your audio stream is configured correctly and you're streaming the audio you expect, you can easily swap to sending that audio to Deepgram's service.
+
+Before diving into writing code from scratch, we highly recommend running through the steps in our test suite at least once to ensure that you can stream sample audio to Deepgram successfully. This will help you avoid many potential issues and streamline the integration process for sending your own audio to our system.
 
 The test suite includes many ways to help diagnose problems. If you encounter issues, the test suite will provide more details on the error as well as steps to fix it.
 
@@ -35,13 +37,17 @@ You must have:
 ### Installation
 
 1. Clone the [streaming test suite](https://github.com/deepgram/streaming-test-suite/) repository
-2. `pip install requirements.txt` 
+2. `pip install -r requirements.txt` 
 
 ## 1. Streaming a Local Source
 
 The first step in getting started with Deepgram's audio streaming capabilities is to learn how to stream a local audio source to Deepgram. This simple task allows you to learn the basic concepts of how Deepgram's API works without worrying about complexities that arise with other audio sources. Additionally, it ensures that you can receive results from Deepgram in your development environment.
 
 The streaming test suite provides sample code that facilitates this process. Before building your own integration, we recommend running this code at least once to make sure that you can stream audio to Deepgram successfully. 
+
+<Alert type="info">
+If you're already confident you can stream audio to Deepgram and receive transcriptions, you can skip to [3. Streaming Your Audio](#3-streaming-your-audio).
+</Alert>
 
 ### Stream a File
 
@@ -50,6 +56,8 @@ While streaming a file isn't our recommended way to use Deepgram's real-time tra
 Just run the following command:
 
 `python test_suite.py -k YOUR_DEEPGRAM_API_KEY`
+
+You may need to use the command `python3` instead.
 
 <Alert type="info">
 Make sure to replace `YOUR_DEEPGRAM_API_KEY` with an API key generated from our [Console](https://console.deepgram.com/).
@@ -109,7 +117,7 @@ To check out how this functionality is implemented, look at the conditional `eli
 
 ## 3. Streaming Your Audio
 
-Now that you've validated you can stream WAV files and URLs to Deepgram, it's time to start the process of integrating your own audio. To do this, we'll start by taking a step back…and removing Deepgram from the picture!
+Now that you've validated you can stream WAV files and URLs to Deepgram, it's time to start the process of integrating your custom audio source. To do this, we'll start by taking a step back…and removing Deepgram from the picture!
 
 Let's set the `test_suite.py` file aside for the moment. In addition to that file, the test suite also comes with a mock server and client: `server.py` and `client.py`. These are intended to create the simplest possible environment to test your custom audio.
 
