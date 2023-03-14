@@ -597,7 +597,7 @@ The API configuration file determines how the API container built from the Docke
   # file, then change it accordingly here. Additionally, the port and prefix
   # should match those defined in the Engine configuration file.
   # NOTE: This must be HTTPS.
-  url = "https://engine:8080/v2"
+  url = "https://engine:8081/v2"
 
   # How long to wait for a connection to be established (in seconds).
   conn_timeout = 5
@@ -739,7 +739,7 @@ podman container logs deepgram-onprem-api
 Test your environment and container setup with a local file:
 
 ```bash
-curl -X POST -T FILE_PATH http://localhost:8080/v2/listen
+curl -X POST -T FILE_PATH http://localhost:8080/v1/listen
 ```
 
 Finally, test that you can view the model that was automatically loaded by Deepgram Engine. To do this, download the American English Harvard Sentences file from the [Open Speech Repository](https://www.voiptroubleshooter.com/open_speech/index.html) and run it through the model:
@@ -785,73 +785,6 @@ Deepgram makes all of its products available through Docker Hub.
 
 Before you can run your on-prem deployment with the License Proxy Server, you must configure the License Proxy Server. To do this, you will need to update your Docker Compose and container configuration files, then restart Docker.
 
-#### Update Your Docker Compose File
-
-Replace the default `docker-compose.yml` file in your root directory with the following:
-
-```toml
-version: "3.7"
-
-services:
-  # The Deepgram API service.
-
-  api:
-    image: deepgram/onprem-api:1.70.0
-    # The API port to the host machine. The container port (right-hand side)
-    # must match the port that the API service is listening on (this can be
-    # found in its configuration file).
-
-    ports:
-      - "8080:8080"
-
-    depends_on:
-      - "license-proxy"
-
-    volumes:
-      # The API configuration file needs to be accessible; this should point to
-      # the file on the host machine.
-      - "/path/to/api.toml:/api.toml:ro"
-
-    # Invoke the API server, passing it the path (inside the container) to its
-    # configuration file.
-    command: -v serve /api.toml
-
-  # The Deepgram Engine service.
-  engine:
-    image: deepgram/onprem-engine:3.37.2
-
-    # Change the default runtime.
-    runtime: nvidia
-
-    depends_on:
-      - "license-proxy"
-
-    # The Engine configuration file and models need to be accessible; these paths
-    # should point to files/directories on the host machine.
-    #
-    # You can combine the configuration file and models into a single volume mount.
-    volumes:
-      # The Engine configuration file needs to be accessible.
-      - "/path/to/engine.toml:/engine.toml:ro"
-
-      # The models will also need to be available. The in-container paths must
-      # match the paths specified in the Engine configuration file.
-      - "/path/to/models:/models:ro"
-
-    # Invoke the Engine service, passing it the path (inside the container) to
-    # its configuration file.
-    command: -v serve /engine.toml
-
-  license-proxy:
-    image: deepgram/onprem-license-proxy:1.0.0-1
-
-    ports:
-      - "8443:8443"
-      - "8089:8089"
-
-    command: -v serve --license-key "YOUR_ONPREM_LICENSE_KEY" --host 0.0.0.0 --port 8443 --status-port 8089
-```
-
 #### Update Your Container Configuration Files
 
 In your `api.toml` and `engine.toml` files, add a line that specifies the URL to your deployed proxy immediately below your license key configuration:
@@ -859,7 +792,7 @@ In your `api.toml` and `engine.toml` files, add a line that specifies the URL to
 ```toml
 [license]
 key = "YOUR_LICENSE_KEY"
-server_url = "https://license-proxy:8443"
+server_url = "https://localhost:8443"
 ```
 
 #### Restart Docker
