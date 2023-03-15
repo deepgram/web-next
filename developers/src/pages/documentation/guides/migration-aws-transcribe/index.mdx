@@ -415,6 +415,7 @@ When using Deepgram to transcribe live streaming audio, two of the features you 
 | Identifies deviations in the natural flow of speech and returns a finalized response at these places | Provides preliminary results during live streaming, then sends a definitive transcript of the portion of audio that has been processed so far |
 | Turned on by default | Turned off by default |
 | Returns `speech_final: true` parameter when Deepgram identifies a deviation in the natural flow of speech and the response contains the finalized transcript| Returns `is_final: true` parameter when Deepgram has finished processing audio for a time range and the response contains the finalized transcript for that time range |
+| Can be controlled by adjusting the length of silence required for an endpoint to be detected | Dictated by Deepgram's internal algorithm |
 
 ##### Amazon Transcribe
 
