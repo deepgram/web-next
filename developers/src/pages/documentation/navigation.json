@@ -2,7 +2,6 @@
   {
     "name": "Getting Started",
     "to": "/documentation/getting-started/",
-    "intro": true,
     "children": [
       {
         "name": "Quickstarts",

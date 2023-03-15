@@ -2,136 +2,213 @@
 import Layout from "../../layouts/Default.astro";
 import PrimarySection from "../../shared/components/layout/PrimarySection.astro";
 import BreadCrumb from "../../shared/components/nav/BreadCrumb.astro";
+import Link from "../../shared/components/general/Link.astro";
+import alf from "../../shared/assets/images/alf-maintenance.svg";
+import noodle from "../../shared/assets/images/noodle.svg";
+import codey from "../../shared/assets/images/codey.svg";
+const { DOCS_DOMAIN } = import.meta.env;
 ---
 
-<Layout>
-	<PrimarySection class="max-w-screen-lg mx-auto px-10 my-10 gap-16">
-		<BreadCrumb />
-        <h1>Support</h1>
-				
-        <section class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-32">
-          <div id="support-section">
-            <form
-              action="/support/success/"
-              name="support"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-            >
-              <input type="hidden" name="form-name" value="support" />
-              <p class="hidden">
-                <label
-                  >Don’t fill this out if you’re human: <input name="bot-field"
-                /></label>
-              </p>
-              <p>
-                <label
-                  >Email <span>*</span>
-                  <input
-                    required
-                    type="email"
-                    name="email"
-                    placeholder="Your email"
-                    class="form-input"
-                /></label>
-              </p>
-              <p>
-                <label
-                  >Name
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your name"
-                    class="form-input"
-                /></label>
-              </p>
-              <p>
-                <label
-                  >Message title
-                  <input
-                    type="text"
-                    name="message-title"
-                    placeholder="Title of your message"
-                    class="form-input"
-                /></label>
-              </p>
-              <p>
-                <label
-                  >Your message
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    class="form-input"
-                  ></textarea>
-                </label>
-              </p>
-              <p class="flex">
-                <button type="submit">Send</button>
-              </p>
-            </form>
-          </div>
-          <div id="email-section">
-            <p class="bold">More of the email type of person?</p>
-            <p>We'll be waiting for your email!</p>
-            <a href="mailto:developers@deepgram.com">developers@deepgram.com</a>
-          </div>
-        </section>
-	</PrimarySection>
-    <div id="feedback-signup">
-      <section>
-        <div class="form-container">
-          <h3>WANT TO HELP US GET BETTER?</h3>
+<script>
+	const formButton = document.querySelector("#form-button");
+	const supportForm = document.querySelector(".support-form");
+	const successMessage = document.querySelector(".success-message");
+	const handleSubmit = (event) => {
+		event.preventDefault();
 
-          <p>
-            We are always looking for people who can test out new potential
-            features or give us feedback on what's currently in production. If
-            you participate, we promise to:
-          </p>
-          <ul>
-            <li>Schedule a time that works for you</li>
-            <li>Take no more than 20 minutes of your time</li>
-            <li>
-              Show our appreciation by letting you choose if you want to receive
-              a <strong>gift card</strong> or a bunch of <strong>swag</strong>.
-            </li>
-          </ul>
-          <form
-            action="/support/success/"
-            name="feedback-signup"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            class="help-us"
-          >
-            <input type="hidden" name="form-name" value="feedback-signup" />
-            <input class="hidden" name="bot-field" />
-            <input type="hidden" name="page" :value="$route.path" />
-            <input type="hidden" name="created_at" :value="Date.now()" />
-            <input
-              required
-              type="email"
-              name="email"
-              placeholder="Your email"
-              class="form-input"
-            />
-            <button class="w-40 bg-meadow font-bold h-14 text-darkCharcoal" type="submit">Sign Me Up!</button>
-          </form>
-        </div>
-        <div class="image-container">
-          <img src="https://res.cloudinary.com/deepgram/image/upload/c_fit/v1670350320/documentation/support-crew_xqk4v3.png" alt="Team photo" />
-          <p>You would make the team very happy!</p>
-        </div>
-      </section>
-    </div>
+		const myForm = event.target;
+		const formData = new FormData(myForm);
+
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: new URLSearchParams(formData).toString(),
+		})
+			.then(() => {
+				console.log("Form successfully submitted");
+				successMessage.classList.remove("hidden");
+				supportForm.classList.add("hidden");
+				(supportForm as HTMLFormElement).reset();
+			})
+			.catch((error) => alert(error));
+	};
+
+	formButton.addEventListener("click", () => {
+		supportForm.classList.remove("hidden");
+		successMessage.classList.add("hidden");
+	});
+	supportForm.addEventListener("submit", handleSubmit);
+</script>
+<Layout>
+	<PrimarySection class="max-w-screen-lg mx-auto px-10 my-10">
+		<BreadCrumb />
+		<h1>Support</h1>
+
+		<section class="support grid grid-cols-1 gap-8 md:grid-cols-5 md:gap-16">
+			<div id="support-section" class="col-span-3 ">
+				<h2 class="mt-6">On a free plan?</h2>
+				<div class="flex flex-col">
+					<p>
+						If you are having specific <b>account issues</b> or are <b>seeing fraud</b>, contact the <a href="mailto:support@deepgram.com">support team</a>. For everything else,
+						get help in our
+						<a href="https://github.com/orgs/deepgram/discussions">community forum</a>.
+					</p>
+					<Link href="https://github.com/orgs/deepgram/discussions" class="button button--primary button--small w-56 mt-10" target="_blank">Visit the Community</Link>
+				</div>
+				<div class="flex flex-col mt-10">
+					<h2>On a paid plan?</h2>
+					<p>
+						<b>Paid accounts include private email support for all issues.</b> Contact the support team or seek self-help via our community forum, docs, and guides. Your choice!
+					</p>
+					<button id="form-button" class="button button--primary button--small w-56 mt-10">Report an Issue</button>
+					<form autocomplete="off" class="support-form mt-16 hidden" name="support" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+						<input type="hidden" name="form-name" value="support" />
+						<p class="hidden">
+							<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+						</p>
+						<p>
+							<label
+								>Email <span>*</span>
+								<input required type="email" name="email" placeholder="Your email" class="form-input" />
+							</label>
+						</p>
+						<p>
+							<label
+								>Name
+								<input type="text" name="name" placeholder="Your name" class="form-input" />
+							</label>
+						</p>
+						<p>
+							<label
+								>Message title
+								<input type="text" name="message-title" placeholder="Title of your message" class="form-input" />
+							</label>
+						</p>
+						<p>
+							<label
+								>Your message
+								<textarea name="message" placeholder="Message" class="form-input"></textarea>
+							</label>
+						</p>
+						<p class="flex justify-center">
+							<button class="support-button-submit button button--primary button--small w-28" type="submit">Send</button>
+						</p>
+					</form>
+					<div class="success-message mt-10 hidden border-cloud rounded-sm border-2 shadow-md bg-gradient-to-r from-[#DAFFF2] via-[#E8F1FF] to-[#FFEBEB] px-4">
+						<h2>Got it!</h2>
+						<p class="mb-5">Thanks for the submission. We'll be in touch soon. Be sure to check your email.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="panels-section" class="col-span-2 order-first md:order-none">
+				<div class="panel">
+					<div class="heading relative">
+						<h3 class="title">Forums</h3>
+						<img class="h-[74px] absolute -top-4 right-4" src={alf} alt="DG Docs logo" />
+					</div>
+
+					<div class="text">
+						<div class="mb-4">
+							Our community forum is the official way to get help if you’re on a free account, and the wealth of information from Deepgram and our community make them a great
+							resource for paying customers too!
+						</div>
+						<Link href="https://github.com/orgs/deepgram/discussions" icon="arrow-right" iconSuffix>View the community forum</Link>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="heading relative">
+						<h3 class="title">Guides</h3>
+						<img class="h-[74px] absolute -top-4 right-4" src={codey} alt="DG Docs logo" />
+					</div>
+					<div class="text">
+						<div class="mb-4">Our guides walk you through step by step how to use the most popular features of Deepgram.</div>
+						<Link href={`${DOCS_DOMAIN}/documentation/guides`} icon="arrow-right" iconSuffix>View all guides</Link>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="heading relative">
+						<h3 class="title">Docs</h3>
+						<img class="h-[74px] absolute -top-4 right-4" src={noodle} alt="DG Docs logo" />
+					</div>
+
+					<div class="text">
+						<div class="mb-4">Our extensive documentation show you how to use every part of Deepgram.</div>
+						<Link href={`${DOCS_DOMAIN}/documentation`} icon="arrow-right" iconSuffix>Read the docs</Link>
+					</div>
+				</div>
+			</div>
+		</section>
+	</PrimarySection>
+	<div id="feedback-signup">
+		<section>
+			<div class="form-container">
+				<h3>WANT TO HELP US GET BETTER?</h3>
+
+				<p>We are always looking for people who can test out new potential features or give us feedback on what's currently in production. If you participate, we promise to:</p>
+				<ul>
+					<li>Schedule a time that works for you</li>
+					<li>Take no more than 20 minutes of your time</li>
+					<li>
+						Show our appreciation by letting you choose if you want to receive a <strong>gift card</strong> or a bunch of <strong>swag</strong>.
+					</li>
+				</ul>
+				<form name="feedback-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="help-us">
+					<input type="hidden" name="form-name" value="feedback-signup" />
+					<input class="hidden" name="bot-field" />
+					<input type="hidden" name="page" :value="$route.path" />
+					<input type="hidden" name="created_at" :value="Date.now()" />
+					<input required type="email" name="email" placeholder="Your email" class="form-input" />
+					<button class="button button--primary button--small w-40" type="submit">Sign Me Up!</button>
+				</form>
+			</div>
+			<div class="image-container">
+				<img src="https://res.cloudinary.com/deepgram/image/upload/c_fit/v1670350320/documentation/support-crew_xqk4v3.png" alt="Team photo" />
+				<p>You would make the team very happy!</p>
+			</div>
+		</section>
+	</div>
 </Layout>
 
 <style>
-	#support-section {
-		display: grid;
-    grid-template-columns: repeat(1,minmax(0,1fr));
-    -moz-column-gap: 9rem;
-    column-gap: 9rem;
+	#panels-section {
+		@apply flex flex-col text-lg;
 	}
+	#panels-section .bold {
+		@apply font-bold;
+	}
+	#panels-section p {
+		@apply m-0;
+	}
+	#panels-section a {
+		@apply mt-6 inline font-bold underline;
+	}
+
+	.panel {
+		@apply flex flex-row flex-wrap align-middle;
+		@apply text-ink text-sm;
+		@apply my-4;
+		@apply border-cloud rounded-sm border-2;
+		@apply bg-mist;
+		@apply shadow-md;
+	}
+
+	.heading {
+		@apply border-cloud rounded-sm border-b-2;
+		@apply w-full;
+		@apply flex flex-row flex-wrap;
+		@apply my-0 ml-0;
+		@apply bg-gradient-to-r from-[#DAFFF2] via-[#E8F1FF] to-[#FFEBEB];
+		/* @apply from-lightIris to-cornflower bg-gradient-to-r; */
+	}
+
+	.title {
+		@apply flex flex-wrap;
+		@apply m-4;
+		@apply w-4/6 md:w-5/6;
+		@apply font-semibold;
+	}
+
 	#support-section form {
 		@apply max-w-lg;
 	}
@@ -145,67 +222,54 @@ import BreadCrumb from "../../shared/components/nav/BreadCrumb.astro";
 		@apply text-fireEngine;
 	}
 	#support-section form label .form-input {
-		@apply mt-2 w-full border border-casper px-2 py-1 font-normal;
-		
+		@apply border-casper mt-2 w-full border px-2 py-1 font-normal;
 	}
-	#support-section form button {
-		@apply ml-auto w-40 bg-meadow font-bold h-14;
+	#feedback-signup {
+		@apply bg-darkCharcoal text-cloud;
 	}
-	#email-section {
-    @apply flex flex-col justify-center mt-12 md:mt-0 text-lg;
+	#feedback-signup h3 {
+		@apply text-3xl font-semibold text-white;
+		@apply max-w-sm sm:max-w-7xl;
 	}
-	#email-section .bold {
-		@apply font-bold;
+	#feedback-signup section {
+		@apply m-auto flex max-w-7xl flex-wrap p-10;
 	}
-	#email-section p {
-		@apply m-0;
+	#feedback-signup ul {
+		@apply ml-6 list-disc;
 	}
-	#email-section a {
-		@apply mt-6 underline inline font-bold;
+	#feedback-signup strong {
+		@apply text-white;
 	}
-  #feedback-signup {
-  @apply bg-darkCharcoal text-cloud;
-}
-#feedback-signup h3 {
-  @apply text-white font-semibold text-3xl;
-  @apply max-w-sm sm:max-w-7xl;
-}
-#feedback-signup section {
-  @apply flex m-auto max-w-7xl p-10 flex-wrap;
-}
-#feedback-signup ul {
-  @apply list-disc ml-6;
-}
-#feedback-signup section .form-container {
-  @apply flex-1 flex flex-col justify-center md:mr-24;
-}
-#feedback-signup section .image-container {
-  @apply flex flex-col flex-1 sm:items-center items-start justify-center;
-  min-width: 400px;
-  @apply pt-4;
-}
-#feedback-signup section .image-container img {
-  max-height: 50%;
-}
-#feedback-signup section .image-container p {
-  @apply my-4;
-}
-#feedback-signup section .form-container form {
-  @apply mt-8 flex;
-}
-#feedback-signup section .form-container form input {
-  @apply mr-2 bg-darkCharcoal text-cloud border border-casper py-1 px-2 w-72;
-}
-#feedback-signup section .form-container p {
-  @apply my-4;
-  @apply max-w-xs sm:max-w-7xl;
-}
-#feedback-signup section .form-container ul {
-  @apply my-4;
-  @apply max-w-xs md:max-w-7xl;
-}
+	#feedback-signup section .form-container {
+		@apply flex flex-1 flex-col justify-center md:mr-24;
+	}
+	#feedback-signup section .image-container {
+		@apply flex flex-1 flex-col items-start justify-center sm:items-center;
+		min-width: 400px;
+		@apply pt-4;
+	}
+	#feedback-signup section .image-container img {
+		max-height: 50%;
+	}
+	#feedback-signup section .image-container p {
+		@apply my-4;
+	}
+	#feedback-signup section .form-container form {
+		@apply mt-8 flex;
+	}
+	#feedback-signup section .form-container form input {
+		@apply bg-darkCharcoal text-cloud border-casper mr-2 w-72 border py-1 px-2;
+	}
+	#feedback-signup section .form-container p {
+		@apply my-4;
+		@apply max-w-xs sm:max-w-7xl;
+	}
+	#feedback-signup section .form-container ul {
+		@apply my-4;
+		@apply max-w-xs md:max-w-7xl;
+	}
 
-.help-us {
-  @apply w-4/6 sm:w-full;
-}
+	.help-us {
+		@apply w-4/6 sm:w-full;
+	}
 </style>

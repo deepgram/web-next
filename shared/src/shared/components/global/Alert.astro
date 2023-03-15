@@ -1,21 +1,44 @@
 ---
 import Icon from "../general/Icon.astro";
-const { blok = { type: "info" } } = Astro.props;
-const { type } = blok;
 import { renderRichText } from "@storyblok/astro";
-let inner;
-if (blok.inner_html) {
-	inner = blok.inner_html;
+
+///////////////////////////////////////////
+let type;
+if (Astro.props.type) {
+	// If prop comes from Astro mdx, set blok to type prop that comes from the mdx file
+	type = Astro.props.type;
 }
+// If prop comes from storyblok, set blok to type prop that comes from storyblok
+const { blok = type } = Astro.props;
+
+///////////////////////////////////////////
+
+let renderedRichText;
+if (blok && blok.inner_html) {
+	renderedRichText = renderRichText(blok.inner_html);
+}
+const host = Astro.url.host;
 ---
 
-<div class={`alert ${type}`}>
+<!-- This script will update all blog alerts to be dark theme -->
+<script define:vars={{ host }}>
+	setTimeout(() => {
+		const alerts = document.getElementsByClassName("alert");
+		if (host === "blog.deepgram.com") {
+			Array.from(alerts).forEach((a) => {
+				a.classList.add("dark");
+			});
+		}
+	}, 500);
+</script>
+
+<div class={`alert ${blok.type || type}`}>
 	<div class="heading">
-		<Icon class={`icon h-6 w-6 ${type}`} icon={type} />
+		<Icon class={`icon h-6 w-6 ${blok.type || type}`} icon={blok.type || type} />
 	</div>
 	<div class="text w-5/6">
 		<slot>
-			<div set:html={inner} />
+			<div set:html={renderedRichText}></div>
 		</slot>
 	</div>
 </div>
@@ -23,22 +46,16 @@ if (blok.inner_html) {
 <style>
 	.alert {
 		@apply flex flex-row flex-wrap items-center align-middle;
-		@apply text-sm text-[#8d8b8b];
+		@apply text-ink text-sm;
 		@apply my-4 py-2;
+		@apply border-cloud rounded-sm border-2;
+		@apply bg-mist;
 	}
 
-	.info {
-		@apply border-grass rounded-sm border-2;
-		/* @apply bg-cloud; */
-	}
-	.warning {
-		@apply border-sunflower/20 rounded-sm border-2;
-		/* @apply bg-sunflower/20; */
-	}
-	.language {
-		@apply border-casper rounded-sm border;
-		/* @apply bg-casper; */
-		@apply m-2.5;
+	.alert.dark {
+		@apply text-cloud;
+		@apply border-rock rounded-sm border-2;
+		@apply bg-ink;
 	}
 
 	.heading {
@@ -50,23 +67,24 @@ if (blok.inner_html) {
 	}
 	.icon > * {
 		@apply m-2.5 mr-0;
+		@apply h-6 w-6;
+		@apply bg-no-repeat;
 		@apply border-0;
 	}
 
 	.icon.info {
-		@apply bg-no-repeat;
-		@apply h-6 w-6;
-		@apply fill-casper;
+		@apply fill-blueberry;
+	}
+
+	.alert.info.dark .icon {
+		@apply fill-sky;
 	}
 
 	.icon.warning {
-		@apply bg-no-repeat;
-		@apply h-6 w-6;
-		@apply fill-sunflower;
+		@apply fill-gold;
 	}
+
 	.icon.language {
-		@apply bg-no-repeat;
-		@apply h-6 w-6;
 		@apply fill-black;
 	}
 
