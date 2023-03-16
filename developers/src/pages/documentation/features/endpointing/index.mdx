@@ -17,6 +17,8 @@ import Alert from '../../../../shared/components/global/Alert.astro';
 
 Deepgram’s Endpointing feature monitors incoming streaming audio and detects sufficiently long pauses that are likely to represent an endpoint in speech. When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes its results for the processed time range and returns the transcript with a `speech_final` parameter set to `true`.
 
+Endpointing relies on a Voice Activity Detector, which monitors the incoming audio and triggers when a sufficiently long pause is detected. You can customize the length of time used to detect whether a speaker has finished speaking by setting the `endpointing` parameter to an integer value. By default, Deepgram uses 10 milliseconds.
+
 <Alert type="info">
 
 Endpointing can be used with Deepgram's [Interim Results](/documentation/features/interim-results/) feature. To compare and contrast these features, and to explore best practices for using them together, see [Using Endpointing and Interim Results with Live Streaming Audio](/documentation/guides/understand-endpointing-interim-results/).
@@ -31,9 +33,15 @@ Some examples of use cases for Endpointing include:
 
 ## Enable Feature
 
-To enable endpointing, when you call Deepgram’s API, add an `endpointing` parameter set to `true` in the query string:
+By default, endpointing is enabled and will return transcripts after detecting 10 milliseconds of silence. When endpointing is enabled, once a speaker finishes speaking, no transcripts will be sent back until the speech resumes or the required amount of silence has been detected. Once either of those conditions are met, a transcript with `speech_final=true` will be sent back.
 
-`endpointing=true`
+The period of silence required for endpointing may be configured. When you call Deepgram’s API, add an `endpointing` parameter set to an integer by setting endpointing to an integer representing a millisecond value:
+
+`endpointing=500`
+
+This will wait until 500 milliseconds of silence has passed to finalize and return transcripts.
+
+Endpointing may be disabled by setting `endpointing=false`. If endpointing is disabled, transcriptions will be returned at a cadence determined by Deepgram's chunking algorithms.
 
 For an example of audio streaming, see [Getting Started with Streaming Audio](/documentation/getting-started/streaming/).
 
