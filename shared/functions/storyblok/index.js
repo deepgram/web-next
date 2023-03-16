@@ -41,17 +41,25 @@ exports.handler = async function (event) {
 		};
 	}
 
-	const { action } = body;
+	const { action, text } = body;
 
-	if (actions.find((a) => a === action)) {
-		await axios.post(url, {
-			event_type: "publish_blog",
-		},
-			{
-				headers: {
-					Authorization: `token ${githubPAT}`,
-				}
-			});
+  if (actions.find((a) => a === action)) {
+    try {
+      console.log("triggering github action")
+      await axios.post(url, {
+        event_type: "publish_blog",
+        client_payload: {
+          text
+        }
+      },
+        {
+          headers: {
+            Authorization: `token ${githubPAT}`,
+          }
+        });
+    } catch (err) {
+      console.log("failed to trigger github action", err);
+    }
 	}
 
 	return {

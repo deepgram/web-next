@@ -1,5 +1,5 @@
 name: "Blog: CI/CD"
-
+run-name: ${{ github.event.client_payload.text }}
 on:
   repository_dispatch:
     types: [publish_blog]
@@ -8,13 +8,11 @@ on:
     branches: [main]
     paths: 
     - 'blog/**'
-    - 'content/**'
     - 'shared/**'
   pull_request:
     branches: [main]
     paths: 
     - 'blog/**'
-    - 'content/**'
     - 'shared/**'
     
 jobs:

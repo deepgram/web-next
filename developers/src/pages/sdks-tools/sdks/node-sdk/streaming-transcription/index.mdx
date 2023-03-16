@@ -47,7 +47,7 @@ The following events are fired by the live transcription object:
 | `open`               | The websocket connection to Deepgram has been opened. | The DG live transcription object                                                  |
 | `close`              | The websocket connection to Deepgram has been closed. | WebSocket.CloseEvent                                                              |
 | `error`              | An error occurred with the websocket connection       | Error object                                                                      |
-| `transcriptReceived` | Deepgram has responded with a transcription           | [Transcription response](/api-reference/#transcription-streaming-response-schema) |
+| `transcriptReceived` | Deepgram has responded with a transcription           | [Transcription response](/api-reference/transcription/#response-schema-1) |
 
 ### Listening to Events
 
@@ -64,7 +64,7 @@ deepgramLive.addListener("transcriptReceived", (transcription) => {
 
 The object returned by the `transcription.live` function provides several
 functions to make using the Deepgram API easier. They are `send`,
-`getReadyState`, and `finish`.
+`getReadyState`, `toggleNumerals`, and `finish`.
 
 ### Sending Data
 
@@ -81,6 +81,28 @@ to Deepgram.
 
 ```js
 const websocketReadyState = deepgramLive.getReadyState();
+```
+
+### Toggle Features
+
+The `configure` function gives the ability to toggle different features. Currently, only the `numerals` feature is supported with plans to add more in the future. The function takes in an object with features to toggle to determine whether or not to enable the feature.
+
+```js
+deepgramLive.configure({numerals: true}); // enable numerals
+deepgramLive.configure({numerals: false}); // disable numerals
+```
+
+This function is a shorthand way of sending the following data to the websocket connection:
+
+```js
+deepgramLive.send(
+	JSON.stringify({
+		type: "Configure",
+		processors: {
+			numerals: true, // or false
+		},
+	})
+);
 ```
 
 ### Closing the Connection

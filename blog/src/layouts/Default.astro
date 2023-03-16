@@ -7,6 +7,7 @@ import Description from "../shared/components/meta/Description.astro";
 import Meta from "../shared/components/meta/Meta.astro";
 import ScriptSrc from "../shared/components/meta/ScriptSrc.astro";
 import Link from "../shared/components/meta/Link.astro";
+import "../../../shared/src/shared/components/copy-code-button/styles.css";
 
 import "../shared/assets/styles/main.css";
 import "../assets/styles/blog.css";
@@ -27,6 +28,9 @@ import JsonLD from "../shared/components/meta/JsonLD.astro";
 				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
 				f.parentNode.insertBefore(j, f);
 			})(window, document, "script", "dataLayer", "GTM-PFZZ2KW");
+
+			import "../shared/components/copy-code-button/copy-code-button";
+			import "../shared/components/copy-code-button/create-copy-buttons";
 		</script>
 		<!-- End Google Tag Manager -->
 

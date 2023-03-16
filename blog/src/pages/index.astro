@@ -8,7 +8,7 @@ import CategoryList from "../shared/components/nav/CategoryList.astro";
 import CategorySection from "../components/homepage/CategorySectionSB.astro";
 import Link from "../shared/components/general/Link.astro";
 import JsonLD from "../shared/components/meta/JsonLD.astro";
-import WhitepaperPromo from "../shared/components/global/WhitepaperPromo.astro";
+import WhitepaperPromo from "../shared/components/global/WhitepaperPromoSB.astro";
 import { useStoryblokApi } from "@storyblok/astro";
 
 const sbApi = useStoryblokApi();
@@ -40,6 +40,11 @@ const { data } = await sbApi.get("cdn/stories", {
 	by_slugs: "categories/*",
 });
 const categories = data.stories;
+categories.sort((a, b) => {
+	const accumlatorA = a.name;
+	const accumulatorB = b.name;
+	return accumlatorA < accumulatorB ? -1 : accumlatorA > accumulatorB ? 1 : 0;
+});
 
 // build json schema object
 const schema = {
@@ -78,7 +83,7 @@ const schema = {
 						<CategorySection category={category} />
 						{index === 0 && (
 							<div class="mb-32">
-								<WhitepaperPromo whitepaper="latest" />
+								<WhitepaperPromo blok={{ whitepaper: { id: "7727d114-4347-4fe8-88a7-642961b5aa33" } }} />
 							</div>
 						)}
 					</>

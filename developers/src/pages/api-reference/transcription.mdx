@@ -2030,17 +2030,18 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 <div class="feature">
 	<header class="notranslate">
 		<div id="endpointing-str">
-			<strong>endpointing:</strong> boolean
+			<strong>endpointing:</strong> integer or boolean
 		</div>
 		{/* {" "}
 		number */}
 	</header>
 	<main>
-		<p>Indicates whether Deepgram will detect whether a speaker has finished speaking (or paused for a significant period of time, indicating the completion of an idea). When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes the result for the processed time range and returns the transcript with a <code>speech_final</code> parameter set to <code>true</code>.</p>
+		<p>Indicates how long Deepgram will wait to detect whether a speaker has finished speaking (or paused for a significant period of time, indicating the completion of an idea). When Deepgram detects an endpoint, it assumes that no additional data will improve its prediction, so it immediately finalizes the result for the processed time range and returns the transcript with a <code>speech_final</code> parameter set to <code>true</code>.</p>
 		<p>For example, if you are working with a 15-second audio clip, but someone is speaking for only the first 3 seconds, endpointing allows you to get a finalized result after the first 3 seconds.</p>
-		<p>By default, endpointing is enabled and finalizes a transcript after a short period of silence.</p>
+		<p>By default, endpointing is enabled and finalizes a transcript after 10 ms of silence. You can customize the length of time used to detect whether a speaker has finished speaking by setting the <code>endpointing</code> parameter to an integer representing a millisecond value.</p>
+		<p>Endpointing may be disabled by setting <code>endpointing=false</code>.</p>
 		<p class="notranslate">
-			<strong>Default:</strong> true
+			<strong>Default:</strong> 10
 		</p>
 		<p>
 			To learn more, see
@@ -2233,7 +2234,7 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 	</li>
 </ul>
 
-#### Error Handling
+#### Close Stream
 
 To gracefully close a streaming connection, send the following JSON string:
 

@@ -6,16 +6,21 @@ import Feedback from "../shared/components/forms/Feedback.astro";
 import SideNav from "../shared/components/nav/SideNav.astro";
 import BreadCrumb from "../shared/components/nav/BreadCrumb.astro";
 import TableOfContents from "../shared/components/nav/TableOfContents.astro";
+import Meta from "../shared/components/meta/Meta.astro";
+import Title from "../shared/components/meta/Title.astro";
 import nav from "../pages/documentation/navigation.json";
 import "../assets/styles/developers.css";
-const { headings } = Astro.props;
+const { frontmatter } = Astro.props;
+const seoTitle = frontmatter ? (frontmatter.seo && frontmatter.seo.metaTitle ? frontmatter.seo.metaTitle : frontmatter.title) : null;
 ---
 
 <Default>
+	<Title slot="head:title" title={`${seoTitle ? seoTitle + " - " : ""}Documentation, Use Cases, Posts, and Tutorials - Deepgram Docs`} />
+	<Meta slot="og:title" property="og:title" content={`${seoTitle ? seoTitle + " - " : ""}Documentation, Use Cases, Posts, and Tutorials - Deepgram Docs`} />
 	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-					<SideNav slot="aside" navStructure={nav} navTitle="Documentation" />
+				<SideNav slot="aside" navStructure={nav} navTitle="Documentation" />
 				<div class="col-span-4 sm:col-span-2 lg:col-span-3 w-11/12 lg:w-full mx-auto sm:ml-8">
 					<PrimarySection class="py-10" padding="px-0">
 						<BreadCrumb />
@@ -37,28 +42,8 @@ const { headings } = Astro.props;
 </Default>
 
 <style>
-  h1 {
-		color: #111827;
-		font-weight: 700;
-		font-size: 2.25em;
-		margin-top: 1.5rem;
-		margin-bottom: 2.50rem;
-		line-height: 1.1111111;
-		font-family: Favorit;
-	}
-	h2 {
-		@apply mb-5 mt-10;
-		color: #111827;
-		font-weight: 700;
-		font-size: 1.5em;
-		line-height: 1.3333333;
-		font-family: Favorit;
-	}
-
 	:global(h3) {
 		@apply mt-0;
 		@apply mb-2;
 	}
-
-  
 </style>

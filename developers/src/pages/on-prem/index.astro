@@ -6,27 +6,36 @@ import BreadCrumb from "../../shared/components/nav/BreadCrumb.astro";
 import SideNav from "../../shared/components/nav/SideNav.astro";
 import DocsCardList from "../../shared/components/lists/DocsCardList.astro";
 import DocsCard from "../../shared/components/cards/DocsCard.astro";
-const baseComponents = await Astro.glob("./base-components/**/index.mdx");
 import nav from "../../pages/on-prem/navigation.json";
+const required = await Astro.glob("./required/**/index.mdx");
 
-const orderedComponents = baseComponents.sort((a,b)=>{
-	return a.frontmatter.order - b.frontmatter.order
-})
+const optional = await Astro.glob("./optional/**/index.mdx");
+
+const orderedRequired = required.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+const orderedOptional = optional.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
 ---
 
 <Default>
 	<PrimarySection class="max-w-full xl:max-w-[72rem] 2xl:max-w-[80rem]" padding="px-0">
 		<HasAside gridClass="flex">
 			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-				<SideNav slot="aside" navStructure={nav} navTitle="On-Premise Deployments" />
+				<SideNav slot="aside" navStructure={nav} navTitle="On-Premises Deployments" />
 				<div class="col-span-3 sm:col-span-2 w-11/12 lg:w-full xl:w-11/12 mx-auto sm:ml-8">
 					<PrimarySection class="py-10">
 						<BreadCrumb />
 						<div class="max-w-screen-xl mx-auto">
-							<h1 slot="page-header">On-Premises Deployments</h1>
-							<h2 class="text-stone mt-6 mb-10">BASE COMPONENTS</h2>
+							<h1 class="w-max" slot="page-header">On-Premises Deployments</h1>
+							<h2 class="text-stone mt-6 mb-10">REQUIRED</h2>
 							<DocsCardList>
-								{orderedComponents.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+								{orderedRequired.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+							</DocsCardList>
+							<h2 class="text-stone mt-6 mb-10">OPTIONAL</h2>
+							<DocsCardList>
+								{orderedOptional.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 							</DocsCardList>
 						</div>
 					</PrimarySection>
@@ -35,23 +44,3 @@ const orderedComponents = baseComponents.sort((a,b)=>{
 		</HasAside>
 	</PrimarySection>
 </Default>
-
-<style is:global>
-	h1 {
-		color: #111827;
-		font-weight: 700;
-		font-size: 2.25em;
-		margin-top: 1.5rem;
-		margin-bottom: 0.75rem;
-		line-height: 1.1111111;
-		font-family: Favorit;
-	}
-	h2 {
-		@apply mb-5 mt-10;
-		color: #111827;
-		font-weight: 700;
-		font-size: 1.5em;
-		line-height: 1.3333333;
-		font-family: Favorit;
-	}
-</style>

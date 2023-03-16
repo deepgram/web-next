@@ -2,16 +2,17 @@
 layout: ../../../../layouts/Documentation.astro
 title: Automatically Generating WebVTT and SRT Captions
 description: Learn how to create ready-to-upload caption files for the web and broadcast.
-type: "transcription"
-order: 6
+type: "tips"
+order: 4
 seo:
   metaTitle: Automatically Generating WebVTT and SRT Captions
   metaDescription: Learn how to create ready-to-upload caption files for the web and broadcast.
   keywords: tutorial, accessibility, webvtt, srt, caption, captioning
 ---
-import Alert from '../../../../shared/components/global/Alert.astro';
-import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
-import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
 
 # {frontmatter.title}
 
@@ -122,6 +123,12 @@ Note that both WebVTT and SRT are similar in their basic forms--the difference i
 
 Now that you understand the basics of the WebVTT and SRT captioning formats, you can start transcribing your captions.
 
+<Alert type="info">
+
+This article covers creating subtitle files from files submitted to the Deepgram pre-recorded audio API. For an example of creating subtitle files with the Deepgram live streaming API, check out the [streaming test suite](https://github.com/deepgram/streaming-test-suite).
+
+</Alert>
+
 ### Choose an Audio File
 
 Locate a hosted audio file that you would like to caption and make note of its URL. If you can't find one, you can use `<https://static.deepgram.com/examples/deep-learning-podcast-clip.wav>`.
@@ -160,9 +167,9 @@ Initialize your dependencies:
 <CodeBlock tab="Node.js" active>
 
 ```js
-const fs = require('fs')
-const { Deepgram } = require('@deepgram/sdk')
-const deepgram = new Deepgram('YOUR_API_KEY')
+const fs = require("fs");
+const { Deepgram } = require("@deepgram/sdk");
+const deepgram = new Deepgram("YOUR_API_KEY");
 ```
 
 </CodeBlock>
@@ -185,18 +192,18 @@ To receive timestamps of phrases to include in your caption files, ask Deepgram 
 
 ```js
 deepgram.transcription
-  .preRecorded(
-    {
-      url: 'YOUR_FILE_LOCATION',
-    },
-    { punctuate: true, utterances: true }
-  )
-  .then((response) => {
-    //  Following code here
-  })
-  .catch((error) => {
-    console.log({ error })
-  })
+	.preRecorded(
+		{
+			url: "YOUR_FILE_LOCATION",
+		},
+		{ punctuate: true, utterances: true }
+	)
+	.then((response) => {
+		//  Following code here
+	})
+	.catch((error) => {
+		console.log({ error });
+	});
 ```
 
 </CodeBlock>
@@ -221,10 +228,10 @@ Inside the `.then()` block, add:
 
 ```js
 // WebVTT Filename
-const stream = fs.createWriteStream('output.vtt', { flags: 'a' })
+const stream = fs.createWriteStream("output.vtt", { flags: "a" });
 
 // SRT Filename
-const stream = fs.createWriteStream('output.srt', { flags: 'a' })
+const stream = fs.createWriteStream("output.srt", { flags: "a" });
 ```
 
 </CodeBlock>
@@ -240,12 +247,12 @@ The WebVTT and SRT formats are very similar, and each requires a block of text p
 <CodeBlock tab="Node.js" active>
 
 ```js
-stream.write('WEBVTT\n\n')
+stream.write("WEBVTT\n\n");
 for (let i = 0; i < response.results.utterances.length; i++) {
-  const utterance = response.results.utterances[i]
-  const start = new Date(utterance.start * 1000).toISOString().substr(11, 12)
-  const end = new Date(utterance.end * 1000).toISOString().substr(11, 12)
-  stream.write(`${i + 1}\n${start} --> ${end}\n- ${utterance.transcript}\n\n`)
+	const utterance = response.results.utterances[i];
+	const start = new Date(utterance.start * 1000).toISOString().substr(11, 12);
+	const end = new Date(utterance.end * 1000).toISOString().substr(11, 12);
+	stream.write(`${i + 1}\n${start} --> ${end}\n- ${utterance.transcript}\n\n`);
 }
 ```
 
@@ -254,7 +261,7 @@ for (let i = 0; i < response.results.utterances.length; i++) {
 <CodeBlock tab="Node.js with SDK" active>
 
 ```js
-stream.write(response.toWebVTT())
+stream.write(response.toWebVTT());
 ```
 
 </CodeBlock>
@@ -269,16 +276,10 @@ Deepgram provides seconds back as a number (`15.4` means 15.4 seconds), but both
 
 ```js
 for (let i = 0; i < response.results.utterances.length; i++) {
-  const utterance = response.results.utterances[i]
-  const start = new Date(utterance.start * 1000)
-    .toISOString()
-    .substr(11, 12)
-    .replace('.', ',')
-  const end = new Date(utterance.end * 1000)
-    .toISOString()
-    .substr(11, 12)
-    .replace('.', ',')
-  stream.write(`${i + 1}\n${start} --> ${end}\n${utterance.transcript}\n\n`)
+	const utterance = response.results.utterances[i];
+	const start = new Date(utterance.start * 1000).toISOString().substr(11, 12).replace(".", ",");
+	const end = new Date(utterance.end * 1000).toISOString().substr(11, 12).replace(".", ",");
+	stream.write(`${i + 1}\n${start} --> ${end}\n${utterance.transcript}\n\n`);
 }
 ```
 
@@ -287,7 +288,7 @@ for (let i = 0; i < response.results.utterances.length; i++) {
 <CodeBlock tab="Node.js with SDK" active>
 
 ```js
-stream.write(response.toSRT())
+stream.write(response.toSRT());
 ```
 
 </CodeBlock>

@@ -20,7 +20,7 @@ const pathname = Astro.url.pathname;
 	<nav class="w-full bg-almostBlack/90 text-white bg-blur py-0 sm:px-4">
 		<div class="flex justify-between items-center xl:grid grid-cols-3 px-4">
 			<div class="logo col-span-2 sm:mt-4 sm:mb-4 w-auto stroke-transparent text-left">
-				<Link href={WWW_DOMAIN} class="max-h-full">
+				<Link href={DOCS_DOMAIN} class="max-h-full">
 					<span class="sr-only">Deepgram</span>
 					<img class="h-[24px]" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
 					<!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" /> -->
@@ -45,50 +45,52 @@ const pathname = Astro.url.pathname;
 					<Link
 						primary
 						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.length === 1 ? "text-white border-lightIris" : "text-cloud"}`}
-						href={`${DOCS_DOMAIN}`}>Home</Link
-					>
+						href={`${DOCS_DOMAIN}`}
+						>Home
+					</Link>
 					<Link
 						primary
 						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${
 							pathname.endsWith("documentation") ? "text-white border-lightIris" : "text-cloud"
 						}`}
-						href={`${DOCS_DOMAIN}/documentation`}>Documentation</Link
-					>
+						href={`${DOCS_DOMAIN}/documentation`}
+						>Documentation
+					</Link>
 					<Link
 						primary
 						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${
 							pathname.endsWith("api-reference") ? "text-white border-lightIris" : "text-cloud"
 						}`}
-						href={`${DOCS_DOMAIN}/api-reference`}>API Reference</Link
-					>
+						href={`${DOCS_DOMAIN}/api-reference`}
+						>API Reference
+					</Link>
 					<Link
 						primary
 						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("on-prem") ? "text-white border-lightIris" : "text-cloud"}`}
-						href={`${DOCS_DOMAIN}/on-prem`}>On-Prem Deployment</Link
-					>
-					<Link
-						primary
-						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("use-cases") ? "text-white border-lightIris" : "text-cloud"}`}
-						href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link
-					>
+						href={`${DOCS_DOMAIN}/on-prem`}
+						>On-Prem Deployment
+					</Link>
 					<Link
 						primary
 						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("sdks-tools") ? "text-white border-lightIris" : "text-cloud"}`}
-						href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs & Tools</Link
-					>
+						href={`${DOCS_DOMAIN}/sdks-tools`}
+						>SDKs & Tools
+					</Link>
 					<Link
 						primary
 						class={`flex items-center hover:text-white font-bold  border-b-4 border-transparent ${pathname.endsWith("changelog") ? "text-white border-lightIris" : "text-cloud"}`}
-						href={`${WWW_DOMAIN}/changelog`}>Changelog</Link
-					>
+						href={`${WWW_DOMAIN}/changelog`}
+						>Changelog
+					</Link>
 					<Link
 						primary
 						icon="arrow-top-right-on-square"
 						iconSuffix
 						iconStroke
 						class={`flex items-center hover:text-white font-bold text-cloud`}
-						href={`${BLOG_DOMAIN}/categories/tutorial`}>Blog Tutorials&nbsp;</Link
-					>
+						href={`${BLOG_DOMAIN}/categories/tutorial`}
+						>Blog Tutorials&nbsp;
+					</Link>
 				</nav>
 			</div>
 		</div>
@@ -117,64 +119,63 @@ const pathname = Astro.url.pathname;
 							primary
 							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  ${pathname.endsWith("") ? "text-white border-lightIris" : "text-cloud"}`}
 							href={`${DOCS_DOMAIN}`}
-							href={`${DOCS_DOMAIN}`}>Home</Link
-						>
+							href={`${DOCS_DOMAIN}`}
+							>Home
+						</Link>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 						<Link
 							primary
 							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
 								pathname.endsWith("documentation") ? "text-white border-lightIris" : "text-cloud"
 							}`}
-							href={`${DOCS_DOMAIN}/documentation`}>Documentation</Link
-						>
+							href={`${DOCS_DOMAIN}/documentation`}
+							>Documentation
+						</Link>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 						<Link
 							primary
 							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
 								pathname.endsWith("api-reference") ? "text-white border-lightIris" : "text-cloud"
 							}`}
-							href={`${DOCS_DOMAIN}/api-reference`}>API Reference</Link
-						>
+							href={`${DOCS_DOMAIN}/api-reference`}
+							>API Reference
+						</Link>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 						<Link
 							primary
 							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
 								pathname.endsWith("on-prem") ? "text-white border-lightIris" : "text-cloud"
 							}`}
-							href={`${DOCS_DOMAIN}/on-prem`}>On-Prem Deployment</Link
-						>
-						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
-						<Link
-							primary
-							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
-								pathname.endsWith("use-cases") ? "text-white border-lightIris" : "text-cloud"
-							}`}
-							href={`${DOCS_DOMAIN}/use-cases`}>Use Cases</Link
-						>
+							href={`${DOCS_DOMAIN}/on-prem`}
+							>On-Prem Deployment
+						</Link>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 						<Link
 							primary
 							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
 								pathname.endsWith("sdks-tools") ? "text-white border-lightIris" : "text-cloud"
 							}`}
-							href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs & Tools</Link
-						>
+							href={`${DOCS_DOMAIN}/sdks-tools`}
+							>SDKs & Tools
+						</Link>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 						<Link
 							primary
 							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
 								pathname.endsWith("changelog") ? "text-white border-lightIris" : "text-cloud"
 							}`}
-							href={`${WWW_DOMAIN}/changelog`}>Changelog</Link
-						>
+							href={`${WWW_DOMAIN}/changelog`}
+							>Changelog
+						</Link>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 						<Link
 							primary
 							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
 								pathname.endsWith("tutorial") ? "text-white border-lightIris" : "text-cloud"
 							}`}
-							href={`${BLOG_DOMAIN}/categories/tutorial`}>Blog Tutorials</Link
-						>
+							href={`${BLOG_DOMAIN}/categories/tutorial`}
+							>Blog Tutorials
+						</Link>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 					</nav>
 				</div>

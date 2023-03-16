@@ -1,34 +1,49 @@
 ---
 const { filename, alt, class: classes } = Astro.props;
 
-const srcs = ['240', '400', '800', '1200']
+const srcs = ["240", "400", "800", "1200"];
 let image = filename;
-const ext = image.split('.').pop()
+const ext = image.split(".").pop();
 
-let webp = undefined
-let orig = undefined
-if (image.indexOf('cloudinary') > -1) {
-    webp = srcs.map(src => {
-        const url = image.replace('upload/', `upload/w_${src},c_scale/`).replace(`.${ext}`,'.webp')
-        return `${url} ${src}w`
-        }).join(', ')
+let webp = undefined;
+let orig = undefined;
+if (image.indexOf("cloudinary") > -1) {
+	webp = srcs
+		.map((src) => {
+			const url = image.replace("upload/", `upload/w_${src},c_scale/`).replace(`.${ext}`, ".webp");
+			return `${url} ${src}w`;
+		})
+		.join(", ");
 
-    orig = srcs.map(src => {
-        const url = image.replace('upload/', `upload/w_${src},c_scale/`)
-        return `${url} ${src}w`
-        }).join(', ')
+	orig = srcs
+		.map((src) => {
+			const url = image.replace("upload/", `upload/w_${src},c_scale/`);
+			return `${url} ${src}w`;
+		})
+		.join(", ");
 }
-if (image.indexOf('storyblok.com') > -1) {
-    image = `${image}/m/`;
-}
+if (image.indexOf("storyblok.com") > -1) {
+	let splitURL = image.split("/");
+	// the dimensions come after the space id in the url, grabbing the width from that.
+	const width = splitURL[splitURL.indexOf("1001320") + 1].split("x")[0];
+	webp = srcs
+		.map((src, index) => {
+			const url = image.concat(`/m/${src}x0`);
+			return `${url} ${src}w`;
+		})
+		.join(", ");
 
+	orig = srcs
+		.map((src) => {
+			const url = image.concat(`/m/${src}x0`);
+			return `${url} ${src}w`;
+		})
+		.join(", ");
+}
 ---
-<picture class={classes} loading="auto">
-    {webp &&
-        <source loading="auto" srcset={webp} type="image/webp" sizes="33.3vw">
-    }
-    {orig &&
-        <source loading="auto" srcset={orig} type={`image/${ext}`} sizes="33.3vw">
-    }
-    <img loading="auto" class={classes} src={image} alt={alt} />
+
+<picture class={classes}>
+	{webp && <source srcset={webp} type="image/webp" sizes="33.3vw" />}
+	{orig && <source srcset={orig} type={`image/${ext}`} sizes="33.3vw" />}
+	<img class={classes} src={image} alt={alt} />
 </picture>

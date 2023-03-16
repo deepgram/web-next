@@ -12,11 +12,11 @@ const { href, icon, class: classes } = Astro.props;
 
 <style>
 	.container:hover .inner {
-		@apply transition-[margin] ease-in-out duration-300;
+		@apply transition-[margin] duration-300 ease-in-out;
 		@apply ml-1;
 	}
 	.container .inner {
-		@apply transition-[margin] ease-in-out duration-300;
+		@apply transition-[margin] duration-300 ease-in-out;
 	}
 
 	:global(.github > svg) {
@@ -34,5 +34,4 @@ const { href, icon, class: classes } = Astro.props;
 		transform-origin: bottom left;
 		transition: transform 0.25s ease-out;
 	}
-
 </style>
