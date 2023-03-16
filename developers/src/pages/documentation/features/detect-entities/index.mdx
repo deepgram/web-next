@@ -9,9 +9,10 @@ seo:
   metaDescription: Learn about Deepgram's Entity Detection feature, which identifies and extracts key entities from content in submitted audio.
   keywords: entity detection, detect, entity, entities
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
-import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
-import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
 
 <div class="badge">PRE-RECORDED</div>
 
@@ -47,7 +48,6 @@ When Entity Detection is enabled, [Punctuation](/documentation/features/punctuat
 
 To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
 
-
 <Alert type="info">
 
 Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
@@ -73,7 +73,6 @@ curl \
 
 ## Analyze Response
 
-
 When the file is finished processing (often after only a few seconds), you’ll receive a JSON response that has the following basic structure:
 
 ```json
@@ -97,7 +96,6 @@ When the file is finished processing (often after only a few seconds), you’ll 
 
 Let's look more closely at the `alternatives` object:
 
-
 ```json
 "alternatives":[
   {
@@ -106,14 +104,7 @@ Let's look more closely at the `alternatives` object:
     "words": [...],
     "entities":[
       {
-        "label":"MISC",
-        "value":" Ai",
-        "confidence":0.99699044,
-        "start_word":3,
-        "end_word":4
-      },
-      {
-        "label":"PER",
+        "label":"NAME",
         "value":" Scott Stephenson",
         "confidence":0.9999924,
         "start_word":6,
@@ -125,6 +116,13 @@ Let's look more closely at the `alternatives` object:
         "confidence":0.9999757,
         "start_word":10,
         "end_word":11
+      },
+      {
+        "label": "CARDINAL_NUM",
+        "value": "one",
+        "confidence": 1,
+        "start_word": 186,
+        "end_word": 187
       },
       ...
     ]
@@ -157,46 +155,46 @@ By default, Deepgram applies its Base-tier, general AI model, which is a good, g
 
 <Alert type="info">
 
-All entities are available im English.
+All entities are available in English.
 
 </Alert>
 
 Entities that our API can identify include the following:
 
-| Label  | Description | Spoken Example | Written Example |
-|--------|-------------|----------------|-----------------|
-| NAME | Person names, including fictional characters | Henry Cavill | Henry Cavill |
-| ORG | Organizations, including companies, government, and non-profit organizations |Bank of Switzerland | Bank of Switzerland |
-| ORG_PROD | Products of organizations | iPhone | iPhone |
-| LANGUAGE | Human-spoken languages | Spanish | Spanish |
-| GENDER | Genders | female | female |
-| LOCATION | Geographic locations, including famous buildings and places | Statue of Liberty | Statue of Lberty |
-| EMAIL | Email strings | duygu at deepgram dot com | duygu@deepgram.com |
-| URL | URL strings | www deepgram dot com | www.deepgram.com |
-| CARDINAL_NUM | Cardinal numbers, including floating points | twenty five | 25 |
-| ORDINAL_NUM | Ordinal numbers | twenty fifth | 25th |
-| DATE | Dates, including weekdays, months, and years | after fifth May | after 5th May |
-| TIME | Times of the day | two pm | 14:00 pm |
-| MONEY | Money entities | five thousand euro | 5000 Euro |
-| QUANTITY | Amounts with units | five grams | 5 g |
-| PERCENT | Percentages | twenty five percent | 25% |
-| US_PHONE_NUM | US phone numbers, both international and domestic | five five five three oh seven two | 555-3072 |
-| PHONE_NUM | General phone numbers | oh five three oh seven two one | 0 530 721 |
-| LOCATION_ADDRESS | Open address strings | one hundred chestnut street, chicago, illinois six oh six one one | 100 Chestnut Street, Chicago, IL 60611 |
-| LOCATION_CITY | City names | Chicago | Chicago |
-| LOCATION_STATE | State names | Illinois | Illinois |
-| LOCATION_TOWN | Town names | Worcester | Worcester |
-| LOCATION_ZIP | ZIP strings | six six one one one | 66111 |
-| LOCATION_COUNTRY | Country names | Cambodia | Cambodia |
-| ACCOUNT_NUM | Account numbers | one two eight oh eight six | 128086 |
-| CARD_NUM | Credit card numbers | four one one one one one one one one one one one one one one one | 4111111111111111 |
-| CVV_NUM | Credit card verification values | five five five | 555 |
-| CARD_EXPIRY_DATE | Credit card expiration dates | eleven twenty five | 11/25 |
-| SSN_NUM | US social security numbers | one one one two two oh oh oh oh | 111-22-0000 |
-| COMMS_CHAN | Radio channel names | channel eleven | channel 11 |
-| NATO_ALPHA | Spelling descriptions with letters and words |	t as in Texas	| t as in Texas |
-| MULTIPLICATIVE | Multiplicative expressions	| three times | three times |
-| SEQUENCE | Sequences of numbers that don't fall into other numeric categories | five five seven | 5 5 7 |
-| EMOTION | Names of emotions | happiest customer ever |	happiest customer ever |
+| Label            | Description                                                                  | Spoken Example                                                    | Written Example                        |
+| ---------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------- |
+| NAME             | Person names, including fictional characters                                 | Henry Cavill                                                      | Henry Cavill                           |
+| ORG              | Organizations, including companies, government, and non-profit organizations | Bank of Switzerland                                               | Bank of Switzerland                    |
+| ORG_PROD         | Products of organizations                                                    | iPhone                                                            | iPhone                                 |
+| LOCATION         | Geographic locations, including famous buildings and places                  | Statue of Liberty                                                 | Statue of Liberty                      |
+| LANGUAGE         | Human-spoken languages                                                       | Spanish                                                           | Spanish                                |
+| GENDER           | Genders                                                                      | female                                                            | female                                 |
+| EMAIL            | Email strings                                                                | duygu at deepgram dot com                                         | duygu<span>@</span>deepgram.com        |
+| URL              | URL strings                                                                  | www deepgram dot com                                              | ww<span>w</span>.deepgram.com          |
+| CARDINAL_NUM     | Cardinal numbers, including floating points                                  | twenty five                                                       | 25                                     |
+| ORDINAL_NUM      | Ordinal numbers                                                              | twenty fifth                                                      | 25th                                   |
+| DATE             | Dates, including weekdays, months, and years                                 | after fifth May                                                   | after 5th May                          |
+| TIME             | Times of the day                                                             | two pm                                                            | 14:00 pm                               |
+| MONEY            | Money entities                                                               | five thousand euro                                                | 5000 Euro                              |
+| QUANTITY         | Amounts with units                                                           | five grams                                                        | 5 g                                    |
+| PERCENT          | Percentages                                                                  | twenty five percent                                               | 25%                                    |
+| US_PHONE_NUM     | US phone numbers, both international and domestic                            | five five five three oh seven two                                 | 555-3072                               |
+| PHONE_NUM        | General phone numbers                                                        | oh five three oh seven two one                                    | 0 530 721                              |
+| LOCATION_ADDRESS | Open address strings                                                         | one hundred chestnut street, chicago, illinois six oh six one one | 100 Chestnut Street, Chicago, IL 60611 |
+| LOCATION_CITY    | City names                                                                   | Chicago                                                           | Chicago                                |
+| LOCATION_STATE   | State names                                                                  | Illinois                                                          | Illinois                               |
+| LOCATION_TOWN    | Town names                                                                   | Worcester                                                         | Worcester                              |
+| LOCATION_ZIP     | ZIP strings                                                                  | six six one one one                                               | 66111                                  |
+| LOCATION_COUNTRY | Country names                                                                | Cambodia                                                          | Cambodia                               |
+| ACCOUNT_NUM      | Account numbers                                                              | one two eight oh eight six                                        | 128086                                 |
+| CARD_NUM         | Credit card numbers                                                          | four one one one one one one one one one one one one one one one  | 4111111111111111                       |
+| CVV_NUM          | Credit card verification values                                              | five five five                                                    | 555                                    |
+| CARD_EXPIRY_DATE | Credit card expiration dates                                                 | eleven twenty five                                                | 11/25                                  |
+| SSN_NUM          | US social security numbers                                                   | one one one two two oh oh oh oh                                   | 111-22-0000                            |
+| COMMS_CHAN       | Radio channel names                                                          | channel eleven                                                    | channel 11                             |
+| NATO_ALPHA       | Spelling descriptions with letters and words                                 | t as in Texas                                                     | t as in Texas                          |
+| MULTIPLICATIVE   | Multiplicative expressions                                                   | three times                                                       | three times                            |
+| SEQUENCE         | Sequences of numbers that don't fall into other numeric categories           | five five seven                                                   | 5 5 7                                  |
+| EMOTION          | Names of emotions                                                            | happiest customer ever                                            | happiest customer ever                 |
 
 All entities are available in English.
