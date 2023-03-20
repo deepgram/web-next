@@ -20,7 +20,7 @@ In addition to the installation guide posted at [UMS Deepgram SR - Deb Installat
 
 ### Adding a new `service-endpoint` for on-prem
 
-In the `umsdeepgram.xml` configuration file, add a `service-endpoint` child element to the `service-endpoints` element. You must specify the on-prem deployment’s IP address and port number in the `service-uri` attribute. On-prem’s URI is `/1/listen/stream` and is only a web socket (`ws`), not a secure web socket (`wss`).
+In the `umsdeepgram.xml` configuration file, add a `service-endpoint` child element to the `service-endpoints` element. You must specify the on-prem deployment’s IP address and port number in the `service-uri` attribute. On-prem’s URI is `/v1/listen/stream` and is only a web socket (`ws`), not a secure web socket (`wss`).
 
 ```xml
 <service-endpoints load-balancing="round-robin" fail-over="true">
