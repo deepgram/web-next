@@ -184,7 +184,7 @@ packaged_dataset_location = "/packaged"
 # transcript field with ASR.
 # Ensure that the endpoint points to your on-premise API instance!
 [asr]
-   endpoint = "http://api:8080/v2/listen?punctuate=true"  # Docker Compose
+   endpoint = "http://api:8080/v1/listen?punctuate=true"  # Docker Compose
 ```
 
 ## Allowing Automatic Transcription
@@ -198,7 +198,7 @@ In Hotpepper’s `config.toml` file, notice the following lines, which enable AS
 
 [asr]
   # docker compose
-  # endpoint = "http://api:8080/v2/listen?punctuate=true"
+  # endpoint = "http://api:8080/v1/listen?punctuate=true"
 ```
 
 When Hotpepper is properly configured for ASR, the **File Details** area of the Hotpepper labeling view will include a **Get ASR** button.
