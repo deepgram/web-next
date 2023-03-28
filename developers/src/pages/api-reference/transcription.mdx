@@ -698,7 +698,9 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 			Notes:
 			<ul class="info">
 				<li>You may embed basic authentication credentials in the callback URL.</li>
-				<li>Only ports 80, 443, 8080, and 8443 can be used for callbacks</li>
+				<li>Only ports 80, 443, 8080, and 8443 can be used for callbacks.</li>
+				<li>If the HTTP status code of the response to the callback POST request is unsuccessful (not 200-299),
+				 Deepgram will retry the callback up to 10 times with a 30 second delay between attempts.</li>
 			</ul>
 		<p>
 			To learn more, see
