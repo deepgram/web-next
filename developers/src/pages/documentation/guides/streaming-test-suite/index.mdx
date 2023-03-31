@@ -124,8 +124,6 @@ Let's set the `test_suite.py` file aside for the moment. In addition to that fil
 
 The mock server exposes a similar interface to Deepgram's streaming service. It accepts websocket connections that specify an encoding, sample rate, and number of channels; and it expects a stream of raw audio. However, it doesn't transcribe that audio. All it does is send back messages confirming how much audio data has been received, and once the client closes the stream, it saves all sent audio to a file.
 
-![server_messages_1.png](server_messages.png)
-
 <Image src={import("./server_messages.png")} alt="image of terminal showing message that websocket has opened" />
 
 Using the mock server for testing allows you to focus on getting your audio and client code right. Once you're confident that your audio stream is configured correctly and you're streaming the audio you expect, you can easily swap to sending that audio to Deepgram's service.
