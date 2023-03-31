@@ -124,8 +124,6 @@ Let's set the `test_suite.py` file aside for the moment. In addition to that fil
 
 The mock server exposes a similar interface to Deepgram's streaming service. It accepts websocket connections that specify an encoding, sample rate, and number of channels; and it expects a stream of raw audio. However, it doesn't transcribe that audio. All it does is send back messages confirming how much audio data has been received, and once the client closes the stream, it saves all sent audio to a file.
 
-<Image src={import("./server_messages_1.png")} alt="image of terminal showing message that websocket has opened" />
-
 Using the mock server for testing allows you to focus on getting your audio and client code right. Once you're confident that your audio stream is configured correctly and you're streaming the audio you expect, you can easily swap to sending that audio to Deepgram's service.
 
 ### Run the Mock Server
@@ -146,11 +144,15 @@ The test suite comes with a raw audio file, `preamble.raw` , that you can use to
 
 When you run the mock client, you should see output confirming that the mock server has begun to receive your audio.
 
+<Image src={import("./server_messages_1.png")} alt="image of terminal showing message that websocket has opened" />
+
 For a list of valid encodings, see [Deepgram's documentation](/documentation/features/encoding/).
 
 ### Validate Your Audio
 
 At the end of an audio stream, the mock server saves all audio data that was sent in a RAW file. It will return the filename to you at the end of the stream.
+
+<Image src={import("./server_messages_2.png")} alt="image of terminal showing message that websocket is receiving data" />
 
 You need to ensure the audio the server received is the audio you intended to send. To validate this, open this file in a program like Audacity (specifying necessary parameters like the encoding and sample rate) and try to play it back. You should be able to listen to your audio and verify it's correct.
 
@@ -158,7 +160,11 @@ You need to ensure the audio the server received is the audio you intended to se
 
 Once you verify your audio is correct, you can try streaming that audio to Deepgram. To do so, simply swap the websocket URL in `client.py` to point to Deepgram—the correct URL is left in a comment for you.
 
+<Image src={import("./test_dg_1.png")} alt="image of terminal showing lines to edit to connect to Deepgram" />
+
 Don't forget add your DG API key to the websocket headers where it says `YOUR_DG_API_KEY`.
+
+<Image src={import("./test_dg_2.png")} alt="image of terminal showing where to add Deepgram API key" />
 
 If you were able to stream to the mock server, and have validated your audio sounds correct, you should be able to seamlessly start receiving transcriptions from Deepgram.
 
