@@ -117,5 +117,6 @@ When you supply a callback URL in your request to Deepgram's API, we will immedi
 ```
 
 We will then process your audio asynchronously and return the transcript to your server through the callback URL you provided.
+If the HTTP status code of the response to the callback POST request is unsuccessful (not 200-299), Deepgram will retry the callback up to 10 times with a 30 second delay between attempts.
 
 To learn more about the response returned to your server, see our API reference for [Transcribe Pre-recorded Audio: Responses](/api-reference/transcription/#responses) or [Transcribe Streaming Audio: Responses](/api-reference/transcription/#responses-1), and the [Feature documentation](/documentation/features/) for the features you enabled in your request.

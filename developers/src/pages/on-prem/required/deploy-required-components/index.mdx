@@ -530,7 +530,7 @@ The API configuration file determines how the API container built from the Docke
 # Configure how the API will listen for your requests
 [server]
   # The base URL (prefix) for requests to the API.
-  base_url = "/v2"
+  base_url = "/v1"
   # The IP address to listen on. Since this is likely running in a Docker
   # container, you will probably want to listen on all interfaces.
   host = "0.0.0.0"
@@ -624,7 +624,7 @@ The Deepgram Engine configuration file determines how the Deepgram Engine contai
 # Configure the server to listen for requests from the API.
 [server]
   # The base URL (prefix) for requests from the API.
-  base_url = "/v2"
+  base_url = "/v1"
   # The IP address to listen on. Because this is likely running in a Docker
   # container, you will probably want to listen on all interfaces.
   host = "0.0.0.0"
@@ -666,7 +666,7 @@ docker-compose up -d
 Test your environment and container setup with a local file:
 
 ```bash
-curl -X POST --data-binary @[FILE_PATH] http://localhost:8080/v2/listen
+curl -X POST --data-binary @[FILE_PATH] http://localhost:8080/v1/listen
 ```
 
 Finally, test that you can view the model that was automatically loaded by Deepgram Engine. To do this, download the American English Harvard Sentences file from the [Open Speech Repository](https://www.voiptroubleshooter.com/open_speech/index.html) and run it through the model:
@@ -674,7 +674,7 @@ Finally, test that you can view the model that was automatically loaded by Deepg
 ```bash
 wget https://www.voiptroubleshooter.com/open_speech/american/OSR_us_000_0019_8k.wav
 
-curl -X POST --data-binary @OSR_us_000_0019_8k.wav "http://localhost:8080/v2/listen?model=general-dQw4w9WgXcQ&version=2021-08-18"; echo
+curl -X POST --data-binary @OSR_us_000_0019_8k.wav "http://localhost:8080/v1/listen?model=general-dQw4w9WgXcQ&version=2021-08-18"; echo
 ```
 
 ## Adding the License Proxy Server
@@ -863,7 +863,7 @@ Your Deepgram Account Representative should provide you with download links to a
 kubectl cp model.dg <engine-pod-name>:/models
 ```
 
-The newly-added models will appear within a minute or so. To validate that they were added, you can query the `/v2/models` endpoint.
+The newly-added models will appear within a minute or so. To validate that they were added, you can query the `/v1/models` endpoint.
 
 <Alert type="info">
 	Note that this method is primarily for proof-of-concept. In production, Kubernetes lets you obtain these files automatically by creating `Volumes`. For more information, see
@@ -883,7 +883,7 @@ To send a query:
 2. Use the IP address in your queries. For example, to query the `/models` endpoint:
 
    ```bash
-   curl http://<api-pod-ip-address>:<api-pod-port>/v2/models
+   curl http://<api-pod-ip-address>:<api-pod-port>/v1/models
    ```
 
 ## Additional Notes

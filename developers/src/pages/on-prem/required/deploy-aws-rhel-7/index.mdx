@@ -655,7 +655,7 @@ The API configuration file determines how the API container built from the Docke
 # Configure how the API will listen for your requests
 [server]
   # The base URL (prefix) for requests to the API.
-  base_url = "/v2"
+  base_url = "/v1"
   # The IP address to listen on. Since this is likely running in a Docker
   # container, you will probably want to listen on all interfaces.
   host = "0.0.0.0"
@@ -746,7 +746,7 @@ The Deepgram Engine configuration file determines how the Deepgram Engine contai
 # Configure the server to listen for requests from the API.
 [server]
   # The base URL (prefix) for requests from the API.
-  base_url = "/v2"
+  base_url = "/v1"
   # The IP address to listen on. Since this is likely running in a Docker
   # container, you will probably want to listen on all interfaces.
   host = "0.0.0.0"
@@ -805,7 +805,7 @@ docker-compose up -d
 Test your environment and container setup with a local file:
 
 ```bash
-curl -X POST --data-binary @[FILE_PATH] http://localhost:8080/v2/listen
+curl -X POST --data-binary @[FILE_PATH] http://localhost:8080/v1/listen
 ```
 
 Finally, test that you can view the model that was automatically loaded by Deepgram Engine. To do this, download the American English Harvard Sentences file from the [Open Speech Repository](https://www.voiptroubleshooter.com/open_speech/index.html) and run it through the model:
@@ -813,7 +813,7 @@ Finally, test that you can view the model that was automatically loaded by Deepg
 ```bash
 wget https://www.voiptroubleshooter.com/open_speech/american/OSR_us_000_0019_8k.wav
 
-curl -X POST --data-binary @OSR_us_000_0019_8k.wav "http://localhost:8080/v2/listen?model=general-dQw4w9WgXcQ&version=2021-08-18"; echo
+curl -X POST --data-binary @OSR_us_000_0019_8k.wav "http://localhost:8080/v1/listen?model=general-dQw4w9WgXcQ&version=2021-08-18"; echo
 ```
 
 ## Adding the License Proxy Server
