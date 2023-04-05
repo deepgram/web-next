@@ -21,26 +21,7 @@ import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
 
 Deepgram’s Diarize feature recognizes speaker changes and assigns a speaker to each word in the transcript.
 
-```
-[Speaker:0] Hello, and thank you for calling premier phone service. Please be aware that this call may be recorded for quality and training purposes.
-[Speaker:0] My name is Beth, and I will be assisting you today. How are you doing?
-[Speaker:1] Not too bad. How are you today?
-[Speaker:0] I'm doing well. Thank you. May I please have your name?
-[Speaker:1] My name is Blake...
-```
-
 To learn more about diarization and multichannel audio, and to learn when to use Deepgram's Diarization or Multichannel feature, see [Understanding when to Use the Multichannel and Diarization Features](/documentation/guides/multichannel-vs-diarization/).
-
-<Alert type="info">
-**UPDATE**
-<br/>
-Deepgram's newly released version of our Speaker Diarization technology provides better accuracy and performance. Its advanced speaker separation accurately identifies speakers in complex audio streams, reducing errors where two speakers are identified as one. Additionaly, the new diarizer can identify and count speakers more accurately, reducing instances where one speaker is split between two labels. The result is more readable transcripts.
-
-To access the latest diarizer, all you need to do is add **diarize=true** to your URL: `https://api.deepgram.com/v1/listen?diarize=true`
-
-We encourage you to switch to the improved Diarizer as soon as possible to ensure that you are taking advantage of the latest advancements in our technology.
-
-</Alert>
 
 ## Use Cases
 
@@ -56,10 +37,16 @@ To enable Diarization, when you call Deepgram’s API, add a `diarize` parameter
 
 <Alert type="warning">
   
+We've recently released an improved version of Diarization. Its advanced speaker separation accurately identifies speakers in complex audio streams, reducing errors where two speakers are identified as one. Additionally, the new diarizer can identify and count speakers more accurately, reducing instances where one speaker is split between two labels. The result is more readable transcripts.
+
+<br />
 With the release of improved diarization, we will be deprecating the `diarize_version` parameter and will be retiring the old diarizer on April 3, 2023.
-<br/>
-Currently, you can call the old diarizer using the below URL:
-`https://api.deepgram.com/v1/listen?tier=enhanced&diarize=true&diarize_version=2021-07-14.0`
+
+Currently, you can call the old diarizer using the below URL: `https://api.deepgram.com/v1/listen?tier=enhanced&diarize=true&diarize_version=2021-07-14.0`
+
+To access the latest diarizer, all you need to do is add **diarize=true** to your URL: `https://api.deepgram.com/v1/listen?diarize=true`
+
+We encourage you to switch to the improved Diarizer as soon as possible to ensure that you are taking advantage of the latest advancements in our technology.
 
 </Alert>
 
