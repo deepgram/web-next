@@ -41,12 +41,17 @@ const formUuid = await getUuid();
 	class={`text-white text-base bg-black pt-40 ${classes ? classes : null}`}
 >
 	<PrimarySection>
-		<AmplifyQuote class="bg-black text-white" type="standard" title="Ready to see Deepgram in Action?" subtitle="Get your API key and unlock up to 12,000 minutes in free credit. No card required." />
+		<AmplifyQuote
+			class="bg-black text-white"
+			type="standard"
+			title="Ready to see Deepgram in Action?"
+			subtitle="Get your API key and unlock up to 12,000 minutes in free credit. No card required."
+		/>
 	</PrimarySection>
 	<PrimarySection>
 		<div class="grid grid-cols-1 w-full sm:w-2/3 lg:w-full lg:grid-cols-5 xl:grid-cols-6 gap-10 items-end py-14">
 			<div class="lg:col-start-1 lg:col-end-3 flex flex-col space-y-6">
-				<Svg name="deepgram-long" class="text-dgRed w-56 stroke-0" />
+				<Svg name="deepgram-white" class="w-40 h-8 stroke-0" />
 				<p>Every Voice. Heard and understood.</p>
 				<ul class="grid grid-cols-4 sm:grid-cols-8 lg:place-items-center md:place-items-start gap-6 md:gap-12">
 					<li>
@@ -93,8 +98,8 @@ const formUuid = await getUuid();
 					<div class="flex flex-col space-y-4">
 						<div class="input-group flex-row items-center space-x-1">
 							<label class="flex items-center" for={`terms-${formUuid}`}>
-								<input class="mr-1" id={`terms-${formUuid}`} type="checkbox" x-model="privacyAgree" /> I’m good with the</label
-							>
+								<input class="mr-1" id={`terms-${formUuid}`} type="checkbox" x-model="privacyAgree" /> I’m good with the
+							</label>
 							<Link href="https://www.iubenda.com/privacy-policy/88905781" target="_blank" class="text-lightIris">Privacy Policy</Link>
 						</div>
 
