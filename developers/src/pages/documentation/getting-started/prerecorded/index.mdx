@@ -9,9 +9,12 @@ seo:
   metaDescription: "A quick introduction to getting transcription data from pre-recorded audio files using a web application, Deepgram's API, and Deepgram SDKs."
   keywords: "pre-recorded, prerecorded, audio, transcribe, transcription, speech recognition, quick start, quickstart, sdk"
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
-import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
-import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
+import Callout from "../../../../shared/components/global/Callout.astro";
+import Icon from "../../../../shared/components/general/Icon.astro";
 
 # {frontmatter.title}
 
@@ -20,6 +23,16 @@ import CodeGroup from '../../../../shared/components/code/CodeGroup.astro';
 **¿Prefieres español?** Ver [Tutorial del API endpoint para audios pre-grabados](/documentation/getting-started/prerecorded-es/).
 
 </Alert>
+
+<Callout title="NOTEBOOK">
+	Prefer the workflow of a Python notebook? Download our Python starter notebook and be up and running quickly without having to copy or paste any code.
+
+    <a href="/notebooks/QuickStart_Deepgram_Pre_Recorded_Audio_Notebook.ipynb" class="flex items-center py-1 mt-2" download="quickstart.ipynb">
+    	<Icon class="mr-2" icon="cloud-download" />
+    	Pre-recorded audio notebook
+    </a>
+
+</Callout>
 
 In this guide, you'll learn how to automatically transcribe pre-recorded audio files using Deepgram's SDKs, which are supported for use with the [Deepgram API](/api-reference/).
 

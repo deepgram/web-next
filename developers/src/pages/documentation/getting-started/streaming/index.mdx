@@ -10,9 +10,12 @@ seo:
   keywords: "streaming, real-time, realtime, audio, transcribe, transcription, speech recognition,
     quick start, quickstart, sdk"
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
-import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
-import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
+import Callout from "../../../../shared/components/global/Callout.astro";
+import Icon from "../../../../shared/components/general/Icon.astro";
 
 # {frontmatter.title}
 
@@ -21,6 +24,16 @@ import CodeGroup from '../../../../shared/components/code/CodeGroup.astro';
 **¿Prefieres español?** Ver [Tutorial para transcribir audio en vivo](/documentation/getting-started/streaming-es/).
 
 </Alert>
+
+<Callout title="NOTEBOOK">
+	Prefer the workflow of a Python notebook? Download our Python starter notebook and be up and running quickly without having to copy or paste any code.
+
+    <a href="/notebooks/QuickStart_Deepgram_Live_Audio_Streaming_Notebook.ipynb" class="flex items-center py-1 mt-2" download="streaming.ipynb">
+    	<Icon class="mr-2" icon="cloud-download" />
+    	Streaming audio notebook
+    </a>
+
+</Callout>
 
 In this guide, you'll learn how to automatically transcribe live streaming audio in real time using Deepgram's SDKs, which are supported for use with the [Deepgram API](/api-reference/).
 
@@ -56,7 +69,7 @@ If you get stuck at any point, help is just a click away! [Contact Support](/sup
 
 ## Transcribe Audio
 
-Once you have your API Key, it's time to transcribe audio! 
+Once you have your API Key, it's time to transcribe audio!
 
 If you want a quick way to get up and running, our [Python streaming test suite](https://github.com/deepgram/streaming-test-suite) provides sample code to help you get started. Before beginning to build your own integration, we recommend running the test suite code at least once to ensure you can successfully stream sample audio to Deepgram.
 
