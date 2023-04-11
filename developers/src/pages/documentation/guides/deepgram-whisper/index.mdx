@@ -1,0 +1,83 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Deepgram's Whisper API
+description: Learn how to get started with Deepgram's Whisper API.
+type: "models"
+order: 1
+seo:
+  metaTitle: Deepgram's Whisper API
+  metaDescription: Learn how to get started with Deepgram's Whisper API.
+  keywords: whisper, speech-to-text, speech to text, asr, openai, model, LLM
+---
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
+
+# {frontmatter.title}
+
+Deepgram’s Whisper API gives you access to OpenAI’s Whisper model by way of the Deepgram API. Accessing the Whisper model through Deepgram provides many benefits. Some of these benefits include:
+
+- Pairing the Whisper model with Deepgram features that you can’t get using the OpenAI speech-to-text API, such as diarization and word timings.
+- Support for all Whisper model sizes: tiny, base, small, medium, and large.
+- Scalable infrastructure that can handle high-traffic usage (up to 50 concurrent requests per minute).
+- Support for audio files up to 2GB
+
+In this guide, you’ll learn how to transcribe pre-recorded audio using Deepgram’s hosted Whisper API.
+
+## Before You Begin
+
+### Create a Deepgram Account
+
+To use the Whisper API hosted by Deepgram, you’ll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
+
+- $200 in credit, which gives you access to:
+  - all base models
+  - pre-recorded and streaming functionality
+  - all features
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](/documentation/getting-started/authentication/#create-an-api-key). Make note of your API Key; you will need it later.
+
+## Quickstart
+
+Transcribe a remote file using Deepgram's Whisper API with the following request.
+
+<CodeGroup title="curl" default="curl" tabs={["curl"]}>
+
+<CodeBlock tab="curl" active>
+
+```sh
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: application/json' \
+  --data '{"url":"https://static.deepgram.com/examples/interview_speech-analytics.wav"}' \
+  --url 'https://api.deepgram.com/v1/listen?model=whisper'
+
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Enable Whisper Model and Sizes
+
+To enable Deepgram’s Whisper API, add a model parameter in the query string and set it to `model=whisper`
+
+```bash
+https://api.deepgram.com/v1/listen?model=whisper
+```
+
+To enable a specific size of the Whisper model, set the model parameter to `model=whisper-size`.
+
+```bash
+https://api.deepgram.com/v1/listen?model=whisper-SIZE
+```
+
+<Alert type="info">
+
+If `model=whisper` is supplied and no model size specified, the model size will default to `model=whisper-medium`.
+
+</Alert>
