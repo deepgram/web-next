@@ -146,5 +146,16 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Best Practices",
+    "to": "/on-prem/best-practices/",
+    "children": [
+      {
+        "name": "Prometheus Integration",
+        "to": "/on-prem/best-practices/prometheus-integration/",
+        "static": false
+      }
+    ]
   }
 ]

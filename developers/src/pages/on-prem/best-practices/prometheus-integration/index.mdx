@@ -1,0 +1,60 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+title: Prometheus Integration
+description: Learn about best practices for integrating a Deepgram On-Prem instance with Prometheus for metrics logging.
+seo:
+  metaTitle: "Prometheus Integration"
+  metaDescription: Learn about best practices for integrating a Deepgram On-Prem instance with Prometheus for metrics logging.
+  keywords: on-premises, prometheus, metrics, logging, endpoint
+---
+
+# {frontmatter.title}
+
+Integrating a Deepgram On-Prem instance with Prometheus for metrics logging. Prometheus is a powerful monitoring and alerting toolkit, often used for collecting and querying various system metrics.
+
+## Introduction
+
+This guide outlines the steps required to integrate Prometheus with an on-prem instance that has a metrics endpoint `/metrics` on port `9991`.
+
+## Prerequisites
+
+Before proceeding, ensure that you have the following:
+
+- Access to the on-prem instance with the metrics endpoint exposed.
+- Prometheus installed on your machine or server. (Visit [Download Prometheus](https://prometheus.io/download/) for installation instructions.)
+- Permission to modify the Prometheus configuration file (usually named `prometheus.yml`)
+
+## Steps to Integrate with the On-Prem Instance
+
+### Step 1: Add Prometheus Target
+
+Add the target to the Prometheus configuration file in the `prometheus.yml` file; locate the `scrape_configs` section, and add a new job with the on-prem instance as a target:
+
+```yml
+scrape_configs:
+  - job_name: "on_prem_instance"
+    static_configs:
+      - targets: ["<INSTANCE_IP>:9991"]
+```
+
+Replace `<INSTANCE_IP>` with the IP address or hostname of the on-prem instance. Save the configuration file.
+
+### Step 2: Reload Prometheus Configuration
+
+To apply the changes made to the `prometheus.yml` file, you need to reload the Prometheus configuration. You can do this by restarting the Prometheus service:
+
+```
+sudo systemctl restart prometheus
+```
+
+### Step 3: Verify the Integration
+
+Open the Prometheus web interface, usually accessible at `http://localhost:9090`, and navigate to the "Targets" page (under the "Status" menu). You should see the `on_prem_instance` job listed with a status of "UP", indicating that Prometheus is successfully scraping metrics from the on-prem instance.
+
+#### Querying Metrics
+
+With the integration complete, you can now query the collected metrics using the Prometheus web interface or API. To access the metrics endpoint directly, visit `http://<INSTANCE_IP>:9991/metrics` in your browser or use a tool like `curl` to fetch the data.
+
+## Conclusion
+
+You've now successfully integrated your on-prem instance with a Prometheus. You can now monitor and query the on-prem system metrics collected from the instance using the Prometheus web interface or API.
