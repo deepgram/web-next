@@ -108,10 +108,8 @@ While other models rely on smaller, more closely paired audio-text training data
 Nova's comprehensive training on diverse data makes it the most reliable and adaptable model on the market, perfect for a wide array of speech recognition applications. Nova also provides a solid foundation for fine-tuning in specific domains and tackling enterprise use cases.
 
 
-<Alert type="info">
-The Nova model works differently than our enhanced and base tiers and can be called by passing in Nova as model option or as tier option.
+The Nova model can be called with the following syntax:
 
- </Alert>
 
 ```curl
 https://api.deepgram.com/v1/listen?model=nova
@@ -123,14 +121,20 @@ https://api.deepgram.com/v1/listen?model=general&tier=nova
 
 #### Whisper
 
-Deepgram's Whisper Cloud is a fully managed API that gives you access to Deepgram's version of OpenAI’s Whisper model.
-
-Using Deepgram's fully hosted Whisper Cloud instead of running your own version of Whisper provides many benefits. Some of these benefits include:
+Deepgram's Whisper Cloud is a fully managed API that gives you access to Deepgram's version of OpenAI’s Whisper model. Using Deepgram's fully hosted Whisper Cloud instead of running your own version of Whisper provides many benefits. Some of these benefits include:
 
 - Pairing the Whisper model with Deepgram features that you can’t get using the OpenAI speech-to-text API, such as diarization and word timings.
-- Support for all Whisper model sizes: tiny, base, small, medium, and large.
 - Scalable infrastructure that can handle high-traffic usage (up to 50 concurrent requests per minute).
+- The ability to use all Whisper model sizes.
 - Support for audio files up to 2GB.
+
+ Deepgram's Whisper models have the following size options:
+
+ - `tiny`: Contains 39 M parameters. The smallest model available.
+ - `base`: Contains 74 M parameters.
+ - `small`: Contains 244 M parameters.
+ - `medium`: Contains 769 M parameters. The default model if you don't specify a size.
+ - `large`: Contains 1550 M parameters. The largest model available. Defaults to OpenAI’s Whisper large-v2.
 
 
 <Alert type="info">
@@ -158,6 +162,12 @@ https://api.deepgram.com/v1/listen?model=whisper-medium&language=en-au
 ```curl
 https://api.deepgram.com/v1/listen?model=whisper-medium
 ```
+
+<Alert type="info">
+When using the Whisper models you do need to specify a tier parameter.
+
+</Alert>
+
 
 
 #### Enhanced
