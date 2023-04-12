@@ -136,6 +136,12 @@ npm install cross-fetch
 
 In your terminal, create a new file in your project's location, and populate it with code.
 
+<Alert type="info">
+
+The following example includes the parameter `model=nova`, which tells the API to use Deepgram's most powerful and affordable model. Removing this parameter will result in the API using the default model, which is currently `model=general`.
+
+</Alert>
+
 <CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
 <CodeBlock tab="Python">
@@ -167,7 +173,8 @@ async def main():
     deepgramLive = await deepgram.transcription.live({
       'punctuate': True,
       'interim_results': False,
-      'language': 'en-GB'
+      'language': 'en-GB',
+      'model': 'nova',
     })
   except Exception as e:
     print(f'Could not open socket: {e}')
@@ -227,6 +234,7 @@ const deepgramLive = deepgram.transcription.live({
 	punctuate: true,
 	interim_results: false,
 	language: "en-GB",
+	model: "nova",
 });
 
 // Listen for the connection to open and send streaming audio from the URL to Deepgram
