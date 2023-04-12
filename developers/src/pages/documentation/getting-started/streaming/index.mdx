@@ -173,7 +173,7 @@ async def main():
     deepgramLive = await deepgram.transcription.live({
       'punctuate': True,
       'interim_results': False,
-      'language': 'en-GB',
+      'language': 'en-US',
       'model': 'nova',
     })
   except Exception as e:
@@ -233,7 +233,7 @@ const deepgram = new Deepgram(deepgramApiKey);
 const deepgramLive = deepgram.transcription.live({
 	punctuate: true,
 	interim_results: false,
-	language: "en-GB",
+	language: "en-US",
 	model: "nova",
 });
 
@@ -338,6 +338,12 @@ Now that you've gotten transcripts for streaming audio, enhance your knowledge b
 To customize the transcripts you receive, you can send a variety of parameters to the Deepgram API.
 
 For example, if your audio is in Spanish rather than UK English, you can pass the `language:` parameter with the `es` option to the `transcription.live` method in the previous examples.
+
+<Alert type="warning">
+
+Not all languages work with all available models. Be sure to check out the [Languages](/documentation/features/language/) page to see which models are compatible with which languages.
+
+</Alert>
 
 <CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
