@@ -1,0 +1,204 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Deepgram Whisper Cloud
+description: Learn how to get started with Deepgram's Whisper Cloud API.
+type: "models"
+order: 1
+seo:
+  metaTitle: Deepgram's Whisper Cloud
+  metaDescription: Learn how to get started with Deepgram's Whisper Cloud API.
+  keywords: whisper, speech-to-text, speech to text, asr, openai, model, LLM, deepgram
+---
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
+
+# {frontmatter.title}
+
+Deepgram Whisper Cloud is a fully managed API that gives you access to Deepgram's version of OpenAI’s Whisper model.
+
+<Alert type="info">Deepgram owns and maintains these Whisper models; they aren't hosted or run by Open AI.</Alert>
+
+Using Deepgram's fully hosted Whisper Cloud instead of running your own version provides many benefits. Some of these benefits include:
+
+- Pairing the Whisper model with Deepgram features that you can’t get using the OpenAI speech-to-text API, such as diarization and word timings.
+- Support for all Whisper model sizes: tiny, base, small, medium, and large.
+- Scalable infrastructure that can handle high-traffic usage (up to 50 concurrent requests per minute).
+- Support for audio files up to 2GB
+
+In this guide, you’ll learn how to transcribe pre-recorded audio using Deepgram’s hosted Whisper API.
+
+## Before You Begin
+
+### Create a Deepgram Account
+
+Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and no credit card is required. Free access includes:
+
+$200 in free credit (around 45,000 minutes) which gives you access to:
+
+- all models
+- pre-recorded and streaming functionality
+- all features
+
+### Create a Deepgram API Key
+
+To access Deepgram’s API, you'll need to [create a Deepgram API Key](/documentation/getting-started/authentication/#create-an-api-key). Make note of your API Key; you will need it later.
+
+## Quickstart
+
+### Transcribe a Remote File
+
+Transcribe a remote file using Deepgram's Whisper API with the following request.
+
+<Alert type="info">
+
+Data sent through API requests for our Whisper models will not be sent to OpenAI.
+
+</Alert>
+
+<CodeGroup title="curl" default="curl" tabs={["curl"]}>
+
+<CodeBlock tab="curl" active>
+
+```sh
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: application/json' \
+  --data '{"url":"https://static.deepgram.com/examples/interview_speech-analytics.wav"}' \
+  --url 'https://api.deepgram.com/v1/listen?model=whisper'
+
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+### Analyze Response
+
+<Alert type="warning">There is a 10 minute time out for all Deepgram models. Transcription requests that run longer than 10 minutes will return a 504 error.</Alert>
+
+```json
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "6ba2879c...",
+    "sha256": "6a7d98...",
+    "created": "2023-04-12T20:33:53.620Z",
+    "duration": 96.56319,
+    "channels": 1,
+    "models": [
+      "e04910..."
+    ],
+    "model_info": {
+      "e04910...": {
+        "name": "medium-en-whisper",
+        "version": "2022-09-21.4",
+        "arch": "whisper"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "another big problem in the speech analytics space when customers first bring the software on is that they are blown away by the fact that an engine can monitor hundreds of kpis ...",
+            "confidence": 0.98273027,
+            "words": [
+              {
+                "word": "another",
+                "start": 0.06,
+                "end": 0.56,
+                "confidence": 0.34510013
+              },
+              {
+                "word": "big",
+                "start": 0.84,
+                "end": 1.3399999,
+                "confidence": 0.9840386
+              },
+              {
+                "word": "problem",
+                "start": 1.54,
+                "end": 2.04,
+                "confidence": 0.9970716
+              },
+            ...
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+```
+
+## Enable Whisper Model and Sizes
+
+To enable Deepgram’s Whisper API, add a model parameter in the query string and set it to `model=whisper`
+
+```bash
+https://api.deepgram.com/v1/listen?model=whisper
+```
+
+To enable a specific size of the Whisper model, set the model parameter to `model=whisper-size`.
+
+```bash
+https://api.deepgram.com/v1/listen?model=whisper-SIZE
+```
+
+<Alert type="info">
+
+If `model=whisper` is supplied and no model size specified, the model size will default to `model=whisper-medium`.
+
+</Alert>
+
+These are the Deepgram Whisper Cloud models available:
+
+- `model=whisper` (defaults to whisper-medium)
+- `model=whisper-tiny`
+- `model=whisper-base`
+- `model=whisper-small`
+- `model=whisper-medium`
+- `model=whisper-large` (defaults to large-v2)
+
+## Other Features
+
+### Language Detection
+
+Deepgram Whisper Cloud supports language detection, which means just by setting `detect_language=true`, your audio will be transcribed in the detected language.
+ 
+ Officially supported languages include Afrikaans, Arabic, Armenian, Azerbaijani, Belarusian, Bosnian, Bulgarian, Catalan, Chinese, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, Galician, German, Greek, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Italian, Japanese, Kannada, Kazakh, Korean, Latvian, Lithuanian, Macedonian, Malay, Marathi, Maori, Nepali, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swahili, Swedish, Tagalog, Tamil, Thai, Turkish, Ukrainian, Urdu, Vietnamese, and Welsh. ([Source: "Whisper API FAQ"](https://help.openai.com/en/articles/7031512-whisper-api-faq))
+
+If you would like to transcribe audio in a specific language, you can do so by setting the language parameter in the query string. This feature is limited to the languages supported among [these options](https://developers.deepgram.com/documentation/features/language/#language-options). To learn more about languages, see [Language](https://deploy-preview-710--romantic-gates-9c0b5e.netlify.app/documentation/features/language/).
+
+```
+https://api.deepgram.com/v1/listen?model=whisper&language=en
+
+```
+
+### Deepgram Features
+
+This is a list of Deepgram Features and their current status for use with Deepgram Whisper Cloud:
+
+| Feature            | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   | Status |
+| ------------------ | --- | ------ |
+| Alternatives       |     | ✅     |
+| Callbacks          |     | ✅     |
+| Diarization        |     | ✅     |
+| Find and Replace   |     | ✅     |
+| Keywords           |     | ❌     |
+| Language Detection |     | ✅     |
+| Multichannel       |     | ✅     |
+| Numerals           |     | ✅     |
+| Paragraphs         |     | ✅     |
+| Profanity Filter   |     | ❌     |
+| Redaction          |     | ✅     |
+| Search             |     | ❌     |
+| Smart Format       |     | ✅     |
+| Summarization      |     | ✅     |
+| Topic Detection    |     | ✅     |
+| Utterances         |     | ✅     |

@@ -224,8 +224,8 @@
         "static": true,
         "children": [
           {
-            "name": "Deepgram Whisper",
-            "to": "/documentation/guides/deepgram-whisper/"
+            "name": "Deepgram Whisper Cloud",
+            "to": "/documentation/guides/deepgram-whisper-cloud/"
           }
         ]
       },
