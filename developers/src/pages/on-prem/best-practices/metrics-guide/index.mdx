@@ -44,6 +44,9 @@ Upon startup of the services a limited set of metrics will be available until th
 ### Initial Metrics
 
 ```
+# HELP engine_estimated_stream_capacity The number of streams the node believes it can serve with acceptable latency.
+# TYPE engine_estimated_stream_capacity gauge
+engine_estimated_stream_capacity 10
 # HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
 # TYPE process_cpu_seconds_total counter
 process_cpu_seconds_total 5
@@ -74,13 +77,27 @@ process_virtual_memory_bytes 17093009408
 # TYPE engine_active_requests gauge
 engine_active_requests{kind="batch"} 0
 engine_active_requests{kind="stream"} 0
+# HELP engine_batch_response_time_seconds Time to process a batch request.
+# TYPE engine_batch_response_time_seconds histogram
+engine_batch_response_time_seconds_bucket{le="1"} 2
+engine_batch_response_time_seconds_bucket{le="2.5"} 2
+engine_batch_response_time_seconds_bucket{le="5"} 2
+engine_batch_response_time_seconds_bucket{le="10"} 3
+engine_batch_response_time_seconds_bucket{le="30"} 3
+engine_batch_response_time_seconds_bucket{le="60"} 3
+engine_batch_response_time_seconds_bucket{le="+Inf"} 3
+engine_batch_response_time_seconds_sum 5.741275712999999
+engine_batch_response_time_seconds_count 3
+# HELP engine_estimated_stream_capacity The number of streams the node believes it can serve with acceptable latency.
+# TYPE engine_estimated_stream_capacity gauge
+engine_estimated_stream_capacity 10
 # HELP engine_max_active_requests Maximum number of active ASR requests
 # TYPE engine_max_active_requests gauge
 engine_max_active_requests 0
 # HELP engine_requests_total Number of ASR requests.
 # TYPE engine_requests_total counter
 engine_requests_total{kind="batch",response_status="1xx"} 0
-engine_requests_total{kind="batch",response_status="2xx"} 1
+engine_requests_total{kind="batch",response_status="2xx"} 3
 engine_requests_total{kind="batch",response_status="3xx"} 0
 engine_requests_total{kind="batch",response_status="4xx"} 0
 engine_requests_total{kind="batch",response_status="5xx"} 0
@@ -91,25 +108,25 @@ engine_requests_total{kind="stream",response_status="4xx"} 0
 engine_requests_total{kind="stream",response_status="5xx"} 0
 # HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
 # TYPE process_cpu_seconds_total counter
-process_cpu_seconds_total 7
+process_cpu_seconds_total 21
 # HELP process_max_fds Maximum number of open file descriptors.
 # TYPE process_max_fds gauge
 process_max_fds 1048576
 # HELP process_open_fds Number of open file descriptors.
 # TYPE process_open_fds gauge
-process_open_fds 43
+process_open_fds 37
 # HELP process_resident_memory_bytes Resident memory size in bytes.
 # TYPE process_resident_memory_bytes gauge
-process_resident_memory_bytes 5350891520
+process_resident_memory_bytes 5044510720
 # HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
 # TYPE process_start_time_seconds gauge
-process_start_time_seconds 1681240240
+process_start_time_seconds 1681325770
 # HELP process_threads Number of OS threads in the process.
 # TYPE process_threads gauge
-process_threads 76
+process_threads 26
 # HELP process_virtual_memory_bytes Virtual memory size in bytes.
 # TYPE process_virtual_memory_bytes gauge
-process_virtual_memory_bytes 18300817408
+process_virtual_memory_bytes 23624794112
 
 ```
 
