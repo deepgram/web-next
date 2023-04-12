@@ -1,0 +1,116 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+title: Metrics Guide
+description: A quick guide for enabling metrics in On-Prem instances.
+seo:
+  metaTitle: "Metrics Guide"
+  metaDescription: A quick guide for enabling metrics in On-Prem instances.
+  keywords: on-premises, metrics, docker, instance, engine
+---
+
+# {frontmatter.title}
+
+A quick guide for enabling metrics in On-Prem instances.
+
+## Docker Compose
+
+Within the docker compose `YAML` file you must expose the port `9991` in Engine for metrics services.
+
+```yml
+services:
+  engine:
+    # other definitions
+    ports:
+      - "9991:9991"
+```
+
+## Engine TOML
+
+Within the `engine.toml` file you must expose the `9991` port.
+
+```toml
+# To support metrics we need to expose an Engine endpoint
+[metrics_server]
+  host = "0.0.0.0"
+  port = 9991
+```
+
+Metrics may now be queried from the on-prem instance at `http://<ip-address>:9991/metrics`.
+
+## Metrics
+
+Upon startup of the services a limited set of metrics will be available until the first request is made. After the first request is made a complete set of metrics will be available.
+
+### Initial Metrics
+
+```
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 5
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1048576
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 43
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 4867039232
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1681240240
+# HELP process_threads Number of OS threads in the process.
+# TYPE process_threads gauge
+process_threads 47
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 17093009408
+```
+
+### Complete Metrics
+
+```
+# HELP engine_active_requests Number of active ASR requests
+# TYPE engine_active_requests gauge
+engine_active_requests{kind="batch"} 0
+engine_active_requests{kind="stream"} 0
+# HELP engine_max_active_requests Maximum number of active ASR requests
+# TYPE engine_max_active_requests gauge
+engine_max_active_requests 0
+# HELP engine_requests_total Number of ASR requests.
+# TYPE engine_requests_total counter
+engine_requests_total{kind="batch",response_status="1xx"} 0
+engine_requests_total{kind="batch",response_status="2xx"} 1
+engine_requests_total{kind="batch",response_status="3xx"} 0
+engine_requests_total{kind="batch",response_status="4xx"} 0
+engine_requests_total{kind="batch",response_status="5xx"} 0
+engine_requests_total{kind="stream",response_status="1xx"} 0
+engine_requests_total{kind="stream",response_status="2xx"} 0
+engine_requests_total{kind="stream",response_status="3xx"} 0
+engine_requests_total{kind="stream",response_status="4xx"} 0
+engine_requests_total{kind="stream",response_status="5xx"} 0
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 7
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1048576
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 43
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 5350891520
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1681240240
+# HELP process_threads Number of OS threads in the process.
+# TYPE process_threads gauge
+process_threads 76
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 18300817408
+
+```
+
+Metrics as of 2023/04/11
