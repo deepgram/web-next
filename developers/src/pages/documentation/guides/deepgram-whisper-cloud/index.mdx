@@ -16,6 +16,8 @@ import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
 
 # {frontmatter.title}
 
+<div class="badge">PRE-RECORDED</div>
+
 Deepgram Whisper Cloud is a fully managed API that gives you access to Deepgram's version of OpenAI’s Whisper model.
 
 <Alert type="info">Deepgram hosts and maintains these Whisper models; they aren't hosted or run by Open AI.</Alert>
@@ -28,6 +30,12 @@ Using Deepgram's fully hosted Whisper Cloud instead of running your own version 
 - Support for audio files up to 2GB
 
 In this guide, you’ll learn how to transcribe pre-recorded audio using Deepgram’s hosted Whisper API.
+
+<Alert type="warning">
+
+Live streaming is not available with Deepgram Whisper Cloud. If you would like to transcribe live streamed audio, we recommend using our Nova model. [This quickstart](/documentation/getting-started/streaming/) can help you get started.
+
+</Alert>
 
 ## Before You Begin
 
