@@ -144,7 +144,8 @@ Deepgram hosts and maintains these Whisper models. They aren't hosted or run by 
 
 **There are some important things to understand about using Deepgram's Whisper Cloud:**
 
-- Deepgram's Whisper models can perform automatic language detection by setting `detect_language=true`. If you would know the language of your audio or video file and would like to specify the language, you can do so by setting the language parameter in the query string. To learn more about languages, see [Language](/documentation/features/language/). To learn more about language detection, see [Language Detection](/documentation/features//detect-language/).
+- Deepgram's Whisper models can perform automatic language detection by setting `detect_language=true`. If you know the language of your audio or video file and would like to specify the language, you can do so by setting the language parameter in the query string. To learn more about languages, see [Language](/documentation/features/language/). To learn more about language detection, see [Language Detection](/documentation/features//detect-language/).
+
 
 ```curl
 https://api.deepgram.com/v1/listen?model=whisper-medium&language=en
