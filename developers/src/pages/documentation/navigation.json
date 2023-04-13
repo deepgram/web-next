@@ -15,7 +15,12 @@
           {
             "name": "Getting Started with Live Streaming Audio",
             "to": "/documentation/getting-started/streaming/"
+          },
+          {
+            "name": "Nova Quickstart",
+            "to": "/documentation/getting-started/nova-quickstart/"
           }
+
         ]
       },
       {
