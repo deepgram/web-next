@@ -90,6 +90,16 @@ export default {
 		},
 	},
 	marks: {
+		subscript() {
+			return {
+				tag: "sub",
+			};
+		},
+		superscript() {
+			return {
+				tag: "sup",
+			};
+		},
 		bold() {
 			return {
 				tag: "b",
