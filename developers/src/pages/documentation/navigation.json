@@ -219,6 +219,17 @@
     "to": "/documentation/guides/",
     "children": [
       {
+        "name": "Models",
+        "to": "/documentation/models/",
+        "static": true,
+        "children": [
+          {
+            "name": "Deepgram Whisper Cloud",
+            "to": "/documentation/guides/deepgram-whisper-cloud/"
+          }
+        ]
+      },
+      {
         "name": "Tips and Tricks",
         "to": "/documentation/transcription-tips/",
         "static": true,
