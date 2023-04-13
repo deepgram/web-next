@@ -9,7 +9,10 @@ seo:
   metaDescription: Official Python SDK for Deepgram's automated speech recognition APIs.
   keywords: sdk, python, javascript, speech-to-text
 ---
-import Panel from '../../../../shared/components/global/Panel.astro'; 
+
+import Panel from "../../../../shared/components/global/Panel.astro";
+import Callout from "../../../../shared/components/global/Callout.astro";
+import Icon from "../../../../shared/components/general/Icon.astro";
 
 # {frontmatter.title}
 
@@ -17,6 +20,21 @@ This guide documents all the functionality available in the Deepgram
 Python SDK, and explains in detail how the library works. All the official
 Deepgram SDKs are open source. To learn more about this SDK specifically, visit
 the [Python SDK](https://github.com/deepgram/deepgram-python-sdk) repository on GitHub.
+
+<Callout title="NOTEBOOK">
+	Prefer the workflow of a Python notebook? Download our Python starter notebook and be up and running quickly without having to copy or paste any code.
+
+    <a href="/notebooks/QuickStart_Deepgram_Pre_Recorded_Audio_Notebook.ipynb" class="flex items-center py-1 mt-2" download="prerecorded.ipynb">
+    	<Icon class="mr-2" icon="cloud-download" />
+    	Pre-recorded audio notebook
+    </a>
+
+    <a href="/notebooks/QuickStart_Deepgram_Live_Audio_Streaming_Notebook.ipynb" class="flex items-center py-1" download="quickstart.ipynb">
+    	<Icon class="mr-2" icon="cloud-download" />
+    	Streaming audio notebook
+    </a>
+
+</Callout>
 
 <Panel type="info" title="Important Note">
 
@@ -35,9 +53,10 @@ Before you can use Deepgram products, you'll need to
 free and includes:
 
 $150 in credit, which gives you access to:
-  - all base models
-  - pre-recorded and streaming functionality
-  - all features
+
+- all base models
+- pre-recorded and streaming functionality
+- all features
 
 ### Create a Deepgram API Key
 

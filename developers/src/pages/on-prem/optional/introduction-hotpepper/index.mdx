@@ -1,0 +1,35 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+robots: noindex, nofollow
+title: Introduction
+description: Learn about Hotpepper, Deepgram's on-premises data labeling tool.
+type: hotpepper
+show: false
+order: 1
+seo:
+  metaTitle: "Hotpepper User Guide: Introduction"
+  metaDescription: Learn about Hotpepper, Deepgram's on-premises data labeling tool.
+  keywords: hotpepper, data label, transcription, transcribe, audio
+---
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+
+# {frontmatter.title}
+
+<Alert type="info">
+
+If you are interested in adding Hotpepper to your on-premise implementation, please [contact Sales](https://deepgram.com/contact-us/).
+
+</Alert>
+
+Welcome to the guide for Hotpepper, an end-to-end data labeling tool set that Deepgram can provide with on-premise implementations. Hotpepper allows you to build custom training datasets quickly and cost effectively while maintaining data quality. It works with audio formats that can be played by the HTML5 audio player element (`mp3`, `wav`, or `ogg`) and improves labeling efficiency by allowing users to submit audio to a hosted or on-premise Deepgram Speech Engine for automatic speech recognition (ASR) and transcription.
+
+With Hotpepper, you can:
+
+- Ensure labels are accurate and consistent
+- Monitor labeling progress by user
+- Package labeled datasets so they can be used to build models
+
+## System Requirements
+
+For labeling, which refers to creating new training datasets with Hotpepper, we recommend our [standard on-prem configuration](/on-prem/required/design-architecture/#basic-deployment), but with additional storage for training data. As part of your on-premises implementation, your Deepgram Account Executive will work with you to help design your hardware layout and system configuration, which will include recommendations for Hotpepper.

@@ -2,16 +2,17 @@
 layout: ../../../../layouts/Documentation.astro
 title: "Using Callbacks to Return Transcripts to Your Server"
 description: Learn how to return transcripts to a callback URL sent to Deepgram's API.
-type: "transcription"
-order: 5
+type: "tips"
+order: 3
 seo:
   metaTitle: "Using Callbacks to Return Transcripts to Your Server"
   metaDescription: Learn how to return transcripts to a callback URL sent to Deepgram's API
   keywords: streaming, real-time, live, pre-recorded, batch, transcript, callback
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
-import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
-import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
 
 # {frontmatter.title}
 
@@ -21,7 +22,7 @@ In this guide, you will learn how to use Deepgram's webhook to return a transcri
 
 ## What is a Webhook?
 
-When using a web application, you often change the information being displayed on the web page you're on. For example, while browsing a list of blog posts, you may click on a link to show more posts. When you do this, the web application's UI on your machine (client) sends an HTTP request to the application's server. The server then sends a response back to your device, which then triggers a change in the UI of the web application. 
+When using a web application, you often change the information being displayed on the web page you're on. For example, while browsing a list of blog posts, you may click on a link to show more posts. When you do this, the web application's UI on your machine (client) sends an HTTP request to the application's server. The server then sends a response back to your device, which then triggers a change in the UI of the web application.
 
 But when a web application’s server wants to trigger an event based on something that’s happening on a remote server instead of a user action, we use webhooks.
 
@@ -51,14 +52,13 @@ Since webhooks send a `POST` request to your application, your webhook consumer 
 
 ```js
 // Require, initialize, and configure Express
-const express = require('express');
+const express = require("express");
 const app = express();
 app.use(express.json());
 
 // This is the route handler our webhook will POST data to
-app.post('/hook', (req, res) => {
-
-    /*
+app.post("/hook", (req, res) => {
+	/*
         You could do anything here, such as:
         Add data to a database
         Trigger an email or SMS
@@ -67,7 +67,7 @@ app.post('/hook', (req, res) => {
 
 	console.log(req.body); // See the data
 	res.status(200).end(); // Return empty response to server
-})
+});
 
 // Start express server
 app.listen(3000);
@@ -81,7 +81,7 @@ For this example, assume that your application's URL is https://exampleco.com, w
 
 ### Send a Request to Deepgram
 
-To send a request to Deepgram and receive the transcript on your server, you need to provide your webhook consumer's URL in the request to Deepgram. You do that by using Deepgram's Callback feature. 
+To send a request to Deepgram and receive the transcript on your server, you need to provide your webhook consumer's URL in the request to Deepgram. You do that by using Deepgram's Callback feature.
 
 To transcribe audio from a file on your computer, for example, run the following cURL command in a terminal or your favorite API client:
 
@@ -113,9 +113,10 @@ curl \
 When you supply a callback URL in your request to Deepgram's API, we will immediately respond with a `request_id`:
 
 ```json
-{"request_id":"c22bea24-ecd3-4b53-bcbf-8ef087d905a5"}
+{ "request_id": "c22bea24-ecd3-4b53-bcbf-8ef087d905a5" }
 ```
 
 We will then process your audio asynchronously and return the transcript to your server through the callback URL you provided.
+If the HTTP status code of the response to the callback POST request is unsuccessful (not 200-299), Deepgram will retry the callback up to 10 times with a 30 second delay between attempts.
 
 To learn more about the response returned to your server, see our API reference for [Transcribe Pre-recorded Audio: Responses](/api-reference/transcription/#responses) or [Transcribe Streaming Audio: Responses](/api-reference/transcription/#responses-1), and the [Feature documentation](/documentation/features/) for the features you enabled in your request.

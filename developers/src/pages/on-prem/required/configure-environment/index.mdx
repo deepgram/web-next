@@ -1,0 +1,25 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+title: Configuring Your Environment
+description: Learn how to configure your environment for on-premises deployments of Deepgram products.
+type: prereq
+order: 3
+seo:
+  metaTitle: Configuring Your Environment
+  metaDescription: Learn how to configure your environment for on-premises deployments of Deepgram products.
+  keywords: on-premises, on-prem, deployment, configuration, configure, required components, required
+---
+
+# {frontmatter.title}
+
+Deepgram's software is intended to be run using [Docker](https://www.docker.com/), a containerization technology used to isolate, secure, and deploy applications across many different host environments and operating systems. Containers are more lightweight than virtual machines but provide many of the same isolation benefits.
+
+Although Docker can be run from a variety of host operating systems, we recommend using Ubuntu 18.04 LTS or a similar Linux distribution because we have tested our products most extensively in these systems.
+
+## Firewall
+
+Docker typically takes care of networking concerns, so as long as your firewall is configured to allow Docker, you should have no issues.
+
+Deepgram server containers listen on port `8080` inside the container, unless otherwise configured.
+
+You'll need to permit outbound HTTPS network traffic to `license.deepgram.com` on port `443`, and If you use Docker Hub (recommended), you'll need to allow outbound traffic to Docker's servers on port `443`.

@@ -1,0 +1,58 @@
+---
+import Layout from "../../../layouts/OnPrem.astro";
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
+import DocsCard from "../../../shared/components/cards/DocsCard.astro";
+
+const requiredComponents = await Astro.glob("./**/index.mdx");
+
+const prereqComponents = requiredComponents.filter((c) => {
+	return c.frontmatter.type === "prereq";
+});
+const sortedprereqComponents = prereqComponents.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+
+const deploymentComponents = requiredComponents.filter((c) => {
+	return c.frontmatter.type === "deployment";
+});
+const sorteddeploymentComponents = deploymentComponents.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+
+const addendumComponents = requiredComponents.filter((c) => {
+	return c.frontmatter.type === "addendum";
+});
+const sortedaddendumComponents = addendumComponents.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
+});
+---
+
+<Layout>
+	<article>
+		<h1>Required Components</h1>
+		<h2 slot="title" class="text-stone uppercase">Pre-Requisites</h2>
+		<DocsCardList>
+			{sortedprereqComponents.map((c) => <DocsCard class={`flex w-full flex-col`} doc={c} />)}
+		</DocsCardList>
+		<h2 slot="title" class="text-stone uppercase">Deployment</h2>
+		<DocsCardList>
+			{sorteddeploymentComponents.map((c) => <DocsCard class={`flex w-full flex-col`} doc={c} />)}
+		</DocsCardList>
+		<h2 slot="title" class="text-stone uppercase">Addendum</h2>
+		<DocsCardList>
+			{sortedaddendumComponents.map((c) => <DocsCard class={`flex w-full flex-col`} doc={c} />)}
+		</DocsCardList>
+	</article>
+</Layout>
+
+<style is:global>
+	/* Overrides prose styles */
+	.post-prose h1 {
+		@apply mb-10;
+	}
+
+	.post-prose h3 {
+		@apply mt-0;
+		@apply text-base;
+	}
+</style>

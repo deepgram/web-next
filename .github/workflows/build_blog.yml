@@ -8,13 +8,11 @@ on:
     branches: [main]
     paths: 
     - 'blog/**'
-    - 'content/**'
     - 'shared/**'
   pull_request:
     branches: [main]
     paths: 
     - 'blog/**'
-    - 'content/**'
     - 'shared/**'
     
 jobs:

@@ -1,0 +1,114 @@
+---
+import { renderRichText } from "@storyblok/astro";
+
+let type;
+let title;
+
+if (Astro.props.type) {
+	// If prop comes from Astro mdx, set blok to type prop that comes from the mdx file
+	type = Astro.props.type;
+} else {
+	type = "info";
+}
+
+if (Astro.props.title) {
+	title = Astro.props.title;
+}
+
+const { blok = { type, title } } = Astro.props;
+
+let renderedRichText;
+if (blok.inner_html) {
+	renderedRichText = renderRichText(blok.inner_html);
+}
+
+const host = Astro.url.host;
+---
+
+<!-- This script will update all blog callouts to be dark theme -->
+<script define:vars={{ host }}>
+	setTimeout(() => {
+		const callouts = document.getElementsByClassName("callout");
+		if (host === "blog.deepgram.com") {
+			Array.from(callouts).forEach((a) => {
+				a.classList.add("dark");
+			});
+		}
+	}, 500);
+</script>
+<div class="bg-gradient-to-r from-[#FB3640] via-[#5D6FD0] to-[#38EDAC] py-[2.5px] px-[2.5px]">
+	<div class={`callout`}>
+		<div class="text">
+			<div class="title">
+				{blok.title || title}
+			</div>
+			<slot>
+				<div set:html={renderedRichText}></div>
+			</slot>
+		</div>
+	</div>
+</div>
+
+<style scoped>
+	.callout {
+		@apply flex flex-row flex-wrap align-middle;
+		@apply text-ink text-sm;
+		@apply rounded-sm;
+		@apply bg-white;
+	}
+
+	.callout.dark {
+		@apply text-cloud;
+		@apply rounded-sm;
+		@apply bg-ink;
+	}
+
+	.title {
+		@apply flex flex-wrap;
+		@apply mb-2;
+		@apply w-4/6 md:w-5/6;
+		@apply font-semibold;
+	}
+
+	.text {
+		@apply w-full;
+		/* @apply m-4; */
+		/* @apply w-5/6; */
+	}
+
+	p + p,
+	p + ul,
+	p + ol,
+	p + h3,
+	p + h4 {
+		@apply mt-0;
+	}
+
+	.dark :global(a) {
+		@apply text-lightIris;
+	}
+
+	.dark :global(path) {
+		@apply fill-lightIris;
+	}
+
+	.text :global(ul > li) {
+		@apply list-disc;
+	}
+
+	.text :global(ol > li) {
+		@apply list-decimal;
+	}
+
+	.text :global(li) {
+		@apply ml-10 pb-1 pl-7;
+	}
+
+	.text :global(p) {
+		@apply py-0;
+	}
+
+	.text :global(p:first-of-type) {
+		@apply pt-0;
+	}
+</style>

@@ -1,12 +1,12 @@
 # redirects sourced from https://docs.google.com/spreadsheets/d/1uaIyk0gX7vdCnW6Oq817H9O1rP7UWnZmK4Y9__M6EFc/edit#gid=1478820656
 
-/events/dev-to-hackathon-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
-/events/kcdc-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
-/events/lbt-hackathon	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
-/events/pypdata-global-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
-/events/pydata-nyc-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
-/events/qcon-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
-/events/scipy-2022	https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/events/dev-to-hackathon-2022 https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/events/kcdc-2022 https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/events/lbt-hackathon https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/events/pypdata-global-2022 https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/events/pydata-nyc-2022 https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/events/qcon-2022 https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
+/events/scipy-2022 https://blog.deepgram.com/deepgram-in-the-wild-a-year-in-review/
 /documentation/features/named-entity-recognition/ /documentation/features/smart-format/
 
 https://enterprise-docs.deepgram.com/* https://developers.deepgram.com/
@@ -16,6 +16,7 @@ https://enterprise-docs.deepgram.com/* https://developers.deepgram.com/
 # 200s
 
 # 301s
+
 /api-reference/deepgram-api /api-reference/
 /api-reference/speech-recognition-api /api-reference/
 /api-reference/usage-api /api-reference/
@@ -58,6 +59,29 @@ https://enterprise-docs.deepgram.com/* https://developers.deepgram.com/
 /security/data-privacy /documentation/security/data-privacy/
 /security/statement /documentation/security/statement/
 /undefined/ /documentation/
+
+# redirects from on-prem reorganization
+
+/on-prem/base-components /on-prem/required/
+/on-prem/optional-components /on-prem/optional/
+/on-prem/base-components/introduction /on-prem/required/introduction/
+/on-prem/base-components/design-architecture /on-prem/required/design-architecture/
+/on-prem/base-components/configure-environment /on-prem/required/configure-environment/
+/on-prem/base-components/license /on-prem/required/license/
+/on-prem/base-components/deploy-base-components /on-prem/required/deploy-required-components/
+/on-prem/base-components/deploy-aws-rhel-7 /on-prem/required/deploy-aws-rhel-7/
+/on-prem/base-components/maintain-base-components /on-prem/required/maintain-required-components/
+/on-prem/base-components/frequently-asked-questions /on-prem/required/frequently-asked-questions/
+/on-prem/optional-components/license-proxy-server /on-prem/optional/license-proxy-server/
+/on-prem/optional-components/dgtools /on-prem/optional/dgtools/
+/on-prem/optional-components/unimrcp /on-prem/optional/unimrcp/
+/on-prem/optional-components/hotpepper/introduction /on-prem/optional/introduction-hotpepper/
+/on-prem/optional-components/hotpepper/setting-up /on-prem/optional/setting-up-hotpepper/
+/on-prem/optional-components/hotpepper/understanding-workflow /on-prem/optional/understanding-workflow-hotpepper/
+/on-prem/optional-components/hotpepper/managing-work /on-prem/optional/managing-work-hotpepper/
+/on-prem/optional-components/hotpepper/managing-datasets /on-prem/optional/managing-datasets-hotpepper/
+/on-prem/optional-components/hotpepper/managing-users /on-prem/optional/managing-users-hotpepper/
+/on-prem/optional-components/hotpepper/best-practices /on-prem/optional/best-practices-hotpepper/
 
 # redirects sourced from https://docs.google.com/spreadsheets/d/1uaIyk0gX7vdCnW6Oq817H9O1rP7UWnZmK4Y9__M6EFc/edit#gid=1478820656
 
@@ -270,11 +294,11 @@ https://enterprise-docs.deepgram.com/* https://developers.deepgram.com/
 /blog/categories/tutorial/page/6/ https://blog.deepgram.com/categories/tutorial
 /blog/categories/tutorial/page/7/ https://blog.deepgram.com/categories/tutorial
 
-/blog/authors/* https://blog.deepgram.com/authors
-/blog/categories/* https://blog.deepgram.com/categories
-/blog/2021/* https://blog.deepgram.com/posts
-/blog/2022/* https://blog.deepgram.com/posts
-/blog/* https://blog.deepgram.com/
+/blog/authors/_ https://blog.deepgram.com/authors
+/blog/categories/_ https://blog.deepgram.com/categories
+/blog/2021/_ https://blog.deepgram.com/posts
+/blog/2022/_ https://blog.deepgram.com/posts
+/blog/\* https://blog.deepgram.com/
 /blog/ https://blog.deepgram.com/
 
 /tags/ https://blog.deepgram.com/tags
@@ -402,7 +426,7 @@ https://enterprise-docs.deepgram.com/* https://developers.deepgram.com/
 /tags/webhooks/ https://blog.deepgram.com/tags/webhooks
 /tags/writing/ https://blog.deepgram.com/tags
 
-/tags/* https://blog.deepgram.com/tags
+/tags/\* https://blog.deepgram.com/tags
 
 /status/ https://status.deepgram.com
 /status/ https://status.deepgram.com/

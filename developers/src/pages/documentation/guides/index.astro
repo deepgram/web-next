@@ -5,42 +5,54 @@ import Layout from "../../../layouts/General.astro";
 
 const guides = await Astro.glob("./**/index.mdx");
 
-const performanceGuides = guides.filter((guide) => {
-	return guide.frontmatter.type === "performance";
+const TipsGuides = guides.filter((guide) => {
+	return guide.frontmatter.type === "tips";
 });
-const sortedPerformanceGuides = performanceGuides.sort((a, b) => {
-	return a.frontmatter.order - b.frontmatter.order
+const sortedTipsGuides = TipsGuides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
 });
 
-const transcriptionGuides = guides.filter((guide) => {
-	return guide.frontmatter.type === "transcription";
+const featuresGuides = guides.filter((guide) => {
+	return guide.frontmatter.type === "features";
 });
-const sortedTranscriptionGuides = transcriptionGuides.sort((a, b) => {
-	return a.frontmatter.order - b.frontmatter.order
+const sortedFeaturesGuides = featuresGuides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
 });
 
 const migrationGuides = guides.filter((guide) => {
 	return guide.frontmatter.type === "migration";
 });
 const sortedMigrationGuides = migrationGuides.sort((a, b) => {
-	return a.frontmatter.order - b.frontmatter.order
+	return a.frontmatter.order - b.frontmatter.order;
+});
+
+const troubleshootingGuides = guides.filter((guide) => {
+	return guide.frontmatter.type === "troubleshooting";
+});
+const sortedTroubleshootingGuides = troubleshootingGuides.sort((a, b) => {
+	return a.frontmatter.order - b.frontmatter.order;
 });
 ---
 
 <Layout>
 	<article>
 		<h1>Deepgram Guides</h1>
+
 		<DocsCardList>
-			<h2 slot="title" class="text-stone uppercase">Migration</h2>
-			{sortedMigrationGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			<h2 slot="title" class="text-stone uppercase">Tips and Tricks</h2>
+			{sortedTipsGuides.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 		</DocsCardList>
 		<DocsCardList>
-			<h2 slot="title" class="text-stone uppercase">Transcription</h2>
-			{sortedTranscriptionGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			<h2 slot="title" class="text-stone uppercase">Migrating</h2>
+			{sortedMigrationGuides.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 		</DocsCardList>
 		<DocsCardList>
-			<h2 slot="title" class="text-stone uppercase">Measuring Performance</h2>
-			{sortedPerformanceGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
+			<h2 slot="title" class="text-stone uppercase">Feature Deep Dives</h2>
+			{sortedFeaturesGuides.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+		</DocsCardList>
+		<DocsCardList>
+			<h2 slot="title" class="text-stone uppercase">Troubleshooting</h2>
+			{sortedTroubleshootingGuides.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
 		</DocsCardList>
 	</article>
 </Layout>

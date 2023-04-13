@@ -1,0 +1,208 @@
+---
+layout: ../../../../layouts/OnPrem.astro
+robots: noindex, nofollow
+title: Setting Up
+description: Learn how to install and set up Hotpepper, Deepgram's on-premises data labeling tool.
+type: hotpepper
+show: false
+order: 2
+seo:
+  metaTitle: "Hotpepper User Guide: Setting Up"
+  metaDescription: Learn how to install and set up Hotpepper, Deepgram's on-premises data labeling tool.
+  keywords: hotpepper, data label, transcription, transcribe, audio, setup, set up, install, deploy
+---
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+
+# {frontmatter.title}
+
+## Before You Begin
+
+If you aren't certain which products your contract includes or if you are interested in adding Hotpepper to your on-premises deployment, please consult a Deepgram Account Representative. To reach one, [contact us](https://deepgram.com/contact-us/)!
+
+You will also need an account on [Docker Hub](https://hub.docker.com/), so you can conveniently get the latest Deepgram software and updates.
+
+<Alert type="info">
+
+Naming conventions may mention Dashscript, a previous version of Hotpepper; they are the same tool.
+
+</Alert>
+
+## Installing
+
+Deepgram makes all of its products available through Docker Hub.
+
+1. Log in to your Docker Hub account from one of your servers.
+2. Run the following command:
+
+   ```bash
+   docker pull deepgram/onprem-dashscript
+   ```
+
+## Deploying
+
+Before you can run your on-prem deployment with Hotpepper, you must configure Hotpepper. To do this, you will need to update your Docker Compose and container configuration files, then restart Docker.
+
+### Update Your Docker Compose File
+
+Hotpepper requires paths to four resources:
+
+- Directory that stores the Hotpepper database
+- Directory that stores input datasets (collections of audio files to transcribe)
+- Directory to which packaged datasets should be output
+- Configuration file, which is written in TOML to promote easy human editing
+
+1. To house your Hotpepper database, in your root directory, create a directory named `db`:
+
+   ```bash
+   mkdir db
+   ```
+
+   <Alert type="info">
+
+   You can name this directory whatever you like, as long as you update the `docker-compose.yml` file accordingly.
+
+   </Alert>
+
+2. To house your input datasets, in your root directory, create a directory named `datasets`:
+
+   ```bash
+   mkdir datasets
+   ```
+
+   <Alert type="info">
+
+   You can name this directory whatever you like, as long as you update the `docker-compose.yml` file accordingly.
+
+   </Alert>
+
+3. To house your output datasets, in your root directory, create a directory named `packaged`:
+
+   ```bash
+   mkdir packaged
+   ```
+
+   <Alert type="info">
+
+   You can name this directory whatever you like, as long as you update the `docker-compose.yml` file accordingly.
+
+   </Alert>
+
+4. Add the following to the end of your default `docker-compose.yml` file in your root directory and modify the file to include the appropriate paths:
+
+   ```toml
+   # Hotpepper, the on-premises human transcription/labeling tool for creating training
+   # sets. (Note: Naming conventions may mention Dashscript, a previous version
+   # of Hotpepper; they are the same tool.)
+   dashscript:
+     image: deepgram/onprem-dashscript:latest
+
+   # Here we expose the service port to the host machine. The container port
+   # (right-hand side) must match the port that the service is listening
+   # on (from its configuration file).
+   ports:
+     - "8081:80"
+
+   # An admin "super-user" must be present in the database to execute user and dataset
+   # management actions through the app.  Setting these environment variables will
+   # ensure that the app starts with at least one.
+   environment:
+     DASHSCRIPT_ADMIN_USER: "admin"
+     DASHSCRIPT_ADMIN_PASSWORD: "admin_pass"
+
+   volumes:
+     # The container paths (right side) should align with those used in the Hotpepper
+     # config file.
+
+     # Path to the Hotpepper database directory.  The name of the database will be
+     # pulled from the Hotpepper config file.
+     - "/path/to/database:/db"
+
+     # Path to the directory containing input datasets. New datasets are
+     # created by adding subdirectories to this folder and placing audio data
+     # there.  This directory should be structured like so:
+     # /path/to/input/data/
+     #    |_ dataset1/
+     #      |_ audio1.mp3
+     #      |_ audio2.mp3
+     #   ...
+     - "/path/to/input/data:/datasets"
+
+     # Path to where Hotpepper
+     # will save its finalized, packaged datasets.
+     - "/path/to/output/data:/packaged"
+
+     # Path to the Hotpepper config file.
+     - "/path/to/config/file.toml:/config.toml:ro"
+
+     # Invoke Hotpepper, giving it the path to the config file (in the
+     # container).
+     command: /config.toml serve
+   ```
+
+5. Add the first Hotpepper administrator by configuring the following environment variables in your `docker-compose.yml` file:
+
+   - `DASHSCRIPT_ADMIN_USER`
+   - `DASHSCRIPT_ADMIN_PASSWORD`
+
+### Update Your Container Configuration File
+
+1. In your `config` subdirectory in your root directory, create the `config.toml` file:
+
+   ```bash
+   cd config
+   touch config.toml
+   ```
+
+2. Add the following code to the `config.toml` file:
+
+```toml
+# The container path to the Hotpepper database. (Note: Naming conventions
+# may mention Dashscript, a previous version of Hotpepper; they are the same tool.)
+db = "/db/dashscript.db"
+
+# A directory for storing input datasets (collections of audio files to
+# transcribe).
+# Path to the directory containing input datasets. New datasets are
+# created by adding subdirectories to this folder and placing audio data
+# there. This directory should be structured like so:
+# /datasets/
+#   |_ dataset1/
+#      |_ audio1.mp3
+#      |_ audio2.mp3
+#   ...
+datasets = "/datasets"
+
+# A directory for outputting packaged datasets.
+packaged_dataset_location = "/packaged"
+
+[server]
+  port = 80
+
+# For customers who have ASR enabled, the following configuration will place
+# a button "Get ASR" on the L1 transcription page to pre-populate the
+# transcript field with ASR.
+# Ensure that the endpoint points to your on-premise API instance!
+[asr]
+   endpoint = "http://api:8080/v1/listen?punctuate=true"  # Docker Compose
+```
+
+## Allowing Automatic Transcription
+
+Hotpepper can be configured to allow users labeling at level L1 to submit assigned files to an on-premise Deepgram Speech Engine for automatic speech recognition (ASR) and transcription. When ASR is used, the Hotpepper server sends the assigned audio file to the configured Speech API endpoint, parses a transcript from the results, and automatically populates the Transcript textarea of the labeling view with the returned transcript. In our experience, users value this feature highly when labeling.
+
+In Hotpepper’s `config.toml` file, notice the following lines, which enable ASR:
+
+```toml
+# Ensure that the endpoint points to your Speech API instance
+
+[asr]
+  # docker compose
+  # endpoint = "http://api:8080/v1/listen?punctuate=true"
+```
+
+When Hotpepper is properly configured for ASR, the **File Details** area of the Hotpepper labeling view will include a **Get ASR** button.
+
+## Backing up Data
+
+To avoid losing all transcripts produced by Hotpepper, back up both your dataset directories and the Hotpepper database. Hotpepper uses a SQLite database, so you only need to copy the configured database file to a secure location.

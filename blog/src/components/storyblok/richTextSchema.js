@@ -50,7 +50,8 @@ export default {
 				singleTag: "br",
 			};
 		},
-		heading(node) {
+    heading(node) {
+      console.log('Heading: ', node.content[0].text)
 			const newAttrs = { ...node.attrs, id: slugify(node.content[0].text, { lower: true }), style: "scroll-margin-top: 4.6rem" };
 
 			return {
