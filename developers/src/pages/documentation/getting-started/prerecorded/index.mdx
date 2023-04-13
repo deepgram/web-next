@@ -109,6 +109,12 @@ pip install deepgram-sdk
 
 In your terminal, create a new file in your project's location, and populate it with code.
 
+<Alert type="info">
+
+The following example includes the parameter `model=nova`, which tells the API to use Deepgram's most powerful and affordable model. Removing this parameter will result in the API using the default model, which is currently `model=general`.
+
+</Alert>
+
 <CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
 <CodeBlock tab="Node.js" active>
@@ -158,6 +164,7 @@ if (file.startsWith("http")) {
 deepgram.transcription
 	.preRecorded(source, {
 		punctuate: true,
+		model: "nova",
 	})
 	.then((response) => {
 		// Write the response to the console
@@ -222,7 +229,8 @@ async def main():
     deepgram.transcription.prerecorded(
       source,
       {
-        'punctuate': True
+        'punctuate': True,
+        'model': 'nova',
       }
     )
   )
@@ -370,6 +378,12 @@ To customize the transcripts you receive, you can send a variety of parameters t
 
 For example, if your audio is in Spanish rather than English, you can pass the `language:` parameter with the `es` option to the `transcription.prerecorded` method in the previous examples:
 
+<Alert type="warning">
+
+Not all languages work with all available models. Be sure to check out the [Languages](/documentation/features/language/) page to see which models are compatible with which languages.
+
+</Alert>
+
 <CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
 <CodeBlock tab="Node.js" active>
@@ -377,7 +391,7 @@ For example, if your audio is in Spanish rather than English, you can pass the `
 ```js
 deepgram.transcription.preRecorded(source, {
 	punctuate: true,
-	language: es,
+	language: "es",
 });
 ```
 
