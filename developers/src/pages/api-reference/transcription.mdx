@@ -2228,6 +2228,16 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 	</li>
 </ul>
 
+#### Stream KeepAlive
+
+By default, the Deepgram streaming connection will time out with a NET-0001 error code if no audio is sent by the client for 10 seconds. (See [Error Handling](/api-reference/transcription/#error-handling) below for more information.)
+
+To keep the websocket open without sending audio data, send the following JSON string:
+
+`{ 'type': 'KeepAlive' }`
+
+This will keep the streaming connection open for an additional 60 seconds. If no audio or additional KeepAlive messages are sent within the 60 second window, the streaming connection will close with a NET-0001. To avoid this error and keep the connection open, continue sending KeepAlive messages 3-5 seconds before the 60 second timeout window expires until you are ready to resume sending audio.
+
 #### Close Stream
 
 To gracefully close a streaming connection, send the following JSON string:

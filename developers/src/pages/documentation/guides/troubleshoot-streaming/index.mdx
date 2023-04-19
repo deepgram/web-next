@@ -162,9 +162,11 @@ If you’re receiving a `1011` code with a `NET-0000` payload, Deepgram wasn’t
 
 If you’re receiving a `1011` code with a `NET-0001` payload, Deepgram didn’t receive any audio from you before the system timed out.
 
-As with the `1008` code, often this error is caused because the data you intend to send to Deepgram is not being sent. In some cases, if there is a period of time before your system begins to send audio, you may need to send silent audio to Deepgram to keep the connection open.
+As with the `1008` code, often this error is caused because the data you intend to send to Deepgram is not being sent.
 
-Other reasons for this error include potential network issues. To troubleshoot, test your network by making a cURL request to Deepgram using a Deepgram-hosted audio file. To learn how to do this, you can follow along with our guide on [generating transcripts from the terminal](/documentation/guides/save-transcripts-from-terminal/). If you’re unable to get a transcript using this method, something in your network may be preventing you from connecting to Deepgram.
+In some cases, however, you may be intentionally not sending audio to Deepgram. For example, there may a period of time before your system is ready to send audio; or you may want to briefly stop sending audio mid-stream before resuming transcription. In these cases, you may send a [KeepAlive message](/api-reference/transcription/#stream-keepalive) to keep the connection open until you are ready to send audio.
+
+If you believe you're sending valid audio to Deepgram and are still getting a `NET-0001`, you may be running into potential network issues. To troubleshoot, test your network by making a cURL request to Deepgram using a Deepgram-hosted audio file. To learn how to do this, you can follow along with our guide on [generating transcripts from the terminal](/documentation/guides/save-transcripts-from-terminal/). If you’re unable to get a transcript using this method, something in your network may be preventing you from connecting to Deepgram.
 
 Another way to check that audio is successfully leaving your network is to capture a sample of your network traffic using a packet sniffer and network analysis tool like [Wireshark](https://www.wireshark.org/).
 
