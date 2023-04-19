@@ -1,13 +1,11 @@
 ---
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
-import Svg from "../shared/components/general/Svg.astro";
 import Icon from "../shared/components/general/Icon.astro";
 import Link from "../shared/components/general/Link.astro";
-import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
 import Button from "../shared/components/general/Button.astro";
 import { getUuid } from "../shared/util";
 
-const { class: classes, ...rest } = Astro.props;
+const { class: classes } = Astro.props;
 const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
 
 const formUuid = await getUuid();
