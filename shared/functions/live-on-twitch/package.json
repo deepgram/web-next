@@ -1,9 +1,0 @@
-{
-  "name": "@deepgram-web-functions/live-on-twitch",
-  "version": "0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^0.27.2"
-  }
-}

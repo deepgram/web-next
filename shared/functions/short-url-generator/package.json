@@ -1,9 +1,0 @@
-{
-  "name": "@deepgram-web-functions/short-url-generator",
-  "version": "0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "faunadb": "^4.6.0"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "name": "@deepgram-web-functions/forms",
-  "version": "0.0.1",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^0.27.2"
-  }
-}
