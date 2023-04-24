@@ -166,10 +166,6 @@
             "to": "/documentation/features/numerals/"
           },
           {
-            "name": "Profanity Filter",
-            "to": "/documentation/features/profanity-filter/"
-          },
-          {
             "name": "Redaction",
             "to": "/documentation/features/redact/"
           },

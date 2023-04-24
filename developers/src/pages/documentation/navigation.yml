@@ -30,8 +30,6 @@
       to: /documentation/features/language/
     - name: Punctuation
       to: /documentation/features/punctuate/
-    - name: Profanity Filter
-      to: /documentation/features/profanity-filter/
     - name: Redaction
       to: /documentation/features/redact/
     - name: Diarization
