@@ -6,7 +6,7 @@ import Button from "../shared/components/general/Button.astro";
 import { getUuid } from "../shared/util";
 
 const { class: classes } = Astro.props;
-const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
+const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN, PLAYGROUND_DOMAIN } = import.meta.env;
 
 const formUuid = await getUuid();
 ---
@@ -123,11 +123,12 @@ const formUuid = await getUuid();
 					<li><a href={`${WWW_DOMAIN}/solutions/voicebots`}>Conversational AI</a></li>
 				</ul>
 				<ul class="space-y-3 leading-tight">
-					<li class="uppercase font-bold">Docs</li>
+					<li class="uppercase font-bold">Developers</li>
 					<li><a href={DOCS_DOMAIN}>Documentation</a></li>
 					<li><a href={`${DOCS_DOMAIN}/documentation/guides`}>Guides</a></li>
 					<li><a href={`${DOCS_DOMAIN}/documentation/getting-started`}>Tutorials</a></li>
 					<li><a href={`${DOCS_DOMAIN}/api-reference`}>API Reference</a></li>
+					<li><a href={`${PLAYGROUND_DOMAIN}`}>API Playground</a></li>
 					<li><a href={`${DOCS_DOMAIN}/on-prem/`}>On-Prem Deployment</a></li>
 					<li><a href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs + Tools</a></li>
 					<li><a href={STATUS_DOMAIN}>Status</a></li>

@@ -6,7 +6,7 @@ import Button from "../shared/components/general/Button.astro";
 import DocSearch from "../shared/components/search/DocSearch";
 import Link from "../shared/components/general/Link.astro";
 
-const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN } = import.meta.env;
+const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, PLAYGROUND_DOMAIN } = import.meta.env;
 const pathname = Astro.url.pathname;
 ---
 
@@ -78,14 +78,11 @@ const pathname = Astro.url.pathname;
 						href={`${WWW_DOMAIN}/changelog`}
 						>Changelog
 					</Link>
-					<Link
-						primary
-						icon="arrow-top-right-on-square"
-						iconSuffix
-						iconStroke
-						class={`flex items-center hover:text-white font-bold text-cloud`}
-						href={`${BLOG_DOMAIN}/categories/tutorial`}
+					<Link primary icon="arrow-top-right-on-square" iconSuffix iconStroke class={`flex items-center hover:text-white font-bold text-cloud`} href={`${BLOG_DOMAIN}`}
 						>Blog Tutorials&nbsp;
+					</Link>
+					<Link primary icon="arrow-top-right-on-square" iconSuffix iconStroke class={`flex items-center hover:text-white font-bold text-cloud`} href={`${PLAYGROUND_DOMAIN}`}
+						>API Playground&nbsp;
 					</Link>
 				</nav>
 			</div>
@@ -171,6 +168,15 @@ const pathname = Astro.url.pathname;
 							}`}
 							href={`${BLOG_DOMAIN}/categories/tutorial`}
 							>Blog Tutorials
+						</Link>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
+								pathname.endsWith("tutorial") ? "text-white border-lightIris" : "text-cloud"
+							}`}
+							href={`${PLAYGROUND_DOMAIN}`}
+							>API Playground
 						</Link>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 					</nav>
