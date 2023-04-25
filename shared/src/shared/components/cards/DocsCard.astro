@@ -5,7 +5,7 @@ const { class: classes, doc } = Astro.props;
 
 <GenericDocsCard class={`w-full flex flex-col border border-darkCharcoal ${classes ? classes : ""}`} doc={doc}>
 	<header>
-		{doc.frontmatter.cover ? <img src={doc.frontmatter.cover} class="flex items-center justify-center w-full m-0 border-b border-darkCharcoal" /> : null}
+		{doc.frontmatter.cover ? <img src={doc.frontmatter.cover} class="flex items-center justify-center w-full m-0 border-b border-darkCharcoal" alt={`image titled ${doc.frontmatter.cover}`} /> : null}
 	</header>
 	<main class="docs-card flex flex-col p-4">
 		<h3 class="text-base mb-2">{doc.frontmatter.title}</h3>
