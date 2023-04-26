@@ -40,6 +40,10 @@
             "to": "/on-prem/required/deploy-aws-rhel-7/"
           },
           {
+            "name": "Deploying Required Components to AWS (RHEL 8)",
+            "to": "/on-prem/required/deploy-aws-rhel-8/"
+          },
+          {
             "name": "Maintaining Required Components",
             "to": "/on-prem/required/maintain-required-components/"
           }
