@@ -46,6 +46,14 @@ If something in the HTTP request doesn’t seem right, the server rejects the re
 
 A successfully opened WebSocket connection will stay alive until it is eventually closed by either the client or the server. When this occurs, a WebSocket Close frame (WebSocket Protocol specification, [section 5.5.1](https://tools.ietf.org/html/rfc6455#section-5.5.1)) will be returned. The body of the Close frame will indicate the reason for closing using one of the specification’s [pre-defined status codes](https://tools.ietf.org/html/rfc6455#section-7.4.1) followed by a UTF-8-encoded payload that represents the reason for the error. After sending a Close message, the endpoint considers the WebSocket connection closed and will close the underlying TCP connection.
 
+For your client application to close the WebSocket connection with Deepgram, send a JSON message to the server: `{ 'type': 'CloseStream' }`. The server will interpret it as a shutdown command, which means it will finish processing whatever data is still has cached, send the response to the client, send a summary metadata object, and then terminate the WebSocket connection.
+
+<Alert type="warning">
+
+Previously, Deepgram allowed connection closures by sending an empty byte message (for example, `Uint8Array(0)` in JavaScript, or `b''` in Python. Though this method is still available, it should be considered deprecated. If you notice your WebSocket connection closing suddenly but without an error, you may be sending an empty byte and triggering a closure.
+
+</Alert>
+
 ## Debugging Websocket Errors
 
 Websocket errors that you may experience fall into two major categories:
