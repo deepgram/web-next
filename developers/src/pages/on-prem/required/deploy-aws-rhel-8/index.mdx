@@ -795,12 +795,14 @@ key = "YOUR_LICENSE_KEY"
 server_url = "https://localhost:8443"
 ```
 
-#### Restart Docker
+#### Start Podman
 
-Restart Docker to begin directing licensing requests through the proxy:
+Start Podman to begin directing licensing requests through the proxy:
 
 ```bash
-docker-compose up -d
+podman run --rm -d --name deepgram-onprem-license-proxy --network=host \
+  docker.io/deepgram/onprem-license-proxy:1.4.0 -v serve \
+  --license-key "LICENSE_KEY" --host 0.0.0.0 --port 8443 --status-port 8089
 ```
 
 After restarting, test that an ASR request is processed as expected.
