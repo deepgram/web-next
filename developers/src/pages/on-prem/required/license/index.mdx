@@ -27,7 +27,7 @@ On-prem API keys may be created by Console project owners. Steps to create on-pr
 
 3. Click "Create a New API Key" on the API Keys page to open a key creation pop-up.
 
-4. Provide a name for your Key and set your key permission level. If you are unsure which permission to use, select Owner. Use the default expiration value "never" and click "Create Key" to create the key and be shown your new secret API key.
+4. Provide a name for your Key and set your key's role permission level. If you are unsure which role permission to use, select Member. Use the default expiration value "never" and click "Create Key" to create the key and be shown your new secret API key. For more information about role permissions in Console, refer to the [Roles](https://developers.deepgram.com/documentation/getting-started/roles/) documentation.
 
 5. Your new secret API key is shown to you. It is a 40 character alphanumeric string. Please copy this secret and save it somewhere safe. For security reasons, we can't show the secret to you again. You can always create a new key if you lose your old secret.
 
@@ -35,7 +35,7 @@ On-prem API keys may be created by Console project owners. Steps to create on-pr
 
 7. The pop-up will be dismissed and you will be back on the "API Keys" page where you can see your new on-prem API key and the On-prem products which are licensed to that key.
 
-8. You can use the secret from your onprem API key in your `api.toml`, `engine.toml`, and `docker-compose.yml` files in place of your legacy on-prem license key.
+8. You can use the secret from your onprem API key in your `api.toml`, `engine.toml`, and `docker-compose.yml` files in place of your legacy on-prem license key. On-prem API keys can also be used to make ASR requests against [https://api.deepgram.com](https://api.deepgram.com).
 
 ```
 # in api.toml & engine.toml
