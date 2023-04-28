@@ -1273,6 +1273,82 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 
 <div class="feature">
 	<header class="notranslate">
+		<div id="encoding-str">
+			<strong>encoding:</strong> string
+		</div>
+		{/* {" "}
+		boolean */}
+	</header>
+	<main>
+		<p>
+			Expected encoding of the submitted streaming audio. If this parameter is set, <code>sample_rate</code> must also be specified.
+		</p>
+		<ul class="info">
+			<li>
+				<p>Required when raw, headerless audio packets are sent to the streaming service. For containerized audio, pre-recorded audio, or audio submitted to the standard <code>/listen</code> endpoint, Deepgram will automatically detect the audio encoding and this parameter should not be used.</p>
+			</li>
+		</ul>
+		<p></p>
+		<p>Options include:</p>
+		<ul>
+			<li><p><code>linear16</code> 16-bit, little endian, signed PCM WAV data</p></li>
+			<li><p><code>flac</code> FLAC-encoded data</p></li>
+			<li><p><code>mulaw</code> mu-law encoded WAV data</p></li>
+			<li><p><code>amr-nb</code> adaptive multi-rate narrowband codec</p></li>
+			<li><p><code>amr-wb</code> adaptive multi-rate wideband codec</p></li>
+			<li><p><code>opus</code> Ogg Opus</p></li>
+			<li><p><code>speex</code> Ogg Speex</p></li>
+		</ul>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/encoding/">Features: Encoding</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="channels-str">
+			<strong>channels:</strong> integer
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Number of independent audio channels contained in submitted streaming audio. Only read when a value is provided for <code>encoding</code>.
+		</p>
+		<p class="notranslate">
+			<strong>Default:</strong> 1
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/channels/">Features: Channels</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
+		<div id="sample_rate-str">
+			<strong>sample_rate:</strong> integer
+		</div>
+		{/* {" "}
+		string */}
+	</header>
+	<main>
+		<p>
+			Sample rate of submitted streaming audio. Required (and only read) when a value is provided for <code>encoding</code>.
+		</p>
+		<p>
+			To learn more, see
+			<a href="/documentation/features/sample-rate/">Features: Sample Rate</a>.
+		</p>
+	</main>
+</div>
+
+<div class="feature">
+	<header class="notranslate">
 		<div id="tier-str">
 			<p><strong>tier:</strong> string</p>
 		</div>
@@ -2040,82 +2116,6 @@ Deepgram does not store transcriptions. Make sure to save output or [return tran
 		<p>
 			To learn more, see
 			<a href="/documentation/features/endpointing/">Features: Endpointing</a>.
-		</p>
-	</main>
-</div>
-
-<div class="feature">
-	<header class="notranslate">
-		<div id="encoding-str">
-			<strong>encoding:</strong> string
-		</div>
-		{/* {" "}
-		boolean */}
-	</header>
-	<main>
-		<p>
-			Expected encoding of the submitted streaming audio. If this parameter is set, <code>sample_rate</code> must also be specified.
-		</p>
-		<ul class="info">
-			<li>
-				<p>Required when raw, headerless audio packets are sent to the streaming service. For containerized audio, pre-recorded audio, or audio submitted to the standard <code>/listen</code> endpoint, Deepgram will automatically detect the audio encoding and this parameter should not be used.</p>
-			</li>
-		</ul>
-		<p></p>
-		<p>Options include:</p>
-		<ul>
-			<li><p><code>linear16</code> 16-bit, little endian, signed PCM WAV data</p></li>
-			<li><p><code>flac</code> FLAC-encoded data</p></li>
-			<li><p><code>mulaw</code> mu-law encoded WAV data</p></li>
-			<li><p><code>amr-nb</code> adaptive multi-rate narrowband codec</p></li>
-			<li><p><code>amr-wb</code> adaptive multi-rate wideband codec</p></li>
-			<li><p><code>opus</code> Ogg Opus</p></li>
-			<li><p><code>speex</code> Ogg Speex</p></li>
-		</ul>
-		<p>
-			To learn more, see
-			<a href="/documentation/features/encoding/">Features: Encoding</a>.
-		</p>
-	</main>
-</div>
-
-<div class="feature">
-	<header class="notranslate">
-		<div id="channels-str">
-			<strong>channels:</strong> integer
-		</div>
-		{/* {" "}
-		string */}
-	</header>
-	<main>
-		<p>
-			Number of independent audio channels contained in submitted streaming audio. Only read when a value is provided for <code>encoding</code>.
-		</p>
-		<p class="notranslate">
-			<strong>Default:</strong> 1
-		</p>
-		<p>
-			To learn more, see
-			<a href="/documentation/features/channels/">Features: Channels</a>.
-		</p>
-	</main>
-</div>
-
-<div class="feature">
-	<header class="notranslate">
-		<div id="sample_rate-str">
-			<strong>sample_rate:</strong> integer
-		</div>
-		{/* {" "}
-		string */}
-	</header>
-	<main>
-		<p>
-			Sample rate of submitted streaming audio. Required (and only read) when a value is provided for <code>encoding</code>.
-		</p>
-		<p>
-			To learn more, see
-			<a href="/documentation/features/sample-rate/">Features: Sample Rate</a>.
 		</p>
 	</main>
 </div>
