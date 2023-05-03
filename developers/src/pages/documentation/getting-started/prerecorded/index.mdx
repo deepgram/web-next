@@ -9,9 +9,12 @@ seo:
   metaDescription: "A quick introduction to getting transcription data from pre-recorded audio files using a web application, Deepgram's API, and Deepgram SDKs."
   keywords: "pre-recorded, prerecorded, audio, transcribe, transcription, speech recognition, quick start, quickstart, sdk"
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
-import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
-import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
+import Callout from "../../../../shared/components/global/Callout.astro";
+import Icon from "../../../../shared/components/general/Icon.astro";
 
 # {frontmatter.title}
 
@@ -20,6 +23,16 @@ import CodeGroup from '../../../../shared/components/code/CodeGroup.astro';
 **¿Prefieres español?** Ver [Tutorial del API endpoint para audios pre-grabados](/documentation/getting-started/prerecorded-es/).
 
 </Alert>
+
+<Callout title="NOTEBOOK">
+	Prefer the workflow of a Python notebook? Download our Python starter notebook and be up and running quickly without having to copy or paste any code.
+
+    <a href="/notebooks/QuickStart_Deepgram_Pre_Recorded_Audio_Notebook.ipynb" class="flex items-center py-1 mt-2" download="quickstart.ipynb">
+    	<Icon class="mr-2" icon="cloud-download" />
+    	Pre-recorded audio notebook
+    </a>
+
+</Callout>
 
 In this guide, you'll learn how to automatically transcribe pre-recorded audio files using Deepgram's SDKs, which are supported for use with the [Deepgram API](/api-reference/).
 
@@ -31,7 +44,7 @@ Before you run the code, you'll need to do a few things.
 
 Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
 
-- $150 in credit, which gives you access to:
+- $200 in credit, which gives you access to:
   - all base [models](/documentation/features/model/)
   - pre-recorded and [live streaming](/documentation/getting-started/streaming/) functionality
   - all [features](/documentation/features/)
@@ -96,6 +109,12 @@ pip install deepgram-sdk
 
 In your terminal, create a new file in your project's location, and populate it with code.
 
+<Alert type="info">
+
+The following example includes the parameter `model=nova`, which tells the API to use Deepgram's most powerful and affordable model. Removing this parameter will result in the API using the default model, which is currently `model=general`.
+
+</Alert>
+
 <CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
 <CodeBlock tab="Node.js" active>
@@ -145,6 +164,7 @@ if (file.startsWith("http")) {
 deepgram.transcription
 	.preRecorded(source, {
 		punctuate: true,
+		model: "nova",
 	})
 	.then((response) => {
 		// Write the response to the console
@@ -209,7 +229,8 @@ async def main():
     deepgram.transcription.prerecorded(
       source,
       {
-        'punctuate': True
+        'punctuate': True,
+        'model': 'nova',
       }
     )
   )
@@ -357,6 +378,12 @@ To customize the transcripts you receive, you can send a variety of parameters t
 
 For example, if your audio is in Spanish rather than English, you can pass the `language:` parameter with the `es` option to the `transcription.prerecorded` method in the previous examples:
 
+<Alert type="warning">
+
+Not all languages work with all available models. Be sure to check out the [Languages](/documentation/features/language/) page to see which models are compatible with which languages.
+
+</Alert>
+
 <CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
 <CodeBlock tab="Node.js" active>
@@ -364,7 +391,7 @@ For example, if your audio is in Spanish rather than English, you can pass the `
 ```js
 deepgram.transcription.preRecorded(source, {
 	punctuate: true,
-	language: es,
+	language: "es",
 });
 ```
 

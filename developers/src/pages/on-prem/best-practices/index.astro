@@ -1,0 +1,28 @@
+---
+import Layout from "../../../layouts/OnPrem.astro";
+import DocsCardList from "../../../shared/components/lists/DocsCardList.astro";
+import DocsCard from "../../../shared/components/cards/DocsCard.astro";
+
+const optionalComponents = await Astro.glob("./**/index.mdx");
+---
+
+<Layout>
+	<article>
+		<h1>Best Practices</h1>
+		<!-- <h2 slot="title" class="text-stone uppercase">Pre-Requisites</h2> -->
+		<DocsCardList>
+			{optionalComponents.map((guide) => <DocsCard class={`flex w-full flex-col`} doc={guide} />)}
+		</DocsCardList>
+	</article>
+</Layout>
+<style is:global>
+	/* Overrides prose styles */
+	.post-prose h1 {
+		@apply mb-10;
+	}
+
+	.post-prose h3 {
+		@apply mt-0;
+		@apply text-base;
+	}
+</style>

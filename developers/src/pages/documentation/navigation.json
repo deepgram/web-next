@@ -15,7 +15,12 @@
           {
             "name": "Getting Started with Live Streaming Audio",
             "to": "/documentation/getting-started/streaming/"
+          },
+          {
+            "name": "Nova Quickstart",
+            "to": "/documentation/getting-started/nova-quickstart/"
           }
+
         ]
       },
       {
@@ -224,6 +229,17 @@
     "to": "/documentation/guides/",
     "children": [
       {
+        "name": "Models",
+        "to": "/documentation/models/",
+        "static": true,
+        "children": [
+          {
+            "name": "Deepgram Whisper Cloud",
+            "to": "/documentation/guides/deepgram-whisper-cloud/"
+          }
+        ]
+      },
+      {
         "name": "Tips and Tricks",
         "to": "/documentation/transcription-tips/",
         "static": true,
@@ -239,6 +255,10 @@
           {
             "name": "Determining Your Audio Format for Live Streaming Audio",
             "to": "/documentation/guides/determine-audio-format/"
+          },
+          {
+            "name": "Getting Started With the Streaming Test Suite",
+            "to": "/documentation/guides/streaming-test-suite/"
           },
           {
             "name": "Using Callbacks to return Transcripts to Your Server",

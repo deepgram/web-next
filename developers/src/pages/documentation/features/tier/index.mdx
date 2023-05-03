@@ -9,18 +9,31 @@ seo:
   metaDescription: Learn about Deepgram's Tier feature, which allows you to associate your API requests with a specific tier.
   keywords: tier, billing, model, enhanced
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
-import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
-import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+import Alert from '../../../../shared/components/global/Alert.astro';
+import CodeBlock from '../../../../shared/components/code/CodeBlock.astro';
+import CodeGroup from '../../../../shared/components/code/CodeGroup.astro';
 
 # {frontmatter.title}
 
 <div class="badge">PRE-RECORDED</div>
 <div class="badge">STREAMING</div>
 
-Deepgram’s Tier feature allows you to associate your API requests with a specific tier, which indicates the level of model you would like to use in your request.
+Deepgram's Tier feature allows you to associate your API requests with a specific tier architecture, which indicates the level of model you would like to use in your request.
 
-For self-serve customers, Deepgram provides Enhanced and Base model tiers. Enhanced models are our newest, most powerful ASR models. Enhanced models generally have higher accuracy with better word recognition than our Base models and they handle uncommon words significantly better. Base models are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness. Once you have chosen your tier and model, you can select an available language and a version. To learn more about models, see [Models](/documentation/features/model/). To learn more about pricing, see [Deepgram Pricing & Plans](https://deepgram.com/pricing/).
+For self-serve customers, Deepgram provides the following architectures.
+
+* **Nova** models are our newest and most powerful speech-to-text models on the market today. Nova's vast and diverse training data sets it apart.  Nova's performance is an incredible 22% better than the competition, making it the top choice for applications that demand high accuracy in diverse contexts. It's also our most cost effective model to use.
+
+* **Enhanced** models are still some of our most powerful ASR models. Enhanced models generally have higher accuracy with better word recognition than our Base models and they handle uncommon words significantly better.
+
+* **Base** models are built on our signature end-to-end deep learning speech model architecture and offer a solid combination of accuracy and cost effectiveness.
+
+
+
+<Alert type="info">
+  To learn more about models, see [Models](/documentation/features/model/). To learn more about pricing, see [Deepgram Pricing & Plans](https://deepgram.com/pricing/).
+
+</Alert>
 
 ## Use Cases
 
@@ -70,10 +83,12 @@ curl \
 
 ### Tier Options
 
-For self-serve customers, Deepgram provides Enhanced and Base models. To learn more about pricing, see [Deepgram Pricing & Plans](https://deepgram.com/pricing/). To learn about which models are available for which tiers, see [Models](/documentation/features/model/).
+For self-serve customers, Deepgram provides Nova, Enhanced and Base models. To learn more about pricing, see [Deepgram Pricing & Plans](https://deepgram.com/pricing/). To learn about which models are available for which tiers, see [Models](/documentation/features/model/).
 
-- `enhanced`: Allows you to use Enhanced models, which are our newest, most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.
-- `base`: Allows you to use Base models, which are built on our signature end-to-end deep learning speech model architecture. They offer a solid combination of accuracy and cost effectiveness.
+
+- `Nova`: our newest and most powerful speech-to-text model on the market today; they are the top choice for applications that demand high accuracy in diverse contexts. They are also our most cost effective models to use.
+- `Enhanced`: still some of our most powerful ASR models; they generally have higher accuracy and better word recognition than our Base models, and they handle uncommon words significantly better.
+- `Base`: built on our signature end-to-end deep learning speech model architecture. They offer a solid combination of accuracy and cost effectiveness in some cases.
 
 <Alert type="warning">
 

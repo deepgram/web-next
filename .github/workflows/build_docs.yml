@@ -4,15 +4,15 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: 
+    paths:
     - 'developers/**'
     - 'shared/**'
   pull_request:
     branches: [main]
-    paths: 
+    paths:
     - 'developers/**'
     - 'shared/**'
-    
+
 jobs:
   docs:
     name: Build Docs
@@ -58,6 +58,7 @@ jobs:
           echo "DOCS_DOMAIN=https://developers.deepgram.com" >> $GITHUB_ENV
           echo "CONSOLE_DOMAIN=https://console.deepgram.com" >> $GITHUB_ENV
           echo "STATUS_DOMAIN=https://status.deepgram.com" >> $GITHUB_ENV
+          echo "PLAYGROUND_DOMAIN=https://playground.deepgram.com" >> $GITHUB_ENV
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Set up Node.js

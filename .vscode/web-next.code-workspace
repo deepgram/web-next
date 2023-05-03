@@ -1,14 +1,6 @@
 {
 	"folders": [
 		{
-			"name": "www",
-			"path": "../www"
-		},
-		{
-			"name": "cms",
-			"path": "../cms"
-		},
-		{
 			"name": "blog",
 			"path": "../blog"
 		},
@@ -19,10 +11,6 @@
 		{
 			"name": "shared",
 			"path": "../shared"
-		},
-		{
-			"name": "content",
-			"path": "../content"
 		},
 		{
 			"name": "next-web root",

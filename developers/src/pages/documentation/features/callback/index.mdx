@@ -88,6 +88,7 @@ Depending on the type of submitted audio, the response will vary.
 ### Pre-recorded Audio
 
 When Deepgram has finished analyzing the audio, it will send a `POST` request to the provided callback URL with an appropriate HTTP status code.
+If the HTTP status code of the response to the callback POST request is unsuccessful (not 200-299), Deepgram will retry the callback up to 10 times with a 30 second delay between attempts.
 
 ### Streaming Audio
 
