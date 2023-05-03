@@ -1,0 +1,201 @@
+---
+layout: ../../../../layouts/Documentation.astro
+title: Entity Detection
+description: Learn about Deepgram's Entity Detection feature, which identifies and extracts key entities from content in submitted audio.
+tags: [entity-detection, pre-recorded]
+order: 20
+seo:
+  metaTitle: Entity Detection
+  metaDescription: Learn about Deepgram's Entity Detection feature, which identifies and extracts key entities from content in submitted audio.
+  keywords: entity detection, detect, entity, entities
+---
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
+
+<div class="badge">PRE-RECORDED</div>
+<div class="badge">BETA</div>
+
+# {frontmatter.title}
+
+Deepgram’s Entity Detection feature identifies and extracts key entities from content in submitted audio and returns these entities in the JSON response. When Entity Detection is enabled, the [Punctuation](/documentation/features/punctuate/) feature will be enabled by default.
+
+<Alert type="warning">
+
+This feature is available for English only ([all available regions](/documentation/features/language/#enable-feature)).
+
+</Alert>
+
+## Use Cases
+
+Some examples of uses for Entity Detection include:
+
+- Customers who want to improve Conversational AI and Voice Assistant by triggering particular workflows and responses based on identified name, address, location, and other key entities.
+- Customers who want to enhance customer service and user experience by extracting meaningful and relevant information about key entities such as a person, organization, email, and phone number.
+- Customers who want to derive meaningful and actionable insights from the audio data based on identified entities in conversations.
+
+## Enable Feature
+
+To enable Entity Detection, when you call Deepgram’s API, add a `detect_entities` parameter set to `true` in the query string:
+
+<Alert type="warning">
+
+When Entity Detection is enabled, [Punctuation](/documentation/features/punctuate/) will also be enabled by default.
+
+</Alert>
+
+`detect_entities=true&punctuate=true`
+
+To transcribe audio from a file on your computer, run the following cURL command in a terminal or your favorite API client.
+
+<Alert type="info">
+
+Be sure to replace `YOUR_DEEPGRAM_API_KEY` with your Deepgram API Key. You can [create an API Key](/documentation/getting-started/authentication/#create-an-api-key) in the [Deepgram Console](https://console.deepgram.com).
+
+</Alert>
+
+<CodeGroup title="curl">
+
+<CodeBlock label="curl" active>
+
+```curl
+curl \
+  --request POST \
+  --header 'Authorization: Token YOUR_DEEPGRAM_API_KEY' \
+  --header 'Content-Type: audio/wav' \
+  --data-binary @youraudio.wav \
+  --url 'https://api.deepgram.com/v1/listen?detect_entities=true&punctuate=true'
+```
+
+</CodeBlock>
+
+</CodeGroup>
+
+## Analyze Response
+
+When the file is finished processing (often after only a few seconds), you’ll receive a JSON response that has the following basic structure:
+
+```json
+{
+  "metadata": {
+    "transaction_key": "string",
+    "request_id": "string",
+    "sha256": "string",
+    "created": "string",
+    "duration": 0,
+    "channels": 0
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives":[],
+      }
+    ]
+  }
+```
+
+Let's look more closely at the `alternatives` object:
+
+```json
+"alternatives":[
+  {
+    "transcript":"Welcome to the Ai show. I'm Scott Stephenson, cofounder of Deepgram...",
+    "confidence":0.9816771,
+    "words": [...],
+    "entities":[
+      {
+        "label":"NAME",
+        "value":" Scott Stephenson",
+        "confidence":0.9999924,
+        "start_word":6,
+        "end_word":8
+      },
+      {
+        "label":"ORG",
+        "value":" Deepgram",
+        "confidence":0.9999757,
+        "start_word":10,
+        "end_word":11
+      },
+      {
+        "label": "CARDINAL_NUM",
+        "value": "one",
+        "confidence": 1,
+        "start_word": 186,
+        "end_word": 187
+      },
+      ...
+    ]
+  }
+]
+```
+
+In this response, we see that each alternative contains:
+
+- `transcript`: Transcript for the audio being processed.
+- `confidence`: Floating point value between 0 and 1 that indicates overall transcript reliability. Larger values indicate higher confidence.
+- `words`: Object containing each word in the transcript, along with its start time and end time (in seconds) from the beginning of the audio stream, and a confidence value.
+- `entities`: Object containing the information about entities for the audio being processed.
+
+And we see that each `entities` object contains:
+
+- `label`: Type of entity identified.
+- `value`: Text of entity identified.
+- `confidence`: Floating point value between 0 and 1 that indicates entity reliability. Larger values indicate higher confidence.
+- `start_word`: Location of the first character of the first word in the section of audio being inspected for entities.
+- `end_word`: Location of the first character of the last word in the section of audio being inspected for entities.
+
+<Alert type="info">
+
+By default, Deepgram applies its Base-tier, general AI model, which is a good, general-purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
+
+</Alert>
+
+## Identifiable Entities
+
+<Alert type="info">
+
+All entities are available in English.
+
+</Alert>
+
+Entities that our API can identify include the following:
+
+| Label            | Description                                                                  | Spoken Example                                                    | Written Example                        |
+| ---------------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------- | -------------------------------------- |
+| NAME             | Person names, including fictional characters                                 | Henry Cavill                                                      | Henry Cavill                           |
+| ORG              | Organizations, including companies, government, and non-profit organizations | Bank of Switzerland                                               | Bank of Switzerland                    |
+| ORG_PROD         | Products of organizations                                                    | iPhone                                                            | iPhone                                 |
+| LOCATION         | Geographic locations, including famous buildings and places                  | Statue of Liberty                                                 | Statue of Liberty                      |
+| LANGUAGE         | Human-spoken languages                                                       | Spanish                                                           | Spanish                                |
+| GENDER           | Genders                                                                      | female                                                            | female                                 |
+| EMAIL            | Email strings                                                                | duygu at deepgram dot com                                         | duygu<span>@</span>deepgram.com        |
+| URL              | URL strings                                                                  | www deepgram dot com                                              | ww<span>w</span>.deepgram.com          |
+| CARDINAL_NUM     | Cardinal numbers, including floating points                                  | twenty five                                                       | 25                                     |
+| ORDINAL_NUM      | Ordinal numbers                                                              | twenty fifth                                                      | 25th                                   |
+| DATE             | Dates, including weekdays, months, and years                                 | after fifth May                                                   | after 5th May                          |
+| TIME             | Times of the day                                                             | two pm                                                            | 14:00 pm                               |
+| MONEY            | Money entities                                                               | five thousand euro                                                | 5000 Euro                              |
+| QUANTITY         | Amounts with units                                                           | five grams                                                        | 5 g                                    |
+| PERCENT          | Percentages                                                                  | twenty five percent                                               | 25%                                    |
+| US_PHONE_NUM     | US phone numbers, both international and domestic                            | five five five three oh seven two                                 | 555-3072                               |
+| PHONE_NUM        | General phone numbers                                                        | oh five three oh seven two one                                    | 0 530 721                              |
+| LOCATION_ADDRESS | Open address strings                                                         | one hundred chestnut street, chicago, illinois six oh six one one | 100 Chestnut Street, Chicago, IL 60611 |
+| LOCATION_CITY    | City names                                                                   | Chicago                                                           | Chicago                                |
+| LOCATION_STATE   | State names                                                                  | Illinois                                                          | Illinois                               |
+| LOCATION_TOWN    | Town names                                                                   | Worcester                                                         | Worcester                              |
+| LOCATION_ZIP     | ZIP strings                                                                  | six six one one one                                               | 66111                                  |
+| LOCATION_COUNTRY | Country names                                                                | Cambodia                                                          | Cambodia                               |
+| ACCOUNT_NUM      | Account numbers                                                              | one two eight oh eight six                                        | 128086                                 |
+| CARD_NUM         | Credit card numbers                                                          | four one one one one one one one one one one one one one one one  | 4111111111111111                       |
+| CVV_NUM          | Credit card verification values                                              | five five five                                                    | 555                                    |
+| CARD_EXPIRY_DATE | Credit card expiration dates                                                 | eleven twenty five                                                | 11/25                                  |
+| SSN_NUM          | US social security numbers                                                   | one one one two two oh oh oh oh                                   | 111-22-0000                            |
+| COMMS_CHAN       | Radio channel names                                                          | channel eleven                                                    | channel 11                             |
+| NATO_ALPHA       | Spelling descriptions with letters and words                                 | t as in Texas                                                     | t as in Texas                          |
+| MULTIPLICATIVE   | Multiplicative expressions                                                   | three times                                                       | three times                            |
+| SEQUENCE         | Sequences of numbers that don't fall into other numeric categories           | five five seven                                                   | 5 5 7                                  |
+| EMOTION          | Names of emotions                                                            | happiest customer ever                                            | happiest customer ever                 |
+
+All entities are available in English.
