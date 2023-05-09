@@ -40,6 +40,10 @@
             "to": "/on-prem/required/deploy-aws-rhel-7/"
           },
           {
+            "name": "Deploying Required Components to AWS (RHEL 8)",
+            "to": "/on-prem/required/deploy-aws-rhel-8/"
+          },
+          {
             "name": "Maintaining Required Components",
             "to": "/on-prem/required/maintain-required-components/"
           }
@@ -144,6 +148,22 @@
             "to": "/on-prem/optional/best-practices-hotpepper/"
           }
         ]
+      }
+    ]
+  },
+  {
+    "name": "Best Practices",
+    "to": "/on-prem/best-practices/",
+    "children": [
+      {
+        "name": "On-Prem Metrics Guide",
+        "to": "/on-prem/best-practices/metrics-guide/",
+        "static": false
+      },
+      {
+        "name": "Prometheus Integration",
+        "to": "/on-prem/best-practices/prometheus-integration/",
+        "static": false
       }
     ]
   }

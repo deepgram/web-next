@@ -5,12 +5,8 @@ import "../shared/components/search/DocSearch.css";
 import Button from "../shared/components/general/Button.astro";
 import DocSearch from "../shared/components/search/DocSearch";
 import Link from "../shared/components/general/Link.astro";
-import MobileNavItem from "../shared/components/nav/MobileNavItem.astro";
-import MobileNavMenu from "../shared/components/nav/MobileNavMenu.astro";
-import MobileNavMenuItem from "../shared/components/nav/MobileNavMenuItem.astro";
-import Svg from "../shared/components/general/Svg.astro";
 
-const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
+const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, PLAYGROUND_DOMAIN } = import.meta.env;
 const pathname = Astro.url.pathname;
 ---
 
@@ -22,7 +18,7 @@ const pathname = Astro.url.pathname;
 			<div class="logo col-span-2 sm:mt-4 sm:mb-4 w-auto stroke-transparent text-left">
 				<Link href={DOCS_DOMAIN} class="max-h-full">
 					<span class="sr-only">Deepgram</span>
-					<img class="h-[24px]" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
+					<img class="h-[24px]" src="/images/dg-wordmark-white.svg" alt="DG Docs logo" />
 					<!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] md:h-[2.3125rem] w-auto text-fireEngine" /> -->
 				</Link>
 			</div>
@@ -82,14 +78,11 @@ const pathname = Astro.url.pathname;
 						href={`${WWW_DOMAIN}/changelog`}
 						>Changelog
 					</Link>
-					<Link
-						primary
-						icon="arrow-top-right-on-square"
-						iconSuffix
-						iconStroke
-						class={`flex items-center hover:text-white font-bold text-cloud`}
-						href={`${BLOG_DOMAIN}/categories/tutorial`}
+					<Link primary icon="arrow-top-right-on-square" iconSuffix iconStroke class={`flex items-center hover:text-white font-bold text-cloud`} href={`${BLOG_DOMAIN}`}
 						>Blog Tutorials&nbsp;
+					</Link>
+					<Link primary icon="arrow-top-right-on-square" iconSuffix iconStroke class={`flex items-center hover:text-white font-bold text-cloud`} href={`${PLAYGROUND_DOMAIN}`}
+						>API Playground&nbsp;
 					</Link>
 				</nav>
 			</div>
@@ -102,7 +95,7 @@ const pathname = Astro.url.pathname;
 					<div class="mr-[2.875rem]">
 						<Link href={WWW_DOMAIN} class="flex">
 							<span class="sr-only">Deepgram</span>
-							<img class="h-full" src="/images/DG-Docs-type.svg" alt="DG Docs logo" />
+							<img class="h-6" src="/images/dg-wordmark-white.svg" alt="DG Docs logo" />
 							<!-- <Svg name="deepgram" class="my-[1.125rem] h-[1.82rem] w-auto text-dgRed" /> -->
 						</Link>
 					</div>
@@ -177,12 +170,21 @@ const pathname = Astro.url.pathname;
 							>Blog Tutorials
 						</Link>
 						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
+						<Link
+							primary
+							class={`group w-full flex items-center py-4 px-6 lg:px-10 hover:text-white font-bold  border-b-4 border-transparent ${
+								pathname.endsWith("tutorial") ? "text-white border-lightIris" : "text-cloud"
+							}`}
+							href={`${PLAYGROUND_DOMAIN}`}
+							>API Playground
+						</Link>
+						<div class="mx-6 lg:mx-10 border-b-2 border-steel"></div>
 					</nav>
 				</div>
 			</div>
 			<div class="bg-black grid grid-cols-2 grid-rows-2 gap-4 p-6 shadow-menu">
 				<Link href={`${CONSOLE_DOMAIN}/login`} class="button button--small button--secondary button--block">Log In</Link>
-				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--small button--tertiary button--block">Free API Key</Link>
+				<Link href={`${CONSOLE_DOMAIN}/signup`} class="button button--small text-darkCharcoal bg-white button--block">Free API Key</Link>
 				<Link href={`${WWW_DOMAIN}/contact-us`} class="col-span-2 button button--small button--primary button--block">Contact Us</Link>
 			</div>
 		</div>

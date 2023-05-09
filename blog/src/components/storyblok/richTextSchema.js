@@ -50,8 +50,7 @@ export default {
 				singleTag: "br",
 			};
 		},
-    heading(node) {
-      console.log('Heading: ', node.content[0].text)
+		heading(node) {
 			const newAttrs = { ...node.attrs, id: slugify(node.content[0].text, { lower: true }), style: "scroll-margin-top: 4.6rem" };
 
 			return {
@@ -90,6 +89,16 @@ export default {
 		},
 	},
 	marks: {
+		subscript() {
+			return {
+				tag: "sub",
+			};
+		},
+		superscript() {
+			return {
+				tag: "sup",
+			};
+		},
 		bold() {
 			return {
 				tag: "b",

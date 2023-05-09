@@ -11,44 +11,57 @@ const sortedGuides = guides.sort((a, b) => {
 
 <Layout>
 	<article>
-		<h1>Features</h1>
+		<h1>Overview</h1>
+
+		<p>
+			Below is a list of all the capabilities of Deepgram models and features. For more details on any of these models or features please refer to the corresponding documentation.
+		</p>
+		<br />
+
+		<h2>Deepgram Models</h2>
+
 		<div class="overflow-x-auto -mr-0 xl:-mr-64">
-			<table border="2">
-				<thead>
-					<tr>
-						<th scope="col" colspan="3">Feature</th>
-						<th scope="col">Pre-recorded?</th>
-						<th scope="col">Streaming?</th>
-						<th scope="col">Language(s)</th>
-					</tr>
-				</thead>
+			<table>
+				<tr>
+					<th style="width: 150px;" scope="col" colspan="1"><a href="/documentation/features/model/">Model</a></th>
+					<th style="width: 100px;" scope="col" colspan="1"><a href="/documentation/features/tier/">Tier</a></th>
+					<th style="width: 125px;" scope="col" colspan="1">Pre-recorded?</th>
+					<th style="width: 100px;" scope="col" colspan="1">Streaming?</th>
+					<th style="width: 200px;" scope="col" colspan="1">Language(s)</th>
+				</tr>
+
 				<tbody>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/tier/">Tier</a><a href="/documentation/features/tier/"> </a></th>
+						<td><code>general</code></td>
+						<td>Nova</td>
 						<td>Yes</td>
 						<td>Yes</td>
-						<td> <a href="/documentation/features/language/">Depends on Model</a><a href="/documentation/features/language/"> </a></td>
-					</tr>
-					<tr>
-						<td rowspan="13"> <a href="/documentation/features/model/">Model</a><a href="/documentation/features/model/"> </a></td>
+						<td><code>en</code>, <code>en-US</code>, <code>en-AU</code>, <code>en-GB</code>, <code>en-NZ</code>, <code>en-IN</code></td>
 					</tr>
 					<tr>
 						<td><code>general</code></td>
 						<td>Enhanced</td>
 						<td>Yes</td>
 						<td>Yes</td>
-						<td><code>en</code>, <code>en-US</code>, <code>es</code></td>
+						<td> <a href="/documentation/features/language/#language-options">See supported languages</a></td>
 					</tr>
 					<tr>
 						<td><code>general</code></td>
 						<td>Base</td>
 						<td>Yes</td>
 						<td>Yes</td>
-						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
+						<td> <a href="/documentation/features/language/#language-options">See supported languages</a></td>
 					</tr>
 					<tr>
 						<td><code>phonecall</code></td>
-						<td>Enhanced <em>beta</em></td>
+						<td>Nova</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td><code>en</code>, <code>en-US</code>, <code>en-AU</code>, <code>en-GB</code>, <code>en-NZ</code>, <code>en-IN</code></td>
+					</tr>
+					<tr>
+						<td><code>phonecall</code></td>
+						<td>Enhanced</td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td><code>en</code>, <code>en-US</code></td>
@@ -72,7 +85,7 @@ const sortedGuides = guides.sort((a, b) => {
 					</tr>
 					<tr>
 						<td><code>meeting</code></td>
-						<td>Enhanced <em>beta</em></td>
+						<td>Enhanced</td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td><code>en</code>, <code>en-US</code></td>
@@ -112,149 +125,202 @@ const sortedGuides = guides.sort((a, b) => {
 						<td>Yes</td>
 						<td><code>en</code>, <code>en-US</code></td>
 					</tr>
+				</tbody>
+			</table>
+
+			<h2>Other Models</h2>
+			<tdead> </tdead><table>
+				<tr>
+					<th style="width: 150px;" scope="col" colspan="1"><a href="/documentation/features/model/">Model</a></th>
+					<th style="width: 100px;" scope="col" colspan="1"><a href="/documentation/features/tier/">Tier</a></th>
+					<th style="width: 125px;" scope="col" colspan="1">Pre-recorded?</th>
+					<th style="width: 100px;" scope="col" colspan="1">Streaming?</th>
+					<th style="width: 200px;" scope="col" colspan="1">Language(s)</th>
+				</tr>
+
+				<tbody>
 					<tr>
-						<td>Custom models</td>
-						<td>Enhanced & Base</td>
+						<td><code>Whisper Cloud</code></td>
+						<td>N/A</td>
 						<td>Yes</td>
-						<td>Yes</td>
-						<td>Available in the language they are built in.</td>
+						<td>No</td>
+						<td><a href="/documentation/guides/deepgram-whisper-cloud/#language-detection">See supported languages</a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/version/">Version</a><a href="/documentation/features/version/"> </a></th>
+						<td><code>Custom models</code></td>
+						<td>Enhanced & Base</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td><a href="/documentation/guides/deepgram-whisper-cloud/">All available</a></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Audio Intelligence Features</h2>
+			<tdead> </tdead><table>
+				<tr>
+					<th style="width: 200px;" scope="col" colspan="1">Feature</th>
+					<th style="width: 125px;" scope="col" colspan="1">Pre-recorded?</th>
+					<th style="width: 100px;" scope="col" colspan="1">Streaming?</th>
+					<th style="width: 250px;" scope="col" colspan="1">Language(s)</th>
+				</tr>
+
+				<tbody>
+					<tr>
+						<td> <a href="/documentation/features/detect-topics/">Topic Detection</a><a href="/documentation/features/detect-topics/"> </a></td>
+						<td>Yes</td>
+						<td>No</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<td> <a href="/documentation/features/detect-entities/">Entity Detection (beta)</a><a href="/documentation/features/detect-entities/"> </a></td>
+						<td>Yes</td>
+						<td>No</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<td> <a href="/documentation/features/redact/">Redaction</a><a href="/documentation/features/redact/"> </a></td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+					<tr>
+						<td> <a href="/documentation/features/summarize/">Summarization</a><a href="/documentation/features/summarize/"> </a></td>
+						<td>Yes</td>
+						<td>No</td>
+						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Core Features</h2>
+			<tdead> </tdead><table>
+				<tr>
+					<th style="width: 200px;" scope="col" colspan="1">Feature</th>
+					<th style="width: 125px;" scope="col" colspan="1">Pre-recorded?</th>
+					<th style="width: 100px;" scope="col" colspan="1">Streaming?</th>
+					<th style="width: 250px;" scope="col" colspan="1">Language(s)</th>
+				</tr>
+
+				<tbody>
+					<tr>
+						<td><a href="/documentation/features/version/">Version</a><a href="/documentation/features/version/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/detect-language/">Language Detection</a><a href="/documentation/features/detect-language/"> </a></th>
+						<td> <a href="/documentation/features/detect-language/">Language Detection</a><a href="/documentation/features/detect-language/"> </a></td>
 						<td>Yes</td>
 						<td>No</td>
 						<td> <a href="/documentation/features/language/">All not in beta</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/punctuate/">Punctuation</a><a href="/documentation/features/punctuate/"> </a></th>
+						<td> <a href="/documentation/features/punctuate/">Punctuation</a><a href="/documentation/features/punctuate/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/profanity-filter/">Profanity Filter</a><a href="/documentation/features/profanity-filter/"> </a></th>
+						<td> <a href="/documentation/features/profanity-filter/">Profanity Filter</a><a href="/documentation/features/profanity-filter/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/redact/">Redaction</a><a href="/documentation/features/redact/"> </a></th>
-						<td>Yes</td>
-						<td>Yes</td>
-						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
-					</tr>
-					<tr>
-						<th colspan="3"> <a href="/documentation/features/diarize/">Diarization</a><a href="/documentation/features/diarize/"> </a></th>
+						<td> <a href="/documentation/features/diarize/">Diarization</a><a href="/documentation/features/diarize/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3">
+						<td>
 							<a href="/documentation/features/smart-format/">Smart Format</a><a href="/documentation/features/smart-format/"> </a>
-						</th>
+						</td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/multichannel/">Multichannel</a><a href="/documentation/features/multichannel/"> </a></th>
+						<td> <a href="/documentation/features/multichannel/">Multichannel</a><a href="/documentation/features/multichannel/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3">Alternatives</th>
+						<td><b>Alternatives</b></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/numerals/">Numerals</a><a href="/documentation/features/numerals/"> </a></th>
+						<td> <a href="/documentation/features/numerals/">Numerals</a><a href="/documentation/features/numerals/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/search/">Search</a><a href="/documentation/features/search/"> </a></th>
+						<td> <a href="/documentation/features/search/">Search</a><a href="/documentation/features/search/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/replace/">Find and Replace</a><a href="/documentation/features/replace/"> </a></th>
+						<td> <a href="/documentation/features/replace/">Find and Replace</a><a href="/documentation/features/replace/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/callback/">Callback</a><a href="/documentation/features/callback/"> </a></th>
+						<td> <a href="/documentation/features/callback/">Callback</a><a href="/documentation/features/callback/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/keywords/">Keywords</a><a href="/documentation/features/keywords/"> </a></th>
+						<td> <a href="/documentation/features/keywords/">Keywords</a><a href="/documentation/features/keywords/"> </a></td>
 						<td>Yes</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/paragraphs/">Paragraphs</a><a href="/documentation/features/paragraphs/"> </a></th>
+						<td> <a href="/documentation/features/paragraphs/">Paragraphs</a><a href="/documentation/features/paragraphs/"> </a></td>
 						<td>Yes</td>
 						<td>No</td>
 						<td> <a href="/documentation/features/language/">All in which words are delimited by spaces</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/summarize/">Summarization</a><a href="/documentation/features/summarize/"> </a></th>
-						<td>Yes</td>
-						<td>No</td>
-						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
-					</tr>
-					<tr>
-						<th colspan="3"> <a href="/documentation/features/detect-topics/">Topic Detection</a><a href="/documentation/features/detect-topics/"> </a></th>
-						<td>Yes</td>
-						<td>No</td>
-						<td> <a href="/documentation/features/language/">English (all available regions)</a><a href="/documentation/features/language/"> </a></td>
-					</tr>
-					<tr>
-						<th colspan="3"> <a href="/documentation/features/utterances/">Utterances</a><a href="/documentation/features/utterances/"> </a></th>
+						<td> <a href="/documentation/features/utterances/">Utterances</a><a href="/documentation/features/utterances/"> </a></td>
 						<td>Yes</td>
 						<td>No</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/interim-results/">Interim Results</a><a href="/documentation/features/interim-results/"> </a></th>
+						<td> <a href="/documentation/features/interim-results/">Interim Results</a><a href="/documentation/features/interim-results/"> </a></td>
 						<td>No</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/endpointing/">Endpointing</a><a href="/documentation/features/endpointing/"> </a></th>
+						<td> <a href="/documentation/features/endpointing/">Endpointing</a><a href="/documentation/features/endpointing/"> </a></td>
 						<td>No</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/encoding/">Encoding</a><a href="/documentation/features/encoding/"> </a></th>
+						<td> <a href="/documentation/features/encoding/">Encoding</a><a href="/documentation/features/encoding/"> </a></td>
 						<td>No</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/channels/">Channels</a><a href="/documentation/features/channels/"> </a></th>
+						<td> <a href="/documentation/features/channels/">Channels</a><a href="/documentation/features/channels/"> </a></td>
 						<td>No</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
 					</tr>
 					<tr>
-						<th colspan="3"> <a href="/documentation/features/sample-rate/">Sample Rate</a><a href="/documentation/features/sample-rate/"> </a></th>
+						<td> <a href="/documentation/features/sample-rate/">Sample Rate</a><a href="/documentation/features/sample-rate/"> </a></td>
 						<td>No</td>
 						<td>Yes</td>
 						<td> <a href="/documentation/features/language/">All available</a><a href="/documentation/features/language/"> </a></td>
@@ -263,7 +329,7 @@ const sortedGuides = guides.sort((a, b) => {
 			</table>
 		</div>
 
-		<h2>Guides</h2>
+		<h2>Feature Documentation</h2>
 		<DocsCardList>
 			{sortedGuides.map((guide) => <DocsCard class={`w-full flex flex-col`} doc={guide} />)}
 		</DocsCardList>
@@ -271,7 +337,6 @@ const sortedGuides = guides.sort((a, b) => {
 </Layout>
 
 <style>
-
 	:global(h3) {
 		@apply mt-0;
 		@apply mb-2;
@@ -281,13 +346,13 @@ const sortedGuides = guides.sort((a, b) => {
 		@apply text-left text-sm;
 	}
 
-	table thead {
+	table tdead {
 		color: #111827;
 		font-weight: 600;
-		border-bottom-width: 1px;
+		border-bottom-widtd: 1px;
 		border-bottom-color: #d1d5db;
 	}
-	th {
+	td {
 		vertical-align: bottom;
 		padding-right: 0.5714286em;
 		padding-bottom: 0.5714286em;
@@ -313,5 +378,19 @@ const sortedGuides = guides.sort((a, b) => {
 		padding-right: 0.5714286em;
 		padding-bottom: 0.5714286em;
 		padding-left: 0.5714286em;
+	}
+	tr {
+		/* set padding to create space between cells and border */
+		padding: 10px;
+	}
+
+	td {
+		/* set border properties for table cells */
+		border: 1px solid black;
+		padding: 5px;
+	}
+
+	th {
+		text-align: center;
 	}
 </style>

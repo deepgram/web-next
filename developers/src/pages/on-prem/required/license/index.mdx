@@ -11,13 +11,66 @@ seo:
   keywords: on-premises, on-prem, deployment, license, licensing, required components, required
 ---
 
+import Alert from "../../../../shared/components/global/Alert.astro";
 import Panel from "../../../../shared/components/global/Panel.astro";
+import { Image } from "@astrojs/image/components";
 
 # {frontmatter.title}
 
 Running on-premises (on-prem) Deepgram requires a valid license. If a valid license is missing, the Deepgram API and Engine containers will fail to start.
 
-## Online Licensing
+## Console API keys
+
+<Alert type="warning">
+	The following information applies only to Console projects which have been granted access to on-prem products. Please contact [Support](https://deepgram.com/contact-us/) if you
+	would like access but don't currently have it.
+</Alert>
+
+On-prem API keys may be created by Console project owners. Steps to create on-prem API keys in Console:
+
+1. Navigate to https://console.deepgram.com to login and select a Console project which you own.
+
+2. Click "Create a New API Key" on the API Keys page to open a key creation pop-up.
+
+<Image src={import("./create-key.png")} alt="Click Create API Key" />
+
+3. Provide a name for your Key and set your key's role permission level. If you are unsure which role permission to use, select Member. Use the default expiration value "never" and click "Create Key" to create the key and be shown your new secret API key. For more information about role permissions in Console, refer to the [Roles](https://developers.deepgram.com/documentation/getting-started/roles/) documentation.
+
+<Image src={import("./name-api.png")} alt="Create and name your key" />
+<Image src={import("./set-expiration.png")} alt="Set expiration to never and click Create Key" />
+
+4. Your new secret API key is shown to you. It is a 40 character alphanumeric string. Please copy this secret and save it somewhere safe. For security reasons, we can't show the secret to you again. You can always create a new key if you lose your old secret.
+
+<Image src={import("./new-api.png")} alt="Your New API Key" />
+
+5. Check the box affirming that you know you can't access this key's secret again and click "Got it."
+
+<Image src={import("./secret-api.png")} alt="Affirm that you cannot access the key's secret again" />
+
+6. The pop-up will be dismissed and you will be back on the "API Keys" page where you can see your new on-prem API key and the On-prem products which are licensed to that key.
+
+<Image src={import("./on-prem-api.png")} alt="Observe your new On-prem API Key is now in your Console project" />
+
+7. You can use the secret from your onprem API key in your `api.toml`, `engine.toml`, and `docker-compose.yml` files in place of your legacy on-prem license key. On-prem API keys can also be used to make ASR requests against [https://api.deepgram.com](https://api.deepgram.com).
+
+```
+# in api.toml & engine.toml
+[license]
+  # Your license key.
+  key = "f1037f690e1c05405b0a71b8fc1df3d453b1bcad"
+
+# in docker-compose.yml
+license-proxy:
+    image: deepgram/onprem-license-proxy:1.4.0
+
+    ports:
+      - "8443:8443"
+      - "8089:8089"
+
+    command: -v serve --license-key "f1037f690e1c05405b0a71b8fc1df3d453b1bcad" --host 0.0.0.0 --port 8443 --status-port 8089
+```
+
+## Online Licensing (legacy)
 
 With online licensing, you receive a license ID that allows Deepgram products to communicate securely with the Deepgram Console in order to verify license terms and report usage.
 
@@ -27,7 +80,9 @@ Licensing connections are established every minute and are short-lived (a second
 
 To ensure that your audio data never leaves your network, Deepgram maintains entirely separate endpoints for transcription and licensing. In addition, the Console licensing endpoint only accepts licensing data, which guards against accidental transmission. Finally, Deepgram products maintain a separate, isolated connection pool that they use to connect to Console.
 
-To verify this, monitor packet sizes and throughput of data between your network and Deepgram. You'll notice that the licensing traffic is very small (a few kilobytes per minute)&mdash;far too small to accommodate audio data leaving your network.
+<br />
+To verify this, monitor packet sizes and throughput of data between your network and Deepgram. You'll notice that the licensing traffic is very small (a few kilobytes per minute)&mdash;far
+too small to accommodate audio data leaving your network.
 
 </Panel>
 

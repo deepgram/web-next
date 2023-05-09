@@ -15,7 +15,12 @@
           {
             "name": "Getting Started with Live Streaming Audio",
             "to": "/documentation/getting-started/streaming/"
+          },
+          {
+            "name": "Nova Quickstart",
+            "to": "/documentation/getting-started/nova-quickstart/"
           }
+
         ]
       },
       {
@@ -203,6 +208,11 @@
         "static": true,
         "children": [
           {
+            "name": "Entity Detection",
+            "to": "/documentation/features/detect-entities/"
+          },
+          {
+
             "name": "Summarization",
             "to": "/documentation/features/summarize/"
           },
@@ -218,6 +228,17 @@
     "name": "Guides",
     "to": "/documentation/guides/",
     "children": [
+      {
+        "name": "Models",
+        "to": "/documentation/models/",
+        "static": true,
+        "children": [
+          {
+            "name": "Deepgram Whisper Cloud",
+            "to": "/documentation/guides/deepgram-whisper-cloud/"
+          }
+        ]
+      },
       {
         "name": "Tips and Tricks",
         "to": "/documentation/transcription-tips/",

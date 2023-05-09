@@ -1,14 +1,12 @@
 ---
 import PrimarySection from "../shared/components/layout/PrimarySection.astro";
-import Svg from "../shared/components/general/Svg.astro";
 import Icon from "../shared/components/general/Icon.astro";
 import Link from "../shared/components/general/Link.astro";
-import AmplifyQuote from "../shared/components/quotes/AmplifyQuote.astro";
 import Button from "../shared/components/general/Button.astro";
 import { getUuid } from "../shared/util";
 
-const { class: classes, ...rest } = Astro.props;
-const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN } = import.meta.env;
+const { class: classes } = Astro.props;
+const { WWW_DOMAIN, DOCS_DOMAIN, BLOG_DOMAIN, CONSOLE_DOMAIN, STATUS_DOMAIN, PLAYGROUND_DOMAIN } = import.meta.env;
 
 const formUuid = await getUuid();
 ---
@@ -43,7 +41,9 @@ const formUuid = await getUuid();
 	<PrimarySection>
 		<div class="pt-4 grid grid-cols-1 w-full sm:w-2/3 lg:w-full lg:grid-cols-5 xl:grid-cols-6 gap-10 items-end pb-14">
 			<div class="lg:col-start-1 lg:col-end-3 flex flex-col space-y-6">
-				<Svg name="deepgram-long" class="text-dgRed w-56 stroke-0" />
+				<div class="flex">
+					<img class="h-[24px]" src="/images/dg-wordmark-white.svg" alt="DG Docs logo" />
+				</div>
 				<p class="text-white">Every Voice. Heard and understood.</p>
 				<ul class="grid grid-cols-4 sm:grid-cols-8 lg:place-items-center md:place-items-start gap-6 md:gap-12">
 					<li>
@@ -123,11 +123,12 @@ const formUuid = await getUuid();
 					<li><a href={`${WWW_DOMAIN}/solutions/voicebots`}>Conversational AI</a></li>
 				</ul>
 				<ul class="space-y-3 leading-tight">
-					<li class="uppercase font-bold">Docs</li>
+					<li class="uppercase font-bold">Developers</li>
 					<li><a href={DOCS_DOMAIN}>Documentation</a></li>
 					<li><a href={`${DOCS_DOMAIN}/documentation/guides`}>Guides</a></li>
 					<li><a href={`${DOCS_DOMAIN}/documentation/getting-started`}>Tutorials</a></li>
 					<li><a href={`${DOCS_DOMAIN}/api-reference`}>API Reference</a></li>
+					<li><a href={`${PLAYGROUND_DOMAIN}`}>API Playground</a></li>
 					<li><a href={`${DOCS_DOMAIN}/on-prem/`}>On-Prem Deployment</a></li>
 					<li><a href={`${DOCS_DOMAIN}/sdks-tools`}>SDKs + Tools</a></li>
 					<li><a href={STATUS_DOMAIN}>Status</a></li>
@@ -158,7 +159,7 @@ const formUuid = await getUuid();
 				</ul>
 			</div>
 			<p class="text-stone">
-				<a class="text-stone" href={`${WWW_DOMAIN}/business/Business_TOS.pdf`}>Terms</a> | <a class="text-stone" href={`${WWW_DOMAIN}/privacy`}>Privacy</a> | Copyright &copy;2022
+				<a class="text-stone" href={`${WWW_DOMAIN}/business/Business_TOS.pdf`}>Terms</a> | <a class="text-stone" href={`${WWW_DOMAIN}/privacy`}>Privacy</a> | Copyright &copy;2023
 			</p>
 		</PrimarySection>
 	</div>

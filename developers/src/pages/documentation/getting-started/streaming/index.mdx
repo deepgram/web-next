@@ -10,9 +10,12 @@ seo:
   keywords: "streaming, real-time, realtime, audio, transcribe, transcription, speech recognition,
     quick start, quickstart, sdk"
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
-import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
-import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
+import Callout from "../../../../shared/components/global/Callout.astro";
+import Icon from "../../../../shared/components/general/Icon.astro";
 
 # {frontmatter.title}
 
@@ -21,6 +24,16 @@ import CodeGroup from '../../../../shared/components/code/CodeGroup.astro';
 **¿Prefieres español?** Ver [Tutorial para transcribir audio en vivo](/documentation/getting-started/streaming-es/).
 
 </Alert>
+
+<Callout title="NOTEBOOK">
+	Prefer the workflow of a Python notebook? Download our Python starter notebook and be up and running quickly without having to copy or paste any code.
+
+    <a href="/notebooks/QuickStart_Deepgram_Live_Audio_Streaming_Notebook.ipynb" class="flex items-center py-1 mt-2" download="streaming.ipynb">
+    	<Icon class="mr-2" icon="cloud-download" />
+    	Streaming audio notebook
+    </a>
+
+</Callout>
 
 In this guide, you'll learn how to automatically transcribe live streaming audio in real time using Deepgram's SDKs, which are supported for use with the [Deepgram API](/api-reference/).
 
@@ -32,7 +45,7 @@ Before you run the code, you'll need to do a few things.
 
 Before you can use Deepgram products, you'll need to [create a Deepgram account](https://console.deepgram.com/signup?jump=keys). Signup is free and includes:
 
-- $150 in credit, which gives you access to:
+- $200 in credit, which gives you access to:
   - all base [models](/documentation/features/model/)
   - [pre-recorded](/documentation/getting-started/prerecorded/) and live streaming functionality
   - all [features](/documentation/features/)
@@ -56,7 +69,7 @@ If you get stuck at any point, help is just a click away! [Contact Support](/sup
 
 ## Transcribe Audio
 
-Once you have your API Key, it's time to transcribe audio! 
+Once you have your API Key, it's time to transcribe audio!
 
 If you want a quick way to get up and running, our [Python streaming test suite](https://github.com/deepgram/streaming-test-suite) provides sample code to help you get started. Before beginning to build your own integration, we recommend running the test suite code at least once to ensure you can successfully stream sample audio to Deepgram.
 
@@ -123,6 +136,12 @@ npm install cross-fetch
 
 In your terminal, create a new file in your project's location, and populate it with code.
 
+<Alert type="info">
+
+The following example includes the parameter `model=nova`, which tells the API to use Deepgram's most powerful and affordable model. Removing this parameter will result in the API using the default model, which is currently `model=general`.
+
+</Alert>
+
 <CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
 <CodeBlock tab="Python">
@@ -154,7 +173,8 @@ async def main():
     deepgramLive = await deepgram.transcription.live({
       'punctuate': True,
       'interim_results': False,
-      'language': 'en-GB'
+      'language': 'en-US',
+      'model': 'nova',
     })
   except Exception as e:
     print(f'Could not open socket: {e}')
@@ -213,7 +233,8 @@ const deepgram = new Deepgram(deepgramApiKey);
 const deepgramLive = deepgram.transcription.live({
 	punctuate: true,
 	interim_results: false,
-	language: "en-GB",
+	language: "en-US",
+	model: "nova",
 });
 
 // Listen for the connection to open and send streaming audio from the URL to Deepgram
@@ -317,6 +338,12 @@ Now that you've gotten transcripts for streaming audio, enhance your knowledge b
 To customize the transcripts you receive, you can send a variety of parameters to the Deepgram API.
 
 For example, if your audio is in Spanish rather than UK English, you can pass the `language:` parameter with the `es` option to the `transcription.live` method in the previous examples.
+
+<Alert type="warning">
+
+Not all languages work with all available models. Be sure to check out the [Languages](/documentation/features/language/) page to see which models are compatible with which languages.
+
+</Alert>
 
 <CodeGroup title="Example" default="Node.js" tabs={["Node.js", "Python"]}>
 
