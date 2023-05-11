@@ -208,6 +208,11 @@
         "static": true,
         "children": [
           {
+            "name": "Entity Detection",
+            "to": "/documentation/features/detect-entities/"
+          },
+          {
+
             "name": "Summarization",
             "to": "/documentation/features/summarize/"
           },

@@ -86,7 +86,7 @@ Use the following command to create the `dgtools` script in the `dgtools` direct
 ```bash
 cat > $DGTOOLS_RESOURCE_DIR/dgtools <<'EOF'
 set -e
-DGTOOLS_IMAGE=${DGTOOLS_IMAGE:-"deepgram/onprem-dgtools:2.1.1"}
+DGTOOLS_IMAGE=${DGTOOLS_IMAGE:-"deepgram/onprem-dgtools:2.1.4"}
 docker pull $DGTOOLS_IMAGE
 docker run \
 -t \
@@ -131,12 +131,12 @@ dgtools version
 The output should look similar to:
 
 ```
-2.1.1: Pulling from deepgram/onprem-dgtools
+2.1.4: Pulling from deepgram/onprem-dgtools
 Digest: sha256:2c859629e7dab6aa8291b3672c72237590c1081da072f8a3d42dce7792221783
-Status: Image is up to date for deepgram/onprem-dgtools:2.1.1
-docker.io/deepgram/onprem-dgtools:2.1.1
-Copyright © 2022 Deepgram, Inc.
-DGTools v2.1.1
+Status: Image is up to date for deepgram/onprem-dgtools:2.1.4
+docker.io/deepgram/onprem-dgtools:2.1.4
+Copyright © 2023 Deepgram, Inc.
+DGTools v2.1.4
 ```
 
 ## Using DGTools
@@ -311,12 +311,12 @@ The `version` subcommand can be used to print the current DGTools version inform
 
 ```bash
 $ dgtools version
-Copyright © 2022 Deepgram, Inc.
-DGTools v2.1.1
+Copyright © 2023 Deepgram, Inc.
+DGTools v2.1.4
 ```
 
 You can also use the following docker command to output the DGTools container image information:
 
 ```bash
-docker image inspect deepgram/onprem-dgtools:2.1.1
+docker image inspect deepgram/onprem-dgtools:2.1.4
 ```

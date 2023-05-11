@@ -13,12 +13,13 @@ seo:
 ---
 
 import Alert from "../../../../shared/components/global/Alert.astro";
+import { Image } from "@astrojs/image/components";
 
 # {frontmatter.title}
 
 Hotpepper’s workflow is informed by Deepgram best practices for labeling audio, which require that all audio files be reviewed by four independent users. Hotpepper implements the idea of independent reviewers through the concept of levels, each of which represents a queue of unlabeled files. For a file to be considered completed, it must pass through all four levels of labeling and be reviewed and marked as complete by four independent reviewers, one at each level.
 
-![Understanding the Hotpepper Workflow](/hotpepper-workflow.png)
+<Image src={import("./hotpepper-workflow.png")} alt="Understanding the Hotpepper workflow" />
 
 When users select a level, the system automatically assigns them a file from the corresponding queue and takes them to the labeling view for the assigned file.
 
