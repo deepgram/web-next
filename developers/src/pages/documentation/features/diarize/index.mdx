@@ -9,9 +9,10 @@ seo:
   metaDescription: Learn about Deepgram's Diarize feature, which recognizes speaker changes in submitted audio.
   keywords: diarize, multiple speakers
 ---
-import Alert from '../../../../shared/components/global/Alert.astro'; 
-import CodeBlock from '../../../../shared/components/code/CodeBlock.astro'; 
-import CodeGroup from '../../../../shared/components/code/CodeGroup.astro'; 
+
+import Alert from "../../../../shared/components/global/Alert.astro";
+import CodeBlock from "../../../../shared/components/code/CodeBlock.astro";
+import CodeGroup from "../../../../shared/components/code/CodeGroup.astro";
 
 # {frontmatter.title}
 
@@ -36,9 +37,16 @@ To enable Diarization, when you call Deepgram’s API, add a `diarize` parameter
 
 <Alert type="warning">
   
-If you want to use our legacy Diarization feature, when you call Deepgram’s API, add an additional `diarize_version` parameter set to `2021-07-14.0` in the query string:
+We've recently released an improved version of Diarization (PRE-RECORDED only). Its advanced speaker separation accurately identifies speakers in complex audio streams, reducing errors where two speakers are identified as one. Additionally, the new diarizer can identify and count speakers more accurately, reducing instances where one speaker is split between two labels. The result is more readable transcripts.
 
-`diarize=true&diarize_version=2021-07-14.0`
+<br />
+With the release of improved diarization, we will be deprecating the `diarize_version` parameter and will be retiring the old diarizer on April 3, 2023.
+
+Currently, you can call the old diarizer using the below URL: `https://api.deepgram.com/v1/listen?tier=enhanced&diarize=true&diarize_version=2021-07-14.0`
+
+To access the latest diarizer, all you need to do is add **diarize=true** to your URL: `https://api.deepgram.com/v1/listen?diarize=true`
+
+We encourage you to switch to the improved Diarizer as soon as possible to ensure that you are taking advantage of the latest advancements in our technology.
 
 </Alert>
 
@@ -182,6 +190,8 @@ In this response, we see that each alternative contains:
 By default, Deepgram applies its general AI [model](/api-reference/transcription/#model-pr), which is a good, general purpose model for everyday situations. To learn more about the customization possible with Deepgram's API, check out the [Deepgram API Reference](/api-reference/).
 
 </Alert>
+
+## Format Response
 
 To improve readability, you can use a JSON processor to parse the JSON. In this example, we use [JQ](https://stedolan.github.io/jq/) and further improve readability by turning on Deepgram’s [punctuation](/documentation/features/punctuate/) and [utterances](/documentation/features/utterances/) features:
 
