@@ -1,5 +1,5 @@
 [[redirects]]
   from = "https://dpgr.am/*"
-  to = "/.netlify/functions/short-url?path=:splat"
+  to = "https://sweet-pie-c52a63-blog.netlify.app/.netlify/functions/short-url?path=:splat"
   status = 301
   force = true
