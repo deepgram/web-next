@@ -22,6 +22,6 @@
 
 [[redirects]]
   from = "https://dpgr.am/*"
-  to = "https://blog.deepgram.com/.netlify/functions/short-url?path=:splat"
+  to = "/.netlify/functions/short-url?path=:splat"
   status = 301
   force = true
