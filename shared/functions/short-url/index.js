@@ -1,26 +1,30 @@
 const { Client, query } = require("faunadb");
 
-const client = new Client({
-	secret: process.env.FAUNA_DB_SECRET,
-});
-
 exports.handler = async (event, context) => {
-	const shortUrl = await getLongUrl(event.queryStringParameters.path);
-	const redirectUrl = shortUrl ? shortUrl.target : "https://deepgram.com/";
+	try {
+		const shortUrl = await getLongUrl(event.queryStringParameters.path);
+		const redirectUrl = shortUrl ? shortUrl.target : "https://deepgram.com/";
 
-	return {
-		statusCode: 302,
-		headers: {
-			location: redirectUrl,
-			"Cache-Control": "no-cache",
-		},
-		body: JSON.stringify({redirectUrl}),
-	};
+		return {
+			statusCode: 302,
+			headers: {
+				location: redirectUrl,
+				"Cache-Control": "no-cache",
+			},
+			body: JSON.stringify({ redirectUrl }),
+		};
+	} catch (err) {
+		console.error(err);
+	}
 };
 
 const getLongUrl = async (path) => {
 	// Lookup path in FaunaDb & get the longUrl if it exists
 	try {
+		const client = new Client({
+			secret: process.env.FAUNA_DB_SECRET,
+		});
+
 		const response = await client.query(
 			query.Map(query.Paginate(query.Match(query.Index("shortCodesBySource"), path)), query.Lambda("shortcodes", query.Get(query.Var("shortcodes"))))
 		);
@@ -29,7 +33,7 @@ const getLongUrl = async (path) => {
 			return response.data[0].data;
 		}
 	} catch (err) {
-		console.log(err);
+		console.error(err);
 	}
 
 	return undefined;
